@@ -72,111 +72,59 @@ Browser vendors are aware of the need to protect user privacy, and the negative 
 
 ### HTTPS by default
 
-[Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network, and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. This is good for privacy because it stops third parties from being able to intercept transmitted data and use it for tracking, etc.
-
-In addition, many "powerful" web API features that provide access to potentially sensitive data (such as video streams from a user's webcam) are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), providing further privacy protection.
+[Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network, and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. This is good for privacy because it stops third parties from being able to intercept transmitted data and use it maliciously, for example for tracking.
 
 Browsers are all moving towards requiring HTTPS by default; this is practically the case already, as you can't do much without it.
 
-GOT HERE
+Related topics are as follows:
 
-1. Browsers tend to require HTTP by default these days, when doing anything risky. (also talk about secure context)
-2. Browsers have features that automatically block 3rd party tracking scripts:
-   Firefox
-   - Firefox tracking protection
-   - Enhanced tracking protection
-   - Redirect tracking protection
-   - State partitioning
-     Chrome
-   - Privacy sandbox project (note that browser would eventually like to phase out 3rd party cookies altogether, while providing alternative solutions for common uses)
-     - Themes include identity and tracking protection, more privacy-respecting ads solutions, preventing covert tracking, and safely sharing data across browsing contexts
-3. Browsers are stricter about sending cookies in cross-site requests (talk about SameSite and default values; see https://developer.chrome.com/docs/privacy-sandbox/overview/#will-samesite-become-irrelevant-after-third-party-cookies-are-deprecated)
-4. Browsers gate usage of several "powerful features" behind a system of user permissions, so users have to explicitly opt in to things like being shown notifications from a site, or the site using their web cam to get access to a media stream.
+- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
+  - : An open standard for monitoring and auditing certificates, creating a database of public logs that can be used to help identify incorrect or malicious certificates.
+- [HTTP Strict Transport Security (HSTS)](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+  - : HSTS is used by servers to let them protect themselves from protocol downgrade and cookie hijack attacks by letting sites tell clients that they can only use HTTPS to communicate with the server.
+- [HTTP/2](/en-US/docs/Glossary/HTTP_2)
+  - : While HTTP/2 technically does not <em>have</em> to use encryption, most browser developers are only supporting it when used with HTTPS, so it can be thought of in that regard as being security/privacy enhancing.
+
+### Opt-in for "powerful features"
+
+So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which basically means HTTP-only. Not only that, but they are gated behind a system of user permissions, so users have to explicitly opt-in to features like notifications, accessing media streams from web cams, web payments, etc. (GET BETTER LINKS FOR THESE, AND MORE EXAMPLES)
+
+This provides further security and privacy protection.
+
+### Anti-tracking technology
+
+Browsers have implemented several anti-tracking features that automatically enhance their users' privacy protection. Many of these block or limit the ability of third party sites embedded in {{htmlelement("iframe")}}s to access cookies set on the top-level domain, run tracking scripts, etc.
+
+> **Note:** browsers are aiming to eventually phase out third party cookies altogether, while providing alternative solutions for common use cases that currently require them. You'll find a number of the solutions discussed here, and in the [What does a developer need to do?](#what_does_a_developer_need_to_do) section later on.
+
+#### Firefox
+
+- Firefox tracking protection
+- Enhanced tracking protection
+- Redirect tracking protection
+- State partitioning
+
+#### Chrome
+
+- Privacy sandbox project ()
+- Themes include identity and tracking protection, more privacy-respecting ads solutions, preventing covert tracking, and safely sharing data across browsing contexts
+
+Browsers are stricter about sending cookies in cross-site requests (talk about SameSite and default values; see https://developer.chrome.com/docs/privacy-sandbox/overview/#will-samesite-become-irrelevant-after-third-party-cookies-are-deprecated)
 
 ## New privacy technology
 
 Web browsers are actively working on improving the privacy space through new features:
 
-{{ListSubpages()}}
+{{ListSubpages()}} LOOK AT THE CURRENT STATE OF THE LIVE SITE, TO SE WHAT TOPICS I AM MISSING FROM THE PAGE
 
-## Privacy and security controls
+PUT THESE ITEMS SOMEWHERE ELSE
 
-There are multiple layers of controls for helping to protect users against security and privacy breaches. These start at the web server, including the very communication layer used over the network, and then extend through the web browser's security offerings before reaching your web app code and the efforts it takes to secure itself and the data the user entrusts to it.
-
-There are several web technologies and features at play to manage privacy and security. The following list includes features affecting both since many of these features are used for both.
-
-<table class="standard-table" style="max-width: 42rem">
-  <caption>
-    Web technologies and features used to enforce security and privacy
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Technology or feature</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a>
-      </td>
-      <td>
-        An open standard for monitoring and auditing certificates, creating a
-        database of public logs that can be used to help identify incorrect or
-        malicious certificates
-      </td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a></td>
-      <td>
-        Provides the ability to define the extent to which a document's content
-        can be accessed by other devices over the web; used in particular to
-        prevent or mitigate attacks on the server
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
-      </td>
-      <td>
-        HSTS is used by servers to let them protect themselves from protocol
-        downgrade and cookie hijack attacks by letting sites tell clients that
-        they can only use HTTPS to communicate with the server
-      </td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/HTTP_2">HTTP/2</a></td>
-      <td>
-        While HTTP/2 technically does not <em>have</em> to use encryption, most
-        browser developers are only supporting it when used with HTTPS, so it
-        can be thought of in that regard as being security-related
-      </td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a></td>
-      <td>
-        Provides a way to determine the status of permissions for the current
-        browser context.
-      </td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></td>
-      <td>
-        Lets web servers selectively enable or disable features and APIs, both for a document and for subdocuments
-        loaded in {{HTMLElement("iframe")}}s via the {{HTTPHeader("Permissions-Policy")}} HTTP header.
-        The <a href="/en-US/docs/Web/HTML/Element/iframe#allow"><code>allow</code></a> attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## Keeping personal data safe
-
-## Managing site permissions
-
-## Bringing it all together
-
-<!--using Feature Policy with permissions and so forth; how to use them together, how they interact, etc.-->
+- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+  - : Provides the ability to define the extent to which a document's content can be accessed by other devices over the web; used in particular to prevent or mitigate attacks on the server
+- [Permissions API](/en-US/docs/Web/API/Permissions_API)
+  - : Provides a way to determine the status of permissions for the current browser context.
+- [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
+  - : Lets web servers selectively enable or disable features and APIs, both for a document and for subdocuments loaded in {{HTMLElement("iframe")}}s via the {{HTTPHeader("Permissions-Policy")}} HTTP header. The <a href="/en-US/docs/Web/HTML/Element/iframe#allow"><code>allow</code></a> attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
 
 ### Permission requests in \<iframe> elements
 
