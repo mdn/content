@@ -125,83 +125,83 @@
           "message": "Don't use curly double quotes",
           "searchPattern": "/“|”/g",
           "replace": "\"",
-          "skipCode": true
+          "searchScope": "text"
         },
         {
           "name": "curly-single-quotes",
           "message": "Don't use curly single quotes",
           "searchPattern": "/‘|’/g",
           "replace": "'",
-          "skipCode": true
+          "searchScope": "text"
         },
         {
           "name": "nbsp",
           "message": "Don't use no-break spaces",
           "searchPattern": "/ /g",
           "replace": " ",
-          "skipCode": false
+          "searchScope": "all"
         },
         {
           "name": "m-dash",
           "message": "Don't use '--'. Use m-dash — instead",
           "search": " -- ",
           "replace": " — ",
-          "skipCode": true
+          "searchScope": "text"
         },
         {
           "name": "relative-link",
           "message": "Internal links should start with '/'",
           "search": "(en-US/docs",
           "replace": "(/en-US/docs",
-          "skipCode": true
+          "searchScope": "text"
         },
         {
           "name": "relative-link-path",
           "message": "Don't use relative paths",
           "search": "](..",
-          "skipCode": true
+          "searchScope": "text"
         },
         {
           "name": "trailing-spaces",
           "message": "Avoid trailing spaces",
           "searchPattern": "/  +$/gm",
           "replace": "",
-          "skipCode": false
+          "searchScope": "all"
         },
         {
           "name": "double-spaces",
           "message": "Avoid double spaces",
           "searchPattern": "/([^\\s>])  ([^\\s|])/g",
           "replace": "$1 $2",
-          "skipCode": true
+          "searchScope": "text"
         },
         {
           "name": "stuck-definition",
           "message": "Character is stuck to definition description marker",
           "searchPattern": "/- :(\\w)/g",
           "replace": "- : $1",
-          "skipCode": true
+          "searchScope": "text"
         },
         {
           "name": "fqdn-moz-links",
           "message": "Don't use developer.mozilla.org for links",
           "search": "](https://developer.mozilla.org/",
           "replace": "](/",
-          "skipCode": true
+          "searchScope": "text"
         },
         {
           "name": "incorrect-spelling",
           "message": "Incorrect spelling",
           "searchPattern": ["/e-mail/ig", "/(w)eb site/ig"],
           "replace": ["email", "$1ebsite"],
-          "skipCode": false
+          "searchScope": "all"
         },
         {
           "name": "localhost-links",
           "message": "Don't use localhost for links",
           "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
           "replace": "](/",
-          "skipCode": true
+          "searchScope": "text"
         }
       ]
     }
