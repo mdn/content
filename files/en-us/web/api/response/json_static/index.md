@@ -8,9 +8,12 @@ browser-compat: api.Response.json_static
 
 {{APIRef("Fetch API")}}
 
-The **`json()`** static method of the {{domxref("Response")}} interface encodes provided data as a stringified JSON in the response body, sets the {{HTTPHeader("Content-Type")}} header to `application/json`, and allows the response status, status message, and additional headers to be set by the developer.
+The **`json()`** static method of the {{domxref("Response")}} interface returns a `Response` that contains the provided JSON data as body, and a {{HTTPHeader("Content-Type")}} header which is set to `application/json`.
+The response status, status message, and additional headers can also be set.
 
-This makes it very easy to create a `Response` object that is suitable for returning JSON encoded data.
+The method makes it easy to create `Response` objects for returning JSON encoded data.
+For example, [service workers](/en-US/docs/Web/API/Service_Worker_API) intercept fetch requests made by a browser, and might use `json()` to construct a `Response` from cached JSON data to return to the main thread.
+The method can also be used in server code to return JSON data for [single page applications](/en-US/docs/Glossary/SPA), and any other applications where a JSON response is expected.
 
 ## Syntax
 
