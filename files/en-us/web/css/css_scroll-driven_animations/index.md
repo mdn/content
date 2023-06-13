@@ -63,7 +63,7 @@ Possible values of the {{cssxref("animation-timeline")}} property for defining _
 - [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll)
 - [`view()`](/en-US/docs/Web/CSS/animation-timeline/view)
 
-### Relevant JavaScript features
+### JavaScript features
 
 - {{domxref("Element.animate()")}}
 - {{domxref("AnimationTimeline")}}
