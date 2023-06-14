@@ -70,15 +70,12 @@ Possible values of the {{cssxref("animation-timeline")}} property for defining _
 - {{domxref("ScrollTimeline")}}
 - {{domxref("ViewTimeline")}}
 
-## Guides
-
-- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/articles/scroll-driven-animations/)
-
 ## Specifications
 
 {{Specifications}}
 
 ## See also
 
+- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/articles/scroll-driven-animations/) on developer.chrome.com
 - [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
