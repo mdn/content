@@ -116,6 +116,7 @@ Browsers are stricter about sending cookies in cross-site requests (talk about S
 Web browsers are actively working on improving the privacy space through new features:
 
 {{ListSubpages()}} LOOK AT THE CURRENT STATE OF THE LIVE SITE, TO SE WHAT TOPICS I AM MISSING FROM THE PAGE
+ALSO, INVESTIGATE WHY THE SIDEBAR IS BROKEN
 
 PUT THESE ITEMS SOMEWHERE ELSE
 
