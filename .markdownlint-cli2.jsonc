@@ -184,8 +184,8 @@
         },
         {
           "name": "fqdn-moz-links",
-          "message": "Don't use developer.mozilla.org for links",
-          "search": "](https://developer.mozilla.org/",
+          "message": "Don't use developer.mozilla.org for links, except for blog posts",
+          "searchPattern": "/\\]\\(https:\\/\\/developer.mozilla.org\\/(?!en-US\\/blog\\/)/g",
           "replace": "](/",
           "searchScope": "text"
         },
