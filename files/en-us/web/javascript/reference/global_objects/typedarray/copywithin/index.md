@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.TypedArray.copyWithin
 The **`copyWithin()`** method copies the sequence of array
 elements within the array to the position starting at `target`.
 The copy is taken from the index positions of the second and third arguments
-`start` and `end`. The `start` parameter is required, but
+`start` and `end`. The
 `end` argument is optional and defaults to the length of the
 array. This method has the same algorithm as {{jsxref("Array.prototype.copyWithin")}}.
 _TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
