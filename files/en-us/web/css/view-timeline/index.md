@@ -48,7 +48,6 @@ The `view-timeline` shorthand property can be applied to a container element as 
 ### Values
 
 - `<view-timeline-name>`
-
   - : See [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name).
 
 - `<view-timeline-axis>`
