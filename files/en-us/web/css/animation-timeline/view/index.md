@@ -30,7 +30,6 @@ animation-timeline: view(vertical);
 animation-timeline: view(horizontal);
 
 /* Values for the inset */
-
 animation-timeline: view(auto); /* Default */
 animation-timeline: view(20%);
 animation-timeline: view(200px);
