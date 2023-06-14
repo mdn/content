@@ -1,12 +1,12 @@
 ---
-title: CSS Animations tips and tricks
+title: CSS animation tips and tricks
 slug: Web/CSS/CSS_animations/Tips
 page-type: guide
 ---
 
 {{CSSRef}}
 
-CSS Animations make it possible to do incredible things with the elements that make up your documents and apps. However, there are things you might want to do that aren't obvious, or clever ways to do things that you might not come up with right away. This article is a collection of tips and tricks we've found that may make your work easier, including how to run a stopped animation again.
+CSS animations make it possible to do incredible things with the elements that make up your documents and apps. However, there are things you might want to do that aren't obvious, or clever ways to do things that you might not come up with right away. This article is a collection of tips and tricks we've found that may make your work easier, including how to run a stopped animation again.
 
 ## Run an animation again
 
