@@ -16,6 +16,8 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 {{InheritanceDiagram}}
 
+> **Note:** Use the non-deprecated ServiceWorkerGlobalScope [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) event instead.
+
 ## Constructor
 
 - {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -85,6 +87,7 @@ self.addEventListener("install", (event) => {
 
 ## See also
 
+- [`install` event](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event)
 - {{domxref("NotificationEvent")}}
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
