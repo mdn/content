@@ -18,9 +18,9 @@ There are two key visibility state change times that this API reports on:
 - `visible`: The time when the page becomes visible (i.e. when its tab moves into the foreground).
 - `hidden`: The time when the pages become hidden (i.e. when its tab moves into the background).
 
-Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
+The performance timeline will always have a "`visibility-state`" entry with a `startTime` of `0` and a `name` representing the initial page visibility state.
 
-> **Note:** The performance timeline will always have a "visibility-state" entry with a `startTime` of 0 and a `name` representing the initial page visibility state.
+> **Note:** Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}
 
