@@ -96,35 +96,35 @@ function disableInAppInstallPrompt() {
 }
 ```
 
-## Responding to native app versions being installed
+## Responding to platform-specific apps being installed
 
-One case not covered by the above examples is where you have a native version of the app as well as a web app, and you want to personalize the web app experience depending on whether the native app is already installed. You might not want to invite users to install the PWA if they already have the native app installed, and/or you might want to invite them to head over to the native app to view content.
+One case not covered by the above examples is where you have a platform-specific version of the app as well as a web app, and you want to personalize the web app experience depending on whether the platform-specific app is already installed. You might not want to invite users to install the PWA if they already have the platform-specific app installed, and/or you might want to invite them to head over to the platform-specific app to view content.
 
-This can be handled with the {{domxref("Navigator.getInstalledRelatedApps()")}} method, which allows you to detect installed related native apps (or PWAs) and respond appropriately.
+This can be handled with the {{domxref("Navigator.getInstalledRelatedApps()")}} method, which allows you to detect installed related platform-specific apps (or PWAs) and respond appropriately.
 
 For example:
 
 ```js
 const relatedApps = await navigator.getInstalledRelatedApps();
 
-// Search for a specific installed native app
-const nativeApp = relatedApps.find((app) => app.id === "com.example.myapp");
+// Search for a specific installed platform-specific app
+const psApp = relatedApps.find((app) => app.id === "com.example.myapp");
 
-if (nativeApp) {
+if (psApp) {
   // Update UI as appropriate
 }
 ```
 
-This method could also be combined with `beforeinstallprompt` to suppress the browser's install UI based on the availability of a native app:
+This method could also be combined with `beforeinstallprompt` to suppress the browser's install UI based on the availability of a platform-specific app:
 
 ```js
 window.addEventListener("beforeinstallprompt", async (event) => {
   const relatedApps = await navigator.getInstalledRelatedApps();
 
-  // Search for a specific installed native app
-  const nativeApp = relatedApps.find((app) => app.id === "com.example.myapp");
+  // Search for a specific installed platform-specific app
+  const psApp = relatedApps.find((app) => app.id === "com.example.myapp");
 
-  if (nativeApp) {
+  if (psApp) {
     event.preventDefault();
     // Update UI as appropriate
   }
