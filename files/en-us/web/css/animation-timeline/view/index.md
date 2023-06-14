@@ -24,7 +24,6 @@ The function parameters can specify the scrollbar axis along which timeline prog
 animation-timeline: view();
 
 /* Values for selecting the axis */
-
 animation-timeline: view(block); /* Default */
 animation-timeline: view(inline);
 animation-timeline: view(vertical);
