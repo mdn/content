@@ -79,7 +79,7 @@ This property may take one of two forms:
 
 In this example, we use the `@font-feature-values` at-rule to define a name for the `swash` feature of the [MonteCarlo](https://github.com/googlefonts/monte-carlo) font. The rule maps the name `"fancy"` to the index value `1`.
 
-We can then use that name inside `font-variant-alternates` to switch on swashes for that font. This is the equivalent of a line like `font-feature-settings: "swsh" 1`, except that the CSS which applies the feature does not need to know the index value needed for this particular font.
+We can then use that name inside `font-variant-alternates` to switch on swashes for that font. This is the equivalent of a line like `font-feature-settings: "swsh" 1`, except that the CSS applying the feature does not need to include, or even know, the index value needed for this particular font.
 
 #### HTML
 
