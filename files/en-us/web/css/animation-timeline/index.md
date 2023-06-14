@@ -311,7 +311,7 @@ p {
 
 The `<div>` with the class of `subject` is also given a class of `animation` — this is where the {{cssxref("view-timeline-name")}} is set to define a named view progress timeline. It is also given an `animation-timeline` name with the same value to declare that this will be the element animated as the view progress timeline is progressed.
 
-Last, an animation is specified on the element that animates its opacity and scale, causing it to fade in and size up as it moves up the scroller.
+Lastly, an animation is specified on the element that animates its opacity and scale, causing it to fade in and size up as it moves up the scroller.
 
 ```css
 .animation {
