@@ -18,8 +18,6 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js
 addEventListener("fetch", (event) => {});
-
-onfetch = (event) => {};
 ```
 
 ## Event type
@@ -28,7 +26,7 @@ A {{domxref("FetchEvent")}}.
 
 ## Example
 
-This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler
+This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} event handler
 listens for the `fetch` event. When fired, the code returns a promise that
 resolves to the first matching request in the {{domxref("Cache")}} object. If no match
 is found, the code fetches a response from the network.
@@ -36,7 +34,7 @@ is found, the code fetches a response from the network.
 The code also handles exceptions thrown from the
 {{domxref("fetch()")}} operation. Note that an HTTP
 error response (e.g., 404) will not trigger an exception. It will return a normal
-response object that has the appropriate error code set.
+response object with the appropriate error code set.
 
 ```js
 self.addEventListener("fetch", (event) => {
