@@ -385,4 +385,4 @@ And here's the live output.
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
 - [CSS animation tips and tricks](/en-US/docs/Web/CSS/CSS_animations/Tips)
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
