@@ -7,7 +7,9 @@ browser-compat: css.properties.animation-timeline
 
 {{CSSRef}}
 
-The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that is used to control the progress of a CSS animation. At the time of writing, three different types of timelines can be set via `animation-timeline`:
+The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that is used to control the progress of a CSS animation.
+
+The following types of timelines can be set via `animation-timeline`:
 
 - The default document timeline, which is progressed through by the passing of time since the document was first loaded in the browser. This is the timeline traditionally associated with CSS animations and is selected with a value of `auto`, or by not specifying an `animation-timeline` value at all.
 - A _scroll progress timeline_, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). The position in the scroll range is converted into a percentage of progress — 0% at the start and 100% at the end. The element that provides the scroll progress timeline can be specified in two ways:
