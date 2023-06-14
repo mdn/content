@@ -73,7 +73,7 @@ animation-timeline: unset;
 
     See {{cssxref("animation-timeline/view", "view()")}} for more information.
 
-- `--timeline-name`
+- `<timeline-name>`
 
   - : A {{cssxref('custom-ident')}} or string identifying a named timeline previously declared with the {{cssxref('scroll-timeline-name')}} property (or {{cssxref('scroll-timeline')}} shorthand property). The name must begin with `--`.
 
