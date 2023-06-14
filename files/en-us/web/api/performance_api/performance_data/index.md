@@ -123,7 +123,7 @@ There is a buffer limit for performance entries for each global object. It ensur
 | `"first-input"`                                                   | {{domxref("PerformanceEventTiming")}}      | 1 (there won't be more)          |
 | `"layout-shift"`                                                  | {{domxref("LayoutShift")}}                 | 150                              |
 | `"largest-contentful-paint"`                                      | {{domxref("LargestContentfulPaint")}}      | 150                              |
-| `"visibility-state"`                                              | {{domxref("VisibilityStateEntry")}}        | Infinite                         |
+| `"visibility-state"`                                              | {{domxref("VisibilityStateEntry")}}        | 50                               |
 
 Table 1. Buffer sizes ([source](https://w3c.github.io/timing-entrytypes-registry/#registry)).
 
