@@ -428,23 +428,17 @@ const products = new Proxy(
         return obj.length;
       }
 
-      let result;
       const types = {};
 
       for (const product of obj) {
         if (product.name === prop) {
-          result = product;
+          return product;
         }
         if (types[product.type]) {
           types[product.type].push(product);
         } else {
           types[product.type] = [product];
         }
-      }
-
-      // Get a product by name
-      if (result) {
-        return result;
       }
 
       // Get products by type
