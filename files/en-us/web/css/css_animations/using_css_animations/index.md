@@ -21,7 +21,7 @@ To create a CSS animation sequence, you style the element you want to animate wi
 The sub-properties of the {{cssxref("animation")}} property are:
 
 - {{cssxref("animation-composition")}}
-  - : Specifies the {{Glossary("Composite operation")}} to use when multiple animations affect the same property simultaneously. This property is not part of the `animation`  shorthand property.
+  - : Specifies the {{Glossary("composite operation")}} to use when multiple animations affect the same property simultaneously. This property is not part of the `animation`  shorthand property.
 - {{cssxref("animation-delay")}}
   - : Specifies the delay between an element loading and the start of an animation sequence and whether the animation should start immediately from its beginning or partway through the animation.
 - {{cssxref("animation-direction")}}

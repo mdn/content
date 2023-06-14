@@ -270,7 +270,7 @@ These can be used by application code to monitor visibility changes and stop pro
 
 ### Single numbers as aspect ratio in media queries
 
-Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when specifying the aspect ratio for a [media query](/en-US/docs/Web/CSS/CSS_media_Queries). (See [Firefox bug 1565562](https://bugzil.la/1565562) for more details.)
+Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when specifying the aspect ratio for a [media query](/en-US/docs/Web/CSS/CSS_media_queries). (See [Firefox bug 1565562](https://bugzil.la/1565562) for more details.)
 
 <table>
   <thead>
