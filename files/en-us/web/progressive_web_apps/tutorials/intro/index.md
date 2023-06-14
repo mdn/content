@@ -7,9 +7,11 @@ slug: Web/Progressive_web_apps/Tutorials/Intro
 
 {{PWASidebar}}
 
-Progressive web applications, known as PWAs, are apps designed to work on all devices built using the web technologies we all know and love: HTML, CSS, and JavaScript.
+Progressive web applications, known as PWAs, are apps designed to work on all devices that are built using the web technologies we all know and love: HTML, CSS, and JavaScript.
 
-PWAs are a way of progressively enhancing websites to make them available on a user's device, even offline. By default, PWAs are regular websites. They use the same technologies as regular websites. They are also linkable, discoverable via search engines, and visible in a browser, just like regular websites. By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
+PWAs are a way of progressively enhancing web applications to make them available on a user's device, even offline. By default, PWAs are regular websites. They use the same technologies as regular websites. Just like regular websites, they are linkable, discoverable via search engines, and visible in a browser.
+
+By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
 
 ## PWA benefits
 
@@ -45,9 +47,9 @@ Once installed, PWAs can be made to appear and act similarly to other applicatio
 - Works offline
   - : Internet access is initially required to download the application and is also required when syncing data with the server or other users. This is required of all applications, not just PWAs. When [service workers] are set to create an offline experience, the application will keep working should the user lose or not have internet access. As the user makes changes while offline, the application can update local and session storage, and service workers can then sync the data once connectivity is restored. The user doesn't need to be actively engaging with the PWA, in fact, the PWA doesn't even need to be open, for it to send and retrieve server data.
 
-## Creating your first PWA
+## Tutorial chapters: creating your first PWA
 
-The three main components of any PWA are the base web application, the manifest, and the service worker. In this tutorial, we will create a PWA. The base web application is a period tracker, in which the user can track the beginning and end of their menstrual cycles. We'll create the application, then add the manifest and the service worker.
+In this tutorial, we will create a PWA. The base web application is a period tracker, in which the user can track the beginning and end of each menstrual cycles. We'll create a static website shell and style it, then learn how to create a secure connection to view our progress. We'll add JavaScript functionality converting the shell into a fully functioning application storing data in localStorage. We will then progressively enhance our web application into an offline capable PWA by adding a manifest file, including iconography, and a service worker.
 
 The steps include:
 
@@ -71,6 +73,8 @@ The steps include:
 
   - : The service worker enables the application to work offline. With the secure connection in the previous step, the initial visit to a page provides its baseline functionality while the service worker downloads. After a service worker is installed and activated, it controls the page to offer improved reliability and speed.
 
+<!--
+
 - [Offline experience](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/offline)
 
   - : With JavaScript, we will determine whether the user is online or offline. When offline, they will be shown an offline experience that informs the user they are offline. When online, the experience will be similar to the website, but the installation button will not be visible.
@@ -78,16 +82,12 @@ The steps include:
 - [Session storage](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Storage)
   - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA.
 
+-->
+
 To complete this tutorial, it is helpful to have a basic level of understanding of HTML, CSS, and JavaScript. The tutorial provides instructions on creating the manifest file and initiating the service worker. The tutorial will cover checking for internet access, defining both an online and offline experience.
 
 While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
 
 You can try the [live period tracker](https://mdn.github.io/pwa-examples/intro/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/master/intro) on GitHub.
-
-## See Also
-
-Possible other introductory level tutorial topics:
-
-- [Splash page](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Splash)
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS")}}
