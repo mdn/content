@@ -56,7 +56,7 @@ As shown by the comments in the syntax block above, if only a single value is pr
 One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS/animation-range-start) and/or [`animation-range-end`](/en-US/docs/Web/CSS/animation-range-end). These values can be one of the following:
 
 - `normal`
-  - : The default value. This is equal to the start of the timeline in the case of `animation-range-start`, and the end of the timeline in the case of `animation-range-end`.
+  - : Represents the start of the timeline in the case of `animation-range-start` and the end of the timeline in the case of `animation-range-end`. This is the default value.
 - `<length-percentage>`
   - : A length or percentage value measured from the beginning of the timeline.
 - `<timeline-range-name>`
