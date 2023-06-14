@@ -39,7 +39,7 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 - The [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) has been implemented.
 - The [`Blob`](/en-US/docs/Web/API/Blob) constructor now takes `ArrayBufferView` as a member of `blobParts` parameter in addition to `ArrayBuffer`. ([bug 752402](https://bugzil.la/752402))
 - The `DeviceLightEvent` specified in the [Ambient Light Events Working Draft](https://www.w3.org/TR/ambient-light/) has been implemented.
-- The {{domxref("DeviceProximityEvent")}} and {{domxref("UserProximityEvent")}} [Proximity Events](https://www.w3.org/TR/proximity/) have been implemented.
+- The `DeviceProximityEvent` and `UserProximityEvent` [Proximity Events](https://www.w3.org/TR/proximity/) have been implemented.
 - The {{domxref("File")}} `lastModifiedDate` property has been implemented. ([Firefox bug 673586](https://bugzil.la/673586))
 
 ### JavaScript

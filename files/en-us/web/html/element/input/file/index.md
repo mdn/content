@@ -276,8 +276,8 @@ Next, let's walk through the JavaScript.
 In the first lines of script, we get references to the form input itself, and the {{htmlelement("div")}} element with the class of `.preview`. Next, we hide the {{htmlelement("input")}} element — we do this because file inputs tend to be ugly, difficult to style, and inconsistent in their design across browsers. You can activate the `input` element by clicking its {{htmlelement("label")}}, so it is better to visually hide the `input` and style the label like a button, so the user will know to interact with it if they want to upload files.
 
 ```js
-const input = document.querySelector('input');
-const preview = document.querySelector('.preview');
+const input = document.querySelector("input");
+const preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
 ```
@@ -287,7 +287,7 @@ input.style.opacity = 0;
 Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
 ```js
-input.addEventListener('change', updateImageDisplay);
+input.addEventListener("change", updateImageDisplay);
 ```
 
 Whenever the `updateImageDisplay()` function is invoked, we:
@@ -306,25 +306,27 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 
 ```js
 function updateImageDisplay() {
-  while(preview.firstChild) {
+  while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
 
   const curFiles = input.files;
   if (curFiles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'No files currently selected for upload';
+    const para = document.createElement("p");
+    para.textContent = "No files currently selected for upload";
     preview.appendChild(para);
   } else {
-    const list = document.createElement('ol');
+    const list = document.createElement("ol");
     preview.appendChild(list);
 
     for (const file of curFiles) {
-      const listItem = document.createElement('li');
-      const para = document.createElement('p');
+      const listItem = document.createElement("li");
+      const para = document.createElement("p");
       if (validFileType(file)) {
-        para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
-        const image = document.createElement('img');
+        para.textContent = `File name ${file.name}, file size ${returnFileSize(
+          file.size
+        )}.`;
+        const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
 
         listItem.appendChild(image);
@@ -354,7 +356,7 @@ const fileTypes = [
   "image/svg+xml",
   "image/tiff",
   "image/webp",
-  "image/x-icon"
+  "image/x-icon",
 ];
 
 function validFileType(file) {

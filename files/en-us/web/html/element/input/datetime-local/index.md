@@ -44,7 +44,7 @@ You can also get and set the date value in JavaScript using the {{domxref("HTMLI
 
 ```js
 const dateControl = document.querySelector('input[type="datetime-local"]');
-dateControl.value = '2017-06-01T08:30';
+dateControl.value = "2017-06-01T08:30";
 ```
 
 There are several methods provided by JavaScript's {{jsxref("Date")}} that can be used to convert numeric date information into a properly-formatted string. For example, the {{jsxref("Date.toISOString()")}} method returns the date/time in UTC with the suffix "`Z`" denoting that timezone; removing the "`Z`" would provide a value in the format expected by a `datetime-local` input.
@@ -308,7 +308,7 @@ It's that simple. Just prepare your code for any number of digits. Do not only p
 
 ```js
 function setValue(element, date) {
-  const isoString = date.toISOString()
+  const isoString = date.toISOString();
   element.value = isoString.substring(0, isoString.indexOf("T") + 6);
 }
 ```
@@ -406,35 +406,35 @@ The other part of the code that may be of interest is the feature detection code
 
 ```js
 // Obtain UI widgets
-const nativePicker = document.querySelector('.nativeDateTimePicker');
-const fallbackPicker = document.querySelector('.fallbackDateTimePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeDateTimePicker");
+const fallbackPicker = document.querySelector(".fallbackDateTimePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const monthSelect = document.querySelector('#month');
-const daySelect = document.querySelector('#day');
-const hourSelect = document.querySelector('#hour');
-const minuteSelect = document.querySelector('#minute');
+const yearSelect = document.querySelector("#year");
+const monthSelect = document.querySelector("#month");
+const daySelect = document.querySelector("#day");
+const hourSelect = document.querySelector("#hour");
+const minuteSelect = document.querySelector("#minute");
 
 // hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // test whether a new datetime-local input falls back to a text input or not
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'datetime-local';
+  test.type = "datetime-local";
 } catch (e) {
   console.log(e.description);
 }
 
 // if it does, run the code inside the if () {} block
-if (test.type === 'text') {
+if (test.type === "text") {
   // hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // populate the days and years dynamically
   // (the months are always the same, therefore hardcoded)
@@ -455,12 +455,22 @@ function populateDays(month) {
   let dayNum;
 
   // 31 or 30 days?
-  if (['January', 'March', 'May', 'July', 'August', 'October', 'December'].includes(month)) {
+  if (
+    [
+      "January",
+      "March",
+      "May",
+      "July",
+      "August",
+      "October",
+      "December",
+    ].includes(month)
+  ) {
     dayNum = 31;
-  } else if (['April', 'June', 'September', 'November'].includes(month)) {
+  } else if (["April", "June", "September", "November"].includes(month)) {
     dayNum = 30;
   } else {
-  // If month is February, calculate whether it is a leap year or not
+    // If month is February, calculate whether it is a leap year or not
     const year = yearSelect.value;
     const isLeap = new Date(year, 1, 29).getMonth() === 1;
     dayNum = isLeap ? 29 : 28;
@@ -468,7 +478,7 @@ function populateDays(month) {
 
   // inject the right number of new <option> elements into the day <select>
   for (let i = 1; i <= dayNum; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -504,7 +514,7 @@ function populateYears() {
 
   // Make this year, and the 100 years before it available in the year <select>
   for (let i = 0; i <= 100; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = year - i;
     yearSelect.appendChild(option);
   }
@@ -513,8 +523,8 @@ function populateYears() {
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
   for (let i = 0; i <= 23; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     hourSelect.appendChild(option);
   }
 }
@@ -522,8 +532,8 @@ function populateHours() {
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
   for (let i = 0; i <= 59; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
@@ -532,11 +542,11 @@ function populateMinutes() {
 // in case the change affected the number of available days
 yearSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 monthSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 //preserve day selection
 let previousDay;
@@ -545,7 +555,7 @@ let previousDay;
 // see end of populateDays() for usage
 daySelect.onchange = () => {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
