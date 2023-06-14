@@ -32,8 +32,8 @@ The object that was passed to the function.
 
 Freezing an object is equivalent to [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and then changing all existing [properties' descriptors'](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) `configurable` to `false` — and for data properties, `writable` to `false` as well. Nothing can be added to or removed from the properties set of a frozen object. Any attempt to do so will fail, either silently or by throwing a {{jsxref("TypeError")}} exception (most commonly, but not exclusively, when in {{jsxref("Strict_mode", "strict mode", "", 1)}}).
 
-For data properties of a frozen object, their values cannot be changed since the writable and
-configurable attributes are set to false. Accessor properties (getters and setters) work the same — the property value returned by the getter may still change, and the setter can still be called without throwing errors when setting the property. Note that values
+For data properties of a frozen object, their values cannot be changed since the `writable` and
+`configurable` attributes are set to `false`. Accessor properties (getters and setters) work the same — the property value returned by the getter may still change, and the setter can still be called without throwing errors when setting the property. Note that values
 that are objects can still be modified, unless they are also frozen. As an object, an
 array can be frozen; after doing so, its elements cannot be altered and no elements can
 be added to or removed from the array.
@@ -195,7 +195,7 @@ graph, otherwise an endless loop will be triggered. An enhancement to
 `deepFreeze()` would be to have an internal function that receives a path
 (e.g. an Array) argument so you can suppress calling `deepFreeze()`
 recursively when an object is in the process of being made immutable. You still run a
-risk of freezing an object that shouldn't be frozen, such as \[window].
+risk of freezing an object that shouldn't be frozen, such as [`window`](/en-US/docs/Web/API/Window).
 
 ```js
 function deepFreeze(object) {

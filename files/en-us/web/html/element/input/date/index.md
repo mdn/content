@@ -33,7 +33,7 @@ You can get and set the date value in JavaScript with the {{domxref("HTMLInputEl
 
 ```js
 const dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2017-06-01';
+dateControl.value = "2017-06-01";
 console.log(dateControl.value); // prints "2017-06-01"
 console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)
 ```
@@ -297,33 +297,33 @@ We create a new {{htmlelement("input")}} element, try setting its `type` to `dat
 
 ```js
 // Obtain UI widgets
-const nativePicker = document.querySelector('.nativeDatePicker');
-const fallbackPicker = document.querySelector('.fallbackDatePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeDatePicker");
+const fallbackPicker = document.querySelector(".fallbackDatePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const monthSelect = document.querySelector('#month');
-const daySelect = document.querySelector('#day');
+const yearSelect = document.querySelector("#year");
+const monthSelect = document.querySelector("#month");
+const daySelect = document.querySelector("#day");
 
 // hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // test whether a new date input falls back to a text input or not
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'date';
+  test.type = "date";
 } catch (e) {
   console.log(e.message);
 }
 
 // if it does, run the code inside the if () {} block
-if (test.type === 'text') {
+if (test.type === "text") {
   // hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // populate the days and years dynamically
   // (the months are always the same, therefore hardcoded)
@@ -342,9 +342,19 @@ function populateDays(month) {
   let dayNum;
 
   // 31 or 30 days?
-  if (['January', 'March', 'May', 'July', 'August', 'October', 'December'].includes(month)) {
+  if (
+    [
+      "January",
+      "March",
+      "May",
+      "July",
+      "August",
+      "October",
+      "December",
+    ].includes(month)
+  ) {
     dayNum = 31;
-  } else if (['April', 'June', 'September', 'November'].includes(month)) {
+  } else if (["April", "June", "September", "November"].includes(month)) {
     dayNum = 30;
   } else {
     // If month is February, calculate whether it is a leap year or not
@@ -355,7 +365,7 @@ function populateDays(month) {
 
   // inject the right number of new <option> elements into the day <select>
   for (let i = 1; i <= dayNum; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -391,7 +401,7 @@ function populateYears() {
 
   // Make this year, and the 100 years before it available in the year <select>
   for (let i = 0; i <= 100; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = year - i;
     yearSelect.appendChild(option);
   }
@@ -401,11 +411,11 @@ function populateYears() {
 // in case the change affected the number of available days
 yearSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 monthSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 //preserve day selection
 let previousDay;
@@ -414,7 +424,7 @@ let previousDay;
 // see end of populateDays() for usage
 daySelect.onchange = () => {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
