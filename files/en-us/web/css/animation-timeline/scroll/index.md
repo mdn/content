@@ -27,7 +27,6 @@ animation-timeline: scroll(root);
 animation-timeline: scroll(self);
 
 /* Values for selecting the axis */
-
 animation-timeline: scroll(block); /* Default */
 animation-timeline: scroll(inline);
 animation-timeline: scroll(vertical);
