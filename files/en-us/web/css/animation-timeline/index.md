@@ -164,7 +164,7 @@ Scroll to see the square element being animated.
 
 ### Setting an anonymous scroll progress timeline
 
-In this example the `#square` element is animated using an anonymous scroll progress timeline, which is applied to the element to be animated using the `scroll()` function.
+In this example, the `#square` element is animated using an anonymous scroll progress timeline, which is applied to the element to be animated using the `scroll()` function.
 The timeline in this particular example is provided by the nearest parent element that has (any) scrollbar, from the scrollbar in the block direction.
 
 #### HTML
