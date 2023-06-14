@@ -85,7 +85,7 @@ One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS
 - `<timeline-range-name> <length-percentage>`
   - : A combination value that equals the specified percentage or distance through the specified named timeline range, measured from the start of that timeline range.
 
-> **Note:** The scroll port (see {{glossary("Scroll container")}} for more details) area known as the view progress visibility range is the area inside which the subject element of a _named view progress timeline_ animation is deemed to be visible. By default this is the full range of the scrollport, but it can be adjusted using the {{cssxref("view-timeline-inset")}} property.
+> **Note:** The scroll port (see {{glossary("Scroll container")}} for more details) area known as the view progress visibility range is the area inside which the subject element of a _named view progress timeline_ animation is deemed to be visible. By default, this is the full range of the scrollport, but it can be adjusted using the {{cssxref("view-timeline-inset")}} property.
 
 ## Formal definition
 
