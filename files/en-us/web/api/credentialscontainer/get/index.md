@@ -188,7 +188,7 @@ navigator.credentials
   });
 ```
 
-> **Note:** For a full code example explanation, see the {{domxref('WebOTP API','','',' ')}} landing page. Also [see this code as part of a full working demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
+> **Note:** For a full code example explanation, see the {{domxref('WebOTP API','','',' ')}} landing page. Also [see this code as part of a full working demo](https://web-otp.glitch.me/).
 
 ## Web Authentication API
 

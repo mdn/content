@@ -7,7 +7,7 @@ spec-urls: https://wicg.github.io/web-otp/
 
 {{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
-The **WebOTP API** is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables web apps to verify that a phone number belongs to a user, for example when using it as a sign-in factor. This is done via a two-step process:
+The **WebOTP API** is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that provides a streamlined user experience for web apps to verify that a phone number belongs to a user, for example when using it as a sign-in factor. This is done via a two-step process:
 
 1. The app client requests a one-time password (OTP), which is obtained from a specially-formatted SMS message sent by the app server.
 2. This is then entered into a validation form on the app client and sent back to the server to verify that it matches what was originally sent in the SMS.
@@ -16,23 +16,25 @@ The **WebOTP API** is an extension of the [Credential Management API](/en-US/doc
 
 Phone numbers are often used as a way to identify the user of an app. An SMS is frequently deployed to verify that the number belongs to the user. This typically contains an OTP that the user is required to copy and paste into a form on the app to verify that they own the number; a somewhat clunky user experience.
 
-Use cases include:
+Example use cases include:
 
 - Using a phone number as an account identifier instead of the traditional email address.
 - Using a phone number as an extra factor (i.e. multifactor authentication) to improve sign-in security.
-- Verification of sensitive actions, for example OK'ing a payment or transferring control of an account.
+- Verification of sensitive actions, for example OK'ing a payment or transfer of control of an account.
 
-The WebOTP API allows web apps to expedite this validation process by copying the OTP from the SMS and passing it to the app automatically after the user has provided consent. Most native platforms have an equivalent API.
+The WebOTP API allows web apps to expedite this validation process by copying the OTP from the SMS and passing it to the app automatically after the user has provided consent (most native platforms have an equivalent API).
+
+Note that the OTP is also bound to the sending domain. This is a useful security constraint for verifying that the OTP is coming from the right source that may be enough for day-to-day reauthentication. You are, however, recommended to combine it with a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for riskier actions like sign-up — phone numbers can be hijacked, or recycled by carriers.
 
 ### How does it work?
 
 The process works like so:
 
 1. At the point where phone number verification is required, an app client will ask a user to enter their phone number into a form, which is then submitted to the app server.
-2. The app client then invokes {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `otp` option, to request an OTP from the underlying system when a specially-formatted SMS message is received from the app server. This SMS should contain the app's domain to allow the system to identify the correct message, and the OTP code. The `get()` call is {{jsxref("Promise")}}-based, and waits for the SMS message to be sent.
-3. Just after Step 2 has occurred, the app server should send the SMS message to the specified phone number.
-4. When the SMS is received on the device, provided it contains the app's domain the browser will display a dialog asking the user if they consent to the OTP being retrieved. If they do consent, the `get()` call will fulfill with an {{domxref("OTPCredential")}} object containing the OTP.
-5. You can then use the OTP in whatever way you wish. Typical usage would be to set it as the value of the validation form on the app client and then submit the form, making the process as seamless as possible.
+2. The app client then invokes {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `otp` option specifying a `transport` type of `"sms"`. This triggers a request for an OTP from the underlying system, the source of which will be a [specially-formatted SMS message](#the_sms_message_format) (containing the OTP and the app's domain) received from the app server. The `get()` call is {{jsxref("Promise")}}-based, and waits for the SMS message to be received.
+3. The app server sends the SMS message to the specified phone number. This must be done just after Step 2 has occurred.
+4. When the SMS is received on the device, provided it contains the app's domain the browser will ask the user if they consent to the OTP being retrieved/used. Chrome, for example, displays a dialog asking them for their permission to retrieve the OTP from the SMS; other browsers may handle it differently. If they do consent, the `get()` call will fulfill with an {{domxref("OTPCredential")}} object containing the OTP.
+5. You can then use the OTP in any way you wish. Typical usage would be to set it as the value of the validation form on the app client and then submit the form, making the process as seamless as possible.
 6. The app server will then verify that the OTP sent back to it matches what it originally sent in the SMS and, if so, complete the process (for example, sign the user in).
 
 ### The SMS message format
@@ -46,7 +48,7 @@ Your verification code is 123456.
 ```
 
 - The first and second lines are optional, and are for human-readability.
-- The last line is mandatory. It must be the line line if there are others present, and must consist of:
+- The last line is mandatory. It must be the last line if there are others present, and must consist of:
   - The domain part of the URL of the website that invoked the API, preceded by a `@`.
   - Followed by a space.
   - Followed by the OTP, preceded by a pound sign (`#`).
@@ -101,7 +103,7 @@ Or could you specify it directly on the `<iframe>` like this:
 
 In this example, when an SMS message arrives, and the user grants permission, an {{domxref("OTPCredential")}} object is returned with an OTP. This password is then prefilled into the verification form field, and the form is submitted.
 
-[Try the demo using a phone here](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
+[Try the demo using a phone here](https://web-otp.glitch.me/).
 
 The form field includes an [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute with a value of `one-time-code`. This is not needed for the WebOTP API to work, but it is worth including. As a result, Safari will prompt the user to autofill this field with the OTP when a correctly-formatted SMS is received, even thought it doesn't fully support the WebOTP API.
 
