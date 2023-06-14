@@ -67,7 +67,7 @@ The `view-timeline` shorthand property can be applied to a container element as 
 ### Creating a named view progress timeline
 
 A view progress timeline named `--subjectReveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subjectReveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
+This is then set as the timeline for the same element using `animation-timeline: --subjectReveal`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
 
 #### HTML
 
