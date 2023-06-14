@@ -4,6 +4,8 @@ slug: Glossary/Microsoft_Internet_Explorer
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 Internet Explorer (or IE) was a free graphical {{glossary("browser")}} maintained by Microsoft for legacy enterprise uses. {{glossary("Microsoft Edge")}} is currently the default Windows browser.
 
 Microsoft first bundled IE with Windows in 1995 as part of the package called "Microsoft Plus!". By around 2002, Internet Explorer had become the most used browser in the world, but lost ground to Chrome, Firefox, Edge, and Safari.

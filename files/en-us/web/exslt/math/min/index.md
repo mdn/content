@@ -7,7 +7,7 @@ slug: Web/EXSLT/math/min
 
 `math:min()` returns the minimum value of a node-set.
 
-To compute the minimum value of the node-set, the node set is sorted into ascending order as it would be using [`xsl:sort()`](/en-US/XSLT/sort) with a data type of `number`. The minimum value is then the first node in the sorted list, converted into a number.
+To compute the minimum value of the node-set, the node set is sorted into ascending order as it would be using [`xsl:sort()`](/en-US/docs/Web/XSLT/Element/sort) with a data type of `number`. The minimum value is then the first node in the sorted list, converted into a number.
 
 ## Syntax
 
@@ -26,4 +26,4 @@ A result tree fragment representing the lowest valued node's numeric value as a 
 
 ## Specifications
 
-[EXSLT - MATH:MIN](http://exslt.org/math/functions/min/index.html)
+[EXSLT - MATH:MIN](https://exslt.github.io/math/functions/min/index.html)

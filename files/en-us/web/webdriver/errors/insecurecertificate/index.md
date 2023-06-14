@@ -23,7 +23,7 @@ session = webdriver.Firefox()
 try:
     session.get("https://self-signed.badssl.com/")
 except exceptions.InsecureCertificateException as e:
-    print("Hit insecure cert on {}".format(session.current_url)
+    print("Hit insecure cert on {}".format(session.current_url))
 ```
 
 Output:

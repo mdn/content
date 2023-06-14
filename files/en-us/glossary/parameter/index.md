@@ -4,6 +4,8 @@ slug: Glossary/Parameter
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A parameter is a named variable passed into a {{Glossary("function")}}. Parameter variables are used to import {{Glossary("argument","arguments")}} into functions.
 
 For example:

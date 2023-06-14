@@ -117,22 +117,29 @@ By default, browsers separate paragraphs with a single blank line. Alternate sep
 ### HTML
 
 ```html
-<p>Separating paragraphs with blank lines is easiest
-for readers to scan, but they can also be separated
-by indenting their first lines. This is often used
-to take up less space, such as to save paper in print.</p>
+<p>
+  Separating paragraphs with blank lines is easiest for readers to scan, but
+  they can also be separated by indenting their first lines. This is often used
+  to take up less space, such as to save paper in print.
+</p>
 
-<p>Writing that is intended to be edited, such as school
-papers and rough drafts, uses both blank lines and
-indentation for separation. In finished works, combining
-both is considered redundant and amateurish.</p>
+<p>
+  Writing that is intended to be edited, such as school papers and rough drafts,
+  uses both blank lines and indentation for separation. In finished works,
+  combining both is considered redundant and amateurish.
+</p>
 
-<p>In very old writing, paragraphs were separated with a
-special character: ¶, the <i>pilcrow</i>. Nowadays, this
-is considered claustrophobic and hard to read.</p>
+<p>
+  In very old writing, paragraphs were separated with a special character: ¶,
+  the <i>pilcrow</i>. Nowadays, this is considered claustrophobic and hard to
+  read.
+</p>
 
-<p>How hard to read? See for yourself:
-  <button data-toggle-text="Oh no! Switch back!">Use pilcrow for paragraphs</button>
+<p>
+  How hard to read? See for yourself:
+  <button data-toggle-text="Oh no! Switch back!">
+    Use pilcrow for paragraphs
+  </button>
 </p>
 ```
 
@@ -156,13 +163,15 @@ p.pilcrow + p.pilcrow::before {
 ### JavaScript
 
 ```js
-document.querySelector('button').addEventListener('click', (event) => {
-  document.querySelectorAll('p').forEach((paragraph) => {
-    paragraph.classList.toggle('pilcrow');
+document.querySelector("button").addEventListener("click", (event) => {
+  document.querySelectorAll("p").forEach((paragraph) => {
+    paragraph.classList.toggle("pilcrow");
   });
 
-  [event.target.innerText, event.target.dataset.toggleText] =
-    [event.target.dataset.toggleText, event.target.innerText];
+  [event.target.innerText, event.target.dataset.toggleText] = [
+    event.target.dataset.toggleText,
+    event.target.innerText,
+  ];
 });
 ```
 
