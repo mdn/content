@@ -80,7 +80,7 @@ One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS
 
     In the case of `<timeline-range-name>` values that do not include a `<length-percentage>`, the percentage defaults to `0%` if it is an `animation-range-start` value, and `100%` if it is an `animation-range-end` value.
 
-    > **Note:** It is quite hard to visualize what these values mean, from the descriptions above. Fortunately, the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) shows exactly what they mean in an easy visual format.
+    > **Note:** It is quite hard to visualize what these values mean from the descriptions above. Fortunately, the [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) shows exactly what they mean in an easy visual format.
 
 - `<timeline-range-name> <length-percentage>`
   - : A combination value that equals the specified percentage or distance through the specified named timeline range, measured from the start of that timeline range.
