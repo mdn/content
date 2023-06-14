@@ -41,6 +41,8 @@ The meaning of this property depends on the value of this performance entry's {{
   - : The value of this entry's {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} property.
 - `taskattribution`
   - : Always `0`.
+- `visibility-state`
+  - : The time when the visibility state change occurred.
 
 ## Examples
 
