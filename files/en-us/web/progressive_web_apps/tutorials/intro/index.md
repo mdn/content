@@ -7,15 +7,15 @@ slug: Web/Progressive_web_apps/Tutorials/Intro
 
 {{PWASidebar}}
 
-Progressive web applications, known as PWAs, are apps designed to work on all devices that are built using the web technologies we all know and love: HTML, CSS, and JavaScript.
+This six-part intro-level tutorial walks thru all the steps of building a basic progressive web app, or PWA. We will be using the web technologies we all know and love — HTML, CSS, and JavaScript — to build a period tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
 
-PWAs are a way of progressively enhancing web applications to make them available on a user's device, even offline. By default, PWAs are regular websites. They use the same technologies as regular websites. Just like regular websites, they are linkable, discoverable via search engines, and visible in a browser.
+We will walk thru the steps of building a fully functional web app, then progressively enhance CycleTracker to make it installable and to work even when the user is offline.
 
-By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
+By default, PWAs are regular websites, built with the same technologies. Just like a regular websites, PWAs are linkable, discoverable via search engines, and visible in a browser. By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
 
 ## PWA benefits
 
-Using the languages of the web, we can create fully functioning applications that work both online and offline, both in the browsers and on the user's operating systems (OS). PWAs don't require any additional programming language knowledge or proprietary SDK. Like regular websites, PWA are hosted on and downloadable from web servers. They don't require any packaging. They can be seamlessly installed on any operating system without the need of app stores (nor app store approval and fees).
+Using the languages of the web, we will create a fully functioning application that works both online and offline, both in the browsers and on the user's operating systems (OS). Like any regular website, CycleTracker can be hosted on and downloadable from a web server. All we need is a text editor: CycleTracker, like all PWAs, doesn't requie require any additional programming language knowledge, packaging, or proprietary SDK. CycleTracker, like any PWA, can be seamlessly installed on any operating system without the need of app stores (nor app store approval and fees).
 
 - Use open web technologies you already know
 
@@ -23,11 +23,11 @@ Using the languages of the web, we can create fully functioning applications tha
 
 - No compiling required
 
-  - : Historically, in most cases, the application code had to be compiled and packaged into an installable format, like .exe, .dmg, .elf, and .apk, or other installable files. Depending on the language, compiling and packaging required the OS's {{glossary("SDK")}}. PWAs solve this problem. Yes, developer teams can have complex build systems, but a PWA can be built out of just HTML and JavaScript.
+  - : Historically, in most cases, the application code had to be compiled and packaged into an installable format, like .exe, .dmg, .elf, and .apk, or other installable files. Depending on the language, compiling and packaging required the OS's {{glossary("SDK")}}. PWAs solve this problem. Yes, developer teams can have complex build systems, but, as we will demonstrate as we build CycleTracker, PWAs can be built out of just HTML and JavaScript (and CSS, though styling is not necessarily required for a PWA).
 
 - Available anywhere and everywhere
 
-  - : Historically, single-OS-only applications are distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements. A PWA can be acquired by visiting the online version of the app. While PWAs don't require that intermediary, the Play Store and App Store do distribute PWAs, undifferentiated from other iOS or Android apps.
+  - : Historically, single-OS-only applications have bee distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements. If you want to distribute your CycleTracker app, you won't require an intermediary. A user can be acquired by visiting the online version of the app.But if you want, the Play Store and App Store do distribute PWAs, undifferentiated from other iOS or Android apps.
 
 - Easy for the user to install
   - : Historically, downloaded single-OS-only applications have to be intentionally installed by the user. Depending on the OS, install format, and download origin, this can be a multi-step installation process. PWAs are streamlined. PWAs are available to anyone with a supporting browser, [installable](/en-US/docs/Web/Progressive_web_apps/Installing) with a couple of clicks.
@@ -38,18 +38,19 @@ Once installed, PWAs can be made to appear and act similarly to other applicatio
 
 - Application window
 
-  - : Similar to other installed applications, depending on PWA settings defined by the developer and set with user preferences, the PWA can be made to open in its own application window.
+  - : With a [manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file#app_presentation) setting, we'll make CycleTracker open in its own application window, meaning installed PWAs are similar to other installed applications.
 
 - Application icon
 
-  - : PWAs display an application icon in the same location as other installed applications installed on the users' operating system: this can be an icon on the homescreen, in the toolbar, in the application's folder, or wherever the device displays application icons.
+  - : PWAs display an application icon in the same location as other installed applications installed on the users' operating system. This can be an icon on the homescreen, in the toolbar, in the application's folder, or wherever the device displays application icons. We'll learn how to [declare icons](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file#app_iconography) for CycleTracker, so, once installed, our PWA can appear like any other OED application on the users device.
 
 - Works offline
-  - : Internet access is initially required to download the application and is also required when syncing data with the server or other users. This is required of all applications, not just PWAs. When [service workers] are set to create an offline experience, the application will keep working should the user lose or not have internet access. As the user makes changes while offline, the application can update local and session storage, and service workers can then sync the data once connectivity is restored. The user doesn't need to be actively engaging with the PWA, in fact, the PWA doesn't even need to be open, for it to send and retrieve server data.
 
-## Tutorial chapters: creating your first PWA
+  - : Internet access is initially required to download the application and is also required when syncing data with the server or other users. This is required of all applications, not just PWAs. We'll add a [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers) to create an offline experience, meaning CycleTracker will work even when if user loses internet access. We will only touch on the power of PWA offline support. Service workers can be used to make PWAs work offline just like any other installed application. If a user makes changes while offline, service workers enable PWAs to sync data once connectivity is restored. With service workers, the user doesn't need to be actively engaging with the PWA, in fact, the PWA doesn't even need to be open, for it to send and retrieve server data.
 
-In this tutorial, we will create a PWA. The base web application is a period tracker, in which the user can track the beginning and end of each menstrual cycles. We'll create a static website shell and style it, then learn how to create a secure connection to view our progress. We'll add JavaScript functionality converting the shell into a fully functioning application storing data in localStorage. We will then progressively enhance our web application into an offline capable PWA by adding a manifest file, including iconography, and a service worker.
+## CycleTracker PWA lessons
+
+The base web application for this PWA tutorial is a period tracker, in which the user can track the beginning and end of each menstrual cycles. We'll create a static website shell and style it, then learn how to create a secure connection to view our progress. We'll add JavaScript functionality converting the HTML and CSS shell into a fully functioning application storing data in localStorage. Using this fully functional web application you built, we will progressively enhance this web app into an offline capable PWA by adding a manifest file, including iconography, and a service worker.
 
 The steps include:
 
@@ -81,13 +82,12 @@ The steps include:
 
 - [Session storage](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Storage)
   - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA.
-
 -->
 
-To complete this tutorial, it is helpful to have a basic level of understanding of HTML, CSS, and JavaScript. The tutorial provides instructions on creating the manifest file and initiating the service worker. The tutorial will cover checking for internet access, defining both an online and offline experience.
+To complete this tutorial, it is helpful to have a basic level of understanding of HTML, CSS, and JavaScript. The tutorial provides instructions on creating the manifest file and initiating the service worker, as well as setting up a local development environment so you can view your progress. <!--The tutorial will cover checking for internet access, defining both an online and offline experience.-->
 
 While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
 
-You can try the [live period tracker](https://mdn.github.io/pwa-examples/intro/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/master/intro) on GitHub.
+You can try the [live period tracker](https://mdn.github.io/pwa-examples/cycletracker/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker) on GitHub.
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS")}}
