@@ -311,7 +311,7 @@ We start by checking that the browser supports the [Service Worker API](/en-US/d
 </script>
 ```
 
-If the property is supported, we can then use the [`register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register) method of the service worker API's [`ServiceWorkerContainer`](/en-US/docs/Web/API/ServiceWorkerContainer/) interface.
+If the property is supported, we can then use the [`register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register) method of the service worker API's [`ServiceWorkerContainer`](/en-US/docs/Web/API/ServiceWorkerContainer) interface.
 
 ```html
 <script>
@@ -355,10 +355,10 @@ Open `index.html` and add the following {{HTMLElement("script")}} after the scri
 
 You can try the fully functioning [cycleTrack period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers) on GitHub. Yes, it works, but it's not a yet PWA.
 
-## Up next
+## We're done!
 
-At its core, a PWA is a web application that can be installed is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert it to a PWA, including the [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection), and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers).
+At its core, a PWA is a web application that can be installed is progressively enhanced to work offline. We created a fully functional web application. We then added the two features - a manifest file and a service worker - required to convert it to a PWA. If you want to share your app with others, make it available via a secure connection. Alternatively, if you just want to use the cycle tracker yourself, [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection), [install the PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Installing), and enjoy! Once installed, you no longer need to run localhost.
 
-Up first, we create the [cycleTracker's manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the identity, appearance, and iconography for our cycleTracker PWA.
+Congratulations!
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}

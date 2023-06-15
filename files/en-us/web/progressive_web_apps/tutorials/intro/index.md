@@ -30,7 +30,7 @@ Using the languages of the web, we will create a fully functioning application t
   - : Historically, single-OS-only applications have bee distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements. If you want to distribute your CycleTracker app, you won't require an intermediary. A user can be acquired by visiting the online version of the app.But if you want, the Play Store and App Store do distribute PWAs, undifferentiated from other iOS or Android apps.
 
 - Easy for the user to install
-  - : Historically, downloaded single-OS-only applications have to be intentionally installed by the user. Depending on the OS, install format, and download origin, this can be a multi-step installation process. PWAs are streamlined. PWAs are available to anyone with a supporting browser, [installable](/en-US/docs/Web/Progressive_web_apps/Installing) with a couple of clicks.
+  - : Historically, downloaded single-OS-only applications have to be intentionally installed by the user. Depending on the OS, install format, and download origin, this can be a multi-step installation process. PWAs are streamlined. PWAs are available to anyone with a supporting browser, [installable](/en-US/docs/Web/Progressive_web_apps/Guides/Installing) with a couple of clicks.
 
 ### Compared to OED applications
 
