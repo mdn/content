@@ -2194,7 +2194,7 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 
 ### Access-Control-Allow-Headers wildcard does not cover Authorization
 
-The [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) is a response header to a [CORS preflight request](/en-US/docs/Glossary/Preflight_request), which indicates what request headers may be included in the final request.
+The [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) is a response header to a [CORS preflight request](/en-US/docs/Glossary/Preflight_request), that indicates which request headers may be included in the final request.
 The response directive can contain a wildcard (`*`) indicating all headers except the `Authorization` header are allowed.
 By default Firefox does not follow the specification, and includes `Authorization` in the headers covered by the wildcard.
 Set the preference to `false` to make Firefox follow the specification.
