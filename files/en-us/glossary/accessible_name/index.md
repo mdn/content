@@ -20,7 +20,7 @@ While many elements don't need an accessible name, some content [roles](/en-US/d
 
 ## See also
 
-- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles/)
+- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
