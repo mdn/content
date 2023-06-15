@@ -7,7 +7,7 @@ browser-compat: webextensions.api.runtime.setUninstallURL
 
 {{AddonSidebar()}}
 
-Sets the URL to be visited when the extension is uninstalled. This may be used to clean up server-side data, do analytics, or implement surveys. The URL can be a maximum 255 characters.
+Sets the URL to be visited when the extension is uninstalled. This can be used to clean up server-side data, do analytics, or implement surveys. Up to Firefox 115, a maximum of 255 characters can be used; from Firefox 116, the maximum is 1023 characters.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -22,11 +22,11 @@ let settingUrl = browser.runtime.setUninstallURL(
 ### Parameters
 
 - `url`
-  - : `string`. URL to be opened after the extension is uninstalled. This URL must have an `http` or `https` scheme. Set it to an empty string to not open a new tab upon uninstallation.
+  - : `string`. URL to open after the extension is uninstalled. This URL must have an `http` or `https` scheme. Can be up to 1023 characters. Set to an empty string to not open a new tab when the extension is uninstalled.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the URL has been set, or rejected with an error message if the operation failed.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with no arguments when the URL is set or rejected with an error message if the operation fails.
 
 ## Browser compatibility
 
