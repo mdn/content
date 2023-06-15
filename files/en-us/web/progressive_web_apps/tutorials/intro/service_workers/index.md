@@ -353,7 +353,38 @@ Open `index.html` and add the following {{HTMLElement("script")}} after the scri
 </script>
 ```
 
-You can try the fully functioning [cycleTrack period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers) on GitHub. Yes, it works, but it's not a yet PWA.
+You can try the fully functioning [cycleTrack period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
+
+## Debugging service workers
+
+Because of the way we have set up the service worker, once it is registered, every request will pull from the cache instead of loading new content. When developing, you will be editing your code. Frequently. You likely want to test your edits in the browser regularly; likely with every save.
+
+### By updating the version number and doing a hard reset
+
+To get a new cache, you can change the [version number](#version-number) and then do a hard browser refresh. The way you do a hard refresh depends on the browser and operating system:
+
+- On Windows: Ctrl+F5, Shift+F5, or Ctrl+Shift+R.
+- On MacOS: Shift+Command+R.
+- Safari on MacOS: Option+Command+E to empty the cache, then Option+Command+R.
+- On Mobile: Go to the browser (Android) or operating system (Samsung, iOS) settings, under advanced setting find the browser (iOS) or website data (Android, Samsung) site settings, and delete the data for CycleTracker, before reloading the page.
+
+### With developer tools
+
+You likely don't want to update the version number with every save. Until you are ready to launch a new version of your PWA to production and give everyone a new version of your PWA, instead of changing the version number on save, you can unregister the service worker.
+
+![Firefox developer tools application panel with a stopped service worker and an unregister button](firefox_sw.jpg)
+
+You can unregister a service worker by clicking on the `unregister` button in the [browser deverloper tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
+
+![Edge developer tools showing the application panel set to a service worker](edge_sw.jpg)
+
+In some developer tools, you can manually unregister a service worker, or you can select the service workers "update on reload" option which sets the developer tools to reset and re-activate the service worker on every reload as long as the developer tools are open. There is also an option to bypass the service worker and load resources from the network. This panel includes features we are not covering in this tutorial, but will be helpful as you create more advanced PWAs that include [synching](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#periodic_background_sync) and [push](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#push), which are both covered in the [offline and background operation guide](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
+
+![Two service workers exist at localhost:8080. The can be be unregistered from the list of service workers](edge_sw_list.jpg)
+
+The service worker panel provides access to a list of all the registered service workers for the browser; not just the service worker for PWA opened in the current tab. This list is another way to stop, start, or unregister any service worker.
+
+In other words, as you are working on your PWA, you don't have to update the version number for every app view. But remember, when you are done with all your changes, update the service worker VERSION value before distributing the updated version of your PWA. If you forget, no one who has already installed your app or even visited your online PWA without installing it will ever get to see your changes!
 
 ## We're done!
 
