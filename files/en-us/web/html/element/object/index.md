@@ -56,7 +56,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   data="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
   width="600"
   height="140"
-></object>
+<img src="path/image.jpg" alt="useful image description" />
+</object>
 ```
 
 #### Result
