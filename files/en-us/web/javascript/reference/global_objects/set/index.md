@@ -37,7 +37,7 @@ This is defined in the specification IDL below:
 
 ```webidl
 interface GPUSupportedFeatures {
-    readonly setlike<DOMString>;
+  readonly setlike<DOMString>;
 };
 ```
 
