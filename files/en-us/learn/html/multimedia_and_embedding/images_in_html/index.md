@@ -320,6 +320,9 @@ Creators of original work such as songs, books, or software often release their 
 
 - Obtain explicit, written permission from the copyright holder.
 - Pay a license fee to use it. This can be a one-time fee for unlimited use ("royalty-free"), or it might be "rights-managed", in which case you might have to pay specific fees per use by time slot, geographic region, industry or media type, etc.
+- Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://www.bl.uk/business-and-ip-centre/articles/fair-dealing-copyright-explained) in your jurisdiction.
+
+Authors are not required to include a copyright notice or license terms with their work. Copyright exists automatically in an original work of authorship once it is created in a tangible medium. So if you find an image online and there are no copyright notices or license terms, the safest course is to assume it is protected by copyright with all rights reserved.
 
 #### Permissive
 
@@ -334,7 +337,11 @@ For example, you might have to:
 - Not use the image in any commercial work.
 - Include a copy of the license along with any release that uses the image.
 
-> **Note:** You may come across the term "copyleft" in the context of permissive licenses. Copyleft specifically refers to licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html)) stipulating that derivative works need to have their source code released under the same license as the original to keep the source code open. They are designed specifically for open-source software releases. Hence, they are also sometimes called "open-source licenses". They are not suitable for licensing media assets.
+You should consult the applicable license for the specific terms you will need to follow.
+
+> **Note:** You may come across the term "copyleft" in the context of permissive licenses. Copyleft licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html) or "Share Alike" Creative Commons licenses) stipulate that derivative works need to be released under the same license as the original.
+
+Copyleft licenses are prominent in the software world. The basic idea is that a new project built with the code of a copyleft-licensed project (this is known as a "fork" of the original software) will also need to be licensed under the same copyleft license. This ensures that the souce code of the new project will also be made available for others to study and modify. Note that, in general, licenses that were drafted for software, such as the GPL, are not considered to be good licenses for non-software works as they were not drafted with non-software works in mind.
 
 Explore the links provided earlier in this section to read about the different license types and the kinds of conditions they specify.
 
