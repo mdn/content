@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro
 
 {{PWASidebar}}
 
-This six-part intro-level tutorial walks thru all the steps of building a basic progressive web app, or PWA. We will be using the web technologies we all know and love — HTML, CSS, and JavaScript — to build a period tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
+This intro-level tutorial walks thru all the steps of building a basic progressive web app, or PWA. We will be using the web technologies we all know and love — HTML, CSS, and JavaScript — to build a period tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
 
 We will walk thru the steps of building a fully functional web app, then progressively enhance CycleTracker to make it installable and to work even when the user is offline.
 

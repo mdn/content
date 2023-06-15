@@ -56,6 +56,8 @@ Listening on https://YourComputerName.local:8000, https://127.0.0.1:8000, https:
 
 In the above, you may need to prefix the install with `sudo` if you don't have permissions.
 
+> **Note:** If you are seeking privacy, realize this PWA, that you build yourself, can be installed on your own machine from your own development environment. This app has no tracking. It's as private an app as you get.
+
 ## Secure external server
 
 The previous options are fine, and necessary, for testing your application as you progress thru this CycleTracker tutorial, or any web development project. While you can host your web app on your device, making it available to anyone with an Internet connection, but it is not recommended.

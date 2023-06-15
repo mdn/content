@@ -68,7 +68,7 @@ The appearance, or presentation, of a PWA's installed and offline experiences ar
 - [`display`](/en-US/docs/Web/Manifest/display)
   - : Controls the app's display mode including `fullscreen`, `standalone`, which displays the [PWA as a standalone application](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app), `minimal-ui`, which is similar to a standalone view but with UI elements for controlling navigation, and `browser`, which opens the app in a regular browser view.
 
-There is also an `orientation` member that defines the PWA's default orientation as `portrait` or `landscape`. As our app works well in both orientations, we'll omit this member.
+There is also an [`orientation`](/en-US/docs/Web/Manifest/orientation) member that defines the PWA's default orientation as `portrait` or `landscape`. As our app works well in both orientations, we'll omit this member.
 
 ### Colors
 
@@ -238,7 +238,7 @@ View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletrac
 
 With a manifest file, Safari will recognize your site as a web app. For the web app to be a full PWA, we will still need to add a service worker.
 
-### Debugging the manifest file
+## Debugging manifest files
 
 Some browser developer tools provide insight into the app manifest. In Edge, Firefox, and Chrome developer tools, the manifest members and their values are visible under the "Application" panel.
 
