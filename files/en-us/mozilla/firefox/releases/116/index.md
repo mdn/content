@@ -55,7 +55,7 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ## Changes for add-on developers
 
-- The URL of a page visited when an extension is uninstalled, provided in {{WebExtAPIRef("runtime.setUninstallURL")}}, can now be up to 1023 characters. This provides compatibility with the Chrome implementation ([Firefox bug 1835723](https://bugzil.la/1835723)).
+- The URL of a page visited when an extension is uninstalled, provided in {{WebExtAPIRef("runtime.setUninstallURL")}}, can now be up to 1023 characters instead of 255 ([Firefox bug 1835723](https://bugzil.la/1835723)).
 
 ### Removals
 
