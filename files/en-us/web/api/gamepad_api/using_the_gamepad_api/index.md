@@ -150,7 +150,7 @@ Now we use the {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnecte
 window.addEventListener("gamepaddisconnected", (e) => {
   gamepadInfo.textContent = "Waiting for gamepad.";
 
-  cancelRequestAnimationFrame(start);
+  cancelAnimationFrame(start);
 });
 ```
 
