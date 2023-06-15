@@ -149,7 +149,7 @@ console.log(getPrices(str2)); // ["$19.99", "€18.99", "¥2000"]
 
 ### Matching strings
 
-The `\p` character class can match strings longer than one character by using one of the properties of strings (most of them are emojis):
+With the `v` flag, `\p{…}` can match strings that are potentially longer than one character by using a property of strings:
 
 ```js
 const flag = "🇺🇳";
@@ -157,7 +157,7 @@ console.log(flag.length); // 2
 console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 ```
 
-However, you can't use `\P` to match "a string that's does not have a property", because it's unclear how many characters should be consumed.
+However, you can't use `\P` to match "a string that does not have a property", because it's unclear how many characters should be consumed.
 
 ```js
 /\P{RGI_Emoji_Flag_Sequence}/v; // Invalid regular expression: /\P{RGI_Emoji_Flag_Sequence}/v: Invalid property name
