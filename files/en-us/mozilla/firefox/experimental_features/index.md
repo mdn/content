@@ -881,6 +881,88 @@ See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
   </tbody>
 </table>
 
+### Named view progress timelines property
+
+The CSS [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) property lets you give a name to a `view-timeline`, that is referenced with a [`<custom-dent>`](/en-US/docs/Web/CSS/custom-ident), to animate elements as they appear in the scroller.
+See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Anonymous view progress timelines function
+
+The CSS [`view()`](/en-US/docs/Web/CSS/view-timeline-name) function lets you anonymously animate elements as they appear in the scroller.
+See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
