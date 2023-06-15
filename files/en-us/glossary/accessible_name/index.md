@@ -1,6 +1,6 @@
 ---
 title: Accessible name
-slug: Glossary/Accessibile_name
+slug: Glossary/Accessible_name
 page-type: glossary-definition
 ---
 
