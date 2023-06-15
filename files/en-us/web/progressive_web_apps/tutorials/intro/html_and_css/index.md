@@ -123,18 +123,26 @@ Within the `<body>`, we include the name of the app as a level-1 heading using [
 
 The form will contain instructions, form controls, a label for each form control, and a submit button. In terms of form controls, we need the user to enter both a start date and an end date for each menstrual cycle submitted.
 
-Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLelement("legend")}} labeling the purpose of that set of form fields. Within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}}), each with a date picker for the start and end dates of the menstrual cycle currently being entered, along with the date pickers' associated {{HTMLelement("label")}}s.
+Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLelement("legend")}} labeling the purpose of that set of form fields.
+
+```html
+<form>
+  <fieldset>
+    <legend>Enter your period start and end date</legend>
+  </fieldset>
+</form>
+```
 
 The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute to reduce user errors by preventing the user from accidetally submitting an incomplete form.
 
-To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an [accessible name].
+To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an {{glossary("accessible name)}}.
 
 ```html
 <label for="start-date">Start date</label>
 <input type="date" id="start-date" required />
 ```
 
-We include a {{HTMLelement("button")}} element which submits the form and label the button "Add period" by including that text between the opening and closing tags. The `type="submit"` is optional, as `submit` is the default type for `<button>`.
+Putting it altogether, within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}}) elements, each with a date picker for the start and end dates of the menstrual cycle currently being entered, along with the date pickers' associated {{HTMLelement("label")}}s. We also include a {{HTMLelement("button")}} element which submits the form and label the button "Add period" by including that text between the opening and closing tags. The `type="submit"` is optional, as `submit` is the default type for `<button>`.
 
 ```html
 <form>
@@ -167,7 +175,7 @@ We then include an empty {{HTMLElement("section")}}. This container will be popu
 
 When the user submits the form, we will use JavaScript to capture the data and present a list of past periods along with a header for the section.
 
-For the time being, we temporarily hardcode some content within this `<section>`, includibg a header and a few past periods, to have something to style as we write the page's CSS.
+For the time being, we temporarily hardcode some content within this `<section>`, includibg an `<h2>` header and a few past periods, to have something to style as we write the page's CSS.
 
 ```html
 <section id="past-periods">
@@ -181,9 +189,9 @@ For the time being, we temporarily hardcode some content within this `<section>`
 
 This content, other than the container `<section id="past-periods"></section>`, is temporary. We will remove or comment-out this temporary data once we [complete the CSS](#css-content) and are satisfied with the app's appearance.
 
-### JavaScript placeholder
+### JavaScript link
 
-Before closing the `</body>`, we include a link to the `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_and_defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
+Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_and_defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
 
 ```html
 <script src="app.js" defer></script>
@@ -223,13 +231,13 @@ li:nth-of-type(even) {
 }
 ```
 
-If every line is familiar to you, you can copy the above CSS, or write your own CSS, and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), then [finish up the static HTML and CSS](#finishing-the-static-html-and-css-for-our-pwa). If anything in the above CSS is new to you, the CSS is explained.
+If every line is familiar to you, you can copy the above CSS, or write your own CSS, and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), then [finish up the static HTML and CSS](#finishing-the-static-html-and-css-for-our-pwa). If anything in the above CSS is new to you, keep reading for an explanation.
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows fake data for two menstrual cycles and a header.](html.jpg)
 
 ### CSS explained
 
-We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color, along with a thin solid border added with the {{CSSXref("border")}} property on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
 
 We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
 
@@ -306,7 +314,7 @@ li:nth-of-type(even) {
 }
 ```
 
-If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_Selectors), or work through [getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started) learning path.
+If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_Selectors), or work through the [getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started) learning path.
 
 Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
 
@@ -328,8 +336,8 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 
 ## Up next
 
-You can view the [static cycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and download the [cycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) from GitHub.
-
 Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) to convert this static content into web app and then enhancing it into a progressive web app with a [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file) and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers), we'll [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection) to view our progress.
+
+Until then, you can view the [static cycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and download the [cycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) from GitHub.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
