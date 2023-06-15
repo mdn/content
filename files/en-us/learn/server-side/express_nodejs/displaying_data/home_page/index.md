@@ -48,7 +48,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 Replace all the code above with the following code fragment.
 The first thing this does is import (`require()`) all the models.
 We need to do this because we'll be using them to get our counts of documents.
-The code also requires "express-validator" (not used in this method), and "express-async-handler", which provides a wrapper to [catch exceptions thrown in route handler functions](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#handling_exceptions_in_route_functions).
+The code also requires "express-async-handler", which provides a wrapper to [catch exceptions thrown in route handler functions](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#handling_exceptions_in_route_functions).
 
 ```js
 const Book = require("../models/book");
@@ -56,7 +56,6 @@ const Author = require("../models/author");
 const Genre = require("../models/genre");
 const BookInstance = require("../models/bookinstance");
 
-const { body, validationResult } = require("express-validator");
 const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {

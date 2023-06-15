@@ -10,7 +10,7 @@ While the article Using the MediaStream Recording API demonstrates using the {{d
 
 ## Example of recording a media element
 
-### HTML content
+### HTML
 
 ```html hidden
 <p>

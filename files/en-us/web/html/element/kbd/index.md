@@ -54,8 +54,8 @@ First, let's look at what this looks like as just plain HTML.
 
 ```html
 <p>
-  You can also create a new document using the keyboard shortcut
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  You can also create a new document using the
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> keyboard shortcut.
 </p>
 ```
 
@@ -80,7 +80,7 @@ We can make more sense of this by adding some CSS:
 We add a new selector for nested `<kbd>` elements, `kbd>kbd`, which we can apply when rendering keyboard keys:
 
 ```css
-kbd>kbd {
+kbd > kbd {
   border-radius: 3px;
   padding: 1px 2px 0;
   border: 1px solid black;
@@ -93,8 +93,8 @@ Then we update the HTML to use this class on the keys in the output to be presen
 
 ```html
 <p>
-  You can also create a new document by pressing
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  You can also create a new document by pressing the
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> shortcut.
 </p>
 ```
 
@@ -128,11 +128,10 @@ Nesting a `<samp>` element inside a `<kbd>` element represents input which is ba
 
 For example, you can explain how to choose the "New Document" option in the "File" menu using HTML that looks like this:
 
-```html
+```html-nolint
 <p>
-  To create a new file, choose the menu option
-  <kbd
-    ><kbd><samp>File</samp></kbd>⇒<kbd><samp>New Document</samp></kbd></kbd>.
+  To create a new file, choose the <kbd><kbd><samp>File</samp></kbd>
+  ⇒<kbd><samp>New Document</samp></kbd></kbd> menu option.
 </p>
 
 <p>
@@ -153,25 +152,17 @@ This does some interesting nesting. For the menu option description, the entire 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -182,17 +173,13 @@ This does some interesting nesting. For the menu option description, the entire 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>

@@ -233,17 +233,17 @@ The `document` and `window` objects are the objects whose interfaces you general
 
 The following is a brief list of common APIs in web and XML page scripting using the DOM.
 
-- `{{domxref("document.querySelector", "", "", "1")}}(selector)`
-- `{{domxref("document.querySelectorAll", "", "", "1")}}(name)`
-- `{{domxref("document.createElement", "", "", "1")}}(name)`
-- `parentNode.{{domxref("Node.appendChild", "appendChild", "", "1")}}(node)`
-- `element.{{domxref("element.innerHTML", "innerHTML", "", "1")}}`
-- `element.{{domxref("HTMLElement/style", "style", "", "1")}}.left`
-- `element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()`
-- `element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()`
-- `element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()`
-- `{{domxref("Window.load_event", "Window.onload", "", "1")}}`
-- `{{domxref("window.scrollTo", "", "", "1")}}()`
+- {{domxref("document.querySelector()")}}
+- {{domxref("document.querySelectorAll()")}}
+- {{domxref("document.createElement()")}}
+- {{domxref("Element.innerHTML")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("EventTarget.addEventListener()")}}
+- {{domxref("HTMLElement.style")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Window.load_event", "window.onload")}}
+- {{domxref("window.scrollTo()")}}
 
 ## Examples
 

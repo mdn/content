@@ -13,7 +13,6 @@ The **`font-stretch`** attribute indicates the desired amount of condensing or e
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}

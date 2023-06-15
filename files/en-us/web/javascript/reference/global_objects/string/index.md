@@ -365,7 +365,7 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
-  - : {{HTMLElement("blink")}}
+  - : `<blink>`
 - {{jsxref("String.prototype.bold()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("b")}}
 - {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}

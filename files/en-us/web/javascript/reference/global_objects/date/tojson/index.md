@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Date.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method returns a string representation of
-the {{jsxref("Date")}} object.
+The **`toJSON()`** method of {{jsxref("Date")}} instances returns a string representing this date in the same ISO format as {{jsxref("Date/toISOString", "toISOString()")}}.
 
 {{EmbedInteractiveExample("pages/js/date-tojson.html")}}
 
@@ -20,30 +19,30 @@ toJSON()
 
 ### Return value
 
-A string representation of the given date.
+A string representing the given date in the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) according to universal time, or `null` when the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). For valid dates, the return value is the same as that of {{jsxref("Date/toISOString", "toISOString()")}}.
 
 ## Description
 
-{{jsxref("Date")}} instances refer to a specific point in time. `toJSON()` calls the object's {{jsxref("Date.prototype.toISOString()", "toISOString()")}} method, which returns a string representing the {{jsxref("Date")}} object's value. This method is generally intended to, by default, usefully serialize {{jsxref("Date")}} objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the [`Date()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) or [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) as the reviver of [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse).
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Date` object is stringified. This method is generally intended to, by default, usefully serialize {{jsxref("Date")}} objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Date/Date", "Date()")}} constructor as the reviver of {{jsxref("JSON.parse()")}}.
 
-The method first attempts to convert its `this` value [to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. If the result is a [non-finite](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) number, `null` is returned. (This generally corresponds to an invalid date, whose [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf) returns {{jsxref("NaN")}}.) Otherwise, if the converted primitive is not a number or is a finite number, the return value of `this.toISOString()` is returned.
+The method first attempts to convert its `this` value [to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), {{jsxref("Object/valueOf", "valueOf()")}}, and {{jsxref("Object/toString", "toString()")}} methods, in that order. If the result is a [non-finite](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) number, `null` is returned. (This generally corresponds to an invalid date, whose {{jsxref("Date/valueOf", "valueOf()")}} returns {{jsxref("NaN")}}.) Otherwise, if the converted primitive is not a number or is a finite number, the return value of {{jsxref("Date/toISOString", "this.toISOString()")}} is returned.
 
-Note that the method does not check whether the `this` value is a valid {{jsxref("Date")}} object. However, calling `Date.prototype.toJSON()` on non-`Date` objects does not have well-defined semantics.
+Note that the method does not check whether the `this` value is a valid {{jsxref("Date")}} object. However, calling `Date.prototype.toJSON()` on non-`Date` objects fails unless the object's number primitive representation is `NaN`, or the object also has a `toISOString()` method.
 
 ## Examples
 
 ### Using toJSON()
 
 ```js
-const jsonDate = new Date().toJSON();
+const jsonDate = new Date(0).toJSON(); // '1970-01-01T00:00:00.000Z'
 const backToDate = new Date(jsonDate);
 
-console.log(jsonDate); // 2015-10-26T07:46:36.611Z
+console.log(jsonDate); // 1970-01-01T00:00:00.000Z
 ```
 
 ### Serialization round-tripping
 
-When parsing JSON containing date strings, you can use [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) to revive them into the original date objects.
+When parsing JSON containing date strings, you can use the {{jsxref("Date/Date", "Date()")}} constructor to revive them into the original date objects.
 
 ```js
 const fileData = {
@@ -58,7 +57,7 @@ const response = JSON.stringify(fileData);
 
 const data = JSON.parse(response, (key, value) => {
   if (key === "createdAt" || key === "updatedAt") {
-    return Date.parse(value);
+    return new Date(value);
   }
   return value;
 });

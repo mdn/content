@@ -1,6 +1,6 @@
 ---
 title: CSS colors
-slug: Web/CSS/CSS_Colors
+slug: Web/CSS/CSS_colors
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-color/
@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS color** module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
+The **CSS colors** module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
 
 While this module has only two CSS properties, {{cssxref("color")}} and {{cssxref("opacity")}}, over 20 CSS and SVG properties, CSS images, at-rules, and @media rules depend on these two properties.
 
@@ -21,7 +21,7 @@ The color syntax converter below shows the values of the currently selected colo
 
 Selecting a color via the [color picker](/en-US/docs/Web/HTML/Element/input/color) and an opacity via the [slider](/en-US/docs/Web/HTML/Element/input/range) updates the RGB, HEX, HSL, and HWB values. When you choose a new color or opacity value, the color of the background and the slider update via the CSS properties {{cssxref("background-color")}} and {{cssxref("accent-color")}}, respectively.
 
-To see the code for this color syntax converter, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/colors.html).
+To see the code for this color syntax converter, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/colors.html).
 
 ## Reference
 
@@ -49,7 +49,7 @@ To see the code for this color syntax converter, [view the source on Github](htt
   - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/color_value/color)
 - [`color-contrast()`](/en-US/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
-- [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-contrast)
+- [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
 - [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
 
 ### Data types
@@ -74,13 +74,13 @@ To see the code for this color syntax converter, [view the source on Github](htt
 
 ## Guides
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
   - : A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
   - : Explanation of contrast requirements between background and foreground content to ensure legibility.
-- [Color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
   - : This tool makes it easy to create, adjust, and experiment with custom colors.
 
 ## Related concepts

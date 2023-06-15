@@ -99,7 +99,6 @@ Let's try adding a popup to the button. Replace manifest.json with this:
   "version": "1.0",
 
   "browser_action": {
-    "browser_style": true,
     "default_popup": "popup/choose_page.html",
     "default_icon": {
       "16": "icons/page-16.png",
@@ -109,11 +108,10 @@ Let's try adding a popup to the button. Replace manifest.json with this:
 }
 ```
 
-We've made three changes from the original:
+We've made two changes from the original:
 
-- We no longer reference "background.js", because now we're going to handle the extension's logic in the popup's script (you are allowed background.js as well as a popup, it's just that we don't need it in this case).
-- We've added `"browser_style": true`, which will help the styling of our popup look more like part of the browser.
-- Finally, we've added `"default_popup": "popup/choose_page.html"`, which is telling the browser that this browser action is now going to display a popup when clicked, the document for which can be found at "popup/choose_page.html".
+- removed the reference to "background.js", because now we're going to handle the extension's logic in the popup's script (you are allowed background.js as well as a popup, it's just that we don't need it in this case).
+- added `"default_popup": "popup/choose_page.html"`, which is telling the browser that this browser action is now going to display a popup when clicked, the document for which can be found at "popup/choose_page.html".
 
 So now we need to create that popup. Create a directory called "popup" then create a file called "choose_page.html" inside it. Give it the following contents:
 

@@ -20,7 +20,7 @@ slug: Mozilla/Firefox/Releases/23
 
 ### HTML
 
-- The {{HTMLElement("blink")}} element support is now completely dropped. The `<blink>` tag now implements the {{domxref("HTMLUnknownElement")}} interface ([Firefox bug 857820](https://bugzil.la/857820)).
+- The `<blink>` element support is now completely dropped. The `<blink>` tag now implements the {{domxref("HTMLUnknownElement")}} interface ([Firefox bug 857820](https://bugzil.la/857820)).
 - The `range` type of the {{HTMLElement("input")}} element ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) has been switched on by default ([Firefox bug 841950](https://bugzil.la/841950)).
 
 ### JavaScript
