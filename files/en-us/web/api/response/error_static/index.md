@@ -30,7 +30,7 @@ A {{domxref("Response")}} object.
 
 ## Examples
 
-### Throwing an error from a service worker
+### Returning a network error from a service worker
 
 Suppose a web app has a service worker, which contains the following `fetch` event handler:
 
