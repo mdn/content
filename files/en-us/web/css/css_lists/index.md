@@ -1,5 +1,5 @@
 ---
-title: CSS Lists
+title: CSS lists
 slug: Web/CSS/CSS_lists
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-lists/
