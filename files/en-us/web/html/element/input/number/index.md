@@ -414,10 +414,10 @@ Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocom
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
       </td>
     </tr>
     <tr>
