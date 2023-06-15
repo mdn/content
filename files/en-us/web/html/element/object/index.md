@@ -55,12 +55,16 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   type="video/mp4"
   data="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
   width="600"
-  height="140"></object>
+  height="140">
+<img src="path/image.jpg" alt="useful image description" />
+</object>
 ```
 
 #### Result
 
 {{EmbedLiveSample}}
+
+If the video in the example fails to load, the user will be provided with an image as fallback content. The {{HTMLElement("img")}} tag is used to display an image. We include the `src` attribute set to the path to the image we want to embed. We also include the `alt` attribute, which provides the image with an accessible name. If the image also fails to load, the content of the `alt` attribute will be displayed.
 
 ## Technical summary
 
