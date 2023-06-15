@@ -55,7 +55,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   type="video/mp4"
   data="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
   width="600"
-  height="140"></object>
+  height="140"
+></object>
 ```
 
 #### Result
@@ -67,7 +68,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 #### HTML
 
 ```html
-<img src="image.jpg" alt="Example Image" onerror="this.src='fallback.jpg'; this.alt='Fallback Image';">
+<img
+  src="image.jpg"
+  alt="Example Image"
+  onerror="this.src='fallback.jpg'; this.alt='Fallback Image';"
+/>
 ```
 
 In this example, the <img> tag is used to display an image with the src attribute pointing to "image.jpg". However, if the image fails to load, the onerror event handler is triggered. Inside the event handler, we set the src attribute to "fallback.jpg" and the alt attribute to "Fallback Image". This ensures that if the original image cannot be loaded, the fallback image will be displayed instead, providing a fallback content option for users.
