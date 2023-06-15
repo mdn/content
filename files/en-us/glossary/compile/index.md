@@ -4,6 +4,8 @@ slug: Glossary/Compile
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Compiling** is the process of transforming a computer program written in a given {{Glossary("computer programming", "language")}} into a set of instructions in another format or language. A **compiler** is a computer program to execute that task.
 
 Typically, a compiler transforms code written in a higher-level language such as [C++](https://en.wikipedia.org/wiki/C++) or [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) or [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>) into executable (runnable) code — so-called **binary code** or **machine code**. [WebAssembly](/en-US/docs/WebAssembly), for example, is a form of executable binary code that [can be compiled from code written in C++, Rust, C#, Go, Swift, and several other languages](https://webassembly.org/getting-started/developers-guide/) and that can then be run on any web page, in any browser.

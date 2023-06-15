@@ -29,8 +29,7 @@ In this example, we provide an annotation for the original character equivalent 
 
 ```html
 <ruby>
-  <rb>漢<rb>字
-  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
+  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -46,8 +45,7 @@ Note that we could also write this example with the two base text parts annotate
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 

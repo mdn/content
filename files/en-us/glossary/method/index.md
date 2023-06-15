@@ -4,6 +4,8 @@ slug: Glossary/Method
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **method** is a {{glossary("function")}} which is a {{glossary("property")}} of an {{glossary("object")}}. There are two kinds of methods: _instance methods_ which are built-in tasks performed by an object instance, or _{{Glossary("static method", "static methods")}}_ which are tasks that are called directly on an object constructor.
 
 > **Note:** In JavaScript functions themselves are objects, so, in that context, a method is actually an {{glossary("object reference")}} to a function.

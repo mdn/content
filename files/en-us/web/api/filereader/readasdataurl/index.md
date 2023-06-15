@@ -37,14 +37,16 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### HTML
+### Reading a single file
+
+#### HTML
 
 ```html
 <input type="file" onchange="previewFile()" /><br />
 <img src="" height="200" alt="Image preview" />
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFile() {
@@ -67,20 +69,20 @@ function previewFile() {
 }
 ```
 
-### Live Result
+#### Result
 
-{{EmbedLiveSample("Examples", "100%", 240)}}
+{{EmbedLiveSample("Reading a single file", "100%", 240)}}
 
-## Example reading multiple files
+### Reading multiple files
 
-### HTML
+#### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple />
+<input id="browse" type="file" multiple />
 <div id="preview"></div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFiles() {
@@ -112,7 +114,14 @@ function previewFiles() {
     Array.prototype.forEach.call(files, readAndPreview);
   }
 }
+
+const picker = document.querySelector("#browse");
+picker.addEventListener("change", previewFiles);
 ```
+
+#### Result
+
+{{EmbedLiveSample("Reading multiple files", "100%", 240)}}
 
 ## Specifications
 

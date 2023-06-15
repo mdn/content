@@ -130,12 +130,12 @@ If you want to accept any value regardless of how many decimal places it extends
 ##### JavaScript
 
 ```js
-const value = document.querySelector("#value")
-const input = document.querySelector("#pi_input")
-value.textContent = input.value
+const value = document.querySelector("#value");
+const input = document.querySelector("#pi_input");
+value.textContent = input.value;
 input.addEventListener("input", (event) => {
-  value.textContent = event.target.value
-})
+  value.textContent = event.target.value;
+});
 ```
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 75)}}
@@ -181,6 +181,8 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 <p>
   <label for="temp2">Temperature for room 2:</label>
   <input type="range" id="temp2" name="temp2" list="values" />
+</p>
+
 <p>
   <label for="temp3">Temperature for room 3:</label>
   <input type="range" id="temp3" name="temp3" list="values" />

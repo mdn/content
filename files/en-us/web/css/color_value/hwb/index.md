@@ -24,7 +24,7 @@ Functional notation: `hwb(H W B[ / A])`
 
 - `H`
 
-  - : An {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#typedef-hue) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+  - : A {{CSSXref("&lt;number&gt;")}} or an {{CSSXref("&lt;angle&gt;")}} representing the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 
 - `W`, `B`
 
@@ -47,3 +47,7 @@ Functional notation: `hwb(H W B[ / A])`
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
