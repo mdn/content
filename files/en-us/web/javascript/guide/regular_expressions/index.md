@@ -314,6 +314,7 @@ These flags can be used separately or together in any order, and are included as
 | `m`  | Allows `^` and `$` to match newline characters.                                               | {{jsxref("RegExp/multiline", "multiline")}}   |
 | `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}         |
 | `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}       |
+| `v`  | Enables Unicode properties of strings, set notation, string literal syntax, and more.         | {{jsxref("RegExp/unicodeSets", "unicodeSets")}}       |
 | `y`  | Perform a "sticky" search that matches starting at the current position in the target string. | {{jsxref("RegExp/sticky", "sticky")}}         |
 
 To include a flag with the regular expression, use this syntax:
@@ -378,9 +379,9 @@ In contrast, {{jsxref("String.prototype.match()")}} method returns all matches a
 console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 ```
 
-#### Using unicode regular expressions
+#### Using Unicode regular expressions
 
-The `u` flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. An important feature that's enabled in unicode mode is [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape). For example, the following regular expression might be used to match against an arbitrary unicode "word":
+The `u` flag is used to create Unicode-aware regular expressions; that is, regular expressions which support matching against Unicode text. An important feature that's enabled in Unicode mode is [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape). For example, the following regular expression might be used to match against an arbitrary unicode "word":
 
 ```js
 /\p{L}*/u;
