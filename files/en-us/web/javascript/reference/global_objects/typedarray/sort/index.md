@@ -32,7 +32,7 @@ sort(compareFn)
     - `b`
       - : The second element for comparison. Will never be `undefined`.
 
-    If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+    If omitted, the array elements are sorted according to numeric value.
 
 ### Return value
 

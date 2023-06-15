@@ -345,39 +345,39 @@ input:valid + span::after {
 And finally, the JavaScript:
 
 ```js
-const metersInputGroup = document.querySelector('.metersInputGroup');
-const feetInputGroup = document.querySelector('.feetInputGroup');
-const metersInput = document.querySelector('#meters');
-const feetInput = document.querySelector('#feet');
-const inchesInput = document.querySelector('#inches');
+const metersInputGroup = document.querySelector(".metersInputGroup");
+const feetInputGroup = document.querySelector(".feetInputGroup");
+const metersInput = document.querySelector("#meters");
+const feetInput = document.querySelector("#feet");
+const inchesInput = document.querySelector("#inches");
 const switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', () => {
-  if (switchBtn.getAttribute('class') === 'meters') {
-    switchBtn.setAttribute('class', 'feet');
-    switchBtn.value = 'Enter height in meters';
+switchBtn.addEventListener("click", () => {
+  if (switchBtn.getAttribute("class") === "meters") {
+    switchBtn.setAttribute("class", "feet");
+    switchBtn.value = "Enter height in meters";
 
-    metersInputGroup.style.display = 'none';
-    feetInputGroup.style.display = 'block';
+    metersInputGroup.style.display = "none";
+    feetInputGroup.style.display = "block";
 
-    feetInput.setAttribute('required', '');
-    inchesInput.setAttribute('required', '');
-    metersInput.removeAttribute('required');
+    feetInput.setAttribute("required", "");
+    inchesInput.setAttribute("required", "");
+    metersInput.removeAttribute("required");
 
-    metersInput.value = '';
+    metersInput.value = "";
   } else {
-    switchBtn.setAttribute('class', 'meters');
-    switchBtn.value = 'Enter height in feet and inches';
+    switchBtn.setAttribute("class", "meters");
+    switchBtn.value = "Enter height in feet and inches";
 
-    metersInputGroup.style.display = 'block';
-    feetInputGroup.style.display = 'none';
+    metersInputGroup.style.display = "block";
+    feetInputGroup.style.display = "none";
 
-    feetInput.removeAttribute('required');
-    inchesInput.removeAttribute('required');
-    metersInput.setAttribute('required', '');
+    feetInput.removeAttribute("required");
+    inchesInput.removeAttribute("required");
+    metersInput.setAttribute("required", "");
 
-    feetInput.value = '';
-    inchesInput.value = '';
+    feetInput.value = "";
+    inchesInput.value = "";
   }
 });
 ```
@@ -414,10 +414,10 @@ Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocom
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
       </td>
     </tr>
     <tr>

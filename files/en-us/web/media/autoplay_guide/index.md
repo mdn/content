@@ -134,7 +134,7 @@ Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/en-US/docs/W
 
 ```js
 const video = document.getElementById("video");
-video.addEventListener("play", handleFirstPlay(event), false);
+video.addEventListener("play", handleFirstPlay, false);
 
 let hasPlayed = false;
 function handleFirstPlay(event) {
@@ -143,7 +143,7 @@ function handleFirstPlay(event) {
 
     // Remove listener so this only gets called once.
     const vid = event.target;
-    vid.removeEventListener("play", handleFirstPlay(event));
+    vid.removeEventListener("play", handleFirstPlay);
 
     // Start whatever you need to do after first playback has started
   }

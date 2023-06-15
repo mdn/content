@@ -4,6 +4,8 @@ slug: Glossary/Thread
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 Thread in computer science is the execution of running multiple tasks or programs at the same time. Each unit capable of executing code is called a **thread**.
 
 The **{{Glossary("main thread")}}** is the one used by the browser to handle user events, render and paint the display, and to run the majority of the code that comprises a typical web page or app. Because these things are all happening in one thread, a slow website or app script slows down the entire browser; worse, if a site or app script enters an infinite loop, the entire browser will hang. This results in a frustrating, sluggish (or worse) user experience.

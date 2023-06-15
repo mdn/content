@@ -26,4 +26,4 @@ A node-set containing the nodes that existed in both `nodeSet1` and in `nodeSet2
 
 ## Specifications
 
-[EXSLT - SET:INTERSECTION](http://exslt.org/set/functions/intersection/index.html)
+[EXSLT - SET:INTERSECTION](https://exslt.github.io/set/functions/intersection/index.html)

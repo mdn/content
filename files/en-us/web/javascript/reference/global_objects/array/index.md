@@ -279,7 +279,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Array.from()")}}
   - : Creates a new `Array` instance from an iterable or array-like object.
-- {{jsxref("Array.fromAsync()")}} {{Experimental_Inline}}
+- {{jsxref("Array.fromAsync()")}}
   - : Creates a new `Array` instance from an async iterable, iterable, or array-like object.
 - {{jsxref("Array.isArray()")}}
   - : Returns `true` if the argument is an array, or `false` otherwise.

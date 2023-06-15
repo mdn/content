@@ -26,4 +26,4 @@ A result tree fragment consisting of copies of the nodes returned by [`math:max(
 
 ## Specifications
 
-[EXSLT - MATH:HIGHEST](http://exslt.org/math/functions/highest/index.html)
+[EXSLT - MATH:HIGHEST](https://exslt.github.io/math/functions/highest/index.html)
