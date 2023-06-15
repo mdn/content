@@ -32,7 +32,7 @@ Events have three functions:
 
 - `listener`
 
-  - : A function that is called when this event occurs. The function is passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `script`
 

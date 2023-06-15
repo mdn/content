@@ -27,7 +27,7 @@ const docType = document.implementation.createDocumentType(
   "http://www.w3.org/2000/svg"
 );
 
-console.log(docType.publicId); // Displays "http://www.w3.org/2000/svg"
+console.log(docType.systemId); // Displays "http://www.w3.org/2000/svg"
 ```
 
 ## Specifications

@@ -31,7 +31,7 @@ Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](
 ### Using setTime()
 
 ```js
-const theBigDay = new Date("July 1, 1999");
+const theBigDay = new Date("1999-07-01");
 const sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
 ```

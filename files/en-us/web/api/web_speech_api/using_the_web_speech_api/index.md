@@ -13,7 +13,7 @@ Speech recognition involves receiving speech through a device's microphone, whic
 
 The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — plus a number of closely-related interfaces for representing grammar, results, etc. Generally, the default speech recognition system available on the device will be used for the speech recognition — most modern OSes have a speech recognition system for issuing voice commands. Think about Dictation on macOS, Siri on iOS, Cortana on Windows 10, Android Speech, etc.
 
-> **Note:** On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
+> **Note:** On some browsers, such as Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
 ### Demo
 
@@ -21,11 +21,7 @@ To show simple usage of Web speech recognition, we've written a demo called [Spe
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that color. In this case it has turned the background red.](speech-color-changer.png)
 
-To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) in a supporting mobile browser like Chrome.
-
-### Browser support
-
-Support for Web Speech API speech recognition is currently limited to Chrome for Desktop and Android — Chrome has supported it since around version 33 but with prefixed interfaces, so you need to include prefixed versions of them, e.g. `webkitSpeechRecognition`.
+To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) in a supporting mobile browser (such as Chrome).
 
 ### HTML and CSS
 
@@ -45,15 +41,18 @@ The CSS provides a very simple responsive styling so that it looks OK across dev
 
 Let's look at the JavaScript in a bit more detail.
 
-#### Chrome support
+#### Prefixed properties
 
-As mentioned earlier, Chrome currently supports speech recognition with prefixed properties, therefore at the start of our code we include these lines to feed the right objects to Chrome, and any future implementations that might support the features without a prefix:
+Browsers currently support speech recognition with prefixed properties.
+Therefore at the start of our code we include these lines to allow for both prefixed properties and unprefixed versions that may be supported in future:
 
 ```js
-const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
-const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
+const SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechGrammarList =
+  window.SpeechGrammarList || window.webkitSpeechGrammarList;
 const SpeechRecognitionEvent =
-  window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+  window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
 ```
 
 #### The grammar
@@ -179,7 +178,7 @@ recognition.onerror = (event) => {
 
 ## Speech synthesis
 
-Speech synthesis (aka text-to-speech, or tts) involves receiving synthesizing text contained within an app to speech, and playing it out of a device's speaker or audio output connection.
+Speech synthesis (aka text-to-speech, or TTS) involves receiving synthesizing text contained within an app to speech, and playing it out of a device's speaker or audio output connection.
 
 The Web Speech API has a main controller interface for this — {{domxref("SpeechSynthesis")}} — plus a number of closely-related interfaces for representing text to be synthesized (known as utterances), voices to be used for the utterance, etc. Again, most OSes have some kind of speech synthesis system, which will be used by the API for this task as available.
 
@@ -189,15 +188,7 @@ To show simple usage of Web speech synthesis, we've provided a demo called [Spea
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesized, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome.
-
-### Browser support
-
-Support for Web Speech API speech synthesis is still getting there across mainstream browsers, and is currently limited to the following:
-
-- Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the `media.webspeech.synth.enabled` flag to `true` in `about:config`.
-- Firefox OS 2.5+ supports it, by default, and without the need for any permissions.
-- Chrome for Desktop and Android have supported it since around version 33, without prefixes.
+To run the demo, navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser.
 
 ### HTML and CSS
 
@@ -277,7 +268,9 @@ function populateVoiceList() {
 }
 ```
 
-When we come to run the function, we do the following. This is because Firefox doesn't support the {{domxref("SpeechSynthesis.voiceschanged_event", "voiceschanged")}} event, and will just return a list of voices when {{domxref("SpeechSynthesis.getVoices()")}} is fired. With Chrome, however, you have to wait for the event to fire before populating the list, hence the if statement seen below.
+Older browser don't support the {{domxref("SpeechSynthesis.voiceschanged_event", "voiceschanged")}} event, and just return a list of voices when {{domxref("SpeechSynthesis.getVoices()")}} is fired.
+While on others, such as Chrome, you have to wait for the event to fire before populating the list.
+To allow for both cases, we run the function as shown below:
 
 ```js
 populateVoiceList();

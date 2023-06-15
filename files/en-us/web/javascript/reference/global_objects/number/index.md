@@ -208,7 +208,7 @@ Larger numbers can be represented using the {{jsxref("BigInt")}} type.
 The following example converts the {{jsxref("Date")}} object to a numerical value using `Number` as a function:
 
 ```js
-const d = new Date("December 17, 1995 03:24:00");
+const d = new Date("1995-12-17T03:24:00");
 console.log(Number(d));
 ```
 

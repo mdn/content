@@ -4,6 +4,8 @@ slug: Glossary/Flex
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 `flex` is a new value added to the CSS {{cssxref("display")}} property. Along with `inline-flex` it causes the element that it applies to in order to become a {{glossary("flex container")}}, and the element's children to each become a {{glossary("flex item")}}. The items then participate in flex layout, and all of the properties defined in the CSS Flexible Box Layout Module may be applied.
 
 The `flex` property is a shorthand for the flexbox properties `flex-grow`, `flex-shrink` and `flex-basis`.

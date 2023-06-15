@@ -9,7 +9,7 @@ browser-compat: webextensions.api.storage.StorageArea.set
 
 Stores one or more items in the storage area, or update existing items.
 
-When you store or update a value using this API, the {{WebExtAPIRef("storage.onChanged")}} event will fire.
+When you store or update a value using this API, the {{WebExtAPIRef("storage.onChanged")}} event fires.
 
 Note that when storing items in the [`sync`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) storage area, the browser enforces quotas on the amount of data each extension can store. See [Storage quotas for sync data](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data).
 
