@@ -36,6 +36,26 @@ console.log(Array.prototype.toString.call({ join: () => 1 })); // 1
 
 JavaScript calls the `toString` method automatically when an array is to be represented as a text value or when an array is referred to in a string concatenation.
 
+`Array.prototype.toString` recursively converts each element, including other arrays, to strings. Because the string returned by `Array.prototype.toString` does not have delimiters, nested arrays look like they are flattened.
+
+```js
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(matrix.toString()); // 1,2,3,4,5,6,7,8,9
+```
+
+When an array is cyclic (it contains an element that is itself), browsers avoid infinite recursion by ignoring the cyclic reference.
+
+```js
+const arr = [];
+arr.push(1, [3, arr, 4], 2);
+console.log(arr.toString()); // 1,3,,4,2
+```
+
 ## Examples
 
 ### Using toString()

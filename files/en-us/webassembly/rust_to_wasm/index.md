@@ -5,7 +5,7 @@ slug: WebAssembly/Rust_to_Wasm
 
 {{WebAssemblySidebar}}
 
-If you have some Rust code, you can compile it into [WebAssembly](/en-US/docs/WebAssembly) (Wasm). This tutorial takes you through all you need to know to compile a Rust project to Wasm and use it in an existing web app.
+If you have some Rust code, you can compile it into [WebAssembly](/en-US/docs/WebAssembly) (Wasm). This tutorial will show you how to compile a Rust project into WebAssembly and use it in an existing web app.
 
 ## Rust and WebAssembly use cases
 
