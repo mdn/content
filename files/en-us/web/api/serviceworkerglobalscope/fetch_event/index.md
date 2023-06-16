@@ -26,7 +26,7 @@ onfetch = (event) => {};
 
 The `fetch` event is fired in the service worker's global scope when the main app thread makes a network request. This includes not only explicit {{domxref("fetch()")}} calls from the main thread, but implicit network requests made when pages and subresources such as JavaScript, CSS, and images are loaded.
 
-The event handler is passd a {{domxref("FetchEvent")}} object, which provides access to the request as a {{domxref("Request")}} instance.
+The event handler is passed a {{domxref("FetchEvent")}} object, which provides access to the request as a {{domxref("Request")}} instance.
 
 The `FetchEvent` also provides a {{domxref("FetchEvent.respondWith()", "respondWith()")}} method, that takes a {{domxref("Response")}} (or a `Promise` that resolves to a `Response`) as a parameter, and this enables the event handler to return a different response to the request: for example, it enables a service worker to return:
 
@@ -98,7 +98,7 @@ This `fetch` event handler implements a "cache only" policy for scripts and styl
 All other requests go through to the network.
 
 ```js
-async function fromCache(request) {
+async function cacheOnly(request) {
   const cachedResponse = await caches.match(request);
   if (cachedResponse) {
     console.log("Found response in cache:", cachedResponse);
@@ -112,7 +112,7 @@ self.addEventListener("fetch", (event) => {
     event.request.destination === "script" ||
     event.request.destination === "style"
   ) {
-    event.respondWith(fromCache(event.request));
+    event.respondWith(cacheOnly(event.request));
   }
 });
 ```
