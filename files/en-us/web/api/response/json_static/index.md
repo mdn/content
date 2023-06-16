@@ -145,4 +145,4 @@ Note that the `ok` property of the response changed to `false` as the status val
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
