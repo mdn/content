@@ -22,8 +22,7 @@ throw expression;
 
 ## Description
 
-The `throw` statement is valid in all contexts where statements can be used. Its execution generates an exception that penetrates through the call stack.
-For more information on error bubbling and handling, see [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling).
+The `throw` statement is valid in all contexts where statements can be used. Its execution generates an exception that penetrates through the call stack. For more information on error bubbling and handling, see [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling).
 
 The `throw` keyword can be followed by any kind of expression, for example:
 
@@ -32,18 +31,18 @@ throw error; // Throws a previously defined value (e.g. within a catch block)
 throw new Error("Required"); // Throws a new Error object
 ```
 
-In practice, the exception you throw should _always_ be an {{jsxref("Error")}} object — including an instance of an `Error` subclass, such as {{jsxref("RangeError")}} — because code that catches the error may expect certain properties, such as {{jsxref("Error/message", "message")}}, to be present on the caught value. For example, web APIs typically throw {{domxref("DOMException")}} instances, which inherit from `Error.prototype`.
+In practice, the exception you throw should _always_ be an {{jsxref("Error")}} object or an instance of an `Error` subclass, such as {{jsxref("RangeError")}}. This is because code that catches the error may expect certain properties, such as {{jsxref("Error/message", "message")}}, to be present on the caught value. For example, web APIs typically throw {{domxref("DOMException")}} instances, which inherit from `Error.prototype`.
 
 ### Automatic semicolon insertion
 
-The syntax forbids any line terminator between the `throw` keyword and the expression, therefore introducing [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) hazards.
+The syntax forbids line terminators between the `throw` keyword and the expression to be thrown.
 
 ```js-nolint example-bad
 throw
 new Error();
 ```
 
-is transformed by ASI into:
+The code above is transformed by [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) into:
 
 ```js
 throw;
@@ -88,7 +87,7 @@ try {
 
 ### Throwing an existing object
 
-This example calls a callback-based async function (which may be turned into a promise-based one with the {{jsxref("Promise/Promise", "Promise()")}} constructor), and throws an error if the callback receives an error.
+This example calls a callback-based async function, and throws an error if the callback receives an error.
 
 ```js
 readFile("foo.txt", (err, data) => {
@@ -97,6 +96,28 @@ readFile("foo.txt", (err, data) => {
   }
   console.log(data);
 });
+```
+
+Errors thrown this way are not catchable by the caller and will cause the program to crash unless (a) the `readFile` function itself catches the error, or (b) the program is running in a context that catches top-level errors. You can handle errors more naturally by using the {{jsxref("Promise/Promise", "Promise()")}} constructor.
+
+```js
+function readFilePromise(path) {
+  return new Promise((resolve, reject) => {
+    readFile(path, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+}
+
+try {
+  const data = await readFilePromise("foo.txt");
+  console.log(data);
+} catch (err) {
+  console.error(err);
+}
 ```
 
 ## Specifications

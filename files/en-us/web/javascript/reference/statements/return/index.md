@@ -34,14 +34,14 @@ If a `return` statement is executed within a {{jsxref("Statements/try...catch", 
 
 ### Automatic semicolon insertion
 
-The syntax forbids any line terminator between the `return` keyword and the expression, therefore introducing [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) hazards.
+The syntax forbids line terminators between the `return` keyword and the expression to be returned.
 
 ```js-nolint example-bad
 return
 a + b;
 ```
 
-is transformed by ASI into:
+The code above is transformed by [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) into:
 
 ```js
 return;
