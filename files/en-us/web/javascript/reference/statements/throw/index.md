@@ -88,7 +88,7 @@ try {
 
 ### Throwing an existing object
 
-This example calls a callback-based async function (which may be turned into a promise-based one with the {{jsxref("Promise/Promise", "Promise()")}} constructor) and throws an error if the callback receives an error.
+This example calls a callback-based async function (which may be turned into a promise-based one with the {{jsxref("Promise/Promise", "Promise()")}} constructor), and throws an error if the callback receives an error.
 
 ```js
 readFile("foo.txt", (err, data) => {
