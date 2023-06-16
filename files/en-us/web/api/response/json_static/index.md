@@ -89,7 +89,7 @@ logResponse(jsonResponse);
 The object has the following properties.
 Note the body and header are set as expected, and that the default status is set to `200`.
 
-{{EmbedLiveSample('Response with JSON data')}}
+{{EmbedLiveSample('Response with JSON data','100%', '170')}}
 
 ### Response with JSON data and options
 
@@ -133,7 +133,7 @@ logResponse(jsonResponse);
 The object has the following properties, which are set as expected.
 Note that the `ok` property of the response changed to `false` as the status value is not in the range of 200 to 299.
 
-{{EmbedLiveSample('Response with JSON data and options')}}
+{{EmbedLiveSample('Response with JSON data and options','100%', '170')}}
 
 ## Specifications
 
