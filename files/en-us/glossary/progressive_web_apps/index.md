@@ -6,7 +6,9 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-Progressive web apps is a term used to describe the modern state of web app development. This involves taking standard websites/apps that enjoy all the best parts of the Web — such as discoverability via search engines, being linkable via {{Glossary("URL")}}s, and working across multiple form factors — and progressively enhancing them with modern APIs (such as [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)), enabling features that confer benefits more commonly attributed to native apps.
+Progressive web applications (PWA) are applications that are built using web platform technologies, but that provide a user experience like that of a platform-specific app.
+
+These kinds of apps enjoy enjoy all the best parts of the Web — such as discoverability via search engines, being linkable via {{Glossary("URL")}}s, and working across multiple form factors, but are progressively enhanced with modern APIs (such as [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)).
 
 These features include being installable, working offline, and being easy to sync with and re-engaging the user from the server.
 
