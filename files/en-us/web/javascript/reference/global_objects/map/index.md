@@ -283,7 +283,7 @@ This is defined in the specification IDL below:
 
 ```webidl
 interface RTCStatsReport {
-    readonly maplike<DOMString, object>;
+  readonly maplike<DOMString, object>;
 };
 ```
 
