@@ -278,7 +278,7 @@ Just like `Map`, entries can be iterated in the same order that they were added 
 However unlike `Map` they only allow specific predefined types for the keys and values of each entry.
 
 The allowed types are set in the specification IDL definition.
-For example, {{domxref("RTCStatsReport")}} is a `Map`-like object that must use strings for keys and any object as the value.
+For example, {{domxref("RTCStatsReport")}} is a `Map`-like object that must use strings for keys and objects for values.
 This is defined in the specification IDL below:
 
 ```webidl
