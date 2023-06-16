@@ -85,9 +85,9 @@ const url = new URL("https://example.com?foo=1&bar=2&foo=3");
 const params = new URLSearchParams(url.search);
 
 // has() returns true if a parameter with the matching name and value is in the query string
-log(`bar=1?:\t${params.has("bar","1")}`);
-log(`bar=2?:\t${params.has("bar","2")}`);
-log(`foo=4?:\t${params.has("foo","4")}`);
+log(`bar=1?:\t${params.has("bar", "1")}`);
+log(`bar=2?:\t${params.has("bar", "2")}`);
+log(`foo=4?:\t${params.has("foo", "4")}`);
 ```
 
 Only the second value above should be `true`, as only the parameter name `bar` with value `2` is matched.
