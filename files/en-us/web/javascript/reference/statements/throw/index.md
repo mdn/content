@@ -22,7 +22,10 @@ throw expression;
 
 ## Description
 
-The `throw` statement is valid in all contexts where statements can be used. Its execution generates an exception that penetrates through the call stack. For more information on error bubbling and handling, see [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling). The `throw` keyword can be followed by any kind of expression, for example:
+The `throw` statement is valid in all contexts where statements can be used. Its execution generates an exception that penetrates through the call stack.
+For more information on error bubbling and handling, see [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling).
+
+The `throw` keyword can be followed by any kind of expression, for example:
 
 ```js
 throw error; // Throws a previously defined value (e.g. within a catch block)
