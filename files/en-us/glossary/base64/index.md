@@ -17,7 +17,7 @@ In JavaScript there are two functions respectively for decoding and encoding Bas
 
 The algorithm used by `atob()` and `btoa()` is specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), section 4.
 
-> **Note:** `btoa()` expects to be passed a string of "binary" data and will throw an exception if the given string contains any characters whose codepoint exceeds `0xff` (the maximum value that can be held in 1 byte). See [§ The "Unicode Problem"](#the_unicode_problem) for ways of working around this limitation.
+> **Note:** `btoa()` expects a string of "binary" data and will throw an exception if the given string contains any character whose code point exceeds `0xff` (the maximum value that can be held in 1 byte). See [The "Unicode Problem"](#the_unicode_problem) for ways of working around this limitation.
 
 ## Encoded size increase
 
@@ -27,9 +27,9 @@ This means that the Base64 version of a string or file will be at least 133% the
 
 ## The "Unicode Problem"
 
-Since `btoa` only accepts characters within the `Latin1` Unicode range (codepoints `0x00..0xff`), calling `btoa` on a string will cause a `Character Out Of Range` exception if a character exceeds that range. There are two possible methods to solve this problem:
+Since `btoa` only accepts characters within the `Latin1` Unicode range (code points `0x00` to `0xff`), calling `btoa` on a string will cause a "Character Out Of Range" exception if a character exceeds that range. There are two possible methods to solve this problem:
 
-- Convert the string to its constituent bytes in a Unicode encoding, such as UTF-8, then encode the bytes;
+- Convert the string to its constituent bytes in a Unicode encoding, such as UTF-8, and then encode the bytes;
 - Escape the whole string and then encode it.
 
 ### Converting the string to UTF-8
@@ -339,7 +339,7 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### Appendix: Decode a Base64 string to Uint8Array or ArrayBuffer
 
-The functions in [§ Solution 2 – custom UTF-8 implementation using `TypedArray`s](#solution_2_–_custom_utf-8_implementation_using_typedarrays) also let us create [uint8Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) or [arrayBuffers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from Base64-encoded strings:
+The functions in [Solution 2 – custom UTF-8 implementation using `TypedArray`s](#solution_2_–_custom_utf-8_implementation_using_typedarrays) also let us create [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) or [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) objects from Base64-encoded strings:
 
 ```js
 // "Base 64 \u2014 Mozilla Developer Network"
@@ -356,7 +356,7 @@ alert(myBuffer.byteLength);
 ```
 
 > **Note:** The function `base64DecToArr(sBase64[, nBlocksSize])` returns
-> a [`uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes.
+> a [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes.
 > If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data,
 > use the `nBlocksSize` argument,
 > which is the number of bytes of which the `uint8Array.buffer.bytesLength` property must result a multiple
