@@ -27,21 +27,18 @@ This means that the Base64 version of a string or file will be at least 133% the
 
 ## The "Unicode Problem"
 
-Since `btoa` only accepts characters within the `Latin1` Unicode range (code points `0x00` to `0xff`), calling `btoa` on a string will cause a "Character Out Of Range" exception if a character exceeds that range. There are two possible methods to solve this problem:
-
-- Convert the string to its constituent bytes in a Unicode encoding, such as UTF-8, and then encode the bytes;
-- Escape the whole string and then encode it.
+Since `btoa` only accepts characters within the `Latin1` Unicode range (code points `0x00` to `0xff`), calling `btoa` on a string will cause a "Character Out Of Range" exception if a character exceeds that range. For use cases where you need to encode arbitrary Unicode text, it is necessary to first convert the string to its constituent bytes in a Unicode encoding, such as UTF-8, and then encode the bytes.
 
 ### Converting the string to UTF-8
 
 #### Solution 1 – `TextEncoder` and `TextDecoder`
 
+The simplest solution is to use `TextEncoder` and `TextDecoder` to convert between UTF-8 and single-byte representations of the string:
+
 ```js
 function encodeBase64(unicodeString) {
-  const utf8Bytes = new TextEncoder().encode(unicodeString);
-  const binString = Array.from(utf8Bytes, (x) => String.fromCodePoint(x)).join(
-    ""
-  );
+  const utf8 = new TextEncoder().encode(unicodeString);
+  const binString = Array.from(utf8, (x) => String.fromCodePoint(x)).join("");
 
   return btoa(binString);
 }
@@ -53,9 +50,9 @@ encodeBase64("a Ā 𐀀 文 🦄"); // "YSDEgCDwkICAIOaWhyDwn6aE"
 ```js
 function decodeBase64(base64String) {
   const binString = atob(base64String);
-  const utf8Bytes = Uint8Array.from(binString, (m) => m.codePointAt(0));
+  const utf8 = Uint8Array.from(binString, (m) => m.codePointAt(0));
 
-  return new TextDecoder().decode(utf8Bytes);
+  return new TextDecoder().decode(utf8);
 }
 
 // Usage
@@ -64,12 +61,11 @@ decodeBase64("YSDEgCDwkICAIOaWhyDwn6aE"); // "a Ā 𐀀 文 🦄"
 
 #### Solution 2 – custom UTF-8 implementation using `TypedArray`s
 
-> **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
+If you need to support environments that lack support for `TextEncoder` and `TextDecoder`, you can manually convert to and from UTF-8:
 
 ```js
-"use strict";
 // Array of bytes to Base64 string decoding
-function b64ToUint6(nChr) {
+function base64ToUint6(nChr) {
   return nChr > 64 && nChr < 91
     ? nChr - 65
     : nChr > 96 && nChr < 123
@@ -97,7 +93,7 @@ function base64DecToArr(sBase64, nBlocksSize) {
   let nOutIdx = 0;
   for (let nInIdx = 0; nInIdx < nInLen; nInIdx++) {
     nMod4 = nInIdx & 3;
-    nUint24 |= b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << (6 * (3 - nMod4));
+    nUint24 |= base64ToUint6(sB64Enc.charCodeAt(nInIdx)) << (6 * (3 - nMod4));
     if (nMod4 === 3 || nInLen - nInIdx === 1) {
       nMod3 = 0;
       while (nMod3 < 3 && nOutIdx < nOutLen) {
@@ -159,7 +155,7 @@ function base64EncArr(aBytes) {
 
 /* UTF-8 array to JS string and vice versa */
 
-function UTF8ArrToStr(aBytes) {
+function utf8ArrToStr(aBytes) {
   let sView = "";
   let nPart;
   const nLen = aBytes.length;
@@ -202,7 +198,7 @@ function UTF8ArrToStr(aBytes) {
   return sView;
 }
 
-function strToUTF8Arr(sDOMStr) {
+function strToUtf8Arr(sDOMStr) {
   let aBytes;
   let nChr;
   const nStrLen = sDOMStr.length;
@@ -279,87 +275,8 @@ function strToUTF8Arr(sDOMStr) {
 
   return aBytes;
 }
+
+// Usage
+base64EncArr(strToUtf8Arr("a Ā 𐀀 文 🦄")); // "YSDEgCDwkICAIOaWhyDwn6aE"
+utf8ArrToStr(base64DecToArr("YSDEgCDwkICAIOaWhyDwn6aE")); // "a Ā 𐀀 文 🦄"
 ```
-
-##### Tests
-
-```js
-/* Tests */
-
-const sMyInput = "Base 64 \u2014 Mozilla Developer Network";
-
-const aMyUTF8Input = strToUTF8Arr(sMyInput);
-
-const sMyBase64 = base64EncArr(aMyUTF8Input);
-
-alert(sMyBase64);
-
-const aMyUTF8Output = base64DecToArr(sMyBase64);
-
-const sMyOutput = UTF8ArrToStr(aMyUTF8Output);
-
-alert(sMyOutput);
-```
-
-### Escaping the string before encoding it
-
-```js
-function utf8_to_b64(str) {
-  return window.btoa(unescape(encodeURIComponent(str)));
-}
-
-function b64_to_utf8(str) {
-  return decodeURIComponent(escape(window.atob(str)));
-}
-
-// Usage:
-utf8_to_b64("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
-b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
-```
-
-This solution has been proposed by [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
-
-Another possible solution without utilizing the now deprecated 'unescape' and 'escape' functions.
-This alternative, though, does not perform base64 encoding of the input string.
-Note the differences in the outputs of `utf8_to_b64` and `b64EncodeUnicode`.
-Adopting this alternative may lead to interoperability issues with other applications.
-
-```js
-function b64EncodeUnicode(str) {
-  return btoa(encodeURIComponent(str));
-}
-
-function UnicodeDecodeB64(str) {
-  return decodeURIComponent(atob(str));
-}
-
-b64EncodeUnicode("✓ à la mode"); // "JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"
-UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode"
-```
-
-### Appendix: Decode a Base64 string to Uint8Array or ArrayBuffer
-
-The functions in [Solution 2 – custom UTF-8 implementation using `TypedArray`s](#solution_2_–_custom_utf-8_implementation_using_typedarrays) also let us create [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) or [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) objects from Base64-encoded strings:
-
-```js
-// "Base 64 \u2014 Mozilla Developer Network"
-const myArray = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
-);
-
-// "Base 64 \u2014 Mozilla Developer Network"
-const myBuffer = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
-).buffer;
-
-alert(myBuffer.byteLength);
-```
-
-> **Note:** The function `base64DecToArr(sBase64[, nBlocksSize])` returns
-> a [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes.
-> If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data,
-> use the `nBlocksSize` argument,
-> which is the number of bytes of which the `uint8Array.buffer.bytesLength` property must result a multiple
-> (`1` or omitted for ASCII, binary strings
-> (i.e., a string in which each character in the string is treated as a byte of binary data)
-> or UTF-8-encoded strings, `2` for UTF-16 strings, `4` for UTF-32 strings).
