@@ -19,15 +19,15 @@ At the end of this lesson, you will have a fully functional PWA; a progressively
 
 The service worker is what makes the application work offline while making sure the application is always up to date. To do this well, the service worker should include the following:
 
-- Version number (or other identifier)
+- Version number (or other identifier).
 - List of resources to cache.
-- Cache version name
+- Cache version name.
 
-The service worker is also responsive for:
+The service worker is also responsible for:
 
-- Installing the cache when the app is installed
-- Updating itself and the other application file as needed
-- Remove files that are no longer used.
+- Installing the cache when the app is installed.
+- Updating itself and the other application file as needed.
+- Removing cached files that are no longer used.
 
 We achieve these tasks by reacting to three service worker events, including the
 
@@ -39,7 +39,7 @@ We achieve these tasks by reacting to three service worker events, including the
 
 Once the PWA is installed on the user's machine, the only way to guarantee updated files are retrieved is for there to be a change in the service worker. If a change is made to any other PWA resource — if the HTML is updated, a bug is fixed in the CSS, a function is added to `app.js`, an image is compressed to reduce the file save, etc. — the installed PWA will not know it needs to download updated resources. When the service worker is altered in any way, the PWA will know it should update the cache.
 
-While changing any character may technically suffice, a PWA best practice create a version number constant that gets updated sequentially to indicate an update to the file. Updating a version number (or date), provides an official edit to the service worker even if nothing else is changed in the service worker itself and provides developers with a way of identifying app versions.
+While changing any character may technically suffice, a PWA best practice is to create a version number constant that gets updated sequentially to indicate an update to the file. Updating a version number (or date), provides an official edit to the service worker even if nothing else is changed in the service worker itself and provides developers with a way of identifying app versions.
 
 #### Task
 
@@ -53,7 +53,7 @@ Save the file as `sw.js`
 
 ### Offline resource list
 
-For a good offline experience, the list of cached files should include all the resources used within the PWAs offline experience. While the manifest file may have a multitude of icons listed in various sizes, the application cache only needs to include the assets used by the app in offline mode.
+For a good offline experience, the list of cached files should include all the resources used within the PWA's offline experience. While the manifest file may have a multitude of icons listed in various sizes, the application cache only needs to include the assets used by the app in offline mode.
 
 ```JavaScript
 const APP_STATIC_RESOURCES = [
@@ -94,7 +94,7 @@ We included the `wheel.svg` icon, even though our current application doesn't us
 
 ### Application cache name
 
-We have a version number and we have the files that need to be cached. Before caching the files, we need to create a name of the cache that will be used to store the app's static resources. This cache name should be versioned to insure that when a new version of the app is installed, a new cache will be created and the old one will be deleted.
+We have a version number and we have the files that need to be cached. Before caching the files, we need to create a name of the cache that will be used to store the app's static resources. This cache name should be versioned to ensure that when the app is updated, a new cache will be created and the old one will be deleted.
 
 #### Task
 
@@ -115,13 +115,13 @@ We have successfully declared our constants; a unique identifier, the list of of
 
 ### Saving the cache on PWA installation
 
-When a user installs a PWA, there is an `install` event. We want to listen for this event, filling the cache with the PWA's static resources upon installation. Every time the app is installed, including the first installation and any time a change is made to the service worker, the install event occurs.
+When a user installs a PWA, the `install` event is fired in the service worker scope. We want to listen for this event, filling the cache with the PWA's static resources upon installation. Every time the service worker version is updated, the browser installs the new service worker and the install event occurs.
 
 The `install` event happens when the app is used for the first time, or when a new version of the service worker is detected by the browser. When an older service worker is being replaced by a new one, the old service worker is used as the PWA's service worker until the new service work is activated.
 
 Only available in secure contexts, the [`caches`](/en-US/docs/Web/API/caches) global property returns a {{domxref("CacheStorage")}} object associated with the current context. The {{domxref("CacheStorage.open()")}} method returns a {{jsxref("Promise")}} that resolves to the {{domxref("Cache")}} object matching name of the cache, passed as a parameter.
 
-The {{domxref("Cache.addAll()")}} method takes as it's parameter an array of URLs, retrieves them, then adds the responses to the given cache. The [`waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method tells the browser that work is ongoing until the promise settles, and it shouldn't terminate the service worker if it wants that work to complete.
+The {{domxref("Cache.addAll()")}} method takes an array of URLs as a parameter, retrieves them, then adds the responses to the given cache. The [`waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method tells the browser that work is ongoing until the promise settles, and it shouldn't terminate the service worker if it wants that work to complete.
 
 ```JavaScript
 self.addEventListener("install", (e) => {
@@ -163,7 +163,7 @@ We listen for the current service worker's global scope [`activate`](/en-US/docs
 
 We get the names of the existing named caches. We use the {{domxref("CacheStorage.keys()")}} method (again accessing `CacheStorage` through the global {{domxref("caches")}} property) which returns a {{jsxref("Promise")}} that resolves with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects in the order they were created.
 
-We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method is to iterate thru that list name promises. The `all()` method takes as input a list of iterable promises and returns a single Promise. For each name in the list of named cachees, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
+We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate thru that list name promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named cachees, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
 
 The last line, the `await clients.claim()` uses the [`claim()`](/en-US/docs/Web/API/Clients/claim) method of the [`Clients`](/en-US/docs/Web/API/Clients) interface to enable our service worker to set itself as the controller for our PWA. The `claim()` method enables the service worker to "claim control" of all clients within its scope. This way, clients loaded in the same scope don't need to be reloaded.
 
@@ -193,7 +193,7 @@ Add the above `activate` eventListener to your `sw.js` file.
 
 We can take advantage of the [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event, to prevent an installed PWA from making requests if the user is online. Listening to the fetch event makes it possible to intercept all requests and respond with cached responses instead of going to the network. Most applications don't require this behavior. In fact, many business models want users to regularly make server requests for tracking and marketing purposes. So, while intercepting requests may be an anti-pattern for some, to improve the privacy of our CycleTracker app, we don't want the app to make unnecessary server requests.
 
-As our PWA is a only a single page, for page navigation requests, we go back to the `index.html` home page. There are no other pages and we don't ever want to go to the server. If the Fetch API's [`Request`](/en-US/docs/Web/API/Request) readonly [`mode`](/en-US/docs/Web/API/Request/mode) property is `navigate`, meaning it's looking for a web page, we use the FetchEvent's `respondWith()`]() method to prevents the browser's default fetch handling, providing our own response promise employing the [`caches.match()`](/en-US/docs/Web/API/CacheStorage/match) method.
+As our PWA consists of a single page, for page navigation requests, we go back to the `index.html` home page. There are no other pages and we don't ever want to go to the server. If the Fetch API's [`Request`](/en-US/docs/Web/API/Request) readonly [`mode`](/en-US/docs/Web/API/Request/mode) property is `navigate`, meaning it's looking for a web page, we use the FetchEvent's `respondWith()`]() method to prevents the browser's default fetch handling, providing our own response promise employing the [`caches.match()`](/en-US/docs/Web/API/CacheStorage/match) method.
 
 For all other request modes, we open the caches as done in the [install event response](#saving-the-cache-on-pwa-installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Status/404) as a response.
 
@@ -203,6 +203,7 @@ Using the [`Response()`](/en-US/docs/Web/API/Response/Response) constructor to p
 self.addEventListener("fetch", (event) => {
   // when seeking an HTML page
   if (event.request.mode === "navigate") {
+    // Return to the index.html page
     event.respondWith(caches.match("/"));
     return;
   }
@@ -216,6 +217,7 @@ self.addEventListener("fetch", (event) => {
         // Return the cached response if it's available.
         return cachedResponse;
       } else {
+        // Respond with a HTTP 404 response status.
         return new Response(null, { status: 404 });
       }
     })()
@@ -225,7 +227,7 @@ self.addEventListener("fetch", (event) => {
 
 ## Complete service worker file
 
-Your `app.js` file should look similar to the following JavaScript. Note that when updating any of the resources listed in the `APP_STATIC_RESOURCES` array, the only constant or function that must be updated within this service worker is the value of `VERSION`.
+Your `sw.js` file should look similar to the following JavaScript. Note that when updating any of the resources listed in the `APP_STATIC_RESOURCES` array, the only constant or function that must be updated within this service worker is the value of `VERSION`.
 
 ```JavaScript
 // The version of the cache.
@@ -359,7 +361,7 @@ You can try the fully functioning [cycleTrack period tracking web app](https://m
 
 ## Debugging service workers
 
-Because of the way we have set up the service worker, once it is registered, every request will pull from the cache instead of loading new content. When developing, you will be editing your code. Frequently. You likely want to test your edits in the browser regularly; likely with every save.
+Because of the way we have set up the service worker, once it is registered, every request will pull from the cache instead of loading new content. When developing, you will be editing your code frequently. You likely want to test your edits in the browser regularly; likely with every save.
 
 ### By updating the version number and doing a hard reset
 
@@ -390,7 +392,7 @@ In other words, as you are working on your PWA, you don't have to update the ver
 
 ## We're done!
 
-At its core, a PWA is a web application that can be installed is progressively enhanced to work offline. We created a fully functional web application. We then added the two features - a manifest file and a service worker - required to convert it to a PWA. If you want to share your app with others, make it available via a secure connection. Alternatively, if you just want to use the cycle tracker yourself, [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection), [install the PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Installing), and enjoy! Once installed, you no longer need to run localhost.
+At its core, a PWA is a web application that can be installed and that is progressively enhanced to work offline. We created a fully functional web application. We then added the two features - a manifest file and a service worker - required to convert it to a PWA. If you want to share your app with others, make it available via a secure connection. Alternatively, if you just want to use the cycle tracker yourself, [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection), [install the PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Installing), and enjoy! Once installed, you no longer need to run localhost.
 
 Congratulations!
 

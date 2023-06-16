@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro
 
 {{PWASidebar}}
 
-This intro-level tutorial walks thru all the steps of building a basic progressive web app, or PWA. We will be using the web technologies we all know and love — HTML, CSS, and JavaScript — to build a period tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
+This intro-level tutorial walks thru all the steps of building a basic progressive web app, or PWA. We will be using web technologies — HTML, CSS, and JavaScript — to build a period tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
 
 We will walk thru the steps of building a fully functional web app, then progressively enhance CycleTracker to make it installable and to work even when the user is offline.
 
@@ -15,11 +15,11 @@ By default, PWAs are regular websites, built with the same technologies. Just li
 
 ## PWA benefits
 
-Using the languages of the web, we will create a fully functioning application that works both online and offline, both in the browsers and on the user's operating systems (OS). Like any regular website, CycleTracker can be hosted on and downloadable from a web server. All we need is a text editor: CycleTracker, like all PWAs, doesn't requie require any additional programming language knowledge, packaging, or proprietary SDK. CycleTracker, like any PWA, can be seamlessly installed on any operating system without the need of app stores (nor app store approval and fees).
+Using the languages of the web, we will create a fully functioning application that works both online and offline, both in the browsers and on the user's operating systems (OS). Like any regular website, CycleTracker is hosted on and downloadable from a web server. All we need is a text editor: CycleTracker, like all PWAs, doesn't require any additional programming language knowledge, packaging, or proprietary SDK. CycleTracker, like any PWA, can be seamlessly installed on any operating system without the need of app stores (nor app store approval and fees).
 
-- Use open web technologies you already know
+- Use standard and open web technologies
 
-  - : Historically, for an application to be installable on an OS, such as Windows, iOS, MacOS, Linux, and Android, the applications are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs solve this problem: they use a single code base, written using regular open web technologies: HTML, CSS, and JavaScript.
+  - : Historically, for an application to be installable on an OS, such as Windows, iOS, MacOS, Linux, and Android, the applications are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs are based on a different model: they use a single code base, written using standard open web technologies that work across OS: HTML, CSS, and JavaScript.
 
 - No compiling required
 
@@ -27,7 +27,7 @@ Using the languages of the web, we will create a fully functioning application t
 
 - Available anywhere and everywhere
 
-  - : Historically, single-OS-only applications have bee distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements. If you want to distribute your CycleTracker app, you won't require an intermediary. A user can be acquired by visiting the online version of the app.But if you want, the Play Store and App Store do distribute PWAs, undifferentiated from other iOS or Android apps.
+  - : Single-OS-only applications are distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements. If you want to distribute your CycleTracker app, you won't require an intermediary. A user can access your app visiting its online version. But if you want, it is possible to distribute your PWA on the Play Store and App Store, undifferentiated from other iOS or Android apps.
 
 - Easy for the user to install
   - : Historically, downloaded single-OS-only applications have to be intentionally installed by the user. Depending on the OS, install format, and download origin, this can be a multi-step installation process. PWAs are streamlined. PWAs are available to anyone with a supporting browser, [installable](/en-US/docs/Web/Progressive_web_apps/Guides/Installing) with a couple of clicks.
@@ -68,7 +68,7 @@ The steps include:
 
 - [Manifest: identity, appearance, and iconography](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file)
 
-  - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport. We also look at debuggin the manifest file with browser developer tools.
+  - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport. We also look at debugging the manifest file with browser developer tools.
 
 - [Service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers)
 

@@ -72,9 +72,9 @@ To get the added features of PWAs, including single click installation, a standa
 
 When officially publishing a PWA, you will likely want to invest in a [domain name and web hosting](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting). For open source projects, where developers can learn from the codebase and even contribute back to the project, you can host your progress on [GitHub Pages](https://pages.github.com/).
 
-## Github pages
+## GitHub pages
 
-The current state of the cycleTracker application is viewable on Github, served securely at [https://mdn.github.io/pwa-examples/cycletracker/html_and_css]. We've posted the files to the MDN Github account. Similarly, if you have a [Github](https://github.com) account, you can post it to yours. Just note that actions on Github, while securely served over SSL, are not necessarily private and all Github pages are public. If you live in an area with a repressive government that tracks menstrual cycles, like areas in Ghana and the United States, consider copying and pasting the code rather than forking it.
+The current state of the cycleTracker application is viewable on GitHub, served securely at [https://mdn.github.io/pwa-examples/cycletracker/html_and_css]. We've posted the files to the MDN GitHub account. Similarly, if you have a [Github](https://github.com) account, you can post it to yours. Just note that actions on GitHub, while securely served over SSL, are not necessarily private and all GitHub pages are public. If you live in an area with a repressive government that tracks menstrual cycles, like areas in Ghana and the United States, consider copying and pasting the code rather than forking it.
 
 To create a publicly available secure site, create a [Github pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site). Create a repository named `<username>.github.io`, where `<username>` is your github username. Create a `gh-pages` branch. This branch of your application will be available at `https://<username>.github.io`.
 
