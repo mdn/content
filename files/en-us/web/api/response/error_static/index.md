@@ -45,7 +45,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-With this service worker, all fetch requests from the app will pass through the service worker to the network, except for requests to fetch "salamander.jpg", which will reject. This means that the following code would throw an error, and the `catch` handler will run.
+With this service worker, all fetch requests from the app will pass through the service worker to the network, except for requests to fetch "salamander.jpg", which will reject. This means that the following main thread code would throw an error, and the `catch` handler will run.
 
 ```js
 // main.js
