@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/Service_workers
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
-Thus far, we've written the HTML, CSS, and JavaScript for cycleTracker. We added a manifest file defining colors, icons, URL, and other app features. We have a working web app! But it isn't yet a PWA. In this section, we will write the JavaScript required to convert our fully functional web application into a PWA that can be distributed as a standalone app and works seamlessly offline.
+Thus far, we've written the HTML, CSS, and JavaScript for CycleTracker. We added a manifest file defining colors, icons, URL, and other app features. We have a working web app! But it isn't yet a PWA. In this section, we will write the JavaScript required to convert our fully functional web application into a PWA that can be distributed as a standalone app and works seamlessly offline.
 
 If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css), and [manifest](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `styles.css`, and `cycletracker.json`.
 
@@ -297,9 +297,11 @@ self.addEventListener("fetch", (event) => {
   );
 });
 ```
+
 When updating a service worker, the VERSION constant doesn't need to be updated, as any change in the content of the service worker script itself will trigger the browser to install the new service worker. However, it is a good practice to update the version number as it makes it easier for devs, including yourself, to see which version of the service worker is currently running in the browser, by [checking the name of the Cache in the Application tool](#with_developer_tools) (or Sources tool).
 
 **Note:** Updating VERSION is important when making changes to any application resource, including the CSS, HTML, and JS code, and image assets. The version number, or any change to the service worker file, is the only way to force an update of the app for your users.
+
 ## Register the service worker
 
 Now that our service worker script is complete, we need to register the service worker.
@@ -327,7 +329,7 @@ If the property is supported, we can then use the [`register()`](/en-US/docs/Web
 </script>
 ```
 
-While the above suffices for the cycleTracker app needs, the `resgister()` method does return a {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object. For a more robust application, error check the registration:
+While the above suffices for the CycleTracker app needs, the `resgister()` method does return a {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object. For a more robust application, error check the registration:
 
 ```javascript
 if ("serviceWorker" in navigator) {

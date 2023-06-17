@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
-In the previous section, we wrote the HTML and CSS for cycleTracker, creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
+In the previous section, we wrote the HTML and CSS for CycleTracker, creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 
 If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css) and save them to files called `index.html` and `styles.css`.
 
@@ -309,12 +309,12 @@ function formatDate(dateString) {
 renderPastPeriods();
 ```
 
-You can try the fully functioning [cycleTrack period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
+You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
 
 ## Up next
 
 At its core, a PWA is a web application that can be installed is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert it to a PWA, including the [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection), and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers).
 
-Up first, we create the [cycleTracker's manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the identity, appearance, and iconography for our cycleTracker PWA.
+Up first, we create the [CycleTracker's manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the identity, appearance, and iconography for our CycleTracker PWA.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}

@@ -51,7 +51,7 @@ Write the first few lines of your manifest file. You can use the text below, or 
 
 ```js
 {
-  "name": "cycleTracker: Period Tracking app",
+  "name": "CycleTracker: Period Tracking app",
   "short_name": "CT",
   "description": "Securily and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving your private data to your browser on your device, without sharing it with the rest of the world."
 }
@@ -138,7 +138,7 @@ In Safari, and therefor for iOS and iPadOS, if you include the [non-standard `ap
 
 Add the icons to the manifest file you have been constructing.
 
-Playing with the words "cycle" and "period" of cycleTracker and the green theme color we've chosen, our icon images could all be light green squares with a green circle. Our smallest size `circle.ico`, and icon file that is just a circle representing the period punctuation mark and app theme color, with our in-between images, `circle.svg`, `tire.svg`, and `wheel.svg`, adding more detail moving from a plain circle to a tire as it gets larger, with our largest icons being a detailed wheel with spokes and shadows. That said, designing icons is beyond the scope of this tutorial.
+Playing with the words "cycle" and "period" of CycleTracker and the green theme color we've chosen, our icon images could all be light green squares with a green circle. Our smallest size `circle.ico`, and icon file that is just a circle representing the period punctuation mark and app theme color, with our in-between images, `circle.svg`, `tire.svg`, and `wheel.svg`, adding more detail moving from a plain circle to a tire as it gets larger, with our largest icons being a detailed wheel with spokes and shadows. That said, designing icons is beyond the scope of this tutorial.
 
 ```html hidden
 <div>
