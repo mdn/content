@@ -23,7 +23,7 @@ Using the languages of the web, we will create a fully functioning application t
 
 - No compiling required
 
-  - : Historically, in most cases, the application code had to be compiled and packaged into an installable format, like .exe, .dmg, .elf, and .apk, or other installable files. Depending on the language, compiling and packaging required the OS's {{glossary("SDK")}}. PWAs solve this problem. Yes, developer teams can have complex build systems, but, as we will demonstrate as we build CycleTracker, PWAs can be built out of just HTML and JavaScript (and CSS, though styling is not necessarily required for a PWA).
+  - : With most programming languages, like Java, C/C++, and Kotlin, which are commonly used for building Android apps, and Objective-C and Swift, for iOS, the code needs to be compiled and packaged into an installable format, like .exe, .dmg, .elf, and .apk, or another installable file type, depending on the operating system. Depending on the language, compiling and packaging may require the OS's {{glossary("SDK")}}. PWAs use web technologies supported by every operating system that doesn't need to be packaged or compiled. Yes, developer teams can have complex build systems, but, as we will demonstrate as we build CycleTracker, PWAs can be built out of just HTML and JavaScript (and CSS, though styling is not necessarily required for a PWA).
 
 - Available anywhere and everywhere
 
@@ -32,7 +32,7 @@ Using the languages of the web, we will create a fully functioning application t
 - Easy for the user to install
   - : Historically, downloaded single-OS-only applications have to be intentionally installed by the user. Depending on the OS, install format, and download origin, this can be a multi-step installation process. PWAs are streamlined. PWAs are available to anyone with a supporting browser, [installable](/en-US/docs/Web/Progressive_web_apps/Guides/Installing) with a couple of clicks.
 
-### Compared to OED applications
+### Compared to OS-installed software applications
 
 Once installed, PWAs can be made to appear and act similarly to other applications installed on the user's device:
 
