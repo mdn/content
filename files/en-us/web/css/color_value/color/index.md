@@ -11,8 +11,6 @@ The **`color()`** functional notation allows a color to be specified in a partic
 
 Support for a particular colorspace can be detected with the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) CSS media feature.
 
-The [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to define and name a color profile to be used in the `color()` function to specify a color.
-
 ## Syntax
 
 ```css
@@ -93,11 +91,11 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Using_predefined_colorspaces_with_color')}}
+{{EmbedLiveSample("using_predefined_colorspaces_with_color")}}
 
-### Using xyz colorspaces with color()
+### Using the xyz colorspace with color()
 
-The following example shows how to use `xyz` colorspaces to specify a color.
+The following example shows how to use the `xyz` colorspace to specify a color.
 
 #### HTML
 
@@ -136,7 +134,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Using_xyz_colorspaces_with_color')}}
+{{EmbedLiveSample("using_the_xyz_colorspace_with_color")}}
 
 ### Using color-gamut media queries with color()
 
@@ -185,7 +183,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Using_color-gamut_media_queries_with_color')}}
+{{EmbedLiveSample("using_color-gamut_media_queries_with_color")}}
 
 ## Specifications
 

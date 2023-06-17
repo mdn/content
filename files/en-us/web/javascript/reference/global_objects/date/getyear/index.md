@@ -34,7 +34,7 @@ This method essentially returns the value of {{jsxref("Date/getFullYear", "getFu
 The second statement assigns the value 95 to the variable `year`.
 
 ```js
-const xmas = new Date("December 25, 1995 23:15:00");
+const xmas = new Date("1995-12-25");
 const year = xmas.getYear(); // returns 95
 ```
 
@@ -43,7 +43,7 @@ const year = xmas.getYear(); // returns 95
 The second statement assigns the value 100 to the variable `year`.
 
 ```js
-const xmas = new Date("December 25, 2000 23:15:00");
+const xmas = new Date("2000-12-25");
 const year = xmas.getYear(); // returns 100
 ```
 
@@ -52,7 +52,7 @@ const year = xmas.getYear(); // returns 100
 The second statement assigns the value -100 to the variable `year`.
 
 ```js
-const xmas = new Date("December 25, 1800 23:15:00");
+const xmas = new Date("1800-12-25");
 const year = xmas.getYear(); // returns -100
 ```
 
@@ -61,7 +61,7 @@ const year = xmas.getYear(); // returns -100
 The third statement assigns the value 95 to the variable `year`, representing the year 1995.
 
 ```js
-const xmas = new Date("December 25, 2015 23:15:00");
+const xmas = new Date("2015-12-25");
 xmas.setYear(95);
 const year = xmas.getYear(); // returns 95
 ```

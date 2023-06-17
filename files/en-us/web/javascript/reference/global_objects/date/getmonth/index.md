@@ -50,7 +50,7 @@ console.log(new Intl.DateTimeFormat("de-DE", options).format(valentines));
 The `month` variable has value `11`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const month = xmas95.getMonth();
 
 console.log(month); // 11

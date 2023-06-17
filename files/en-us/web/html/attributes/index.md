@@ -218,10 +218,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/charset">charset</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/meta#charset">charset</a></code>
       </td>
       <td>
-        {{ HTMLElement("meta") }}, {{ HTMLElement("script") }}
+        {{ HTMLElement("meta") }}
       </td>
       <td>Declares the character encoding of the page or script.</td>
     </tr>

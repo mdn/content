@@ -34,7 +34,7 @@ As all objects have no own symbol properties initially, `Object.getOwnPropertySy
 
 ## Examples
 
-### Using getOwnPropertySymbols
+### Using Object.getOwnPropertySymbols()
 
 ```js
 const obj = {};

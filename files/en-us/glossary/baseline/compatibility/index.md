@@ -3,6 +3,8 @@ title: Baseline (compatibility)
 slug: Glossary/Baseline/Compatibility
 ---
 
+{{GlossarySidebar}}
+
 **Baseline** identifies widely-supported web platform features.
 Web developers can expect Baseline features to work in contemporary browsers.
 

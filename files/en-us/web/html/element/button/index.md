@@ -20,9 +20,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - `autofocus`
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
 - `autocomplete` {{non-standard_inline}}
+
   - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see [Firefox bug 654072](https://bugzil.la/654072).
 
 - `disabled`
+
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 
     Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. To control this feature, use the [`autocomplete`](#autocomplete) attribute.
@@ -70,12 +72,15 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 
 - `name`
+
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
 
 - `popovertarget`
+
   - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
 
 - `popovertargetaction`
+
   - : Specifies the the action to be performed on a popover element being controlled by a control `<button>`. Possible values are:
 
     - `"hide"`
