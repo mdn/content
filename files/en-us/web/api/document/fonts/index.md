@@ -28,7 +28,7 @@ document.fonts.ready.then((fontFaceSet) => {
   const fontFaces = [...fontFaceSet];
   console.log(fontFaces);
   // some fonts may still be unloaded if they aren't used on the site
-  console.log(fontFaces.map(f => f.status));
+  console.log(fontFaces.map((f) => f.status));
 });
 ```
 
