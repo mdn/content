@@ -175,7 +175,7 @@ We then include an empty {{HTMLElement("section")}}. This container will be popu
 
 When the user submits the form, we will use JavaScript to capture the data and present a list of past periods along with a header for the section.
 
-For the time being, we temporarily hardcode some content within this `<section>`, includibg an `<h2>` header and a few past periods, to have something to style as we write the page's CSS.
+For the time being, we temporarily hardcode some content within this `<section>`, including an `<h2>` header and a few past periods, to have something to style as we write the page's CSS.
 
 ```html
 <section id="past-periods">
