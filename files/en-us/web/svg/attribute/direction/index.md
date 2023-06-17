@@ -17,7 +17,6 @@ In many cases, the bidirectional Unicode algorithm produces the desired result a
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}

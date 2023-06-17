@@ -47,18 +47,15 @@ You also need to include the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExten
 
 ```json
 "options_ui": {
-  "page": "options.html",
-  "browser_style": true
+  "page": "options.html"
 },
 ```
-
-> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so if you wish to support them, you need to add both keys.
 
 See the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) page for **sharing options** between your options page and background or content scripts.
 
 ## Options content design
 
-For details on how to design your options content to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) and [browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
+For details on how to design your options content to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html).
 
 ## Examples
 

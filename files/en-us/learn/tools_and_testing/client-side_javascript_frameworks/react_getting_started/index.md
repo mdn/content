@@ -82,12 +82,10 @@ const header = (
 
 > **Note:** The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
 >
-> ```jsx
-> const header = (
->   <header>
->     <h1>Mozilla Developer Network</h1>
->   </header>
-> );
+> ```jsx-nolint
+> const header = <header>
+>   <h1>Mozilla Developer Network</h1>
+> </header>;
 > ```
 >
 > However, this looks kind of awkward, because the [`<header>`](/en-US/docs/Web/HTML/Element/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
@@ -326,13 +324,13 @@ The first two statements import the `React` and `ReactDOM` libraries because the
 
 `index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
 
-Line 7 calls React's `ReactDOM.createRoot()` function with the DOM element inside which we want the component to be rendered, in this case the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`. React will create a root for this node, and take over managing the DOM inside it (read more on the [official react doc](https://beta.reactjs.org/apis/react-dom/client/createRoot)). The function returns the `root` which we can use to `render` a React element into the DOM.
+Line 7 calls the `ReactDOM.createRoot()` function with the DOM element inside which we want the React element to be rendered, in this case the DOM element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`. React will create a root for this node, and take over managing the DOM inside it (read more on the [official react doc](https://beta.reactjs.org/apis/react-dom/client/createRoot)). The function returns the `root`.
 
-Line 8 calls `root.render()` with the component we want to render, `<App />` in this case.
+Line 8 calls the `root.render()` method with the React element we want to render into the DOM, `<App />` in this case. We use [strict mode](https://react.dev/reference/react/StrictMode) during development to find common bugs in our components.
 
-All of this tells React that we want to render our React application with the `App` component as the root, or first component.
+All of this tells React that we want to render our React application with `<App />` as the root, or first element.
 
-> **Note:** In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
+> **Note:** In JSX, React elements and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
 [`reportWebVitals`](https://create-react-app.dev/docs/measuring-performance/) are a set of useful metrics that aim to capture the user experience of a web page, but they're not in scope for this article. You can delete its import line, as well as the `reportWebVitals();` line.
 
@@ -345,7 +343,11 @@ import "./index.css";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 ```
 
 ## Variables and props

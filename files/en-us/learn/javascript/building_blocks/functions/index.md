@@ -244,10 +244,10 @@ textBox.addEventListener("keydown", event => {
 
 Finally, if your function contains only one line that's a `return` statement, you can also omit the braces and the `return` keyword, and implicitly return the expression. In the following example we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
 
-```js
+```js-nolint
 const originals = [1, 2, 3];
 
-const doubled = originals.map((item) => item * 2);
+const doubled = originals.map(item => item * 2);
 
 console.log(doubled); // [2, 4, 6]
 ```

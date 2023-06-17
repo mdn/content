@@ -31,7 +31,7 @@ A new array with the element at `index` replaced with `value`.
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `index > array.length` or `index < -array.length`.
+  - : Thrown if `index >= array.length` or `index < -array.length`.
 
 ## Description
 

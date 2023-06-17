@@ -39,9 +39,9 @@ Events have three functions:
 
 - `listener`
 
-  - : Function that will be called when this event occurs.
+  - : The function called when this event occurs.
 
-    The `listener` function will be called with the following arguments:
+    The `listener` function is called with these arguments:
 
     - `details`
 
@@ -72,9 +72,9 @@ Events have three functions:
 
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects.
 
-    If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array.
+    If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array.
 
-    If you omit this parameter, the event will fire for all transitions.
+    If you omit this parameter, the event fires for all transitions.
 
 ## Browser compatibility
 

@@ -23,6 +23,42 @@ Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equali
 
 The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in the set, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array has a `length` equal to a set's `size`.
 
+### Set-like browser APIs
+
+Browser **`Set`-like objects** (or "setlike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
+
+Just like `Set`, elements can be iterated in the same order that they were added to the object.
+`Set`-like objects and `Set` also have properties and methods that share the same name and behavior.
+However unlike `Set` they only allow a specific predefined type for each entry.
+
+The allowed types are set in the specification IDL definition.
+For example, {{domxref("GPUSupportedFeatures")}} is a `Set`-like object that must use strings as the key/value.
+This is defined in the specification IDL below:
+
+```webidl
+interface GPUSupportedFeatures {
+  readonly setlike<DOMString>;
+};
+```
+
+`Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
+
+- Read-only `Set`-like objects have the property [`size`](#set.prototype.size), and the methods: [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), and [`@@iterator`](#set.prototypeiterator).
+- Writeable `Set`-like objects additionally have the methods: [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), and [`add()`](#set.prototype.add).
+
+The methods and properties have the same behavior as the equivalent entities in `Set`, except for the restriction on the types of the entry.
+
+The following are examples of read-only `Set`-like browser objects:
+
+- {{domxref("GPUSupportedFeatures")}}
+- {{domxref("XRAnchorSet")}}
+
+The following are examples of writable `Set`-like browser objects:
+
+- {{domxref("CustomStateSet")}}
+- {{domxref("FontFaceSet")}}
+- {{domxref("Highlight")}}
+
 ## Constructor
 
 - {{jsxref("Set/Set", "Set()")}}

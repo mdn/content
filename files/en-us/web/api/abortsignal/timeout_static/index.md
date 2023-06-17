@@ -3,7 +3,7 @@ title: "AbortSignal: timeout() static method"
 short-title: timeout()
 slug: Web/API/AbortSignal/timeout_static
 page-type: web-api-static-method
-browser-compat: api.AbortSignal.timeout
+browser-compat: api.AbortSignal.timeout_static
 ---
 
 {{APIRef("DOM")}}

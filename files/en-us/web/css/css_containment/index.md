@@ -1,6 +1,6 @@
 ---
-title: CSS Containment
-slug: Web/CSS/CSS_Containment
+title: CSS containment
+slug: Web/CSS/CSS_containment
 page-type: css-module
 browser-compat:
   - css.properties.contain
@@ -9,7 +9,7 @@ browser-compat:
 
 {{CSSRef}}
 
-The aim of the CSS Containment specification is to improve performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
+The aim of the **CSS containment** module is to improve performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
 If the browser knows that a part of the page is independent, rendering can be optimized and performance improved.
 
 In addition, it lets developers indicate whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen.
@@ -114,7 +114,7 @@ article {
 ```
 
 Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
-The main use case is to prevent situations where a [CSS Counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
+The main use case is to prevent situations where a [CSS Counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
 
 Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
 
