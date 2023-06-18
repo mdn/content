@@ -418,7 +418,12 @@ Back in `App.js`, let's revisit the App function itself, which reads like this (
 function App() {
   const subject = "React";
   return (
-    // return statement
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Hello, {subject}!  Welcome Back!</p>
+      </header>
+    </div>
   );
 }
 ```
@@ -430,7 +435,12 @@ Just like any other function parameter, you can put `props` in a `console.log()`
 function App(props) {
   console.log(props);
   return (
-    // return statement
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Hello, {subject}!</p>
+      </header>
+    </div>
   );
 }
 ```
@@ -450,7 +460,12 @@ Now that `subject` is one of our props, let's utilize it in `App.js`. Change the
 function App(props) {
   const subject = props.subject;
   return (
-    // return statement
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Hello, {subject}!</p>
+      </header>
+    </div>
   );
 }
 ```
