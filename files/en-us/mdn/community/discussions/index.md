@@ -62,13 +62,8 @@ Check out the definition of each discussion category below so that you can start
         >
       </td>
       <td>
-        Discussions related to improvements to existing
-        <a href="https://github.com/mdn/content">content</a>,
-        ideas for new content, or any other content suggestions on MDN Web Docs.
-        You can propose your ideas here along with a
-        description of how the change will be useful to our readers and/or links
-        to relevant resources. We commonly label these as opportunity
-        assessments.
+        Discussions related to the
+        <a href="https://github.com/mdn/content">content</a> on MDN Web Docs.
         <em>Note:</em> This is not the place to ask for help with code examples.
         For code-related help, please
         <a href="https://discourse.mozilla.org/c/mdn/learn/250"
