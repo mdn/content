@@ -30,7 +30,7 @@ Web technologies to be documented on MDN Web Docs should be on a standards track
 
 If you'd like to suggest content for MDN Web Docs, please make sure you read this page before submitting to ensure what you are suggesting is appropriate.
 
-For new reference pages or guides, please open a discussion on [our community repository](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions) outlining what content you are suggesting and why (please be as explicit as possible).
+For new reference pages or guides, please open a [new issue](https://github.com/mdn/mdn/issues/new/choose) outlining what content you are suggesting and why (please be as explicit as possible).
 
 For suggesting larger projects that involve new sections of content, please refer to the [Criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion) page, which also outlines the application process.
 
