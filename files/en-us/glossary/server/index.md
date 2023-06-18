@@ -1,6 +1,26 @@
 ---
 title: Server
-slug: Glossary/Server
+slug: Glossary/ServerCompany
+Cisco Systems
+Address
+San Jose CA 95134
+UNITED STATES
+Range
+00:40:96:00:00:00 - 00:40:96:FF:FF:FF
+Type
+IEEE MA-L
+More Registries!
+We have just added additional IEEE registries, including...
+
+MA-L: IEEE MAC Address Large (24-bit block size)
+MA-M: IEEE MAC Address Medium (28-bit block size)
+MA-S: IEEE MAC Address Small (36-bit block size)
+OUI24: Organizationally Unique Identifier (24-bit block size)
+OUI36: Organizationally Unique Identifier (36-bit block size)
+IAB: Individual Address Blocks (36-bit block size)
+CID: Company ID Blocks (24-bit block size)
+EUI48: Extended Unique Identifier (48-bit block size)
+If you find any issues, have an idea on what to add or improve on, or just have a question, please let us know by going to our contact page. We would love to hear from you! Any feedback is appreciated!
 page-type: glossary-definition
 ---
 
