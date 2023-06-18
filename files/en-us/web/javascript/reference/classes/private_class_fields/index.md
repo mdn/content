@@ -72,6 +72,8 @@ instance.#privateField === 42; // Syntax error
 
 JavaScript, being a dynamic language, is able to perform this compile-time check because of the special hash identifier syntax, making it different from normal properties on the syntax level.
 
+> **Note:** The Chrome console allows accessing private properties outside the class. However, this is a DevTools-only ability and doing the same elsewhere is always a syntax error.
+
 If you access a private property from an object that doesn't have the property, a {{jsxref("TypeError")}} is thrown, instead of returning `undefined` as normal properties do.
 
 ```js example-bad
