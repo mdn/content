@@ -8,7 +8,7 @@ browser-compat: api.RTCPeerConnection.icecandidate_event
 
 {{APIRef("WebRTC")}}
 
-An **`icecandidate`** event is sent to an {{domxref("RTCPeerConnection")}} when an {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}}. The event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.
+An **`icecandidate`** event is sent to an {{domxref("RTCPeerConnection")}} when A) an {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}}, B) every {{domxref("RTCIceCandidate")}} correlated with a particular Username Fragment and Password combination (a **generation**) has been so identified and added, and C) all ICE gathering on all transports is complete.  In the first two cases, the event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.
 
 This event is not cancelable and does not bubble.
 
@@ -33,7 +33,7 @@ An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
 _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
 
 - {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
-  - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
+  - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or the empty string if this event indicates that there are no further candidates to come.
 
 ## Description
 
@@ -65,7 +65,7 @@ The end-of-candidates indication is described in [section 9.3 of the Trickle ICE
 
 ### Indicating that ICE gathering is complete
 
-Once all ICE transports have finished gathering candidates and the value of the {{domxref("RTCPeerConnection")}} object's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has made the transition to `complete`, an `icecandidate` event is sent with the value of `complete` set to `null`.
+Once all ICE transports have finished gathering candidates and the value of the {{domxref("RTCPeerConnection")}} object's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has made the transition to `complete`, an `icecandidate` event is sent with the value of `candidate` set to `null`.
 
 This signal exists for backward compatibility purposes and does _not_ need to be delivered onward to the remote peer (which is why the code snippet above checks to see if `event.candidate` is `null` prior to sending the candidate along.
 
@@ -101,10 +101,10 @@ First, an example using {{domxref("EventTarget.addEventListener", "addEventListe
 pc.addEventListener(
   "icecandidate",
   (ev) => {
-    if (ev.candidate) {
+    if (ev.candidate !== null) {
       sendMessage({
         type: "new-ice-candidate",
-        candidate: event.candidate,
+        candidate: ev.candidate,
       });
     }
   },
@@ -116,10 +116,10 @@ You can also set the `onicecandidate` event handler property directly:
 
 ```js
 pc.onicecandidate = (ev) => {
-  if (ev.candidate) {
+  if (ev.candidate !== null) {
     sendMessage({
       type: "new-ice-candidate",
-      candidate: event.candidate,
+      candidate: ev.candidate,
     });
   }
 };
