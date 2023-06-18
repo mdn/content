@@ -101,7 +101,7 @@ const instance2 = new C();
 console.log(instance1.obj === instance2.obj); // false
 ```
 
-The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
+The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
 
 Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor. However, because instance fields of a derived class are defined after `super()` returns, the base class's constructor does not have access to the derived class's fields.
 
