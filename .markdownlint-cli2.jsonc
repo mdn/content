@@ -151,8 +151,8 @@
         {
           "name": "relative-link",
           "message": "Internal links should start with '/'",
-          "search": "(en-US/docs",
-          "replace": "(/en-US/docs",
+          "searchPattern": "/([\\(\"])en-US\\/docs/g",
+          "replace": "$1/en-US/docs",
           "searchScope": "text"
         },
         {

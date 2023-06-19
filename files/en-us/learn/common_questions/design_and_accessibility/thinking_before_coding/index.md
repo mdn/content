@@ -58,11 +58,11 @@ Suppose you are a musician. You could wish to:
 - Talk about your music.
 - Teach music through videos.
 - Publish photos of your cats.
-- Find a new girl/boyfriend.
+- Find a new apartment.
 
 Once you have such a list, you need to prioritize. Order the goals from most important to least important:
 
-1. Find a new girl/boyfriend.
+1. Find a new apartment.
 2. Let people hear your music.
 3. Talk about your music.
 4. Meet other musicians.
@@ -78,9 +78,9 @@ So now that you have a prioritized list of goals, let's move on to the next ques
 
 So you have a list of goals and you feel you need a website to reach those goals. Are you sure?
 
-Let's look back at our example. We have five goals connected to music, one goal related to personal life (finding your significant other), and the completely unrelated cat photos. Is it reasonable to build a single website to cover all those goals? Is it even necessary? After all, scores of existing web services might bring you to your goals without building a new website.
+Let's look back at our example. We have five goals connected to music, one goal related to personal life (finding a new apartment), and the completely unrelated cat photos. Is it reasonable to build a single website to cover all those goals? Is it even necessary? After all, scores of existing web services might bring you to your goals without building a new website.
 
-Finding a girl/boyfriend is a prime case where it makes more sense to use existing resources rather than build a whole new site. Why? Because we'll spend more time building and maintaining the website rather than actually searching for a girl/boyfriend. Since our goal is what matters most, we should spend our energy on leveraging existing tools rather than starting from scratch. Again, there are so many web services already available for showcasing photos that it isn't worth the effort to build a new site just to spread the word about how cute our cats are.
+Finding a new apartment is a prime case where it makes more sense to use existing resources rather than build a whole new site. Why? Because we'll spend more time building and maintaining the website rather than actually searching for a new apartment. Since our goal is what matters most, we should spend our energy on leveraging existing tools rather than starting from scratch. Again, there are so many web services already available for showcasing photos that it isn't worth the effort to build a new site just to spread the word about how cute our cats are.
 
 The other five goals are all connected to music. There are, of course, many web services that could handle these goals, but it makes sense in this case to build a dedicated website of our own. Such a website is the best way to _aggregate_ all the stuff we want to publish in a single place (good for goals 3, 5, and 6) and promote _interaction_ between us and the public (good for goals 2 and 4). In short, since these goals all revolve around the same topic, having everything in one place will help us meet our goals and help our followers connect with us.
 

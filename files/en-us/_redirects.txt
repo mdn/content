@@ -8531,6 +8531,7 @@
 /en-US/docs/Web/API/HTMLMediaElement/onencrypted	/en-US/docs/Web/API/HTMLMediaElement
 /en-US/docs/Web/API/HTMLMediaElement/onerror	/en-US/docs/Web/API/HTMLMediaElement/error_event
 /en-US/docs/Web/API/HTMLMediaElement/onwaitingforkey	/en-US/docs/Web/API/HTMLMediaElement
+/en-US/docs/Web/API/HTMLMetaElement/charset	/en-US/docs/Web/HTML/Element/meta#charset
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/Web/API/HTMLOrForeignElement/blur	/en-US/docs/Web/API/HTMLElement/blur

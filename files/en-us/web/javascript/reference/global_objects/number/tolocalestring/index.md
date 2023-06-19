@@ -62,7 +62,7 @@ console.log(number.toLocaleString()); // "3,500" if in U.S. English locale
 
 ### Checking for support for locales and options parameters
 
-The `locales` and `options` parameters may not be supported in all implementations, because support for the internalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
+The `locales` and `options` parameters may not be supported in all implementations, because support for the internationalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
 
 ```js
 function toLocaleStringSupportsLocales() {

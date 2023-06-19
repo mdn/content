@@ -496,7 +496,7 @@ If an inner `try` block does _not_ have a corresponding
 2. the enclosing `try...catch` statement's `catch` block is
    checked for a match.
 
-For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
+For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try_blocks)
 on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 reference page.
 

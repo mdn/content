@@ -269,6 +269,40 @@ contacts.delete("Jessie"); // true
 console.log(contacts.size); // 1
 ```
 
+### Map-like browser APIs
+
+**Browser `Map`-like objects** (or "maplike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a `Map`.
+
+Just like `Map`, entries can be iterated in the same order that they were added to the object.
+`Map`-like objects and `Map` also have properties and methods that share the same name and behavior.
+However unlike `Map` they only allow specific predefined types for the keys and values of each entry.
+
+The allowed types are set in the specification IDL definition.
+For example, {{domxref("RTCStatsReport")}} is a `Map`-like object that must use strings for keys and objects for values.
+This is defined in the specification IDL below:
+
+```webidl
+interface RTCStatsReport {
+  readonly maplike<DOMString, object>;
+};
+```
+
+`Map`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
+
+- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`@@iterator`](#map.prototypeiterator).
+- Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
+
+The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
+
+The following are examples of read-only `Map`-like browser objects:
+
+- {{domxref("AudioParamMap")}}
+- {{domxref("RTCStatsReport")}}
+- {{domxref("EventCounts")}}
+- {{domxref("KeyboardLayoutMap")}}
+- {{domxref("MIDIInputMap")}}
+- {{domxref("MIDIOutputMap")}}
+
 ## Constructor
 
 - {{jsxref("Map/Map", "Map()")}}
