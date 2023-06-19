@@ -51,6 +51,8 @@ low-resolution image with the full-resolution one that's now available.
 
 ## Examples
 
+### Basic usage
+
 The following example shows how to use the `decode()` method to control when
 an image is appended to the DOM. Without a {{jsxref('Promise')}}-returning method, you
 would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler, such as by using
@@ -69,6 +71,32 @@ img
     // Do something with the error.
   });
 ```
+
+### Avoiding empty images
+
+In the below example, you'll likely get an empty image shown on the page as the image is downloaded:
+
+```js
+const img = new Image();
+img.src = "img/logo.png";
+document.body.appendChild(img);
+```
+
+Using `decode()` will delay inserting the image into the DOM until it is fully downloaded and decoded, thereby avoiding the empty image problem:
+
+```js
+async function getImage() {
+  const img = new Image();
+  img.src = "img/logo.png";
+  await img.decode();
+  document.body.appendChild(img);
+  const p = document.createElement("p");
+  p.textContent = "Image is fully loaded!";
+  document.body.appendChild(p);
+}
+```
+
+This is particularly useful if you're dynamically swapping an existing image for a new one, and also prevents unrelated paints outside of this code from being held up while the image is decoding.
 
 ## Specifications
 

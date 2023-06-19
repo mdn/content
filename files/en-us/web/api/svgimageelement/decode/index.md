@@ -10,8 +10,8 @@ browser-compat: api.SVGImageElement.decode
 
 The **`decode()`** method of the
 {{domxref("SVGImageElement")}} interface initiates asynchronous decoding of an image,
-returning a {{jsxref('Promise')}} that resolves once the image data is ready
-for use.
+returning a {{jsxref('Promise')}} that resolves image is decoded and it is safe to append
+the image to the DOM.
 
 ## Syntax
 
@@ -34,16 +34,35 @@ None.
 
 ## Examples
 
-Using `decode()` like this provides a way to asynchronously decode an image, pausing inserting it into the DOM until it is fully downloaded and decoded, thereby avoiding showing empty images. This is particularly useful if you're dynamically swapping an existing image for a new one.
+In the below example, you'll likely get an empty image shown on the page as the image is downloaded:
 
 ```js
 const SVG_NS = "http://www.w3.org/2000/svg";
+const svg = document.querySelector("svg");
 
 const img = document.createElementNS(SVG_NS, "image");
-img.setAttribute("href", "img/logo.svg");
-await img.decode();
-// Add image to the DOM
+img.src = "img/logo.svg";
+svg.appendChild(img);
 ```
+
+Using `decode()` will delay inserting the image into the DOM until it is fully downloaded and decoded, thereby avoiding the empty image problem:
+
+```js
+const SVG_NS = "http://www.w3.org/2000/svg";
+const svg = document.querySelector("svg");
+
+async function getImage() {
+  const img = document.createElementNS(SVG_NS, "image");
+  img.src = "img/logo.svg";
+  await img.decode();
+  svg.appendChild(img);
+  const text = document.createElementNS(SVG_NS, "text");
+  text.textContent = "Image is fully loaded!";
+  svg.appendChild(text);
+}
+```
+
+This is particularly useful if you're dynamically swapping an existing image for a new one, and also prevents unrelated paints outside of this code from being held up while the image is decoding.
 
 ## Specifications
 

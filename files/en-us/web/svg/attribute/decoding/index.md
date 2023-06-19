@@ -11,7 +11,7 @@ The `decoding` attribute, valid on {{SVGElement("image")}} elements, provides a 
 
 In theory, this attribute provides a hint to the browser as to whether it should perform image decoding along with rendering other content in a single presentation step that looks more "correct" (`sync`), or render and present the other content first and then decode the image and present it later (`async`). In practice, `async` means that the next paint does not wait for the image to decode. It does not make decoding happen off the main thread; modern browsers do this anyway.
 
-In reality, `decoding` is not very useful. The decode time will be so small for most images — and it's rare for the image paint to be ready in the exact same frame and therefore be waiting for the image decode — that in most situations you won't notice any difference. You might notice a difference if you have very large images embedded in a page — setting `decoding="async"` may stop text content rendering from being held up by image decoding, with a tradeoff that you might experience flashes of unpainted content. However, embedding very large images is not recommended, and would cause more problems than `decode` would solve.
+In reality, using `decoding` on static `<image>` elements is often not very useful. It is likely that they'll be initially rendered as empty images while the image files are fetched (either from the network or from the cache) and then handled independently anyway. As a result, it is often almost impossible to notice differences in these settings. `decoding` is somewhat more useful when dynamically inserting `<image>` elements into the DOM via JavaScript — see {{domxref("SVGImageElement.decoding")}}.
 
 Allowed values:
 

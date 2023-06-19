@@ -94,7 +94,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : In theory, this attribute provides a hint to the browser as to whether it should perform image decoding along with rendering the other DOM content in a single presentation step that looks more "correct" (`sync`), or render and present the other DOM content first and then decode the image and present it later (`async`). In practice, `async` means that the next paint does not wait for the image to decode. It does not make decoding happen off the main thread; modern browsers do this anyway.
 
-    In reality, `decoding` is not very useful. The decode time will be so small for most images — and it's rare for the image paint to be ready in the exact same frame and therefore be waiting for the image decode — that in most situations you won't notice any difference. You might notice a difference if you have very large images embedded in a page — setting `decoding="async"` may stop text content rendering from being held up by image decoding, with a tradeoff that you might experience flashes of unpainted content. However, embedding very large images is not recommended, and would cause more problems than `decode` would solve.
+    In reality, using `decoding` on static `<img>` elements is often not very useful. It is likely that they'll be initially rendered as empty images while the image files are fetched (either from the network or from the cache) and then handled independently anyway. As a result, it is often almost impossible to notice differences in these settings. `decoding` is somewhat more useful when dynamically inserting `<img>` elements into the DOM via JavaScript — see {{domxref("HTMLImageElement.decoding")}}.
 
     Allowed values:
 
@@ -160,7 +160,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : One or more strings separated by commas, indicating a set of source sizes. Each source size consists of:
 
-    1. A [media condition](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
+    1. A [media condition](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). This must be omitted for the last item in the list.
     2. A source size value.
 
     Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.
