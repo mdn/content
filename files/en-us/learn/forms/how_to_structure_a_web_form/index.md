@@ -12,17 +12,13 @@ With the basics out of the way, we'll now look in more detail at the elements us
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >understanding of HTML</a
-        >.
+        Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to structure HTML forms and give them semantics so
-        they are usable and accessible.
+        To understand how to structure HTML forms and give them semantics so they are usable and accessible.
       </td>
     </tr>
   </tbody>
@@ -59,7 +55,7 @@ Here is a little example:
       <label for="size_1" aria-label="required">Small</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium" required/>
+      <input type="radio" name="size" id="size_2" value="medium" required />
       <label for="size_2" aria-label="required">Medium</label>
     </p>
     <p>
