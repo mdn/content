@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 When the term "Base64" is used on its own to refer to a specific algorithm, it typically refers to the version of Base64 outlined in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), section 4, which uses the following alphabet to represent the radix-64 digits, alongside `=` as a padding character:
 
-```plain
+```
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
@@ -19,8 +19,8 @@ A common variant is "Base64 URL safe", which omits the padding and replaces `+/`
 Base64 encoding schemes are commonly used to encode binary data for storage or transfer over media that can only deal with ASCII text (or some superset of ASCII that still falls short of accepting arbitrary binary data). This ensures that the data remains intact without modification during transport. Common applications of Base64 include:
 
 - Email via [MIME](https://en.wikipedia.org/wiki/MIME)
-- Storing complex data in [XML](/en-US/docs/Web/XML).
-- Encoding binary data so it can be included in a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+- Storing complex data in [XML](/en-US/docs/Web/XML)
+- Encoding binary data so it can be included in a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 
 ## Encoded size increase
 
