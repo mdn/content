@@ -103,3 +103,7 @@ If your browser does not support the `value` option the method will match on the
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)

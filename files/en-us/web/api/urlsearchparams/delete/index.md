@@ -100,3 +100,7 @@ Otherwise the result will be the same as in the previous example (`bar=2`).
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
