@@ -57,7 +57,7 @@ navigator.mediaDevices
     video.srcObject = stream;
   })
   .catch((error) => {
-    if (error.name === "ConstraintNotSatisfiedError") {
+    if (error.name === "OverconstrainedError") {
       console.error(
         `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`
       );
