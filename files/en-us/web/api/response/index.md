@@ -44,7 +44,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.redirect_static", "Response.redirect()")}}
   - : Creates a new response with a different URL.
 - {{domxref("Response.json_static", "Response.json()")}}
-  - : Creates a new response whose body is the JSON-encoded data, and status, status message, and headers are provided by init.
+  - : Creates a new `Response` object for returning the provided JSON encoded data.
 
 ## Instance methods
 
