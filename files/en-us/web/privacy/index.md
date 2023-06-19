@@ -99,15 +99,30 @@ Browsers have implemented several anti-tracking features that automatically enha
 
 #### Firefox
 
-- Firefox tracking protection
-- Enhanced tracking protection
-- Redirect tracking protection
-- State partitioning
+- [Firefox tracking protection](/en-US/docs/Web/Privacy/Firefox_tracking_protection)
+  - : Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites.
+- [Enhanced tracking protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop)
+  - : Blocks trackers that follow you around online to collect information about your browsing habits and interests without breaking site functionality. It also includes protections against harmful scripts, such as malware that drains your battery.
+- [Redirect tracking protection](/en-US/docs/Web/Privacy/Redirect_tracking_protection)
+  - : Firefox includes protection against redirect tracking, which is an abuse of cross-site navigation in which a tracker momentarily redirects a user to their website for the purpose of using first-party storage to track that user across websites.
+- [State partitioning](/en-US/docs/Web/Privacy/State_Partitioning)
+  - : A reworking of how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse state for cross-site tracking. This is achieved by providing what is effectively a "different", isolated storage location to every website a user visits.
+- [Storage access policy](/en-US/docs/Web/Privacy/Storage_Access_Policy)
+  - : A storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies, which was available in Firefox for many years.
 
 #### Chrome
 
-- Privacy sandbox project ()
-- Themes include identity and tracking protection, more privacy-respecting ads solutions, preventing covert tracking, and safely sharing data across browsing contexts
+- [Privacy sandbox project](https://developer.chrome.com/en/docs/privacy-sandbox/)
+  - : A series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
+
+#### Safari
+
+- [Intelligent Tracking Prevention](https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/)
+  - : Multiple priavy enhancements in the Safari browser to prevent tracking.
+
+### Stricter controls on sending cross-site cookies
+
+GOT HERE
 
 Browsers are stricter about sending cookies in cross-site requests (talk about SameSite and default values; see https://developer.chrome.com/docs/privacy-sandbox/overview/#will-samesite-become-irrelevant-after-third-party-cookies-are-deprecated)
 
