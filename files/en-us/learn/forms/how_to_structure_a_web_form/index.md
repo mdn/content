@@ -52,15 +52,15 @@ Here is a little example:
     <legend>Fruit juice size</legend>
     <p>
       <input type="radio" name="size" id="size_1" value="small" required />
-      <label for="size_1" aria-label="required">Small</label>
+      <label for="size_1">Small</label>
     </p>
     <p>
       <input type="radio" name="size" id="size_2" value="medium" required />
-      <label for="size_2" aria-label="required">Medium</label>
+      <label for="size_2">Medium</label>
     </p>
     <p>
       <input type="radio" name="size" id="size_3" value="large" required />
-      <label for="size_3" aria-label="required">Large</label>
+      <label for="size_3">Large</label>
     </p>
   </fieldset>
 </form>
