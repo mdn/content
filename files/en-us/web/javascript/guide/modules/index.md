@@ -216,7 +216,7 @@ The following sections expand on the various features outlined above.
 
 ### Feature detection
 
-You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports) static method (which is itself broadly supported):
+You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports_static) static method (which is itself broadly supported):
 
 ```js
 if (HTMLScriptElement.supports?.("importmap")) {

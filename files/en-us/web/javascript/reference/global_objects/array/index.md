@@ -79,7 +79,7 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length); // 2
 ```
 
-This is explained further on the {{jsxref("Array/length")}} page.
+This is explained further on the {{jsxref("Array/length", "length")}} page.
 
 ### Array methods and empty slots
 
@@ -279,7 +279,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Array.from()")}}
   - : Creates a new `Array` instance from an iterable or array-like object.
-- {{jsxref("Array.fromAsync()")}} {{Experimental_Inline}}
+- {{jsxref("Array.fromAsync()")}}
   - : Creates a new `Array` instance from an async iterable, iterable, or array-like object.
 - {{jsxref("Array.isArray()")}}
   - : Returns `true` if the argument is an array, or `false` otherwise.

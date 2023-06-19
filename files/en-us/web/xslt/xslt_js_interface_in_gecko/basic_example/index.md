@@ -3,6 +3,8 @@ title: Basic example
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 ---
 
+{{XsltSidebar}}
+
 ## Basic Example
 
 The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/XSLTProcessor/Generating_HTML) example in the [XSLT in Netscape Gecko](/en-US/docs/Web/API/XSLTProcessor) article. The XML file describes an article and the XSL file formats the information for display.

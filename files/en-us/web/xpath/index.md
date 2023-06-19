@@ -3,21 +3,7 @@ title: XPath
 slug: Web/XPath
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
-    <li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li>
-    <li class="toggle"><details open><summary>Guides</summary>
-      <ol>
-        <li><a href="/en-US/docs/Web/XPath/Comparison_with_CSS_selectors">Comparison of CSS Selectors and XPath</a></li>
-        <li><a href="/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript">Introduction to using XPath in JavaScript</a></li>
-        <li><a href="/en-US/docs/Web/XPath/Snippets">XPath snippets</a></li>
-      </ol></details>
-    </li>
-    <li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Axes">XPath Axes</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Axes")}}</details></li>
-    <li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Functions">XPath Functions</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Functions")}}</details></li>
-  </ol>
-</section>
+{{XsltSidebar}}
 
 XPath stands for XML Path Language. It uses a non-XML syntax to provide a flexible way of addressing (pointing to) different parts of an [XML](/en-US/docs/Web/XML/XML_introduction) document. It can also be used to test addressed nodes within a document to determine whether they match a pattern or not.
 

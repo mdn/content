@@ -7639,6 +7639,10 @@
 /en-US/docs/Web/API/BluetoothGattService/uuid	/en-US/docs/Web/API/BluetoothRemoteGATTService/uuid
 /en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService	/en-US/docs/Web/API/BluetoothRemoteGATTService
 /en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices	/en-US/docs/Web/API/BluetoothRemoteGATTService
+/en-US/docs/Web/API/BluetoothUUID/canonicalUUID	/en-US/docs/Web/API/BluetoothUUID/canonicalUUID_static
+/en-US/docs/Web/API/BluetoothUUID/getCharacteristic	/en-US/docs/Web/API/BluetoothUUID/getCharacteristic_static
+/en-US/docs/Web/API/BluetoothUUID/getDescriptor	/en-US/docs/Web/API/BluetoothUUID/getDescriptor_static
+/en-US/docs/Web/API/BluetoothUUID/getService	/en-US/docs/Web/API/BluetoothUUID/getService_static
 /en-US/docs/Web/API/Body/arrayBuffer	/en-US/docs/Web/API/Response/arrayBuffer
 /en-US/docs/Web/API/Body/blob	/en-US/docs/Web/API/Response/blob
 /en-US/docs/Web/API/Body/body	/en-US/docs/Web/API/Response/body
@@ -7679,6 +7683,8 @@
 /en-US/docs/Web/API/CSSStyleSheet.deleteRule	/en-US/docs/Web/API/CSSStyleSheet/deleteRule
 /en-US/docs/Web/API/CSSStyleSheet.insertRule	/en-US/docs/Web/API/CSSStyleSheet/insertRule
 /en-US/docs/Web/API/CSSStyleValue/CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
+/en-US/docs/Web/API/CSSStyleValue/parse	/en-US/docs/Web/API/CSSStyleValue/parse_static
+/en-US/docs/Web/API/CSSStyleValue/parseAll	/en-US/docs/Web/API/CSSStyleValue/parseAll_static
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue()	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue.CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSValueList/CSSValueList.length	/en-US/docs/Web/API/CSSValueList/length
@@ -8525,6 +8531,7 @@
 /en-US/docs/Web/API/HTMLMediaElement/onencrypted	/en-US/docs/Web/API/HTMLMediaElement
 /en-US/docs/Web/API/HTMLMediaElement/onerror	/en-US/docs/Web/API/HTMLMediaElement/error_event
 /en-US/docs/Web/API/HTMLMediaElement/onwaitingforkey	/en-US/docs/Web/API/HTMLMediaElement
+/en-US/docs/Web/API/HTMLMetaElement/charset	/en-US/docs/Web/HTML/Element/meta#charset
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/Web/API/HTMLOrForeignElement/blur	/en-US/docs/Web/API/HTMLElement/blur
@@ -8750,6 +8757,7 @@
 /en-US/docs/Web/API/IDBVersionChangeEvent/version	/en-US/docs/Web/API/IDBVersionChangeEvent
 /en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse()	/en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse
 /en-US/docs/Web/API/IdleDetector/onchange	/en-US/docs/Web/API/IdleDetector/change_event
+/en-US/docs/Web/API/IdleDetector/requestPermission	/en-US/docs/Web/API/IdleDetector/requestPermission_static
 /en-US/docs/Web/API/Image	/en-US/docs/Web/API/HTMLImageElement/Image
 /en-US/docs/Web/API/ImageBitmapFactories/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
 /en-US/docs/Web/API/ImageBitmapRenderingContext/transferImageBitmap	/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
@@ -9386,6 +9394,7 @@
 /en-US/docs/Web/API/PushManager.register	/en-US/docs/Web/API/PushManager/register
 /en-US/docs/Web/API/PushManager.registrations	/en-US/docs/Web/API/PushManager/registrations
 /en-US/docs/Web/API/PushManager.unregister	/en-US/docs/Web/API/PushManager/unregister
+/en-US/docs/Web/API/PushManager/supportedContentEncodings	/en-US/docs/Web/API/PushManager/supportedContentEncodings_static
 /en-US/docs/Web/API/Push_API/Using_the_Push_API	/en-US/docs/Web/API/Push_API
 /en-US/docs/Web/API/RTCAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCConfiguration	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
@@ -9516,8 +9525,12 @@
 /en-US/docs/Web/API/RTCSessionDescription.toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/RTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSignalingState	/en-US/docs/Web/API/RTCPeerConnection/signalingState
+/en-US/docs/Web/API/RTCStats	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/id	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/timestamp	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/type	/en-US/docs/Web/API/RTCStatsReport
 /en-US/docs/Web/API/RTCStatsIceCandidatePairState	/en-US/docs/Web/API/RTCIceCandidatePairStats/state
-/en-US/docs/Web/API/RTCStatsType	/en-US/docs/Web/API/RTCStats/type
+/en-US/docs/Web/API/RTCStatsType	/en-US/docs/Web/API/RTCStatsReport
 /en-US/docs/Web/API/RTCTrackEventInit	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RTCTrackEventInit/receiver	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RTCTrackEventInit/streams	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
@@ -12657,10 +12670,11 @@
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction#Advantages_of_web_applications
 /en-US/docs/Web/Progressive_web_apps/App_structure	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing	/en-US/docs/Web/Progressive_web_apps/Installing
+/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing	/en-US/docs/Web/Progressive_web_apps/Guides/Installing
 /en-US/docs/Web/Progressive_web_apps/Discoverable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Installable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Installable_PWAs	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+/en-US/docs/Web/Progressive_web_apps/Installing	/en-US/docs/Web/Progressive_web_apps/Guides/Installing
 /en-US/docs/Web/Progressive_web_apps/Introduction	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
 /en-US/docs/Web/Progressive_web_apps/Linkable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Loading	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading

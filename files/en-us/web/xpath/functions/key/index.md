@@ -3,7 +3,7 @@ title: key
 slug: Web/XPath/Functions/key
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `key` function returns a node-set of nodes that have the given value for the given key.
 

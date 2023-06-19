@@ -123,7 +123,7 @@ Media feature expressions test for their presence or value, and are entirely opt
     Added in Media Queries Level 5.
 - {{cssxref("@media/resolution", "resolution")}}
   - : Pixel density of the output device.
-- {{cssxref("@media/scripting", "scripting")}}
+- {{cssxref("@media/scripting", "scripting")}} {{Experimental_Inline}}
   - : Detects whether scripting (i.e. JavaScript) is available.
     Added in Media Queries Level 5.
 - {{cssxref("@media/update-frequency", "update")}}

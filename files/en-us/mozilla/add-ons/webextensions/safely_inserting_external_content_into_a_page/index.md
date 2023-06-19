@@ -1,5 +1,6 @@
 ---
-title: Safely inserting external content into a page
+title: Safely insert external content into a page
+short-title: Insert external content
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
 page-type: guide
 ---
