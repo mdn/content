@@ -145,7 +145,7 @@ Let's consider this example:
 <!-- But this is probably best: -->
 <div>
   <label for="username">Name: <span aria-label="required">*</span></label>
-  <input id="username" type="text" name="username" required/>
+  <input id="username" type="text" name="username" required />
 </div>
 ```
 
@@ -235,21 +235,21 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <span>Name: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="name" name="username" required/>
+       <input type="text" id="name" name="username" required />
      </p>
      <p>
        <label for="mail">
          <span>Email: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="email" id="mail" name="usermail" required/>
+       <input type="email" id="mail" name="usermail" required />
      </p>
      <p>
        <label for="pwd">
          <span>Password: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="password" id="pwd" name="password" required/>
+       <input type="password" id="pwd" name="password" required />
      </p>
    </section>
    ```
@@ -281,7 +281,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <span>Card number:</span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="tel" id="number" name="cardnumber" required/>
+       <input type="tel" id="number" name="cardnumber" required />
      </p>
      <p>
        <label for="expiration">
