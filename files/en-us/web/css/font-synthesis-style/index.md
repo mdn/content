@@ -51,21 +51,23 @@ This example shows turning off synthesis of the oblique typeface by the browser 
 
 ```html
 <p class="english">
-  This is the default <em>oblique typeface</em> and <strong>bold typeface</strong>.
+  This is the default <em>oblique typeface</em> and
+  <strong>bold typeface</strong>.
 </p>
 
 <p class="english no-syn">
-  The  <em>oblique typeface</em> is turned off here but not the <strong>bold typeface</strong>.
+  The <em>oblique typeface</em> is turned off here but not the
+  <strong>bold typeface</strong>.
 </p>
 ```
 
 #### CSS
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .english {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .no-syn {
   font-synthesis-style: none;

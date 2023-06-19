@@ -51,21 +51,23 @@ This example shows turning off synthesis of the bold typeface by the browser in 
 
 ```html
 <p class="english">
-  This is the default <strong>bold typeface</strong> and <em>oblique typeface</em>.
+  This is the default <strong>bold typeface</strong> and
+  <em>oblique typeface</em>.
 </p>
 
 <p class="english no-syn">
-  The <strong>bold typeface</strong> is turned off here but not the <em>oblique typeface</em>.
+  The <strong>bold typeface</strong> is turned off here but not the
+  <em>oblique typeface</em>.
 </p>
 ```
 
 #### CSS
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .english {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .no-syn {
   font-synthesis-weight: none;

@@ -51,21 +51,23 @@ This example shows turning off synthesis of the small-caps typeface by the brows
 
 ```html
 <p class="english">
-  These are the default <span class="small-caps">small-caps</span>, <strong>bold</strong>, and <em>oblique</em> typefaces.
+  These are the default <span class="small-caps">small-caps</span>,
+  <strong>bold</strong>, and <em>oblique</em> typefaces.
 </p>
 
 <p class="english no-syn">
-  The <span class="small-caps">small-caps</span> typeface is turned off here but not the <strong>bold</strong> and <em>oblique</em> typefaces.
+  The <span class="small-caps">small-caps</span> typeface is turned off here but
+  not the <strong>bold</strong> and <em>oblique</em> typefaces.
 </p>
 ```
 
 #### CSS
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .english {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .small-caps {
   font-variant: small-caps;

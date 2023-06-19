@@ -62,16 +62,16 @@ For example, using the [:lang()](/en-US/docs/Web/CSS/:lang) pseudo-class, you ca
 
 The table below shows how a value of the shorthand `font-synthesis` property maps to the constituent longhand properties.
 
-| font-synthesis value | [font-synthesis-weight](/en-US/docs/Web/CSS/font-synthesis-weight) value | [font-synthesis-style](/en-US/docs/Web/CSS/font-synthesis-style) value | [font-synthesis-small-caps](/en-US/docs/Web/CSS/font-synthesis-small-caps) value |
-| :------------------- | :-------------------------- | :------------------------- | :------------------------------ |
-| `none` | `none` | `none` | `none` |
-| `weight` | `auto` | `none` | `none` |
-| `style` | `none` | `auto` | `none` |
-| `small-caps` | `none` | `none` | `auto` |
-| `weight style` | `auto` | `auto` | `none` |
-| `weight small-caps` | `auto` | `none` | `auto` |
-| `style small-caps` | `none` | `auto` | `auto` |
-| `weight style small-caps` | `auto` | `auto` | `auto` |
+| font-synthesis value      | [font-synthesis-weight](/en-US/docs/Web/CSS/font-synthesis-weight) value | [font-synthesis-style](/en-US/docs/Web/CSS/font-synthesis-style) value | [font-synthesis-small-caps](/en-US/docs/Web/CSS/font-synthesis-small-caps) value |
+| :------------------------ | :----------------------------------------------------------------------- | :--------------------------------------------------------------------- | :------------------------------------------------------------------------------- |
+| `none`                    | `none`                                                                   | `none`                                                                 | `none`                                                                           |
+| `weight`                  | `auto`                                                                   | `none`                                                                 | `none`                                                                           |
+| `style`                   | `none`                                                                   | `auto`                                                                 | `none`                                                                           |
+| `small-caps`              | `none`                                                                   | `none`                                                                 | `auto`                                                                           |
+| `weight style`            | `auto`                                                                   | `auto`                                                                 | `none`                                                                           |
+| `weight small-caps`       | `auto`                                                                   | `none`                                                                 | `auto`                                                                           |
+| `style small-caps`        | `none`                                                                   | `auto`                                                                 | `auto`                                                                           |
+| `weight style small-caps` | `auto`                                                                   | `auto`                                                                 | `auto`                                                                           |
 
 ## Formal definition
 
@@ -94,41 +94,34 @@ This example shows the browser's default font-synthesis behavior and compares it
 <p class="english">
   This font supports <strong>bold</strong> and <em>italic</em>.
 </p>
-<p class="chinese">
-  这个字体支持<strong>加粗</strong>和<em>斜体</em>
-</p>
+<p class="chinese">这个字体支持<strong>加粗</strong>和<em>斜体</em></p>
 <br />
 
 <pre> SYNTHESIS IS DISABLED </pre>
 <p class="english no-syn">
   This font supports <strong>bold</strong> and <em>italic.</em>
 </p>
-<p class="chinese no-syn">
-  这个字体支持<strong>加粗</strong>和<em>斜体</em>
-</p>
+<p class="chinese no-syn">这个字体支持<strong>加粗</strong>和<em>斜体</em></p>
 <br />
 
 <pre> SYNTHESIS IS ENABLED </pre>
 <p class="english">
   This font supports <strong>bold</strong> and <em>italic</em>.
 </p>
-<p class="chinese syn">
-  这个字体支持<strong>加粗</strong>和<em>斜体</em>
-</p>
+<p class="chinese syn">这个字体支持<strong>加粗</strong>和<em>斜体</em></p>
 ```
 
 #### CSS
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
 
 .english {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .chinese {
-  font-family: 'Ma Shan Zheng';
+  font-family: "Ma Shan Zheng";
 }
 .no-syn {
   font-synthesis: none;
