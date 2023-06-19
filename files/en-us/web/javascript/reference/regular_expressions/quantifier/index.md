@@ -7,7 +7,7 @@ browser-compat: javascript.regular_expressions.quantifier
 
 {{JsSidebar}}
 
-A **quantifier** repeats an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atom) a certain number of times. The quantifier is placed after the atom it applies to.
+A **quantifier** repeats an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atoms) a certain number of times. The quantifier is placed after the atom it applies to.
 
 ## Syntax
 
@@ -42,7 +42,7 @@ atom{min,max}?
 
 ## Description
 
-A quantifier is placed after an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atom) to repeat it a certain number of times. It cannot appear on its own. Each quantifier is able to specify a minimum and maximum number that a pattern must be repeated for.
+A quantifier is placed after an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atoms) to repeat it a certain number of times. It cannot appear on its own. Each quantifier is able to specify a minimum and maximum number that a pattern must be repeated for.
 
 | Quantifier  | Minimum | Maximum  |
 |-------------|---------|----------|

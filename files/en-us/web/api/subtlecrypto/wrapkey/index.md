@@ -54,7 +54,7 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
     - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
       pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams) object.
     - To use [AES-KW](#aes-kw),
-      pass the string `"AES-KW"`, or an object of the form `{ "name": "AES-KW }`.
+      pass the string `"AES-KW"`, or an object of the form `{ name: "AES-KW" }`.
 
 ### Return value
 
