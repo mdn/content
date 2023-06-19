@@ -24,7 +24,7 @@ Example use cases include:
 
 The WebOTP API allows web apps to expedite this validation process by copying the OTP from the SMS and passing it to the app automatically after the user has provided consent (most native platforms have an equivalent API).
 
-Note that the OTP is also bound to the sending domain. This is a useful security constraint for verifying that the OTP is coming from the right source that may be enough for day-to-day reauthentication. You are, however, recommended to combine it with a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for riskier actions like sign-up — phone numbers can be hijacked, or recycled by carriers.
+Note that the OTP is also bound to the sending domain. This is a useful security constraint for verifying that the OTP is coming from the right source, which can mitigate the risk of phishing attacks during day-to-day reauthentication.
 
 ### How does it work?
 
@@ -36,6 +36,8 @@ The process works like so:
 4. When the SMS is received on the device, provided it contains the app's domain the browser will ask the user if they consent to the OTP being retrieved/used. Chrome, for example, displays a dialog asking them for their permission to retrieve the OTP from the SMS; other browsers may handle it differently. If they do consent, the `get()` call will fulfill with an {{domxref("OTPCredential")}} object containing the OTP.
 5. You can then use the OTP in any way you wish. Typical usage would be to set it as the value of the validation form on the app client and then submit the form, making the process as seamless as possible.
 6. The app server will then verify that the OTP sent back to it matches what it originally sent in the SMS and, if so, complete the process (for example, sign the user in).
+
+> **Note:** You are recommended to combine WebOTP with a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for actions like initial user sign-up — there is always the risk that phone numbers can be hijacked or recycled by carriers.
 
 ### The SMS message format
 
