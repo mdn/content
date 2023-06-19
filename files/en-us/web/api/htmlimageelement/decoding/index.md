@@ -8,7 +8,7 @@ browser-compat: api.HTMLImageElement.decoding
 
 {{APIRef}}
 
-The **`decoding`** property of the {{domxref("HTMLImageElement")}} interface provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
+The **`decoding`** property of the {{domxref("HTMLImageElement")}} interface provides a hint to the browser as to whether it should wait for the image to be decoded before presenting other content updates or not.
 
 ## Value
 
