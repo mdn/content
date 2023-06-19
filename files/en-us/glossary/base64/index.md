@@ -37,7 +37,7 @@ Browsers natively provide two JavaScript functions for decoding and encoding Bas
 
 > **Note:** Base64 is a binary encoding rather than a text encoding, but `btoa` and `atob` were added to the web platform before it supported binary data types. As a result, the two functions use strings to represent binary data, with the code point of each character representing the value of each byte. This has led to a common misconception that `btoa` can be used to encode arbitrary text data — for example, creating a Base64 `data:` URL of a text or HTML document.
 >
-> However, in [UTF-8](/en-US/docs/Glossary/UTF-8), the byte-to-code-point correspondence only holds true for code points up to `0x7f`. Furthermore, code points over `0xff` will cause `btoa` to throw an error due to exceeding the maximum value for 1 byte. The next section details ways of working around this limitation when encoding arbitrary Unicode text.
+> However, the byte-to-code-point correspondence only reliably holds true for code points up to `0x7f`. Furthermore, code points over `0xff` will cause `btoa` to throw an error due to exceeding the maximum value for 1 byte. The next section details how to work around this limitation when encoding arbitrary Unicode text.
 
 ## The "Unicode Problem"
 
@@ -84,6 +84,6 @@ async function dataUrlToBytes(dataUrl) {
 }
 
 // Usage
-await bytesToBase64DataUrl(new Uint8Array([65])); // "data:application/octet-stream;base64,QQ=="
-await dataUrlToBytes("data:application/octet-stream;base64,QQ=="); // Uint8Array [65]
+await bytesToBase64DataUrl(new Uint8Array([0, 1, 2])); // "data:application/octet-stream;base64,AAEC"
+await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array [0, 1, 2]
 ```
