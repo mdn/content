@@ -79,7 +79,7 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length); // 2
 ```
 
-This is explained further on the {{jsxref("Array/length")}} page.
+This is explained further on the {{jsxref("Array/length", "length")}} page.
 
 ### Array methods and empty slots
 
