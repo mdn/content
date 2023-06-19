@@ -88,27 +88,34 @@ negotiation and thus fail `replaceTrack()`:
 ```js
 // example to change video camera, suppose selected value saved into window.selectedCamera
 
-navigator.mediaDevices
-  .getUserMedia({
-    video: {
-      deviceId: {
-        exact: window.selectedCamera,
+let localConnection = new RTCPeerConnection(),
+    remoteConnection = new RTCPeerConnection();
+// Configuring these to use the the WebRTC API can be explored at
+// https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample
+let PCs = [localConnection,remoteConnection];
+function useSelectedCamera() { // Assumes window.selectedCamera is the selected camera
+  navigator.mediaDevices
+    .getUserMedia({
+      video: {
+        deviceId: {
+          exact: window.selectedCamera,
+        },
       },
-    },
-  })
-  .then((stream) => {
-    const [videoTrack] = stream.getVideoTracks();
-    PCs.forEach((pc) => {
-      const sender = pc
-        .getSenders()
-        .find((s) => s.track.kind === videoTrack.kind);
-      console.log("Found sender:", sender);
-      sender.replaceTrack(videoTrack);
+    })
+    .then((stream) => {
+      const [videoTrack] = stream.getVideoTracks();
+      PCs.forEach((pc) => {
+        const sender = pc
+          .getSenders()
+          .find((s) => s.track.kind === videoTrack.kind);
+        console.log("Found sender:", sender);
+        sender.replaceTrack(videoTrack);
+      });
+    })
+    .catch((err) => {
+      console.error(`Error happened: ${err}`);
     });
-  })
-  .catch((err) => {
-    console.error(`Error happened: ${err}`);
-  });
+}
 ```
 
 ## Specifications
