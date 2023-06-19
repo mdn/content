@@ -133,9 +133,9 @@ This code snippet adds a canvas element to your HTML document. A fallback text i
 Then in the JavaScript code, call {{domxref("HTMLCanvasElement.getContext()")}} to get a drawing context and start drawing onto the canvas:
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
