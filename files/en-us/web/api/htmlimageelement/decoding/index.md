@@ -23,9 +23,11 @@ A string representing the decoding hint. Possible values are:
 
 ## Usage notes
 
-In theory, this property provides a hint to the browser as to whether it should perform image decoding along with other tasks in a single step (`"sync"`), or do other tasks first and then decode the image (`"async"`).
+In theory, this property provides a hint to the browser as to whether it should perform image decoding along with other tasks in a single step (`"sync"`), or allow other content to be rendered before this completes. (`"async"`). In reality, the `decoding` attribute for APIs is often not that useful, and there are often better ways of handling this. 
 
-In reality, `decoding` is not very useful. If we imagine a situation in which you have dynamically loaded an image and then added it to the DOM, the decode time will be so small for most images that in most situations you won't notice any difference. In addition, `decoding` doesn't stop the image from being added to the DOM, so you will probably get a flash of empty image as it finishes downloading.
+For images that are not downloaded before being inserted into the DOM, the browser will likely render the empty image initially, and then handle the image when it is available, independently of the other content anyway.
+
+For images that are downloaded before being inserted into the DOM, using the {{domxref("HTMLImageElement.decode()")}} method is a better way to assure atomic presentation without holding up other content.
 
 ## Examples
 
