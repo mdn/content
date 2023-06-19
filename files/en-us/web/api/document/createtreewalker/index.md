@@ -68,7 +68,7 @@ This example uses `whatToShow` to transform text contents into upper case. Note 
 <div id="root">
   This is a text node.
   <span>And this is a <code>span</code> element.</span>
-<div>
+</div>
 ```
 
 #### JavaScript
@@ -97,16 +97,16 @@ This example uses `filter` to escape text contents. For any `.escape` element, t
 
 ```html
 <div>
-  <div>This is not escaped.
-    <span class="escape">But this is escaped.</span>
+  <div>
+    This is not escaped. <span class="escape">But this is escaped.</span>
   </div>
   <div class="escape">This is escaped.</div>
   <div class="no-escape">This is not escaped.</div>
 </div>
 <hr />
 <div class="escape">
-  <div>This is escaped.
-    <span class="no-escape">But this is not escaped.</span>
+  <div>
+    This is escaped. <span class="no-escape">But this is not escaped.</span>
   </div>
   <div class="no-escape">This is not escaped.</div>
 </div>
@@ -144,11 +144,12 @@ span {
 const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  (node) => node.classList.contains("no-escape") ?
-    NodeFilter.FILTER_REJECT :
-    node.closest(".escape") ?
-    NodeFilter.FILTER_ACCEPT :
-    NodeFilter.FILTER_SKIP
+  (node) =>
+    node.classList.contains("no-escape")
+      ? NodeFilter.FILTER_REJECT
+      : node.closest(".escape")
+      ? NodeFilter.FILTER_ACCEPT
+      : NodeFilter.FILTER_SKIP
 );
 
 let currentNode;
@@ -156,16 +157,15 @@ while ((currentNode = treeWalker.nextNode())) {
   const textTreeWalker = document.createTreeWalker(
     currentNode,
     NodeFilter.SHOW_ALL,
-    (node) => node.nodeName === "#text" && !/^\s*$/.test(node.data) ?
-       NodeFilter.FILTER_ACCEPT :
-       NodeFilter.FILTER_REJECT
+    (node) =>
+      node.nodeName === "#text" && !/^\s*$/.test(node.data)
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_REJECT
   );
 
   let currentTextNode;
   while ((currentTextNode = textTreeWalker.nextNode())) {
-    currentTextNode.data = encodeURI(
-      currentTextNode.data.replace(/\s+/g, " ")
-    );
+    currentTextNode.data = encodeURI(currentTextNode.data.replace(/\s+/g, " "));
   }
 }
 ```
