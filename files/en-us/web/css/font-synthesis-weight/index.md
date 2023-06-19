@@ -50,9 +50,13 @@ This example shows turning off synthesis of the bold typeface by the browser in 
 #### HTML
 
 ```html
-<p class="english">This is the default <strong>bold typeface</strong> and <em>oblique typeface</em>.</p>
+<p class="english">
+  This is the default <strong>bold typeface</strong> and <em>oblique typeface</em>.
+</p>
 
-<p class="english no-syn">The <strong>bold typeface</strong> is turned off here but not the <em>oblique typeface</em>.</p>
+<p class="english no-syn">
+  The <strong>bold typeface</strong> is turned off here but not the <em>oblique typeface</em>.
+</p>
 ```
 
 #### CSS

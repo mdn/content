@@ -91,17 +91,30 @@ This example shows the browser's default font-synthesis behavior and compares it
 
 ```html
 <pre> DEFAULT </pre>
-<p class="english">This font supports <strong>bold</strong> and <em>italic</em>.</p>
-<p class="chinese">这个字体支持<strong>加粗</strong>和<em>斜体</em>。</p><br>
+<p class="english">
+  This font supports <strong>bold</strong> and <em>italic</em>.
+</p>
+<p class="chinese">
+  这个字体支持<strong>加粗</strong>和<em>斜体</em>
+</p>
+<br />
 
 <pre> SYNTHESIS IS DISABLED </pre>
-<p class="english no-syn">This font supports <strong>bold</strong> and <em>italic.</em></p>
-<p class="chinese no-syn">这个字体支持<strong>加粗</strong>和<em>斜体</em>。</p><br>
+<p class="english no-syn">
+  This font supports <strong>bold</strong> and <em>italic.</em>
+</p>
+<p class="chinese no-syn">
+  这个字体支持<strong>加粗</strong>和<em>斜体</em>
+</p>
+<br />
 
 <pre> SYNTHESIS IS ENABLED </pre>
-<p class="english">This font supports <strong>bold</strong> and <em>italic</em>.</p>
-<p class="chinese syn">这个字体支持<strong>加粗</strong>和<em>斜体</em>。</p>
-
+<p class="english">
+  This font supports <strong>bold</strong> and <em>italic</em>.
+</p>
+<p class="chinese syn">
+  这个字体支持<strong>加粗</strong>和<em>斜体</em>
+</p>
 ```
 
 #### CSS

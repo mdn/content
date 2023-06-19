@@ -50,9 +50,13 @@ This example shows turning off synthesis of the small-caps typeface by the brows
 #### HTML
 
 ```html
-<p class="english">These are the default <span class="small-caps">small-caps</span>, <strong>bold</strong>, and <em>oblique</em> typefaces.</p>
+<p class="english">
+  These are the default <span class="small-caps">small-caps</span>, <strong>bold</strong>, and <em>oblique</em> typefaces.
+</p>
 
-<p class="english no-syn">The <span class="small-caps">small-caps</span> typeface is turned off here but not the <strong>bold</strong> and <em>oblique</em> typefaces.</p>
+<p class="english no-syn">
+  The <span class="small-caps">small-caps</span> typeface is turned off here but not the <strong>bold</strong> and <em>oblique</em> typefaces.
+</p>
 ```
 
 #### CSS

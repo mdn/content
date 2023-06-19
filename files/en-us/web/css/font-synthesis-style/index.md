@@ -50,9 +50,13 @@ This example shows turning off synthesis of the oblique typeface by the browser 
 #### HTML
 
 ```html
-<p class="english">This is the default <em>oblique typeface</em> and <strong>bold typeface</strong>.</p>
+<p class="english">
+  This is the default <em>oblique typeface</em> and <strong>bold typeface</strong>.
+</p>
 
-<p class="english no-syn">The  <em>oblique typeface</em> is turned off here but not the <strong>bold typeface</strong>.</p>
+<p class="english no-syn">
+  The  <em>oblique typeface</em> is turned off here but not the <strong>bold typeface</strong>.
+</p>
 ```
 
 #### CSS
