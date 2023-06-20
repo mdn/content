@@ -19,7 +19,7 @@ Because [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 Correct use of `WeakRef` takes careful thought, and it's best avoided if possible. It's also important to avoid relying on any specific behaviors not guaranteed by the specification. When, how, and whether garbage collection occurs is down to the implementation of any given JavaScript engine. Any behavior you observe in one engine may be different in another engine, in another version of the same engine, or even in a slightly different situation with the same version of the same engine. Garbage collection is a hard problem that JavaScript engine implementers are constantly refining and improving their solutions to.
 
-Here are some specific points that the authors of the WeakRef proposal included in its [explainer document](https://github.com/tc39/proposal-weakrefs/blob/master/README.md):
+Here are some specific points included by the authors in the [proposal](https://github.com/tc39/proposal-weakrefs) that introduced `WeakRef`:
 
 > [Garbage collectors](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>) are complicated. If an application or library depends on GC cleaning up a WeakRef or calling a finalizer \[cleanup callback] in a timely, predictable manner, it's likely to be disappointed: the cleanup may happen much later than expected, or not at all. Sources of variability include:
 >
