@@ -92,7 +92,7 @@ Note that in the example above, `respondWith()` is only called for requests in `
 This is an extension to the previous strategy. In the `fetch` event handler, if the resource is cachable, we:
 
 - Look in the cache for the resource, and return the resource if it is found.
-- Otherwise, go to the network. If the network request succeds, cache the resource for next time.
+- Otherwise, go to the network. If the network request succeeds, cache the resource for next time.
 
 If the resource is not cachable, we only use the network, as before. The definition of "cachable" is specific to the PWA, but again includes the idea that the resource should not change for this version of the app. In this example, everything except requests for JSON data is treated as cachable.
 
@@ -199,13 +199,13 @@ self.addEventListener("fetch", (event) => {
 
 This is useful for requests for which it is important to get the most fresh response possible, but for which a cached resource is better than nothing. A messaging app's list of recent messages might fall into this category.
 
-There are still requests for which no response is better than a possibly-outdated response, and for which only a "network only" strategy is appropriate. For example, if an app is showing the list of available products, it will be frustrating to users of the list is out of date.
+There are still requests for which no response is better than a possibly-outdated response, and for which only a "network only" strategy is appropriate. For example, if an app is showing the list of available products, it will be frustrating to users if the list is out of date.
 
 ## Deleting cached data
 
-Caches have a limited amount of storage space, and the browser may evict an app's cached data if the limit is exceeded. The specific limits and behavior are browser-specific: see [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) for details. In practice, eviction of cached data is a very rare event.
+Caches have a limited amount of storage space, and the browser may evict an app's cached data if the limit is exceeded. The specific limits and behavior are browser-specific: see [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) for details. In practice, eviction of cached data is a very rare event. The user can also clear an app's cache at any time.
 
-A PWA should clean up any old versions of its cache in the service worker's {{domxref("ServiceWorkerGlobalScope.activate_event", "activate")}} event: when this event fires the service worker can be sure that no previous versions of the service worker are running, so old cached data is no longer needed.
+A PWA should clean up any old versions of its cache in the service worker's {{domxref("ServiceWorkerGlobalScope.activate_event", "activate")}} event: when this event fires, the service worker can be sure that no previous versions of the service worker are running, so old cached data is no longer needed.
 
 ## See also
 
