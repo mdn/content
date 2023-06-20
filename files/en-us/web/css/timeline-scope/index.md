@@ -2,6 +2,8 @@
 title: timeline-scope
 slug: Web/CSS/timeline-scope
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.timeline-scope
 ---
 
