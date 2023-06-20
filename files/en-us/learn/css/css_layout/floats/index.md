@@ -340,7 +340,7 @@ In your CSS, add the following rule for the `.wrapper` class and then reload the
   background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
-  display: overflow;
+  overflow: auto;
 }
 ```
 
