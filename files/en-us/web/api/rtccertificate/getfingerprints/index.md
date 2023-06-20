@@ -8,9 +8,9 @@ browser-compat: api.RTCCertificate.getFingerprints
 
 {{APIRef("WebRTC")}}
 
-The **`getFingerprints()`** method of the **{{domxref("RTCCertificate")}}** interface is used to get the array of certificate fingerprints.
+The **`getFingerprints()`** method of the **{{domxref("RTCCertificate")}}** interface is used to get an array of certificate fingerprints.
 
-An application can compare these certificate fingerprints from the client to certificates from the server.
+An application can use this method to compare the client certificate fingerprints with the certificate fingerprints from the server.
 The server and client may support different sets of algorithms: all fingerprint values for the set of algorithms supported by both client and server should match.
 
 ## Syntax
