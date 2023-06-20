@@ -8,7 +8,7 @@ slug: Glossary/Baseline/Compatibility
 **Baseline** identifies widely-supported web platform features.
 Web developers can expect Baseline features to work in contemporary browsers.
 
-A Baseline feature - such as an API, a set of CSS properties, or a JavaScript syntax - is known to work consistently in the current and previous major versions of several well-known browsers (Chrome, Edge, Firefox, and Safari).
+A Baseline feature - such as an API, a set of CSS properties, or a JavaScript syntax - is known to work consistently in at least one version before the current version of all of several well-known browsers (Chrome, Edge, Firefox, and Safari).
 
 ## Badges
 

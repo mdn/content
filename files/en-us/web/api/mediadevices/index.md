@@ -61,7 +61,7 @@ navigator.mediaDevices
       console.error(
         `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`
       );
-    } else if (error.name === "PermissionDeniedError") {
+    } else if (error.name === "NotAllowedError") {
       console.error(
         "You need to grant this page permission to access your camera and microphone."
       );

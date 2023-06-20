@@ -542,7 +542,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `popovertargetaction`
 
-  - : Specifies the the action to be performed on a popover element being controlled by a control `<input type="button">`. Possible values are:
+  - : Specifies the action to be performed on a popover element being controlled by a control `<input type="button">`. Possible values are:
 
     - `"hide"`
       - : The button will hide a shown popover. If you try to hide an already hidden popover, no action will be taken.

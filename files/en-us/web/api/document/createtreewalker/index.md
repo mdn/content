@@ -8,8 +8,7 @@ browser-compat: api.Document.createTreeWalker
 
 {{ApiRef("Document")}}
 
-The **`Document.createTreeWalker()`** creator method returns a
-newly created {{domxref("TreeWalker")}} object.
+The **`Document.createTreeWalker()`** creator method returns a newly created {{domxref("TreeWalker")}} object.
 
 ## Syntax
 
@@ -22,15 +21,12 @@ createTreeWalker(root, whatToShow, filter)
 ### Parameters
 
 - `root`
-  - : A root {{domxref("Node")}} of this {{domxref("TreeWalker")}} traversal. Typically
-    this will be an element owned by the document.
+
+  - : A root {{domxref("Node")}} of this {{domxref("TreeWalker")}} traversal. Typically this will be an element owned by the document.
+
 - `whatToShow` {{optional_inline}}
 
-  - : A `unsigned long` representing a bitmask created by combining the
-    constant properties of
-    [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter).
-    It is a convenient way of filtering for certain types of node. It defaults to
-    `0xFFFFFFFF` representing the `SHOW_ALL` constant.
+  - : An `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF`, representing the `SHOW_ALL` constant.
 
     | Constant                                                 | Numerical value                                         | Description                                                                                                                                                                                                                                                                                                                                                                               |
     | -------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,9 +45,12 @@ createTreeWalker(root, whatToShow, filter)
     | `NodeFilter.SHOW_TEXT`                                   | `4`                                                     | Shows {{domxref("Text")}} nodes.                                                                                                                                                                                                                                                                                                                                                          |
 
 - `filter` {{optional_inline}}
-  - : A {{domxref("NodeFilter")}}, that is an object with a method
-    `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine
-    whether or not to accept a node that has passed the `whatToShow` check.
+
+  - : A callback function or an object with an `acceptNode()` method, which returns `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. The function or method will be called for each node in the subtree based at `root` which is accepted as included by the `whatToShow` flag to determine whether or not to include it in the list of iterable nodes:
+
+    - If the return value is `NodeFilter.FILTER_ACCEPT`, this node is included.
+    - If the return value is `NodeFilter.FILTER_REJECT`, any node in the subtree based at this node is not included.
+    - If the return value is `NodeFilter.FILTER_SKIP`, this node is not included.
 
 ### Return value
 
@@ -59,32 +58,121 @@ A new {{domxref("TreeWalker")}} object.
 
 ## Examples
 
-The following example goes through all nodes in the body,
-filters out any non nodes that aren't elements (with the `NodeFilter.SHOW_ELEMENT` value),
-marks each remaining node as acceptable (The `acceptNode()` method could make
-a different decision.), and then makes use of tree walker iterator
-that is created to advance through the nodes (now all elements) and push them into an
-array.
+### Using whatToShow
+
+This example uses `whatToShow` to transform text contents into upper case. Note that the text nodes of the descendants of the `#root` element are also traversed despite of the fact that they are not child nodes of the `#root` element.
+
+#### HTML
+
+```html
+<div id="root">
+  This is a text node.
+  <span>And this is a <code>span</code> element.</span>
+</div>
+```
+
+#### JavaScript
+
+```js
+const treeWalker = document.createTreeWalker(
+  document.querySelector("#root"),
+  NodeFilter.SHOW_TEXT
+);
+
+let currentNode;
+while ((currentNode = treeWalker.nextNode())) {
+  currentNode.data = currentNode.data.toUpperCase();
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("using_whattoshow", "100%", 100)}}
+
+### Using filter
+
+This example uses `filter` to escape text contents. For any `.escape` element, the text contents of all its descendants will be escaped using {{JSXref("encodeURI()")}}, unless a descendant is also a descendant of a `.no-escape` element.
+
+#### HTML
+
+```html
+<div>
+  <div>
+    This is not escaped. <span class="escape">But this is escaped.</span>
+  </div>
+  <div class="escape">This is escaped.</div>
+  <div class="no-escape">This is not escaped.</div>
+</div>
+<hr />
+<div class="escape">
+  <div>
+    This is escaped. <span class="no-escape">But this is not escaped.</span>
+  </div>
+  <div class="no-escape">This is not escaped.</div>
+</div>
+<hr />
+<div class="no-escape">
+  <div>This is not escaped.</div>
+  <div class="escape">This is not escaped.</div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  margin: 0.25em 0;
+  padding: 0.25em;
+}
+span {
+  display: inline-block;
+}
+```
+
+```css
+.escape {
+  border: dashed;
+}
+.no-escape {
+  border: solid;
+}
+```
+
+#### JavaScript
 
 ```js
 const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  {
-    acceptNode(node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
-  }
+  (node) =>
+    node.classList.contains("no-escape")
+      ? NodeFilter.FILTER_REJECT
+      : node.closest(".escape")
+      ? NodeFilter.FILTER_ACCEPT
+      : NodeFilter.FILTER_SKIP
 );
 
-const nodeList = [];
-let currentNode = treeWalker.currentNode;
+let currentNode;
+while ((currentNode = treeWalker.nextNode())) {
+  const textTreeWalker = document.createTreeWalker(
+    currentNode,
+    NodeFilter.SHOW_ALL,
+    (node) =>
+      node.nodeName === "#text" && !/^\s*$/.test(node.data)
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_REJECT
+  );
 
-while (currentNode) {
-  nodeList.push(currentNode);
-  currentNode = treeWalker.nextNode();
+  let currentTextNode;
+  while ((currentTextNode = textTreeWalker.nextNode())) {
+    currentTextNode.data = encodeURI(currentTextNode.data.replace(/\s+/g, " "));
+  }
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_filter", "100%", 400)}}
 
 ## Specifications
 
@@ -96,4 +184,4 @@ while (currentNode) {
 
 ## See also
 
-- The interface of the object it creates: {{domxref("TreeWalker")}}.
+- {{domxref("TreeWalker")}}: Related interface
