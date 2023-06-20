@@ -32,7 +32,7 @@ where:
   - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
 - _layer-name_
   - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported.
-- _supports-condition_
+- _supports-condition_ {{experimental_inline}}
   - : Indicates the feature(s) that the browser must support in order for the stylesheet to be imported.
     If the browser does not conform to the conditions specified in the _supports-condition_, it may not fetch the linked stylesheet, and even if downloaded through some other path, will not load it.
     The syntax of `supports()` is almost identical to that described in {{CSSxRef("@supports")}}, and that topic can be used as a more complete reference.

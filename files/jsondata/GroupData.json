@@ -1001,7 +1001,8 @@
         "PerformanceResourceTiming",
         "PerformanceServerTiming",
         "PerformanceTiming",
-        "TaskAttributionTiming"
+        "TaskAttributionTiming",
+        "VisibilityStateEntry"
       ],
       "methods": [],
       "properties": ["performance_property"],

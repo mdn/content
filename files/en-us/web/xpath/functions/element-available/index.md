@@ -3,7 +3,7 @@ title: element-available
 slug: Web/XPath/Functions/element-available
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `element-available` function determines if an element is available and returns true or false.
 
