@@ -7369,6 +7369,7 @@
 /en-US/docs/Web-related_technologies	/en-US/docs/Related
 /en-US/docs/Web/API/AbortController/FetchController	/en-US/docs/Web/API/AbortController/AbortController
 /en-US/docs/Web/API/AbortSignal/abort	/en-US/docs/Web/API/AbortSignal/abort_static
+/en-US/docs/Web/API/AbortSignal/any	/en-US/docs/Web/API/AbortSignal/any_static
 /en-US/docs/Web/API/AbortSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
 /en-US/docs/Web/API/AbortSignal/timeout	/en-US/docs/Web/API/AbortSignal/timeout_static
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker

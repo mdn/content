@@ -24,6 +24,8 @@ _The AbortSignal interface may also inherit properties from its parent interface
 
 - {{domxref("AbortSignal.abort()")}}
   - : Returns an **`AbortSignal`** instance that is already set as aborted.
+- {{domxref("AbortSignal.any()")}}
+  - : Returns an **`AbortSignal`** that aborts when any of the given abort signals abort.
 - {{domxref("AbortSignal.timeout()")}}
   - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
 
@@ -115,23 +117,25 @@ try {
 }
 ```
 
+
 ### Aborting a fetch with timeout or explicit abort
 
-`fetch()` isn't designed to combine multiple signals, so you can't abort a download "directly" due to either of {{domxref("AbortController.abort()")}} being called or an `AbortSignal` timeout (though as in the preceding example, a timeout signal will abort if triggered by _inbuilt_ browser mechanisms like a stop button).
-
-To trigger on multiple signals they must be daisy chained.
-The code snippet below shows how you might call {{domxref("AbortController.abort()")}} in the handler for a separate timer.
+If you want to abort from multiple signals, you can use {{domxref("AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
 
 ```js
 try {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 5000);
-  const res = await fetch(url, { signal: controller.signal });
+  const timeoutSignal = AbortSignal.timeout(5000);
+  const res = await fetch(url, {
+    // This will abort the fetch when either signal is aborted
+    signal: AbortSignal.any([controller.signal, timeoutSignal]),
+  });
   const body = await res.json();
 } catch (e) {
   if (e.name === "AbortError") {
     // Notify the user of abort.
-    // Note this will never be a timeout error!
+  } else if (e.name === "TimeoutError") {
+    // Notify the user of timeout
   } else {
     // A network error, or some other problem.
     console.log(`Type: ${e.name}, Message: ${e.message}`);
@@ -140,8 +144,6 @@ try {
   clearTimeout(timeoutId);
 }
 ```
-
-> **Note:** Unlike when using {{domxref("AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
 ### Implementing an abortable API
 
