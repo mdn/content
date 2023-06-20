@@ -486,7 +486,9 @@
     },
     "File System Access API": {
       "overview": ["File System Access API"],
-      "guides": [],
+      "guides": [
+        "/docs/Web/API/File_System_Access_API/Origin_private_file_system"
+      ],
       "interfaces": [
         "FileSystemHandle",
         "FileSystemFileHandle",

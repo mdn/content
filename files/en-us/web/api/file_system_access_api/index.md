@@ -24,7 +24,7 @@ You can also gain access to file handles via:
 - The {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API', 'HTML Drag and Drop API', '', 'nocode')}}.
 - The [File Handling API](https://developer.chrome.com/en/articles/file-handling/).
 
-Each handle provides its own functionality and there are a few differences depending on which one you are using (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected. This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.
+Each handle provides its own functionality and there are a few differences depending on which one you are using (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected. This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it (note that this is not the case with the [Origin private file system](#origin_private_file_system), because it is not visible to the user).
 
 > **Note:** The different exceptions that can be thrown when using the features of this API are listed on relevant pages as defined in the spec. However, the situation is made more complex by the interaction of the API and the underlying operating system. A proposal has been made to [list the error mappings in the spec](https://github.com/whatwg/fs/issues/57), which includes useful related information.
 
@@ -32,27 +32,11 @@ Each handle provides its own functionality and there are a few differences depen
 
 ### Origin private file system
 
-The [origin private file system (OPFS)](https://fs.spec.whatwg.org/#origin-private-file-system) is a storage endpoint private to the origin of the page, providing optional access to a special kind of file that is highly optimized for performance, for example, by offering in-place and exclusive write access to a file's content.
+The origin private file system (OPFS) is a storage endpoint provided as part of the File System Access API, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
 
-Storing data in the OPFS is similar to storing data in any other browser-provided storage mechanism that's private to the origin of the page (for example the {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}). This means that files in the OPFS differ from files selected using a picker in the following ways:
-
-- Permission prompts are not required to access files in the OPFS.
-- Clearing data for the site deletes the OPFS.
-- The OPFS is subject to browser quota restrictions.
-
-Files can be manipulated inside the OPFS via a three-step process:
-
-1. The {{domxref("StorageManager.getDirectory()")}} method, which is obtained using [`navigator.storage.getDirectory()`](/en-US/docs/Web/API/Navigator/storage) in a worker or the main thread, returns a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents — this represents the root of the OPFS.
-2. The {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} method is invoked to return a {{domxref('FileSystemFileHandle')}} object representing a handle to a specific file in the directory.
-3. The {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} method is invoked on that file handle, and returns a {{domxref('FileSystemSyncAccessHandle')}} object that can be used to read and write to the file. This is a high-performance handle for _synchronous_ read/write operations (the other handle types are asynchronous). The synchronous nature of this class brings performance advantages intended for use in contexts where asynchronous operations come with high overhead (for example, [WebAssembly](/en-US/docs/WebAssembly)). Note that it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-
-While browsers typically implement this by persisting the contents of the OPFS to disk somewhere, it is not intended that the contents be easily user-accessible. While the browser might make it seem that there are files, they might be stored in a database or any other data structure. You cannot expect to find the created files matched one-to-one somewhere on the hard disk.
-
-> **Note:** Writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are in-place, meaning that changes are written to the actual underlying file at the same time as they are written to the writer. This is not the case with other writing mechanisms available in this API (e.g. {{domxref('FileSystemFileHandle.createWritable()')}}), where changes are not committed to disk until the writing stream is closed.
+Read our [Origin private file system](/en-US/docs/Web/API/File_System_Access_API/Origin_private_file_system) for an understanding of how to use it.
 
 ### Saving files
-
-There is also "save" functionality:
 
 - In the case of the asynchronous handles, use the {{domxref('FileSystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{jsxref("String")}} object, string literal or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
 - In the case of the synchronous {{domxref('FileSystemSyncAccessHandle')}}, you write changes to a file using the {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} method. You can optionally also call {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} if you need the changes committed to disk at a specific time (otherwise you can leave the underlying operating system to handle this when it sees fit, which should be OK in most cases).
