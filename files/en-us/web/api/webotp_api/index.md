@@ -37,7 +37,7 @@ The process works like so:
 5. You can then use the OTP in any way you wish. Typical usage would be to set it as the value of the validation form on the app client and then submit the form, making the process as seamless as possible.
 6. The app server will then verify that the OTP sent back to it matches what it originally sent in the SMS and, if so, complete the process (for example, sign the user in).
 
-> **Note:** You are recommended to combine WebOTP with a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for actions like initial user sign-up — there is always the risk that phone numbers can be hijacked or recycled by carriers.
+> **Note:** Attackers can spoof SMS and hijack a person's phone number. Carriers can also recycle phone numbers to new users after an account is closed. While SMS OTP is useful to verify a phone number, you are recommended to use a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
 
 ### The SMS message format
 
