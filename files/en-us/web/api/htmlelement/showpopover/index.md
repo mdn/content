@@ -3,12 +3,10 @@ title: "HTMLElement: showPopover() method"
 short-title: showPopover()
 slug: Web/API/HTMLElement/showPopover
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HTMLElement.showPopover
 ---
 
-{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
+{{ APIRef("HTML DOM") }}
 
 The **`showPopover()`** method of the {{domxref("HTMLElement")}} interface shows a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) by adding it to the {{glossary("top layer")}}.
 

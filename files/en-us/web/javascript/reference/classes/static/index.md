@@ -43,7 +43,7 @@ Public static features are declared using the `static` keyword. They are added t
 
 Static methods are often utility functions, such as functions to create or clone instances. Public static fields are useful when you want a field to exist only once per class, not on every class instance you create. This is useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
-Static field names can be [computed](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names). The `this` value in the computed expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await")}} and {{jsxref("Operators/yield")}} work as expected in this expression.
+Static field names can be [computed](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names). The `this` value in the computed expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await", "await")}} and {{jsxref("Operators/yield", "yield")}} work as expected in this expression.
 
 Static fields can have an initializer. Static fields without initializers are initialized to `undefined`. Public static fields are not reinitialized on subclasses, but can be accessed via the prototype chain.
 

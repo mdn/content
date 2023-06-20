@@ -3,7 +3,7 @@ title: choose
 slug: Web/XPath/Functions/choose
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `choose` function returns one of the specified objects based on a boolean parameter.
 
