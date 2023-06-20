@@ -46,7 +46,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/action">action</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#action">action</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -56,7 +56,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/align">align</a></code>
+        <code>align</code> {{deprecated_inline}}
       </td>
       <td>
         {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
@@ -311,7 +311,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/contextmenu">contextmenu</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
