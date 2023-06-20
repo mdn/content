@@ -172,6 +172,7 @@ Scroll to see the subject element being animated.
 
 ## See also
 
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- {{cssxref("timeline-scope")}}
+- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline), [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis), [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline), [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis), and [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) properties
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

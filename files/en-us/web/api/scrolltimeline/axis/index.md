@@ -17,13 +17,13 @@ The **`axis`** read-only property of the
 
 An enumerated value. Possible values are:
 
-- `block`
-  - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `vertical`, while for vertical writing modes, it is the same as `horizontal`.
-- `inline`
-  - : The scrollbar on the inline axis of the scroll container, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as the `horizontal` axis, while for vertical writing modes, this is the same as `vertical`.
-- `vertical`
+- `"block"`
+  - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `"y"`, while for vertical writing modes, it is the same as `"x"`.
+- `"inline"`
+  - : The scrollbar on the inline axis of the scroll container, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as `"x"`, while for vertical writing modes, this is the same as `"y"`.
+- `"y"`
   - : The scrollbar on the vertical axis of the scroll container.
-- `horizontal`
+- `"x"`
   - : The scrollbar on the horizontal axis of the scroll container.
 
 ## Examples
@@ -40,7 +40,7 @@ See the main {{domxref("ScrollTimeline")}} page for an example.
 
 ## See also
 
-- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - {{domxref("ScrollTimeline")}}
 - {{domxref("AnimationTimeline")}}, {{domxref("ViewTimeline")}}
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)

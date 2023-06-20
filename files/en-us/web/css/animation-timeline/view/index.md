@@ -26,8 +26,8 @@ animation-timeline: view();
 /* Values for selecting the axis */
 animation-timeline: view(block); /* Default */
 animation-timeline: view(inline);
-animation-timeline: view(vertical);
-animation-timeline: view(horizontal);
+animation-timeline: view(y);
+animation-timeline: view(x);
 
 /* Values for the inset */
 animation-timeline: view(auto); /* Default */
@@ -39,9 +39,9 @@ animation-timeline: view(100px 200px);
 animation-timeline: view(auto 200px);
 
 /* Examples that specify axis and inset */
-animation-timeline: scroll(block auto); /* Default */
-animation-timeline: scroll(inline 20%);
-animation-timeline: scroll(horizontal 200px auto);
+animation-timeline: view(block auto); /* Default */
+animation-timeline: view(inline 20%);
+animation-timeline: view(x 200px auto);
 ```
 
 ### Parameters
@@ -52,13 +52,13 @@ animation-timeline: scroll(horizontal 200px auto);
 
     - `block`
       - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line.
-        For horizontal writing modes, such as standard English, this is the same as `vertical`, while for vertical writing modes, it is the same as `horizontal`. This is the default value.
+        For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
     - `inline`
       - : The scrollbar on the inline axis of the scroll container, which is the axis in the direction parallel to the flow of text in a line.
-        For horizontal writing modes, this is the same as the `horizontal` axis, while for vertical writing modes, this is the same as `vertical`.
-    - `vertical`
+        For horizontal writing modes, this is the same as the `x` axis, while for vertical writing modes, this is the same as `y`.
+    - `y`
       - : The scrollbar on the vertical axis of the scroll container.
-    - `horizontal`
+    - `x`
       - : The scrollbar on the horizontal axis of the scroll container.
 
 - inset

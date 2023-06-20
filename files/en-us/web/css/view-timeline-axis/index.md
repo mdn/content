@@ -32,9 +32,9 @@ view-timeline-axis: x;
 Allowed values for `view-timeline-axis` are:
 
 - `block`
-  - : The scrollbar on the block axis of the scroller element, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `vertical`, while for vertical writing modes, it is the same as `horizontal`. This is the default value.
+  - : The scrollbar on the block axis of the scroller element, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
 - `inline`
-  - : The scrollbar on the inline axis of the scroller element, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as the `horizontal` axis, while for vertical writing modes, this is the same as `vertical`.
+  - : The scrollbar on the inline axis of the scroller element, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
 - `vertical` {{deprecated_inline}}
   - : The scrollbar on the vertical axis of the scroller element.
 - `horizontal` {{deprecated_inline}}
@@ -181,6 +181,7 @@ Scroll the horizontal bar at the bottom to see the subject element animate as yo
 
 ## See also
 
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- {{cssxref("timeline-scope")}}
+- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline), [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline) and [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) properties
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

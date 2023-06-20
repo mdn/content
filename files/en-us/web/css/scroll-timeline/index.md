@@ -26,10 +26,10 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* two values: one each for scroll-timeline-name and scroll-timeline-axis */
-scroll-timeline: custom_name_for_timeline block;
-scroll-timeline: custom_name_for_timeline inline;
-scroll-timeline: custom_name_for_timeline y;
-scroll-timeline: custom_name_for_timeline x;
+scroll-timeline: --custom_name_for_timeline block;
+scroll-timeline: --custom_name_for_timeline inline;
+scroll-timeline: --custom_name_for_timeline y;
+scroll-timeline: --custom_name_for_timeline x;
 scroll-timeline: none block;
 scroll-timeline: none inline;
 scroll-timeline: none y;
@@ -37,12 +37,12 @@ scroll-timeline: none x;
 
 /* one value: scroll-timeline-name */
 scroll-timeline: none;
-scroll-timeline: custom_name_for_timeline;
+scroll-timeline: --custom_name_for_timeline;
 ```
 
 The `scroll-timeline` shorthand property can be applied to a container element as a combination of the `<scroll-timeline-name>` and `<scroll-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<scroll-timeline-name>` value followed by the `<scroll-timeline-axis>` value.
 
-> **Note:** When only one value is specified, it is interpreted as the `<scroll-timeline-name>` value. As a best practice, avoid using `<scroll-timeline-axis>` keyword values as a `<scroll-timeline-name>` value.
+> **Note:** `<scroll-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 
@@ -65,8 +65,8 @@ The `scroll-timeline` shorthand property can be applied to a container element a
 
 ### Creating a named scroll progress timeline animation
 
-In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`.
-This is then applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
+In this example, a scroll timeline named `--squareTimeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`.
+This is then applied to the animation on the `#square` element using `animation-timeline: --squareTimeline`.
 
 #### HTML
 
@@ -81,7 +81,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline` property.
+The CSS for the container sets it as the source of a scroll timeline named `--squareTimeline` using the `scroll-timeline` property.
 It also sets the scrollbar to use for the timeline as "vertical" (though this was not actually needed as it would have been used by default).
 
 The height of the container is set to `300px`, and the container is also set to create a vertical scrollbar if it overflows (the CSS `height` rule on the `stretcher` element below does make the content overflow its container).
@@ -90,12 +90,12 @@ The height of the container is set to `300px`, and the container is also set to 
 #container {
   height: 300px;
   overflow-y: scroll;
-  scroll-timeline: squareTimeline vertical;
+  scroll-timeline: --squareTimeline vertical;
   position: relative;
 }
 ```
 
-The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `squareTimeline` timeline named above.
+The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `--squareTimeline` timeline named above.
 
 ```css
 #square {
@@ -104,7 +104,7 @@ The CSS below defines a square that rotates according to the timeline provided b
   height: 100px;
   animation-name: rotateAnimation;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  animation-timeline: squareTimeline;
+  animation-timeline: --squareTimeline;
   position: absolute;
   bottom: 0;
 }
@@ -146,6 +146,7 @@ The square animates as you scroll, and the animation duration when using `scroll
 
 ## See also
 
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name)
+- {{cssxref("timeline-scope")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis) and [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) properties
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

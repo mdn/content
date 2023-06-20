@@ -172,5 +172,7 @@ Scroll to see the subject element being animated.
 - [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
 - [`animation-range`](/en-US/docs/Web/CSS/animation-range), [`animation-range-start`](/en-US/docs/Web/CSS/animation-range-start)
 - [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name)
+- {{cssxref("timeline-scope")}}
 - [`view-timeline-inset`](/en-US/docs/Web/CSS/view-timeline-inset)
+- The JavaScript equivalent: The `rangeEnd` property available in {{domxref("Element.animate()")}} calls
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)

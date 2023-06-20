@@ -20,7 +20,7 @@ The {{cssxref("view-timeline-axis")}} and `view-timeline-name` properties can al
 
 ```css
 view-timeline-name: none;
-view-timeline-name: custom_name_for_timeline;
+view-timeline-name: --custom_name_for_timeline;
 ```
 
 ### Values
@@ -29,11 +29,11 @@ Allowed values for `view-timeline-name` are:
 
 - `none`
   - : The timeline has no name.
-- `<custom-ident>`
+- `<dashed-ident>`
 
-  - : An arbitrary custom identifier defining a name for a view progress timeline, which can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property. See [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) for more details about permitted values.
+  - : An arbitrary custom identifier defining a name for a view progress timeline, which can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property.
 
-    > **Note:** Custom timeline names must start with `--`.
+    > **Note:** [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 
@@ -165,6 +165,7 @@ Scroll to see the subject element being animated.
 
 ## See also
 
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- {{cssxref("timeline-scope")}}
+- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline), [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline) and [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis) properties
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

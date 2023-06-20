@@ -27,10 +27,10 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* two values: one each for view-timeline-name and view-timeline-axis */
-view-timeline: custom_name_for_timeline block;
-view-timeline: custom_name_for_timeline inline;
-view-timeline: custom_name_for_timeline y;
-view-timeline: custom_name_for_timeline x;
+view-timeline: --custom_name_for_timeline block;
+view-timeline: --custom_name_for_timeline inline;
+view-timeline: --custom_name_for_timeline y;
+view-timeline: --custom_name_for_timeline x;
 view-timeline: none block;
 view-timeline: none inline;
 view-timeline: none y;
@@ -38,12 +38,12 @@ view-timeline: none x;
 
 /* one value: view-timeline-name */
 view-timeline: none;
-view-timeline: custom_name_for_timeline;
+view-timeline: --custom_name_for_timeline;
 ```
 
 The `view-timeline` shorthand property can be applied to a container element as a combination of the `<view-timeline-name>` and `<view-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<view-timeline-name>` value followed by the `<view-timeline-axis>` value.
 
-> **Note:** When only one value is specified, it is interpreted as the `<view-timeline-name>` value. As a best practice, avoid using `<view-timeline-axis>` keyword values as a `<view-timeline-name>` value.
+> **Note:** `<view-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 
@@ -184,6 +184,7 @@ Scroll to see the subject element being animated.
 
 ## See also
 
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- {{cssxref("timeline-scope")}}
+- [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis), [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis) and [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) properties
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

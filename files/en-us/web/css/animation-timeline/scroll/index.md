@@ -29,13 +29,13 @@ animation-timeline: scroll(self);
 /* Values for selecting the axis */
 animation-timeline: scroll(block); /* Default */
 animation-timeline: scroll(inline);
-animation-timeline: scroll(vertical);
-animation-timeline: scroll(horizontal);
+animation-timeline: scroll(y);
+animation-timeline: scroll(x);
 
 /* Examples that specify scroller and axis */
 animation-timeline: scroll(block nearest); /* Default */
 animation-timeline: scroll(inline root);
-animation-timeline: scroll(horizontal self);
+animation-timeline: scroll(x self);
 ```
 
 ### Parameters
@@ -56,12 +56,12 @@ animation-timeline: scroll(horizontal self);
   - : The scrollbar axis value can be any one of the following:
 
     - `block`
-      - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `vertical`, while for vertical writing modes, it is the same as `horizontal`. This is the default value.
+      - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
     - `inline`
-      - : The scrollbar on the inline axis of the scroll container, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as the `horizontal` axis, while for vertical writing modes, this is the same as `vertical`.
-    - `vertical`
+      - : The scrollbar on the inline axis of the scroll container, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as the `x` axis, while for vertical writing modes, this is the same as `y`.
+    - `y`
       - : The scrollbar on the vertical axis of the scroll container.
-    - `horizontal`
+    - `x`
       - : The scrollbar on the horizontal axis of the scroll container.
 
 > **Note:** The scroller and axis values can be specified in any order.
