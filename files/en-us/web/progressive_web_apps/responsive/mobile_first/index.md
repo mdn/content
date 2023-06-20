@@ -229,61 +229,8 @@ The second one sets the width of the content at 600px and centers it in the spac
 
 Feature detection involves doing tests (usually in JavaScript) to determine whether a browser supports a certain feature, and then serving CSS or JavaScript to suit that situation. This can be very useful for mobile first, as you may well want to hide bits of code from the "mobile version" and only include them for the "desktop version", or vice versa.
 
-You can write your own feature detects (Mark Pilgrim's [All-In-One Almost-Alphabetical Guide to Detecting Everything](http://diveintohtml5.info/everything.html) is a good start), but really it is much better to use a dedicated existing solution, such as [Modernizr](https://modernizr.com/). Modernizr is a good choice as it not only includes a feature detect for just about everything (CSS, modern HTML features, some other bits besides), it is also fairly reliable, and you can create your own custom version with only the feature detects you need in it, using the [Modernizr Download Builder](https://modernizr.com/download/). The full uncompressed Modernizr library is 42KB, but the version we are using in this demo is only 8KB.
-
-I put Modernizr inside my `js/lib` directory, then included it by putting the following construct inside my HTML file:
-
-```html
-<script src="js/lib/modernizr.js"></script>
-```
-
-With Modernizr in place, we can now use the following JS block to test whether media queries are supported, and if not, to load in [respond.js](https://github.com/scottjehl/Respond), Scott Jehl's `matchMedia` and media query polyfill.
-
-```js
-if (!Modernizr.mq("only all")) {
-  require("respond");
-}
-```
-
-`matchMedia` is also very useful in many other ways. Imagine you wanted to include some kind of WebGL chart in the desktop version of the site requiring a WebGL library like Three but didn't want it included in the mobile version? You could create a block to only load the library in the case of narrow screen devices:
-
-```js
-if (window.matchMedia("(min-width: 481px)").matches) {
-  require("three");
-}
-```
-
-We can, therefore, save the bandwidth for browsers that don't need it.
-
-#### Modernizr CSS and JavaScript
-
-Back to Modernizr! The reason why it is so useful is that it provides a mechanism to selectively serve both CSS and JavaScript. Modernizr stores the results of all its feature tests as classes on the HTML element. For example, the Modernizr in our example app is testing for multiple background image and rgba support. When they are not supported, the `<html>` tag looks like this:
-
-```html-nolint
-<html class="js no-rgba no-multiplebgs">
-```
-
-When these are present, we can serve alternative styling rules to provide sensible fallbacks using descendant selectors — see the following in my code.
-
-```css
-.no-multiplebgs body {
-  background: white;
-}
-
-.no-rgba .main > p {
-  background: white;
-}
-```
-
-This is not hugely pretty, but it does make the main content area more readable on browsers that don't support either or both of these features.
-
-Modernizr also puts its feature detect results in a JavaScript `Modernizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
-
-```js
-if (Modernizr.rgba) {
-  // run code that depends on RGBA colors being supported.
-}
-```
+There are dedicated libraries that perform feature detection, but loading polyfills may come at a performance cost to your visitors, especially on older devices, so you should carefully consider if you want to use them.
+An alternative is to write your own feature detection functionality; Mark Pilgrim's [All-In-One Almost-Alphabetical Guide to Detecting Everything](http://diveintohtml5.info/everything.html) is a good place to start.
 
 ## Google searches and mobile preference
 
