@@ -24,7 +24,7 @@ onfetch = (event) => {};
 
 ## Description
 
-The `fetch` event is fired in the service worker's global scope when the main app thread makes a network request. This includes not only explicit {{domxref("fetch()")}} calls from the main thread, but also implicit network requests made when pages and subresources such as JavaScript, CSS, and images are loaded.
+The `fetch` event is fired in the service worker's global scope when the main app thread makes a network request. This includes not only explicit {{domxref("fetch()")}} calls from the main thread, but also implicit network requests to load pages and subresources (such as JavaScript, CSS, and images) made by the browser following page navigation.
 
 The event handler is passed a {{domxref("FetchEvent")}} object, which provides access to the request as a {{domxref("Request")}} instance.
 
