@@ -311,7 +311,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a> {{non-standard_inline}} {{deprecated_inline}}</code>
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
