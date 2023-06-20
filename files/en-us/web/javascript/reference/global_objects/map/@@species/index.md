@@ -17,7 +17,9 @@ Map[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct copied `Map` instances.
+The getter for `@@species` returns the constructor (`this`) on which `@@species` was accessed. The return value is used to construct copied `Map` instances.
+
+There is no setter for `@@species`, so you cannot change this property's value using assignment.
 
 ## Description
 

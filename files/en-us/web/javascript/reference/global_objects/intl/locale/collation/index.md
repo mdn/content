@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Intl.Locale.collation
 
 The **`collation`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [collation type](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) for this locale, which is used to order strings according to the locale's rules.
 
+## Syntax
+
+### Return value
+
+The getter for `collation` returns a string whose value is set at construction time, either through the `co` key of the locale identifier or through the `collation` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`. For a list of supported collation types, see [`Intl.Locale.prototype.getCollations()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations#supported_collation_types).
+
+There is no setter for `collation`, so you cannot change this property's value using assignment.
+
 ## Description
 
-Collation is the process of ordering strings of characters. It is used whenever strings must be sorted and placed into a certain order, from search query results to ordering records in a database. While the idea of placing strings in order might seem trivial, the idea of order can vary from region to region and language to language. The `collation` property's value is set at construction time, either through the `co` key of the locale identifier or through the `collation` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
-
-For a list of supported collation types, see [`Intl.Locale.prototype.getCollations()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations#supported_collation_types).
-
-The set accessor of `collation` is `undefined`. You cannot change this property directly.
+Collation is the process of ordering strings of characters. It is used whenever strings must be sorted and placed into a certain order, from search query results to ordering records in a database. While the idea of placing strings in order might seem trivial, the idea of order can vary from region to region and language to language. The `collation` property returns the collation type that would be used if the locale is used in a collation context, such as {{jsxref("Intl.Collator")}}.
 
 ## Examples
 

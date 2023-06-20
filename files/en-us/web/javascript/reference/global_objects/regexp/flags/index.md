@@ -11,13 +11,19 @@ The **`flags`** accessor property of {{jsxref("RegExp")}} instances returns the 
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
 
+## Syntax
+
+### Return value
+
+The getter for `flags` returns a string where each letter represents a flag set on the regular expression. The letters are sorted in ascending alphabetical order (e.g. `"dgimsuvy"`).
+
+There is no setter for `flags`, so you cannot change this property's value using assignment.
+
 ## Description
 
-`RegExp.prototype.flags` has a string as its value. Flags in the `flags` property are sorted alphabetically (from left to right, e.g. `"dgimsuvy"`). It actually invokes the other flag accessors ([`hasIndices`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices), [`global`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global), etc.) one-by-one and concatenates the results.
+The `flags` getter actually invokes the other flag accessors ([`hasIndices`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices), [`global`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global), etc.) one-by-one and concatenates the results.
 
 All built-in functions read the `flags` property instead of reading individual flag accessors.
-
-The set accessor of `flags` is `undefined`. You cannot change this property directly.
 
 ## Examples
 

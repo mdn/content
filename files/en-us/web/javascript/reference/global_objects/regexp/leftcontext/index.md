@@ -13,11 +13,17 @@ browser-compat: javascript.builtins.RegExp.leftContext
 
 The **`RegExp.leftContext`** static accessor property returns the substring preceding the most recent match. `` RegExp["$`"] `` is an alias for this property.
 
+## Syntax
+
+### Return value
+
+The getter for `leftContext` returns a string containing the substring preceding the matched substring from the last time when a `RegExp` (but not a `RegExp` subclass) instance made a successful match. If no matches have been made, it returns an empty string.
+
+There is no setter for `leftContext`, so you cannot change this property's value using assignment.
+
 ## Description
 
 Because `leftContext` is a static property of {{jsxref("RegExp")}}, you always use it as `RegExp.leftContext` or `` RegExp["$`"] ``, rather than as a property of a `RegExp` object you created.
-
-The value of `leftContext` updates whenever a `RegExp` (but not a `RegExp` subclass) instance makes a successful match. If no matches have been made, `leftContext` is an empty string. The set accessor of `leftContext` is `undefined`, so you cannot change this property directly.
 
 You cannot use the shorthand alias with the dot property accessor (`` RegExp.$`  ``), because `` ` `` is not a valid identifier part, so this causes a {{jsxref("SyntaxError")}}. Use the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) instead.
 

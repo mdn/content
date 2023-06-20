@@ -9,11 +9,17 @@ browser-compat: javascript.builtins.Intl.Locale.numberingSystem
 
 The **`numberingSystem`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for this locale.
 
+## Syntax
+
+### Return value
+
+The getter for `numberingSystem` returns a string whose value is set at construction time, either through the `nu` key of the locale identifier or through the `numberingSystem` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types).
+
+There is no setter for `numberingSystem`, so you cannot change this property's value using assignment.
+
 ## Description
 
-A numeral system is a system for expressing numbers. The `numberingSystem` property's value is set at construction time, either through the `nu` key of the locale identifier or through the `numberingSystem` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
-
-For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types).
+A numeral system is a system for expressing numbers. The `numberingSystem` property returns the numbering system type that would be used if the locale is used in a number formatting context, such as {{jsxref("Intl.NumberFormat")}}.
 
 ## Examples
 

@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Intl.Locale.hourCycle
 
 The **`hourCycle`** accessor property of {{jsxref("Intl.Locale")}} instances returns the hour cycle type for this locale.
 
+## Syntax
+
+### Return value
+
+The getter for `hourCycle` returns a string whose value is set at construction time, either through the `hc` key of the locale identifier or through the `hourCycle` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`. For a list of supported hour cycle types, see [`Intl.Locale.prototype.getHourCycles()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types).
+
+There is no setter for `hourCycle`, so you cannot change this property's value using assignment.
+
 ## Description
 
-There are 2 main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. The `hourCycle` property's value is set at construction time, either through the `hc` key of the locale identifier or through the `hourCycle` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
-
-For a list of supported hour cycle types, see [`Intl.Locale.prototype.getHourCycles()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types).
-
-The set accessor of `hourCycle` is `undefined`. You cannot change this property directly.
+There are 2 main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. The `hourCycle` property returns the collation type that would be used if the locale is used in a time formatting context, such as {{jsxref("Intl.DateTimeFormat")}}.
 
 ## Examples
 

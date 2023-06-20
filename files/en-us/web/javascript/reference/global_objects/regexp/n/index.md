@@ -13,11 +13,17 @@ browser-compat: javascript.builtins.RegExp.n
 
 The **`RegExp.$1, …, RegExp.$9`** static accessor properties return parenthesized substring matches.
 
+## Syntax
+
+### Return value
+
+The getter for `$1, …, $9` returns a string containing the corresponding parenthesized submatch from the last time when a `RegExp` (but not a `RegExp` subclass) instance made a successful match. If no matches have been made, or if the last match does not have the corresponding capturing group, the respective property is an empty string.
+
+There is no setter for each property, so you cannot change their values using assignment.
+
 ## Description
 
 Because `$1`–`$9` are static properties of {{jsxref("RegExp")}}, you always use them as `RegExp.$1`, `RegExp.$2`, etc., rather than as properties of a `RegExp` object you created.
-
-The values of `$1, …, $9` update whenever a `RegExp` (but not a `RegExp` subclass) instance makes a successful match. If no matches have been made, or if the last match does not have the corresponding capturing group, the respective property is an empty string. The set accessor of each property is `undefined`, so you cannot change the properties directly.
 
 The number of possible parenthesized substrings is unlimited, but the `RegExp` object can only hold the first nine. You can access all parenthesized substrings through the returned array's indexes.
 

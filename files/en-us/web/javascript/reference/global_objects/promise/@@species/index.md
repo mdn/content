@@ -19,7 +19,9 @@ Promise[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct return values from promise chaining methods that create new promises.
+The getter for `@@species` returns the constructor (`this`) on which `@@species` was accessed. The return value is used to construct return values from promise chaining methods that create new promises.
+
+There is no setter for `@@species`, so you cannot change this property's value using assignment.
 
 ## Description
 

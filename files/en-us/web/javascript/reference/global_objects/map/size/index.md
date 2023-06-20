@@ -11,11 +11,13 @@ The **`size`** accessor property of {{jsxref("Map")}} instances returns the numb
 
 {{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
 
-## Description
+## Syntax
 
-The value of `size` is an integer representing how many entries the `Map` object
-has. A set accessor function for `size` is `undefined`; you can not change this
-property.
+### Return value
+
+The getter for `size` returns an integer representing how many entries the `Map` object has.
+
+There is no setter for `size`, so you cannot change this property's value using assignment.
 
 ## Examples
 

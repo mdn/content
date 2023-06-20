@@ -9,11 +9,13 @@ browser-compat: javascript.builtins.SharedArrayBuffer.maxByteLength
 
 The **`maxByteLength`** accessor property of {{jsxref("SharedArrayBuffer")}} instances returns the maximum length (in bytes) that this `SharedArrayBuffer` can be grown to.
 
-## Description
+## Syntax
 
-The `maxByteLength` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the shared array is constructed, set via the `maxByteLength` option of the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} constructor, and cannot be changed.
+### Return value
 
-If this `SharedArrayBuffer` was constructed without specifying a `maxByteLength` value, this property returns a value equal to the value of the `SharedArrayBuffer`'s {{jsxref("SharedArrayBuffer/byteLength", "byteLength")}}.
+The getter for `maxByteLength` returns an integer whose value is established via the `maxByteLength` option of the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} constructor. If this `SharedArrayBuffer` is [not growable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable), it returns the same value as the `SharedArrayBuffer`'s {{jsxref("SharedArrayBuffer/byteLength", "byteLength")}}.
+
+There is no setter for `maxByteLength`, so you cannot change this property's value using assignment.
 
 ## Examples
 

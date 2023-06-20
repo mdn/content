@@ -13,11 +13,17 @@ browser-compat: javascript.builtins.RegExp.input
 
 The **`RegExp.input`** static accessor property returns the string against which a regular expression is matched. `RegExp.$_` is an alias for this property.
 
+## Syntax
+
+### Return value
+
+The getter for `input` returns a string containing the input from the last time when a `RegExp` (but not a `RegExp` subclass) instance made a successful match. If no matches have been made, it returns an empty string.
+
+You can set the value of `input` because it has a setter, but this does not affect other behaviors of the regex, and the value will be overwritten again when the next successful match is made.
+
 ## Description
 
 Because `input` is a static property of {{jsxref("RegExp")}}, you always use it as `RegExp.input` or `RegExp.$_`, rather than as a property of a `RegExp` object you created.
-
-The value of `input` updates whenever a `RegExp` (but not a `RegExp` subclass) instance makes a successful match. If no matches have been made, `input` is an empty string. You can set the value of `input`, but this does not affect other behaviors of the regex, and the value will be overwritten again when the next successful match is made.
 
 ## Examples
 

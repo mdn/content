@@ -14,13 +14,20 @@ browser-compat: javascript.builtins.Function.arguments
 
 The **`arguments`** accessor property of {{jsxref("Function")}} instances returns the arguments passed to this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `arguments` property throws a {{jsxref("TypeError")}}.
 
+## Syntax
+
+### Return value
+
+The getter for `arguments`, when accessed on a non-strict plain function, returns an [arguments object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) that contains the arguments passed to the last occurrence of the function on the call stack. It returns {{jsxref("Operators/null", "null")}} if this function does not appear on the call stack (either the function was never called or has already returned).
+
+The setter for `arguments`, when accessed on a non-strict plain function, does nothing.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown by both the getter and the setter if accessed on a strict, arrow, async, or generator function.
+
 ## Description
-
-The value of `arguments` is an array-like object corresponding to the arguments passed to a function.
-
-In the case of recursion, i.e. if function `f` appears several times on the call stack, the value of `f.arguments` represents the arguments corresponding to the most recent invocation of the function.
-
-The value of the `arguments` property is normally {{jsxref("Operators/null", "null")}} if there is no outstanding invocation of the function in progress (that is, the function has been called but has not yet returned).
 
 Note that the only behavior specified by the ECMAScript specification is that `Function.prototype` has an initial `arguments` accessor that unconditionally throws a {{jsxref("TypeError")}} for any `get` or `set` request (known as a "poison pill accessor"), and that implementations are not allowed to change this semantic for any function except non-strict plain functions. The actual behavior of the `arguments` property, if it's anything other than throwing an error, is implementation-defined. For example, Chrome defines it as an own data property, while Firefox and Safari extend the initial poison-pill `Function.prototype.arguments` accessor to specially handle `this` values that are non-strict functions.
 

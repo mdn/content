@@ -13,7 +13,9 @@ The **`byteOffset`** accessor property of {{jsxref("DataView")}} instances retur
 
 ## Description
 
-The `byteOffset` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when an `DataView` is constructed and cannot be changed.
+The getter for `byteOffset` returns an integer whose value is established via the second `byteOffset` parameter of the {{jsxref("DataView/DataView", "DataView()")}} constructor.
+
+There is no setter for `byteOffset`, so you cannot change this property's value using assignment.
 
 ## Examples
 

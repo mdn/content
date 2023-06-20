@@ -11,9 +11,17 @@ The **`length`** accessor property of {{jsxref("TypedArray")}} instances returns
 
 {{EmbedInteractiveExample("pages/js/typedarray-length.html","shorter")}}
 
+## Syntax
+
+### Return value
+
+The getter for `length` returns an integer whose value is either explicitly specified via the `length` parameter of the {{jsxref("TypedArray")}} constructor, or implicitly calculated by the `byteOffset` parameter and the `byteLength` of the referenced {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}, where _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+
+There is no setter for `length`, so you cannot change this property's value using assignment.
+
 ## Description
 
-The `length` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when a _TypedArray_ is constructed and cannot be changed. If the _TypedArray_ is not specifying a `byteOffset` or a `length`, the length of the referenced {{jsxref("ArrayBuffer")}} will be returned. _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+The value of `length` is always equal to the value of {{jsxref("TypedArray/byteLength", "byteLength")}} divided by {{jsxref("TypedArray/BYTES_PER_ELEMENT", "BYTES_PER_ELEMENT")}}.
 
 ## Examples
 

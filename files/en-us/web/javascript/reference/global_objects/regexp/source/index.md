@@ -11,6 +11,14 @@ The **`source`** accessor property of {{jsxref("RegExp")}} instances returns a s
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}
 
+## Syntax
+
+### Return value
+
+The getter for `source` returns a string containing the source text of this regular expression, without the two forward slashes on both sides or any flags, such that when the `source` is passed to the `RegExp()` constructor, the new `RegExp` object will have the same behavior as the original one if the same flags are used. Some characters may be escaped.
+
+There is no setter for `source`, so you cannot change this property's value using assignment.
+
 ## Description
 
 Conceptually, the `source` property is the text between the two forward slashes in the regular expression literal. The language requires the returned string to be properly escaped, so that when the `source` is concatenated with a forward slash on both ends, it would form a parsable regex literal. For example, for `new RegExp("/")`, the `source` is `\\/`, because if it generates `/`, the resulting literal becomes `///`, which is a line comment. Similarly, all [line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) will be escaped because line terminator _characters_ would break up the regex literal. There's no requirement for other characters, as long as the result is parsable. For empty regular expressions, the string `(?:)` is returned.

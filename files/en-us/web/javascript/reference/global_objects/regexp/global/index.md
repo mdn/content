@@ -11,13 +11,19 @@ The **`global`** accessor property of {{jsxref("RegExp")}} instances returns whe
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}
 
+## Syntax
+
+### Return value
+
+The getter for `global` returns a boolean which is `true` if the `g` flag was used, and `false` otherwise.
+
+There is no setter for `global`, so you cannot change this property's value using assignment.
+
 ## Description
 
-`RegExp.prototype.global` has the value `true` if the `g` flag was used; otherwise, `false`. The `g` flag indicates that the regular expression should be tested against all possible matches in a string. Each call to [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) will update its [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) property, so that the next call to `exec()` will start at the next character.
+The `g` flag indicates that the regular expression should be tested against all possible matches in a string. Each call to [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) will update its [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) property, so that the next call to `exec()` will start at the next character.
 
 Some methods, such as [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll), will validate that, if the parameter is a regex, it is global. The regex's [`@@match`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match) and [`@@replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) methods (called by [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) and [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)) would also have different behaviors when the regex is global.
-
-The set accessor of `global` is `undefined`. You cannot change this property directly.
 
 ## Examples
 

@@ -9,6 +9,14 @@ browser-compat: javascript.builtins.Intl.Locale.language
 
 The **`language`** accessor property of {{jsxref("Intl.Locale")}} instances returns the language associated with this locale.
 
+## Syntax
+
+### Return value
+
+The getter for `language` returns a string representing the language subtag of the locale, without any other subtags such as region or script.
+
+There is no setter for `language`, so you cannot change this property's value using assignment.
+
 ## Description
 
 Language is one of the core features of a locale. The Unicode specification treats the language identifier of a locale as the language and the region together (to make a distinction between dialects and variations, e.g. British English vs. American English). The `language` property of a {{jsxref("Intl/Locale", "Locale")}} returns strictly the locale's language subtag.

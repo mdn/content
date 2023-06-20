@@ -11,9 +11,13 @@ The **`byteLength`** accessor property of {{jsxref("SharedArrayBuffer")}} instan
 
 {{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html","shorter")}}
 
-## Description
+## Syntax
 
-The `byteLength` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the shared array is constructed and cannot be changed.
+### Return value
+
+The getter for `byteLength` returns an integer whose value is established via the first `length` parameter of the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} constructor.
+
+There is no setter for `byteLength`, so you cannot change this property's value using assignment.
 
 ## Examples
 

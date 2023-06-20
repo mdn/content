@@ -11,9 +11,13 @@ The **`buffer`** accessor property of {{jsxref("DataView")}} instances returns t
 
 {{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}
 
-## Description
+## Syntax
 
-The `buffer` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the `DataView` is constructed and cannot be changed.
+### Return value
+
+The getter for `buffer` returns the underlying {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} of this `DataView`, established via the first `buffer` parameter of the {{jsxref("DataView/DataView", "DataView()")}} constructor.
+
+There is no setter for `buffer`, so you cannot change this property's value using assignment.
 
 ## Examples
 

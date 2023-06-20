@@ -25,18 +25,18 @@ obj.__proto__
 
 ### Return value
 
-If used as a getter, returns the object's `[[Prototype]]`.
+The getter for `__proto__` returns an object or `null` that is the prototype of the object on which it is accessed (`this`).
+
+The setter for `__proto__` mutates the prototype chain of `this`. The value provided must be an object or `null`. Providing any other value does nothing.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if attempting to set the prototype of a [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible) object or an [immutable prototype exotic object](https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window).
+  - : Thrown by the setter if attempting to set the prototype of a [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible) object or an [immutable prototype exotic object](https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window).
 
 ## Description
 
 The `__proto__` getter function exposes the value of the internal `[[Prototype]]` of an object. For objects created using an object literal, this value is `Object.prototype`. For objects created using array literals, this value is [`Array.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). For functions, this value is {{JSxRef("Function.prototype")}}. You can read more about the prototype chain in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
-
-The `__proto__` setter allows the `[[Prototype]]` of an object to be mutated. The value provided must be an object or {{JSxRef("Operators/null", "null")}}. Providing any other value will do nothing.
 
 Unlike {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}, which are always available on `Object` as static properties and always reflect the `[[Prototype]]` internal property, the `__proto__` property doesn't always exist as a property on all objects, and as a result doesn't reflect `[[Prototype]]` reliably.
 

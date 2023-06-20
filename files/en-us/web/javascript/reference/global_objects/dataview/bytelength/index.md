@@ -11,9 +11,13 @@ The **`byteLength`** accessor property of {{jsxref("DataView")}} instances retur
 
 {{EmbedInteractiveExample("pages/js/dataview-bytelength.html")}}
 
-## Description
+## Syntax
 
-The `byteLength` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when an `DataView` is constructed and cannot be changed. If the `DataView` is not specifying an offset or a `byteLength`, the `byteLength` of the referenced `ArrayBuffer` or `SharedArrayBuffer` will be returned.
+### Return value
+
+The getter for `byteLength` returns an integer whose value is either explicitly specified via the third `byteLength` parameter of the {{jsxref("DataView/DataView", "DataView()")}} constructor, or implicitly calculated by the `byteOffset` parameter and the `byteLength` of the referenced {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.
+
+There is no setter for `byteLength`, so you cannot change this property's value using assignment.
 
 ## Examples
 

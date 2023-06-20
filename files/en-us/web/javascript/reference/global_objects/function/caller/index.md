@@ -14,9 +14,20 @@ browser-compat: javascript.builtins.Function.caller
 
 The **`caller`** accessor property of {{jsxref("Function")}} instances returns the function that invoked this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `caller` property throws a {{jsxref("TypeError")}}.
 
-## Description
+## Syntax
 
-If the function `f` was invoked by the top-level code, the value of `f.caller` is {{jsxref("Operators/null", "null")}}; otherwise it's the function that called `f`. If the function that called `f` is a strict mode function, the value of `f.caller` is also `null`.
+### Return value
+
+The getter for `caller`, when accessed on a non-strict plain function, returns the function that's immediately below this function in the call stack. It returns {{jsxref("Operators/null", "null")}} if this function does not appear on the call stack (either the function was never called or has already returned), or if this function is called by top-level code. If the function that called this function is a strict mode function, the `caller` getter also returns `null`.
+
+The setter for `caller`, when accessed on a non-strict plain function, does nothing.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown by both the getter and the setter if accessed on a strict, arrow, async, or generator function.
+
+## Description
 
 Note that the only behavior specified by the ECMAScript specification is that `Function.prototype` has an initial `caller` accessor that unconditionally throws a {{jsxref("TypeError")}} for any `get` or `set` request (known as a "poison pill accessor"), and that implementations are not allowed to change this semantic for any function except non-strict plain functions, in which case it must not have the value of a strict mode function. The actual behavior of the `caller` property, if it's anything other than throwing an error, is implementation-defined. For example, Chrome defines it as an own data property, while Firefox and Safari extend the initial poison-pill `Function.prototype.caller` accessor to specially handle `this` values that are non-strict functions.
 

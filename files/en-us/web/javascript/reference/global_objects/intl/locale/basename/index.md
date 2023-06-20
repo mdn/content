@@ -9,11 +9,17 @@ browser-compat: javascript.builtins.Intl.Locale.baseName
 
 The **`baseName`** accessor property of {{jsxref("Intl.Locale")}} instances returns a substring of this locale's string representation, containing core information about this locale.
 
+## Syntax
+
+### Return value
+
+The getter for `baseName` returns a string containing the `language ["-" script] ["-" region] *("-" variant)` subsequence of the [unicode_language_id grammar](https://www.unicode.org/reports/tr35/#Identifiers), whose value is established either via the locale identifier or via the `language`, `script`, and `region` options of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor.
+
+There is no setter for `baseName`, so you cannot change this property's value using assignment.
+
 ## Description
 
 An {{jsxref("Intl/Locale", "Intl.Locale")}} object represents a parsed local and options for that locale. The `baseName` property returns basic, core information about the Locale in the form of a substring of the complete data string. Specifically, the property returns the substring containing the language, and the script and region if available.
-
-`baseName` returns the `language ["-" script] ["-" region] *("-" variant)` subsequence of the [unicode_language_id grammar](https://www.unicode.org/reports/tr35/#Identifiers).
 
 ## Examples
 

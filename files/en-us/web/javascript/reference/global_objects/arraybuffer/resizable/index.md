@@ -11,9 +11,13 @@ The **`resizable`** accessor property of {{jsxref("ArrayBuffer")}} instances ret
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-resizable.html")}}
 
-## Description
+## Syntax
 
-The `resizable` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the array is constructed. If the `maxByteLength` option was set in the constructor, `resizable` will return `true`; if not, it will return `false`.
+### Return value
+
+The getter for `resizable` returns a boolean value, which is `true` if the `maxByteLength` option was set in the constructor, and `false` otherwise.
+
+There is no setter for `resizable`, so you cannot change this property's value using assignment.
 
 ## Examples
 

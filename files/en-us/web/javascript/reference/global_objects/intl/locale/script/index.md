@@ -9,6 +9,14 @@ browser-compat: javascript.builtins.Intl.Locale.script
 
 The **`script`** accessor property of {{jsxref("Intl.Locale")}} instances returns the script used for writing the particular language used in this locale.
 
+## Syntax
+
+### Return value
+
+The getter for `script` returns a string representing the script subtag of the locale, without any other subtags such as language or region. It returns `undefined` if the locale does not have a script subtag.
+
+There is no setter for `script`, so you cannot change this property's value using assignment.
+
 ## Description
 
 A script, sometimes called writing system, is one of the core attributes of a locale. It indicates the set of symbols, or glyphs, that are used to write a particular language. For instance, the script associated with English is Latin, whereas the script typically associated with Korean is Hangul. In many cases, denoting a script is not strictly necessary, since the language (which is necessary) is only written in a single script. There are exceptions to this rule, however, and it is important to indicate the script whenever possible, in order to have a complete Unicode language identifier.

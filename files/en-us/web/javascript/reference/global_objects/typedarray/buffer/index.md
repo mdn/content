@@ -11,9 +11,15 @@ The **`buffer`** accessor property of {{jsxref("TypedArray")}} instances returns
 
 {{EmbedInteractiveExample("pages/js/typedarray-buffer.html","shorter")}}
 
-## Description
+## Syntax
 
-The `buffer` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the _TypedArray_ is constructed and cannot be changed. _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+### Return value
+
+The getter for `buffer` returns the underlying {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} of this typed array, established via the first `buffer` parameter of the {{jsxref("TypedArray")}} constructor, where _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+
+There is no setter for `buffer`, so you cannot change this property's value using assignment.
+
+## Description
 
 Because a typed array is a _view_ of a buffer, the underlying buffer may be longer than the typed array itself.
 

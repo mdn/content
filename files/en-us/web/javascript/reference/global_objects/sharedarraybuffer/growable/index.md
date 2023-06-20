@@ -9,9 +9,13 @@ browser-compat: javascript.builtins.SharedArrayBuffer.growable
 
 The **`growable`** accessor property of {{jsxref("SharedArrayBuffer")}} instances returns whether this `SharedArrayBuffer` can be grow or not.
 
-## Description
+## Syntax
 
-The `growable` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the array is constructed. If a `maxByteLength` option was set in the constructor, `growable` will return `true`; if not, it will return `false`.
+### Return value
+
+The getter for `growable` returns a boolean value, which is `true` if the `maxByteLength` option was set in the constructor, and `false` otherwise.
+
+There is no setter for `growable`, so you cannot change this property's value using assignment.
 
 ## Examples
 

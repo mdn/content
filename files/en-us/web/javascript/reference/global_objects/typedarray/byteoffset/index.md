@@ -9,9 +9,13 @@ browser-compat: javascript.builtins.TypedArray.byteOffset
 
 The **`byteOffset`** accessor property of {{jsxref("TypedArray")}} instances returns the offset (in bytes) of this typed array from the start of its {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.
 
-## Description
+## Syntax
 
-The `byteOffset` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when a _TypedArray_ is constructed and cannot be changed. _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+### Return value
+
+The getter for `byteOffset` returns an integer whose value is established via the second `byteOffset` parameter of the {{jsxref("TypedArray")}} constructor, where _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+
+There is no setter for `byteOffset`, so you cannot change this property's value using assignment.
 
 ## Examples
 

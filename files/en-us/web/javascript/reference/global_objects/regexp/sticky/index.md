@@ -11,11 +11,17 @@ The **`sticky`** accessor property of {{jsxref("RegExp")}} instances returns whe
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
 
+## Syntax
+
+### Return value
+
+The getter for `sticky` returns a boolean which is `true` if the `y` flag was used, and `false` otherwise.
+
+There is no setter for `sticky`, so you cannot change this property's value using assignment.
+
 ## Description
 
-`RegExp.prototype.sticky` has the value `true` if the `y` flag was used; otherwise, `false`. The `y` flag indicates that the regex attempts to match the target string only from the index indicated by the {{jsxref("RegExp/lastIndex", "lastIndex")}} property (and unlike a global regex, does not attempt to match from any later indexes).
-
-The set accessor of `sticky` is `undefined`. You cannot change this property directly.
+The `y` flag indicates that the regex attempts to match the target string only from the index indicated by the {{jsxref("RegExp/lastIndex", "lastIndex")}} property (and unlike a global regex, does not attempt to match from any later indexes).
 
 For both sticky regexes and [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) regexes:
 

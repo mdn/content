@@ -11,9 +11,17 @@ The **`description`** accessor property of {{jsxref("Symbol")}} values returns a
 
 {{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
 
+## Syntax
+
+### Return value
+
+The getter for `description` returns a string containing the description of this symbol, or `undefined` if the symbol has no description.
+
+There is no setter for `description`, so you cannot change this property's value using assignment.
+
 ## Description
 
-{{JSxRef("Symbol")}} objects can be created with an optional description which can be used for debugging but not to access the symbol itself. The `Symbol.prototype.description` property can be used to read that description. It is different to `Symbol.prototype.toString()` as it does not contain the enclosing `"Symbol()"` string. See the examples.
+{{JSxRef("Symbol")}} objects can be created with an optional description which can be used for debugging but not to access the symbol itself. The `Symbol.prototype.description` property can be used to read that description. It is different to `Symbol.prototype.toString()` as it does not contain the enclosing `"Symbol()"` string.
 
 ## Examples
 

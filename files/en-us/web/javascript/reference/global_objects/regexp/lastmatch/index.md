@@ -13,11 +13,17 @@ browser-compat: javascript.builtins.RegExp.lastMatch
 
 The **`RegExp.lastMatch`** static accessor property returns the last matched substring. `RegExp["$&"]` is an alias for this property.
 
+## Syntax
+
+### Return value
+
+The getter for `lastMatch` returns a string containing the matched substring from the last time when a `RegExp` (but not a `RegExp` subclass) instance made a successful match. If no matches have been made, it returns an empty string.
+
+There is no setter for `lastMatch`, so you cannot change this property's value using assignment.
+
 ## Description
 
 Because `lastMatch` is a static property of {{jsxref("RegExp")}}, you always use it as `RegExp.lastMatch` or `RegExp["$&"]`, rather than as a property of a `RegExp` object you created.
-
-The value of `lastMatch` updates whenever a `RegExp` (but not a `RegExp` subclass) instance makes a successful match. If no matches have been made, `lastMatch` is an empty string. The set accessor of `lastMatch` is `undefined`, so you cannot change this property directly.
 
 You cannot use the shorthand alias with the dot property accessor (`RegExp.$&`), because `&` is not a valid identifier part, so this causes a {{jsxref("SyntaxError")}}. Use the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) instead.
 

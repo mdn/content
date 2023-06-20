@@ -11,11 +11,13 @@ The **`maxByteLength`** accessor property of {{jsxref("ArrayBuffer")}} instances
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-maxbytelength.html")}}
 
-## Description
+## Syntax
 
-The `maxByteLength` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the array is constructed, set via the `maxByteLength` option of the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} constructor, and cannot be changed.
+### Return value
 
-This property returns 0 if this `ArrayBuffer` has been detached. If this `ArrayBuffer` was constructed without specifying a `maxByteLength` value, this property returns a value equal to the value of the `ArrayBuffer`'s {{jsxref("ArrayBuffer/byteLength", "byteLength")}}.
+The getter for `maxByteLength` returns an integer whose value is established via the `maxByteLength` option of the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} constructor. If this `ArrayBuffer` is [not resizable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable), it returns the same value as the `ArrayBuffer`'s {{jsxref("ArrayBuffer/byteLength", "byteLength")}}. It returns 0 if this `ArrayBuffer` has been detached.
+
+There is no setter for `maxByteLength`, so you cannot change this property's value using assignment.
 
 ## Examples
 
