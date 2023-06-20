@@ -352,7 +352,7 @@ Accessing private fields outside the class is an early syntax error. The languag
 console.log(red.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
 ```
 
-> **Note:** The Chrome console allows accessing private properties outside the class. However, this is a DevTools-only ability and doing the same elsewhere is always a syntax error.
+> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
 Private fields in JavaScript are _hard private_: if the class does not implement methods that expose these private fields, there's absolutely no mechanism to retrieve them from outside the class. This means you are safe to do any refactors to your class's private fields, as long as the behavior of exposed methods stay the same.
 

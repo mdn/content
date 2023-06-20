@@ -178,7 +178,7 @@ summers.canStudyArchery(); // true
 summers.#year; // SyntaxError
 ```
 
-> **Note:** The Chrome console allows accessing private properties outside the class. However, this is a DevTools-only ability and doing the same elsewhere is always a syntax error.
+> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
 Private data properties must be declared in the class declaration, and their names start with `#`.
 
