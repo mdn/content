@@ -115,13 +115,13 @@ We have successfully declared our constants; a unique identifier, the list of of
 
 ### Saving the cache on PWA installation
 
-When a user installs a PWA, the `install` event is fired in the service worker scope. We want to listen for this event, filling the cache with the PWA's static resources upon installation. Every time the service worker version is updated, the browser installs the new service worker and the install event occurs.
+When a user installs a PWA or simply visits a website with a service worker, an `install` event is fired in the service worker scope. We want to listen for this event, filling the cache with the PWA's static resources upon installation. Every time the service worker version is updated, the browser installs the new service worker and the install event occurs.
 
 The `install` event happens when the app is used for the first time, or when a new version of the service worker is detected by the browser. When an older service worker is being replaced by a new one, the old service worker is used as the PWA's service worker until the new service work is activated.
 
 Only available in secure contexts, the [`caches`](/en-US/docs/Web/API/caches) global property returns a {{domxref("CacheStorage")}} object associated with the current context. The {{domxref("CacheStorage.open()")}} method returns a {{jsxref("Promise")}} that resolves to the {{domxref("Cache")}} object matching name of the cache, passed as a parameter.
 
-The {{domxref("Cache.addAll()")}} method takes an array of URLs as a parameter, retrieves them, then adds the responses to the given cache. The [`waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method tells the browser that work is ongoing until the promise settles, and it shouldn't terminate the service worker if it wants that work to complete.
+The {{domxref("Cache.addAll()")}} method takes an array of URLs as a parameter, retrieves them, then adds the responses to the given cache. The [`waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method tells the browser that work is ongoing until the promise settles, and it shouldn't terminate the service worker if it wants that work to complete. While browsers are responsible for executing and terminating service workers when necessary, the `waitUntil` method is a request to the browser to not terminate the service worker while a task is being executed.
 
 ```JavaScript
 self.addEventListener("install", (e) => {
@@ -359,7 +359,7 @@ Open `index.html` and add the following {{HTMLElement("script")}} after the scri
 </script>
 ```
 
-You can try the fully functioning [cycleTrack period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
+You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
 
 ## Debugging service workers
 

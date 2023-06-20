@@ -19,7 +19,9 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](filefile.jpg)
 
-We are viewing our page using the `file://` protocol. This works for the current state of our codebase, and will continue to suffice as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality). However, manifest files and services workers, both PWA requirements, require a secure connection. PWAs need to be served from a web server over `https` or a local development environment, using `localhost`, `127.0.0.1`, with or without a port number. If we view our finished app using the `files://` protocol, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers) we add will fail.
+We are viewing our page using the `file://` protocol. This works for the current state of our codebase, and will continue to suffice as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality). However, manifest files and services workers, both PWA requirements, require a secure connection, as do several other APIs. PWAs need to be served from a web server over `https` or a local development environment, using `localhost`, `127.0.0.1`, with or without a port number. If we view our finished app using the `files://` protocol, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers) we add will fail.
+
+> **Note:** Serving your app over `https` isn't only good for PWAs, but for all websites as it ensures the information that transits between your web server and the user's browser is encrypted end to end. Several [Web APIs require secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Even if you aren't creating installable PWAs, as you add features to any web app, you may run into cases where a secure context is required.
 
 We need a local development environment to work thru the tutorial. Part of [making a PWA installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) is a secure server. The files will need to be served over a secure connection on the web to access the benefits PWAs provide and to distribute our application as a PWA.
 
@@ -43,7 +45,7 @@ You can also create a [local server with the IntelliJ IDE](https://www.jetbrains
 
 Learn how to [set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) using [Python](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_python) or [local server side language](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) like PHP.
 
-## Localhost and secure local servers with npx
+## Localhost with npx
 
 If you have node installed, you may have npm and npx installed as well. At the command line, enter `npx -v`. If a version number is returned, you can use [http-server](https://www.npmjs.com/package/http-server), a non-configurable static HTTP server, without needing to install any requirements. Enter `npx http-server [path]` at the command line, where `[path]` is the folder where your index file is stored.
 
@@ -51,7 +53,7 @@ By default, entering `localhost:8080` in the browser URL bar will load the page.
 
 You can choose a different port number. Entering `npx http-server /user/yourName/CycleTracker -p 8787` will start local server at port `8787` if available. If not, if you enter a port number that is already being used, you will get an `address already in use` or simiar error. If successfule, entering `localhost:8787` in the browser URL bar will render the index file stored as `~/user/yourName/CycleTracker/index.html`, or will display the directory contents of `~/user/yourName/CycleTracker/` if no index file is present.
 
-This non-configurable static HTTP server suffices for our basic app. For a configurable secure local web server served over HTTPs, you will need to [add a built-in SSL certificate](https://github.com/lwsjs/local-web-server/wiki/How-to-get-the-%22green-padlock%22-using-the-built-in-certificate) to be able to serve https. With a certificate, you can now install and run [local-web-server](https://github.com/lwsjs/local-web-server/wiki/How-to-launch-a-secure-local-web-server-(HTTPS)) from the command line to serve your project locally over https without a security warning.
+This non-configurable static HTTP server suffices for our basic app. Apps served via `localhost` and `127.0.0.1` are exempt from https and always considered secure. Browser insecure warnings, if given, can be bypassed. While not necessary, to configurable your local web server to be served over HTTPs, you can [add a built-in SSL certificate](https://github.com/lwsjs/local-web-server/wiki/How-to-get-the-%22green-padlock%22-using-the-built-in-certificate). With the certificate, you will be able to install and run [local-web-server](<https://github.com/lwsjs/local-web-server/wiki/How-to-launch-a-secure-local-web-server-(HTTPS)>) from the command line to serve your project locally over `https`, preventing any security warning.
 
 ```
 $ npm install -g local-web-server
