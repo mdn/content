@@ -28,7 +28,10 @@ The `fetch` event is fired in the service worker's global scope when the main ap
 
 The event handler is passed a {{domxref("FetchEvent")}} object, which provides access to the request as a {{domxref("Request")}} instance.
 
-The `FetchEvent` also provides a {{domxref("FetchEvent.respondWith()", "respondWith()")}} method, that takes a {{domxref("Response")}} (or a `Promise` that resolves to a `Response`) as a parameter, and this enables the event handler to return a different response to the request: for example, it enables a service worker to return:
+The `FetchEvent` also provides a {{domxref("FetchEvent.respondWith()", "respondWith()")}} method, that takes a {{domxref("Response")}} (or a `Promise` that resolves to a `Response`) as a parameter.
+This enables the service worker event handler to provide the response that is returned to the request in the main thread.
+
+For example, the service worker can return:
 
 - A locally cached response retrieved from the {{domxref("Cache")}} interface.
 - A response that the service worker synthesizes, using methods like {{domxref("Response.json()")}} or the {{domxref("Response.Response()", "Response()")}} constructor.
@@ -62,7 +65,8 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-If `respondWith()` is not called in the handler, then the original network request is made: so in the example above, all requests that do not match `pattern1` or `pattern2` are made as if the service worker did not exist.
+If `respondWith()` is not called in the handler, then the user agent automatically makes the original network request.
+For example, in the code above, all requests that do not match `pattern1` or `pattern2` are made as if the service worker did not exist.
 
 ## Event type
 
@@ -94,7 +98,6 @@ self.addEventListener("fetch", (event) => {
 ### Cache only
 
 This `fetch` event handler implements a "cache only" policy for scripts and stylesheets. If the request's {{domxref("Request.destination", "destination")}} property is `"script"` or `"style"`, the handler only looks in the cache, returning an error if the response was not found.
-
 All other requests go through to the network.
 
 ```js
