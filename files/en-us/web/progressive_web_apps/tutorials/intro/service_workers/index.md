@@ -165,7 +165,7 @@ We get the names of the existing named caches. We use the {{domxref("CacheStorag
 
 We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate thru that list name promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named cachees, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
 
-The last line, the `await clients.claim()` uses the [`claim()`](/en-US/docs/Web/API/Clients/claim) method of the [`Clients`](/en-US/docs/Web/API/Clients) interface to enable our service worker to set itself as the controller for our PWA. The `claim()` method enables the service worker to "claim control" of all clients within its scope. This way, clients loaded in the same scope don't need to be reloaded.
+The last line, the `await clients.claim()` uses the [`claim()`](/en-US/docs/Web/API/Clients/claim) method of the [`Clients`](/en-US/docs/Web/API/Clients) interface to enable our service worker to set itself as the controller for our client; the "client" referring to a running instance of the PWA. The `claim()` method enables the service worker to "claim control" of all clients within its scope. This way, clients loaded in the same scope don't need to be reloaded.
 
 ```JavaScript
 self.addEventListener("activate", (event) => {
