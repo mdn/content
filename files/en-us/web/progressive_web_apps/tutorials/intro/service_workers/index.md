@@ -329,7 +329,7 @@ If the property is supported, we can then use the [`register()`](/en-US/docs/Web
 </script>
 ```
 
-While the above suffices for the CycleTracker app needs, the `resgister()` method does return a {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object. For a more robust application, error check the registration:
+While the above suffices for the CycleTracker app needs, the `register()` method does return a {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object. For a more robust application, error check the registration:
 
 ```javascript
 if ("serviceWorker" in navigator) {
