@@ -143,6 +143,59 @@ try {
 
 > **Note:** Unlike when using {{domxref("AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
+### Implementing an abortable API
+
+An API that needs to support aborting can accept an `AbortSignal` object, and use its state to trigger abort signal handling when needed.
+
+A {{jsxref("Promise")}}-based API should respond to the abort signal by rejecting any unsettled promise with the `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}}.
+For example, consider the following `myCoolPromiseAPI`, which takes a signal and returns a promise.
+The promise is rejected immediately if the signal is already aborted, or if the abort event is detected.
+Otherwise it completes normally and then resolves the promise.
+
+```js
+function myCoolPromiseAPI(/* … ,*/ { signal }) {
+  return new Promise((resolve, reject) => {
+    // If the signal is already aborted, immediately throw in order to reject the promise.
+    if (signal.aborted) {
+      reject(signal.reason);
+    }
+
+    // Perform the main purpose of the API
+    // Call resolve(result) when done.
+
+    // Watch for 'abort' signals
+    signal.addEventListener("abort", () => {
+      // Stop the main operation
+      // Reject the promise with the abort reason.
+      reject(signal.reason);
+    });
+  });
+}
+```
+
+The API might then be used as shown.
+Note that {{domxref("AbortController.abort()")}} is called to abort the operation.
+
+```js
+const controller = new AbortController();
+const signal = controller.signal;
+
+startSpinner();
+
+myCoolPromiseAPI({ /* … ,*/ signal })
+  .then((result) => {})
+  .catch((err) => {
+    if (err.name === "AbortError") return;
+    showUserErrorMessage();
+  })
+  .then(() => stopSpinner());
+
+controller.abort();
+```
+
+APIs that do not return promises might react in a similar manner.
+In some cases it may make sense to absorb the signal.
+
 ## Specifications
 
 {{Specifications}}

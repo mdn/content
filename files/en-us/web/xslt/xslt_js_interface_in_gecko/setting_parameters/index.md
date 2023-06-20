@@ -3,6 +3,8 @@ title: Setting parameters
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 ---
 
+{{XsltSidebar}}
+
 ## Setting Parameters
 
 While running transformations using precoded .xsl and .xml files is quite useful, configuring the .xsl file from JavaScript may be even more useful. For example, JavaScript and XSLT could be used to sort XML data and then display it. The sorting would have to alternate between ascending and descending sorting.

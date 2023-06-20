@@ -1,5 +1,5 @@
 ---
-title: CSS Paged Media
+title: CSS paged media
 slug: Web/CSS/CSS_paged_media
 page-type: css-module
 spec-urls:
@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-**CSS Paged Media** is a module of CSS that defines how page switches are handled.
+The **CSS paged media** module defines how page switches are handled.
 
 ## Reference
 

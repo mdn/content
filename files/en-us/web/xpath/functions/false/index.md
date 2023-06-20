@@ -3,7 +3,7 @@ title: "false"
 slug: Web/XPath/Functions/false
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `false` function returns boolean false.
 
