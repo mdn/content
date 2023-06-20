@@ -26,6 +26,8 @@ The WebOTP API allows web apps to expedite this validation process by copying th
 
 Note that the OTP is also bound to the sending domain. This is a useful security constraint for verifying that the OTP is coming from the right source, which can mitigate the risk of phishing attacks during day-to-day reauthentication.
 
+> **Note:** Attackers can spoof SMS and hijack a person's phone number. Carriers can also recycle phone numbers to new users after an account is closed. While SMS OTP is useful to verify a phone number, you are recommended to combine it with a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
+
 ### How does it work?
 
 The process works like so:
@@ -36,8 +38,6 @@ The process works like so:
 4. When the SMS is received on the device, provided it contains the app's domain the browser will ask the user if they consent to the OTP being retrieved/used. Chrome, for example, displays a dialog asking them for their permission to retrieve the OTP from the SMS; other browsers may handle it differently. If they do consent, the `get()` call will fulfill with an {{domxref("OTPCredential")}} object containing the OTP.
 5. You can then use the OTP in any way you wish. Typical usage would be to set it as the value of the validation form on the app client and then submit the form, making the process as seamless as possible.
 6. The app server will then verify that the OTP sent back to it matches what it originally sent in the SMS and, if so, complete the process (for example, sign the user in).
-
-> **Note:** Attackers can spoof SMS and hijack a person's phone number. Carriers can also recycle phone numbers to new users after an account is closed. While SMS OTP is useful to verify a phone number, you are recommended to use a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
 
 ### The SMS message format
 
