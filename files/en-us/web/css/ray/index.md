@@ -11,7 +11,7 @@ browser-compat: css.types.ray
 
 The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a line segment that begins from an [offset starting position](https://drafts.fxtf.org/motion/#offset-starting-position) and extends in the direction of the specified angle. The line segment is referred to as "ray". The length of a ray can be constrained by specifying a size and using the `contain` keyword.
 
-The `ray()` function is used in [CSS motion path](/en-US/docs/Web/CSS/CSS_Motion_Path). It is used as a value for the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property to define the path that an animated element can follow. The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the path's offset starting position. The default offset starting position of a ray is at the top-left corner of the element box.
+The `ray()` function is used in [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path). It is used as a value for the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property to define the path that an animated element can follow. The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the path's offset starting position. The default offset starting position of a ray is at the top-left corner of the element box.
 
 ## Syntax
 
