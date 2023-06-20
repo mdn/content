@@ -66,7 +66,7 @@ Here is a basic single line text field example:
 
 Single line text fields have only one true constraint: if you type text with line breaks, the browser removes those line breaks before sending the data to the server.
 
-_The following screenshot shows default, focused and disabled text input types in Firefox 71 and Safari on macOS and in Chrome 79 and Edge 18 on Windows 10._
+_The following screenshot shows default, focused and disabled text input types in Firefox 114 and Safari on macOS and in Chrome 114 and Edge 114 on Windows 11._
 
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
