@@ -21,7 +21,7 @@ An {{DOMxRef("HTMLAllCollection")}} which contains every element in the document
 
 ## Special type conversion behavior
 
-For historical reasons, `document.all` is an object that in many ways behave like `undefined`. Specifically:
+For historical reasons, `document.all` is an object that in many ways behaves like `undefined`. Specifically:
 
 - It is [loosely equal](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) to `undefined` and `null`.
 - It is [falsy](/en-US/docs/Glossary/Falsy) in boolean contexts.
