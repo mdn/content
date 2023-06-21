@@ -25,7 +25,7 @@ The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method 
 
 ### Set-like browser APIs
 
-Browser **`Set`-like objects** (or "setlike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
+Browser **`Set`-like objects** (or "setlike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a `Set`.
 
 Just like `Set`, elements can be iterated in the same order that they were added to the object.
 `Set`-like objects and `Set` also have properties and methods that share the same name and behavior.

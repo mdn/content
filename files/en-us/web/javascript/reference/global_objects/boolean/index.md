@@ -54,7 +54,7 @@ const s = Boolean(myString); // initial value of true
 
 ### Boolean coercion
 
-Many built-in operations that expect booleans first coerce their arguments to booleans. [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
+Many built-in operations that expect booleans first coerce their arguments to booleans. [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toboolean) can be summarized as follows:
 
 - Booleans are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `false`.
