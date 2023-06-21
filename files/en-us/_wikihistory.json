@@ -79324,17 +79324,6 @@
       "GT"
     ]
   },
-  "Web/CSS/Paged_Media": {
-    "modified": "2020-07-07T12:37:45.184Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "Sheppy",
-      "justingeeslin",
-      "RAMilewski",
-      "nimbupani"
-    ]
-  },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2020-05-05T20:20:41.094Z",
     "contributors": [
