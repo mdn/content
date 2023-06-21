@@ -77,19 +77,19 @@ Once we have an established connection to a web server, the browser sends an ini
 </html>
 ```
 
-This response for this initial request contains the first byte of data received. {{glossary('Time to First Byte')}} (TTFB) is the time between when the user made the request—say by clicking on a link—and the receipt of this first packet of HTML. The first chunk of content is usually 14KB of data.
+This response for this initial request contains the first byte of data received. {{glossary('Time to First Byte')}} (TTFB) is the time between when the user made the request—say by clicking on a link—and the receipt of this first packet of HTML. The first chunk of content is usually 14 kB of data.
 
-In our example above, the request is definitely less than 14KB, but the linked resources aren't requested until the browser encounters the links during parsing, described below.
+In our example above, the request is definitely less than 14 kB, but the linked resources aren't requested until the browser encounters the links during parsing, described below.
 
-### TCP Slow Start / 14KB rule
+### TCP Slow Start / 14 kB rule
 
-The first response packet will be 14KB. This is part of {{glossary('TCP slow start')}}, an algorithm which balances the speed of a network connection. Slow start gradually increases the amount of data transmitted until the network's maximum bandwidth can be determined.
+The first response packet will be 14 kB. This is part of {{glossary('TCP slow start')}}, an algorithm which balances the speed of a network connection. Slow start gradually increases the amount of data transmitted until the network's maximum bandwidth can be determined.
 
 In {{glossary('TCP slow start')}}, after receipt of the initial packet, the server doubles the size of the next packet to around 28KB. Subsequent packets increase in size until a predetermined threshold is reached, or congestion is experienced.
 
 ![TCP slow start](congestioncontrol.jpg)
 
-If you've ever heard of the 14KB rule for initial page load, TCP slow start is the reason why the initial response is 14KB, and why web performance optimization calls for focusing optimizations with this initial 14KB response in mind. TCP slow start gradually builds up transmission speeds appropriate for the network's capabilities to avoid congestion.
+If you've ever heard of the 14 kB rule for initial page load, TCP slow start is the reason why the initial response is 14 kB, and why web performance optimization calls for focusing optimizations with this initial 14 kB response in mind. TCP slow start gradually builds up transmission speeds appropriate for the network's capabilities to avoid congestion.
 
 ### Congestion control
 
@@ -101,7 +101,7 @@ Once the browser receives the first chunk of data, it can begin parsing the info
 
 The DOM is the internal representation of the markup for the browser. The DOM is also exposed, and can be manipulated through various APIs in JavaScript.
 
-Even if the requested page's HTML is larger than the initial 14KB packet, the browser will begin parsing and attempting to render an experience based on the data it has. This is why it's important for web performance optimization to include everything the browser needs to start rendering a page, or at least a template of the page—the CSS and HTML needed for the first render—in the first 14KB. But before anything is rendered to the screen, the HTML, CSS, and JavaScript have to be parsed.
+Even if the requested page's HTML is larger than the initial 14 kB packet, the browser will begin parsing and attempting to render an experience based on the data it has. This is why it's important for web performance optimization to include everything the browser needs to start rendering a page, or at least a template of the page—the CSS and HTML needed for the first render—in the first 14 kB. But before anything is rendered to the screen, the HTML, CSS, and JavaScript have to be parsed.
 
 ### Building the DOM tree
 
@@ -109,11 +109,11 @@ We describe five steps in the [critical rendering path](/en-US/docs/Web/Performa
 
 The first step is processing the HTML markup and building the DOM tree. HTML parsing involves [tokenization](/en-US/docs/Web/API/DOMTokenList) and tree construction. HTML tokens include start and end tags, as well as attribute names and values. If the document is well-formed, parsing it is straightforward and faster. The parser parses tokenized input into the document, building up the document tree.
 
-The DOM tree describes the content of the document. The [`<html>`](/en-US/docs/Web/HTML/Element/html) element is the first tag and root node of the document tree. The tree reflects the relationships and hierarchies between different tags. Tags nested within other tags are child nodes. The greater the number of DOM nodes, the longer it takes to construct the DOM tree.
+The DOM tree describes the content of the document. The [`<html>`](/en-US/docs/Web/HTML/Element/html) element is the first element and root node of the document tree. The tree reflects the relationships and hierarchies between different elements. Elements nested within other elements are child nodes. The greater the number of DOM nodes, the longer it takes to construct the DOM tree.
 
 ![The DOM tree for our sample code, showing all the nodes, including text nodes.](dom.gif)
 
-When the parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but `<script>` tags—particularly those without an [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or `defer` attribute—block rendering, and pause the parsing of HTML. Though the browser's preload scanner hastens this process, excessive scripts can still be a significant bottleneck.
+When the parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but `<script>` elements—particularly those without an [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or `defer` attribute—block rendering, and pause the parsing of HTML. Though the browser's preload scanner hastens this process, excessive scripts can still be a significant bottleneck.
 
 ### Preload scanner
 
@@ -144,7 +144,7 @@ Building the CSSOM is very, very fast and is not displayed in a unique color in 
 
 #### JavaScript Compilation
 
-While the CSS is being parsed and the CSSOM created, other assets, including JavaScript files, are downloading (thanks to the preload scanner). JavaScript is interpreted, compiled, parsed and executed. The scripts are parsed into abstract syntax trees. Some browser engines take the [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_Syntax_Tree) and pass it into an interpreter, outputting bytecode which is executed on the main thread. This is known as JavaScript compilation.
+While the CSS is being parsed and the CSSOM created, other assets, including JavaScript files, are downloading (thanks to the preload scanner). JavaScript is parsed, compiled, and interpreted. The scripts are parsed into abstract syntax trees. Some browser engines take the [abstract syntax trees](https://en.wikipedia.org/wiki/Abstract_Syntax_Tree) and pass them into a compiler, outputting bytecode. This is known as JavaScript compilation. Then the code is interpreted on the main thread.
 
 #### Building the Accessibility Tree
 
@@ -160,25 +160,25 @@ Rendering steps include style, layout, paint and, in some cases, compositing. Th
 
 The third step in the critical rendering path is combining the DOM and CSSOM into a render tree. The computed style tree, or render tree, construction starts with the root of the DOM tree, traversing each visible node.
 
-Tags that aren't going to be displayed, like the [`<head>`](/en-US/docs/Web/HTML/Element/head) and its children and any nodes with `display: none`, such as the `script { display: none; }` you will find in user agent stylesheets, are not included in the render tree as they will not appear in the rendered output. Nodes with `visibility: hidden` applied are included in the render tree, as they do take up space. As we have not given any directives to override the user agent default, the `script` node in our code example above will not be included in the render tree.
+Elements that aren't going to be displayed, like the [`<head>`](/en-US/docs/Web/HTML/Element/head) element and its children and any nodes with `display: none`, such as the `script { display: none; }` you will find in user agent stylesheets, are not included in the render tree as they will not appear in the rendered output. Nodes with `visibility: hidden` applied are included in the render tree, as they do take up space. As we have not given any directives to override the user agent default, the `script` node in our code example above will not be included in the render tree.
 
 Each visible node has its CSSOM rules applied to it. The render tree holds all the visible nodes with content and computed styles—matching up all the relevant styles to every visible node in the DOM tree, and determining, based on the [CSS cascade](/en-US/docs/Web/CSS/Cascade), what the computed styles are for each node.
 
 ### Layout
 
-The fourth step in the critical rendering path is running layout on the render tree to compute the geometry of each node. _Layout_ is the process by which the width, height, and location of all the nodes in the render tree are determined, plus the determination of the size and position of each object on the page. _Reflow_ is any subsequent size and position determination of any part of the page or the entire document.
+The fourth step in the critical rendering path is running layout on the render tree to compute the geometry of each node. _Layout_ is the process by which the dimensions and location of all the nodes in the render tree are determined, plus the determination of the size and position of each object on the page. _Reflow_ is any subsequent size and position determination of any part of the page or the entire document.
 
-Once the render tree is built, layout commences. The render tree identified which nodes are displayed (even if invisible) along with their computed styles, but not the dimensions or location of each node. To determine the exact size and location of each object, the browser starts at the root of the render tree and traverses it.
+Once the render tree is built, layout commences. The render tree identified which nodes are displayed (even if invisible) along with their computed styles, but not the dimensions or location of each node. To determine the exact size and position of each object, the browser starts at the root of the render tree and traverses it.
 
-On the web page, almost everything is a box. Different devices and different desktop preferences mean an unlimited number of differing viewport sizes. In this phase, taking the viewport size into consideration, the browser determines what the dimensions of all the different boxes are going to be on the screen. Taking the size of the viewport as its base, layout generally starts with the body, laying out the dimensions of all the body's descendants, with each element's box model properties, providing placeholder space for replaced elements it doesn't know the dimensions of, such as our image.
+On the web page, almost everything is a box. Different devices and different desktop preferences mean an unlimited number of differing viewport sizes. In this phase, taking the viewport size into consideration, the browser determines what the sizes of all the different boxes are going to be on the screen. Taking the size of the viewport as its base, layout generally starts with the body, laying out the sizes of all the body's descendants, with each element's box model properties, providing placeholder space for replaced elements it doesn't know the dimensions of, such as our image.
 
-The first time the size and position of nodes are determined is called _layout_. Subsequent recalculations of node size and locations are called _reflows_. In our example, suppose the initial layout occurs before the image is returned. Since we didn't declare the size of our image, there will be a reflow once the image size is known.
+The first time the size and position of each node is determined is called _layout_. Subsequent recalculations of are called _reflows_. In our example, suppose the initial layout occurs before the image is returned. Since we didn't declare the dimensions of our image, there will be a reflow once the image dimensions is known.
 
 ### Paint
 
 The last step in the critical rendering path is painting the individual nodes to the screen, the first occurrence of which is called the [first meaningful paint](/en-US/docs/Glossary/First_meaningful_paint). In the painting or rasterization phase, the browser converts each box calculated in the layout phase to actual pixels on the screen. Painting involves drawing every visual part of an element to the screen, including text, colors, borders, shadows, and replaced elements like buttons and images. The browser needs to do this super quickly.
 
-To ensure smooth scrolling and animation, everything occupying the main thread, including calculating styles, along with reflow and paint, must take the browser less than 16.67ms to accomplish. At 2048 X 1536, the iPad has over 3,145,000 pixels to be painted to the screen. That is a lot of pixels that have to be painted very quickly. To ensure repainting can be done even faster than the initial paint, the drawing to the screen is generally broken down into several layers. If this occurs, then compositing is necessary.
+To ensure smooth scrolling and animation, everything occupying the main thread, including calculating styles, along with reflow and paint, must take the browser less than 16.67 ms to accomplish. At 2048 x 1536, the iPad has over 3,145,000 pixels to be painted to the screen. That is a lot of pixels that have to be painted very quickly. To ensure repainting can be done even faster than the initial paint, the drawing to the screen is generally broken down into several layers. If this occurs, then compositing is necessary.
 
 Painting can break the elements in the layout tree into layers. Promoting content into layers on the GPU (instead of the main thread on the CPU) improves paint and repaint performance. There are specific properties and elements that instantiate a layer, including [`<video>`](/en-US/docs/Web/HTML/Element/video) and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas), and any element which has the CSS properties of [`opacity`](/en-US/docs/Web/CSS/opacity), a 3D [`transform`](/en-US/docs/Web/CSS/transform), [`will-change`](/en-US/docs/Web/CSS/will-change), and a few others. These nodes will be painted onto their own layer, along with their descendants, unless a descendant necessitates its own layer for one (or more) of the above reasons.
 
@@ -188,15 +188,15 @@ Layers do improve performance, but are expensive when it comes to memory managem
 
 When sections of the document are drawn in different layers, overlapping each other, compositing is necessary to ensure they are drawn to the screen in the right order and the content is rendered correctly.
 
-As the page continues to load assets, reflows can happen (recall our example image that arrived late). A reflow sparks a repaint and a re-composite. Had we defined the size of our image, no reflow would have been necessary, and only the layer that needed to be repainted would be repainted, and composited if necessary. But we didn't include the image size! When the image is obtained from the server, the rendering process goes back to the layout steps and restarts from there.
+As the page continues to load assets, reflows can happen (recall our example image that arrived late). A reflow sparks a repaint and a re-composite. Had we defined the dimensions of our image, no reflow would have been necessary, and only the layer that needed to be repainted would be repainted, and composited if necessary. But we didn't include the image dimensions! When the image is obtained from the server, the rendering process goes back to the layout steps and restarts from there.
 
 ## Interactivity
 
 Once the main thread is done painting the page, you would think we would be "all set." That isn't necessarily the case. If the load includes JavaScript, that was correctly deferred, and only executed after the [`onload`](/en-US/docs/Web/API/Window/load_event) event fires, the main thread might be busy, and not available for scrolling, touch, and other interactions.
 
-{{glossary('Time to Interactive')}} (TTI) is the measurement of how long it took from that first request which led to the DNS lookup and SSL connection to when the page is interactive—interactive being the point in time after the {{glossary('First Contentful Paint')}} when the page responds to user interactions within 50ms. If the main thread is occupied parsing, compiling, and executing JavaScript, it is not available and therefore not able to respond to user interactions in a timely (less than 50ms) fashion.
+{{glossary('Time to Interactive')}} (TTI) is the measurement of how long it took from that first request which led to the DNS lookup and TCP connection to when the page is interactive—interactive being the point in time after the {{glossary('First Contentful Paint')}} when the page responds to user interactions within 50 ms. If the main thread is occupied parsing, compiling, and executing JavaScript, it is not available and therefore not able to respond to user interactions in a timely (less than 50 ms) fashion.
 
-In our example, maybe the image loaded quickly, but perhaps the `anotherscript.js` file was 2MB and our user's network connection was slow. In this case the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:
+In our example, maybe the image loaded quickly, but perhaps the `anotherscript.js` file was 2 MB and our user's network connection was slow. In this case the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:
 
 ![The main thread is occupied by the downloading, parsing and execution of a JavaScript file - over a fast connection](visa_network.png)
 
