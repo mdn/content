@@ -7,7 +7,7 @@ browser-compat: api.FileSystemDirectoryHandle
 
 {{securecontext_header}}{{APIRef("File System Access API")}}
 
-The **`FileSystemDirectoryHandle`** interface of the {{domxref('File System Access API')}} provides a handle to a file system directory.
+The **`FileSystemDirectoryHandle`** interface of the {{domxref("File System Access API", "File System Access API", "", "nocode")}} provides a handle to a file system directory.
 
 The interface can be accessed via the {{domxref('window.showDirectoryPicker()')}}, {{domxref('StorageManager.getDirectory()')}}, {{domxref('DataTransferItem.getAsFileSystemHandle()')}}, and {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}} methods.
 
@@ -21,18 +21,23 @@ _Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._
 
 _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
-- {{domxref('FileSystemDirectoryHandle.entries()')}}
-  - : Returns a new _async iterator_ of a given object's own enumerable property `[key, value]` pairs
-- {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
-  - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the directory the method is called.
+Regular methods:
+
 - {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}}
   - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name within the directory handle on which the method is called.
-- {{domxref('FileSystemDirectoryHandle.keys()')}}
-  - : Returns a new _async iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
+- {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
+  - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the directory the method is called.
 - {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
   - : Attempts to asynchronously remove an entry if the directory handle contains a file or directory called the name specified.
 - {{domxref('FileSystemDirectoryHandle.resolve()')}}
   - : Returns a {{jsxref('Promise')}} fulfilled with an {{jsxref('Array')}} of directory names from the parent handle to the specified child entry, with the name of the child entry as the last array item.
+
+[Asynchronous iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) methods:
+
+- {{domxref('FileSystemDirectoryHandle.entries()')}}
+  - : Returns a new _async iterator_ of a given object's own enumerable property `[key, value]` pairs.
+- {{domxref('FileSystemDirectoryHandle.keys()')}}
+  - : Returns a new _async iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
 - {{domxref('FileSystemDirectoryHandle.values()')}}
   - : Returns a new _async iterator_ containing the values for each index in the `FileSystemDirectoryHandle` object.
 - [`FileSystemDirectoryHandle[@@asyncIterator]()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries)
@@ -40,7 +45,9 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
 ## Examples
 
-The following example returns a directory handle with the specified name, if the directory does not exist it is created.
+### Return directory handle
+
+The following example returns a directory handle with the specified name; if the directory does not already exist it is created.
 
 ```js
 const dirName = "directoryToGetName";
@@ -48,6 +55,8 @@ const dirName = "directoryToGetName";
 // assuming we have a directory handle: 'currentDirHandle'
 const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
+
+### Return file path
 
 The following asynchronous function uses `resolve()` to find the path to a chosen file, relative to a specified directory handle.
 
@@ -75,6 +84,8 @@ async function returnPathDirectories(directoryHandle) {
   }
 }
 ```
+
+### Return handles for all files in a directory
 
 The following example scans recursively through a directory to return {{domxref('FileSystemFileHandle')}} objects for each file in that directory:
 

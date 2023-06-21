@@ -19,22 +19,50 @@ seek(position)
 ### Parameters
 
 - `position`
-  - : An unsigned long describing the byte position from the top (beginning) of the file.
+  - : A number specifying the byte position from the beginning of the file.
 
 ### Return value
 
-{{jsxref('Promise')}} which returns undefined.
+A {{jsxref('Promise')}} that returns `undefined`.
 
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : If the {{domxref('PermissionStatus.state')}} is not 'granted'.
+  - : Returned if {{domxref('PermissionStatus.state')}} is not `granted`.
 - {{jsxref("TypeError")}}
-  - : If `position` is not defined or of type unsigned long.
+  - : Returned if `position` is not a number or not defined.
 
 ## Examples
 
-Todo
+The following asynchronous function opens the 'Save File' picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected. From this, a writable stream is created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.
+
+Next, we write to the stream:
+
+1. A text string is written to the stream.
+2. The `seek()` method is used to put the cursor at the start of the stream.
+3. A second text string is written to the start of the stream, overwriting the first write.
+
+The stream is then closed.
+
+```js
+async function saveFile() {
+  // create a new handle
+  const newHandle = await window.showSaveFilePicker();
+
+  // create a FileSystemWritableFileStream to write to
+  const writableStream = await newHandle.createWritable();
+
+  // write our file
+  await writableStream.write("My first file content");
+  await writableStream.seek(0);
+  await writableStream.write("My second file content");
+
+  // close the file and write the contents to disk.
+  await writableStream.close();
+}
+```
+
+If you run the above function and then open the resulting file created on disk, you should see the text "My second file content".
 
 ## Specifications
 

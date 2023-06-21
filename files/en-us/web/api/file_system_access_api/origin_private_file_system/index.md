@@ -9,19 +9,20 @@ browser-compat: api.StorageManager.getDirectory
 
 The origin private file system (OPFS) is a storage endpoint provided as part of the File System Access API, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
 
-## Working with Files using the File System Access API
+## Working with files using the File System Access API
 
-Before the OPFS was available, the File System Access API provided access to a file using some simple methods. As an example:
+Before the OPFS was available, the File System Access API already provided access to files using some simple methods. As an example:
 
-1. {{domxref("Window.showOpenFilePicker()")}} allows the user to choose a file to access, which results in a {{domxref("FileSystemFileHandle")}} being returned.
-2. {{domxref("FileSystemFileHandle.getFile()")}} is called to get access to the file's contents, the content is modified using {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}}, then {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode: 'readwrite'})")}} is used to request the user's permission to save the changes.
-3. If the user accepts the permission request, save the changes back to the original file.
+1. {{domxref("Window.showOpenFilePicker()")}} allows the user to choose a file to access, which results in a {{domxref("FileSystemFileHandle")}} object being returned.
+2. {{domxref("FileSystemFileHandle.getFile()")}} is called to get access to the file's contents, the content is modified using {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}}.
+3. {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode: 'readwrite'})")}} is used to request the user's permission to save the changes.
+4. If the user accepts the permission request, the changes are saved back to the original file.
 
 This works, but it has some restrictions. These changes are being made to the user-visible file system, so there are a lot of security checks in place to guard against malicious content being written to that file system. These writes are not in-place, and instead use a temporary file. The original is not modified unless it passes all the security checks.
 
 As a result, these operations are fairly slow. It is not so noticeable when you are making small text updates, but the performance suffers when making more significant, large-scale file updates such as [SQLite](https://www.sqlite.org/) database and [mipmap](https://en.wikipedia.org/wiki/Mipmap) modifications.
 
-## How does OPFS solve such problems?
+## How does the OPFS solve such problems?
 
 The OPFS offers low-level, byte-by-byte file access, which is private to the origin of the page and not visible to the user. As a result, it doesn't require the same series of security checks and permission grants and is therefore faster than regular File System Access API calls. It also has a set of synchronous calls available (other File System Access API calls are asynchronous) that can be run inside web workers only so as not to block the main thread.
 
@@ -32,9 +33,9 @@ To summarize how the OPFS differs from the user-visible file system:
 - Permission prompts and security checks are not required to access files in the OPFS.
 - Browsers persist the contents of the OPFS to disk somewhere, but you cannot expect to find the created files matched one-to-one. The OPFS is not intended to be visible to the user.
 
-## How do you use the OPFS?
+## How do you access the OPFS?
 
-First of all, you call the {{domxref("StorageManager.getDirectory()", "navigator.storage.getDirectory()")}} method. This returns a reference to a {{domxref("FileSystemDirectoryHandle")}} object that represents the root of the OPFS.
+To access the OPFS in the first place, you call the {{domxref("StorageManager.getDirectory()", "navigator.storage.getDirectory()")}} method. This returns a reference to a {{domxref("FileSystemDirectoryHandle")}} object that represents the root of the OPFS.
 
 ## Manipulating the OPFS from the main thread
 
@@ -59,19 +60,19 @@ const existingDirectoryHandle = await opfsRoot
     .getDirectoryHandle('my first folder);
 ```
 
-### To read a file
+### Reading a file
 
 1. Make a {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} call to return a {{domxref("FileSystemFileHandle")}} object.
 2. Call the {{domxref("FileSystemFileHandle.getFile()")}} object to return a {{domxref("File")}} object. This is a specialized type of {{domxref("Blob")}}, and as such can be manipulated just like any other `Blob`. For example, you could access the text content directly via {{domxref("Blob.text()")}}.
 
-### To write a file
+### Writing a file
 
 1. Make a {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} call to return a {{domxref("FileSystemFileHandle")}} object.
 2. Call {{domxref("FileSystemFileHandle.createWritable()")}} to return a {{domxref("FileSystemWritableFileStream")}} object, which is a specialized type of {{domxref("WritableStream")}}.
 3. Write contents to it using a {{domxref("FileSystemWritableFilestream.write()")}} call.
 4. Close the stream using {{domxref("WritableStream.close()")}}.
 
-### To delete a file or folder
+### Deleting a file or folder
 
 You can call {{domxref("FileSystemDirectoryHandle.removeEntry()")}} on the parent directory, passing it the name of the item you want to remove:
 
@@ -115,7 +116,7 @@ for await (let name of directoryHandle.keys()) {
 
 Web Workers don't block the main thread, which means you can use the synchronous file access APIs in this context. Synchronous APIs are faster as they avoid having to deal with promises.
 
-You can synchronously access a file by calling {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} on a regular {{domxref("FileSystemFileHandle")}}, as shown in the previous section.
+You can synchronously access a file by calling {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} on a regular {{domxref("FileSystemFileHandle")}}:
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
@@ -131,7 +132,7 @@ There are a number of methods available on the returned {{domxref("FileSystemSyn
 - {{domxref("FileSystemSyncAccessHandle.write", "write()")}}: Writes the content of a buffer into the, optionally at a given offset, and returns the number of written bytes. Checking the returned number of written bytes allows callers to detect and handle errors and partial writes.
 - {{domxref("FileSystemSyncAccessHandle.read", "read()")}}: Reads the contents of the file into a buffer, optionally at a given offset.
 - {{domxref("FileSystemSyncAccessHandle.truncate", "truncate()")}}: Resizes the file to the given size.
-- {{domxref("FileSystemSyncAccessHandle.flush", "flush()")}}: Ensures that the contents of the file contain all the modifications done through write().
+- {{domxref("FileSystemSyncAccessHandle.flush", "flush()")}}: Ensures that the file contents contain all the modifications done through `write()`.
 - {{domxref("FileSystemSyncAccessHandle.close", "close()")}}: Closes the access handle.
 
 Here is an example that uses all the methods mentioned above:

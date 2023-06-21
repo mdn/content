@@ -29,7 +29,13 @@ A new {{jsxref('Array')}}
 
 ## Examples
 
-Todo
+```js
+const dirHandle = await window.showDirectoryPicker();
+
+for await (const value of dirHandle.values()) {
+  console.log(value);
+}
+```
 
 ## Specifications
 

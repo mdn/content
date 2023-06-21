@@ -28,7 +28,13 @@ A new {{jsxref('Array')}}
 
 ## Examples
 
-Todo
+```js
+const dirHandle = await window.showDirectoryPicker();
+
+for await (const key of dirHandle.keys()) {
+  console.log(key);
+}
+```
 
 ## Specifications
 
