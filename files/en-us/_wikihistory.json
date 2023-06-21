@@ -89623,66 +89623,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2020-10-15T21:35:08.741Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "sideshowbarker",
-      "ExE-Boss",
-      "mfluehr",
-      "chrisdavidmills",
-      "HTMLValidator",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2020-10-15T21:35:10.048Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "sideshowbarker",
-      "mfuji09",
-      "ExE-Boss",
-      "mfluehr",
-      "chrisdavidmills",
-      "HTMLValidator",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/scroll-snap-points-x": {
-    "modified": "2020-10-15T21:35:08.972Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Manishearth",
-      "rolfedh",
-      "myakura",
-      "m_gol",
-      "barkerbaggies",
-      "teoli"
-    ]
-  },
-  "Web/CSS/scroll-snap-points-y": {
-    "modified": "2020-10-15T21:35:09.330Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Manishearth",
-      "rolfedh",
-      "myakura",
-      "m_gol",
-      "teoli"
-    ]
-  },
   "Web/CSS/scroll-snap-stop": {
     "modified": "2020-10-15T22:10:00.782Z",
     "contributors": [
@@ -89712,32 +89652,6 @@
       "Sebastianz",
       "Sole",
       "teoli"
-    ]
-  },
-  "Web/CSS/scroll-snap-type-x": {
-    "modified": "2020-10-15T21:36:49.348Z",
-    "contributors": [
-      "ddbeck",
-      "fscholz",
-      "rachelandrew",
-      "mfluehr",
-      "chrisdavidmills",
-      "Sebastianz",
-      "myakura",
-      "malyw"
-    ]
-  },
-  "Web/CSS/scroll-snap-type-y": {
-    "modified": "2020-10-15T21:36:47.615Z",
-    "contributors": [
-      "ddbeck",
-      "fscholz",
-      "rachelandrew",
-      "mfluehr",
-      "chrisdavidmills",
-      "jscissr",
-      "myakura",
-      "Sebastianz"
     ]
   },
   "Web/CSS/scrollbar-color": {
