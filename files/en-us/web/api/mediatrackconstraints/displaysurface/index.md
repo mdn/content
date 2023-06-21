@@ -10,14 +10,14 @@ browser-compat: api.MediaTrackConstraints.displaySurface
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`displaySurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the preferred value for the {{domxref("MediaTrackSettings.displaySurface","displaySurface")}} constrainable property.
 
-This is set by the application to identify to the user agent the type of display surface (window, browser, or monitor at this time) preferred by the application.  It has no effect on what the user can choose to share, but may be used to present the options in a different order.  
+This is set by the application to identify to the user agent the type of display surface (window, browser, or monitor at this time) preferred by the application. It has no effect on what the user can choose to share, but may be used to present the options in a different order.
 
 If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.displaySurface")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
 ## Value
 
 A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) which specifies the type of display surface preferred by the application.
-This value _does not_ add or remove display sources in the browser's user interface, but may reorder them.  You can't use this property to limit the user to a subset of the three display surface values, window, browser, and monitor, but, as you will see below, you can see what was chosen and reject it.
+This value _does not_ add or remove display sources in the browser's user interface, but may reorder them. You can't use this property to limit the user to a subset of the three display surface values, window, browser, and monitor, but, as you will see below, you can see what was chosen and reject it.
 
 See [how constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#how_constraints_are_defined).
 
@@ -53,13 +53,15 @@ of the received frames of video.
 ## Examples
 
 Here are some example constraints objects for `getDisplayMedia()` that make
-use of the `displaySurface` property. 
+use of the `displaySurface` property.
+
 ```js
 dsConstraints = { displaySurface: 'window' }; // 'browser' and 'monitor' are also possible
 applyConstraints(dsConstraints);
 // The user still may choose to share the monitor or the browser,
 // but we indicated that a window is preferred.
 ```
+
 In addition, see the
 [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example
 that demonstrates how constraints are used.
