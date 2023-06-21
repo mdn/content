@@ -14,12 +14,6 @@ Just like the scripts loaded by normal web pages, content scripts can read and m
 
 Content scripts can only access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
 
-> **Note:** Content scripts are only executed if the extension is granted [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
->
-> However, [restricted domains](#restricted_domains) can never be accessed, regardless of the granted permissions.
->
-> Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or out of host permissions after installing the extension.
-
 ## Loading content scripts
 
 You can load a content script into a web page in one of three ways:
@@ -40,9 +34,19 @@ Using method (3), you can also load scripts into pages packaged with your extens
 > **Note:** [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see [Firefox bug 1536094](https://bugzil.la/1536094).
 > Only URLs with the _moz-extension_ scheme are allowed, which excludes data URLs ([Firefox bug 1587336](https://bugzil.la/1587336)).
 
-## Restricted domains
+## Permissions, restrictions, and limitations
 
-Even with the right [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), extensions cannot access some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
+### Permissions
+
+Registered content scripts are only executed if the extension is granted [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
+
+To inject scripts programmatically, the extension needs either the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) or [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). The `scripting` permission is required to use methods from the {{WebExtAPIRef("scripting")}} API.
+
+Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or out of host permissions after installing the extension.
+
+### Restricted domains
+
+Both [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) and the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) have exceptions for some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
 
 In Firefox, this includes the following domains:
 
