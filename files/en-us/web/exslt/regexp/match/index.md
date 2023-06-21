@@ -54,4 +54,4 @@ Part 5 = /en/docs/Firefox_3_for_developers
 
 ## Specifications
 
-[EXSLT - REGEXP:MATCH](http://exslt.org/regexp/functions/match/index.html)
+[EXSLT - REGEXP:MATCH](https://exslt.github.io/regexp/functions/match/index.html)

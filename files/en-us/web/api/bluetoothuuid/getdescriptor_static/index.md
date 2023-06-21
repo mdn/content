@@ -5,7 +5,7 @@ slug: Web/API/BluetoothUUID/getDescriptor_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.BluetoothUUID.getDescriptor
+browser-compat: api.BluetoothUUID.getDescriptor_static
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}

@@ -3,6 +3,8 @@ title: For further reading
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 ---
 
+{{XsltSidebar}}
+
 [« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 ## Print

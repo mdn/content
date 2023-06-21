@@ -3,7 +3,7 @@ title: <xsl:call-template>
 slug: Web/XSLT/Element/call-template
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:call-template>` element invokes a named template.
 

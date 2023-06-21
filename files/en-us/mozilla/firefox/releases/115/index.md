@@ -21,6 +21,9 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### JavaScript
 
+- The {{jsxref("Array.fromAsync()")}} static method is now supported.
+  The method asynchronously returns a new, shallow-copied `Array` instance from an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols), [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object ([Firefox bug 1795816](https://bugzil.la/1795816)).
+
 #### Removals
 
 ### SVG
@@ -37,11 +40,19 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### APIs
 
+- The [`Response: json()` static method](/en-US/docs/Web/API/Response/json_static) is now supported, making it easier to construct {{domxref("Response")}} objects for returning JSON data.
+  The method will be useful for [service workers](/en-US/docs/Web/API/Service_Worker_API) and any other code that needs to respond to browser requests with JSON data ([Firefox bug 1758943](https://bugzil.la/1758943)).
+- The [`URL.canParse()`](/en-US/docs/Web/API/URL/canParse_static) static method can now be used to parse and validate an absolute URL, or a relative URL and base URL.
+  This provides a fast and easy way to check if URLs are valid, instead of constructing them within a `try...catch` block and handling exceptions.
+  ([Firefox bug 1823354](https://bugzil.la/1823354)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
 
 #### Removals
+
+- The deprecated `mozPreservesPitch` alias of [HTMLMediaElement.preservesPitch](/en-US/docs/Web/API/HTMLMediaElement/preservesPitch) has been disabled by default, and may be fully removed in a future release ([Firefox bug 1831205](https://bugzil.la/1831205)).
 
 ### WebAssembly
 

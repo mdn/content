@@ -78,7 +78,7 @@ This article provides information about the changes in Firefox 68 that will affe
 
 #### Removals
 
-- {{CSSxRef("scroll-snap-coordinate")}}, {{CSSxRef("scroll-snap-destination")}}, {{CSSxRef("scroll-snap-type-x")}} and {{CSSxRef("scroll-snap-type-y")}} have been removed.
+- `scroll-snap-coordinate`, `scroll-snap-destination`, `scroll-snap-type-x` and `scroll-snap-type-y` have been removed.
 - The {{CSSxRef("scroll-snap-type")}} property has become a longhand, so the old shorthand syntax like `scroll-snap-type:mandatory` will stop working.
 
 ### SVG

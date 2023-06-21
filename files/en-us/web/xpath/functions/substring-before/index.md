@@ -3,7 +3,7 @@ title: substring-before
 slug: Web/XPath/Functions/substring-before
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `substring-before` function returns a string that is the part of a given string before a given substring.
 

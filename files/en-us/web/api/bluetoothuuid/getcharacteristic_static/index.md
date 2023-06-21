@@ -5,7 +5,7 @@ slug: Web/API/BluetoothUUID/getCharacteristic_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.BluetoothUUID.getCharacteristic
+browser-compat: api.BluetoothUUID.getCharacteristic_static
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
