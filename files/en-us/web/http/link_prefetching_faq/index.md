@@ -44,7 +44,7 @@ No, only `<link>` tags with a relation type of `next` or `prefetch` are prefetch
 
 Yes, link prefetching as outlined in this document does not violate any existing web standards. In fact, the HTML 4.01 specification explicitly allows for the definition of new link relation types ([see Section 6.12: Link types](https://www.w3.org/TR/html4/types.html#type-links)). However, the exact mechanism employed by Mozilla is not yet standardized. An Internet-Draft is in the works.
 
-Standardization of this technique is part of the scope of HTML 5, see the current working draft, [section §5.11.3.13. Link type "prefetch"](https://html.spec.whatwg.org/#link-type-prefetch) .
+Standardization of this technique is part of the scope of HTML 5, see the current working draft, [section §5.11.3.13. Link type "prefetch"](https://html.spec.whatwg.org/multipage/links.html#link-type-prefetch) .
 
 ### How is browser idle time determined?
 
