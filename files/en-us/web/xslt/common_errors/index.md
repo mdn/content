@@ -3,6 +3,8 @@ title: Common XSLT Errors
 slug: Web/XSLT/Common_errors
 ---
 
+{{XsltSidebar}}
+
 ### MIME types
 
 Your server needs to send both the source and the stylesheet with a XML mime type, `text/xml` or `application/xml`. To find out the current type, load the file in Mozilla and look at the page info. Or use a download tool, those usually tell the mime type.

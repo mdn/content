@@ -59,7 +59,7 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
 
 - If the information you provide in the issue is incomplete, then you might be contacted later during the [issue triaging process](#review_issue_to_determine_completeness_of_information).
 
-- If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/mdn/mdn-community/discussions):
+- If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/orgs/mdn/discussions):
 
   - A discussion needs to take place to clarify an issue.
   - A discussion begins after opening the issue.
@@ -167,7 +167,7 @@ These are some of the things to keep in mind while reviewing the validity of an 
 
 - Check if the issue raised is valid and if the fix will improve the content for the readers and the website.
 - Evaluate if the impact of the fix will be small or site-wide.
-- Evaluate if the fix for the issue will need a discussion first, in which case, point the author to open a [discussion](https://github.com/mdn/mdn-community/discussions) instead.
+- Evaluate if the fix for the issue will need a discussion first, in which case, point the author to open a [discussion](https://github.com/orgs/mdn/discussions) instead.
 - Check if the issue complies with our [writing guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and [templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types).
 - Check whether suggestions for adding links comply with our [external links policy](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links).
 

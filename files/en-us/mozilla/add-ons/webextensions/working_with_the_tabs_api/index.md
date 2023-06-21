@@ -1,5 +1,5 @@
 ---
-title: Working with the Tabs API
+title: Work with the Tabs API
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 page-type: guide
 ---

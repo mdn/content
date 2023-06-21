@@ -54,7 +54,8 @@ By passing a selector argument, we can select the **nth** element that matches t
 This is different from moving the selector outside of the function, like:
 
 ```css
-li.important: nth-child(-n + 3);
+li.important:nth-child(-n + 3) {
+}
 ```
 
 This selector selects list items if they are among the first three children and match the selector `li.important`.

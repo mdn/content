@@ -88,7 +88,7 @@ For an alphabetical listing see the sidebar on the left.
 
 ## Difference between statements and declarations
 
-In this section, we will be mixing two kinds of constructs: [_statements_](https://tc39.es/ecma262/#prod-Statement) and [_declarations_](https://tc39.es/ecma262/#prod-Declaration). They are two disjoint sets of grammars. The following are declarations:
+In this section, we will be mixing two kinds of constructs: [_statements_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement) and [_declarations_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration). They are two disjoint sets of grammars. The following are declarations:
 
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
