@@ -26,7 +26,7 @@ The WebOTP API allows web apps to expedite this validation process by copying th
 
 Note that the OTP is also bound to the sending domain. This is a useful security constraint for verifying that the OTP is coming from the right source, which can mitigate the risk of phishing attacks during day-to-day reauthentication.
 
-> **Note:** Attackers can spoof SMS and hijack a person's phone number. Carriers can also recycle phone numbers to new users after an account is closed. While SMS OTP is useful to verify a phone number, you are recommended to combine it with a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
+> **Note:** Attackers can spoof SMS and hijack a person's phone number. Carriers can also recycle phone numbers to new users after an account is closed. While SMS OTP is useful to verify a phone number, you are recommended to use a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
 
 ### How does it work?
 
