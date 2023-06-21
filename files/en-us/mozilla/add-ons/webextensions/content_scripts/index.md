@@ -69,6 +69,10 @@ Other browsers have similar restrictions over the websites extensions can be ins
 
 The set of domains can be restricted further through enterprise policies: Firefox recognizes the `restricted_domains` policy as documented at [ExtensionSettings in mozilla/policy-templates](https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings). Chrome's `runtime_blocked_hosts` policy is documented at [Configure ExtensionSettings policy](https://support.google.com/chrome/a/answer/9867568).
 
+### Limitations
+
+Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), {{DOMxRef("URL.createObjectURL", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
+
 ## Content script environment
 
 ### DOM access
