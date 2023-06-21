@@ -55,7 +55,7 @@ animation-timeline: view(x 200px auto);
         For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
     - `inline`
       - : The scrollbar on the inline axis of the scroll container, which is the axis in the direction parallel to the flow of text in a line.
-        For horizontal writing modes, this is the same as the `x` axis, while for vertical writing modes, this is the same as `y`.
+        For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
     - `y`
       - : The scrollbar on the vertical axis of the scroll container.
     - `x`

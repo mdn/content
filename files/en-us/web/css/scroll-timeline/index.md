@@ -82,7 +82,7 @@ The HTML for the example is shown below.
 #### CSS
 
 The CSS for the container sets it as the source of a scroll timeline named `--squareTimeline` using the `scroll-timeline` property.
-It also sets the scrollbar to use for the timeline as "vertical" (though this was not actually needed as it would have been used by default).
+It also sets the scrollbar to use for the timeline as the vertical scrollbar (this is not actually needed as it is the default).
 
 The height of the container is set to `300px`, and the container is also set to create a vertical scrollbar if it overflows (the CSS `height` rule on the `stretcher` element below does make the content overflow its container).
 
@@ -90,6 +90,8 @@ The height of the container is set to `300px`, and the container is also set to 
 #container {
   height: 300px;
   overflow-y: scroll;
+  scroll-timeline: --squareTimeline y;
+  /* Firefox supports the older "vertical" syntax */
   scroll-timeline: --squareTimeline vertical;
   position: relative;
 }
@@ -134,7 +136,7 @@ Scroll the vertical bar to see the square animate as you scroll.
 
 {{EmbedLiveSample("Creating_a_named_scroll_progress_timeline_animation", "100%", "320px")}}
 
-The square animates as you scroll, and the animation duration when using `scroll-timeline` really depends on the scroll speed (nevertheless, the `animation-duration` property has been defined so you can make out the scroll-driven animation).
+The square animates as you scroll, and the animation duration when using `scroll-timeline` depends on the scroll speed (nevertheless, the `animation-duration` property has been defined so you can make out the scroll-driven animation).
 
 ## Specifications
 

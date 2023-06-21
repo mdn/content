@@ -19,10 +19,7 @@ The `view-timeline-axis` and {{cssxref("view-timeline-name")}} properties can al
 /* Logical property values */
 view-timeline-axis: block;
 view-timeline-axis: inline;
-/* Older, deprecated non-logical property values */
-view-timeline-axis: vertical;
-view-timeline-axis: horizontal;
-/* Current non-logical property values */
+/* Non-logical property values */
 view-timeline-axis: y;
 view-timeline-axis: x;
 ```
@@ -35,13 +32,9 @@ Allowed values for `view-timeline-axis` are:
   - : The scrollbar on the block axis of the scroller element, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
 - `inline`
   - : The scrollbar on the inline axis of the scroller element, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
-- `vertical` {{deprecated_inline}}
-  - : The scrollbar on the vertical axis of the scroller element.
-- `horizontal` {{deprecated_inline}}
-  - : The scrollbar on the horizontal axis of the scroller element.
-- `x`
-  - : The scrollbar on the vertical axis of the scroller element.
 - `y`
+  - : The scrollbar on the vertical axis of the scroller element.
+- `x`
   - : The scrollbar on the horizontal axis of the scroller element.
 
 ## Formal definition
@@ -58,7 +51,7 @@ Allowed values for `view-timeline-axis` are:
 
 In this example, a view progress timeline named `--subjectReveal` is defined using the `view-timeline-name` property on a subject element with a class of "animation". This timeline is then applied to the animation on the same element, using `animation-timeline: --subjectReveal;`.
 
-To demonstrate the effect of `view-timeline-axis`, a `horizontal` (non-default) scrollbar is used in this example to drive the animation.
+To demonstrate the effect of `view-timeline-axis`, a horizontal (non-default) scrollbar is used in this example to drive the animation.
 
 #### HTML
 
@@ -149,7 +142,6 @@ p {
   animation-fill-mode: both;
   animation-timeline: --subjectReveal;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  animation-range: entry;
 }
 
 @keyframes appear {

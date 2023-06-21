@@ -19,10 +19,7 @@ The `scroll-timeline-axis` and {{cssxref("scroll-timeline-name")}} properties ca
 /* Logical property values */
 scroll-timeline-axis: block;
 scroll-timeline-axis: inline;
-/* Older, deprecated non-logical property values */
-scroll-timeline-axis: vertical;
-scroll-timeline-axis: horizontal;
-/* Current non-logical property values */
+/* Non-logical property values */
 scroll-timeline-axis: y;
 scroll-timeline-axis: x;
 ```
@@ -35,13 +32,9 @@ Allowed values for `scroll-timeline-axis` are:
   - : The scrollbar on the block axis of the scroller element, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
 - `inline`
   - : The scrollbar on the inline axis of the scroller element, which is the axis in the direction parallel to the flow of text in a line. For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
-- `vertical` {{deprecated_inline}}
-  - : The scrollbar on the vertical axis of the scroller element.
-- `horizontal` {{deprecated_inline}}
-  - : The scrollbar on the horizontal axis of the scroller element.
-- `x`
-  - : The scrollbar on the vertical axis of the scroller element.
 - `y`
+  - : The scrollbar on the vertical axis of the scroller element.
+- `x`
   - : The scrollbar on the horizontal axis of the scroller element.
 
 ## Formal definition
@@ -58,7 +51,7 @@ Allowed values for `scroll-timeline-axis` are:
 
 In this example, a scroll progress timeline named `--myScroller` is defined using the `scroll-timeline-name` property on the <code>:root</code> element ({{htmlelement("html")}}). This timeline is then applied to the animation on the element with the `animation` class using `animation-timeline: --myScroller`.
 
-To demonstrate the effect of `scroll-timeline-axis`, a `horizontal` (non-default) scrollbar is used in this example to drive the animation.
+To demonstrate the effect of `scroll-timeline-axis`, a horizontal (non-default) scrollbar is used in this example to drive the animation.
 
 #### HTML
 
