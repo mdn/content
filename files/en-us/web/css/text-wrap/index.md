@@ -11,7 +11,7 @@ browser-compat: css.properties.text-wrap
 
 The **`text-wrap`** CSS property controls how text inside an element is wrapped.
 
-> **Note:** Newer values of the {{CSSxRef("white-space")}} property can act as shorthand for {{CSSxRef("white-space-collapse")}} and `text-wrap`.
+> **Note:** The {{CSSxRef("white-space-collapse")}} and `text-wrap` properties can both be set on one line using the {{CSSxRef("white-space")}} shorthand property.
 
 ## Syntax
 
@@ -36,13 +36,13 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 ### Values
 
 - `wrap`
-  - : Text is wrapped across lines at appropriate characters (for example spaces between words, in the case of latin languages) to minimize overflow.
+  - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.
 - `nowrap`
-  - : Text does not wrap across lines and will overflow its containing element rather than break onto a new line.
+  - : Text does not wrap across lines. It will overflow its containing element rather than breaking onto a new line.
 - `balance`
-  - : Text is wrapped across lines in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because the underlying algorithm is computationally expensive, this only works with a limited number of lines (the Chromium implementation uses four wrapped lines or less), meaning that it is useful for cases such as headings or pull quotes.
+  - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (the Chromium implementation uses four wrapped lines or less), meaning that it is useful for cases such as headings or pull quotes.
 - `pretty`
-  - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of typographic orphans should be kept to a minimum).
+  - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [typographic orphans](https://en.wikipedia.org/wiki/Widows_and_orphans) should be kept to a minimum).
 - `stable`
   - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. So, for example, line 1 breaking is not affected by changes on lines 2 and later, line 2 breaking is not affected by changes on lines 3 and later, etc. The intention is to keep the text layout as stable as possible and mitigate performance issues in containers where editable text is updated. You don't want the editing cursor jumping around as text is added or removed due to the algorithm recalculating the wrapping.
 
@@ -56,7 +56,9 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 
 ## Examples
 
-### HTML
+### Basic text wrap value comparison
+
+#### HTML
 
 ```html
 <h2 class="wrap">
@@ -93,13 +95,20 @@ h2 {
 }
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample("Examples", "100%", 350)}}
 
-> **Note:** If you already have another property set on your text that stops wrapping, such as {{cssxref("white-space", "white-space: nowrap")}}, your `text-wrap` setting may not work. In such a case, you'll have to unset the other property.
+### Unsetting white-space nowrap
 
-> **Note:** Remember that `text-wrap` only controls wrapping of the text inside the element, not the inline-size of the element.
+`text-wrap` values like `balance` can compete with {{cssxref("white-space")}} values like `nowrap` because one is asking for no wrapping and the other is asking for balanced wrapping. You can overcome this by unsetting `white-space` before applying balanced wrapping:
+
+```css
+.balanced {
+  white-space: unset;
+  text-wrap: balance;
+}
+```
 
 ## Specifications
 
@@ -111,6 +120,7 @@ h2 {
 
 ## See also
 
-- Shorthand for {{CSSxRef("white-space-collapse")}} and `text-wrap`: The {{CSSxRef("white-space")}} property.
+- {{CSSxRef("white-space")}}
+- {{CSSxRef("white-space-collapse")}}
 - [CSS text module](/en-US/docs/Web/CSS/CSS_Text)
 - [CSS text-wrap: balance](https://developer.chrome.com/blog/css-text-wrap-balance/) on developer.chrome.com

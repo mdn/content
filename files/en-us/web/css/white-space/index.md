@@ -21,7 +21,7 @@ The property specifies two things:
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Single keyword values */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
@@ -29,7 +29,7 @@ white-space: pre-wrap;
 white-space: pre-line;
 white-space: break-spaces;
 
-/* Shorthand values */
+/* white-space-collapse and text-wrap shorthand values */
 white-space: collapse balance;
 white-space: preserve nowrap;
 
@@ -41,9 +41,9 @@ white-space: revert-layer;
 white-space: unset;
 ```
 
-The `white-space` property is specified as a single keyword chosen from the list of values below or shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
-
 ### Values
+
+`white-space` property values can be specified as a single keyword chosen from the list of values below or shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
 
 - `normal`
   - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
