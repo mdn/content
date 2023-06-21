@@ -18,15 +18,20 @@ Phone numbers are often used as a way to identify the user of an app. An SMS is 
 
 Example use cases include:
 
-- Using a phone number as an account identifier instead of the traditional email address.
-- Using a phone number as an extra factor (i.e. multifactor authentication) to improve sign-in security.
-- Verification of sensitive actions, for example OK'ing a payment or transfer of control of an account.
+- Using a phone number as an extra factor (i.e. for two-factor authentication (2FA) or multifactor authentication (MFA)) to improve sign-in security.
+- Verification of sensitive actions, for example, verifying a payment.
 
 The WebOTP API allows web apps to expedite this validation process by copying the OTP from the SMS and passing it to the app automatically after the user has provided consent (most native platforms have an equivalent API).
 
 Note that the OTP is also bound to the sending domain. This is a useful security constraint for verifying that the OTP is coming from the right source, which can mitigate the risk of phishing attacks during day-to-day reauthentication.
 
-> **Note:** Attackers can spoof SMS and hijack a person's phone number. Carriers can also recycle phone numbers to new users after an account is closed. While SMS OTP is useful to verify a phone number, you are recommended to use a stronger form of authentication such as the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
+### Security concerns with SMS OTPs
+
+SMS OTPs are useful for verifying phone numbers, and using SMS for a second factor is certainly better than having no second factor. In some regions, other identifiers such as email addresses and authenticators are not widely-used, so SMS OTPs are very common.
+
+However, SMS isn't that secure. Attackers can spoof SMS and hijack a person's phone number, and carriers can recycle phone numbers to new users after an account is closed.
+
+You are therefore recommended to use a stronger form of authentication if possible, such as a [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)-based solution involving a password and security key, or a passkey.
 
 ### How does it work?
 
