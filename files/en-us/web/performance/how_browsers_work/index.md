@@ -81,7 +81,7 @@ This response for this initial request contains the first byte of data received.
 
 In our example above, the request is definitely less than 14 kB, but the linked resources aren't requested until the browser encounters the links during parsing, described below.
 
-### TCP Slow Start / 14 kB rule
+### TCP Slow Start / 14 kB Rule
 
 The first response packet will be 14 kB. This is part of {{glossary('TCP slow start')}}, an algorithm which balances the speed of a network connection. Slow start gradually increases the amount of data transmitted until the network's maximum bandwidth can be determined.
 
@@ -91,7 +91,7 @@ In {{glossary('TCP slow start')}}, after receipt of the initial packet, the serv
 
 If you've ever heard of the 14 kB rule for initial page load, TCP slow start is the reason why the initial response is 14 kB, and why web performance optimization calls for focusing optimizations with this initial 14 kB response in mind. TCP slow start gradually builds up transmission speeds appropriate for the network's capabilities to avoid congestion.
 
-### Congestion control
+### Congestion Control
 
 As the server sends data in TCP packets, the user's client confirms delivery by returning acknowledgements, or ACKs. The connection has a limited capacity depending on hardware and network conditions. If the server sends too many packets too quickly, they will be dropped. Meaning, there will be no acknowledgement. The server registers this as missing ACKs. Congestion control algorithms use this flow of sent packets and ACKs to determine a send rate.
 
@@ -103,7 +103,7 @@ The DOM is the internal representation of the markup for the browser. The DOM is
 
 Even if the requested page's HTML is larger than the initial 14 kB packet, the browser will begin parsing and attempting to render an experience based on the data it has. This is why it's important for web performance optimization to include everything the browser needs to start rendering a page, or at least a template of the page—the CSS and HTML needed for the first render—in the first 14 kB. But before anything is rendered to the screen, the HTML, CSS, and JavaScript have to be parsed.
 
-### Building the DOM tree
+### Building the DOM Tree
 
 We describe five steps in the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path).
 
@@ -115,7 +115,7 @@ The DOM tree describes the content of the document. The [`<html>`](/en-US/docs/W
 
 When the parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but `<script>` elements—particularly those without an [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or `defer` attribute—block rendering, and pause the parsing of HTML. Though the browser's preload scanner hastens this process, excessive scripts can still be a significant bottleneck.
 
-### Preload scanner
+### Preload Scanner
 
 While the browser builds the DOM tree, this process occupies the main thread. As this happens, the _preload scanner_ will parse through the content available and request high priority resources like CSS, JavaScript, and web fonts. Thanks to the preload scanner, we don't have to wait until the parser finds a reference to an external resource to request it. It will retrieve resources in the background so that by the time the main HTML parser reaches requested assets, they may already be in flight, or have been downloaded. The optimizations the preload scanner provides reduce blockages.
 
@@ -130,7 +130,7 @@ In this example, while the main thread is parsing the HTML and CSS, the preload 
 
 Waiting to obtain CSS doesn't block HTML parsing or downloading, but it does block JavaScript, because JavaScript is often used to query CSS properties' impact on elements.
 
-### Building the CSSOM
+### Building the CSSOM Tree
 
 The second step in the critical rendering path is processing CSS and building the CSSOM tree. The CSS object model is similar to the DOM. The DOM and CSSOM are both trees. They are independent data structures. The browser converts the CSS rules into a map of styles it can understand and work with. The browser goes through each rule set in the CSS, creating a tree of nodes with parent, child, and sibling relationships based on the CSS selectors.
 
