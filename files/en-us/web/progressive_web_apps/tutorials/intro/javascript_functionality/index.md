@@ -1,11 +1,11 @@
 ---
-title: JavaScript web functionality
+title: JavaScript functionality
 slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality
 ---
 
 {{PWASidebar}}
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
 In the previous section, we wrote the HTML and CSS for CycleTracker, creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 

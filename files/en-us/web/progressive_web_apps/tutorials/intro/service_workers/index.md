@@ -11,7 +11,7 @@ Thus far, we've written the HTML, CSS, and JavaScript for CycleTracker. We added
 
 If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/app.js), and [manifest](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `styles.css`, `app.js`, and `cycletracker.json`, respectively.
 
-In this section, we are creating `sw.js`, the service worker script, that will convert our WA into a PWA. We already have one JavaScript file; the last line in the HTML file calls the `app.js`. This JavaScript provides all the functionality for the standard web application features. Instead of calling the `sw.js` file like we did the `app.js` file with the `src` attribute of {{HTMLElement("script")}}, we will create a relationship between the web app and its service worker by registering the service worker.
+In this section, we are creating `sw.js`, the service worker script, that will convert our Web App into a PWA. We already have one JavaScript file; the last line in the HTML file calls the `app.js`. This JavaScript provides all the functionality for the standard web application features. Instead of calling the `sw.js` file like we did the `app.js` file with the `src` attribute of {{HTMLElement("script")}}, we will create a relationship between the web app and its service worker by registering the service worker.
 
 At the end of this lesson, you will have a fully functional PWA; a progressively enhanced web application that is fully installable that works even when the user is offline.
 
@@ -90,7 +90,7 @@ const APP_STATIC_RESOURCES = [
 ];
 ```
 
-We included the `wheel.svg` icon, even though our current application doesn't use it, incase you are enhancing the PWA UI, such as displaying the logo when there is no period data.
+We included the `wheel.svg` icon, even though our current application doesn't use it, in case you are enhancing the PWA UI, such as displaying the logo when there is no period data.
 
 ### Application cache name
 
@@ -108,7 +108,7 @@ We name our cache `period-tracker-` with the current `VERSION` appended. As the 
 const VERSION = "v1";
 const CACHE_NAME = `period-tracker-${VERSION}`;
 
-const APP_STATIC_RESOURCES = [ .... ];
+const APP_STATIC_RESOURCES = [ ... ];
 ```
 
 We have successfully declared our constants; a unique identifier, the list of offline resources as an array, and the application's cache name that changes every time the identifier is updated. Now let's focus on installing, updating, and deleting unused cached resources.
@@ -157,13 +157,13 @@ self.addEventListener("install", (event) => {
 
 ### Updating the PWA and deleting old caches
 
-As mentioned, when an existing service worker is being replaced by a new one, the existing service worker is used as the PWA's service worker until the new service work is activated. We use the `activate` event to delete old caches to avoid running out of space. We iterate over named {{domxref("Cache")}} objects, deleting all but the current one, and the set the service worker as the [`controller`](/en-US/docs/Web/API/ServiceWorkerContainer/controller) for the PWA.
+As mentioned, when an existing service worker is being replaced by a new one, the existing service worker is used as the PWA's service worker until the new service worker is activated. We use the `activate` event to delete old caches to avoid running out of space. We iterate over named {{domxref("Cache")}} objects, deleting all but the current one, and then set the service worker as the [`controller`](/en-US/docs/Web/API/ServiceWorkerContainer/controller) for the PWA.
 
 We listen for the current service worker's global scope [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) event.
 
 We get the names of the existing named caches. We use the {{domxref("CacheStorage.keys()")}} method (again accessing `CacheStorage` through the global {{domxref("caches")}} property) which returns a {{jsxref("Promise")}} that resolves with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects in the order they were created.
 
-We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate thru that list name promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named cachees, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
+We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate thru that list of name cache promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named caches, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
 
 The last line, the `await clients.claim()` uses the [`claim()`](/en-US/docs/Web/API/Clients/claim) method of the [`Clients`](/en-US/docs/Web/API/Clients) interface to enable our service worker to set itself as the controller for our client; the "client" referring to a running instance of the PWA. The `claim()` method enables the service worker to "claim control" of all clients within its scope. This way, clients loaded in the same scope don't need to be reloaded.
 
@@ -193,7 +193,7 @@ Add the above `activate` eventListener to your `sw.js` file.
 
 We can take advantage of the [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event, to prevent an installed PWA from making requests if the user is online. Listening to the fetch event makes it possible to intercept all requests and respond with cached responses instead of going to the network. Most applications don't require this behavior. In fact, many business models want users to regularly make server requests for tracking and marketing purposes. So, while intercepting requests may be an anti-pattern for some, to improve the privacy of our CycleTracker app, we don't want the app to make unnecessary server requests.
 
-As our PWA consists of a single page, for page navigation requests, we go back to the `index.html` home page. There are no other pages and we don't ever want to go to the server. If the Fetch API's [`Request`](/en-US/docs/Web/API/Request) readonly [`mode`](/en-US/docs/Web/API/Request/mode) property is `navigate`, meaning it's looking for a web page, we use the FetchEvent's `respondWith()`]() method to prevents the browser's default fetch handling, providing our own response promise employing the [`caches.match()`](/en-US/docs/Web/API/CacheStorage/match) method.
+As our PWA consists of a single page, for page navigation requests, we go back to the `index.html` home page. There are no other pages and we don't ever want to go to the server. If the Fetch API's [`Request`](/en-US/docs/Web/API/Request) readonly [`mode`](/en-US/docs/Web/API/Request/mode) property is `navigate`, meaning it's looking for a web page, we use the FetchEvent's [`respondWith()`](/en-US/docs/Web/API/FetchEvent/respondWith) method to prevent the browser's default fetch handling, providing our own response promise employing the [`caches.match()`](/en-US/docs/Web/API/CacheStorage/match) method.
 
 For all other request modes, we open the caches as done in the [install event response](#saving-the-cache-on-pwa-installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Status/404) as a response.
 
@@ -309,8 +309,8 @@ Now that our service worker script is complete, we need to register the service 
 We start by checking that the browser supports the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) by using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#the_concept_of_feature_detection) for the presence of the [`serviceWorker`](/en-US/docs/Web/API/ServiceWorker) property on the global [`navigator`](/en-US/docs/Web/API/Navigator) object:
 
 ```html
-<!-- Does "serviceWorker" exist -->
 <script>
+  // Does "serviceWorker" exist
   if ("serviceWorker" in navigator) {
     // If yes, we register the service worker
   }
@@ -380,11 +380,11 @@ You likely don't want to update the version number with every save. Until you ar
 
 ![Firefox developer tools application panel with a stopped service worker and an unregister button](firefox_sw.jpg)
 
-You can unregister a service worker by clicking on the `unregister` button in the [browser deverloper tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
+You can unregister a service worker by clicking on the `unregister` button in the [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
 
 ![Edge developer tools showing the application panel set to a service worker](edge_sw.jpg)
 
-In some developer tools, you can manually unregister a service worker, or you can select the service workers "update on reload" option which sets the developer tools to reset and re-activate the service worker on every reload as long as the developer tools are open. There is also an option to bypass the service worker and load resources from the network. This panel includes features we are not covering in this tutorial, but will be helpful as you create more advanced PWAs that include [synching](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#periodic_background_sync) and [push](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#push), which are both covered in the [offline and background operation guide](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
+In some developer tools, you can manually unregister a service worker, or you can select the service workers "update on reload" option which sets the developer tools to reset and re-activate the service worker on every reload as long as the developer tools are open. There is also an option to bypass the service worker and load resources from the network. This panel includes features we are not covering in this tutorial, but will be helpful as you create more advanced PWAs that include [syncing](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#periodic_background_sync) and [push](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#push), which are both covered in the [offline and background operation guide](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
 
 ![Two service workers exist at localhost:8080. The can be be unregistered from the list of service workers](edge_sw_list.jpg)
 

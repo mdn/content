@@ -248,7 +248,7 @@ The Manifest App pane provides the name of the manifest file as a link, and iden
 
 ![The identity and presentation manifest members along with values, if present.](manifest_identity_and_presentation.jpg)
 
-Supported manifest members are displayed, along with all included values. Note that we did not include the `orientation` member, but it is listed. While we did not include the `id` member, the developer tools provide information "Note: `id`is not specified in the manifest, `start_url` is used instead. To specify an App Id that matches the current identity, set the `id` field to /".
+Supported manifest members are displayed, along with all included values. In this screenshot, while we did not include the `orientation` or `id` members, they are listed. The App panel can be used to see the manifest members and even learn: in this example, we learn that to specify an App Id that matches the current identity, set the `id` field to /".
 
 ![Installability shows that because we don't have a service worker, our app is not an installable PWA. yet.](manifest_installability.jpg)
 
@@ -258,7 +258,7 @@ Our web app doesn't have any protocol handlers; a topic not covered in this tuto
 
 ![The four icons included in the Manifest file, with the background removed as "show only the minimum safe area for maskable icons is checked.](manifest_icons.jpg)
 
-The manifest panel also includes insight into the safe area for maskable icons and a link to a [PWA image generator](https://www.pwabuilder.com/imageGenerator). This tool creates over 100 six square PNG images for Android, Apple OSs, and Windows, as well as a JSON object listing all the images and their sizes. The images produced may not serve your needs, but the list of image sizes produced for each OS demonstrates the diversity of where and how PWAs can be served.
+The manifest panel also includes insight into the safe area for maskable icons and a link to a [PWA image generator](https://www.pwabuilder.com/imageGenerator). This tool creates over 100 square PNG images for Android, Apple OSs, and Windows, as well as a JSON object listing all the images and their sizes. The images produced may not serve your needs, but the list of image sizes produced for each OS demonstrates the diversity of where and how PWAs can be served.
 
 The developer tools are useful in identifying which manifest members are supported. Note the Firefox developer tools have entries for `dir`, `lang`, `orientation`, `scope`, and `id`, even though our manifest file did not include these members. Firefox also includes the value of the `purpose` member for each icon, displaying `any` if no the purpose is not explicitly set.
 

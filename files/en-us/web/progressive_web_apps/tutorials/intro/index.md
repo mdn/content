@@ -42,7 +42,7 @@ Once installed, PWAs can be made to appear and act similarly to other applicatio
 
 - Application icon
 
-  - : PWAs display an application icon in the same location as other installed applications installed on the users' operating system. This can be an icon on the homescreen, in the toolbar, in the application's folder, or wherever the device displays application icons. We'll learn how to [declare icons](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file#app_iconography) for CycleTracker, so, once installed, our PWA can appear like any other OED application on the users device.
+  - : PWAs display an application icon in the same location as other installed applications installed on the users' operating system. This can be an icon on the homescreen, in the toolbar, in the application's folder, or wherever the device displays application icons. We'll learn how to [declare icons](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file#app_iconography) for CycleTracker, so, once installed, our PWA can appear like any other installed application on the user's device.
 
 - Works offline
 

@@ -79,7 +79,7 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 The {{HTMLelement("head")}} contains machine-readable information about the web application that, with the exception of the `<title>`, which may be displayed as the heading of the browser tab, is not visible to the user.
 
-The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML). The first two bit of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
+The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
 ```html
 <head>
@@ -88,7 +88,7 @@ The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to
 </head>
 ```
 
-We set the title of the page to "Cycle Tracker" with the {{HTMLelement("title")}} element. While the contents of the `<head>` are not displayed within the page, the contents of the `<title>` are seen! The `<title>` element's inner text appears in the browser tab when the page is loaded, in search engine results, and is the default title used when a user bookmarks a web page.
+We set the title of the page to "Cycle Tracker" with the {{HTMLelement("title")}} element. While the contents of the `<head>` are not displayed within the page, the contents of the `<title>` are seen! The `<title>` element's inner text appears in the browser tab when the page is loaded, in search engine results, and is the default title used when a user bookmarks a web page.  The title also provides an accessible name for screen reader users who depend on it to know which tab they're currently on.
 
 While the title could be "Menstrual cycle tracking application", we opted for a shortened name that is more discreet.
 
