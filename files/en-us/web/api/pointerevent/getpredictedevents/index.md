@@ -9,7 +9,7 @@ browser-compat: api.PointerEvent.getPredictedEvents
 {{APIRef("Pointer Events")}}
 
 The **`getPredictedEvents()`** method of the {{domxref("PointerEvent")}} interface returns a sequence of `PointerEvent` instances that are estimated future pointer positions.
-How the predicted positions are calculated depends on the user agent, but they are based on past points and current velocity and trajectory.
+How the predicted positions are calculated depends on the user agent, but they are based on past points, current velocity, and trajectory.
 
 Applications can use the predicted events to "draw ahead" to a predicted position which may reduce perceived latency depending on the application's interpretation of the predicted events and the use case.
 
@@ -56,7 +56,7 @@ function drawCircle(x, y, color) {
 
   for (const pointerEvent of pointerEvents) {
     ctx.beginPath();
-    ctx.arc(pointerEvent.x, pointerEvent.y, 10, 0, 4 * Math.PI);
+    ctx.arc(pointerEvent.x, pointerEvent.y, 10, 0, 2 * Math.PI);
     ctx.strokeStyle = pointerEvent.color;
     ctx.stroke();
   }

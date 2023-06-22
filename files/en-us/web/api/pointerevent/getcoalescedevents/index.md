@@ -58,7 +58,7 @@ function drawCircle(x, y, color) {
 
   for (const pointerEvent of pointerEvents) {
     ctx.beginPath();
-    ctx.arc(pointerEvent.x, pointerEvent.y, 10, 0, 4 * Math.PI);
+    ctx.arc(pointerEvent.x, pointerEvent.y, 10, 0, 2 * Math.PI);
     ctx.strokeStyle = pointerEvent.color;
     ctx.stroke();
   }
