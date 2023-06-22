@@ -148,7 +148,8 @@ This permission is specified as `"activeTab"`. If an extension has the `activeTa
 
 "User interaction" includes:
 
-- the user clicks the extension's {{webextAPIref("browserAction", "browser action", "", 1)}} or page action
+- the user clicks the extension's item in the add-on toolbar menu or its icon pinned to the toolbar (It is referred to as {{webextAPIref("action")}} in Manifest V3 API and as {{webextAPIref("browserAction", "browser action")}} in Manifest V2 API.)
+- the user clicks the extension's [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) added to the address bar (Manifest V2 only)
 - the user selects its context menu item
 - the user activates a keyboard shortcut defined by the extension
 
