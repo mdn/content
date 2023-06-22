@@ -76836,7 +76836,7 @@
     "modified": "2020-12-14T11:01:11.157Z",
     "contributors": ["rachelandrew", "wbamberg", "mfuji09", "bershanskiy"]
   },
-  "Web/CSS/@media/update-frequency": {
+  "Web/CSS/@media/update": {
     "modified": "2020-12-14T11:01:26.322Z",
     "contributors": [
       "rachelandrew",
