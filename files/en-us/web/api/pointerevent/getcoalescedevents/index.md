@@ -8,7 +8,7 @@ browser-compat: api.PointerEvent.getCoalescedEvents
 
 {{APIRef("Pointer Events")}}
 
-The **`getCoalescedEvents()`** method of the {{domxref("PointerEvent")}} interface returns a sequence of `PointerEvent` instances that were coalesced (merged) into a single {{domxref('Element/pointermove_event', 'pointermove')}} event.
+The **`getCoalescedEvents()`** method of the {{domxref("PointerEvent")}} interface returns a sequence of `PointerEvent` instances that were coalesced (merged) into a single {{domxref('Element/pointermove_event', 'pointermove')}} or {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}} event.
 Instead of a stream of many {{domxref('Element/pointermove_event', 'pointermove')}} events, user agents coalesce multiple updates into a single event.
 This helps with performance as the user agent has less event handling to perform, but there is a reduction in the granularity and accuracy when tracking, especially with fast and large movements.
 
