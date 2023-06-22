@@ -88,11 +88,11 @@ negotiation and thus fail `replaceTrack()`:
 ```js
 // example to change video camera, suppose selected value saved into window.selectedCamera
 
-let localConnection = new RTCPeerConnection(),
-    remoteConnection = new RTCPeerConnection();
+const localConnection = new RTCPeerConnection();
+const remoteConnection = new RTCPeerConnection();
 // Configuring these to use the the WebRTC API can be explored at
 // https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample
-let PCs = [localConnection,remoteConnection];
+const PCs = [localConnection, remoteConnection];
 function useSelectedCamera() { // Assumes window.selectedCamera is the selected camera
   navigator.mediaDevices
     .getUserMedia({
