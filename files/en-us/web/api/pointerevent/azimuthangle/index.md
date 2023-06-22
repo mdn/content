@@ -3,10 +3,12 @@ title: "PointerEvent: azimuth angle property"
 short-title: azimuth angle
 slug: Web/API/PointerEvent/azimuthAngle
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PointerEvent.azimuthAngle
 ---
 
-{{ APIRef("Pointer Events") }}
+{{ APIRef("Pointer Events") }}{{SeeCompatTable}}
 
 The **`azimuth angle`** read-only property of the {{domxref("PointerEvent")}} interface represents the angle between the Y-Z plane and the plane containing both the transducer (pointer or stylus) axis and the Y axis.
 
