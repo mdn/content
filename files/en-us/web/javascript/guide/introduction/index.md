@@ -101,7 +101,7 @@ console.log(eval("3 + 5"));
 
 ### Multi-line input in the console
 
-By default, if you press <kbd>Return or Enter</kbd>( after entering a line of code, then the string you typed is executed. To enter multi-line input:
+By default, if you press <kbd>Enter</kbd> (or <kbd>Return</kbd>, depending on your keyboard) after entering a line of code, then the string you typed is executed. To enter multi-line input:
 
 - If the string you typed was incomplete (for example, you typed `function foo() {`) then the console will treat <kbd>Enter</kbd> as a line break, and let you type another line.
 - If you hold down <kbd>Shift</kbd> while pressing <kbd>Enter</kbd>, then the console will treat this as a line break, and let you type another line.
