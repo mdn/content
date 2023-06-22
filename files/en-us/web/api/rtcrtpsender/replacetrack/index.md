@@ -86,25 +86,25 @@ negotiation and thus fail `replaceTrack()`:
 ### Switching video cameras
 
 ```js
-// example to change video camera, suppose selected value saved into window.selectedCamera
+// example to change video camera
 
 const localConnection = new RTCPeerConnection();
 const remoteConnection = new RTCPeerConnection();
 // Configuring these to use the the WebRTC API can be explored at
 // https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample
-const PCs = [localConnection, remoteConnection];
-function useSelectedCamera() { // Assumes window.selectedCamera is the selected camera
+const connections = [localConnection, remoteConnection];
+function setCamera( selectedCamera ) { 
   navigator.mediaDevices
     .getUserMedia({
       video: {
         deviceId: {
-          exact: window.selectedCamera,
+          exact: selectedCamera,
         },
       },
     })
     .then((stream) => {
       const [videoTrack] = stream.getVideoTracks();
-      PCs.forEach((pc) => {
+      connections.forEach((pc) => {
         const sender = pc
           .getSenders()
           .find((s) => s.track.kind === videoTrack.kind);
