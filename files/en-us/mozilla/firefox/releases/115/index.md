@@ -23,6 +23,9 @@ This article provides information about the changes in Firefox 115 that affect d
 
 - The {{jsxref("Array.fromAsync()")}} static method is now supported.
   The method asynchronously returns a new, shallow-copied `Array` instance from an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols), [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object ([Firefox bug 1795816](https://bugzil.la/1795816)).
+- The `Array` and `TypedArray` methods [`Array.toReversed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed), [`Array.toSorted()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted), [`Array.toSpliced()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced), [`Array.with()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with), [`TypedArrays.toReversed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed), [`TypedArrays.toSorted()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted), and [`TypedArrays.with()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/with) are now supported.
+  These methods return a new array with elements that have been shallow copied (similarly named methods without the `to` prefix modify the array elements in place).
+  ([Firefox bug 1811057](https://bugzil.la/1811057)).
 
 #### Removals
 

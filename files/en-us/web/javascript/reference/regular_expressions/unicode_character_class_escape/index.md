@@ -24,7 +24,7 @@ A **unicode character class escape** is a kind of [character class escape](/en-U
 ### Parameters
 
 - `loneProperty`
-  - : A lone Unicode property name or value, following the same syntax as `value`. It specifies the value for the `General_Category` property, or a [binary property name](https://tc39.es/ecma262/#table-binary-unicode-properties).
+  - : A lone Unicode property name or value, following the same syntax as `value`. It specifies the value for the `General_Category` property, or a [binary property name](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties).
 - `property`
   - : A Unicode property name. Must be made of ASCII letters (`A–Z`, `a–z`) and underscores (`_`), and must be one of the [non-binary property names](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties).
 - `value`

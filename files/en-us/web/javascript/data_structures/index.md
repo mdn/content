@@ -229,7 +229,7 @@ As mentioned above, JavaScript is a [weakly typed](#dynamic_and_weak_typing) lan
 
 ### Primitive coercion
 
-The [primitive coercion](https://tc39.es/ecma262/#sec-toprimitive) process is used where a primitive value is expected, but there's no strong preference for what the actual type should be. This is usually when a [string](#string_type), a [number](#number_type), or a [BigInt](#bigint_type) are equally acceptable. For example:
+The [primitive coercion](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive) process is used where a primitive value is expected, but there's no strong preference for what the actual type should be. This is usually when a [string](#string_type), a [number](#number_type), or a [BigInt](#bigint_type) are equally acceptable. For example:
 
 - The [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) constructor, when it receives one argument that's not a `Date` instance — strings represent date strings, while numbers represent timestamps.
 - The [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) operator — if one operand is a string, string concatenation is performed; otherwise, numeric addition is performed.
@@ -270,4 +270,4 @@ In all cases, `[@@toPrimitive]()`, if present, must be callable and return a pri
 - [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
 - [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
 - [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
-- [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
+- [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html)
