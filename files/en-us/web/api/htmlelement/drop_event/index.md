@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.drop_event
 
 {{APIRef}}
 
-The **`drop`** event is fired when an element or text selection is dropped on a valid drop target.
+The **`drop`** event is fired when an element or text selection is dropped on a valid drop target. It won't fire until you preventDefault in drag-over.
 
 ## Syntax
 
