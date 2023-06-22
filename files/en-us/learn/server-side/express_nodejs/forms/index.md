@@ -144,7 +144,7 @@ The functions are defined as below:
   ];
   ```
 
-  You can also daisy chain different validators, and add messages that are displayed if the preceding validators are true.
+  You can also daisy chain different validators, and add messages that are displayed if the preceding validators are false.
 
   ```js
   [
