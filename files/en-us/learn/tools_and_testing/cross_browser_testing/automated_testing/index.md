@@ -177,12 +177,11 @@ To use each plugin, you need to first install it via npm, then require any depen
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function html(cb) {
+   function html() {
      return gulp
        .src("src/index.html")
        .pipe(htmltidy())
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
@@ -223,7 +222,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function css(cb) {
+   function css() {
      return gulp
        .src("src/style.css")
        .pipe(csslint())
@@ -234,7 +233,6 @@ In the input version of the file, you may have noticed that we put an empty {{ht
          })
        )
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
@@ -286,7 +284,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function js(cb) {
+   function js() {
      return gulp
        .src("src/main.js")
        .pipe(jshint())
@@ -297,7 +295,6 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
          })
        )
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
