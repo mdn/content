@@ -387,6 +387,7 @@ body {
   background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
+  overflow: auto;
 }
 
 .box {
