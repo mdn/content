@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media
 
 {{CSSRef}}
 
-The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
 > **Note:** In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
 
@@ -35,7 +35,7 @@ The `@media` at-rule may be placed at the top level of your code or nested insid
 }
 ```
 
-For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax).
+For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
 ## Description
 
@@ -47,7 +47,7 @@ Except when using the `not` or `only` logical operators, the media type is optio
 - `all`
   - : Suitable for all devices.
 - `print`
-  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/Paged_Media) for information about formatting issues that are specific to these formats.)
+  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/CSS_paged_media) for information about formatting issues that are specific to these formats.)
 - `screen`
   - : Intended primarily for screens.
 
@@ -165,7 +165,7 @@ You can also combine multiple media queries into a single rule by separating the
 
 ## Accessibility concerns
 
-To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 Both [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) and [`px`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) are valid units, but [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) works better if the user changes the browser text size.
 
@@ -227,7 +227,7 @@ Introduced in Media Queries Level 4 is a new range syntax that allows for less v
 }
 ```
 
-For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+For more examples, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ## Specifications
 
@@ -239,7 +239,7 @@ For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Media_Qu
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - In JavaScript, `@media` can be accessed via the CSS object model interface {{domxref("CSSMediaRule")}}.
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
 - [Extended WebKit media features](/en-US/docs/Web/CSS/WebKit_Extensions#media_features)
