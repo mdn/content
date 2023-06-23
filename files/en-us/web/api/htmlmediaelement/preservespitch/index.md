@@ -46,18 +46,12 @@ div {
 
 ```js
 const audio = document.querySelector("audio");
-document.getElementById("rate").addEventListener(
-  "change",
-  (e) => {
-    audio.playbackRate = e.target.value;
-  }
-);
-document.getElementById("pitch").addEventListener(
-  "change",
-  (e) => {
-    audio.preservesPitch = e.target.checked;
-  }
-);
+document.getElementById("rate").addEventListener("change", (e) => {
+  audio.playbackRate = e.target.value;
+});
+document.getElementById("pitch").addEventListener("change", (e) => {
+  audio.preservesPitch = e.target.checked;
+});
 ```
 
 {{EmbedLiveSample("Setting the preservesPitch property")}}
