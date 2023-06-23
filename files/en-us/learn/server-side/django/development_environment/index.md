@@ -59,7 +59,7 @@ In this article, we'll provide instructions for Windows, macOS, and Linux/Unix.
 #### What version of Python should be used?
 
 You can use any Python version supported by your target Django release.
-For Django 4.0.2 the allowed versions are Python 3.8 to 3.10 (see [FAQ:Installation](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django)).
+For Django 4.0.10 the allowed versions are Python 3.8 to 3.10 (see [FAQ:Installation](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django)).
 
 The Django project _recommends_ (and "officially supports") using the newest available supported Python release.
 
@@ -338,11 +338,11 @@ You can test that Django is installed by running the following command (this jus
 ```bash
 # Linux/macOS
 python3 -m django --version
- 4.0.2
+ 4.0.10
 
 # Windows
 py -3 -m django --version
- 4.0.2
+ 4.0.10
 ```
 
 > **Note:** If the above Windows command does not show a django module present, try:
@@ -351,7 +351,9 @@ py -3 -m django --version
 > py -m django --version
 > ```
 >
-> In Windows _Python 3_ scripts are launched by prefixing the command with `py -3`, although this can vary depending on your specific installation. Try omitting the `-3` modifier if you encounter any problems with commands. In Linux/macOS, the command is `python3.`
+> In Windows _Python 3_ scripts are launched by prefixing the command with `py -3`, although this can vary depending on your specific installation.
+> Try omitting the `-3` modifier if you encounter any problems with commands.
+> In Linux/macOS, the command is `python3.`
 
 > **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`). If you're working on _Windows_ replace this prefix with: `py -3`
 
@@ -390,7 +392,7 @@ System check identified no issues (0 silenced).
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
 March 01, 2022 - 01:19:16
-Django version 4.0.2, using settings 'mytestsite.settings'
+Django version 4.0.10, using settings 'mytestsite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
