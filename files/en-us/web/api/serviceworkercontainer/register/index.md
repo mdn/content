@@ -164,6 +164,6 @@ service worker's location.
 
 ## See also
 
-- [ServiceWorkerRegistration: `unregister()` method](/en-US/docs/Web/API/ServiceWorkerRegistration/unregister) method
+- [ServiceWorkerRegistration: `unregister()` method](/en-US/docs/Web/API/ServiceWorkerRegistration/unregister)
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
