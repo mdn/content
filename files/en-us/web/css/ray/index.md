@@ -238,9 +238,7 @@ body {
   }
 ```
 
-#### HTML
-
-```html
+```html hidden
 <div>
   <div class="container">
     <div class=" shape shape1">&mdash;</div>
