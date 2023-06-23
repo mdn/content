@@ -17,7 +17,7 @@ You can associate a popup with the button. The popup is specified using HTML, CS
 
 If you specify a popup, it will be shown — and the content will be loaded — when the user clicks the icon. If you do not specify a popup, then when the user clicks the icon an event is dispatched to your extension.
 
-You can define most of a browser action's properties declaratively using the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json.
+You can define most of a browser action's properties declaratively using the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key in the manifest.json.
 
 With the `action` API, you can:
 
@@ -75,7 +75,7 @@ With the `action` API, you can:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API. This documentation is derived from [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
