@@ -46,3 +46,4 @@ Location: http://www.example.org/index.asp
 - {{HTTPStatus("308", "308 Permanent Redirect")}}, the equivalent of this status code
   where the method used never changes.
 - {{HTTPStatus("302", "302 Found")}}, a temporary redirect
+- Validate HTTP Status on any online tool, such as the [redirect checker](https://redirectchecker.com/ "redirect checker")tool, And analyze inside url redirection and its path.
