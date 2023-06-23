@@ -3,7 +3,7 @@ title: Privacy on the web
 slug: Web/Privacy
 ---
 
-People use websites for several important tasks such as banking, shopping, entertainment, and paying their taxes. In doing so, they are required to share personal information with those sites. Users place a certain level of trust in the sites they share their data with — if that information fell into the wrong hands it could be used to exploit users, for example by profiling them, targetting them with unwanted ads, or even stealing their identify or money.
+People use websites for several important tasks such as banking, shopping, entertainment, and paying their taxes. In doing so, they are required to share personal information with those sites. Users place a certain level of trust in the sites they share their data with — if that information fell into the wrong hands it could be used to exploit users, for example by profiling them, targetting them with unwanted ads, or even stealing their identity or money.
 
 Modern browsers already have a wealth of features to protect users' privacy on the web, but that's not enough. To create a trustworthy, privacy-respecting experience, developers need to educate their users in good practices (and enforce them) and create sites that collect as little data as possible, use it responsibly, and transport and store it securely.
 
@@ -141,9 +141,9 @@ Some of the most developed parts of the privacy sandbox project are as follows:
 
 ## What does a developer need to do?
 
-There are several actions web developers can and should take to improve privacy for their users. This section discusses the most important ones. Some of the categories are not purely technical tasks as such but will involve collaboration with other team members.
+There are several actions web developers can and should take to improve privacy for their users. The below sections discuss the most important ones. Some of the categories are not purely technical tasks as such but will involve collaboration with other team members.
 
-### Collect data ethically
+## Collect data ethically
 
 Companies collect lots of different data from their users for a variety of different reasons:
 
@@ -163,7 +163,7 @@ The ethics of data collection can be broken down into three simple principles:
 
 > **Note:** The tips provided below make for a better, more privacy-aware user experience, but many of them are required by law to comply with regulations, for example the [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN) in the EU. You should make sure to find out what regulations apply to you in your locale, and what you need to do to compley with them.
 
-#### Don't collect more data than you need
+### Don't collect more data than you need
 
 It is tempting to ask for a lot of data because you think it might be useful in future. However, every bit of extra data you collect adds risk to your customer's privacy, and increases the chance that they will abandon the step they are taking (whether it is filling out a survey, or signing up for a service).
 
@@ -171,7 +171,7 @@ It is good to anonymize data, and you should also consider whether you can get w
 
 The best way to protect their privacy though, is to not collect data at all — returning to the previous example, you could infer the same data by looking at user purchase history. As another example, users really appreciate being able to buy products anonymously. You shouldn't force them to sign up for an account; it should be their choice.
 
-#### Communicate clearly how you are going to use it
+### Communicate clearly how you are going to use it
 
 Once you have decided what data you are going to collect, you should publish a privacy policy on your site that clearly states:
 
@@ -185,7 +185,7 @@ When providing you with data, your users should be given an opportunity to read 
 
 When you've published your privacy policy, you need to make sure that you comply with it — doing what you say you are going to do is very important in building user trust. You should only collect the data you say you'll collect, and only use it for the purpose you say you'll use it for. If someone from your company comes up with a clever new way to use existing data, that still isn't OK under the terms of your policy if it doesn't specify that you'll use it for that purpose.
 
-#### Delete the data once you have finished with it
+### Delete the data once you have finished with it
 
 Earlier on, we mentioned giving users a way to see what data of theirs you have collected, and delete it if they want to. You could possibly do this as part of the same experience they can use to delete their account (their data goes with it), or make them two separate options. Either way, the options should be easy to find.
 
@@ -193,7 +193,7 @@ Allowing the user to choose when significant portions of data get deleted is ver
 
 > **Note:** The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g. [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
 
-### Cut down on tracking cookies
+## Cut down on tracking cookies
 
 Earlier on we discussed tracking, and some of the unethical purposes they are used for. We shouldn't have to spell out how such uses can erode user trust; wherever possible, you should only use cookies for ethical uses, such as transferring login or other personalization status across sites.
 
@@ -257,13 +257,13 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 
 > **Note:** See [Third parties](https://web.dev/learn/privacy/third-parties/) over on web.dev for additional useful information on auditing and more.
 
-### Protect user data
+## Protect user data
 
 You need to make sure that, once you have collected data from your users, that it is transmitted and stored securely. This is more of a [security](/en-US/docs/Web/Security) topic, but it is worth mentioning here — a good privacy policy is no good if your security is lax and attackers can steal the data from you.
 
 The below tips offer some guidance on protecting your user's data:
 
-- Security is hard to get right. When implementing a secure solution that involves data collection — particularly if it is sensitive data such as log-in credentials — it makes sense to use a reputable solution from a well-respected provider. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities You could also consider using a specialized product for your purpose — for example an identity provider solution, or a secure online survey provider.
+- Security is hard to get right. When implementing a secure solution that involves data collection — particularly if it is sensitive data such as log-in credentials — it makes sense to use a reputable solution from a well-respected provider. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose — for example an identity provider solution, or a secure online survey provider.
 - If you want to roll your own solution for collecting user data, make sure you understand what you are doing. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested throroughly. Use multi-factor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
 - When collecting user sign-up information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down.
 - Don't include sensitive data in URLs — if a third party intercepts the URL (for example via the {{httpheader("Referer")}} header), they could steal that information. Use `POST` requests rather than `GET` requests to avoid this.
