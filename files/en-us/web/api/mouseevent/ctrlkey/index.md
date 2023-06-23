@@ -10,7 +10,7 @@ browser-compat: api.MouseEvent.ctrlKey
 
 The **`MouseEvent.ctrlKey`** read-only property is a boolean value that indicates whether the <kbd>ctrl</kbd> key was pressed or not when a given mouse event occurs.
 
-On Macintosh keyboards, this key is labeled the <kbd>control</kbd> key. Also, note that on a Mac a click combined with the <kbd>control</kbd> key is intercepted by the operating system and used to open a context menu, so `ctrlKey` is not detectable on click events.
+On Macintosh keyboards, this key is labeled the <kbd>control</kbd> key. Also, note that on a Mac, a click combined with the <kbd>control</kbd> key is intercepted by the operating system and used to open a context menu, so `ctrlKey` is not detectable on click events.
 
 ## Value
 
