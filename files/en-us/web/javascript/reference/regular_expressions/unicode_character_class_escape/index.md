@@ -27,7 +27,7 @@ A **unicode character class escape** is a kind of [character class escape](/en-U
 
   - : A lone Unicode property name or value, following the same syntax as `value`. It specifies the value for the `General_Category` property, or a [binary property name](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). In [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) mode, it can also be a [binary Unicode property of strings](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings).
 
-  > **Note:** [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) syntax allows omitting the `Script` property name as well, but JavaScript does not support this, because most of the time `Script_Extensions` is more useful than `Script`.
+    > **Note:** [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) syntax allows omitting the `Script` property name as well, but JavaScript does not support this, because most of the time `Script_Extensions` is more useful than `Script`.
 
 - `property`
   - : A Unicode property name. Must be made of ASCII letters (`A–Z`, `a–z`) and underscores (`_`), and must be one of the [non-binary property names](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties).
