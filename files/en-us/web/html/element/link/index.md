@@ -60,7 +60,7 @@ Some interesting new performance and security features have been added to the `<
   crossorigin="anonymous" />
 ```
 
-A `rel` value of `preload` indicates that the browser should preload this resource (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
+A `rel` value of `preload` indicates that the browser should preload this resource (see [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
 The `crossorigin` attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.
 
 Other usage notes:
@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `as`
 
-  - : This attribute is only used when `rel="preload"` or `rel="prefetch"` has been set on the `<link>` element.
+  - : This attribute is only used when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set on the `<link>` element.
     It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
     Furthermore, `rel="preload"` uses this as a signal for request prioritization.
     The table below lists the valid values for this attribute and the elements or resources they apply to.
