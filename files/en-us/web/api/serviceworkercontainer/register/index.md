@@ -150,7 +150,7 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-However, Servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
+However, servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
 worker script, and then you can specify a max scope for that service worker above the
 service worker's location.
 
@@ -161,3 +161,9 @@ service worker's location.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [ServiceWorkerRegistration: `unregister()` method](/en-US/docs/Web/API/ServiceWorkerRegistration/unregister) method
+- [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)

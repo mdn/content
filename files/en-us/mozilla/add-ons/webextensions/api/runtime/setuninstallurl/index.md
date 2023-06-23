@@ -7,7 +7,7 @@ browser-compat: webextensions.api.runtime.setUninstallURL
 
 {{AddonSidebar()}}
 
-Sets the URL to be visited when the extension is uninstalled. This can be used to clean up server-side data, do analytics, or implement surveys. Up to Firefox 115, a maximum of 255 characters can be used; from Firefox 116, the maximum is 1023 characters.
+Sets the URL to be visited when the extension is uninstalled. This can be used to clean up server-side data, do analytics, or implement surveys. The URL can be up to 1023 characters. This limit used to be 255, see [Browser compatibility](browser_compatibility) for more details.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

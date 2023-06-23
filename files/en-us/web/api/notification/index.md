@@ -59,7 +59,7 @@ These properties are available only on instances of the `Notification` object.
   - : Specifies whether the user should be notified after a new notification replaces an old one.
 - {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
-- {{domxref("Notification.silent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.silent")}} {{ReadOnlyInline}}
   - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.
 - {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies the time at which a notification is created or applicable (past, present, or future).

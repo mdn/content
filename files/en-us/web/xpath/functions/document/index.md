@@ -3,7 +3,7 @@ title: document
 slug: Web/XPath/Functions/document
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `document` finds a node-set in an external document, or multiple external documents, and returns the resulting node-set.
 
