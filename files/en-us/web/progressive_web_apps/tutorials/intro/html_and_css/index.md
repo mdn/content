@@ -1,5 +1,5 @@
 ---
-title: Base HTML and CSS
+title: "PWA tutorial: Base HTML and CSS"
 slug: Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS
 ---
 
@@ -88,7 +88,7 @@ The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to
 </head>
 ```
 
-We set the title of the page to "Cycle Tracker" with the {{HTMLelement("title")}} element. While the contents of the `<head>` are not displayed within the page, the contents of the `<title>` are seen! The `<title>` element's inner text appears in the browser tab when the page is loaded, in search engine results, and is the default title used when a user bookmarks a web page.  The title also provides an accessible name for screen reader users who depend on it to know which tab they're currently on.
+We set the title of the page to "Cycle Tracker" with the {{HTMLelement("title")}} element. While the contents of the `<head>` are not displayed within the page, the contents of the `<title>` are seen! The `<title>` element's inner text appears in the browser tab when the page is loaded, in search engine results, and is the default title used when a user bookmarks a web page. The title also provides an accessible name for screen reader users who depend on it to know which tab they're currently on.
 
 While the title could be "Menstrual cycle tracking application", we opted for a shortened name that is more discreet.
 

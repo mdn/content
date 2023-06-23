@@ -1,5 +1,5 @@
 ---
-title: Service worker
+title: "PWA tutorial: Service workers"
 slug: Web/Progressive_web_apps/Tutorials/Intro/Service_workers
 ---
 
@@ -378,17 +378,17 @@ To get a new cache, you can change the [version number](#version-number) and the
 
 You likely don't want to update the version number with every save. Until you are ready to launch a new version of your PWA to production and give everyone a new version of your PWA, instead of changing the version number on save, you can unregister the service worker.
 
-![Firefox developer tools application panel with a stopped service worker and an unregister button](firefox_sw.jpg)
-
 You can unregister a service worker by clicking on the `unregister` button in the [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
 
-![Edge developer tools showing the application panel set to a service worker](edge_sw.jpg)
+![Firefox developer tools application panel with a stopped service worker and an unregister button](firefox_sw.jpg)
 
 In some developer tools, you can manually unregister a service worker, or you can select the service workers "update on reload" option which sets the developer tools to reset and re-activate the service worker on every reload as long as the developer tools are open. There is also an option to bypass the service worker and load resources from the network. This panel includes features we are not covering in this tutorial, but will be helpful as you create more advanced PWAs that include [syncing](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#periodic_background_sync) and [push](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#push), which are both covered in the [offline and background operation guide](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
 
-![Two service workers exist at localhost:8080. The can be be unregistered from the list of service workers](edge_sw_list.jpg)
+![Edge developer tools showing the application panel set to a service worker](edge_sw.jpg)
 
 The service worker window within the DevTools' application panel, provides a link to access to pop up window containing a list of all the registered service workers for the browser; not just the service worker for the application opened in the current tab. Each service worker list of workers has buttons to stop, start, or unregister that individual service worker.
+
+![Two service workers exist at localhost:8080. The can be be unregistered from the list of service workers](edge_sw_list.jpg)
 
 In other words, as you are working on your PWA, you don't have to update the version number for every app view. But remember, when you are done with all your changes, update the service worker VERSION value before distributing the updated version of your PWA. If you forget, no one who has already installed your app or even visited your online PWA without installing it will ever get to see your changes!
 

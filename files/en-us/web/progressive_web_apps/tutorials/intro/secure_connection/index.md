@@ -1,5 +1,5 @@
 ---
-title: Creating a secure connection
+title: "PWA tutorial: Secure connection"
 slug: Web/Progressive_web_apps/Tutorials/Intro/Secure_connection
 ---
 

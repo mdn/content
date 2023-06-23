@@ -1,5 +1,5 @@
 ---
-title: JavaScript functionality
+title: "PWA tutorial: JavaScript functionality"
 slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality
 ---
 

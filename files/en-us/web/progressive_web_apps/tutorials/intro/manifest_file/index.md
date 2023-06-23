@@ -1,5 +1,5 @@
 ---
-title: PWA manifest and iconography
+title: "PWA tutorial: Manifest and iconography"
 slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
 ---
 
