@@ -31,11 +31,12 @@ createUnidirectionalStream()
 ```
 
 <!-- createUnidirectionalStream({sendOrder: "596996858"}) -->
+
 ### Parameters
 
 None
 
-<!-- 
+<!--
 - `options` {{optional_inline}}
 
   - : An object that may have the following properties:
