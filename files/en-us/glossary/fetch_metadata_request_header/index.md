@@ -31,3 +31,5 @@ The fetch metadata request headers are:
   - {{Glossary("HTTP_header","HTTP header")}}
   - {{Glossary("Response header")}}
   - {{Glossary("Request header")}}
+- {{HTTPHeader("Sec-Purpose")}}
+- {{HTTPHeader("Service-Worker-Navigation-Preload")}}
