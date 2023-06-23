@@ -88,7 +88,7 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 ![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 
-> **Note:** You might get an error similar to like the one below if `req.params.id` (or any other ID) cannot be cast to a [`mongoose.Types.ObjectId()`](https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.Types).
+> **Note:** You might get an error similar to the one below if `req.params.id` (or any other ID) cannot be cast to a [`mongoose.Types.ObjectId()`](https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.Types).
 >
 > ```bash
 > Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
