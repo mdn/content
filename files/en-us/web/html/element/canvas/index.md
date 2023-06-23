@@ -118,9 +118,9 @@ The maximum size of a `<canvas>` element is very large, but the exact size depen
 
 ### Using an offscreen canvas
 
-A canvas can be rendered offscreen and on a different thread using the {{domxref("OffscreenCanvas")}} API.
-The benefit of this is that the main thread of your web application is not blocked by operations that are happening on the canvas.
-The UI elements of your web application will remain responsive, even if you are rendering complex graphics on the canvas.
+A canvas can be rendered using the {{domxref("OffscreenCanvas")}} API where the document and canvas are decoupled.
+The benefit is that a [worker thread](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) can handle canvas rendering and the main thread of your web application is not blocked by canvas operations.
+By parallelizing work, other UI elements of your web application will remain responsive even if you are running complex graphics on an offscreen canvas.
 For more information, see the {{domxref("OffscreenCanvas")}} API documentation.
 
 ## Examples
