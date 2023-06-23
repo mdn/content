@@ -492,7 +492,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
-        The <a href="https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
+        The <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
         specifies what action label (or icon) to present for the enter key on
         virtual keyboards. The attribute can be used with form controls (such as
         the value of <code>textarea</code> elements), or in elements in an
