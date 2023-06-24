@@ -99,6 +99,10 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 
 ### Guides
 
+- [CSS selectors guide](/en-US/docs/Web/CSS/CSS_selectors/selectors_guide)
+
+  - : Overview of the selectors, combinators, and terminology introduced in the CSS selectors module.
+
 - [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
 
   - : Selects elements that have the given attribute, with optional substring values.

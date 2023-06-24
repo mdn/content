@@ -13,101 +13,99 @@ CSS selectors can be grouped into the following categories based on the type of 
 
 ## Selector types
 
-There are over 80 selectors and
+There are over 80 selectors and combinators.
 
-## Basic selectors
+### Basic selectors
 
-- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+The [type selector](/en-US/docs/Web/CSS/Type_selectors) selects all elements that have the given node name. For example, `div` will select all {{HTMLElement("div")}} elements and `input` will match any {{HTMLElement("input")}} element. The [universal selector](/en-US/docs/Web/CSS/Universal_selectors), denoted with an asterisk (`*`), is a special type selector that selects all elements.
 
-  - : Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.
+The [class selector](/en-US/docs/Web/CSS/Class_selectors) selects all elements that have the given `class` attribute denoted by the class name prefixed with a period (`.`). For example, `.index` will match any element that has `class="index"`. The [ID selector](/en-US/docs/Web/CSS/ID_selectors) selects an element based on the value of its `id` attribute. The selector is the `id` prefixed with an octothorp (`#`). For example, `#toc` will match the element that has `id="toc"`. Both [`class`](/en-US/docs/Web/HTML/Global_attributes/class) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) are global attributes. There should be only one element with a given `id` in a document; but if there are more than one, the ID selector will match all the elements with that `id`.
 
-    **Syntax:** `*` `ns|*` `*|*`
+#### CSS
 
-    **Example:** `*` will match all the elements of the document.
+We declare four [simple selectors](#simple-selector) using the four basic selector types.
 
-- [Type selector](/en-US/docs/Web/CSS/Type_selectors)
+```css
+* {
+  font-style: italic;
+}
+p {
+  color: red;
+}
+.myClass {
+  text-decoration: underline;
+}
+#myId {
+  font-family: monospace;
+}
+```
 
-  - : Selects all elements that have the given node name.
+#### HTML
 
-    **Syntax:** `elementname`
+```html
+<p class="myClass" id="myId">I match everything.</p>
+<p>I match the universal and type selectors only.</p>
+```
 
-    **Example:** `input` will match any {{HTMLElement("input")}} element.
+#### Result
 
-- [Class selector](/en-US/docs/Web/CSS/Class_selectors)
-
-  - : Selects all elements that have the given `class` attribute.
-
-    **Syntax:** `.classname`
-
-    **Example:** `.index` will match any element that has `class="index"`.
-
-- [ID selector](/en-US/docs/Web/CSS/ID_selectors)
-
-  - : Selects an element based on the value of its `id` attribute. There should be only one element with a given ID in a document.
-
-    **Syntax:** `#idname`
-
-    **Example:** `#toc` will match the element that has `id="toc"`.
-
-- [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
-
-  - : Selects all elements that have the given attribute.
-
-    **Syntax:** `[attr]` `[attr=value]` `[attr~=value]` `[attr|=value]` `[attr^=value]` `[attr$=value]` `[attr*=value]`
-
-    **Example:** `[autoplay]` will match all elements that have the `autoplay` attribute set (to any value).
-
-## Grouping selectors
-
-- [Selector list](/en-US/docs/Web/CSS/Selector_list)
-
-  - : The `,` selector is a grouping method that selects all the matching nodes.
-
-    **Syntax:** `A, B`
-
-    **Example:** `div, span` will match both {{HTMLElement("span")}} and {{HTMLElement("div")}} elements.
+{{EmbedLiveSample("Basic selectors", "100%", 100)}}
 
 ## Combinators
 
-- [Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator)
+With CSS combinators we can combineselectors to select DOM nodes based on their relationship to other elements within the document node tree.
 
-  - : The " " (space) combinator selects nodes that are descendants of the first element.
+The [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), denoted with one or more spaces, selects nodes that are descendants of the first element. For example, `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.
 
-    **Syntax:** `A B`
+The [child combinator](/en-US/docs/Web/CSS/Child_combinator) is more specific than the descendant combinator. Denoted with the greater than character (`>`), the child combinator selects nodes that are direct children of the first element. Adding to our previous example, `div > span` will match only the {{HTMLElement("span")}} elements that direct children of a {{HTMLElement("div")}} element.
 
-    **Example:** `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.
+In addition to descendant selectors, CSS also enable selecting elements based on their siblings. The [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), denoted with a tilde (`~`) selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, with both `A` and `B` sharing the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
 
-- [Child combinator](/en-US/docs/Web/CSS/Child_combinator)
+The [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), denoted by the plus symbol (`+`) is similar to the general sibling, but given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
 
-  - : The `>` combinator selects nodes that are direct children of the first element.
+There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters ( `||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
-    **Syntax:** `A > B`
+#### CSS
 
-    **Example:** `ul > li` will match all {{HTMLElement("li")}} elements that are nested directly inside a {{HTMLElement("ul")}} element.
+We declare four [compound selectors](#compund-selector) using the basic selectors with combinators.
 
-- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator)
+```css
+h2 ~ p {
+  font-style: italic;
+}
+h2 + p + p {
+  color: red;
+}
+.myClass + p {
+  text-decoration: underline;
+}
+#myId > .myClass {
+  font-family: monospace;
+}
+```
 
-  - : The `~` combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
+#### HTML
 
-    **Syntax:** `A ~ B`
+```html
+<h2 class="myClass" id="myId">
+  Nothing selectors match; not even the last one.
+</h2>
+<p>The first paragraph is underlined. All the paragraphs are italic</p>
+<p>The second paragraph is red. All the paragraphs are italic</p>
+<p>The third paragraph is NOT red. All the paragraphs are italic.</p>
+<p class="myClass">Monospace font as this is a child of #myId.</p>
+```
 
-    **Example:** `p ~ span` will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.
+#### Result
 
-- [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
+{{EmbedLiveSample("Combinators", "100%", 400)}}
 
-  - : The `+` combinator matches the second element only if it _immediately_ follows the first element.
+### Attribute selectors
 
-    **Syntax:** `A + B`
+[Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) selects all elements that, depending on how the selector is written, either have the given attribute or have the given attribute with a substring value match.
+For example, `[type]` will match all elements that have the `type` attribute set (to any value).
 
-    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follows an {{HTMLElement("Heading_Elements", "h2")}} element.
-
-- [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
-
-  - : The `||` combinator selects nodes which belong to a column.
-
-    **Syntax:** `A || B`
-
-    **Example:** `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+Additionally, [type="submit"] will match `<input type="submit">` and `<button type="submit">`. If the attribute is an enumerated HTML attribute, the value in the selector is case-insensitive, even if the value is not one of the enumerated values or if the attribute is not a valid value for the element on which it is set. For non-enumerated attributes, like `class`, `id`, or any `data-*` attribute, or non-HTML attributes, like `role` or `aria-*` attributes, the value match is case sensitive, but can be made case insensitive with a case-insensitive modifier (`i`).
 
 ## Pseudo-classes and pseudo-elements
 
@@ -133,10 +131,8 @@ A **simple selector** is a selector with a single component, such as a single ty
 
 ```css
 #myId {
-  ...;
 }
 [pattern*="\d"] {
-  ...;
 }
 ```
 
@@ -148,7 +144,6 @@ In a compound selector, the [type selector](/en-US/docs/Web/CSS/Type_selectors) 
 
 ```css
 a#selected {
-  ...;
 }
 ```
 
@@ -158,13 +153,10 @@ A **complex selector** is a sequence of one or more simple and/or [compound sele
 
 ```css
 a#selected > .icon {
-  ...;
 }
 .box h2 + p {
-  ...;
 }
 a .icon {
-  ...;
 }
 ```
 
@@ -174,13 +166,10 @@ A **relative selector** is a selector representing an element relative to one or
 
 ```css
 + div#topic > #reference {
-  ...;
 }
 > .icon {
-  ...;
 }
 dt:has(+ img) ~ dd {
-  ...;
 }
 ```
 
@@ -191,9 +180,12 @@ A [**selector list**](/en-US/docs/Web/CSS/Selector_list) is a comma-separated li
 ```css
 #main,
 article.heading {
-  ...;
 }
 ```
+
+Selectors can be restricted to a specific namespace or to all namespaces.
+
+**Syntax:** `*` `ns|*` `*|*`
 
 ## Specifications
 
