@@ -79,11 +79,100 @@ If `currentcolor` is used as the value of the `color` property, it instead takes
 
 {{EmbedLiveSample("currentcolor_keyword", "100%", 80)}}
 
+### Missing color components
+
+Each component of any CSS color functions - except for those using the legacy comma-separated syntax - can be specified as the keyword `none` to be a missing component.
+
+Explicitly specifying missing components is usually useful in [color interpolation](#interpolation-with-missing-components). For all other purposes, a missing component will effectively have a zero value in an appropriate unit - `0`, `0%`, or `0deg`. For example:
+
+```css
+oklab(50% none -0.25) /* is equivalent to */
+oklab(50% 0 -0.25)
+
+hsl(none 100% 50%) /* is equivalent to */
+hsl(0deg 100% 50%)
+```
+
 ## Interpolation
 
 Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), and [animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/computed_value) are interpolated linearly, with interpolation's speed being determined by the [timing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overriden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
+
+### Interpolation with missing components
+
+Missing components can be used to interpolate only certain components of a color.
+
+#### Simple case
+
+In the simple case, both colors to be interpolated are already in the interpolation color space, e.g.:
+
+```css
+color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
+```
+
+Before the interpolation takes place, any missing component will be replaced with the same component from the other color. Thus the expression above is equivalent to:
+
+```css
+color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
+```
+
+> **Note:** If a component is missing from both colors, this component will be missing after the interpolation.
+
+#### General case
+
+In the general case, missing components are first transferred into the converted colors based the analogy of components. In the following table, components of the same category are **analogous components**.
+
+| Category     | Components |
+| ------------ | ---------- |
+| Reds         | `R`, `X`   |
+| Greens       | `G`, `Y`   |
+| Blues        | `B`, `Z`   |
+| Lightness    | `L`        |
+| Colorfulness | `C`, `S`   |
+| Hue          | `H`        |
+
+For example:
+
+- The `X` component (`0.2`) in `color(xyz 0.2 0.1 0.6)` is analogous to the `R` component (`50%`) in `rgb(50% 70% 30%)`.
+- The `H` component (`0deg`) in `hsl(0deg 100% 80%)` is analogous to the `H` component (`140`) in `oklch(80% 0.1 140)`.
+
+Using Oklch as the interpolation color space and the two colors below as an example:
+
+```css
+lch(80% 30 none)
+color(display-p3 0.7 0.5 none)
+```
+
+the preprocessing procedure is:
+
+1. Replace the missing components in both colors with a zero value:
+
+   ```css
+   lch(80% 30 0)
+   color(display-p3 0.7 0.5 0)
+   ```
+
+2. Convert both colors into the interpolation color space:
+
+   ```css
+   oklch(83.915% 0.0902 0.28)
+   oklch(63.612% 0.1522 78.748)
+   ```
+
+3. If any component of the converted colors is analogous to a missing component in the corresponding original color, reset it as a missing component:
+
+   ```css
+   oklch(83.915% 0.0902 none)
+   oklch(63.612% 0.1522 78.748)
+   ```
+
+4. Replace any missing component with the same component from the other converted color:
+
+   ```css
+   oklch(83.915% 0.0902 78.748)
+   oklch(63.612% 0.1522 78.748)
+   ```
 
 ## Accessibility considerations
 
