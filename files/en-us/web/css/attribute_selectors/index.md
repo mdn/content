@@ -7,7 +7,11 @@ browser-compat: css.selectors.attribute
 
 {{CSSRef}}
 
-The CSS **attribute selector** matches elements based on the presence or value of a given attribute.
+The CSS **attribute selector** matches elements based on the the element having a given attribute explicitly set, with options for defining a attribute value or substring value match.
+
+The case-sensitivity of attribute names and values depends on the document language. In HTML, attribute names are case insensitive as are spec-definted enumerated values. In these cases, the value in the selector is case-insensitive, even if the value is not one of the enumerated values or if the attribute is not a valid value for the element on which it is set. 
+
+If the attribute value is case sensitive, like [`class`](/en-US/docs/Web/HTML/Global_attributes/class), [`id`](/en-US/docs/Web/HTML/Global_attributes/class), or any [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) attribute, the attribute selector value match is case-sensitive. Attributes defined outside of the HTML specification, like [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) and [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Attributes) attributes, are also case-sensitive. Normally case-sensitive attribute selectors can be made case-insensitive with the inclusion of the case-insensitive modifier (`i`).
 
 ```css
 /* <a> elements with a title attribute */
@@ -26,8 +30,8 @@ a[href*="example"] {
   font-size: 2em;
 }
 
-/* <a> elements with an href ending ".org" */
-a[href$=".org"] {
+/* <a> elements with an href ending ".org", case-insensitive */
+a[href$=".org" i] {
   font-style: italic;
 }
 
@@ -96,8 +100,8 @@ a[href$=".org"] {
   color: red;
 }
 
-/* Links that start with "https" and end in ".org" */
-a[href^="https"][href$=".org"] {
+/* Links that start with "https://" and end in ".org" */
+a[href^="https://"][href$=".org"] {
   color: green;
 }
 ```
@@ -175,7 +179,7 @@ div[data-lang="zh-Hant-TW"] {
 ### HTML ordered lists
 
 The HTML specification requires the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
-Note that if the modifiers are not supported by the user agent, then the selector will not match.
+Note that if a modifier is not supported by the user agent, then the selector will not match.
 
 #### CSS
 
