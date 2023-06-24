@@ -31,9 +31,9 @@ In this case, you need to configure the server receiving the HTTP requests (whic
 
 Example:
 
-1. A server receives a request for `http://www.example.org/whaddup` (when the canonical domain is example.org)
+1. A server receives a request for `http://www.example.org/whaddup` (when the canonical domain is example.org).
 2. The server answers with a code {{HTTPStatus(301)}} with the header `{{HTTPHeader("Location")}}: http://example.org/whaddup`.
-3. The client issues a request to the canonical domain: `http://example.org/whaddup`
+3. The client issues a request to the location under the canonical domain: `http://example.org/whaddup`.
 
 The [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) has an example on [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
@@ -41,8 +41,7 @@ The [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) has a
 
 It is possible to add a special HTML {{HTMLElement("link")}} element to a page to indicate what the canonical address of a page is. This has no impact on the human reader of the page, but tells search engine crawlers where the page actually lives. This way, search engines don't index the same page several times, potentially leading to it being considered as duplicate content or spam, and even removing or lowering your page from the search engine result pages.
 
-When adding such a tag, you serve the same content for both domains, telling search engines which URL is canonical. In the previous example, `http://www.example.org/
-` would serve the same content as `http://example.org/whaddup`, but with an additional {{htmlelement("link")}} element in the head:
+When adding such a tag, you serve the same content for both domains, telling search engines which URL is canonical. In the previous example, `http://www.example.org/whaddup` would serve the same content as `http://example.org/whaddup`, but with an additional {{htmlelement("link")}} element in the head:
 
 ```html
 <link href="http://example.org/whaddup" rel="canonical" />
