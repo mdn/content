@@ -61,7 +61,7 @@ Many built-in operations that expect booleans first coerce their arguments to bo
 - [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `false`.
 - `0`, `-0`, and `NaN` turn into `false`; other numbers turn into `true`.
 - `0n` turns into `false`; other [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) turn into `true`.
-- Empty [string](en-US/docs/Web/JavaScript/Reference/Global_Objects/String) values turn into `false`; other strings turn into `true`.
+- Empty [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) values turn into `false`; other strings turn into `true`.
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) turn into `true`.
 - All objects become `true`.
 
