@@ -191,7 +191,7 @@ function resolveAfter2Seconds() {
     setTimeout(() => {
       resolve("slow");
       console.log("slow promise is done");
-    }, 2000);
+    }, 2000); // timer can run in parallel with another setTimeout API
   });
 }
 
@@ -201,7 +201,7 @@ function resolveAfter1Second() {
     setTimeout(() => {
       resolve("fast");
       console.log("fast promise is done");
-    }, 1000);
+    }, 1000); // timer can run in parallel with another setTimeout API
   });
 }
 
@@ -239,10 +239,10 @@ function concurrentPromise() {
 async function parallel() {
   console.log("==PARALLEL with await Promise.all==");
 
-  // Start 2 "jobs" in parallel and wait for both of them to complete
+  // Start 2 "jobs" concurrently (internal timers run in parallel) and wait for both of them to complete
   await Promise.all([
-    (async () => console.log(await resolveAfter2Seconds()))(),
-    (async () => console.log(await resolveAfter1Second()))(),
+    (async () => console.log(await resolveAfter2Seconds()))(), // await expression suspends async function, resumes after timer stops
+    (async () => console.log(await resolveAfter1Second()))(), // await expression suspends async function, resumes after timer stops
   ]);
 }
 
@@ -265,14 +265,27 @@ In `sequentialStart`, execution suspends 2 seconds for the first
 second timer is not created until the first has already fired, so the code finishes
 after 3 seconds.
 
-In `concurrentStart`, both timers are created and then `await`ed.
-The timers run concurrently, which means the code finishes in 2 rather than 3 seconds,
+In `concurrentStart`, both internal timers are created and then `await`ed.
+Async functions run concurrently, and timers run concurrently, which means the code finishes in 2 rather than 3 seconds,
 i.e. the slowest timer.
 However, the `await` calls still run in series, which means the second
 `await` will wait for the first one to finish. In this case, the result of
 the fastest timer is processed after the slowest.
 
-If you wish to safely perform two or more jobs in parallel, you must await a call
+In 'parallel', async functions run concurrently and both internal timers run simultaneously during overlapping time periods.
+
+Please note that asynchronous APIs and async functions are different. 
+It's important to avoid confusion.
+
+The `await` operator can evaluate Promise objects returned by both asynchronous APIs and async functions. Be cautious and consider what you are `await`ing.
+Async functions do not run in parallel but rather run concurrently using the microtask mechanism in the [event loop](/en-US/docs/Web/JavaScript/Event_loop).
+On the other hand, asynchronous APIs such as `setTimeout` and `fetch` can run in parallel.
+These functions are provided by runtime environments like browsers and Node.js, 
+meaning they are not native ECMAScript features.
+By itself, JavaScript code cannot run in parallel without the use of the Worker API.
+However, Web APIs and runtime APIs (implemented in C++ or Rust) can run in parallel.
+
+If you wish to safely perform two or more jobs concurrently, you must await a call
 to [`Promise.all`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all),
 or
 [`Promise.allSettled`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled).
