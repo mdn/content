@@ -333,7 +333,7 @@ This imports the new module from the `node_modules` folder. This isn't considere
 Finally, we need to modify the HTML file, which was created under the `pkg` folder.
 Our project should look like this:
 
-```plain
+```
 ├── index.html
 ├── index.js
 ├── node_modules
