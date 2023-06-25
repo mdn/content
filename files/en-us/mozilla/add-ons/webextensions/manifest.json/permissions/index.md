@@ -97,7 +97,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `declarativeNetRequest`
 - `declarativeNetRequestFeedback`
 - `declarativeNetRequestWithHostAccess`
-- `devtools`
+- `devtools` (implicitly granted when the [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)) manifest key is present)
 - `dns`
 - `downloads`
 - `downloads.open`
