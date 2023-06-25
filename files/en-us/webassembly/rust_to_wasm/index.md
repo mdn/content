@@ -202,11 +202,9 @@ If you check out the generated WebAssembly code size, it may be a few hundred ki
 
 Now that we've got a compiled wasm module, let's run it in the browser.
 
-Let's start by creating a file named `index.html` in the root of the project, and give it the following contents:
+Let's start by creating a file named `index.html` in the root of the project, so we end up with the following project structure:
 
-Project Structure
-
-```plain
+```
 ├── Cargo.lock
 ├── Cargo.toml
 ├── index.html
@@ -223,6 +221,8 @@ Project Structure
     ├── release
     └── wasm32-unknown-unknown
 ```
+
+Put the following content in the `index.html` file:
 
 ```html
 <!DOCTYPE html>
