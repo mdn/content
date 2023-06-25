@@ -57,8 +57,6 @@ None ({{jsxref("undefined")}}).
 In the following example, `setAttribute()` is used to set attributes on a
 {{HTMLElement("button")}}.
 
-### HTML
-
 ```html
 <button>Hello World</button>
 ```
@@ -70,8 +68,6 @@ button {
   margin: 1em;
 }
 ```
-
-### JavaScript
 
 ```js
 const button = document.querySelector("button");

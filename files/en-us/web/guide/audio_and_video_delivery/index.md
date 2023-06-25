@@ -30,8 +30,6 @@ To deliver video and audio, the general workflow is usually something like this:
 3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
 4. Deliver the media file to the player.
 
-### HTML Audio
-
 ```html
 <audio controls preload="auto">
   <source src="audiofile.mp3" type="audio/mpeg" />
@@ -49,8 +47,6 @@ The code above will create an audio player that attempts to preload as much audi
 > **Note:** The `preload` attribute may be ignored by some mobile browsers.
 
 For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
-
-### HTML Video
 
 ```html
 <video

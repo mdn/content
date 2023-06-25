@@ -413,8 +413,6 @@ The regular expression looks for:
 6. followed by four digits `\d{4}`
 7. followed by the end of the line of data: `$`
 
-#### HTML
-
 ```html
 <p>
   Enter your phone number (with area code) and then click "Check".
@@ -427,8 +425,6 @@ The regular expression looks for:
 </form>
 <p id="output"></p>
 ```
-
-#### JavaScript
 
 ```js
 const form = document.querySelector("#form");
@@ -450,8 +446,6 @@ form.addEventListener("submit", (event) => {
   testInfo(input);
 });
 ```
-
-#### Result
 
 {{ EmbedLiveSample('Using_special_characters_to_verify_input') }}
 

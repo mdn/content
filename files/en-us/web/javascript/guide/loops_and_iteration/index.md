@@ -67,8 +67,6 @@ In the example below, the function contains a `for` statement that counts
 the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select)
 element that allows multiple selections).
 
-#### HTML
-
 ```html
 <form name="selectForm">
   <label for="musicTypes"
@@ -85,8 +83,6 @@ element that allows multiple selections).
   <button id="btn" type="button">How many are selected?</button>
 </form>
 ```
-
-#### JavaScript
 
 Here, the `for` statement declares the variable `i` and initializes it to `0`. It checks that `i` is less than the number of options in the `<select>` element, performs the succeeding `if` statement, and increments `i` by 1 after each pass through the loop.
 

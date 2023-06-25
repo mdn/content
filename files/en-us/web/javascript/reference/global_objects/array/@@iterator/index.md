@@ -27,13 +27,9 @@ The same return value as {{jsxref("Array.prototype.values()")}}: a new [iterable
 
 Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes arrays [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically calls this method to obtain the iterator to loop over.
 
-#### HTML
-
 ```html
 <ul id="letterResult"></ul>
 ```
-
-#### JavaScript
 
 ```js
 const arr = ["a", "b", "c"];
@@ -44,8 +40,6 @@ for (const letter of arr) {
   letterResult.appendChild(li);
 }
 ```
-
-#### Result
 
 {{EmbedLiveSample('Iteration_using_for...of_loop', '', '')}}
 

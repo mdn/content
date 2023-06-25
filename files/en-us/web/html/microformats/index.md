@@ -21,8 +21,6 @@ There are [open source parsing libraries for most languages](https://microformat
 
 An author of a webpage can add microformats to their HTML. For example if they wanted to identify themselves they could use an [h-card](https://microformats.org/wiki/h-card) such as:
 
-### HTML Example
-
 ```html
 <a class="h-card" href="https://alice.example.com">Alice Blogger</a>
 ```

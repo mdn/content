@@ -21,13 +21,9 @@ This issue does not arise if the content you specify consists of symbols or imag
 
 CSS can insert text content before or after an element, or change the content of a list item marker (such as a bullet symbol or number) before a {{HTMLElement('li')}} or other element with {{ cssxref("display", "display: list-item;") }}. To specify this, make a rule and add {{ cssxref("::before") }}, {{ cssxref("::after") }}, or {{cssxref("::marker")}} to the selector. In the declaration, specify the {{ cssxref("content") }} property with the text content as its value.
 
-#### HTML
-
 ```html
 A text where I need to <span class="ref">something</span>
 ```
-
-#### CSS
 
 ```css
 .ref::before {
@@ -36,8 +32,6 @@ A text where I need to <span class="ref">something</span>
   content: "Reference ";
 }
 ```
-
-#### Output
 
 {{ EmbedLiveSample('Text_content', 600, 30) }}
 
@@ -51,13 +45,9 @@ To add an image before or after an element, you can specify the URL of an image 
 
 This rule adds a space and an icon after every link that has the class `glossary`:
 
-#### HTML
-
 ```html
 <a href="developer.mozilla.org" class="glossary">developer.mozilla.org</a>
 ```
-
-#### CSS
 
 ```css
 a.glossary::after {

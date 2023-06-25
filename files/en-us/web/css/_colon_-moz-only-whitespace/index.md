@@ -25,13 +25,9 @@ The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 
 ### Simple :-moz-only-whitespace example
 
-#### HTML
-
 ```html-nolint
 <div> </div>
 ```
-
-#### CSS
 
 ```css
 div {

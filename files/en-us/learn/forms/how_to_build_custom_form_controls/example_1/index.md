@@ -7,8 +7,6 @@ This is the first example of code that explains [how to build a custom form widg
 
 ## Basic state
 
-### HTML
-
 ```html
 <div class="select">
   <span class="value">Cherry</span>
@@ -21,8 +19,6 @@ This is the first example of code that explains [how to build a custom form widg
   </ul>
 </div>
 ```
-
-### CSS
 
 ```css
 /* --------------- */
@@ -136,8 +132,6 @@ This is the first example of code that explains [how to build a custom form widg
   color: #ffffff;
 }
 ```
-
-### Result for basic state
 
 {{ EmbedLiveSample('Basic_state', 120, 130) }}
 
@@ -158,8 +152,6 @@ This is the first example of code that explains [how to build a custom form widg
 </div>
 ```
 
-### CSS
-
 ```css
 /* --------------- */
 /* Required Styles */
@@ -273,13 +265,9 @@ This is the first example of code that explains [how to build a custom form widg
 }
 ```
 
-### Result for active state
-
 {{ EmbedLiveSample('Active_state', 120, 130) }}
 
 ## Open state
-
-### HTML
 
 ```html
 <div class="select active">
@@ -293,8 +281,6 @@ This is the first example of code that explains [how to build a custom form widg
   </ul>
 </div>
 ```
-
-### CSS
 
 ```css
 /* --------------- */
@@ -408,7 +394,5 @@ This is the first example of code that explains [how to build a custom form widg
   color: #fff;
 }
 ```
-
-### Result for open state
 
 {{ EmbedLiveSample('Open_state', 120, 130) }}

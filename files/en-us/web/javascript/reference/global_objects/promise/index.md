@@ -309,14 +309,10 @@ The fulfillment of the promise is logged, via a fulfill callback set using {{jsx
 
 By clicking the button several times in a short amount of time, you'll even see the different promises being fulfilled one after another.
 
-#### HTML
-
 ```html
 <button id="make-promise">Make a promise!</button>
 <div id="log"></div>
 ```
-
-#### JavaScript
 
 ```js
 "use strict";
@@ -360,8 +356,6 @@ function testPromise() {
 const btn = document.getElementById("make-promise");
 btn.addEventListener("click", testPromise);
 ```
-
-#### Result
 
 {{EmbedLiveSample("Advanced_Example", "500", "200")}}
 
