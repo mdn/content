@@ -266,21 +266,21 @@ second timer is not created until the first has already fired, so the code finis
 after 3 seconds.
 
 In `concurrentStart`, both internal timers are created and then `await`ed.
-Async functions run concurrently, and timers run concurrently, which means the code finishes in 2 rather than 3 seconds,
+Async functions run concurrently, and the timers run concurrently, which means the code finishes in 2 rather than 3 seconds,
 i.e. the slowest timer.
 However, the `await` calls still run in series, which means the second
 `await` will wait for the first one to finish. In this case, the result of
 the fastest timer is processed after the slowest.
 
-In 'parallel', async functions run concurrently and both internal timers run simultaneously during overlapping time periods.
+In `parallel`, async functions run concurrently and both internal timers run simultaneously during overlapping time periods.
 
-Please note that asynchronous APIs and async functions are different. 
+Please note that asynchronous APIs and async functions are different.
 It's important to avoid confusion.
 
 The `await` operator can evaluate Promise objects returned by both asynchronous APIs and async functions. Be cautious and consider what you are `await`ing.
 Async functions do not run in parallel but rather run concurrently using the microtask mechanism in the [event loop](/en-US/docs/Web/JavaScript/Event_loop).
 On the other hand, asynchronous APIs such as `setTimeout` and `fetch` can run in parallel.
-These functions are provided by runtime environments like browsers and Node.js, 
+These functions are provided by runtime environments like browsers and Node.js,
 meaning they are not native ECMAScript features.
 By itself, JavaScript code cannot run in parallel without the use of the Worker API.
 However, Web APIs and runtime APIs (implemented in C++ or Rust) can run in parallel.
