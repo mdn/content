@@ -31,7 +31,9 @@ font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 
-The {{cssxref("@font-feature-values")}} at-rule can define names for alternative glyph functions (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` or `annotation`), associating the name with OpenType parameters. This property allows those human-readable names (defined in {{cssxref("@font-feature-values")}}) in the stylesheet.
+The {{cssxref("@font-feature-values")}} at-rule can be used to associate, for a given font face, a human-readable name with a numeric index that controls a particular OpenType font feature. For features that select alternative glyphs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` or `annotation`), the `font-variant-alternates` property can then reference the human-readable name in order to apply the associated feature.
+
+This allows CSS rules to enable alternative glyphs without needing to know the specific index values that a particular font uses to control them.
 
 ## Syntax
 
@@ -75,6 +77,10 @@ This property may take one of two forms:
 
 ### Enabling swash glyphs
 
+In this example, we use the `@font-feature-values` at-rule to define a name for the `swash` feature of the [MonteCarlo](https://github.com/googlefonts/monte-carlo) font. The rule maps the name `"fancy"` to the index value `1`.
+
+We can then use that name inside `font-variant-alternates` to switch on swashes for that font. This is the equivalent of a line like `font-feature-settings: "swsh" 1`, except that the CSS applying the feature does not need to include, or even know, the index value needed for this particular font.
+
 #### HTML
 
 ```html
@@ -103,7 +109,6 @@ p {
 }
 
 .variant {
-  font-feature-settings: "swsh" 1;
   font-variant-alternates: swash(fancy);
 }
 ```
@@ -130,3 +135,4 @@ p {
 - [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
 - [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)
 - [`@font-feature-values`](/en-US/docs/Web/CSS/@font-feature-values)
+- [`font-feature-settings`](/en-US/docs/Web/CSS/font-feature-settings)

@@ -88,26 +88,15 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 ![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 
-> **Note:** You might get an error similar to this:
+> **Note:** You might get an error similar to the one below if `req.params.id` (or any other ID) cannot be cast to a [`mongoose.Types.ObjectId()`](https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.Types).
 >
 > ```bash
 > Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
 > ```
 >
-> This is a mongoose error coming from the `req.params.id`. To solve this problem, first you need to require mongoose on the `genreController.js` page like this:
->
-> ```js
-> const mongoose = require("mongoose");
-> ```
->
-> Then use `mongoose.Types.ObjectId()` to convert the id to a type that can be used. For example:
->
-> ```js
-> exports.genre_detail = asyncHandler(async (req, res, next) => {
->   const id = mongoose.Types.ObjectId(req.params.id);
->   // …
-> });
-> ```
+> The most likely cause is that the ID being passed into the mongoose methods is not actually an ID.
+> This could happen, for example, if your intended route had an ID, but another route without an ID was matched first.
+> [`Mongoose.prototype.isValidObjectId()`](<https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.isValidObjectId()>) can be used to check whether a particular ID is valid.
 
 ## Next steps
 

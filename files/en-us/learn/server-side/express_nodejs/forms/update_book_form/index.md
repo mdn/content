@@ -114,7 +114,7 @@ exports.book_update_post = [
 
       // Mark our selected genres as checked.
       for (const genre of allGenres) {
-        if (book.genre.indexOf(genres._id) > -1) {
+        if (book.genre.indexOf(genre._id) > -1) {
           genre.checked = "true";
         }
       }

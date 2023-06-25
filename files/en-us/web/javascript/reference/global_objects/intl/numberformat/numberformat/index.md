@@ -104,7 +104,7 @@ Intl.NumberFormat(locales, options)
     - `unit`
 
       - : The unit to use in `unit` formatting, Possible values are core unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements).
-        A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier) of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
+        A [subset](https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers) of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
         Pairs of simple units can be concatenated with "-per-" to make a compound unit.
         There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
 

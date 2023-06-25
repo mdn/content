@@ -301,7 +301,7 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 - {{CSSxRef("font-variant-alternates#annotation", "annotation()")}}
   - : Enables annotations such as circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, such as `nalt 2`.
 
-## Timing functions
+## Easing functions
 
 The following functions are used as a value in transition and animation properties.
 

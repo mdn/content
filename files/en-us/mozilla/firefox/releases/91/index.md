@@ -47,6 +47,7 @@ No changes
   and the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
   The default `allowlist` is `*`; this default will be updated to `self` in a future release, in order to match the specification. ([Firefox bug 1704005](https://bugzil.la/1704005)).
 - `Window.clientInformation` has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ([Firefox bug 1717072](https://bugzil.la/1717072)).
+- Changing the playback speed of a media element ([`<video>`](/en-US/docs/Web/HTML/Element/video) or [`<audio>`](/en-US/docs/Web/HTML/Element/audio)) using the [`playbackRate`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) attribute now works when the media element is captured to a [`MediaStream`](/en-US/docs/Web/API/MediaStream) or via [`AudioContext.createMediaElementSource`](/en-US/docs/Web/API/AudioContext/createMediaElementSource) ([Firefox bug 1517199](https://bugzil.la/1517199)).
 
 ### WebDriver conformance (Marionette)
 

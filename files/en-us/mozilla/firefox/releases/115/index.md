@@ -23,6 +23,9 @@ This article provides information about the changes in Firefox 115 that affect d
 
 - The {{jsxref("Array.fromAsync()")}} static method is now supported.
   The method asynchronously returns a new, shallow-copied `Array` instance from an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols), [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object ([Firefox bug 1795816](https://bugzil.la/1795816)).
+- The `Array` and `TypedArray` methods [`Array.toReversed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed), [`Array.toSorted()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted), [`Array.toSpliced()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced), [`Array.with()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with), [`TypedArrays.toReversed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed), [`TypedArrays.toSorted()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted), and [`TypedArrays.with()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/with) are now supported.
+  These methods return a new array with elements that have been shallow copied (similarly named methods without the `to` prefix modify the array elements in place).
+  ([Firefox bug 1811057](https://bugzil.la/1811057)).
 
 #### Removals
 
@@ -40,11 +43,22 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### APIs
 
+- The [`Response: json()` static method](/en-US/docs/Web/API/Response/json_static) is now supported, making it easier to construct {{domxref("Response")}} objects for returning JSON data.
+  The method will be useful for [service workers](/en-US/docs/Web/API/Service_Worker_API) and any other code that needs to respond to browser requests with JSON data ([Firefox bug 1758943](https://bugzil.la/1758943)).
+- The [`URL.canParse()`](/en-US/docs/Web/API/URL/canParse_static) static method can now be used to parse and validate an absolute URL, or a relative URL and base URL.
+  This provides a fast and easy way to check if URLs are valid, instead of constructing them within a `try...catch` block and handling exceptions.
+  ([Firefox bug 1823354](https://bugzil.la/1823354)).
+- The [`URLSearchParams.has()`](/en-US/docs/Web/API/URLSearchParams/has) and [`URLSearchParams.delete()`](/en-US/docs/Web/API/URLSearchParams/delete) methods now support the optional `value` argument.
+  This allows matching a search parameter on both the `name` and `value`, making it possible to work with query strings that contain multiple search parameters that have the same name.
+  ([Firefox bug 1831587](https://bugzil.la/1831587)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
 
 #### Removals
+
+- The deprecated `mozPreservesPitch` alias of [HTMLMediaElement.preservesPitch](/en-US/docs/Web/API/HTMLMediaElement/preservesPitch) has been disabled by default, and may be fully removed in a future release ([Firefox bug 1831205](https://bugzil.la/1831205)).
 
 ### WebAssembly
 
