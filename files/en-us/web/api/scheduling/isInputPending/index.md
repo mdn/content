@@ -27,7 +27,7 @@ navigator.scheduling.isInputPending(options)
   - : An object containing options.
     - `includeContinuous`: A boolean (optional), indicate that continuous input events should also be considered when checking for pending input.
 
-## Value
+### Return value
 
 A boolean.
 
