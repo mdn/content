@@ -48,6 +48,9 @@ This article provides information about the changes in Firefox 115 that affect d
 - The [`URL.canParse()`](/en-US/docs/Web/API/URL/canParse_static) static method can now be used to parse and validate an absolute URL, or a relative URL and base URL.
   This provides a fast and easy way to check if URLs are valid, instead of constructing them within a `try...catch` block and handling exceptions.
   ([Firefox bug 1823354](https://bugzil.la/1823354)).
+- The [`URLSearchParams.has()`](/en-US/docs/Web/API/URLSearchParams/has) and [`URLSearchParams.delete()`](/en-US/docs/Web/API/URLSearchParams/delete) methods now support the optional `value` argument.
+  This allows matching a search parameter on both the `name` and `value`, making it possible to work with query strings that contain multiple search parameters that have the same name.
+  ([Firefox bug 1831587](https://bugzil.la/1831587)).
 
 #### DOM
 

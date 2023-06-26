@@ -11284,6 +11284,7 @@
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
+/en-US/docs/Web/CSS/@media/update-frequency	/en-US/docs/Web/CSS/@media/update
 /en-US/docs/Web/CSS/@page_rule	/en-US/docs/Web/CSS/@page
 /en-US/docs/Web/CSS/@scroll-timeline	/en-US/docs/Web/CSS/scroll-timeline
 /en-US/docs/Web/CSS/@styleset	/en-US/docs/Web/CSS/@font-feature-values
