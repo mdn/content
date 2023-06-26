@@ -110,7 +110,7 @@ The case sensitivity of the attribute depends on the language. Generally, in HTM
 ### Pseudo-class selectors
 
 The [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors) defines over 60 [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes). Pseudo-classes are [simple selectors](#simple-selector), prefixed with a colon (`:`), that allow the selection of elements based on state information that is not contained in the document tree.
-For example, `a:visited` matches all {{HTMLElement("a")}} elements that have been visited by the user.
+For example, the simple {{cssxref(":target")}} selector target element of a URL containing a fragment identifier and the complex [`a:visited`](/en-US/docs/Web/CSS/:visited) selector matches all {{HTMLElement("a")}} elements that have been visited by the user.
 
 There are [element display state](/en-US/docs/Web/CSS/Pseudo-classes#element_display_state_pseudo-classes), [input](/en-US/docs/Web/CSS/Pseudo-classes#input_pseudo-classes), [linguistic](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), [location](/en-US/docs/Web/CSS/Pseudo-classes#location_pseudo-classes), [resource state](/en-US/docs/Web/CSS/Pseudo-classes#resource_state_pseudo-classes), [time-dimensional](/en-US/docs/Web/CSS/Pseudo-classes#time-dimensional_pseudo-classes), [tree-structural](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes), [user action](/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes), and [functional](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes) pseudo-classes.
 
@@ -118,11 +118,13 @@ Multiple pseudo-classes can be combined to create [compound selectors](#compound
 
 ### Pseudo-element selectors
 
-Now defined in the [CSS pseudo element](/en-US/docs/Web/CSS/CSS_pseudo) specification, [pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements), prefixed with two colons (`::`), represent entities that are not included in HTML. For example, the simple {{cssxref("::target")}} selector selects the target element of a URL containing a fragment identifier and the complex [`p::first-line`](/en-US/docs/Web/CSS/::first-line) selector matches the first line of all {{HTMLElement("p")}} elements.
+Now defined in the [CSS pseudo element](/en-US/docs/Web/CSS/CSS_pseudo) specification, [pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements), prefixed with two colons (`::`), represent entities that are not included in HTML. For example, the simple {{cssxref("::marker")}} selector selects list item bullets and the complex [`p::first-line`](/en-US/docs/Web/CSS/::first-line) selector matches the first line of all {{HTMLElement("p")}} elements.
 
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
 
 See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#specifications) specification tables for details on those.
 
