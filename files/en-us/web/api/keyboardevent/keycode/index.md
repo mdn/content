@@ -1152,7 +1152,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td><code>0x11 (17)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSLeft"</code></th>
+      <th scope="row"><code>"MetaLeft"</code></th>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
@@ -1163,7 +1163,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td><code>0x5B (91)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSRight"</code></th>
+      <th scope="row"><code>"MetaRight"</code></th>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5D (93)</code>⚠️</td>
