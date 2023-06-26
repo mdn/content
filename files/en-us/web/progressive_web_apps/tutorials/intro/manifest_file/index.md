@@ -53,7 +53,7 @@ Write the first few lines of your manifest file. You can use the text below, or 
 {
   "name": "CycleTracker: Period Tracking app",
   "short_name": "CT",
-  "description": "Securily and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving your private data to your browser on your device, without sharing it with the rest of the world."
+  "description": "Securely and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving your private data to your browser on your device, without sharing it with the rest of the world."
 }
 ```
 

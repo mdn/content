@@ -197,7 +197,7 @@ As our PWA consists of a single page, for page navigation requests, we go back t
 
 For all other request modes, we open the caches as done in the [install event response](#saving-the-cache-on-pwa-installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Status/404) as a response.
 
-Using the [`Response()`](/en-US/docs/Web/API/Response/Response) constructor to pass a `null` body and a `status: 404` as options, doens't mean there is an error in our PWA. Rather, everything we need should already be in the cache, and if it isn't, we're not going to the server to resolve this non-issue.
+Using the [`Response()`](/en-US/docs/Web/API/Response/Response) constructor to pass a `null` body and a `status: 404` as options, doesn't mean there is an error in our PWA. Rather, everything we need should already be in the cache, and if it isn't, we're not going to the server to resolve this non-issue.
 
 ```JavaScript
 self.addEventListener("fetch", (event) => {
