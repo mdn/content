@@ -91,5 +91,5 @@ Walking through this:
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [FileSystemHandle.remove() demo](https://filesystemhandle-remove.glitch.me/)
