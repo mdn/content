@@ -46,19 +46,23 @@ The stream is then closed.
 
 ```js
 async function saveFile() {
-  // create a new handle
-  const newHandle = await window.showSaveFilePicker();
+  try {
+    // create a new handle
+    const newHandle = await window.showSaveFilePicker();
 
-  // create a FileSystemWritableFileStream to write to
-  const writableStream = await newHandle.createWritable();
+    // create a FileSystemWritableFileStream to write to
+    const writableStream = await newHandle.createWritable();
 
-  // write our file
-  await writableStream.write("My first file content");
-  await writableStream.seek(0);
-  await writableStream.write("My second file content");
+    // write our file
+    await writableStream.write("My first file content");
+    await writableStream.seek(0);
+    await writableStream.write("My second file content");
 
-  // close the file and write the contents to disk.
-  await writableStream.close();
+    // close the file and write the contents to disk.
+    await writableStream.close();
+  } catch (err) {
+    console.error(err.name, err.message);
+  }
 }
 ```
 
