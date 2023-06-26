@@ -43,6 +43,7 @@ The Performance API records various different types of performance data, and the
 - `"navigation"` records metrics associated with navigating to and initial load of the page.
 - `"paint"` records key moments of rendering during page load.
 - `"resource"` records how long it took the browser to fetch a resource.
+- `"visibility-state"` records the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
 ### Performance entry subclasses
 
@@ -63,6 +64,7 @@ The following interfaces inherit from `PerformanceEntry`:
 - {{domxref("PerformanceResourceTiming")}}
   - {{domxref("PerformanceNavigationTiming")}} inherits from `PerformanceResourceTiming`
 - {{domxref("TaskAttributionTiming")}}
+- {{domxref("VisibilityStateEntry")}}
 
 ## Accessing data
 
@@ -121,6 +123,7 @@ There is a buffer limit for performance entries for each global object. It ensur
 | `"first-input"`                                                   | {{domxref("PerformanceEventTiming")}}      | 1 (there won't be more)          |
 | `"layout-shift"`                                                  | {{domxref("LayoutShift")}}                 | 150                              |
 | `"largest-contentful-paint"`                                      | {{domxref("LargestContentfulPaint")}}      | 150                              |
+| `"visibility-state"`                                              | {{domxref("VisibilityStateEntry")}}        | 50                               |
 
 Table 1. Buffer sizes ([source](https://w3c.github.io/timing-entrytypes-registry/#registry)).
 

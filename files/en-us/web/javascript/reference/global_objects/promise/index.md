@@ -181,29 +181,13 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 ## Static methods
 
 - {{jsxref("Promise.all()")}}
-
-  - : Wait for all promises to be fulfilled, or for any to be rejected.
-
-    If the returned promise fulfills, it is fulfilled with an aggregating array of the values from the fulfilled promises, in the same order as defined in the iterable of multiple promises.
-
-    If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.
-
+  - : Takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises reject, with this first rejection reason.
 - {{jsxref("Promise.allSettled()")}}
-
-  - : Wait until all promises have settled (each may fulfill or reject).
-
-    Returns a Promise that fulfills after all of the given promises is either fulfilled or rejected, with an array of objects that each describe the outcome of each promise.
-
+  - : Takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
 - {{jsxref("Promise.any()")}}
-  - : Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that fulfills with the value from that promise.
+  - : Takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 - {{jsxref("Promise.race()")}}
-
-  - : Wait until any of the promises is fulfilled or rejected.
-
-    If the returned promise fulfills, it is fulfilled with the value of the first promise in the iterable that fulfilled.
-
-    If it rejects, it is rejected with the reason from the first promise that was rejected.
-
+  - : Takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise settles with the eventual state of the first promise that settles.
 - {{jsxref("Promise.reject()")}}
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
