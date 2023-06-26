@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.flush
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`flush()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface persists any changes made to the file associated with the handle via the {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} method to disk.
@@ -83,5 +83,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemWritableFileStream.write
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`write()`** method of the {{domxref("FileSystemWritableFileStream")}} interface writes content into the file the method is called on, at the current file cursor offset.
 
@@ -98,5 +98,5 @@ writableStream.write({ type: "truncate", size });
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

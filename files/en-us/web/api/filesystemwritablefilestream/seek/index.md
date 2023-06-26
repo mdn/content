@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemWritableFileStream.seek
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`seek()`** method of the {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor offset to the position (in bytes) specified when calling the method.
 
@@ -78,5 +78,5 @@ If you run the above function and then open the resulting file created on disk, 
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

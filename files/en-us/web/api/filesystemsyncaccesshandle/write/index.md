@@ -6,12 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.write
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`write()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset.
 
-Files within the [origin private file system](/en-US/docs/Web/API/File_System_Access_API/Origin_private_file_system) are not visible to end-users, therefore are not subject to the same security checks as methods running on files within the user-visible file system. As a result, writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are much more performant. This makes them suitable for significant, large-scale file updates such as [SQLite](https://www.sqlite.org/wasm) database modifications.
+Files within the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) are not visible to end-users, therefore are not subject to the same security checks as methods running on files within the user-visible file system. As a result, writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are much more performant. This makes them suitable for significant, large-scale file updates such as [SQLite](https://www.sqlite.org/wasm) database modifications.
 
 ## Syntax
 
@@ -91,5 +91,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

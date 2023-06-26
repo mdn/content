@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileSystemHandle.queryPermission
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
 
 The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the
@@ -87,5 +87,5 @@ async function verifyPermission(fileHandle, withWrite) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

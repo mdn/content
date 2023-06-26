@@ -1,15 +1,15 @@
 ---
-title: File System Access API
-slug: Web/API/File_System_Access_API
+title: File System API
+slug: Web/API/File_System_API
 page-type: web-api-overview
 browser-compat:
   - api.FileSystemHandle
   - api.FileSystemFileHandle
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
 
-The File System Access API allows read, write and file management capabilities.
+The File System API — with extensions provided via the [File System Access API](https://wicg.github.io/file-system-access/) to access files on the device file system — allows read, write and file management capabilities.
 
 ## Concepts and Usage
 
@@ -32,7 +32,7 @@ Each handle provides its own functionality and there are a few differences depen
 
 ### Origin private file system
 
-The origin private file system (OPFS) is a storage endpoint provided as part of the File System Living Standard, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
+The origin private file system (OPFS) is a storage endpoint provided as part of the File System API, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
 
 Read our [Origin private file system](/en-US/docs/Web/API/File_System_Access_API/Origin_private_file_system) for instructions on how to use it.
 
@@ -224,4 +224,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/) on web.dev
+- [The origin private file system](https://web.dev/origin-private-file-system/) on web.dev

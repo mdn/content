@@ -1,17 +1,17 @@
 ---
 title: Origin private file system
-slug: Web/API/File_System_Access_API/Origin_private_file_system
+slug: Web/API/File_System_API/Origin_private_file_system
 page-type: guide
 browser-compat: api.StorageManager.getDirectory
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
 
-The origin private file system (OPFS) is a storage endpoint provided as part of the File System Access API, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
+The origin private file system (OPFS) is a storage endpoint provided as part of the File System API, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
 
 ## Working with files using the File System Access API
 
-Before the OPFS was available, the File System Access API already provided access to files using picker methods. As an example:
+The [File System Access API](https://wicg.github.io/file-system-access/), which extends the File System API, provides access to files using picker methods. As an example:
 
 1. {{domxref("Window.showOpenFilePicker()")}} allows the user to choose a file to access, which results in a {{domxref("FileSystemFileHandle")}} object being returned.
 2. {{domxref("FileSystemFileHandle.getFile()")}} is called to get access to the file's contents, the content is modified using {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}}.
@@ -24,7 +24,7 @@ As a result, these operations are fairly slow. It is not so noticeable when you 
 
 ## How does the OPFS solve such problems?
 
-The OPFS offers low-level, byte-by-byte file access, which is private to the origin of the page and not visible to the user. As a result, it doesn't require the same series of security checks and permission grants and is therefore faster than regular File System Access API calls. It also has a set of synchronous calls available (other File System Access API calls are asynchronous) that can be run inside web workers only so as not to block the main thread.
+The OPFS offers low-level, byte-by-byte file access, which is private to the origin of the page and not visible to the user. As a result, it doesn't require the same series of security checks and permission grants and is therefore faster than File System Access API calls. It also has a set of synchronous calls available (other File System API calls are asynchronous) that can be run inside web workers only so as not to block the main thread.
 
 To summarize how the OPFS differs from the user-visible file system:
 

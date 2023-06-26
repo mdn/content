@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.keys
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`keys()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
@@ -46,5 +46,5 @@ for await (const key of dirHandle.keys()) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -36,7 +36,7 @@ No notable changes.
 
 ### APIs
 
-- [Origin private file system (OPFS)](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) is now supported when using the [File System Access API](/en-US/docs/Web/API/File_System_Access_API).
+- [Origin private file system (OPFS)](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) is now supported when using the [File System API](/en-US/docs/Web/API/File_System_API).
   The data in this file system is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
   The OPFS is accessed with the {{domxref("StorageManager.getDirectory()")}} method, by calling `navigator.storage.getDirectory()` in a worker or the main thread.
   See [Firefox bug 1785123](https://bugzil.la/1785123) for more details.

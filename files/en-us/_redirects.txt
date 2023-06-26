@@ -3461,7 +3461,7 @@
 /en-US/docs/Event.initEvent	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/Extension_Library/Extensions	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/Extension_Library/Extensions/Firefox	/en-US/docs/Mozilla/Add-ons
-/en-US/docs/File_System_Access_API	/en-US/docs/Web/API/File_System_Access_API
+/en-US/docs/File_System_Access_API	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Firefox 11 for developers	/en-US/docs/Mozilla/Firefox/Releases/11
 /en-US/docs/Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Firefox_1.5_Beta_for_Developers	/en-US/docs/Mozilla/Firefox/Releases/1.5
@@ -8199,8 +8199,9 @@
 /en-US/docs/Web/API/FileSystemFlags/create	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
 /en-US/docs/Web/API/FileSystemFlags/exclusive	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
 /en-US/docs/Web/API/File_Handle_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
-/en-US/docs/Web/API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/API/File_System_Access_API	/en-US/docs/Web/API/File_System_API
+/en-US/docs/Web/API/File_System_Access_API/Origin_private_file_system	/en-US/docs/Web/API/File_System_API/Origin_private_file_system
 /en-US/docs/Web/API/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
 /en-US/docs/Web/API/Float64Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array
 /en-US/docs/Web/API/FocusEvent.FocusEvent	/en-US/docs/Web/API/FocusEvent/FocusEvent

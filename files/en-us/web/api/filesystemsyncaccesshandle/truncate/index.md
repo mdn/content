@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.truncate
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`truncate()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface resizes the file associated with the handle to a specified number of bytes.
@@ -66,5 +66,5 @@ async function truncateFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

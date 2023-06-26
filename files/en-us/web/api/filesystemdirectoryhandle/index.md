@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.FileSystemDirectoryHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
-The **`FileSystemDirectoryHandle`** interface of the {{domxref("File System Access API", "File System Access API", "", "nocode")}} provides a handle to a file system directory.
+The **`FileSystemDirectoryHandle`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} provides a handle to a file system directory.
 
 The interface can be accessed via the {{domxref('window.showDirectoryPicker()')}}, {{domxref('StorageManager.getDirectory()')}}, {{domxref('DataTransferItem.getAsFileSystemHandle()')}}, and {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}} methods.
 
@@ -118,5 +118,5 @@ for await (const fileHandle of getFilesRecursively(directoryHandle)) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

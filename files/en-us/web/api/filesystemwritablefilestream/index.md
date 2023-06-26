@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.FileSystemWritableFileStream
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
-The **`FileSystemWritableFileStream`** interface of the {{domxref("File System Access API", "File System Access API", "", "nocode")}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
+The **`FileSystemWritableFileStream`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
 {{InheritanceDiagram}}
 
@@ -74,5 +74,5 @@ writableStream.write({ type: "truncate", size });
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

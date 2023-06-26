@@ -95,7 +95,7 @@ Note that the code checks that `launchQueue` exists before using it, to ensure t
 
 - [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers) manifest member
 - {{domxref("LaunchQueue")}} interface
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [File API](/en-US/docs/Web/API/File_API)
 - [Let installed web applications be file handlers](https://developer.chrome.com/articles/file-handling/) on web.dev (June 15, 2022)
 - [Handle files in Progressive Web Apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) on learn.microsoft.com (April 3, 2023)

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.read
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`read()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface reads the content of the file associated with the handle into a specified buffer, optionally at a given offset.
@@ -89,5 +89,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

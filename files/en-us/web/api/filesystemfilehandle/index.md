@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.FileSystemFileHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
-The **`FileSystemFileHandle`** interface of the {{domxref("File System Access API", "File System Access API", "", "nocode")}} represents a handle to a file system entry. The interface is accessed through the {{domxref('window.showOpenFilePicker()')}} method.
+The **`FileSystemFileHandle`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} represents a handle to a file system entry. The interface is accessed through the {{domxref('window.showOpenFilePicker()')}} method.
 
 Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.
 
@@ -130,5 +130,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

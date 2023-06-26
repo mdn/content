@@ -5,11 +5,11 @@ page-type: web-api-interface
 browser-compat: api.FileSystemSyncAccessHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
-The **`FileSystemSyncAccessHandle`** interface of the {{domxref("File System Access API", "File System Access API", "", "nocode")}} represents a synchronous handle to a file system entry.
+The **`FileSystemSyncAccessHandle`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} represents a synchronous handle to a file system entry.
 
-This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (so that its methods do not block execution on the main thread) for files within the [origin private file system](/en-US/docs/Web/API/File_System_Access_API/Origin_private_file_system), which is not visible to end-users.
+This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (so that its methods do not block execution on the main thread) for files within the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system), which is not visible to end-users.
 
 As a result, its methods are not subject to the same security checks as methods running on files within the user-visible file system, and so are much more performant. This makes them suitable for significant, large-scale file updates such as [SQLite](https://www.sqlite.org/wasm) database modifications.
 
@@ -88,5 +88,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

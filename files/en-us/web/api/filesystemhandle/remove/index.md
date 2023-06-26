@@ -9,13 +9,13 @@ status:
 browser-compat: api.FileSystemHandle.remove
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`remove()`** method of the {{domxref("FileSystemHandle")}} interface requests removal of the entry represented by the handle from the underlying file system.
 
 The `remove()` method allows you to remove a file or directory directly from its handle. Without this method, you would have to obtain the handle of the parent directory, then call {{domxref("FileSystemDirectoryHandle.removeEntry()")}} on that to remove it.
 
-You can also call `remove()` on the root directory of the [Origin Private File System](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) to clear its contents, after which a new empty OPFS is created.
+You can also call `remove()` on the root directory of the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) to clear its contents, after which a new empty OPFS is created.
 
 ## Syntax
 
