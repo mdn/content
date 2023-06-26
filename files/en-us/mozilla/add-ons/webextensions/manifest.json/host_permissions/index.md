@@ -41,11 +41,11 @@ Use the `host_permissions` key to request access for the APIs in your extension 
 
 In most browsers, `host_permission` requests are treated as optional, and fully under the user's control.
 
-If you request permissions using this key, the browser _may_ prompt the user to grant the extension access to this host data at install time.  Currently Safari, Firefox,  and some configurations of Chromium-based browsers don't prompt the user during installation.
+If you request permissions using this key, the browser _may_ prompt the user to grant the extension access to this host data at install time. Currently Safari, Firefox, and some configurations of Chromium-based browsers don't prompt the user during installation.
 
 Whether the user is prompted and grants permissions or not, most browsers allow the user to control the extension's host permissions after installation: grant or revoke them as needed.
 
-To account for different possible states, you should use the [permissions API](en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions).  Specifically you can check if you have all the required permissions after installation using [permissions.contains](en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/contains).  Depending on your specific use case, you could have an onboarding step to explain why some permissions are necessary, and request them using [permissions.request](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request).
+To account for different possible states, you should use the [permissions API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions). Specifically you can check if you have all the required permissions after installation using [permissions.contains](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/contains). Depending on your specific use case, you could have an onboarding step to explain why some permissions are necessary, and request them using [permissions.request](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request).
 
 As the request to grant host permissions may impact users' willingness to install your extension, requesting host permissions is worth careful consideration. For example, you want to avoid requesting unnecessary host permissions and may want to provide information about why you are requesting host permissions in your extension's store description. The article [Request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) provides more information on the issues you should consider.
 
