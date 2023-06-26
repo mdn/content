@@ -823,7 +823,7 @@ In order to test the models (and to create some example books and other items th
 
 1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/main/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
-   > **Note:** You don't need to know how `populatedb.js` works; it just adds sample data into the database.
+   > **Note:** The code in `populatedb.js` may be useful in learning JavaScript, but understanding it is not necessary for this tutorial.
 
 2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 

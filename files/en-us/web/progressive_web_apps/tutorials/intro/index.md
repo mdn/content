@@ -60,7 +60,7 @@ The steps include:
 
 - [Local development environment or secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection)
 
-  - : While all websites should be served over https, with PWAs, https is a requirement. Sevice workers, and therefore PWAs, are restricted to secure contexts including SSL contexts served with the `https://` protocol and locally-delivered resources, including `127.0.0.1` and `localhost` URLs served with the `http://` protocol. We will look at the page in the current state with the `file://` protocol, then cover options for creating a secure localhost connection to test your code as we progress thru the tutorial steps. We also look at serving your PWA with GitHub pages.
+  - : While all websites should be served over https, with PWAs, https is a requirement. Service workers, and therefore PWAs, are restricted to secure contexts including SSL contexts served with the `https://` protocol and locally-delivered resources, including `127.0.0.1` and `localhost` URLs served with the `http://` protocol. We will look at the page in the current state with the `file://` protocol, then cover options for creating a secure localhost connection to test your code as we progress thru the tutorial steps. We also look at serving your PWA with GitHub pages.
 
 - [JavaScript and LocalStorage](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality)
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.animation
 
 {{CSSRef}}
 
-The **`animation`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property applies an animation between styles. It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, and {{cssxref("animation-play-state")}}.
+The **`animation`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property applies an animation between styles. It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, and {{cssxref("animation-timeline")}}.
 
 {{EmbedInteractiveExample("pages/css/animation.html")}}
 
@@ -22,6 +22,7 @@ This property is a shorthand for the following CSS properties:
 - [`animation-iteration-count`](/en-US/docs/Web/CSS/animation-iteration-count)
 - [`animation-name`](/en-US/docs/Web/CSS/animation-name)
 - [`animation-play-state`](/en-US/docs/Web/CSS/animation-play-state)
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timing-function) {{experimental_inline}}
 - [`animation-timing-function`](/en-US/docs/Web/CSS/animation-timing-function)
 
 ## Syntax
@@ -53,6 +54,8 @@ Each individual animation is specified as:
   - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}
 
 - an optional name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}
+
+> **Note:** {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, and {{cssxref("animation-range-end")}} are not currently included in this list, as current implementations are reset-only. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto` and previously-declared `animation-range-start` and `animation-range-end` values to `normal`, but these properties cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare these properties after declaring any `animation` shorthand for it to take effect.
 
 ### Values
 
@@ -99,7 +102,7 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 
 ## Examples
 
-> **Note:** Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
+> **Note:** Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
 
 ### Sun Rise
 
@@ -284,7 +287,7 @@ is 'overwritten' by the bounce animation.
 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#examples) for additional examples.
+See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples) for additional examples.
 
 ## Specifications
 
@@ -296,5 +299,5 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animatio
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
