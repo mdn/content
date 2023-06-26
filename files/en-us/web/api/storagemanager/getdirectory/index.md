@@ -8,7 +8,7 @@ browser-compat: api.StorageManager.getDirectory
 
 {{securecontext_header}}{{APIRef("Storage")}}
 
-The **`getDirectory()`** method of the {{domxref("StorageManager")}} interface is used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) (OPFS).
+The **`getDirectory()`** method of the {{domxref("StorageManager")}} interface is used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS).
 
 ## Syntax
 
