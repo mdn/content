@@ -89,7 +89,7 @@ Lists the changes to the state of the tab that is updated. To learn more about t
 - `audible` {{optional_inline}}
   - : `boolean`. The tab's new audible state.
 - `autoDiscardable` {{optional_inline}}
-  - : `boolean`. Whether the tab can be discarded automatically by the browser when resources are low.
+  - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
 - `discarded` {{optional_inline}}
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory but is visible in the tab strip. Its content gets reloaded the next time it's activated.
 - `favIconUrl` {{optional_inline}}
