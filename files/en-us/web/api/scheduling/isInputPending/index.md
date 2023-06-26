@@ -31,7 +31,7 @@ navigator.scheduling.isInputPending(options)
 
 A boolean.
 
-The `navigator.scheduling.isInputPending` property returns a Boolean value, indicating whether there are pending input events or not. It can have one of the following three possible values:
+The `navigator.scheduling.isInputPending` method returns a Boolean value, indicating whether there are pending input events or not. It can have one of the following three possible values:
 
 - `true`: Indicates that there are input events pending in the event queue.
 
