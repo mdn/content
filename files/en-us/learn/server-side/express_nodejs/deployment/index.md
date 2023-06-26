@@ -179,7 +179,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 ### Use Helmet to protect against well known vulnerabilities
 
-[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmetjs.github.io/docs/) for more information on what headers it sets and vulnerabilities it protects against).
+[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmetjs.github.io/) for more information on what headers it sets and vulnerabilities it protects against).
 
 Install this at the root of your project by running the following command:
 
