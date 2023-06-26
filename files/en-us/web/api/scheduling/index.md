@@ -9,9 +9,10 @@ browser-compat: api.Scheduling
 
 The **`scheduling`** read-only property of the {{domxref("Navigator")}} interface returns an {{domxref("Scheduling")}} object for the current document.
 
-## Value
+## Instance methods
 
-An {{domxref('Scheduling')}} object.
+- {{domxref("Scheduling.isInputPending", "isInputPending()")}} {{Experimental_Inline}}
+  - : Returns a {{jsxref("Boolean")}}
 
 ## Example
 
