@@ -1,6 +1,6 @@
 ---
-title: CSS selectors guide
-slug: Web/CSS/CSS_Selectors/Selectors_guide
+title: CSS selectors and combinators
+slug: Web/CSS/CSS_Selectors/Selectors_and_combinators
 page-type: landing-page
 spec-urls: https://drafts.csswg.org/selectors/
 ---
@@ -103,89 +103,22 @@ h2 + p + p {
 ### Attribute selectors
 
 [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) selects all elements that, depending on how the selector is written, either have the given attribute or have the given attribute with a substring value match.
-For example, `[type]` will match all elements that have the `type` attribute set (to any value).
+For example, `[type]` will match all elements that have the `type` attribute set (to any value), and [type="submit"] will match `<input type="submit">` and `<button type="submit">`, or any element with `type="submit"` set, case-insensitive, even though that attribute-value pair is only supported on {{HTMLElement("input")}} and {{HTMLElement("button")}}.
 
-Additionally, [type="submit"] will match `<input type="submit">` and `<button type="submit">`. If the attribute is an enumerated HTML attribute, the value in the selector is case-insensitive, even if the value is not one of the enumerated values or if the attribute is not a valid value for the element on which it is set. For non-enumerated attributes, like `class`, `id`, or any `data-*` attribute, or non-HTML attributes, like `role` or `aria-*` attributes, the value match is case sensitive, but can be made case insensitive with a case-insensitive modifier (`i`).
+The case sensitivity of the attribute depends on the language. Generally, in HTML, if the attribute is an {{glossary("enumerated")}} HTML attribute, the value in the selector is case-insensitive, even if the value is not one of the enumerated values or if the attribute is not a valid value for the element on which it is set. For non-enumerated attributes, like `class`, `id`, or any `data-*` attribute, or non-HTML attributes, like `role` or `aria-*` attributes, the value match is case sensitive, but can be made case insensitive with a case-insensitive modifier (`i`).
 
-## Pseudo-classes and pseudo-elements
+### Pseudo-class selectors
 
-- [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
+The [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors) defines over 60 [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes). Pseudo-classes are [simple selectors](#simple-selector), prefixed with a colon (`:`), that allow the selection of elements based on state information that is not contained in the document tree.
+For example, `a:visited` matches all {{HTMLElement("a")}} elements that have been visited by the user.
 
-  - : The `:` pseudo allow the selection of elements based on state information that is not contained in the document tree.
+There are [element display state](/en-US/docs/Web/CSS/Pseudo-classes#element_display_state_pseudo-classes), [input](/en-US/docs/Web/CSS/Pseudo-classes#input_pseudo-classes), [linguistic](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), [location](/en-US/docs/Web/CSS/Pseudo-classes#location_pseudo-classes), [resource state](/en-US/docs/Web/CSS/Pseudo-classes#resource_state_pseudo-classes), [time-dimensional](/en-US/docs/Web/CSS/Pseudo-classes#time-dimensional_pseudo-classes), [tree-structural](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes), [user action](/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes), and [functional](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes) pseudo-classes.
 
-    **Example:** `a:visited` will match all {{HTMLElement("a")}} elements that have been visited by the user.
+Multiple pseudo-classes can be combined to create [compound selectors](#compound-selector) When combining a pseudo-class into a compound selector, the pseudo-class must follow the type selector or universal selector, if present.
 
-- [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements)
+### Pseudo-element selectors
 
-  - : The `::` pseudo represent entities that are not included in HTML.
-
-    **Example:** `p::first-line` will match the first line of all {{HTMLElement("p")}} elements.
-
-## Structure of a selector
-
-The term 'selector' can refer to one of the following:
-
-### Simple selector
-
-A **simple selector** is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. All [basic selectors](#basic_selectors), attribute selectors, and single [pseudo-classes and pseudo-element](#pseudo-classes_and_pseudo-elements) selectors are simple selectors.
-
-```css
-#myId {
-}
-[pattern*="\d"] {
-}
-```
-
-### Compound selector
-
-A **compound selector** is a sequence of [simple selectors](#simple_selector) that are not separated by a [combinator](#combinators). A compound selector represents a set of simultaneous conditions on a single element. A given element is said to match a compound selector when the element matches all the simple selectors in the compound selector.
-
-In a compound selector, the [type selector](/en-US/docs/Web/CSS/Type_selectors) or a [universal selector](/en-US/docs/Web/CSS/Universal_selectors) in a compound selector must come first in the sequence of selectors. Only one type selector or universal selector is allowed in the sequence. Since whitespace represents the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), no whitespace is allowed between the simple selectors in a compound selector.
-
-```css
-a#selected {
-}
-```
-
-### Complex selector
-
-A **complex selector** is a sequence of one or more simple and/or [compound selectors](#compound_selector) that are separated by [combinators](#combinators). A complex selector represents a set of simultaneous conditions on a set of elements. These conditions apply in the context of relationships described by the combinators. A given element is said to match a complex selector when the element matches compound selectors and the combinators between the compound selectors.
-
-```css
-a#selected > .icon {
-}
-.box h2 + p {
-}
-a .icon {
-}
-```
-
-### Relative selector
-
-A **relative selector** is a selector representing an element relative to one or more anchor elements preceded by a combinator. Relative selectors that don't begin with an explicit [combinator](#combinators) have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
-
-```css
-+ div#topic > #reference {
-}
-> .icon {
-}
-dt:has(+ img) ~ dd {
-}
-```
-
-### Selector list
-
-A [**selector list**](/en-US/docs/Web/CSS/Selector_list) is a comma-separated list of [simple](#simple_selector), [compound](#compound_selector), or [complex](#complex_selector) selectors. If the constituent selector type of a selector list is important but unspecified, it is called a _complex selector list_. A given element is said to match a selector list when the element matches any (at least one) of the selectors in that selector list. Read more about when a selector list is deemed [invalid](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list) and how to construct a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list).
-
-```css
-#main,
-article.heading {
-}
-```
-
-Selectors can be restricted to a specific namespace or to all namespaces.
-
-**Syntax:** `*` `ns|*` `*|*`
+Now defined in the [CSS pseudo element](/en-US/docs/Web/CSS/CSS_pseudo) specification, [pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements), prefixed with two colons (`::`), represent entities that are not included in HTML. For example, the simple {{cssxref("::target")}} selector selects the target element of a URL containing a fragment identifier and the complex [`p::first-line`](/en-US/docs/Web/CSS/::first-line) selector matches the first line of all {{HTMLElement("p")}} elements.
 
 ## Specifications
 

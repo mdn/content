@@ -37,6 +37,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{CSSXref(":fullscreen")}}
 - {{CSSXref(":future")}}
 - {{CSSXref(":has", ":has()")}}
+- {{CSSXref(":hover")}}
 - {{CSSXref(":indeterminate")}}
 - {{CSSXref(":in-range")}}
 - {{CSSXref(":invalid")}}
@@ -96,12 +97,18 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - [Complex selector]()
 - [Relative selector]()
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
+- {{CSSXref("Specificity")}}
+- Selectors can be restricted to a specific namespace or to all namespaces. `*` `ns|*` `*|*`
 
 ### Guides
 
-- [CSS selectors guide](/en-US/docs/Web/CSS/CSS_selectors/selectors_guide)
+- [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 
-  - : Overview of the selectors, combinators, and terminology introduced in the CSS selectors module.
+  - : Overview of the different types of simple selectors and the various combinators defined in the CSS selectors and pseudo modules.
+
+- [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
+
+  - : The structure of CSS selectors and the terminology introduced in the selectors module, from "simple selector" to "forgiving relative selector list".
 
 - [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
 
@@ -111,13 +118,9 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 
   - : The `:` pseudo allow the selection of elements based on state information that is not contained in the document tree.
 
-- [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements)
-
-  - : The `::` pseudo represent entities that are not included in HTML.
-
 ## Related concepts
 
-- [Pseudo-elements]()
+- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) (representing entities not included in HTML)
 
   - {{CSSXref("::after")}}
   - {{CSSXref("::before")}}
