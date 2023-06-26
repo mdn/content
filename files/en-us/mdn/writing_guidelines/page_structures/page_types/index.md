@@ -173,7 +173,7 @@ An extended discussion of a topic might be spread across multiple conceptual pag
 
 A **glossary page** contains a brief explanation of a term, topic, or concept.
 The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences.
-This can be followed by links to further information in the **Learn more** section.
+This can be followed by links to further information in the **See also** section.
 If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) for more details.
 
 ### Examples
