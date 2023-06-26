@@ -26,7 +26,7 @@ To see the code for this animation, [view the source on GitHub](https://github.c
 ### Properties
 
 - {{cssxref("animation")}} shorthand
-- {{cssxref("animation-composition")}} {{Experimental_Inline}}
+- {{cssxref("animation-composition")}}
 - {{cssxref("animation-delay")}}
 - {{cssxref("animation-direction")}}
 - {{cssxref("animation-duration")}}
@@ -61,7 +61,7 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Step-by-step tutorial on how to create animations using CSS. This article describes the animation-related CSS properties and at-rule and how they interact with each other.
-- [CSS animations tips and tricks](/en-US/docs/Web/CSS/CSS_animations/Tips)
+- [CSS animation tips and tricks](/en-US/docs/Web/CSS/CSS_animations/Tips)
   - : Tips and tricks to help you get the most out of CSS animations.
 
 ## Related concepts
