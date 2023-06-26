@@ -9,9 +9,13 @@ browser-compat: css.properties.text-wrap
 
 {{CSSRef}}{{seecompattable}}
 
-The **`text-wrap`** CSS property controls how text inside an element is wrapped.
+The **`text-wrap`** CSS property controls how text inside an element is wrapped. The different values provide:
 
-> **Note:** The {{CSSxRef("white-space-collapse")}} and `text-wrap` properties can both be set on one line using the {{CSSxRef("white-space")}} shorthand property.
+- Typographic improvements, for example more balanced line lengths across broken headings
+- More stability in content-editable elements — for example {{htmlelement("textarea")}}s and elements with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on them — as content is edited.
+- A way to turn text wrapping off completely.
+
+> **Note:** The {{CSSxRef("white-space-collapse")}} and `text-wrap` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 ## Syntax
 
@@ -44,7 +48,12 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 - `pretty`
   - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [typographic orphans](https://en.wikipedia.org/wiki/Widows_and_orphans) should be kept to a minimum).
 - `stable`
-  - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. So, for example, line 1 breaking is not affected by changes on lines 2 and later, line 2 breaking is not affected by changes on lines 3 and later, etc. The intention is to keep the text layout as stable as possible and mitigate performance issues in containers where editable text is updated. You don't want the editing cursor jumping around as text is added or removed due to the algorithm recalculating the wrapping.
+
+  - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. When editing text that has already been painted to the screen, line 1 breaking is not affected by changes on lines 2 and later, line 2 breaking is not affected by changes on lines 3 and later, etc.
+
+    For example, imagine a situation where you have a long word broken onto the next line because it doesn't quite fit on the previous line. The default behavior (i.e. with values like `wrap` or `balance`) would be that, if you start deleting the long word so that what is left would then fit on the previous line, the break would be recalculated and all the content would jump onto the same line. With `stable`, that wouldn't happen, and it would remain as two lines.
+
+    The intention is to keep the text layout as stable as possible and mitigate performance issues in containers where editable text is updated. You don't want the editing cursor jumping around as text is added or removed due to the algorithm recalculating the wrapping.
 
 ## Formal definition
 
@@ -61,15 +70,15 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 #### HTML
 
 ```html
-<h2 class="wrap">
-  The default behavior; the text in the heading wraps fairly "normally"
+<h2 class="wrap" contenteditable>
+  The default behavior; the text in the heading wraps "normally"
 </h2>
 
-<h2 class="no-wrap">
+<h2 class="nowrap" contenteditable>
   In this case the text in the heading doesn't wrap, and overflows the container
 </h2>
 
-<h2 class="balance">
+<h2 class="balance" contenteditable>
   In this case the text in the heading is nicely balanced across lines
 </h2>
 ```
@@ -81,7 +90,7 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
   text-wrap: wrap;
 }
 
-.no-wrap {
+.nowrap {
   text-wrap: nowrap;
 }
 
@@ -97,18 +106,9 @@ h2 {
 
 #### Result
 
+The text in the example is editable. Change the text, adding long words, to view how the different line and word lengths impact wrapping.
+
 {{EmbedLiveSample("Examples", "100%", 350)}}
-
-### Unsetting white-space nowrap
-
-`text-wrap` values like `balance` can compete with {{cssxref("white-space")}} values like `nowrap` because one is asking for no wrapping and the other is asking for balanced wrapping. You can overcome this by unsetting `white-space` before applying balanced wrapping:
-
-```css
-.balanced {
-  white-space: unset;
-  text-wrap: balance;
-}
-```
 
 ## Specifications
 
@@ -122,5 +122,5 @@ h2 {
 
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
-- [CSS text module](/en-US/docs/Web/CSS/CSS_Text)
+- [CSS text module](/en-US/docs/Web/CSS/CSS_text)
 - [CSS text-wrap: balance](https://developer.chrome.com/blog/css-text-wrap-balance/) on developer.chrome.com

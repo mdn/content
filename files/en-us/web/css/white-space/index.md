@@ -43,7 +43,7 @@ white-space: unset;
 
 ### Values
 
-`white-space` property values can be specified as a single keyword chosen from the list of values below or shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
+`white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
 
 - `normal`
   - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
@@ -139,7 +139,7 @@ The following table summarizes the behavior of the various `white-space` keyword
 
 ## Collapsing of white space
 
-See [`white-space-collapse` > Collapsing of white space](/en-US/docs/Web/CSS/white-space-collapse#collapsing_of_white_space).
+The {{cssxref("white-space-collapse")}} property page explains the [browser algorithm for collapsing white space](/en-US/docs/Web/CSS/white-space-collapse#collapsing_of_white_space).
 
 ## Formal definition
 

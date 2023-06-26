@@ -11,7 +11,7 @@ browser-compat: css.properties.white-space-collapse
 
 The **`white-space-collapse`** CSS property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
-> **Note:** The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can both be set on one line using the {{CSSxRef("white-space")}} shorthand property.
+> **Note:** The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 ## Syntax
 
@@ -41,16 +41,18 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 - `discard`
   - : All white space in the element is discarded.
 - `preserve`
-  - : White space sequences and sgement break characters (characters that cause text to break onto new lines, such as line feeds) are preserved.
+  - : White space sequences and segment break characters are preserved.
 - `preserve-breaks`
-  - : White space sequences are collapsed, while segment break characters (such as line feeds) are preserved.
+  - : White space sequences are collapsed, while segment break characters are preserved.
 - `preserve-spaces`
-  - : White space sequences are preserved, while tabs and segment break characters (such as line feeds) are converted to spaces.
+  - : White space sequences are preserved, while tabs and segment break characters are converted to spaces.
 - `break-spaces`
-  - : The behavior is identical to that of `preserve`, except that:
+  - : The behavior is identical to `preserve`, except that:
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
     - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
+
+> **Note:** Segment break characters are characters such as line feeds that cause text to break onto new lines.
 
 ## Collapsing of white space
 
@@ -62,10 +64,8 @@ User agents handle white space collapsing as follows:
   - They are converted to spaces in the case of languages that separate words with spaces (like English), or removed altogether in the case of languages that do not separate words with spaces (like Chinese).
 - If spaces are to be collapsed:
   - Spaces or tabs before or after segment breaks are removed.
-  - Sequences of spaces are converted to a single space width.
-- When spaces are preserved, sequences of spaces are treated as non-breaking except that they will soft-wrap at the end of each sequence. In the case of the `break-spaces` value, they will soft wrap after each space.
-
-See the [CSS text](/en-US/docs/Web/CSS/CSS_Text) specification [phase I: collapsing and transformation](https://drafts.csswg.org/css-text-4/#white-space-phase-1) section for the spec definition.
+  - Sequences of spaces are converted to a single space.
+- When spaces are preserved, sequences of spaces are treated as non-breaking except that they will soft-wrap at the end of each sequence — i.e. the next line will always start with the next non-space character. In the case of the `break-spaces` value however, a soft wrap could potentially occur after each space, so the next line may start with one or more spaces.
 
 ## Formal definition
 
@@ -128,4 +128,4 @@ h2 {
 ## See also
 
 - Shorthand for `white-space-collapse` and {{CSSxRef("text-wrap")}}: The {{CSSxRef("white-space")}} property.
-- [CSS text module](/en-US/docs/Web/CSS/CSS_Text)
+- [CSS text module](/en-US/docs/Web/CSS/CSS_text)
