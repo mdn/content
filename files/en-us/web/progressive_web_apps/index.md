@@ -17,6 +17,8 @@ These guides give conceptual explanations of different aspects of PWAs. They're 
   - : An introduction to PWAs, comparing them with traditional websites and with platform-specific apps, and outlining their main features.
 - [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
   - : One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app. In this guide we'll explore what "installable" means, what a PWA needs to provide for it to be installable, and how you can customize the install experience.
+- [Installing and uninstalling web apps](/en-US/docs/Web/Progressive_web_apps/Guides/Installing)
+  - : This guide covers how users can install and uninstall PWAs on their devices.
 - [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
   - : In this guide, we'll introduce a set of technologies that enable a PWA to provide a good user experience even when the device has intermittent network connectivity and to perform operations in the background, even when the main app is not running.
 - [Best practices for PWAs](/en-US/docs/Web/Progressive_web_apps/Guides/Best_practices)
@@ -28,6 +30,8 @@ These guides give concrete detailed instructions for how to implement specific P
 
 - [Create a standalone app](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)
   - : Describes how to specify that a PWA should be launched in its own dedicated window when it is launched, rather than a browser tab.
+- [Define your app icons](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons)
+  - : Describes how to define your own set of icons to be used when the PWA is installed on a device.
 - [Customize your app's colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors)
   - : Describes how to set background and theme colors for a PWA.
 - [Display badges](/en-US/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)
@@ -40,6 +44,15 @@ These guides give concrete detailed instructions for how to implement specific P
   - : Describes how developers can provide their own UI to invite users to install their PWA.
 - [Associate files with your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA)
   - : Describes how you can create an association between file types and your PWA, so that when the user clicks on the file, your PWA is launched to handle it.
+
+## Tutorials
+
+In these tutorials, you'll build a PWA from scratch. Tutorials walk through the steps of creating an app, from start to finish, explaining how the different features of the app are implemented.
+
+- [Creating your first PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro)
+  - : This novice-level tutorial walks through the creation of a PWA to track menstrual cycles. Lessons include a walk through of the HTML, CSS, and JavaScript required to create a fully functional web app, setting up a testing environment, and complete explanations guiding the learner through upgrading the web app into a PWA; including developing and inspecting a manifest, adding a service worker, and using the service worker to delete stale caches.
+- [Deep dive into PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames)
+  - : This intermediate-level tutorial walks through the creation of a PWA that lists information about games submitted to the A-Frame category in the [js13kGames 2017](https://2017.js13kgames.com/) competition. This tutorial includes all the basics for creating a PWA, with additional features, including notifications, push, and app performance.
 
 ## Reference
 
