@@ -131,7 +131,7 @@ const syncAccessHandle = await fileHandle.createSyncAccessHandle();
 There are a number of _synchronous_ methods available on the returned {{domxref("FileSystemSyncAccessHandle")}}:
 
 - {{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}}: Returns the size of the file in bytes.
-- {{domxref("FileSystemSyncAccessHandle.write", "write()")}}: Writes the content of a buffer into the, optionally at a given offset, and returns the number of written bytes. Checking the returned number of written bytes allows callers to detect and handle errors and partial writes.
+- {{domxref("FileSystemSyncAccessHandle.write", "write()")}}: Writes the content of a buffer into the file, optionally at a given offset, and returns the number of written bytes. Checking the returned number of written bytes allows callers to detect and handle errors and partial writes.
 - {{domxref("FileSystemSyncAccessHandle.read", "read()")}}: Reads the contents of the file into a buffer, optionally at a given offset.
 - {{domxref("FileSystemSyncAccessHandle.truncate", "truncate()")}}: Resizes the file to the given size.
 - {{domxref("FileSystemSyncAccessHandle.flush", "flush()")}}: Ensures that the file contents contain all the modifications done through `write()`.
