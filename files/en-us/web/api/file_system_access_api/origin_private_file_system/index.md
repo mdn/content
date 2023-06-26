@@ -118,6 +118,8 @@ Web Workers don't block the main thread, which means you can use the synchronous
 
 You can synchronously access a file by calling {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} on a regular {{domxref("FileSystemFileHandle")}}:
 
+> **Note:** Despite having "Sync" in its name, the `createSyncAccessHandle()` method itself is asynchronous.
+
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
 const fileHandle = await opfsRoot.getFileHandle("my highspeed file.txt", {
