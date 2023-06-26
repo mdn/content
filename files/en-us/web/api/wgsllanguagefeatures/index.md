@@ -76,4 +76,4 @@ async function init() {
 
 ## See also
 
-- The [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
+- [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
