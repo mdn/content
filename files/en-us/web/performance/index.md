@@ -184,6 +184,6 @@ Best Practices
 
   - [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
 
-- [PWA](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers)
+- [PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
 - [Caching](/en-US/docs/Web/HTTP/Caching)
 - Content Delivery Networks (CDN)
