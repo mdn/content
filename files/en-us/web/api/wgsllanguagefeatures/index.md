@@ -33,15 +33,15 @@ The following properties are available to all read-only [setlike](/en-US/docs/We
 The following methods are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects (the links below are to the {{jsxref("Set")}} global object reference pages).
 
 - {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
-  - : Returns a boolean asserting whether an element is present with the given value in the set or not.
+  - : Returns a boolean asserting whether or not an element with the given value is present in the set.
 - {{jsxref("Set.prototype.values()", "values()")}} {{Experimental_Inline}}
-  - : Returns a new iterator object that yields the **values** for each element in the set in insertion order.
+  - : Returns a new iterator object that yields **values** for each element in the set in insertion order.
 - {{jsxref("Set.prototype.keys()", "keys()")}} {{Experimental_Inline}}
   - : An alias for {{jsxref("Set.prototype.values()", "values()")}}.
 - {{jsxref("Set.prototype.entries()", "entries()")}} {{Experimental_Inline}}
-  - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the set, in insertion order.
+  - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the set in insertion order.
 - {{jsxref("Set.prototype.forEach()", "forEach()")}} {{Experimental_Inline}}
-  - : Calls a provided callback function once for each value present in the set, in insertion order.
+  - : Calls the provided callback function once for each value present in the set in insertion order.
 
 ## Examples
 
