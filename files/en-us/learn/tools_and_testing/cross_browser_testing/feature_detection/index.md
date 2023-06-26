@@ -48,8 +48,6 @@ if ("geolocation" in navigator) {
 }
 ```
 
-To detect a single feature, the `if` statement works well. For complex applications, consider using an established feature detection library rather than writing your own. Modernizr is the industry standard for feature detection tests, and we'll look at that later on.
-
 Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_bad_browser_sniffing_code) for more details.
 
 ## Writing your own feature detection tests
@@ -129,8 +127,6 @@ This is more convenient than the previous example — we can do all of our featu
 
 We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of a few common patterns.
 
-Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables) from 2016.
-
 Common patterns for detectable features include:
 
 - Members of an object
@@ -171,6 +167,8 @@ Common patterns for detectable features include:
 
   - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
 
+Bear in mind that some features are, however, known to be undetectable. In these cases, you'll need to use a different approach, such as using a {{Glossary("Polyfill", "polyfill")}}.
+
 #### matchMedia
 
 We also wanted to mention the {{domxref("Window.matchMedia")}} JavaScript feature at this point too. This is a property that allows you to run media query tests inside JavaScript. It looks like this:
@@ -198,144 +196,9 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 }
 ```
 
-## Using Modernizr to implement feature detection
-
-It is possible to implement your own feature detection tests using techniques like the ones detailed above. You might as well use a dedicated feature detection library however, as it makes things much easier. The mother of all feature detection libraries is [Modernizr](https://modernizr.com/), and it can detect just about everything you'll ever need. Let's look at how to use it now.
-
-When you are experimenting with Modernizr you might as well use the development build, which includes every possible feature detection test. Download this now by:
-
-1. Clicking on the [Development build](https://modernizr.com/download?do_not_use_in_production) link.
-2. Clicking the big pink _Build_ button at the top of the page.
-3. Clicking the top _Download_ link in the dialog box that appears.
-
-Save it somewhere sensible, like the directory you've been using your other guides in this series.
-
-When you are using Modernizr in production, you can go to the [Download page](https://modernizr.com/download) you've already visited and click the plus buttons to include only the features you need to feature detect. Then when you click the _Build_ button, you'll download a custom build containing only those feature detects, making for a much smaller file size.
-
-### CSS
-
-Let's have a look at how Modernizr works in terms of selectively applying CSS.
-
-1. First, make a copy of [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) and [`supports-styling.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Save them as `modernizr-css.html` and `modernizr-css.css`.
-2. Update your {{htmlelement("link")}} element in your HTML so it points to the correct CSS file (you should also update your {{htmlelement("title")}} element to something more suitable!):
-
-   ```html
-   <link href="modernizr-css.css" rel="stylesheet" />
-   ```
-
-3. Above this `<link>` element, add a {{htmlelement("script")}} element to apply the Modernizr library to the page, as shown below. This needs to be applied to the page before any CSS (or JavaScript) that might make use of it.
-
-   ```html
-   <script src="modernizr-custom.js"></script>
-   ```
-
-4. Now edit your opening `<html>` tag, so that it looks like this:
-
-   ```html
-   <html lang="en-us" class="no-js">
-     …
-   </html>
-   ```
-
-At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated the `class` attribute of your `<html>` element like so:
-
-```html
-<html
-  class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">
-  …
-</html>
-```
-
-It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support grid at all, `<html>` would be given a class name of `no-cssgrid`. If you search through the class list, you'll also see others relating to grid, like:
-
-- `cssgridlegacy` or `no-cssgridlegacy` depending on whether a legacy version of grid is or is not supported.
-
-> **Note:** You can find a list of what most of the class names mean — see [Features detected by Modernizr](https://modernizr.com/docs#features).
-
-Unfortunately, Modernizr does not test for support of some new CSS features like container queries, cascade layers, or subgrid. If it did, we would update our `@supports` example in the following way:
-
-```css
-main {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(4, minmax(100px, auto));
-}
-.item {
-  display: grid;
-  grid-column: 2 / 7;
-  grid-row: 2 / 4;
-  grid-template-rows: repeat(3, 80px);
-}
-/* Properties for browsers with subgrid */
-.csssubgrid .item {
-  grid-template-columns: subgrid;
-}
-.csssubgrid .subitem {
-  grid-column: 3 / 6;
-  grid-row: 1 / 3;
-}
-/* Fallbacks for browsers that don't support subgrid */
-.no-csssubgrid .subitem {
-  display: flex;
-  flex: 33%;
-}
-```
-
-So how does this work? Because all those class names have been put on the `<html>` element, you can target browsers that do or don't support a feature using specific descendant selectors. So here we're applying the top set of rules only to browsers that do support subgrid, and the bottom set of rules only to browsers that don't (`no-csssubgrid`).
-
-> **Note:** All of Modernizr's HTML and JavaScript feature tests are reported as class names, so you can apply CSS selectively based on whether the browser supports HTML or JavaScript features, if needed.
-
-### JavaScript
-
-Modernizr is also equally well-prepared for implementing JavaScript feature detects too. It does this by making the global `Modernizr` object available to the page it is applied to, which contains results of the feature detects as `true`/`false` properties.
-
-For example, load up our [`modernizr-css.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html) example in your browser, then try going to your JavaScript console and typing in `Modernizr.` followed by some of those class names (they are the same here too). For example:
-
-```
-Modernizr.flexbox
-Modernizr.xhr2
-Modernizr.fetch
-```
-
-The console will return `true`/`false` values to indicate whether your browser supports those features or not.
-
-Let's look at an example to show how you'd use those properties.
-
-1. First of all, make a local copy of the [`modernizr-js.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/modernizr-js.html) example file.
-2. Attach the Modernizr library to the HTML using a `<script>` element, as we have done in previous demos. Put it above the existing `<script>` element, which is attaching the Google Maps API to the page.
-3. Next, fill in the `YOUR-API-KEY` placeholder text in the second `<script>` element (as it is now) with a valid Google Maps API key. To get a key, sign in to a Google account, go to the [Get a Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key) page, then click the blue _Get a Key_ button and follow the instructions.
-4. Finally, add another `<script>` element at the bottom of the HTML body (just before the `</body>` tag), and put the following script inside the tags:
-
-   ```js
-   if (Modernizr.geolocation) {
-     navigator.geolocation.getCurrentPosition(function (position) {
-       let latlng = new google.maps.LatLng(
-         position.coords.latitude,
-         position.coords.longitude
-       );
-       let myOptions = {
-         zoom: 8,
-         center: latlng,
-         mapTypeId: google.maps.MapTypeId.TERRAIN,
-         disableDefaultUI: true,
-       };
-       let map = new google.maps.Map(
-         document.getElementById("map_canvas"),
-         myOptions
-       );
-     });
-   } else {
-     const para = document.createElement("p");
-     para.textContent = "Argh, no geolocation!";
-     document.body.appendChild(para);
-   }
-   ```
-
-Try your example out! Here we use the `Modernizr.geolocation` test to check whether geolocation is supported by the current browser. If it is, we run some code that gets your device's current location, and plots it on a Google Map.
-
 ## Summary
 
-This article covered feature detection in a reasonable amount of detail, going through the main concepts and showing you how to both implement your own feature detection tests and use the Modernizr library to implement tests more easily.
+This article covered feature detection in a reasonable amount of detail, going through the main concepts and showing you how to implement your own feature detection tests.
 
 Next up, we'll start looking at automated testing.
 

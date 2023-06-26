@@ -127,7 +127,7 @@ In the following example, we will use an external image as the backdrop for a sm
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="180" height="150"></canvas>
   </body>
 </html>
@@ -150,6 +150,10 @@ function draw() {
 }
 ```
 
+```js
+draw();
+```
+
 The resulting graph looks like this:
 
 {{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
@@ -169,7 +173,7 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -188,6 +192,10 @@ function draw() {
   };
   img.src = "rhino.jpg";
 }
+```
+
+```js hidden
+draw();
 ```
 
 The resulting canvas looks like this:
@@ -215,7 +223,7 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 
 ```html
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
     <div style="display:none;">
       <img id="source" src="rhino.jpg" width="300" height="227" />
@@ -246,6 +254,7 @@ function draw() {
   // Draw frame
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+draw();
 ```
 
 We took a different approach to loading the images this time. Instead of loading them by creating new {{domxref("HTMLImageElement")}} objects, we included them as {{HTMLElement("img")}} tags directly in our HTML source and retrieved the images from those. The images are hidden from output by setting the CSS property {{cssxref("display")}} to none for those images.
@@ -264,7 +273,7 @@ The code below should be self-explanatory. We loop through the {{domxref("docume
 
 ```html
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <table>
       <tr>
         <td><img src="gallery_1.jpg" /></td>
@@ -331,6 +340,7 @@ function draw() {
     }
   }
 }
+draw();
 ```
 
 {{EmbedLiveSample("Art_gallery_example", 725, 400)}}

@@ -198,7 +198,7 @@ In order for the framework to properly handle exceptions, they must be caught, a
 Re-imagining the simple example from the previous section with `About.find().exec()` as a database query that returns a promise, we might write the route function inside a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block like this:
 
 ```js
-exports.get("/about", function (req, res, next) {
+exports.get("/about", async function (req, res, next) {
   try {
     const successfulResult = await About.find({}).exec();
     res.render("about_view", { title: "About", list: successfulResult });
