@@ -7,7 +7,7 @@ browser-compat: webextensions.api.runtime.getManifest
 
 {{AddonSidebar()}}
 
-In Chromium-based browsers and Safari, this returns the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. The file is deserialized from JSON to an object. In Firefox, it returns the browser's parsed version of the manifest.json file, as an object. This results in largely the same thing cross browser, but means that Firefox will return `null` for values that are not provided, as well as removing any unsupported keys.
+Get the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, deserialized from JSON to an object. Firefox returns null for missing values, and removes unsupported keys.
 
 ## Syntax
 
