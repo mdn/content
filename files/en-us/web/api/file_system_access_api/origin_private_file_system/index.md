@@ -128,7 +128,7 @@ const fileHandle = await opfsRoot.getFileHandle("my highspeed file.txt", {
 const syncAccessHandle = await fileHandle.createSyncAccessHandle();
 ```
 
-There are a number of methods available on the returned {{domxref("FileSystemSyncAccessHandle")}}:
+There are a number of _synchronous_ methods available on the returned {{domxref("FileSystemSyncAccessHandle")}}:
 
 - {{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}}: Returns the size of the file in bytes.
 - {{domxref("FileSystemSyncAccessHandle.write", "write()")}}: Writes the content of a buffer into the, optionally at a given offset, and returns the number of written bytes. Checking the returned number of written bytes allows callers to detect and handle errors and partial writes.
