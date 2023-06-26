@@ -9,7 +9,7 @@ browser-compat: api.RTCStatsReport
 
 The **`RTCStatsReport`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides a statistics report for a {{domxref("RTCPeerConnection")}}, {{domxref("RTCRtpSender")}}, or {{domxref("RTCRtpReceiver")}}.
 
-The report is a read-only [`Map`-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object, in which each key is an identifier for an object for which statistics are being reported, and the corresponding value is a dictionary object providing the statistics.
+An `RTCStatsReport` instance is a read-only [`Map`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_objects), in which each key is an identifier for an object for which statistics are being reported, and the corresponding value is a dictionary object providing the statistics.
 
 ## Instance properties
 

@@ -52,12 +52,12 @@ The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-
 ```js
 const gamepads = {};
 
-function gamepadHandler(event, connecting) {
+function gamepadHandler(event, connected) {
   const gamepad = event.gamepad;
   // Note:
   // gamepad === navigator.getGamepads()[gamepad.index]
 
-  if (connecting) {
+  if (connected) {
     gamepads[gamepad.index] = gamepad;
   } else {
     delete gamepads[gamepad.index];
@@ -150,7 +150,7 @@ Now we use the {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnecte
 window.addEventListener("gamepaddisconnected", (e) => {
   gamepadInfo.textContent = "Waiting for gamepad.";
 
-  cancelRequestAnimationFrame(start);
+  cancelAnimationFrame(start);
 });
 ```
 

@@ -12,17 +12,13 @@ With the basics out of the way, we'll now look in more detail at the elements us
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >understanding of HTML</a
-        >.
+        Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to structure HTML forms and give them semantics so
-        they are usable and accessible.
+        To understand how to structure HTML forms and give them semantics so they are usable and accessible.
       </td>
     </tr>
   </tbody>
@@ -133,7 +129,7 @@ Let's consider this example:
 <!-- So this: -->
 <!--div>
   <label for="username">Name:</label>
-  <input id="username" type="text" name="username">
+  <input id="username" type="text" name="username" required>
   <label for="username"><span aria-label="required">*</label>
 </div-->
 
@@ -141,7 +137,7 @@ Let's consider this example:
 <!--div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username">
+    <input id="username" type="text" name="username" required>
     <span aria-label="required">*</span>
   </label>
 </div-->
@@ -149,7 +145,7 @@ Let's consider this example:
 <!-- But this is probably best: -->
 <div>
   <label for="username">Name: <span aria-label="required">*</span></label>
-  <input id="username" type="text" name="username" />
+  <input id="username" type="text" name="username" required />
 </div>
 ```
 
@@ -239,21 +235,21 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <span>Name: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="name" name="username" />
+       <input type="text" id="name" name="username" required />
      </p>
      <p>
        <label for="mail">
          <span>Email: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="email" id="mail" name="usermail" />
+       <input type="email" id="mail" name="usermail" required />
      </p>
      <p>
        <label for="pwd">
          <span>Password: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="password" id="pwd" name="password" />
+       <input type="password" id="pwd" name="password" required />
      </p>
    </section>
    ```
@@ -285,7 +281,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <span>Card number:</span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="tel" id="number" name="cardnumber" />
+       <input type="tel" id="number" name="cardnumber" required />
      </p>
      <p>
        <label for="expiration">

@@ -3,7 +3,7 @@ title: not
 slug: Web/XPath/Functions/not
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `not` function evaluates a boolean expression and returns the opposite value.
 

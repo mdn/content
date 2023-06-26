@@ -3,7 +3,7 @@ title: <xsl:choose>
 slug: Web/XSLT/Element/choose
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:choose>` element defines a choice among a number of alternatives. It behaves like a switch statement in procedural languages.
 

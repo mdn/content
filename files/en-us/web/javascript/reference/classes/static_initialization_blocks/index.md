@@ -65,7 +65,7 @@ The statements are evaluated synchronously. You cannot use {{jsxref("Operators/a
 
 The scope of the static block is nested _within_ the lexical scope of the class body, and can access [private names](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) declared within the class without causing a syntax error.
 
-Static field initializers and [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) are evaluated one-by-one. The initialization block can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the current block.
+[Static field](/en-US/docs/Web/JavaScript/Reference/Classes/static) initializers and static initialization blocks are evaluated one-by-one. The initialization block can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the current block.
 
 > **Note:** This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 

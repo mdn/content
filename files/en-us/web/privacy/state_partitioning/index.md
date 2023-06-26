@@ -52,9 +52,9 @@ Rather than block access to certain stateful APIs in a third-party context,
 Firefox provides embedded resources with a separate storage
 bucket for every top-level website. More specifically, Firefox double-keys
 all client-side state by the
-_[origin](https://html.spec.whatwg.org/#origin)_
+_[origin](https://html.spec.whatwg.org/multipage/browsers.html#origin)_
 of the resource being loaded and by the _top-level
-[site](https://html.spec.whatwg.org/multipage/origin.html#site)_.
+[site](https://html.spec.whatwg.org/multipage/browsers.html#site)_.
 In most instances, the top-level site is the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level
 page being visited by the user.
 
