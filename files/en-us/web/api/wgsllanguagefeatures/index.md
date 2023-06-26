@@ -19,7 +19,7 @@ Note that not all WGSL language extensions are available to WebGPU in all browse
 
 ## Available features
 
-We have not listed the exact set of WGSL language extensions available to be used in WebGPU, as it will vary between implementations and physical devices, and will change over time. For a list, refer to [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification.
+The available WGSL language extensions that can be used in WebGPU can vary across implementations and physical devices and may also change over time. For a complete list, refer to [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification.
 
 ## Instance properties
 
