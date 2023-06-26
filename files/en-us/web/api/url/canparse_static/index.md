@@ -31,7 +31,7 @@ URL.canParse(url, base)
     If not specified, it defaults to `undefined`.
 
 > **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, just like with other Web APIs that accept a string.
-> In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will stringify to the object's {{domxref("URL.href", "href")}} property.
+> In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will be stringified to the object's {{domxref("URL.href", "href")}} property.
 
 ### Return value
 
@@ -84,7 +84,7 @@ Here we have passed a `URL` object.
 
 ```js
 if ("canParse" in URL) {
-  log("\nTest relative URL with base URL define to be a URL object");
+  log("\nTest relative URL with base URL supplied as a URL object");
   let baseUrl = new URL("https://developer.mozilla.org/");
   let url = "/en-US/docs";
   result = URL.canParse(url, baseUrl);
