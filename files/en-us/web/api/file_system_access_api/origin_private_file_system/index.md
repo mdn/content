@@ -11,7 +11,7 @@ The origin private file system (OPFS) is a storage endpoint provided as part of 
 
 ## Working with files using the File System Access API
 
-Before the OPFS was available, the File System Access API already provided access to files using some simple methods. As an example:
+Before the OPFS was available, the File System Access API already provided access to files using picker methods. As an example:
 
 1. {{domxref("Window.showOpenFilePicker()")}} allows the user to choose a file to access, which results in a {{domxref("FileSystemFileHandle")}} object being returned.
 2. {{domxref("FileSystemFileHandle.getFile()")}} is called to get access to the file's contents, the content is modified using {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}}.
