@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="600" height="600" viewBox="0 0 600 600" xml:space="preserve" style="background: #363">
+<style>
+line {
+  stroke: #cfc;
+  stroke-width: 20;
+  transform-origin: center;
+}
+circle {
+  stroke-miterlimit: 4; 
+  fill: none;
+}
+</style>
+<line x1="300" y1="70" x2="300" y2="525" />
+<line style="rotate: 22.5deg;" x1="300" y1="70" x2="300" y2="525" />
+<line style="rotate: 45deg;" x1="300" y1="70" x2="300" y2="525" />
+<line style="rotate: 67.5deg;" x1="300" y1="70" x2="300" y2="525" />
+<line style="rotate: 90deg;" x1="300" y1="70" x2="300" y2="525" />
+<line style="rotate: 112.5deg;" x1="300" y1="70" x2="300" y2="525" />
+<line style="rotate: 135deg;" x1="300" y1="70" x2="300" y2="525" />
+<line style="rotate: 157.5deg;" x1="300" y1="70" x2="300" y2="525" />
+<circle style="stroke: #fff; stroke-width: 35;" cx="300" cy="300" r="223" />
+<circle style="stroke: #cfc; stroke-width: 35;" cx="300" cy="300" r="225" />
+<circle style="stroke: #bfb; stroke-width: 25;" cx="300" cy="300" r="229" />
+<circle style="stroke: #afa; stroke-width: 15;" cx="300" cy="300" r="233" />
+<circle style="stroke: #9f9; stroke-width: 5;" cx="300" cy="300" r="237" />
+<circle style="stroke: #484; stroke-width: 1;" cx="300" cy="300" r="240" />
+<circle style="stroke: #393; stroke-width: 1;" cx="300" cy="300" r="233" />
+<circle style="stroke: #2a2; stroke-width: 1;" cx="300" cy="300" r="226" />
+<circle style="stroke: #1b1; stroke-width: 1;" cx="300" cy="300" r="219" />
+<circle style="stroke: #aca; stroke-width: 1;" cx="300" cy="300" r="212" />
+<circle style="stroke: #363; stroke-width: 4;" cx="300" cy="300" r="204" />
+
+<circle style="stroke: #fff; stroke-width: 29;" cx="300" cy="300" r="55" />
+<circle style="stroke: #cfc; stroke-width: 28;" cx="300" cy="300" r="55" />
+<circle style="stroke: #bfb; stroke-width: 22;" cx="300" cy="300" r="45" />
+<circle style="stroke: #afa; stroke-width: 18;" cx="300" cy="300" r="45" />
+<circle style="stroke: #9f9; stroke-width: 12;" cx="300" cy="300" r="25" />
+<circle style="stroke: #363; stroke-width: 3;" cx="300" cy="300" r="69" />
+<circle style="stroke: #363; stroke-width: 3;" cx="300" cy="300" r="55" />
+<circle style="stroke: #2a2; stroke-width: 1;" cx="300" cy="300" r="50" />
+<circle style="stroke: #1b1; stroke-width: 1;" cx="300" cy="300" r="45" />
+<circle style="stroke: #aca; stroke-width: 1;" cx="300" cy="300" r="40" />
+<circle style="stroke: #bdb; stroke-width: 1;" cx="300" cy="300" r="35" />
+<circle style="fill: #363; stroke-width: 0;" cx="300" cy="300" r="28" />
+</svg>

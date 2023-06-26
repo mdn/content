@@ -51,18 +51,18 @@ We'll begin by creating a simple button with a {{domxref("Element/click_event", 
 ```
 
 ```js
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
+  if (button.value === "Start machine") {
+    button.value = "Stop machine";
+    paragraph.textContent = "The machine has started!";
   } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
+    button.value = "Start machine";
+    paragraph.textContent = "The machine is stopped.";
   }
 }
 ```
@@ -85,18 +85,18 @@ In this example, <kbd>s</kbd> is specified as the access key (you'll need to pre
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
+  if (button.value === "Start machine") {
+    button.value = "Stop machine";
+    paragraph.textContent = "The machine has started!";
   } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
+    button.value = "Start machine";
+    paragraph.textContent = "The machine is stopped.";
   }
 }
 ```
@@ -122,16 +122,16 @@ You can enable and disable buttons at run time by setting `disabled` to `true` o
 ```
 
 ```js
-const button = document.querySelector('input');
+const button = document.querySelector("input");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   button.disabled = true;
-  button.value = 'Disabled';
+  button.value = "Disabled";
   setTimeout(() => {
     button.disabled = false;
-    button.value = 'Enabled';
+    button.value = "Enabled";
   }, 2000);
 }
 ```
@@ -154,10 +154,10 @@ The example below shows this in action. This is very similar to the previous exa
 ```
 
 ```js
-const button = document.querySelector('input');
-const fieldset = document.querySelector('fieldset');
+const button = document.querySelector("input");
+const fieldset = document.querySelector("fieldset");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
@@ -228,29 +228,29 @@ span {
 ```
 
 ```js
-const canvas = document.querySelector('.myCanvas');
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight - 85;
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight - 85);
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 const colorPicker = document.querySelector('input[type="color"]');
 const sizePicker = document.querySelector('input[type="range"]');
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 const clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // update sizepicker output value
 
 sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
-}
+};
 
 // store mouse pointer coordinates, and whether the button is pressed
 let curX;
@@ -261,7 +261,7 @@ let pressed = false;
 document.onmousemove = (e) => {
   curX = e.pageX;
   curY = e.pageY;
-}
+};
 
 canvas.onmousedown = () => {
   pressed = true;
@@ -269,18 +269,25 @@ canvas.onmousedown = () => {
 
 canvas.onmouseup = () => {
   pressed = false;
-}
+};
 
 clearBtn.onclick = () => {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
   if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY - 85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false
+    );
     ctx.fill();
   }
 

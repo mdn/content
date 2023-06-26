@@ -72,6 +72,8 @@ instance.#privateField === 42; // Syntax error
 
 JavaScript, being a dynamic language, is able to perform this compile-time check because of the special hash identifier syntax, making it different from normal properties on the syntax level.
 
+> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
+
 If you access a private property from an object that doesn't have the property, a {{jsxref("TypeError")}} is thrown, instead of returning `undefined` as normal properties do.
 
 ```js example-bad
@@ -105,8 +107,8 @@ Private fields include private instance fields and private static fields. Privat
 
 Like their public counterparts, private instance fields:
 
-- Are added before the constructor runs in a base class, or immediately after [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) is invoked in a subclass, and
-- Are only available on instances of the class.
+- are added before the constructor runs in a base class, or immediately after [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) is invoked in a subclass, and
+- are only available on instances of the class.
 
 ```js
 class ClassWithPrivateField {
@@ -166,8 +168,8 @@ console.log(obj instanceof Stamper); // false
 
 Like their public counterparts, private static fields:
 
-- Are added to the class constructor at class evaluation time, and
-- Are only available on the class itself.
+- are added to the class constructor at class evaluation time, and
+- are only available on the class itself.
 
 ```js
 class ClassWithPrivateStaticField {
@@ -218,7 +220,7 @@ class Subclass extends ClassWithPrivateStaticField {
 Subclass.callSuperMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
-You are advised to always access static private fields through the class name, not through `this`, so inheritance doesn't break the method.
+You are advised to always access private static fields through the class name, not through `this`, so inheritance doesn't break the method.
 
 ### Private methods
 
@@ -228,8 +230,8 @@ Private methods include private instance methods and private static methods. Pri
 
 Unlike their public counterparts, private instance methods:
 
-- Are installed immediately before the instance fields are installed, and
-- Are only available on instances of the class, not on its `.prototype` property.
+- are installed immediately before the instance fields are installed, and
+- are only available on instances of the class, not on its `.prototype` property.
 
 ```js
 class ClassWithPrivateMethod {
@@ -287,8 +289,8 @@ console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instanc
 
 Like their public counterparts, private static methods:
 
-- Are added to the class constructor at class evaluation time, and
-- Are only available on the class itself.
+- are added to the class constructor at class evaluation time, and
+- are only available on the class itself.
 
 ```js
 class ClassWithPrivateStaticMethod {

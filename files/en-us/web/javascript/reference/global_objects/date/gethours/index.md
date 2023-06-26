@@ -28,7 +28,7 @@ An integer, between 0 and 23, representing the hours for the given date accordin
 The `hours` variable has value `23`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const hours = xmas95.getHours();
 
 console.log(hours); // 23

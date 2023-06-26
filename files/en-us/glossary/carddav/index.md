@@ -4,6 +4,8 @@ slug: Glossary/CardDAV
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **CardDAV** (vCard Extension to {{Glossary("WebDAV")}}) is a {{glossary("protocol")}} standardized by the {{Glossary("IETF")}} and used to remote-access or share contact information over a {{glossary("server")}}.
 
 ## See also

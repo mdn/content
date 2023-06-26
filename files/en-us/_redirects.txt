@@ -529,7 +529,7 @@
 /en-US/docs/CSS/Media_queries	/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /en-US/docs/CSS/Multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /en-US/docs/CSS/Other_Resources	/en-US/docs/Web/CSS
-/en-US/docs/CSS/Paged_Media	/en-US/docs/Web/CSS/Paged_Media
+/en-US/docs/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
 /en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector
 /en-US/docs/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Pseudo-classes
 /en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Pseudo-elements
@@ -1252,7 +1252,6 @@
 /en-US/docs/DOM/DeviceOrientationEvent.alpha	/en-US/docs/Web/API/DeviceOrientationEvent/alpha
 /en-US/docs/DOM/DeviceOrientationEvent.beta	/en-US/docs/Web/API/DeviceOrientationEvent/beta
 /en-US/docs/DOM/DeviceOrientationEvent.gamma	/en-US/docs/Web/API/DeviceOrientationEvent/gamma
-/en-US/docs/DOM/DeviceProximityEvent	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/DOM/DeviceRotationRate	/en-US/docs/Web/API/DeviceMotionEventRotationRate
 /en-US/docs/DOM/DeviceRotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha
 /en-US/docs/DOM/DeviceRotationRate.beta	/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta
@@ -1721,7 +1720,6 @@
 /en-US/docs/DOM/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/DOM/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/DOM/UIEvent	/en-US/docs/Web/API/UIEvent
-/en-US/docs/DOM/UserProximityEvent	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/DOM/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
 /en-US/docs/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/DOM/Using_full-screen_mode	/en-US/docs/Web/API/Fullscreen_API
@@ -7641,6 +7639,10 @@
 /en-US/docs/Web/API/BluetoothGattService/uuid	/en-US/docs/Web/API/BluetoothRemoteGATTService/uuid
 /en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService	/en-US/docs/Web/API/BluetoothRemoteGATTService
 /en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices	/en-US/docs/Web/API/BluetoothRemoteGATTService
+/en-US/docs/Web/API/BluetoothUUID/canonicalUUID	/en-US/docs/Web/API/BluetoothUUID/canonicalUUID_static
+/en-US/docs/Web/API/BluetoothUUID/getCharacteristic	/en-US/docs/Web/API/BluetoothUUID/getCharacteristic_static
+/en-US/docs/Web/API/BluetoothUUID/getDescriptor	/en-US/docs/Web/API/BluetoothUUID/getDescriptor_static
+/en-US/docs/Web/API/BluetoothUUID/getService	/en-US/docs/Web/API/BluetoothUUID/getService_static
 /en-US/docs/Web/API/Body/arrayBuffer	/en-US/docs/Web/API/Response/arrayBuffer
 /en-US/docs/Web/API/Body/blob	/en-US/docs/Web/API/Response/blob
 /en-US/docs/Web/API/Body/body	/en-US/docs/Web/API/Response/body
@@ -7681,6 +7683,8 @@
 /en-US/docs/Web/API/CSSStyleSheet.deleteRule	/en-US/docs/Web/API/CSSStyleSheet/deleteRule
 /en-US/docs/Web/API/CSSStyleSheet.insertRule	/en-US/docs/Web/API/CSSStyleSheet/insertRule
 /en-US/docs/Web/API/CSSStyleValue/CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
+/en-US/docs/Web/API/CSSStyleValue/parse	/en-US/docs/Web/API/CSSStyleValue/parse_static
+/en-US/docs/Web/API/CSSStyleValue/parseAll	/en-US/docs/Web/API/CSSStyleValue/parseAll_static
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue()	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue.CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSValueList/CSSValueList.length	/en-US/docs/Web/API/CSSValueList/length
@@ -7903,7 +7907,6 @@
 /en-US/docs/Web/API/DeviceOrientationEvent.alpha	/en-US/docs/Web/API/DeviceOrientationEvent/alpha
 /en-US/docs/Web/API/DeviceOrientationEvent.beta	/en-US/docs/Web/API/DeviceOrientationEvent/beta
 /en-US/docs/Web/API/DeviceOrientationEvent.gamma	/en-US/docs/Web/API/DeviceOrientationEvent/gamma
-/en-US/docs/Web/API/DeviceProximityEvent/max	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/Web/API/DeviceRotationRate	/en-US/docs/Web/API/DeviceMotionEventRotationRate
 /en-US/docs/Web/API/DeviceRotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha
 /en-US/docs/Web/API/DeviceRotationRate.beta	/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta
@@ -8528,6 +8531,7 @@
 /en-US/docs/Web/API/HTMLMediaElement/onencrypted	/en-US/docs/Web/API/HTMLMediaElement
 /en-US/docs/Web/API/HTMLMediaElement/onerror	/en-US/docs/Web/API/HTMLMediaElement/error_event
 /en-US/docs/Web/API/HTMLMediaElement/onwaitingforkey	/en-US/docs/Web/API/HTMLMediaElement
+/en-US/docs/Web/API/HTMLMetaElement/charset	/en-US/docs/Web/HTML/Element/meta#charset
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/Web/API/HTMLOrForeignElement/blur	/en-US/docs/Web/API/HTMLElement/blur
@@ -8753,6 +8757,7 @@
 /en-US/docs/Web/API/IDBVersionChangeEvent/version	/en-US/docs/Web/API/IDBVersionChangeEvent
 /en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse()	/en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse
 /en-US/docs/Web/API/IdleDetector/onchange	/en-US/docs/Web/API/IdleDetector/change_event
+/en-US/docs/Web/API/IdleDetector/requestPermission	/en-US/docs/Web/API/IdleDetector/requestPermission_static
 /en-US/docs/Web/API/Image	/en-US/docs/Web/API/HTMLImageElement/Image
 /en-US/docs/Web/API/ImageBitmapFactories/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
 /en-US/docs/Web/API/ImageBitmapRenderingContext/transferImageBitmap	/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
@@ -9366,7 +9371,6 @@
 /en-US/docs/Web/API/PromiseRejection/promise	/en-US/docs/Web/API/PromiseRejectionEvent/promise
 /en-US/docs/Web/API/PromiseRejection/reason	/en-US/docs/Web/API/PromiseRejectionEvent/reason
 /en-US/docs/Web/API/PromiseResolver	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-/en-US/docs/Web/API/Proximity	/en-US/docs/Web/API/Proximity_Events
 /en-US/docs/Web/API/PublicKeyCredential/PublicKeyCredential.rawId	/en-US/docs/Web/API/PublicKeyCredential/rawId
 /en-US/docs/Web/API/PublicKeyCredential/getClientExtensionResult	/en-US/docs/Web/API/PublicKeyCredential/getClientExtensionResults
 /en-US/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable	/en-US/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
@@ -9390,6 +9394,7 @@
 /en-US/docs/Web/API/PushManager.register	/en-US/docs/Web/API/PushManager/register
 /en-US/docs/Web/API/PushManager.registrations	/en-US/docs/Web/API/PushManager/registrations
 /en-US/docs/Web/API/PushManager.unregister	/en-US/docs/Web/API/PushManager/unregister
+/en-US/docs/Web/API/PushManager/supportedContentEncodings	/en-US/docs/Web/API/PushManager/supportedContentEncodings_static
 /en-US/docs/Web/API/Push_API/Using_the_Push_API	/en-US/docs/Web/API/Push_API
 /en-US/docs/Web/API/RTCAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCConfiguration	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
@@ -9520,8 +9525,12 @@
 /en-US/docs/Web/API/RTCSessionDescription.toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/RTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSignalingState	/en-US/docs/Web/API/RTCPeerConnection/signalingState
+/en-US/docs/Web/API/RTCStats	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/id	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/timestamp	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/type	/en-US/docs/Web/API/RTCStatsReport
 /en-US/docs/Web/API/RTCStatsIceCandidatePairState	/en-US/docs/Web/API/RTCIceCandidatePairStats/state
-/en-US/docs/Web/API/RTCStatsType	/en-US/docs/Web/API/RTCStats/type
+/en-US/docs/Web/API/RTCStatsType	/en-US/docs/Web/API/RTCStatsReport
 /en-US/docs/Web/API/RTCTrackEventInit	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RTCTrackEventInit/receiver	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RTCTrackEventInit/streams	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
@@ -9882,7 +9891,6 @@
 /en-US/docs/Web/API/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/Web/API/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /en-US/docs/Web/API/Uint8ClampedArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-/en-US/docs/Web/API/UserProximityEvent/near	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/Web/API/User_Timing_API	/en-US/docs/Web/API/Performance_API/User_timing
 /en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API	/en-US/docs/Web/API/Performance_API/User_timing
 /en-US/docs/Web/API/VRDevice	/en-US/docs/Web/API/VRDisplay
@@ -10113,7 +10121,6 @@
 /en-US/docs/Web/API/Window/ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/Window/ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
 /en-US/docs/Web/API/Window/ondeviceorientationabsolute	/en-US/docs/Web/API/Window/deviceorientationabsolute_event
-/en-US/docs/Web/API/Window/ondeviceproximity	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/Web/API/Window/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/Window/ongamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/Web/API/Window/ongamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
@@ -10139,7 +10146,6 @@
 /en-US/docs/Web/API/Window/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/Window/onunhandledrejection	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/Window/onunload	/en-US/docs/Web/API/Window/unload_event
-/en-US/docs/Web/API/Window/onuserproximity	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/Web/API/Window/onvrdisplayactivate	/en-US/docs/Web/API/Window/vrdisplayactivate_event
 /en-US/docs/Web/API/Window/onvrdisplayblur	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/onvrdisplayconnect	/en-US/docs/Web/API/Window/vrdisplayconnect_event
@@ -11278,6 +11284,7 @@
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
+/en-US/docs/Web/CSS/@media/update-frequency	/en-US/docs/Web/CSS/@media/update
 /en-US/docs/Web/CSS/@page_rule	/en-US/docs/Web/CSS/@page
 /en-US/docs/Web/CSS/@scroll-timeline	/en-US/docs/Web/CSS/scroll-timeline
 /en-US/docs/Web/CSS/@styleset	/en-US/docs/Web/CSS/@font-feature-values
@@ -11430,6 +11437,7 @@
 /en-US/docs/Web/CSS/Media_Queries/Using_media_queries_for_accessibility	/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_motion_path
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
+/en-US/docs/Web/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
 /en-US/docs/Web/CSS/Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Web/CSS/Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Webkit_Extensions
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/object-position
@@ -12664,10 +12672,11 @@
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction#Advantages_of_web_applications
 /en-US/docs/Web/Progressive_web_apps/App_structure	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing	/en-US/docs/Web/Progressive_web_apps/Installing
+/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing	/en-US/docs/Web/Progressive_web_apps/Guides/Installing
 /en-US/docs/Web/Progressive_web_apps/Discoverable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Installable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Installable_PWAs	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+/en-US/docs/Web/Progressive_web_apps/Installing	/en-US/docs/Web/Progressive_web_apps/Guides/Installing
 /en-US/docs/Web/Progressive_web_apps/Introduction	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
 /en-US/docs/Web/Progressive_web_apps/Linkable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Loading	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
@@ -12978,7 +12987,6 @@
 /en-US/docs/WebAPI/Network_Information	/en-US/docs/Web/API/Network_Information_API
 /en-US/docs/WebAPI/Permissions	/en-US/docs/Web/API/Permissions_API
 /en-US/docs/WebAPI/Pointer_Lock	/en-US/docs/Web/API/Pointer_Lock_API
-/en-US/docs/WebAPI/Proximity	/en-US/docs/Web/API/Proximity_Events
 /en-US/docs/WebAPI/Using_Web_Notifications	/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /en-US/docs/WebAPI/Using_geolocation	/en-US/docs/Web/API/Geolocation_API
 /en-US/docs/WebAPI/Vibration	/en-US/docs/Web/API/Vibration_API

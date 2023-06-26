@@ -1,5 +1,5 @@
 ---
-title: ":user-valid (:-moz-ui-valid)"
+title: ":user-valid"
 slug: Web/CSS/:user-valid
 page-type: css-pseudo-class
 browser-compat: css.selectors.user-valid
@@ -8,8 +8,6 @@ browser-compat: css.selectors.user-valid
 {{CSSRef}}
 
 The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Learn/Forms#constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
-
-> **Note:** The pseudo-class behaves in the same way as the non-standard `:-moz-ui-valid` pseudo-class.
 
 This pseudo-class is applied according to the following rules:
 
