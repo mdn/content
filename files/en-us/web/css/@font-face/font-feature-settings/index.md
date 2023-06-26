@@ -25,11 +25,16 @@ font-feature-settings: "swsh" 2;
 
 ### Values
 
+This descriptor is specified as either the keyword `normal` or as a comma-separated list of `<feature-tag-value>` values. When rendering text, the list of OpenType `<feature-tag-value>` values are passed to the text layout engine to enable or disable font features.
+
 - `normal`
-  - : Indicates that text is laid out using default settings.
+  - : Indicates that text is laid out using default font settings. This is the default value.
 - `<feature-tag-value>`
-  - : Represents a comma separated list of a string and an optional integer or keyword value. When rendering text, the list of OpenType feature-tag and value are passed to the text layout engine to enable or disable font features. The tag is always a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters. If it has more or less characters or if it contains characters outside the `U+20` – `U+7E` code point range, the descriptor is invalid.
-    The optional value is a positive integer or the keyword `on` or `off`. The keywords `on` and `off` are synonyms for `1` and `0`, respectively. If no value is set, the default is `1`. For non-Boolean OpenType features (e.g., [stylistic alternates](https://docs.microsoft.com/typography/opentype/spec/features_pt)), the value implies a particular glyph to be selected; for Boolean values, the value is a switch.
+  - : Represents a space-separated tuple consisting of a tag name and an optional value.
+
+    The tag name is always a {{cssxref("&lt;string&gt;")}} of four ASCII characters. If the tag name has more or less characters or if it contains characters outside the `U+20` – `U+7E` code point range, the descriptor is invalid.
+
+    The optional value can be a positive integer or the keyword `on` or `off`. The keywords `on` and `off` are synonyms for the values `1` and `0`, respectively. If no value is set, the default is `1`. For non-boolean OpenType features (e.g., [stylistic alternates](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-salt)), the value implies a particular glyph to be selected; for boolean features, the value turns the feature on or off.
 
 ## Formal definition
 
@@ -41,15 +46,46 @@ font-feature-settings: "swsh" 2;
 
 ## Examples
 
-### Setting font features in a @font-face rule
+### Enabling swash glyphs using the @font-face at-rule
+
+In this example, the tag name `swsh` and a boolean value `1` are used as the value for the `font-feature-settings` descriptor in the `@font-face` at-rule.
+
+#### HTML
+
+```html
+<p class="swashoff">Swash is off here</p>
+<p class="swashon">Swash is on here</p>
+```
+
+#### CSS
 
 ```css
 @font-face {
-  font-family: "MyFont";
-  src: url("myfont.woff2") format("woff2");
-  font-feature-settings: "liga" off, "dlig" off, "swsh" 2, "smcp";
+  font-family: MonteCarlo;
+  src: url("montecarlo-regular.woff2");
+}
+@font-face {
+  font-family: MonteCarlo2;
+  src: url("montecarlo-regular.woff2");
+  font-feature-settings: "swsh" 1;
+}
+p {
+  font-size: 3rem;
+  margin: 0.7rem 3rem;
+}
+.swashoff {
+  font-family: MonteCarlo;
+}
+.swashon {
+  font-family: MonteCarlo2;
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample("Enabling swash glyphs using the @font-face rule", 0, 230)}}
+
+Line 1 shows the default ornate design of the [MonteCarlo](https://github.com/googlefonts/monte-carlo) font, and line 2 shows the default glyphs being replaced with [swash](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-swsh) glyphs.
 
 ## Specifications
 
@@ -62,4 +98,4 @@ font-feature-settings: "swsh" 2;
 ## See also
 
 - Other `@font-face` descriptors: {{cssxref("@font-face/font-family", "font-family")}}, {{cssxref("@font-face/font-style", "font-style")}}, {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}, {{cssxref("@font-face/font-weight", "font-weight")}}, {{cssxref("@font-face/src", "src")}}
-- Related font properties: {{cssxref("font-feature-settings")}}, {{cssxref("font-variation-settings")}}
+- Related font properties: {{cssxref("font-feature-settings")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variation-settings")}}
