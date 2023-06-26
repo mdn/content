@@ -247,6 +247,14 @@ if ("geolocation" in navigator) {
 ```
 
 You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`).
+If you're looking to apply styles if a CSS feature is supported, you can directly use the [@supports](/en-US/docs/Web/CSS/@supports) at-rule (known as a feature query).
+For example, to check whether the browser supports CSS container queries, you could do something like this:
+
+```css
+@supports (container-type: inline-size) {
+  /* Use container queries if supported */
+}
+```
 
 As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](#using_bad_browser_sniffing_code), later on, for more details.
 
