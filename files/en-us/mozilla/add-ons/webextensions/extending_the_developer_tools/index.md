@@ -8,7 +8,7 @@ page-type: guide
 
 > **Note:** This page describes the devtools APIs in Firefox 55. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/mv3/devtools/), Firefox does not implement all those features; therefore, not all features are documented here. To see which features are missing, refer to [Limitations of the devtools APIs](#limitations_of_the_devtools_apis).
 
-You can use WebExtensions APIs to extend the browser's built-in developer tools. To create a devtools extension, include the "[devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" key in your manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file:
+You can use WebExtensions APIs to extend the browser's built-in developer tools. To create a devtools extension, include the "[devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" key in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file:
 
 ```json
 "devtools_page": "devtools/devtools-page.html"
@@ -16,7 +16,7 @@ You can use WebExtensions APIs to extend the browser's built-in developer tools.
 
 The value of this key is a URL pointing to an HTML file bundled with your extension, a special extension page called the devtools page. The URL must be relative to the manifest.json file.
 
-You must also include the `"devtools"` permission in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key.
+This manifest key implicitly sets the `"devtools"` permission, which triggers [an install-time permission warning about devtools](https://support.mozilla.org/en-US/kb/permission-request-messages-firefox-extensions#w_extend-developer-tools-to-access-your-data-in-open-tabs). To avoid this warning, mark the feature as optional by listing the `"devtools"` permission in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key. Setting the optional permission can be particularly helpful when introducing dev tools features in an update, as it prevents the extension from being disabled (in Chrome) or blocked from updating (in Firefox).
 
 ## The devtools page
 

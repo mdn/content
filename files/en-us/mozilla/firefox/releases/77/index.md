@@ -64,7 +64,7 @@ This article provides information about the changes in Firefox 77 that will affe
 
 - The following permissions are now optional, they can be specified in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key and requested using the {{WebExtAPIRef("permissions")}} API:
   - `browsingData` ([Firefox bug 1630417](https://bugzil.la/1630417))
-  - `devtools` ([Firefox bug 1606862](https://bugzil.la/1606862))
+  - `devtools` ([Firefox bug 1606862](https://bugzil.la/1606862)) – by setting this permission, an extension can introduce developer tools panels in an update without the extension being disabled (in Chrome) or blocked from updating (in Firefox).
   - `pkcs11` ([Firefox bug 1630418](https://bugzil.la/1630418))
   - `proxy` ([Firefox bug 1548011](https://bugzil.la/1548011))
   - `sessions` ([Firefox bug 1630414](https://bugzil.la/1630414)).
