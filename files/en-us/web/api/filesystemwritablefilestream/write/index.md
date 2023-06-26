@@ -58,17 +58,21 @@ A text string is then written to the stream, which is subsequently closed.
 
 ```js
 async function saveFile() {
-  // create a new handle
-  const newHandle = await window.showSaveFilePicker();
+  try {
+    // create a new handle
+    const newHandle = await window.showSaveFilePicker();
 
-  // create a FileSystemWritableFileStream to write to
-  const writableStream = await newHandle.createWritable();
+    // create a FileSystemWritableFileStream to write to
+    const writableStream = await newHandle.createWritable();
 
-  // write our file
-  await writableStream.write("This is my file content");
+    // write our file
+    await writableStream.write("This is my file content");
 
-  // close the file and write the contents to disk.
-  await writableStream.close();
+    // close the file and write the contents to disk.
+    await writableStream.close();
+  } catch (err) {
+    console.error(err.name, err.message);
+  }
 }
 ```
 

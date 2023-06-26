@@ -7,7 +7,7 @@ browser-compat: api.StorageManager.getDirectory
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}
 
-The origin private file system (OPFS) is a storage endpoint provided as part of the File System API, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
+The origin private file system (OPFS) is a storage endpoint provided as part of the [File System API](https://fs.spec.whatwg.org/), which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
 
 ## Working with files using the File System Access API
 
@@ -18,7 +18,7 @@ The [File System Access API](https://wicg.github.io/file-system-access/), which 
 3. {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode: 'readwrite'})")}} is used to request the user's permission to save the changes.
 4. If the user accepts the permission request, the changes are saved back to the original file.
 
-This works, but it has some restrictions. These changes are being made to the user-visible file system, so there are a lot of security checks in place to guard against malicious content being written to that file system. These writes are not in-place, and instead use a temporary file. The original is not modified unless it passes all the security checks.
+This works, but it has some restrictions. These changes are being made to the user-visible file system, so there are a lot of security checks in place (for example, [safe browsing](https://developers.google.com/safe-browsing) in Chrome) to guard against malicious content being written to that file system. These writes are not in-place, and instead use a temporary file. The original is not modified unless it passes all the security checks.
 
 As a result, these operations are fairly slow. It is not so noticeable when you are making small text updates, but the performance suffers when making more significant, large-scale file updates such as [SQLite](https://www.sqlite.org/wasm) database modifications.
 
@@ -28,7 +28,7 @@ The OPFS offers low-level, byte-by-byte file access, which is private to the ori
 
 To summarize how the OPFS differs from the user-visible file system:
 
-- The OPFS is subject to browser quota restrictions, just like any other origin-partitioned storage mechanism (for example {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}). You can access the amount of storage space the OPFS is using via {{domxref("StorageManager.estimate()", "navigator.storage.estimate()")}}.
+- The OPFS is subject to [browser storage quota restrictions](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria), just like any other origin-partitioned storage mechanism (for example {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}). You can access the amount of storage space the OPFS is using via {{domxref("StorageManager.estimate()", "navigator.storage.estimate()")}}.
 - Clearing storage data for the site deletes the OPFS.
 - Permission prompts and security checks are not required to access files in the OPFS.
 - Browsers persist the contents of the OPFS to disk somewhere, but you cannot expect to find the created files matched one-to-one. The OPFS is not intended to be visible to the user.
@@ -87,7 +87,7 @@ await fileHandle.remove();
 await directoryHandle.remove({ recursive: true });
 ```
 
-> **Note:** At the time of writing, `removeEntry()` has better browser support.
+> **Note:** At the time of writing, `remove()` is only supported in Chromium-based browsers.
 
 The following provides a quick way to clear the entire OPFS:
 
