@@ -37,11 +37,21 @@ browser-compat: webextensions.manifest.host_permissions
 
 Use the `host_permissions` key to request access for the APIs in your extension that read or modify host data, such as {{WebExtAPIRef("cookies")}}, {{WebExtAPIRef("webRequest")}}, and {{WebExtAPIRef("tabs")}}. This key is an array of strings, and each string is a request for a permission.
 
-If you request permissions using this key, the browser may prompt the user to grant the extension access to this host data at install time. Whether the user is prompted or not, the browser allows the user to control the extension's host permissions after installation: grant or revoke them as needed.
+### Requested permissions and user prompts
+
+In most browsers, `host_permission` requests are treated as optional, and fully under the user's control.
+
+If you request permissions using this key, the browser _may_ prompt the user to grant the extension access to this host data at install time.  Currently Safari, Firefox,  and some configurations of Chromium-based browsers don't prompt the user during installation.
+
+Whether the user is prompted and grants permissions or not, most browsers allow the user to control the extension's host permissions after installation: grant or revoke them as needed.
+
+To account for different possible states, you should use the [permissions API](en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions).  Specifically you can check if you have all the required permissions after installation using [permissions.contains](en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/contains).  Depending on your specific use case, you could have an onboarding step to explain why some permissions are necessary, and request them using [permissions.request](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request).
 
 As the request to grant host permissions may impact users' willingness to install your extension, requesting host permissions is worth careful consideration. For example, you want to avoid requesting unnecessary host permissions and may want to provide information about why you are requesting host permissions in your extension's store description. The article [Request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) provides more information on the issues you should consider.
 
 For information on how to test and preview permission requests, see [Test permission requests](https://extensionworkshop.com/documentation/develop/test-permission-requests/) on the Extension Workshop site.
+
+### Format
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
