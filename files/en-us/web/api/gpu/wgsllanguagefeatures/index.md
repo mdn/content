@@ -13,7 +13,7 @@ browser-compat: api.GPU.wgslLanguageFeatures
 The **`wgslLanguageFeatures`** read-only property of the
 {{domxref("GPU")}} interface returns a {{domxref("WGSLLanguageFeatures")}} object that reports the [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) supported by the WebGPU implementation.
 
-You should note that not all WGSL language extensions will be available to WebGPU in all browsers that support it. If you are hoping to take advantage of a specific extension in a WebGPU app, thorough testing is advised.
+> **Note:** Not all WGSL language extensions are available to WebGPU in all browsers that support the API. We recommend you thoroughly test any extensions you choose to use.
 
 ## Value
 
