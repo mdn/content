@@ -13,7 +13,7 @@ The **`WGSLLanguageFeatures`** interface of the {{domxref("WebGPU API", "WebGPU 
 
 The `WGSLLanguageFeatures` object is accessed via the {{domxref("GPU.wgslLanguageFeatures")}} property.
 
-You should note that not all WGSL language extensions will be available to WebGPU in all browsers that support it. If you are hoping to take advantage of a specific extension in a WebGPU app, thorough testing is advised.
+Note that not all WGSL language extensions are available to WebGPU in all browsers that support the API. We recommend you thoroughly test the extension you choose to use in a WebGPU app.
 
 {{InheritanceDiagram}}
 
