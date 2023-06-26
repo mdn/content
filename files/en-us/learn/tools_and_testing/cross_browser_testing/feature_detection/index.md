@@ -49,6 +49,7 @@ if ("geolocation" in navigator) {
 ```
 
 To detect a single feature, the `if` statement works well. For complex applications, there may be cases where using a dedicated library for feature detection, but be aware that loading additional resources will slow down your page load time, and this is particularly true for older mobile devices.
+
 Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_bad_browser_sniffing_code) for more details.
 
 ## Writing your own feature detection tests
@@ -128,10 +129,6 @@ This is more convenient than the previous example — we can do all of our featu
 
 We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of a few common patterns.
 
-<!-- TODO - which ones and why -->
-
-Bear in mind though that some features, however, are known to be undetectable.
-
 Common patterns for detectable features include:
 
 - Members of an object
@@ -172,6 +169,8 @@ Common patterns for detectable features include:
 
   - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
 
+Bear in mind that some features are, however, known to be undetectable. In these cases, you'll need to use a different approach, such as using a {{Glossary("Polyfill", "polyfill")}}.
+
 #### matchMedia
 
 We also wanted to mention the {{domxref("Window.matchMedia")}} JavaScript feature at this point too. This is a property that allows you to run media query tests inside JavaScript. It looks like this:
@@ -201,7 +200,8 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 
 ## Summary
 
-This article covered feature detection in a reasonable amount of detail, going through the main concepts and showing you how to both implement your own feature detection tests.
+This article covered feature detection in a reasonable amount of detail, going through the main concepts and showing you how to implement your own feature detection tests.
+
 Next up, we'll start looking at automated testing.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}

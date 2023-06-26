@@ -39,7 +39,7 @@ Values of this type are objects. They contain the following properties:
 
   - : `boolean`. Whether the tab is highlighted, i.e. part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.
 
-    Firefox for Android doesn't support highlighting multiple tabs, and Firefox desktop requires the `browser.tabs.multiselect` preference (enabled by default).
+    Firefox for Android doesn't support highlighting multiple tabs.
 
 - `id` {{optional_inline}}
   - : `integer`. The tab's ID. Tab IDs are unique within a browser session. The tab ID may also be set to {{WebExtAPIRef('tabs.TAB_ID_NONE')}} for browser windows that don't host content tabs (for example, devtools windows).
