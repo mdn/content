@@ -19,7 +19,7 @@ A string.
 
 ```js
 // Let's say we are on the URL https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname#examples
-console.log(location.pathname) // Returns:'/en-US/docs/Web/API/Location/pathname'
+console.log(location.pathname) // '/en-US/docs/Web/API/Location/pathname'
 ```
 
 ## Specifications
