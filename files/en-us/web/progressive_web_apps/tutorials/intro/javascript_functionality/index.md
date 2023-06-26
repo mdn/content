@@ -47,7 +47,7 @@ The page contains a {{HTMLelement("form")}} with date pickers for selecting the 
 The form has no method or action. Instead, we add an event listener with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) to the form. When the user tries to submit the form, we prevent the form from submitting, store the new menstrual cycle, render this period along with previous ones, and then reset the form.
 
 ```js
-// create contstants for the form and the form controls
+// create constants for the form and the form controls
 const newPeriodFormEl = document.getElementsByTagName("form")[0];
 const startDateInputEl = document.getElementById("start-date");
 const endDateInputEl = document.getElementById("end-date");
