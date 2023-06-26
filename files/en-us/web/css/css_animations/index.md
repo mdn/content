@@ -41,10 +41,6 @@ To see the code for this animation, [view the source on GitHub](https://github.c
 
 - {{cssxref("@keyframes")}}
 
-### Functions
-
-- [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll)
-
 ### Events
 
 All animations, even those with 0 seconds duration, throw animation events.
@@ -73,7 +69,7 @@ All animations, even those with 0 seconds duration, throw animation events.
 - {{cssxref("will-change")}} CSS property
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function) data type
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
-- {{glossary("Bézier curve")}} glossary term
+- {{glossary("Bezier curve")}} glossary term
 
 ## Specifications
 
@@ -81,7 +77,7 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 ## See also
 
-- {{Experimental_Inline}} The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - Properties in the [transitions](/en-US/docs/Web/CSS/CSS_Transitions) CSS module to trigger animations based on user actions
 - The {{htmlelement("canvas")}} HTML element along with [canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations
 - The {{domxref("SVGAnimationElement")}} interface for all the animation-related element interfaces, including {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}}, and {{domxref("SVGAnimateTransformElement")}}

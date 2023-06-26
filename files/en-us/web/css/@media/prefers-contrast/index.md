@@ -65,5 +65,3 @@ This example has an annoying low contrast by default.
 ## See also
 
 - CSS [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
