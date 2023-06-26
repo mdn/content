@@ -41,7 +41,7 @@ To access the OPFS in the first place, you call the {{domxref("StorageManager.ge
 
 When accessing the OPFS from the main thread, you will use asynchronous, {{jsxref("Promise")}}-based APIs. You can access file ({{domxref("FileSystemFileHandle")}}) and directory ({{domxref("FileSystemDirectoryHandle")}}) handles by calling {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} and {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} respectively on the {{domxref("FileSystemDirectoryHandle")}} object representing the OPFS root (and child directories, as they are created).
 
-> **Note:** Passing `{ create: true }` into the above methods causes the file or folder will be created if it doesn't exist.
+> **Note:** Passing `{ create: true }` into the above methods causes the file or folder to be created if it doesn't exist.
 
 ```js
 // Create a hierarchy of files and folders
