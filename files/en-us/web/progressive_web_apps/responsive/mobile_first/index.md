@@ -230,7 +230,8 @@ The second one sets the width of the content at 600px and centers it in the spac
 Feature detection involves doing tests (usually in JavaScript) to determine whether a browser supports a certain feature, and then serving CSS or JavaScript to suit that situation. This can be very useful for mobile first, as you may well want to hide bits of code from the "mobile version" and only include them for the "desktop version", or vice versa.
 
 There are dedicated libraries that perform feature detection, but loading polyfills may come at a performance cost to your visitors, especially on older devices, so you should carefully consider if you want to use them.
-An alternative is to write your own feature detection functionality; Mark Pilgrim's [All-In-One Almost-Alphabetical Guide to Detecting Everything](http://diveintohtml5.info/everything.html) is a good place to start.
+An alternative is to write your own feature detection functionality as described in [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection).
+Additional hints for detecting features are covered in Mark Pilgrim's [All-In-One Almost-Alphabetical Guide to Detecting Everything](http://diveintohtml5.info/everything.html).
 
 ## Google searches and mobile preference
 
