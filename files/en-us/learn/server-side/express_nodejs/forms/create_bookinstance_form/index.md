@@ -109,25 +109,25 @@ block content
   form(method='POST' action='')
     div.form-group
       label(for='book') Book:
-      select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
+      select#book.form-control(type='select', placeholder='Select book' name='book' required='true' )
         - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for book in book_list
           option(value=book._id, selected=(selected_book==book._id.toString() ? 'selected' : false) ) #{book.title}
 
     div.form-group
       label(for='imprint') Imprint:
-      input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required='true' value=(undefined===bookinstance ? '' : bookinstance.imprint))
+      input#imprint.form-control(type='text', placeholder='Publisher and date information' name='imprint' required='true' value=(undefined===bookinstance ? '' : bookinstance.imprint) )
     div.form-group
       label(for='due_back') Date when book available:
-      input#due_back.form-control(type='date' name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back))
+      input#due_back.form-control(type='date', name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
 
     div.form-group
       label(for='status') Status:
-      select#status.form-control(type='select' placeholder='Select status' name='status' required='true')
-        option(value='Maintenance') Maintenance
-        option(value='Available') Available
-        option(value='Loaned') Loaned
-        option(value='Reserved') Reserved
+      select#status.form-control(type='select', placeholder='Select status' name='status' required='true' )
+        option(value='Maintenance' selected=(undefined===bookinstance || bookinstance.status!='Maintenance' ? false:'selected')) Maintenance
+        option(value='Available' selected=(undefined===bookinstance || bookinstance.status!='Available' ? false:'selected')) Available
+        option(value='Loaned' selected=(undefined===bookinstance || bookinstance.status!='Loaned' ? false:'selected')) Loaned
+        option(value='Reserved' selected=(undefined===bookinstance || bookinstance.status!='Reserved' ? false:'selected')) Reserved
 
     button.btn.btn-primary(type='submit') Submit
 
@@ -137,9 +137,29 @@ block content
         li!= error.msg
 ```
 
-The view structure and behavior is almost the same as for the **book_form.pug** template, so we won't go over it again.
+> **Note:** The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values.
+> Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
 
-> **Note:** The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
+The view structure and behavior is almost the same as for the **book_form.pug** template, so we won't go over it in detail.
+The one thing to note is the line where we set the "due back" date to `bookinstance.due_back_yyyy_mm_dd` if we are populating the date input for an existing instance.
+
+```pug
+input#due_back.form-control(type='date', name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
+```
+
+The date value has to be set in the format `YYYY-MM-DD` because this is expected by [`<input>` elements with `type="date"`](/en-US/docs/Web/HTML/Element/input/date), however the date is not stored in this format so we have to convert it before setting the value in the control.
+The `due_back_yyyy_mm_dd()` method is added to the `BookInstance` model in the next section.
+
+## Model—virtual `due_back_yyyy_mm_dd()` method
+
+Open the file where you defined the `BookInstanceSchema` model (**models/bookinstance.js**).
+Add the `due_back_yyyy_mm_dd()` virtual function shown below (after the `due_back_formatted()` virtual function):
+
+```pug
+BookInstanceSchema.virtual("due_back_yyyy_mm_dd").get(function () {
+  return DateTime.fromJSDate(this.due_back).toISODate(); //format 'YYYY-MM-DD'
+});
+```
 
 ## What does it look like?
 
