@@ -52,6 +52,7 @@ The following Web APIs are available to workers:
 - {{domxref("FormData")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
+- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} (dedicated workers only)
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
 - {{domxref("Performance_API","Performance API")}}, including:
