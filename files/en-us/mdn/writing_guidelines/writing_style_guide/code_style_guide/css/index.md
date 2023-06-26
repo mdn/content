@@ -16,7 +16,7 @@ Before diving in and writing huge chunks of CSS, plan your styles carefully. Wha
 
 ### Use flexible/relative units
 
-For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [Responsive design building blocks](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids) article.
+For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [guide to CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units).
 
 ### Don't use preprocessors
 
