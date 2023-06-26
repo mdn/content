@@ -650,7 +650,8 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`). Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
+Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
+Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
@@ -665,6 +666,10 @@ async function main() {
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+
+Note that hard-coding database credentials in source code as shown above is not recommended.
+We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.
+We'll show you how to do this more safely when [deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#database_configuration)!
 
 ## Defining the LocalLibrary Schema
 
