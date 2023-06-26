@@ -82,7 +82,7 @@ Intl.Collator(locales, options)
         `"best fit"`. For information about this option, see the
         {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `usage`
-      - : Whether the comparison is for sorting a list of strings or fuzzy (for the Latin script diacritic-insensitive and case-insensitive) filtering a list of strings by key. Possible values are `"sort"` and `"search"`; the default is `"sort"` for sorting a list of string. `"search"` is for filtering a list of strings by testing each list item for a full-string match against a key. With `"search"`, the caller should only pay attention to whether `compare()` returns zero or non-zero and should not distinguish the non-zero return values from each other. That is, it is inappropriate to use `"search"` for sorting/ordering.
+      - : Whether the comparison is for sorting a list of strings or fuzzy (for the Latin script diacritic-insensitive and case-insensitive) filtering a list of strings by key. Possible values are `"sort"` and `"search"`; the default is `"sort"` for sorting a list of strings. `"search"` is for filtering a list of strings by testing each list item for a full-string match against a key. With `"search"`, the caller should only pay attention to whether `compare()` returns zero or non-zero and should not distinguish the non-zero return values from each other. That is, it is inappropriate to use `"search"` for sorting/ordering.
     - `sensitivity`
 
       - : Which differences in the strings should lead to non-zero result values.
