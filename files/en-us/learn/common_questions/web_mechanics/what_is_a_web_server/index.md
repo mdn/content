@@ -102,7 +102,12 @@ Roughly speaking, a server can serve either static or dynamic content. Remember 
 
 The term _dynamic_ means that the server processes the content or even generates it on the fly from a database. This approach provides more flexibility, but the technical stack is more complex, making it dramatically more challenging to build a website.
 
-There are many off-the-shelf application server technologies specialized for different purposes, so it's hard to suggest any particular one. Some application servers are designed to host and manage blogs, wikis, or e-commerce solutions, while others are more generic. If you're building a dynamic website, take the time to research your requirements and try a technology that you think fits best. If you're a beginner, it's unlikely that you would need to develop an application server from scratch because of the many options available that you can configure for your needs instead of designing from the ground up. If you'd like to experiment with building a server, take a look through the resources in the [Server-side website programming](/en-US/docs/Learn/Server-side) learning pathway.
+It is impossible to suggest a single off-the-shelf application server that will be the right solution for every possible use case. Some application servers are designed to host and manage blogs, wikis, or e-commerce solutions, while others are more generic. If you're building a dynamic website, take the time to research your requirements and find the technology that best fits your needs.
+
+Most website developers won't need to create an application server from scratch, because there are so many off-the-shelf solutions, many of which are highly configurable.
+But if you do need to create your own server, then you will probably want to use a server framework, leveraging its existing code and libraries, and extending just the parts that you need in order to meet your use case.
+Only a relatively small number of developers should need to develop a server completely from scratch: for example, in order to meet tight resource constraints on an embedded system.
+If you'd like to experiment with building a server, take a look through the resources in the [Server-side website programming](/en-US/docs/Learn/Server-side) learning pathway.
 
 ## Next steps
 
