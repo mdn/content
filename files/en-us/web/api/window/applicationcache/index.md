@@ -10,6 +10,7 @@ browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
 
 {{APIRef}}
+
 > **Warning:** Application cache has been removed from web platform.
 > Use [service workers](/en-US/docs/Web/API/Service_Worker_API) instead.
 
