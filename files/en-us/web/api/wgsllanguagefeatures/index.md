@@ -19,18 +19,18 @@ The `WGSLLanguageFeatures` object is accessed via the {{domxref("GPU.wgslLanguag
 
 ## Available features
 
-The available WGSL language extensions that can be used in WebGPU can vary across implementations and physical devices and may also change over time. For a complete list, refer to [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification.
+The available WGSL language extensions can vary across implementations and physical devices and may also change over time; we have therefore not listed them here. For a complete list, refer to [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification.
 
 ## Instance properties
 
-The following properties are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects (the below links are to the {{jsxref("Set")}} global object reference pages).
+The following property is available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects.
 
 - {{jsxref("Set.prototype.size", "size")}} {{Experimental_Inline}}
   - : Returns the number of values in the set.
 
 ## Instance methods
 
-The following methods are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects (the links below are to the {{jsxref("Set")}} global object reference pages).
+The following methods are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects.
 
 - {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
   - : Returns a boolean asserting whether or not an element with the given value is present in the set.
