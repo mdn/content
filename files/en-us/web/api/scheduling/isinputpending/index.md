@@ -10,8 +10,6 @@ browser-compat: api.Scheduling.isInputPending
 
 This feature can be useful in scenarios where you want to check if there are any pending input events before performing a long-running operation or updating the UI. By checking the value of navigator.scheduling.isInputPending, you can avoid blocking the main thread when the user is interacting with the page.
 
-The property is read-only.
-
 ## Syntax
 
 ```js-nolint
