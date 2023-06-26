@@ -65,7 +65,7 @@ if ("canParse" in URL) {
   let result = URL.canParse(url);
   log(` URL.canParse("${url}"): ${result}`);
 
-  log("\nTest relative URL with no base URL absolute URL");
+  log("\nTest relative URL with no base URL");
   url = "/en-US/docs";
   result = URL.canParse(url);
   log(` URL.canParse("${url}"): ${result}`);
@@ -79,7 +79,7 @@ if ("canParse" in URL) {
 }
 ```
 
-Last of all, below the code shows that the `baseUrl` doesn't have to be a string.
+Last of all, the code below shows that the `baseUrl` doesn't have to be a string.
 Here we have passed a `URL` object.
 
 ```js
