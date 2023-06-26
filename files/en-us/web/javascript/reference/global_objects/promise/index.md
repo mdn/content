@@ -181,13 +181,13 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 ## Static methods
 
 - {{jsxref("Promise.all()")}}
-  - : Takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises reject, with this first rejection reason.
+  - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises reject, with this first rejection reason.
 - {{jsxref("Promise.allSettled()")}}
-  - : Takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
+  - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
 - {{jsxref("Promise.any()")}}
-  - : Takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
+  - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 - {{jsxref("Promise.race()")}}
-  - : Takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise settles with the eventual state of the first promise that settles.
+  - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise settles with the eventual state of the first promise that settles.
 - {{jsxref("Promise.reject()")}}
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
