@@ -83,7 +83,7 @@ If `currentcolor` is used as the value of the `color` property, it instead takes
 
 Each component of any CSS color functions - except for those using the legacy comma-separated syntax - can be specified as the keyword `none` to be a missing component.
 
-Explicitly specifying missing components is usually useful in [color interpolation](#interpolation-with-missing-components). For all other purposes, a missing component will effectively have a zero value in an appropriate unit - `0`, `0%`, or `0deg`. For example:
+Explicitly specifying missing components is usually useful in [color interpolation](#interpolation_with_missing_components). For all other purposes, a missing component will effectively have a zero value in an appropriate unit - `0`, `0%`, or `0deg`. For example:
 
 ```css
 oklab(50% none -0.25) /* is equivalent to */
