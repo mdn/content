@@ -14,7 +14,7 @@ The **namespace separator** (`|`) separates the selector from the namespace, ide
 myNameSpace|a {
   font-weight: bold;
 }
-/* paragraphs in any or no namespace */
+/* paragraphs in any namespace (including no namespace) */
 *|p {
   color: darkblue;
 }
@@ -38,7 +38,7 @@ namespace|element { style properties }
 
 ## Examples
 
-#### CSS
+### CSS
 
 The CSS declares two namespaces, then assigns styles to links globally, to links in no name space, any namespace or no namespace, and than to two different named namespaces.
 
@@ -49,12 +49,12 @@ The CSS declares two namespaces, then assigns styles to links globally, to links
 a {
   font-size: 1.4rem;
 }
-/* no name space */
+/* no namespace */
 |a {
   text-decoration: wavy overline lime;
   font-weight: bold;
 }
-/* all namespaces or no namespace */
+/* all namespaces (including no namespace) */
 *|a {
   color: red;
   fill: red;
