@@ -9,7 +9,7 @@ browser-compat: webextensions.api.tabs.discard
 
 Discards one or more tabs.
 
-Some browsers "discard" unused tabs to free memory. Discarded tabs stay visible in the tabstrip. The browser remembers the tab's state and restores it when the user selects the tab. The details of when tabs are and what is discarded are browser-specific.
+Some browsers automatically "discard" unused tabs to free memory. Discarded tabs stay visible in the tabstrip. The browser remembers the tab's state and restores it when the user selects the tab. The details of when tabs are and what is discarded are browser-specific.
 
 You can control whether the browser or this API discards a tab by setting its `autoDiscardable` property to `false` in {{WebExtAPIRef("tabs.update")}}. This setting prevents the browser from discarding the tab. The tab can then only be discarded with this API.
 
