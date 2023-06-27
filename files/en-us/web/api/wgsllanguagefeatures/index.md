@@ -23,7 +23,7 @@ The available WGSL language extensions can vary across implementations and physi
 
 ## Instance properties
 
-The following property is available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects.
+The following property is available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects:
 
 - {{jsxref("Set.prototype.size", "size")}} {{Experimental_Inline}}
   - : Returns the number of values in the set.
