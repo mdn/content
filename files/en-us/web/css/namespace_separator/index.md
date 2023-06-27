@@ -93,11 +93,11 @@ htmlNameSpace|a {
 
 #### Result
 
-{{EmbedLiveSample("Named namespace example", "100%", 100)}}
+{{EmbedLiveSample("Named_namespace_example", "100%", 100)}}
 
 The selector `|a`, a link not in a namespace, doesn't match any links. In HTML, the `http://www.w3.org/1999/xhtml` is implied, meaning all HTML is in a namespace, even if none is explicitly declared. In SVG, even if not explicitly set, the `http://www.w3.org/2000/svg` namespace is also implied. This means all the content is within at least one namespace.
 
-### Unnamed namespace and elements with no namespace
+### Default namespace and no namespace
 
 In this example, we use JavaScript to create an element without a namespace and append it to the document. We set the SVG namespace to be the default namespace by defining the unnamed namespace with `@namespace`.
 
@@ -165,7 +165,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Unnamed namespace and elements with no namespace", "100%", 100)}}
+{{EmbedLiveSample("Default_namespace_and_no_namespace", "100%", 100)}}
 
 The selector with no namespace separator, the `a`, matched only the SVG `<a>` elements, as SVG was set as the default namespace.
 
