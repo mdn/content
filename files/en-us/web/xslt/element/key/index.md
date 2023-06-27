@@ -3,7 +3,7 @@ title: <xsl:key>
 slug: Web/XSLT/Element/key
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:key>` element declares a named key which can be used elsewhere in the stylesheet with the `key( )` function.
 

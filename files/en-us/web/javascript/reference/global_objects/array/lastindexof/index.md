@@ -100,7 +100,7 @@ console.log([1, , 3].lastIndexOf(undefined)); // -1
 
 ### Calling lastIndexOf() on non-array objects
 
-The `lastIndexOf()` method reads the `length` property of `this` and then accesses each integer index.
+The `lastIndexOf()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -108,6 +108,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 2,
+  3: 5, // ignored by lastIndexOf() since length is 3
 };
 console.log(Array.prototype.lastIndexOf.call(arrayLike, 2));
 // 2

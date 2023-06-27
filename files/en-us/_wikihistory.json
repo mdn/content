@@ -76836,7 +76836,7 @@
     "modified": "2020-12-14T11:01:11.157Z",
     "contributors": ["rachelandrew", "wbamberg", "mfuji09", "bershanskiy"]
   },
-  "Web/CSS/@media/update-frequency": {
+  "Web/CSS/@media/update": {
     "modified": "2020-12-14T11:01:26.322Z",
     "contributors": [
       "rachelandrew",
@@ -79322,17 +79322,6 @@
       "Phreed",
       "Jchernandez",
       "GT"
-    ]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2020-07-07T12:37:45.184Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "Sheppy",
-      "justingeeslin",
-      "RAMilewski",
-      "nimbupani"
     ]
   },
   "Web/CSS/Privacy_and_the_:visited_selector": {
@@ -89623,66 +89612,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2020-10-15T21:35:08.741Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "sideshowbarker",
-      "ExE-Boss",
-      "mfluehr",
-      "chrisdavidmills",
-      "HTMLValidator",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2020-10-15T21:35:10.048Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "sideshowbarker",
-      "mfuji09",
-      "ExE-Boss",
-      "mfluehr",
-      "chrisdavidmills",
-      "HTMLValidator",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/scroll-snap-points-x": {
-    "modified": "2020-10-15T21:35:08.972Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Manishearth",
-      "rolfedh",
-      "myakura",
-      "m_gol",
-      "barkerbaggies",
-      "teoli"
-    ]
-  },
-  "Web/CSS/scroll-snap-points-y": {
-    "modified": "2020-10-15T21:35:09.330Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "chrisdavidmills",
-      "Sebastianz",
-      "Manishearth",
-      "rolfedh",
-      "myakura",
-      "m_gol",
-      "teoli"
-    ]
-  },
   "Web/CSS/scroll-snap-stop": {
     "modified": "2020-10-15T22:10:00.782Z",
     "contributors": [
@@ -89712,32 +89641,6 @@
       "Sebastianz",
       "Sole",
       "teoli"
-    ]
-  },
-  "Web/CSS/scroll-snap-type-x": {
-    "modified": "2020-10-15T21:36:49.348Z",
-    "contributors": [
-      "ddbeck",
-      "fscholz",
-      "rachelandrew",
-      "mfluehr",
-      "chrisdavidmills",
-      "Sebastianz",
-      "myakura",
-      "malyw"
-    ]
-  },
-  "Web/CSS/scroll-snap-type-y": {
-    "modified": "2020-10-15T21:36:47.615Z",
-    "contributors": [
-      "ddbeck",
-      "fscholz",
-      "rachelandrew",
-      "mfluehr",
-      "chrisdavidmills",
-      "jscissr",
-      "myakura",
-      "Sebastianz"
     ]
   },
   "Web/CSS/scrollbar-color": {
@@ -124466,51 +124369,6 @@
   "Web/Progressive_web_apps/Guides/Structural_overview": {
     "modified": "2020-06-11T10:44:58.956Z",
     "contributors": ["Sheppy"]
-  },
-  "Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites": {
-    "modified": "2019-03-18T20:52:26.499Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dkocho4",
-      "saerdnaer",
-      "Juan-jo",
-      "rogerhc",
-      "stoprunning3"
-    ]
-  },
-  "Web/Progressive_web_apps/Responsive/Mobile_first": {
-    "modified": "2020-01-10T05:01:47.206Z",
-    "contributors": [
-      "chrisdavidmills",
-      "hallb9",
-      "daniel.stormont",
-      "sideshowbarker",
-      "VladPavel15",
-      "Onkar316",
-      "bakufusyougunn",
-      "Syedfaisal",
-      "xfq"
-    ]
-  },
-  "Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns": {
-    "modified": "2019-03-18T20:52:24.930Z",
-    "contributors": ["chrisdavidmills", "georgialyle"]
-  },
-  "Web/Progressive_web_apps/Responsive/responsive_design_building_blocks": {
-    "modified": "2020-06-26T14:04:07.507Z",
-    "contributors": [
-      "jswisher",
-      "ribaricplusplus",
-      "scs727c",
-      "cartwr40",
-      "chrisdavidmills",
-      "mfluehr",
-      "stephaniehobson",
-      "kestutis",
-      "gibranalnn",
-      "Sheppy",
-      "tregagnon"
-    ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-08-24T13:46:24.412Z",

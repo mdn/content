@@ -20,7 +20,8 @@ importScripts(path0, path1, /* … ,*/ pathN)
 
 ### Parameters
 
-A comma-separated list of string objects representing the scripts to be imported. These paths are relative to _html document base URL_.
+- `pathN`
+  - : A string value representing the URL of the script to be imported. The URL may be absolute or relative. If the URL is relative, it is relative to the HTML document's base URL.
 
 ### Return value
 

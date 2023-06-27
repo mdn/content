@@ -350,7 +350,8 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
         <a href="/en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>name`](/en-US/docs/Web/HTML/Element/input#name), [`pattern</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#name"><code>name</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a>,
@@ -374,9 +375,11 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        with no <code>list</code> attribute:
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code><br />
+        with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>
