@@ -12,7 +12,7 @@ The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}}
 The interface:
 
 - Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you're not limited to only using it with service workers).
-- Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
+- Maintans a mapping of string names to corresponding {{domxref("Cache")}} objects.
 
 Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance.
 
