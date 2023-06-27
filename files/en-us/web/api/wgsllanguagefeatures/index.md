@@ -30,7 +30,7 @@ The following property is available to all read-only [setlike](/en-US/docs/Web/J
 
 ## Instance methods
 
-The following methods are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects.
+The following methods are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects:
 
 - {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
   - : Returns a boolean asserting whether or not an element with the given value is present in the set.
