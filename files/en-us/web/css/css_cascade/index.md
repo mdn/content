@@ -1,8 +1,10 @@
 ---
-title: CSS cascade
+title: CSS cascade and inheritance
 slug: Web/CSS/CSS_cascade
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-cascade/
+spec-urls:
+  - https://drafts.csswg.org/css-cascade/
+  - https://drafts.csswg.org/css-cascade-5/
 ---
 
 {{CSSRef}}
@@ -47,9 +49,9 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - {{DOMXRef("CSSLayerStatementRule")}}
 - {{DOMXRef("CSSRule")}}
 
-### Terms and definitions
+### Definitions
 
-- Values
+- [Values](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [actual value](/en-US/docs/Web/CSS/actual_value)
   - [computed value](/en-US/docs/Web/CSS/computed_value)
   - [initial value](/en-US/docs/Web/CSS/initial_value)
@@ -57,13 +59,13 @@ The opposite also occurs. Sometimes there are no declarations defining the value
   - [specified value](/en-US/docs/Web/CSS/specified_value)
   - [used value](/en-US/docs/Web/CSS/used_value)
 - [Origin types](/en-US/docs/Web/CSS/Cascade#origin_types)
-  - [User-agent origin](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets)
-  - [Author origin](/en-US/docs/Web/CSS/Cascade#author_stylesheets)
-  - [User origin](/en-US/docs/Web/CSS/Cascade#user_stylesheets)
+  - [user-agent origin](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets)
+  - [quthor origin](/en-US/docs/Web/CSS/Cascade#author_stylesheets)
+  - [user origin](/en-US/docs/Web/CSS/Cascade#user_stylesheets)
 - [Declaring layers](/en-US/docs/Web/CSS/@import#importing_css_rules_into_a_cascade_layer)
   - [named layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
   - [anonymous layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the-layer-block-at-rule-for-named-and-anonymous-layers)
-- {{glossary("style origin")}}
+- Glossary: {{glossary("style origin")}}
 
 ## Guides
 
