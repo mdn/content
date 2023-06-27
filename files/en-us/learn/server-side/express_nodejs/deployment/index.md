@@ -513,7 +513,7 @@ Select **Deploy from GitHub repo**.
 ![Railway popup showing deployment options with Deploy from GitHub repo option highlighted](railway_new_project_button_deploy_github_repo.png)
 
 All projects in the GitHub repos you shared with Railway during setup are displayed.
-Select your GitHub repository for the local library: `<user-name>/django-locallibrary-tutorial`.
+Select your GitHub repository for the local library: `<user-name>/express-locallibrary-tutorial`.
 
 ![Railway popup showing GitHub repos that can be deployed](railway_new_project_button_deploy_github_selectrepo.png)
 

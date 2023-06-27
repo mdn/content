@@ -410,7 +410,7 @@ So that's it. Try revisiting the active learning section above and trying this n
 
 > **Note:** The `href` values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the `<iframe>` the live example is embedded in, thereby losing the example.
 
-> **Note:** Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) yet; these are explained in other places.
+> **Note:** Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) yet; these are explained in other places.
 
 ## Styling links as buttons
 
