@@ -60,7 +60,6 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
 ### Using Atomics
 
 ```js
-const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 
 ta[0]; // 0
