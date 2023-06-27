@@ -124370,51 +124370,6 @@
     "modified": "2020-06-11T10:44:58.956Z",
     "contributors": ["Sheppy"]
   },
-  "Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites": {
-    "modified": "2019-03-18T20:52:26.499Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dkocho4",
-      "saerdnaer",
-      "Juan-jo",
-      "rogerhc",
-      "stoprunning3"
-    ]
-  },
-  "Web/Progressive_web_apps/Responsive/Mobile_first": {
-    "modified": "2020-01-10T05:01:47.206Z",
-    "contributors": [
-      "chrisdavidmills",
-      "hallb9",
-      "daniel.stormont",
-      "sideshowbarker",
-      "VladPavel15",
-      "Onkar316",
-      "bakufusyougunn",
-      "Syedfaisal",
-      "xfq"
-    ]
-  },
-  "Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns": {
-    "modified": "2019-03-18T20:52:24.930Z",
-    "contributors": ["chrisdavidmills", "georgialyle"]
-  },
-  "Web/Progressive_web_apps/Responsive/responsive_design_building_blocks": {
-    "modified": "2020-06-26T14:04:07.507Z",
-    "contributors": [
-      "jswisher",
-      "ribaricplusplus",
-      "scs727c",
-      "cartwr40",
-      "chrisdavidmills",
-      "mfluehr",
-      "stephaniehobson",
-      "kestutis",
-      "gibranalnn",
-      "Sheppy",
-      "tregagnon"
-    ]
-  },
   "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-08-24T13:46:24.412Z",
     "contributors": [
