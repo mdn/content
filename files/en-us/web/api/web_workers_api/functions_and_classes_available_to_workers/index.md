@@ -25,6 +25,8 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
+- {{domxref("queueMicrotask()")}}
+- {{domxref("structuredClone()")}}
 - {{domxref("window.requestAnimationFrame")}}
 - {{domxref("window.cancelAnimationFrame")}} (dedicated workers only)
 
