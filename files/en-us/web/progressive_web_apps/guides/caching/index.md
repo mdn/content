@@ -124,11 +124,11 @@ Note also that when we add `networkResponse` to the cache, we must clone the res
 
 You might wonder why we fall back to the network for precached resources. If they are precached, can't we be sure they will be in the cache? The reason is that it is possible for the cache to be cleared, either by the browser or by the user. Although this is unlikely, it would make the PWA unusable unless it can fall back to the network. See [Deleting cached data](#deleting_cached_data).
 
-### Stale while revalidate
+### Cache first with cache refresh
 
 The drawback of "cache first" is that once a response is in the cache, it is never refreshed until a new version of the app is installed.
 
-The "stale while revalidate" strategy is similar to "cache first", except that we always send the request to the network, even after a cache hit, and use the response to refresh the cache. This means we get the responsiveness of "cache first", but get a fairly fresh response (as long as the request is made reasonably often).
+The "Cache first with cache refresh" strategy, also known as "stale while revalidate", is similar to "cache first", except that we always send the request to the network, even after a cache hit, and use the response to refresh the cache. This means we get the responsiveness of "cache first", but get a fairly fresh response (as long as the request is made reasonably often).
 
 ```js
 function isCachable(request) {
@@ -136,7 +136,7 @@ function isCachable(request) {
   return !url.pathname.endsWith(".json");
 }
 
-async function staleWhileRevalidate(request) {
+async function cacheFirstWithRefresh(request) {
   const cachedResponse = await caches.match(request);
   const fetchedResponse = fetch(request);
 
@@ -153,7 +153,7 @@ async function staleWhileRevalidate(request) {
 
 self.addEventListener("fetch", (event) => {
   if (isCachable(event.request)) {
-    event.respondWith(staleWhileRevalidate(event.request));
+    event.respondWith(cacheFirstWithRefresh(event.request));
   }
 });
 ```
