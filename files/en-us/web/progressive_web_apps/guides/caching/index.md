@@ -94,7 +94,7 @@ This is an extension to the previous strategy. In the `fetch` event handler, if 
 - Look in the cache for the resource, and return the resource if it is found.
 - Otherwise, go to the network. If the network request succeeds, cache the resource for next time.
 
-If the resource is not cachable, we only use the network, as before. The definition of "cachable" is specific to the PWA, but again includes the idea that the resource should not change for this version of the app. In this example, everything except requests for JSON data is treated as cachable.
+If the resource is not cachable, we only use the network, as before. The definition of "cachable" is specific to the PWA, but again includes the idea that the resource should not change for this version of the app. In this example, everything except requests for JSON data are treated as cachable.
 
 ```js
 function isCachable(request) {
