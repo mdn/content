@@ -46,6 +46,8 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
+- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("window.cancelAnimationFrame")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
@@ -72,6 +74,7 @@ The following Web APIs are available to workers:
 - {{domxref("FileReaderSync")}} (only works in workers!)
 - {{domxref("FormData")}}
 - {{domxref("ImageData")}}
+- {{domxref("ImageBitmap")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
 - {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} (dedicated workers only)
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)
@@ -83,10 +86,10 @@ The following Web APIs are available to workers:
   - {{domxref("PerformanceMark")}}
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
-- {{jsxref("Promise")}}
 - [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
 - {{domxref("URL_API","URL API")}} (e.g. {{domxref("URL")}})
+- {{domxref('WebCodecs_API','','','true')}}
 - [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
