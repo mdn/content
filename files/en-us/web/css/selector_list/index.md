@@ -124,7 +124,7 @@ The difference between the two is that the specificity of `:is()` is its most sp
 
 ### Relative selector list
 
-A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors/selector_structure#relative_selector), which begin with an explicit or implied combinator.
+A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#relative_selector), which begin with an explicit or implied combinator.
 
 ```css
 h2:has(+ p, + ul.red) {
