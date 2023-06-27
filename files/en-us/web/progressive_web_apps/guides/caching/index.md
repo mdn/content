@@ -166,6 +166,8 @@ This is a good choice when responsiveness is important, and freshness is somewha
 
 The last strategy we'll look at, "network first", is the inverse of cache first: we try to retrieve the resource from the network. If the network request succeeds, we return the response and update the cache. If it fails, we try the cache.
 
+This is useful for requests for which it is important to get the most fresh response possible, but for which a cached resource is better than nothing. A messaging app's list of recent messages might fall into this category.
+
 ```js
 function isCachable(request) {
   const url = new URL(request.url);
@@ -192,8 +194,6 @@ self.addEventListener("fetch", (event) => {
   }
 });
 ```
-
-This is useful for requests for which it is important to get the most fresh response possible, but for which a cached resource is better than nothing. A messaging app's list of recent messages might fall into this category.
 
 There are still requests for which no response is better than a possibly-outdated response, and for which only a "network only" strategy is appropriate. For example, if an app is showing the list of available products, it will be frustrating to users if the list is out of date.
 
