@@ -1,13 +1,13 @@
 ---
-title: Namespace prefix
-slug: Web/CSS/Namespace_prefix
+title: Namespace separator
+slug: Web/CSS/Namespace_separator
 page-type: css-combinator
 browser-compat: css.selectors.namespace
 ---
 
 {{CSSRef("Selectors")}}
 
-The **namespace prefix** (`|`) identifies the namespace, or lack thereof, for a type selector.
+The **namespace prefix** (`|`) separates the selector from the namespace, identifying the namespace, or lack thereof, for a type selector.
 
 ```css
 /* Links in the namespace named myNameSpace */
