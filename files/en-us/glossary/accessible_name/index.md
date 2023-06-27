@@ -4,9 +4,7 @@ slug: Glossary/Accessible_name
 page-type: glossary-definition
 ---
 
-An **accessible name** is the name of a user interface element; it is the text associated with an HTML element that provides assistive technology users with a label for the element. Many elements, such as sections of textual content, don't need an accessible name. All controls should have an accessible name. All images that convey information and aren't purely presentational do too.
-
-Assistive technologies will provide the user with the accessibility name property, which is the accessible name along with the element's role.
+An **accessible name** is the name of a user interface element; it is the text associated with an HTML element that provides assistive technology users with a label for the element. 
 
 Accessible names convey the purpose or intent of the element. This helps users understand what the element is for and how they can interact with it. In general, accessible names for elements should be unique to a page. This helps users distinguish an element from other elements and helps users identify the element they want to interact with.
 
@@ -16,7 +14,9 @@ It is best to use visible text as the accessible names. Many elements, including
 
 To create an association between visible content and an element or multiple text nodes and an element, the [`aria-labeledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute can be used. If there is no visible text to associate with a UI element needing an accessible name, the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute can be used. Names should not be added to elements marking up inline text, like {{HTMLElement("code")}}, {{HTMLElement("del")}}, and {{HTMLElement("mark")}}.
 
-While many elements don't need an accessible name, some content [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) can benefit from having an accessible name. For example, a [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) is a section of content that appears after a user activates the associated element with a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role. This role can be set on an element with no needed name, like the {{HTMLElement("div")}} element. The `tab` is the control and must have an accessible name. The `tabpanel` is the child (content section) of the `tab`. Adding `aria-labelledby` to the `tabpanel` is a best practice.
+Many elements, such as sections of textual content, don't need an accessible name. All controls should have an accessible name. All images that convey information and aren't purely presentational do too.
+
+Assistive technologies will provide the user with the accessibility name property, which is the accessible name along with the element's role. While many elements don't need an accessible name, some content [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) can benefit from having an accessible name. For example, a [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) is a section of content that appears after a user activates the associated element with a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role. This role can be set on an element with no needed name, like the {{HTMLElement("div")}} element. The `tab` is the control and must have an accessible name. The `tabpanel` is the child (content section) of the `tab`. Adding `aria-labelledby` to the `tabpanel` is a best practice.
 
 ## See also
 
