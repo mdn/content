@@ -319,13 +319,13 @@ A server can use them to make decisions about whether a request should be allowe
     It is a Structured Header whose value is a boolean so possible values are `?0` for false and `?1` for true.
 - {{HTTPHeader("Sec-Fetch-Dest")}}
   - : Indicates the request's destination.
-     It is a Structured Header whose value is a token with possible values `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, and `xslt`.
+    It is a Structured Header whose value is a token with possible values `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, and `xslt`.
 
 The following request headers are not _strictly_ "fetch metadata request headers", but similarly provide information about the context of how a resource will be used.
 A server might use them to modify its caching behavior, or the information that is returned:
 
-- {{HTTPHeader("Sec-Purpose")}}
-  - : Indicates the purpose of the request, if the purpose is something other than immediate use by the user-agent.
+- {{HTTPHeader("Sec-Purpose")}} {{Experimental_Inline}}
+  - : Indicates the purpose of the request, when the purpose is something other than immediate use by the user-agent.
     The header currently has one possible value, `prefetch`, which indicates that the resource is being fetched preemptively for a possible future navigation.
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
   - : A request header sent in preemptive request to {{domxref("fetch()")}} a resource during service worker boot.

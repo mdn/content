@@ -19,6 +19,12 @@ The fetch metadata request headers are:
 - {{HTTPHeader("Sec-Fetch-User")}}
 - {{HTTPHeader("Sec-Fetch-Dest")}}
 
+The following request headers are not _strictly_ "fetch metadata request headers", as they are not in the same specification, but similarly provide information about the context of how a resource will be used.
+A server might use them to modify its caching behavior, or the information that is returned:
+
+- {{HTTPHeader("Sec-Purpose")}} {{Experimental_Inline}}
+- {{HTTPHeader("Service-Worker-Navigation-Preload")}}
+
 ## See also
 
 - [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
@@ -31,5 +37,3 @@ The fetch metadata request headers are:
   - {{Glossary("HTTP_header","HTTP header")}}
   - {{Glossary("Response header")}}
   - {{Glossary("Request header")}}
-- {{HTTPHeader("Sec-Purpose")}}
-- {{HTTPHeader("Service-Worker-Navigation-Preload")}}
