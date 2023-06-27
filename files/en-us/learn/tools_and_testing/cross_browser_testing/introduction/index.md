@@ -157,7 +157,7 @@ Just to reiterate on what was said above, if you discover bugs in browsers, you 
 - [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/)
 - [Safari](https://bugs.webkit.org/)
 - [Chrome](https://bugs.chromium.org/p/chromium/issues/list)
-- [Opera](https://help.opera.com/en/computer-bug-wizard/)
+- [Opera](https://opera.atlassian.net/servicedesk/customer/portal/9)
 
 ## Summary
 
