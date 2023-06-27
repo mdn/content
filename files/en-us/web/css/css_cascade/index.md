@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS cascade** module defines the rules for assigning property values, cascading, and inheritance. This module specifies the rules for finding the specified value for all properties on all elements.
+The **CSS cascade and inheritance** module defines the rules for assigning property values, cascading, and inheritance. This module specifies the rules for finding the specified value for all properties on all elements.
 
 One of the fundamental design principles of CSS is cascading, which allows several style sheets to influence the presentation of a document. CSS property-value declarations define how a document is rendered. Multiple declarations may set different values for the same element/property combination, but only one value can be applied for any CSS property. The CSS cascade module defines how these conflicts are resolved.
 
