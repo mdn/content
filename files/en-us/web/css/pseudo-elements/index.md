@@ -17,8 +17,6 @@ p::first-line {
 }
 ```
 
-> **Note:** In contrast to pseudo-elements, {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
-
 ## Syntax
 
 ```css
@@ -29,7 +27,7 @@ selector::pseudo-element {
 
 You can use only one pseudo-element in a selector. It must appear after the simple selectors in the statement.
 
-> **Note:** As a rule, double colons (`::`) should be used instead of a single colon (`:`). This distinguishes pseudo-classes from pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most browsers support both syntaxes for the original pseudo-elements.
+Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-classes from pseudo-elements where single colon (`:`) is used. As this distinction was not present in the original CSS specification, browsers also support a single colon syntax for the original four pseudo-elements, `::before`, `::after`, `::first-line`, and `::first-letter`, only.
 
 ## Alphabetical index
 
@@ -119,4 +117,5 @@ T
 
 ## See also
 
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo)
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)

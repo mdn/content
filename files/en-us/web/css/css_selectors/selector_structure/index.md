@@ -7,7 +7,9 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{CSSRef("Selectors")}}
 
-The term 'selector' can refer to one of the following:
+A **selector** represents a particular pattern of element or elements in a tree structure. The term selector can refer to a [simple selector](#simple-selector), [compound selector](#compound-selector), or [complex selector](#complex-selector). When included in the `:has()` selector as a parameter, these selectors are [relative selectors](#relative-selector), represent elementing relative to one or more relative selector anchor elements.
+
+These selectors can be combined into a comma-separated [selector list](#selector-list). If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Selector_list##valid_and_invalid_selector_lists) list is invalid, the entire selector list is invalidated.
 
 ### Simple selector
 
@@ -67,12 +69,16 @@ article.heading {
 }
 ```
 
-Selectors can be restricted to a specific namespace or to all namespaces.
-
-**Syntax:** `*` `ns|*` `*|*`
-
 ## Specifications
 
 {{Specifications}}
 
 See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#specifications) specification tables for details on those.
+
+## See also
+
+- [Forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list)
+- {{DOMXref("Document.querySelector()")}}
+- {{DOMXref("Document.querySelectorAll()")}}
+- [CSS selectors module](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS pseudo-elements module](/en-US/docs/Web/CSS/CSS_pseudo)

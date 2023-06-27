@@ -1,5 +1,5 @@
 ---
-title: CSS pseudo elements
+title: CSS pseudo-element module
 slug: Web/CSS/CSS_pseudo
 page-type: css-module
 spec-urls: https://drafts.csswg.org/pseudo/
@@ -7,9 +7,11 @@ spec-urls: https://drafts.csswg.org/pseudo/
 
 {{CSSRef}}
 
-The **CSS pseudo** module defines the patterns to representing entities not included in HTML.
+The **CSS pseudo-element** module defines the patterns to representing entities not included in HTML.
 
-## Selectors
+## Reference
+
+### Selectors
 
 - {{CSSXref("::after")}}
 - {{CSSXref("::before")}}
@@ -26,20 +28,24 @@ The **CSS pseudo** module defines the patterns to representing entities not incl
 - {{CSSXref("::target-text")}}
 - [`:has()`-allowed pseudo-elements]()
 
-## Interfaces
+### Interfaces
 
 - {{DOMxRef('CSSPseudoElement')}} interface
 - {{DOMxRef('Element.pseudo()')}} method
 - {{DOMxRef('CSSPseudoElement.element')}}
 
-## Definitions
+### Definitions
 
-### Guides
+## Guides
+
+- [Building block: pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+
+- [How to: using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
 
 ## Related concepts
 
 - CSS {{cssxref("content")}} property
-- [Generated Content]()
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_genererated_content) module
 - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes) allow the selection of elements based on state information that is not contained in the document tree.
 - [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
@@ -49,6 +55,9 @@ The **CSS pseudo** module defines the patterns to representing entities not incl
 - fragment
 - placeholder attribute
 - : placeholder-shown selector
+- {{DOMXref("AnimationEvent.pseudoElement")}} property
+- {{DOMXref("KeyframeEffect.pseudoElement")}} property
+- {{DOMXref("TransitionEvent.pseudoElement")}} property
 
 ## Specifications
 
