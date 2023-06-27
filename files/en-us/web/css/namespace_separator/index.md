@@ -24,7 +24,7 @@ myNameSpace|a {
 }
 ```
 
-[Type selectors](/en-US/docs/Web/CSS/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) allow an optional namespace component. When a namespace has been previously declared via {{CSSXref("@namespace")}}, these selectors can be namespaced by prepending the selector with name of the namespace separated by the namespace separator (`|`). This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
+[Type selectors](/en-US/docs/Web/CSS/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) allow an optional namespace component. When a namespace has been previously declared via {{CSSXref("@namespace")}}, these selectors can be namespaced by prepending the selector with the name of the namespace separated by the namespace separator (`|`). This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
 - `ns|h1` - matches `<h1>` elements in namespace `ns`
 - `*|h1` - matches all `<h1>` elements
@@ -38,14 +38,20 @@ namespace|element { style properties }
 
 ## Examples
 
-### CSS
+By default, all elements in an HTML or SVG element have a namespace as the `http://www.w3.org/1999/xhtml` and   `http://www.w3.org/2000/svg` namespace are implied. The {{domxref("document.createElementNS")}} method, with an empty string for the namespace parameter, can be used to create elements with no namespace.
+
+### Named namespace example
+
+In this example, all elements are in a namespace.
+
+#### CSS
 
 The CSS declares two namespaces, then assigns styles to links globally (`a`), to links in no namespace (`|a`), to links in any namespace or no namespace (`*|a`), and then to two different named namespaces (`svgNamespace|a` and `htmlNameSpace|a`).
 
 ```css
 @namespace svgNamespace url("http://www.w3.org/2000/svg");
 @namespace htmlNameSpace url("http://www.w3.org/1999/xhtml");
-/* all namespaces or no namespace */
+/* all links (see next example for exceptions) */
 a {
   font-size: 1.4rem;
 }
@@ -85,11 +91,15 @@ The HTML contains two links. No namespaces are explicitly declared.
 </svg>
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples", "100%", 100)}}
+{{EmbedLiveSample("Named namespace example", "100%", 100)}}
 
 The selector `|a`, a link not in a namespace, doesn't match any links. In HTML, the `http://www.w3.org/1999/xhtml` is implied, meaning all HTML is in a namespace, even if none is explicitly declared. In SVG, even if not explicitly set, the `http://www.w3.org/2000/svg` namespace is also implied. This means all the content is within at least one namespace.
+
+### Unnamed namedspace and elements with no namespace
+
+In this example, we use JavaScript to create an element without a namespace and append it to the 
 
 ## Specifications
 
