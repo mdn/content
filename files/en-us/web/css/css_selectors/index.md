@@ -18,6 +18,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{CSSXref("||")}} ([column combinator](/en-US/docs/Web/CSS/Column_combinator)) {{Experimental_Inline}}
 - {{CSSXref("General_sibling_combinator", "~")}} ([general-, or subsequent-, sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator))
 - {{CSSXref("descendant_combinator", "&nbsp;")}} ([descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
+- [`|`](/en-US/docs/Web/CSS/Namespace_separator) ([namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
 
 ### Selectors
 
@@ -98,14 +99,13 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 ## Definitions
 
 - {{glossary("Pseudo-class")}} glossary term
-- Combinator
-- [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/selectors_guide#structure-of-a-selector)
-- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/selectors_guide#structure-of-a-selector)
-- [Complex selector]()
-- [Relative selector]()
+- [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
+- [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#simple-selector)
+- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#compound-selector)
+- [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#complex-selector)
+- [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#relative-selector)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - {{CSSXref("Specificity")}}
-- Selectors can be restricted to a specific namespace or to all namespaces. `*` `ns|*` `*|*`
 
 ## Guides
 
@@ -123,7 +123,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 
 - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
-  - : The `:` pseudo allow the selection of elements based on state information that is not contained in the document tree.
+  - : Pseudo-classes allow the selection of elements based on state information that is not contained in the document tree.
 
 - [Learn: CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
@@ -158,7 +158,16 @@ The **CSS selectors** module defines the patterns to select elements to which a 
   - {{CSSXref("::spelling-error")}}
   - {{CSSXref("::target-text")}}
 
-- [cascade layer]()
+- {{CSSXref("@namespace")}} at-rule
+- CSS scoping module
+  - {{CSSXref(":host")}}
+  - {{CSSXref(":host_function", ":host()")}}
+  - {{CSSXref(":host-context()")}}
+  - {{CSSXref("::part")}}
+  - {{CSSXref("::slotted")}}
+
+- [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)
 
 ## Specifications
 
@@ -166,4 +175,6 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 
 ## See also
 
-- [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
+- {{cssxref("important", "!important")}}
+- [Cascade origin and importance](/en-US/docs/Web/CSS/Cascade)
+- [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
