@@ -74,9 +74,11 @@ In the initial planning phase, you will probably have several planning meetings 
 
 Once you've got an idea of the required feature set, and what technologies you will likely build these features with, you should start exploring the target audience — what browsers, devices, etc. will the target audience for this site be using? The client might already have data about this from previous research they've done, e.g. from other websites they own, or from previous versions of the website you are now working on. If not, you will be able to get a good idea by looking at other sources, such as usage stats for competitors, or countries the site will be serving. You can also use a bit of intuition.
 
-So for example, you might be building an e-commerce site that serves customers in North America. The site should work entirely in the last few versions of the most popular desktop and mobile (iOS, Android, Windows phone) browsers — this should include Chrome (and Opera as it is based on the same rendering engine as Chrome), Firefox, IE/Edge, and Safari. It should also provide an acceptable experience on IE 8 and 9, and be accessible with WCAG AA compliance.
+So for example, you might be building an e-commerce site that serves customers in North America. The site should work entirely in the last few versions of the most popular desktop and mobile (iOS, Android, Windows phone) browsers — this should include Chrome (and Opera as it is based on the same rendering engine as Chrome), Firefox, Edge, and Safari.
+It should also be accessible with WCAG AA compliance.
 
-Now you know your target testing platforms, you should go back and review the required feature set and what technologies you are going to use. For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each product built into the product pages, they will need to accept that this just won't work in IE versions before 11. You'd have to agree to provide a version of the site without this feature to users of older IE versions.
+Now you know your target testing platforms, you should go back and review the required feature set and what technologies you are going to use.
+For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each product built into the product pages, they will need to accept that this just won't work all legacy browser version.
 
 You should compile a list of the potential problem areas.
 
@@ -100,7 +102,7 @@ Normally your development will involve a combination of the above three approach
 
 After each implementation phase, you will need to test the new functionality. To start with, you should make sure there are no general issues with your code that are stopping your feature from working:
 
-1. Test it in a couple of stable browsers on your system, like Firefox, Safari, Chrome, or IE/Edge.
+1. Test it in a couple of stable browsers on your system, like Firefox, Safari, Chrome, or Edge.
 2. Do some lo-fi accessibility testing, such as trying to use your site with only the keyboard, or using your site via a screen reader to see if it is navigable.
 3. Test on a mobile platform, such as Android or iOS.
 
@@ -108,7 +110,7 @@ At this point, fix any problems you find with your new code.
 
 Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross-browser issues (see the next article for more information on [determining your target browsers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#gotta_test_em_all)). For example:
 
-- Try to test the latest change on all the modern desktop browsers you can — including Firefox, Chrome, Opera, IE, Edge, and Safari on desktop (Mac, Windows, and Linux, ideally).
+- Try to test the latest change on all the modern desktop browsers you can — including Firefox, Chrome, Opera, Edge, and Safari on desktop (Mac, Windows, and Linux, ideally).
 - Test it in common phone and tablet browsers (e.g. iOS Safari on iPhone/iPad, Chrome and Firefox on iPhone/iPad/Android),
 - Also do tests in any other browsers you have included inside your target list.
 
