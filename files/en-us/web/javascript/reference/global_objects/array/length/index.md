@@ -13,13 +13,13 @@ The **`length`** data property of an {{jsxref("Array")}} instance represents the
 
 ## Value
 
-A non-negative integer less than 2<sup>32</sup>.
+A nonnegative integer less than 2<sup>32</sup>.
 
 {{js_property_attributes(1, 0, 0)}}
 
 ## Description
 
-The value of the `length` property is a non-negative integer with a value less than 2<sup>32</sup>.
+The value of the `length` property is a nonnegative integer with a value less than 2<sup>32</sup>.
 
 ```js
 const listA = [1, 2, 3];
@@ -41,7 +41,7 @@ const listC = new Array(-100); // Negative numbers are not allowed
 The array object observes the `length` property, and automatically syncs the `length` value with the array's content. This means:
 
 - Setting `length` to a value smaller than the current length truncates the array — elements beyond the new `length` are deleted.
-- Setting any array index (a non-negative integer smaller than 2<sup>32</sup>) beyond the current `length` extends the array — the `length` property is increased to reflect the new highest index.
+- Setting any array index (a nonnegative integer smaller than 2<sup>32</sup>) beyond the current `length` extends the array — the `length` property is increased to reflect the new highest index.
 - Setting `length` to an invalid value (e.g. a negative number or a non-integer) throws a `RangeError` exception.
 
 When `length` is set to a bigger value than the current length, the array is extended by adding [empty slots](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), not actual `undefined` values. Empty slots have some special interactions with array methods; see [array methods and empty slots](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots).
