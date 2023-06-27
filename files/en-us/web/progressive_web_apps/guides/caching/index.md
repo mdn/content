@@ -60,7 +60,9 @@ A PWA can cache resources at any time, but in practice there are a few times whe
 
 A caching strategy is an algorithm for when to cache a resource, when to serve a cached resource, and when to get the resource from the network. In this section we'll summarize some common strategies.
 
-This isn't an exhaustive list: it's just intended to illustrate the kinds of approaches a PWA can take. Each PWA must consider its own specific needs when deciding which strategies to use for which resources.
+This isn't an exhaustive list: it's just intended to illustrate the kinds of approaches a PWA can take.
+
+Also, a caching strategy balances offline operation, responsiveness, and freshness. Different resources have different requirements here: for example, the app's basic UI is likely to be relatively static, while it may be essential to have fresh data when displaying a product listing. This means that a PWA will typically adopt different strategies for different resources, and a single PWA might use all the strategies described here.
 
 ### Cache first
 
