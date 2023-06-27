@@ -1,19 +1,17 @@
 ---
 title: CSS selectors and combinators
 slug: Web/CSS/CSS_Selectors/Selectors_and_combinators
-page-type: landing-page
+page-type: guide
 spec-urls: https://drafts.csswg.org/selectors/
 ---
 
 {{CSSRef("Selectors")}}
 
-**CSS selectors** define the pattern to select elements to which a set of CSS rules are then applied.
-
-CSS selectors can be grouped into the following categories based on the type of elements they can select.
+CSS selectors are used to define the pattern of elements that should be selected for which a set of CSS rules should be applied. Combinators define the relationships between the components of the selector. The various selectors and combinators enable selecting precisely which elements should be styled based on their type, attributes, state, and relationship to other elements.
 
 ## Selector types
 
-There are over 80 selectors and combinators.
+There are over 80 selectors and combinators. CSS selectors can be grouped into the following categories based on the type of elements they can select.
 
 ### Basic selectors
 
@@ -56,12 +54,6 @@ p.myClass#myId {
 
 {{EmbedLiveSample("Basic selectors", "100%", 100)}}
 
-### Selector namespaces
-
-[Type selectors](/en-US/docs/Web/CSS/Type_selectors) and the [universal selectors](/en-US/docs/Web/CSS/Universal_selectors) allow an optional namespace component. A namespace prefix that has been previously declared via {{CSSXref("@namespace")}} may be prepended to the element name separated by the namespace separator (`|`). WIth HTML, the `http://www.w3.org/1999/xhtml` namespace is implied. Namespacing can be useful to target MathML, SVG, or other XML based content within your HTML.
-
-For example, by declaring `@namespace SVG url('http://www.w3.org/2000/svg');` you can include selectors targeting elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document.
-
 ## Combinators
 
 With CSS combinators we can combine selectors to select DOM nodes based on their relationship to other elements within the document node tree to create [complex selectors](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#complex_selector).
@@ -75,6 +67,8 @@ In addition to descendant selectors, CSS also enable selecting elements based on
 The [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), denoted by the plus symbol (`+`) is similar to the general sibling, but given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
 
 There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters ( `||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+
+Generally used in conjunction with {{CSSXref("@namespace")}}, the [namespace separator](/en-US/docs/Web/CSS/Namespace_separator), denoted by a single pipe character (`|`), enables limiting [type selectors](/en-US/docs/Web/CSS/Type_selectors) and the [universal selectors](/en-US/docs/Web/CSS/Universal_selectors) to a specific namespace. For example, by declaring `@namespace SVG url('http://www.w3.org/2000/svg');` you can include selectors targeting elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document. Namespacing can be useful to target MathML, SVG, or other XML-based content within your HTML.
 
 #### CSS
 

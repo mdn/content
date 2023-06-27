@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/pseudo/
 
 {{CSSRef}}
 
-The **CSS pseudo-element** module defines the patterns to representing entities not included in HTML.
+The **CSS pseudo-element** module defines the patterns representing entities not included in HTML.
 
 ## Reference
 
