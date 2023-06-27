@@ -109,7 +109,7 @@ newCar[0].color = purple
 
 ### Calling slice() on non-array objects
 
-The `slice()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`. It then reads the integer-keyed properties from `start` to `end` and defines them on a newly created array.
+The `slice()` method reads the `length` property of `this`. It then reads the integer-keyed properties from `start` to `end` and defines them on a newly created array.
 
 ```js
 const arrayLike = {

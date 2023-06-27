@@ -92,8 +92,8 @@ const arrayLike = {
 };
 console.log(Array.prototype.reverse.call(arrayLike));
 // { 0: 4, 3: 33, length: 3, unrelated: 'foo' }
-// The property with a key of '2' is deleted because there was no property with a key of '0' present originally
-// The property with a key of '3' is unchanged since the value of length is 3
+// The index 2 is deleted because there was no index 0 present originally
+// The index 3 is unchanged since the length is 3
 ```
 
 ## Specifications
