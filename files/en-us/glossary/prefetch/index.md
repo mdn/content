@@ -31,7 +31,7 @@ The request should also include the {{HTTPHeader("Sec-Fetch-Dest")}} header with
 The {{HTTPHeader("Accept")}} header in the request should match the value used for normal navigation requests, so that the browser can find the matching cached resources following navigation.
 If a response is returned, it is cached with the request in the HTTP cache.
 
-> **Note:** Browser vendors are currently aligning around the behaviour described here, and may use different headers.
+> **Note:** Browser vendors are currently aligning around the HTTP headers that are sent, and may use different headers and values.
 > The best place to track specification compliance is the [`Sec-Purpose`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) compatibility table.
 
 ### DNS Prefetching
