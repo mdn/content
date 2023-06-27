@@ -40,11 +40,11 @@ namespace|element { style properties }
 
 ### CSS
 
-The CSS declares two namespaces, then assigns styles to links globally, to links in no name space, any namespace or no namespace, and than to two different named namespaces.
+The CSS declares two namespaces, then assigns styles to links globally (`a`), to links in no namespace (`|a`), to links in any namespace or no namespace (`*|a`), and then to two different named namespaces (`svgNamespace|a` and `htmlNameSpace|a`).
 
 ```css
-@namespace myNamespace url("http://www.w3.org/2000/svg");
-@namespace defaultNameSpace url("http://www.w3.org/1999/xhtml");
+@namespace svgNamespace url("http://www.w3.org/2000/svg");
+@namespace htmlNameSpace url("http://www.w3.org/1999/xhtml");
 /* all namespaces or no namespace */
 a {
   font-size: 1.4rem;
@@ -60,20 +60,20 @@ a {
   fill: red;
   font-style: italic;
 }
-/* only the myNamespace namespace */
-myNamespace|a {
+/* only the svgNamespace namespace, which is <svg> content */
+svgNamespace|a {
   color: green;
   fill: green;
 }
-/* all HTML is in a namespace */
-defaultNameSpace|a {
+/* The htmlNameSpace namespace, which is the HTML document */
+htmlNameSpace|a {
   text-decoration-line: line-through;
 }
 ```
 
 #### HTML
 
-The HTML contains two links. One link is in an SVG with a explicitly declared namespace.
+The HTML contains two links. No namespaces are explicitly declared.
 
 ```html
 <p>This paragraph <a href="#">has a link</a>.</p>
@@ -89,7 +89,7 @@ The HTML contains two links. One link is in an SVG with a explicitly declared na
 
 {{EmbedLiveSample("Examples", "100%", 100)}}
 
-The selector `|a`, a link not in a namespace, doesn't match any links. In HTML, the `http://www.w3.org/1999/xhtml` is implied, meaning all HTML is in a namespace even if none is explicitly declared. In SVG, even if not explicitly set, the `http://www.w3.org/2000/svg` namespace is implied.
+The selector `|a`, a link not in a namespace, doesn't match any links. In HTML, the `http://www.w3.org/1999/xhtml` is implied, meaning all HTML is in a namespace, even if none is explicitly declared. In SVG, even if not explicitly set, the `http://www.w3.org/2000/svg` namespace is also implied. This means all the content is within at least one namespace.
 
 ## Specifications
 
