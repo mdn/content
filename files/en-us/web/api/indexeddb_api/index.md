@@ -19,7 +19,6 @@ IndexedDB is a transactional database system, like an SQL-based RDBMS. However, 
 
 - Read more about [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology).
 - Learn to use IndexedDB asynchronously from first principles with our [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) guide.
-- Combine IndexedDB for storing data offline with Service Workers for storing assets offline, as outlined in [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers).
 
 > **Note:** Like most web storage solutions, IndexedDB follows a [same-origin policy](https://www.w3.org/Security/wiki/Same_Origin_Policy). So while you can access stored data within a domain, you cannot access data across different domains.
 
