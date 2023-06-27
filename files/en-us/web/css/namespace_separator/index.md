@@ -101,7 +101,7 @@ The selector `|a`, a link not in a namespace, doesn't match any links. In HTML, 
 
 ## See also
 
-- [@namespace](/en-US/docs/Web/CSS/@namespace)
+- [`@namespace`](/en-US/docs/Web/CSS/@namespace)
 - [CSS type selector](/en-US/docs/Web/CSS/Type_selectors)
 - [CSS universal selector](/en-US/docs/Web/CSS/Universal_selectors)
 - [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
