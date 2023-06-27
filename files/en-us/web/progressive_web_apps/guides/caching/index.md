@@ -30,8 +30,6 @@ The `fetch()` function is available to service workers as well as to the main ap
 
 A service worker is a part of a PWA: it's a separate script that runs in its own thread, separate from the app's main thread.
 
-When a service worker is installed, the browser fires an event called {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} in the service worker's global scope. At this point the service worker can _precache_ resources, fetching them from the network and storing them in the cache. This ensures that they will already be available locally the first time they are needed.
-
 Once the service worker is active, then whenever the app requests a network resource controlled by the service worker, the browser fires an event called {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} in the service worker's global scope. This event is fired not only for explicit `fetch()` calls from the main thread, but also implicit network requests to load pages and subresources (such as JavaScript, CSS, and images) made by the browser following page navigation.
 
 By listening for the `fetch` event, the service worker can intercept the request and return a customized `Response`. In particular, it can return a locally cached response instead of always going to the network, or return a locally cached response if the device is offline.
@@ -42,15 +40,40 @@ The {{domxref("Cache")}} interface provides persistent storage for `Request`/`Re
 
 Most commonly, the service worker will add resources to the cache in its `install` or `fetch` event handlers.
 
+## When to cache resources
+
+A PWA can cache resources at any time, but in practice there are a few times when most PWAs will choose to cache them:
+
+- **In the service worker's `install` event handler (precaching)**: When a service worker is installed, the browser fires an event called {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} in the service worker's global scope. At this point the service worker can _precache_ resources, fetching them from the network and storing them in the cache. This ensures that they will already be available locally the first time they are needed.
+
+  > **Note:** Service worker install time is not the same as PWA install time. A service worker's `install` event fires as soon as the service worker has been downloaded and executes, which will typically happen as soon as the user visits your site.
+  >
+  > Even if the user never installs your site as a PWA, its service worker will be installed and activated.
+
+- **In the service worker's `fetch` event handler**: When a service worker's `fetch` event fires, the service worker may forward the request to the network and cache the resulting response, either if the cache did not already contain a response, or to update the cached response with a more recent one.
+
+- **In response to a user request**: A PWA might explicitly invite the user to download a resource to use later, when the device might be offline. For example, a music player might invite the user to download tracks to play later. In this case the main app thread could fetch the resource and add the response to the cache. Especially if the requested resource is big, the PWA might use the [Background Fetch API](/en-US/docs/Web/API/Background_Fetch_API), and in this case the response will be handled by the service worker, which will add it to the cache.
+
+- **Periodically**: Using the [Periodic Background Sync API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API), a service worker might fetch resources periodically and cache the responses, to ensure that the PWA can serve reasonably fresh responses even while the device is offline.
+
 ## Caching strategies
 
 A caching strategy is an algorithm for when to cache a resource, when to serve a cached resource, and when to get the resource from the network. In this section we'll summarize some common strategies.
 
 This isn't an exhaustive list: it's just intended to illustrate the kinds of approaches a PWA can take. Each PWA must consider its own specific needs when deciding which strategies to use for which resources.
 
-### Cache only
+### Cache first
 
-In this strategy, the service worker precaches some resources in its `install` event handler:
+In this strategy we will precache some resources, and then implement a "cache first" strategy only for those resources. That is:
+
+- For the precached resources, we will:
+  - Look in the cache for the resource, and return the resource if it is found.
+  - Otherwise, go to the network. If the network request succeeds, cache the resource for next time.
+- For all other resources, we will always go to the network.
+
+Precaching is an appropriate stategy for resources that the PWA is certain to need, that will not change for this version of the app, and that need to be fetched as quickly as possible. That includes, for example, the basic user interface of the app. If this is precached, then the app's UI can be rendered on launch without needing any network requests.
+
+First, the service worker precaches static resources in its `install` event handler:
 
 ```js
 const cacheName = "MyCache_1";
@@ -66,42 +89,11 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-Note that in the `install` event handler, we pass the result of the caching operation into the event's {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. This means that if caching fails for any reason, the installation fails: so conversely, when the service worker intercepts a request for a precached resource, it can be assured that the resource exists in the cache.
+In the `install` event handler, we pass the result of the caching operation into the event's {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. This means that if caching fails for any reason, the installation fails: so conversely, when the service worker intercepts a request for a precached resource, it can be assured that the resource has been added in the cache.
 
-When the resource is requested, we look at the URL of the request. If the URL matches one of the precached resources, we implement a "cache only" strategy: we retrieve the resource from the cache, and return the result. If there wasn't a match, this will be treated like a network error.
-
-```js
-async function cacheOnly(request) {
-  return caches.match(request);
-}
-
-self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-  if (precachedResources.includes(url.pathname)) {
-    event.respondWith(cacheOnly(event.request));
-  }
-});
-```
-
-This is an appropriate stategy for resources that the PWA is certain to need, that will not change for this version of the app, and that need to be fetched as quickly as possible. That includes, for example, the basic user interface of the app. If this is precached, then the app's UI can be rendered on launch without needing any network requests.
-
-Note that in the example above, `respondWith()` is only called for requests in `precachedResources`. If `respondWith()` is not called for a given request, the request is sent to the network as if the service worker had not intercepted it. So this strategy actually implements "cache only" for precached resources, and "network only" for all other requests.
-
-### Cache first
-
-This is an extension to the previous strategy. In the `fetch` event handler, if the resource is cachable, we:
-
-- Look in the cache for the resource, and return the resource if it is found.
-- Otherwise, go to the network. If the network request succeeds, cache the resource for next time.
-
-If the resource is not cachable, we only use the network, as before. The definition of "cachable" is specific to the PWA, but again includes the idea that the resource should not change for this version of the app. In this example, everything except requests for JSON data are treated as cachable.
+The `fetch` event handler looks like this:
 
 ```js
-function isCachable(request) {
-  const url = new URL(request.url);
-  return !url.pathname.endsWith(".json");
-}
-
 async function cacheFirst(request) {
   const cachedResponse = await caches.match(request);
   if (cachedResponse) {
@@ -120,13 +112,17 @@ async function cacheFirst(request) {
 }
 
 self.addEventListener("fetch", (event) => {
-  if (isCachable(event.request)) {
+  if (precachedResources.includes(url.pathname)) {
     event.respondWith(cacheFirst(event.request));
   }
 });
 ```
 
+We return the resource by calling the event's {{domxref("FetchEvent.respondWith()", "respondWith()")}} method. If we don't call `respondWith()` for a given request, then the request is sent to the network as if the service worker had not intercepted it. So if a request is not precached, it just goes to the network.
+
 Note also that when we add `networkResponse` to the cache, we must clone the response and add the copy to the cache, returning the original. This is because `Response` objects are streamable, so may only be read once.
+
+You might wonder why we fall back to the network for precached resources. If they are precached, can't we be sure they will be in the cache? The reason is that it is possible for the cache to be cleared, either by the browser or by the user. Although this is unlikely, it would make the PWA unusable unless it can fall back to the network. See [Deleting cached data](#deleting_cached_data).
 
 ### Stale while revalidate
 
