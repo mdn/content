@@ -15,7 +15,7 @@ One of the fundamental design principles of CSS is cascading, which allows sever
 
 The opposite also occurs. Sometimes there are no declarations defining the value of a property. The CSS cascade module defines how these missing values should be set via inheritance or from the property's initial value.
 
->**Note:** The rules for finding the specified values in the page context and its margin boxes are described in the [CSS page module](/en-US/docs/Web/CSS/CSS_paged_media).
+> **Note:** The rules for finding the specified values in the page context and its margin boxes are described in the [CSS page module](/en-US/docs/Web/CSS/CSS_paged_media).
 
 ## Reference
 
@@ -70,6 +70,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 ## Guides
 
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+
   - : Guide to the cascade algorithm that defines how user agents combine property values originating from different sources
 
 - [Learn: Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
