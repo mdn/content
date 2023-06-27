@@ -3,6 +3,9 @@ title: caption-side
 slug: Web/CSS/caption-side
 page-type: css-property
 browser-compat: css.properties.caption-side
+spec-urls: 
+  - https://drafts.csswg.org/css2/#propdef-caption-side
+  - https://drafts.csswg.org/css-logical/#caption-side
 ---
 
 {{CSSRef}}
