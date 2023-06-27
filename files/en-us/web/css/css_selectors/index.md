@@ -159,6 +159,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
   - {{CSSXref("::target-text")}}
 
 - {{CSSXref("@namespace")}} at-rule
+
 - CSS scoping module
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
