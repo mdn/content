@@ -82,6 +82,6 @@ console.log(encodeURI(illFormed.toWellFormed())); // "https://example.com/search
 
 ## See also
 
-- [Polyfill of `String.prototype.toWellFormed` in `core-js`](https://github.com/zloirock/core-js#well-formed-unicode-strings)
 - {{jsxref("String.prototype.isWellFormed()")}}
 - {{jsxref("String.prototype.normalize()")}}
+- [Polyfill of `String.prototype.toWellFormed` in `core-js`](https://github.com/zloirock/core-js#well-formed-unicode-strings)
