@@ -7,7 +7,7 @@ browser-compat: css.selectors.namespace
 
 {{CSSRef("Selectors")}}
 
-The **namespace prefix** (`|`) separates the selector from the namespace, identifying the namespace, or lack thereof, for a type selector.
+The **namespace separator** (`|`) separates the selector from the namespace, identifying the namespace, or lack thereof, for a type selector.
 
 ```css
 /* Links in the namespace named myNameSpace */
