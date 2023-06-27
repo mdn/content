@@ -38,7 +38,7 @@ namespace|element { style properties }
 
 ## Examples
 
-By default, all elements in an HTML or SVG element have a namespace as the `http://www.w3.org/1999/xhtml` and   `http://www.w3.org/2000/svg` namespace are implied. The {{domxref("document.createElementNS")}} method, with an empty string for the namespace parameter, can be used to create elements with no namespace.
+By default, all elements in an HTML or SVG element have a namespace as the `http://www.w3.org/1999/xhtml` and `http://www.w3.org/2000/svg` namespace are implied. The {{domxref("document.createElementNS")}} method, with an empty string for the namespace parameter, can be used to create elements with no namespace.
 
 ### Named namespace example
 
@@ -101,7 +101,7 @@ The selector `|a`, a link not in a namespace, doesn't match any links. In HTML, 
 
 In this example, we use JavaScript to create an element without a namespace and append it to the document. We set the SVG namespace to be the default namespace by defining the unnamed namespace with `@namespace`.
 
->**Note:** If a default, or unnamed, namespace is defined, universal and type selectors apply only to elements in that namespace.
+> **Note:** If a default, or unnamed, namespace is defined, universal and type selectors apply only to elements in that namespace.
 
 #### HTML
 
@@ -123,9 +123,9 @@ With JavaScript, with {{DOMXRef("document.createElementNS")}}, we create an anch
 
 ```js
 // create 'no namespace' anchor
-const a = document.createElementNS('', 'a');
-a.href='#';
-a.appendChild(document.createTextNode('Link created without a namespace'));
+const a = document.createElementNS("", "a");
+a.href = "#";
+a.appendChild(document.createTextNode("Link created without a namespace"));
 
 document.body.appendChild(a);
 ```
@@ -143,7 +143,7 @@ a {
   font-size: 1.4rem;
 }
 
-/* `<svg>` and `<p>` in the default (set to SVG) namespace */ 
+/* `<svg>` and `<p>` in the default (set to SVG) namespace */
 svg,
 p {
   border: 5px solid gold;
