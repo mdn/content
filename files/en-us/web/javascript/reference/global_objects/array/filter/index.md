@@ -151,7 +151,7 @@ console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
 
 ### Calling filter() on non-array objects
 
-The `filter()` method reads the `length` property of `this` and then accesses each integer index.
+The `filter()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -159,6 +159,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "a", // ignored by filter() since length is 3
 };
 console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 // [ 'a', 'b' ]

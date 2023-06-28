@@ -26,15 +26,15 @@ Unlike [character escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressi
 - `\d`
   - : Matches any digit character. Equivalent to `[0-9]`.
 - `\w`
-  - : Matches any word character, where a word character includes letters (A–Z, a–z), numbers (0–9), and underscore (_). If the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) and [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flags are both set, it also matches other Unicode characters that get canonicalized to one of the characters above through [case folding](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
+  - : Matches any word character, where a word character includes letters (A–Z, a–z), numbers (0–9), and underscore (\_). If the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) and the [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag is set, it also matches other Unicode characters that get canonicalized to one of the characters above through [case folding](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
 - `\s`
   - : Matches any [whitespace](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) or [line terminator](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) character.
 
-The uppercase forms `\D`, `\W`, and `\S` negates the match or `\d`, `\w`, and `\s`, respectively. They match any character that is not in the set of characters matched by the lowercase form.
+The uppercase forms `\D`, `\W`, and `\S` create complement character classes for `\d`, `\w`, and `\s`, respectively. They match any character that is not in the set of characters matched by the lowercase form.
 
-[Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) start with `\p` and `\P`, but they are only supported in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode). In non-unicode mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the `p` or `P` character.
+[Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) start with `\p` and `\P`, but they are only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). In Unicode-unaware mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the `p` or `P` character.
 
-Character class escapes can be used in [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class). However, they cannot be used as boundaries of character ranges. This is only allowed as a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+Character class escapes can be used in [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class). However, they cannot be used as boundaries of character ranges, which is only allowed as a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ## Examples
 

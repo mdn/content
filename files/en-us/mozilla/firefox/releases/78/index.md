@@ -35,7 +35,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 - The {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes are now enabled by default ([Firefox bug 1632646](https://bugzil.la/1632646)).
 - The {{CSSxRef(":read-only")}} and {{CSSxRef(":read-write")}} pseudo-classes are now supported without prefixes ([Firefox bug 312971](https://bugzil.la/312971)).
 
-  - In addition, `:read-write` styles are no longer applied to disabled [`<input>`](/en-US/docs/Web/HTML/Element/input) and [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) elements, which was a violation of [the HTML spec](https://html.spec.whatwg.org/#selector-read-write) ([Firefox bug 888884](https://bugzil.la/888884)).
+  - In addition, `:read-write` styles are no longer applied to disabled [`<input>`](/en-US/docs/Web/HTML/Element/input) and [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) elements, which was a violation of [the HTML spec](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-write) ([Firefox bug 888884](https://bugzil.la/888884)).
 
 ### JavaScript
 

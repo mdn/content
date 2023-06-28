@@ -87,68 +87,20 @@ ctx.fillText(textString, x, y);
 
 ### Monitoring screen resolution or zoom level changes
 
-In this example, we'll set up a media query and watch it to see when the device
-resolution changes, so that we can check the value of `devicePixelRatio` to
-handle any updates we need to.
-
-#### JavaScript
-
-The JavaScript code creates the media query that monitors the device resolution and
-checks the value of `devicePixelRatio` any time it changes.
-
-```js
-let remove = null;
-
-const updatePixelRatio = () => {
-  if (remove != null) {
-    remove();
-  }
-  let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
-  let media = matchMedia(mqString);
-  media.addEventListener("change", updatePixelRatio);
-  remove = function () {
-    media.removeEventListener("change", updatePixelRatio);
-  };
-
-  console.log("devicePixelRatio: " + window.devicePixelRatio);
-};
-updatePixelRatio();
-```
-
-The string `mqString` is set up to be the media query itself. The media
-query, which begins as `(resolution: 1dppx)` (for standard displays) or
-`(resolution: 2dppx)` (for Retina/HiDPI displays), checks to see if the
-current display resolution matches a specific number of device dots per
-`px`.
-
-The `updatePixelRatio()` function fetches the current value of
-`devicePixelRatio`, then sets the {{domxref("HTMLElement.innerText",
-  "innerText")}} of the element `pixelRatioBox` to a string which displays the
-ratio both as a percentage and as a raw decimal value with up to two decimal places.
-
-Then the `updatePixelRatio()` function is called once to display the
-starting value, after which the media query is created using
-{{domxref("Window.matchMedia", "matchMedia()")}} and
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} is called to set up
-`updatePixelRatio()` as a handler for the `change` event.
+In this example, we'll set up a media query and watch it to see when the device resolution changes, logging the new resolution.
 
 #### HTML
 
-The HTML creates the boxes containing the instructions and the `pixel-ratio`
-box that will display the current pixel ratio information.
-
 ```html
-<div class="container">
-  <div class="inner-container">
-    <p>
-      This example demonstrates the effect of zooming the page in and out (or
-      moving it to a screen with a different scaling factor) on the value of the
-      property <code>Window.devicePixelRatio</code>. Try it and watch what
-      happens!
-    </p>
-  </div>
-  <div class="pixel-ratio"></div>
+<div id="container">
+  <p>
+    This example demonstrates the effect of zooming the page in and out
+    (or moving it to a screen with a different scaling factor) on the
+    value of the <code>devicePixelRatio</code> property.</p>
+    <p>Try it and watch what happens!</p>
+  </p>
 </div>
+<div id="output"></div>
 ```
 
 #### CSS
@@ -158,36 +110,48 @@ body {
   font: 22px arial, sans-serif;
 }
 
-.container {
-  top: 2em;
-  width: 22em;
-  height: 14em;
+#container {
   border: 2px solid #22d;
-  margin: 0 auto;
-  padding: 0;
+  margin: 1rem auto;
+  padding: 1rem;
   background-color: #a9f;
 }
+```
 
-.inner-container {
-  padding: 1em 2em;
-  text-align: justify;
-  text-justify: auto;
-}
+#### JavaScript
 
-.pixel-ratio {
-  position: relative;
-  margin: auto;
-  height: 1.2em;
-  text-align: right;
-  bottom: 0;
-  right: 1em;
-  font-weight: bold;
-}
+The string `mqString` is set to a media query which checks to see if the current display resolution matches a specific number of device dots per `px`.
+
+The `media` variable is a {{domxref("MediaQueryList")}} object that's initialized with the media query string. When the result of running `mqString` against the document changes, the `media` object's `change` event fires, and the code logs the new resolution.
+
+Note that every time the resolution changes, the example has to create a new media query, based on the new resolution, and a new `MediaQueryList` instance.
+
+```js
+let remove = null;
+const output = document.querySelector("#output");
+
+const updatePixelRatio = () => {
+  if (remove != null) {
+    remove();
+  }
+  const mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
+  const media = matchMedia(mqString);
+  media.addEventListener("change", updatePixelRatio);
+  remove = () => {
+    media.removeEventListener("change", updatePixelRatio);
+  };
+
+  output.textContent = `devicePixelRatio: ${window.devicePixelRatio}`;
+};
+
+updatePixelRatio();
 ```
 
 #### Result
 
-{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}
+To test the example, try zooming the page in and out, and note the difference in the logged value of `devicePixelRatio`.
+
+{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 300)}}
 
 ## Specifications
 
@@ -199,7 +163,7 @@ body {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [CSS `resolution` media query](/en-US/docs/Web/CSS/@media/resolution)
 - The {{cssxref("image-resolution")}} property
