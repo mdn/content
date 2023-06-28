@@ -16,7 +16,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let gettingUserSettings = await browser.action.getUserSettings()
+let userSettings = await browser.action.getUserSettings();
 ```
 
 ### Parameters
@@ -39,8 +39,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This code logs a message indicating whether the action is pinned or not:
 
 ```js
-function gotSettings(settings) {
-  if (settings.isOnToolbar) {
+function gotSettings(userSettings) {
+  if (userSettings.isOnToolbar) {
     console.log("Action is pinned to toolbar.");
   } else {
     console.log("Action is not pinned to toolbar.");
@@ -57,7 +57,7 @@ gettingUserSettings.then(gotSettings);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getUserSettings) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
