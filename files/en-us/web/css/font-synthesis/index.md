@@ -26,8 +26,8 @@ This property is a shorthand for the following CSS properties:
 font-synthesis: none;
 font-synthesis: weight;
 font-synthesis: style;
-font-synthesis: small-caps style; /* can be specified in any order */
-font-synthesis: style small-caps weight; /* can be specified in any order */
+font-synthesis: small-caps style; /* property values can be in any order */
+font-synthesis: style small-caps weight; /* property values can be in any order */
 
 /* Global values */
 font-synthesis: inherit;
