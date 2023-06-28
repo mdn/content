@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 
 {{PWASidebar}}
 
-In previous articles we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push). In this article we will go even further and improve the performance of the app by progressively loading its resources.
+In previous steps of this tutorial we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push). In this article we will go further and improve the performance of the app by progressively loading its resources.
 
 ## First meaningful paint
 
@@ -180,8 +180,8 @@ Remember about the progressive enhancement approach — offer a usable product n
 
 ## Final thoughts
 
-That's all for this tutorial series — we went through the [source code of the js13kPWA example app](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) and learned about the use of progressive web apps features including an [Introduction](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction), [PWA structure](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure), [offline availability with Service Workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [installable PWAs](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), and finally notifications.
-We also explained push with help from the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook).
+That's all for this tutorial series — we went through the [source code of the js13kPWA example app](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) and learned about the [PWA structure](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure), [offline availability with Service Workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [installable PWAs](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), and finally [notifications](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/engageable_Notifications_Push).
+
 And in this article, we've looked into the concept of progressive loading, including an interesting example that makes use of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API).
 
 Feel free to experiment with the code, enhance your existing app with PWA features, or build something entirely new on your own. PWAs give a huge advantage over regular web apps.
