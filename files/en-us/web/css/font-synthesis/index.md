@@ -7,7 +7,7 @@ browser-compat: css.properties.font-synthesis
 
 {{CSSRef}}
 
-The **`font-synthesis`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize the missing typefaces – bold, italic, or small-caps.
+The **`font-synthesis`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize the bold, italic, and/or small-caps typefaces when they are missing in the specified font-family.
 
 {{EmbedInteractiveExample("pages/css/font-synthesis.html")}}
 

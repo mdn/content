@@ -9,7 +9,7 @@ browser-compat: css.properties.font-synthesis-weight
 
 The **`font-synthesis-weight`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize the bold typeface when it is missing in a font family.
 
-It is often convenient to use the shorthand property {{cssxref("font-synthesis")}} to control all typeface synthesis in one go.
+It is often convenient to use the shorthand property {{cssxref("font-synthesis")}} to control all typeface synthesis values.
 
 ## Syntax
 
