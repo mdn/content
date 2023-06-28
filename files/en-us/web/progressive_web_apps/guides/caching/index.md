@@ -128,7 +128,7 @@ You might wonder why we fall back to the network for precached resources. If the
 
 ### Cache first with cache refresh
 
-The drawback of "cache first" is that once a response is in the cache, it is never refreshed until a new version of the app is installed.
+The drawback of "cache first" is that once a response is in the cache, it is never refreshed until a new version of the service worker is installed.
 
 The "cache first with cache refresh" strategy, also known as "stale while revalidate", is similar to "cache first", except that we always send the request to the network, even after a cache hit, and use the response to refresh the cache. This means we get the responsiveness of "cache first", but get a fairly fresh response (as long as the request is made reasonably often).
 
