@@ -44,7 +44,7 @@ Try updating the live code below to recreate the finished example by following t
 2. Format `result` so that it has two decimal places and store it in a variable called `finalResult`.
 3. Check the data type of `finalResult` using `typeof`. If it's a `string`, convert it to a `number` type and store the result in a variable called `finalNumber`.
 
-To pass this test, `finalNumber` should have a result of `10.42`.
+To pass this test, `finalNumber` should have a result of `4633.33`.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
