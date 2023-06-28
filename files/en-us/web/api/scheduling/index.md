@@ -7,7 +7,7 @@ browser-compat: api.Scheduling
 
 {{SeeCompatTable}}{{APIRef("Scheduling API")}}
 
-The **`scheduling`** read-only property of the {{domxref("Navigator")}} interface returns an {{domxref("Scheduling")}} object for the current document.
+The **`Scheduling`** object provides methods and properties to control scheduling tasks within the current document.
 
 ## Instance methods
 

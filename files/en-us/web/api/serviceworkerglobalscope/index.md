@@ -66,8 +66,6 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("btoa", "ServiceWorkerGlobalScope.btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("Window.cancelAnimationFrame", "ServiceWorkerGlobalScope.cancelAnimationFrame()")}}
-  - : Cancels a callback scheduled by requestAnimationFrame.
 - {{domxref("clearInterval", "ServiceWorkerGlobalScope.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval")}}.
 - {{domxref("clearTimeout", "ServiceWorkerGlobalScope.clearTimeout()")}}
@@ -76,8 +74,6 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Writes a message to the console.
 - {{domxref("WorkerGlobalScope.importScripts", "ServiceWorkerGlobalScope.importScripts()")}}
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
-- {{domxref("Window.requestAnimationFrame", "ServiceWorkerGlobalScope.requestAnimationFrame()")}}
-  - : Requests the browser to execute a callback function before painting the next frame.
 - {{domxref("setInterval", "ServiceWorkerGlobalScope.setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.
 - {{domxref("setTimeout", "ServiceWorkerGlobalScope.setTimeout()")}}

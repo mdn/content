@@ -6,7 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Scheduling.isInputPending
 ---
 
-`navigator.scheduling.isInputPending` is an experimental feature that is part of the JavaScript Scheduling API. It allows you to check whether there are pending input events in the event queue, indicating that the user has interacted with the page or the system is about to dispatch such events.
+{{SeeCompatTable}}{{APIRef("Scheduling API")}}
+
+The `isInputPending()` method allows you to check whether there are pending input events in the event queue, indicating that the user has interacted with the page or the system is about to dispatch such events.
 
 This feature can be useful in scenarios where you want to check if there are any pending input events before performing a long-running operation or updating the UI. By checking the value of navigator.scheduling.isInputPending, you can avoid blocking the main thread when the user is interacting with the page.
 
@@ -27,7 +29,7 @@ navigator.scheduling.isInputPending(options)
 
 A boolean.
 
-The `navigator.scheduling.isInputPending` property returns a Boolean value, indicating whether there are pending input events or not. It can have one of the following three possible values:
+The `navigator.scheduling.isInputPending()` method returns a Boolean value, indicating whether there are pending input events or not. It can have one of the following three possible values:
 
 - `true`: Indicates that there are input events pending in the event queue.
 

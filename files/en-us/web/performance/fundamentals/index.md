@@ -101,7 +101,7 @@ Another problem that can delay startup is idle time, caused by waiting for respo
 
 > **Note:** For much more information on improving startup performance, read [Optimizing startup performance](/en-US/docs/Web/Performance/Optimizing_startup_performance).
 
-On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) for a guide as to how.
+On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation) for a guide about using service workers for offline and background sync capabilities.
 
 ### Frame rate
 
