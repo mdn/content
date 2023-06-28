@@ -182,7 +182,7 @@ The selector with no namespace, the `|a`, matched the JavaScript defined and app
 ## See also
 
 - [`@namespace`](/en-US/docs/Web/CSS/@namespace)
-- [`Document.createElementNS()](/en-US/docs/Web/API/Document/createElementNS) method
+- [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) method
 - [Element.namespaceURI](/en-US/docs/Web/API/Element/namespaceURI) property
 - [CSS type selector](/en-US/docs/Web/CSS/Type_selectors)
 - [CSS universal selector](/en-US/docs/Web/CSS/Universal_selectors)
