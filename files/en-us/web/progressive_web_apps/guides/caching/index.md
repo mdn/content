@@ -169,12 +169,9 @@ The last strategy we'll look at, "network first", is the inverse of cache first:
 
 This is useful for requests for which it is important to get the most fresh response possible, but for which a cached resource is better than nothing. A messaging app's list of recent messages might fall into this category.
 
-```js
-function isCachable(request) {
-  const url = new URL(request.url);
-  return !url.pathname.endsWith(".json");
-}
+In the example below we use "network first" for requests to fetch all resources located under the app's "inbox" path.
 
+```js
 async function networkFirst(request) {
   try {
     const networkResponse = await fetch(request);
@@ -190,7 +187,8 @@ async function networkFirst(request) {
 }
 
 self.addEventListener("fetch", (event) => {
-  if (isCachable(event.request)) {
+  const url = new URL(event.request.url);
+  if (url.pathname.match(/^\/inbox/)) {
     event.respondWith(networkFirst(event.request));
   }
 });
