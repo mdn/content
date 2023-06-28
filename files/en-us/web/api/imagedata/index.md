@@ -21,7 +21,7 @@ It is created using the {{domxref("ImageData.ImageData", "ImageData()")}} constr
 ## Instance properties
 
 - {{domxref("ImageData.data")}} {{ReadOnlyInline}}
-  - : A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (inclusive). The order goes by rows from the top-left pixel to the bottom-right.
+  - : A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (inclusive). The order goes by rows from the top-left pixel to the bottom-right in row-major order.
 - {{domxref("ImageData.colorSpace")}} {{ReadOnlyInline}}
   - : A string indicating the color space of the image data.
 - {{domxref("ImageData.height")}} {{ReadOnlyInline}}
