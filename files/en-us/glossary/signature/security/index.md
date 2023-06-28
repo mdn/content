@@ -4,6 +4,8 @@ slug: Glossary/Signature/Security
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **signature**, or _digital signature_, is a {{glossary("protocol")}} showing that a message is authentic.
 
 From the {{glossary("hash")}} of a given message, the **signing process** first generates a digital signature linked to the signing entity, using the entity's private {{glossary("key")}}.

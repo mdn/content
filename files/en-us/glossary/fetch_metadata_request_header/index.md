@@ -4,6 +4,8 @@ slug: Glossary/Fetch_metadata_request_header
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **fetch metadata request header** is an {{Glossary("Request header", "HTTP request header")}} that provides additional information about the context from which the request originated. This allows the server to make decisions about whether a request should be allowed based on where the request came from and how the resource will be used.
 
 With this information a server can implement a {{Glossary("resource isolation policy")}}, allowing external sites to request only those resources that are intended for sharing, and that are used appropriately. This approach can help mitigate common cross-site web vulnerabilities such as {{Glossary("CSRF")}}, Cross-site Script Inclusion('XSSI'), timing attacks, and cross-origin information leaks.
@@ -16,6 +18,12 @@ The fetch metadata request headers are:
 - {{HTTPHeader("Sec-Fetch-Mode")}}
 - {{HTTPHeader("Sec-Fetch-User")}}
 - {{HTTPHeader("Sec-Fetch-Dest")}}
+
+The following request headers are not _strictly_ "fetch metadata request headers", as they are not in the same specification, but similarly provide information about the context of how a resource will be used.
+A server might use them to modify its caching behavior, or the information that is returned:
+
+- {{HTTPHeader("Sec-Purpose")}} {{Experimental_Inline}}
+- {{HTTPHeader("Service-Worker-Navigation-Preload")}}
 
 ## See also
 

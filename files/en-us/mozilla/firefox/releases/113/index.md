@@ -21,6 +21,7 @@ No notable changes.
 - The [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
   See ([Firefox bug 1808229](https://bugzil.la/1808229)) for more details.
 - The [`scripting`](/en-US/docs/Web/CSS/@media/scripting) media feature is now supported. See ([Firefox bug 1166581](https://bugzil.la/1166581)) for more details.
+- The [`content`](/en-US/docs/Web/CSS/content) property now supports all image type including, `<gradient>`, `image-set()` and `url()`. See ([Firefox bug 1684958](https://bugzil.la/1684958)) for more details. There is currently an issue with the `::before` and `::after` pseudo selectors that means that they don't paint `<gradient>`s. See ([Firefox bug 1832901](https://bugzil.la/1832901)) for more details.
 
 ### JavaScript
 
@@ -38,8 +39,8 @@ No notable changes.
 #### Media, WebRTC, and Web Audio
 
 - The [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now enabled on Android. Hardware accelerated decoding is used if supported by the device ([Firefox bug 1672276](https://bugzil.la/1672276)).
-- The following WebRTC methods, properties, and dictionaries are now supported: [`RTCRtpSender.getCapabilities()`](/en-US/docs/Web/API/RTCRtpSender/getCapabilities), [`RTCRtpReceiver.getCapabilities()`](/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities), [`RTCRtpSender.setStreams()`](/en-US/docs/Web/API/RTCRtpSender/setStreams), [`RTCSctpTransport`](/en-US/docs/Web/API/RTCSctpTransport), [`RTCPeerConnection.sctp`](/en-US/docs/Web/API/RTCPeerConnection/sctp), [`RTCMediaSourceStats`](/en-US/docs/Web/API/RTCMediaSourceStats), [`RTCPeerConnection.connectionState`](/en-US/docs/Web/API/RTCPeerConnection/connectionState), and [`RTCPeerConnectionStats`](/en-US/docs/Web/API/RTCPeerConnectionStats).
-  The corresponding bug reports are, respectively: [Firefox bug 1531460](https://bugzil.la/1531460), [Firefox bug 1510802](https://bugzil.la/1510802), [Firefox bug 1278299](https://bugzil.la/1278299), [Firefox bug 1804678](https://bugzil.la/1804678), [Firefox bug 1265827](https://bugzil.la/1265827), [Firefox bug 1531087](https://bugzil.la/1531087).
+- The following WebRTC methods, properties, and dictionaries are now supported: [`RTCRtpSender.getCapabilities()`](/en-US/docs/Web/API/RTCRtpSender/getCapabilities), [`RTCRtpReceiver.getCapabilities()`](/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities), [`RTCRtpSender.setStreams()`](/en-US/docs/Web/API/RTCRtpSender/setStreams), [`RTCSctpTransport`](/en-US/docs/Web/API/RTCSctpTransport) & [`RTCPeerConnection.sctp`](/en-US/docs/Web/API/RTCPeerConnection/sctp), [`RTCMediaSourceStats`](/en-US/docs/Web/API/RTCMediaSourceStats), [`RTCPeerConnection.connectionState`](/en-US/docs/Web/API/RTCPeerConnection/connectionState), and [`RTCPeerConnectionStats`](/en-US/docs/Web/API/RTCPeerConnectionStats).
+  The corresponding bug reports are, respectively: [Firefox bug 1531460](https://bugzil.la/1531460), [Firefox bug 1531461](https://bugzil.la/1531461), [Firefox bug 1510802](https://bugzil.la/1510802), [Firefox bug 1278299](https://bugzil.la/1278299), [Firefox bug 1804678](https://bugzil.la/1804678), [Firefox bug 1265827](https://bugzil.la/1265827), and [Firefox bug 1531087](https://bugzil.la/1531087).
 
 #### Removals
 

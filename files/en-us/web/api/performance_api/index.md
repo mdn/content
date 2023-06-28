@@ -77,6 +77,8 @@ The following interfaces are present in the Performance API:
   - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 - {{domxref("TaskAttributionTiming")}}
   - : Identifies the type of task and the container that is responsible for the long task.
+- {{domxref("VisibilityStateEntry")}}
+  - : Measures the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
 ## Guides
 

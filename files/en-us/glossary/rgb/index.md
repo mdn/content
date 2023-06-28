@@ -4,6 +4,8 @@ slug: Glossary/RGB
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 _Red-Green-Blue_ (**RGB**) is a color model that represents colors as mixtures of three underlying components (or channels), namely: _red_, _green_, and _blue_. This model describes a color with a sequence of three numbers (typically between 0.0 and 1.0, or between 0 and 255). Each number represents the primary colors' different intensities (or contributions) in determining the final color.
 
 Alone an RGB value has no meaning. A color model defines how the three components relate to a color space. Graphically, a point in a three-dimensional grid or cube represents a color. Each dimension (or axis) corresponds to a different channel. The RGB color model is then a _cubic_, or _Cartesian_, coordinate system of the underlying color space.

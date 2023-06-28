@@ -4,6 +4,8 @@ slug: Glossary/Main_Axis
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 The main axis in {{glossary("flexbox")}} is defined by the direction set by the {{cssxref("flex-direction")}} property. There are four possible values for `flex-direction`. These are:
 
 - `row`

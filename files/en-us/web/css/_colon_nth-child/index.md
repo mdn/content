@@ -54,7 +54,8 @@ By passing a selector argument, we can select the **nth** element that matches t
 This is different from moving the selector outside of the function, like:
 
 ```css
-li.important: nth-child(-n + 3);
+li.important:nth-child(-n + 3) {
+}
 ```
 
 This selector selects list items if they are among the first three children and match the selector `li.important`.
@@ -407,7 +408,7 @@ td {
 
 In the first table this is just using `:nth-child(even)` the third row has the `hidden` attribute applied to it. So in this instance the 3rd row is not visible and the 2nd & 4th rows are counted as even, which technically they are but visually they are not.
 
-In the second table the _of syntax_ is used to target only the `tr`s that are **not** hidden using `:nth-child(even of :not(hidden))`.
+In the second table the _of syntax_ is used to target only the `tr`s that are **not** hidden using `:nth-child(even of :not([hidden]))`.
 
 {{EmbedLiveSample('Using_of_selector_to_fix_striped_tables', 550, 180)}}
 

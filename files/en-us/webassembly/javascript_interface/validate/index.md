@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.WebAssembly.validate
 {{WebAssemblySidebar}}
 
 The **`WebAssembly.validate()`** function validates a given [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of WebAssembly binary
-code, returning whether the bytes form a valid wasm module (`true`) or not
+code, returning whether the bytes form a valid Wasm module (`true`) or not
 (`false`).
 
 ## Syntax
@@ -24,7 +24,7 @@ WebAssembly.validate(bufferSource)
 
 ### Return value
 
-A boolean that specifies whether `bufferSource` is valid wasm code
+A boolean that specifies whether `bufferSource` is valid Wasm code
 (`true`) or not (`false`).
 
 ### Exceptions
@@ -38,7 +38,7 @@ a {{jsxref("TypeError")}} is thrown.
 
 The following example (see the validate.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html),
 and [see it live too](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html))
-fetches a .wasm module and converts it into a typed array.
+fetches a Wasm module and converts it into a typed array.
 The `validate()` method is then used to check whether the module is valid.
 
 ```js
@@ -47,7 +47,7 @@ fetch("simple.wasm")
   .then((bytes) => {
     const valid = WebAssembly.validate(bytes);
     console.log(
-      `The given bytes are ${valid ? "" : "not "}a valid wasm module`
+      `The given bytes are ${valid ? "" : "not "}a valid Wasm module`
     );
   });
 ```

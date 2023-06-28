@@ -171,12 +171,12 @@ document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const myWordmark = document.createElement("img");
-myWordmark.setAttribute(
+const loginImage = document.createElement("img");
+loginImage.setAttribute(
   "src",
-  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
 );
-document.querySelector("h1").appendChild(myWordmark);
+document.querySelector("h1").appendChild(loginImage);
 ```
 
 Now try entering the following incorrect versions of the code and see what you get.
@@ -190,12 +190,12 @@ document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js example-bad
-const myWordmark = document.createElement("img");
-myBanana.setAttribute(
+const loginImage = document.createElement("img");
+banana.setAttribute(
   "src",
-  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
 );
-document.querySelector("h1").appendChild(myWordmark);
+document.querySelector("h1").appendChild(loginImage);
 ```
 
 You'll start to see the kind of errors that the browser returns. Often these errors are fairly cryptic, but it should be pretty simple to figure these problems out!

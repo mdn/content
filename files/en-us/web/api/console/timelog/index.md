@@ -15,12 +15,16 @@ The **`console.timeLog()`** method logs the current value of a timer that was pr
 ```js-nolint
 timeLog()
 timeLog(label)
+timeLog(label, val1)
+timeLog(label, val1, /* …, */ valN)
 ```
 
 ### Parameters
 
 - `label` {{optional_inline}}
   - : The name of the timer to log to the console. If this is omitted the label "default" is used.
+- `valN` {{optional_inline}}
+  - : Additional values to be logged to the console after the timer output.
 
 ### Return value
 
@@ -59,6 +63,15 @@ If there is no corresponding timer, `timeLog()` logs a warning like:
 
 ```
 Timer "timer name" doesn't exist.
+```
+
+You can log additional values to the console after the timer output:
+
+```js
+console.time();
+reticulateSplines();
+console.timeLog("default", "Hello", "world");
+// default: 780ms Hello world
 ```
 
 See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for more details and examples.

@@ -35,4 +35,4 @@ The character flags are:
 
 ## Specifications
 
-[EXSLT - REGEXP:TEST](http://exslt.org/regexp/functions/test/index.html)
+[EXSLT - REGEXP:TEST](https://exslt.github.io/regexp/functions/test/index.html)
