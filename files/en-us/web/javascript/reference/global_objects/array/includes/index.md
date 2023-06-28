@@ -97,7 +97,7 @@ console.log([1, , 3].includes(undefined)); // true
 
 ### Calling includes() on non-array objects
 
-The `includes()` method reads the `length` property of `this` and then accesses each integer index.
+The `includes()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -105,6 +105,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 1, // ignored by includes() since length is 3
 };
 console.log(Array.prototype.includes.call(arrayLike, 2));
 // true
