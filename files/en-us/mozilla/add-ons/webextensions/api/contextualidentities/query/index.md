@@ -1,17 +1,10 @@
 ---
 title: contextualIdentities.query()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - query
+page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.query
 ---
+
 {{AddonSidebar()}}
 
 Gets information about all contextual identities, or about those contextual identities that match a given filter argument.
@@ -20,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var getContext = browser.contextualIdentities.query(
+```js-nolint
+let getContext = browser.contextualIdentities.query(
   details                  // object
 )
 ```
@@ -49,13 +42,13 @@ Retrieve all contextual identities, and log their names:
 
 ```js
 function onGot(contexts) {
-  for (let context of contexts) {
+  for (const context of contexts) {
     console.log(`Name: ${context.name}`);
   }
 }
 
-function onError(e) {
-  console.error(e);
+function onError(error) {
+  console.error(error);
 }
 
 browser.contextualIdentities.query({}).then(onGot, onError);
@@ -65,18 +58,20 @@ Retrieve all contextual identities whose names are "my-thing", and log their nam
 
 ```js
 function onGot(contexts) {
-  for (let context of contexts) {
+  for (const context of contexts) {
     console.log(`Name: ${context.name}`);
   }
 }
 
-function onError(e) {
-  console.error(e);
+function onError(error) {
+  console.error(error);
 }
 
-browser.contextualIdentities.query({
-  name: "my-thing"
-}).then(onGot, onError);
+browser.contextualIdentities
+  .query({
+    name: "my-thing",
+  })
+  .then(onGot, onError);
 ```
 
 {{WebExtExamples}}

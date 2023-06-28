@@ -1,18 +1,10 @@
 ---
 title: downloads.removeFile()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - removeFile
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.removeFile
 ---
+
 {{AddonSidebar()}}
 
 The **`removeFile()`** function of the {{WebExtAPIRef("downloads")}} API removes a downloaded file from disk.
@@ -23,12 +15,12 @@ To remove a file from the downloads history, you need to use {{WebExtAPIRef("dow
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Note:** If you want to remove a downloaded file from disk _and_ erase it from history, you have to call `removeFile()` before you call {{WebExtAPIRef("downloads.erase()")}}. If you try it the other way around you'll get an error when calling `removeFile()`, because the browser will no longer have a record of the download.
+> **Note:** If you want to remove a downloaded file from disk _and_ erase it from history, you have to call `removeFile()` before you call {{WebExtAPIRef("downloads.erase()")}}. If you try it the other way around you'll get an error when calling `removeFile()`, because the browser will no longer have a record of the download.
 
 ## Syntax
 
-```js
-var removing = browser.downloads.removeFile(
+```js-nolint
+let removing = browser.downloads.removeFile(
   downloadId      // integer
 )
 ```
@@ -61,12 +53,12 @@ function onError(error) {
 
 function remove(downloadItems) {
   if (downloadItems.length > 0) {
-    var removing = browser.downloads.removeFile(downloadItems[0].id);
+    let removing = browser.downloads.removeFile(downloadItems[0].id);
     removing.then(onRemoved, onError);
   }
 }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   limit: 1,
   orderBy: ["-startTime"]
 });
@@ -76,11 +68,10 @@ searching.then(remove, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-removeFile) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-removeFile) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,4 +98,4 @@ searching.then(remove, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,15 +1,15 @@
 ---
 title: WebGLTexture
 slug: Web/API/WebGLTexture
-tags:
-  - API
-  - Reference
-  - WebGL
+page-type: web-api-interface
 browser-compat: api.WebGLTexture
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLTexture** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents an opaque texture object providing storage and state for texturing operations.
+
+{{InheritanceDiagram}}
 
 ## WebGL textures
 
@@ -20,8 +20,7 @@ The `WebGLTexture` object does not define any methods or properties of its own a
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}
 - {{domxref("WebGLRenderingContext.isTexture()")}}
 
-See also the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) on [Using textures
-in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+See also the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) on [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 ## WebXR opaque textures
 
@@ -47,9 +46,9 @@ The WebXR _opaque texture_ is identical to the standard `WebGLTexture` with the 
 ### Creating a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const texture = gl.createTexture();
 ```
 
 ## Specifications

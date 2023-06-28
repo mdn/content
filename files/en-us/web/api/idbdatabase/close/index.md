@@ -1,16 +1,11 @@
 ---
-title: IDBDatabase.close()
+title: "IDBDatabase: close() method"
+short-title: close()
 slug: Web/API/IDBDatabase/close
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
+page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.close
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`close()`** method of the {{domxref("IDBDatabase")}}
@@ -25,28 +20,36 @@ operation is pending.
 
 ## Syntax
 
-```js
-IDBDatabase.close();
+```js-nolint
+close()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4); // opening a database.
+const DBOpenRequest = window.indexedDB.open("toDoList", 4); // opening a database.
 
 // Create event handlers for both success and failure of
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += "<li>Error loading database.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += "<li>Database initialised.</li>";
+DBOpenRequest.onsuccess = (event) => {
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   db = DBOpenRequest.result;
 
-  // now let"s close the database again!
+  // now let's close the database again!
   db.close();
 };
 ```
@@ -67,5 +70,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

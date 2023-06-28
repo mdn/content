@@ -1,13 +1,13 @@
 ---
 title: Background Fetch API
 slug: Web/API/Background_Fetch_API
-tags:
-  - API
-  - Overview
-  - Reference
-  - Background Fetch API
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.BackgroundFetchManager
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
 
 The **Background Fetch API** provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.
 
@@ -15,7 +15,7 @@ The **Background Fetch API** provides a method for managing downloads that may t
 
 When a web application requires the user to download large files, this often presents a problem in that the user needs to stay connected to the page for the download to complete. If they lose connectivity, close the tab or navigate away from the page the download stops.
 
-The {{domxref("Background Sync API")}} provides a way for service workers to defer processing until a user is connected; however it can't be used for long running tasks such as downloading a large file. Background Sync requires that the service worker stays alive until the fetch is completed, and to conserve battery life and to prevent unwanted tasks happening in the background the browser will at some point terminate the task.
+The {{domxref("Background Synchronization API")}} provides a way for service workers to defer processing until a user is connected; however it can't be used for long running tasks such as downloading a large file. Background Sync requires that the service worker stays alive until the fetch is completed, and to conserve battery life and to prevent unwanted tasks happening in the background the browser will at some point terminate the task.
 
 The Background Fetch API solves this problem. It creates a way for a web developer to tell the browser to perform some fetches in the background, for example when the user clicks a button to download a video file. The browser then performs the fetches in a user-visible way, displaying progress to the user and giving them a method to cancel the download. Once the download is complete the browser then opens the service worker, at which point your application can do something with the response if required.
 
@@ -38,8 +38,8 @@ The Background Fetch API will enable the fetch to happen if the user starts the 
 
 Before using Background Fetch, check for browser support.
 
-```css
-if (!('BackgroundFetchManager' in self)) {
+```js
+if (!("BackgroundFetchManager" in self)) {
   // Provide fallback downloading.
 }
 ```
@@ -51,15 +51,21 @@ A background fetch may fetch a number of files. In our example the fetch request
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
-    title: 'Episode 5: Interesting things.',
-    icons: [{
-      sizes: '300x300',
-      src: '/ep-5-icon.png',
-      type: 'image/png',
-    }],
-    downloadTotal: 60 * 1024 * 1024,
-  });
+  const bgFetch = await swReg.backgroundFetch.fetch(
+    "my-fetch",
+    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+    {
+      title: "Episode 5: Interesting things.",
+      icons: [
+        {
+          sizes: "300x300",
+          src: "/ep-5-icon.png",
+          type: "image/png",
+        },
+      ],
+      downloadTotal: 60 * 1024 * 1024,
+    }
+  );
 });
 ```
 
@@ -67,11 +73,13 @@ You can find a demo application which implements Background Fetch [here](https:/
 
 ## Specifications
 
-| Specification                                                |
-| ------------------------------------------------------------ |
-| [Background Fetch](https://wicg.github.io/background-fetch/) |
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
-- [Introducing Background Fetch](https://developers.google.com/web/updates/2018/12/background-fetch)
+- [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/)
 - [Background Fetch - HTTP 203](https://www.youtube.com/watch?v=cElAoxhQz6w)

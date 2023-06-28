@@ -1,12 +1,11 @@
 ---
-title: Node.ownerDocument
+title: "Node: ownerDocument property"
+short-title: ownerDocument
 slug: Web/API/Node/ownerDocument
-tags:
-  - Property
-  - Reference
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.Node.ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`ownerDocument`** property of the {{domxref("Node")}} interface

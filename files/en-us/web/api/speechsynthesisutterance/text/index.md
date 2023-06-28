@@ -1,66 +1,52 @@
 ---
-title: SpeechSynthesisUtterance.text
+title: "SpeechSynthesisUtterance: text property"
+short-title: text
 slug: Web/API/SpeechSynthesisUtterance/text
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Text
-  - Web Speech API
-  - speech
-  - synthesis
+page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.text
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`text`** property of the
-{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be
-synthesised when the utterance is spoken.
+{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be synthesized when the utterance is spoken.
 
-The text may be provided as plain text, or a well-formed [SSML](https://www.w3.org/TR/speech-synthesis/)
-document. The SSML tags will be stripped away by devices that don't support SSML.
+The text may be provided as plain text, or a well-formed [SSML](https://www.w3.org/TR/speech-synthesis/) document.
+The SSML tags will be stripped away by devices that don't support SSML.
 
-## Syntax
+## Value
 
-```js
-var myText = speechSynthesisUtteranceInstance.text;
-speechSynthesisUtteranceInstance.text = 'Hello I am speaking';
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the text to the synthesised. The maximum length
-of the text that can be spoken in each utterance is 32,767 characters.
+A string representing the text to the synthesized.
+The maximum length of the text that can be spoken in each utterance is 32,767 characters.
 
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   console.log(utterThis.text);
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

@@ -1,36 +1,33 @@
 ---
-title: WebGLRenderingContext.pixelStorei()
+title: "WebGLRenderingContext: pixelStorei() method"
+short-title: pixelStorei()
 slug: Web/API/WebGLRenderingContext/pixelStorei
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.pixelStorei
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.pixelStorei()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the pixel storage modes.
 
 ## Syntax
 
-```js
-void gl.pixelStorei(pname, param);
+```js-nolint
+pixelStorei(pname, param)
 ```
 
 ### Parameters
 
-- pname
+- `pname`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. See below for possible
     values.
-- param
-  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying a value to set the _`pname`_
+- `param`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying a value to set the `pname`
     parameter to. See below for possible values.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Pixel storage parameters
 
@@ -193,10 +190,8 @@ Setting the pixel storage mode affects the
 textures with the {{domxref("WebGLRenderingContext.texImage2D()")}} and
 {{domxref("WebGLRenderingContext.texSubImage2D()")}} methods.
 
-
-
 ```js
-var tex = gl.createTexture();
+const tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
 gl.pixelStorei(gl.PACK_ALIGNMENT, 4);
 ```

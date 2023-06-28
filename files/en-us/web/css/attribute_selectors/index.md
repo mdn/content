@@ -1,17 +1,17 @@
 ---
 title: Attribute selectors
 slug: Web/CSS/Attribute_selectors
-tags:
-  - Attribute selectors
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.attribute
 ---
+
 {{CSSRef}}
 
-The CSS **attribute selector** matches elements based on the presence or value of a given attribute.
+The CSS **attribute selector** matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.
+
+The case sensitivity of attribute names and values depends on the document language. In HTML, attribute names are case insensitive, as are spec-defined {{glossary("enumerated")}} values. In these cases, the value in the selector is case-insensitive, even if the value is not one of the enumerated values or if the attribute is not a valid value for the element on which it is set.
+
+If the attribute value is case sensitive, like [`class`](/en-US/docs/Web/HTML/Global_attributes/class), [`id`](/en-US/docs/Web/HTML/Global_attributes/id), or any [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) attribute, the attribute selector value match is case-sensitive. Attributes defined outside of the HTML specification, like [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) and [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Attributes) attributes, are also case-sensitive. Normally case-sensitive attribute selectors can be made case-insensitive with the inclusion of the case-insensitive modifier (`i`).
 
 ```css
 /* <a> elements with a title attribute */
@@ -20,7 +20,8 @@ a[title] {
 }
 
 /* <a> elements with an href matching "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -29,8 +30,8 @@ a[href*="example"] {
   font-size: 2em;
 }
 
-/* <a> elements with an href ending ".org" */
-a[href$=".org"] {
+/* <a> elements with an href ending ".org", case-insensitive */
+a[href$=".org" i] {
   font-style: italic;
 }
 
@@ -91,7 +92,7 @@ a[href*="insensitive" i] {
 /* Links with "cAsE" anywhere in the URL,
 with matching capitalization */
 a[href*="cAsE" s] {
-  color: pink;
+  color: pink;
 }
 
 /* Links that end in ".org" */
@@ -99,9 +100,10 @@ a[href$=".org"] {
   color: red;
 }
 
-/* Links that start with "https" and end in ".org" */
-a[href^="https"][href$=".org"] {
-  color: green;
+/* Links that start with "https://" and end in ".org" */
+a[href^="https://"][href$=".org"]
+{
+  color: green;
 }
 ```
 
@@ -147,7 +149,7 @@ div[lang="pt"] {
 }
 
 /* All divs in Chinese are red, whether
-   simplified (zh-CN) or traditional (zh-TW). */
+   simplified (zh-Hans-CN) or traditional (zh-Hant-TW). */
 div[lang|="zh"] {
   color: red;
 }
@@ -156,7 +158,7 @@ div[lang|="zh"] {
    `data-lang` are purple. */
 /* Note: You could also use hyphenated attributes
    without double quotes */
-div[data-lang="zh-TW"] {
+div[data-lang="zh-Hant-TW"] {
   color: purple;
 }
 ```
@@ -166,9 +168,9 @@ div[data-lang="zh-TW"] {
 ```html
 <div lang="en-us en-gb en-au en-nz">Hello World!</div>
 <div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">世界您好！</div>
+<div lang="zh-Hans-CN">世界您好！</div>
+<div lang="zh-Hant-TW">世界您好！</div>
+<div data-lang="zh-Hant-TW">世界您好！</div>
 ```
 
 #### Result
@@ -177,25 +179,31 @@ div[data-lang="zh-TW"] {
 
 ### HTML ordered lists
 
-The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively due to it primarily being used in the {{HTMLElement("input")}} element, trying to use attribute selectors to with the {{htmlattrxref("type", "ol")}} attribute of an {{HTMLElement("ol", "ordered list")}} doesn't work without the [case-sensitive](#case-sensitive) modifier.
+The HTML specification requires the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
+Note that if a modifier is not supported by the user agent, then the selector will not match.
 
 #### CSS
 
 ```css
-/* List types require the case sensitive flag due to a quirk in how HTML treats the type attribute. */
+/* Case-sensitivity depends on document language */
 ol[type="a"] {
   list-style-type: lower-alpha;
   background: red;
 }
 
-ol[type="a" s] {
+ol[type="b" s] {
   list-style-type: lower-alpha;
   background: lime;
 }
 
-ol[type="A" s] {
+ol[type="B" s] {
   list-style-type: upper-alpha;
-  background: lime;
+  background: grey;
+}
+
+ol[type="c" i] {
+  list-style-type: upper-alpha;
+  background: green;
 }
 ```
 
@@ -203,7 +211,20 @@ ol[type="A" s] {
 
 ```html
 <ol type="A">
-  <li>Example list</li>
+  <li>
+    Red background for case-insensitive matching (default for the type selector)
+  </li>
+</ol>
+<ol type="b">
+  <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
+</ol>
+<ol type="B">
+  <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
+</ol>
+<ol type="C">
+  <li>
+    Green background if `i` modifier is supported (case-insensitive match)
+  </li>
 </ol>
 ```
 

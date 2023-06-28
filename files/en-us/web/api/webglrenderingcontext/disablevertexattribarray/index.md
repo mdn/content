@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.disableVertexAttribArray()
+title: "WebGLRenderingContext: disableVertexAttribArray() method"
+short-title: disableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/disableVertexAttribArray
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.disableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.disableVertexAttribArray()`**
@@ -17,18 +14,18 @@ vertex attribute array off at a given index position.
 
 ## Syntax
 
-```js
-void gl.disableVertexAttribArray(index);
+```js-nolint
+disableVertexAttribArray(index)
 ```
 
 ### Parameters
 
-- index
+- `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute to disable.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

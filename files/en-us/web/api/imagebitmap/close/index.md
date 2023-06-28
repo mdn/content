@@ -1,39 +1,43 @@
 ---
-title: ImageBitmap.close()
+title: "ImageBitmap: close() method"
+short-title: close()
 slug: Web/API/ImageBitmap/close
-tags:
-  - API
-  - Experimental
-  - ImageBitmap
-  - Method
-  - OffscreenCanvas
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.ImageBitmap.close
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+
+{{APIRef("Canvas API")}}
 
 The **`ImageBitmap.close()`**
 method disposes of all graphical resources associated with an `ImageBitmap`.
 
 ## Syntax
 
-```js
-void ImageBitmap.close()
+```js-nolint
+close()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext('webgl');
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext("webgl");
 
-// ... some drawing using the gl context ...
+// Perform some drawing using the gl context
 
-var bitmap = offscreen.transferToImageBitmap();
+const bitmap = offscreen.transferToImageBitmap();
 // ImageBitmap { width: 256, height: 256 }
 
 bitmap.close();
-// ImageBitmap { width: 0, height: 0 } -- disposed
+// ImageBitmap { width: 0, height: 0 } — disposed
 ```
 
 ## Specifications

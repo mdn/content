@@ -1,25 +1,20 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - i18n
+page-type: webextension-api
 browser-compat: webextensions.api.i18n
 ---
+
 {{AddonSidebar}}
 
 Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header).
 
+See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this API.
+
 ## Types
 
 - {{WebExtAPIRef("i18n.LanguageCode")}}
-  - : A [language tag](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) such as `"en-US"` or "`fr`".
+  - : A [language tag](https://www.rfc-editor.org/rfc/rfc9110.html#name-language-tags) such as `"en-US"` or "`fr`".
 
 ## Functions
 
@@ -38,16 +33,15 @@ Functions to internationalize your extension. You can use these APIs to get loca
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
 
 ## See also
 
 - [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization): a guide to using the WebExtension i18n system.
 - [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): extensions supply locale-specific strings in files called `messages.json`. This page describes the format of `messages.json`.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,4 +68,4 @@ Functions to internationalize your extension. You can use these APIs to get loca
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

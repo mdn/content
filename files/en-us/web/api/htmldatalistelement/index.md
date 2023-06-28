@@ -1,27 +1,24 @@
 ---
 title: HTMLDataListElement
 slug: Web/API/HTMLDataListElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.HTMLDataListElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLDataListElement`** interface provides special properties (beyond the {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) to manipulate {{ HTMLElement("datalist") }} elements and their content.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}_
+_Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
-- {{domxref("HTMLDataListElement.options")}} {{readonlyInline}}
-  - : Is a {{domxref("HTMLCollection")}} representing a collection of the contained option elements.
+- {{domxref("HTMLDataListElement.options")}} {{ReadOnlyInline}}
+  - : A {{domxref("HTMLCollection")}} representing a collection of the contained option elements.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

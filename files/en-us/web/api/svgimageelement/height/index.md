@@ -1,18 +1,11 @@
 ---
-title: SVGImageElement.height
+title: "SVGImageElement: height property"
+short-title: height
 slug: Web/API/SVGImageElement/height
-tags:
-  - API
-  - Image
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - height
+page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.height
 ---
+
 {{APIRef("SVG")}}
 
 The **`height`** read-only property of the
@@ -20,13 +13,7 @@ The **`height`** read-only property of the
 corresponding to the {{SVGAttr("height")}} attribute of the given
 {{SVGElement("image")}} element.
 
-## Syntax
-
-```js
-var height = svgImageElement.height
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}}.
 

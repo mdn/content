@@ -1,15 +1,11 @@
 ---
-title: HTMLElement.lang
+title: "HTMLElement: lang property"
+short-title: lang
 slug: Web/API/HTMLElement/lang
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - NeedsUpdate
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.lang
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.lang`** property gets or sets the base
@@ -24,22 +20,15 @@ level described here, is most often specified for the root element of the docume
 This also only works with the `lang` attribute and not with
 `xml:lang`.
 
-## Syntax
+## Value
 
-```js
-var languageUsed = elementNodeReference.lang; // Get the value of lang
-elementNodeReference.lang = NewLanguage; // Set new value for lang
-```
+A string.
 
-_languageUsed_ is a string variable that gets the language in which the text
-of the current element is written. _NewLanguage_ is a string variable with its
-value setting the language in which the text of the current element is written.
-
-## Example
+## Examples
 
 ```js
 // this snippet compares the base language and
-// redirects to another url based on language
+// redirects to another URL based on language
 if (document.documentElement.lang === "en") {
   window.location.href = "Some_document.html.en";
 } else if (document.documentElement.lang === "ru") {

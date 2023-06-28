@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.getShaderParameter()
+title: "WebGLRenderingContext: getShaderParameter() method"
+short-title: getShaderParameter()
 slug: Web/API/WebGLRenderingContext/getShaderParameter
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getShaderParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getShaderParameter()`** method of
@@ -17,25 +14,28 @@ given shader.
 
 ## Syntax
 
-```js
-any gl.getShaderParameter(shader, pname);
+```js-nolint
+getShaderParameter(shader, pname)
 ```
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} to get parameter information from.
-- pname
+- `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
 
-    - `gl.DELETE_STATUS`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
-      whether or not the shader is flagged for deletion.
-    - `gl.COMPILE_STATUS`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
-      whether or not the last shader compilation was successful.
-    - `gl.SHADER_TYPE`: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating whether
-      the shader is a vertex shader (`gl.VERTEX_SHADER`) or fragment shader
-      (`gl.FRAGMENT_SHADER`) object.
+    - `gl.DELETE_STATUS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
+        whether or not the shader is flagged for deletion.
+    - `gl.COMPILE_STATUS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
+        whether or not the last shader compilation was successful.
+    - `gl.SHADER_TYPE`
+      - : Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating whether
+        the shader is a vertex shader (`gl.VERTEX_SHADER`) or fragment shader
+        (`gl.FRAGMENT_SHADER`) object.
 
 ### Return value
 

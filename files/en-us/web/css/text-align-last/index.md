@@ -1,15 +1,10 @@
 ---
 title: text-align-last
 slug: Web/CSS/text-align-last
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-align-last
 ---
+
 {{CSSRef}}
 
 The **`text-align-last`** CSS property sets how the last line of a block or a line, right before a forced line break, is aligned.
@@ -32,6 +27,7 @@ text-align-last: justify;
 text-align-last: inherit;
 text-align-last: initial;
 text-align-last: revert;
+text-align-last: revert-layer;
 text-align-last: unset;
 ```
 
@@ -65,7 +61,11 @@ text-align-last: unset;
 ### Justifying the last line
 
 ```html hidden
-<p>Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.</p>
+<p>
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+</p>
 ```
 
 #### CSS

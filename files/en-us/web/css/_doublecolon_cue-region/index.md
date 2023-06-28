@@ -1,20 +1,13 @@
 ---
-title: '::cue-region'
+title: "::cue-region"
 slug: Web/CSS/::cue-region
-tags:
-  - '::cue-region'
-  - CSS
-  - Media
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web Video Text Tracks
-  - WebVTT
+page-type: css-pseudo-element
 browser-compat: css.selectors.cue-region
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`::cue-region`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webtt_cues) in media with VTT tracks.
+The **`::cue-region`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_cues) in media with VTT tracks.
 
 ```css
 ::cue-region {
@@ -23,11 +16,15 @@ The **`::cue-region`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/W
 }
 ```
 
-The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its shorthand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
+The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its longhand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
 
 ## Syntax
 
-{{CSSSyntax}}
+```css-nolint
+::cue-region | ::cue-region(<selector>) {
+  /* ... */
+}
+```
 
 ## Permitted properties
 

@@ -1,15 +1,11 @@
 ---
-title: ShadowRoot.pointerLockElement
+title: "ShadowRoot: pointerLockElement property"
+short-title: pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
-tags:
-  - API
-  - DOM
-  - ShadowRoot
-  - Property
-  - Reference
-  - mouse lock
+page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.pointerLockElement
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`pointerLockElement`** property
@@ -18,20 +14,14 @@ element set as the target for mouse events while the pointer is locked. It is
 `null` if lock is pending, pointer is unlocked, or the target is in another
 tree.
 
-## Syntax
-
-```js
-shadowRoot.pointerLockElement;
-```
-
-### Value
+## Value
 
 An {{domxref("Element")}} or `null`.
 
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let pleElem = shadow.pointerLockElement;
 ```

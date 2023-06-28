@@ -1,29 +1,18 @@
 ---
-title: CSSPropertyRule.syntax
+title: "CSSPropertyRule: syntax property"
+short-title: syntax
 slug: Web/API/CSSPropertyRule/syntax
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values API
-  - CSSPropertyRule
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.CSSPropertyRule.syntax
 ---
+
 {{APIRef("CSS Properties and Values API")}}
 
-The read-only **`syntax`** property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property’s value is parsed at computed-value time.
+The read-only **`syntax`** property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property's value is parsed at computed-value time.
 
-## Syntax
+## Value
 
-    const syntax = CSSPropertyRule.syntax;
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 
@@ -31,7 +20,7 @@ This stylesheet contains a single {{cssxref("@property")}} rule. The first {{dom
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

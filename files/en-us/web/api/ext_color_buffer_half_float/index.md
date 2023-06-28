@@ -1,13 +1,11 @@
 ---
-title: EXT_color_buffer_half_float
+title: EXT_color_buffer_half_float extension
+short-title: EXT_color_buffer_half_float
 slug: Web/API/EXT_color_buffer_half_float
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension
 browser-compat: api.EXT_color_buffer_half_float
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_color_buffer_half_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the ability to render to 16-bit floating-point color buffers.
@@ -21,9 +19,9 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 ## Constants
 
 - `ext.RGBA16F_EXT`
-  - : RGBA 16-bit floating-point color-renderable format.
+  - : RGBA 16-bit floating-point color-renderable format.
 - `ext.RGB16F_EXT`
-  - : RGB 16-bit floating-point color-renderable format.
+  - : RGB 16-bit floating-point color-renderable format.
 - `ext.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT`
   - : ?
 - `ext.UNSIGNED_NORMALIZED_EXT`
@@ -38,9 +36,9 @@ This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_color_buffer_half_float');
+const ext = gl.getExtension("EXT_color_buffer_half_float");
 
-gl.renderbufferStorage(gl.RENDERBUFFER, ext.RBGA16F_EXT, 256, 256);
+gl.renderbufferStorage(gl.RENDERBUFFER, ext.RGBA16F_EXT, 256, 256);
 ```
 
 ## Specifications

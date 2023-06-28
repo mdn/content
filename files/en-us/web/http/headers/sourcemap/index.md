@@ -1,17 +1,13 @@
 ---
 title: SourceMap
 slug: Web/HTTP/Headers/SourceMap
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.SourceMap
 ---
+
 {{HTTPSidebar}}
 
-The **`SourceMap`** [HTTP](/en-US/docs/Web/HTTP) response header links generated code to a [source map](/en-US/docs/Tools/Debugger/How_to/Use_a_source_map), enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.
+The **`SourceMap`** [HTTP](/en-US/docs/Web/HTTP) response header links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html), enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.
 
 <table class="properties">
   <tbody>
@@ -28,7 +24,7 @@ The **`SourceMap`** [HTTP](/en-US/docs/Web/HTTP) response header links generated
 
 ## Syntax
 
-```
+```http
 SourceMap: <url>
 X-SourceMap: <url> (deprecated)
 ```
@@ -40,15 +36,13 @@ X-SourceMap: <url> (deprecated)
 
 ## Examples
 
-```
+```http
 SourceMap: /path/to/file.js.map
 ```
 
 ## Specifications
 
-| Specification                                       | Title                          |
-| --------------------------------------------------- | ------------------------------ |
-| [Draft document](https://sourcemaps.info/spec.html) | Source Map Revision 3 Proposal |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -56,4 +50,4 @@ SourceMap: /path/to/file.js.map
 
 ## See also
 
-- [Firefox Developer Tools: using a source map](/en-US/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [Firefox Developer Tools: using a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)

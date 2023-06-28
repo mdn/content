@@ -1,63 +1,55 @@
 ---
-title: SpeechSynthesisUtterance()
+title: "SpeechSynthesisUtterance: SpeechSynthesisUtterance() constructor"
+short-title: SpeechSynthesisUtterance()
 slug: Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance
-tags:
-  - API
-  - Constructor
-  - Reference
-  - SpeechSynthesisUtterance
-  - Web Speech API
-  - speech
-  - synthesis
+page-type: web-api-constructor
 browser-compat: api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-The `SpeechSynthesisUtterance()` constructor of the
-{{domxref("SpeechSynthesisUtterance")}} interface returns a new
-`SpeechSynthesisUtterance` object instance.
+{{APIRef("Web Speech API")}}
+
+The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUtterance")}} interface returns a new `SpeechSynthesisUtterance` object instance.
 
 ## Syntax
 
-```js
-var utterThis = new SpeechSynthesisUtterance(text);
+```js-nolint
+new SpeechSynthesisUtterance(text)
 ```
 
 ### Parameters
 
-- text
-  - : A {{domxref("DOMString")}} containing the text that will be synthesized when the
-    utterance is spoken..
+- `text`
+  - : A string containing the text that will be synthesized when the utterance is spoken.
 
 ## Examples
 
-The following snippet is excerpted from our [Speech
-synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis).
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

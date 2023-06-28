@@ -1,15 +1,11 @@
 ---
-title: Element.attributes
+title: "Element: attributes property"
+short-title: attributes
 slug: Web/API/Element/attributes
-tags:
-  - API
-  - Attributes
-  - DOM
-  - Element
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Element.attributes
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.attributes`** property returns a live collection
@@ -19,67 +15,64 @@ methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To
 specific, `attributes` is a key/value pair of strings that represents any
 information regarding that attribute.
 
-## Syntax
+## Value
 
-```js
-var attr = element.attributes;
-```
+A {{domxref("NamedNodeMap")}} object.
 
-## Example
+## Examples
 
 ### Basic examples
 
 ```js
 // Get the first <p> element in the document
-var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;
+const paragraph = document.querySelector("p");
+const attributes = paragraph.attributes;
 ```
 
 ### Enumerating elements attributes
 
-Numerical indexing is useful for going through all of an element's attributes.
+You can enumerate through an element's attributes using [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
 The following example runs through the attribute nodes for the element in the document
 with id "paragraph", and prints each attribute's value.
 
 ```html
 <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Attributes example</title>
+    <script>
+    function listAttributes() {
+       const paragraph = document.getElementById("paragraph");
+       const result = document.getElementById("result");
 
-<html>
-
- <head>
-  <title>Attributes example</title>
-  <script type="text/javascript">
-   function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
-
-     // First, let's verify that the paragraph has some attributes
-     if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
+       // First, let's verify that the paragraph has some attributes
+       if (paragraph.hasAttributes()) {
+         let output = "Attributes of first paragraph:\n";
+         for (const attr of paragraph.attributes) {
+           output += `${attr.name} -> ${attr.value}\n`;
+         }
+         result.textContent = output;
+       } else {
+         result.textContent = "No attributes to show";
        }
-       result.value = output;
-     } else {
-       result.value = "No attributes to show";
-     }
-   }
-  </script>
- </head>
+    }
+    </script>
+  </head>
 
-<body>
- <p id="paragraph" style="color: green;">Sample Paragraph</p>
- <form action="">
-  <p>
-    <input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph" style="color: green;">Sample Paragraph</p>
+    <form action="">
+      <p>
+        <input type="button" value="Show first attribute name and value"
+          onclick="listAttributes();">
+        <pre id="result"></pre>
+      </p>
+    </form>
+  </body>
 </html>
 ```
+
+{{EmbedLiveSample('enumerating_elements_attributes', 100, 300)}}
 
 ## Specifications
 
@@ -92,4 +85,4 @@ with id "paragraph", and prints each attribute's value.
 ## See also
 
 - {{domxref("NamedNodeMap")}}, the interface of the returned object
-- Cross-browser compatibility considerations: on [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes)
+- Cross-browser compatibility considerations: on [quirksmode](https://quirksmode.org/dom/core/#attributes)

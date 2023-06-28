@@ -1,15 +1,12 @@
 ---
-title: Box alignment in Flexbox
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
-tags:
-  - CSS
-  - Guide
-  - box alignment
-  - flexbox
+title: Box alignment in flexbox
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
+page-type: guide
 ---
+
 {{CSSRef}}
 
-The [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) Specification details how alignment works in various layout methods; on this page, we explore how box alignment works in the context of Flexbox. As this page aims to detail things which are specific to Flexbox and box alignment, it should be read in conjunction with the main [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) page which details the common features of box alignment across layout methods.
+The [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) Specification details how alignment works in various layout methods; on this page, we explore how box alignment works in the context of Flexbox. As this page aims to detail things which are specific to Flexbox and box alignment, it should be read in conjunction with the main [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) page which details the common features of box alignment across layout methods.
 
 ## Basic example
 
@@ -88,10 +85,9 @@ On the cross axis the `row-gap` property creates spacing between adjacent flex l
 
 ## Guides
 
-- [Alignment in flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [Alignment in flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 
 ## External Resources
 
-- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
 - [CSS Grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
 - [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

@@ -1,20 +1,13 @@
 ---
 title: Intl.Locale.prototype.baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.baseName
 ---
+
 {{JSRef}}
 
-The **`Intl.Locale.prototype.baseName`** property returns a substring of the `Locale`'s string representation, containing core information about the `Locale`.
+The **`baseName`** accessor property of {{jsxref("Intl.Locale")}} instances returns a substring of this locale's string representation, containing core information about this locale.
 
 ## Description
 
@@ -27,7 +20,7 @@ An {{jsxref("Intl/Locale", "Intl.Locale")}} object represents a parsed local and
 ### Basic Example
 
 ```js
-let myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Canadian French
+const myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Canadian French
 console.log(myLoc.toString()); // Prints out "fr-Latn-CA-u-ca-gregory"
 console.log(myLoc.baseName); // Prints out "fr-Latn-CA"
 ```
@@ -38,7 +31,7 @@ console.log(myLoc.baseName); // Prints out "fr-Latn-CA"
 // Sets language to Japanese, region to Japan,
 
 // calendar to Gregorian, hour cycle to 24 hours
-let japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
+const japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
 console.log(japan.toString()); // Prints out "ja-JP-u-ca-gregory-hc-h24"
 console.log(japan.baseName); // Prints out "ja-JP"
 ```
@@ -49,7 +42,7 @@ console.log(japan.baseName); // Prints out "ja-JP"
 // Input string indicates language as Dutch and region as Belgium,
 
 // but options object overrides the region and sets it to the Netherlands
-let dutch = new Intl.Locale("nl-Latn-BE", {region: "NL"});
+const dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
 
 console.log(dutch.baseName); // Prints out "nl-Latn-NL"
 ```

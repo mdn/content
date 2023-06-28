@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.getAttribLocation()
+title: "WebGLRenderingContext: getAttribLocation() method"
+short-title: getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getAttribLocation
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getAttribLocation()`** method of
@@ -17,16 +14,16 @@ attribute variable in a given {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
-GLint gl.getAttribLocation(program, name);
+```js-nolint
+getAttribLocation(program, name)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} containing the attribute variable.
-- name
-  - : A {{domxref("DOMString")}} specifying the name of the attribute variable whose
+- `name`
+  - : A string specifying the name of the attribute variable whose
     location to get.
 
 ### Return value
@@ -37,7 +34,7 @@ Returns -1 otherwise.
 ## Examples
 
 ```js
-gl.getAttribLocation(program, 'vColor');
+gl.getAttribLocation(program, "vColor");
 ```
 
 ## Specifications

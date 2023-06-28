@@ -1,12 +1,10 @@
 ---
 title: Trusted Types API
 slug: Web/API/Trusted_Types_API
-tags:
-  - API
-  - Overview
-  - Reference
-  - Trusted Types
+page-type: web-api-overview
+spec-urls: https://w3c.github.io/trusted-types/dist/spec/
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **Trusted Types API** gives web developers a way to lock down the insecure parts of the {{domxref("Document Object Model","DOM API")}} to prevent client-side {{Glossary("Cross-site scripting")}} (XSS) attacks.
@@ -21,7 +19,7 @@ Trusted Types works alongside [Content-Security Policy](/en-US/docs/Web/HTTP/CSP
 
 ### Injection Sinks
 
-The Trusted Types API locks down injection sinks that can act as a vector for DOM-XSS attacks. An injection sink is any Web API function that should only be called with trusted, validated or santized input. Examples of injection sinks include:
+The Trusted Types API locks down injection sinks that can act as a vector for DOM-XSS attacks. An injection sink is any Web API function that should only be called with trusted, validated or sanitized input. Examples of injection sinks include:
 
 - Functions that insert HTML into the document such as {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("Document.write")}}.
 - Functions that create a new same-origin {{domxref("Document")}} with caller-controlled markup such as {{domxref("DOMParser.parseFromString")}}.
@@ -41,7 +39,7 @@ A policy is a factory for Trusted Types. Web developers can specify a set of pol
 - {{domxref("TrustedScript")}}
   - : Represents a string to insert into an injection sink that could lead to the script being executed.
 - {{domxref("TrustedScriptURL")}}
-  - : Represents a string to insert into an injection sink that will parse it as an URL of an external script resource.
+  - : Represents a string to insert into an injection sink that will parse it as a URL of an external script resource.
 - {{domxref("TrustedTypePolicy")}}
   - : Defines the functions used to create the above Trusted Type objects.
 - {{domxref("TrustedTypePolicyFactory")}}
@@ -59,7 +57,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<"),
 });
 
 let el = document.getElementById("myDiv");
@@ -72,18 +70,13 @@ Read more about this example, and discover other ways to sanitize input in the a
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Trusted Types')}} | {{Spec2('Trusted Types')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
 See the compatibility data for each of the Trusted Types API interfaces.
 
-## Polyfill
-
-A [polyfill is available](https://github.com/w3c/webappsec-trusted-types#polyfill). The polyfill is also available as an npm package [trusted-types](https://www.npmjs.com/package/trusted-types).
-
 ## See also
 
 - [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill) (also available as an [npm package](https://www.npmjs.com/package/trusted-types))

@@ -1,17 +1,12 @@
 ---
-title: WritableStreamDefaultWriter.close()
+title: "WritableStreamDefaultWriter: close() method"
+short-title: close()
 slug: Web/API/WritableStreamDefaultWriter/close
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - close
+page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.close
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`close()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface closes the associated writable
@@ -23,8 +18,8 @@ invoking the close behavior. During this time any further attempts to write will
 
 ## Syntax
 
-```js
-var promise = writableStreamDefaultWriter.close();
+```js-nolint
+close()
 ```
 
 ### Parameters
@@ -39,7 +34,7 @@ a problem was encountered during the process.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The stream you are trying to close is not a {{domxref("WritableStream")}}.
 
 ## Examples
@@ -54,7 +49,7 @@ used to write each chunk of the string to the stream. Finally, `write()` and
 of chunks and streams.
 
 ```js
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
@@ -64,7 +59,7 @@ function sendMessage(message, writableStream) {
   encoded.forEach((chunk) => {
     defaultWriter.ready
       .then(() => {
-        return defaultWriter.write(chunk);
+        defaultWriter.write(chunk);
       })
       .then(() => {
         console.log("Chunk written to sink.");
@@ -90,36 +85,38 @@ function sendMessage(message, writableStream) {
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
-      view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      return new Promise((resolve, reject) => {
+        const buffer = new ArrayBuffer(1);
+        const view = new Uint8Array(buffer);
+        view[0] = chunk;
+        const decoded = decoder.decode(view, { stream: true });
+        const listItem = document.createElement("li");
+        listItem.textContent = `Chunk decoded: ${decoded}`;
+        list.appendChild(listItem);
+        result += decoded;
+        resolve();
+      });
+    },
+    close() {
+      const listItem = document.createElement("li");
+      listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
       list.appendChild(listItem);
-      result += decoded;
-      resolve();
-    });
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
-    list.appendChild(listItem);
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer
-example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

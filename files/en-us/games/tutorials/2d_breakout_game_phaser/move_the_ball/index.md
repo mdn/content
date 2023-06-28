@@ -1,16 +1,9 @@
 ---
 title: Move the ball
 slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - moving
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}
@@ -25,8 +18,8 @@ Remember the `update()` function and its definition? The code inside it is execu
 
 ```js
 function update() {
-    ball.x += 1;
-    ball.y += 1;
+  ball.x += 1;
+  ball.y += 1;
 }
 ```
 

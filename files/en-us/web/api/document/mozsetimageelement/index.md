@@ -1,15 +1,13 @@
 ---
-title: Document.mozSetImageElement()
+title: "Document: mozSetImageElement() method"
+short-title: mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Non-standard
-  - Reference
+page-type: web-api-instance-method
+status:
+  - non-standard
 browser-compat: api.Document.mozSetImageElement
 ---
+
 {{ ApiRef("DOM") }}{{ non-standard_header() }}
 
 The **`Document.mozSetImageElement()`** method changes the
@@ -18,28 +16,32 @@ element ID.
 
 ## Syntax
 
-```js
-document.mozSetImageElement(imageElementId, imageElement);
+```js-nolint
+mozSetImageElement(imageElementId, imageElement)
 ```
 
 ### Parameters
 
 - `imageElementId` is a string indicating the name of an element that has
-  been specified as a background image using the {{ cssxref("-moz-element") }} CSS
+  been specified as a background image using the {{ cssxref("element", "-moz-element") }} CSS
   function.
 - `imageElement` is the new element to use as the background corresponding
   to that image element string. Specify `null` to remove the background
   element.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example changes the background of a {{ HTMLElement("div") }} block each time the
 block is clicked by the user.
 
-[View this example live](https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html).
+[View this example live](https://mdn.dev/archives/media/samples/domref/mozSetImageElement.html).
 
 ```html
-<style type="text/css">
+<style>
   #mybox {
     background-image: -moz-element(#canvasbg);
     text-align: center;
@@ -54,14 +56,14 @@ The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{
   HTMLElement("div") }} to use an element with the id "canvasbg" as its background.
 
 ```js
-var c = 0x00;
+let c = 0x00;
 function clicked() {
-  var canvas = document.createElement("canvas");
+  const canvas = document.createElement("canvas");
   canvas.setAttribute("width", 100);
   canvas.setAttribute("height", 100);
 
-  var ctx = canvas.getContext('2d');
-  ctx.fillStyle = "#" + c.toString(16) + "0000";
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = `#${c.toString(16)}0000`;
   ctx.fillRect(25, 25, 75, 75);
 
   c += 0x11;
@@ -94,4 +96,4 @@ Not part of any specification.
 
 ## See also
 
-- {{ cssxref("-moz-element") }}
+- {{ cssxref("element", "-moz-element") }}

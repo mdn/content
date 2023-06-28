@@ -1,52 +1,49 @@
 ---
-title: FormData.entries()
+title: "FormData: entries() method"
+short-title: entries()
 slug: Web/API/FormData/entries
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest API
+page-type: web-api-instance-method
 browser-compat: api.FormData.entries
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
-The **`FormData.entries()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value
-pairs contained in this object. The key of each pair is a {{domxref("USVString")}}
-object; the value either a {{domxref("USVString")}}, or a {{domxref("Blob")}}.
+The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all key/value pairs contained in the {{domxref("FormData")}}. The key of each pair is a string object, and the value is either a string or a {{domxref("Blob")}}.
 
 > **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
-```js
-formData.entries();
+```js-nolint
+entries()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-Returns an {{jsxref("Iteration_protocols","iterator")}}.
+An [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of {{domxref("FormData")}}'s key/value pairs.
 
-## Example
+## Examples
 
 ```js
-// Create a test FormData object
-var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the key/value pairs
-for(var pair of formData.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+for (const pair of formData.entries()) {
+  console.log(`${pair[0]}, ${pair[1]}`);
 }
 ```
 
 The result is:
 
-    key1, value1
-    key2, value2
+```
+key1, value1
+key2, value2
+```
 
 ## Specifications
 
@@ -58,8 +55,5 @@ The result is:
 
 ## See also
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using
-  FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

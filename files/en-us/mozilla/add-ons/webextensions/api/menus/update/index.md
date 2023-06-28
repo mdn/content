@@ -1,18 +1,10 @@
 ---
 title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - contextMenus
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.update
 ---
+
 {{AddonSidebar()}}
 
 Updates a previously created menu item.
@@ -23,8 +15,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var updating = browser.menus.update(
+```js-nolint
+let updating = browser.menus.update(
   id,               // integer or string
   updateProperties // object
 )
@@ -42,13 +34,16 @@ var updating = browser.menus.update(
       - : `boolean`. The initial state of a checkbox or radio item: `true` for selected and `false` for unselected. Only one radio item can be selected at a time in a given group of radio items.
     - `command` {{optional_inline}}
 
-      - : `string`. String describing an action that should be taken when the user clicks the item. Possible values are:
+      - : `string`. String describing an action that should be taken when the user clicks the item. The recognized values are:
 
-        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one
+        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one (Manifest V2 only)
+        - `"_execute_action"`: simulate a click on the extension's action, opening its popup if it has one (Manifest V3 only)
         - `"_execute_page_action"`: simulate a click on the extension's page action, opening its popup if it has one
         - `"_execute_sidebar_action"`: open the extension's sidebar
 
-        Clicking the item will still trigger the {{WebExtAPIRef("menus.onClicked")}} event, but there's no guarantee of the ordering here: the command may be executed before `onClicked` fires.
+        See the documentation of special shortcuts in the manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) for details.
+
+        When one of the recognized values is specified, clicking the item does not trigger the {{WebExtAPIRef("menus.onClicked")}} event; instead, the default action triggers, such as opening a pop-up. Otherwise, clicking the item triggers {{WebExtAPIRef("menus.onClicked")}} and the event can be used to implement fallback behavior.
 
     - `contexts` {{optional_inline}}
 
@@ -85,11 +80,11 @@ var updating = browser.menus.update(
     - `id` {{optional_inline}}
       - : `string`. The unique ID to assign to this item. Mandatory for event pages. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
-      - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
+      - : `function`. The function called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
     - `parentId` {{optional_inline}}
       - : `integer` or `string`. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.
     - `targetUrlPatterns` {{optional_inline}}
-      - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
+      - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
     - `title` {{optional_inline}}
 
       - : `string`. The text to be displayed in the item. Mandatory unless `type` is "separator".
@@ -107,7 +102,7 @@ var updating = browser.menus.update(
     - `type` {{optional_inline}}
       - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
     - `viewTypes` {{optional_inline}}
-      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
+      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
     - `visible` {{optional_inline}}
       - : `boolean`. Whether the item is shown in the menu. Defaults to `true`.
 
@@ -125,7 +120,7 @@ function onUpdated() {
 }
 
 function onError() {
-  console.log("error updating item:" + browser.runtime.lastError);
+  console.log("error updating item:", browser.runtime.lastError);
 }
 
 browser.menus.create({
@@ -134,9 +129,9 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "do-not-click-me") {
-    var updating = browser.menus.update(info.menuItemId, {
+browser.menus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "do-not-click-me") {
+    let updating = browser.menus.update(info.menuItemId, {
       title: "Do not click this button again"
     });
     updating.then(onUpdated, onError);
@@ -150,9 +145,10 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-update) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-update) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -179,4 +175,4 @@ browser.menus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

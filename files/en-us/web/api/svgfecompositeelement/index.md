@@ -1,19 +1,15 @@
 ---
 title: SVGFECompositeElement
 slug: Web/API/SVGFECompositeElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGFECompositeElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFECompositeElement`** interface corresponds to the {{SVGElement("feComposite")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 
@@ -66,7 +62,7 @@ The **`SVGFECompositeElement`** interface corresponds to the {{SVGElement("feCom
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -87,7 +83,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFECompositeElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

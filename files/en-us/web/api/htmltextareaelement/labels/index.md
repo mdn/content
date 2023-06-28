@@ -1,53 +1,44 @@
 ---
-title: HTMLTextAreaElement.labels
+title: "HTMLTextAreaElement: labels property"
+short-title: labels
 slug: Web/API/HTMLTextAreaElement/labels
-tags:
-  - API
-  - HTML DOM
-  - HTMLTextAreaElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLTextAreaElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLTextAreaElement.labels`** read-only property returns
 a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("textArea")}} element.
 
-## Syntax
-
-```js
-var labelElements = textArea.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<textArea>` element.
 
-## Example
+## Examples
 
 ### HTML
 
 ```html
 <label id="label1" for="test">Label 1</label>
-<textArea id="test">Some text</textArea>
+<textarea id="test">Some text</textarea>
 <label id="label2" for="test">Label 2</label>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const textArea = document.getElementById("test");
-  for(var i = 0; i < textArea.labels.length; i++) {
-    console.log(textArea.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of textArea.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 60)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## Specifications
 

@@ -1,11 +1,7 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Title
+page-type: html-attribute
 browser-compat: html.global_attributes.title
 ---
 
@@ -15,13 +11,15 @@ The **`title`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) conta
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
 
-Some typical uses:
+The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 
-- Labeling {{HTMLElement("iframe")}} elements for assistive technology
-- Providing a programmatically associated label for an {{HTMLElement("input")}} element as a fallback for a real {{HTMLElement("label")}}
-- Labeling controls in [data tables](/en-US/docs/Web/HTML/Element/table)
+The `title` attribute may also be used to label controls in [data tables](/en-US/docs/Web/HTML/Element/table).
 
-Additional semantics are attached to the `title` attributes of the {{HTMLElement("link")}}, {{HTMLElement("abbr")}}, {{HTMLElement("input")}}, and {{HTMLElement("menuitem")}} elements.
+The `title` attribute, when added to [`<link rel="stylesheet">`](/en-US/docs/Web/HTML/Element/link), creates an alternate stylesheet. When defining an alternative style sheet with `<link rel="alternate">` the attribute is required and must be set to a non-empty string.
+
+If included on the {{htmlelement('abbr')}} opening tag, the `title` must be a full expansion of the abbreviation or acronym. Instead of using `title`, when possible, provide an expansion of the abbreviation or acronym in plain text on first use, using the `<abbr>` to mark up the abbreviation. This enables all users know what name or term the abbreviation or acronym shortens while providing a hint to user agents on how to announce the content.
+
+While `title` can be used to provide a programmatically associated label for an {{HTMLElement("input")}} element, this is not good practice. Use a {{HTMLElement("label")}} instead.
 
 ## Multiline titles
 
@@ -30,9 +28,27 @@ The `title` attribute may contain several lines. Each `U+000A LINE FEED` (`LF`) 
 ### HTML
 
 ```html
-<p>Newlines in <code>title</code> should be taken into account,
-like <abbr title="This is a
-multiline title">example</abbr>.</p>
+<p>
+  Newlines in <code>title</code> should be taken into account. This
+  <span
+    title="This is a
+multiline title">
+    example span
+  </span>
+  has a title a attribute with a newline.
+</p>
+<hr />
+<pre id="output"></pre>
+```
+
+### JavaScript
+
+We can query the `title` attribute and display it in the empty `<pre>` element as follows:
+
+```js
+const span = document.querySelector("span");
+const output = document.querySelector("#output");
+output.textContent = span.title;
 ```
 
 ### Result
@@ -49,7 +65,7 @@ If this attribute is set to the empty string, it means its ancestors' `title`s a
 
 ```html
 <div title="CoolTip">
-  <p>Hovering here will show “CoolTip”.</p>
+  <p>Hovering here will show "CoolTip".</p>
   <p title="">Hovering here will show nothing.</p>
 </div>
 ```
@@ -70,8 +86,8 @@ Use of the `title` attribute is highly problematic for:
 
 This is due to inconsistent browser support, compounded by the additional assistive technology parsing of the browser-rendered page. If a tooltip effect is desired, it is better to [use a more accessible technique](https://inclusive-components.design/tooltips-toggletips/) that can be accessed with the above browsing methods.
 
-- [3.2.5.1. The title attribute | W3C HTML 5.2: 3. Semantics, structure, and APIs of HTML documents](https://www.w3.org/TR/html/dom.html#the-title-attribute)
-- [Using the HTML title attribute – updated | The Paciello Group](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
+- [3.2.5.1. The title attribute | W3C HTML 5.2: 3. Semantics, structure, and APIs of HTML documents](https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute)
+- [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 - [Tooltips & Toggletips - Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)
 - [The Trials and Tribulations of the Title Attribute - 24 Accessibility](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)
 

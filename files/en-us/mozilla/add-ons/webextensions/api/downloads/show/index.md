@@ -1,18 +1,10 @@
 ---
 title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - show
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.show
 ---
+
 {{AddonSidebar()}}
 
 The **`show()`** function of the {{WebExtAPIRef("downloads")}} API shows the downloaded file in its containing folder in the underlying platform's file manager.
@@ -21,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var showing = browser.downloads.show(
+```js-nolint
+let showing = browser.downloads.show(
   downloadId             // integer
 )
 ```
@@ -46,7 +38,7 @@ This example shows the most recently downloaded item:
 
 ```js
 function onShowing(success) {
-  console.log(`Showing download item: ${success}`);
+  console.log(`Showing download item: ${success}`);
 }
 
 function onError(error) {
@@ -56,12 +48,12 @@ function onError(error) {
 function openDownload(downloadItems) {
     if (downloadItems.length > 0) {
       latestDownloadId = downloadItems[0].id;
-      var showing = browser.downloads.show(latestDownloadId);
+      let showing = browser.downloads.show(latestDownloadId);
       showing.then(onShowing, onError);
     }
   }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   limit: 1,
   orderBy: ["-startTime"]
 });
@@ -71,11 +63,10 @@ searching.then(openDownload, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-show) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-show) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +93,4 @@ searching.then(openDownload, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

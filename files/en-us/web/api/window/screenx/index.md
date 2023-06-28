@@ -1,16 +1,11 @@
 ---
-title: Window.screenX
+title: "Window: screenX property"
+short-title: screenX
 slug: Web/API/Window/screenX
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - screenX
+page-type: web-api-instance-property
 browser-compat: api.Window.screenX
 ---
+
 {{APIRef}}
 
 The **`Window.screenX`** read-only property returns the
@@ -21,21 +16,14 @@ the left side of the screen.
 > browsers in more recent times — {{domxref("Window.screenLeft")}}. This was originally
 > supported only in IE but was introduced everywhere due to popularity.
 
-## Syntax
-
-```js
-leftWindowPos = window.screenX
-```
-
-### Returns
+## Value
 
 A number equal to the number of CSS pixels from the left edge of the browser viewport
-to the  left edge of the screen.
+to the left edge of the screen.
 
 ## Examples
 
-In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) ([source
-code](https://github.com/mdn/dom-examples/blob/master/screenleft-screentop/index.html)) example, you'll see a canvas onto which has been drawn a circle. In this
+In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) ([source code](https://github.com/mdn/dom-examples/blob/main/screenleft-screentop/index.html)) example, you'll see a canvas onto which has been drawn a circle. In this
 example we are using {{domxref("Window.screenLeft")}}/{{domxref("Window.screenTop")}}
 plus {{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in
 the same physical position on the screen, even if the window position is moved.
@@ -51,14 +39,21 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillStyle = "rgb(0, 0, 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = 'rgb(0, 0, 255)';
+  ctx.fillStyle = "rgb(0, 0, 255)";
   ctx.beginPath();
-  ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
+  ctx.arc(
+    leftUpdate + width / 2,
+    topUpdate + height / 2 + 35,
+    50,
+    degToRad(0),
+    degToRad(360),
+    false
+  );
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent = `Window.screenLeft: ${window.screenLeft}, Window.screenTop: ${window.screenTop}`;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -73,7 +68,7 @@ supported, and if not, polyfills in `screenLeft`/`screenTop` using
 `screenX`/`screenY`.
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }

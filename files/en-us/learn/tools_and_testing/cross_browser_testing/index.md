@@ -1,21 +1,8 @@
 ---
 title: Cross browser testing
 slug: Learn/Tools_and_testing/Cross_browser_testing
-tags:
-  - Accessibility
-  - Automation
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - Testing
-  - Tools
-  - cross browser
 ---
+
 {{LearnSidebar}}
 
 This module focuses on testing web projects across different browsers. We look at identifying your target audience (e.g. what users, browsers, and devices do you most need to worry about?), how to go about doing testing, the main issues that you'll face with different types of code and how to mitigate them, what tools are most useful in helping you test and fix problems, and how to use automation to speed up testing.
@@ -38,7 +25,7 @@ You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [
 - [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
   - : This article starts the module off by providing an overview of the topic of cross browser testing, answering questions such as "what is cross browser testing?", "what are the most common types of problems you'll encounter?", and "what are the main approaches for testing, identifying, and fixing problems?"
 - [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-  - : Next, we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad-hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
+  - : Next, we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
 - [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
   - : With the scene set, we'll now look specifically at the common cross-browser problems you will come across in HTML and CSS code, and what tools can be used to prevent problems from happening, or fix problems that occur. This includes linting code, handling CSS prefixes, using browser dev tools to track down problems, using polyfills to add support into browsers, tackling responsive design problems, and more.
 - [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)

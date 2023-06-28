@@ -1,20 +1,16 @@
 ---
-title: XRCylinderLayer.space
+title: "XRCylinderLayer: space property"
+short-title: space
 slug: Web/API/XRCylinderLayer/space
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRCylinderLayer.space
 ---
-{{APIRef("WebXR Device API")}}
 
-The **`space`** property of the {{domxref("XRCylinderLayer")}} interface represents the layer's spatial relationship with the user’s physical environment.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The **`space`** property of the {{domxref("XRCylinderLayer")}} interface represents the layer's spatial relationship with the user's physical environment.
 
 ## Value
 
@@ -30,7 +26,7 @@ The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinde
 const cylinderLayer = xrGlBinding.createCylinderLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 cylinderLayer.space = someOtherSpace;

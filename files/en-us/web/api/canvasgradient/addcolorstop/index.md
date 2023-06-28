@@ -1,26 +1,20 @@
 ---
-title: CanvasGradient.addColorStop()
+title: "CanvasGradient: addColorStop() method"
+short-title: addColorStop()
 slug: Web/API/CanvasGradient/addColorStop
-tags:
-  - API
-  - Canvas
-  - CanvasGradient
-  - Gradients
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasGradient.addColorStop
 ---
+
 {{APIRef("Canvas API")}}
 
-The
-**`CanvasGradient.addColorStop()`**
-method adds a new color stop, defined by an `offset` and a
-`color`, to a given canvas gradient.
+The **`CanvasGradient.addColorStop()`** method adds a new color stop,
+defined by an `offset` and a `color`, to a given canvas gradient.
 
 ## Syntax
 
-```js
-void gradient.addColorStop(offset, color);
+```js-nolint
+addColorStop(offset, color)
 ```
 
 ### Parameters
@@ -28,12 +22,21 @@ void gradient.addColorStop(offset, color);
 - `offset`
   - : A number between `0` and `1`, inclusive, representing the
     position of the color stop. `0` represents the start of the gradient and
-    `1` represents the end; an `INDEX_SIZE_ERR` is raised if the
-    number is outside that range.
+    `1` represents the end.
 - `color`
   - : A [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;color&gt;")}} value
-    representing the color of the stop. A `SYNTAX_ERR` is raised if the value
-    cannot be parsed as a CSS `<color>` value.
+    representing the color of the stop.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if `offset` is not between 0 and 1 (both included).
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if `color` cannot be parsed as a CSS {{cssxref("&lt;color&gt;")}} value.
 
 ## Examples
 
@@ -51,13 +54,13 @@ This example uses the `addColorStop` method to add stops to a linear
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 let gradient = ctx.createLinearGradient(0, 0, 200, 0);
-gradient.addColorStop(0, 'green');
-gradient.addColorStop(.7, 'white');
-gradient.addColorStop(1, 'pink');
+gradient.addColorStop(0, "green");
+gradient.addColorStop(0.7, "white");
+gradient.addColorStop(1, "pink");
 ctx.fillStyle = gradient;
 ctx.fillRect(10, 10, 200, 100);
 ```

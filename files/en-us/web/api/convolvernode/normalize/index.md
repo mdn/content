@@ -1,15 +1,11 @@
 ---
-title: ConvolverNode.normalize
+title: "ConvolverNode: normalize property"
+short-title: normalize
 slug: Web/API/ConvolverNode/normalize
-tags:
-  - API
-  - ConvolverNode
-  - Property
-  - Reference
-  - Web Audio API
-  - parent
+page-type: web-api-instance-property
 browser-compat: api.ConvolverNode.normalize
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `normalize` property of the {{ domxref("ConvolverNode") }} interface
@@ -23,46 +19,43 @@ set to `false`, then the convolution will be rendered with no
 pre-processing/scaling of the impulse response. Changes to this value do not take
 effect until the next time the `buffer` attribute is set.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var convolver = audioCtx.createConvolver();
-convolver.normalize = false;
-```
-
-### Value
+## Value
 
 A boolean.
 
-## Example
+## Examples
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
-var soundSource, concertHallBuffer;
+let soundSource;
+let concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open('GET', 'concert-crowd.ogg', true);
-ajaxRequest.responseType = 'arraybuffer';
+ajaxRequest.open("GET", "concert-crowd.ogg", true);
+ajaxRequest.responseType = "arraybuffer";
 
-ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
+ajaxRequest.onload = () => {
+  let audioData = ajaxRequest.response;
+  audioCtx.decodeAudioData(
+    audioData,
+    (buffer) => {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
-}
+    },
+    (e) => console.error(`Error with decoding audio data: ${e.err}`)
+  );
+};
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.normalize = false; // must be set before the buffer, to take effect
 convolver.buffer = concertHallBuffer;

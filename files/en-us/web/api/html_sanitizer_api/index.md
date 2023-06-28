@@ -1,35 +1,33 @@
 ---
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
-tags:
-  - HTML Sanitizer API
-  - Landing
-  - Web API
-  - santitize
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.Sanitizer
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and {{domxref('Document')}} or {{domxref('DocumentFragment')}} objects, and sanitize them for safe insertion into a document’s DOM.
+The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and {{domxref('Document')}} or {{domxref('DocumentFragment')}} objects, and sanitize them for safe insertion into a document's DOM.
 
 ## Concepts and usage
 
-Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution or for rendering user generated content, or when including data in a frame from other another site.
+Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution or for rendering user generated content, or when including data in a frame from another site.
 The Sanitizer API allows for rendering of this potentially untrusted HTML in a safe manner.
 
 To access the API you would use the {{domxref('Sanitizer.Sanitizer()','Sanitizer()')}} constructor to create and configure a {{domxref('Sanitizer')}} instance.
 The configuration options parameter allows you to specify the allowed and dis-allowed elements and attributes, and to enable custom elements and comments.
 
 The most common use-case - preventing XSS - is handled by the default configuration.
-Creating a {{domxref('Sanitizer.Sanitizer')}} with a custom configuration is necessary only to handle additional, application-specific use cases.
+Creating a {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} with a custom configuration is necessary only to handle additional, application-specific use cases.
 
-The API has three main methods for sanitizing data.
-- {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element.
-  This is essentially "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
-- {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM.
-  This might be used when the target element for the string is not always ready/available for update.
-- {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}.
-  It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
+The API has three main methods for sanitizing data:
 
+1. {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element.
+   This is essentially a "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
+2. {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM. This might be used when the target element for the string is not always ready/available for update.
+3. {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}. It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
 
 ### Parsing and sanitizing strings
 
@@ -57,14 +55,12 @@ The parser may also perform normalization operations on the input string.
 As a result, even if the HTML is valid and the sanitizer method does nothing, the sanitized output may not precisely match the unsanitized input.
 This applies to both methods.
 
-
 ## Interfaces
 
-- {{domxref('Sanitizer')}}
+- {{domxref('Sanitizer')}} {{Experimental_Inline}}
   - : Provides the functionality to define a sanitizer configuration, to sanitize untrusted strings of HTML for later insertion into the DOM, and to sanitize {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
 - {{domxref('Element/setHTML','Element.setHTML()')}}
   - : Parses a string of HTML into a subtree of nodes, sanitizes it using a `Sanitizer` object, then sets it as a child of the current element.
-
 
 ## Examples
 
@@ -77,13 +73,13 @@ The code below demonstrates how {{domxref('Element/setHTML','Element.setHTML()')
 The `script` element is disallowed by the default sanitizer so the alert is removed.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def"; // Unsanitized string of HTML
 
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const sanitizer = new Sanitizer(); // Default sanitizer;
 
 // Get the Element with id "target" and set it with the sanitized string.
 const target = document.getElementById("target");
-target.setHTML(unsanitized_string, sanitizer);
+target.setHTML(unsanitized_string, { sanitizer });
 
 console.log(target.innerHTML);
 // "abc  def"
@@ -94,22 +90,22 @@ console.log(target.innerHTML);
 The example below shows the same sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method, with the intent of later inserting the returned element into a `<div>` element:
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def"; // Unsanitized string of HTML
+const sanitizer = new Sanitizer(); // Default sanitizer;
 
 // Sanitize the string
-let sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
+const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
 
 //We can verify the returned element type, and view sanitized HTML in string form:
-console.log( (sanitizedDiv instanceof HTMLDivElement) );
+console.log(sanitizedDiv instanceof HTMLDivElement);
 // true
-console.log(sanitizedDiv.innerHTML)
+console.log(sanitizedDiv.innerHTML);
 // "abc  def"
 
-// At some point later ...
+// At some point later…
 
 // Get the element to update. This must be a div to match our sanitizeFor() context.
-// Set its content to be the children of our sanitized element. 
+// Set its content to be the children of our sanitized element.
 document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 ```
 
@@ -117,47 +113,33 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > but you must remember to use the correct context when the string is applied:
 >
 > ```js
-> const unsanitized_string = "abc <script>alert(1)</script> def"; 
-> let sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
+> const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
+> const sanitizedString = new Sanitizer().sanitizeFor(
+>   "div",
+>   unsanitized_string
+> ).innerHTML;
 > ```
-
 
 ### Sanitize a frame
 
 To sanitize data from an {{HTMLElement("iframe")}} with id `userFrame`:
 
 ```js
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const sanitizer = new Sanitizer(); // Default sanitizer;
 
 // Get the frame and its Document object
-const frame_element = document.getElementById("userFrame")
-const unsantitized_frame_tree = frame_element.contentWindow.document;
+const frame_element = document.getElementById("userFrame");
+const unsanitized_frame_tree = frame_element.contentWindow.document;
 
 // Sanitize the document tree and update the frame.
-const sanitized_frame_tree = sanitizer.sanitize(unsanititized_frame_tree);
+const sanitized_frame_tree = sanitizer.sanitize(unsanitized_frame_tree);
 frame_element.replaceChildren(sanitized_frame_tree);
 ```
 
-
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML Sanitizer API','#sanitizer-api')}}
-      </td>
-      <td>{{Spec2('HTML Sanitizer API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Sanitizer")}}
+{{Compat}}

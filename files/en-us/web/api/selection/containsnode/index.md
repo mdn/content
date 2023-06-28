@@ -1,24 +1,22 @@
 ---
-title: Selection.containsNode()
+title: "Selection: containsNode() method"
+short-title: containsNode()
 slug: Web/API/Selection/containsNode
-tags:
-  - API
-  - Experimental
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.containsNode
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+
+{{ ApiRef("DOM") }}
 
 The **`Selection.containsNode()`** method indicates whether a
-specfied node is part of the selection.
+specified node is part of the selection.
 
 ## Syntax
 
-```js
-sel.containsNode(node, partialContainment)
+```js-nolint
+containsNode(node)
+containsNode(node)
+containsNode(node, partialContainment)
 ```
 
 ### Parameters
@@ -31,7 +29,11 @@ sel.containsNode(node, partialContainment)
     `containsNode()` only returns `true` when the entire node is
     part of the selection. If not specified, the default value `false` is used.
 
-## Example
+### Return value
+
+Returns `true` if the given node is part of the selection, and `false` otherwise.
+
+## Examples
 
 ### Check for selection
 
@@ -51,22 +53,25 @@ In this example, a message appears when you select the secret word. It uses
 
 ```html
 <p>Can you find the secret word?</p>
-<p>Hmm, where <span id="secret" style="color:transparent">SECRET</span> could it be?</p>
+<p>
+  Hmm, where <span id="secret" style="color:transparent">SECRET</span> could it
+  be?
+</p>
 <p id="win" hidden>You found it!</p>
 ```
 
 #### JavaScript
 
 ```js
-const secret = document.getElementById('secret');
-const win = document.getElementById('win');
+const secret = document.getElementById("secret");
+const win = document.getElementById("win");
 
 // Listen for selection changes
-document.addEventListener('selectionchange', () => {
+document.addEventListener("selectionchange", () => {
   const selection = window.getSelection();
   const found = selection.containsNode(secret);
 
-  win.toggleAttribute('hidden', !found);
+  win.toggleAttribute("hidden", !found);
 });
 ```
 

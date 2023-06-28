@@ -1,20 +1,11 @@
 ---
 title: Accessibility in React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - focus management
-  - keyboard
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.
+In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen reader users.
 
 <table>
   <tbody>
@@ -42,9 +33,9 @@ In our final tutorial article, we'll focus on (pun intended) accessibility, incl
 
 ## Including keyboard users
 
-At this point, we've accomplished all of the features we set out to implement. A user can add a new task, check and uncheck tasks, delete tasks, or edit task names. And they can filter their task list by all, active, or completed tasks.
+At this point, we've accomplished all of the features we set out to implement. A user can add a new task, check and uncheck tasks, delete tasks, or edit task names. Also, they can filter their task list by all, active, or completed tasks.
 
-Or, at least: they can do all of these things with a mouse. Unfortunately, these features are not very accessible to keyboard-only users. Let's explore this now.
+Or, at least, they can do all of these things with a mouse. Unfortunately, these features are not very accessible to keyboard-only users. Let's explore this now.
 
 ## Exploring the keyboard usability problem
 
@@ -58,7 +49,7 @@ But where did our focus indicator go?
 
 When we switch between templates in our `<Todo />` component, we completely remove the elements that were there before to replace them with something else. That means the element that we were focused on vanishes, and nothing is in focus at all. This could confuse a wide variety of users — particularly users who rely on the keyboard, or users who use a screen reader.
 
-To improve the experience for keyboard and screen-reader users, we should manage the browser’s focus ourselves.
+To improve the experience for keyboard and screen-reader users, we should manage the browser's focus ourselves.
 
 ## Focusing between templates
 
@@ -66,17 +57,17 @@ When a user toggles a `<Todo/>` template from viewing to editing, we should focu
 
 ### Targeting our elements
 
-In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React’s [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) hook creates an object with a single property: `current`. This property can be a reference to anything we want and look that reference up later. It’s particularly useful for referring to DOM elements.
+In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) hook creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
 
 Change the `import` statement at the top of `Todo.js` so that it includes `useRef`:
 
-```js
+```jsx
 import React, { useRef, useState } from "react";
 ```
 
 Then, create two new constants beneath the hooks in your `Todo()` function. Each should be a ref – one for the "Edit" button in the view template and one for the edit field in the editing template.
 
-```js
+```jsx
 const editFieldRef = useRef(null);
 const editButtonRef = useRef(null);
 ```
@@ -85,7 +76,7 @@ These refs have a default value of `null` because they will not have value until
 
 The textbox `<input>` in your editing template should be updated like this:
 
-```js
+```jsx
 <input
   id={props.id}
   className="todo-text"
@@ -98,13 +89,12 @@ The textbox `<input>` in your editing template should be updated like this:
 
 The "Edit" button in your view template should read like this:
 
-```js
+```jsx
 <button
   type="button"
   className="btn"
   onClick={() => setEditing(true)}
-  ref={editButtonRef}
->
+  ref={editButtonRef}>
   Edit <span className="visually-hidden">{props.name}</span>
 </button>
 ```
@@ -115,13 +105,13 @@ To use our refs for their intended purpose, we need to import another React hook
 
 Change the import statement of `Todo.js` again to add `useEffect`:
 
-```js
+```jsx
 import React, { useEffect, useRef, useState } from "react";
 ```
 
 `useEffect()` takes a function as an argument; this function is executed after the component renders. Let's see this in action; put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass into it a function that logs the words "side effect" to your console:
 
-```js
+```jsx
 useEffect(() => {
   console.log("side effect");
 });
@@ -129,16 +119,18 @@ useEffect(() => {
 
 To illustrate the difference between the main render process and code run inside `useEffect()`, add another log – put this one below the previous addition:
 
-```js
+```jsx
 console.log("main render");
 ```
 
 Now, open the app in your browser. You should see both messages in your console, with each one repeating three times. Note how "main render" logged first, and "side effect" logged second, even though the "side effect" log appears first in the code.
 
-    main render (3)                                     Todo.js:100
-    side effect (3)                                     Todo.js:98
+```
+main render (3)                                     Todo.js:100
+side effect (3)                                     Todo.js:98
+```
 
-That's it for our experimentation for now. Delete `console.log("main render")` now, and lets move on to implementing our focus management.
+That's it for our experimentation for now. Delete `console.log("main render")` now, and let's move on to implementing our focus management.
 
 ### Focusing on our editing field
 
@@ -146,7 +138,7 @@ Now that we know our `useEffect()` hook works, we can manage focus with it. As a
 
 Update your existing `useEffect()` hook so that it reads like this:
 
-```js
+```jsx
 useEffect(() => {
   if (isEditing) {
     editFieldRef.current.focus();
@@ -162,7 +154,7 @@ Try it now, and you'll see that when you click an "Edit" button, focus moves to 
 
 At first glance, getting React to move focus back to our "Edit" button when the edit is saved or cancelled appears deceptively easy. Surely we could add a condition to our `useEffect` to focus on the edit button if `isEditing` is `false`? Let's try it now — update your `useEffect()` call like so:
 
-```js
+```jsx
 useEffect(() => {
   if (isEditing) {
     editFieldRef.current.focus();
@@ -172,7 +164,7 @@ useEffect(() => {
 }, [isEditing]);
 ```
 
-This kind of mostly works. Head back to your browser and you’ll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focussed immediately on page load, before we even interact with the app!
+This kind of mostly works. Head back to your browser and you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load, before we even interact with the app!
 
 Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. Because there are three instances of `<Todo />`, we see focus on the last "Edit" button.
 
@@ -182,18 +174,20 @@ We need to refactor our approach so that focus changes only when `isEditing` cha
 
 In order to meet our refined criteria, we need to know not just the value of `isEditing`, but also _when that value has changed_. In order to do that, we need to be able to read the previous value of the `isEditing` constant. Using pseudocode, our logic should be something like this:
 
-    if (wasNotEditingBefore && isEditingNow) {
-      focusOnEditField()
-    }
-    if (wasEditingBefore && isNotEditingNow) {
-      focusOnEditButton()
-    }
+```jsx
+if (wasNotEditingBefore && isEditingNow) {
+  focusOnEditField();
+}
+if (wasEditingBefore && isNotEditingNow) {
+  focusOnEditButton();
+}
+```
 
-The React team had discussed [ways to get a component’s previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and has provided an example custom hook we can use for the job.
+The React team had discussed [ways to get a component's previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and has provided an example custom hook we can use for the job.
 
 Paste the following code near the top of `Todo.js`, above your `Todo()` function.
 
-```js
+```jsx
 function usePrevious(value) {
   const ref = useRef();
   useEffect(() => {
@@ -205,13 +199,13 @@ function usePrevious(value) {
 
 Now we'll define a `wasEditing` constant beneath the hooks at the top of `Todo()`. We want this constant to track the previous value of `isEditing`, so we call `usePrevious` with `isEditing` as an argument:
 
-```js
+```jsx
 const wasEditing = usePrevious(isEditing);
 ```
 
 With this constant, we can update our `useEffect()` hook to implement the pseudocode we discussed before — update it as follows:
 
-```js
+```jsx
 useEffect(() => {
   if (!wasEditing && isEditing) {
     editFieldRef.current.focus();
@@ -238,13 +232,13 @@ Sometimes, the place we want to send our focus to is obvious: when we toggled ou
 
 Import the `useRef()` and `useEffect()` hooks into `App.js` — you'll need them both below:
 
-```js
+```jsx
 import React, { useState, useRef, useEffect } from "react";
 ```
 
 Then declare a new ref inside the `App()` function. Just above the `return` statement is a good place:
 
-```js
+```jsx
 const listHeadingRef = useRef(null);
 ```
 
@@ -254,7 +248,7 @@ Heading elements like our `<h2>` are not usually focusable. This isn't a problem
 
 Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the heading above our list of tasks, along with our `headingRef`:
 
-```js
+```jsx
 <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
   {headingText}
 </h2>
@@ -266,7 +260,7 @@ Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the h
 
 We want to focus on the element associated with our ref (via the `ref` attribute) only when our user deletes a task from their list. That's going to require the `usePrevious()` hook we already used earlier on. Add it to the top of your `App.js` file, just below the imports:
 
-```js
+```jsx
 function usePrevious(value) {
   const ref = useRef();
   useEffect(() => {
@@ -278,7 +272,7 @@ function usePrevious(value) {
 
 Now add the following, above the `return` statement inside the `App()` function:
 
-```js
+```jsx
 const prevTaskLength = usePrevious(tasks.length);
 ```
 
@@ -288,11 +282,11 @@ Here we are invoking `usePrevious()` to track the length of the tasks state, lik
 
 ### Using `useEffect()` to control our heading focus
 
-Now that we've stored how many tasks we previously had, we can set up a `useEffect()` hook to run when our number of tasks changes, which will focus the heading if the number of tasks we have now is less than with it previously was — i.e. we deleted a task!
+Now that we've stored how many tasks we previously had, we can set up a `useEffect()` hook to run when our number of tasks changes, which will focus the heading if the number of tasks we have now is less than it previously was — that is, we deleted a task!
 
 Add the following into the body of your `App()` function, just below your previous additions:
 
-```js
+```jsx
 useEffect(() => {
   if (tasks.length - prevTaskLength === -1) {
     listHeadingRef.current.focus();
@@ -302,73 +296,18 @@ useEffect(() => {
 
 We only try to focus on our list heading if we have fewer tasks now than we did before. The dependencies passed into this hook ensure it will only try to re-run when either of those values (the number of current tasks, or the number of previous tasks) changes.
 
-Now, when you delete a task in your browser, you will see our dotted focus outline appear around the heading above the list.
+Now, when you delete a task in your browser, you will see our dashed focus outline appear around the heading above the list.
 
 ## Finished!
 
-You've just finished building a React app from the ground up! Congratulations! The skills you’ve learned here will be a great foundation to build on as you continue working with React.
+You've just finished building a React app from the ground up! Congratulations! The skills you've learned here will be a great foundation to build on as you continue working with React.
 
 Most of the time, you can be an effective contributor to a React project even if all you do is think carefully about components and their state and props. Remember to always write the best HTML you can.
 
 `useRef()` and `useEffect()` are somewhat advanced features, and you should be proud of yourself for using them! Look out for opportunities to practice them more, because doing so will allow you to create inclusive experiences for users. Remember: our app would have been inaccessible to keyboard users without them!
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
+> **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react>.
 
 In the very last article we'll present you with a list of React resources that you can use to go further in your learning.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

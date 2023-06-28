@@ -1,23 +1,11 @@
 ---
-title: TextTrackList.getTrackById()
+title: "TextTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/TextTrackList/getTrackById
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Method
-  - Reference
-  - TextTrack
-  - TextTrackList
-  - Track ID
-  - Track List
-  - Tracks
-  - getTrackById
-  - id
-  - track
+page-type: web-api-instance-method
 browser-compat: api.TextTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("TextTrackList")}}** method
@@ -29,14 +17,14 @@ string.
 
 ## Syntax
 
-```js
-var theTrack = TextTrackList.getTrackById(id);
+```js-nolint
+getTrackById(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+  - : A string indicating the ID of the track to locate within the track
     list.
 
 ### Return value

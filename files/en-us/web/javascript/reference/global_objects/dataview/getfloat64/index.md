@@ -1,14 +1,10 @@
 ---
 title: DataView.prototype.getFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getFloat64
 ---
+
 {{JSRef}}
 
 The **`getFloat64()`** method gets a signed 64-bit float
@@ -18,7 +14,7 @@ The **`getFloat64()`** method gets a signed 64-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 getFloat64(byteOffset)
 getFloat64(byteOffset, littleEndian)
 ```
@@ -27,8 +23,8 @@ getFloat64(byteOffset, littleEndian)
 
 - `byteOffset`
   - : The offset, in byte, from the start of the view where to read the data.
-- `littleEndian`
-  - : {{optional_inline}} Indicates whether the 64-bit float is stored in
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 64-bit float is stored in
     {{Glossary("Endianness", "little- or big-endian")}} format. If `false` or
     `undefined`, a big-endian value is read.
 
@@ -51,8 +47,8 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 ### Using the getFloat64 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getFloat64(0); // 0
 ```
 

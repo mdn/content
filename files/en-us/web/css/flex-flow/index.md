@@ -1,14 +1,10 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.flex-flow
 ---
+
 {{CSSRef}}
 
 The **`flex-flow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies the direction of a flex container, as well as its wrapping behavior.
@@ -45,6 +41,7 @@ flex-flow: column-reverse wrap-reverse;
 flex-flow: inherit;
 flex-flow: initial;
 flex-flow: revert;
+flex-flow: revert-layer;
 flex-flow: unset;
 ```
 

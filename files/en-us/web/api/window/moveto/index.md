@@ -1,14 +1,11 @@
 ---
-title: Window.moveTo()
+title: "Window: moveTo() method"
+short-title: moveTo()
 slug: Web/API/Window/moveTo
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
+page-type: web-api-instance-method
 browser-compat: api.Window.moveTo
 ---
+
 {{APIRef}}
 
 The **`moveTo()`** method of the {{domxref("Window")}}
@@ -20,8 +17,8 @@ interface moves the current window to the specified coordinates.
 
 ## Syntax
 
-```js
-window.moveTo(x, y)
+```js-nolint
+moveTo(x, y)
 ```
 
 ### Parameters
@@ -29,7 +26,11 @@ window.moveTo(x, y)
 - `x` is the horizontal coordinate to be moved to.
 - `y` is the vertical coordinate to be moved to.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example moves the window to the top-left corner of the screen.
 
@@ -47,11 +48,10 @@ function origin() {
 
 {{Compat}}
 
-As of Firefox 7, websites can no longer move a browser window [in the following
-cases](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24):
+As of Firefox 7, websites can no longer move a browser window [in the following cases](https://bugzil.la/565541#c24):
 
-1.  You can't move a window or tab that wasn’t created by {{domxref("Window.open()")}}.
-2.  You can't move a window or tab when it’s in a window with more than one tab.
+1. You can't move a window or tab that wasn't created by {{domxref("Window.open()")}}.
+2. You can't move a window or tab when it's in a window with more than one tab.
 
 ## See also
 

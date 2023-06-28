@@ -1,20 +1,13 @@
 ---
 title: scroll-margin-bottom
 slug: Web/CSS/scroll-margin-bottom
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Scroll margin bottom
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-bottom
+page-type: css-property
 browser-compat: css.properties.scroll-margin-bottom
 ---
+
 {{CSSRef}}
 
-The `scroll-margin-bottom` property defines the bottom margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
+The `scroll-margin-bottom` property defines the bottom margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
 {{EmbedInteractiveExample("pages/css/scroll-margin-bottom.html")}}
 
@@ -29,6 +22,7 @@ scroll-margin-bottom: 1em;
 scroll-margin-bottom: inherit;
 scroll-margin-bottom: initial;
 scroll-margin-bottom: revert;
+scroll-margin-bottom: revert-layer;
 scroll-margin-bottom: unset;
 ```
 

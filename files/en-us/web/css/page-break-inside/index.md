@@ -1,19 +1,19 @@
 ---
 title: page-break-inside
 slug: Web/CSS/page-break-inside
-tags:
-  - CSS
-  - CSS Property
-  - Page Breaks
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.page-break-inside
 ---
+
 {{CSSRef}}
 
 > **Warning:** This property has been replaced by the {{cssxref("break-inside")}} property.
 
 The **`page-break-inside`** CSS property adjusts page breaks _inside_ the current element.
+
+{{EmbedInteractiveExample("pages/css/page-break-inside.html")}}
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -24,10 +24,9 @@ page-break-inside: avoid;
 page-break-inside: inherit;
 page-break-inside: initial;
 page-break-inside: revert;
+page-break-inside: revert-layer;
 page-break-inside: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -63,21 +62,24 @@ For compatibility reasons, `page-break-inside` should be treated by browsers as 
 
 ```html
 <div class="page">
-  <p>This is the first paragraph.</p>
-  <section class="list">
-    <span>A list</span>
-    <ol>
-      <li>one</li>
-<!--       <li>two</li> -->
-    </ol>
-  </section>
-  <ul>
-    <li>one</li>
-<!--     <li>two</li> -->
-  </ul>
-  <p>This is the second paragraph.</p>
-  <p>This is the third paragraph, it contains more text.</p>
-  <p>This is the fourth paragraph. It has a little bit more text than the third one.</p>
+  <p>This is the first paragraph.</p>
+  <section class="list">
+    <span>A list</span>
+    <ol>
+      <li>one</li>
+      <!-- <li>two</li> -->
+    </ol>
+  </section>
+  <ul>
+    <li>one</li>
+    <!-- <li>two</li> -->
+  </ul>
+  <p>This is the second paragraph.</p>
+  <p>This is the third paragraph, it contains more text.</p>
+  <p>
+    This is the fourth paragraph. It has a little bit more text than the third
+    one.
+  </p>
 </div>
 ```
 
@@ -92,7 +94,10 @@ For compatibility reasons, `page-break-inside` should be treated by browsers as 
   column-width: 100px;
 }
 
-.list, ol, ul, p {
+.list,
+ol,
+ul,
+p {
   break-inside: avoid;
 }
 
@@ -100,7 +105,9 @@ p {
   background-color: #8ca0ff;
 }
 
-ol, ul, .list {
+ol,
+ul,
+.list {
   margin: 0.5em 0;
   display: block;
   background-color: orange;

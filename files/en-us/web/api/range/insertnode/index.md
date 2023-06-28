@@ -1,13 +1,11 @@
 ---
-title: Range.insertNode()
+title: "Range: insertNode() method"
+short-title: insertNode()
 slug: Web/API/Range/insertNode
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
+page-type: web-api-instance-method
 browser-compat: api.Range.insertNode
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.insertNode()`** method inserts a node at the start
@@ -22,16 +20,20 @@ inserted instead.
 
 ## Syntax
 
-```js
-range.insertNode(newNode);
+```js-nolint
+insertNode(newNode)
 ```
 
 ### Parameters
 
-- _newNode_
+- `newNode`
   - : The {{domxref("Node")}} to insert at the start of the `range`.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 range = document.createRange();

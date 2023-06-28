@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.deleteFramebuffer()
+title: "WebGLRenderingContext: deleteFramebuffer() method"
+short-title: deleteFramebuffer()
 slug: Web/API/WebGLRenderingContext/deleteFramebuffer
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteFramebuffer()`** method of
@@ -18,29 +15,29 @@ has already been deleted.
 
 ## Syntax
 
-```js
-void gl.deleteFramebuffer(framebuffer);
+```js-nolint
+deleteFramebuffer(framebuffer)
 ```
 
 ### Parameters
 
-- framebuffer
+- `framebuffer`
   - : A {{domxref("WebGLFramebuffer")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ### Deleting a frame buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var framebuffer = gl.createFramebuffer();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const framebuffer = gl.createFramebuffer();
 
-// ...
+// …
 
 gl.deleteFramebuffer(framebuffer);
 ```

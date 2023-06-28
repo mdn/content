@@ -1,13 +1,10 @@
 ---
 title: CSS Declaration Block
 slug: Web/API/CSS_Object_Model/CSS_Declaration_Block
-tags:
-  - CSS
-  - CSS Object Model
-  - CSS Declaration Block
-  - CSS Declarations
-  - Reference
+page-type: guide
+spec-urls: https://drafts.csswg.org/cssom/#css-declaration-blocks
 ---
+
 {{ APIRef("CSSOM") }}
 
 A **CSS declaration block** is an ordered collection of CSS properties and values. It is represented in the DOM as a {{domxref("CSSStyleDeclaration")}}.
@@ -23,13 +20,13 @@ Each property and value pairing is known as a [CSS declaration](/en-US/docs/Web/
 - owner node
   - : The {{domxref("element")}} that the CSS declaration block is associated with, otherwise null.
 - updating flag
-  - : Set when the CSS declaration block is updating the owner node's {{htmlattrxref("style")}} attribute.
+  - : Set when the CSS declaration block is updating the owner node's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 
 When a {{domxref("CSSStyleDeclaration")}} is returned by a [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) interface these properties are set to appropriate values as defined by the specification.
 
 ## Basic example
 
-The following example shows a CSS rule with a declaration block for the {{htmlelement("Heading_elements","&lt;h1&gt;")}} element. The CSS declaration block is the lines between the curly braces.
+The following example shows a CSS rule with a declaration block for the {{htmlelement("Heading_Elements","h1")}} element. The CSS declaration block is the lines between the curly braces.
 
 ```css
 h1 {
@@ -50,6 +47,4 @@ console.log(rule.style); // a CSSStyleDeclaration object
 
 ## Specifications
 
-| Specification                                                                                        | Status                   | Comment |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('CSSOM', '#css-declaration-blocks', 'CSS Declaration Blocks')}} | {{Spec2('CSSOM')}} |         |
+{{Specifications}}

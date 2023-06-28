@@ -1,16 +1,9 @@
 ---
 title: Tiles and tilemaps overview
 slug: Games/Techniques/Tilemaps
-tags:
-  - 2D
-  - Canvas
-  - Games
-  - JavaScript
-  - Static
-  - WebGL
-  - tilemap
-  - tiles
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called **tiles**. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using [JavaScript](/en-US/docs/Web/JavaScript) and [Canvas](/en-US/docs/Web/API/Canvas_API) (although the same high level techniques could be used in any programming language.)
@@ -53,11 +46,11 @@ A tilemap can either fit into the visible screen area screen or be larger. In th
 Rendering static tilemaps is easy, and can be done with a nested loop iterating over columns and rows. A high-level algorithm could be:
 
 ```js
-for (var column = 0; column < map.columns; column++) {
-  for (var row = 0; row < map.rows; row++) {
-    var tile = map.getTile(column, row);
-    var x = column * map.tileSize;
-    var y = row * map.tileSize;
+for (let column = 0; column < map.columns; column++) {
+  for (let row = 0; row < map.rows; row++) {
+    const tile = map.getTile(column, row);
+    const x = column * map.tileSize;
+    const y = row * map.tileSize;
     drawTile(tile, x, y);
   }
 }
@@ -79,29 +72,29 @@ Here are examples showing how to translate from world coordinates to screen coor
 // these functions assume that the camera points to the top left corner
 
 function worldToScreen(x, y) {
-  return {x: x - camera.x, y: y - camera.y};
+  return { x: x - camera.x, y: y - camera.y };
 }
 
-function screenToWorld(x,y) {
-  return {x: x + camera.x, y: y + camera.y};
+function screenToWorld(x, y) {
+  return { x: x + camera.x, y: y + camera.y };
 }
 ```
 
 #### Rendering
 
-A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the `worldToScreen()` example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. **Only tiles that are at visible should be rendered** ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.
+A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the `worldToScreen()` example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. **Only tiles that are at visible should be rendered** ideally — see the [Performance](#performance) section for more ideas on improving rendering performance.
 
 You can read more about implementing scrolling tilemaps and see some example implementations in [Square tilemaps implementation: Scrolling maps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps).
 
 ### Layers
 
-The visual grid is often made up of several layers. This allows us to have a richer game world with less tiles, since the same image can be used with different backgrounds. For instance, a rock that could appear on top of several terrain types (like grass, sand or brick) could be included on it's own separate tile which is then rendered on a new layer, instead of several rock tiles, each with a different background terrain.
+The visual grid is often made up of several layers. This allows us to have a richer game world with fewer tiles, since the same image can be used with different backgrounds. For instance, a rock that could appear on top of several terrain types (like grass, sand or brick) could be included on its own separate tile which is then rendered on a new layer, instead of several rock tiles, each with a different background terrain.
 
 If characters or other game sprites are drawn in the middle of the layer stack, this allows for interesting effects such as having characters walking behind trees or buildings.
 
 The following screenshot shows an example of both points: a character appearing _behind_ a tile (the knight appearing behind the top of a tree) and a tile (the bush) being rendered over different terrain types.
 
-![](screen_shot_2015-10-06_at_15.56.05.png)
+![A grid of layered background terrains. A bush tile is rendered at the top, over a large grass terrain, and again over a layered rectangular terrain with brown sand at the bottom. A tree tile is rendered over the grass terrain at the bottom left and again at the bottom right. A knight tile appears behind the tree tile that is rendered at the bottom left.](screen_shot_2015-10-06_at_15.56.05.png)
 
 ### The logic grid
 
@@ -111,9 +104,9 @@ Since tilemaps are an actual grid of visual tiles, it is common to create a mapp
 
 ## Isometric tilemaps
 
-Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy or RPG games. Some of these games include _SimCity 2000_, _Pharaoh_ or _Final Fantasy Tactics_. The below image shows an example of an atlas for an isometric tileset.
+Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy, or RPG games. Some of these games include _SimCity 2000_, _Pharaoh_, or _Final Fantasy Tactics_. The below image shows an example of an atlas for an isometric tileset.
 
-![](iso_tiles.png)
+![A 3x4 map of variously colored tiles in isometric projection](iso_tiles.png)
 
 ## Performance
 
@@ -123,9 +116,9 @@ One simple technique consists of pre-rendering the map in a canvas on its own (w
 
 One way consists of [drawing the section that will be visible off-canvas](https://mozdevs.github.io/gamedev-js-tiles/performance/offcanvas.html) (instead of the entire map.) That means that as long as there is no scrolling, the map doesn't need to be rendered.
 
-A caveat of that approach is that when there _is_ a scrolling, that technique is not very efficient. A better way would be to create a canvas that is 2x2 tiles bigger than the visible area, so there is one tile of "bleeding" around the edges. That means that the map only needs to be redrawn on canvas when the scrolling has advanced one full tile — instead of every frame — while scrolling.
+A caveat of that approach is that when there _is_ a scrolling, that technique is not very efficient. A better way would be to create a canvas that is 2x2 tiles bigger than the visible area, so there is one tile of "bleeding" around the edges. That means that the map only needs to be redrawn on the canvas when the scrolling has advanced one full tile — instead of every frame — while scrolling.
 
-In fast games that might still not be enough.  An alternative method would be to split the tilemap into big sections (like a full map split into 10 x 10 chunks of tiles), pre-render each one off-canvas and then treat each rendered section as a "big tile" in combination with one of the algorithms discussed above.
+In fast games that might still not be enough. An alternative method would be to split the tilemap into big sections (like a full map split into 10 x 10 chunks of tiles), pre-render each one off-canvas and then treat each rendered section as a "big tile" in combination with one of the algorithms discussed above.
 
 ## See also
 

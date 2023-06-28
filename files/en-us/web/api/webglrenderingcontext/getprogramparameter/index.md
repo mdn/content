@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.getProgramParameter()
+title: "WebGLRenderingContext: getProgramParameter() method"
+short-title: getProgramParameter()
 slug: Web/API/WebGLRenderingContext/getProgramParameter
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getProgramParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getProgramParameter()`** method of
@@ -18,41 +14,52 @@ given program.
 
 ## Syntax
 
-```js
-any gl.getProgramParameter(program, pname);
+```js-nolint
+getProgramParameter(program, pname)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to get parameter information from.
-- pname
+- `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
 
-    - `gl.DELETE_STATUS`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
-      whether or not the program is flagged for deletion.
-    - `gl.LINK_STATUS`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
-      whether or not the last link operation was successful.
-    - `gl.VALIDATE_STATUS`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
-      whether or not the last validation operation was successful.
-    - `gl.ATTACHED_SHADERS`: Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
-      number of attached shaders to a program.
-    - `gl.ACTIVE_ATTRIBUTES`: Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
-      number of active attribute variables to a program.
-    - `gl.ACTIVE_UNIFORMS`: Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
-      number of active uniform variables to a program.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    - `gl.DELETE_STATUS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
+        whether or not the program is flagged for deletion.
+    - `gl.LINK_STATUS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
+        whether or not the last link operation was successful.
+    - `gl.VALIDATE_STATUS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
+        whether or not the last validation operation was successful.
+    - `gl.ATTACHED_SHADERS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
+        number of attached shaders to a program.
+    - `gl.ACTIVE_ATTRIBUTES`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
+        number of active attribute variables to a program.
+    - `gl.ACTIVE_UNIFORMS`
 
-      - `gl.TRANSFORM_FEEDBACK_BUFFER_MODE`: Returns a
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
+        number of active uniform variables to a program.
+
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
+
+    - `gl.TRANSFORM_FEEDBACK_BUFFER_MODE`
+      - : Returns a
         {{domxref("WebGL_API/Types", "GLenum")}} indicating the buffer mode when transform feedback is
         active. May be `gl.SEPARATE_ATTRIBS` or
         `gl.INTERLEAVED_ATTRIBS`.
-      - `gl.TRANSFORM_FEEDBACK_VARYINGS`: Returns a {{domxref("WebGL_API/Types", "GLint")}}
+    - `gl.TRANSFORM_FEEDBACK_VARYINGS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
         indicating the number of varying variables to capture in transform feedback
         mode.
-      - `gl.ACTIVE_UNIFORM_BLOCKS`: Returns a {{domxref("WebGL_API/Types", "GLint")}}
+    - `gl.ACTIVE_UNIFORM_BLOCKS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
         indicating the number of uniform blocks containing active uniforms.
 
 ### Return value

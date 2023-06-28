@@ -1,31 +1,18 @@
 ---
-title: CSSMathSum.values
+title: "CSSMathSum: values property"
+short-title: values
 slug: Web/API/CSSMathSum/values
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathSum
-  - Experimental
-  - Houdini
-  - NeedsExample
-  - Property
-  - Reference
-  - values
+page-type: web-api-instance-property
 browser-compat: api.CSSMathSum.values
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathSum.values`** read-only property
 of the {{domxref("CSSMathSum")}} interface returns a {{domxref('CSSNumericArray')}}
 object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Syntax
-
-```js
-var cssNumericArray = CSSMathSum.values;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericArray')}}.
 

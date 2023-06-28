@@ -1,27 +1,78 @@
 ---
-title: '<thead>: The Table Head element'
+title: "<thead>: The Table Head element"
 slug: Web/HTML/Element/thead
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
+page-type: html-element
 browser-compat: html.elements.thead
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<thead>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows defining the head of the columns of the table.
 
 {{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}
 
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+### Deprecated attributes
+
+- `align` {{deprecated_inline}}
+
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+
+    - `left`, aligning the content to the left of the cell
+    - `center`, centering the content in the cell
+    - `right`, aligning the content to the right of the cell
+    - `justify`, inserting spaces into the textual content so that the content is justified in the cell
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
+
+    If this attribute is not set, the `left` value is assumed.
+
+    > **Warning:** Do not use this attribute as it is obsolete (not supported) in the latest standard.
+    >
+    > - To align values, use the CSS {{cssxref("text-align")}} property instead.
+
+- `bgcolor` {{Deprecated_Inline}}
+
+  - : This attribute defines the background color of each column cell. It accepts a 6-digit hexadecimal color or a named color. Alpha transparency is not supported.
+
+    > **Note:** Do not use this attribute, as it is non-standard. The `thead` element should be styled using the CSS {{cssxref("background-color")}} property, which can be applied to any element, including the `thead`, {{HTMLElement("tr")}}, {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
+
+- `char` {{deprecated_inline}}
+
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
+
+    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
+
+- `charoff` {{deprecated_inline}}
+
+  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
+
+    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
+
+- `valign` {{deprecated_inline}}
+
+  - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
+
+    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
+    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
+    - `middle`, which will center the text in the cell;
+    - `top`, which will put the text as close to the top of the cell as it is possible.
+
+    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{cssxref("vertical-align")}} property on it.
+
+## Examples
+
+See {{HTMLElement("table")}} for examples on `<thead>`.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -72,79 +123,6 @@ The **`<thead>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows def
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-### Deprecated attributes
-
-- {{htmlattrdef("align")}} {{deprecated_inline}}
-
-  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
-
-    - `left`, aligning the content to the left of the cell
-    - `center`, centering the content in the cell
-    - `right`, aligning the content to the right of the cell
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "thead")}} and {{htmlattrxref("charoff", "thead")}} attributes.
-
-    If this attribute is not set, the `left` value is assumed.
-
-    > **Warning:** Do not use this attribute as it is obsolete (not supported) in the latest standard.
-    >
-    > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "thead")}} as the value of the {{cssxref("text-align")}} property.
-
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
-
-  - : This attribute defines the background color of each cell of the column. It is one of the 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB), prefixed by a '#'. One of the sixteen predefined color strings may be used:
-
-    - `black` = "#000000"
-    - `green` = "#008000"
-    - `silver` = "#C0C0C0"
-    - `lime` = "#00FF00"
-    - `gray` = "#808080"
-    - `olive` = "#808000"
-    - `white` = "#FFFFFF"
-    - `yellow` = "#FFFF00"
-    - `maroon` = "#800000"
-    - `navy` = "#000080"
-    - `red` = "#FF0000"
-    - `blue` = "#0000FF"
-    - `purple` = "#800080"
-    - `teal` = "#008080"
-    - `fuchsia` = "#FF00FF"
-    - `aqua` = "#00FFFF"
-
-    > **Note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{HTMLElement("thead")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/en-US/docs/Web/CSS) property {{cssxref("background-color")}}, on the relevant {{HTMLElement("td")}} or {{HTMLElement("th")}} elements.
-
-- {{htmlattrdef("char")}} {{deprecated_inline}}
-
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "thead")}} is not set to `char`, this attribute is ignored.
-
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "thead")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "thead")}} attribute as the value of the {{cssxref("text-align")}} property.
-
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
-
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
-
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
-
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
-
-  - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
-
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - `top`, which will put the text as close to the top of the cell as it is possible.
-
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{cssxref("vertical-align")}} property on it.
-
-## Examples
-
-See {{HTMLElement("table")}} for examples on `<thead>`.
 
 ## Specifications
 

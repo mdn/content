@@ -1,32 +1,23 @@
 ---
-title: HTMLSelectElement.labels
+title: "HTMLSelectElement: labels property"
+short-title: labels
 slug: Web/API/HTMLSelectElement/labels
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLSelectElement.labels`** read-only property returns a
 {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("select")}} element.
 
-## Syntax
-
-```js
-var labelElements = select.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<select>` element.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -42,15 +33,15 @@ with the `<select>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("test");
-  for(var i = 0; i < select.labels.length; i++) {
-    console.log(select.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of select.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

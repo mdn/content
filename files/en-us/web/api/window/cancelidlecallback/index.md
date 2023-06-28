@@ -1,18 +1,12 @@
 ---
-title: window.cancelIdleCallback()
+title: "Window: cancelIdleCallback() method"
+short-title: cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - cancelIdleCallback
-  - polyfill
+page-type: web-api-instance-method
 browser-compat: api.Window.cancelIdleCallback
 ---
-{{APIRef}}{{SeeCompatTable}}
+
+{{APIRef}}
 
 ## Summary
 
@@ -21,8 +15,8 @@ previously scheduled with {{domxref("window.requestIdleCallback()")}}.
 
 ## Syntax
 
-```js
-window.cancelIdleCallback(handle);
+```js-nolint
+cancelIdleCallback(handle)
 ```
 
 ### Parameters
@@ -33,13 +27,12 @@ window.cancelIdleCallback(handle);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
-in the article [Cooperative Scheduling
-of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 

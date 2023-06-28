@@ -1,12 +1,10 @@
 ---
 title: short_name
 slug: Web/Manifest/short_name
-tags:
-  - Manifest
-  - Web
-  - short_name
+page-type: web-manifest-member
 browser-compat: html.manifest.short_name
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -14,10 +12,6 @@ browser-compat: html.manifest.short_name
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

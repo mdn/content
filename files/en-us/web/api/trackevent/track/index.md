@@ -1,20 +1,11 @@
 ---
-title: TrackEvent.track
+title: "TrackEvent: track property"
+short-title: track
 slug: Web/API/TrackEvent/track
-tags:
-  - API
-  - Audio
-  - Event
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - TrackEvent
-  - Video
-  - track
+page-type: web-api-instance-property
 browser-compat: api.TrackEvent.track
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`track`** property of
@@ -24,13 +15,7 @@ event applies.
 The media track will be an {{domxref("AudioTrack")}},
 {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}} object.
 
-## Syntax
-
-```js
-track = TrackEvent.track;
-```
-
-### Value
+## Value
 
 An object which is one of the types {{domxref("AudioTrack")}},
 {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}, depending on the type of media

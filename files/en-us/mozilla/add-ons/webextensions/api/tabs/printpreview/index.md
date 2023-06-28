@@ -1,22 +1,15 @@
 ---
 title: tabs.printPreview()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - printPreview
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.printPreview
 ---
+
 {{AddonSidebar()}}
 
 Opens print preview for the active tab.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).An extension can detect when print preview has been closed by listening to the [afterprint](/en-US/docs/Web/API/Window/afterprint_event) event:
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). An extension can detect when print preview has been closed by listening to the [afterprint](/en-US/docs/Web/API/Window/afterprint_event) event:
 
 ```js
 window.addEventListener("afterprint", resumeFunction, false);
@@ -24,8 +17,8 @@ window.addEventListener("afterprint", resumeFunction, false);
 
 ## Syntax
 
-```js
-var openingPreview = browser.tabs.printPreview()
+```js-nolint
+let openingPreview = browser.tabs.printPreview()
 ```
 
 ### Parameters

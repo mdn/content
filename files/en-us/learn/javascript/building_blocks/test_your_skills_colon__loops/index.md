@@ -1,19 +1,17 @@
 ---
-title: 'Test your skills: Loops'
+title: "Test your skills: Loops"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - Loops
 ---
+
 {{learnsidebar}}
 
-This aim of this skill test is to assess whether you've understood our [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) article.
+The aim of this skill test is to assess whether you've understood our [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) article.
 
-> **Note:** You can try out solutions for the tasks below by downloading the code, putting it in an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/), then working on the tasks. We didn't provide live editable versions of these tasks because of the risk of creating infinite loops and crashing the assessment page!
+> **Note:** You can try out solutions for the tasks below by downloading the code, putting it in an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/), then working on the tasks.
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
+
+> **Note:** We didn't provide live editable versions of these tasks because of the risk of creating infinite loops and crashing the assessment page!
 
 ## DOM manipulation: considered useful
 
@@ -23,11 +21,11 @@ We haven't explicitly taught this yet in the course, but you'll have seen some e
 
 ## Loops 1
 
-In our first looping task we want you start by creating a simple loop that goes through all the items in the provided `myArray` and prints them out on the screen inside list items (i.e., [`<li>`](/en-US/docs/Web/HTML/Element/li) elements), which are appended to the provided `list`.
+In our first looping task we want you to start by creating a simple loop that goes through all the items in the provided `myArray` and prints them out on the screen inside list items (i.e., [`<li>`](/en-US/docs/Web/HTML/Element/li) elements), which are appended to the provided `list`.
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops1-download.html) to work in your own editor or in an online editor.
 
 ## Loops 2
 
@@ -37,15 +35,15 @@ If you haven't read about objects yet, don't worry! For now, all you need to kno
 
 You are given three variables to begin with:
 
-- `i` — starts off with a value of 0; intended to be used as an iterator.
 - `name` — contains a name to search for
-- `para` — contains a reference to a paragraph, which will be used to report the results.
+- `para` — contains a reference to a paragraph, which will be used to report the results
+- `phonebook` - contains the phonebook entries to search.
 
 You should use a type of loop that you've not used in the previous task.
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops2-download.html) to work in your own editor or in an online editor.
 
 ## Loops 3
 
@@ -61,16 +59,16 @@ You should use a type of loop that you've not used in the previous two tasks.
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Loops 1 skill test".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+   - A descriptive title such as "Assessment wanted for Loops 1 skill test".
+   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+   - A link to the actual task or assessment page, so we can find the question you want help with.

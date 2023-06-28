@@ -1,29 +1,21 @@
 ---
 title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 ---
+
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.supportedLocalesOf()`** method
+The **`Intl.DateTimeFormat.supportedLocalesOf()`** static method
 returns an array containing those of the provided locales that are supported in date
 and time formatting without having to fall back to the runtime's default locale.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html","shorter")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
-```js
+```js-nolint
 Intl.DateTimeFormat.supportedLocalesOf(locales)
 Intl.DateTimeFormat.supportedLocalesOf(locales, options)
 ```
@@ -31,18 +23,16 @@ Intl.DateTimeFormat.supportedLocalesOf(locales, options)
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form of the `locales` argument, see the {{jsxref("Intl",
-		"Intl", "#Locale_identification_and_negotiation", 1)}} page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
 
   - : An object that may have the following property:
 
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
-        "`lookup`" and "`best fit`"; the default is
-        "`best fit`". For information about this option, see the
-        {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        `"lookup"` and `"best fit"`; the default is
+        `"best fit"`. For information about this option, see the
+        {{jsxref("Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
 
 ### Return value
 
@@ -66,15 +56,17 @@ time formatting, `supportedLocalesOf` returns the Indonesian and German
 language tags unchanged, even though `pinyin` collation is neither relevant
 to date and time formatting nor used with Indonesian, and a specialized German for
 Indonesia is unlikely to be supported. Note the specification of the
-"`lookup`" algorithm here — a "`best fit`" matcher might decide
+`"lookup"` algorithm here — a `"best fit"` matcher might decide
 that Indonesian is an adequate match for Balinese since most Balinese speakers also
 understand Indonesian, and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(', '));
-// → "id-u-co-pinyin, de-ID"
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(
+  Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "),
+);
+// "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

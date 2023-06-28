@@ -1,22 +1,21 @@
 ---
 title: Using feature queries
-slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
-tags:
-  - CSS
-  - Conditional CSS
-  - Guide
-  - feature queries
-  - progressive enhancement
+slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
+page-type: guide
 ---
+
 {{CSSRef}}
 
 **Feature queries** are created using the CSS at-rule [@supports](/en-US/docs/Web/CSS/@supports), and are useful as they give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide you will learn how to implement progressive enhancement using feature queries.
 
+> **Note:** The CSS at-rule [@import](/en-US/docs/Web/CSS/@import) can similarly use a `supports()` condition, if available, to ensure that stylesheets are not even loaded (and possibly not fetched) if they use features that are not supported.
+> The syntax is almost identical to that described here for `@supports`.
+
 ## Syntax
 
-CSS feature queries are part of the [CSS Conditional Rules module](https://drafts.csswg.org/css-conditional-3/), which also contains the media query [@media](/en-US/docs/Web/CSS/@media) rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
+CSS feature queries are part of the [CSS conditional rules module](/en-US/docs/Web/CSS/CSS_conditional_rules), which also contains the media query [@media](/en-US/docs/Web/CSS/@media) rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
 
-A feature query consists of the `@supports` rule, followed by the property name and value you would like to test for. You may not test for a bare property name such as `display`; the rule requires a property name and a value:
+A feature query consists of the `@supports` rule, followed by the property name and value you would like to test for. You may not test for a bare property name such as `display`; the rule requires a property name and a value:
 
 ```css
 @supports (property: value) {
@@ -90,7 +89,7 @@ Let's say we want to create a layout of three boxes in a row, and ideally we wou
 
 When browsers don't understand a CSS property or value, they ignore it. So we could start enhancing our layout by using CSS Grid. Browsers that do not support grid will ignore the `grid` value of the `display` property. Once a floated item becomes a grid item, the float is removed — something you can read more about in [Supporting Older Browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers). Therefore the grid version should just overwrite the floated one.
 
-We have a problem however, caused by the `width` property we used on our floated items to make them display as three columns. This is now interpreted by grid as being the width of the column track, not the width of the container as it is for the float.
+We have a problem however, caused by the `width` property we used on our floated items to make them display as three columns. This is now interpreted by grid as being the width of the column track, not the width of the container as it is for the float.
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step2.html", '100%', 900)}}
 

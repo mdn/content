@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.globalAlpha
+title: "CanvasRenderingContext2D: globalAlpha property"
+short-title: globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.globalAlpha
 ---
+
 {{APIRef}}
 
 The
@@ -16,23 +13,11 @@ The
 property of the Canvas 2D API specifies the alpha (transparency) value that is applied
 to shapes and images before they are drawn onto the canvas.
 
-> **Note:** See also the chapter [Applying
-> styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
-> Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> **Note:** See also the chapter [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Syntax
+## Value
 
-```js
-ctx.globalAlpha = value;
-```
-
-### Options
-
-- `value`
-  - : A number between `0.0` (fully transparent) and `1.0` (fully
-    opaque), inclusive. The default value is `1.0`. Values outside that range,
-    including {{jsxref("Infinity")}} and {{jsxref("NaN")}}, will not be set, and
-    `globalAlpha` will retain its previous value.
+A number between `0.0` (fully transparent) and `1.0` (fully opaque), inclusive. The default value is `1.0`. Values outside that range, including {{jsxref("Infinity")}} and {{jsxref("NaN")}}, will not be set, and `globalAlpha` will retain its previous value.
 
 ## Examples
 
@@ -50,15 +35,15 @@ rectangles.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.globalAlpha = 0.5;
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(50, 50, 100, 100);
 ```
 
@@ -83,19 +68,19 @@ background would eventually disappear completely from the center of the image.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw background
-ctx.fillStyle = '#FD0';
+ctx.fillStyle = "#FD0";
 ctx.fillRect(0, 0, 75, 75);
-ctx.fillStyle = '#6C0';
+ctx.fillStyle = "#6C0";
 ctx.fillRect(75, 0, 75, 75);
-ctx.fillStyle = '#09F';
+ctx.fillStyle = "#09F";
 ctx.fillRect(0, 75, 75, 75);
-ctx.fillStyle = '#F30';
+ctx.fillStyle = "#F30";
 ctx.fillRect(75, 75, 75, 75);
-ctx.fillStyle = '#FFF';
+ctx.fillStyle = "#FFF";
 
 // Set transparency value
 ctx.globalAlpha = 0.2;

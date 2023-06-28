@@ -1,0 +1,10 @@
+name: "Mark issues and pull requests as idle"
+on:
+  schedule:
+    - cron: "49 11,23 * * *"
+
+jobs:
+  idle:
+    uses: mdn/workflows/.github/workflows/idle.yml@main
+    with:
+      target-repo: "mdn/content"

@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.stencilMaskSeparate()
+title: "WebGLRenderingContext: stencilMaskSeparate() method"
+short-title: stencilMaskSeparate()
 slug: Web/API/WebGLRenderingContext/stencilMaskSeparate
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilMaskSeparate
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.stencilMaskSeparate()`** method of
@@ -20,13 +17,13 @@ and back stencil writemasks to one value at the same time.
 
 ## Syntax
 
-```js
-void gl.stencilMaskSeparate(face, mask);
+```js-nolint
+stencilMaskSeparate(face, mask)
 ```
 
 ### Parameters
 
-- face
+- `face`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil writemask
     is updated. The possible values are:
@@ -41,7 +38,7 @@ void gl.stencilMaskSeparate(face, mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

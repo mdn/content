@@ -1,44 +1,42 @@
 ---
-title: console.trace()
+title: "console: trace() method"
+short-title: trace()
 slug: Web/API/console/trace
-tags:
-  - API
-  - Chrome
-  - DOM
-  - Debugging
-  - Firefox
-  - Method
-  - String
-  - Web Development
-  - console.trace()
-  - trace
-  - web console
+page-type: web-api-instance-method
 browser-compat: api.console.trace
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.trace()`** method outputs a stack trace to the
-[Web console](/en-US/docs/Tools/Web_Console).
+[Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 {{AvailableInWorkers}}
+
+> **Note:** In some browsers, `console.trace()` may also output the sequence of calls and asynchronous events leading to the current `console.trace()` which are not on the call stack — to help identify the origin of the current event evaluation loop.
 
 See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
 {{domxref("console")}} documentation for details and examples.
 
 ## Syntax
 
-```js
-console.trace( [...any, ...data ]);
+```js-nolint
+trace()
+trace(object1, /* …, */ objectN)
 ```
 
 ### Parameters
 
-- `...any, ...data` {{optional_inline}}
+- `objects` {{optional_inline}}
   - : Zero or more objects to be output to console along with the trace. These are
     assembled and formatted the same way they would be if passed to the
     {{domxref("console.log()")}} method.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 function foo() {
@@ -53,9 +51,11 @@ foo();
 
 In the console, the following trace will be displayed:
 
-    bar
-    foo
-    <anonymous>
+```
+bar
+foo
+<anonymous>
+```
 
 ## Specifications
 

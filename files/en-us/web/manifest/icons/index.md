@@ -1,12 +1,10 @@
 ---
 title: icons
 slug: Web/Manifest/icons
-tags:
-  - Icons
-  - Manifest
-  - Web
+page-type: web-manifest-member
 browser-compat: html.manifest.icons
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -14,10 +12,6 @@ browser-compat: html.manifest.icons
     <tr>
       <th scope="row">Type</th>
       <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -43,7 +37,7 @@ The `icons` member specifies an array of objects representing image files that c
   },
   {
     "src": "icon/hd_hi.svg",
-    "sizes": "72x72"
+    "sizes": "any"
   }
 ]
 ```
@@ -62,7 +56,11 @@ Image objects may contain the following values:
   <tbody>
     <tr>
       <td><code>sizes</code></td>
-      <td>A string containing space-separated image dimensions.</td>
+      <td>
+        A string containing space-separated image dimensions using the same syntax as the
+        <a href="/en-US/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a>
+        attribute.
+      </td>
     </tr>
     <tr>
       <td><code>src</code></td>

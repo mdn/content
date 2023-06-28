@@ -1,15 +1,10 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Layout
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-decoration-style
 ---
+
 {{CSSRef}}
 
 The **`text-decoration-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of the lines specified by {{ cssxref("text-decoration-line") }}. The style applies to all lines that are set with `text-decoration-line`.
@@ -34,6 +29,7 @@ text-decoration-style: wavy;
 text-decoration-style: inherit;
 text-decoration-style: initial;
 text-decoration-style: revert;
+text-decoration-style: revert-layer;
 text-decoration-style: unset;
 ```
 
@@ -49,7 +45,7 @@ text-decoration-style: unset;
   - : Draws a dashed line.
 - wavy
   - : Draws a wavy line.
-- \-moz-none{{ non-standard_inline }}
+- \-moz-none {{ non-standard_inline }}
   - : Draws no line. Use {{ cssxref("text-decoration-line") }}`: none` instead.
 
 ## Formal definition
@@ -64,16 +60,7 @@ text-decoration-style: unset;
 
 ### Setting a wavy underline
 
-```css
-.example {
-       -moz-text-decoration-line: underline;
-       -moz-text-decoration-style: wavy;
-       -moz-text-decoration-color: red;
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-style: wavy;
-    -webkit-text-decoration-color: red;
-}
-```
+The following creates a red wavy underline:
 
 #### CSS
 
@@ -93,7 +80,7 @@ text-decoration-style: unset;
 
 #### Results
 
-{{ EmbedLiveSample('Setting_a_wavy_underline', '', '', '') }}
+{{EmbedLiveSample('Setting_a_wavy_underline')}}
 
 ## Specifications
 
@@ -106,3 +93,7 @@ text-decoration-style: unset;
 ## See also
 
 - When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-thickness")}}
+- {{cssxref("text-underline-offset")}}

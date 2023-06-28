@@ -1,11 +1,10 @@
 ---
 title: clip-path
 slug: Web/SVG/Attribute/clip-path
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.clip-path
 ---
+
 {{SVGRef}}
 
 The **`clip-path`** presentation attribute defines or associates a clipping path with the element it is related to.
@@ -14,30 +13,34 @@ The **`clip-path`** presentation attribute defines or associates a clipping path
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('a')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('clipPath')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('g')}}
-*   {{SVGElement('glyph')}}
-*   {{SVGElement('image')}}
-*   {{SVGElement('line')}}
-*   {{SVGElement('marker')}}
-*   {{SVGElement('mask')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('pattern')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('svg')}}
-*   {{SVGElement('symbol')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('use')}}
+- {{SVGElement('a')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('clipPath')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('g')}}
+- {{SVGElement('glyph')}}
+- {{SVGElement('image')}}
+- {{SVGElement('line')}}
+- {{SVGElement('marker')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('path')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('symbol')}}
+- {{SVGElement('text')}}
+- {{SVGElement('use')}}
 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -47,24 +50,44 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- Top-left: Apply a custom defined clipping path -->
-  <rect x="1" y="1" width="8" height="8" stroke="green"
-        clip-path="url(#myClip)" />
+  <rect
+    x="1"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="url(#myClip)" />
 
   <!-- Top-right: Apply a CSS basic shape on a fill-box
        geometry. This is the same as having a custom clipping
        path with a clipPathUnits set to objectBoundingBox -->
-  <rect x="11" y="1" width="8" height="8" stroke="green"
-        clip-path="circle() fill-box" />
+  <rect
+    x="11"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() fill-box" />
 
   <!-- Bottom-left -->
-  <rect x="1" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() stroke-box" />
+  <rect
+    x="1"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() stroke-box" />
 
   <!-- Bottom-right: Apply a CSS basic shape on a view-box
        geometry. This is the same as having a custom clipping
        path with a clipPathUnits set to userSpaceOnUse -->
-  <rect x="11" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() view-box" />
+  <rect
+    x="11"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() view-box" />
 </svg>
 ```
 
@@ -92,47 +115,19 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-*   \<geometry-box>
-    *   : An extra information to tell how a {{cssxref('basic-shape')}} is applied to an element: `fill-box` indicates to use the object bounding box; `stroke-box` indicates to use the object bounding box extended with the stroke; `view-box` indicates to use the nearest SVG viewport as the reference box.
+- \<geometry-box>
+  - : An extra information to tell how a {{cssxref('basic-shape')}} is applied to an element: `fill-box` indicates to use the object bounding box; `stroke-box` indicates to use the object bounding box extended with the stroke; `view-box` indicates to use the nearest SVG viewport as the reference box.
 
 > **Note:** For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-## Specifications
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS Masks", "#the-clip-path", 'clip-path')}}
-      </td>
-      <td>{{Spec2('CSS Masks')}}</td>
-      <td>
-        Extends its application to HTML elements. The
-        <code>clip-path</code> property replaces the deprecated
-        {{cssxref("clip")}} property.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('SVG1.1', 'masking.html#ClipPathProperty', 'clip-path')}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Initial definition (applies to SVG elements only).</td>
-    </tr>
-  </tbody>
-</table>
-
 ## See also
 
-*   The CSS {{cssxref("clip-path")}} property
+- The CSS {{cssxref("clip-path")}} property

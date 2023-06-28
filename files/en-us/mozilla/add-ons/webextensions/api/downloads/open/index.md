@@ -1,21 +1,13 @@
 ---
 title: downloads.open()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - open
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.open
 ---
+
 {{AddonSidebar()}}
 
-The **`open()`** function of the {{WebExtAPIRef("downloads")}} API opens the downloaded file with its associated application. A {{WebExtAPIRef("downloads.onChanged")}} event will fire when the item is opened for the first time.
+The **`open()`** function of the {{WebExtAPIRef("downloads")}} API opens the downloaded file with its associated application. A {{WebExtAPIRef("downloads.onChanged")}} event fires when the item is opened for the first time.
 
 To use this function in your extension you must ask for the "downloads.open" [manifest permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), as well as the "downloads" permission. Also, you can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
@@ -23,8 +15,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var opening = browser.downloads.open(
+```js-nolint
+let opening = browser.downloads.open(
   downloadId      // integer
 )
 ```
@@ -36,7 +28,7 @@ var opening = browser.downloads.open(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request was successful, the promise will be fulfilled with no arguments. If the request failed, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request is successful, the promise is fulfilled with no arguments. If the request failed, the promise is rejected with an error message.
 
 ## Browser compatibility
 
@@ -57,12 +49,12 @@ function onError(error) {
 
 function openDownload(downloadItems) {
     if (downloadItems.length > 0) {
-      var opening = browser.downloads.open(downloadItems[0].id);
+      let opening = browser.downloads.open(downloadItems[0].id);
       opening.then(onOpened, onError);
     }
   }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   limit: 1,
   orderBy: ["-startTime"]
 });
@@ -72,11 +64,10 @@ searching.then(openDownload, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-open) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-open) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,4 +94,4 @@ searching.then(openDownload, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

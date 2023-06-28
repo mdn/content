@@ -1,44 +1,38 @@
 ---
 title: Collision detection
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-tags:
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
-  - collision
-  - detection
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
 This is the **7th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
-We have the bricks appearing on the screen already, but the game still isn't _that_ interesting as the ball goes through them. We need to think about adding collision detection so it can bounce off the bricks and break them.
+We have the bricks appearing on the screen already, but the game still isn't _that_ interesting as the ball goes through them. We need to think about adding collision detection so it can bounce off the bricks and break them.
 
-It's our decision how to implement this, of course, but it can be tough to calculate whether the ball is touching the rectangle or not because there are no helper functions in Canvas for this. For the sake of this tutorial we will do it the easiest way possible. We will check if the center of the ball is colliding with any of the given bricks. This won't give a perfect result every time, and there are much more sophisticated ways to do collision detection, but this will work fine for teaching you the basic concepts.
+It's our decision how to implement this, of course, but it can be tough to calculate whether the ball is touching the rectangle or not because there are no helper functions in Canvas for this. For the sake of this tutorial we will do it the easiest way possible. We will check if the center of the ball is colliding with any of the given bricks. This won't give a perfect result every time, and there are much more sophisticated ways to do collision detection, but this will work fine for teaching you the basic concepts.
 
 ## A collision detection function
 
-To kick this all off we want to create a collision detection function that will loop through all the bricks and compare every single brick's position with the ball's coordinates as each frame is drawn. For better readability of the code we will define the `b` variable for storing the brick object in every loop of the collision detection:
+To kick this all off we want to create a collision detection function that will loop through all the bricks and compare every single brick's position with the ball's coordinates as each frame is drawn. For better readability of the code we will define the `b` variable for storing the brick object in every loop of the collision detection:
 
 ```js
 function collisionDetection() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            // calculations
-        }
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const b = bricks[c][r];
+      // calculations
     }
+  }
 }
 ```
 
 If the center of the ball is inside the coordinates of one of our bricks, we'll change the direction of the ball. For the center of the ball to be inside the brick, all four of the following statements need to be true:
 
 - The x position of the ball is greater than the x position of the brick.
-- The x position of the ball is less than the x position of the brick plus its width.
+- The x position of the ball is less than the x position of the brick plus its width.
 - The y position of the ball is greater than the y position of the brick.
 - The y position of the ball is less than the y position of the brick plus its height.
 
@@ -46,14 +40,14 @@ Let's write that down in code:
 
 ```js
 function collisionDetection() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                dy = -dy;
-            }
-        }
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const b = bricks[c][r];
+      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        dy = -dy;
+      }
     }
+  }
 }
 ```
 
@@ -64,12 +58,12 @@ Add the above block to your code, below the `keyUpHandler()` function.
 The above code will work as desired and the ball changes its direction. The problem is that the bricks are staying where they are. We have to figure out a way to get rid of the ones we've already hit with the ball. We can do that by adding an extra parameter to indicate whether we want to paint each brick on the screen or not. In the part of the code where we initialize the bricks, let's add a `status` property to each brick object. Update the following part of the code as indicated by the highlighted line:
 
 ```js
-var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1 };
-    }
+const bricks = [];
+for (let c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (let r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
 }
 ```
 
@@ -77,21 +71,21 @@ Next we'll check the value of each brick's `status` property in the `drawBricks(
 
 ```js
 function drawBricks() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            if(bricks[c][r].status == 1) {
-                var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-                var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-                bricks[c][r].x = brickX;
-                bricks[c][r].y = brickY;
-                ctx.beginPath();
-                ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
-                ctx.fill();
-                ctx.closePath();
-            }
-        }
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status === 1) {
+        const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+        const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
     }
+  }
 }
 ```
 
@@ -101,17 +95,22 @@ Now we need to involve the brick `status` property in the `collisionDetection()`
 
 ```js
 function collisionDetection() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                }
-            }
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const b = bricks[c][r];
+      if (b.status === 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
         }
+      }
     }
+  }
 }
 ```
 

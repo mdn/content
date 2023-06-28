@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.createRadialGradient()
+title: "CanvasRenderingContext2D: createRadialGradient() method"
+short-title: createRadialGradient()
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createRadialGradient
 ---
+
 {{APIRef}}
 
 The
@@ -28,8 +24,8 @@ properties.
 
 ## Syntax
 
-```js
-CanvasGradient ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+```js-nolint
+createRadialGradient(x0, y0, r0, x1, y1, r1)
 ```
 
 The `createRadialGradient()` method is specified by six parameters, three
@@ -52,8 +48,14 @@ defining the gradient's start circle, and three defining the end circle.
 
 ### Return value
 
-- {{domxref("CanvasGradient")}}
-  - : A radial `CanvasGradient` initialized with the two specified circles.
+A radial {{domxref("CanvasGradient")}} initialized with the two specified circles.
+
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown when non-finite values are passed in parameter.
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown when a negative radius is passed in parameter.
 
 ## Examples
 
@@ -73,18 +75,18 @@ is rendered to a filled rectangle.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create a radial gradient
 // The inner circle is at x=110, y=90, with radius=30
 // The outer circle is at x=100, y=100, with radius=70
-var gradient = ctx.createRadialGradient(110,90,30, 100,100,70);
+const gradient = ctx.createRadialGradient(110, 90, 30, 100, 100, 70);
 
 // Add three color stops
-gradient.addColorStop(0, 'pink');
-gradient.addColorStop(.9, 'white');
-gradient.addColorStop(1, 'green');
+gradient.addColorStop(0, "pink");
+gradient.addColorStop(0.9, "white");
+gradient.addColorStop(1, "green");
 
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;
@@ -102,13 +104,6 @@ ctx.fillRect(20, 20, 160, 160);
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
-  throws `NOT_SUPPORTED_ERR` instead of `SYNTAX_ERR`.
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a negative radius
-  correctly throws `INDEX_SIZE_ERR`.
 
 ## See also
 

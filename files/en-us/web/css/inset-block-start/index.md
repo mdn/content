@@ -1,18 +1,17 @@
 ---
 title: inset-block-start
 slug: Web/CSS/inset-block-start
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.inset-block-start
 ---
+
 {{CSSRef}}
 
 The **`inset-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical block start offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+{{EmbedInteractiveExample("pages/css/inset-block-start.html")}}
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -29,10 +28,9 @@ inset-block-start: auto;
 inset-block-start: inherit;
 inset-block-start: initial;
 inset-block-start: revert;
+inset-block-start: revert-layer;
 inset-block-start: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -74,6 +72,8 @@ div {
   background-color: #c8c800;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("Setting_block_start_offset", 140, 140)}}
 

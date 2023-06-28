@@ -1,19 +1,13 @@
 ---
 title: scroll-margin-top
 slug: Web/CSS/scroll-margin-top
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-top
+page-type: css-property
 browser-compat: css.properties.scroll-margin-top
 ---
+
 {{CSSRef}}
 
-The `scroll-margin-top` property defines the top margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
+The `scroll-margin-top` property defines the top margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
 {{EmbedInteractiveExample("pages/css/scroll-margin-top.html")}}
 
@@ -28,6 +22,7 @@ scroll-margin-top: 1em;
 scroll-margin-top: inherit;
 scroll-margin-top: initial;
 scroll-margin-top: revert;
+scroll-margin-top: revert-layer;
 scroll-margin-top: unset;
 ```
 

@@ -1,16 +1,11 @@
 ---
-title: '-webkit-text-stroke-color'
+title: "-webkit-text-stroke-color"
 slug: Web/CSS/-webkit-text-stroke-color
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - WebKit
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.-webkit-text-stroke-color
 ---
-{{CSSRef}}{{Non-standard_header}}
+
+{{CSSRef}}
 
 The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
 
@@ -23,6 +18,8 @@ The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/e
 /* Global values */
 -webkit-text-stroke-color: inherit;
 -webkit-text-stroke-color: initial;
+-webkit-text-stroke-color: revert;
+-webkit-text-stroke-color: revert-layer;
 -webkit-text-stroke-color: unset;
 ```
 
@@ -49,7 +46,7 @@ The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/e
 
 ```html
 <p>Text with stroke</p>
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 #### CSS
@@ -64,8 +61,8 @@ p {
 ```
 
 ```js hidden
-var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function(evt) {
+const colorPicker = document.querySelector("input");
+colorPicker.addEventListener("change", (evt) => {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });
 ```
@@ -84,7 +81,7 @@ colorPicker.addEventListener("change", function(evt) {
 
 ## See also
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [Surfin' Safari blog post announcing this feature](https://webkit.org/blog/85/introducing-text-stroke/)
 - [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-fill-color")}}
 - {{cssxref("-webkit-text-stroke-width")}}

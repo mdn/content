@@ -1,13 +1,10 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toExponential
 ---
+
 {{JSRef}}
 
 The **`toExponential()`** method returns a string representing
@@ -17,7 +14,7 @@ the {{jsxref("Number")}} object in exponential notation.
 
 ## Syntax
 
-```js
+```js-nolint
 toExponential()
 toExponential(fractionDigits)
 ```
@@ -37,11 +34,9 @@ with one digit before the decimal point, rounded to
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `fractionDigits` is too small or too large. Values between
-    `0` and `100`, inclusive, will not cause a
-    {{jsxref("RangeError")}}.
+  - : Thrown if `fractionDigits` is not between `0` and `100` (inclusive).
 - {{jsxref("TypeError")}}
-  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
+  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 
@@ -65,13 +60,13 @@ of rounding in the description of the {{jsxref("Number.prototype.toFixed",
 ### Using toExponential
 
 ```js
-var numObj = 77.1234;
+const numObj = 77.1234;
 
-console.log(numObj.toExponential());  // logs 7.71234e+1
-console.log(numObj.toExponential(4)); // logs 7.7123e+1
-console.log(numObj.toExponential(2)); // logs 7.71e+1
-console.log(77.1234.toExponential()); // logs 7.71234e+1
-console.log(77 .toExponential());     // logs 7.7e+1
+console.log(numObj.toExponential()); // 7.71234e+1
+console.log(numObj.toExponential(4)); // 7.7123e+1
+console.log(numObj.toExponential(2)); // 7.71e+1
+console.log((77.1234).toExponential()); // 7.71234e+1
+console.log((77).toExponential()); // 7.7e+1
 ```
 
 ## Specifications
@@ -84,6 +79,7 @@ console.log(77 .toExponential());     // logs 7.7e+1
 
 ## See also
 
+- [A polyfill of `Number.prototype.toExponential`](https://github.com/zloirock/core-js#ecmascript-number) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}

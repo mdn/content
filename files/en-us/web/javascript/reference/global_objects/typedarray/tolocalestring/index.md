@@ -1,28 +1,25 @@
 ---
 title: TypedArray.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing
 the elements of the typed array. The elements are converted to strings and are separated
-by a locale-specific string (such as a comma “,”). This method has the same algorithm as
+by a locale-specific string (such as a comma ","). This method has the same algorithm as
 {{jsxref("Array.prototype.toLocaleString()")}} and, as the typed array elements are
-numbers, the same algorithm as {{jsxref("Number.prototype.toLocaleString()")}} applies
-for each element. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+numbers, the same algorithm as {{jsxref("Number.prototype.toLocaleString()")}} applies
+for each element. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+
+{{EmbedInteractiveExample("pages/js/typedarray-tolocalestring.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)
@@ -48,16 +45,16 @@ A string representing the elements of the typed array.
 ### Using toLocaleString
 
 ```js
-var uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
+const uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
 
 uint.toLocaleString();
 // if run in a de-DE locale
 // "2.000,500,8.123,12,4.212"
 
-uint.toLocaleString('en-US');
+uint.toLocaleString("en-US");
 // "2,000,500,8,123,12,4,212"
 
-uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+uint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 // "￥2,000,￥500,￥8,123,￥12,￥4,212"
 ```
 

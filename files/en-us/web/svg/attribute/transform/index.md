@@ -1,10 +1,13 @@
 ---
 title: transform
 slug: Web/SVG/Attribute/transform
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+spec-urls:
+  - https://drafts.csswg.org/css-transforms/#svg-transform
+  - https://drafts.csswg.org/css-transforms/#svg-transform
+  - https://svgwg.org/svg2-draft/coords.html#TransformProperty
 ---
+
 {{SVGRef}}
 
 The **`transform`** attribute defines a list of transform definitions that are applied to an element and the element's children.
@@ -16,20 +19,30 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="-40 0 150 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g fill="grey"
-     transform="rotate(-10 50 100)
-                translate(-36 45.5)
-                skewX(40)
-                scale(1 0.5)">
-    <path id="heart" d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
+<svg
+  viewBox="-40 0 150 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g
+    fill="grey"
+    transform="rotate(-10 50 100)
+               translate(-36 45.5)
+               skewX(40)
+               scale(1 0.5)">
+    <path
+      id="heart"
+      d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
   </g>
 
-  <use xlink:href="#heart" fill="none" stroke="red"/>
+  <use xlink:href="#heart" fill="none" stroke="red" />
 </svg>
 ```
 
@@ -64,18 +77,26 @@ Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElemen
 
 ## Transform functions
 
-The following transform functions can be used by the `transform` attribute *`<transform-list>`*
+The following transform functions can be used by the `transform` attribute `<transform-list>`
 
 > **Warning:** As per the spec, you should be able to also use CSS [transform functions](/en-US/docs/Web/CSS/transform-function). However, the compatibility isn't guaranteed.
 
 ### Matrix
 
-The `matrix(<a> <b> <c> <d> <e> <f>)` transform function specifies a transformation in the form of a transformation matrix of six values. `matrix(a,b,c,d,e,f)` is equivalent to applying the transformation matrix:<math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math> which maps coordinates from a previous coordinate system into a new coordinate system by the following matrix equalities:<math display="block"><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x_{\mathrm{newCoordSys}} \\ y_{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x_{\mathrm{prevCoordSys}} \\ y_{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x_{\mathrm{prevCoordSys}} + c y_{\mathrm{prevCoordSys}} + e \\ b x_{\mathrm{prevCoordSys}} + d y_{\mathrm{prevCoordSys}} + f \\ 1 \end{pmatrix}</annotation></semantics></math>
+The `matrix(<a> <b> <c> <d> <e> <f>)` transform function specifies a transformation in the form of a transformation matrix of six values. `matrix(a,b,c,d,e,f)` is equivalent to applying the transformation matrix:
+
+<math display="block">
+  <semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math> which maps coordinates from a previous coordinate system into a new coordinate system by the following matrix equalities:<math display="block"><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x_{\mathrm{newCoordSys}} \\ y_{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x_{\mathrm{prevCoordSys}} \\ y_{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x_{\mathrm{prevCoordSys}} + c y_{\mathrm{prevCoordSys}} + e \\ b x_{\mathrm{prevCoordSys}} + d y_{\mathrm{prevCoordSys}} + f \\ 1 \end{pmatrix}</annotation></semantics>
+</math>
 
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -106,8 +127,13 @@ html,body,svg { height:100% }
   newX = a * oldX + c * oldY + e = 3 * 40 - 1 * 30 + 30 = 120
   newY = b * oldX + d * oldY + f = 1 * 40 + 3 * 30 + 40 = 170
   -->
-  <rect x="10" y="10" width="30" height="20" fill="red"
-        transform="matrix(3 1 -1 3 30 40)" />
+  <rect
+    x="10"
+    y="10"
+    width="30"
+    height="20"
+    fill="red"
+    transform="matrix(3 1 -1 3 30 40)" />
 </svg>
 ```
 
@@ -119,15 +145,19 @@ The `translate(<x> [<y>])` transform function moves the object by `x` and `y`. I
 
 In other words:
 
-```js
+```plain
 xnew = xold + <x>
-    ynew = yold + <y>
+ynew = yold + <y>
 ```
 
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -136,20 +166,35 @@ html,body,svg { height:100% }
   <rect x="5" y="5" width="40" height="40" fill="green" />
 
   <!-- Horizontal translation -->
-  <rect x="5" y="5" width="40" height="40" fill="blue"
-        transform="translate(50)" />
+  <rect
+    x="5"
+    y="5"
+    width="40"
+    height="40"
+    fill="blue"
+    transform="translate(50)" />
 
   <!-- Vertical translation -->
-  <rect x="5" y="5" width="40" height="40" fill="red"
-        transform="translate(0 50)" />
+  <rect
+    x="5"
+    y="5"
+    width="40"
+    height="40"
+    fill="red"
+    transform="translate(0 50)" />
 
   <!-- Both horizontal and vertical translation -->
-  <rect x="5" y="5" width="40" height="40" fill="yellow"
-         transform="translate(50,50)" />
+  <rect
+    x="5"
+    y="5"
+    width="40"
+    height="40"
+    fill="yellow"
+    transform="translate(50 50)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Translate', '100%', 200)}}
+{{EmbedLiveSample('Example_3', '100%', 200)}}
 
 ### Scale
 
@@ -158,22 +203,23 @@ The `scale(<x> [<y>])` transform function specifies a scale operation by `x` and
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- uniform scale -->
-  <circle cx="0" cy="0" r="10" fill="red"
-          transform="scale(4)" />
+  <circle cx="0" cy="0" r="10" fill="red" transform="scale(4)" />
 
   <!-- vertical scale -->
-  <circle cx="0" cy="0" r="10" fill="yellow"
-          transform="scale(1,4)" />
+  <circle cx="0" cy="0" r="10" fill="yellow" transform="scale(1, 4)" />
 
   <!-- horizontal scale -->
-  <circle cx="0" cy="0" r="10" fill="pink"
-          transform="scale(4,1)" />
+  <circle cx="0" cy="0" r="10" fill="pink" transform="scale(4, 1)" />
 
   <!-- No scale -->
   <circle cx="0" cy="0" r="10" fill="black" />
@@ -189,7 +235,11 @@ The `rotate(<a> [<x> <y>])` transform function specifies a rotation by `a` degre
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -197,12 +247,16 @@ html,body,svg { height:100% }
   <rect x="0" y="0" width="10" height="10" />
 
   <!-- rotation is done around the point 0,0 -->
-  <rect x="0" y="0" width="10" height="10" fill="red"
-        transform="rotate(100)" />
+  <rect x="0" y="0" width="10" height="10" fill="red" transform="rotate(100)" />
 
   <!-- rotation is done around the point 10,10 -->
-  <rect x="0" y="0" width="10" height="10" fill="green"
-        transform="rotate(100,10,10)" />
+  <rect
+    x="0"
+    y="0"
+    width="10"
+    height="10"
+    fill="green"
+    transform="rotate(100, 10, 10)" />
 </svg>
 ```
 
@@ -215,15 +269,18 @@ The `skewX(<a>)` transform function specifies a skew transformation along the x 
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
   <rect x="-3" y="-3" width="6" height="6" />
 
-  <rect x="-3" y="-3" width="6" height="6" fill="red"
-        transform="skewX(30)" />
+  <rect x="-3" y="-3" width="6" height="6" fill="red" transform="skewX(30)" />
 </svg>
 ```
 
@@ -236,15 +293,18 @@ The `skewY(<a>)` transform function specifies a skew transformation along the y 
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
   <rect x="-3" y="-3" width="6" height="6" />
 
-  <rect x="-3" y="-3" width="6" height="6" fill="red"
-        transform="skewY(30)" />
+  <rect x="-3" y="-3" width="6" height="6" fill="red" transform="skewY(30)" />
 </svg>
 ```
 
@@ -252,42 +312,4 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('CSS Transforms 2', '#svg-transform', 'transform')}}
-      </td>
-      <td>{{Spec2('CSS Transforms 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('CSS3 Transforms', '#svg-transform', 'transform')}}
-      </td>
-      <td>{{Spec2('CSS3 Transforms')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "coords.html#TransformProperty", "transform")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "coords.html#TransformAttribute", "transform")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

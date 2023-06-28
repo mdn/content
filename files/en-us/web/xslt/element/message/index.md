@@ -1,21 +1,19 @@
 ---
 title: <xsl:message>
 slug: Web/XSLT/Element/message
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - message
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:message>` element outputs a message (to the JavaScript Console in NS) and optionally terminates execution of the stylesheet. It can be useful for debugging.
 
 ### Syntax
 
-    <xsl:message terminate="yes" | "no" >
-    	TEMPLATE
-    </xsl:message>
+```xml
+<xsl:message terminate="yes" | "no" >
+  TEMPLATE
+</xsl:message>
+```
 
 ### Required Attributes
 

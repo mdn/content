@@ -1,29 +1,26 @@
 ---
-title: VideoDecoder.flush()
+title: "VideoDecoder: flush() method"
+short-title: flush()
 slug: Web/API/VideoDecoder/flush
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - VideoDecoder
+page-type: web-api-instance-method
 browser-compat: api.VideoDecoder.flush
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`flush()`** method of the {{domxref("VideoDecoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
 
 ## Syntax
 
-```js
-VideoDecoder.flush()
+```js-nolint
+flush()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}} that resolves with undefined.
 
@@ -47,4 +44,3 @@ VideoDecoder.flush();
 ## Browser compatibility
 
 {{Compat}}
-

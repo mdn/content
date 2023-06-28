@@ -1,14 +1,9 @@
 ---
-title: 'XSLT: Extensible Stylesheet Language Transformations'
+title: "XSLT: Extensible Stylesheet Language Transformations"
 slug: Web/XSLT
-tags:
-  - Landing
-  - Web
-  - XSLT
 ---
-{{XSLTRef}}
 
-<div id="Quick_links"><ol><li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li><li class="toggle"><details open><summary>Guides</summary><ol><li><a href="/en-US/docs/Web/XSLT/Common_errors">Common XSLT Errors</a></li><li><a href="/en-US/docs/Web/XSLT/PI_Parameters">PI Parameters</a></li><li><a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT/JavaScript Interface in Gecko</a></li><li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT">Transforming XML with XSLT</a></li><li><a href="/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Using the Mozilla JavaScript interface to XSL Transformations</a></li></ol></details></li><li class="toggle"><details open><summary><a href="/en-US/docs/XSLT/Element">XSLT Elements</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}</details></li></ol></div>
+{{XsltSidebar}}
 
 **Extensible Stylesheet Language Transformations (XSLT)** is an [XML](/en-US/docs/Web/XML/XML_introduction)-based language used, in conjunction with specialized processing software, for the transformation of XML documents.
 
@@ -36,3 +31,30 @@ XSLT is most often used to convert data between different XML schemas or to conv
 ## Related Topics
 
 - [XML](/en-US/docs/Web/XML/XML_introduction), [XPath](/en-US/docs/Web/XPath)
+
+<div id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li>
+    <li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
+    <li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li>
+    <li class="toggle">
+      <details open>
+        <summary>Guides</summary>
+        <ol>
+          <li><a href="/en-US/docs/Web/XSLT/Common_errors">Common XSLT Errors</a></li>
+          <li><a href="/en-US/docs/Web/XSLT/PI_Parameters">PI Parameters</a></li>
+          <li><a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT/JavaScript Interface in Gecko</a></li>
+          <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT">Transforming XML with XSLT</a></li>
+          <li><a href="/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Using the
+              Mozilla JavaScript interface to XSL Transformations</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details open>
+        <summary><a href="/en-US/docs/XSLT/Element">XSLT Elements</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
+      </details>
+    </li>
+  </ol>
+</div>

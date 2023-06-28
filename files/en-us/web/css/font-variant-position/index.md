@@ -1,14 +1,10 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-variant-position
 ---
+
 {{CSSRef}}
 
 The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
@@ -25,6 +21,7 @@ font-variant-position: super;
 font-variant-position: inherit;
 font-variant-position: initial;
 font-variant-position: revert;
+font-variant-position: revert-layer;
 font-variant-position: unset;
 ```
 
@@ -97,10 +94,12 @@ p {
 
 {{Compat}}
 
-## See Also
+## See also
 
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
+- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
+- [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-alternates)
+- [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)

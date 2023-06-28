@@ -1,27 +1,18 @@
 ---
-title: Document.embeds
+title: "Document: embeds property"
+short-title: embeds
 slug: Web/API/Document/embeds
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsExample
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.Document.embeds
 ---
+
 {{ApiRef}}
 
 The **`embeds`** read-only property of the
 {{domxref("Document")}} interface returns a list of the embedded
 {{htmlelement("embed")}} elements within the current document.
 
-## Syntax
-
-```js
-nodeList = document.embeds
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}}.
 

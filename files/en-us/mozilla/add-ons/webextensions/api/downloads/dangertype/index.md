@@ -1,18 +1,10 @@
 ---
 title: downloads.DangerType
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
-tags:
-  - API
-  - Add-ons
-  - DangerType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
+page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DangerType
 ---
+
 {{AddonSidebar()}}
 
 The `DangerType` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons that a downloadable file might be considered dangerous.
@@ -48,11 +40,10 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-DangerType) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-DangerType) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -79,4 +70,4 @@ Values of this type are strings. Possible values are:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

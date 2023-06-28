@@ -1,12 +1,10 @@
 ---
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
-tags:
-  - '508'
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc5842#section-7.2
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`508 Loop Detected`**
@@ -19,12 +17,10 @@ entire operation failed.
 
 ## Status
 
-```
+```http
 508 Loop Detected
 ```
 
 ## Specifications
 
-| Specification                                                | Title                                    |
-| ------------------------------------------------------------ | ---------------------------------------- |
-| {{RFC("5842", "508 Loop Detected" , "7.2")}} | Web Distributed Authoring and Versioning |
+{{Specifications}}

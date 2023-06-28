@@ -1,14 +1,11 @@
 ---
-title: Document.elementFromPoint()
+title: "Document: elementFromPoint() method"
+short-title: elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-tags:
-  - API
-  - Coordinates
-  - Document
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Document.elementFromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The **`elementFromPoint()`**
@@ -36,7 +33,7 @@ If you need to find the specific position inside the element, use
 
 ## Syntax
 
-```js
+```js-nolint
 elementFromPoint(x, y)
 ```
 
@@ -53,7 +50,7 @@ elementFromPoint(x, y)
 
 The topmost {{domxref("Element")}} object located at the specified coordinates.
 
-## Example
+## Examples
 
 This example creates two buttons which let you set the current color of the paragraph
 element located under the coordinates `(2, 2)`.
@@ -84,7 +81,7 @@ one to change the color to blue, and another to change the color to red.
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 100)}}
+{{EmbedLiveSample('Examples', 400, 120)}}
 
 ## Specifications
 

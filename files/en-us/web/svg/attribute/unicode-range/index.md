@@ -1,19 +1,19 @@
 ---
 title: unicode-range
 slug: Web/SVG/Attribute/unicode-range
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.unicode-range
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
-The **`unicode-range`** attribute defines the range of [ISO 10646](https://www.iso.org/standard/56921.html "Universal Coded Character Set (UCS)") characters possibly covered by the glyphs in a font.
+The **`unicode-range`** attribute defines the range of [ISO 10646](https://www.iso.org/standard/56921.html) characters possibly covered by the glyphs in a font.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -42,29 +42,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<urange>#`
-    *   : This value is a comma-separated list of ISO 10646 characters possibly covered by the glyphs in the font.
+- `<urange>#`
+  - : This value is a comma-separated list of ISO 10646 characters possibly covered by the glyphs in the font.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontFaceElementUnicodeRangeAttribute", "unicode-range")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -72,4 +55,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [ISO 10646](https://www.iso.org/standard/56921.html "Universal Coded Character Set (UCS)")
+- [ISO 10646 - Universal Coded Character Set (UCS)](https://www.iso.org/standard/56921.html)

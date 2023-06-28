@@ -1,13 +1,10 @@
 ---
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - header
+page-type: http-header
+spec-urls: https://httpwg.org/specs/rfc9110.html#field.proxy-authorization
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Proxy-Authorization`** request header contains the
@@ -30,17 +27,15 @@ and the {{HTTPHeader("Proxy-Authenticate")}} header.
 
 ## Syntax
 
-```
+```http
 Proxy-Authorization: <type> <credentials>
 ```
 
 ## Directives
 
 - \<type>
-  - : [Authentication
-    type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
-    See also the [IANA
-    registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Authentication type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
+    See also the [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - \<credentials>
 
   - : The credentials are constructed like this:
@@ -57,15 +52,13 @@ Proxy-Authorization: <type> <credentials>
 
 ## Examples
 
-```
+```http
 Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
 ## Specifications
 
-| Specification                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------- |
-| [RFC 7235<br/># header.proxy-authorization](https://httpwg.org/specs/rfc7235.html#header.proxy-authorization) |
+{{Specifications}}
 
 ## See also
 

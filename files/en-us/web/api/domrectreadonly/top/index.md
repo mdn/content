@@ -1,29 +1,16 @@
 ---
-title: DOMRectReadOnly.top
+title: "DOMRectReadOnly: top property"
+short-title: top
 slug: Web/API/DOMRectReadOnly/top
-tags:
-  - API
-  - DOM
-  - DOMRect
-  - DOMRectReadOnly
-  - Experimental
-  - Geometry
-  - Property
-  - Reference
-  - top
+page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.top
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-The **`top`** read-only property of the **`DOMRectReadOnly`** interface returns the top coordinate value of the `DOMRect.` (Has the same value as `y`, or `y + height` if `height` is negative.)
+{{APIRef("Geometry Interfaces")}}
 
-## Syntax
+The **`top`** read-only property of the **`DOMRectReadOnly`** interface returns the top coordinate value of the `DOMRect`. (Has the same value as `y`, or `y + height` if `height` is negative.)
 
-```js
-var recTop = DOMRect.top;
-```
-
-### Value
+## Value
 
 A double.
 

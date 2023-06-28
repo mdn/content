@@ -1,18 +1,10 @@
 ---
 title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getRecentlyClosed
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getRecentlyClosed
 ---
+
 {{AddonSidebar()}}
 
 Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).
@@ -21,15 +13,15 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingSessions = browser.sessions.getRecentlyClosed(
+```js-nolint
+let gettingSessions = browser.sessions.getRecentlyClosed(
   filter             // optional object
 )
 ```
 
 ### Parameters
 
-- `filter`{{optional_inline}}
+- `filter` {{optional_inline}}
   - : `object`. A {{WebExtAPIRef("sessions.Filter")}} object that limits the set of sessions returned.
 
 ### Return value
@@ -64,8 +56,8 @@ function onError(error) {
   console.log(error);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  var gettingSessions = browser.sessions.getRecentlyClosed({
+browser.browserAction.onClicked.addListener(() => {
+  let gettingSessions = browser.sessions.getRecentlyClosed({
     maxResults: 1
   });
   gettingSessions.then(restoreMostRecent, onError);
@@ -74,11 +66,10 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,4 +96,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

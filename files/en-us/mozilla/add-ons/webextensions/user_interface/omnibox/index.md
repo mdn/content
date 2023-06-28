@@ -1,10 +1,9 @@
 ---
 title: Address bar suggestions
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
-tags:
-  - User Interface
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar()}}
 
 Using the {{WebExtAPIRef("omnibox")}} API, extensions can customize the suggestions offered in the browser address bar's drop-down when the user enters a keyword.
@@ -21,16 +20,16 @@ You tell your extension that it is going to customize the address bar suggestion
   "omnibox": { "keyword" : "cs" }
 ```
 
-In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, you can optionally define the first suggestion to be displayed in the address bar drop-down. Use this to provide a hint on how to use the feature:
+In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, you can optionally define the first suggestion to be displayed in the address bar drop-down. Use this to provide a hint on how to use the feature:
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: `Search the firefox codebase
+  description: `Search the Firefox codebase
     (e.g. "hello world" | "path:omnibox.js onInputChanged")`
 });
 ```
 
-You can then add the code to provide the customized content by listening for {{WebExtAPIRef("omnibox.onInputStarted")}}, which is dispatched when the user has typed the keyword and a space, and {{WebExtAPIRef("omnibox.onInputChanged")}}, which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a search of https\://searchfox.org/mozilla-central using the term entered by the user:
+You can then add the code to provide the customized content by listening for {{WebExtAPIRef("omnibox.onInputStarted")}}, which is dispatched when the user has typed the keyword and a space, and {{WebExtAPIRef("omnibox.onInputChanged")}}, which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a [search of mozilla-central](https://searchfox.org/mozilla-central) using the term entered by the user:
 
 ```js
 browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
@@ -47,13 +46,13 @@ browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
 
 If the extension set a default suggestion using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, then this will appear first in the drop-down.
 
-The extension can then listen for the user clicking one of the suggestions, using {{WebExtAPIRef("omnibox.onInputEntered")}}. If the default suggestion is clicked the user's custom term is returned, otherwise the suggestion's string is returned. This also passes information on the user's browser preferences for handling new links. In the code below the user's custom term is used to create a search, otherwise the suggested URL is opened:
+The extension can then listen for the user clicking one of the suggestions, using {{WebExtAPIRef("omnibox.onInputEntered")}}. If the default suggestion is clicked the user's custom term is returned, otherwise the suggestion's string is returned. This also passes information on the user's browser preferences for handling new links. In the code below the user's custom term is used to create a search, otherwise the suggested URL is opened:
 
 ```js
 browser.omnibox.onInputEntered.addListener((text, disposition) => {
   let url = text;
   if (!text.startsWith(SOURCE_URL)) {
-    // Update the url if the user clicks on the default suggestion.
+    // Update the URL if the user clicks on the default suggestion.
     url = `${SEARCH_URL}?q=${text}`;
   }
   switch (disposition) {

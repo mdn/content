@@ -1,11 +1,9 @@
 ---
 title: Chrome incompatibilities
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - Guide
-  - WebExtensions
-  - google chrome
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 Extensions built with WebExtension APIs are designed to be compatible with Chrome and Opera extensions. As far as possible, extensions written for those browsers should run on Firefox with minimal changes.
@@ -14,21 +12,21 @@ However, there are significant differences between Chrome, Firefox, and Edge. In
 
 - Support for JavaScript APIs differs across browsers. See [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for more details.
 - Support for `manifest.json` keys differs across browsers. See the ["Browser compatibility" section](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page for more details.
-- Javascript APIs:
+- JavaScript APIs:
 
-  - **In Firefox and Edge:** JavaScript APIs are accessed under the `browser` namespace.
-  - **In Chrome:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://bugs.chromium.org/p/chromium/issues/detail?id=798169))
+  - **In Firefox:** JavaScript APIs are accessed under the `browser` namespace.
+  - **In Chrome and Edge:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
 
 - Asynchronous APIs:
 
   - **In Firefox:** Asynchronous APIs are implemented using promises.
-  - **In Chrome and Edge:** Asynchronous APIs are implemented using callbacks. (cf. [Chrome bug 328932](https://bugs.chromium.org/p/chromium/issues/detail?id=328932))
+  - **In Chrome and Edge:** Asynchronous APIs are implemented using callbacks. (cf. [Chrome bug 328932](https://crbug.com/328932))
 
 The rest of this page summarizes these and other incompatibilities.
 
 ## JavaScript APIs
 
-### \*chrome.\** and *browser.\*\* namespace
+### chrome.\* and browser.\* namespace
 
 - **In Firefox:** The equivalent APIs are accessed using the `browser` namespace.
 
@@ -78,11 +76,11 @@ The rest of this page summarizes these and other incompatibilities.
   );
   ```
 
-### Firefox supports both the *chrome* and *browser* namespaces
+### Firefox supports both the chrome and browser namespaces
 
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome`, using callbacks, as well as `browser`, using promises. This means that many Chrome extensions will just work in Firefox without any changes.
 
-> **Note:** However, this is _not_ part of the WebExtensions standard. and may not be supported by all compliant browsers.
+> **Note:** However, this is _not_ part of the WebExtensions standard and may not be supported by all compliant browsers.
 
 If you choose to write your extension to use `browser` and promises, then Firefox also provides a polyfill that will enable it to run in Chrome: <https://github.com/mozilla/webextension-polyfill>.
 
@@ -147,8 +145,8 @@ When calling `tabs.remove()`:
 - **In Firefox:**
 
   - Requests can be redirected only if their original URL uses the `http:` or `https:` scheme.
-  - The `activeTab` permission does not allow intercepting network requests in the current tab. (See [bug 1617479](https://bugzilla.mozilla.org/show_bug.cgi?id=1617479))
-  - Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
+  - The `activeTab` permission does not allow intercepting network requests in the current tab. (See [bug 1617479](https://bugzil.la/1617479))
+  - Events are not fired for system requests (for example, extension upgrades or search bar suggestions).
 
     - **From Firefox 57 onwards:** Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 
@@ -168,7 +166,7 @@ When calling `tabs.remove()`:
 
 #### DeclarativeContent API
 
-- **In Firefox:** Chrome's [declarativeContent](https://developer.chrome.com/extensions/declarativeContent) API [has not yet been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864). In addition, Firefox [will not be supporting](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) the `declarativeContent.RequestContentScript` API (which is rarely used, and is unavailable in stable releases of Chrome).
+- **In Firefox:** Chrome's [declarativeContent](https://developer.chrome.com/docs/extensions/reference/declarativeContent/) API [has not yet been implemented](https://bugzil.la/1435864). In addition, Firefox [will not be supporting](https://bugzil.la/1323433#c16) the `declarativeContent.RequestContentScript` API (which is rarely used, and is unavailable in stable releases of Chrome).
 
 ### Miscellaneous incompatibilities
 
@@ -189,20 +187,30 @@ When calling `tabs.remove()`:
 #### Manifest "key" property
 
 - **In Firefox:** Since Firefox uses random UUIDs for `web_accessible_resources`, this property is unsupported.
-- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/extensions/manifest/key) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
+- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/docs/extensions/mv3/manifest/key/) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
 
 #### Content script HTTP(S) requests
 
 - **In Firefox:** When a content script makes an HTTP(S) request, you _must_ provide absolute URLs.
 - **In Chrome:** When a content script makes a request (for example, using [`fetch()`](/en-US/docs/Web/API/Fetch_API/Using_Fetch)) to a relative URL (like `/api`), it will be sent to `https://example.com/api`.
 
+#### Content script environment
+
+- **In Firefox:** The global scope of the [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) is not strictly equal to `window` ([Firefox bug 1208775](https://bugzil.la/1208775)). More specifically, the global scope (`globalThis`) is composed of standard JavaScript features as usual, plus `window` as the prototype of the global scope. Most DOM APIs are inherit from the page through `window`, through [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) to shield the content script from modifications by the web page. Content scripts may encounter JavaScript objects from its own global scope or Xray-wrapped versions from the web page.
+- **In Chrome:** The global scope is `window` and the available DOM APIs are generally independent of the web page (other than sharing the underlying DOM). Content scripts cannot directly access JavaScript objects from the web page.
+
+#### Executing code in web page from content script
+
+- **In Firefox:** {{jsxref("Global_Objects/eval", "eval")}} runs code in the context of the content script, and `window.eval` runs code in the context of the page. See [Using `eval` in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts).
+- **In Chrome:** {{jsxref("Global_Objects/eval", "eval")}} and `window.eval` always runs code in the context of the content script, not in the context of the page.
+
 #### Sharing variables between content scripts
 
-- **In Firefox:** You cannot share variables between content scripts by assigning them to `this.{variableName}` in one script and then attempting to access them using `window.{variableName}` in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.
+- **In Firefox:** You cannot share variables between content scripts by assigning them to `this.{variableName}` in one script and then attempting to access them using `window.{variableName}` in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see [Firefox bug 1208775](https://bugzil.la/1208775).
 
 #### Content script lifecycle during navigation
 
-- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"`  and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in {{bug(1525400)}}.
+- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"` and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in [Firefox bug 1525400](https://bugzil.la/1525400).
 
   To mimic the behavior of Chrome, listen for the [pageshow](/en-US/docs/Web/API/Window/pageshow_event) and [pagehide](/en-US/docs/Web/API/Window/pagehide_event) events. Then simulate the injection or destruction of the content script.
 
@@ -229,8 +237,8 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 
 **On Windows:** Chrome passes two arguments:
 
-1.  The origin of the extension
-2.  A handle to the Chrome native window that started the app
+1. The origin of the extension
+2. A handle to the Chrome native window that started the app
 
 ### allowed_extensions
 
@@ -239,14 +247,18 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 
 ### App manifest location
 
-- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location) in the Chrome docs.
+- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location) in the Chrome docs.
+
+### App persistance
+
+- **In Firefox:** When a native messaging connection is closed, Firefox kills the subprocesses if they do not break away. On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>) and kills the job. Suppose the native application launches other processes and wants them to remain open after the native application is killed. In that case, the native application must use `CreateProcess`, instead of `ShellExecute`, to launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag.
 
 ## Data cloning algorithm
 
 Some extension APIs allow an extension to send data from one part of the extension to another, such as {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("tabs.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, the `postMessage()` method of {{WebExtAPIRef("runtime.port")}}, and {{WebExtAPIRef("tabs.executeScript()")}}.
 
 - **In Firefox:** The [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) is used.
-- **In Chrome:** The [JSON serialization algorithm](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description) is used. It may switch to structured cloning in the future ([issue 248548](https://bugs.chromium.org/p/chromium/issues/detail?id=248548)).
+- **In Chrome:** The [JSON serialization algorithm](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description) is used. It may switch to structured cloning in the future ([issue 248548](https://crbug.com/248548)).
 
 The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a `toJSON` method. DOM objects are not cloneable nor JSON-serializable by default, but with a `toJSON()` method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.
 

@@ -1,26 +1,27 @@
 ---
-title: NDEFRecord.recordType
+title: "NDEFRecord: recordType property"
+short-title: recordType
 slug: Web/API/NDEFRecord/recordType
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.NDEFRecord.recordType
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`recordType`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the record type of the record.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.recordType
 ```
 
 ### Value
 
-A {{DOMxRef("USVString")}} which can be one of the following:
+A string which can be one of the following:
 
 - `"empty"`
   - : An empty NDEF record.

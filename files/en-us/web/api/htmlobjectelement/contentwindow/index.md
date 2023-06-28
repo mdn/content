@@ -1,32 +1,21 @@
 ---
-title: HTMLObjectElement.contentWindow
+title: "HTMLObjectElement: contentWindow property"
+short-title: contentWindow
 slug: Web/API/HTMLObjectElement/contentWindow
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - contentWindow
+page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.contentWindow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentWindow`** read-only property of
-the {{domxref("HTMLObjectElement")}} interface returns a {{domxref("WindowProxy")}}
+the {{domxref("HTMLObjectElement")}} interface returns a {{glossary("WindowProxy")}}
 representing the window proxy of the object element's nested browsing context, if any;
 otherwise null.
 
-## Syntax
+## Value
 
-```js
-var WindowProxy = HTMLObjectElement.contentWindow;
-```
-
-### Value
-
-A {{domxref('WindowProxy')}}.
+A {{domxref('Window')}}, or `null` if there are none.
 
 ## Specifications
 

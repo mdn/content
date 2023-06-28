@@ -1,15 +1,11 @@
 ---
-title: History.go()
+title: "History: go() method"
+short-title: go()
 slug: Web/API/History/go
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.History.go
 ---
+
 {{APIRef("History API")}}
 
 The **`History.go()`** method loads a specific page from the
@@ -17,12 +13,13 @@ session history. You can use it to move forwards and backwards through the histo
 depending on the value of a parameter.
 
 This method is {{glossary("asynchronous")}}. Add a listener for the
-{{event("popstate")}} event in order to determine when the navigation has completed.
+{{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed.
 
 ## Syntax
 
-```js
-history.go([delta])
+```js-nolint
+go()
+go(delta)
 ```
 
 ### Parameters
@@ -34,19 +31,23 @@ history.go([delta])
     moves back two pages. If no value is passed or if `delta` equals 0, it has
     the same result as calling `location.reload()`.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 To move back one page (the equivalent of calling {{domxref("History.back",
   "back()")}}):
 
 ```js
-history.go(-1)
+history.go(-1);
 ```
 
 To move forward a page, just like calling {{domxref("History.forward", "forward()")}}:
 
 ```js
-history.go(1)
+history.go(1);
 ```
 
 To move forward two pages:
@@ -81,6 +82,5 @@ history.go(0);
 - {{domxref("History")}}
 - {{DOMxRef("History.back","back()")}}
 - {{DOMxRef("History.forward","forward()")}}
-- {{event("popstate")}} event
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- {{domxref("Window/popstate_event", "popstate")}} event
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

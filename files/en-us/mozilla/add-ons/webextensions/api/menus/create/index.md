@@ -1,18 +1,10 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new menu item, given an options object defining properties for the item.
@@ -23,10 +15,10 @@ For compatibility with other browsers, Firefox makes this method available via t
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.create(
   createProperties, // object
-  function() {...}  // optional function
+  () => {/* … */}   // optional function
 )
 ```
 
@@ -40,13 +32,16 @@ browser.menus.create(
       - : `boolean`. The initial state of a checkbox or radio item: `true` for selected and `false` for unselected. Only one radio item can be selected at a time in a given group of radio items.
     - `command` {{optional_inline}}
 
-      - : `string`. String describing an action that should be taken when the user clicks the item. Possible values are:
+      - : `string`. String describing an action that should be taken when the user clicks the item. The recognized values are:
 
-        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one
+        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one (Manifest V2 only)
+        - `"_execute_action"`: simulate a click on the extension's action, opening its popup if it has one (Manifest V3 only)
         - `"_execute_page_action"`: simulate a click on the extension's page action, opening its popup if it has one
         - `"_execute_sidebar_action"`: open the extension's sidebar
 
-        Clicking the item will still trigger the {{WebExtAPIRef("menus.onClicked")}} event, but there's no guarantee of the ordering here: the command may be executed before `onClicked` fires.
+        See the documentation of special shortcuts in the manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) for details.
+
+        When one of the recognized values is specified, clicking the item does not trigger the {{WebExtAPIRef("menus.onClicked")}} event; instead, the default action triggers, such as opening a pop-up. Otherwise, clicking the item triggers {{WebExtAPIRef("menus.onClicked")}} and the event can be used to implement fallback behavior.
 
     - `contexts` {{optional_inline}}
 
@@ -81,13 +76,13 @@ browser.menus.create(
         > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
     - `id` {{optional_inline}}
-      - : `string`. The unique ID to assign to this item. Mandatory for event pages. Cannot be the same as another ID for this extension.
+      - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
-      - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
+      - : `function`. The function called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
     - `parentId` {{optional_inline}}
       - : `integer` or `string`. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.
     - `targetUrlPatterns` {{optional_inline}}
-      - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
+      - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
     - `title` {{optional_inline}}
 
       - : `string`. The text to be displayed in the item. Mandatory unless `type` is "separator".
@@ -102,12 +97,12 @@ browser.menus.create(
 
         Only the first ampersand will be used to set an access key: subsequent ampersands will not be displayed but will not set keys. So "\&A and \&B" will be shown as "A and B" and set "A" as the access key.
 
-        In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, _unless_ the menu title itself already ends with the access key (`"toolkit(&K)"` for example). For more details, see {{bug(1647373)}}.
+        In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, _unless_ the menu title itself already ends with the access key (`"toolkit(&K)"` for example). For more details, see [Firefox bug 1647373](https://bugzil.la/1647373).
 
     - `type` {{optional_inline}}
       - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
     - `viewTypes` {{optional_inline}}
-      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
+      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
     - `visible` {{optional_inline}}
       - : `boolean`. Whether the item is shown in the menu. Defaults to `true`.
 
@@ -129,8 +124,8 @@ browser.menus.create({
   contexts: ["selection"]
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "log-selection") {
+browser.menus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "log-selection") {
     console.log(info.selectionText);
   }
 });
@@ -141,7 +136,7 @@ This example adds two radio items, which you can use to choose whether to apply 
 ```js
 function onCreated() {
   if (browser.runtime.lastError) {
-    console.log("error creating item:" + browser.runtime.lastError);
+    console.log("error creating item:", browser.runtime.lastError);
   } else {
     console.log("item created successfully");
   }
@@ -163,15 +158,15 @@ browser.menus.create({
   checked: false
 }, onCreated);
 
-var makeItBlue = 'document.body.style.border = "5px solid blue"';
-var makeItGreen = 'document.body.style.border = "5px solid green"';
+let makeItBlue = 'document.body.style.border = "5px solid blue"';
+let makeItGreen = 'document.body.style.border = "5px solid green"';
 
-browser.menus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "radio-blue") {
+browser.menus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "radio-blue") {
     browser.tabs.executeScript(tab.id, {
       code: makeItBlue
     });
-  } else if (info.menuItemId == "radio-green") {
+  } else if (info.menuItemId === "radio-green") {
     browser.tabs.executeScript(tab.id, {
       code: makeItGreen
     });
@@ -185,9 +180,10 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-create) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-create) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -214,4 +210,4 @@ browser.menus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

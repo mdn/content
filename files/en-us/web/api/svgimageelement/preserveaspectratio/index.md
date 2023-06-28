@@ -1,18 +1,11 @@
 ---
-title: SVGImageElement.preserveAspectRatio
+title: "SVGImageElement: preserveAspectRatio property"
+short-title: preserveAspectRatio
 slug: Web/API/SVGImageElement/preserveAspectRatio
-tags:
-  - API
-  - Image
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - preserveAspectRatio
+page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.preserveAspectRatio
 ---
+
 {{APIRef("SVG")}}
 
 The **`preserveAspectRatio`** read-only
@@ -21,13 +14,7 @@ property of the {{domxref("SVGImageElement")}} interface returns an
 {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("image")}}
 element.
 
-## Syntax
-
-```js
-var svgAnimatedPreerveAspectRatio = svgImageElement.preserveAspectRatio;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedPreserveAspectRatio")}}.
 

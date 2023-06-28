@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.scissor()
+title: "WebGLRenderingContext: scissor() method"
+short-title: scissor()
 slug: Web/API/WebGLRenderingContext/scissor
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.scissor
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.scissor()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets a scissor box, which limits
@@ -16,8 +13,8 @@ the drawing to a specified rectangle.
 
 ## Syntax
 
-```js
-void gl.scissor(x, y, width, height);
+```js-nolint
+scissor(x, y, width, height)
 ```
 
 ### Parameters
@@ -28,16 +25,16 @@ void gl.scissor(x, y, width, height);
 - `y`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the vertical coordinate for the lower left corner
     of the box. Default value: 0.
-- width
+- `width`
   - : A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the scissor box.
     Default value: width of the canvas.
-- height
+- `height`
   - : A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the scissor box.
     Default value: height of the canvas.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

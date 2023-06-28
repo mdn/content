@@ -1,23 +1,15 @@
 ---
 title: proxy.register()
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/register
-tags:
-  - API
-  - Add-ons
-  - Function
-  - Method
-  - Proxy
-  - Reference
-  - WebExtensions
-  - register
-  - registerProxyScript
+page-type: webextension-api-function
 browser-compat: webextensions.api.proxy.register
 ---
+
 {{AddonSidebar()}} {{deprecated_header}}
 
 > **Warning:** This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:
 >
-> ![](proxy_register_warning.png)
+> ![Proxy register error message](proxy_register_warning.png)
 
 Registers a [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file). The file is executed immediately, and its `FindProxyForURL()` function will be called for any HTTP or HTTPS requests.
 
@@ -41,9 +33,9 @@ To send a message to the PAC file, you must set the `toProxyScript` option:
 
 // Log any messages from the proxy.
 browser.runtime.onMessage.addListener((message, sender) => {
-  if (sender.url === browser.extension.getURL(proxyScriptURL)) {
-    console.log(message);
-  }
+  if (sender.url === browser.extension.getURL(proxyScriptURL)) {
+    console.log(message);
+  }
 });
 
 let messageToProxy = {
@@ -73,7 +65,7 @@ The basic PAC file syntax is described in the [PAC documentation](/en-US/docs/We
 
 The standard `FindProxyForURL()` [returns a string](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#return_value_format). In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 _only_, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.
 
-From Firefox 57 onwards, `FindProxyForURL()` may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.
+From Firefox 57 onwards, `FindProxyForURL()` may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.
 
 If the array contains more than one object, then all `ProxyInfo` objects after the first one represent failovers: if the proxy at position N in the array is not reachable when its `ProxyInfo.failoverTimeout` expires, then the browser will try the proxy at position N+1.
 
@@ -100,7 +92,7 @@ The first proxy in the array will be tried first. If it does not respond in `fai
 
 ### PAC file environment
 
-The global helper functions usually available for PAC files ([`isPlainHostName()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname()_2>), [`dnsDomainIs()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis()>), and so on) are not available.
+The global helper functions usually available for PAC files ([`isPlainHostName()`](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname), [`dnsDomainIs()`](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis), and so on) are not available.
 
 Code running in the PAC file does not get access to:
 
@@ -120,7 +112,7 @@ browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);
 
 function handleMessage(message, sender) {
   // only handle messages from the proxy script
-  if (sender.url != browser.extension.getURL(proxyScriptURL)) {
+  if (sender.url !== browser.extension.getURL(proxyScriptURL)) {
     return;
   }
   console.log(message);
@@ -131,8 +123,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ## Syntax
 
-```js
-var registering = browser.proxy.register(
+```js-nolint
+let registering = browser.proxy.register(
   url   // string
 )
 ```

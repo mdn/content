@@ -1,15 +1,11 @@
 ---
-title: Element.scrollBy()
+title: "Element: scrollBy() method"
+short-title: scrollBy()
 slug: Web/API/Element/scrollBy
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Method
-  - Reference
-  - scrollBy
+page-type: web-api-instance-method
 browser-compat: api.Element.scrollBy
 ---
+
 {{APIRef}}
 
 The **`scrollBy()`** method of the {{domxref("Element")}}
@@ -17,9 +13,9 @@ interface scrolls an element by the given amount.
 
 ## Syntax
 
-```js
-element.scrollBy(x-coord, y-coord);
-element.scrollBy(options)
+```js-nolint
+scrollBy(x-coord, y-coord)
+scrollBy(options)
 ```
 
 ### Parameters
@@ -40,6 +36,10 @@ element.scrollBy(options)
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js
@@ -53,7 +53,7 @@ Using `options`:
 element.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

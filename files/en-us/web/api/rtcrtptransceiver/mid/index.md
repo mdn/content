@@ -1,20 +1,11 @@
 ---
-title: RTCRtpTransceiver.mid
+title: "RTCRtpTransceiver: mid property"
+short-title: mid
 slug: Web/API/RTCRtpTransceiver/mid
-tags:
-  - API
-  - Media
-  - Media ID
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - mid
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpTransceiver.mid
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only {{domxref("RTCRtpTransceiver")}} interface's
@@ -22,15 +13,9 @@ The read-only {{domxref("RTCRtpTransceiver")}} interface's
 (`mid`) which the local and remote peers have agreed upon to uniquely
 identify the stream's pairing of sender and receiver.
 
-## Syntax
+## Value
 
-```js
-var mediaID = RTCRtpTransceiver.mid;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which uniquely identifies the pairing of source and
+A string which uniquely identifies the pairing of source and
 destination of the transceiver's stream. Its value is taken from the media ID of the SDP
 m-line. This value is `null` if negotiation has not completed.
 
@@ -44,5 +29,4 @@ m-line. This value is `null` if negotiation has not completed.
 
 ## See also
 
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)

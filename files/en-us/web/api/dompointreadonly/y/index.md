@@ -1,21 +1,11 @@
 ---
-title: DOMPointReadOnly.y
+title: "DOMPointReadOnly: y property"
+short-title: "y"
 slug: Web/API/DOMPointReadOnly/y
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Read-only
-  - Reference
-  - Vertical
-  - 'y'
+page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.y
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's
@@ -28,13 +18,7 @@ of this property, you should instead use the {{domxref("DOMPoint")}} object.
 In general, positive values of `y` mean downward, and negative values of
 `y` mean upward, assuming no transforms have resulted in a reversal.
 
-## Syntax
-
-```js
-const yPos = someDOMPointReadOnly.y;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the y coordinate's value for the
 point. This value is **unrestricted**, meaning that it is allowed to be

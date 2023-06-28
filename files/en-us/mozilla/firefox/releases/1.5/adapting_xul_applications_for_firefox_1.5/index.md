@@ -1,11 +1,8 @@
 ---
 title: Adapting XUL Applications for Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
-tags:
-  - Add-ons
-  - Extensions
-  - XUL
 ---
+
 {{FirefoxSidebar}}
 
 This page contains a list of changes in [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5), affecting XUL developers.
@@ -24,4 +21,4 @@ This page contains a list of changes in [Firefox 1.5](/en-US/docs/Mozilla/Firefo
 ### Other Information
 
 - [How to check application's version using nsIXULAppInfo](/en-US/docs/Using_nsIXULAppInfo)
-- [MozillaZine](http://kb.mozillazine.org/Dev_:_Extensions_:_Cross-Version_Compatibility_Techniques)
+- [MozillaZine](https://kb.mozillazine.org/Dev_:_Extensions_:_Cross-Version_Compatibility_Techniques)

@@ -1,25 +1,14 @@
 ---
-title: XRView.eye
+title: "XRView: eye property"
+short-title: eye
 slug: Web/API/XRView/eye
-tags:
-  - API
-  - AR
-  - Eye
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - augmented
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRView.eye
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRView")}} interface's read-only **`eye`**
 property is a string indicating which eye's viewpoint the `XRView` represents: `left` or
@@ -53,16 +42,16 @@ particular eye has been injured during gameplay. When rendering that eye, if the
 ```js
 glLayer = xrSession.renderState.baseLayer;
 gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
-gl.clearColor(0,0, 0, 1.0);
+gl.clearColor(0, 0, 0, 1.0);
 gl.clearDepth(1.0);
 gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_BUFFER_BIT);
 
-for (let view of xrPose.views) {
+for (const view of xrPose.views) {
   let skipView = false;
 
-  if (view.eye == "left" && body.leftEye.injured) ||
+  if (view.eye === "left" && body.leftEye.injured) {
     skipView = updateInjury(body.leftEye);
-  } else if (view.eye == "right" && body.rightEye.injured) {
+  } else if (view.eye === "right" && body.rightEye.injured) {
     skipView = updateInjury(body.rightEye);
   }
 
@@ -74,7 +63,7 @@ for (let view of xrPose.views) {
 }
 ```
 
-For each of the views, the value of `eye` is checked and  if it's either
+For each of the views, the value of `eye` is checked and if it's either
 `left` or `right`, we check to see if the
 `body.leftEye.injured` or `body.rightEye.injured` property is
 `true`; if so, we call a function `updateInjury()` on that eye to
@@ -82,7 +71,7 @@ do things such as allow a bit of healing to occur, track the progress of a poiso
 effect, or the like, as appropriate for the game's needs.
 
 `updateInjury()` returns `true` if the eye is still injured or
-`false` if the eye has been restored to health by the function,. If the
+`false` if the eye has been restored to health by the function. If the
 result is `false`, indicating that the eye is now healthy, we render the
 scene for that eye. Otherwise, we don't.
 

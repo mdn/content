@@ -1,33 +1,18 @@
 ---
-title: DeviceMotionEvent.rotationRate
+title: "DeviceMotionEvent: rotationRate property"
+short-title: rotationRate
 slug: Web/API/DeviceMotionEvent/rotationRate
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Device Orientation
-  - Experimental
-  - Mobile
-  - Motion
-  - NeedsExample
-  - Orientation
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEvent.rotationRate
 ---
+
 {{APIRef("Device Orientation Events")}}
 
-Returns the rate at which the device is rotating around each of its axes in degrees per
+The **`DeviceMotionEvent.rotationRate`** read-only property returns the rate at which the device is rotating around each of its axes in degrees per
 second.
 
 > **Note:** If the hardware isn't capable of providing this
 > information, this property returns `null`.
-
-## Syntax
-
-```js
-var rotationRate = deviceMotionEvent.rotationRate;
-```
 
 ## Value
 
@@ -53,11 +38,8 @@ rates of the device around each of its axes:
 ## See also
 
 - {{DOMxRef("DeviceMotionEvent") }}
-- {{Event("devicemotion") }}
-- {{DOMxRef("window.ondevicemotion") }}
-- {{Event("deviceorientation") }}
+- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent") }}
-- [Detecting device
-  orientation](/en-US/docs/Web/API/Detecting_device_orientation)
-- [Orientation and motion data
-  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

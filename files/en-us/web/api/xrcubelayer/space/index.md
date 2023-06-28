@@ -1,20 +1,16 @@
 ---
-title: XRCubeLayer.space
+title: "XRCubeLayer: space property"
+short-title: space
 slug: Web/API/XRCubeLayer/space
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRCubeLayer.space
 ---
-{{APIRef("WebXR Device API")}}
 
-The **`space`** property of the {{domxref("XRCubeLayer")}} interface represents the layer's spatial relationship with the user’s physical environment.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The **`space`** property of the {{domxref("XRCubeLayer")}} interface represents the layer's spatial relationship with the user's physical environment.
 
 ## Value
 
@@ -30,7 +26,7 @@ The {{domxref("XRWebGLBinding.createCubeLayer()")}} method creates a cube layer 
 const cubeLayer = xrGlBinding.createCubeLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 cubeLayer.space = someOtherSpace;

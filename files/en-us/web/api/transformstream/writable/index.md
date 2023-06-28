@@ -1,25 +1,16 @@
 ---
-title: TransformStream.writable
+title: "TransformStream: writable property"
+short-title: writable
 slug: Web/API/TransformStream/writable
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TransformStream
+page-type: web-api-instance-property
 browser-compat: api.TransformStream.writable
 ---
+
 {{APIRef("Streams")}}
 
 The **`writable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("WritableStream")}} instance controlled by this `TransformStream`.
 
-## Syntax
-
-```js
-let writable = TransformStream.writable;
-```
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 
@@ -29,7 +20,7 @@ The following example creates a new {{domxref("TransformStream")}} as a `textEnc
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.writable) // a WritableStream
+console.log(textEncoderStream.writable); // a WritableStream
 ```
 
 ## Specifications

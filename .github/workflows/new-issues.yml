@@ -1,0 +1,17 @@
+name: "Mark new issues with needs-triage label"
+
+on:
+  issues:
+    types:
+      - reopened
+      - opened
+
+jobs:
+  label-new-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: initial labelling
+        uses: andymckay/labeler@master
+        with:
+          add-labels: "needs triage"
+          ignore-if-assigned: true

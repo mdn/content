@@ -1,17 +1,10 @@
 ---
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setIcon
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setIcon
 ---
+
 {{AddonSidebar()}}
 
 Sets the icon for the sidebar.
@@ -24,20 +17,20 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Types of icon
 
-Your extension should specify an icon for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
+Your extension should specify an icon for the sidebar in the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
 
-If you don't specify an icon in the sidebar_action key, you get the browser's default icon. This is called the _"default icon"_.
+If you don't specify an icon in the `sidebar_action` key, you get the browser's default icon. This is called the _"default icon"_.
 
-If you set a new icon using `setIcon()`, and include the `tabId` option, then the icon is set only for the given tab. This icon is called the _"tab-specific icon"_.
+If you set a new icon using `setIcon()`, and include the `tabId` option, then the icon is set only for the given tab. This icon is called the _"tab-specific icon"_.
 
-If you set a new icon using `setIcon()`, and include the `windowId` option, then the icon is set only for the given window. This icon is called the _"window-specific icon"_, and will appear in all tabs of that window that do not have a tab-specific icon set.
+If you set a new icon using `setIcon()`, and include the `windowId` option, then the icon is set only for the given window. This icon is called the _"window-specific icon"_, and will appear in all tabs of that window that do not have a tab-specific icon set.
 
 If you set a new icon using `setIcon()`, and omit both the `tabId` and `windowId` options, then this sets the _"global icon"_. The global icon will then appear in all tabs that do not have a tab-specific icon set and whose window does not have a window-specific icon.
 
 ## Syntax
 
-```js
-var settingIcon = browser.sidebarAction.setIcon(
+```js-nolint
+let settingIcon = browser.sidebarAction.setIcon(
   details         // object
 )
 ```
@@ -48,7 +41,7 @@ var settingIcon = browser.sidebarAction.setIcon(
 
   - : `object`. An object with the following properties:
 
-    - `imageData`{{optional_inline}}
+    - `imageData` {{optional_inline}}
 
       - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
 
@@ -63,7 +56,7 @@ var settingIcon = browser.sidebarAction.setIcon(
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-    - `path`{{optional_inline}}
+    - `path` {{optional_inline}}
 
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
@@ -86,7 +79,7 @@ var settingIcon = browser.sidebarAction.setIcon(
 
         if `path` is `null`, and `tabId` was omitted, and there was a global icon set, it will be reset to the manifest icon.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the icon only for the given tab.
     - `windowId` {{optional_inline}}
       - : `integer`. Sets the icon only for the given window.
@@ -109,7 +102,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 The code below toggles the sidebar icon for the active tab when the user clicks a browser action:
 
 ```js
-var on = false;
+let on = false;
 
 function toggle(tab) {
   if (on) {

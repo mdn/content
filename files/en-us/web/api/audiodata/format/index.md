@@ -1,36 +1,35 @@
 ---
-title: AudioData.format
+title: "AudioData: format property"
+short-title: format
 slug: Web/API/AudioData/format
-tags:
-  - API
-  - Property
-  - Reference
-  - format
-  - AudioData
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioData.format
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`format`** read-only property of the {{domxref("AudioData")}} interface returns the sample format of the `AudioData` object.
 
-### Value
+## Value
 
 A string. One of:
 
 - `"u8"`
   - : 8-bit unsigned integer samples, in an interleaved format.
 - `"s16"`
-  - : 16-bit unsigned integer samples, in an interleaved format.
+  - : 16-bit signed integer samples, in an interleaved format.
 - `"s32"`
-  - : 32-bit unsigned integer samples, in an interleaved format.
+  - : 32-bit signed integer samples, in an interleaved format.
 - `"f32"`
   - : 32-bit float samples, in an interleaved format.
 - `"u8-planar"`
   - : 8-bit unsigned integer samples, in a planar format.
 - `"s16-planar"`
-  - : 16-bit unsigned integer samples, in a planar format.
+  - : 16-bit signed integer samples, in a planar format.
 - `"s32-planar"`
-  - : 32-bit unsigned integer samples, in a planar format.
+  - : 32-bit signed integer samples, in a planar format.
 - `"f32-planar"`
   - : 32-bit float samples, in a planar format.
 
@@ -49,5 +48,3 @@ console.log(AudioData.format);
 ## Browser compatibility
 
 {{Compat}}
-
-

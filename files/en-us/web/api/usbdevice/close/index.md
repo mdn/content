@@ -1,17 +1,13 @@
 ---
-title: USBDevice.close()
+title: "USBDevice: close() method"
+short-title: close()
 slug: Web/API/USBDevice/close
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - close
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.USBDevice.close
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`close()`** method of the {{domxref("USBDevice")}}
@@ -20,8 +16,8 @@ released and the device session has ended.
 
 ## Syntax
 
-```js
-var promise = USBDevice.close()
+```js-nolint
+close()
 ```
 
 ### Parameters

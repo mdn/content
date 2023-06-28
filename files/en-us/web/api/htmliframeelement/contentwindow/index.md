@@ -1,27 +1,26 @@
 ---
-title: HTMLIFrameElement.contentWindow
+title: "HTMLIFrameElement: contentWindow property"
+short-title: contentWindow
 slug: Web/API/HTMLIFrameElement/contentWindow
-tags:
-  - API
-  - HTML DOM
-  - HTMLIFrameElement
-  - Property
-  - Read-only
-  - Reference
-  - Web
+page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.contentWindow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentWindow`** property returns the [Window](/en-US/docs/Web/API/Window) object of an [HTMLIFrameElement](/en-US/docs/Web/API/HTMLIFrameElement). You can use this `Window` object to access the iframe's document and its internal DOM. This attribute is read-only, but its properties can be manipulated like the global `Window` object.
 
-## Example of contentWindow
+## Value
+
+A [Window](/en-US/docs/Web/API/Window) object.
+
+## Examples
 
 ```js
-var x = document.getElementsByTagName("iframe")[0].contentWindow;
+const x = document.querySelector("iframe").contentWindow;
 //x = window.frames[0];
 
-x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+x.document.querySelector("body").style.backgroundColor = "blue";
 // this would turn the 1st iframe in document blue.
 ```
 

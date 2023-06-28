@@ -1,20 +1,11 @@
 ---
-title: SVGImageElement.decode
+title: "SVGImageElement: decode() method"
+short-title: decode()
 slug: Web/API/SVGImageElement/decode
-tags:
-  - API
-  - Decode
-  - Experimental
-  - Image
-  - Method
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - asynchronous
+page-type: web-api-instance-method
 browser-compat: api.SVGImageElement.decode
 ---
+
 {{APIRef("SVG")}}
 
 The **`decode()`** method of the
@@ -24,8 +15,8 @@ for use.
 
 ## Syntax
 
-```js
-var promise = svgImageElement.decode();
+```js-nolint
+decode()
 ```
 
 ### Parameters

@@ -1,27 +1,27 @@
 ---
-title: TrustedTypePolicy.createScript()
+title: "TrustedTypePolicy: createScript() method"
+short-title: createScript()
 slug: Web/API/TrustedTypePolicy/createScript
-tags:
-  - API
-  - Method
-  - Reference
-  - createScript
-  - TrustedTypePolicy
+page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicy.createScript
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 
-    var str = TrustedTypePolicy.createScript(input[,args]);
+```js-nolint
+createScript(input)
+createScript(input, args)
+```
 
 ### Parameters
 
 - `input`
-  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
-- `args`{{optional_inline}}
+  - : A string containing the string to be sanitized by the policy.
+- `args` {{optional_inline}}
   - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 
 ### Return value

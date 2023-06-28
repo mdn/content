@@ -1,25 +1,22 @@
 ---
-title: WebGLRenderingContext.linkProgram()
+title: "WebGLRenderingContext: linkProgram() method"
+short-title: linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.linkProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} interface's
-**`linkProgram()`** method links a given
+**`linkProgram()`** method links a given
 {{domxref("WebGLProgram")}}, completing the process of preparing the GPU code for the
 program's fragment and vertex shaders.
 
 ## Syntax
 
-```js
-void gl.linkProgram(program);
+```js-nolint
+linkProgram(program)
 ```
 
 ### Parameters
@@ -29,12 +26,12 @@ void gl.linkProgram(program);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -42,9 +39,9 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
-  throw new Error('Could not compile WebGL program. \n\n' + info);
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const info = gl.getProgramInfoLog(program);
+  throw new Error(`Could not compile WebGL program. \n\n${info}`);
 }
 ```
 

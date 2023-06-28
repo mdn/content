@@ -1,15 +1,10 @@
 ---
 title: mask-position
 slug: Web/CSS/mask-position
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-position
 ---
+
 {{CSSRef}}
 
 The **`mask-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position, relative to the mask position layer set by {{cssxref("mask-origin")}}, for each defined mask image.
@@ -35,6 +30,7 @@ mask-position: 1rem 1rem, center;
 mask-position: inherit;
 mask-position: initial;
 mask-position: revert;
+mask-position: revert-layer;
 mask-position: unset;
 ```
 

@@ -1,11 +1,9 @@
 ---
 title: Event reference
 slug: Web/Events
-tags:
-  - Event
-  - Overview
-  - Reference
+spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 ---
+
 [Events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.
 
 Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in [Event > Interfaces based on Event](/en-US/docs/Web/API/Event#introduction).
@@ -309,39 +307,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
               ><code>gestureend</code> event</a
             >.
           </li>
-          <li>
-            Non-standard IE specific events on
-            <a href="/en-US/docs/Web/API/Element#touch_events"
-              ><code>Element</code></a
-            >:
-            <a href="/en-US/docs/Web/API/Element/MSGestureStart_event"
-              ><code>MSGestureStart</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureChange_event"
-              ><code>MSGestureChange</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureEnd_event"
-              ><code>MSGestureEnd</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureHold_event"
-              ><code>MSGestureHold</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureTap_event"
-              ><code>MSGestureTap</code></a
-            >.
-          </li>
-          <li>
-            Deprecated/non-standard Mozilla touch events
-            <a
-              href="/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events"
-              >Touch events (Mozilla experimental)</a
-            >
-          </li>
-          <li>
-            <a href="/en-US/docs/Web/Events/Mouse_gesture_events"
-              >Mouse gesture events for Firefox Addons</a
-            >
-          </li>
         </ul>
       </td>
     </tr>
@@ -454,7 +419,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Events related to media usage (including the
-          <a href="/en-US/docs/Web/API/Media_Streams_API#events"
+          <a href="/en-US/docs/Web/API/Media_Capture_and_Streams_API#events"
             >Media Capture and Streams API</a
           >,
           <a href="/en-US/docs/Web/API/Web_Audio_API#events">Web Audio API</a>,
@@ -936,7 +901,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [readystatechange event](/en-US/docs/Web/API/Document/readystatechange_event)
   - [scroll event](/en-US/docs/Web/API/Document/scroll_event)
   - [selectionchange event](/en-US/docs/Web/API/Document/selectionchange_event)
-  - [selectstart event](/en-US/docs/Web/API/Document/selectstart_event)
   - [touchcancel event](/en-US/docs/Web/API/Document/touchcancel_event)
   - [touchend event](/en-US/docs/Web/API/Document/touchend_event)
   - [touchmove event](/en-US/docs/Web/API/Document/touchmove_event)
@@ -950,6 +914,10 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 - {{DOMxRef("Element")}}
 
+  - [animationcancel event](/en-US/docs/Web/API/Element/animationcancel_event)
+  - [animationend event](/en-US/docs/Web/API/Element/animationend_event)
+  - [animationiteration event](/en-US/docs/Web/API/Element/animationiteration_event)
+  - [animationstart event](/en-US/docs/Web/API/Element/animationstart_event)
   - [afterscriptexecute event](/en-US/docs/Web/API/Element/afterscriptexecute_event)
   - [auxclick event](/en-US/docs/Web/API/Element/auxclick_event)
   - [beforescriptexecute event](/en-US/docs/Web/API/Element/beforescriptexecute_event)
@@ -973,9 +941,11 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [gesturechange event](/en-US/docs/Web/API/Element/gesturechange_event)
   - [gestureend event](/en-US/docs/Web/API/Element/gestureend_event)
   - [gesturestart event](/en-US/docs/Web/API/Element/gesturestart_event)
+  - [gotpointercapture event](/en-US/docs/Web/API/Element/gotpointercapture_event)
   - [keydown event](/en-US/docs/Web/API/Element/keydown_event)
   - [keypress event](/en-US/docs/Web/API/Element/keypress_event)
   - [keyup event](/en-US/docs/Web/API/Element/keyup_event)
+  - [lostpointercapture event](/en-US/docs/Web/API/Element/lostpointercapture_event)
   - [mousedown event](/en-US/docs/Web/API/Element/mousedown_event)
   - [mouseenter event](/en-US/docs/Web/API/Element/mouseenter_event)
   - [mouseleave event](/en-US/docs/Web/API/Element/mouseleave_event)
@@ -984,22 +954,25 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [mouseover event](/en-US/docs/Web/API/Element/mouseover_event)
   - [mouseup event](/en-US/docs/Web/API/Element/mouseup_event)
   - [mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event)
-  - [msContentZoom event](/en-US/docs/Web/API/Element/msContentZoom_event)
-  - [MSGestureChange event](/en-US/docs/Web/API/Element/MSGestureChange_event)
-  - [MSGestureEnd event](/en-US/docs/Web/API/Element/MSGestureEnd_event)
-  - [MSGestureHold event](/en-US/docs/Web/API/Element/MSGestureHold_event)
-  - [MSGestureStart event](/en-US/docs/Web/API/Element/MSGestureStart_event)
-  - [MSGestureTap event](/en-US/docs/Web/API/Element/MSGestureTap_event)
-  - [MSInertiaStart event](/en-US/docs/Web/API/Element/MSInertiaStart_event)
-  - [MSManipulationStateChanged event](/en-US/docs/Web/API/Element/MSManipulationStateChanged_event)
   - [paste event](/en-US/docs/Web/API/Element/paste_event)
+  - [pointercancel event](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [pointerdown event](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [pointerenter event](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [pointerleave event](/en-US/docs/Web/API/Element/pointerleave_event)
+  - [pointermove event](/en-US/docs/Web/API/Element/pointermove_event)
+  - [pointerout event](/en-US/docs/Web/API/Element/pointerout_event)
+  - [pointerover event](/en-US/docs/Web/API/Element/pointerover_event)
+  - [pointerup event](/en-US/docs/Web/API/Element/pointerup_event)
   - [scroll event](/en-US/docs/Web/API/Element/scroll_event)
   - [select event](/en-US/docs/Web/API/Element/select_event)
-  - [show event](/en-US/docs/Web/API/Element/show_event)
   - [touchcancel event](/en-US/docs/Web/API/Element/touchcancel_event)
   - [touchend event](/en-US/docs/Web/API/Element/touchend_event)
   - [touchmove event](/en-US/docs/Web/API/Element/touchmove_event)
   - [touchstart event](/en-US/docs/Web/API/Element/touchstart_event)
+  - [transitioncancel event](/en-US/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend event](/en-US/docs/Web/API/Element/transitionend_event)
+  - [transitionrun event](/en-US/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart event](/en-US/docs/Web/API/Element/transitionstart_event)
   - [webkitmouseforcechanged event](/en-US/docs/Web/API/Element/webkitmouseforcechanged_event)
   - [webkitmouseforcedown event](/en-US/docs/Web/API/Element/webkitmouseforcedown_event)
   - [webkitmouseforceup event](/en-US/docs/Web/API/Element/webkitmouseforceup_event)
@@ -1038,27 +1011,9 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 - {{DOMxRef("HTMLElement")}}
 
-  - [animationcancel event](/en-US/docs/Web/API/HTMLElement/animationcancel_event)
-  - [animationend event](/en-US/docs/Web/API/HTMLElement/animationend_event)
-  - [animationiteration event](/en-US/docs/Web/API/HTMLElement/animationiteration_event)
-  - [animationstart event](/en-US/docs/Web/API/HTMLElement/animationstart_event)
   - [beforeinput event](/en-US/docs/Web/API/HTMLElement/beforeinput_event)
   - [change event](/en-US/docs/Web/API/HTMLElement/change_event)
-  - [gotpointercapture event](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
   - [input event](/en-US/docs/Web/API/HTMLElement/input_event)
-  - [lostpointercapture event](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
-  - [pointercancel event](/en-US/docs/Web/API/HTMLElement/pointercancel_event)
-  - [pointerdown event](/en-US/docs/Web/API/HTMLElement/pointerdown_event)
-  - [pointerenter event](/en-US/docs/Web/API/HTMLElement/pointerenter_event)
-  - [pointerleave event](/en-US/docs/Web/API/HTMLElement/pointerleave_event)
-  - [pointermove event](/en-US/docs/Web/API/HTMLElement/pointermove_event)
-  - [pointerout event](/en-US/docs/Web/API/HTMLElement/pointerout_event)
-  - [pointerover event](/en-US/docs/Web/API/HTMLElement/pointerover_event)
-  - [pointerup event](/en-US/docs/Web/API/HTMLElement/pointerup_event)
-  - [transitioncancel event](/en-US/docs/Web/API/HTMLElement/transitioncancel_event)
-  - [transitionend event](/en-US/docs/Web/API/HTMLElement/transitionend_event)
-  - [transitionrun event](/en-US/docs/Web/API/HTMLElement/transitionrun_event)
-  - [transitionstart event](/en-US/docs/Web/API/HTMLElement/transitionstart_event)
 
 - {{DOMxRef("HTMLFormElement")}}
 
@@ -1111,9 +1066,9 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 - {{DOMxRef("IDBDatabase")}}
 
-  - [abort event](/en-US/docs/Web/API/IDBDatabase/abort_event)
+  - [abort event](/en-US/docs/Web/API/IDBTransaction/abort_event)
   - [close event](/en-US/docs/Web/API/IDBDatabase/close_event)
-  - [error event](/en-US/docs/Web/API/IDBDatabase/error_event)
+  - [error event](/en-US/docs/Web/API/IDBTransaction/error_event)
   - [versionchange event](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
 
 - {{DOMxRef("IDBOpenDBRequest")}}
@@ -1150,6 +1105,10 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
   - [mute event](/en-US/docs/Web/API/MediaStreamTrack/mute_event)
   - [unmute event](/en-US/docs/Web/API/MediaStreamTrack/unmute_event)
+
+- {{DOMxRef("MediaQueryList")}}
+
+  - [change event](/en-US/docs/Web/API/MediaQueryList/change_event)
 
 - {{DOMxRef("MessagePort")}}
 
@@ -1328,8 +1287,8 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [blur event](/en-US/docs/Web/API/Window/blur_event)
   - [copy event](/en-US/docs/Web/API/Window/copy_event)
   - [cut event](/en-US/docs/Web/API/Window/cut_event)
-  - [devicemotion event](/en-US/docs/Web/API/Window/devicemotion_event)
-  - [deviceorientation event](/en-US/docs/Web/API/Window/deviceorientation_event)
+  - [devicemotion event](/en-US/docs/Web/API/Window.devicemotion_event)
+  - [deviceorientation event](/en-US/docs/Web/API/Window.deviceorientation_event)
   - [DOMContentLoaded event](/en-US/docs/Web/API/Window/DOMContentLoaded_event)
   - [error event](/en-US/docs/Web/API/Window/error_event)
   - [focus event](/en-US/docs/Web/API/Window/focus_event)
@@ -1407,9 +1366,10 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 ## Specifications
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#event-handler-attributes', 'event handlers')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'webappapis.html#event-handler-attributes', 'event handlers')}}     | {{Spec2('HTML5 W3C')}}     |         |
+{{Specifications}}
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li></ul>{{ListSubpages}}</section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+  </ol>{{ListSubpages}}
+</section>

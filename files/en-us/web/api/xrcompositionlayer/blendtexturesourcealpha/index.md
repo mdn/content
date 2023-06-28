@@ -1,18 +1,14 @@
 ---
-title: XRCompositionLayer.blendTextureSourceAlpha
+title: "XRCompositionLayer: blendTextureSourceAlpha property"
+short-title: blendTextureSourceAlpha
 slug: Web/API/XRCompositionLayer/blendTextureSourceAlpha
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRCompositionLayer.blendTextureSourceAlpha
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`blendTextureSourceAlpha`** property of the {{domxref("XRCompositionLayer")}} interface is a boolean enabling the layer's texture {{Glossary("Alpha", "alpha channel")}}.
 

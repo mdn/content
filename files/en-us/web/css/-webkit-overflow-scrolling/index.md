@@ -1,19 +1,30 @@
 ---
-title: '-webkit-overflow-scrolling'
+title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-overflow-scrolling
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls whether or not touch devices use momentum-based scrolling for a given element.
 
 ## Syntax
+
+```css
+/* Keyword values */
+-webkit-overflow-scrolling: auto;
+-webkit-overflow-scrolling: touch;
+
+/* Global values */
+-webkit-overflow-scrolling: inherit;
+-webkit-overflow-scrolling: initial;
+-webkit-overflow-scrolling: revert;
+-webkit-overflow-scrolling: revert-layer;
+-webkit-overflow-scrolling: unset;
+```
 
 ### Values
 
@@ -28,7 +39,10 @@ The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls wh
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-overflow-scrolling =
+  auto | touch
+```
 
 ## Examples
 
@@ -36,14 +50,10 @@ The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls wh
 
 ```html
 <div class="scroll-touch">
-  <p>
-    This paragraph has momentum scrolling
-  </p>
+  <p>This paragraph has momentum scrolling</p>
 </div>
 <div class="scroll-auto">
-  <p>
-    This paragraph does not.
-  </p>
+  <p>This paragraph does not.</p>
 </div>
 ```
 
@@ -77,7 +87,7 @@ p {
 
 ## Specifications
 
-Not part of any standard. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling).
+Not part of any standard. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling).
 
 ## Browser compatibility
 
@@ -85,6 +95,6 @@ Not part of any standard. Apple has [a description in the Safari CSS Reference](
 
 ## See also
 
-- [CSS-Tricks article with demo](http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [CSS-Tricks article with demo](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
 - [Smashing Magazine - describing the effect of scroll bouncing and how it works on different web browsers](https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/)
-- [Safari 13 Release notes](https://developer.apple.com/documentation/safari_release_notes/safari_13_release_notes): Indicates the addition of support for one-finger accelerated scrolling to all frames and `overflow:scroll` elements, eliminating the need to set `-webkit-overflow-scrolling: touch`.
+- [Safari 13 Release notes](https://developer.apple.com/documentation/safari-release-notes/safari-13-release-notes): Indicates the addition of support for one-finger accelerated scrolling to all frames and `overflow:scroll` elements, eliminating the need to set `-webkit-overflow-scrolling: touch`.

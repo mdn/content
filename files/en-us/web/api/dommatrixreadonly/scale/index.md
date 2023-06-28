@@ -1,11 +1,11 @@
 ---
-title: DOMMatrixReadOnly.scale()
+title: "DOMMatrixReadOnly: scale() method"
+short-title: scale()
 slug: Web/API/DOMMatrixReadOnly/scale
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.scale
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`scale()`** method of the
@@ -48,11 +48,11 @@ DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY, originZ);
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix "The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations.")
+Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix)
 containing a new matrix being the result of the matrix x and y dimensions being scaled
 by the given factor, centered on the origin given. The original matrix is not modified.
 
-If a scale is applied about the z-axis, the resulting matrix will be a 4x4 3D matrix.
+If a scale is applied about the z-axis, the resulting matrix will be a 4✕4 3D matrix.
 
 ## Examples
 
@@ -71,7 +71,7 @@ This JavaScript first creates an identity matrix, then uses the `scale()`
 method to create a new matrix with a single parameter.
 
 We test if the browser supports a six parameter `scale()` method by creating
-a new matrix using three parameters and observing it's `is2D` property — if
+a new matrix using three parameters and observing its `is2D` property. If
 this is `false` then the third parameter has been accepted by the browser as
 a `scaleZ` parameter, making this a 3D matrix.
 
@@ -94,13 +94,15 @@ if (browserExpectsSixParamScale) {
   scaledMatrixWithOrigin = matrix.scale(0.5, 0.5, 1, 25, 25, 0);
 }
 
-document.querySelector('#transformed').setAttribute('transform', scaledMatrix.toString());
-document.querySelector('#transformedOrigin').setAttribute('transform', scaledMatrixWithOrigin.toString());
+document
+  .querySelector("#transformed")
+  .setAttribute("transform", scaledMatrix.toString());
+document
+  .querySelector("#transformedOrigin")
+  .setAttribute("transform", scaledMatrixWithOrigin.toString());
 ```
 
-{{ EmbedLiveSample('Examples', '250', '250',
-  'screen_shot_2019-02-18_at_13.23.31.png',
-  'Web/API/DOMMatrixReadOnly/scale') }}
+{{EmbedLiveSample('Examples', '250', '250')}}
 
 ## Specifications
 

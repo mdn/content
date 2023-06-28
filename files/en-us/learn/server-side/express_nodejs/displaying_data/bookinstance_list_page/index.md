@@ -1,13 +1,8 @@
 ---
 title: BookInstance list page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
 ---
+
 Next we'll implement our list of all book copies (`BookInstance`) in the library. This page needs to include the title of the `Book` associated with each `BookInstance` (linked to its detail page) along with other information in the `BookInstance` model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the `BookInstance` detail page.
 
 ## Controller
@@ -19,28 +14,29 @@ Find the exported `bookinstance_list()` controller method and replace it with th
 
 ```js
 // Display list of all BookInstances.
-exports.bookinstance_list = function(req, res, next) {
+exports.bookinstance_list = asyncHandler(async (req, res, next) => {
+  const allBookInstances = await BookInstance.find().populate("book").exec();
 
-  BookInstance.find()
-    .populate('book')
-    .exec(function (err, list_bookinstances) {
-      if (err) { return next(err); }
-      // Successful, so render
-      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
-    });
-
-};
+  res.render("bookinstance_list", {
+    title: "Book Instance List",
+    bookinstance_list: allBookInstances,
+  });
+});
 ```
 
-The method uses the model's `find()` function to return all `BookInstance` objects. It then daisy-chains a call to `populate()` with the `book` field—this will replace the book id stored for each `BookInstance` with a full `Book` document.
+The route handler calls the `find()` function on the `BookInstance` model, and then daisy-chains a call to `populate()` with the `book` field—this will replace the book id stored for each `BookInstance` with a full `Book` document.
+`exec()` is then daisy-chained on the end in order to execute the query and return a promise.
 
-On success, the callback passed to the query renders the **bookinstance_list**(.pug) template, passing the `title` and `bookinstance_list` as variables.
+The route handler uses `await` to wait on the promise, pausing execution until it is settled.
+If the promise is fulfilled, the results of the query are saved to the `allBookInstances` variable, and the route handler continues execution.
+
+The last part of the code calls `render()`, specifying the **bookinstance_list** (.pug) template and passing values for the `title` and `bookinstance_list` into the template.
 
 ## View
 
 Create **/views/bookinstance_list.pug** and copy in the text below.
 
-```js
+```pug
 extends layout
 
 block content
@@ -67,7 +63,7 @@ This view is much the same as all the others. It extends the layout, replacing t
 
 ## What does it look like?
 
-Run the application, open your browser to <http://localhost:3000/>, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
+Run the application, open your browser to `http://localhost:3000/`, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
 ![BookInstance List Page - Express Local Library site](locallibary_express_bookinstance_list.png)
 

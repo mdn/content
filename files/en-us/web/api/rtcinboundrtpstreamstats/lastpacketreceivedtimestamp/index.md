@@ -1,41 +1,21 @@
 ---
-title: RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
+title: "RTCInboundRtpStreamStats: lastPacketReceivedTimestamp property"
+short-title: lastPacketReceivedTimestamp
 slug: Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
-tags:
-  - API
-  - Media
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Time
-  - Time stamp
-  - WebRTC
-  - WebRTC API
-  - lastPacketReceivedTimestamp
-  - stream
-  - timeStamp
-browser-compat: api.RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
+page-type: web-api-instance-property
+browser-compat: api.RTCStatsReport.type_inbound-rtp.lastPacketReceivedTimestamp
 ---
+
 {{APIRef("WebRTC")}}
 
-The **`lastPacketReceivedTimestamp`**
-property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the time
-at which the most recently received packet arrived from this source.
+The **`lastPacketReceivedTimestamp`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the time at which the most recently received packet arrived from this source.
 
-## Syntax
+## Value
 
-```js
-var lastPacketTimestamp = rtcInboundRtpStreamStats.lastPacketReceivedTimestamp;
-```
+A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most recently received packet arrived on this RTP stream.
 
-### Value
-
-A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most
-recently received packet arrived on this RTP stream.
-
-> **Note:** This value differs from the {{domxref("RTCStats.timestamp",
-    "timestamp")}}, which represents the time at which the statistics object was created.
+> **Note:** This value differs from the {{domxref("RTCInboundRtpStreamStats.timestamp", "timestamp")}},
+> which represents the time at which the statistics object was created.
 
 ## Specifications
 

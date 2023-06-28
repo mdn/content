@@ -1,34 +1,20 @@
 ---
-title: FontFace.style
+title: "FontFace: style property"
+short-title: style
 slug: Web/API/FontFace/style
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - Style
+page-type: web-api-instance-property
 browser-compat: api.FontFace.style
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The **`style`** property of the
-{{domxref("FontFace")}} interface retrieves or sets the font's style. It is equivalent
-to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
+The **`style`** property of the {{domxref("FontFace")}} interface retrieves or sets the font's style.
 
-## Syntax
+This property is equivalent to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
 
-```js
-let style = FontFace.style;
-FontFace.style = value;
-```
+## Value
 
-### Value
-
-A {{domxref('CSSOMString')}} containing the descriptors defined in the style sheet's
-`@font-face` rule.
+A string containing the descriptors defined in the style sheet's `@font-face` rule.
 
 ## Specifications
 

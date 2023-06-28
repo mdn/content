@@ -1,17 +1,14 @@
 ---
-title: Window.event
+title: "Window: event property"
+short-title: event
 slug: Web/API/Window/event
-tags:
-  - API
-  - Event
-  - Event Handler
-  - HTML DOM
-  - Property
-  - Read-only
-  - Window
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Window.event
 ---
-{{APIRef("DOM")}} {{Deprecated_Header}}
+
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The read-only {{domxref("Window")}} property **`event`** returns the {{domxref("Event")}} which is currently being handled by the site's code. Outside the context of an event handler, the value is always `undefined`.
 

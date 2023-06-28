@@ -1,29 +1,27 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:blank
-tags:
-  - ':blank'
-  - CSS
-  - CSS Selectors
-  - Draft
-  - Experimental
-  - NeedsContent
-  - NeedsExample
-  - Pseudo-class
-  - Selector
+page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.blank
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **Note:** The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
 >
-> See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967 "[selectors] decide on :blank").
+> See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967).
 
 The **`:blank`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects empty user input elements (e.g. {{HTMLElement("input")}} or {{HTMLElement("textarea")}}).
 
 ## Syntax
 
-{{CSSSyntax}}
+```css
+:blank {
+  /* ... */
+}
+```
 
 ## Examples
 

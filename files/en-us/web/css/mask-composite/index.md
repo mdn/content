@@ -1,15 +1,10 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-composite
 ---
+
 {{CSSRef}}
 
 The **`mask-composite`** [CSS](/en-US/docs/Web/CSS) property represents a compositing operation used on the current mask layer with the mask layers below it.
@@ -25,6 +20,7 @@ mask-composite: exclude;
 mask-composite: inherit;
 mask-composite: initial;
 mask-composite: revert;
+mask-composite: revert-layer;
 mask-composite: unset;
 ```
 

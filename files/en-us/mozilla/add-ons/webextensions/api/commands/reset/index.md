@@ -1,17 +1,10 @@
 ---
 title: commands.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/reset
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - commands
-  - reset
+page-type: webextension-api-function
 browser-compat: webextensions.api.commands.reset
 ---
+
 {{AddonSidebar()}}
 
 Resets the given command's description and keyboard shortcut to the values given in the extension's [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
@@ -22,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.commands.reset(
   name // string
 );

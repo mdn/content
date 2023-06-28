@@ -1,25 +1,18 @@
 ---
-title: LayoutShiftAttribution.previousRect
+title: "LayoutShiftAttribution: previousRect property"
+short-title: previousRect
 slug: Web/API/LayoutShiftAttribution/previousRect
-tags:
-  - API
-  - Property
-  - Reference
-  - previousRect
-  - LayoutShiftAttribution
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.LayoutShiftAttribution.previousRect
 ---
-{{APIRef("Layout Instability API")}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`previousRect`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
 
-## Syntax
-
-```js
-let previousRect = LayoutShiftAttribution.previousRect;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMRectReadOnly")}} object.
 
@@ -29,12 +22,12 @@ The following example prints the `previousRect` of the first item in {{domxref("
 
 ```js
 new PerformanceObserver((list) => {
-  for (const {sources} of list.getEntries()) {
+  for (const { sources } of list.getEntries()) {
     if (sources) {
       console.log(sources[0].previousRect);
     }
   }
-}).observe({type: 'layout-shift', buffered: true});
+}).observe({ type: "layout-shift", buffered: true });
 ```
 
 ## Specifications

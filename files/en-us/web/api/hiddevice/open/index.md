@@ -1,24 +1,23 @@
 ---
-title: HIDDevice.open()
+title: "HIDDevice: open() method"
+short-title: open()
 slug: Web/API/HIDDevice/open
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - HIDDevice
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.HIDDevice.open
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that the operating sytem opens the HID device.
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-> **Note:** HID devices are not opened automatically. Therefore, a {{domxref("HIDDevice")}} returned by {{domxref("HID.getRequestDevice()")}} must be opened with this method before it is available to transfer data.
+The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that the operating system opens the HID device.
+
+> **Note:** HID devices are not opened automatically. Therefore, a {{domxref("HIDDevice")}} returned by {{domxref("HID.requestDevice()")}} must be opened with this method before it is available to transfer data.
 
 ## Syntax
 
-```js
-HIDDevice.open();
+```js-nolint
+open()
 ```
 
 ### Parameters
@@ -40,7 +39,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the connection is op
 
 In the following example, we wait for the HID connection to open before attempting to send or receive data.
 
-```css
+```js
 await device.open();
 ```
 

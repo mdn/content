@@ -1,18 +1,14 @@
 ---
-title: XRLayerEvent.layer
+title: "XRLayerEvent: layer property"
+short-title: layer
 slug: Web/API/XRLayerEvent/layer
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRLayerEvent.layer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`layer`** property of the {{domxref("XRLayerEvent")}} interface is a reference to the {{domxref("XRLayer")}} which generated the event.
 
@@ -27,7 +23,7 @@ An {{domxref("XRLayer")}}.
 In this example, the `layer` property is used to obtain the {{domxref("XRLayer")}} object that sent the event.
 
 ```js
-myLayer.addEventListener("redraw", e => {
+myLayer.addEventListener("redraw", (e) => {
   if (typeof e.layer === "XRQuadLayer") {
     // redraw quad layer
   }

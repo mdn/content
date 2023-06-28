@@ -1,18 +1,10 @@
 ---
 title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - addUrl
+page-type: webextension-api-function
 browser-compat: webextensions.api.history.addUrl
 ---
+
 {{AddonSidebar()}}
 
 Adds a record to the browser's history of a visit to the given URL. The visit's time is recorded as the time of the call, and the {{WebExtAPIRef("history.TransitionType", "TransitionType")}} is recorded as "link".
@@ -21,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var addingUrl = browser.history.addUrl(
+```js-nolint
+let addingUrl = browser.history.addUrl(
   details         // object
 )
 ```
@@ -35,12 +27,12 @@ var addingUrl = browser.history.addUrl(
 
     - `url`
       - : `string`. The URL to add.
-    - `title`{{optional_inline}}
+    - `title` {{optional_inline}}
       - : string: The title of the page. If this is not supplied, the title will be recorded as `null`.
-    - `transition`{{optional_inline}}
+    - `transition` {{optional_inline}}
       - : {{WebExtAPIRef("history.TransitionType")}}. Describes how the browser navigated to the page on this occasion. If this is not supplied, a transition type of "link" will be recorded.
-    - `visitTime`{{optional_inline}}
-      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
+    - `visitTime` {{optional_inline}}
+      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
 
 ### Return value
 
@@ -62,59 +54,54 @@ function onGot(results) {
   }
 }
 
-function onAdded() {
-  var searching = browser.history.search({
-    text: "https://example.org/",
-    startTime: 0,
-    maxResults: 1
-  });
-  searching.then(onGot);
-}
-
-var addingUrl = browser.history.addUrl({url: "https://example.org/"});
-addingUrl.then(onAdded);
+browser.history
+  .addUrl({ url: "https://example.org/" })
+  .then(() =>
+    browser.history.search({
+      text: "https://example.org/",
+      startTime: 0,
+      maxResults: 1,
+    })
+  )
+  .then(onGot);
 ```
 
 Add a record of a visit to "https\://example.org", but give it a `visitTime` 24 hours in the past, and a `transition` of "typed":
 
 ```js
-const DAY = 24 * 60* 60 * 1000;
+const DAY = 24 * 60 * 60 * 1000;
 
 function oneDayAgo() {
   return Date.now() - DAY;
 }
 
 function onGot(visits) {
-  for (visit of visits) {
+  for (const visit of visits) {
     console.log(new Date(visit.visitTime));
     console.log(visit.transition);
   }
 }
 
-function onAdded() {
-  var gettingVisits = browser.history.getVisits({
-    url: "https://example.org/"
-  });
-
-  gettingVisits.then(onGot);
-}
-
-var addingUrl = browser.history.addUrl({
-  url: "https://example.org/",
-  visitTime: oneDayAgo(),
-  transition: "typed"
-});
-
-addingUrl.then(onAdded);
+browser.history
+  .addUrl({
+    url: "https://example.org/",
+    visitTime: oneDayAgo(),
+    transition: "typed",
+  })
+  .then(() =>
+    browser.history.getVisits({
+      url: "https://example.org/",
+    })
+  )
+  .then(onGot);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-addUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-addUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -141,4 +128,4 @@ addingUrl.then(onAdded);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

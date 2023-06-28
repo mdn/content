@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.vertexAttribDivisor()
+title: "WebGL2RenderingContext: vertexAttribDivisor() method"
+short-title: vertexAttribDivisor()
 slug: Web/API/WebGL2RenderingContext/vertexAttribDivisor
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.vertexAttribDivisor
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.vertexAttribDivisor()`** method
@@ -19,14 +16,13 @@ with {{domxref("WebGL2RenderingContext.drawArraysInstanced()",
 {{domxref("WebGL2RenderingContext.drawElementsInstanced()",
   "gl.drawElementsInstanced()")}}.
 
-> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "",
-    1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
+> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
 > too.
 
 ## Syntax
 
-```js
-void gl.vertexAttribDivisor(index, divisor);
+```js-nolint
+vertexAttribDivisor(index, divisor)
 ```
 
 ### Parameters
@@ -39,7 +35,7 @@ void gl.vertexAttribDivisor(index, divisor);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

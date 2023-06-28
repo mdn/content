@@ -1,25 +1,21 @@
 ---
 title: SVGSetElement
 slug: Web/API/SVGSetElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGSetElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSetElement`** interface corresponds to the {{SVGElement("set")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGAnimationElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGAnimationElement")}}._
 

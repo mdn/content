@@ -1,18 +1,11 @@
 ---
-title: RTCRtpTransceiver.stop()
+title: "RTCRtpTransceiver: stop() method"
+short-title: stop()
 slug: Web/API/RTCRtpTransceiver/stop
-tags:
-  - API
-  - Media
-  - Method
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Stopping a Transceiver
-  - WebRTC
-  - stop
+page-type: web-api-instance-method
 browser-compat: api.RTCRtpTransceiver.stop
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`stop()`** method in the
@@ -20,18 +13,16 @@ The **`stop()`** method in the
 stopping both the associated {{domxref("RTCRtpSender")}} and
 {{domxref("RTCRtpReceiver")}}.
 
-> **Note:** Until recently, the {{domxref("RTCRtpTransceiver.stopped",
-    "stopped")}} property was provided to return `true` if the connection is
+> **Note:** Until recently, the {{domxref("RTCRtpTransceiver.stopped", "stopped")}} property was provided to return `true` if the connection is
 > stopped. That property has been deprecated and will be removed at some point. Instead,
-> check the value of {{domxref("RTCRtpTransceiver.currentDirection",
-    "currentDirection")}}. If it's `stopped`, the transceiver has been stopped.
+> check the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}. If it's `stopped`, the transceiver has been stopped.
 
 This method does nothing if the transceiver is already stopped.
 
 ## Syntax
 
-```js
-RTCRtpTransceiver.stop()
+```js-nolint
+stop()
 ```
 
 ### Parameters
@@ -40,7 +31,7 @@ None.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -62,7 +53,7 @@ The negotiation process causes {{domxref("RTCRtpTransceiver.currentDirection",
 transceiver has been fully stopped.
 
 > **Note:** Stopping the transceiver causes a
-> {{event("negotiationneeded")}} event to be sent to the transceiver's
+> {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event to be sent to the transceiver's
 > {{domxref("RTCPeerConnection")}}, so the connection can adapt to the change.
 
 ## Specifications
@@ -76,6 +67,5 @@ transceiver has been fully stopped.
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("MediaStreamTrack")}}

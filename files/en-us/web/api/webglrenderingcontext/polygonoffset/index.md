@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.polygonOffset()
+title: "WebGLRenderingContext: polygonOffset() method"
+short-title: polygonOffset()
 slug: Web/API/WebGLRenderingContext/polygonOffset
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.polygonOffset
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.polygonOffset()`** method of the
@@ -20,23 +17,23 @@ into the depth buffer.
 
 ## Syntax
 
-```js
-void gl.polygonOffset(factor, units);
+```js-nolint
+polygonOffset(factor, units)
 ```
 
 ### Parameters
 
-- factor
+- `factor`
   - : A {{domxref("WebGL_API/Types", "GLfloat")}} which sets the scale factor for the variable depth offset
     for each polygon. The default value is 0.
-- units
+- `units`
   - : A {{domxref("WebGL_API/Types", "GLfloat")}} which sets the multiplier by which an
     implementation-specific value is multiplied with to create a constant depth offset.
     The default value is 0.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -55,7 +52,7 @@ To check the current polygon offset factor or units, query the
 
 ```js
 gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
-gl.getParameter(gl.POLYGON_OFFSET_UNITS);  // 3
+gl.getParameter(gl.POLYGON_OFFSET_UNITS); // 3
 ```
 
 ## Specifications

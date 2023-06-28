@@ -1,31 +1,11 @@
 ---
-title: XRReferenceSpaceEvent.transform
+title: "XRReferenceSpaceEvent: transform property"
+short-title: transform
 slug: Web/API/XRReferenceSpaceEvent/transform
-tags:
-  - API
-  - AR
-  - Coordinate System
-  - Coordinates
-  - Event
-  - Mixed
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - reset
-  - transform
+page-type: web-api-instance-property
 browser-compat: api.XRReferenceSpaceEvent.transform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRReferenceSpaceEvent")}} property
@@ -34,7 +14,7 @@ affected {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}}'s
 native origin after the changes the event represents are applied. The
 `transform` is defined using the old coordinate system, which allows it to be
 used to convert coordinates from the pre-event coordinate system to the post-event
-coordiante system.
+coordinate system.
 
 ## Value
 
@@ -50,7 +30,7 @@ system. Alternatively, you can just discard any cached positional information an
 recompute from scratch. The approach you take will depend on your needs.
 
 For details on what causes a `reset` event and how to respond, see the
-{{domxref("XRReferenceSpaceEvent.reset_event", "reset")}} event's documentation.
+{{domxref("XRReferenceSpace.reset_event", "reset")}} event's documentation.
 
 ## Examples
 
@@ -60,8 +40,8 @@ a scene, updating each object's position by multiplying it with the event's give
 all the objects in an array called `objects` within it.
 
 ```js
-xrReferenceSpace.addEventListener("reset", event => {
-  for (let obj of scene.objects) {
+xrReferenceSpace.addEventListener("reset", (event) => {
+  for (const obj of scene.objects) {
     mat4.multiply(obj.transform, obj.transform, event.transform);
   }
 });

@@ -1,16 +1,11 @@
 ---
-title: Gamepad.buttons
+title: "Gamepad: buttons property"
+short-title: buttons
 slug: Web/API/Gamepad/buttons
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Gamepad.buttons
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.buttons`** property of the {{domxref("Gamepad")
@@ -28,17 +23,14 @@ if the button is pressed. Each {{domxref("gamepadButton")}} object has two prope
   are normalized to the range 0.0 – 1.0, with 0.0 representing a button that is not
   pressed, and 1.0 representing a button that is fully pressed.
 
-## Syntax
+## Value
 
-```js
-const buttons = gamepad.buttons;
-```
+An array of {{domxref("gamepadButton")}} objects.
 
-## Example
+## Examples
 
 The following code is taken from my Gamepad API button demo (you can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and
-[find the source
-code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on Github.) Note the code fork — in Chrome
+[find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.) Note the code fork — in Chrome
 {{domxref("Navigator.getGamepads")}} needs a `webkit` prefix and the button
 values are stores as an array of double values, whereas in Firefox
 {{domxref("Navigator.getGamepads")}} doesn't need a prefix, and the button values are
@@ -49,42 +41,40 @@ example I've just allowed either.
 
 ```js
 function gameLoop() {
-  if(navigator.webkitGetGamepads) {
-    var gp = navigator.webkitGetGamepads()[0];
+  let a = 0;
+  let b = 0;
+  if (navigator.webkitGetGamepads) {
+    const gp = navigator.webkitGetGamepads()[0];
 
-    if(gp.buttons[0] == 1) {
+    if (gp.buttons[0] === 1) {
       b--;
-    } else if(gp.buttons[1] == 1) {
+    } else if (gp.buttons[1] === 1) {
       a++;
-    } else if(gp.buttons[2] == 1) {
+    } else if (gp.buttons[2] === 1) {
       b++;
-    } else if(gp.buttons[3] == 1) {
+    } else if (gp.buttons[3] === 1) {
       a--;
     }
   } else {
-    var gp = navigator.getGamepads()[0];
+    const gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
+    if (gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
       b--;
-    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
+    } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed) {
       a++;
-    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
+    } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed) {
       b++;
-    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
+    } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed) {
       a--;
     }
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = `${a * 2}px`;
+  ball.style.top = `${b * 2}px`;
 
-  var start = rAF(gameLoop);
-};
+  const start = rAF(gameLoop);
+}
 ```
-
-## Value
-
-An array of {{domxref("gamepadButton")}} objects.
 
 ## Specifications
 

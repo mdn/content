@@ -1,23 +1,19 @@
 ---
 title: Accept-CH-Lifetime
 slug: Web/HTTP/Headers/Accept-CH-Lifetime
-tags:
-  - Accept-CH-Lifetime
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Response header
-  - Deprecated
-  - Non-standard
-  - Experimental
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Accept-CH-Lifetime
 ---
-{{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}
+
+{{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}{{Non-standard_header}}
 
 > **Warning:** The header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-08).
 
 The **`Accept-CH-Lifetime`** header is set by the server to
-specify the persistence of the [client hint headers](/en-US/docs/Glossary/Client_hints) it specified using {{HTTPHeader("Accept-CH")}}, that the client should
+specify the persistence of the [client hint headers](/en-US/docs/Web/HTTP/Client_hints) it specified using {{HTTPHeader("Accept-CH")}}, that the client should
 include in subsequent requests.
 
 <table class="properties">
@@ -45,13 +41,13 @@ include in subsequent requests.
 
 ## Syntax
 
-```
+```http
 Accept-CH-Lifetime: <age>
 ```
 
 ## Examples
 
-```
+```http
 Accept-CH: Viewport-Width
 Accept-CH-Lifetime: 86400
 ```

@@ -1,11 +1,8 @@
 ---
 title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
-tags:
-  - Firefox
-  - Firefox 9
-  - Gecko 9
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
@@ -14,13 +11,13 @@ Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9
 
 ### HTML
 
-- The `value` attribute of {{ HTMLElement("li") }} now can be negative as specified in HTML5. Previously negative values were converted to 0.
+- The `value` attribute of {{ HTMLElement("li") }} now can be negative. Previously negative values were converted to 0.
 - You can now [specify the start and stop time of media](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#specifying_playback_range) in the URI of the media when using {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements.
 - {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements [now respect the value of the `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) when invoking the spell checker.
 - Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the {{ HTMLElement("input") }} element is used with `type="file"` and `accept="image/*"`.
 - Windows Vista style PNG ICO images are now supported.
 - Drawing images that use the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute to request CORS access no longer incorrectly [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) when CORS is granted.
-- The value of the {{ htmlattrxref("rowspan", "td") }} attribute may now be as large as 65,534, up from 8190.
+- The value of the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute may now be as large as 65,534, up from 8190.
 
 ### CSS
 
@@ -35,8 +32,8 @@ _No change._
 
 ### DOM
 
-- [Using full-screen mode](/en-US/docs/Web/API/Fullscreen_API)
-  - : The new full-screen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.
+- [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
+  - : The new fullscreen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.
 
 <!---->
 
@@ -47,7 +44,7 @@ _No change._
 - The {{ domxref("Document.queryCommandSupported()") }} method has been implemented.
 - The set of events that can be listened for on {{ HTMLElement("body") }} elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM event reference](/en-US/docs/Web/Events) reflects which events can be listened for on {{ HTMLElement("body") }}.
 - The `readystatechange` event is now fired only on the {{ domxref("Document") }}, as intended.
-- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but [there are exceptions](/en-US/docs/Web/Guide/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but there are exceptions.
 - A new response type, "`moz-json`", has been added to `XMLHttpRequest`, letting `XMLHttpRequest` automatically parse [JSON](/en-US/docs/Glossary/JSON) strings for you; when you request this type, a returned JSON string is parsed, so that the value of the `response` property is the resulting JavaScript object.
 - [`XMLHttpRequest` "progress" events](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress) are now reliably sent for every chunk of data received; in the past it was possible for the last chunk of data received to not fire a "progress" event. Now you can track progress by following only "progress" events, instead of also having to monitor "load" events to detect the receipt of the last chunk of data.
 - In the past, calling [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) with a `null` listener would throw an exception. Now it returns without error and with no effect.
@@ -67,7 +64,7 @@ _No change._
 ### MathML
 
 - The non-standard `restyle` value for the `actiontype` attribute on {{ MathMLElement("maction") }} elements has been removed.
-- While still unsupported, using the `mlabeledtr` element no longer breaks rendering completely. See {{ bug(689641) }} for progress on actual support of this element.
+- While still unsupported, using the `mlabeledtr` element no longer breaks rendering completely. See [Firefox bug 689641](https://bugzil.la/689641) for progress on actual support of this element.
 
 ### Networking
 
@@ -80,8 +77,8 @@ _No change._
 
 ### Developer tools
 
-- The web console now supports basic [string substitutions](/en-US/docs/Tools/Web_Console#string_substitutions) in its logging methods.
-- You can now [create visually nested blocks of output](/en-US/docs/Tools/Web_Console#using_groups_in_the_console) in the web console, to help make it easier to read.
+- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
+- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
 
 ## Changes for Mozilla and add-on developers
 
@@ -96,11 +93,11 @@ See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Updating_add-on
 
 ### JavaScript code module changes
 
-- [`FileUtils.jsm`](/en-US/docs/JavaScript_code_modules/FileUtils.jsm) now has a `File` constructor that returns an {{ interface("nsIFile") }} object representing a file specified by its pathname.
+- [`FileUtils.jsm`](/en-US/docs/JavaScript_code_modules/FileUtils.jsm) now has a `File` constructor that returns an `nsIFile` object representing a file specified by its pathname.
 
 ### Service changes
 
-- The content preference service now [handles private mode browsing](/en-US/docs/Using_content_preferences#private-browsing) (see {{ bug("679784") }}).
+- The content preference service now [handles private mode browsing](/en-US/docs/Using_content_preferences#private-browsing) (see [Firefox bug 679784](https://bugzil.la/679784)).
 
 ### NSPR
 
@@ -110,19 +107,19 @@ See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Updating_add-on
 
 #### Removed interfaces
 
-- {{ interface("nsIGlobalHistory3") }} has been removed during streamlining of the Places and DocShell code.
+- `nsIGlobalHistory3` has been removed during streamlining of the Places and DocShell code.
 
 #### Miscellaneous interface changes
 
-- The {{ interface("nsISound") }} interface has a new constant, `EVENT_EDITOR_MAX_LEN`. The allows for playing the system sound for when more characters than the maximum allowed are typed into a text field. Currently, this is only used on Windows.
-- The {{ interface("nsIScriptError2") }} interface has new `timeStamp` and `innerWindowID` properties; in addition, the `initWithWindowID()` method now takes an inner window ID instead of an outer window ID.
-- The {{ ifattribute("nsIBidiKeyboard", "haveBidiKeyboards") }} attribute has been added; this lets you determine if the system has at least one keyboard installed for each direction: left-to-right and right-to-left.
-- The new {{ ifattribute("nsIEditor", "isSelectionEditable") }} attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.
-- The {{ ifmethod("nsIBrowserHistory", "registerOpenPage") }} and {{ ifmethod("nsIBrowserHistory", "unregisterOpenPage") }} methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in {{ interface("mozIPlacesAutoComplete") }} instead.
-- The {{ ifmethod("nsIDOMWindowUtils", "wrapDOMFile") }} method has been added; this returns a DOM {{ domxref("File") }} object for a given {{ interface("nsIFile") }}.
-- The {{ ifmethod("nsIChromeFrameMessageManager", "removeDelayedFrameScript") }} method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using {{ ifmethod("nsIChromeFrameMessageManager", "loadFrameScript") }} with the delayed load flag set. This is exposed to add-ons as `browser.messageManager.removeDelayedFrameScript()`.
-- The {{ interface("nsIAppStartup") }} interface has a new `interrupted` attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.
-- The {{ interface("nsIEditorSpellCheck") }} interface has been revised to support per-site selection of spell checker dictionaries.
+- The `nsISound` interface has a new constant, `EVENT_EDITOR_MAX_LEN`. The allows for playing the system sound for when more characters than the maximum allowed are typed into a text field. Currently, this is only used on Windows.
+- The `nsIScriptError2` interface has new `timeStamp` and `innerWindowID` properties; in addition, the `initWithWindowID()` method now takes an inner window ID instead of an outer window ID.
+- The `nsIBidiKeyboard.haveBidiKeyboards` attribute has been added; this lets you determine if the system has at least one keyboard installed for each direction: left-to-right and right-to-left.
+- The new `nsIEditor.isSelectionEditable` attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.
+- The `nsIBrowserHistory.registerOpenPage()` and `nsIBrowserHistory.unregisterOpenPage()` methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in `mozIPlacesAutoComplete` instead.
+- The `nsIDOMWindowUtils.wrapDOMFile()` method has been added; this returns a DOM {{ domxref("File") }} object for a given `nsIFile`.
+- The `nsIChromeFrameMessageManager.removeDelayedFrameScript()` method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using `nsIChromeFrameMessageManager.loadFrameScript()` with the delayed load flag set. This is exposed to add-ons as `browser.messageManager.removeDelayedFrameScript()`.
+- The `nsIAppStartup` interface has a new `interrupted` attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.
+- The `nsIEditorSpellCheck` interface has been revised to support per-site selection of spell checker dictionaries.
 
 ### IDL parser
 

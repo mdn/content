@@ -1,14 +1,10 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-bottom-width
 ---
+
 {{CSSRef}}
 
 The **`border-bottom-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the bottom border of an element.
@@ -32,6 +28,7 @@ border-bottom-width: 6px;
 border-bottom-width: inherit;
 border-bottom-width: initial;
 border-bottom-width: revert;
+border-bottom-width: revert-layer;
 border-bottom-width: unset;
 ```
 

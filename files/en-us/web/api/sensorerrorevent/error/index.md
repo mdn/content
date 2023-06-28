@@ -1,31 +1,18 @@
 ---
-title: SensorErrorEvent.error
+title: "SensorErrorEvent: error property"
+short-title: error
 slug: Web/API/SensorErrorEvent/error
-tags:
-  - API
-  - Error
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - SensorErrorEvent
-  - Sensors
+page-type: web-api-instance-property
 browser-compat: api.SensorErrorEvent.error
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`error`** read-only property of
 the {{domxref("SensorErrorEvent")}} interface returns the {{domxref('DOMException')}}
-object passed in the event's contructor.
+object passed in the event's constructor.
 
-## Syntax
-
-```js
-var domException = sensorErrorEvent.error;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMException')}}.
 

@@ -1,15 +1,11 @@
 ---
-title: XRPose.angularVelocity
+title: "XRPose: angularVelocity property"
+short-title: angularVelocity
 slug: Web/API/XRPose/angularVelocity
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WebXR
-  - XRPose
+page-type: web-api-instance-property
 browser-compat: api.XRPose.angularVelocity
 ---
+
 {{APIRef}}
 
 The `angularVelocity` read-only property of the
@@ -20,8 +16,8 @@ the angular velocity in radians per second relative to the base
 ## Value
 
 A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians
-per second relative to the base {{DOMxRef("XRSpace")}}. Returns {{jsxref("null")}}
-if the user agent can’t populate this value.
+per second relative to the base {{DOMxRef("XRSpace")}}. Returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+if the user agent can't populate this value.
 
 ## Specifications
 

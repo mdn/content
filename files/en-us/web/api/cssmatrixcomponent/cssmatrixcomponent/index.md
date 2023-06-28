@@ -1,27 +1,22 @@
 ---
-title: CSSMatrixComponent()
+title: "CSSMatrixComponent: CSSMatrixComponent() constructor"
+short-title: CSSMatrixComponent()
 slug: Web/API/CSSMatrixComponent/CSSMatrixComponent
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMatrixComponent
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
+page-type: web-api-constructor
 browser-compat: api.CSSMatrixComponent.CSSMatrixComponent
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMatrixComponent()`** constructor
-creates a new {{domxref("CSSMatrixComponent")}} object representing the [matrix()](</en-US/docs/Web/CSS/transform-function/matrix()>) and [matrix3d()](</en-US/docs/Web/CSS/transform-function/matrix()>) values of the
+creates a new {{domxref("CSSMatrixComponent")}} object representing the [matrix()](/en-US/docs/Web/CSS/transform-function/matrix) and [matrix3d()](/en-US/docs/Web/CSS/transform-function/matrix3d) values of the
 individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
-```js
-var CSSMatrixComponent = new CSSMatrixComponent(matrix[,options]);
+```js-nolint
+new CSSMatrixComponent(matrix)
+new CSSMatrixComponent(matrix, options)
 ```
 
 ### Parameters

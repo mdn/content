@@ -1,15 +1,10 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-tags:
-  - Condtional Requests
-  - HTTP
-  - HTTP Header
-  - Range Requests
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.If-Range
 ---
+
 {{HTTPSidebar}}
 
 The **`If-Range`** HTTP request header makes a range request
@@ -39,7 +34,7 @@ has not been modified since the last fragment has been received.
 
 ## Syntax
 
-```
+```http
 If-Range: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 If-Range: <etag>
 ```
@@ -48,9 +43,7 @@ If-Range: <etag>
 
 - \<etag>
   - : An entity tag uniquely representing the requested resource. It is a string of ASCII
-    characters placed between double quotes (Like `"675af34563dc-tr34"`). It
-    may be prefixed by `W/` to indicate that the weak comparison algorithm
-    should be used.
+    characters placed between double quotes (Like `"675af34563dc-tr34"`). A weak entity tag (one prefixed by `W/`) must not be used in this header.
 - \<day-name>
   - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
 - \<day>
@@ -71,7 +64,7 @@ If-Range: <etag>
 
 ## Examples
 
-```
+```http
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

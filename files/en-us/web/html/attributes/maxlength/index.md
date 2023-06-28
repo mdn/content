@@ -1,18 +1,13 @@
 ---
-title: 'HTML attribute: maxlength'
+title: "HTML attribute: maxlength"
 slug: Web/HTML/Attributes/maxlength
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Input
-  - Reference
-  - maxlength
-  - textarea
+page-type: html-attribute
+browser-compat:
+  - html.elements.input.maxlength
+  - html.elements.textarea.maxlength
 ---
 
-{{HTMLSidebar}}{{draft}}
+{{HTMLSidebar}}
 
 The **`maxlength`** attribute defines the maximum number of characters (as UTF-16 code units) the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher.
 
@@ -24,48 +19,29 @@ Any `maxlength` value must be greater than or equal to the value of [`minlength`
 
 While the browser will generally prevent user from entering more text than the maxlength attribute allows, should the length be longer than the maxlength allows, the read-only {{domxref("ValidityState.tooLong", "tooLong")}} property of a {{domxref("ValidityState")}} object will be true.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-maxlength.html", "tabbed-shorter")}}
+
 ## Examples
 
 ```html
-<input type="password" maxlength="4"/>
+<input type="password" maxlength="4" />
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#attr-input-maxlength', 'maxlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'input.html#attr-maxlength-accept', 'maxlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.maxlength")}}
+{{Compat}}
 
 ## See also
 
 - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{htmlelement('input')}}

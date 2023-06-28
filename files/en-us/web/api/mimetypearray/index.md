@@ -1,42 +1,40 @@
 ---
 title: MimeTypeArray
 slug: Web/API/MimeTypeArray
-tags:
-  - API
-  - Interface
-  - Reference
-  - mimeType
+page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.MimeTypeArray
 ---
-{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} instances, each of which contains information about a supported browser plugins. This object is returned by {{domxref("Navigator.mimeTypes")}}.
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-## Properties
+The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} instances, each of which contains information about a supported browser plugins. This object is returned by {{domxref("Navigator.mimeTypes")}}.
 
-- {{domxref("MimeTypeArray.length")}}
+> **Note:** This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
+
+## Instance properties
+
+- {{domxref("MimeTypeArray.length")}} {{Deprecated_Inline}}
   - : The number of items in the array.
 
-## Methods
+## Instance methods
 
-- {{domxref("MimeTypeArray.item()")}}
+- {{domxref("MimeTypeArray.item()")}} {{Deprecated_Inline}}
   - : Returns the `MimeType` object with the specified index.
-- {{domxref("MimeTypeArray.namedItem()")}}
+- {{domxref("MimeTypeArray.namedItem()")}} {{Deprecated_Inline}}
   - : Returns the `MimeType` object with the specified name.
 
 ## Example
 
-The following example tests whether a plugin is available for the application/pdf mime type and if so, which plugin that is.
+The following example tests whether a plugin is available for the 'application/pdf' mime type and if so, logs its description.
 
 ```js
-var mimeTypes = navigator.mimeTypes;
-var flashPlugin = mimeTypes['video/x-flv'];
-if (typeof flashPlugin === "undefined") {
-  var vid = document.createElement('video');
-  // Use vid.canPlayType() to test for a supported mime type.
-} else {
-  // Notify the user that flash is being deprecated and they
-  //   should upgrade their browser.
+const mimeTypes = navigator.mimeTypes;
+const pdf = mimeTypes.namedItem("application/pdf");
+
+if (pdf) {
+  console.log(pdf.description);
 }
 ```
 

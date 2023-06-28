@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.scale()
+title: "CanvasRenderingContext2D: scale() method"
+short-title: scale()
 slug: Web/API/CanvasRenderingContext2D/scale
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.scale
 ---
+
 {{APIRef}}
 
 The
@@ -24,8 +21,8 @@ drawn at twice the normal size.
 
 ## Syntax
 
-```js
-void ctx.scale(x, y);
+```js-nolint
+scale(x, y)
 ```
 
 ### Parameters
@@ -36,6 +33,10 @@ void ctx.scale(x, y);
 - `y`
   - : Scaling factor in the vertical direction. A negative value flips pixels across the
     horizontal axis. A value of `1` results in no vertical scaling.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -60,19 +61,19 @@ Notice that its position on the canvas also changes. Since its specified corner 
 10\), its rendered corner becomes (90, 30).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Scaled rectangle
 ctx.scale(9, 3);
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(10, 10, 8, 20);
 
 // Reset current transformation matrix to the identity matrix
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 // Non-scaled rectangle
-ctx.fillStyle = 'gray';
+ctx.fillStyle = "gray";
 ctx.fillRect(10, 10, 8, 20);
 ```
 
@@ -102,12 +103,12 @@ point.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.scale(-1, 1);
-ctx.font = '48px serif';
-ctx.fillText('Hello world!', -280, 90);
+ctx.font = "48px serif";
+ctx.fillText("Hello world!", -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 

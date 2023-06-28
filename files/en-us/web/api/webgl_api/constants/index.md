@@ -1,21 +1,21 @@
 ---
 title: WebGL constants
 slug: Web/API/WebGL_API/Constants
-tags:
-  - API
-  - Reference
-  - WebGL
-  - constants
+page-type: guide
+spec-urls:
+  - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14
+  - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 The [WebGL API](/en-US/docs/Web/API/WebGL_API) provides several constants that are passed into or returned by functions. All constants are of type {{domxref("WebGL_API/Types", "GLenum")}}.
 
 Standard WebGL constants are installed on the {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} objects, so that you use them as `gl.CONSTANT_NAME`:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById("myCanvas");
+const gl = canvas.getContext("webgl");
 
 gl.getParameter(gl.LINE_WIDTH);
 ```
@@ -23,11 +23,11 @@ gl.getParameter(gl.LINE_WIDTH);
 Some constants are also provided by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions). A [list](#constants_defined_in_webgl_extensions) is provided below.
 
 ```js
-var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
+const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
-The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") has more information, examples, and resources on how to get started with WebGL.
+The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
 
 ## Table of contents
 
@@ -124,7 +124,7 @@ Constants passed to {{domxref("WebGLRenderingContext.drawElements()")}} or {{dom
 
 ### Blending modes
 
-Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxref("WebGLRenderingContext.blendFuncSeparate()")}} to specify the blending mode (for both, RBG and alpha, or separately).
+Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxref("WebGLRenderingContext.blendFuncSeparate()")}} to specify the blending mode (for both, RGB and alpha, or separately).
 
 <table class="no-markdown">
   <thead>
@@ -261,7 +261,7 @@ Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxre
 
 ### Blending equations
 
-Constants passed to {{domxref("WebGLRenderingContext.blendEquation()")}} or {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} to control how the blending is calculated (for both, RBG and alpha, or separately).
+Constants passed to {{domxref("WebGLRenderingContext.blendEquation()")}} or {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} to control how the blending is calculated (for both, RGB and alpha, or separately).
 
 <table class="no-markdown">
   <thead>
@@ -850,7 +850,7 @@ Constants passed to {{domxref("WebGLRenderingContext.cullFace()")}}.
       <td><code>FRONT_AND_BACK</code></td>
       <td>0x0408</td>
       <td>
-        Passed to <code>cullFace</code> to specify that front and back faces
+        Passed to <code>cullFace</code> to specify that front and back faces
         should be culled.
       </td>
     </tr>
@@ -1197,7 +1197,7 @@ Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxre
       <td>0x0200</td>
       <td>
         Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will never pass. i.e. Nothing will be
+        specify depth or stencil tests will never pass, i.e., nothing will be
         drawn.
       </td>
     </tr>
@@ -1260,7 +1260,7 @@ Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxre
       <td>0x0207</td>
       <td>
         Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will always pass. i.e. Pixels will be
+        specify depth or stencil tests will always pass, i.e., pixels will be
         drawn in the order they are drawn.
       </td>
     </tr>
@@ -1740,27 +1740,33 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
 
 ## Constants defined in WebGL extensions
 
-### {{domxref("ANGLE_instanced_arrays")}}
+### ANGLE_instanced_arrays
 
 | Constant name                       | Value  | Description                                                   |
 | ----------------------------------- | ------ | ------------------------------------------------------------- |
 | `VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE` | 0x88FE | Describes the frequency divisor used for instanced rendering. |
 
-### {{domxref("WEBGL_debug_renderer_info")}}
+For more information, see {{domxref("ANGLE_instanced_arrays")}}.
+
+### WEBGL_debug_renderer_info
 
 | Constant name             | Value  | Description                                                                 |
 | ------------------------- | ------ | --------------------------------------------------------------------------- |
 | `UNMASKED_VENDOR_WEBGL`   | 0x9245 | Passed to `getParameter` to get the vendor string of the graphics driver.   |
 | `UNMASKED_RENDERER_WEBGL` | 0x9246 | Passed to `getParameter` to get the renderer string of the graphics driver. |
 
-### {{domxref("EXT_texture_filter_anisotropic")}}
+For more information, see {{domxref("WEBGL_debug_renderer_info")}}.
+
+### EXT_texture_filter_anisotropic
 
 | Constant name                    | Value  | Description                                                                   |
 | -------------------------------- | ------ | ----------------------------------------------------------------------------- |
 | `MAX_TEXTURE_MAX_ANISOTROPY_EXT` | 0x84FF | Returns the maximum available anisotropy.                                     |
 | `TEXTURE_MAX_ANISOTROPY_EXT`     | 0x84FE | Passed to `texParameter` to set the desired maximum anisotropy for a texture. |
 
-### {{domxref("WEBGL_compressed_texture_s3tc")}}
+For more information, see {{domxref("EXT_texture_filter_anisotropic")}}.
+
+### WEBGL_compressed_texture_s3tc
 
 <table class="no-markdown">
   <thead>
@@ -1804,7 +1810,9 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
   </tbody>
 </table>
 
-### {{domxref("WEBGL_compressed_texture_etc")}}
+For more information, see {{domxref("WEBGL_compressed_texture_s3tc")}}.
+
+### WEBGL_compressed_texture_etc
 
 <table class="no-markdown">
   <thead>
@@ -1838,7 +1846,7 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
     <tr>
       <td><code>COMPRESSED_RGB8_ETC2</code></td>
       <td>0x9274</td>
-      <td>Compresses RBG8 data with no alpha channel.</td>
+      <td>Compresses RGB8 data with no alpha channel.</td>
     </tr>
     <tr>
       <td><code>COMPRESSED_RGBA8_ETC2_EAC</code></td>
@@ -1851,7 +1859,7 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
     <tr>
       <td><code>COMPRESSED_SRGB8_ETC2</code></td>
       <td>0x9276</td>
-      <td>Compresses sRBG8 data with no alpha channel.</td>
+      <td>Compresses sRGB8 data with no alpha channel.</td>
     </tr>
     <tr>
       <td><code>COMPRESSED_SRGB8_ALPHA8_ETC2_EAC</code></td>
@@ -1880,50 +1888,64 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
   </tbody>
 </table>
 
-### {{domxref("WEBGL_compressed_texture_pvrtc")}}
+For more information, see {{domxref("WEBGL_compressed_texture_etc")}}.
+
+### WEBGL_compressed_texture_pvrtc
 
 | Constant name                      | Value  | Description                                                    |
 | ---------------------------------- | ------ | -------------------------------------------------------------- |
 | `COMPRESSED_RGB_PVRTC_4BPPV1_IMG`  | 0x8C00 | RGB compression in 4-bit mode. One block for each 4×4 pixels.  |
 | `COMPRESSED_RGBA_PVRTC_4BPPV1_IMG` | 0x8C02 | RGBA compression in 4-bit mode. One block for each 4×4 pixels. |
 | `COMPRESSED_RGB_PVRTC_2BPPV1_IMG`  | 0x8C01 | RGB compression in 2-bit mode. One block for each 8×4 pixels.  |
-| `COMPRESSED_RGBA_PVRTC_2BPPV1_IMG` | 0x8C03 | RGBA compression in 2-bit mode. One block for each 8×4 pixe    |
+| `COMPRESSED_RGBA_PVRTC_2BPPV1_IMG` | 0x8C03 | RGBA compression in 2-bit mode. One block for each 8×4 pixels. |
 
-### {{domxref("WEBGL_compressed_texture_etc1")}}
+For more information, see {{domxref("WEBGL_compressed_texture_pvrtc")}}.
+
+### WEBGL_compressed_texture_etc1
 
 | Constant name               | Value  | Description                                       |
 | --------------------------- | ------ | ------------------------------------------------- |
 | `COMPRESSED_RGB_ETC1_WEBGL` | 0x8D64 | Compresses 24-bit RGB data with no alpha channel. |
 
-### {{domxref("WEBGL_depth_texture")}}
+For more information, see {{domxref("WEBGL_compressed_texture_etc1")}}.
+
+### WEBGL_depth_texture
 
 | Constant name             | Value  | Description                                          |
 | ------------------------- | ------ | ---------------------------------------------------- |
 | `UNSIGNED_INT_24_8_WEBGL` | 0x84FA | Unsigned integer type for 24-bit depth texture data. |
 
-### {{domxref("OES_texture_half_float")}}
+For more information, see {{domxref("WEBGL_depth_texture")}}.
+
+### OES_texture_half_float
 
 | Constant name    | Value  | Description                        |
 | ---------------- | ------ | ---------------------------------- |
 | `HALF_FLOAT_OES` | 0x8D61 | Half floating-point type (16-bit). |
 
-### {{domxref("WEBGL_color_buffer_float")}}
+For more information, see {{domxref("OES_texture_half_float")}}.
+
+### WEBGL_color_buffer_float
 
 | Constant name                               | Value  | Description                                         |
 | ------------------------------------------- | ------ | --------------------------------------------------- |
-| `RGBA32F_EXT`                               | 0x8814 | RGBA 32-bit floating-point color-renderable format. |
-| `RGB32F_EXT`                                | 0x8815 | RGB 32-bit floating-point color-renderable format.  |
+| `RGBA32F_EXT`                               | 0x8814 | RGBA 32-bit floating-point color-renderable format. |
+| `RGB32F_EXT`                                | 0x8815 | RGB 32-bit floating-point color-renderable format.  |
 | `FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT` | 0x8211 |                                                     |
 | `UNSIGNED_NORMALIZED_EXT`                   | 0x8C17 |                                                     |
 
-### {{domxref("EXT_blend_minmax")}}
+For more information, see {{domxref("WEBGL_color_buffer_float")}}.
+
+### EXT_blend_minmax
 
 | Constant name | Value  | Description                                                                 |
 | ------------- | ------ | --------------------------------------------------------------------------- |
 | `MIN_EXT`     | 0x8007 | Produces the minimum color components of the source and destination colors. |
 | `MAX_EXT`     | 0x8008 | Produces the maximum color components of the source and destination colors. |
 
-### {{domxref("EXT_sRGB")}}
+For more information, see {{domxref("EXT_blend_minmax")}}.
+
+### EXT_sRGB
 
 | Constant name                               | Value  | Description                                                     |
 | ------------------------------------------- | ------ | --------------------------------------------------------------- |
@@ -1932,7 +1954,9 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
 | `SRGB8_ALPHA8_EXT`                          | 0x8C43 | Sized (8-bit) sRGB and alpha formats.                           |
 | `FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT` | 0x8210 | Returns the framebuffer color encoding.                         |
 
-### {{domxref("OES_standard_derivatives")}}
+For more information, see {{domxref("EXT_sRGB")}}.
+
+### OES_standard_derivatives
 
 <table class="no-markdown">
   <thead>
@@ -1955,7 +1979,9 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
   </tbody>
 </table>
 
-### {{domxref("WEBGL_draw_buffers")}}
+For more information, see {{domxref("OES_standard_derivatives")}}.
+
+### WEBGL_draw_buffers
 
 | Constant name                 | Value  | Description                                           |
 | ----------------------------- | ------ | ----------------------------------------------------- |
@@ -1994,13 +2020,17 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
 | `MAX_COLOR_ATTACHMENTS_WEBGL` | 0x8CDF | Maximum number of framebuffer color attachment points |
 | `MAX_DRAW_BUFFERS_WEBGL`      | 0x8824 | Maximum number of draw buffers                        |
 
-### {{domxref("OES_vertex_array_object")}}
+For more information, see {{domxref("WEBGL_draw_buffers")}}.
+
+### OES_vertex_array_object
 
 | Constant name              | Value  | Description                          |
 | -------------------------- | ------ | ------------------------------------ |
 | `VERTEX_ARRAY_BINDING_OES` | 0x85B5 | The bound vertex array object (VAO). |
 
-### {{domxref("EXT_disjoint_timer_query")}}
+For more information, see {{domxref("OES_vertex_array_object")}}.
+
+### EXT_disjoint_timer_query
 
 | Constant name                | Value  | Description                                                                   |
 | ---------------------------- | ------ | ----------------------------------------------------------------------------- |
@@ -2012,12 +2042,11 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
 | `TIMESTAMP_EXT`              | 0x8E28 | The current time.                                                             |
 | `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether or not the GPU performed any disjoint operation. |
 
+For more information, see {{domxref("EXT_disjoint_timer_query")}}.
+
 ## Specifications
 
-| Specification                                                                | Status                   | Comment                       |
-| ---------------------------------------------------------------------------- | ------------------------ | ----------------------------- |
-| {{SpecName('WebGL', "#5.14", "WebGLRenderingContext")}}     | {{Spec2('WebGL')}} | Initial definition            |
-| {{SpecName('WebGL2', "#3.7", "WebGL2RenderingContext")}} | {{Spec2('WebGL2')}} | Defines additional constants. |
+{{Specifications}}
 
 ## See also
 

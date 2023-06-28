@@ -1,39 +1,28 @@
 ---
-title: 'HTMLFormElement: reset event'
+title: "HTMLFormElement: reset event"
+short-title: reset
 slug: Web/API/HTMLFormElement/reset_event
-tags:
-  - API
-  - Event
-  - Forms
-  - HTML DOM
-  - HTMLFormElement
-  - Reference
+page-type: web-api-event
 browser-compat: api.HTMLFormElement.reset_event
 ---
+
 {{APIRef}}
 
 The **`reset`** event fires when a {{HTMLElement("form")}} is reset.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes (although specified as a simple event that doesn't bubble)</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onreset")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("reset", (event) => {});
+
+onreset = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -43,8 +32,8 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text"></label>
-  <br><br>
+  <label>Test field: <input type="text" /></label>
+  <br /><br />
   <button type="reset">Reset form</button>
 </form>
 <p id="log"></p>
@@ -54,12 +43,12 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```js
 function logReset(event) {
-  log.textContent = `Form reset! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('reset', logReset);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("reset", logReset);
 ```
 
 ### Result

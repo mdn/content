@@ -1,44 +1,32 @@
 ---
-title: DynamicsCompressorNode.release
+title: "DynamicsCompressorNode: release property"
+short-title: release
 slug: Web/API/DynamicsCompressorNode/release
-tags:
-  - API
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Release
-  - Web Audio API
+page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.release
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `release` property of the {{ domxref("DynamicsCompressorNode") }} interface Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of time, in seconds, required to increase the gain by 10 dB. It defines how quick the signal is adapted when its volume is reduced.
 
 The `release` property's default value is `0.25` and it can be set between `0` and `1`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
-compressor.release.value = 0.25;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}.
 
 > **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
-## Example
+## Examples
 
 ```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
+const audioCtx = new AudioContext();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.release.value = 0.25;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

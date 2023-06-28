@@ -1,35 +1,26 @@
 ---
-title: MIDIPort.id
+title: "MIDIPort: id property"
+short-title: id
 slug: Web/API/MIDIPort/id
-tags:
-  - API
-  - Property
-  - Reference
-  - id
-  - MIDIPort
+page-type: web-api-instance-property
 browser-compat: api.MIDIPort.id
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`id`** read-only property of the {{domxref("MIDIPort")}} interface returns the unique ID of the port.
 
-## Syntax
+## Value
 
-```js
-let id = MIDIPort.id;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing an ID for the port.
+A string containing an ID for the port.
 
 ## Examples
 
 The following example loops through all input ports and prints the id of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.id);
 }
 ```

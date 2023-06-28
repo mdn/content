@@ -1,14 +1,10 @@
 ---
 title: column-span
 slug: Web/CSS/column-span
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-span
 ---
+
 {{CSSRef}}
 
 The **`column-span`** [CSS](/en-US/docs/Web/CSS) property makes it possible for an element to span across all columns when its value is set to `all`.
@@ -24,6 +20,7 @@ column-span: all;
 column-span: inherit;
 column-span: initial;
 column-span: revert;
+column-span: revert-layer;
 column-span: unset;
 ```
 
@@ -60,13 +57,25 @@ In this example, the heading is made to span across all the columns of the artic
 <article>
   <h2>Header spanning all of the columns</h2>
   <p>
-     The h2 should span all the columns. The rest
-     of the text should be distributed among the columns.
+    The h2 should span all the columns. The rest of the text should be
+    distributed among the columns.
   </p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
 </article>
 ```
 
@@ -96,5 +105,6 @@ h2 {
 
 ## See also
 
-- [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
+- [Spanning and balancing columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
+- [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
 - {{domxref("HTMLSpanElement")}}

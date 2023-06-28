@@ -1,32 +1,21 @@
 ---
-title: BluetoothCharacteristicProperties.broadcast
+title: "BluetoothCharacteristicProperties: broadcast property"
+short-title: broadcast
 slug: Web/API/BluetoothCharacteristicProperties/broadcast
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - broadcast
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.broadcast
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`broadcast`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if the broadcast of the characteristic
 value is permitted using the Server Characteristic Configuration Descriptor.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.broadcast;
-```
-
-### Value
+## Value
 
 A boolean value.
 

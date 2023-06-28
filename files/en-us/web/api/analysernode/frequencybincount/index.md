@@ -1,47 +1,38 @@
 ---
-title: AnalyserNode.frequencyBinCount
+title: "AnalyserNode: frequencyBinCount property"
+short-title: frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequencyBinCount
+page-type: web-api-instance-property
 browser-compat: api.AnalyserNode.frequencyBinCount
 ---
+
 {{APIRef("Web Audio API")}}
 
-The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface is an unsigned integer half that of the {{domxref("AnalyserNode.fftSize")}}. This generally equates to the number of data values you will have to play with for the visualization.
+The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface contains the total number of data points available to {{domxref("AudioContext")}} {{domxref("BaseAudioContext.sampleRate", "sampleRate")}}. This is half of the `value` of the {{domxref("AnalyserNode.fftSize")}}. The two methods' indices have a linear relationship with the frequencies they represent, between 0 and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency).
 
-## Syntax
-
-```js
-var arrayLength = analyserNode.frequencyBinCount;
-```
-
-### Value
+## Value
 
 An unsigned integer, equal to the number of values that {{domxref("AnalyserNode.getByteFrequencyData()")}} and {{domxref("AnalyserNode.getFloatFrequencyData()")}} copy into the provided `TypedArray`.
 
 For technical reasons related to how the [Fast Fourier transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) is defined, it is always half the value of {{domxref("AnalyserNode.fftSize")}}. Therefore, it will be one of `16`, `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, and `16384`.
 
-## Example
+## Examples
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bar graph style" output of the current audio input.
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo (see [app.js lines 108-193](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/blob/gh-pages/scripts/app.js#L108-L193) for relevant code).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 
-  ...
+// …
 
 analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
+const bufferLength = analyser.frequencyBinCount;
 console.log(bufferLength);
-var dataArray = new Uint8Array(bufferLength);
+const dataArray = new Uint8Array(bufferLength);
 
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
@@ -50,22 +41,22 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+  canvasCtx.fillStyle = "rgb(0, 0, 0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5 - 1;
-  var barHeight;
-  var x = 0;
+  const barWidth = (WIDTH / bufferLength) * 2.5 - 1;
+  let barHeight;
+  let x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
 
     x += barWidth;
   }
-};
+}
 
 draw();
 ```

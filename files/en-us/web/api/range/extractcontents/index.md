@@ -1,13 +1,11 @@
 ---
-title: Range.extractContents()
+title: "Range: extractContents() method"
+short-title: extractContents()
 slug: Web/API/Range/extractContents
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
+page-type: web-api-instance-method
 browser-compat: api.Range.extractContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.extractContents()`** method moves contents of the
@@ -24,18 +22,26 @@ document fragment valid.
 
 ## Syntax
 
-```js
-documentFragment = range.extractContents();
+```js-nolint
+extractContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{ domxref("DocumentFragment") }} object.
+
+## Examples
 
 ### Basic example
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.extractContents();
+const documentFragment = range.extractContents();
 document.body.appendChild(documentFragment);
 ```
 
@@ -62,12 +68,12 @@ body {
 p {
   border: 1px solid;
   font-size: 2em;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 button {
   font-size: 1.2em;
-  padding: .5em;
+  padding: 0.5em;
   pointer-events: auto;
 }
 ```
@@ -75,22 +81,26 @@ button {
 #### JavaScript
 
 ```js
-const list1 = document.getElementById('list1');
-const list2 = document.getElementById('list2');
-const button = document.getElementById('swap');
+const list1 = document.getElementById("list1");
+const list2 = document.getElementById("list2");
+const button = document.getElementById("swap");
 
-button.addEventListener('click', e => {
+button.addEventListener("click", (e) => {
   selection = window.getSelection();
 
   for (let i = 0; i < selection.rangeCount; i++) {
     const range = selection.getRangeAt(i);
 
-    if (range.commonAncestorContainer === list1 ||
-        range.commonAncestorContainer.parentNode === list1) {
+    if (
+      range.commonAncestorContainer === list1 ||
+      range.commonAncestorContainer.parentNode === list1
+    ) {
       const documentFragment = range.extractContents();
       list2.appendChild(documentFragment);
-    } else if (range.commonAncestorContainer === list2 ||
-        range.commonAncestorContainer.parentNode === list2) {
+    } else if (
+      range.commonAncestorContainer === list2 ||
+      range.commonAncestorContainer.parentNode === list2
+    ) {
       const documentFragment = range.extractContents();
       list1.appendChild(documentFragment);
     }

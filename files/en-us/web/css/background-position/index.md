@@ -1,14 +1,10 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.background-position
 ---
+
 {{CSSRef}}
 
 The **`background-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
@@ -46,6 +42,7 @@ background-position: top right 10px;
 background-position: inherit;
 background-position: initial;
 background-position: revert;
+background-position: revert-layer;
 background-position: unset;
 ```
 
@@ -68,7 +65,8 @@ The `background-position` property is specified as one or more `<position>` valu
     - One of the keyword values `top`, `left`, `bottom`, `right`. If `left` or `right` are given here, then this defines X and the other given value defines Y. If `top` or `bottom` are given, then this defines Y and the other value defines X.
     - A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. If the other value is `left` or `right`, then this value defines Y, relative to the top edge. If the other value is `top` or `bottom`, then this value defines X, relative to the left edge. If both values are `<length>` or `<percentage>` values, then the first defines X and the second Y.
     - Note that: If one value is `top` or `bottom`, then the other value may not be `top` or `bottom`. If one value is `left` or `right`, then the other value may not be `left` or `right`. This means, e.g., that `top top` and `left right` are not valid.
-    - The default value is `top left` or `0% 0%`.
+    - Order: when pairing keywords, placement is not important as the browser can reorder it, the value `top left` or `left top` will yield the same result. With pairing {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} with a keyword the placement is important, the value defining X should come first followed by Y, the value `right 20px` is not the same as `20px right` the former is valid but the latter is invalid. The value `left 20%` or `20% bottom` is valid as X and Y values are clearly defined and the placement is right.
+    - The default value is `left top` or `0% 0%`.
 
     **3-value syntax:** Two values are keyword values, and the third is the offset for the preceding value:
 
@@ -81,7 +79,7 @@ The `background-position` property is specified as one or more `<position>` valu
     - The first value and third values one of the keyword values `top`, `left`, `bottom`, `right`. If `left` or `right` are given here, then this defines X. If `top` or `bottom` are given, then this defines Y and the other keyword value defines X.
     - The second and fourth values are {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values. The second value is the offset for the first keyword. The fourth value is the offset for the second keyword.
 
-### Regarding Percentages:
+### Regarding Percentages
 
 The percentage offset of the given background image's position is relative to the container. A value of 0% means that the left (or top) edge of the background image is aligned with the corresponding left (or top) edge of the container, or the 0% mark of the image will be on the 0% mark of the container. A value of 100% means that the _right_ (or _bottom_) edge of the background image is aligned with the _right_ (or _bottom_) edge of the container, or the 100% mark of the image will be on the 100% mark of the container. Thus a value of 50% horizontally or vertically centers the background image as the 50% of the image will be at the 50% mark of the container. Similarly, `background-position: 25% 75%` means the spot on the image that is 25% from the left and 75% from the top will be placed at the spot of the container that is 25% from the container's left and 75% from the container's top.
 
@@ -145,7 +143,7 @@ Each of these three examples uses the {{cssxref("background")}} property to crea
 ```css
 /* Shared among all <div>s */
 div {
-  background-color: #FFEE99;
+  background-color: #ffee99;
   background-repeat: no-repeat;
   width: 300px;
   height: 80px;
@@ -154,19 +152,17 @@ div {
 
 /* These examples use the `background` shorthand property */
 .exampleone {
-  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #FFEE99 left 4em bottom 1em no-repeat;
+  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* Multiple background images: Each image is matched with the
    corresponding position, from first specified to last. */
 .examplethree {
-  background-image:    url("startransparent.gif"),
-                       url("catfront.png");
-  background-position: 0px 0px,
-                       right 3em bottom 2em;
+  background-image: url("startransparent.gif"), url("catfront.png");
+  background-position: 0px 0px, right 3em bottom 2em;
 }
 ```
 
@@ -186,7 +182,5 @@ div {
 
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
 - {{cssxref("transform-origin")}}

@@ -1,31 +1,20 @@
 ---
-title: MediaQueryList.media
+title: "MediaQueryList: media property"
+short-title: media
 slug: Web/API/MediaQueryList/media
-tags:
-  - API
-  - CSSOM View
-  - Media
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MediaQueryList.media
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`media`** read-only property of the
-{{DOMxRef("MediaQueryList")}} interface is a {{DOMxRef("DOMString")}} representing a
+{{DOMxRef("MediaQueryList")}} interface is a string representing a
 serialized media query.
 
-## Syntax
+## Value
 
-```js
-var media = MediaQueryList.media;
-```
-
-### Value
-
-A {{DOMxRef("DOMString")}} representing a serialized media query.
+A string representing a serialized media query.
 
 ## Examples
 
@@ -36,7 +25,7 @@ value of the resulting `MediaQueryList`'s `media` property in a
 ### JavaScript
 
 ```js
-let mql = window.matchMedia('(max-width: 600px)');
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.media;
 ```
@@ -79,8 +68,7 @@ A simple `<span>` to receive the output.
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

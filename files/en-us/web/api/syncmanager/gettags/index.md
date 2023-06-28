@@ -1,36 +1,37 @@
 ---
-title: SyncManager.getTags()
+title: "SyncManager: getTags() method"
+short-title: getTags()
 slug: Web/API/SyncManager/getTags
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - ServiceWorker
-  - SyncManager
-  - getTags
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.SyncManager.getTags
 ---
-{{APIRef("Service Workers API")}}{{Non-standard_header}}
+
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`SyncManager.getTags`** method of the
-{{domxref("SyncManager")}} interface returns a list of developer-defined identifiers for
+{{domxref("SyncManager")}} interface returns a list of developer-defined identifiers for
 `SyncManager` registrations.
 
 ## Syntax
 
-```js
-SyncManager.getTags().then(function(tags[]) { ... })
+```js-nolint
+getTags()
 ```
-
-### Returns
-
-A {{jsxref("Promise")}} that resolves to an array of {{jsxref("DOMString")}}s
-containing developer-defined identifiers for `SyncManager` registrations.
 
 ### Parameters
 
 None.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to an array of strings
+containing developer-defined identifiers for `SyncManager` registrations.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

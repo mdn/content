@@ -1,32 +1,19 @@
 ---
-title: CSSMathProduct.values
+title: "CSSMathProduct: values property"
+short-title: values
 slug: Web/API/CSSMathProduct/values
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathProduct
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - values
+page-type: web-api-instance-property
 browser-compat: api.CSSMathProduct.values
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathProduct.values`** read-only
 property of the {{domxref("CSSMathProduct")}} interface returns a
 {{domxref('CSSNumericArray')}} object which contains one or more
 {{domxref('CSSNumericValue')}} objects.
 
-## Syntax
-
-```js
-var cssNumericArray = CSSMathProduct.values;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericArray')}}.
 

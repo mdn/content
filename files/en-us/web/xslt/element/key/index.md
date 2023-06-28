@@ -1,20 +1,18 @@
 ---
 title: <xsl:key>
 slug: Web/XSLT/Element/key
-tags:
-  - Element
-  - Key
-  - Reference
-  - XSLT
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:key>` element declares a named key which can be used elsewhere in the stylesheet with the `key( )` function.
 
 ### Syntax
 
-    <xsl:key name=NAME match=EXPRESSION
-    	use=EXPRESSION />
+```xml
+<xsl:key name=NAME match=EXPRESSION
+  use=EXPRESSION />
+```
 
 ### Required Attributes
 

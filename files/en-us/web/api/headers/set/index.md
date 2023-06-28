@@ -1,16 +1,12 @@
 ---
-title: Headers.set()
+title: "Headers: set() method"
+short-title: set()
 slug: Web/API/Headers/set
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Method
-  - Reference
-  - set
+page-type: web-api-instance-method
 browser-compat: api.Headers.set
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The **`set()`** method of the {{domxref("Headers")}} interface
 sets a new value for an existing header inside a `Headers` object, or adds
@@ -22,14 +18,13 @@ overwrites the existing value with the new one, whereas {{domxref("Headers.appen
 appends the new value to the end of the set of values.
 
 For security reasons, some headers can only be controller by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 
-```js
-myHeaders.set(name, value);
+```js-nolint
+set(name, value)
 ```
 
 ### Parameters
@@ -40,24 +35,24 @@ myHeaders.set(name, value);
 - `value`
   - : The new value you want to set.
 
-### Returns
+### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}, then set a new
 value for this header using `set()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.set('Content-Type', 'text/html');
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.set("Content-Type", "text/html");
 ```
 
 If the specified header does not already exist, `set()` will create it and
@@ -66,9 +61,9 @@ does accept multiple values, `set()` will overwrite the existing value with
 the new one:
 
 ```js
-myHeaders.set('Accept-Encoding', 'deflate');
-myHeaders.set('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns 'gzip'
+myHeaders.set("Accept-Encoding", "deflate");
+myHeaders.set("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns 'gzip'
 ```
 
 You'd need {{domxref("Headers.append")}} to append the new value onto the values, not

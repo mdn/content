@@ -1,15 +1,9 @@
 ---
 title: Desktop gamepad controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_gamepad
-tags:
-  - Controls
-  - Desktop
-  - Gamepad API
-  - Gamepads
-  - Games
-  - JavaScript
-  - controllers
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}
@@ -51,14 +45,14 @@ To update the state of the gamepad's currently pressed buttons we will need a fu
 
 ```js
 function gamepadUpdateHandler() {
-    buttonsPressed = [];
-    if(controller.buttons) {
-        for(var b=0; b<controller.buttons.length; b++) {
-            if(controller.buttons[b].pressed) {
-                buttonsPressed.push(b);
-            }
-        }
+  buttonsPressed = [];
+  if (controller.buttons) {
+    for (let b = 0; b < controller.buttons.length; b++) {
+      if (controller.buttons[b].pressed) {
+        buttonsPressed.push(b);
+      }
     }
+  }
 }
 ```
 
@@ -66,13 +60,13 @@ We first reset the `buttonsPressed` array to get it ready to store the latest in
 
 ```js
 function gamepadButtonPressedHandler(button) {
-    var press = false;
-    for(var i=0; i<buttonsPressed.length; i++) {
-        if(buttonsPressed[i] == button) {
-            press = true;
-        }
+  let press = false;
+  for (let i = 0; i < buttonsPressed.length; i++) {
+    if (buttonsPressed[i] === button) {
+      press = true;
     }
-    return press;
+  }
+  return press;
 }
 ```
 
@@ -82,31 +76,29 @@ Next, in the `draw()` function we do two things — execute the `gamepadUpdateHa
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ...
+  // …
 
-    gamepadUpdateHandler();
-    if(gamepadButtonPressedHandler(0)) {
-        playerY -= 5;
-    }
-    else if(gamepadButtonPressedHandler(1)) {
-        playerY += 5;
-    }
-    if(gamepadButtonPressedHandler(2)) {
-        playerX -= 5;
-    }
-    else if(gamepadButtonPressedHandler(3)) {
-        playerX += 5;
-    }
-    if(gamepadButtonPressedHandler(11)) {
-        alert('BOOM!');
-    }
+  gamepadUpdateHandler();
+  if (gamepadButtonPressedHandler(0)) {
+    playerY -= 5;
+  } else if (gamepadButtonPressedHandler(1)) {
+    playerY += 5;
+  }
+  if (gamepadButtonPressedHandler(2)) {
+    playerX -= 5;
+  } else if (gamepadButtonPressedHandler(3)) {
+    playerX += 5;
+  }
+  if (gamepadButtonPressedHandler(11)) {
+    alert("BOOM!");
+  }
 
-    // ...
+  // …
 
-    ctx.drawImage(img, playerX, playerY);
-    requestAnimationFrame(draw);
+  ctx.drawImage(img, playerX, playerY);
+  requestAnimationFrame(draw);
 }
 ```
 
@@ -125,21 +117,21 @@ Let's move on to the final Gamepad API implementation in the [Captain Rogers: Ba
 First off, we'll create a small library that will take care of handling the input for us. Here's the `GamepadAPI` object, which contains useful variables and functions:
 
 ```js
-var GamepadAPI = {
-    active: false,
-    controller: {},
-    connect: function(event) {},
-    disconnect: function(event) {},
-    update: function() {},
-    buttons: {
-        layout: [],
-        cache: [],
-        status: [],
-        pressed: function(button, state) {}
-    }
-    axes: {
-        status: []
-    }
+const GamepadAPI = {
+  active: false,
+  controller: {},
+  connect(event) {},
+  disconnect(event) {},
+  update() {},
+  buttons: {
+    layout: [],
+    cache: [],
+    status: [],
+    pressed(button, state) {},
+  },
+  axes: {
+    status: [],
+  },
 };
 ```
 
@@ -159,7 +151,7 @@ The `pressed()` function gets the input data and sets the information about it i
 After the gamepad is connected, the information about the controller is stored in the object:
 
 ```js
-connect: function(event) {
+connect(event) {
     GamepadAPI.controller = event.gamepad;
     GamepadAPI.active = true;
 },
@@ -168,7 +160,7 @@ connect: function(event) {
 The `disconnect` function removes the information from the object:
 
 ```js
-disconnect: function(event) {
+disconnect(event) {
     delete GamepadAPI.controller;
     GamepadAPI.active = false;
 },
@@ -177,24 +169,24 @@ disconnect: function(event) {
 The `update()` function is executed in the update loop of the game on every frame, so it contains the latest information on the pressed buttons:
 
 ```js
-update: function() {
+update() {
   GamepadAPI.buttons.cache = [];
-  for(var k=0; k<GamepadAPI.buttons.status.length; k++) {
+  for (let k = 0; k < GamepadAPI.buttons.status.length; k++) {
     GamepadAPI.buttons.cache[k] = GamepadAPI.buttons.status[k];
   }
   GamepadAPI.buttons.status = [];
-  var c = GamepadAPI.controller || {};
-  var pressed = [];
-  if(c.buttons) {
-    for(var b=0,t=c.buttons.length; b<t; b++) {
-      if(c.buttons[b].pressed) {
+  const c = GamepadAPI.controller || {};
+  const pressed = [];
+  if (c.buttons) {
+    for (let b = 0; b < c.buttons.length; b++) {
+      if (c.buttons[b].pressed) {
         pressed.push(GamepadAPI.buttons.layout[b]);
       }
     }
   }
-  var axes = [];
-  if(c.axes) {
-    for(var a=0,x=c.axes.length; a<x; a++) {
+  const axes = [];
+  if (c.axes) {
+    for (let a = 0; a < c.axes.length; a++) {
       axes.push(c.axes[a].toFixed(2));
     }
   }
@@ -204,19 +196,19 @@ update: function() {
 },
 ```
 
-The function above clears the buttons cache, and copies their status from the previous frame to the cache. Next, the button status is cleared and the new information is added. The same goes for the axes information — looping through axes adds the values to the array. Received values are assigned to the proper objects and returns the pressed info for debugging purposes.
+The function above clears the buttons cache, and copies their status from the previous frame to the cache. Next, the button status is cleared and the new information is added. The same goes for the axes' information — looping through axes adds the values to the array. Received values are assigned to the proper objects and returns the pressed info for debugging purposes.
 
 The `button.pressed()` function detects the actual button presses:
 
 ```js
-pressed: function(button, hold) {
-  var newPress = false;
-  for(var i=0,s=GamepadAPI.buttons.status.length; i<s; i++) {
-    if(GamepadAPI.buttons.status[i] == button) {
+pressed(button, hold) {
+  let newPress = false;
+  for (let i = 0; i < GamepadAPI.buttons.status.length; i++) {
+    if (GamepadAPI.buttons.status[i] === button) {
       newPress = true;
-      if(!hold) {
-        for(var j=0,p=GamepadAPI.buttons.cache.length; j<p; j++) {
-          if(GamepadAPI.buttons.cache[j] == button) {
+      if (!hold) {
+        for (let j = 0; j < GamepadAPI.buttons.cache.length; j++) {
+          if (GamepadAPI.buttons.cache[j] === button) {
             newPress = false;
           }
         }
@@ -231,46 +223,37 @@ It loops through pressed buttons and if the button we're looking for is pressed,
 
 ## Implementation
 
-We now know what the `GamepadAPI` object looks like and what variables and functions it contain, so let's learn how all this is actually used in the game. To indicate that the gamepad controller is active we can show the user some custom text on the game's main menu screen.
+We now know what the `GamepadAPI` object looks like and what variables and functions it contains, so let's learn how all this is actually used in the game. To indicate that the gamepad controller is active we can show the user some custom text on the game's main menu screen.
 
 The `textGamepad` object holds the text saying a gamepad has been connected, and is hidden by default. Here's the code we've prepared in the `create()` function that is executed once when the new state is created:
 
 ```js
 create() {
-    // ...
-    var message = 'Gamepad connected! Press Y for controls';
-    var textGamepad = this.add.text(message, ...);
-    textGamepad.visible = false;
+  // …
+  const message = 'Gamepad connected! Press Y for controls';
+  const textGamepad = this.add.text(0, 0, message);
+  textGamepad.visible = false;
 }
 ```
 
 In the `update()` function, which is executed every frame, we can wait until the controller is actually connected, so the proper text can be shown. Then we can keep the track of the information about pressed buttons by using the `Gamepad.update()` method, and react to the given information:
 
 ```js
-update: function() {
-    // ...
-    if(GamepadAPI.active) {
-        if(!this.textGamepad.visible) {
-            this.textGamepad.visible = true;
-        }
-        GamepadAPI.update();
-        if(GamepadAPI.buttons.pressed('Start')) {
-            // start the game
-        }
-        if(GamepadAPI.buttons.pressed('X')) {
-            // turn on/off the sounds
-        }
-        if(GamepadAPI.buttons.pressed('Y','hold')) {
-            if(!this.screenGamepadHelp.visible) {
-                this.screenGamepadHelp.visible = true;
-            }
-        }
-        else {
-            if(this.screenGamepadHelp.visible) {
-                this.screenGamepadHelp.visible = false;
-            }
-        }
+update() {
+  // …
+  if (GamepadAPI.active) {
+    this.textGamepad.visible = true;
+
+    GamepadAPI.update();
+    if (GamepadAPI.buttons.pressed('Start')) {
+      // start the game
     }
+    if (GamepadAPI.buttons.pressed('X')) {
+      // turn on/off the sounds
+    }
+
+    this.screenGamepadHelp.visible = GamepadAPI.buttons.pressed('Y', 'hold');
+  }
 }
 ```
 
@@ -284,21 +267,19 @@ When the game is started, some introductory text is shown that shows you availab
 
 ```js
 create() {
-    // ...
-    if(this.game.device.desktop) {
-        if(GamepadAPI.active) {
-            moveText = 'DPad or left Stick\nto move';
-            shootText = 'A to shoot,\nY for controls';
-        }
-        else {
-            moveText = 'Arrow keys\nor WASD to move';
-            shootText = 'X or Space\nto shoot';
-        }
+  // …
+  if (this.game.device.desktop) {
+    if (GamepadAPI.active) {
+      moveText = 'DPad or left Stick\nto move';
+      shootText = 'A to shoot,\nY for controls';
+    } else {
+      moveText = 'Arrow keys\nor WASD to move';
+      shootText = 'X or Space\nto shoot';
     }
-    else {
-        moveText = 'Tap and hold to move';
-        shootText = 'Tap to shoot';
-    }
+  } else {
+    moveText = 'Tap and hold to move';
+    shootText = 'Tap to shoot';
+  }
 }
 ```
 
@@ -309,31 +290,32 @@ When on desktop, we can check if the controller is active and show the gamepad c
 We can offer even more flexibility to the player by giving him main and alternative gamepad movement controls:
 
 ```js
-if(GamepadAPI.buttons.pressed('DPad-Up','hold')) {
+if (GamepadAPI.buttons.pressed("DPad-Up", "hold")) {
+  // move player up
+} else if (GamepadAPI.buttons.pressed("DPad-Down", "hold")) {
+  // move player down
+}
+
+if (GamepadAPI.buttons.pressed("DPad-Left", "hold")) {
+  // move player left
+}
+
+if (GamepadAPI.buttons.pressed("DPad-Right", "hold")) {
+  // move player right
+}
+
+if (GamepadAPI.axes.status) {
+  if (GamepadAPI.axes.status[0] > 0.5) {
     // move player up
-}
-else if(GamepadAPI.buttons.pressed('DPad-Down','hold')) {
+  } else if (GamepadAPI.axes.status[0] < -0.5) {
     // move player down
-}
-if(GamepadAPI.buttons.pressed('DPad-Left','hold')) {
+  }
+
+  if (GamepadAPI.axes.status[1] > 0.5) {
     // move player left
-}
-if(GamepadAPI.buttons.pressed('DPad-Right','hold')) {
+  } else if (GamepadAPI.axes.status[1] < -0.5) {
     // move player right
-}
-if(GamepadAPI.axes.status && GamepadAPI.axes.status[0]) {
-    if(GamepadAPI.axes.status[0] > 0.5) {
-        // move player up
-    }
-    else if(GamepadAPI.axes.status[0] < -0.5) {
-        // move player down
-    }
-    if(GamepadAPI.axes.status[1] > 0.5) {
-        // move player left
-    }
-    else if(GamepadAPI.axes.status[1] < -0.5) {
-        // move player right
-    }
+  }
 }
 ```
 
@@ -344,55 +326,47 @@ Have you noticed that the current value of the axes is evaluated against `0.5`? 
 For the shooting controls, we used the `A` button — when it is held down, a new bullet is spawned, and everything else is handled by the game:
 
 ```js
-if(GamepadAPI.buttons.pressed('A','hold')) {
-    this.spawnBullet();
+if (GamepadAPI.buttons.pressed("A", "hold")) {
+  this.spawnBullet();
 }
 ```
 
 Showing the screen with all the controls looks exactly the same as in the main menu:
 
 ```js
-if(GamepadAPI.buttons.pressed('Y','hold')) {
-    if(!this.screenGamepadHelp.visible) {
-        this.screenGamepadHelp.visible = true;
-    }
-}
-else {
-    if(this.screenGamepadHelp.visible) {
-        this.screenGamepadHelp.visible = false;
-    }
-}
+this.screenGamepadHelp.visible = GamepadAPI.buttons.pressed("Y", "hold");
 ```
 
 If the `B` button is pressed, the game is paused:
 
 ```js
-if(gamepadAPI.buttonPressed('B')) {
-    this.managePause();
+if (gamepadAPI.buttonPressed("B")) {
+  this.managePause();
 }
 ```
 
-## Pause and game over states
+## The paused and gameover states
 
 We already learned how to control the whole lifecycle of the game: pausing the gameplay, restarting it, or getting back to the main menu. It works smooth on mobile and desktop, and adding gamepad controls is just as straightforward — in the `update()` function, we check to see if the current state status is `paused` — if so, the relevant actions are enabled:
 
 ```js
-if(GamepadAPI.buttons.pressed('Start')) {
-    this.managePause();
+if (GamepadAPI.buttons.pressed("Start")) {
+  this.managePause();
 }
-if(GamepadAPI.buttons.pressed('Back')) {
-    this.stateBack();
+
+if (GamepadAPI.buttons.pressed("Back")) {
+  this.stateBack();
 }
 ```
 
 Similarly, when the `gameover` state status is active, then we can allow the user to restart the game instead of continuing it:
 
 ```js
-if(GamepadAPI.buttons.pressed('Start')) {
-    this.stateRestart();
+if (GamepadAPI.buttons.pressed("Start")) {
+  this.stateRestart();
 }
-if(GamepadAPI.buttons.pressed('Back')) {
-    this.stateBack();
+if (GamepadAPI.buttons.pressed("Back")) {
+  this.stateBack();
 }
 ```
 
@@ -402,6 +376,6 @@ When the game over screen is visible, the `Start` button restarts the game while
 
 That's it! We have successfully implemented gamepad controls in our game — try connecting any popular controller like the XBox 360 one and see for yourself how fun it is to avoid the asteroids and shoot the aliens with a gamepad.
 
-Now we can move on and explore new, even more unconventional ways to control the HTML5 game like waving your hand in front of the laptop or screaming into your microphone.
+Now we can move on and explore new, even more unconventional ways to control the HTML game like waving your hand in front of the laptop or screaming into your microphone.
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}

@@ -1,18 +1,11 @@
 ---
-title: RTCPeerConnection.currentRemoteDescription
+title: "RTCPeerConnection: currentRemoteDescription property"
+short-title: currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - currentRemoteDescription
+page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.currentRemoteDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property
@@ -28,41 +21,31 @@ To change the `currentRemoteDescription`, call
 {{domxref("RTCPeerConnection.setRemoteDescription()")}}, which triggers a series of
 events which leads to this value being set. For details on what exactly happens and why
 the change isn't necessarily instantaneous, see
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-  descriptions")}}.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page.
 
 > **Note:** Unlike {{domxref("RTCPeerConnection.remoteDescription")}}, this value represents the
 > actual current state of the local end of the connection;
 > `remoteDescription` may specify a description which the connection is
 > currently in the process of switching over to.
 
-## Syntax
-
-```js
-sessionDescription = RTCPeerConnection.currentRemoteDescription;
-```
-
-### Return value
+## Value
 
 The current description of the remote end of the connection, if one has been set. If
 none has been successfully set, this value is `null`.
 
-## Example
+## Examples
 
 This example looks at the `currentRemoteDescription` and displays an alert
 containing the {{domxref("RTCSessionDescription")}} object's `type` and
 `sdp` fields.
 
 ```js
-var pc = new RTCPeerConnection();
-…
-var sd = pc.currentRemoteDescription;
+const pc = new RTCPeerConnection();
+// ...
+const sd = pc.currentRemoteDescription;
 if (sd) {
-  alert("Local session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
-}
-else {
+  alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
+} else {
   alert("No local session yet.");
 }
 ```
@@ -84,4 +67,4 @@ else {
   {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

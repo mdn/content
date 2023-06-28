@@ -1,40 +1,36 @@
 ---
-title: USBDevice.transferOut()
+title: "USBDevice: transferOut() method"
+short-title: transferOut()
 slug: Web/API/USBDevice/transferOut
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - transferOut
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.USBDevice.transferOut
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`transferOut()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves with a
-{{domxref("USBTransferOutResult")}} when bulk or interrupt data is sent to the USB
+{{domxref("USBOutTransferResult")}} when bulk or interrupt data is sent to the USB
 device.
 
 ## Syntax
 
-```js
-var promise = USBDevice.transferOut(endpointNumber, data)
+```js-nolint
+transferOut(endpointNumber, data)
 ```
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- data
-  - : A {{domxref("TypedArray")}} containing the data to send to the device.
+- `data`
+  - : A {{jsxref("TypedArray")}} containing the data to send to the device.
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a {{domxref("USBTransferOutResult")}}.
+A {{jsxref("promise")}} that resolves with a {{domxref("USBOutTransferResult")}}.
 
 ## Specifications
 

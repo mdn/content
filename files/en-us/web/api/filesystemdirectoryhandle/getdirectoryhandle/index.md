@@ -1,16 +1,12 @@
 ---
-title: FileSystemDirectoryHandle.getDirectoryHandle()
+title: "FileSystemDirectoryHandle: getDirectoryHandle() method"
+short-title: getDirectoryHandle()
 slug: Web/API/FileSystemDirectoryHandle/getDirectoryHandle
-tags:
-  - Directories
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
+page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`getDirectoryHandle()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a
@@ -19,23 +15,25 @@ within the directory handle on which the method is called.
 
 ## Syntax
 
-```js
-var FileSystemDirectoryHandle = FileSystemDirectoryHandle.getDirectoryHandle();
+```js-nolint
+getDirectoryHandle(name)
+getDirectoryHandle(name, options)
 ```
 
 ### Parameters
 
-- _name_
-  - : A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
+- `name`
+  - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the subdirectory you wish to retrieve.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An optional object containing options for the retrieved subdirectory. Options are as
     follows:
 
-    - `create`: A {{jsxref('Boolean')}}. Default `false`. When
-      set to `true` if the directory is not found, one with the specified
-      name will be created and returned.
+    - `create`
+      - : A boolean value, which defaults to `false`. When
+        set to `true` if the directory is not found, one with the specified
+        name will be created and returned.
 
 ### Return value
 
@@ -57,10 +55,10 @@ The following example returns a directory handle with the specified name, if the
 directory does not exist it is created.
 
 ```js
-const dirName = 'directoryToGetName';
+const dirName = "directoryToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
+const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
 
 ## Specifications
@@ -74,5 +72,4 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

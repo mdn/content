@@ -1,18 +1,14 @@
 ---
-title: XRProjectionLayer.ignoreDepthValues
+title: "XRProjectionLayer: ignoreDepthValues property"
+short-title: ignoreDepthValues
 slug: Web/API/XRProjectionLayer/ignoreDepthValues
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRProjectionLayer.ignoreDepthValues
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`ignoreDepthValues`** property of the {{domxref("XRProjectionLayer")}} interface is a boolean indicating if the XR compositor is not making use of depth buffer values when rendering the layer.
 
@@ -28,7 +24,7 @@ If the `depthFormat` option is `0` when creating a projection layer, the `ignore
 
 ```js
 let glProjectionLayer = xrGLBinding.createProjectionLayer({
-  depthFormat: 0
+  depthFormat: 0,
 });
 
 glProjectionLayer.ignoreDepthValues; // true

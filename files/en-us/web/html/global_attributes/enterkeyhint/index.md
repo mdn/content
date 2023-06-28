@@ -1,17 +1,14 @@
 ---
 title: enterkeyhint
 slug: Web/HTML/Global_attributes/enterkeyhint
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.enterkeyhint
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
 The **`enterkeyhint`** [global attribute](/en-US/docs/Web/HTML/Global_attributes)
-is an enumerated attribute defining what action label (or icon) to present for the enter key on virtual keyboards.
+is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute defining what action label (or icon) to present for the enter key on virtual keyboards.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-enterkeyhint.html","tabbed-shorter")}}
 
@@ -28,12 +25,12 @@ represents what the user should do next; typical actions are: sending text, inse
 If no `enterkeyhint` attribute is provided, the user agent might use contextual information from the
 [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode),
 [`type`](/en-US/docs/Web/HTML/Element/input#input_types),
-or [`pattern`](/en-US/docs/Web/HTML/Element/input#htmlattrdefpattern)
+or [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern)
 attributes to display a suitable enter key label (or icon).
 
 ### Values
 
-The `enterkeyhint` attribute is an enumerated attribute and only accepts the following values:
+The `enterkeyhint` attribute is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute and only accepts the following values:
 
 <table class="no-markdown">
   <thead>
@@ -104,9 +101,9 @@ The `enterkeyhint` attribute is an enumerated attribute and only accepts the fol
 
 ## See also
 
-- [`HTMLElement.enterkeyhint`](/en-US/docs/Web/API/HTMLElement/enterkeyhint) property reflecting this attribute
+- [`HTMLElement.enterKeyHint`](/en-US/docs/Web/API/HTMLElement/enterKeyHint) property reflecting this attribute
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute
 - [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute
 - [`type`](/en-US/docs/Web/HTML/Element/input#input_types) and
-  [`pattern`](/en-US/docs/Web/HTML/Element/input#htmlattrdefpattern) attributes on
+  [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attributes on
   [`<input>`](/en-US/docs/Web/HTML/Element/input) elements

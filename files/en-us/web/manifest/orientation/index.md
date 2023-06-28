@@ -1,23 +1,19 @@
 ---
 title: orientation
 slug: Web/Manifest/orientation
-tags:
-  - Manifest
-  - Orientation
-  - Web
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.orientation
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

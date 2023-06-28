@@ -1,37 +1,21 @@
 ---
-title: WakeLockSentinel.type
+title: "WakeLockSentinel: type property"
+short-title: type
 slug: Web/API/WakeLockSentinel/type
-tags:
-  - Property
-  - Read-only
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLockSentinel
-  - screen
+page-type: web-api-instance-property
 browser-compat: api.WakeLockSentinel.type
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
 The read-only **`type`** property of the
-{{domxref("WakeLockSentinel")}} interface returns a {{jsxref("String")}}
+{{domxref("WakeLockSentinel")}} interface returns a string
 representation of the currently acquired {{domxref("WakeLockSentinel")}} type.
-
-## Syntax
-
-```js
-var type = sentinel.type;
-```
 
 ### Value
 
-A {{jsxref("String")}} representation of the currently acquired wake lock type.
-
-- _type_ {{ReadOnlyInline}}
-
-  - : Return values are:
-
-    - `'screen'`: A screen wake lock. Prevents devices from dimming
-      or locking the screen.
+A string representation of the currently acquired wake lock type.
+The type 'screen'` is a screen wake lock. It prevents devices from dimming or locking the screen.
 
 ## Examples
 
@@ -40,7 +24,7 @@ This example shows an asynchronous function that acquires a
 
 ```js
 const requestWakeLock = async () => {
-  wakeLock = await navigator.wakeLock.request('screen');
+  wakeLock = await navigator.wakeLock.request("screen");
   console.log(wakeLock.type); // logs 'screen'
 };
 

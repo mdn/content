@@ -1,40 +1,34 @@
 ---
-title: PushMessageData.blob()
+title: "PushMessageData: blob() method"
+short-title: blob()
 slug: Web/API/PushMessageData/blob
-tags:
-  - API
-  - Blob
-  - Experimental
-  - Method
-  - Push
-  - PushMessageData
-  - Reference
-  - Service Workers
+page-type: web-api-instance-method
 browser-compat: api.PushMessageData.blob
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+
+{{APIRef("Push API")}}
 
 The **`blob()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as a {{domxref("Blob")}} object.
 
 ## Syntax
 
-```js
-var myBlob = PushEvent.data.blob();
+```js-nolint
+blob()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref("Blob")}}.
 
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
-  var blob = event.data.blob();
+self.addEventListener("push", (event) => {
+  const blob = event.data.blob();
 
   // do something with your Blob
 });

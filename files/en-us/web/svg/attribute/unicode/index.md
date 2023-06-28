@@ -1,12 +1,12 @@
 ---
 title: unicode
 slug: Web/SVG/Attribute/unicode
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.glyph.unicode
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`unicode`** attribute specifies one or more {{Glossary("Unicode")}} characters indicating the sequence of Unicode characters which corresponds to a {{Glossary("glyph")}}.
@@ -15,11 +15,11 @@ If a character is provided, then this glyph corresponds to the given Unicode cha
 
 It is often useful to refer to characters using XML character references expressed in hexadecimal notation or decimal notation. For example, `unicode="ffl"` could be expressed as XML character references in hexadecimal notation as `unicode="&#x66;&#x66;&#x6c;"` or in decimal notation as `unicode="&#102;&#102;&#108;"`.
 
-The `unicode` attribute contributes to the process for deciding which glyph(s) are used to represent which character(s). If the attribute is not provided for a given `<glyph>`, then the only way to use this glyph is via an {{SVGElement("altGlyph")}} reference.
+The `unicode` attribute contributes to the process for deciding which glyph(s) are used to represent which character(s).
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("glyph")}}
+- {{SVGElement("glyph")}}
 
 ## Context notes
 
@@ -40,29 +40,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<string>`
-    *   : This value specifies one or more Unicode characters corresponding to a glyph.
+- `<string>`
+  - : This value specifies one or more Unicode characters corresponding to a glyph.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementUnicodeAttribute", "unicode")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

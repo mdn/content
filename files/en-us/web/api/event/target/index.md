@@ -1,12 +1,11 @@
 ---
-title: Event.target
+title: "Event: target property"
+short-title: target
 slug: Web/API/Event/target
-tags:
-  - Property
-  - Reference
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.Event.target
 ---
+
 {{ApiRef("DOM")}}
 
 The read-only **`target`** property of the
@@ -25,23 +24,23 @@ delegation**.
 
 ```js
 // Make a list
-const ul = document.createElement('ul');
+const ul = document.createElement("ul");
 document.body.appendChild(ul);
 
-const li1 = document.createElement('li');
-const li2 = document.createElement('li');
+const li1 = document.createElement("li");
+const li2 = document.createElement("li");
 ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(evt) {
-  // e.target refers to the clicked <li> element
-  // This is different than e.currentTarget, which would refer to the parent <ul> in this context
-  evt.target.style.visibility = 'hidden';
+  // evt.target refers to the clicked <li> element
+  // This is different than evt.currentTarget, which would refer to the parent <ul> in this context
+  evt.target.style.visibility = "hidden";
 }
 
 // Attach the listener to the list
 // It will fire when each <li> is clicked
-ul.addEventListener('click', hide, false);
+ul.addEventListener("click", hide, false);
 ```
 
 ## Specifications

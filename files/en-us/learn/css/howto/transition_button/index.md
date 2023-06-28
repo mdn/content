@@ -1,14 +1,8 @@
 ---
 title: How to fade a button on hover
 slug: Learn/CSS/Howto/Transition_button
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
 ---
+
 {{LearnSidebar}}
 
 In this guide you can find out how to do a gentle fade between two colors when hovering over a button.

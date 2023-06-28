@@ -1,25 +1,21 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - Functions
-  - JavaScript
-  - Method
-  - Reference
-  - inFinite
+page-type: javascript-function
 browser-compat: javascript.builtins.isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
-The global **`isFinite()`** function determines whether the
-passed value is a finite number. If  needed, the parameter is first converted to a
+The **`isFinite()`** function determines whether the
+passed value is a finite number. If needed, the parameter is first converted to a
 number.
 
 {{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 isFinite(testValue)
 ```
 
@@ -48,19 +44,17 @@ You can use this function to determine whether a number is a finite number. The
 ### Using isFinite
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
 
-isFinite(null);      // true, would've been false with the
-                     // more robust Number.isFinite(null)
-
-isFinite('0');       // true, would've been false with the
-                     // more robust Number.isFinite("0")
+// Would've been false with the more robust Number.isFinite():
+isFinite(null); // true
+isFinite("0"); // true
 ```
 
 ## Specifications

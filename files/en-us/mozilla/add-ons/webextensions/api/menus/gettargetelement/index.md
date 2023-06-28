@@ -1,15 +1,10 @@
 ---
 title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
-tags:
-  - API
-  - Method
-  - Reference
-  - WebExtensions
-  - getTargetElement
-  - menus
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.getTargetElement
 ---
+
 {{AddonSidebar}}
 
 Returns the element for a given `targetElementId`
@@ -24,14 +19,14 @@ An extension requires the "menus" permission to use this API.
 
 ## Syntax
 
-```js
+```js-nolint
 let elem = browser.menus.getTargetElement(targetElementId);
 ```
 
 ### Parameters
 
 - `targetElementId`
-  - : The property of the `{{WebExtAPIRef("menus.OnClickData")}}` object passed to the `{{WebExtAPIRef("menus.onClicked")}}` handler or `{{WebExtAPIRef("menus.onShown")}}` event.
+  - : The property of the `{{WebExtAPIRef("menus.OnClickData")}}` object passed to the `{{WebExtAPIRef("menus.onClicked")}}` handler or `{{WebExtAPIRef("menus.onShown")}}` event.
 
 ### Return value
 
@@ -45,7 +40,16 @@ The following example uses the `getTargetElement` method to get the element refe
 browser.menus.create({
   title: "Remove element",
   documentUrlPatterns: ["*://*/*"],
-  contexts: ["audio", "editable", "frame", "image", "link", "page", "password", "video"],
+  contexts: [
+    "audio",
+    "editable",
+    "frame",
+    "image",
+    "link",
+    "page",
+    "password",
+    "video",
+  ],
   onclick(info, tab) {
     browser.tabs.executeScript(tab.id, {
       frameId: info.frameId,

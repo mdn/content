@@ -1,14 +1,10 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.justify-content
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-content`** property defines how the browser distributes space between and around content items along the {{Glossary("Main Axis", "main-axis")}} of a flex container, and the inline axis of a grid container.
@@ -23,13 +19,13 @@ The alignment is done after the lengths and auto margins are applied, meaning th
 
 ```css
 /* Positional alignment */
-justify-content: center;     /* Pack items around the center */
-justify-content: start;      /* Pack items from the start */
-justify-content: end;        /* Pack items from the end */
+justify-content: center; /* Pack items around the center */
+justify-content: start; /* Pack items from the start */
+justify-content: end; /* Pack items from the end */
 justify-content: flex-start; /* Pack flex items from the start */
-justify-content: flex-end;   /* Pack flex items from the end */
-justify-content: left;       /* Pack items from the left */
-justify-content: right;      /* Pack items from the right */
+justify-content: flex-end; /* Pack flex items from the end */
+justify-content: left; /* Pack items from the left */
+justify-content: right; /* Pack items from the right */
 
 /* Baseline alignment */
 /* justify-content does not take baseline values */
@@ -41,12 +37,12 @@ justify-content: normal;
 justify-content: space-between; /* Distribute items evenly
                                    The first item is flush with the start,
                                    the last is flush with the end */
-justify-content: space-around;  /* Distribute items evenly
+justify-content: space-around; /* Distribute items evenly
                                    Items have a half-size space
                                    on either end */
-justify-content: space-evenly;  /* Distribute items evenly
+justify-content: space-evenly; /* Distribute items evenly
                                    Items have equal space around them */
-justify-content: stretch;       /* Distribute items evenly
+justify-content: stretch; /* Distribute items evenly
                                    Stretch 'auto'-sized items to fit
                                    the container */
 
@@ -58,6 +54,7 @@ justify-content: unsafe center;
 justify-content: inherit;
 justify-content: initial;
 justify-content: revert;
+justify-content: revert-layer;
 justify-content: unset;
 ```
 
@@ -76,15 +73,11 @@ justify-content: unset;
 - `center`
   - : The items are packed flush to each other toward the center of the alignment container along the main axis.
 - `left`
-  - : The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+  - : The items are packed flush with each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when [`flex-direction: column;`](/en-US/docs/Web/CSS/flex-direction) is set, this value behaves like `start`.
 - `right`
-  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis (in a grid container) or the main-axis (in a flexbox container), this value behaves like `start`.
 - `normal`
-  - : The items are packed in their default position as if no `justify-content` value was set. This value behaves as `stretch` in grid and flex containers.
-- `baseline first baseline`
-  `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+  - : Behaves as `stretch`, except in the case of multi-column containers with a non-`auto` [`column-width`](/en-US/docs/Web/CSS/column-width), in which case the columns take their specified `column-width` rather than stretching to fill the container. As `stretch` behaves as `start` in flex containers, `normal` also behaves as `start`.
 - `space-between`
   - : The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.
 - `space-around`
@@ -95,12 +88,12 @@ justify-content: unset;
 
   - : If the combined size of the items along the main axis is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
 
-    > **Note:** `stretch` is not supported by flexible boxes (flexbox).
+    > **Note:** While `stretch` is supported by flexible boxes (flexbox), when applied on a flexbox, as stretching is controlled by {{CSSXref("flex")}}, `stretch` behaves as `start`.
 
 - `safe`
-  - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
+  - : If the item overflows the alignment container, then the item is aligned as if the alignment mode is `start`. The desired alignment will not be implemented.
 - `unsafe`
-  - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container, and regardless of whether overflow which causes data loss might happen, the given alignment value is honored.
+  - : Even if the item overflows the alignment container, the desired alignment will be implemented. Unlike `safe`, which will ignore the desired alignment in favor of preventing overflow.
 
 ## Formal definition
 
@@ -143,9 +136,6 @@ justify-content: unset;
   <option value="center">center</option>
   <option value="left">left</option>
   <option value="right">right</option>
-  <option value="baseline">baseline</option>
-  <option value="first baseline">first baseline</option>
-  <option value="last baseline">last baseline</option>
   <option value="space-between" selected>space-between</option>
   <option value="space-around">space-around</option>
   <option value="space-evenly">space-evenly</option>
@@ -154,10 +144,9 @@ justify-content: unset;
 ```
 
 ```js hidden
-var justifyContent = document.getElementById("justifyContent");
-justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+const justifyContent = document.getElementById("justifyContent");
+justifyContent.addEventListener("change", (evt) => {
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 
@@ -167,7 +156,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.justify-content.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

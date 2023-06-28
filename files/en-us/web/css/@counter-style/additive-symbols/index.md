@@ -1,15 +1,10 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.additive-symbols
 ---
+
 {{CSSRef}}
 
 The **`additive-symbols`** descriptor lets you specify symbols when the value of a counter {{cssxref('system')}} descriptor is `additive`. The `additive-symbols` descriptor defines _additive tuples_, each of which is a pair containing a symbol and a non-negative integer weight. The additive system is used to construct [sign-value numbering](https://en.wikipedia.org/wiki/Sign-value_notation) systems such as Roman numerals.
@@ -53,7 +48,7 @@ When the `system` descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, o
 ```css
 @counter-style additive-symbols-example {
   system: additive;
-  additive-symbols: V 5, IV 4, I 1;
+  additive-symbols: V 5, IV 4, I 1;
 }
 .list {
   list-style: additive-symbols-example;

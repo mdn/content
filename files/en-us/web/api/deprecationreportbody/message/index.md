@@ -1,27 +1,20 @@
 ---
-title: DeprecationReportBody.message
+title: "DeprecationReportBody: message property"
+short-title: message
 slug: Web/API/DeprecationReportBody/message
-tags:
-  - API
-  - Property
-  - Reference
-  - message
-  - DeprecationReportBody
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.message
 ---
-{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`message`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns a human-readable description of the deprecation. This typically matches the message a browser will display in its DevTools console regarding a deprecated feature.
 
-## Syntax
+## Value
 
-```js
-let message = DeprecationReportBody.message;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 
@@ -29,11 +22,11 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.message);

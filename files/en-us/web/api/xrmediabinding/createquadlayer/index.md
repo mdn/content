@@ -1,22 +1,20 @@
 ---
-title: XRMediaBinding.createQuadLayer()
+title: "XRMediaBinding: createQuadLayer() method"
+short-title: createQuadLayer()
 slug: Web/API/XRMediaBinding/createQuadLayer
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRMediaBinding.createQuadLayer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createQuadLayer()`** method of the {{domxref("XRMediaBinding")}} interface returns an {{domxref("XRQuadLayer")}} object which is a layer that takes up a flat rectangular space in the virtual environment.
 
 ## Syntax
 
-```js
+```js-nolint
 createQuadLayer(video, options)
 ```
 
@@ -26,18 +24,29 @@ createQuadLayer(video, options)
   - : An {{domxref("HTMLVideoElement")}} to display.
 - `options`
   - : An object to configure the {{domxref("XRQuadLayer")}}. The object can have the following properties and `space` is required:
-    - `height`: Optional. A number specifying the height of the layer.
-    - `invertStereo`: Optional. A boolean specifying if the natural location of each view in the video should be inverted. By default `false`.
-    - `layout`: Optional. A string indicating the layout of the video. Possible values:
-      - `default`: The layer accommodates all views of the session.
-      - `mono`: A single {{domxref("XRSubImage")}} is allocated and presented to both eyes.
-      - `stereo`: The user agent decides how it allocates the {{domxref("XRSubImage")}} (one or two) and the layout (top/bottom or left/right). It is recommended to use the `texture-array` texture type for `stereo` layouts.
-      - `stereo-left-right`: A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
-      - `stereo-top-bottom`: A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
-      The default value is `mono`.
-    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user’s physical environment.
-    - `transform`: Optional. An {{domxref("XRRigidTransform")}} object defining the offset and orientation relative to `space`.
-    - `width`: Optional. A number specifying the width of the layer.
+    - `height` {{optional_inline}}
+      - : A number specifying the height of the layer.
+    - `invertStereo` {{optional_inline}}
+      - : A boolean specifying if the natural location of each view in the video should be inverted. By default `false`.
+    - `layout` {{optional_inline}}
+      - : A string indicating the layout of the video. Possible values:
+        - `default`
+          - : The layer accommodates all views of the session.
+        - `mono`
+          - : A single {{domxref("XRSubImage")}} is allocated and presented to both eyes.
+        - `stereo`
+          - : The user agent decides how it allocates the {{domxref("XRSubImage")}} (one or two) and the layout (top/bottom or left/right). It is recommended to use the `texture-array` texture type for `stereo` layouts.
+        - `stereo-left-right`
+          - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
+        - `stereo-top-bottom`
+          - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
+            The default value is `mono`.
+    - `space` **Required**
+      - : An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
+    - `transform` {{optional_inline}}
+      - : An {{domxref("XRRigidTransform")}} object defining the offset and orientation relative to `space`.
+    - `width` {{optional_inline}}
+      - : A number specifying the width of the layer.
 
 ### Return value
 
@@ -52,15 +61,15 @@ Create an {{domxref("XRMediaBinding")}} and use an {{domxref("HTMLVideoElement")
 ```js
 function onXRSessionStarted(xrSession) {
   const xrMediaBinding = new XRMediaBinding(xrSession);
-  const video = document.createElement('video');
-  video.src = 'just-fascination.mp4';
+  const video = document.createElement("video");
+  video.src = "just-fascination.mp4";
 
   const videoLayer = xrMediaBinding.createQuadLayer(video, {
-    space: xrReferenceSpace
+    space: xrReferenceSpace,
   });
 
   xrSession.updateRenderState({
-    layers: [videoLayer]
+    layers: [videoLayer],
   });
 }
 ```

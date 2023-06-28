@@ -1,18 +1,13 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.SharedArrayBuffer.slice
 ---
+
 {{JSRef}}
 
-The **`SharedArrayBuffer.prototype.slice()`** method returns a
+The **`slice()`** method of {{jsxref("SharedArrayBuffer")}} instances returns a
 new {{jsxref("SharedArrayBuffer")}} whose contents are a copy of this
 `SharedArrayBuffer`'s bytes from begin, inclusive, up to end, exclusive. If
 either begin or end is negative, it refers to an index from the end of the array, as
@@ -23,7 +18,7 @@ opposed to from the beginning. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(begin)
 slice(begin, end)
@@ -65,10 +60,10 @@ A new {{jsxref("SharedArrayBuffer")}} containing the extracted elements.
 ### Using slice()
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
+const sab = new SharedArrayBuffer(1024);
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 

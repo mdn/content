@@ -1,13 +1,14 @@
 ---
-title: Sanitizer.sanitize()
+title: "Sanitizer: sanitize() method"
+short-title: sanitize()
 slug: Web/API/Sanitizer/sanitize
-tags:
-  - HTML Sanitizer API
-  - Method
-  - sanitize
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Sanitizer.sanitize
 ---
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`sanitize()`** method of the {{domxref("Sanitizer")}} interface is used to sanitize a tree of DOM nodes, removing any unwanted elements or attributes.
 
@@ -22,14 +23,14 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 ## Syntax
 
-```js
+```js-nolint
 sanitize(input)
 ```
 
 ### Parameters
 
 - `input`
-  - : A  {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
+  - : A {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
 
 ### Return value
 
@@ -44,10 +45,10 @@ None.
 To sanitize data from an iframe with id `userFrame`:
 
 ```js
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const sanitizer = new Sanitizer(); // Default sanitizer;
 
 // Get the frame and its Document object
-const frame_element = document.getElementById("userFrame")
+const frame_element = document.getElementById("userFrame");
 const unsanitized_frame_tree = frame_element.contentWindow.document;
 
 // Sanitize the document tree and update the frame.
@@ -67,4 +68,3 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 - {{domxref('HTML Sanitizer API')}}
 - {{domxref("Element.setHTML()")}}
-

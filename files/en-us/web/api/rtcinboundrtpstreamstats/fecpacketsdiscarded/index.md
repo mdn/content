@@ -1,22 +1,11 @@
 ---
-title: RTCInboundRtpStreamStats.fecPacketsDiscarded
+title: "RTCInboundRtpStreamStats: fecPacketsDiscarded property"
+short-title: fecPacketsDiscarded
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded
-tags:
-  - API
-  - Errors
-  - FEC
-  - Packets
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - fecPacketsDiscarded
+page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.fecPacketsDiscarded
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`fecPacketsDiscarded`** property
@@ -24,13 +13,7 @@ of the {{domxref("RTCInboundRtpStreamStats")}} dictionary is a numeric value
 indicating the number of {{Glossary("RTP")}} Forward Error Correction (FEC) packets
 that have been discarded.
 
-## Syntax
-
-```js
-var fecPacketsDiscarded = rtcInboundRtpStreamStats.fecPacketsDiscarded;
-```
-
-### Value
+## Value
 
 An unsigned integer value indicating how many FEC packets have been received whose
 error correction payload has been discarded.

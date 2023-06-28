@@ -1,32 +1,23 @@
 ---
-title: ':first-child'
+title: ":first-child"
 slug: Web/CSS/:first-child
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.first-child
 ---
+
 {{CSSRef}}
 
 The **`:first-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element among a group of sibling elements.
 
-```css
-/* Selects any <p> that is the first element
-   among its siblings */
-p:first-child {
-  color: lime;
-}
-```
-
-> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-child.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{csssyntax}}
+```css
+:first-child {
+  /* ... */
+}
+```
 
 ## Examples
 
@@ -68,7 +59,8 @@ p:first-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>
@@ -105,7 +97,7 @@ ul li:first-child {
 
 ## See also
 
-- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":last-child")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}

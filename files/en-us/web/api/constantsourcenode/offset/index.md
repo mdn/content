@@ -1,16 +1,11 @@
 ---
-title: ConstantSourceNode.offset
+title: "ConstantSourceNode: offset property"
+short-title: offset
 slug: Web/API/ConstantSourceNode/offset
-tags:
-  - API
-  - Audio
-  - ConstantSourceNode
-  - Media
-  - Property
-  - Read-only
-  - Web Audio API
+page-type: web-api-instance-property
 browser-compat: api.ConstantSourceNode.offset
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The read-only `offset` property of the {{ domxref("ConstantSourceNode") }}
@@ -26,16 +21,7 @@ by the source when asked for the next sample.
 > myConstantSourceNode.offset.value = newValue;
 > ```
 
-## Syntax
-
-```js
-let offsetParameter = ConstantAudioNode.offset;
-
-let offset = ConstantSourceNode.offset.value;
-ConstantSourceNode.offset.value = newValue;
-```
-
-### Value
+## Value
 
 An {{ domxref("AudioParam") }} object indicating the [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) value returned for every
 sample by this node. The default value is 1.0.
@@ -43,12 +29,11 @@ sample by this node. The default value is 1.0.
 To access the `offset` parameter's current value, access the parameter's
 `value` property, as shown in the syntax box above.
 
-## Example
+## Examples
 
 This example shows how to set up a `ConstantSourceNode` so its
 `offset` is used as the input to a pair of {{domxref("GainNode")}}s; this
-snippet is derived from the complete example you can find in [Controlling
-multiple parameters with ConstantSourcenode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
+snippet is derived from the complete example you can find in [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
 
 ```js
 gainNode2 = context.createGain();
@@ -68,7 +53,7 @@ to match the gain on the two nodes. Then we create a new
 {{domxref("GainNode.gain")}} values. Each of those values is also an
 {{domxref("AudioParam")}}.
 
-Let's say we have an event handler (for {{event("click")}} events, in this case) which
+Let's say we have an event handler (for {{domxref("Element/click_event", "click")}} events, in this case) which
 needs to respond by altering the value of the two gain nodes. With the linkage above in
 place, that can be done using this simple event handler:
 
@@ -94,8 +79,7 @@ adopt the new volume level.
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("ConstantSourceNode")}}
 - {{domxref("AudioNode")}}
 - {{domxref("AudioParam")}}

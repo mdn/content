@@ -1,23 +1,22 @@
 ---
-title: SVGPointList.appendItem()
+title: "SVGPointList: appendItem() method"
+short-title: appendItem()
 slug: Web/API/SVGPointList/appendItem
-tags:
-  - API
-  - Method
-  - Reference
-  - appendItem
-  - SVGPointList
+page-type: web-api-instance-method
 browser-compat: api.SVGPointList.appendItem
 ---
+
 {{APIRef("SVG")}}
 
 The **`appendItem()`** method of the {{domxref("SVGPointList")}} interface adds a {{domxref("SVGPoint","point")}} to the end of the list.
 
 ## Syntax
 
-```js
-SVGPointList.appendItem(obj);
+```js-nolint
+appendItem(obj)
 ```
+
+### Parameters
 
 - `obj`
   - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be appended.
@@ -28,7 +27,7 @@ The {{domxref("SVGPoint")}} object that was appended.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModicationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples
@@ -37,8 +36,12 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 
 ```html
 <svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline
+    id="example"
+    stroke="black"
+    fill="none"
+    points="50,0 21,90 98,35 2,35 79,90" />
+</svg>
 ```
 
 ```js

@@ -1,16 +1,11 @@
 ---
-title: BaseAudioContext.createChannelSplitter()
+title: "BaseAudioContext: createChannelSplitter() method"
+short-title: createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createChannelSplitter
+page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createChannelSplitter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createChannelSplitter()` method of the {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("ChannelSplitterNode")}},
@@ -22,21 +17,21 @@ which is used to access the individual channels of an audio stream and process t
 
 ## Syntax
 
-```js
+```js-nolint
 createChannelSplitter(numberOfOutputs)
 ```
 
 ### Parameters
 
-- numberOfOutputs
+- `numberOfOutputs`
   - : The number of channels in the input audio stream that you want to output separately;
-    the default is 6 if this parameter is not specified.
+    the default is 6 if this parameter is not specified.
 
-### Returns
+### Return value
 
 A {{domxref("ChannelSplitterNode")}}.
 
-## Example
+## Examples
 
 The following simple example shows how you could separate a stereo track (say, a piece
 of music), and process the left and right channel differently. To use them, you need to
@@ -45,30 +40,30 @@ method, which allow you to specify the index of the channel to connect from and 
 index of the channel to connect to.
 
 ```js
-var ac = new AudioContext();
-ac.decodeAudioData(someStereoBuffer, function(data) {
- var source = ac.createBufferSource();
- source.buffer = data;
- var splitter = ac.createChannelSplitter(2);
- source.connect(splitter);
- var merger = ac.createChannelMerger(2);
+const ac = new AudioContext();
+ac.decodeAudioData(someStereoBuffer, (data) => {
+  const source = ac.createBufferSource();
+  source.buffer = data;
+  const splitter = ac.createChannelSplitter(2);
+  source.connect(splitter);
+  const merger = ac.createChannelMerger(2);
 
- // Reduce the volume of the left channel only
- var gainNode = ac.createGain();
- gainNode.gain.setValueAtTime(0.5, ac.currentTime);
- splitter.connect(gainNode, 0);
+  // Reduce the volume of the left channel only
+  const gainNode = ac.createGain();
+  gainNode.gain.setValueAtTime(0.5, ac.currentTime);
+  splitter.connect(gainNode, 0);
 
- // Connect the splitter back to the second input of the merger: we
- // effectively swap the channels, here, reversing the stereo image.
- gainNode.connect(merger, 0, 1);
- splitter.connect(merger, 1, 0);
+  // Connect the splitter back to the second input of the merger: we
+  // effectively swap the channels, here, reversing the stereo image.
+  gainNode.connect(merger, 0, 1);
+  splitter.connect(merger, 1, 0);
 
- var dest = ac.createMediaStreamDestination();
+  const dest = ac.createMediaStreamDestination();
 
- // Because we have used a ChannelMergerNode, we now have a stereo
- // MediaStream we can use to pipe the Web Audio graph to WebRTC,
- // MediaRecorder, etc.
- merger.connect(dest);
+  // Because we have used a ChannelMergerNode, we now have a stereo
+  // MediaStream we can use to pipe the Web Audio graph to WebRTC,
+  // MediaRecorder, etc.
+  merger.connect(dest);
 });
 ```
 

@@ -1,50 +1,39 @@
 ---
-title: BiquadFilterNode.gain
+title: "BiquadFilterNode: gain property"
+short-title: gain
 slug: Web/API/BiquadFilterNode/gain
-tags:
-  - API
-  - BiquadFilterNode
-  - Gain
-  - Property
-  - Reference
-  - Web Audio API
+page-type: web-api-instance-property
 browser-compat: api.BiquadFilterNode.gain
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The `gain` property of the {{ domxref("BiquadFilterNode") }} interface Is a [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](https://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
+The `gain` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} — a double representing the [gain](https://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 
-When it takes a positive value it is a real gain, when negative it is an attenuation.
+When its value is positive, it represents a real gain; when negative, it represents an attenuation.
 
-It is expressed in dB, has a default value of `0` and can take a value in a nominal range of `-40` to `40`.
+It is expressed in dB, has a default value of `0`, and can take a value in a nominal range of `-40` to `40`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();
-biquadfilter.gain.value = 25;
-```
-
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}.
 
-## Example
+> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
 
-The following example shows basic usage of an AudioContext to create a Biquad filter node. For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (look at the [source code](https://github.com/mdn/voice-change-o-matic) too).
+## Examples
+
+The following example shows basic usage of an AudioContext to create a Biquad filter node.
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 //set up the different audio nodes we will use for the app
-var analyser = audioCtx.createAnalyser();
-var distortion = audioCtx.createWaveShaper();
-var gainNode = audioCtx.createGain();
-var biquadFilter = audioCtx.createBiquadFilter();
-var convolver = audioCtx.createConvolver();
+const analyser = audioCtx.createAnalyser();
+const distortion = audioCtx.createWaveShaper();
+const gainNode = audioCtx.createGain();
+const biquadFilter = audioCtx.createBiquadFilter();
+const convolver = audioCtx.createConvolver();
 
 // connect the nodes together
 

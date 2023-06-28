@@ -1,16 +1,11 @@
 ---
-title: HTMLFormElement.length
+title: "HTMLFormElement: length property"
+short-title: length
 slug: Web/API/HTMLFormElement/length
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.length`**
@@ -30,23 +25,14 @@ that any whose type is "image" are omitted for historical reasons),
 {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}},
 and {{HTMLElement("textarea")}}.
 
-## Syntax
+## Value
+
+A number.
+
+## Examples
 
 ```js
-numControls = form.length;
-```
-
-### Value
-
-`numControls` is the number of form controls within the
-`<form>`. This is the same as the number of the elements in the
-{{domxref("HTMLFormControlsCollection")}} returned by the
-{{domxref("HTMLFormElement.elements", "elements")}} property.
-
-## Example
-
-```js
-if (document.getElementById('form1').length > 1) {
+if (document.getElementById("form1").length > 1) {
   // more than one form control here
 }
 ```

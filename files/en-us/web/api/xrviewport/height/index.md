@@ -1,26 +1,11 @@
 ---
-title: XRViewport.height
+title: "XRViewport: height property"
+short-title: height
 slug: Web/API/XRViewport/height
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRViewport
-  - augmented
-  - height
-  - size
-  - viewport
+page-type: web-api-instance-property
 browser-compat: api.XRViewport.height
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewport")}} property

@@ -1,17 +1,12 @@
 ---
-title: WritableStreamDefaultWriter.abort()
+title: "WritableStreamDefaultWriter: abort() method"
+short-title: abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - abort
+page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.abort
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`abort()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface aborts the stream, signaling that
@@ -24,14 +19,15 @@ rejected promise.
 
 ## Syntax
 
-```js
-var promise = writableStreamDefaultWriter.abort(reason);
+```js-nolint
+abort()
+abort(reason)
 ```
 
 ### Parameters
 
-- reason {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing a human-readable reason for the abort.
+- `reason` {{optional_inline}}
+  - : A string representing a human-readable reason for the abort.
 
 ### Return value
 
@@ -40,35 +36,38 @@ parameter.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The stream you are trying to abort is not a {{domxref("WritableStream")}}, or it is
     locked.
 
 ## Examples
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    ...
-  },
-  abort(err) {
-    ...
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-...
+// ...
 
 // abort the stream when desired
 writer.abort.then((reason) => {
   console.log(reason);
-})
+});
 ```
 
 ## Specifications

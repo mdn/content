@@ -1,11 +1,11 @@
 ---
-title: CharacterData.substringData()
+title: "CharacterData: substringData() method"
+short-title: substringData()
 slug: Web/API/CharacterData/substringData
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CharacterData.substringData
 ---
+
 {{APIRef("DOM")}}
 
 The **`substringData()`** method of the {{domxref("CharacterData")}} interface
@@ -15,7 +15,7 @@ and extending for a given number of characters afterwards.
 
 ## Syntax
 
-```js
+```js-nolint
   domString = characterData.substringData(offset, count)
 ```
 
@@ -29,7 +29,7 @@ and extending for a given number of characters afterwards.
 
 ### Return value
 
-A new {{jsxref("String")}} object with the substring.
+A string with the substring.
 
 ## Exceptions
 

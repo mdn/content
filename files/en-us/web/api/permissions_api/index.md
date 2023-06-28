@@ -1,20 +1,15 @@
 ---
 title: Permissions API
 slug: Web/API/Permissions_API
-tags:
-  - API
-  - Introduction
-  - Overview
-  - Permissions
-  - Permissions API
-  - Web
-  - access
+page-type: web-api-overview
+browser-compat: api.Permissions
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
-The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
+The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (although not current versions of Firefox, as [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions) is not implemented).
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (although not current versions of Firefox, as [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions) is not implemented).
 
 ## Concepts and usage
 
@@ -35,13 +30,13 @@ More APIs will gain Permissions API support over time.
 
 ## Examples
 
-We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on Github](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
+We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
 
 Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 
 ## Interfaces
 
-- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{readonlyinline}}
+- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
   - : Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.
 - {{domxref("Permissions")}}
   - : Provides the core Permission API functionality, such as methods for querying and revoking permissions.
@@ -50,15 +45,11 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 ## Specifications
 
-| Specification                                     |
-| ------------------------------------------------- |
-| [Permissions](https://w3c.github.io/permissions/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Permissions interface
-
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## See also
 

@@ -1,29 +1,26 @@
 ---
 title: CSSNamespaceRule
 slug: Web/API/CSSNamespaceRule
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.CSSNamespaceRule
 ---
+
 {{APIRef("CSSOM")}}
 
-The **`CSSNamespaceRule`** interface describes an object representing a single CSS {{ cssxref("@namespace") }} {{cssxref("at-rule")}}.
+The **`CSSNamespaceRule`** interface describes an object representing a single CSS {{ cssxref("@namespace") }} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_Inherits methods from its ancestor {{domxref("CSSRule")}}._
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSNamespaceRule.namespaceURI")}}
-  - : Returns a {{ domxref("DOMString") }} containing the text of the URI of the given namespace.
+  - : Returns a string containing the text of the URI of the given namespace.
 - {{domxref("CSSNamespaceRule.prefix")}}
-  - : Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.
+  - : Returns a string with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 

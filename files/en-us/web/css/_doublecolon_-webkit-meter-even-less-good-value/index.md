@@ -1,15 +1,12 @@
 ---
-title: '::-webkit-meter-even-less-good-value'
+title: "::-webkit-meter-even-less-good-value"
 slug: Web/CSS/::-webkit-meter-even-less-good-value
-tags:
-  - '-webkit-meter-even-less-good-value'
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-meter-even-less-good-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-meter-even-less-good-value`** gives a red color to a {{htmlelement("meter")}} element when the value and the optimum attributes fall outside the low-high range, but in opposite zones. To illustrate, it applies when _value_ < _low_ < _high_ < _optimum_ or _value_ > _high_ > _low_ > _optimum_.
@@ -17,7 +14,9 @@ The **`::-webkit-meter-even-less-good-value`** gives a red color to a {{htmlelem
 ## Syntax
 
 ```css
-::-webkit-meter-even-less-good-value
+::-webkit-meter-even-less-good-value {
+  /* ... */
+}
 ```
 
 ## Specifications

@@ -1,14 +1,10 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.column-rule
 ---
+
 {{CSSRef}}
 
 The **`column-rule`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the line drawn between columns in a multi-column layout.
@@ -31,12 +27,13 @@ column-rule: thick inset blue;
 column-rule: inherit;
 column-rule: initial;
 column-rule: revert;
+column-rule: revert-layer;
 column-rule: unset;
 ```
 
-The `column-rule` property is specified as one, two, or three of the values listed below, in any order.
-
 ### Values
+
+The `column-rule` property is specified as one, two, or three of the values listed below, in any order.
 
 - `<'column-rule-width'>`
   - : Is a {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. See {{cssxref("border-width")}} for details.
@@ -59,15 +56,23 @@ The `column-rule` property is specified as one, two, or three of the values list
 
 ```css
 /* Same as "medium dotted currentcolor" */
-p.foo { column-rule: dotted; }
+p.foo {
+  column-rule: dotted;
+}
 
 /* Same as "medium solid blue" */
-p.bar { column-rule: solid blue; }
+p.bar {
+  column-rule: solid blue;
+}
 
 /* Same as "8px solid currentcolor" */
-p.baz { column-rule: solid 8px; }
+p.baz {
+  column-rule: solid 8px;
+}
 
-p.abc { column-rule: thick inset blue; }
+p.abc {
+  column-rule: thick inset blue;
+}
 ```
 
 ### Example 2
@@ -76,10 +81,9 @@ p.abc { column-rule: thick inset blue; }
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns.
-  Take note of how the `column-rule` property is used
-  to adjust the style, width, and color of the rule
-  that appears between the columns.
+  This is a bunch of text split into three columns. Take note of how the
+  `column-rule` property is used to adjust the style, width, and color of the
+  rule that appears between the columns.
 </p>
 ```
 

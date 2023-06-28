@@ -1,15 +1,11 @@
 ---
-title: HTMLElement.offsetWidth
+title: "HTMLElement: offsetWidth property"
+short-title: offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetWidth`** read-only property returns
@@ -24,22 +20,16 @@ If the element is hidden (for example, by setting `style.display` on the
 element or one of its ancestors to `"none"`), then `0` is
 returned.
 
-## Syntax
+## Value
 
-```js
-var intElemOffsetWidth = element.offsetWidth;
-```
-
-`intElemOffsetWidth` is a variable storing an integer corresponding to the
-`offsetWidth` pixel value of the element. The `offsetWidth`
-property is a read-only.
+An integer corresponding to the `offsetWidth` pixel value of the element. The `offsetWidth` property is a read-only.
 
 > **Note:** This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
-## Example
+## Examples
 
-![](dimensions-offset.png)
+![An example element with large padding, border and margin. `offsetWidth` is the layout width of the element including its padding and border, and excluding its margin.](dimensions-offset.png)
 
 ## Specifications
 
@@ -59,5 +49,4 @@ dimensions, or an element's border-box width.
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

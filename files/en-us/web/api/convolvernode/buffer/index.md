@@ -1,15 +1,11 @@
 ---
-title: ConvolverNode.buffer
+title: "ConvolverNode: buffer property"
+short-title: buffer
 slug: Web/API/ConvolverNode/buffer
-tags:
-  - API
-  - Buffer
-  - ConvolverNode
-  - Property
-  - Reference
-  - Web Audio API
+page-type: web-api-instance-property
 browser-compat: api.ConvolverNode.buffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`buffer`** property of the {{ domxref("ConvolverNode") }} interface represents a mono, stereo, or 4-channel {{domxref("AudioBuffer")}} containing the (possibly multichannel) impulse response used by the `ConvolverNode` to create the reverb effect.
@@ -18,46 +14,43 @@ This is normally a simple recording of as-close-to-an-impulse as can be found in
 
 This _{{domxref("AudioBuffer")}}_ must have the same sample-rate as the `AudioContext` or an exception will be thrown. At the time when this attribute is set, the buffer and the state of the attribute will be used to configure the `ConvolverNode` with this impulse response having the given normalization. The initial value of this attribute is `null`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var convolver = audioCtx.createConvolver();
-convolver.buffer = myAudioBuffer;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioBuffer")}}.
 
-## Example
+## Examples
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
-var soundSource, concertHallBuffer;
+let soundSource;
+let concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open('GET', 'concert-crowd.ogg', true);
-ajaxRequest.responseType = 'arraybuffer';
+ajaxRequest.open("GET", "concert-crowd.ogg", true);
+ajaxRequest.responseType = "arraybuffer";
 
-ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
+ajaxRequest.onload = () => {
+  const audioData = ajaxRequest.response;
+  audioCtx.decodeAudioData(
+    audioData,
+    (buffer) => {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
-}
+    },
+    (e) => console.error(`Error with decoding audio data: ${e.err}`)
+  );
+};
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.buffer = concertHallBuffer;
 ```

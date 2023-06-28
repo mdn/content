@@ -1,11 +1,10 @@
 ---
 title: direction
 slug: Web/SVG/Attribute/direction
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.direction
 ---
+
 {{SVGRef}}
 
 The **`direction`** attribute specifies the inline-base direction of a {{SVGElement("text")}} or {{SVGElement("tspan")}} element. It defines the start and end points of a line of text as used by the {{SVGAttr("text-anchor")}} and {{SVGAttr("inline-size")}} properties. It also may affect the direction in which characters are positioned if the {{SVGAttr("unicode-bidi")}} property's value is either `embed` or `bidi-override`.
@@ -18,25 +17,30 @@ In many cases, the bidirectional Unicode algorithm produces the desired result a
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("text")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
-<svg viewBox="0 0 600 72" xmlns="http://www.w3.org/2000/svg"
-    direction="rtl" lang="fa">
-  <text x="300" y="50" text-anchor="middle"
-      font-size="36">داستان SVG 1.1 SE طولا ني است.</text>
+<svg
+  viewBox="0 0 600 72"
+  xmlns="http://www.w3.org/2000/svg"
+  direction="rtl"
+  lang="fa">
+  <text x="300" y="50" text-anchor="middle" font-size="36">
+    داستان SVG 1.1 SE طولا ني است.
+  </text>
 </svg>
 ```
 
@@ -61,41 +65,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Writing Modes", "#direction", "direction")}}
-      </td>
-      <td>{{Spec2("CSS3 Writing Modes")}}</td>
-      <td>Definition in CSS</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "text.html#DirectionProperty", "direction")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Refers to the CSS Writing Modes specification of the
-        <code>direction</code> property.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#DirectionProperty", "direction")}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -103,4 +73,4 @@ html, body, svg {
 
 ## See also
 
-*   {{cssxref("direction", "CSS direction")}}
+- {{cssxref("direction", "CSS direction")}}

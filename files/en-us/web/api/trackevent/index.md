@@ -1,20 +1,13 @@
 ---
 title: TrackEvent
 slug: Web/API/TrackEvent
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - TrackEvent
-  - Video
+page-type: web-api-interface
 browser-compat: api.TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are {{event("addtrack")}} and {{event("removetrack")}}.
+The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are `addtrack` and `removetrack`.
 
 It's important not to confuse `TrackEvent` with the {{domxref("RTCTrackEvent")}} interface, which is used for tracks which are part of an {{domxref("RTCPeerConnection")}}.
 
@@ -24,28 +17,30 @@ Events based on `TrackEvent` are always sent to one of the media track list type
 - Events involving audio tracks are always sent to the {{domxref("AudioTrackList")}} specified in {{domxref("HTMLMediaElement.audioTracks")}}
 - Events affecting text tracks are sent to the {{domxref("TextTrackList")}} object indicated by {{domxref("HTMLMediaElement.textTracks")}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("TrackEvent.TrackEvent", "TrackEvent()")}}
   - : Creates and initializes a new `TrackEvent` object with the event type specified, as well as optional additional properties.
 
-## Properties
+## Instance properties
 
 _`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are also available on `TrackEvent` objects._
 
 - {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
   - : The DOM track object the event is in reference to. If not `null`, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}).
 
-## Methods
+## Instance methods
 
 _`TrackEvent` has no methods of its own; however, it is based on {{domxref("Event")}}, so it provides the methods available on `Event` objects._
 
 ## Example
 
-This example sets up a function, `handleTrackEvent()`, which is called for any {{event("addtrack")}} or {{event("removetrack")}} event on the first {{HTMLElement("video")}} element found in the document.
+This example sets up a function, `handleTrackEvent()`, which is called for any `addtrack` or `removetrack` event on the first {{HTMLElement("video")}} element found in the document.
 
 ```js
-var videoElem = document.querySelector("video");
+const videoElem = document.querySelector("video");
 
 videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent, false);
@@ -55,24 +50,24 @@ videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
 
 function handleTrackEvent(event) {
-  var trackKind;
+  let trackKind;
 
-  if (event.target instanceof(VideoTrackList)) {
+  if (event.target instanceof VideoTrackList) {
     trackKind = "video";
-  } else if (event.target instanceof(AudioTrackList)) {
+  } else if (event.target instanceof AudioTrackList) {
     trackKind = "audio";
-  } else if (event.target instanceof(TextTrackList)) {
+  } else if (event.target instanceof TextTrackList) {
     trackKind = "text";
   } else {
     trackKind = "unknown";
   }
 
-  switch(event.type) {
+  switch (event.type) {
     case "addtrack":
-      console.log("Added a " + trackKind + " track");
+      console.log(`Added a ${trackKind} track`);
       break;
     case "removetrack":
-      console.log("Removed a " + trackKind + " track");
+      console.log(`Removed a ${trackKind} track`);
       break;
   }
 }

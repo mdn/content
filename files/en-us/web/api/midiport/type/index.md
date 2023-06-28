@@ -1,27 +1,18 @@
 ---
-title: MIDIPort.type
+title: "MIDIPort: type property"
+short-title: type
 slug: Web/API/MIDIPort/type
-tags:
-  - API
-  - Property
-  - Reference
-  - type
-  - MIDIPort
+page-type: web-api-instance-property
 browser-compat: api.MIDIPort.type
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`type`** read-only property of the {{domxref("MIDIPort")}} interface returns the type of the port, indicating whether this is an input or output MIDI port.
 
-## Syntax
+## Value
 
-```js
-let type = MIDIPort.type;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the type of the port, one of:
+A string containing the type of the port, one of:
 
 - `"input"`
   - : The `MIDIPort` is an input port.
@@ -33,8 +24,8 @@ A {{domxref("DOMString","string")}} containing the type of the port, one of:
 The following example loops through all input ports and prints the `type` of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.type); // should always be input
 }
 ```

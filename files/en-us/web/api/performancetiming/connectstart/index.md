@@ -1,19 +1,14 @@
 ---
-title: PerformanceTiming.connectStart
+title: "PerformanceTiming: connectStart property"
+short-title: connectStart
 slug: Web/API/PerformanceTiming/connectStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTML
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.connectStart
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
@@ -23,15 +18,13 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, where the request to open a connection is sent to
 the network. If the transport layer reports an error and the connection establishment is
-started again, the last connection establisment start time is given. If a persistent
+started again, the last connection establishment start time is given. If a persistent
 connection is used, the value will be the same as
 {{domxref("PerformanceTiming.fetchStart")}}.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.connectStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

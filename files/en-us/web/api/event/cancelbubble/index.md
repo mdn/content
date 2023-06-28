@@ -1,19 +1,20 @@
 ---
-title: Event.cancelBubble
+title: "Event: cancelBubble property"
+short-title: cancelBubble
 slug: Web/API/Event/cancelBubble
-tags:
-  - Property
-  - Reference
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Event.cancelBubble
 ---
-{{APIRef("DOM Events")}} {{Deprecated_Header}}
+
+{{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`cancelBubble`** property of the {{domxref("Event")}}
 interface is deprecated. Use {{domxref("Event.stopPropagation()")}} instead.
 Setting its value to `true` before returning from an event handler prevents propagation
 of the event. In later implementations, setting this to `false` does nothing.
-See {{anch("Browser compatibility")}} for details.
+See [Browser compatibility](#browser_compatibility) for details.
 
 ## Value
 
@@ -22,10 +23,10 @@ A boolean value. The value `true` means that the event must not be propagated fu
 ## Example
 
 ```js
-elem.onclick = function(event) {
+elem.onclick = (event) => {
   // Do cool things here
   event.cancelBubble = true;
-}
+};
 ```
 
 ## Specifications

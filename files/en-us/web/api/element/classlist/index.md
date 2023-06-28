@@ -1,15 +1,11 @@
 ---
-title: Element.classList
+title: "Element: classList property"
+short-title: classList
 slug: Web/API/Element/classList
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Element.classList
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.classList`** is a read-only property that
@@ -19,13 +15,7 @@ attributes of the element. This can then be used to manipulate the class list.
 Using `classList` is a convenient alternative to accessing an element's list
 of classes as a space-delimited string via {{domxref("element.className")}}.
 
-## Syntax
-
-```js
-const elementClasses = elementNodeReference.classList;
-```
-
-### Returns
+## Value
 
 A {{domxref("DOMTokenList")}} representing the contents of the element's
 `class` attribute. If the `class` attribute is not set or empty,
@@ -34,11 +24,13 @@ the `length` property equal to `0`.
 
 Although the `classList` property itself is read-only, you can modify its associated `DOMTokenList` using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
+You can test whether the element contains a given class using the {{domxref("DOMTokenList/contains", "classList.contains()")}} method.
+
 ## Examples
 
 ```js
-const div = document.createElement('div');
-div.className = 'foo';
+const div = document.createElement("div");
+div.className = "foo";
 
 // our starting state: <div class="foo"></div>
 console.log(div.outerHTML);
@@ -54,8 +46,9 @@ console.log(div.outerHTML);
 div.classList.toggle("visible");
 
 // add/remove visible, depending on test conditional, i less than 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
+// false
 console.log(div.classList.contains("foo"));
 
 // add or remove multiple classes
@@ -70,9 +63,6 @@ div.classList.remove(...cls);
 // replace class "foo" with class "bar"
 div.classList.replace("foo", "bar");
 ```
-
-> **Note:** Versions of Firefox before 26 do not implement the use of several arguments in the
-> add/remove/toggle methods. See <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
 ## Specifications
 

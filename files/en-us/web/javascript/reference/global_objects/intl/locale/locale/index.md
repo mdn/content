@@ -1,49 +1,41 @@
 ---
 title: Intl.Locale() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
+
 {{JSRef}}
 
-The **`Intl.Locale`** constructor is a
-standard built-in property of the Intl object that represents a Unicode locale
-identifier.
+The **`Intl.Locale()`** constructor creates {{jsxref("Intl.Locale")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-locale.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Locale(tag)
 new Intl.Locale(tag, options)
 ```
+
+> **Note:** `Intl.Locale()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `tag`
   - : The Unicode locale identifier string.
 - `options`
-  - : An object that contains configuration for the Locale. Keys are Unicode locale tags,
-    values are valid Unicode tag values.
+  - : An object that contains configuration for the Locale. Keys are Unicode locale tags, values are valid Unicode tag values. Option values here take priority over extension keys in the locale identifier.
 
 ## Examples
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor takes
+At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes
 a locale identifier string as its argument:
 
 ```js
-let us = new Intl.Locale('en-US');
+const us = new Intl.Locale("en-US");
 ```
 
 ### Using the Locale constructor with an options object
@@ -55,14 +47,9 @@ property of the configuration object to your desired hour cycle type, and then p
 into the constructor:
 
 ```js
-let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
-console.log(locale.hourCycle); // Prints "h12"
+const locale = new Intl.Locale("en-US", { hourCycle: "h12" });
+console.log(locale.hourCycle); // "h12"
 ```
-
-## Polyfill
-
-[formatjs Intl.Locale
-polyfill](https://formatjs.io/docs/polyfills/intl-locale)
 
 ## Specifications
 
@@ -75,5 +62,5 @@ polyfill](https://formatjs.io/docs/polyfills/intl-locale)
 ## See also
 
 - {{jsxref("Intl.Collator")}}
-- [Unicode
-  locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+- [Unicode locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+- [A polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)

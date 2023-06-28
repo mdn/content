@@ -1,34 +1,28 @@
 ---
-title: HTMLElement.title
+title: "HTMLElement: title property"
+short-title: title
 slug: Web/API/HTMLElement/title
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.title
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.title`** property
 represents the title of the element: the text usually displayed in a 'tooltip' popup
 when the mouse is over the node.
 
-## Syntax
+## Value
+
+A string.
+
+## Examples
 
 ```js
-var str = element.title;
-element.title = str;
-```
-
-## Example
-
-```js
-const link = document.createElement('a');
-link.innerText = 'grapes';
-link.href = 'https://en.wikipedia.org/wiki/Grape';
-link.title = 'Wikipedia page on grapes';
+const link = document.createElement("a");
+link.innerText = "grapes";
+link.href = "https://en.wikipedia.org/wiki/Grape";
+link.title = "Wikipedia page on grapes";
 ```
 
 ## Specifications

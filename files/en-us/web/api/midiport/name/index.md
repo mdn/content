@@ -1,35 +1,26 @@
 ---
-title: MIDIPort.name
+title: "MIDIPort: name property"
+short-title: name
 slug: Web/API/MIDIPort/name
-tags:
-  - API
-  - Property
-  - Reference
-  - name
-  - MIDIPort
+page-type: web-api-instance-property
 browser-compat: api.MIDIPort.name
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`name`** read-only property of the {{domxref("MIDIPort")}} interface returns the system name of the port.
 
-## Syntax
+## Value
 
-```js
-let aname = MIDIPort.name;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the system name of the port.
+A string containing the system name of the port.
 
 ## Examples
 
 The following example loops through all input ports and prints the name of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.name);
 }
 ```

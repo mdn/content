@@ -1,22 +1,11 @@
 ---
-title: AudioTrackList.getTrackById()
+title: "AudioTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - Track ID
-  - Track List
-  - Tracks
-  - getTrackById
-  - id
-  - track
+page-type: web-api-instance-method
 browser-compat: api.AudioTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("AudioTrackList")}}** method
@@ -27,14 +16,14 @@ you know its ID string.
 
 ## Syntax
 
-```js
-var theTrack = AudioTrackList.getTrackById(id);
+```js-nolint
+getTrackById(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+  - : A string indicating the ID of the track to locate within the track
     list.
 
 ### Return value
@@ -47,14 +36,14 @@ The tracks are searched in their natural order; that is, in the order defined by
 media resource itself, or, if the resource doesn't define an order, the relative order
 in which the tracks are declared by the media resource.
 
-## Example
+## Examples
 
 This example suggests a hypothetical game in which movies are used as cut-scenes or
 other key set pieces within the game. Each movie has one audio track for each character,
 as well as one for the music, sound effects, and so forth. This function allows the game
 to disable a specific character's audio in order to adjust the movie's performance based
 on occurrences within the game; if the character's dialog isn't relevant, it gets left
-out. Obviously that would require some clever graphic design to make work, but... it's a
+out. Obviously, that would require some clever graphic design to make work, but it's a
 hypothetical game.
 
 ```js

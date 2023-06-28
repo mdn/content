@@ -1,20 +1,17 @@
 ---
 title: text-overflow
 slug: Web/CSS/text-overflow
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-overflow
 ---
+
 {{CSSRef}}
 
 The **`text-overflow`** [CSS](/en-US/docs/Web/CSS) property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis ('`…`'), or display a custom string.
 
 {{EmbedInteractiveExample("pages/css/text-overflow.html")}}
 
-The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:
+The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container, you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:
 
 ```css
 overflow: hidden;
@@ -36,6 +33,7 @@ text-overflow: ellipsis " [..]";
 text-overflow: inherit;
 text-overflow: initial;
 text-overflow: revert;
+text-overflow: revert-layer;
 text-overflow: unset;
 ```
 
@@ -76,25 +74,36 @@ This example shows different values for `text-overflow` applied to a paragraph, 
 #### HTML
 
 ```html
-
 <div class="ltr">
   <h2>Left to right text</h2>
   <pre>clip</pre>
-  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>" [..]"</pre>
-  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-string">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
 </div>
 
 <div class="rtl">
   <h2>Right to left text</h2>
   <pre>clip</pre>
-  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>" [..]"</pre>
-  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-string">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
 </div>
 ```
 
@@ -150,13 +159,21 @@ To show the effect we have to scroll the line so the start of the line is also h
 
 ```html
 <pre>clip clip</pre>
-<p class="overflow-clip-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-clip-clip">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>clip ellipsis</pre>
-<p class="overflow-clip-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-clip-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>ellipsis ellipsis</pre>
-<p class="overflow-ellipsis-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-ellipsis-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>ellipsis " [..]"</pre>
-<p class="overflow-ellipsis-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-ellipsis-string">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 ```
 
 #### CSS
@@ -195,7 +212,7 @@ p {
 // Scroll each paragraph so the start is also hidden
 const paras = document.querySelectorAll("p");
 
-for (let para of paras) {
+for (const para of paras) {
   para.scroll(100, 0);
 }
 ```

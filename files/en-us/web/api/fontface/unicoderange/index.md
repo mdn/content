@@ -1,35 +1,20 @@
 ---
-title: FontFace.unicodeRange
+title: "FontFace: unicodeRange property"
+short-title: unicodeRange
 slug: Web/API/FontFace/unicodeRange
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - unicodeRange
+page-type: web-api-instance-property
 browser-compat: api.FontFace.unicodeRange
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The **`unicodeRange`** property of the
-{{domxref("FontFace")}} interface retrieves or sets the range of unicode codepoints
-encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range",
-  "unicode-range")}} descriptor.
+The **`unicodeRange`** property of the {{domxref("FontFace")}} interface retrieves or sets the range of unicode code points encompassing the font.
 
-## Syntax
+This property is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
 
-```js
-let unicodeRangeDescriptor = FontFace.unicodeRange;
-FontFace.unicodeRange = unicodeRangeDescriptor;
-```
+## Value
 
-### Value
-
-A {{domxref('CSSOMString')}} containing a descriptor as it would appear in a style
-sheet's `@font-face` rule.
+A string containing a descriptor as it would appear in a style sheet's `@font-face` rule.
 
 ## Specifications
 

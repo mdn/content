@@ -1,25 +1,15 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.hover
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 The **`:hover`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
 
-```css
-/* Selects any <a> element when "hovered" */
-a:hover {
-  color: orange;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-hover.html", "tabbed-shorter")}}
 
 Styles defined by the `:hover` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, or {{ cssxref(":active") }}) that has at least equal specificity. To style links appropriately, put the `:hover` rule after the `:link` and `:visited` rules but before the `:active` one, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
@@ -27,7 +17,11 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 
 ## Syntax
 
-{{csssyntax}}
+```css
+:hover {
+  /* ... */
+}
+```
 
 ## Examples
 
@@ -44,7 +38,7 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 ```css
 a {
   background-color: powderblue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 a:hover {
@@ -56,12 +50,6 @@ a:hover {
 
 {{EmbedLiveSample("Basic_example")}}
 
-### Image gallery
-
-You can use the `:hover` pseudo-class to build an image gallery with full-size images that show only when the mouse moves over a thumbnail. See [this demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip") for a possible cue.
-
-> **Note:** For an analogous effect, but based on the [`:checked`](/en-US/docs/Web/CSS/:checked) pseudo-class (applied to hidden radioboxes), see [this demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip"), taken from the [:checked](/en-US/docs/Web/CSS/:checked) reference page.
-
 ## Specifications
 
 {{Specifications}}
@@ -72,5 +60,5 @@ You can use the `:hover` pseudo-class to build an image gallery with full-size i
 
 ## See also
 
-- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://code.google.com/p/chromium/issues/detail?id=370155)
-- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://code.google.com/p/chromium/issues/detail?id=306581)
+- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://crbug.com/370155)
+- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://crbug.com/306581)

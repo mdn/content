@@ -1,22 +1,22 @@
 ---
 title: kernelUnitLength
 slug: Web/SVG/Attribute/kernelUnitLength
-tags:
-  - Filters
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-kernelunitlength
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fediffuselighting-kernelunitlength
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feconvolvematrix-kernelunitlength
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`kernelUnitLength`** attribute has two meanings based on the context it's used in. For lighting filter primitives, it indicates the intended distance for the x and y coordinates, for {{SVGElement("feConvolveMatrix")}}, it indicates the intended distance between successive columns and rows in the kernel matrix.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feSpecularLighting")}}
 
 ## feConvolveMatrix
 
@@ -47,8 +47,8 @@ If a negative or zero value is specified the default value will be used instead.
   </tbody>
 </table>
 
-*   `<number-optional-number>`
-    *   : The first number is the x value. The second number is the y value. If the x value is not specified, it defaults to the same value as x.
+- `<number-optional-number>`
+  - : The first number is the x value. The second number is the y value. If the x value is not specified, it defaults to the same value as x.
 
 ## feDiffuseLighting
 
@@ -114,56 +114,4 @@ If a negative or zero value is specified the default value will be used instead.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fespecularlighting-kernelunitlength", "kernelUnitLength for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>Marked the attribute as deprecated.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fediffuselighting-kernelunitlength", "kernelUnitLength for &lt;feDiffuseLighting&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>Marked the attribute as deprecated.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-kernelunitlength", "kernelUnitLength for &lt;feConvolveMatrix&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>Marked the attribute as deprecated.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feSpecularLightingKernelUnitLengthAttribute", "kernelUnitLength for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feSpecularLighting></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feDiffuseLightingKernelUnitLengthAttribute", "kernelUnitLength for &lt;feDiffuseLighting&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feDiffuseLighting></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementKernelUnitLengthAttribute", "kernelUnitLength for &lt;feConvolveMatrix&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feConvolveMatrix></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

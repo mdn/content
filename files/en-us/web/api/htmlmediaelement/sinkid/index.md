@@ -1,31 +1,28 @@
 ---
-title: HTMLMediaElement.sinkId
+title: "HTMLMediaElement: sinkId property"
+short-title: sinkId
 slug: Web/API/HTMLMediaElement/sinkId
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Extensions
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLMediaElement.sinkId
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.sinkId`** read-only property returns a
-{{domxref("DOMString")}} that is the unique ID of the audio device delivering output. If
-it is using the user agent default, it returns an empty string. This ID should be one of
-the {{domxref("MediaDeviceInfo.deviceId")}} values returned from
-{{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or
-`id-communications`.
+The **`HTMLMediaElement.sinkId`** read-only property returns a string that is the unique ID of the audio device delivering output.
+If it is using the user agent default, it returns an empty string.
+This ID should be one of the {{domxref("MediaDeviceInfo.deviceId")}} values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
 
-## Syntax
+## Value
 
-```js
-var sinkId = HTMLMediaElement.sinkId
-```
+A string.
+
+## Security requirements
+
+Access to the property is subject to the following constraints:
+
+- The property must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 ## Specifications
 
@@ -34,3 +31,7 @@ var sinkId = HTMLMediaElement.sinkId
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+[`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId)

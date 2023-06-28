@@ -1,29 +1,18 @@
 ---
-title: AudioParam.minValue
+title: "AudioParam: minValue property"
+short-title: minValue
 slug: Web/API/AudioParam/minValue
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Property
-  - Reference
-  - Web Audio API
-  - minValue
+page-type: web-api-instance-property
 browser-compat: api.AudioParam.minValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`minValue`**
 read-only property of the {{domxref("AudioParam")}} interface represents the minimum
 possible value for the parameter's nominal (effective) range.
 
-## Syntax
-
-```js
-var minVal = audioParam.minValue;
-```
-
-### Value
+## Value
 
 A floating-point {{jsxref("Number")}} indicating the minimum value permitted for the
 parameter's nominal range.
@@ -31,7 +20,7 @@ parameter's nominal range.
 The default value of `minValue` is the minimum negative single-precision
 floating-point value (-340,282,346,638,528,859,811,704,183,484,516,925,440).
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

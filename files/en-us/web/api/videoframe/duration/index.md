@@ -1,19 +1,16 @@
 ---
-title: VideoFrame.duration
+title: "VideoFrame: duration property"
+short-title: duration
 slug: Web/API/VideoFrame/duration
-tags:
-  - API
-  - Property
-  - Reference
-  - duration
-  - VideoFrame
+page-type: web-api-instance-property
 browser-compat: api.VideoFrame.duration
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}
 
 The **`duration`** property of the {{domxref("VideoFrame")}} interface returns an integer indicating the duration of the video in microseconds.
 
-### Value
+## Value
 
 An integer.
 
@@ -32,5 +29,3 @@ console.log(VideoFrame.duration);
 ## Browser compatibility
 
 {{Compat}}
-
-

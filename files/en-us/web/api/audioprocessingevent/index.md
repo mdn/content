@@ -1,92 +1,132 @@
 ---
 title: AudioProcessingEvent
 slug: Web/API/AudioProcessingEvent
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Internationalization
-  - Reference
-  - Web Audio API
+page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.AudioProcessingEvent
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
-The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
+The `AudioProcessingEvent` interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
 
-> **Note:** As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and is soon to be replaced by [AudioWorklet](https://webaudio.github.io/web-audio-api/#audioworklet).
+An `audioprocess` event with this interface is fired on a {{domxref("ScriptProcessorNode")}} when audio processing is required. During audio processing, the input buffer is read and processed to produce output audio data, which is then written to the output buffer.
 
-## Properties
+> **Warning:** This feature has been deprecated and should be replaced by an [`AudioWorklet`](/en-US/docs/Web/API/AudioWorklet).
 
-_The list below includes the properties inherited from its parent, {{domxref("Event")}}_.
+{{InheritanceDiagram}}
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Property</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>target</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("EventTarget")}}</td>
-      <td>The event target (the topmost target in the DOM tree).</td>
-    </tr>
-    <tr>
-      <td><code>type</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>The type of event.</td>
-    </tr>
-    <tr>
-      <td><code>bubbles</code> {{ReadOnlyInline}}</td>
-      <td><code>boolean</code></td>
-      <td>Does the event normally bubble?</td>
-    </tr>
-    <tr>
-      <td><code>cancelable</code> {{ReadOnlyInline}}</td>
-      <td><code>boolean</code></td>
-      <td>Is it possible to cancel the event?</td>
-    </tr>
-    <tr>
-      <td><code>playbackTime</code> {{ReadOnlyInline}}</td>
-      <td><code>double</code></td>
-      <td>
-        The time when the audio will be played, as defined by the time of
-        {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>inputBuffer</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("AudioBuffer")}}</td>
-      <td>
-        The buffer containing the input audio data to be processed. The number
-        of channels is defined as a parameter,
-        <code>numberOfInputChannels</code>, of the factory method
-        {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
-        Note the returned <code>AudioBuffer</code> is only valid in the scope of
-        the <code>onaudioprocess</code> function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>outputBuffer</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("AudioBuffer")}}</td>
-      <td>
-        The buffer where the output audio data should be written. The number of
-        channels is defined as a parameter, <code>numberOfOutputChannels</code>,
-        of the factory method
-        {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
-        Note the returned <code>AudioBuffer</code> is only valid in the scope of
-        the <code>onaudioprocess</code> function.
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Constructor
 
-## Example
+- {{domxref("AudioProcessingEvent.AudioProcessingEvent", "AudioProcessingEvent()")}} {{Deprecated_Inline}}
+  - : Creates a new `AudioProcessingEvent` object.
 
-See [`BaseAudioContext.createScriptProcessor()`](/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example) for example code that uses an `AudioProcessingEvent`.
+## Instance properties
+
+_Also implements the properties inherited from its parent, {{domxref("Event")}}_.
+
+- {{domxref("AudioProcessingEvent.playbackTime", "playbackTime")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : A double representing the time when the audio will be played,
+    as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+- {{domxref("AudioProcessingEvent.inputBuffer", "inputBuffer")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed.
+    The number of channels is defined as a parameter `numberOfInputChannels`,
+    of the factory method {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
+    Note that the returned <code>AudioBuffer</code> is only valid in the scope of the event handler.
+- {{domxref("AudioProcessingEvent.outputBuffer", "outputBuffer")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : An {{domxref("AudioBuffer")}} that is the buffer where the output audio data should be written.
+    The number of channels is defined as a parameter, <code>numberOfOutputChannels</code>,
+    of the factory method {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
+    Note that the returned <code>AudioBuffer</code> is only valid in the scope of the event handler.
+
+## Examples
+
+The following example shows how to use of a `ScriptProcessorNode` to take a
+track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
+of white noise to each audio sample of the input track (buffer) and play it through the
+{{domxref("AudioDestinationNode")}}. For each channel and each sample frame, the
+`scriptNode.onaudioprocess` function takes the associated
+`audioProcessingEvent` and uses it to loop through each channel of the input
+buffer, and each sample in each channel, and add a small amount of white noise, before
+setting that result to be the output sample in each case.
+
+> **Note:** For a full working example, see our [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/)
+> GitHub repo. (You can also access the [source code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
+
+```js
+const myScript = document.querySelector("script");
+const myPre = document.querySelector("pre");
+const playButton = document.querySelector("button");
+
+// Create AudioContext and buffer source
+const audioCtx = new AudioContext();
+const source = audioCtx.createBufferSource();
+
+// Create a ScriptProcessorNode with a bufferSize of 4096 and a single input and output channel
+const scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
+console.log(scriptNode.bufferSize);
+
+// load in an audio track via XHR and decodeAudioData
+
+function getData() {
+  request = new XMLHttpRequest();
+  request.open("GET", "viper.ogg", true);
+  request.responseType = "arraybuffer";
+  request.onload = () => {
+    const audioData = request.response;
+
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
+        myBuffer = buffer;
+        source.buffer = myBuffer;
+      },
+      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    );
+  };
+  request.send();
+}
+
+// Give the node a function to process audio events
+scriptNode.onaudioprocess = (audioProcessingEvent) => {
+  // The input buffer is the song we loaded earlier
+  const inputBuffer = audioProcessingEvent.inputBuffer;
+
+  // The output buffer contains the samples that will be modified and played
+  const outputBuffer = audioProcessingEvent.outputBuffer;
+
+  // Loop through the output channels (in this case there is only one)
+  for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
+    const inputData = inputBuffer.getChannelData(channel);
+    const outputData = outputBuffer.getChannelData(channel);
+
+    // Loop through the 4096 samples
+    for (let sample = 0; sample < inputBuffer.length; sample++) {
+      // make output equal to the same as the input
+      outputData[sample] = inputData[sample];
+
+      // add noise to each output sample
+      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
+    }
+  }
+};
+
+getData();
+
+// Wire up the play button
+playButton.onclick = () => {
+  source.connect(scriptNode);
+  scriptNode.connect(audioCtx.destination);
+  source.start();
+};
+
+// When the buffer source stops playing, disconnect everything
+source.onended = () => {
+  source.disconnect(scriptNode);
+  scriptNode.disconnect(audioCtx.destination);
+};
+```
 
 ## Browser compatibility
 

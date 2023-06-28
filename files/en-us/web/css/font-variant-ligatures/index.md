@@ -1,14 +1,10 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-variant-ligatures
 ---
+
 {{CSSRef}}
 
 The **`font-variant-ligatures`** CSS property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
@@ -21,19 +17,20 @@ The **`font-variant-ligatures`** CSS property controls which {{Glossary("ligatur
 /* Keyword values */
 font-variant-ligatures: normal;
 font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures;           /* <common-lig-values> */
-font-variant-ligatures: no-common-ligatures;        /* <common-lig-values> */
-font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values> */
+font-variant-ligatures: common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: no-common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: discretionary-ligatures; /* <discretionary-lig-values> */
 font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: historical-ligatures;       /* <historical-lig-values> */
-font-variant-ligatures: no-historical-ligatures;    /* <historical-lig-values> */
-font-variant-ligatures: contextual;                 /* <contextual-alt-values> */
-font-variant-ligatures: no-contextual;              /* <contextual-alt-values> */
+font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: contextual; /* <contextual-alt-values> */
+font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
 
 /* Global values */
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
 font-variant-ligatures: revert;
+font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
@@ -88,49 +85,45 @@ The `font-variant-ligatures` property is specified as one of the keyword values 
 #### HTML
 
 ```html
-<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
 <p class="normal">
-  normal<br>
+  normal<br />
   if fi ff tf ft jf fj
 </p>
 <p class="none">
-  none<br>
+  none<br />
   if fi ff tf ft jf fj
 </p>
 <p class="common-ligatures">
-  common-ligatures<br>
+  common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-common-ligatures">
-  no-common-ligatures<br>
+  no-common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="discretionary-ligatures">
-  discretionary-ligatures<br>
+  discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-discretionary-ligatures">
-  no-discretionary-ligatures<br>
+  no-discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="historical-ligatures">
-  historical-ligatures<br>
+  historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-historical-ligatures">
-  no-historical-ligatures<br>
+  no-historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="contextual">
-  contextual<br>
+  contextual<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-contextual">
-  no-contextual<br>
-  if fi ff tf ft jf fj
-</p>
-<p class="contextual">
-  contextual<br>
+  no-contextual<br />
   if fi ff tf ft jf fj
 </p>
 ```
@@ -180,15 +173,11 @@ p {
 .no-contextual {
   font-variant-ligatures: no-contextual;
 }
-
-.contextual {
-  font-variant-ligatures: contextual;
-}
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700', '', 'Web/CSS/font-variant-ligatures') }}
+{{ EmbedLiveSample('Setting font ligatures and contextual forms', '', '700') }}
 
 ## Specifications
 
@@ -198,10 +187,11 @@ p {
 
 {{Compat}}
 
-## See Also
+## See also
 
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-numeric")}}
+- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
+- [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)

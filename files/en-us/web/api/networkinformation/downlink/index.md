@@ -1,16 +1,13 @@
 ---
-title: NetworkInformation.downlink
+title: "NetworkInformation: downlink property"
+short-title: downlink
 slug: Web/API/NetworkInformation/downlink
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Reference
-  - downlink
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.NetworkInformation.downlink
 ---
+
 {{SeeCompatTable}}{{APIRef("Network Information API")}}
 
 The **`downlink`** read-only property of the
@@ -21,15 +18,9 @@ connections, excluding connections made to a private address space. In the absen
 recent bandwidth measurement data, the attribute value is determined by the properties
 of the underlying connection technology.
 
-## Syntax
+## Value
 
-```js
-var downLink = NetworkInformation.downlink
-```
-
-### Value
-
-A {{jsxref("double")}}.
+A number.
 
 ## Specifications
 

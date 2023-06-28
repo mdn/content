@@ -1,15 +1,10 @@
 ---
 title: prefix
 slug: Web/CSS/@counter-style/prefix
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.prefix
 ---
+
 {{CSSRef}}
 
 The **`prefix`** descriptor of the {{cssxref('@counter-style')}} rule specifies content that will be prepended to the marker representation. If not specified, the default value will be `""` (an empty string).
@@ -58,7 +53,7 @@ prefix: url(bullet.png);
 @counter-style chapters {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  prefix: 'Chapter ';
+  prefix: "Chapter ";
 }
 
 .index {
@@ -82,4 +77,4 @@ prefix: url(bullet.png);
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles

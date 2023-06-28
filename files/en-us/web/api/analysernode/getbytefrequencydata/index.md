@@ -1,14 +1,11 @@
 ---
-title: AnalyserNode.getByteFrequencyData()
+title: "AnalyserNode: getByteFrequencyData() method"
+short-title: getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
+page-type: web-api-instance-method
 browser-compat: api.AnalyserNode.getByteFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`getByteFrequencyData()`** method of the {{ domxref("AnalyserNode") }} interface copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
@@ -21,12 +18,8 @@ If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCou
 
 ## Syntax
 
-```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array should be the same length as the frequencyBinCount
-
-void analyser.getByteFrequencyData(dataArray); // fill the Uint8Array with data returned from getByteFrequencyData()
+```js-nolint
+getByteFrequencyData(array)
 ```
 
 ### Parameters
@@ -37,54 +30,49 @@ void analyser.getByteFrequencyData(dataArray); // fill the Uint8Array with data 
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bar graph style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
+const bufferLength = analyser.frequencyBinCount;
 console.log(bufferLength);
-var dataArray = new Uint8Array(bufferLength);
+const dataArray = new Uint8Array(bufferLength);
 
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
 function draw() {
-  drawVisual = requestAnimationFrame(draw);
+  drawVisual = requestAnimationFrame(draw);
 
-  analyser.getByteFrequencyData(dataArray);
+  analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = "rgb(0, 0, 0)";
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  const barWidth = (WIDTH / bufferLength) * 2.5;
+  let barHeight;
+  let x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i];
+  for (let i = 0; i < bufferLength; i++) {
+    barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
 
-    x += barWidth + 1;
-  }
-};
+    x += barWidth + 1;
+  }
+}
 
 draw();
 ```
-
-## Parameters
-
-- array
-  - : The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to.
 
 ## Specifications
 

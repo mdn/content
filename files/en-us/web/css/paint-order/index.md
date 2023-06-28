@@ -1,14 +1,10 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Reference
-  - SVG
-  - Web
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.paint-order
 ---
+
 {{CSSRef}}
 
 The **`paint-order`** [CSS](/en-US/docs/Web/CSS) property lets you control the order in which the fill and stroke (and painting markers) of text content and shapes are drawn.
@@ -31,6 +27,7 @@ paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
 paint-order: inherit;
 paint-order: initial;
 paint-order: revert;
+paint-order: revert-layer;
 paint-order: unset;
 ```
 
@@ -65,8 +62,8 @@ When one value is specified, that one is painted first, followed by the other tw
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
-  <text x="10" y="75">stroke in front</text>
-  <text x="10" y="150" class="stroke-behind">stroke behind</text>
+  <text x="10" y="75">stroke in front</text>
+  <text x="10" y="150" class="stroke-behind">stroke behind</text>
 </svg>
 ```
 
@@ -74,16 +71,16 @@ When one value is specified, that one is painted first, followed by the other tw
 
 ```css
 text {
-  font-family: sans-serif;
-  font-size: 50px;
-  font-weight: bold;
-  fill: black;
-  stroke: red;
-  stroke-width: 4px;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  fill: black;
+  stroke: red;
+  stroke-width: 4px;
 }
 
 .stroke-behind {
-  paint-order: stroke fill;
+  paint-order: stroke fill;
 }
 ```
 

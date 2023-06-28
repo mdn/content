@@ -1,21 +1,12 @@
 ---
-title: RTCIceServers.urls
+title: "RTCIceServers: urls property"
+short-title: urls
 slug: Web/API/RTCIceServer/urls
-tags:
-  - Experimental
-  - Property
-  - RTCIceServer
-  - Reference
-  - WebRTC
-  - urls
+page-type: web-api-instance-property
 browser-compat: api.RTCIceServer.urls
 ---
+
 {{APIRef("WebRTC")}}
-
-{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}
-
-{{SeeCompatTable}}
 
 The {{domxref("RTCIceServer")}} dictionary's **`urls`**
 property specifies the URL or URLs of the servers to be used for ICE negotiations. These
@@ -23,12 +14,12 @@ are typically STUN and/or TURN servers.
 
 ## Syntax
 
-```js
-var iceServer = {
-                  urls = iceServerUrl | [ url1, ..., urlN ],
-                  username: "webrtc", // optional
-                  credential: "turnpassword" // optional
-                };
+```js-nolint
+const iceServer = {
+  urls: iceServerUrl, /* or an array or URLs: [ url1, ..., urlN ] */
+  username: "webrtc", // optional
+  credential: "turnpassword" // optional
+};
 
 iceServers.push(iceServer);
 ```
@@ -50,9 +41,9 @@ connections.
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      urls: "stun:stunserver.example.org"
-    }
-  ]
+      urls: "stun:stunserver.example.org",
+    },
+  ],
 });
 ```
 
@@ -72,9 +63,9 @@ myPeerConnection = new RTCPeerConnection({
     {
       urls: "turn:turnserver.example.org",
       username: "webrtc",
-      credential: "turnpassword"
-    }
-  ]
+      credential: "turnpassword",
+    },
+  ],
 });
 ```
 
@@ -94,9 +85,9 @@ myPeerConnection = new RTCPeerConnection({
     {
       urls: ["turns:turnserver.example.org", "turn:turnserver.example.org"],
       username: "webrtc",
-      credential: "turnpassword"
-    }
-  ]
+      credential: "turnpassword",
+    },
+  ],
 });
 ```
 
@@ -112,12 +103,12 @@ myPeerConnection = new RTCPeerConnection({
     {
       urls: ["turns:turnserver.example.org", "turn:turnserver.example.org"],
       username: "webrtc",
-      credential: "turnpassword"
+      credential: "turnpassword",
     },
     {
-      urls: "stun: stunserver.example.org"
-    }
-  ]
+      urls: "stun: stunserver.example.org",
+    },
+  ],
 });
 ```
 

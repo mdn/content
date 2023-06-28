@@ -1,58 +1,46 @@
 ---
-title: PerformanceNavigationTiming.domComplete
+title: "PerformanceNavigationTiming: domComplete property"
+short-title: domComplete
 slug: Web/API/PerformanceNavigationTiming/domComplete
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.domComplete
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`domComplete`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
-time immediately before the user agent sets the current document readiness of the
-current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.
+{{APIRef("Performance API")}}
 
-## Syntax
+The **`domComplete`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"complete"`.
+
+See also the `complete` state of {{domxref("Document.readyState")}} which corresponds to this property and refers to the state in which the document and all sub-resources have finished loading. The state also indicates that the {{domxref("Window/load_event", "load")}} event is about to fire.
+
+## Value
+
+A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"complete"`.
+
+## Examples
+
+### Logging DOM completion time
+
+The `domComplete` property can be used to log the time when the DOM is complete.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-perfEntry.domComplete;
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(`${entry.name}: domComplete time: ${entry.domComplete}ms`);
+  });
+});
+
+observer.observe({ type: "navigation", buffered: true });
 ```
 
-### Return Value
-
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the
-time immediately before the user agent sets the current document readiness of the
-current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.
-
-## Example
-
-The following example illustrates this property's usage.
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
-function print_nav_timing_data() {
-  // Use getEntriesByType() to just get the "navigation" events
-  var perfEntries = performance.getEntriesByType("navigation");
-
-  for (var i=0; i < perfEntries.length; i++) {
-    console.log("= Navigation entry[" + i + "]");
-    var p = perfEntries[i];
-    // dom Properties
-    console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
-    console.log("DOM complete = " + p.domComplete);
-    console.log("DOM interactive = " + p.interactive);
-
-    // document load and unload time
-    console.log("document load = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("document unload = " + (p.unloadEventEnd - p.unloadEventStart));
-
-    // other properties
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
-  }
-}
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
+  console.log(`${entry.name}: domComplete time: ${entry.domComplete}ms`);
+});
 ```
 
 ## Specifications
@@ -62,3 +50,7 @@ function print_nav_timing_data() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.readyState")}}

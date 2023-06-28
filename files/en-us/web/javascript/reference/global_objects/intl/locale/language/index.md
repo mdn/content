@@ -1,20 +1,13 @@
 ---
 title: Intl.Locale.prototype.language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.language
 ---
+
 {{JSRef}}
 
-The **`Intl.Locale.prototype.language`** property is an accessor property that returns the language associated with the locale.
+The **`language`** accessor property of {{jsxref("Intl.Locale")}} instances returns the language associated with this locale.
 
 ## Description
 
@@ -24,19 +17,19 @@ Language is one of the core features of a locale. The Unicode specification trea
 
 ### Setting the language in the locale identifier string argument
 
-In order to be a valid Unicode locale identifier, a string must start with the language subtag. The main argument to the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor must be a valid Unicode locale identifier, so whenever the constructor is used, it must be passed an identifier with a language subtag.
+In order to be a valid Unicode locale identifier, a string must start with the language subtag. The main argument to the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor must be a valid Unicode locale identifier, so whenever the constructor is used, it must be passed an identifier with a language subtag.
 
 ```js
-let locale = new Intl.Locale("en-Latn-US");
+const locale = new Intl.Locale("en-Latn-US");
 console.log(locale.language); // Prints "en"
 ```
 
 ### Overriding language via the configuration object
 
-While the language subtag must be specified, the {{jsxref("Intl/Locale", "Locale")}} constructor takes a configuration object, which can override the language subtag.
+While the language subtag must be specified, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes a configuration object, which can override the language subtag.
 
 ```js
-let locale = new Intl.Locale("en-Latn-US", { language: "es" });
+const locale = new Intl.Locale("en-Latn-US", { language: "es" });
 console.log(locale.language); // Prints "es"
 ```
 

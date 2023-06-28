@@ -1,23 +1,24 @@
 ---
 title: Texel
 slug: Glossary/Texel
-tags:
-  - 3D
-  - Drawing
-  - Glossary
-  - Graphics
-  - Texel
-  - Texture
+page-type: glossary-definition
 ---
-A **Texel** is a single-pixel within a texture map, which is an image that gets used (in whole or in part) as the image presented on a polygon's surface within a 3D rendered image. It is not to be confused with pixel which is the unit of screen space. This is one of the main differences between Texel’s and pixels, pixels are image data. Texel components are made up of subjective data, therefore they can be an image as well as a depth map.
 
-The process of mapping the appropriate Texel’s to their corresponding points on a polygon is called **texture mapping**, which is a stage of the process of rendering a 3D image for display. Texture mapping is typically done prior to lighting the scene; however, in WebGL, lighting is performed as part of the texture mapping process.
+{{GlossarySidebar}}
 
-Textures are characterised by collections of Texel’s, as how images are characterised by collections of pixels. When texture mapping occurs the renderer maps Texel’s to the appropriate pixels.
+In 3D graphics, a **texel** is a single pixel within a texture. _Textures_ are images presented on a polygon's surface within a 3D rendered image. A texture is characterized by a collection of texels, similar to how an image is characterized by a collection of pixels.
+
+A pixel in a raster image file is a series of bits containing color data, and sometimes opacity data, which maps to display pixels on an output device such as a computer monitor. When a pixel belongs to an image used as a texture resource, it is called a 'texture pixel' or shortened to 'texel'. Instead of mapping directly to screen pixels, a texel's data is mapped to a location in the coordinate space of the 3D object being modeled. Textures can be used to convey color and other surface qualities such as depth and reflectivity. Multiple textures may be layered to create complex surface overlays.
+
+The process of mapping the appropriate texels to their corresponding points on a polygon is called **texture mapping**. Texture mapping is a stage of the process of rendering a 3D image for display. When the source texel grid and destination pixel grid do not align, further **texture filtering** is applied to smooth the resultant texture-mapped pixels (texture _magnification_ or _minification_). The final output of the rendering process is a flattened 2D projection of the 3D model, where the texture has been 'wrapped' around the model.
+
+During the render pipeline, texture mapping is typically done prior to lighting the scene; however, in WebGL, lighting is performed as part of the texture mapping process.
 
 ## See also
 
-- {{interwiki("wikipedia", "Texel (graphics)")}} on Wikipedia
+- [Texel (graphics)](<https://en.wikipedia.org/wiki/Texel_(graphics)>) on Wikipedia
+- [Texture mapping](https://en.wikipedia.org/wiki/Texture_mapping) on Wikipedia
+- [Texture filtering](https://en.wikipedia.org/wiki/Texture_filtering) on Wikipedia
 - [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
 - [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)
 - [Animating textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)

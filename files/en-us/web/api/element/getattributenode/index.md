@@ -1,32 +1,36 @@
 ---
-title: Element.getAttributeNode()
+title: "Element: getAttributeNode() method"
+short-title: getAttributeNode()
 slug: Web/API/Element/getAttributeNode
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Element.getAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 Returns the specified attribute of the specified element, as an `Attr` node.
 
 ## Syntax
 
-    var attrNode = element.getAttributeNode(attrName);
+```js-nolint
+getAttributeNode(attrName)
+```
 
-- `attrNode` is an `Attr` node for the attribute.
+### Parameters
+
 - `attrName` is a string containing the name of the attribute.
 
-## Example
+### Return value
+
+An `Attr` node for the attribute.
+
+## Examples
 
 ```js
 // html: <div id="top" />
 let t = document.getElementById("top");
 let idAttr = t.getAttributeNode("id");
-alert(idAttr.value == "top")
+alert(idAttr.value === "top");
 ```
 
 ## Notes

@@ -1,21 +1,18 @@
 ---
-title: HTMLFontElement.face
+title: "HTMLFontElement: face property"
+short-title: face
 slug: Web/API/HTMLFontElement/face
-tags:
-  - API
-  - HTML DOM
-  - HTMLFontElement
-  - Property
-  - Reference
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLFontElement.face
 ---
+
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
 The obsolete
 **`HTMLFontElement.face`**
-property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("face",
-    "font") }} HTML attribute, containing a comma-separated list of one or more font
+property is a string that reflects the [`face`](/en-US/docs/Web/HTML/Element/font#face) HTML attribute, containing a comma-separated list of one or more font
 names.
 
 The document text, in the default style, is rendered as the first font face that the
@@ -28,25 +25,22 @@ The format of the string must follow one of the following HTML microsyntax:
 | ------------------------------------------- | ------------------------------------------------------------------- | ----------------- |
 | List of one or more valid font family names | _A list of font names, that have to be present on the local system_ | `courier,verdana` |
 
-## Syntax
+## Value
 
-```js
-faceString = fontObj.face;
-fontObj.face = faceString;
-```
+A string.
 
 ## Examples
 
 ```js
 // Assumes there is <font id="f"> element in the HTML
 
-var f = document.getElementById("f");
+const f = document.getElementById("f");
 f.face = "arial";
 ```
 
 ## Specifications
 
-The \<font> tag is not supported in HTML5 and as a result neither is
+The `<font>` element has been deprecated and is no longer supported and, as a result, neither is
 `<font>.face`.
 
 ## Browser compatibility

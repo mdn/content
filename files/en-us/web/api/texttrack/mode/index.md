@@ -1,16 +1,11 @@
 ---
-title: TextTrack.mode
+title: "TextTrack: mode property"
+short-title: mode
 slug: Web/API/TextTrack/mode
-tags:
-  - Accessibility
-  - NeedsExample
-  - Property
-  - TextTrack
-  - Web
-  - WebVTT
-  - mode
+page-type: web-api-instance-property
 browser-compat: api.TextTrack.mode
 ---
+
 {{APIRef("WebVTT")}}
 
 The {{domxref("TextTrack")}} interface's
@@ -23,22 +18,15 @@ Safari additionally requires the **`default`**
 boolean attribute to be set to true when implementing your own video player controls in
 order for the subtitles cues to be shown.
 
-## Syntax
-
-```js
-let mode = textTrack.mode;
-textTrack.mode = a;
-```
-
 ### Value
 
-A {{domxref("DOMString")}} which indicates the track's current mode. One of:
+A string which indicates the track's current mode. One of:
 
 - `disabled`
   - : The text track is currently disabled. While the track's presence is exposed in the
     DOM, the user agent is otherwise ignoring it. No cues are active, no events are being
     fired, and the user agent won't attempt to obtain the track's cues. This is the
-    default value, unless the text track has the {{htmlattrxref("default", "track")}}
+    default value, unless the text track has the [`default`](/en-US/docs/Web/HTML/Element/track#default)
     Boolean attribute is specified, in which case the default is `showing`.
 - `hidden`
   - : The text track is currently active but the cues aren't being displayed. If the user
@@ -53,19 +41,19 @@ A {{domxref("DOMString")}} which indicates the track's current mode. One of:
     "activeCues")}} list is being maintained and events are firing at the appropriate
     times; the track's text is also being drawn appropriately based on the styling and the
     track's {{domxref("TextTrack.kind", "kind")}}. This is the default value if the text
-    track's {{htmlattrxref("default", "track")}} Boolean attribute is specified.
+    track's [`default`](/en-US/docs/Web/HTML/Element/track#default) Boolean attribute is specified.
 
 ## Usage notes
 
 The default `mode` is `disabled`, unless the
-{{htmlattrxref("default", "track")}} Boolean attribute is specified, in which case the
+[`default`](/en-US/docs/Web/HTML/Element/track#default) Boolean attribute is specified, in which case the
 default `mode` is `showing`. When a text track is loaded in the
 `disabled` state, the corresponding WebVTT file is not loaded until the state
 changes to either `showing` or `hidden`. This way, the resource
 fetch and memory usage are avoided unless the cues are actually needed.
 
 However, that means that if you wish to perform any actions involving the track's cues
-while handling, for example, the {{event("load")}} event—in order to process some aspect
+while handling, for example, the {{domxref("Window/load_event", "load")}} event—in order to process some aspect
 of the cues upon page load—and the track mode was initially `disabled`,
 you'll have to change the `mode` to either `hidden` or
 `showing` in order to trigger loading of the cues.
@@ -80,7 +68,7 @@ and manner of that performance varies depending on each text track's
   non-visual form (for example, the text might be spoken to describe the action in the
   video).
 - Tracks whose `kind` is `"chapters"` are used by the user agent
-  or the Web site or Web app to construct and present an interface for navigating the
+  or the website or web app to construct and present an interface for navigating the
   named chapters, where each cue in the list represents a chapter in the media. The user
   can then navigate to the desired chapter, which begins at the cue's start position and
   ends at the cue's end position.
@@ -94,16 +82,15 @@ finished, the video automatically pauses playback. This is done by setting the
 `mode` to `showing`.
 
 ```js
-window.addEventListener("load", event => {
+window.addEventListener("load", (event) => {
   let trackElem = document.querySelector("track");
   let track = trackElem.track;
 
   track.mode = "showing";
 
-  for (let index=0; index < track.cues.length; index++) {
-    let cue = track.cues[index];
+  for (const cue of track.cues) {
     cue.pauseOnExit = true;
-  };
+  }
 });
 ```
 

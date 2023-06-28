@@ -1,42 +1,47 @@
 ---
 title: Writing forward-compatible websites
 slug: Web/Guide/Writing_forward-compatible_websites
-tags:
-  - CSS
-  - Compatibility
-  - DOM
-  - HTML
-  - JavaScript
-  - Web Development
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
+
 This page explains how to write websites that do not break when new browser versions are released.
 
 This is especially important for intranets and other non-public websites; if we can't see your code, we can't see that it broke. It's not always possible to follow all of these, but following as many of them as possible will help future-proof your website.
 
 ## JavaScript
 
-### Prefix all global variable access in `onfoo` attributes with “`window`.”
+### Prefix all global variable access in `onfoo` attributes with "`window`."
 
 When an event handler content attribute (`onclick`, `onmouseover`, and so forth) is used on HTML element, all name lookup in the attribute first happens on the element itself, then on the element's form if the element is a form control, then on the document, and then on the window (where the global variables you have defined are). For example, if you have this markup:
 
-    <div onclick="alert(ownerDocument)">Click me</div>
+```html
+<div onclick="alert(ownerDocument)">Click me</div>
+```
 
-then clicking on the text alerts the `ownerDocument` of the `div`. This happens even if there is a `var ownerDocument` declared in global scope.
+then clicking on the text alerts the `ownerDocument` of the `div`. This happens even if there is an `ownerDocument` variable declared in the global scope.
 
-What this means is that any time you access a global variable in an event handler content attribute, including calling any function declared globally, you can end up with a name collision if a specification adds a new DOM property to elements or documents which has the same name as your function or variable, and a browser implements it. If that happens, then suddenly your function stops being called. This has happened multiple times to various sites already during the evolution of HTML5.
+What this means is that any time you access a global variable in an event handler content attribute, including calling any function declared globally, you can end up with a name collision if a specification adds a new DOM property to elements or documents which has the same name as your function or variable, and a browser implements it. If that happens, then suddenly your function stops being called. This has happened multiple times to various sites already during the evolution of HTML.
 
 To avoid this, fully qualify global variable access using "window.", like so:
 
-    <script>
-      function localName() {
-        alert('Function localName has been called');
-      }
-    </script>
-    <div onclick="window.localName()">Clicking me should show an alert<div>
+```html
+<script>
+  function localName() {
+    alert("Function localName has been called");
+  }
+</script>
+<div onclick="window.localName()">
+  Clicking me should show an alert
+  <div></div>
+</div>
+```
 
 ### Don't concatenate scripts you don't control
 
-The `"use strict;"` directive in ECMAScript, when used on the file level, applies to everything in the file. So appending a script that depends on non-strict-mode behavior to a strict-mode script will cause things to break.
+The `"use strict";` directive in ECMAScript, when used on the file level, applies to everything in the file. So appending a script that depends on non-strict-mode behavior to a strict-mode script will cause things to break.
 
 ### Ask the authors of any JavaScript libraries you use to also follow these guidelines
 
@@ -46,7 +51,7 @@ Suggest to the developers of your favorite libraries that they follow these guid
 
 ### Sniff for specific features
 
-If you plan to use some feature, use object-detection to sniff for that exact feature, if possible.  As a simple example, don't assume that any browser in which `"filter" in body.style` tests true must be Microsoft Internet Explorer and therefore e.g. will have a `window.event` object available in event handlers. Don't assume that browsers with support for a given DOM feature must also have some other, especially nonstandard, DOM feature. Or, conversely, that they _don't_ have support for some other feature (e.g., don't assume that a browser that supports `onload` on script elements will never support `onreadystatechange` on them). As browsers converge behavior, they both add features and remove them. They also fix bugs.  All three of these have happened in the past and will happen again.
+If you plan to use some feature, use object-detection to sniff for that exact feature, if possible. As a simple example, don't assume that any browser in which `"filter" in body.style` tests true must be Opera and therefore e.g. will have a `window.event` object available in event handlers. Don't assume that browsers with support for a given DOM feature must also have some other, especially nonstandard, DOM feature. Or, conversely, that they _don't_ have support for some other feature (e.g., don't assume that a browser that supports `onload` on script elements will never support `onreadystatechange` on them). As browsers converge behavior, they both add features and remove them. They also fix bugs. All three of these have happened in the past and will happen again.
 
 So don't sniff for one feature or object and then assume that, because it exists or doesn't exist, some other feature or object must also exist or not exist.
 
@@ -68,7 +73,7 @@ Don't go out of your way to run different code based on either object detection 
 
 ### Test with all major engines
 
-Test your code at least in Firefox, Chrome, Safari, Opera, and Internet Explorer. If you are following the advice given above so that you have a single code path for all current and unknown browsers, testing that this single code path works in all the major engines makes it extremely probable that your code won't break in the future.
+Test your code at least in Firefox, Chrome and Safari. If you are following the advice given above so that you have a single code path for all current and unknown browsers, testing that this single code path works in all the major engines makes it extremely probable that your code won't break in the future.
 
 Sometimes browsers implement a given feature slightly differently. If you have a single code path that works in all the top engines, it means that you are either using features where browser behavior has already converged or, if the behavior hasn't quite converged yet, your code works regardless of which engine's behavior standards turn out to uphold.
 
@@ -88,30 +93,17 @@ Prefixed, non-standard features are provided by browser developers for you to ex
 
 ### When using cutting-edge features (even standard ones) that are not universally implemented, make sure to test fallback paths
 
-Make sure to test what happens in a browser that doesn't implement the feature you're using, especially if you don't use such a browser day-to-day while working on the site.
-
-### Don't use vendor-prefixed features except to target old buggy versions
-
-Vendor-prefixed features can change behavior in future releases.  Once a browser has shipped a feature unprefixed, however, you can use the prefixed version to target old releases by making sure to always use the unprefixed version of the feature when available.  A good example, for a browser vendor using the `-vnd` CSS prefix that has shipped an unprefixed implementation of the `make-it-pretty` property, with a behavior for the value `"sometimes"` that differs from the prefixed version:
-
-    <style>
-      .pretty-element {
-        -vnd-make-it-pretty: sometimes;
-        make-it-pretty: sometimes;
-      }
-    </style>
-
-The order of the declarations in the rule above is important: the unprefixed one needs to come last.
+Make sure to test what happens in a browser that doesn't implement the feature you're using, especially if you don't use such a browser day-to-day while working on the site. Also, use Javascript [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) and CSS [@supports](/en-US/docs/Web/CSS/@supports).
 
 ### Don't use unprefixed versions of CSS properties or APIs until at least one browser supports them
 
-Until there's decently widespread support of the unprefixed version of something, its behavior can still change in unexpected ways.  Most especially, don't use the unprefixed version if no browser actually supports it. You can't assume that the syntax of the final version will be the same as the syntax of any of the prefixed versions.
+Until there's decently widespread support of the unprefixed version of something, its behavior can still change in unexpected ways. Most especially, don't use the unprefixed version if no browser actually supports it. You can't assume that the syntax of the final version will be the same as the syntax of any of the prefixed versions.
 
 ## Code hygiene
 
-### Avoid missing `>`
+### Use best practices when coding
 
-Passing a validator is one way to ensure this, but even if your website doesn't validate entirely you should make sure all your `>` characters are present. Missing those can lead to unexpected situations due to a following tag name being treated as an attribute on a previous tag. This can work for a bit, then break if a specification attaches a meaning to that attribute. Here's an example that works in browsers without HTML5 support but breaks in a browser supporting HTML5:
+Passing a validator is one way to ensure your code is valid. But even if your website doesn't validate entirely you should make sure there are no errors, such as ensuring all your `>` characters are present. Missing those can lead to unexpected situations due to a following tag name being treated as an attribute on a previous tag. This can work for a bit, then break if a specification attaches a meaning to that attribute. Here's an example that worked in older browsers but breaks in all modern browsers:
 
 ```html
 <form action="http://www.example.com">
@@ -123,4 +115,4 @@ due to the missing `>` on the `input` tag.
 
 ### Don't leave experiments that didn't work in your code
 
-If you try using a CSS property to do something you want, but it has no effect, remove it.  It might start doing something you don't expect in the future
+If you try using a CSS property to do something you want, but it has no effect, remove it. It might start doing something you don't expect in the future

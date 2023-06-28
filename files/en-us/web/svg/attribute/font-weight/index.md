@@ -1,11 +1,10 @@
 ---
 title: font-weight
 slug: Web/SVG/Attribute/font-weight
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-weight
 ---
+
 {{SVGRef}}
 
 The **`font-weight`** attribute refers to the boldness or lightness of the glyphs used to render the text, relative to other fonts in the same font family.
@@ -14,24 +13,25 @@ The **`font-weight`** attribute refers to the boldness or lightness of the glyph
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-weight="normal">Normal text</text>
-  <text x="100" y="20" font-weight="bold">Bold text</text>
+  <text y="20" font-weight="normal">Normal text</text>
+  <text x="100" y="20" font-weight="bold">Bold text</text>
 </svg>
 ```
 
@@ -59,45 +59,11 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-weight`](/en-US/docs/Web/CSS/font-weight#Values) property.
+For a description of the values, please refer to the [CSS `font-weight`](/en-US/docs/Web/CSS/font-weight#values) property.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS4 Fonts", "#font-weight-prop", "font-weight")}}
-      </td>
-      <td>{{Spec2("CSS4 Fonts")}}</td>
-      <td>
-        Defines <code>font-weight</code> to accept any numbers between 1 and
-        1000.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Fonts", "#font-weight-prop", "font-weight")}}
-      </td>
-      <td>{{Spec2("CSS3 Fonts")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#FontWeightProperty", "font-weight")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -105,4 +71,4 @@ For a description of the values, please refer to the [CSS `font-weight`](/en-US/
 
 ## See also
 
-*   {{cssxref("font-weight", "CSS font-weight")}}
+- {{cssxref("font-weight", "CSS font-weight")}}

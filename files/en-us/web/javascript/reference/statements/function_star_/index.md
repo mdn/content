@@ -1,39 +1,44 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.generator_function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`function*`** declaration (`function` keyword
 followed by an asterisk) defines a _generator function_, which returns a
 {{jsxref("Global_Objects/Generator","Generator")}} object.
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
-
 You can also define generator functions using the {{jsxref("GeneratorFunction")}}
 constructor, or the function expression syntax.
 
+{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+
 ## Syntax
 
-```js
-function* name([param[, param[, ... param]]]) {
-   statements
+```js-nolint
+function* name(param0) {
+  statements
+}
+function* name(param0, param1) {
+  statements
+}
+function* name(param0, param1, /* … ,*/ paramN) {
+  statements
 }
 ```
+
+> **Note:** Generator functions do not have arrow function counterparts.
+
+### Parameters
 
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
   - : The name of a formal parameter for the function.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements comprising the body of the function.
 
 ## Description
@@ -41,14 +46,14 @@ function* name([param[, param[, ... param]]]) {
 Generators are functions that can be exited and later re-entered. Their context
 (variable bindings) will be saved across re-entrances.
 
-Generators in JavaScript -- especially when combined with Promises -- are a very
-powerful tool for asynchronous programming as they mitigate -- if not entirely eliminate
-\-- the problems with callbacks, such as [Callback
-Hell](http://callbackhell.com/) and [Inversion
-of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/). However, an even simpler solution to these problems can be achieved
+Generators in JavaScript — especially when combined with Promises — are a very
+powerful tool for asynchronous programming as they mitigate — if not entirely eliminate
+\-- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and
+[Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
+However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
 
-Calling a generator function does not execute its body immediately; an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)
+Calling a generator function does not execute its body immediately; a [generator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
 object for the function is returned instead. When the iterator's `next()`
 method is called, the generator function's body is executed until the first
 {{jsxref("Operators/yield", "yield")}} expression, which specifies the value to be
@@ -65,10 +70,12 @@ finish (i.e. the `done` property of the object returned by it will be set to
 `true`). If a value is returned, it will be set as the `value`
 property of the object returned by the generator.
 Much like a `return` statement, an error thrown inside the generator will
-make the generator finished -- unless caught within the generator's body.
+make the generator finished — unless caught within the generator's body.
 When a generator is finished, subsequent `next()` calls will not execute any
 of that generator's code, they will just return an object of this form:
 `{value: undefined, done: true}`.
+
+`function*` declarations are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope.
 
 ## Examples
 
@@ -76,18 +83,19 @@ of that generator's code, they will just return an object of this form:
 
 ```js
 function* idMaker() {
-  var index = 0;
-  while (true)
+  let index = 0;
+  while (true) {
     yield index++;
+  }
 }
 
-var gen = idMaker();
+const gen = idMaker();
 
 console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
-// ...
+// …
 ```
 
 ### Example with yield\*
@@ -105,7 +113,7 @@ function* generator(i) {
   yield i + 10;
 }
 
-var gen = generator(10);
+const gen = generator(10);
 
 console.log(gen.next().value); // 10
 console.log(gen.next().value); // 11
@@ -124,14 +132,14 @@ function* logGenerator() {
   console.log(3, yield);
 }
 
-var gen = logGenerator();
+const gen = logGenerator();
 
 // the first call of next executes from the start of the function
 // until the first yield statement
-gen.next();             // 0
-gen.next('pretzel');    // 1 pretzel
-gen.next('california'); // 2 california
-gen.next('mayonnaise'); // 3 mayonnaise
+gen.next(); // 0
+gen.next("pretzel"); // 1 pretzel
+gen.next("california"); // 2 california
+gen.next("mayonnaise"); // 3 mayonnaise
 ```
 
 ### Return statement in a generator
@@ -143,7 +151,7 @@ function* yieldAndReturn() {
   yield "unreachable";
 }
 
-var gen = yieldAndReturn()
+const gen = yieldAndReturn();
 console.log(gen.next()); // { value: "Y", done: false }
 console.log(gen.next()); // { value: "R", done: true }
 console.log(gen.next()); // { value: undefined, done: true }
@@ -153,13 +161,13 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 const someObj = {
-  *generator () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *generator() {
+    yield "a";
+    yield "b";
+  },
+};
 
-const gen = someObj.generator()
+const gen = someObj.generator();
 
 console.log(gen.next()); // { value: 'a', done: false }
 console.log(gen.next()); // { value: 'b', done: false }
@@ -170,14 +178,14 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 class Foo {
-  *generator () {
+  *generator() {
     yield 1;
     yield 2;
     yield 3;
   }
 }
 
-const f = new Foo ();
+const f = new Foo();
 const gen = f.generator();
 
 console.log(gen.next()); // { value: 1, done: false }
@@ -190,20 +198,20 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 class Foo {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
   }
 }
 
 const SomeObj = {
-  *[Symbol.iterator] () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *[Symbol.iterator]() {
+    yield "a";
+    yield "b";
+  },
+};
 
-console.log(Array.from(new Foo)); // [ 1, 2 ]
+console.log(Array.from(new Foo())); // [ 1, 2 ]
 console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
 ```
 
@@ -211,7 +219,7 @@ console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
 
 ```js
 function* f() {}
-var obj = new f; // throws "TypeError: f is not a constructor
+const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
 ### Generator defined in an expression
@@ -229,22 +237,24 @@ console.log(bar.next()); // {value: 10, done: false}
 ### Generator example
 
 ```js
-function* powers(n){
-     //endless loop to generate
-     for(let current =n;; current *= n){
-         yield current;
-     }
+function* powers(n) {
+  //endless loop to generate
+  for (let current = n; ; current *= n) {
+    yield current;
+  }
 }
 
-for(let power of powers(2)){
-     //controlling generator
-     if(power > 32) break;
-     console.log(power)
-           //2
-          //4
-         //8
-        //16
-       //32
+for (const power of powers(2)) {
+  // controlling generator
+  if (power > 32) {
+    break;
+  }
+  console.log(power);
+  // 2
+  // 4
+  // 8
+  // 16
+  // 32
 }
 ```
 
@@ -260,8 +270,7 @@ for(let power of powers(2)){
 
 - {{jsxref("Operators/function*", "function*")}} expression
 - {{jsxref("GeneratorFunction")}} object
-- [Iteration
-  protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object
@@ -270,10 +279,7 @@ for(let power of powers(2)){
 - {{jsxref("Functions", "Functions and function scope", "", 1)}}
 - Other web resources:
 
-  - [Regenerator](https://facebook.github.io/regenerator/) an ES2015
-    generator compiler to ES5
-  - [Forbes Lindesay: Promises
-    and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Regenerator](https://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](https://github.com/mozilla/task.js)
-  - [Iterating
-    generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)
+  - [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)

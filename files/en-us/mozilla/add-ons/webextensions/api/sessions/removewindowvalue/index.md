@@ -1,17 +1,10 @@
 ---
 title: sessions.removeWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeWindowValue
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeWindowValue
 ---
+
 {{AddonSidebar()}}
 
 Removes a value previously stored by a call to {{WebExtAPIRef("sessions.setWindowValue")}}.
@@ -20,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var removing = browser.sessions.removeWindowValue(
+```js-nolint
+let removing = browser.sessions.removeWindowValue(
   windowId,    // integer
   key          // string
 )

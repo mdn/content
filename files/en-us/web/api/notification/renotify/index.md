@@ -1,29 +1,21 @@
 ---
-title: Notification.renotify
+title: "Notification: renotify property"
+short-title: renotify
 slug: Web/API/Notification/renotify
-tags:
-  - API
-  - Experimental
-  - Notifications
-  - Property
-  - Reference
-  - renotify
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Notification.renotify
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`renotify`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the user should be notified
 after a new notification replaces an old one, as specified in the `renotify`
 option of the {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var renotify = Notification.renotify;
-```
-
-### Value
+## Value
 
 A boolean value. `false` is the default; `true` makes
 the notification renotify the user.
@@ -35,14 +27,14 @@ it has been replaced; a simple `options` object is created, and then the
 notification is fired using the `Notification()` constructor.
 
 ```js
-var options = {
-  body: 'Do you like my body?',
-  renotify: true
-}
+const options = {
+  body: "Your code submission has received 3 new review comments.",
+  renotify: true,
+};
 
-var n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.renotify) // should log true
+console.log(n.renotify); // "true"
 ```
 
 ## Specifications
@@ -55,5 +47,4 @@ console.log(n.renotify) // should log true
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -1,24 +1,11 @@
 ---
-title: RTCRtpStreamStats.firCount
+title: "RTCRtpStreamStats: firCount property"
+short-title: firCount
 slug: Web/API/RTCRtpStreamStats/firCount
-tags:
-  - API
-  - Dropped Frames
-  - Frames
-  - Media
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - firCount
-  - rtc
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.firCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`firCount`** property of the
@@ -29,19 +16,13 @@ the sender.
 This is a measure of how often the stream falls behind and has to
 skip frames in order to catch up.
 
-## Syntax
-
-```js
-var firCount = RTCRtpStreamStats.firCount;
-```
-
-### Value
+## Value
 
 An integer value indicating how many FIR packets have been received by the sender
 during the current connection. This value is available only on receivers for video
 tracks.
 
-The receiver sends a FIR packet to the sender any time it falls bahind or loses packets
+The receiver sends a FIR packet to the sender any time it falls behind or loses packets
 and cannot decode the incoming stream any longer because of the lost data. This tells
 the sender to send a full frame instead of a delta frame, so that the receiver can catch
 up.

@@ -1,18 +1,14 @@
 ---
-title: XRProjectionLayer.fixedFoveation
+title: "XRProjectionLayer: fixedFoveation property"
+short-title: fixedFoveation
 slug: Web/API/XRProjectionLayer/fixedFoveation
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRProjectionLayer.fixedFoveation
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`fixedFoveation`** property of the {{domxref("XRProjectionLayer")}} interface is a number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
 
@@ -21,6 +17,7 @@ It is most useful for low-contrast textures such as background images, but less 
 ## Value
 
 A number between 0 and 1.
+
 - The minimum amount of foveation is indicated by 0 (full resolution).
 - The maximum amount of foveation is indicated by 1 (the edges render at lower resolution).
 
@@ -33,7 +30,7 @@ Note that some user agents might implement certain levels of foveation, so you m
 - `2/3`: medium foveation
 - `1.0`: maximum foveation
 
-Some devices don't support foveated rendering. In that case `fixedFoveation` is {{jsxref("null")}} and setting it will not do anything.
+Some devices don't support foveated rendering. In that case `fixedFoveation` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and setting it will not do anything.
 
 ## Examples
 
@@ -42,9 +39,10 @@ Some devices don't support foveated rendering. In that case `fixedFoveation` is 
 The `fixedFoveation` property allows you to set the level of foveation at runtime and for each frame. To set the maximum foveation for a given {{domxref("XRProjectionLayer")}}, use a value of `1`.
 
 ```js
-let glProjectionLayer = glBinding.createProjectionLayer(/* ... */);
+let glProjectionLayer = glBinding.createProjectionLayer(/* … */);
 glProjectionLayer.fixedFoveation = 1; // maximum foveation
 ```
+
 ## Specifications
 
 {{Specifications}}

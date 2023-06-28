@@ -1,59 +1,71 @@
 ---
-title: CookieStore.get()
+title: "CookieStore: get() method"
+short-title: get()
 slug: Web/API/CookieStore/get
-tags:
-  - API
-  - Method
-  - Reference
-  - get()
-  - CookieStore
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CookieStore.get
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. (See below.) The method will return the first matching cookie for the passed parameters.
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+
+The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. The method will return the first matching cookie for the passed parameters.
 
 ## Syntax
 
-    var cookie = CookieStore.get(name);
-    var cookie = CookieStore.get(options);
+```js-nolint
+get(name)
+get(options)
+```
 
 ### Parameters
 
 This method requires one of the following:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of a cookie.
-- options
+  - : A string with the name of a cookie.
+
+Or
+
+- `options`
 
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `url`
-      - : A {{domxref("USVString")}} with the url of a cookie.
+      - : A string with the URL of a cookie.
 
 > **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an object containing the first cookie matching the submitted name or options. This object contains the following properties:
+A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted name or options. This object contains the following properties:
+
+- `domain`
+
+  - : A string containing the domain of the cookie.
+
+- `expires`
+
+  - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
 
 - `name`
-  - : A {{domxref("USVString")}} containing the name of the cookie.
-- `value`
-  - : A {{domxref("USVString")}} containing the value of the cookie.
-- `domain`
-  - : A {{domxref("USVString")}} containing the domain of the cookie.
+
+  - : A string containing the name of the cookie.
+
+- `partitioned`
+
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+
 - `path`
-  - : A {{domxref("USVString")}} containing the path of the cookie.
-- `expires`
-  - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
-- `secure`
-  - : A {{jsxref("boolean")}} indicating whether the cookie is to be used in secure contexts only.
+
+  - : A string containing the path of the cookie.
+
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
@@ -62,7 +74,12 @@ A {{jsxref("Promise")}} that resolves with an object containing the first cookie
     - `"none"`
       - : Cookies will be sent in all contexts.
 
-    > **Note:** For more information on SameSite cookies see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
+- `secure`
+
+  - : A boolean value indicating whether the cookie is to be used in secure contexts only (`true`) or not (`false`).
+
+- `value`
+  - : A string containing the value of the cookie.
 
 ### Exceptions
 
@@ -74,11 +91,11 @@ A {{jsxref("Promise")}} that resolves with an object containing the first cookie
 In this example we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
 
 ```js
-let cookie = cookieStore.get('cookie1');
+let cookie = cookieStore.get("cookie1");
 if (cookie) {
-    console.log(cookie);
+  console.log(cookie);
 } else {
-    console.log('Cookie not found');
+  console.log("Cookie not found");
 }
 ```
 

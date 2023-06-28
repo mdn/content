@@ -1,23 +1,18 @@
 ---
-title: XRLightEstimate.sphericalHarmonicsCoefficients
+title: "XRLightEstimate: sphericalHarmonicsCoefficients property"
+short-title: sphericalHarmonicsCoefficients
 slug: Web/API/XRLightEstimate/sphericalHarmonicsCoefficients
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRLightEstimate.sphericalHarmonicsCoefficients
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`sphericalHarmonicsCoefficients`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.
 
-Spheral harmonic lighting is a technique that uses spherical functions instead of standard lighting equations. See [Wikipedia](https://en.wikipedia.org/wiki/Spherical_harmonic_lighting) for more information.
+Spherical harmonic lighting is a technique that uses spherical functions instead of standard lighting equations. See [Wikipedia](https://en.wikipedia.org/wiki/Spherical_harmonic_lighting) for more information.
 
 ## Value
 
@@ -36,7 +31,7 @@ const lightProbe = await xrSession.requestLightProbe();
 function onXRFrame(time, xrFrame) {
   let lightEstimate = xrFrame.getLightEstimate(lightProbe);
 
-  // Render lights using lightEstimate.sphericalHarmonicsCoefficients ...
+  // Render lights using lightEstimate.sphericalHarmonicsCoefficients
 }
 ```
 

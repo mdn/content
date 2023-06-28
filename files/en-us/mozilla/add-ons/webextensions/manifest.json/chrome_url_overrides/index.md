@@ -1,12 +1,10 @@
 ---
 title: chrome_url_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.chrome_url_overrides
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -20,12 +18,16 @@ browser-compat: webextensions.manifest.chrome_url_overrides
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
-  "chrome_url_overrides" : {
-    "newtab": "my-new-tab.html"
-  }</pre
+  "chrome_url_overrides" : {
+    "newtab": "my-new-tab.html"
+  }</pre
         >
       </td>
     </tr>
@@ -51,7 +53,7 @@ The `chrome_url_overrides` key is an object that may have the following properti
       <td><code>bookmarks</code></td>
       <td><code>String</code></td>
       <td>
-        <p>Provide a replacement for the page that shows the bookmarks. </p>
+        <p>Provide a replacement for the page that shows the bookmarks. </p>
       </td>
     </tr>
     <tr>
@@ -59,7 +61,7 @@ The `chrome_url_overrides` key is an object that may have the following properti
       <td><code>String</code></td>
       <td>
         <p>
-          Provide a replacement for the page that shows the browsing history. 
+          Provide a replacement for the page that shows the browsing history.
         </p>
       </td>
     </tr>

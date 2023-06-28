@@ -1,27 +1,21 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 ---
+
 {{JSRef}}
 
-The **`handler.setPrototypeOf()`** method is a trap for
-{{jsxref("Object.setPrototypeOf()")}}.
+The **`handler.setPrototypeOf()`** method is a trap for the `[[SetPrototypeOf]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.setPrototypeOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller",
-  "taller")}}
+{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
 
 ## Syntax
 
-```js
-const p = new Proxy(target, {
-  setPrototypeOf: function(target, prototype) {
+```js-nolint
+new Proxy(target, {
+  setPrototypeOf(target, prototype) {
   }
 });
 ```
@@ -43,9 +37,6 @@ The `setPrototypeOf()` method returns `true` if the
 
 ## Description
 
-The **`handler.setPrototypeOf()`** method is a trap for
-{{jsxref("Object.setPrototypeOf()")}}.
-
 ### Interceptions
 
 This trap can intercept these operations:
@@ -53,10 +44,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}
 
+Or any other operation that invokes the `[[SetPrototypeOf]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - If `target` is not extensible, the `prototype`
   parameter must be the same value as
@@ -80,12 +72,13 @@ _doesn't_ ordinarily throw in case of failure, such as
 
 ```js
 const handlerReturnsFalse = {
-    setPrototypeOf(target, newProto) {
-        return false;
-    }
+  setPrototypeOf(target, newProto) {
+    return false;
+  },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto); // throws a TypeError
@@ -100,15 +93,16 @@ failure, or you want to throw a custom exception value.
 
 ```js
 const handlerThrows = {
-    setPrototypeOf(target, newProto) {
-        throw new Error('custom error');
-    }
+  setPrototypeOf(target, newProto) {
+    throw new Error("custom error");
+  },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p2 = new Proxy(target, handlerThrows);
-Object.setPrototypeOf(p2, newProto);  // throws new Error("custom error")
+Object.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 ```
 
@@ -123,6 +117,6 @@ Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}

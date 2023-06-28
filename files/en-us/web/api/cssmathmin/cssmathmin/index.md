@@ -1,31 +1,28 @@
 ---
-title: CSSMathMin()
+title: "CSSMathMin: CSSMathMin() constructor"
+short-title: CSSMathMin()
 slug: Web/API/CSSMathMin/CSSMathMin
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathMin
-  - CSSNumericValue
-  - Constructor
-  - Experimental
-  - Houdini
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.CSSMathMin.CSSMathMin
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathMin()`** constructor creates a
 new {{domxref("CSSMathMin")}} object which represents the CSS
-{{CSSXref('min()','min()')}} function.
+{{CSSXref('min','min()')}} function.
 
 ## Syntax
 
-```js
-var CSSMathMin = new CSSMathMin(args);
+```js-nolint
+new CSSMathMin(args)
 ```
 
 ### Parameters
 
-- args
+- `args`
   - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
     integer or a {{domxref('CSSNumericValue')}}.
 

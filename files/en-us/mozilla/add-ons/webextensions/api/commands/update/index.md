@@ -1,17 +1,10 @@
 ---
 title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Update
-  - WebExtensions
-  - commands
+page-type: webextension-api-function
 browser-compat: webextensions.api.commands.update
 ---
+
 {{AddonSidebar()}}
 
 Change the description or keyboard shortcut for the given command.
@@ -20,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.commands.update(
   details // object
 );
@@ -34,9 +27,9 @@ browser.commands.update(
 
     - `name`
       - : `string`. The name of the command to update. This must match the name of an existing command, as given for example in the `name` property of the {{WebExtAPIRef("commands.Command")}} object.
-    - `description`{{optional_inline}}
+    - `description` {{optional_inline}}
       - : `string`. A new description to set for the command.
-    - `shortcut`{{optional_inline}}
+    - `shortcut` {{optional_inline}}
 
       - : `string`. A new shortcut to set for the command. This can be:
 

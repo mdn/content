@@ -1,29 +1,16 @@
 ---
-title: DOMRectReadOnly.right
+title: "DOMRectReadOnly: right property"
+short-title: right
 slug: Web/API/DOMRectReadOnly/right
-tags:
-  - API
-  - DOM
-  - DOMRect
-  - DOMRectReadOnly
-  - Experimental
-  - Geometry
-  - Property
-  - Reference
-  - right
+page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.right
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-The **`right`** read-only property of the **`DOMRectReadOnly`** interface returns the right coordinate value of the `DOMRect.` (Has the same value as `x + width`, or `x` if `width` is negative.)
+{{APIRef("Geometry Interfaces")}}
 
-## Syntax
+The **`right`** read-only property of the **`DOMRectReadOnly`** interface returns the right coordinate value of the `DOMRect`. (Has the same value as `x + width`, or `x` if `width` is negative.)
 
-```js
-var recRight = DOMRect.right;
-```
-
-### Value
+## Value
 
 A double.
 

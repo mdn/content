@@ -1,17 +1,17 @@
 ---
 title: last
 slug: Web/XPath/Functions/last
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `last` function returns a number equal to the context size from the expression evaluation context.
 
 ### Syntax
 
-    last()
+```
+last()
+```
 
 ### Returns
 
@@ -23,7 +23,7 @@ An integer equal to the context size from the expression evaluation context.
 
 ### Defined
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-last)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-last)
 
 ### Gecko support
 

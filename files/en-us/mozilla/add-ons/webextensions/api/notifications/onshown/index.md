@@ -1,25 +1,17 @@
 ---
 title: notifications.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Notifications
-  - Reference
-  - WebExtensions
-  - events
-  - onShown
+page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired immediately after a notification has been shown.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.notifications.onShown.addListener(listener)
 browser.notifications.onShown.removeListener(listener)
 browser.notifications.onShown.hasListener(listener)
@@ -27,7 +19,7 @@ browser.notifications.onShown.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -38,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `notificationId`
       - : `string`. ID of the notification that has been shown.
@@ -66,4 +58,4 @@ browser.notifications.onShown.addListener(logShown);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

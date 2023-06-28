@@ -1,16 +1,9 @@
 ---
 title: Move the ball
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Loop
-  - Tutorial
-  - movement
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
@@ -27,7 +20,7 @@ Delete all the JavaScript you currently have inside your HTML file except for th
 
 ```js
 function draw() {
-    // drawing code
+  // drawing code
 }
 setInterval(draw, 10);
 ```
@@ -36,7 +29,7 @@ Thanks to the infinite nature of `setInterval` the `draw()` function will be cal
 
 ```js
 ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.arc(50, 50, 10, 0, Math.PI * 2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
@@ -51,46 +44,46 @@ You won't notice the ball being repainted constantly at the moment, as it's not 
 First, add the following two lines above your `draw()` function, to define `x` and `y`:
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
 ```
 
 Next update the `draw()` function to use the x and y variables in the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method, as shown in the following highlighted line:
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
 Now comes the important part: we want to add a small value to `x` and `y` after every frame has been drawn to make it appear that the ball is moving. Let's define these small values as `dx` and `dy` and set their values to 2 and -2 respectively. Add the following below your x and y variable definitions:
 
 ```js
-var dx = 2;
-var dy = -2;
+let dx = 2;
+let dy = -2;
 ```
 
 The last thing to do is to update `x` and `y` with our `dx` and `dy` variable on every frame, so the ball will be painted in the new position on every update. Add the following two new lines indicated below to your `draw()` function:
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
 Save your code again and try it in your browser. This works OK, although it appears that the ball is leaving a trail behind it:
 
-![](ball-trail.png)
+![A blue line that indicates where the ball has been](ball-trail.png)
 
 ## Clearing the canvas before each frame
 
@@ -100,14 +93,14 @@ Add the following highlighted new line to the `draw()` function:
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -121,18 +114,18 @@ Replace the existing draw() function with the following two functions:
 
 ```js
 function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
 }
 ```
 

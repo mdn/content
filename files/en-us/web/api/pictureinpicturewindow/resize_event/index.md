@@ -1,42 +1,39 @@
 ---
-title: 'PictureInPictureWindow: resize event'
+title: "PictureInPictureWindow: resize event"
+short-title: resize
 slug: Web/API/PictureInPictureWindow/resize_event
-tags:
-  - API
-  - Event
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
-  - resize
+page-type: web-api-event
 browser-compat: api.PictureInPictureWindow.resize_event
 ---
-{{APIRef}}
+
+{{APIRef("Picture-in-Picture API")}}
 
 The **`resize`** event fires when the floating video window has been resized.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PictureInPictureWindow")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("PictureInPictureWindow.onresize", "onresize")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("resize", (event) => {});
+
+onresize = (event) => {};
+```
+
+## Event type
+
+A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PictureInPictureEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
+  - : Returns the {{domxref("PictureInPictureWindow")}} that is resized.
 
 ## Examples
 
@@ -50,27 +47,20 @@ The **`resize`** event fires when the floating video window has been resized.
 ```
 
 ```js
-const video = document.querySelector('#video');
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
+const video = document.querySelector("#video");
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
 
 function resize(evt) {
-  heightOutput.textContent = evt.target.width;
+  heightOutput.textContent = evt.target.height;
   widthOutput.textContent = evt.target.width;
 }
 
-video.requestPictureInPicture()
-  .then(pictureInPictureWindow => {
-    pictureInPictureWindow.onresize = resize;
-  });
-```
-
-### addEventListener equivalent
-
-You could set up the event handler using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
-
-```js
-pictureInPictureWindow.addEventListener('resize', resize);
+video.requestPictureInPicture().then((pictureInPictureWindow) => {
+  pictureInPictureWindow.onresize = resize;
+  // or
+  pictureInPictureWindow.addEventListener("resize", resize);
+});
 ```
 
 ## Specifications
@@ -80,7 +70,3 @@ pictureInPictureWindow.addEventListener('resize', resize);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("PictureInPictureWindow.onresize")}}

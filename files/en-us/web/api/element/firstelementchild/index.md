@@ -1,13 +1,11 @@
 ---
-title: Element.firstElementChild
+title: "Element: firstElementChild property"
+short-title: firstElementChild
 slug: Web/API/Element/firstElementChild
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.Element.firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.firstElementChild`** read-only property
@@ -17,28 +15,23 @@ are no child elements.
 `Element.firstElementChild` includes only element nodes.
 To get all child nodes, including non-element nodes like text and comment nodes, use {{domxref("Node.firstChild")}}.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = el.firstElementChild;
+An {{domxref("Element")}} object, or `null`.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```html
 <ul id="list">
-  <li>First  (1)</li>
+  <li>First (1)</li>
   <li>Second (2)</li>
-  <li>Third  (3)</li>
+  <li>Third (3)</li>
 </ul>
 
 <script>
-const list = document.getElementById('list');
-console.log(list.firstElementChild.textContent);
-// logs "First (1)"
+  const list = document.getElementById("list");
+  console.log(list.firstElementChild.textContent);
+  // logs "First (1)"
 </script>
 ```
 

@@ -1,23 +1,16 @@
 ---
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.find
 ---
+
 {{JSRef}}
 
 The **`find()`** method returns a value of an element in the
 typed array, if it satisfies the provided testing function. Otherwise
-{{jsxref("undefined")}} is returned. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+{{jsxref("undefined")}} is returned. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 See also the {{jsxref("TypedArray.findIndex", "findIndex()")}} method, which returns
 the **index** of a found element in the typed array instead of its value.
@@ -26,38 +19,23 @@ the **index** of a found element in the typed array instead of its value.
 
 ## Syntax
 
-```js
-// Arrow function
-find((element) => { ... } )
-find((element, index) => { ... } )
-find((element, index, array) => { ... } )
-
-// Callback function
+```js-nolint
 find(callbackFn)
 find(callbackFn, thisArg)
-
-// Inline callback function
-find(function(element) { ... })
-find(function(element, index) { ... })
-find(function(element, index, array){ ... })
-find(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function to execute on each value in the typed array, taking three arguments:
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the typed array.
     - `index`
       - : The index of the current element being processed in the typed array.
     - `array`
       - : The array `find()` was called upon.
-
 - `thisArg` {{optional_inline}}
-  - : Object to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
@@ -100,16 +78,16 @@ returns {{jsxref("undefined")}} if there is no prime number).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
-      return false;
-    }
-  }
-  return element > 1;
+  let start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+    }
+  }
+  return element > 1;
 }
 
-var uint8 = new Uint8Array([4, 5, 8, 12]);
+const uint8 = new Uint8Array([4, 5, 8, 12]);
 console.log(uint8.find(isPrime)); // 5
 ```
 
@@ -123,6 +101,6 @@ console.log(uint8.find(isPrime)); // 5
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.find` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

@@ -1,17 +1,10 @@
 ---
-title: 'CSP: font-src'
+title: "CSP: font-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - font
-  - source
-browser-compat: http.headers.csp.Content-Security-Policy.font-src
+page-type: http-csp-directive
+browser-compat: http.headers.Content-Security-Policy.font-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -42,14 +35,16 @@ valid sources for fonts loaded using {{cssxref("@font-face")}}.
 
 One or more sources can be allowed for the `font-src` policy:
 
-```
+```http
 Content-Security-Policy: font-src <source>;
 Content-Security-Policy: font-src <source> <source>;
 ```
 
 ### Sources
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 
@@ -57,7 +52,7 @@ Content-Security-Policy: font-src <source> <source>;
 
 Given this CSP header:
 
-```
+```http
 Content-Security-Policy: font-src https://example.com/
 ```
 

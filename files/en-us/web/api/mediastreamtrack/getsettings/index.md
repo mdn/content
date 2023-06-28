@@ -1,34 +1,33 @@
 ---
-title: MediaStreamTrack.getSettings()
+title: "MediaStreamTrack: getSettings() method"
+short-title: getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
-tags:
-  - API
-  - Constraints
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.MediaStreamTrack.getSettings
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getSettings()`** method of the
-{{domxref("MediaStreamTrack")}} interface returns a {{domxref("MediaTrackSettings")}}
-object containing the current values of each of the constrainable properties for the
+{{domxref("MediaStreamTrack")}} interface returns a {{domxref("MediaTrackSettings")}}
+object containing the current values of each of the constrainable properties for the
 current `MediaStreamTrack`.
 
-See [Capabilities, constraints,
-and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
+See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for details on how to work with constrainable properties.
 
 ## Syntax
 
-```js
-const settings = track.getSettings()
+```js-nolint
+getSettings()
 ```
 
-### Returns
+### Parameters
 
-A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
+None.
+
+### Return value
+
+A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
 track's constrainable properties.
 
 > **Note:** The returned object identifies the current values of every

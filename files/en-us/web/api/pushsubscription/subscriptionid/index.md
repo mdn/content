@@ -1,32 +1,24 @@
 ---
-title: PushSubscription.subscriptionId
+title: "PushSubscription: subscriptionId property"
+short-title: subscriptionId
 slug: Web/API/PushSubscription/subscriptionId
-tags:
-  - API
-  - Deprecated
-  - Experimental
-  - Property
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - subscriptionId
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PushSubscription.subscriptionId
 ---
+
 {{APIRef("Push API")}}{{Deprecated_header}}
 
 The **`subscriptionId`** read-only property of the
-{{domxref("PushSubscription")}} interface returns a {{domxref("DOMString")}} containing
+{{domxref("PushSubscription")}} interface returns a string containing
 the subscription ID associated with the push subscription.
 
-> **Warning:** Instead of this feature, use the {{domxref("PushSubscription.endPoint")}} property on the same interface.
+> **Warning:** Instead of this feature, use the {{domxref("PushSubscription.endpoint")}} property on the same interface.
 
-## Syntax
+## Value
 
-```js
-var subId = pushSubscription.subscriptionId;
-```
+A string.
 
 ## Specifications
 

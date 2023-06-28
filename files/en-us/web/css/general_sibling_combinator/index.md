@@ -1,16 +1,13 @@
 ---
 title: General sibling combinator
 slug: Web/CSS/General_sibling_combinator
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-combinator
 browser-compat: css.selectors.general_sibling
 ---
+
 {{CSSRef("Selectors")}}
 
-The **general sibling combinator** (`~`) separates two selectors and matches _all iterations_ of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent {{Glossary("element")}}.
+The **general sibling combinator** (`~`) separates two selectors and matches _all iterations_ of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent {{Glossary("element")}}.
 
 ```css
 /* Paragraphs that are siblings of and
@@ -39,17 +36,24 @@ p ~ span {
 ### HTML
 
 ```html
-<span>This is not red.</span>
-<p>Here is a paragraph.</p>
-<code>Here is some code.</code>
-<span>And here is a red span!</span>
-<span>And this is a red span!</span>
-<code>More code...</code>
-<div> How are you? </div>
-<p> Whatever it may be, keep smiling. </p>
-<h1> Dream big </h1>
-<h2> that's all. </h2>
-<span>And yet again this is a red span!</span>
+<article>
+  <span>This is not red because it appears before any paragraph.</span>
+  <p>Here is a paragraph.</p>
+  <code>Here is some code.</code>
+  <span>
+    This span is red because it appears after the paragraph, even though there
+    are other nodes in between
+  </span>
+  <p>Whatever it may be, keep smiling.</p>
+  <h1>Dream big</h1>
+  <span>
+    Doesn't matter how many or what kind of nodes are in between, all spans from
+    the same parent after a paragraph are red.
+  </span>
+</article>
+<span>
+  This span is not red because it it doesn't share a parent with a paragraph
+</span>
 ```
 
 ### Result

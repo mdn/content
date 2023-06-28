@@ -1,14 +1,11 @@
 ---
-title: 'Location: replace()'
+title: "location: replace() method"
+short-title: replace()
 slug: Web/API/Location/replace
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Location.replace
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`replace()`** method of the {{DOMXref("Location")}}
@@ -29,20 +26,26 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 
 ## Syntax
 
-```js
-object.replace(url);
+```js-nolint
+replace(url)
 ```
 
 ### Parameters
 
 - `url`
-  - : Is a {{domxref("DOMString")}} containing the URL of the page to navigate to.
+  - : A string containing the URL of the page to navigate to.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 // Navigate to the Location.reload article by replacing this page
-window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+window.location.replace(
+  "https://developer.mozilla.org/en-US/docs/Web/API/Location.reload"
+);
 ```
 
 ## Specifications

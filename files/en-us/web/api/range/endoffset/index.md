@@ -1,13 +1,11 @@
 ---
-title: Range.endOffset
+title: "Range: endOffset property"
+short-title: endOffset
 slug: Web/API/Range/endOffset
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
+page-type: web-api-instance-property
 browser-compat: api.Range.endOffset
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.endOffset`** read-only property returns a number
@@ -23,19 +21,17 @@ boundary point of the {{domxref("Range")}}. This property is read-only. To chang
 `endOffset` of a {{domxref("Range")}}, use one of the
 {{domxref("Range.setEnd")}} methods.
 
-## Syntax
+## Value
+
+A number.
+
+## Examples
 
 ```js
-endRangeOffset = range.endOffset;
-```
+const range = document.createRange();
 
-## Example
-
-```js
-var range = document.createRange();
-
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 endRangeOffset = range.endOffset;
 ```
 

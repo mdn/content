@@ -1,14 +1,12 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-internal
+page-type: css-type
+browser-compat:
+  - css.properties.display.table_values
+  - css.properties.display.ruby_values
 ---
+
 {{CSSRef}}
 
 Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill. This page defines those "internal" display values, which only have meaning within that particular layout mode.
@@ -38,9 +36,13 @@ Valid `<display-internal>` values:
 - `ruby-text` {{Experimental_Inline}}
   - : These elements behave like {{HTMLElement("rt")}} HTML elements.
 - `ruby-base-container` {{Experimental_Inline}}
-  - : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
+  - : These elements are generated as anonymous boxes.
 - `ruby-text-container` {{Experimental_Inline}}
   - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -54,11 +56,11 @@ The following example demonstrates laying out a simple form using CSS table layo
 <main>
   <div>
     <label for="name">Name</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
 </main>
 ```
@@ -74,7 +76,8 @@ div {
   display: table-row;
 }
 
-label, input {
+label,
+input {
   display: table-cell;
   margin: 5px;
 }
@@ -86,23 +89,11 @@ label, input {
 
 ## Specifications
 
-| Specification                                                                                            | Status                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Support of table values
-
-`table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, and `table-row-group`
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### Support of ruby values
-
-`ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, and `ruby-text-container`
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## See also
 

@@ -1,15 +1,12 @@
 ---
-title: FileSystemDirectoryHandle.removeEntry()
+title: "FileSystemDirectoryHandle: removeEntry() method"
+short-title: removeEntry()
 slug: Web/API/FileSystemDirectoryHandle/removeEntry
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
+page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`removeEntry()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface attempts to remove an entry if the
@@ -17,21 +14,22 @@ directory handle contains a file or directory called the name specified.
 
 ## Syntax
 
-```js
-FileSystemDirectoryHandle.removeEntry(name).then...
+```js-nolint
+removeEntry(name)
+removeEntry(name, options)
 ```
 
 ### Parameters
 
-- _name_
-  - : A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
+- `name`
+  - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the entry you wish to remove.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An optional object containing options, which are as follows:
 
-    - `recursive`: A {{jsxref('Boolean')}}. Default `false`.
-      When set to `true` entries will be removed recursively.
+    - `recursive`
+      - : A boolean value, which defaults to `false`. When set to `true` entries will be removed recursively.
 
 ### Return value
 
@@ -39,7 +37,7 @@ A {{jsxref('Promise')}} which resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the name is not a valid string or contains characters not allowed on the file
     system
 - `NotAllowedError` {{domxref("DOMException")}}
@@ -54,12 +52,12 @@ A {{jsxref('Promise')}} which resolves with `undefined`.
 The following example removes an entry within the directory handle.
 
 ```js
-const entryName = 'entryToRemove';
+const entryName = "entryToRemove";
 
 // assuming we have a directory handle: 'currentDirHandle'
-currentDirHandle.removeEntry(entryName).then( () => {
+currentDirHandle.removeEntry(entryName).then(() => {
   // code to run if removing was successful
-} );
+});
 ```
 
 ## Specifications
@@ -73,5 +71,4 @@ currentDirHandle.removeEntry(entryName).then( () => {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

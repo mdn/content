@@ -1,30 +1,17 @@
 ---
-title: DocumentFragment.children
+title: "DocumentFragment: children property"
+short-title: children
 slug: Web/API/DocumentFragment/children
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - Property
-  - children
+page-type: web-api-instance-property
 browser-compat: api.DocumentFragment.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}
 which contains all of the child {{domxref("Element", "elements")}} of the document fragment upon which it was called.
 
-## Syntax
-
-```js
-// Getter
-collection = myFragment.children;
-
-// No setter; read-only property
-```
-
-### Return value
+## Value
 
 An {{ domxref("HTMLCollection") }} which is a live, ordered collection of the DOM
 elements which are children of the document fragment. You can access the
@@ -35,14 +22,14 @@ JavaScript array-style notation.
 If the document fragment has no element children, then `children` is an empty list with a
 `length` of `0`.
 
-## Example
+## Examples
 
 ```js
-let fragment = new DocumentFragment()
+let fragment = new DocumentFragment();
 fragment.children; // HTMLCollection []
 
-let paragraph = document.createElement('p')
-fragment.appendChild(paragraph)
+let paragraph = document.createElement("p");
+fragment.appendChild(paragraph);
 
 fragment.children; // HTMLCollection [<p>]
 ```

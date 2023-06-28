@@ -1,34 +1,23 @@
 ---
-title: OffscreenCanvas.height
+title: "OffscreenCanvas: height property"
+short-title: height
 slug: Web/API/OffscreenCanvas/height
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - OffscreenCanvas
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.OffscreenCanvas.height
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-The **`height`** property returns and sets the height of an
-{{domxref("OffscreenCanvas")}} object.
+{{APIRef("Canvas API")}}
 
-## Syntax
+The **`height`** property returns and sets the height of an {{domxref("OffscreenCanvas")}} object.
 
-```js
-var pxl = offscreen.height;
-offscreen.height = pxl;
-```
+## Value
 
 ## Examples
 
-Creating a new offscreen canvas and returning or setting the height of the offscreen
-canvas:
+Creating a new offscreen canvas and returning or setting the height of the offscreen canvas:
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
+const offscreen = new OffscreenCanvas(256, 256);
 offscreen.height; // 256
 offscreen.height = 512;
 ```

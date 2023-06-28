@@ -1,37 +1,33 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.writeValue()
+title: "BluetoothRemoteGATTCharacteristic: writeValue() method"
+short-title: writeValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValue
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - writeValue
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValue
 ---
-{{Deprecated_header}}
+
+{{APIRef("Bluetooth API")}}{{Deprecated_header}}
 
 Use {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} and {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}} instead.
 
-The **`BluetoothRemoteGATTCharacteristic.writeValue()`** method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object’s `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"optional"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
+The **`BluetoothRemoteGATTCharacteristic.writeValue()`** method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object's `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"optional"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
 
 ## Syntax
 
-```js
-BluetoothRemoteGATTCharacteristic.writeValue(value).then(function() { ... })
+```js-nolint
+writeValue(value)
 ```
-
-### Returns
-
-A {{jsxref("Promise")}}.
 
 ### Parameters
 
-- value
+- `value`
   - : An {{jsxref("ArrayBuffer")}}.
+
+### Return value
+
+A {{jsxref("Promise")}}.
 
 ## Specifications
 

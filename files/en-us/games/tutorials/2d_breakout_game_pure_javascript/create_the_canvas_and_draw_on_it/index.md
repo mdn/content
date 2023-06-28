@@ -1,16 +1,9 @@
 ---
 title: Create the Canvas and draw on it
-slug: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - HTML
-  - JavaScript
-  - Tutorial
+slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
@@ -25,24 +18,29 @@ The HTML document structure is quite simple, as the game will be rendered entire
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en-US">
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-	// JavaScript code goes here
-</script>
-
-</body>
+    <script>
+      // JavaScript code goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -53,8 +51,8 @@ We have a `charset` defined, {{htmlelement("title")}} and some basic CSS in the 
 To actually be able to render graphics on the {{htmlelement("canvas")}} element, first we have to grab a reference to it in JavaScript. Add the following below your opening `<script>` tag.
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 ```
 
 Here we're storing a reference to the {{htmlelement("canvas")}} element to the `canvas` variable. Then we're creating the `ctx` variable to store the 2D rendering context — the actual tool we can use to paint on the Canvas.
@@ -69,13 +67,13 @@ ctx.fill();
 ctx.closePath();
 ```
 
-All the instructions are between the {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} and {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} methods. We are defining a rectangle using {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: the first two values specify the coordinates of the top left corner of the rectangle on the canvas, while the second two specify the width and height of the rectangle. In our case the rectangle is painted 20 pixels from the left side of the screen and 40 pixels from the top side, and is 50 pixels wide and 50 pixels high, which makes it a perfect square. The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property stores a color that will be used by the {{domxref("CanvasRenderingContext2D.fill()","fill()")}} method to paint the square, in our case, red.
+All the instructions are between the {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} and {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} methods. We are defining a rectangle using {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: the first two values specify the coordinates of the top left corner of the rectangle on the canvas, while the second two specify the width and height of the rectangle. In our case the rectangle is painted 20 pixels from the left side of the screen and 40 pixels from the top side, and is 50 pixels wide and 50 pixels high, which makes it a perfect square. The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property stores a color that will be used by the {{domxref("CanvasRenderingContext2D.fill()","fill()")}} method to paint the square, in our case, red.
 
 We're not limited to rectangles — here's a piece of code for printing out a green circle. Try adding this to the bottom of your JavaScript, saving and refreshing:
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();

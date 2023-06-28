@@ -1,23 +1,22 @@
 ---
 title: Callback function
 slug: Glossary/Callback_function
-tags:
-  - Callback
-  - Callback function
-  - CodingScripting
-  - Glossary
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 
 Here is a quick example:
 
 ```js
 function greeting(name) {
-  alert('Hello ' + name);
+  alert(`Hello, ${name}`);
 }
 
 function processUserInput(callback) {
-  var name = prompt('Please enter your name.');
+  const name = prompt("Please enter your name.");
   callback(name);
 }
 
@@ -30,4 +29,4 @@ Note, however, that callbacks are often used to continue code execution after an
 
 ## See also
 
-- {{interwiki("wikipedia", "Callback_(computer_programming)", "Callback")}} on Wikipedia
+- [Callback](<https://en.wikipedia.org/wiki/Callback_(computer_programming)>) on Wikipedia

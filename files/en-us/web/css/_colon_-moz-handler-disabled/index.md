@@ -1,15 +1,12 @@
 ---
-title: ':-moz-handler-disabled'
+title: ":-moz-handler-disabled"
 slug: Web/CSS/:-moz-handler-disabled
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 ---
-{{ CSSRef }}{{Non-standard_header}}
+
+{{CSSRef}} {{Non-standard_header}}
 
 The **`:-moz-handler-disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements that can't be displayed because their handlers have been disabled by the user.
 
@@ -18,7 +15,9 @@ The **`:-moz-handler-disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-U
 ## Syntax
 
 ```css
-:-moz-handler-disabled
+:-moz-handler-disabled {
+  /* ... */
+}
 ```
 
 ## Specifications

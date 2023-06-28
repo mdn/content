@@ -1,18 +1,17 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Property
-  - Generated Content
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.content
 ---
+
 {{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
+
+{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+
+## Syntax
 
 ```css
 /* Keywords that cannot be combined with other values */
@@ -29,6 +28,11 @@ content: url("http://www.example.com/test.png") / "This is the alt text";
 
 /* <string> value */
 content: "prefix";
+
+/* list of content values */
+content: "prefix" url("http://www.example.com/test.png");
+content: "prefix" url("http://www.example.com/test.png") "suffix" /
+  "This is some alt text";
 
 /* <counter> values, optionally with <list-style-type> */
 content: counter(chapter_counter);
@@ -52,10 +56,9 @@ content: open-quote counter(chapter_counter);
 content: inherit;
 content: initial;
 content: revert;
+content: revert-layer;
 content: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -65,15 +68,18 @@ content: unset;
   - : Computes to `none` for the `::before` and `::after` pseudo-elements.
 - {{cssxref("&lt;string&gt;")}}
   - : Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
+- `<content-list>`
+  - : A list of anonymous inline boxes that will replace the content of the selected element (in the specified order).
+    This list can include strings, images, counters, and so on.
 - {{cssxref("&lt;image&gt;")}}
-  - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element()", "element()")}} function, denoting the content to display.
-- {{cssxref("counter()")}}
+  - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url", "url()")}} or {{cssxref("image/image-set", "image-set()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.
+- {{cssxref("counter", "counter()")}}
 
-  - : The value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.
+  - : The value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function.
 
-    The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+    The {{cssxref("counter", "counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
 
-    The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+    The {{cssxref("counters", "counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
 
 - `attr(x)`
   - : The value of the element's attribute `x` as a string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute names depends on the document language.
@@ -81,6 +87,10 @@ content: unset;
   - : These values are replaced by the appropriate string from the {{cssxref("quotes")}} property.
 - `no-open-quote` | `no-close-quote`
   - : Introduces no content, but increments (decrements) the level of nesting for quotes.
+- `<content-list> / "Alternative text"`
+  - : Alternative text may be specified for an image (or list of content items) by appending a forward slash and then the text.
+    The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers.
+    Note that if the browser does not support alternative text, neither the content or alternative text will be used.
 
 ## Accessibility concerns
 
@@ -108,21 +118,25 @@ This example inserts quotation marks around quotes, and adds the word "Chapter" 
 
 ```html
 <h1>5</h1>
-<p>According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
-    lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.</q>
-  We must understand that there is nothing fundamentally wrong
-  with building on the contributions of others.
+<p>
+  According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+    I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.
+  </q>
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
 </p>
 
 <h1>6</h1>
-<p>According to the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
-    must have the ability to shape the Internet and
-    their own experiences on the Internet.</q>
-  Therefore, we can infer that contributing to the open web
-  can protect our own individual experiences on it.
+<p>
+  According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+    Individuals must have the ability to shape the Internet and their own
+    experiences on the Internet.
+  </q>
+  Therefore, we can infer that contributing to the open web can protect our own
+  individual experiences on it.
 </p>
 ```
 
@@ -141,10 +155,10 @@ q::after {
   content: close-quote;
 }
 
-h1::before  {
-  content: "Chapter ";  /* The trailing space creates separation
-                           between the added content and the
-                           rest of the content */
+h1::before {
+  content: "Chapter "; /* The trailing space creates separation
+                          between the added content and the
+                          rest of the content */
 }
 ```
 
@@ -152,9 +166,10 @@ h1::before  {
 
 {{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
 
-### Image combined with text
+### Image combined with alternative text
 
-This example inserts an image before the link. If the image is not found, it inserts text instead.
+This example inserts an image before the link and provides alternative text that a screen reader can output as speech.
+Some browsers may also display the alternative text.
 
 #### HTML
 
@@ -164,9 +179,14 @@ This example inserts an image before the link. If the image is not found, it ins
 
 #### CSS
 
+The CSS to show the image and set the alternative text is shown below.
+This also sets the font and color for the content.
+This will only be used on browsers that _display_ the alternative text.
+
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
+    " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
 }
@@ -174,7 +194,14 @@ a::before {
 
 #### Result
 
+The browser should display the icon before the link below.
+If using a screen reader, it should speak the word "MOZILLA" when it reaches the image.
+
 {{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
+
+Note that on a browser that does not support the alternative text syntax, the whole line is invalid.
+In this case neither the image or alternative text will be used!
+You could partially address this issue by including CSS that adds the image before the line with them both.
 
 ### Targeting classes
 
@@ -196,9 +223,9 @@ This example inserts additional text after special items in a list.
 
 ```css
 .new-entry::after {
-  content: " New!";  /* The leading space creates separation
-                        between the added content and the
-                        rest of the content */
+  content: " New!"; /* The leading space creates separation
+                       between the added content and the
+                       rest of the content */
   color: red;
 }
 ```
@@ -215,10 +242,12 @@ This example inserts an image before each link, and adds its `id` attribute afte
 
 ```html
 <ul>
-  <li><a id="moz" href="https://www.mozilla.org/">
-    Mozilla Home Page</a></li>
-  <li><a id="mdn" href="https://developer.mozilla.org/">
-    Mozilla Developer Network</a></li>
+  <li><a id="moz" href="https://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/">
+      Mozilla Developer Network</a
+    >
+  </li>
 </ul>
 ```
 
@@ -251,9 +280,9 @@ li {
 
 {{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
 
-### Element replacement
+### Element replacement with `url()`
 
-This example replaces an element's content with an image. You can replace the contents of an element with either a {{cssxref("url()")}} or an {{cssxref("&lt;image&gt;")}} value. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
+This example replaces an element's content with an image {{cssxref("url", "url()")}}. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
 
 #### HTML
 
@@ -268,14 +297,77 @@ This example replaces an element's content with an image. You can replace the co
   content: url("mdn.svg");
 }
 
-#replaced::after { /* will not show if element replacement is supported */
+/* will not show if element replacement is supported */
+#replaced::after {
   content: " (" attr(id) ")";
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Element_replacement', '100%', 200)}}
+{{EmbedLiveSample('Element_replacement_with_url', '100%', 200)}}
+
+### Element replacement with `<gradient>`
+
+This example replaces an element's content with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}.
+
+#### HTML
+
+```html
+<div id="replaced">Mozilla</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lightgrey;
+}
+```
+
+```css
+#replaced {
+  content: linear-gradient(purple, yellow);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Element_replacement_with_gradient', '100%', 110)}}
+
+### Element replacement with `image-set()`
+
+This example replaces an element's content with a {{cssxref("image/image-set" ,"image-set()")}}. If the users display has normal resolution the `1x.png` will be displayed screens with a higher resolution will display the `2x.png` image.
+
+#### HTML
+
+```html
+<div id="replaced">Mozilla</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  width: 100px;
+  border: 1px solid lightgrey;
+}
+```
+
+```css-nolint
+#replaced {
+  content: image-set(
+    "1x.png" 1x,
+    "2x.png" 2x
+  );
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Element_replacement_with_image-set', '100%', 110)}}
 
 ## Specifications
 
@@ -291,5 +383,8 @@ This example replaces an element's content with an image. You can replace the co
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
+- {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("gradient", "&lt;gradient&gt;")}}
+- {{cssxref("image/image-set", "image-set()")}} function
+- {{cssxref("url", "url()")}} function

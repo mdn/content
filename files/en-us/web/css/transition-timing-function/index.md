@@ -1,14 +1,10 @@
 ---
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.transition-timing-function
 ---
+
 {{CSSRef}}
 
 The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
@@ -35,7 +31,7 @@ transition-timing-function: step-end;
 
 /* Function values */
 transition-timing-function: steps(4, jump-end);
-transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Steps Function keywords */
 transition-timing-function: steps(4, jump-start);
@@ -46,12 +42,13 @@ transition-timing-function: steps(6, start);
 transition-timing-function: steps(8, end);
 
 /* Multiple timing functions */
-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
 transition-timing-function: inherit;
 transition-timing-function: initial;
 transition-timing-function: revert;
+transition-timing-function: revert-layer;
 transition-timing-function: unset;
 ```
 
@@ -70,14 +67,14 @@ transition-timing-function: unset;
     - `ease-in`
       - : Equal to `cubic-bezier(0.42, 0, 1.0, 1.0)`, starts off slowly, with the transition speed increasing until complete.
     - `ease-out`
-      - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts transitioning quickly, slowing down the transition continues. •
+      - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts transitioning quickly, slowing down as the transition continues.
     - `ease-in-out`
       - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, starts transitioning slowly, speeds up, and then slows down again.
     - `cubic-bezier(p1, p2, p3, p4)`
       - : An author-defined cubic-Bezier curve, where the p1 and p3 values must be in the range of 0 to 1.
     - `steps( n, <jumpterm>)`
 
-      - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5,  there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
+      - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5, there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
 
         - `jump-start`
           - : Denotes a left-continuous function, so that the first jump happens when the transition begins;
@@ -99,7 +96,7 @@ transition-timing-function: unset;
 
 ## Accessibility concerns
 
-Some animations can be helpful such as to guide users to understand what actions are expected, to show relationships within the user interface, and to inform users as to what actions have occurred. Animations can help reduce cognitive load, prevent change blindness, and establish better recall in spatial relationships. However, some animations can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD) and certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
+Some animations can be helpful such as to guide users to understand what actions are expected, to show relationships within the user interface, and to inform users as to what actions have occurred. Animations can help reduce cognitive load, prevent change blindness, and establish better recall in spatial relationships. However, some animations can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD) and certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
 Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for no animated experiences.
 
@@ -127,57 +124,58 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration: 7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration: 2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
 ```js hidden
 function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  const els = document.querySelectorAll(".parent > div[class]");
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css
 .ease {
-   transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 .easein {
-   transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 .easeout {
-   transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 .easeinout {
-   transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .linear {
-   transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 .cb {
-   transition-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
@@ -197,57 +195,58 @@ var intervalID = window.setInterval(updateTransition, 10000);
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration:7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration:2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
 ```js hidden
 function updateTransition() {
-  var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  const els = document.querySelectorAll(".parent > div[class]");
+  for (let i = 0; i < els.length; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
-var intervalID = window.setInterval(updateTransition, 10000);
+const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css
 .jump-start {
-   transition-timing-function: steps(5, jump-start);
+  transition-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   transition-timing-function: steps(5, jump-end);
+  transition-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   transition-timing-function: steps(5, jump-none);
+  transition-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   transition-timing-function: steps(5, jump-both);
+  transition-timing-function: steps(5, jump-both);
 }
 .step-start {
-   transition-timing-function: step-start;
+  transition-timing-function: step-start;
 }
 .step-end {
-   transition-timing-function: step-end;
+  transition-timing-function: step-end;
 }
 ```
 
@@ -264,6 +263,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 ## See also
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

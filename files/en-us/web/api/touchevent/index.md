@@ -1,15 +1,10 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - TouchEvent
-  - touch
+page-type: web-api-interface
 browser-compat: api.TouchEvent
 ---
+
 {{APIRef("Touch Events")}}
 
 The **`TouchEvent`** interface represents an {{domxref("UIEvent")}} which is sent when the state of contacts with a touch-sensitive surface changes. This surface can be a touch screen or trackpad, for example. The event can describe one or more points of contact with the screen and includes support for detecting movement, addition and removal of contact points, and so forth.
@@ -23,28 +18,28 @@ Touches are represented by the {{domxref("Touch")}} object; each touch is descri
 - {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
   - : Creates a `TouchEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its parent, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-- {{domxref("TouchEvent.altKey")}} {{readonlyInline}}
+- {{domxref("TouchEvent.altKey")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the alt key was down when the touch event was fired.
-- {{domxref("TouchEvent.changedTouches")}} {{readonlyInline}}
+- {{domxref("TouchEvent.changedTouches")}} {{ReadOnlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing individual points of contact whose states changed between the previous touch event and this one.
-- {{domxref("TouchEvent.ctrlKey")}} {{readonlyInline}}
+- {{domxref("TouchEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the control key was down when the touch event was fired.
-- {{domxref("TouchEvent.metaKey")}} {{readonlyInline}}
+- {{domxref("TouchEvent.metaKey")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the meta key was down when the touch event was fired.
-- {{domxref("TouchEvent.shiftKey")}} {{readonlyInline}}
+- {{domxref("TouchEvent.shiftKey")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the shift key was down when the touch event was fired.
-- {{domxref("TouchEvent.targetTouches")}}{{readonlyInline}}
+- {{domxref("TouchEvent.targetTouches")}} {{ReadOnlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects that are both currently in contact with the touch surface **and** were also started on the same element that is the target of the event.
-- {{domxref("TouchEvent.touches")}} {{readonlyInline}}
+- {{domxref("TouchEvent.touches")}} {{ReadOnlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.
-- {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{readonlyInline}}
-  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`
-- {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{readonlyInline}}
-  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`
+- {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`.
+- {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`.
 
 ## Touch event types
 
@@ -97,20 +92,7 @@ There are several types of event that can be fired to indicate that touch-relate
 
 It's important to note that in many cases, both touch and mouse events get sent (in order to let non-touch-specific code still interact with the user). If you use touch events, you should call {{domxref("Event.preventDefault","preventDefault()")}} to keep the mouse event from being sent as well.
 
-The exception to this is Chrome, starting with version 56 (desktop, Chrome for android, and android webview), where the default value for the `passive` option for {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} is `true` and calls to {{domxref("Event.preventDefault","preventDefault()")}} will have no effect. To override this behavior, you need to set the `passive` option to `false`, after which calling {{domxref("Event.preventDefault","preventDefault()")}} will work as specified. The change to treat listeners as `passive` by default prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners) site.
-
-## GlobalEventHandlers
-
-The {{domxref("GlobalEventHandlers")}} mixin defines these events as global events that are available on any element in the DOM that the user can interact with.
-
-- {{domxref("GlobalEventHandlers.ontouchstart")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchstart_event", "touchstart")}} event.
-- {{domxref("GlobalEventHandlers.ontouchend")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchend_event", "touchend")}} event.
-- {{domxref("GlobalEventHandlers.ontouchmove")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchmove_event", "touchmove")}} event.
-- {{domxref("GlobalEventHandlers.ontouchcancel")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchcancel_event", "touchcancel")}} event.
+The exception to this is Chrome, starting with version 56 (desktop, Chrome for Android, and Android webview), where the default value for the `passive` option for {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} is `true` and calls to {{domxref("Event.preventDefault","preventDefault()")}} will have no effect. To override this behavior, you need to set the `passive` option to `false`, after which calling {{domxref("Event.preventDefault","preventDefault()")}} will work as specified. The change to treat listeners as `passive` by default prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the [Chrome Developer](https://developer.chrome.com/blog/passive-event-listeners/) site.
 
 ## Example
 
@@ -128,4 +110,3 @@ See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_eve
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("GestureEvent")}}
-- {{domxref("MSGestureEvent")}}

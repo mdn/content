@@ -1,18 +1,17 @@
 ---
-title: 'Blocked: Storage access requests from trackers'
+title: "Blocked: Storage access requests from trackers"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedTracker
-tags:
-  - Cookies
-  - Errors
-  - Storage
-  - storage access policy
-  - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+
 ## Message
 
 Firefox:
 
-    CookieBlockedTracker=Request to access cookies or storage on “X” was blocked because it came from a tracker and content blocking is enabled.
+```
+CookieBlockedTracker=Request to access cookies or storage on "X" was blocked because it came from a tracker and content blocking is enabled.
+```
 
 ## What went wrong?
 

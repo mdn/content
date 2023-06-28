@@ -5,33 +5,25 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - files/**
       - .github/workflows/pr-check_redirects.yml
 
 jobs:
-  check_redirects:
+  check-redirects:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v3
         with:
-          node-version: "12"
-
-      - name: Cache node_modules
-        uses: actions/cache@v2.1.6
-        id: cached-node_modules
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}-${{ hashFiles('.github/workflows/pr-check_redirects.yml') }}
+          node-version-file: ".nvmrc"
+          cache: yarn
 
       - name: Install all yarn packages
-        if: steps.cached-node_modules.outputs.cache-hit != 'true'
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Check redirects file(s)
         run: yarn content validate-redirects en-us --strict

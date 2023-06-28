@@ -1,49 +1,39 @@
 ---
-title: SourceBuffer.appendBuffer()
+title: "SourceBuffer: appendBuffer() method"
+short-title: appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendBuffer
+page-type: web-api-instance-method
 browser-compat: api.SourceBuffer.appendBuffer
 ---
-{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`appendBuffer()`** method of the
 {{domxref("SourceBuffer")}} interface appends media segment data from an
-{{jsxref("ArrayBuffer")}} or `ArrayBufferView` object to the
-`SourceBuffer`.
+{{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object
+to the `SourceBuffer`.
 
 ## Syntax
 
-```js
-sourceBuffer.appendBuffer(source);
+```js-nolint
+appendBuffer(source)
 ```
 
 ### Parameters
 
 - `source`
-  - : A {{domxref("BufferSource")}} (that is, either an {{domxref("ArrayBufferView")}} or
-    {{jsxref("ArrayBuffer")}}) which contains the media segment data you want to add to
-    the `SourceBuffer`.
+  - : Either an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object
+    that contains the media segment data you want to add to the `SourceBuffer`.
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 None.
 
-## Example
+## Examples
 
 TBD.
 

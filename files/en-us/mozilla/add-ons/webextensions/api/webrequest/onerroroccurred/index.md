@@ -1,18 +1,10 @@
 ---
 title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onErrorOccurred
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onErrorOccurred
 ---
+
 {{AddonSidebar()}}
 
 Fired when a request could not be processed due to an error: for example, a lack of Internet connectivity.
@@ -25,7 +17,7 @@ This event is informational only.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onErrorOccurred.addListener(
   listener,             // function
   filter                //  object
@@ -36,7 +28,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter)`
+- `addListener(listener, filter)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -47,15 +39,15 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details) below.
+      - : `object`. Details about the request. See the [details](#details_2) section for more information.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that is sent to this listener.
 
 ## Additional objects
 
@@ -125,7 +117,7 @@ Events have three functions:
   - : `string`. Target of the request.
 - `urlClassification`
 
-  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
       - : `array` of `strings`. Classification flags for the request's first party.
@@ -136,10 +128,22 @@ Events have three functions:
 
     - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
-    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
+
+    **Note** If Firefox Tracking Protection blocks the request an empty object is returned and `error` returns one of these codes:
+
+    - `NS_ERROR_MALWARE_URI` indicating a malware URI.
+    - `NS_ERROR_PHISHING_URI` indicating a phishing URI.
+    - `NS_ERROR_TRACKING_URI` indicating a tracking URI.
+    - `NS_ERROR_UNWANTED_URI` indicating an unwanted URI.
+    - `NS_ERROR_BLOCKED_URI` indicating a blocked URI.
+    - `NS_ERROR_HARMFUL_URI` indicating a harmful URI.
+    - `NS_ERROR_FINGERPRINTING` indicating a fingerprinting URI.
+    - `NS_ERROR_CRYPTOMINING_URI` indicating a cryptomining URI.
+    - `NS_ERROR_SOCIALTRACKING_URI` indicating a social tracking URI.
 
 ## Browser compatibility
 
@@ -148,7 +152,7 @@ Events have three functions:
 ## Examples
 
 ```js
-var target = "<all_urls>";
+let target = "<all_urls>";
 
 /*
 e.g., with no network:
@@ -169,11 +173,10 @@ browser.webRequest.onErrorOccurred.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onErrorOccurred) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onErrorOccurred) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -200,4 +203,4 @@ browser.webRequest.onErrorOccurred.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

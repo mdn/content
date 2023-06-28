@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.fillRect()
+title: "CanvasRenderingContext2D: fillRect() method"
+short-title: fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.fillRect
 ---
+
 {{APIRef}}
 
 The
@@ -23,8 +20,8 @@ on it.
 
 ## Syntax
 
-```js
-void ctx.fillRect(x, y, width, height);
+```js-nolint
+fillRect(x, y, width, height)
 ```
 
 The `fillRect()` method draws a filled rectangle whose starting point is at
@@ -42,6 +39,10 @@ attribute.
   - : The rectangle's width. Positive values are to the right, and negative to the left.
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -61,9 +62,9 @@ The rectangle's top-left corner is at (20, 10). It has a width of 150 and a heig
 100\.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(20, 10, 150, 100);
 ```
 
@@ -79,8 +80,8 @@ the dimensions of the rectangle are set to equal the {{HtmlElement("canvas")}} e
 `width` and `height` attributes.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 

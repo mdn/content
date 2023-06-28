@@ -1,30 +1,30 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.stopNotifications()
+title: "BluetoothRemoteGATTCharacteristic: stopNotifications() method"
+short-title: stopNotifications()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - stopNotifications
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.stopNotifications
 ---
-{{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTCharacteristic.stopNotifications()`** method
-returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+
+The **`BluetoothRemoteGATTCharacteristic.stopNotifications()`** method
+returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
 there is no longer an active notification on it.
 
 ## Syntax
 
-```js
-BluetoothRemoteGATTCharacteristic.stopNotifications().then(function(BluetoothRemoteGATTCharacteristic) { ... })
+```js-nolint
+stopNotifications()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}}.
 

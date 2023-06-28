@@ -1,15 +1,12 @@
 ---
-title: WakeLock.request()
+title: "WakeLock: request() method"
+short-title: request()
 slug: Web/API/WakeLock/request
-tags:
-  - API
-  - Method
-  - Reference
-  - Screen Wake Lock API
-  - WakeLock
+page-type: web-api-instance-method
 browser-compat: api.WakeLock.request
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
 The **`request()`** method of the
 {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
@@ -18,18 +15,19 @@ locking.
 
 ## Syntax
 
-```js
-var wakeLock = navigator.wakeLock.request(type);
+```js-nolint
+request(type)
 ```
 
 ### Parameters
 
-- _type_
+- `type`
 
   - : Options are as follows:
 
-    - `'screen'`: Requests a screen wake lock. Prevents devices from
-      dimming or locking the screen.
+    - `'screen'`
+      - : Requests a screen wake lock. Prevents devices from
+        dimming or locking the screen.
 
 ### Return value
 
@@ -41,11 +39,10 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 
   - : Thrown when wake lock is not available, which can happen because:
 
-    - Document is not allowed to use screen wake lock due to screen-wake-lock
-      policy.
-    - Document is not fully active.
-    - Document is hidden.
-    - {{Glossary("User Agent")}} could not acquire platform's wake lock.
+    - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - The document is not fully active.
+    - The document is hidden.
+    - The {{Glossary("User Agent")}} could not acquire platform's wake lock.
 
 ## Examples
 
@@ -56,15 +53,13 @@ to account for if the browser refuses the request for any reason.
 ```js
 const requestWakeLock = async () => {
   try {
-
-    const wakeLock = await navigator.wakeLock.request('screen');
-
+    const wakeLock = await navigator.wakeLock.request("screen");
   } catch (err) {
     // The wake lock request fails - usually system-related, such as low battery.
 
     console.log(`${err.name}, ${err.message}`);
   }
-}
+};
 
 requestWakeLock();
 ```

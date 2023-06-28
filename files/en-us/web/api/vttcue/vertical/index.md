@@ -1,28 +1,18 @@
 ---
-title: VTTCue.vertical
+title: "VTTCue: vertical property"
+short-title: vertical
 slug: Web/API/VTTCue/vertical
-tags:
-  - API
-  - Property
-  - Reference
-  - vertical
-  - VTTCue
+page-type: web-api-instance-property
 browser-compat: api.VTTCue.vertical
 ---
+
 {{APIRef("WebVTT")}}
 
-The **`vertical`** property of the {{domxref("VTTCue")}} interface is a {{domxref("DOMString","string")}} representing the cue's writing direction.
+The **`vertical`** property of the {{domxref("VTTCue")}} interface is a string representing the cue's writing direction.
 
-## Syntax
+## Value
 
-```js
-let vertical = VTTCue.vertical;
-VTTCue.vertical = "lr";
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `""` (an empty string)
   - : Represents a horizontal writing direction.
@@ -36,12 +26,12 @@ A {{domxref("DOMString","string")}} containing one of the following values:
 In the following example a new {{domxref("VTTCue")}} is created, then the value of `vertical` is set to `"rl"`. The value is then printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
-cue1.vertical = 'rl';
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
+cue1.vertical = "rl";
 console.log(cue1.vertical);
 
 track.addCue(cue1);

@@ -1,13 +1,10 @@
 ---
 title: protocol_handlers
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.protocol_handlers
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -19,6 +16,10 @@ browser-compat: webextensions.manifest.protocol_handlers
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -41,6 +42,8 @@ Use this key to register one or more web-based protocol handlers.
 
 A protocol handler is an application that knows how to handle particular types of links: for example, a mail client is a protocol handler for "mailto:" links. When the user clicks a "mailto:" link, the browser opens the application selected as the handler for the "mailto:" protocol (or offers them a choice of handlers, depending on their settings).
 
+> **Note:** By default, extensions do not run in private browsing windows. As protocol handlers are part of the extension, they don't work in private browsing windows by default. Whether an extension can access private browsing windows and its protocol handlers become active is under user control. For details, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). Your extension can check whether it can access private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}.
+
 With this key, you can register a website as a handler for a particular protocol. The syntax and semantics of this key is very much like the [`Navigator.registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler) function, except that with `registerProtocolHandler()` a website can only register itself as a handler.
 
 Each protocol handler has three properties, all mandatory:
@@ -61,11 +64,11 @@ Each protocol handler has three properties, all mandatory:
 
 ```json
 "protocol_handlers": [
-  {
-    "protocol": "magnet",
-    "name": "Magnet Extension",
-    "uriTemplate": "https://example.com/#!/%s"
-  }
+  {
+    "protocol": "magnet",
+    "name": "Magnet Extension",
+    "uriTemplate": "https://example.com/#!/%s"
+  }
 ]
 ```
 
@@ -73,11 +76,11 @@ If the protocol is not in the allowed list then it has to start with 'ext+'
 
 ```json
 "protocol_handlers": [
-  {
-    "protocol": "ext+foo",
-    "name": "Foo Extension",
-    "uriTemplate": "https://example.com/#!/%s"
-  }
+  {
+    "protocol": "ext+foo",
+    "name": "Foo Extension",
+    "uriTemplate": "https://example.com/#!/%s"
+  }
 ]
 ```
 
@@ -85,11 +88,11 @@ Handlers can also be [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions
 
 ```json
 "protocol_handlers": [
-  {
-    "protocol": "magnet",
-    "name": "Magnet Extension",
-    "uriTemplate": "/example.xhtml#!/%s"
-  }
+  {
+    "protocol": "magnet",
+    "name": "Magnet Extension",
+    "uriTemplate": "/example.xhtml#!/%s"
+  }
 ]
 ```
 

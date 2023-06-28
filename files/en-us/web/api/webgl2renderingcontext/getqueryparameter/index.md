@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.getQueryParameter()
+title: "WebGL2RenderingContext: getQueryParameter() method"
+short-title: getQueryParameter()
 slug: Web/API/WebGL2RenderingContext/getQueryParameter
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getQueryParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getQueryParameter()`** method of
@@ -17,22 +14,24 @@ information of a {{domxref("WebGLQuery")}} object.
 
 ## Syntax
 
-```js
-any gl.getQueryParameter(query, pname);
+```js-nolint
+getQueryParameter(query, pname)
 ```
 
 ### Parameters
 
-- query
+- `query`
   - : A {{domxref("WebGLQuery")}} object.
 - `pname`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Possible values:
 
-    - `gl.QUERY_RESULT`: Returns a {{domxref("WebGL_API/Types", "GLuint")}} containing the
-      query result.
-    - `gl.QUERY_RESULT_AVAILABLE`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}}
-      indicating whether or not a query result is available.
+    - `gl.QUERY_RESULT`
+      - : Returns a {{domxref("WebGL_API/Types", "GLuint")}} containing the
+        query result.
+    - `gl.QUERY_RESULT_AVAILABLE`
+      - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}}
+        indicating whether or not a query result is available.
 
 ### Return value
 
@@ -42,10 +41,10 @@ Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLuint"
 ## Examples
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
-var result = gl.getQueryParameter(query, gl.QUERY_RESULT);
+const result = gl.getQueryParameter(query, gl.QUERY_RESULT);
 ```
 
 ## Specifications

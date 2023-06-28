@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingEnabled
+title: "CanvasRenderingContext2D: imageSmoothingEnabled property"
+short-title: imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
 ---
+
 {{APIRef}}
 
 The **`imageSmoothingEnabled`** property of the
@@ -24,17 +21,9 @@ images, the default resizing algorithm will blur the pixels. Set this property t
 > {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}
 > property.
 
-## Syntax
+## Value
 
-```js
-ctx.imageSmoothingEnabled = value;
-```
-
-### Options
-
-- `value`
-  - : A boolean value indicating whether to smooth scaled images or not. The
-    default value is `true`.
+A boolean value indicating whether to smooth scaled images or not. The default value is `true`.
 
 ## Examples
 
@@ -53,26 +42,27 @@ to 3X but drawn with image smoothing disabled.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 
-const ctx = canvas.getContext('2d');
-ctx.font = '16px sans-serif';
-ctx.textAlign = 'center';
+const ctx = canvas.getContext("2d");
+ctx.font = "16px sans-serif";
+ctx.textAlign = "center";
 
 const img = new Image();
-img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
-img.onload = function() {
+img.src =
+  "https://interactive-examples.mdn.mozilla.net/media/examples/star.png";
+img.onload = () => {
   const w = img.width,
-        h = img.height;
+    h = img.height;
 
-  ctx.fillText('Source', w * .5, 20);
+  ctx.fillText("Source", w * 0.5, 20);
   ctx.drawImage(img, 0, 24, w, h);
 
-  ctx.fillText('Smoothing = TRUE', w * 2.5, 20);
+  ctx.fillText("Smoothing = TRUE", w * 2.5, 20);
   ctx.imageSmoothingEnabled = true;
   ctx.drawImage(img, w, 24, w * 3, h * 3);
 
-  ctx.fillText('Smoothing = FALSE', w * 5.5, 20);
+  ctx.fillText("Smoothing = FALSE", w * 5.5, 20);
   ctx.imageSmoothingEnabled = false;
   ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
 };

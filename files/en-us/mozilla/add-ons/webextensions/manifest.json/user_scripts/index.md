@@ -1,14 +1,10 @@
 ---
 title: user_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
-  - user_scripts key
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.user_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -20,6 +16,10 @@ browser-compat: webextensions.manifest.user_scripts
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -37,7 +37,7 @@ browser-compat: webextensions.manifest.user_scripts
 
 Instructs the browser to load a script packaged in the extension, known as the API script, this script is used to export a set of custom API methods for use in user scripts. The API script path, relative to the manifest.json file, is defined as a `string` in `"api_script"`.
 
-> **Note:** The [`user_script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) key  is required for the {{WebExtAPIRef("userScripts")}} API to function, even if no API script is specified. For example. `user_scripts: {}`.
+> **Note:** The `user_script` key is required for the {{WebExtAPIRef("userScripts")}} API to function, even if no API script is specified. For example. `user_scripts: {}`.
 
 The API script:
 

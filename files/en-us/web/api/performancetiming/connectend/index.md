@@ -1,18 +1,14 @@
 ---
-title: PerformanceTiming.connectEnd
+title: "PerformanceTiming: connectEnd property"
+short-title: connectEnd
 slug: Web/API/PerformanceTiming/connectEnd
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.connectEnd
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
@@ -22,16 +18,14 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, where the connection is opened network. If the
 transport layer reports an error and the connection establishment is started again, the
-last connection establisment end time is given. If a persistent connection is used, the
+last connection establishment end time is given. If a persistent connection is used, the
 value will be the same as {{domxref("PerformanceTiming.fetchStart")}}. A connection is
 considered as opened when all secure connection handshake, or SOCKS authentication, is
 terminated.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.connectEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

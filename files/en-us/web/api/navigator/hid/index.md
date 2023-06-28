@@ -1,15 +1,13 @@
 ---
-title: Navigator.hid
+title: "Navigator: hid property"
+short-title: hid
 slug: Web/API/Navigator/hid
-tags:
-  - API
-  - Advanced
-  - WebHID
-  - WebHID API
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Navigator.hid
 ---
+
 {{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`Navigator.hid`**
@@ -17,13 +15,9 @@ read-only property returns an {{domxref("HID")}} object providing methods
 for connecting to HID devices, listing attached HID devices, and event
 handlers for connected HID devices.
 
-## Syntax
+Where a defined [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks WebHID usage, the `Navigator.hid` property will not be available.
 
-```js
-var hidVar = navigator.hid
-```
-
-### Value
+## Value
 
 An {{domxref("HID")}} object.
 

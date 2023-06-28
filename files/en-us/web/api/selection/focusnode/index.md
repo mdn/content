@@ -1,17 +1,12 @@
 ---
-title: Selection.focusNode
+title: "Selection: focusNode property"
+short-title: focusNode
 slug: Web/API/Selection/focusNode
-tags:
-  - API
-  - Experimental
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
+page-type: web-api-instance-property
 browser-compat: api.Selection.focusNode
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+
+{{ ApiRef("DOM") }}
 
 The **`Selection.focusNode`** read-only property returns the
 {{domxref("Node")}} in which the selection ends.
@@ -22,11 +17,9 @@ be visualized by holding the <kbd>Shift</kbd> key and pressing the arrow keys on
 keyboard to modify the current selection. The selection's focus moves, but the
 selection's anchor, the other end of the selection, does not move.
 
-## Syntax
+## Value
 
-```js
-node = sel.focusNode
-```
+A {{domxref("Node")}} object.
 
 ## Specifications
 

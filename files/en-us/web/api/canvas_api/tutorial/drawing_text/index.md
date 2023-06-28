@@ -1,13 +1,10 @@
 ---
 title: Drawing text
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - Canvas
-  - Graphics
-  - Intermediate
-  - Tutorial
+page-type: guide
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 After having seen how to [apply styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the previous chapter, we will now have a look at how to draw text onto the canvas.
 
@@ -26,9 +23,9 @@ The text is filled using the current `fillStyle`.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.fillText('Hello world', 10, 50);
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.fillText("Hello world", 10, 50);
 }
 ```
 
@@ -48,9 +45,9 @@ The text is filled using the current `strokeStyle`.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.strokeText('Hello world', 10, 50);
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
@@ -79,7 +76,7 @@ In the examples above we are already making use of the `font` property to make t
 
 These properties might be familiar to you, if you have worked with CSS before.
 
-The following diagram from the [WHATWG](https://www.whatwg.org/) demonstrates the various baselines supported by the `textBaseline` property.![The top of the em square is
+The following diagram from the [WHATWG](https://whatwg.org/) demonstrates the various baselines supported by the `textBaseline` property.![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -97,39 +94,40 @@ Edit the code below and see your changes update live in the canvas:
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+ctx.strokeText("Hello world", 0, 100);
+</textarea>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
+const code = textarea.value;
 
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('A_textBaseline_example', 700, 400) }}
@@ -145,11 +143,17 @@ The following code snippet shows how you can measure a text and get its width.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var text = ctx.measureText('foo'); // TextMetrics object
+  const ctx = document.getElementById("canvas").getContext("2d");
+  const text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }
 ```
+
+## Accessibility concerns
+
+The `<canvas>` element is just a bitmap and does not provide information about any drawn objects. Text written on canvas can cause legibility issues with users relying on screen magnification. The pixels within a canvas element do not scale and can become blurry with magnification. This is because they are not a vector but letter-shaped collection of pixels. When zooming in on it, the pixels become bigger.
+
+Canvas content is not exposed to accessibility tools like semantic HTML is. In general, you should avoid using canvas in an accessible website or app. An alternative is to use HTML elements or SVG instead of canvas.
 
 ## Gecko-specific notes
 

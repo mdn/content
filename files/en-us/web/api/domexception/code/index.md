@@ -1,32 +1,22 @@
 ---
-title: DOMException.code
+title: "DOMException: code property"
+short-title: code
 slug: Web/API/DOMException/code
-tags:
-  - API
-  - Code
-  - DOMException
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.DOMException.code
 ---
-{{ APIRef("DOM") }}
 
-The **`code`** read-only property of the
-{{domxref("DOMException")}} interface returns a `short` that contains one of
-the [error code constants](/en-US/docs/Web/API/DOMException#error_names), or
-`0` if none match. This field is used for historical reasons. New DOM
-exceptions don't use this anymore: they put this info in the
-{{domxref("DOMException.name")}} attribute.
+{{ APIRef("DOM") }} {{deprecated_header}}
 
-## Syntax
+The **`code`** read-only property of the {{domxref("DOMException")}} interface returns one of the legacy [error code constants](/en-US/docs/Web/API/DOMException#error_names), or `0` if none match.
 
-```js
-var domExceptionCode = domExceptionInstance.code;
-```
+This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the {{domxref("DOMException.name")}} attribute.
 
-### Value
+## Value
 
-A short number.
+One of the [error code constants](/en-US/docs/Web/API/DOMException#error_names), or `0` if none match.
 
 ## Specifications
 

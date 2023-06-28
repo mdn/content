@@ -1,37 +1,20 @@
 ---
-title: AudioNode.disconnect()
+title: "AudioNode: disconnect() method"
+short-title: disconnect()
 slug: Web/API/AudioNode/disconnect
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Disconnect
-  - Method
-  - Reference
-  - Web Audio API
+page-type: web-api-instance-method
 browser-compat: api.AudioNode.disconnect
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`disconnect()`** method of the {{ domxref("AudioNode") }} interface lets you disconnect one or more nodes from the node on which the method is called.
 
 ## Syntax
 
-```js
-AudioNode.disconnect();
-
-AudioNode.disconnect(output);
-
-AudioNode.disconnect(destination);
-
-AudioNode.disconnect(destination, output);
-
-AudioNode.disconnect(destination, output, input);
+```js-nolint
+disconnect()
 ```
-
-### Return value
-
-{{jsxref("undefined")}}
 
 ### Parameters
 
@@ -44,6 +27,10 @@ There are several versions of the `disconnect()` method, which accept different 
 - `input` {{optional_inline}}
   - : An index describing which input into the specified destination `AudioNode` is to be disconnected. The index numbers are defined according to the number of input channels (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
@@ -51,15 +38,15 @@ There are several versions of the `disconnect()` method, which accept different 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the node on which `disconnect()` is called isn't connected to the specified `destination` node.
 
-## Example
+## Examples
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const AudioContext = window.AudioContext || window.webkitAudioContext;
 
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillator = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);

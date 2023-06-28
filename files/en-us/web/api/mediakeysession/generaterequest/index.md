@@ -1,17 +1,11 @@
 ---
-title: MediaKeySession.generateRequest()
+title: "MediaKeySession: generateRequest() method"
+short-title: generateRequest()
 slug: Web/API/MediaKeySession/generateRequest
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Experimental
-  - MediaKeySession
-  - Method
-  - NeedsExample
-  - Reference
-  - generateRequest
+page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.generateRequest
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.generateRequest()` method returns a
@@ -19,9 +13,17 @@ The `MediaKeySession.generateRequest()` method returns a
 
 ## Syntax
 
-```js
-mediaKeySession.generateRequest().then(function) { ... });
+```js-nolint
+generateRequest()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+A {{jsxref('Promise')}}.
 
 ## Specifications
 

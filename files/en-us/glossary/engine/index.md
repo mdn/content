@@ -1,13 +1,13 @@
 ---
 title: Engine
 slug: Glossary/Engine
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
+page-type: glossary-definition
 ---
-The {{glossary("JavaScript")}} engine is an interpreter that parses and executes a JavaScript program.
+
+{{GlossarySidebar}}
+
+The {{glossary("JavaScript")}} engine is an interpreter that parses and executes a JavaScript program.
 
 ## See also
 
-- {{Interwiki("wikipedia", "JavaScript engine")}} on Wikipedia
+- [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) on Wikipedia

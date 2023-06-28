@@ -1,18 +1,10 @@
 ---
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
-tags:
-  - API
-  - Draft
-  - Element
-  - Monitor
-  - Overview
-  - Reference
-  - Resize Observer
-  - Resize Observer API
-  - observe
-  - size
+page-type: web-api-overview
+browser-compat: api.ResizeObserver
 ---
+
 {{DefaultAPISidebar("Resize Observer API")}}
 
 The Resize Observer API provides a performant mechanism by which code can monitor an element for changes to its size, with notifications being delivered to the observer each time the size changes.
@@ -27,7 +19,7 @@ To achieve this, a limited solution would be to listen to changes to a suitable 
 
 Such a solution tends to only work for limited use cases, be bad for performance (continually calling the above methods would result in a big performance hit), and often won't work when the browser window size is not changed.
 
-The Resize Observer API provides a solution to exactly these kinds of problems, and more besides, allowing you to easily observe and respond to changes in the size of an element’s content or border box in a performant way. It provides a JavaScript solution to the often-discussed lack of [element queries](https://www.xanthir.com/b4PR0) in the web platform.
+The Resize Observer API provides a solution to exactly these kinds of problems, and more besides, allowing you to easily observe and respond to changes in the size of an element's content or border box in a performant way. It provides a JavaScript solution to the often-discussed lack of [element queries](https://www.xanthir.com/b4PR0) in the web platform.
 
 Usage is simple, and pretty much the same as other observers, such as [Performance Observer](/en-US/docs/Web/API/PerformanceObserver) or [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API) — you create a new {{domxref("ResizeObserver")}} object using the [`ResizeObserver()`](/en-US/docs/Web/API/ResizeObserver/ResizeObserver) constructor, then use {{domxref("ResizeObserver.observe()")}} to make it look for changes to a specific element's size. A callback function set up inside the constructor then runs every time the size changes, providing access to the new dimensions and allowing you to do anything you like in response to those changes.
 
@@ -42,37 +34,42 @@ Usage is simple, and pretty much the same as other observers, such as [Performan
 
 You find a couple of simple examples on our GitHub repo:
 
-- [resize-observer-border-radius.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html) ([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html)): A simple example with a green box, sized as a percentage of the viewport size. When the viewport size is changed, the box's rounded corners change in proportion to the size of the box. We could just implement this using {{cssxref("border-radius")}} with a percentage, but that quickly leads to ugly-looking elliptical corners, whereas the above solution gives you nice square corners that scale with the box size.
-- [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)): Here we use the resize observer to change the {{cssxref("font-size")}} of a header and paragraph as a slider’s value is changed causing the containing `<div>` to change width. This shows that you can respond to changes in an element’s size, even if they have nothing to do with the viewport.
+- [resize-observer-border-radius.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html) ([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-border-radius.html)): A simple example with a green box, sized as a percentage of the viewport size. When the viewport size is changed, the box's rounded corners change in proportion to the size of the box. We could just implement this using {{cssxref("border-radius")}} with a percentage, but that quickly leads to ugly-looking elliptical corners, whereas the above solution gives you nice round corners that scale with the box size.
+- [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)): Here we use the resize observer to change the {{cssxref("font-size")}} of a header and paragraph as a slider's value is changed causing the containing `<div>` to change width. This shows that you can respond to changes in an element's size, even if they have nothing to do with the viewport.
 
 The code will usually follow this kind of pattern (taken from resize-observer-border-radius.html):
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize[0].inlineSize/10) +
-                                                      (entry.contentBoxSize[0].blockSize/10)) + 'px';
+const resizeObserver = new ResizeObserver((entries) => {
+  const calcBorderRadius = (size1, size2) =>
+    `${Math.min(100, size1 / 10 + size2 / 10)}px`;
+
+  for (const entry of entries) {
+    if (entry.borderBoxSize) {
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.borderBoxSize[0].inlineSize,
+        entry.borderBoxSize[0].blockSize
+      );
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.contentRect.width,
+        entry.contentRect.height
+      );
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Specifications
 
-| Specification                                                |
-| ------------------------------------------------------------ |
-| [Resize Observer](https://drafts.csswg.org/resize-observer/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ResizeObserver")}}
+{{Compat}}
 
 ## See also
 
-- [ResizeObserver: It’s Like document.onresize for Elements](https://developers.google.com/web/updates/2016/10/resizeobserver)
+- [ResizeObserver: It's Like document.onresize for Elements](https://web.dev/resize-observer/)

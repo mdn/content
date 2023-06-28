@@ -1,27 +1,25 @@
 ---
 title: SVGAnimatedLength
 slug: Web/API/SVGAnimatedLength
-tags:
-  - API
-  - Reference
-  - SVG
+page-type: web-api-interface
 browser-compat: api.SVGAnimatedLength
 ---
+
 {{APIRef("SVG")}}
 
-The `SVGAnimatedLength` interface represents attributes of type [\<length>](/en-US/docs/Web/SVG/Content_type#length) which can be animated.
+The **`SVGAnimatedLength`** interface represents attributes of type [\<length>](/en-US/docs/Web/SVG/Content_type#length) which can be animated.
 
-## Properties
+## Instance properties
 
-- {{domxref("baseVal")}} {{ReadOnlyInline}}
+- {{domxref("SVGAnimatedLength.baseVal", "baseVal")}} {{ReadOnlyInline}}
   - : A {{domxref("SVGLength")}} representing the base value of the given attribute before applying any animations.
-- {{domxref("animVal")}} {{ReadOnlyInline}}
-  - : If the given attribute or property is being animated, 
-    a {{domxref("SVGLength")}} containing the current animated value of the attribute or property. 
-    If the given attribute or property is not currently being animated, 
-    a {{domxref("SVGLength")}} containing the same value as <code>baseVal</code>.
+- {{domxref("SVGAnimatedLength.animVal", "animVal")}} {{ReadOnlyInline}}
+  - : If the given attribute or property is being animated,
+    a {{domxref("SVGLength")}} containing the current animated value of the attribute or property.
+    If the given attribute or property is not currently being animated,
+    a {{domxref("SVGLength")}} containing the same value as `baseVal`.
 
-## Methods
+## Instance methods
 
 _This interface does not implement any specific methods._
 
@@ -32,3 +30,7 @@ _This interface does not implement any specific methods._
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SVGLength")}}

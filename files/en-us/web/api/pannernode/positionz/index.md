@@ -1,19 +1,14 @@
 ---
-title: PannerNode.positionZ
+title: "PannerNode: positionZ property"
+short-title: positionZ
 slug: Web/API/PannerNode/positionZ
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionZ
+page-type: web-api-instance-property
 browser-compat: api.PannerNode.positionZ
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`positionZ`** property of the {{ domxref("PannerNode")
-    }} interface specifies the Z coordinate of the audio source's position in 3D Cartesian
+The **`positionZ`** property of the {{ domxref("PannerNode") }} interface specifies the Z coordinate of the audio source's position in 3D Cartesian
 coordinates, corresponding to the _depth_ axis (behind-in front of the
 listener). The complete vector is defined by the position of the audio source, given
 as ({{domxref("PannerNode.positionX", "positionX")}},
@@ -35,23 +30,15 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var positionZ = PannerNode.positionZ;
-
-PannerNode.positionZ.value = newPositionZ;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the Z coordinate of the audio
 source's position, in 3D Cartesian coordinates.
 
-## Example
+## Examples
 
-The following example starts an oscillator and moves it in front of the listener after
-1 second, behind the listener after 2 seconds, and back to the listener's position after
+The following example starts an oscillator and moves it in front of the listener after
+1 second, behind the listener after 2 seconds, and back to the listener's position after
 3 seconds. Note that in this case, the change will mainly affect the timbre and
 perceived volume of the sound.
 
@@ -60,14 +47,13 @@ const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 
 panner.positionZ.setValueAtTime(1, context.currentTime + 1);
 panner.positionZ.setValueAtTime(-1, context.currentTime + 2);
 panner.positionZ.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```
@@ -83,6 +69,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

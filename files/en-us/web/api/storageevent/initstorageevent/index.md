@@ -1,15 +1,13 @@
 ---
-title: StorageEvent.initStorageEvent()
+title: "StorageEvent: initStorageEvent() method"
+short-title: initStorageEvent()
 slug: Web/API/StorageEvent/initStorageEvent
-tags:
-  - API
-  - Method
-  - Deprecated
-  - Reference
-  - StorageEvent
-  - Web Storage API
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.StorageEvent.initStorageEvent
 ---
+
 {{ ApiRef("Web Storage API") }}{{deprecated_header}}
 
 The **`StorageEvent.initStorageEvent()`** method is used to initialize the
@@ -17,8 +15,15 @@ value of a {{ domxref("StorageEvent") }}.
 
 ## Syntax
 
-```js
-storageEvent.initStorageEvent(type[, canBubble[, cancelable[, key[, oldValue[, newValue[, url[, storageArea]]]]]]])
+```js-nolint
+initStorageEvent(type)
+initStorageEvent(type, canBubble)
+initStorageEvent(type, canBubble, cancelable)
+initStorageEvent(type, canBubble, cancelable, key)
+initStorageEvent(type, canBubble, cancelable, key, oldValue)
+initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue)
+initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue, url)
+initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue, url, storageArea)
 ```
 
 ### Parameters
@@ -40,6 +45,10 @@ storageEvent.initStorageEvent(type[, canBubble[, cancelable[, key[, oldValue[, n
 - `storageArea` {{optional_inline}}
   - : The {{DOMxRef("Storage")}} object representing the storage area on which this event
     occurred.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

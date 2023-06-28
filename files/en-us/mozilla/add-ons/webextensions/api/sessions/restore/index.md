@@ -1,17 +1,10 @@
 ---
 title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - WebExtensions
-  - restore
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.restore
 ---
+
 {{AddonSidebar()}}
 
 Restores a closed tab or window. Restoring doesn't just reopen the tab or window: it also restores the tab's navigation history so the back/forward buttons will work. Restoring a window will restore all the tabs that the window contained when it was closed.
@@ -20,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var restoringSession = browser.sessions.restore(
+```js-nolint
+let restoringSession = browser.sessions.restore(
   sessionId             // string
 )
 ```
@@ -61,8 +54,8 @@ function onError(error) {
   console.log(error);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  var gettingSessions = browser.sessions.getRecentlyClosed({
+browser.browserAction.onClicked.addListener(() => {
+  let gettingSessions = browser.sessions.getRecentlyClosed({
     maxResults: 1
   });
   gettingSessions.then(restoreMostRecent, onError);
@@ -71,11 +64,10 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,8 +94,8 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
 
 ## Known issues
 
-[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) -  Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"
+[Bug 1538119](https://bugzil.la/1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"
