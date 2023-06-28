@@ -122,7 +122,7 @@ self.addEventListener("fetch", (event) => {
 
 We return the resource by calling the event's {{domxref("FetchEvent.respondWith()", "respondWith()")}} method. If we don't call `respondWith()` for a given request, then the request is sent to the network as if the service worker had not intercepted it. So if a request is not precached, it just goes to the network.
 
-Note also that when we add `networkResponse` to the cache, we must clone the response and add the copy to the cache, returning the original. This is because `Response` objects are streamable, so may only be read once.
+When we add `networkResponse` to the cache, we must clone the response and add the copy to the cache, returning the original. This is because `Response` objects are streamable, so may only be read once.
 
 You might wonder why we fall back to the network for precached resources. If they are precached, can't we be sure they will be in the cache? The reason is that it is possible for the cache to be cleared, either by the browser or by the user. Although this is unlikely, it would make the PWA unusable unless it can fall back to the network. See [Deleting cached data](#deleting_cached_data).
 
