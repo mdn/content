@@ -65,7 +65,6 @@ new Notification(title, options)
         `false`, which means they won't be notified.
 
          If `true`, tag propery must have be setted. Otherwise you will get this error:
-         
          `TypeError: Failed to execute 'showNotification' on 'ServiceWorkerRegistration': Notifications which set the renotify flag must specify a non-empty tag`.
     - `requireInteraction`
       - : Indicates that a notification should remain
