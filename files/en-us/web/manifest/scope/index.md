@@ -1,6 +1,7 @@
 ---
 title: scope
 slug: Web/Manifest/scope
+page-type: web-manifest-member
 browser-compat: html.manifest.scope
 ---
 

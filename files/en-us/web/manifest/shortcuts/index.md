@@ -1,6 +1,7 @@
 ---
 title: shortcuts
 slug: Web/Manifest/shortcuts
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.shortcuts
