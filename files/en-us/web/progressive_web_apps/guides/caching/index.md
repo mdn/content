@@ -130,7 +130,11 @@ You might wonder why we fall back to the network for precached resources. If the
 
 The drawback of "cache first" is that once a response is in the cache, it is never refreshed until a new version of the app is installed.
 
-The "Cache first with cache refresh" strategy, also known as "stale while revalidate", is similar to "cache first", except that we always send the request to the network, even after a cache hit, and use the response to refresh the cache. This means we get the responsiveness of "cache first", but get a fairly fresh response (as long as the request is made reasonably often).
+The "cache first with cache refresh" strategy, also known as "stale while revalidate", is similar to "cache first", except that we always send the request to the network, even after a cache hit, and use the response to refresh the cache. This means we get the responsiveness of "cache first", but get a fairly fresh response (as long as the request is made reasonably often).
+
+This is a good choice when responsiveness is important, and freshness is somewhat important but not essential.
+
+In this version we implement "cache first with cache refresh" for all resources except JSON.
 
 ```js
 function isCachable(request) {
@@ -139,10 +143,7 @@ function isCachable(request) {
 }
 
 async function cacheFirstWithRefresh(request) {
-  const cachedResponse = await caches.match(request);
-  const fetchedResponse = fetch(request);
-
-  fetchedResponse.then(async (networkResponse) => {
+  const fetchResponsePromise = fetch(request).then(async (networkResponse) => {
     if (networkResponse.ok) {
       const cache = await caches.open("MyCache_1");
       cache.put(request, networkResponse.clone());
@@ -150,7 +151,7 @@ async function cacheFirstWithRefresh(request) {
     return networkResponse;
   });
 
-  return cachedResponse || fetchedResponse;
+  return (await caches.match(request)) || (await fetchResponsePromise);
 }
 
 self.addEventListener("fetch", (event) => {
@@ -161,8 +162,6 @@ self.addEventListener("fetch", (event) => {
 ```
 
 Note that we update the cache asynchronously (in a `then()` handler), so the app does not have to wait for the network response to be received before it can use the cached response.
-
-This is a good choice when responsiveness is important, and freshness is somewhat important but not essential.
 
 ### Network first
 
