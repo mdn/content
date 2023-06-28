@@ -91,7 +91,7 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-In the `install` event handler, we pass the result of the caching operation into the event's {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. This means that if caching fails for any reason, the installation fails: conversely, if installation succeeded, the service worker can be sure that the resource was added to the cache.
+In the `install` event handler, we pass the result of the caching operation into the event's {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. This means that if caching fails for any reason, the installation of the service worker fails: conversely, if installation succeeded, the service worker can be sure that the resource was added to the cache.
 
 The `fetch` event handler looks like this:
 
