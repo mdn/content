@@ -1,6 +1,7 @@
 ---
 title: Game over
 slug: Games/Tutorials/2D_breakout_game_Phaser/Game_over
+page-type: guide
 ---
 
 {{GamesSidebar}}
