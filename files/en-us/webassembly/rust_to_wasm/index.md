@@ -48,9 +48,9 @@ $ cargo new --lib hello-wasm
 This creates a new library in a subdirectory named `hello-wasm` with everything you need to get going:
 
 ```plain
-+-- Cargo.toml
-+-- src
-    +-- lib.rs
+├── Cargo.toml
+└── src
+    └── lib.rs
 ```
 
 First, we have `Cargo.toml`; this is the file that we use to configure our build. If you've used `Gemfile` from Bundler or `package.json` from npm, this is likely to be familiar; Cargo works in a similar manner to both of them.
@@ -201,7 +201,6 @@ If you check out the generated WebAssembly code size, it may be a few hundred ki
 ## Using the package on the web
 
 Now that we've got a compiled Wasm module, let's run it in the browser.
-
 Let's start by creating a file named `index.html` in the root of the project, so we end up with the following project structure:
 
 ```
@@ -264,7 +263,8 @@ wasm-pack build --target bundler
 
 We are building an npm package, so you need to have Node.js and npm installed.
 
-To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
+To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions.
+This tutorial targets node 16, if you need to switch between node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
 
 Next, let's use `npm link` to make this package available to other JavaScript packages installed
 
@@ -330,19 +330,7 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 
 This imports the new module from the `node_modules` folder. This isn't considered a best practice, but this is a demo, so it's OK for now. Once it's loaded, it calls the `greet` function from that module, passing `"WebAssembly"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
 
-Finally, we need to modify the HTML file, which was created under the `pkg` folder.
-Our project should look like this:
-
-```
-├── index.html
-├── index.js
-├── node_modules
-├── package-lock.json
-├── package.json
-└── webpack.config.js
-```
-
-Open the `index.html` file and replace the contents with the following:
+Finally, we need to add a HTML file to load the JavaScript. Create an `index.html` file and add the following:
 
 ```html
 <!DOCTYPE html>
@@ -355,6 +343,17 @@ Open the `index.html` file and replace the contents with the following:
     <script src="./index.js"></script>
   </body>
 </html>
+```
+
+The `hello-wasm/site` directory should look like this:
+
+```
+├── index.html
+├── index.js
+├── node_modules
+│   └── hello-wasm -> ../../pkg
+├── package.json
+└── webpack.config.js
 ```
 
 We're done making files. Let's give this a shot:
