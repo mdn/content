@@ -1,6 +1,7 @@
 ---
 title: Ajax
 slug: Web/Guide/AJAX
+page-type: landing-page
 ---
 
 <section id="Quick_links">

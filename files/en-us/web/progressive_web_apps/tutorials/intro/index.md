@@ -1,6 +1,7 @@
 ---
 title: "PWA tutorial: Introduction"
 slug: Web/Progressive_web_apps/Tutorials/Intro
+page-type: tutorial
 ---
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS")}}

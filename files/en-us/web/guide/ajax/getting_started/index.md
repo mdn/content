@@ -1,6 +1,7 @@
 ---
 title: Getting started
 slug: Web/Guide/AJAX/Getting_Started
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}

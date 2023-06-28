@@ -1,6 +1,7 @@
 ---
 title: Navigation and resource timings
 slug: Web/Performance/Navigation_and_resource_timings
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

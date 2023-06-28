@@ -1,6 +1,7 @@
 ---
 title: "PWA tutorial: Service workers"
 slug: Web/Progressive_web_apps/Tutorials/Intro/Service_workers
+page-type: tutorial
 ---
 
 {{PWASidebar}}

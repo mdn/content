@@ -1,6 +1,7 @@
 ---
 title: Structural overview of progressive web apps
 slug: Web/Progressive_web_apps/Guides/Structural_overview
+page-type: guide
 ---
 
 {{PWASidebar}}

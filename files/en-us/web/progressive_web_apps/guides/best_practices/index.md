@@ -1,6 +1,7 @@
 ---
 title: Best practices for PWAs
 slug: Web/Progressive_web_apps/Guides/Best_practices
+page-type: guide
 ---
 
 {{PWASidebar}}

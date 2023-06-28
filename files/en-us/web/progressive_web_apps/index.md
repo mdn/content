@@ -1,6 +1,7 @@
 ---
 title: Progressive web apps (PWAs)
 slug: Web/Progressive_web_apps
+page-type: landing-page
 ---
 
 {{PWASidebar}}

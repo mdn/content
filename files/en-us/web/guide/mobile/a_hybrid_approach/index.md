@@ -1,6 +1,7 @@
 ---
 title: A hybrid approach
 slug: Web/Guide/Mobile/A_hybrid_approach
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}

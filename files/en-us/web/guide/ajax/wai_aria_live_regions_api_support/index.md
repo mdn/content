@@ -1,6 +1,7 @@
 ---
 title: WAI ARIA Live Regions/API Support
 slug: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}

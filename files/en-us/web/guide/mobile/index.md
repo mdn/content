@@ -1,6 +1,7 @@
 ---
 title: Mobile Web Development
 slug: Web/Guide/Mobile
+page-type: guide
 ---
 
 <section id="Quick_links">

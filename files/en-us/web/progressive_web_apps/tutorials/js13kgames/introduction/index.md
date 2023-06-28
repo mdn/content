@@ -1,6 +1,7 @@
 ---
 title: Introduction to progressive web apps
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+page-type: guide
 ---
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
