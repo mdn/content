@@ -16,9 +16,11 @@ These selectors can be combined into a comma-separated [selector list](#selector
 A **simple selector** is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. Any selector that contains a single [basic selector](/en-US/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators#basic_selectors), [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), or [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selector is a simple selector.
 
 ```css
-#myId { }
+#myId {
+}
 
-[pattern*="\d"] { }
+[pattern*="\d"] {
+}
 ```
 
 ### Compound selector
@@ -26,9 +28,11 @@ A **simple selector** is a selector with a single component, such as a single ty
 A **compound selector** is a sequence of [simple selectors](#simple_selector) that are not separated by a [combinator](/en-US/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators#combinators). A compound selector represents a set of simultaneous conditions on a single element. A given element is said to match a compound selector when the element matches all the simple selectors in the compound selector.
 
 ```css
-a#selected { }
+a#selected {
+}
 
-[type="checkbox"]:checked:focus { }
+[type="checkbox"]:checked:focus {
+}
 ```
 
 In a compound selector, the [type selector](/en-US/docs/Web/CSS/Type_selectors) or [universal selector](/en-US/docs/Web/CSS/Universal_selectors) must come first in the sequence of selectors. Only one type selector or universal selector is allowed in the sequence. As whitespace represents the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), no whitespace is allowed between the simple selectors that make up a compound selector.
@@ -40,9 +44,11 @@ A **complex selector** is a sequence of one or more simple and/or compound selec
 A complex selector represents a set of simultaneous conditions on a set of elements.
 
 ```css
-a#selected > .icon { }
+a#selected > .icon {
+}
 
-.box h2 + p { }
+.box h2 + p {
+}
 ```
 
 Selectors can be read from right to left. For example, `a#selected > .icon` matches all elements with a class of `icon` that are the direct children of the `<a>` element with the id `selected`. The selector `.box h2 + p` matches the first `<p>`s to come immediately after any `<h2>` elements that are descendants of any element with the class of `box`.
@@ -52,11 +58,14 @@ Selectors can be read from right to left. For example, `a#selected > .icon` matc
 A **relative selector** is a selector representing an element relative to one or more anchor elements preceded by a combinator. Relative selectors that don't begin with an explicit combinator have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
 
 ```css
-+ div#topic > #reference { }
++ div#topic > #reference {
+}
 
-> .icon { }
+> .icon {
+}
 
-dt:has(+ img) ~ dd { }
+dt:has(+ img) ~ dd {
+}
 ```
 
 ### Selector list
