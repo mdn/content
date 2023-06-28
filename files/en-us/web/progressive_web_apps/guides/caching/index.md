@@ -44,7 +44,7 @@ Most commonly, the service worker will add resources to the cache in its `instal
 
 A PWA can cache resources at any time, but in practice there are a few times when most PWAs will choose to cache them:
 
-- **In the service worker's `install` event handler (precaching)**: When a service worker is installed, the browser fires an event called {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} in the service worker's global scope. At this point the service worker can _precache_ resources, fetching them from the network and storing them in the cache. This ensures that they will already be available locally the first time they are needed.
+- **In the service worker's `install` event handler (precaching)**: When a service worker is installed, the browser fires an event called {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} in the service worker's global scope. At this point the service worker can _precache_ resources, fetching them from the network and storing them in the cache.
 
   > **Note:** Service worker install time is not the same as PWA install time. A service worker's `install` event fires as soon as the service worker has been downloaded and executes, which will typically happen as soon as the user visits your site.
   >
@@ -91,7 +91,7 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-In the `install` event handler, we pass the result of the caching operation into the event's {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. This means that if caching fails for any reason, the installation fails: so conversely, when the service worker intercepts a request for a precached resource, it can be assured that the resource has been added in the cache.
+In the `install` event handler, we pass the result of the caching operation into the event's {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. This means that if caching fails for any reason, the installation fails: conversely, if installation succeeded, the service worker can be sure that the resource was added in the cache.
 
 The `fetch` event handler looks like this:
 
