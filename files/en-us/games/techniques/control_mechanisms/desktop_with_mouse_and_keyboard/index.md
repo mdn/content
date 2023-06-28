@@ -1,6 +1,7 @@
 ---
 title: Desktop mouse and keyboard controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
+page-type: guide
 ---
 
 {{GamesSidebar}}
