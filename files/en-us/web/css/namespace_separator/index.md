@@ -108,7 +108,7 @@ In this example, we use JavaScript to create an element without a namespace and 
 No namespaces are explicitly declared in the HTML or within the SVG.
 
 ```html
-<p>In the default namespace <a href="#">has a link</a>.</p>
+<p><a href="#">A link</a> in the implied HTML namespace.</p>
 
 <svg width="400" viewBox="0 0 400 20">
   <a href="#">
@@ -132,7 +132,7 @@ document.body.appendChild(a);
 
 #### CSS
 
-We declare a namespace with {{cssxref("@namespace")}}. By ommitting the name for the namespace, the `@namespace` declaration creates a default namespace. name for the name.
+We declare a namespace with {{cssxref("@namespace")}}. By omitting the name for the namespace, the `@namespace` declaration creates a default namespace.
 
 ```css
 /* By ommitting a name, this sets SVG as the default namespace */
@@ -151,7 +151,7 @@ p {
 
 /* links outside of any namespace */
 |a {
-  text-decoration: wavy overline purple;
+  text-decoration: wavy underline purple;
   font-weight: bold;
 }
 
