@@ -28,6 +28,9 @@ These page types are not specific to a particular MDN technology area:
 
 - `guide`: a generic guide page with no specific structure. See [Conceptual page](#conceptual_page).
 - `landing-page`: a page that acts primarily as a navigation aid, listing links to other pages. See [Landing page](#landing_page).
+- `how-to`: a page that acts primarily as a goal-oriented how-to article.
+- `tutorial`: a page that is the overview page of a learning-oriented article.
+- `tutorial-chapter`: a page that is a part of a multipart tutorial.
 
 ## Domain-specific page types
 
@@ -134,6 +137,14 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 - `web-api-event`: an event, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event). See [API reference subpage](#api_reference_subpage).
 - `webgl-extension`: a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`: a WebGL extension method, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
+
+### WebDriver
+
+This section lists `page-type` values for pages under [Web/WebDriver](/en-US/docs/Web/WebDriver). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Commands/CloseWindow).
+- `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts).
+- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Errors/InsecureCertificate).
 
 ### WebExtensions page types
 
