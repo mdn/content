@@ -73,48 +73,9 @@ For `datetime-local` inputs, the value of `step` is given in seconds, with a sca
 
 _At this time, it's unclear what a value of `any` means for `step` when used with `datetime-local` inputs. This will be updated as soon as that information is determined._
 
-## Using datetime-local inputs
+### Using datetime-local inputs
 
 Date/time inputs are convenient for the developer; they provide an easy UI for choosing dates and times, and they normalize the data format sent to the server, regardless of the user's locale. However, it is important to consider your users. Don't require your users to enter data that is not needed for your app to function.
-
-### Basic uses of datetime-local
-
-The simplest use of `<input type="datetime-local">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
-
-```html
-<form>
-  <label for="party">Enter a date and time for your party booking:</label>
-  <input id="party" type="datetime-local" name="partydate" />
-</form>
-```
-
-{{ EmbedLiveSample('Basic_uses_of_datetime-local', 600, 40) }}
-
-### Setting maximum and minimum dates and times
-
-You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to restrict the dates/times that can be chosen by the user. In the following example, we are setting a minimum datetime of `2024-06-01T08:30` and a maximum datetime of `2024-06-30T16:30`:
-
-```html
-<form>
-  <label for="party">Enter a date and time for your party booking:</label>
-  <input
-    id="party"
-    type="datetime-local"
-    name="partydate"
-    min="2024-06-01T08:30"
-    max="2024-06-30T16:30" />
-</form>
-```
-
-{{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
-
-Only days in June 2024 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
-
-In some browsers (Chrome and Edge), only the "days" part of the date value will be editable, and dates outside June can't be scrolled. In others (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
-
-The valid range included all times between the `min` and `max` values; the time of day is only constrained on the first and last dates in the range.
-
-> **Note:** You should be able to use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
 
 ### Controlling input size
 
@@ -206,6 +167,47 @@ input:valid + span::after {
 > **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, problems can arise when improperly-formatted data is submitted (or data that is too large, is of the wrong type, and so forth).
 
 > **Note:** With a `datetime-local` input, the date value is always normalized to the format `YYYY-MM-DDThh:mm`.
+
+## Examples
+
+### Basic uses of datetime-local
+
+The simplest use of `<input type="datetime-local">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+
+```html
+<form>
+  <label for="party">Enter a date and time for your party booking:</label>
+  <input id="party" type="datetime-local" name="partydate" />
+</form>
+```
+
+{{ EmbedLiveSample('Basic_uses_of_datetime-local', 600, 40) }}
+
+### Setting maximum and minimum dates and times
+
+You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to restrict the dates/times that can be chosen by the user. In the following example, we are setting a minimum datetime of `2024-06-01T08:30` and a maximum datetime of `2024-06-30T16:30`:
+
+```html
+<form>
+  <label for="party">Enter a date and time for your party booking:</label>
+  <input
+    id="party"
+    type="datetime-local"
+    name="partydate"
+    min="2024-06-01T08:30"
+    max="2024-06-30T16:30" />
+</form>
+```
+
+{{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
+
+Only days in June 2024 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
+
+In some browsers (Chrome and Edge), only the "days" part of the date value will be editable, and dates outside June can't be scrolled. In others (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
+
+The valid range included all times between the `min` and `max` values; the time of day is only constrained on the first and last dates in the range.
+
+> **Note:** You should be able to use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
 
 ## Technical summary
 
