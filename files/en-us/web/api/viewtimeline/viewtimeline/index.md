@@ -8,7 +8,7 @@ status:
 browser-compat: api.ViewTimeline.ViewTimeline
 ---
 
-{{APIRef("History API")}}
+{{APIRef("History API")}}{{SeeCompatTable}}
 
 The **`ViewTimeline()`** constructor creates a new {{domxref("ViewTimeline")}} object instance.
 

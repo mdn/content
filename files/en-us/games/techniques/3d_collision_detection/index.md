@@ -1,6 +1,7 @@
 ---
 title: 3D collision detection
 slug: Games/Techniques/3D_collision_detection
+page-type: guide
 ---
 
 {{GamesSidebar}}
