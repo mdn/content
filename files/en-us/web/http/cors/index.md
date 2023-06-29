@@ -7,11 +7,11 @@ browser-compat: http.headers.Access-Control-Allow-Origin
 
 {{HTTPSidebar}}
 
-**Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) is a protocol that lets a server use special {{Glossary("HTTP")}} headers to indicate any {{glossary("origin", "origins")}} (domain, scheme, port) other than its own from which a browser may fetch that server's resources. In other words, CORS lets a website (running on a server) indicate which *other* websites (running in browser(s)) may fetch its data over HTTP. 
+**Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) is a protocol that lets a server use special {{Glossary("HTTP")}} headers to indicate any {{glossary("origin", "origins")}} (domain, scheme, port) other than its own from which a browser may fetch that server's resources. In other words, CORS lets a website (running on a server) indicate which _other_ websites (running in browser(s)) may fetch its data over HTTP.
 
 For example, if Website A has a permissive enough CORS policy, and a script on Website B, running in a browser, makes a special HTTP request (a "CORS request") for a resource from Website A, then Website A's server will send that resource as an HTTP response to the browser running Website B, even though Websites A and B have different origins.
 
-The benefit of CORS is that it lets a website allow other websites to fetch that website's data (e.g. images, JSON files). However, this comes with dangers. The main danger is that, if a given website uses an overly permissive CORS policy, then untrustworthy websites may able to fetch that website's *private* data (e.g. user data). Hence, it is dangerous to use an overly permissive CORS policy. That is why, by default, websites adopt the restrictive [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+The benefit of CORS is that it lets a website allow other websites to fetch that website's data (e.g. images, JSON files). However, this comes with dangers. The main danger is that, if a given website uses an overly permissive CORS policy, then untrustworthy websites may able to fetch that website's _private_ data (e.g. user data). Hence, it is dangerous to use an overly permissive CORS policy. That is why, by default, websites adopt the restrictive [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 A browser can check if a server is compatible with CORS by sending the server a "CORS-preflight" request, which is a special HTTP request whose headers indicate the HTTP methods and headers a future CORS request will use.
 
