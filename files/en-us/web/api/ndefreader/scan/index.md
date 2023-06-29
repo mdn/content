@@ -10,7 +10,7 @@ browser-compat: api.NDEFReader.scan
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
+The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag read operation is scheduled or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
 ## Syntax
 
