@@ -1000,7 +1000,8 @@
         "PerformanceResourceTiming",
         "PerformanceServerTiming",
         "PerformanceTiming",
-        "TaskAttributionTiming"
+        "TaskAttributionTiming",
+        "VisibilityStateEntry"
       ],
       "methods": [],
       "properties": ["performance_property"],
@@ -1120,13 +1121,6 @@
       ],
       "methods": [],
       "properties": ["Window.scheduler"],
-      "events": []
-    },
-    "Proximity Events": {
-      "overview": ["Proximity Events"],
-      "interfaces": ["DeviceProximityEvent", "UserProximityEvent"],
-      "methods": [],
-      "properties": [],
       "events": []
     },
     "Push API": {
@@ -1315,7 +1309,6 @@
     "SVG": {
       "interfaces": [
         "SVGAElement",
-        "SVGAltGlyphElement",
         "SVGAngle",
         "SVGAnimateColorElement",
         "SVGAnimatedAngle",
@@ -1587,7 +1580,9 @@
         "AnimationTimeline",
         "AnimationPlaybackEvent",
         "DocumentTimeline",
-        "KeyframeEffect"
+        "KeyframeEffect",
+        "ScrollTimeline",
+        "ViewTimeline"
       ],
       "methods": [
         "Document.getAnimations()",
@@ -2023,36 +2018,21 @@
         "RTCDataChannelInit",
         "RTCDataChannelEventInit",
         "RTCDTMFToneChangeEventInit",
-        "RTCStats",
         "RTCStatsEventInit",
         "RTCErrorEventInit",
-        "RTCRtpStreamStats",
-        "RTCCodecStats",
-        "RTCReceivedRtpStreamStats",
-        "RTCInboundRtpStreamStats",
-        "RTCRemoteInboundRtpStreamStats",
-        "RTCSentRtpStreamStats",
-        "RTCOutboundRtpStreamStats",
-        "RTCRemoteOutboundRtpStreamStats",
-        "RTCRtpContributingSourceStats",
-        "RTCPeerConnectionStats",
-        "RTCAudioSourceStats",
-        "RTCMediaStreamStats",
-        "RTCMediaHandlerStats",
-        "RTCVideoHandlerStats",
-        "RTCVideoSenderStats",
-        "RTCSenderVideoTrackAttachmentStats",
-        "RTCVideoReceiverStats",
-        "RTCAudioHandlerStats",
-        "RTCAudioSenderStats",
-        "RTCSenderAudioTrackAttachmentStats",
-        "RTCAudioReceiverStats",
-        "RTCDataChannelStats",
-        "RTCTransportStats",
-        "RTCIceCandidateStats",
         "RTCIceCandidatePairStats",
         "RTCCertificateStats",
-        "RTCRTPStreamStats"
+        "RTCCodecStats",
+        "RTCDataChannelStats",
+        "RTCInboundRtpStreamStats",
+        "RTCIceCandidateStats",
+        "RTCAudioSourceStats",
+        "RTCVideoSourceStats",
+        "RTCOutboundRtpStreamStats",
+        "RTCPeerConnectionStats",
+        "RTCRemoteInboundRtpStreamStats",
+        "RTCRemoteOutboundRtpStreamStats",
+        "RTCTransportStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": ["Navigator.mediaDevices"],

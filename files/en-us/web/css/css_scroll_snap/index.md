@@ -1,6 +1,6 @@
 ---
-title: CSS Scroll Snap
-slug: Web/CSS/CSS_Scroll_Snap
+title: CSS scroll snap
+slug: Web/CSS/CSS_scroll_snap
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scroll-snap/
 ---
@@ -23,7 +23,7 @@ Using snap properties, you can allow or block the scrolling past an element, a n
 
 To compare scroll snapping to regular scrolling, check the "disable snapping" checkbox and try scrolling again.
 
-To see the code for this example, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/scroll_snap.html).
+To see the code for this example, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/scroll_snap.html).
 
 ## Reference
 
@@ -60,7 +60,7 @@ To see the code for this example, [view the source on Github](https://github.com
 
 ## Guides
 
-- [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
+- [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
   - : An overview and examples of CSS scroll snap features.
 
 ## Related concepts
@@ -81,8 +81,8 @@ To see the code for this example, [view the source on Github](https://github.com
 
 ## See also
 
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
-- [CSS scrollbars style](/en-US/docs/Web/CSS/CSS_Scrollbars) module
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (November 28, 2022)
 - [Scroll snap examples](https://codepen.io/collection/KpqBGW) on Codepen (September 7, 2022)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/) on web.dev (August 13, 2021)

@@ -12,11 +12,6 @@ As a JavaScript developer, programmatically reading and manipulating streams of 
 
 > **Note:** If you are looking for information on writable streams try [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams) instead.
 
-## Browser support
-
-You can consume Fetch body objects as streams and create your own custom readable streams most current browsers.
-[Pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) support is still not universal, and it may be worth checking compatibility tables (for example, see {{domxref("ReadableStream.pipeThrough()")}}).
-
 ## Finding some examples
 
 We will look at various examples in this article, taken from our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/main/streams) repo. You can find the full source code there, as well as links to the examples.

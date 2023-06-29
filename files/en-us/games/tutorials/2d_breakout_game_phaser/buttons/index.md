@@ -1,6 +1,7 @@
 ---
 title: Buttons
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
+page-type: guide
 ---
 
 {{GamesSidebar}}

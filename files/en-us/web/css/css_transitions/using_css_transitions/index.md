@@ -1,6 +1,6 @@
 ---
 title: Using CSS transitions
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-transitions/
 ---
@@ -75,7 +75,7 @@ This example performs a four-second font size transition with a two-second delay
 </body>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 .box {
@@ -261,4 +261,4 @@ el.addEventListener("transitionstart", signalStart, true);
 ## See also
 
 - The {{domxref("TransitionEvent")}} interface and the {{domxref("Element/transitionend_event", "transitionend")}} event
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)

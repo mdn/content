@@ -60,7 +60,7 @@ Some interesting new performance and security features have been added to the `<
   crossorigin="anonymous" />
 ```
 
-A `rel` value of `preload` indicates that the browser should preload this resource (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
+A `rel` value of `preload` indicates that the browser should preload this resource (see [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
 The `crossorigin` attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.
 
 Other usage notes:
@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `as`
 
-  - : This attribute is only used when `rel="preload"` or `rel="prefetch"` has been set on the `<link>` element.
+  - : This attribute is only used when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set on the `<link>` element.
     It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
     Furthermore, `rel="preload"` uses this as a signal for request prioritization.
     The table below lists the valid values for this attribute and the elements or resources they apply to.
@@ -259,7 +259,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     The value of the attribute should be a MIME type such as **text/html**, **text/css**, and so on.
     The common use of this attribute is to define the type of stylesheet being referenced (such as **text/css**), but given that CSS is the only stylesheet language used on the web, not only is it possible to omit the `type` attribute, but is actually now recommended practice.
     It is also used on `rel="preload"` link types, to make sure the browser only downloads file types that it supports.
-- `blocking`
+- `blocking` {{Experimental_Inline}}
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
     - `render`: The rendering of content on the screen is blocked.
 

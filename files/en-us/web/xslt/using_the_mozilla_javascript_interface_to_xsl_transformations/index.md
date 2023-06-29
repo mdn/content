@@ -3,6 +3,8 @@ title: Using the Mozilla JavaScript interface to XSL Transformations
 slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 ---
 
+{{XsltSidebar}}
+
 This document describes the JavaScript interface in Mozilla 1.2 and up to the XSLT Processing Engine (TransforMiiX).
 
 ### Creating an XSLTProcessor

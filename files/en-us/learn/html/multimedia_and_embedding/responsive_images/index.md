@@ -24,7 +24,7 @@ In this article, we'll learn about the concept of responsive images — images t
       <th scope="row">Objective:</th>
       <td>
         Learn how to use features like
-         <a href="en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
+         <a href="/en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
         {{htmlelement("picture")}} element to implement responsive
         image solutions on websites.
       </td>

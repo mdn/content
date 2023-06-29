@@ -33,7 +33,7 @@ let updating = browser.tabs.update(
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tab should become active. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). If `true`, non-active highlighted tabs will stop being highlighted. If `false`, does nothing.
     - `autoDiscardable` {{optional_inline}}
-      - : `boolean`. Whether the tab should be discarded automatically by the browser when resources are low.
+      - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
     - `highlighted` {{optional_inline}}
 
       - : `boolean`. Adds or removes the tab from the current selection. If `true` and the tab is not highlighted, it will become active by default.

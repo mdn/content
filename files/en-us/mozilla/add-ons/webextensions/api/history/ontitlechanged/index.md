@@ -30,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that is called when this event occurs. The function is passed an object with these properties:
+  - : The function called when this event occurs. The function is passed an object with these properties:
 
     - `id`
       - : `String`. The unique identifier for the {{WebExtAPIRef("history.HistoryItem")}} associated with this visit.

@@ -57,4 +57,4 @@ Helpful tools and resources for understanding and debugging HTTP.
 - [RedBot](https://redbot.org/)
   - : Tools to check your cache-related headers.
 - [How Browsers Work (2011)](https://web.dev/howbrowserswork/)
-  - : A very comprehensive article on browser internals and request flow through HTTP protocol. A MUST-READ for any web developer.
+  - : A very comprehensive article on browser internals and request flow through HTTP protocol.

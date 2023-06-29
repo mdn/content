@@ -216,7 +216,7 @@ We've provided a simple example that shows how to use the mouse and touch events
 
 ## Responsive design
 
-[Responsive design](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) is the practice of making your layouts and other features of your apps dynamically change depending on factors such as screen size and resolution, so they are usable and accessible to users of different device types.
+[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is the practice of making your layouts and other features of your apps dynamically change depending on factors such as screen size and resolution, so they are usable and accessible to users of different device types.
 
 In particular, the most common problems that need to be addressed for mobile are:
 

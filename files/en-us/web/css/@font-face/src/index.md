@@ -7,7 +7,7 @@ browser-compat: css.at-rules.font-face.src
 
 {{CSSRef}}
 
-The **`src`** CSS descriptor of the {{cssxref("@font-face")}} rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
+The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
 
 ## Syntax
 
@@ -198,7 +198,7 @@ p.bold {
 }
 ```
 
-### Specifying font resources using tech and format values
+### Specifying font resources using tech() and format() values
 
 The following example shows how to use the `tech()` and `format()` values to specify font resources.
 A font using `color-colrv1` technology and `opentype` format is specified using the `tech()` and `format()` values.
@@ -217,12 +217,12 @@ p {
 }
 ```
 
-### Fallbacks for older browsers
+### Specifying fallbacks for older browsers
 
 Browsers should use a `@font-face` with a single `src` descriptor listing possible sources for the font.
-Since the browser will use the first resource that it is able to load, items should be specified in the order that you'd most like them to be used.
+Since the browser will use the first resource that it is able to load, items should be specified in the order of your preference for their usage.
 
-Generally this means that local files should appear before remote files, and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
+Generally this means that local files should appear before remote files and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
 For example:
 
 ```css

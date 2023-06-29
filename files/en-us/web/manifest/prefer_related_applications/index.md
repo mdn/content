@@ -1,6 +1,7 @@
 ---
 title: prefer_related_applications
 slug: Web/Manifest/prefer_related_applications
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.prefer_related_applications

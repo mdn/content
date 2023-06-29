@@ -3,7 +3,7 @@ title: string
 slug: Web/XPath/Functions/string
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `string` function converts the given argument to a string.
 

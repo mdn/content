@@ -1,6 +1,7 @@
 ---
 title: display_override
 slug: Web/Manifest/display_override
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.display_override

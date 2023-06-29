@@ -15,22 +15,16 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, palpable content.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, but with no <code>&#x3C;footer></code> or
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, but with no <code>&#x3C;footer></code> or
         {{HTMLElement("header")}} descendants.
       </td>
     </tr>
@@ -42,9 +36,7 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >. Note that a <code>&#x3C;footer></code> element must not be a
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a>. Note that a <code>&#x3C;footer></code> element must not be a
         descendant of an {{HTMLElement("address")}},
         {{HTMLElement("header")}} or another
         <code>&#x3C;footer></code> element.
@@ -53,12 +45,8 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role"
-          >contentinfo</a
-        >, or
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a>, or
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
         if a descendant of an
         <a href="/en-US/docs/Web/HTML/Element/article">article</a>,
         <a href="/en-US/docs/Web/HTML/Element/aside">aside</a>,
@@ -66,22 +54,12 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
         <a href="/en-US/docs/Web/HTML/Element/nav">nav</a> or
         <a href="/en-US/docs/Web/HTML/Element/section">section</a> element, or
         an element with
-        <code
-          >role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role"
-            >article</a
-          ></code
-        >,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
-          >complementary</a
-        >,
+        <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a>,
         <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
-          >navigation</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a>
         or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role"
-          >region</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a>
       </td>
     </tr>
     <tr>
@@ -112,26 +90,28 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ```html
 <body>
-<h3>FIFA World Cup top goalscorers</h3>
-<ol>
-<li>Miroslav Klose, 16</li>
-<li>Ronaldo Nazário, 15</li>
-<li>Gerd Müller, 14</li>
+  <h3>FIFA World Cup top goalscorers</h3>
+  <ol>
+    <li>Miroslav Klose, 16</li>
+    <li>Ronaldo Nazário, 15</li>
+    <li>Gerd Müller, 14</li>
   </ol>
 
-<footer> <small>Copyright © 2023 Football History Archives . All Rights Reserved.</small></footer>
-
+  <footer>
+    <small>
+      Copyright © 2023 Football History Archives. All Rights Reserved.
+    </small>
+  </footer>
 </body>
 ```
 
 ```css
 footer {
-    text-align:center;
-    padding: 5px;
-    background-color: #abbaba;
-    color: #000;
+  text-align: center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #000;
 }
-
 ```
 
 {{EmbedLiveSample('Examples')}}
