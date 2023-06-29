@@ -69,5 +69,5 @@ All other shortcut object properties are optional, but you should consider provi
 ## See also
 
 - [`shortcuts` manifest member](/en-US/docs/Web/Manifest/shortcuts)
-- [Get things done quickly with app shortcuts](https://web.dev/app-shortcuts/) on web.dev (June 8, 2022)
-- [Define app shortcuts](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/shortcuts) on learn.microsoft.com (March 28, 2023)
+- [Get things done quickly with app shortcuts](https://web.dev/app-shortcuts/) on web.dev (2022)
+- [Define app shortcuts](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/shortcuts) on learn.microsoft.com (2023)
