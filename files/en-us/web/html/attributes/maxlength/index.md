@@ -9,7 +9,7 @@ browser-compat:
 
 {{HTMLSidebar}}
 
-The **`maxlength`** attribute defines the maximum number of characters (as UTF-16 code units) the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher.
+The **`maxlength`** attribute defines the maximum string length the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher. The string [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) is measured in UTF-16 code units, which is usually equivalent to the number of characters for most scripts, although not always — [Strings with length not equal to the number of characters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length#strings_with_length_not_equal_to_the_number_of_characters) has some examples.
 
 If no maxlength is specified, or an invalid value is specified, the input or textarea has no maximum length.
 
