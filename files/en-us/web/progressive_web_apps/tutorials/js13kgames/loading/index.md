@@ -180,7 +180,7 @@ Remember about the progressive enhancement approach — offer a usable product n
 
 ## Final thoughts
 
-That's all for this tutorial series — we went through the [source code of the js13kPWA example app](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) and learned about the [PWA structure](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure), [offline availability with Service Workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [installable PWAs](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), and finally [notifications](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/engageable_Notifications_Push).
+That's all for this tutorial series — we went through the [source code of the js13kPWA example app](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) and learned about the [PWA structure](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure), [offline availability with Service Workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [installable PWAs](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), and finally [notifications](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push).
 
 And in this article, we've looked into the concept of progressive loading, including an interesting example that makes use of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API).
 
