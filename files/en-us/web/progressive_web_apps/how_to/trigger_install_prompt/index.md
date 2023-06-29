@@ -1,7 +1,7 @@
 ---
 title: Trigger installation from your PWA
 slug: Web/Progressive_web_apps/How_to/Trigger_install_prompt
-page-type: howto
+page-type: how-to
 ---
 
 {{PWASidebar}}
