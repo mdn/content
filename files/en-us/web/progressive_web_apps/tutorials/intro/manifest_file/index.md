@@ -1,7 +1,7 @@
 ---
 title: "PWA tutorial: Manifest and iconography"
 slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
-page-type: tutorial
+page-type: tutorial-chapter
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Service_workers", "Web/Progressive_web_apps/Tutorials/Intro")}}

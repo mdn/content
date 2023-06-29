@@ -378,7 +378,13 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "how-to", "tutorial"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "how-to",
+                "tutorial",
+                "tutorial-chapter"
+              ]
             }
           }
         },

@@ -1,7 +1,7 @@
 ---
 title: "PWA tutorial: JavaScript functionality"
 slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality
-page-type: tutorial
+page-type: tutorial-chapter
 ---
 
 {{PWASidebar}}

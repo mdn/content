@@ -1,7 +1,7 @@
 ---
 title: "PWA tutorial: Base HTML and CSS"
 slug: Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS
-page-type: tutorial
+page-type: tutorial-chapter
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
