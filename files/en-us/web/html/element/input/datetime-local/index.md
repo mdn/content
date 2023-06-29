@@ -75,7 +75,7 @@ _At this time, it's unclear what a value of `any` means for `step` when used wit
 
 ## Using datetime-local inputs
 
-Date/time inputs are convenient for the developer; they provide an easy UI for choosing dates and times, and they normalize the data format sent to the server, regardless of the user's locale. However, it is important to consider your users. Don't require your users to enter data that is not needed for your app to function.  
+Date/time inputs are convenient for the developer; they provide an easy UI for choosing dates and times, and they normalize the data format sent to the server, regardless of the user's locale. However, it is important to consider your users. Don't require your users to enter data that is not needed for your app to function.
 
 ### Basic uses of datetime-local
 
@@ -205,7 +205,7 @@ input:valid + span::after {
 
 > **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, problems can arise when improperly-formatted data is submitted (or data that is too large, is of the wrong type, and so forth).
 
->**Note:** With a `datetime-local` input, the date value is always normalized to the format `YYYY-MM-DDThh:mm`. 
+>**Note:** With a `datetime-local` input, the date value is always normalized to the format `YYYY-MM-DDThh:mm`.
 
 ## Technical summary
 
