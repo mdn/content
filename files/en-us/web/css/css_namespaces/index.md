@@ -23,16 +23,28 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 
 - [Namespaces crash course](/en-US/docs/Web/SVG/Namespaces_Crash_Course)
 
-  - :
+  - : Deep dive into what a namespace is and how they are used in XML and XML-based markup languages.
 
 ## Related concepts
 
 - CSS [namespace separator (`|`)](/en-US/docs/Web/CSS/Namespace_separator) combinator
-- {{DOMXRef("CSSNamespaceRule")}} interface
-- [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) method
-- [`Element.namespaceURI`](/en-US/docs/Web/API/Element/namespaceURI) property
 - [CSS type selector](/en-US/docs/Web/CSS/Type_selectors)
 - [CSS universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+- {{DOMXRef("CSSNamespaceRule")}} interface
+- [`Document.createAttributeNS()`](/en-US/docs/Web/API/Document/createAttributeNS) method
+- [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) method
+- [`Document.getElementsByTagNameNS()`](/en-US/docs/Web/API/Document/getElementsByTagNameNS) method
+- [`Element.getAttributeNodeNS()`](/en-US/docs/Web/API/Element/getAttributeNodeNS) method
+- [`Element.getAttributeNS()`](/en-US/docs/Web/API/Element/getAttributeNS) method
+- [`Element.getElementsByTagNameNS()`](/en-US/docs/Web/API/Element/getElementsByTagNameNS) method
+- [`Element.hasAttributeNS()`](/en-US/docs/Web/API/Element/hasAttributeNS) method
+- [`Element.namespaceURI`](/en-US/docs/Web/API/Element/namespaceURI) property
+- [`Element.removeAttributeNS()`](/en-US/docs/Web/API/Element/removeAttributeNS) method
+- [`Element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS) method
+- [`Element.setAttributeNodeNS()`](/en-US/docs/Web/API/Element/setAttributeNodeNS) method
+- [`NamedNodeMap.getNamedItemNS()`](/en-US/docs/Web/API/NamedNodeMap/getNamedItemNS) method
+- [`NamedNodeMap.removeNamedItemNS()`](/en-US/docs/Web/API/NamedNodeMap/removeNamedItemNS) method
+- [`NamedNodeMap.setNamedItemNS()`](/en-US/docs/Web/API/NamedNodeMap/setNamedItemNS) method
 - {{glossary("namespace")}} glossary term
 
 ## Specifications
@@ -46,4 +58,4 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 ## See also
 
 - [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
-- [SVG nameps](/en-US/docs/Web/SVG/Element/a#example)
+- [CSS Namespace example in SVG](/en-US/docs/Web/SVG/Element/a#example)
