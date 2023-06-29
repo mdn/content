@@ -73,7 +73,7 @@ For `datetime-local` inputs, the value of `step` is given in seconds, with a sca
 
 _At this time, it's unclear what a value of `any` means for `step` when used with `datetime-local` inputs. This will be updated as soon as that information is determined._
 
-### Using datetime-local inputs
+## Using datetime-local inputs
 
 Date/time inputs are convenient for the developer; they provide an easy UI for choosing dates and times, and they normalize the data format sent to the server, regardless of the user's locale. However, it is important to consider your users. Don't require your users to enter data that is not needed for your app to function.
 
