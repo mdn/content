@@ -242,6 +242,21 @@
       {
         "if": {
           "properties": {
+            "slug": { "type": "string", "pattern": "^Web/Manifest/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "web-manifest-member"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
             "slug": {
               "type": "string",
               "pattern": "^Web/HTTP/Headers/Content-Security-Policy/"

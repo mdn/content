@@ -17,7 +17,7 @@ Pass a `ViewTimeline` instance to the {{domxref("Animation.Animation", "Animatio
 
 ## Constructor
 
-- {{domxref("ViewTimeline.ViewTimeline", "ViewTimeline()")}}
+- {{domxref("ViewTimeline.ViewTimeline", "ViewTimeline()")}} {{Experimental_Inline}}
   - : Creates a new `ViewTimeline` object instance.
 
 ## Instance properties
