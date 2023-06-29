@@ -108,7 +108,7 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
 
-Only days in June 2024 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range"}} and will fail [validation](#validation).
+Only days in June 2024 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
 
 In some browsers (Chrome and Edge), only the "days" part of the date value will be editable, and dates outside June can't be scrolled. In others (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
 
