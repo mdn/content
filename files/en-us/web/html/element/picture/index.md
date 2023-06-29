@@ -121,8 +121,7 @@ The following example illustrates the usage of `srcset` attribute with the `<sou
 
 ```html
 <picture>
-  <source srcset="logo.png, 
-                  logo-1.5x.png 1.5x" />
+  <source srcset="logo.png, logo-1.5x.png 1.5x" />
   <img src="logo.png" alt="MDN Web Docs logo" height="320" width="320" />
 </picture>
 ```
@@ -135,8 +134,7 @@ As mentioned earlier, the `srcset` attribute can also be used on the `<img>` ele
   src="logo.png"
   height="320"
   width="320"
-  alt="MDN Web Docs logo"
-/>
+  alt="MDN Web Docs logo" />
 ```
 
 The `sizes` attribute is not mandatory when using srcset, but it is recommended to use it in order to provide additional information to the browser to help it select the best image source.
