@@ -99,5 +99,5 @@ Make sure your PWA provides an app-like experience by considering the following 
 
 ## See also
 
-- [What makes a good Progressive Web App](https://web.dev/pwa-checklist/) on web.dev (July 18, 2022).
-- [Best practices for PWAs](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/best-practices) on learn.microsoft.com (March 28, 2023).
+- [What makes a good Progressive Web App](https://web.dev/pwa-checklist/) on web.dev (2022).
+- [Best practices for PWAs](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/best-practices) on learn.microsoft.com (2023).

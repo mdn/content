@@ -115,4 +115,4 @@ The following APIs can be used by a service worker to perform tasks in the backg
 
 - [Progressive web apps](https://web.dev/progressive-web-apps/) on web.dev
 - [Learn PWA](https://web.dev/learn/pwa/) on web.dev
-- [Progressive web apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) on learn.microsoft.com (January 24, 2023)
+- [Progressive web apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) on learn.microsoft.com (2023)
