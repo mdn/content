@@ -9,12 +9,13 @@ browser-compat: css.properties.offset-position
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`offset-position`** CSS property defines the [initial position](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) of the {{cssxref("offset-path")}}.
+The **`offset-position`** [CSS](/en-US/docs/Web/CSS) property defines the initial position of an element on a path. It determines where the element gets placed initially for moving along an {{cssxref("offset-path")}}.
 
 ## Syntax
 
 ```css
 /* Keyword values */
+offset-position: normal;
 offset-position: auto;
 offset-position: top;
 offset-position: bottom;
@@ -46,8 +47,10 @@ offset-position: unset;
 
 ### Values
 
+- `normal`
+  - : Indicates that the element does not have an offset starting position.
 - `auto`
-  - : The initial position is the position of the box specified by the {{cssxref("position")}} property.
+  - : Indicates that the offset starting position is the top-left corner of the element box.
 - `<position>`
   - : A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
 
@@ -61,20 +64,38 @@ offset-position: unset;
 
 ## Examples
 
-### Setting initial offset position
+### Exploring various offset starting positions
+
+### Setting initial offset position for an offset-path
+
+#### HTML
 
 ```html
-<div id="motion-demo"></div>
+<div id="wrap">
+  <div id="motion-demo"></div>
+</div>
 ```
 
+#### CSS
+
 ```css
+#wrap {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
 #motion-demo {
-  offset-path: path("M20,20 C20,100 200,0 200,100");
-  offset-position: left top;
+  offset-path: path("M10,10 C10,100 200,0 200,100");
+  offset-position: auto;
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;
   background: cyan;
+  position: absolute;
+  left: 40px;
+  top: 40px;
 }
 
 @keyframes move {
@@ -86,6 +107,16 @@ offset-position: unset;
   }
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample('Setting initial offset position for an offset path', '100%', 250)}}
+
+The offset-path property is used to define the path along which an element should move. In this code example, the offset-path property is set to path("M20,20 C20,100 200,0 200,100").
+
+The value of path("M20,20 C20,100 200,0 200,100") is a SVG path data that describes a curved path. The path starts at the point (20,20) and includes a cubic Bezier curve. The control points of the curve are (20,100) and (200,0), and the end point of the curve is (200,100).
+
+By setting the offset-path property to this path, the element with the #motion-demo ID will move along this curved path during the animation.
 
 ## Specifications
 
