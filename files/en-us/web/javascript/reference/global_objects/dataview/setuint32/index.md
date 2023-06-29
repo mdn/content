@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.DataView.setUint32
 
 {{JSRef}}
 
-The **`setUint32()`** method stores an unsigned 32-bit integer
-(unsigned long) value at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`setUint32()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 32-bit unsigned integer in the 4 bytes at the specified byte offset of this `DataView`.
 
 {{EmbedInteractiveExample("pages/js/dataview-setuint32.html")}}
 

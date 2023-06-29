@@ -1,6 +1,7 @@
 ---
 title: Tiles and tilemaps overview
 slug: Games/Techniques/Tilemaps
+page-type: guide
 ---
 
 {{GamesSidebar}}

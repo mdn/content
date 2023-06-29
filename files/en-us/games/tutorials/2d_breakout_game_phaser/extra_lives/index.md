@@ -1,6 +1,7 @@
 ---
 title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
+page-type: guide
 ---
 
 {{GamesSidebar}}
