@@ -1,5 +1,5 @@
 ---
-title: Progressive web apps (PWAs)
+title: Progressive web apps
 slug: Web/Progressive_web_apps
 ---
 
@@ -21,6 +21,8 @@ These guides give conceptual explanations of different aspects of PWAs. They're 
   - : This guide covers how users can install and uninstall PWAs on their devices.
 - [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
   - : In this guide, we'll introduce a set of technologies that enable a PWA to provide a good user experience even when the device has intermittent network connectivity and to perform operations in the background, even when the main app is not running.
+- [Caching](/en-US/docs/Web/Progressive_web_apps/Guides/Caching)
+  - : An overview of the APIs that enable a PWA to cache resources locally, and some common strategies used by PWAs to implement offline functionality.
 - [Best practices for PWAs](/en-US/docs/Web/Progressive_web_apps/Guides/Best_practices)
   - : PWAs should adapt to different browsers and devices, be accessible, have good performance, and integrate well with the operating system. This guide provides a list of best practices to help you make sure your PWA is as good as it can be.
 
