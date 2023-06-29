@@ -1,6 +1,7 @@
 ---
 title: Add a hitmap on top of an image
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}

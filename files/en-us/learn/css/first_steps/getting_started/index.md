@@ -1,6 +1,7 @@
 ---
 title: Getting started with CSS
 slug: Learn/CSS/First_steps/Getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
