@@ -79,7 +79,7 @@ See [how things are handled](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_trans
 
 ### Simple example
 
-This example performs a four-second font size transition with a one-second delay when the user hovers over the element.
+In this example, when the user hovers over the element there is a one-second delay before a four-second font size transition occurs.
 
 #### HTML
 
@@ -89,8 +89,9 @@ This example performs a four-second font size transition with a one-second delay
 
 #### CSS
 
+We include two {{cssxref("time")}} values. In the `transition` shorthand, the first `<time>` value is the `transition-duration`. The second time value is the `transition-delay`. Both default to `0s` if omitted. 
+
 ```css
-/* note the 1s delay */
 .target {
   font-size: 14px;
   transition: font-size 4s 1s;
