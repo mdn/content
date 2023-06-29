@@ -31,6 +31,8 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 - [CSS type selector](/en-US/docs/Web/CSS/Type_selectors)
 - [CSS universal selector](/en-US/docs/Web/CSS/Universal_selectors)
 - {{DOMXRef("CSSNamespaceRule")}} interface
+  - {{DOMXRef("CSSNamespaceRule.namespaceURI")}} property
+  - {{DOMXRef("CSSNamespaceRule.prefix")}} property
 - [`Document.createAttributeNS()`](/en-US/docs/Web/API/Document/createAttributeNS) method
 - [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) method
 - [`Document.getElementsByTagNameNS()`](/en-US/docs/Web/API/Document/getElementsByTagNameNS) method
@@ -57,5 +59,8 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 
 ## See also
 
-- [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
 - [CSS Namespace example in SVG](/en-US/docs/Web/SVG/Element/a#example)
+- [CSS `url()` functions](/en-US/docs/Web/CSS/url)
+- [CSS at-rules](/en-US/docs/Web/CSS/At-rule)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/At-rule-functions)
+- [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
