@@ -8786,6 +8786,7 @@
 /en-US/docs/Web/API/InputEvent.isComposing	/en-US/docs/Web/API/InputEvent/isComposing
 /en-US/docs/Web/API/InputEvent/input	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/API/InputEvent/input_event	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/InstallEvent/activeWorker	/en-US/docs/Web/API/InstallEvent
 /en-US/docs/Web/API/Int16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array
 /en-US/docs/Web/API/Int32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array
 /en-US/docs/Web/API/Int8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array
