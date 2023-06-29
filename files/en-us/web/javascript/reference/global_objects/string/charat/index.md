@@ -34,7 +34,7 @@ Characters in a string are indexed from left to right. The index of the first ch
 
 Unicode code points range from `0` to `1114111` (`0x10FFFF`). `charAt()` always returns a character whose value is less than `65536`, because the higher code points are represented by _a pair_ of 16-bit surrogate pseudo-characters. Therefore, in order to get a full character with value greater than `65535`, it is necessary to retrieve not only `charAt(i)`, but also `charAt(i + 1)` (as if manipulating a string with two characters), or to use {{jsxref("String/codePointAt", "codePointAt(i)")}} and {{jsxref("String.fromCodePoint()")}} instead. For information on Unicode, see [UTF-16 characters, Unicode code points, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
-`charAt()` is very similar to using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation) to access a character at the specified index. The main differences are:
+`charAt()` is very similar to using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) to access a character at the specified index. The main differences are:
 
 - `charAt()` attempts to convert `index` to an integer, while bracket notation does not, and directly uses `index` as a property name.
 - `charAt()` returns an empty string if `index` is out of range, while bracket notation returns `undefined`.
