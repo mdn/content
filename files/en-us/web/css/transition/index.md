@@ -79,7 +79,7 @@ See [how things are handled](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_trans
 
 ### Simple example
 
-In this example, when the user hovers over the element there is a one-second delay before a four-second font size transition occurs.
+In this example, when the user hovers over the element, there is a one-second delay before the four-second `font-size` transition occurs.
 
 #### HTML
 
