@@ -135,7 +135,9 @@ Note that here we `await` on the result of the database query, following the sam
 
 ```js
 // Check if Genre with same name already exists.
-const genreExists = await Genre.findOne({ name: req.body.name }).collation( { locale: 'en', strength: 2 } ).exec();
+const genreExists = await Genre.findOne({ name: req.body.name })
+  .collation({ locale: "en", strength: 2 })
+  .exec();
 if (genreExists) {
   // Genre exists, redirect to its detail page.
   res.redirect(genreExists.url);
