@@ -44234,17 +44234,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/InstallEvent/activeWorker": {
-    "modified": "2020-10-19T08:08:26.849Z",
-    "contributors": [
-      "sideshowbarker",
-      "jpmedley",
-      "fscholz",
-      "chrisdavidmills",
-      "Sebastianz",
-      "kscarfone"
-    ]
-  },
   "Web/API/IntersectionObserver": {
     "modified": "2020-10-15T21:46:41.294Z",
     "contributors": [
