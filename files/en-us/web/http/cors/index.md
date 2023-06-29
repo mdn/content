@@ -7,7 +7,13 @@ browser-compat: http.headers.Access-Control-Allow-Origin
 
 {{HTTPSidebar}}
 
-**Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) is an {{Glossary("HTTP")}}-header based mechanism that allows a server to indicate any {{glossary("origin", "origins")}} (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+**Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) is a protocol that lets a server use special {{Glossary("HTTP")}} headers to indicate any {{glossary("origin", "origins")}} (domain, scheme, port) other than its own from which a browser may fetch that server's resources. In other words, CORS lets a website (running on a server) indicate which *other* websites (running in browser(s)) may fetch its data over HTTP. 
+
+For example, if Website A has a permissive enough CORS policy, and a script on Website B, running in a browser, makes a special HTTP request (a "CORS request") for a resource from Website A, then Website A's server will send that resource as an HTTP response to the browser running Website B, even though Websites A and B have different origins.
+
+The benefit of CORS is that it lets a website allow other websites to fetch that website's data (e.g. images, JSON files). However, this comes with dangers. The main danger is that, if a given website uses an overly permissive CORS policy, then untrustworthy websites may able to fetch that website's *private* data (e.g. user data). Hence, it is dangerous to use an overly permissive CORS policy. That is why, by default, websites adopt the restrictive [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+
+A browser can check if a server is compatible with CORS by sending the server a "CORS-preflight" request, which is a special HTTP request whose headers indicate the HTTP methods and headers a future CORS request will use.
 
 An example of a cross-origin request: the front-end JavaScript code served from `https://domain-a.com` uses {{domxref("XMLHttpRequest")}} to make a request for `https://domain-b.com/data.json`.
 
