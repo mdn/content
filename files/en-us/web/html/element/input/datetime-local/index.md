@@ -13,7 +13,7 @@ browser-compat: html.elements.input.type_datetime-local
 
 The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully to simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) controls.
 
-The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap).
+The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 ## Value
 
@@ -32,9 +32,9 @@ You can set a default value for the input by including a date and time inside th
 
 {{ EmbedLiveSample('Value', 600, 60) }}
 
-One thing to note is that the displayed date and time formats differ from the actual `value`; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time `value` is always formatted `YYYY-MM-DDThh:mm`. When the above value is submitted to the server, for example, it will look like `partydate=2017-06-01T08:30`.
+One thing to note is that the displayed date and time formats differ from the actual `value`; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time `value` is always formatted `YYYY-MM-DDThh:mm`. When the above value is submitted to the server, for example, it will look like `partydate=2024-06-01T08:30`.
 
-> **Note:** Also bear in mind that if such data is submitted via HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET), the colon character will need to be escaped for inclusion in the URL parameters, e.g. `partydate=2017-06-01T08%3A30`. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.
+> **Note:** Also bear in mind that if such data is submitted via HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET), the colon character will need to be escaped for inclusion in the URL parameters, e.g. `partydate=2024-06-01T08%3A30`. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.
 
 You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
 
@@ -178,7 +178,7 @@ If you try to submit the form with an incomplete date (or with a date outside th
 
 {{ EmbedLiveSample('Validation', 600, 120) }}
 
-Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid. We put the icons on a {{htmlelement("span")}} next to the input, not on the input itself.
+Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid. We put the icons on a {{htmlelement("span")}} next to the input.
 
 ```css
 div {
