@@ -66,7 +66,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an {{domxref("Scheduling")}} object for the current document.
+  - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
 - {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
