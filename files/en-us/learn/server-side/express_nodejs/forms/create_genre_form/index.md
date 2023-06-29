@@ -135,7 +135,7 @@ Note that here we `await` on the result of the database query, following the sam
 
 ```js
 // Check if Genre with same name already exists.
-const genreExists = await Genre.findOne({ name: req.body.name }).exec();
+const genreExists = await Genre.findOne({ name: req.body.name }).collation( { locale: 'en', strength: 2 } ).exec();
 if (genreExists) {
   // Genre exists, redirect to its detail page.
   res.redirect(genreExists.url);
@@ -146,7 +146,7 @@ if (genreExists) {
 }
 ```
 
-This same pattern is used in all our post controllers: we run validators (with sanitizers), then check for errors and either re-render the form with error information or save the data.
+This same pattern is used in all our post controllers: we run validators (with sanitizers), then check for errors and either re-render the form with error information or save the data. We use the collation method when executing the query to retrieve the genre. This is done to ensure that the query is case-insensitive. By setting the locale to 'en' and strength to 2, we adjust the comparison sensitivity such that it ignores differences in case and diacritics. In practice, this means that if someone attempts to add a genre 'fantasy' with a lowercase 'f', it will be considered the same as 'Fantasy' with an uppercase 'F', and won't be treated as a distinct genre.
 
 ## View
 
