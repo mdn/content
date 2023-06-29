@@ -69,8 +69,16 @@ This article provides information about the changes in Firefox 115 that affect d
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
+By enhancing the implementation of the WebDriver BiDi protocol we can offer more features to our users. For this release of Firefox no new commands were added, but the following bug fixes are included:
+- The payload will now always include stacktraces for responses and events without capping it after the first 50 “throw” usages in a realm ([Firefox bug 1791715](https://bugzil.la/1791715)).
+- When using `input.performActions` any ongoing wheel transaction is now reset at the end of the command to not retain state and to not leak into following actions within the same tab ([Firefox bug 1821733](https://bugzil.la/1821733)).
+- When using a `pointerMove` action with `input.performActions` an invalid element origin is now correctly raising a “no such error” failure ([Firefox bug 1832028](https://bugzil.la/1832028)).
+- A race condition for the initial page load has been fixed that could appear when directly interacting with a newly opened tab or window ([Firefox bug 1832891](https://bugzil.la/1832891)).
 
 #### Marionette
+No new features have been added for this release of Firefox but the following bugs were fixed:
+- Both the commands `WebDriver:GetComputedLabel` and `WebDriver:GetComputedRole` now correctly wait for the requested Accessible for an element to exist if it just got inserted into the DOM ([Firefox bug 1828816](https://bugzil.la/1828816)).
+- Updated all instances of `window.setTimeout()` in our privileged code running in content processes to use the Timer.sys.mjs module instead. This prevents throttling of the timers in case the given tab for automation is in the background.
 
 ## Changes for add-on developers
 
