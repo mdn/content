@@ -90,6 +90,7 @@ This example performs a four-second font size transition with a one-second delay
 #### CSS
 
 ```css
+/* note the 1s delay */
 .target {
   font-size: 14px;
   transition: font-size 4s 1s;
