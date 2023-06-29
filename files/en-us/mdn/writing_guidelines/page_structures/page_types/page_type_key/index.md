@@ -145,3 +145,9 @@ This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtens
 - `webextension-api-property`: a WebExtension property, like [`browserSettings.openBookmarksInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs).
 - `webextension-api-type`: a WebExtension type, like [`contextualIdentities.ContextualIdentity`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity).
 - `webextension-manifest-key`: a WebExtension manifest key, like [`user_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+
+### Web Manifest page types
+
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/description).

@@ -2,10 +2,12 @@
 title: animation-timeline
 slug: Web/CSS/animation-timeline
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.animation-timeline
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that is used to control the progress of a CSS animation.
 
@@ -61,7 +63,7 @@ animation-timeline: unset;
 
   - : The animation's timeline is the document's default [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline).
 
-- `scroll()`
+- `scroll()` {{Experimental_Inline}}
 
   - : An anonymous scroll progress timeline is provided by some ancestor scroller of the current element. The function parameters allow you to select the scroller, and the scrolling axis the timeline will be measured along.
 
