@@ -480,4 +480,4 @@ obj.doSomethingLater(); // logs 11
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/function", "function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/) on hacks.mozilla.org (June 4, 2015)
+- [ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/) on hacks.mozilla.org (2015)
