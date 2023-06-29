@@ -405,7 +405,7 @@ One feature that we haven't used here, but which you may find valuable, is that 
 For example, given the path shown below, for a request to `/myurl/halibut/` Django will call `views.my_view(request, fish=halibut, my_template_name='some_path')`.
 
 ```python
-path('myurl/<int:fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
+path('myurl/<str:fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
 ```
 
 > **Note:** Both named captured patterns and dictionary options are passed to the view as _named_ arguments. If you use the **same name** for both a capture pattern and a dictionary key, then the dictionary option will be used.
