@@ -467,7 +467,7 @@ To use quote marks inside other quote marks of the same type (single quote or do
 Instead, you need to do this:
 
 ```html-nolint
-<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href='https://www.example.com' title='Isn&apos;t this fun?'>A link to my example.</a>
 ```
 
 ## Anatomy of an HTML document
