@@ -17,7 +17,7 @@ Browsers can infer this automatically for some resources, such as the current UR
 
 Browsers will also prefetch content for [`<link>`](/en-US/docs/Web/HTML/Element/link) elements that have the [`rel="prefetch"`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) attribute.
 This allows developers to hint to the browser the likely navigation from the current page.
-Note that only these links are prefetched (so `<a>` elements are not), and that they are fetched at lower priority that resources used by the current page.
+Note that only these links are prefetched (so `<a>` elements are not), and that they are fetched at lower priority that resources used by the current page, including elements with `fetchPriority="low"`.
 
 ```html
 <link rel="prefetch" href="https://www.example.com/solutions" />
