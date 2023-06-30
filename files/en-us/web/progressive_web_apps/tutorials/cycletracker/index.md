@@ -1,5 +1,5 @@
 ---
-title: "CycleTracker"
+title: CycleTracker
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 ---
 
@@ -76,11 +76,11 @@ The steps include:
 
 <!--
 
-- [Offline experience](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/offline)
+- [Offline experience](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/offline)
 
   - : With JavaScript, we will determine whether the user is online or offline. When offline, they will be shown an offline experience that informs the user they are offline. When online, the experience will be similar to the website, but the installation button will not be visible.
 
-- [Session storage](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Storage)
+- [Session storage](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Storage)
   - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA.
 -->
 
