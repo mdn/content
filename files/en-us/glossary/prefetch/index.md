@@ -39,7 +39,7 @@ If a response is returned, it is cached with the request in the HTTP cache.
 [DNS prefetching](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch) resolves domain names in advance thereby speeding up load times by reducing the time associated with domain lookup at request time.
 
 ```html
-<link rel="dns-prefetch" href="https://example.com/" />
+<link rel="dns-prefetch" href="https://example.com/">
 ```
 
 ## See also
