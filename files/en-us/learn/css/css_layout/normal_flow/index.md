@@ -1,6 +1,7 @@
 ---
 title: Normal Flow
 slug: Learn/CSS/CSS_layout/Normal_Flow
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

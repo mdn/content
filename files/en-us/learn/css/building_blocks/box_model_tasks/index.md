@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: The box model"
 slug: Learn/CSS/Building_blocks/Box_Model_Tasks
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

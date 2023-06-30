@@ -1,6 +1,7 @@
 ---
 title: Fundamental text and font styling
 slug: Learn/CSS/Styling_text/Fundamentals
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}

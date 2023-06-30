@@ -1,6 +1,7 @@
 ---
 title: Adding vector graphics to the web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

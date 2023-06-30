@@ -51,9 +51,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `form`
   - : The form element that the `<textarea>` element is associated with (its "form owner"). The value of the attribute must be the `id` of a form element in the same document. If this attribute is not specified, the `<textarea>` element must be a descendant of a form element. This attribute enables you to place `<textarea>` elements anywhere within a document, not just as descendants of form elements.
 - `maxlength`
-  - : The maximum number of characters (UTF-16 code units) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.
+  - : The maximum string length (measured in UTF-16 code units) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.
 - `minlength`
-  - : The minimum number of characters (UTF-16 code units) required that the user should enter.
+  - : The minimum string length (measured in UTF-16 code units) required that the user should enter.
 - `name`
   - : The name of the control.
 - `placeholder`

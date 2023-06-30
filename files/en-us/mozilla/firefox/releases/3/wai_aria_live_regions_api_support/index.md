@@ -1,9 +1,9 @@
 ---
 title: WAI ARIA Live Regions/API Support
-slug: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
+slug: Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}
+{{FirefoxSidebar}}
 
 > **Warning:** These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 
