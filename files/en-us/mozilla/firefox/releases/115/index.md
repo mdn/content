@@ -37,6 +37,9 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### HTTP
 
+- The [`Sec-Purpose`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is now included in requests to {{Glossary("Prefetch")}} resources.
+  This allows servers to provide any special handling that might be needed, such as adjusting the caching expiry for the request ([Firefox bug 1836328](https://bugzil.la/1836328)).
+
 #### Removals
 
 ### Security
