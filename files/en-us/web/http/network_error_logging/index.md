@@ -9,7 +9,7 @@ browser-compat: http.headers.NEL
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-Network Error Logging is a mechanism that can be configured via the {{HTTPHeader("NEL")}} HTTP _[response header](/en-US/docs/Glossary/Response_header)_. This experimental header allows web sites and applications to opt-in to receive reports about failed (and, if desired, successful) network fetches from supporting browsers.
+Network Error Logging is a mechanism that can be configured via the {{HTTPHeader("NEL")}} HTTP _[response header](/en-US/docs/Glossary/Response_header)_. This experimental header allows websites and applications to opt-in to receive reports about failed (and, if desired, successful) network fetches from supporting browsers.
 
 Reports are sent to a reporting group defined within a {{HTTPHeader("Report-To")}} header.
 

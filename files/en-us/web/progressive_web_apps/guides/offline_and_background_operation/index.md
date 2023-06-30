@@ -355,7 +355,7 @@ Inside `updateNews()`, the service worker can fetch and cache the latest stories
 
 ### Unregistering a periodic sync
 
-When the PWA no longer needs periodic background updates, (for example, because the user has switched them off in the app's settings) then the PWA should ask the browser to stop generation periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
+When the PWA no longer needs periodic background updates, (for example, because the user has switched them off in the app's settings) then the PWA should ask the browser to stop generating periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
 
 ```js
 // main.js
@@ -444,8 +444,8 @@ In this section we'll outline these steps. Several of these APIs require explici
 
 ### Guides
 
-- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/) on web.dev (September 22, 2017)
-- [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/) on web.dev (July 28, 2022)
-- [The Periodic Background Sync API](https://developer.chrome.com/articles/periodic-background-sync/) on web.dev (August 18, 2020)
+- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/) on web.dev (2017)
+- [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/) on web.dev (2022)
+- [The Periodic Background Sync API](https://developer.chrome.com/articles/periodic-background-sync/) on web.dev (2020)
 - [Notifications](https://web.dev/notifications/) on web.dev
-- [PWA with offline streaming](https://web.dev/pwa-with-offline-streaming/) on web.dev (July 5, 2021)
+- [PWA with offline streaming](https://web.dev/pwa-with-offline-streaming/) on web.dev (2021)

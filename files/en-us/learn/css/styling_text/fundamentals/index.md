@@ -1,6 +1,7 @@
 ---
 title: Fundamental text and font styling
 slug: Learn/CSS/Styling_text/Fundamentals
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
@@ -713,7 +714,7 @@ If you make a mistake, you can always reset it using the _Reset_ button.
 p {
 
 }
-</textarea>
+  </textarea>
 
   <h2>Output</h2>
   <div

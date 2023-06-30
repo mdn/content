@@ -1,6 +1,7 @@
 ---
-title: create fancy boxes
-slug: Learn/CSS/Howto/create_fancy_boxes
+title: Create fancy boxes
+slug: Learn/CSS/Howto/Create_fancy_boxes
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}
@@ -84,7 +85,7 @@ Before we jump to some practical examples, let's step back a bit as there are tw
 
 Okay, let's have fun with backgrounds:
 
-```css
+```css-nolint
 .fancy {
   padding: 1em;
   width: 100%;

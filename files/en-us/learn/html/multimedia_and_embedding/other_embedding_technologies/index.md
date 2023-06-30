@@ -1,6 +1,7 @@
 ---
 title: From object to iframe — other embedding technologies
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -277,7 +278,7 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there's really no good reason to avoid using it or other available means to HTTPS-enable your site.
 
-> **Note:** [GitHub pages](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages) allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.
+> **Note:** [GitHub pages](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.
 
 #### Always use the `sandbox` attribute
 
@@ -316,26 +317,26 @@ If you find yourself needing to embed plugin content, this is the kind of inform
   <tbody>
     <tr>
       <td>{{glossary("URL")}} of the embedded content</td>
-      <td><a href="/en-US/docs/Web/HTML/Element/src#embed"><code>embed</code></a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/data#object"><code>object</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         <em>accurate </em>{{glossary("MIME type", 'media type')}}
         of the embedded content
       </td>
-      <td><a href="/en-US/docs/Web/HTML/Element/type#embed"><code>embed</code></a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/type#object"><code>object</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

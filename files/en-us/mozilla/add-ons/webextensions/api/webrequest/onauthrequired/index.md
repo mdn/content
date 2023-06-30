@@ -7,7 +7,7 @@ browser-compat: webextensions.api.webRequest.onAuthRequired
 
 {{AddonSidebar()}}
 
-Fired when the server sends a `401` or `407` status code (that is, when the server is asking the client to provide authentication credentials, such as a username and password).
+Fired when the server sends a `401` or `407` status code and a `WWW-Authenticate` header using the `Basic` scheme (that is, when the server is asking the client to provide authentication credentials, such as a username and password).
 
 The listener can respond in one of four different ways:
 
@@ -60,7 +60,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -71,9 +71,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `details`
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
@@ -84,7 +84,7 @@ Events have three functions:
     - To handle the request asynchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `Promise` that is resolved with a `BlockingResponse` object, with its `cancel` or its `authCredentials` properties set.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that is sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:

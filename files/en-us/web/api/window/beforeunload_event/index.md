@@ -39,7 +39,8 @@ In addition to the `Window` interface, the event handler property `onbeforeunloa
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Sticky activation](/en-US/docs/Glossary/Sticky_activation) is required.
+The user has to have interacted with the page in order for this feature to work.
 
 ## Usage notes
 
@@ -51,13 +52,13 @@ Especially on mobile, the `beforeunload` event is not reliably fired. For exampl
 2. The user then switches to a different app.
 3. Later, the user closes the browser from the app manager.
 
-The `beforeunload` event is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, browsers will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
+Additionally, on Firefox, the `beforeunload` event is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
 
 However, unlike the `unload` event, there is a legitimate use case for the `beforeunload` event: the scenario where the user has entered unsaved data that will be lost if the page is unloaded.
 
 It is recommended that developers listen for `beforeunload` only in this scenario, and only when they actually have unsaved changes, so as to minimize the effect on performance. See the Examples section below for an example of this.
 
-See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) guide for more information about the problems associated with the `beforeunload` event.
+See the [bfcache guide](https://web.dev/bfcache/#only-add-beforeunload-listeners-conditionally) on web.dev for more information about the problems associated with the `beforeunload` event.
 
 ## Examples
 
@@ -125,7 +126,7 @@ of Chrome 81).
 ## See also
 
 - Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}
-- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)
+- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/multipage/browsing-the-web.html#prompt-to-unload-a-document)
 - [Remove Custom Messages in onbeforeload Dialogs after Chrome 51](https://developer.chrome.com/blog/chrome-51-deprecations/#remove-custom-messages-in-onbeforeunload-dialogs)
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in detail why you should use `visibilitychange`, not `beforeunload`/`unload`.
 - [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecycle behavior in your web applications.

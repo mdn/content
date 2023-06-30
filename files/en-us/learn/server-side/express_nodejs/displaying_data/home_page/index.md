@@ -38,7 +38,7 @@ Open **/controllers/bookController.js**. Near the top of the file you should see
 
 ```js
 const Book = require("../models/book");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
@@ -48,7 +48,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 Replace all the code above with the following code fragment.
 The first thing this does is import (`require()`) all the models.
 We need to do this because we'll be using them to get our counts of documents.
-The code also requires "express-validator" (not used in this method), and "express-async-handler", which provides a wrapper to [catch exceptions thrown in route handler functions](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#handling_exceptions_in_route_functions).
+The code also requires "express-async-handler", which provides a wrapper to [catch exceptions thrown in route handler functions](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#handling_exceptions_in_route_functions).
 
 ```js
 const Book = require("../models/book");
@@ -56,7 +56,6 @@ const Author = require("../models/author");
 const Genre = require("../models/genre");
 const BookInstance = require("../models/bookinstance");
 
-const { body, validationResult } = require("express-validator");
 const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
@@ -72,7 +71,7 @@ exports.index = asyncHandler(async (req, res, next) => {
     BookInstance.countDocuments({}).exec(),
     BookInstance.countDocuments({ status: "Available" }).exec(),
     Author.countDocuments({}).exec(),
-    Author.countDocuments({}).exec(),
+    Genre.countDocuments({}).exec(),
   ]);
 
   res.render("index", {
@@ -86,7 +85,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 });
 ```
 
-We use the [`countDocuments()`](https://mongoosejs.com/docs/api/model.html#Model.countDocuments()) method to get the number of instances of each model.
+We use the [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) method to get the number of instances of each model.
 This method is called on a model, with an optional set of conditions to match against, and returns a `Query` object.
 The query can be executed by calling [`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec), which returns a `Promise` that is either fulfilled with a result, or rejected if there is a database error.
 

@@ -4,6 +4,8 @@ slug: Glossary/REST
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **REST** (Representational State Transfer) refers to a group of software architecture design constraints that bring about efficient, reliable and scalable distributed systems.
 
 The basic idea of REST is that a resource, e.g. a document, is transferred via well-recognized, language-agnostic, and reliably standardized client/server interactions. Services are deemed RESTful when they adhere to these constraints.

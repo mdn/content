@@ -1,6 +1,7 @@
 ---
 title: screenshots
 slug: Web/Manifest/screenshots
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.screenshots

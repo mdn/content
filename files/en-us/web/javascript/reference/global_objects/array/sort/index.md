@@ -26,7 +26,8 @@ sort(compareFn)
 ### Parameters
 
 - `compareFn` {{optional_inline}}
-  - : A function that defines the sort order. The return value should be a number whose positivity indicates the relative order of the two elements. The function is called with the following arguments:
+
+  - : A function that defines the sort order. The return value should be a number whose sign indicates the relative order of the two elements: negative if `a` is less than `b`, positive if `a` is greater than `b`, and zero if they are equal. `NaN` is treated as `0`. The function is called with the following arguments:
 
     - `a`
       - : The first element for comparison. Will never be `undefined`.
@@ -246,7 +247,7 @@ console.log(numbers[0]); // 3
 
 ### Sort stability
 
-Since version 10 (or ECMAScript 2019), the [specification](https://tc39.es/ecma262/#sec-array.prototype.sort) dictates that `Array.prototype.sort` is stable.
+Since version 10 (or ECMAScript 2019), the specification dictates that `Array.prototype.sort` is stable.
 
 For example, say you had a list of students alongside their grades. Note that the list of students is already pre-sorted by name in alphabetical order:
 
@@ -356,6 +357,6 @@ console.log(Array.prototype.sort.call(arrayLike));
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - {{jsxref("TypedArray.prototype.sort()")}}
-- [Getting things sorted in V8](https://v8.dev/blog/array-sort) on v8.dev (September 28, 2018)
-- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort) on v8.dev (July 2, 2019)
+- [Getting things sorted in V8](https://v8.dev/blog/array-sort) on v8.dev (2018)
+- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort) on v8.dev (2019)
 - [`Array.prototype.sort` stability](https://mathiasbynens.be/demo/sort-stability) by Mathias Bynens

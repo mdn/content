@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getSeconds
 
 {{JSRef}}
 
-The **`getSeconds()`** method of a {{jsxref("Date")}} instance returns the seconds for this date according to local time.
+The **`getSeconds()`** method of {{jsxref("Date")}} instances returns the seconds for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-getseconds.html", "shorter")}}
 
@@ -28,7 +28,7 @@ An integer, between 0 and 59, representing the seconds for the given date accord
 The `seconds` variable has value `30`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const seconds = xmas95.getSeconds();
 
 console.log(seconds); // 30

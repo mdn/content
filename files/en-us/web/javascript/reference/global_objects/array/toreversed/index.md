@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.toReversed
 
 {{JSRef}}
 
-The **`toReversed()`** method of an {{jsxref("Array")}} instance is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) counterpart of the {{jsxref("Array/reverse", "reverse()")}} method. It returns a new array with the elements in reversed order.
+The **`toReversed()`** method of {{jsxref("Array")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) counterpart of the {{jsxref("Array/reverse", "reverse()")}} method. It returns a new array with the elements in reversed order.
 
 ## Syntax
 
@@ -53,7 +53,7 @@ console.log([1, , 3, 4].toReversed()); // [4, 3, undefined, 1]
 
 ### Calling toReversed() on non-array objects
 
-The `toReversed()` method reads the `length` property of `this`. It then visits each index between `length - 1` and `0` in descending order, and adds the value of that index in the original array to the corresponding index in the new array.
+The `toReversed()` method reads the `length` property of `this`. It then visits each property having an integer key between `length - 1` and `0` in descending order, adding the value of the current property to the end of the array to be returned.
 
 ```js
 const arrayLike = {

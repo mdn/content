@@ -1,5 +1,5 @@
 ---
-title: Sharing objects with page scripts
+title: Share objects with page scripts
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 page-type: guide
 ---

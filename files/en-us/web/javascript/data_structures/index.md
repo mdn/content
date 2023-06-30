@@ -126,7 +126,7 @@ BigInt values are neither always more precise nor always less precise than numbe
 
 ### String type
 
-The {{jsxref("String")}} type represents textual data and is encoded as a sequence of 16-bit unsigned integer values representing [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters). Each element in the string occupies a position in the string. The first element is at index `0`, the next at index `1`, and so on. The [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) of a string is the number of UTF-16 code units in it, which may not correspond to the actual number of Unicode characters; see the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) reference page for more details.
+The {{jsxref("String")}} type represents textual data and is encoded as a sequence of 16-bit unsigned integer values representing [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters). Each element in the string occupies a position in the string. The first element is at index `0`, the next at index `1`, and so on. The [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) of a string is the number of UTF-16 code units in it, which may not correspond to the actual number of Unicode characters; see the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) reference page for more details.
 
 JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it. String methods create new strings based on the content of the current string — for example:
 
@@ -203,7 +203,7 @@ When representing dates, the best choice is to use the built-in [`Date`](/en-US/
 
 Additionally, arrays inherit from `Array.prototype`, which provides a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) searches a value in the array and [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) appends an element to the array. This makes Arrays a perfect candidate to represent ordered lists.
 
-[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
+[Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
 
 ### Keyed collections: Maps, Sets, WeakMaps, WeakSets
 
@@ -229,7 +229,7 @@ As mentioned above, JavaScript is a [weakly typed](#dynamic_and_weak_typing) lan
 
 ### Primitive coercion
 
-The [primitive coercion](https://tc39.es/ecma262/#sec-toprimitive) process is used where a primitive value is expected, but there's no strong preference for what the actual type should be. This is usually when a [string](#string_type), a [number](#number_type), or a [BigInt](#bigint_type) are equally acceptable. For example:
+The [primitive coercion](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive) process is used where a primitive value is expected, but there's no strong preference for what the actual type should be. This is usually when a [string](#string_type), a [number](#number_type), or a [BigInt](#bigint_type) are equally acceptable. For example:
 
 - The [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) constructor, when it receives one argument that's not a `Date` instance — strings represent date strings, while numbers represent timestamps.
 - The [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) operator — if one operand is a string, string concatenation is performed; otherwise, numeric addition is performed.
@@ -270,4 +270,4 @@ In all cases, `[@@toPrimitive]()`, if present, must be callable and return a pri
 - [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
 - [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
 - [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
-- [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
+- [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html)

@@ -81,7 +81,7 @@ The EXSLT Strings package provides functions that allow the manipulation of stri
 
 ## See also
 
-- [EXSLT web site](http://exslt.org/)
+- [EXSLT website](https://exslt.github.io/)
 
 <section id="Quick_links">
   <ol>

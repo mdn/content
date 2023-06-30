@@ -4,6 +4,8 @@ slug: Glossary/Quality_values
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Quality values**, or _q-values_ and _q-factors_, are used to describe the order of priority of values in a comma-separated list. It is a special syntax allowed in some [HTTP headers](/en-US/docs/Web/HTTP/Headers) and in HTML.
 
 The importance of a value is marked by the suffix `';q='` immediately followed by a value between `0` and `1` included, with up to three decimal digits, the highest value denoting the highest priority. When not present, the default value is `1`.
@@ -37,12 +39,6 @@ text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 | `*/*`       | `0.8` (not specified)         |
 
 Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifiers like `text/html;level=1`. These increase the specificity of the value. Their use is extremely rare.
-
-## Browser-specific information
-
-### Firefox
-
-Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ([Firefox bug 672448](https://bugzil.la/672448)).
 
 ## More information
 

@@ -3,7 +3,7 @@ title: <xsl:text>
 slug: Web/XSLT/Element/text
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:text>` element writes literal text to the output tree. It may contain `#PCDATA`, literal text, and entity references.
 

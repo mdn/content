@@ -3,12 +3,10 @@ title: "WebTransportBidirectionalStream: writable property"
 short-title: writable
 slug: Web/API/WebTransportBidirectionalStream/writable
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportBidirectionalStream.writable
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`writable`** read-only property of the {{domxref("WebTransportBidirectionalStream")}} interface returns a {{domxref("WritableStream")}} instance that can be used to write outgoing data.
 

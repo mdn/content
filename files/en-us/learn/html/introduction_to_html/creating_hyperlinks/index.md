@@ -1,6 +1,7 @@
 ---
 title: Creating hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -70,7 +71,9 @@ If you want to make a heading element a link then wrap it in an anchor (`<a>`) e
 <a href="https://developer.mozilla.org/en-US/">
   <h1>MDN Web Docs</h1>
 </a>
-<p>Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.</p>
+<p>
+  Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.
+</p>
 ```
 
 This turns the heading into a link:
@@ -104,13 +107,14 @@ This makes the MDN logo a link:
 Another attribute you may want to add to your links is `title`.
 The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the website.
 
-```html
+```html-nolint
 <p>
   I'm creating a link to
   <a
     href="https://www.mozilla.org/en-US/"
     title="The best place to find more information about Mozilla's
-          mission and how to contribute">the Mozilla homepage</a>.
+          mission and how to contribute">
+    the Mozilla homepage</a>.
 </p>
 ```
 
@@ -229,18 +233,15 @@ Let's look at a specific example:
 **Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/">
-  Download Firefox
-</a></p>
+<p><a href="https://www.mozilla.org/firefox/">Download Firefox</a></p>
 ```
 
 **Bad** link text: [Click here](https://www.mozilla.org/firefox/) to download Firefox
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/firefox/">
-  Click here
-</a>
-to download Firefox</p>
+<p>
+  <a href="https://www.mozilla.org/firefox/">Click here</a> to download Firefox
+</p>
 ```
 
 Other tips:

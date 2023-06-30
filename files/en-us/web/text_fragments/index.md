@@ -59,7 +59,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 - Text strings used for the `textStart`, `textEnd`, `prefix-`, and `-suffix` values need to be [percent-encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
 - Matches are case-insensitive.
-- Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Web/HTML/Block-level_elements#elements), but complete matches can span across multiple element boundaries.
+- Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Glossary/Block-level_content), but complete matches can span across multiple element boundaries.
 - For security reasons, the feature requires links to be opened in a noopener context — you need to add `rel="noopener"` to your {{htmlelement("a")}} elements, and add `noopener` to your {{domxref("window.open()")}} calls when using this feature.
 - Text fragments are invoked only on full (non-same-page), user-initiated navigations.
 - Text fragments are only applied to the main frame; text will not be searched inside {{htmlelement("iframe")}}s, and `iframe` navigation will not invoke a text fragment.
@@ -104,7 +104,7 @@ If you don't see one or more of your text fragments highlighted and you are sure
 
 ### Styling matched text fragments
 
-Browsers are free to style the highlighted text in whatever default way they choose. The [CSS Pseudo-Elements Module Level 4](https://w3c.github.io/csswg-drafts/css-pseudo/#selectordef-target-text) defines a pseudo-element, {{cssxref("::target-text")}}, which allows you to specifying custom styling.
+Browsers are free to style the highlighted text in whatever default way they choose. The [CSS Pseudo-Elements Module Level 4](https://drafts.csswg.org/css-pseudo/#selectordef-target-text) defines a pseudo-element, {{cssxref("::target-text")}}, which allows you to specifying custom styling.
 
 For example, in our [scroll-to-text demo](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance) we have the following CSS:
 

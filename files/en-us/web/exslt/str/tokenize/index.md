@@ -43,7 +43,7 @@ Returns a node set like this:
 
 ## Specifications
 
-[EXSLT - STR:TOKENIZE](http://exslt.org/str/functions/tokenize/index.html)
+[EXSLT - STR:TOKENIZE](https://exslt.github.io/str/functions/tokenize/index.html)
 
 ## See also
 

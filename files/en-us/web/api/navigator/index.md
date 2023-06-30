@@ -65,6 +65,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
+- {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
 - {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
@@ -108,7 +110,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
 - {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Reports the value of the user's do-not-track preference. When this value is "1", your web site or application should not track the user.
+  - : Reports the value of the user's do-not-track preference. When this value is "1", your website or application should not track the user.
 - {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
 - {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
@@ -138,8 +140,10 @@ _Doesn't inherit any method._
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
+- {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}}
+  - : Returns a promise that resolves with an array of objects representing any related native or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed.
 - {{domxref("Navigator.registerProtocolHandler()")}}
-  - : Allows web sites to register themselves as a possible handler for a given protocol.
+  - : Allows websites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.unregisterProtocolHandler()")}}
   - : Unregister a website that is a handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}

@@ -105,5 +105,6 @@ h2 {
 
 ## See also
 
-- [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
+- [Spanning and balancing columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
+- [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
 - {{domxref("HTMLSpanElement")}}

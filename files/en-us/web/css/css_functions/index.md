@@ -132,15 +132,15 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Exponential functions
 
-- {{CSSxRef("pow", "pow()")}} {{Experimental_Inline}}
+- {{CSSxRef("pow", "pow()")}}
   - : Calculates the base raised to the power of a number.
-- {{CSSxRef("sqrt", "sqrt()")}} {{Experimental_Inline}}
+- {{CSSxRef("sqrt", "sqrt()")}}
   - : Calculates the square root of a number.
-- {{CSSxRef("hypot", "hypot()")}} {{Experimental_Inline}}
+- {{CSSxRef("hypot", "hypot()")}}
   - : Calculates the square root of the sum of the squares of its arguments.
-- {{CSSxRef("log", "log()")}} {{Experimental_Inline}}
+- {{CSSxRef("log", "log()")}}
   - : Calculates the logarithm of a number.
-- {{CSSxRef("exp", "exp()")}} {{Experimental_Inline}}
+- {{CSSxRef("exp", "exp()")}}
   - : Calculates `e` raised to the power of a number.
 
 ### Sign-related functions
@@ -275,7 +275,7 @@ The following functions are used as a value of properties to reference a value d
 
 ## Grid functions
 
-The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 - {{CSSxRef("fit-content", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
@@ -301,7 +301,7 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 - {{CSSxRef("font-variant-alternates#annotation", "annotation()")}}
   - : Enables annotations such as circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, such as `nalt 2`.
 
-## Timing functions
+## Easing functions
 
 The following functions are used as a value in transition and animation properties.
 
@@ -312,10 +312,12 @@ The following functions are used as a value in transition and animation properti
 
 ## Animation functions
 
-The following functions are used as a value of different {{CSSxRef("animation")}} properties.
+The following functions are used as a value of different `animation-timeline` properties. See {{CSSxRef("animation-timeline")}} for more details about these.
 
-- {{cssxref("animation-timeline/scroll", "scroll()")}} {{Experimental_Inline}}
-  - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous scroll progress timeline_.
+- {{cssxref("animation-timeline/view", "view()")}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous view progress timeline_.
 
 ## See also
 

@@ -34,7 +34,7 @@ Using `windows.create()`, for example, you can open an HTML page into a detached
 ```js
 let createData = {
   type: "detached_panel",
-  url: "panel.html",
+  url: "my-page.html",
   width: 250,
   height: 100,
 };
@@ -70,7 +70,7 @@ To use the history API, you must request the "`history`" [permission](/en-US/doc
 
 ## Web page design
 
-For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) and [browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
+For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html).
 
 ## Examples
 

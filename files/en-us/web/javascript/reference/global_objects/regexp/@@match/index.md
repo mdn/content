@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.@@match
 
 {{JSRef}}
 
-The **`[@@match]()`** method of a regular expression specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
+The **`[@@match]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 
@@ -63,7 +63,7 @@ When the regex is sticky and global, it would still perform sticky matches — i
 console.log("ab-c".match(/[abc]/gy)); // [ 'a', 'b' ]
 ```
 
-If the current match is an empty string, the `lastIndex` would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode codepoint; otherwise, it advances by one UTF-16 code unit.
+If the current match is an empty string, the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
 
 ```js
 console.log("😄".match(/(?:)/g)); // [ '', '', '' ]

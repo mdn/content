@@ -35,7 +35,6 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("border-inline-end-color","-webkit-border-end-color")}}\*\*
 - {{CSSxRef("border-inline-end-style","-webkit-border-end-style")}}\*\*
 - {{CSSxRef("border-inline-end-width","-webkit-border-end-width")}}\*\*
-- {{CSSxRef("border-image-repeat", "-webkit-border-fit")}}
 - {{CSSxRef("-webkit-border-horizontal-spacing", "-webkit-border-horizontal-spacing")}}
 - {{CSSxRef("border-inline-start", "-webkit-border-start")}}\*\*
 - {{CSSxRef("border-inline-start-color", "-webkit-border-start-color")}}\*\*
@@ -66,7 +65,6 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-dashboard-region", "-webkit-dashboard-region")}}
 - {{CSSxRef("-webkit-font-size-delta", "-webkit-font-size-delta")}}
 - {{CSSxRef("font-smooth", "-webkit-font-smoothing")}}
-- {{CSSxRef("-webkit-highlight", "-webkit-highlight")}}
 - {{CSSxRef("-webkit-hyphenate-character", "-webkit-hyphenate-character")}}
 - {{CSSxRef("-webkit-hyphenate-limit-after", "-webkit-hyphenate-limit-after")}}
 - {{CSSxRef("-webkit-hyphenate-limit-before", "-webkit-hyphenate-limit-before")}}
@@ -325,7 +323,7 @@ The following properties are supported in at least one browser without a prefix,
 
 The following properties are supported with the `-webkit-` prefix in Firefox. Many of these are supported with no prefix as well: see [Formerly proprietary properties that are now standard](#formerly_proprietary_properties_that_are_now_standard) above.
 
-> **Note:** Due to the legacy code in a multitude of web sites that used -webkit- prefixed properties, Edge and Firefox redirect many -webkit- prefixed properties to -moz-, -ms-, and unprefixed equivalents.
+> **Note:** Due to the legacy code in a multitude of websites that used -webkit- prefixed properties, Edge and Firefox redirect many -webkit- prefixed properties to -moz-, -ms-, and unprefixed equivalents.
 
 ### A
 
@@ -425,22 +423,23 @@ The following properties are supported with the `-webkit-` prefix in Firefox. Ma
 The following properties were once supported with the -webkit- prefix but are no longer supported in evergreen browsers, with or without the `-webkit-` prefix.
 
 - `-webkit-alt*`
-- {{CSSxRef("-webkit-background-composite", "-webkit-background-composite")}}
+- `-webkit-background-composite`
 - `-webkit-border-fit`
 - `-webkit-color-correction`
 - `-webkit-flow-from`
 - `-webkit-flow-into`
 - `-webkit-grid-columns` (See [`grid-column)`](/en-US/docs/Web/CSS/grid-column)
 - `-webkit-grid-rows` (See [`grid-row)`](/en-US/docs/Web/CSS/grid-row)
+- `-webkit-highlight`
 - `-webkit-hyphenate-charset`
 - `-webkit-image-set (See {{CSSxRef("image/image-set", "image-set")}})
 - `-webkit-mask-attachment`
 - `-webkit-match-nearest-mail-blockquote-color`
-- {{CSSxRef("-webkit-margin-collapse", "-webkit-margin-collapse")}}
-- {{CSSxRef("-webkit-margin-after-collapse", "-webkit-margin-after-collapse")}}
-- {{CSSxRef("-webkit-margin-before-collapse", "-webkit-margin-before-collapse")}}
-- {{CSSxRef("-webkit-margin-bottom-collapse", "-webkit-margin-bottom-collapse")}}
-- {{CSSxRef("-webkit-margin-top-collapse", "-webkit-margin-top-collapse")}}
+- `-webkit-margin-collapse`
+- `-webkit-margin-after-collapse`
+- `-webkit-margin-before-collapse`
+- `-webkit-margin-bottom-collapse`
+- `-webkit-margin-top-collapse`
 - {{CSSxRef("-webkit-overflow-scrolling", "-webkit-overflow-scrolling")}}
 - `-webkit-region-break-after`
 - `-webkit-region-break-before`

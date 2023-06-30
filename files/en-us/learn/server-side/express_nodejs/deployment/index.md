@@ -88,11 +88,42 @@ Most providers also offer a "basic" tier that is intended for small production s
 
 ## Getting your website ready to publish
 
-The main things to think about when publishing your website are web security and performance. At the bare minimum, you will want to remove the stack traces that are included on error pages during development, tidy up your logging, and set the appropriate headers to avoid many common security threats.
+The main things to think about when publishing your website are web security and performance.
+At the bare minimum, you will want to modify the database configuration so that you can use a different database for production and secure its credentials, remove the stack traces that are included on error pages during development, tidy up your logging, and set the appropriate headers to avoid many common security threats.
 
 In the following subsections, we outline the most important changes that you should make to your app.
 
 > **Note:** There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
+
+#### Database configuration
+
+So far in this tutorial, we've used a single development database, for which the address and credentials are hard-coded into **app.js**.
+Since the development database doesn't contain any information that we mind being exposed or corrupted, there is no particular risk in leaking these details.
+However if you're working with real data, in particular personal user information, then protecting your database credentials is very important.
+
+For this reason we want to use a different database for production than we use for development, and also keep the production database credentials separate from the source code so that they can be properly protected.
+
+If your hosting provider supports setting environment variables through a web interface (as many do), one way to do this is to have the server get the database URL from an environment variable.
+Below we modify the LocalLibrary website to get the database URI from an OS environment variable, if it has been defined, and otherwise use the development database URL.
+
+Open **app.js** and find the line that sets the MongoDB connection variable.
+It will look something like this:
+
+```js
+const mongoDB =
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
+```
+
+Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below).
+
+```js
+// Set up mongoose connection
+const dev_db_url =
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
+```
+
+> **Note:** Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the npm [dotenv](https://www.npmjs.com/package/dotenv) module).
 
 ### Set NODE_ENV to 'production'
 
@@ -179,7 +210,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 ### Use Helmet to protect against well known vulnerabilities
 
-[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmetjs.github.io/docs/) for more information on what headers it sets and vulnerabilities it protects against).
+[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmetjs.github.io/) for more information on what headers it sets and vulnerabilities it protects against).
 
 Install this at the root of your project by running the following command:
 
@@ -304,7 +335,7 @@ For example, an application that uses a database must get the address using a va
 The database service itself may be hosted by Railway or some other provider.
 
 Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
-The CLI allows you to associate a local Github repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
+The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
 In order to get our application to work on Railway, we'll need to put our Express web application into a git repository and make a few minor modifications.
@@ -314,11 +345,11 @@ That's all the overview you need in order to get started.
 
 ### Creating an application repository in GitHub
 
-Railway is closely integrated with Github and the **git** source code version control system, and you can configure it to automatically deploy updates when changes are made to a particular repository or branch on Github.
+Railway is closely integrated with GitHub and the **git** source code version control system, and you can configure it to automatically deploy updates when changes are made to a particular repository or branch on GitHub.
 Alternatively you can push your current local code branch direct to the railway deployment using the CLI.
 
-> **Note:** Using a source code management system like Github is good software development practice.
-> Skip this step if you're already using Github to manage your source.
+> **Note:** Using a source code management system like GitHub is good software development practice.
+> Skip this step if you're already using GitHub to manage your source.
 
 There are a lot of ways to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
 
@@ -435,27 +466,6 @@ Note that there are other ways to provision the node version on Railway, but we'
 Note also that Railway will not necessarily use the precise version of node that you specify.
 Where possible it will use a version that has the same major version number.
 
-#### Database configuration
-
-So far in this tutorial, we've used a single database that is hard-coded into **app.js**. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment (if it has been defined), and otherwise use our development database.
-
-Open **app.js** and find the line that sets the MongoDB connection variable.
-It will look something like this:
-
-```js
-const mongoDB =
-  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
-```
-
-Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
-
-```js
-// Set up mongoose connection
-const dev_db_url =
-  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
-```
-
 #### Get dependencies and re-test
 
 Before we proceed, let's test the site again and make sure it wasn't affected by any of our changes.
@@ -486,26 +496,26 @@ We should now be ready to start deploying _LocalLibrary_ on Railway.
 To start using Railway you will first need to create an account:
 
 - Go to [railway.app](https://railway.app/) and click the **Login** link in the top toolbar.
-- Select Github in the popup to login using your Github credentials
+- Select GitHub in the popup to login using your GitHub credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.app dashboard: <https://railway.app/dashboard>.
 
-### Deploy on Railway from Github
+### Deploy on Railway from GitHub
 
-Next we'll setup Railway to deploy our library from Github.
+Next we'll setup Railway to deploy our library from GitHub.
 First choose the **Dashboard** option from the site top menu, then select the **New Project** button:
 
 ![Railway website dashboard showing new project button](railway_new_project_button.png)
 
-Railway will display a list of options for the new project, including the option to deploy a project from a template that is first created in your Github account, and a number of databases.
+Railway will display a list of options for the new project, including the option to deploy a project from a template that is first created in your GitHub account, and a number of databases.
 Select **Deploy from GitHub repo**.
 
-![Railway popup showing deployment options with Deploy from Github repo option highlighted](railway_new_project_button_deploy_github_repo.png)
+![Railway popup showing deployment options with Deploy from GitHub repo option highlighted](railway_new_project_button_deploy_github_repo.png)
 
-All projects in the Github repos you shared with Railway during setup are displayed.
-Select your Github repository for the local library: `<user-name>/django-locallibrary-tutorial`.
+All projects in the GitHub repos you shared with Railway during setup are displayed.
+Select your GitHub repository for the local library: `<user-name>/express-locallibrary-tutorial`.
 
-![Railway popup showing github repos that can be deployed](railway_new_project_button_deploy_github_selectrepo.png)
+![Railway popup showing GitHub repos that can be deployed](railway_new_project_button_deploy_github_selectrepo.png)
 
 Confirm your deployment by selecting **Deploy Now**.
 
@@ -540,7 +550,7 @@ Select the **New** button, which is used to add services to the current project.
 
 Select **Database** when prompted about the type of service to add:
 
-![Railway popup showing options for a new service, such as database, github repo, empty service etc](railway_database_add.png)
+![Railway popup showing options for a new service, such as database, GitHub repo, empty service etc](railway_database_add.png)
 
 Then select **Add MongoDB** to start adding the database
 
@@ -593,7 +603,7 @@ You can add data through the website interface and it should work in the same wa
 Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/develop/cli).
 
 After the client is installed you will be able run commands.
-Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to github), and running your project locally using the same settings as you have on the production server.
+Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your project locally using the same settings as you have on the production server.
 
 You can get a list of all the possible commands by entering the following in a terminal.
 

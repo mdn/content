@@ -19,7 +19,7 @@ MDN Web Docs community Discord server is open to the public. This server is a gr
 
 You can ask questions, seek clarifications, and find out how you can get involved. You can also join specific channels based on your areas of interest or expertise.
 
-Join the MDN Web Docs community on Discord [here](https://discord.gg/apa6Rn7uEj).
+Join the MDN Web Docs community on Discord [here](https://discord.gg/aZqEtMrbr7).
 
 ### Matrix chat rooms
 
@@ -32,7 +32,7 @@ The Matrix chat rooms are an alternative to the Discord server.
 
 ## GitHub Discussions
 
-[GitHub Discussions](https://github.com/mdn/mdn-community/discussions) on MDN Web Docs is the place to look out for any project-wide [announcements](https://github.com/mdn/mdn-community/discussions/categories/announcements).
+[GitHub Discussions](https://github.com/orgs/mdn/discussions) on MDN Web Docs is the place to look out for any project-wide [announcements](https://github.com/orgs/mdn/discussions/categories/announcements).
 
 Use GitHub discussions to post your questions and propose your suggestions. Choose the appropriate [discussion category](https://github.com/mdn/mdn-community#github-discussions) when starting a thread. Your answered questions can be really useful for other people looking for similar information in the future.
 

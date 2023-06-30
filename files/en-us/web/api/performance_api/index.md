@@ -77,6 +77,8 @@ The following interfaces are present in the Performance API:
   - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 - {{domxref("TaskAttributionTiming")}}
   - : Identifies the type of task and the container that is responsible for the long task.
+- {{domxref("VisibilityStateEntry")}}
+  - : Measures the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
 ## Guides
 
@@ -87,7 +89,7 @@ The following guides help you to understand key concepts of the Performance API 
 - [Resource timing](/en-US/docs/Web/API/Performance_API/Resource_timing): Measuring network timing for fetched resources, such as images, CSS, and JavaScript.
 - [Navigation timing](/en-US/docs/Web/API/Performance_API/Navigation_timing): Measuring navigation timing of a document.
 - [User timing](/en-US/docs/Web/API/Performance_API/User_timing): Measuring and recording performance data custom to your application.
-- Server timing
+- [Server timing](/en-US/docs/Web/API/Performance_API/Server_timing): Collecting server-side metrics.
 - Paint timing
 - Long task timing
 - Largest contentful paint

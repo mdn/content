@@ -71,13 +71,13 @@ This series of files will act as our fake database; in a real application, we'd 
 
 To begin this example, make a local copy of [fetch-start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) and the four text files — [verse1.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt) — in a new directory on your computer. In this example, we will fetch a different verse of the poem (which you may well recognize) when it's selected in the drop-down menu.
 
-Just inside the {{htmlelement("script")}} element, add the following code. This stores references to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements and adds a listener to the `<select>` element, so that when the user selects a new value, the new value is passed to function named `updateDisplay()` as a parameter.
+Just inside the {{htmlelement("script")}} element, add the following code. This stores references to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements and adds a listener to the `<select>` element, so that when the user selects a new value, the new value is passed to the function named `updateDisplay()` as a parameter.
 
 ```js
-const verseChoose = document.querySelector('select');
-const poemDisplay = document.querySelector('pre');
+const verseChoose = document.querySelector("select");
+const poemDisplay = document.querySelector("pre");
 
-verseChoose.addEventListener('change', () => {
+verseChoose.addEventListener("change", () => {
   const verse = verseChoose.value;
   updateDisplay(verse);
 });
@@ -85,7 +85,7 @@ verseChoose.addEventListener('change', () => {
 
 Let's define our `updateDisplay()` function. First of all, put the following beneath your previous code block — this is the empty shell of the function.
 
-```js
+```js-nolint
 function updateDisplay(verse) {
 
 }
@@ -96,7 +96,7 @@ We'll start our function by constructing a relative URL pointing to the text fil
 However, web servers tend to be case-sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the 'V' to lower case, remove the space, and add ".txt" on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals). Add the following lines inside your `updateDisplay()` function:
 
 ```js
-verse = verse.replace(' ', '').toLowerCase();
+verse = verse.replace(" ", "").toLowerCase();
 const url = `${verse}.txt`;
 ```
 
@@ -119,10 +119,14 @@ fetch(url)
   })
   // When response.text() has succeeded, the `then()` handler is called with
   // the text, and we copy it into the `poemDisplay` box.
-  .then((text) => poemDisplay.textContent = text)
+  .then((text) => {
+    poemDisplay.textContent = text;
+  })
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
-  .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+  .catch((error) => {
+    poemDisplay.textContent = `Could not fetch verse: ${error}`;
+  });
 ```
 
 There's quite a lot to unpack in here.
@@ -140,8 +144,8 @@ Finally, we chain a {{jsxref("Promise/catch", "catch()")}} handler at the end, t
 One problem with the example as it stands is that it won't show any of the poem when it first loads. To fix this, add the following two lines at the bottom of your code (just above the closing `</script>` tag) to load verse 1 by default, and make sure the {{htmlelement("select")}} element always shows the correct value:
 
 ```js
-updateDisplay('Verse 1');
-verseChoose.value = 'Verse 1';
+updateDisplay("Verse 1");
+verseChoose.value = "Verse 1";
 ```
 
 #### Serving your example from a server
@@ -165,7 +169,7 @@ We will, however, explain the Fetch code.
 The first block that uses Fetch can be found at the start of the JavaScript:
 
 ```js
-fetch('products.json')
+fetch("products.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -222,15 +226,14 @@ Sometimes, especially in older code, you'll see another API called [`XMLHttpRequ
 const request = new XMLHttpRequest();
 
 try {
-  request.open('GET', 'products.json');
+  request.open("GET", "products.json");
 
-  request.responseType = 'json';
+  request.responseType = "json";
 
-  request.addEventListener('load', () => initialize(request.response));
-  request.addEventListener('error', () => console.error('XHR error'));
+  request.addEventListener("load", () => initialize(request.response));
+  request.addEventListener("error", () => console.error("XHR error"));
 
   request.send();
-
 } catch (error) {
   console.error(`XHR error ${request.status}`);
 }
@@ -256,7 +259,7 @@ This article shows how to start working with Fetch to fetch data from the server
 
 There are however a lot of different subjects discussed in this article, which has only really scratched the surface. For a lot more detail on these subjects, try the following articles:
 
-- [Ajax — Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+- [Ajax](/en-US/docs/Web/Guide/AJAX)
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)

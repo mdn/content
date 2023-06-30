@@ -24,9 +24,9 @@ new ArrayBuffer(length, options)
 
 - `length`
   - : The size, in bytes, of the array buffer to create.
-- `options` {{optional_inline}} {{experimental_inline}}
+- `options` {{optional_inline}}
   - : An object, which can contain the following properties:
-    - `maxByteLength` {{optional_inline}} {{experimental_inline}}
+    - `maxByteLength` {{optional_inline}}
       - : The maximum size, in bytes, that the array buffer can be resized to.
 
 ### Return value
@@ -75,5 +75,5 @@ buffer.resize(12);
 ## See also
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}

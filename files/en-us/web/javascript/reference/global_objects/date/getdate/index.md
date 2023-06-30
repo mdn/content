@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getDate
 
 {{JSRef}}
 
-The **`getDate()`** method of a {{jsxref("Date")}} instance returns the day of the month for this date according to local time.
+The **`getDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-getdate.html","shorter")}}
 
@@ -28,7 +28,7 @@ An integer, between 1 and 31, representing the day of the month for the given da
 The `day` variable has value `25`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const day = xmas95.getDate();
 
 console.log(day); // 25

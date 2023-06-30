@@ -20,7 +20,7 @@ To determine what character corresponds with the key event, use the {{domxref("K
 
 ## Value
 
-The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: code values](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) page.
+The code values for Windows, Linux, and macOS are listed on the [KeyboardEvent: code values](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) page.
 
 ## Examples
 

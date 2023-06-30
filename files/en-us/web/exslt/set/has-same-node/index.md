@@ -26,4 +26,4 @@ set:has-same-node(nodeSet1, nodeSet2)
 
 ## Specifications
 
-[EXSLT - SET:HAS-SAME-NODE](http://exslt.org/set/functions/has-same-node/index.html)
+[EXSLT - SET:HAS-SAME-NODE](https://exslt.github.io/set/functions/has-same-node/index.html)

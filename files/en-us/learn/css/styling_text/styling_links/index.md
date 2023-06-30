@@ -1,6 +1,7 @@
 ---
 title: Styling links
 slug: Learn/CSS/Styling_text/Styling_links
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
@@ -215,7 +216,8 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <p>There are several browsers available, such as <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p></textarea>
+<a href="#">Microsoft Edge</a>.</p>
+  </textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -342,14 +344,13 @@ A common practice is to include icons on links to provide more of an indicator a
 
 Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
 
-```html
+```html-nolint
 <p>
   For more information on the weather, visit our <a href="#">weather page</a>,
   look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
   out
   <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">
-    weather on National Geographic
-  </a>.
+    weather on National Geographic</a>.
 </p>
 ```
 
@@ -410,7 +411,7 @@ So that's it. Try revisiting the active learning section above and trying this n
 
 > **Note:** The `href` values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the `<iframe>` the live example is embedded in, thereby losing the example.
 
-> **Note:** Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) yet; these are explained in other places.
+> **Note:** Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) yet; these are explained in other places.
 
 ## Styling links as buttons
 

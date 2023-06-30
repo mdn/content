@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.RegExp
 
 The **`RegExp`** object is used for matching text with a pattern.
 
-For an introduction to regular expressions, read the [Regular Expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
+For an introduction to regular expressions, read the [Regular expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the JavaScript guide. For detailed information of regular expression syntax, read the [regular expression reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions).
 
 ## Description
 
@@ -54,7 +54,7 @@ const re = new RegExp("\\w+");
 
 > **Note:** Whether something is a "regex" can be [duck-typed](https://en.wikipedia.org/wiki/Duck_typing). It doesn't have to be a `RegExp`!
 
-Some built-in methods would treat regexes specially. They decide whether `x` is a regex through [multiple steps](https://tc39.es/ecma262/#sec-isregexp):
+Some built-in methods would treat regexes specially. They decide whether `x` is a regex through [multiple steps](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-isregexp):
 
 1. `x` must be an object (not a primitive).
 2. If [`x[Symbol.match]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) is not `undefined`, check if it's [truthy](/en-US/docs/Glossary/Truthy).
@@ -138,6 +138,8 @@ These properties are defined on `RegExp.prototype` and shared by all `RegExp` in
   - : Whether or not the search is sticky.
 - {{jsxref("RegExp.prototype.unicode")}}
   - : Whether or not Unicode features are enabled.
+- {{jsxref("RegExp.prototype.unicodeSets")}}
+  - : Whether or not the `v` flag, an upgrade to the `u` mode, is enabled.
 
 These properties are own properties of each `RegExp` instance.
 
@@ -263,7 +265,7 @@ console.log(regex.lastIndex); // 15
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
 
 ### Extracting subdomain name from URL
 
@@ -315,7 +317,8 @@ Note that due to web compatibility, `RegExp.$N` will still return an empty strin
 ## See also
 
 - [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.split()")}}

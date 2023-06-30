@@ -1,6 +1,7 @@
 ---
 title: Organizing your CSS
 slug: Learn/CSS/Building_blocks/Organizing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
@@ -58,7 +59,7 @@ Having a set of rules you always follow reduces the amount of mental overhead ne
 
 There are a couple of ways you will see CSS formatted. Some developers put all of the rules onto a single line, like so:
 
-```css
+```css-nolint
 .box {background-color: #567895; }
 h2 {background-color: black; color: white; }
 ```

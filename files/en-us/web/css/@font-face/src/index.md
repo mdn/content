@@ -7,7 +7,7 @@ browser-compat: css.at-rules.font-face.src
 
 {{CSSRef}}
 
-The **`src`** CSS descriptor of the {{cssxref("@font-face")}} rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
+The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
 
 ## Syntax
 
@@ -64,7 +64,7 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
 
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` component value, which uniquely identifies a single font face within a larger family.
-    The name can optionally be enclosed in quotes. The font face name [is not case-sensitive](https://w3c.github.io/csswg-drafts/css-fonts-3/#font-family-casing).
+    The name can optionally be enclosed in quotes. The font face name [is not case-sensitive](https://drafts.csswg.org/css-fonts-3/#font-family-casing).
 
 > **Note:** The {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} can be used to access the user's locally installed font data — this includes higher-level details such as names, styles, and families, as well as the raw bytes of the underlying font files.
 
@@ -198,7 +198,7 @@ p.bold {
 }
 ```
 
-### Specifying font resources using tech and format values
+### Specifying font resources using tech() and format() values
 
 The following example shows how to use the `tech()` and `format()` values to specify font resources.
 A font using `color-colrv1` technology and `opentype` format is specified using the `tech()` and `format()` values.
@@ -217,12 +217,12 @@ p {
 }
 ```
 
-### Fallbacks for older browsers
+### Specifying fallbacks for older browsers
 
 Browsers should use a `@font-face` with a single `src` descriptor listing possible sources for the font.
-Since the browser will use the first resource that it is able to load, items should be specified in the order that you'd most like them to be used.
+Since the browser will use the first resource that it is able to load, items should be specified in the order of your preference for their usage.
 
-Generally this means that local files should appear before remote files, and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
+Generally this means that local files should appear before remote files and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
 For example:
 
 ```css

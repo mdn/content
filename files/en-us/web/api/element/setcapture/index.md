@@ -93,7 +93,7 @@ clicking and holding down on an element.
 </html>
 ```
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/mousecapture.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
 
 ## Notes
 

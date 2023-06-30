@@ -4,18 +4,13 @@ slug: Web/API/Streams_API/Using_readable_streams
 page-type: guide
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API's readable stream functionality? This article explains the basics.
 
 > **Note:** This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
 
 > **Note:** If you are looking for information on writable streams try [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams) instead.
-
-## Browser support
-
-You can consume Fetch body objects as streams and create your own custom readable streams most current browsers.
-[Pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) support is still not universal, and it may be worth checking compatibility tables (for example, see {{domxref("ReadableStream.pipeThrough()")}}).
 
 ## Finding some examples
 
@@ -152,19 +147,17 @@ fetch("http://example.com/somefile.txt")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
-    while (true) {
-      // read() returns a promise that resolves when a value has been received
-      reader.read().then(function pump({ done, value }) {
-        if (done) {
-          // Do something with last chunk of data then exit reader
-          return;
-        }
-        // Otherwise do something here to process current chunk
+    // read() returns a promise that resolves when a value has been received
+    reader.read().then(function pump({ done, value }) {
+      if (done) {
+        // Do something with last chunk of data then exit reader
+        return;
+      }
+      // Otherwise do something here to process current chunk
 
-        // Read some more, and call this function again
-        return reader.read().then(pump);
-      });
-    }
+      // Read some more, and call this function again
+      return reader.read().then(pump);
+    });
   })
   .catch((err) => console.error(err));
 ```

@@ -19,7 +19,7 @@ width: calc(100px * tan(0.785398163rad));
 
 /* Single <number> values */
 width: calc(100px * tan(0.5773502));
-width: calc(100px * tan(1.732 – 1));
+width: calc(100px * tan(1.732 - 1));
 
 /* Other values */
 width: calc(100px * tan(pi / 3));

@@ -1,6 +1,7 @@
 ---
 title: Styling lists
 slug: Learn/CSS/Styling_text/Styling_lists
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
@@ -349,7 +350,8 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea>
+</ul>
+  </textarea>
 
   <h2>CSS Input</h2>
   <textarea

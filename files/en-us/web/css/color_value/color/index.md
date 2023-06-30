@@ -11,8 +11,6 @@ The **`color()`** functional notation allows a color to be specified in a partic
 
 Support for a particular colorspace can be detected with the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) CSS media feature.
 
-The [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to define and name a color profile to be used in the `color()` function to specify a color.
-
 ## Syntax
 
 ```css
@@ -22,13 +20,19 @@ color(display-p3 1 0.5 0 / .5);
 
 ### Values
 
-- Functional notation: `color( [ [<ident> | <dashed-ident>]? [ <number-percentage>+ ] [ / <alpha-value> ]? ] )`
+Functional notation: `color(colorspace p1 p2 p3[ / A])`
 
-  - : `[<ident> | <dashed-ident>]` is an optional {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom colorspace, defined by a [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) rule.
+- `colorspace`
 
-    `[ <number-percentage>+ ]` is one or more {{cssxref("number")}} or {{cssxref("percentage")}} values providing the parameter values that the colorspace takes.
+  - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, and `xyz-d65`.
 
-    `/ <alpha-value>` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+- `p1`, `p2`, `p3`
+
+  - : {{CSSXref("number")}} or {{CSSXref("percentage")}} values providing the parameter values that the color space takes.
+
+- `A` {{optional_inline}}
+
+  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
 
@@ -87,11 +91,11 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Using_predefined_colorspaces_with_color')}}
+{{EmbedLiveSample("using_predefined_colorspaces_with_color")}}
 
-### Using xyz colorspaces with color()
+### Using the xyz colorspace with color()
 
-The following example shows how to use `xyz` colorspaces to specify a color.
+The following example shows how to use the `xyz` colorspace to specify a color.
 
 #### HTML
 
@@ -130,7 +134,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Using_xyz_colorspaces_with_color')}}
+{{EmbedLiveSample("using_the_xyz_colorspace_with_color")}}
 
 ### Using color-gamut media queries with color()
 
@@ -179,7 +183,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Using_color-gamut_media_queries_with_color')}}
+{{EmbedLiveSample("using_color-gamut_media_queries_with_color")}}
 
 ## Specifications
 

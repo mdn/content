@@ -66,7 +66,8 @@ This example opens a modal dialog when the "Show the dialog" button is activated
 <dialog id="favDialog">
   <form>
     <p>
-      <label>Favorite animal:
+      <label>
+        Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>
@@ -77,7 +78,7 @@ This example opens a modal dialog when the "Show the dialog" button is activated
     </p>
     <div>
       <button value="cancel" formmethod="dialog">Cancel</button>
-      <button id="confirmBtn" value="default">Submit</button>
+      <button id="confirmBtn" value="default">Confirm</button>
     </div>
   </form>
 </dialog>
@@ -90,27 +91,32 @@ This example opens a modal dialog when the "Show the dialog" button is activated
 #### JavaScript
 
 ```js
-const showButton = document.getElementById('showDialog');
-const favDialog = document.getElementById('favDialog');
-const outputBox = document.querySelector('output');
-const selectEl = favDialog.querySelector('select');
-const confirmBtn = favDialog.querySelector('#confirmBtn');
+const showButton = document.getElementById("showDialog");
+const favDialog = document.getElementById("favDialog");
+const outputBox = document.querySelector("output");
+const selectEl = favDialog.querySelector("select");
+const confirmBtn = favDialog.querySelector("#confirmBtn");
 
 // "Show the dialog" button opens the <dialog> modally
-showButton.addEventListener('click', () => {
-    favDialog.showModal();
+showButton.addEventListener("click", () => {
+  favDialog.showModal();
 });
 
 // "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener('change', (e) => {
+selectEl.addEventListener("change", (e) => {
   confirmBtn.value = selectEl.value;
 });
 
-// "Confirm" button triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener('close', (e) => {
-  outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
+favDialog.addEventListener("close", (e) => {
+  outputBox.value =
+    favDialog.returnValue === "default"
+      ? "No return value."
+      : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
 });
-confirmBtn.addEventListener('click', (event) => {
+
+// Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
+confirmBtn.addEventListener("click", (event) => {
   event.preventDefault(); // We don't want to submit this fake form
   favDialog.close(selectEl.value); // Have to send the select box value here.
 });
@@ -120,7 +126,7 @@ confirmBtn.addEventListener('click', (event) => {
 
 {{EmbedLiveSample("Advanced_example", "100%", 300)}}
 
-This modal dialog can be closed three ways. For keyboard users, modal dialogs can be closed with the <kbd>Esc</kbd> key. In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Submit" closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
+This modal dialog can be closed three ways. For keyboard users, modal dialogs can be closed with the <kbd>Esc</kbd> key. In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
 The "Cancel" button includes a [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod), which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved, not submitted, and the dialog gets closed.
 Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
 
@@ -132,25 +138,17 @@ It is important to provide a closing mechanism within every `dialog` element. Th
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
-          >sectioning root</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>
       </td>
     </tr>
     <tr>
@@ -161,17 +159,13 @@ It is important to provide a closing mechanism within every `dialog` element. Th
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role"
-          >dialog</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a>
       </td>
     </tr>
     <tr>

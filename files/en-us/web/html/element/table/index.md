@@ -87,7 +87,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`: the table is displayed in the center of the document;
     - `right`: the table is displayed on the right side of the document.
 
-    Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to `auto` or {{cssxref("margin")}} to `0 auto` to achieve an effect that is similar to the align attribute.
+    Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to achieve an effect that is similar to the align attribute:
+
+    - `left`: `margin-right: auto; margin-left: 0;`
+    - `center`: `margin-right: auto; margin-left: auto;`
+    - `right`: `margin-right: 0; margin-left: auto;`
 
 - `bgcolor` {{Deprecated_inline}}
 
@@ -690,6 +694,6 @@ If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs
 - CSS properties that may be especially useful to style the `<table>` element:
 
   - {{cssxref("width")}} to control the width of the table;
-  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;
+  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules, and frame;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
   - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define the alignment of text and cell content.

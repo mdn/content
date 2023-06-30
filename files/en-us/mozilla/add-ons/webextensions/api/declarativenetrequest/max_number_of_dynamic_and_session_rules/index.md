@@ -15,7 +15,7 @@ In Firefox, each ruleset has its own quota.
 
 Its value is `5000`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

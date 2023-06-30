@@ -1,6 +1,7 @@
 ---
 title: CSS FAQ
 slug: Learn/CSS/Howto/CSS_FAQ
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

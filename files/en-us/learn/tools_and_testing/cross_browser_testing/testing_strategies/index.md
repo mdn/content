@@ -81,7 +81,7 @@ You may also consider using open-source and privacy-focused analytics platforms 
 
 1. First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://marketingplatform.google.com/about/analytics/).
 2. Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
-3. Enter your website/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
+3. Enter your website/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the website URL. This needs to be your site/app's root URL.
 4. Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
 5. The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could place the snippets below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
 6. Upload the changes to the development server, or wherever else you need your code.
@@ -197,7 +197,7 @@ You can often find simulators for other mobile device environments too, for exam
 
 ### Virtual machines
 
-Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as [Parallels](www.parallels.com/), [VMWare](https://www.vmware.com/), and [Virtual Box](https://www.virtualbox.org/wiki/Downloads); we personally like the latter, because it is free.
+Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as [Parallels](https://www.parallels.com/), [VMWare](https://www.vmware.com/), and [Virtual Box](https://www.virtualbox.org/wiki/Downloads); we personally like the latter, because it is free.
 
 > **Note:** You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
 

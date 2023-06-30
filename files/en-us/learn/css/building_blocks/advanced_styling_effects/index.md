@@ -1,6 +1,7 @@
 ---
 title: Advanced styling effects
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
+page-type: guide
 ---
 
 {{LearnSidebar}}
@@ -97,7 +98,7 @@ You can also specify multiple box shadows in a single `box-shadow` declaration, 
 </article>
 ```
 
-```css
+```css-nolint
 p {
   margin: 0;
 }

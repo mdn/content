@@ -1,6 +1,7 @@
 ---
 title: HTML basics
 slug: Learn/Getting_started_with_the_web/HTML_basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
@@ -212,7 +213,9 @@ Links are very important — they are what makes the web a web! To add a link, w
 4. Fill in the value of this attribute with the web address that you want the link to:
 
    ```html
-   <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">
+     Mozilla Manifesto
+   </a>
    ```
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.

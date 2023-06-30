@@ -3,7 +3,7 @@ title: "true"
 slug: Web/XPath/Functions/true
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `true` function returns a boolean value of true.
 

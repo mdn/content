@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.onRuleMatchedDebug
 
 {{AddonSidebar()}}
 
-Fired when a rule is matched with a request. Only available extensions with the `"declarativeNetRequestFeedback"` permission, as this is intended for debugging purposes only. See [Testing](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#testing) for details on how testing is enabled in each browser.
+Fired when a rule is matched with a request. Only available extensions with the `"declarativeNetRequestFeedback"` permission, as this is intended for debugging purposes only. See [Testing](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#testing) for details on how testing is enabled in each browser.
 
 ## Syntax
 
@@ -30,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that is called when this event occurs. The function is passed these arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `request`
 
@@ -65,7 +65,7 @@ Events have three functions:
     - `rule`
       - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule", "MatchedRule")}}. Details of a matched rule.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

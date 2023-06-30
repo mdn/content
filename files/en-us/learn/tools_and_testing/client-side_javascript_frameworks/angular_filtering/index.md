@@ -48,31 +48,31 @@ In the following snippet, the existing sections in your HTML are in comments so 
 <!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
  -->
 
-  <!-- Buttons that show all, still to do, or done items on click -->
-  <div class="btn-wrapper">
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'all'"
-      (click)="filter = 'all'">
-      All
-    </button>
+<!-- Buttons that show all, still to do, or done items on click -->
+<div class="btn-wrapper">
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'all'"
+    (click)="filter = 'all'">
+    All
+  </button>
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'active'"
-      (click)="filter = 'active'">
-      To Do
-    </button>
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'active'"
+    (click)="filter = 'active'">
+    To Do
+  </button>
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'done'"
-      (click)="filter = 'done'">
-      Done
-    </button>
-  </div>
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'done'"
+    (click)="filter = 'done'">
+    Done
+  </button>
+</div>
 
-  <!-- <h2>\{{items.length}} item(s)</h2>
+<!-- <h2>\{{items.length}} item(s)</h2>
          <ul>... -->
 ```
 

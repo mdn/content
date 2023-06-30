@@ -46,7 +46,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/action">action</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#action">action</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -56,10 +56,9 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/align">align</a></code>
+        <code>align</code> {{deprecated_inline}}
       </td>
       <td>
-        {{ HTMLElement("applet") }},
         {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
         {{ HTMLElement("colgroup") }},
         {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
@@ -82,7 +81,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <code><a href="/en-US/docs/Web/HTML/Attributes/alt">alt</a></code>
       </td>
       <td>
-        {{ HTMLElement("applet") }}, {{ HTMLElement("area") }},
+        {{ HTMLElement("area") }},
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
       </td>
       <td>Alternative text in case an image can't be displayed.</td>
@@ -126,7 +125,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -220,17 +218,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/keygen#challenge">challenge</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>A challenge string that is submitted along with the public key.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/charset">charset</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/meta#charset">charset</a></code>
       </td>
       <td>
-        {{ HTMLElement("meta") }}, {{ HTMLElement("script") }}
+        {{ HTMLElement("meta") }}
       </td>
       <td>Declares the character encoding of the page or script.</td>
     </tr>
@@ -262,25 +253,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
       </td>
       <td>Often used with CSS to style elements with common properties.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/applet#code">code</a></code>
-      </td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>
-        Specifies the URL of the applet's class file to be loaded and executed.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/applet#codebase">codebase</a></code>
-      </td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>
-        This attribute gives the absolute or relative URL of the directory where
-        applets' .class files referenced by the code attribute are stored.
-      </td>
     </tr>
     <tr>
       <td><code>color</code></td>
@@ -339,7 +311,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/contextmenu">contextmenu</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -475,7 +447,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -521,7 +492,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
-        The <a href="https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
+        The <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
         specifies what action label (or icon) to present for the enter key on
         virtual keyboards. The attribute can be used with form controls (such as
         the value of <code>textarea</code> elements), or in elements in an
@@ -546,7 +517,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -789,13 +759,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/keygen#keytype">keytype</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>Specifies the type of key generated.</td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/en-US/docs/Web/HTML/Element/track#kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
@@ -853,7 +816,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         {{ HTMLElement("audio") }},
-        {{ HTMLElement("bgsound") }},
         {{ HTMLElement("marquee") }},
         {{ HTMLElement("video") }}
       </td>
@@ -986,7 +948,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},

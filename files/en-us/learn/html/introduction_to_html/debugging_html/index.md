@@ -1,6 +1,7 @@
 ---
 title: Debugging HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
@@ -101,7 +102,8 @@ It's time to study the permissive nature of HTML code.
    - The incorrect nesting has been fixed by the browser as shown here:
 
      ```html
-     <strong>strong
+     <strong>
+       strong
        <em>strong emphasized?</em>
      </strong>
      <em> what is this?</em>
@@ -112,8 +114,8 @@ It's time to study the permissive nature of HTML code.
      ```html
      <li>
        <strong>
-         Unclosed attributes: Another common source of HTML problems. Let's
-         look at an example:
+         Unclosed attributes: Another common source of HTML problems. Let's look
+         at an example:
        </strong>
      </li>
      ```
