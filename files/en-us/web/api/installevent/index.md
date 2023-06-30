@@ -25,9 +25,6 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("InstallEvent.activeWorker")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns the {{domxref("ServiceWorker")}} that is currently controlling the page.
-
 ## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.

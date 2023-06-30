@@ -72,6 +72,27 @@
       },
       {
         "if": {
+          "properties": { "slug": { "type": "string", "pattern": "^Learn/" } }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "learn-topic",
+                "learn-module",
+                "learn-module-chapter",
+                "learn-module-assessment",
+                "learn-faq"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
           "properties": { "slug": { "type": "string", "pattern": "^MDN/" } }
         },
         "then": {
@@ -249,6 +270,27 @@
           "properties": {
             "page-type": {
               "enum": ["guide", "landing-page", "web-manifest-member"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/WebDriver/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "webdriver-command",
+                "webdriver-capability",
+                "webdriver-error"
+              ]
             }
           }
         },

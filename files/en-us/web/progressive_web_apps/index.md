@@ -1,5 +1,5 @@
 ---
-title: Progressive web apps (PWAs)
+title: Progressive web apps
 slug: Web/Progressive_web_apps
 ---
 
@@ -21,6 +21,8 @@ These guides give conceptual explanations of different aspects of PWAs. They're 
   - : This guide covers how users can install and uninstall PWAs on their devices.
 - [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
   - : In this guide, we'll introduce a set of technologies that enable a PWA to provide a good user experience even when the device has intermittent network connectivity and to perform operations in the background, even when the main app is not running.
+- [Caching](/en-US/docs/Web/Progressive_web_apps/Guides/Caching)
+  - : An overview of the APIs that enable a PWA to cache resources locally, and some common strategies used by PWAs to implement offline functionality.
 - [Best practices for PWAs](/en-US/docs/Web/Progressive_web_apps/Guides/Best_practices)
   - : PWAs should adapt to different browsers and devices, be accessible, have good performance, and integrate well with the operating system. This guide provides a list of best practices to help you make sure your PWA is as good as it can be.
 
@@ -49,7 +51,7 @@ These guides give concrete detailed instructions for how to implement specific P
 
 In these tutorials, you'll build a PWA from scratch. Tutorials walk through the steps of creating an app, from start to finish, explaining how the different features of the app are implemented.
 
-- [Creating your first PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro)
+- [Creating your first PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker)
   - : This novice-level tutorial walks through the creation of a PWA to track menstrual cycles. Lessons include a walk through of the HTML, CSS, and JavaScript required to create a fully functional web app, setting up a testing environment, and complete explanations guiding the learner through upgrading the web app into a PWA; including developing and inspecting a manifest, adding a service worker, and using the service worker to delete stale caches.
 - [Deep dive into PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames)
   - : This intermediate-level tutorial walks through the creation of a PWA that lists information about games submitted to the A-Frame category in the [js13kGames 2017](https://2017.js13kgames.com/) competition. This tutorial includes all the basics for creating a PWA, with additional features, including notifications, push, and app performance.
@@ -113,4 +115,4 @@ The following APIs can be used by a service worker to perform tasks in the backg
 
 - [Progressive web apps](https://web.dev/progressive-web-apps/) on web.dev
 - [Learn PWA](https://web.dev/learn/pwa/) on web.dev
-- [Progressive web apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) on learn.microsoft.com (January 24, 2023)
+- [Progressive web apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) on learn.microsoft.com (2023)

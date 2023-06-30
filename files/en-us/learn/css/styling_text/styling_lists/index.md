@@ -1,6 +1,7 @@
 ---
 title: Styling lists
 slug: Learn/CSS/Styling_text/Styling_lists
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
