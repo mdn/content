@@ -109,14 +109,14 @@ block content
   form(method='POST' action='')
     div.form-group
       label(for='book') Book:
-      select#book.form-control(type='select' placeholder='Select book' name='book' required='true' )
+      select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
         - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for book in book_list
           option(value=book._id, selected=(selected_book==book._id.toString() ? 'selected' : false) ) #{book.title}
 
     div.form-group
       label(for='imprint') Imprint:
-      input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required='true' value=(undefined===bookinstance ? '' : bookinstance.imprint) )
+      input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required='true' value=(undefined===bookinstance ? '' : bookinstance.imprint))
     div.form-group
       label(for='due_back') Date when book available:
       input#due_back.form-control(type='date' name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
