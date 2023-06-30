@@ -10,9 +10,6 @@ Prefetching refers to the practice of speculatively fetching resources in the ba
 This can significantly reduce the load time for the prefetched page if the user does choose to navigate to it.
 Prefetching might be used, for example, to fetch the page resources linked by a "Next" button, or a link popup that a user hovers over, or search results.
 
-Prefetching is the first step in {{Glossary("prerender","prerendering")}} and has the same purpose: to reduce time to display for the likely next navigation.
-It differs from [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload), which is the term used to refer to controlling the fetch priority for resources in the current page.
-
 ### Resource prefetching
 
 Resources should be prefetched based on how likely it is that they will be needed in a future navigation.
