@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.DataView.setFloat32
 
 {{JSRef}}
 
-The **`setFloat32()`** method stores a signed 32-bit float
-(float) value at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`setFloat32()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 32-bit float in the 4 bytes starting at the specified byte offset of this `DataView`.
 
 {{EmbedInteractiveExample("pages/js/dataview-setfloat32.html")}}
 

@@ -1,6 +1,7 @@
 ---
 title: WebDriver
 slug: Web/WebDriver
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages}}

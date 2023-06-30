@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.DataView.getFloat32
 
 {{JSRef}}
 
-The **`getFloat32()`** method gets a signed 32-bit float
-(float) at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`getFloat32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit float.
 
 {{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}
 

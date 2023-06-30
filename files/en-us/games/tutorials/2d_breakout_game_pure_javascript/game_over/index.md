@@ -1,6 +1,7 @@
 ---
 title: Game over
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
+page-type: guide
 ---
 
 {{GamesSidebar}}

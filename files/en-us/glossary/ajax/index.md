@@ -20,4 +20,4 @@ With interactive websites and modern web standards, Ajax is performed using func
 - {{DOMxRef("Fetch API")}}
 - [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
-- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/) (September 1, 2014)
+- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/) (2014)

@@ -76,7 +76,7 @@ two.transferFromImageBitmap(bitmapTwo);
 
 Another way to use the `OffscreenCanvas` API, is to call {{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}} on a {{HTMLElement("canvas")}} element, either on a [worker](/en-US/docs/Web/API/Web_Workers_API) or the main thread, which will return an `OffscreenCanvas` object from an {{domxref("HTMLCanvasElement")}} object from the main thread. Calling {{domxref("OffscreenCanvas.getContext", "getContext()")}} will then obtain a rendering context from that `OffscreenCanvas`.
 
-main.js (main thread code):
+The `main.js` script (main thread) may look like this:
 
 ```js
 const htmlCanvas = document.getElementById("canvas");
@@ -86,18 +86,17 @@ const worker = new Worker("offscreencanvas.js");
 worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 
-offscreencanvas.js (worker code):
+While the `offscreencanvas.js` script (worker thread) can look like this:
 
 ```js
 onmessage = (evt) => {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
-
   // Perform some drawing using the gl context
 };
 ```
 
-You can also use requestAnimationFrame in workers
+It's also possible to use {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} in workers:
 
 ```js
 onmessage = (evt) => {
@@ -112,7 +111,7 @@ onmessage = (evt) => {
 };
 ```
 
-For a full example, see our [OffscreenCanvas worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) ([run OffscreenCanvas worker](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/)).
+For a full example, see the [OffscreenCanvas example source](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) on GitHub or run the [OffscreenCanvas example live](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/).
 
 ## Specifications
 
@@ -124,9 +123,10 @@ For a full example, see our [OffscreenCanvas worker example](https://github.com/
 
 ## See also
 
-- [WebGL Off the Main Thread – Mozilla Hacks](https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/)
 - {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("OffscreenCanvasRenderingContext2D")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageBitmapRenderingContext")}}
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
+- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}}
+- [WebGL Off the Main Thread – Mozilla Hacks](https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/) (2016)
