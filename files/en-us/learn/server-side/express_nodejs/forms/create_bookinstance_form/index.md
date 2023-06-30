@@ -1,6 +1,7 @@
 ---
 title: Create BookInstance form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
+page-type: learn-module-chapter
 ---
 
 This subarticle shows how to define a page/form to create `BookInstance` objects.

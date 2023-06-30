@@ -1,6 +1,7 @@
 ---
 title: Example 2
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_2
+page-type: learn-module-chapter
 ---
 
 This is the second example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).

@@ -1,6 +1,7 @@
 ---
 title: MathML fractions and roots
 slug: Learn/MathML/First_steps/Fractions_and_roots
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
