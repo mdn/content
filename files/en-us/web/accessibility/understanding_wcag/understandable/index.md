@@ -466,6 +466,27 @@ This guideline centers around helping users enter correct information when requi
         input situations, not just ones involving sensitive data.
       </td>
       <td>Again, see 3.3.4.</td>
+      <tr>
+      <td> 3.3.7 Redundant Entry (A) </td>
+      <td>
+      Required information that is previously entered or provided by the user in the same process is either auto-populated or available for the user to choose.
+      </td>
+      <td> <strong> Note:</strong> This criteria is not applicable for certain situations. Check out <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#337-redundant-entry-a">the note in WCAG 3.3.7</a> to learn more.</td>
+      </tr>
+      <tr>
+      <td> 3.3.8 Accessible Authentication (Minimum) (AA)
+      </td>
+      <td>
+States that cognitive function tests like remembering a password is not required for any step in an authentication process unless said provides an alternative, object recognition/personal content(e.g., images, videos, and audio), or mechanicism(e.g., copy and paste and autosave passwords).
+      </td>
+      <td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication"> the full documentation</a> for this standard to learn more. </td>
+    </tr>
+    <tr>
+    <td> 3.3.9 Accessible Authentication (Enhanced) (AAA) </td>
+    <td>
+Cognitive function tests like remembering a password is not required for any step in an authentication process unless that step either provides an alternative or mechanicism.
+    </td>
+<td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced"> the full documentation</a> for this standard to learn more.</td>
     </tr>
   </tbody>
 </table>
