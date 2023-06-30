@@ -9,8 +9,8 @@ browser-compat: css.selectors.volume-locked
 
 The **`:volume-locked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is capable of making sound, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, but the audio volume of the media element is currently "locked" by the user.
 
-User agents may set media [`muted`](/en-US/docs/Web/API/HTMLMediaElement/muted) or [`volume`](/en-US/docs/Web/API/HTMLMediaElement/volume) values according to user preferences (e.g. remembering the last set value across sessions, on a per-site basis or otherwise).
-An element that is `:volume-locked` cannot be muted, un-muted or have its volume changed via JavaScript because of an operating system or user agent preference.
+User agents may set media [`muted`](/en-US/docs/Web/API/HTMLMediaElement/muted) or [`volume`](/en-US/docs/Web/API/HTMLMediaElement/volume) values according to user preferences (e.g., remembering the last set value across sessions, on a per-site basis, or otherwise).
+An element that is `:volume-locked` cannot be muted, un-muted, or have its volume changed via JavaScript. The locked status is an operating system or user agent preference.
 
 ## Syntax
 
@@ -50,5 +50,5 @@ video:volume-locked {
 - {{cssxref(":playing")}}
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
 - [`volume`](/en-US/docs/Web/API/HTMLMediaElement/volume) property of {{domxref("HTMLMediaElement")}} objects

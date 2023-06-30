@@ -27,11 +27,11 @@ For more information, see the [Media buffering, seeking, and time ranges](/en-US
 
 ```css
 :seeking {
-  border: 5px solid red;
+  outline: 5px solid red;
 }
 
-audio:seeking {
-  border: 5px solid blue;
+video:seeking {
+  outline: 5px solid blue;
 }
 ```
 
@@ -51,4 +51,4 @@ audio:seeking {
 - {{cssxref(":playing")}}
 - {{cssxref(":stalled")}}
 - {{cssxref(":volume-locked")}}
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)

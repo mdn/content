@@ -32,7 +32,7 @@ For more information, see the [Media buffering, seeking, and time ranges](/en-US
   outline: 5px solid red;
 }
 
-audio:buffering {
+video:buffering {
   outline: 5px solid blue;
 }
 ```
@@ -53,4 +53,4 @@ audio:buffering {
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
 - {{cssxref(":volume-locked")}}
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
