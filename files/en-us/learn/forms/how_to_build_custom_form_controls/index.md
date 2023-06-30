@@ -1,7 +1,6 @@
 ---
 title: How to build custom form controls
 slug: Learn/Forms/How_to_build_custom_form_controls
-page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
