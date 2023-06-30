@@ -351,7 +351,6 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
-- [Ajax - Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)

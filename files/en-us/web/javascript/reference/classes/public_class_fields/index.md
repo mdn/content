@@ -249,5 +249,5 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 - {{jsxref("Statements/class", "class")}}
-- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (May 2, 2018)
-- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (December 13, 2018)
+- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
+- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (2018)

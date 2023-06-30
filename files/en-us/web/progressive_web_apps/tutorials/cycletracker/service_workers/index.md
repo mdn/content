@@ -1,11 +1,12 @@
 ---
-title: "PWA tutorial: Service workers"
-slug: Web/Progressive_web_apps/Tutorials/Intro/Service_workers
+title: "CycleTracker: Service workers"
+short-title: "Service workers"
+slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 ---
 
 {{PWASidebar}}
 
-{{PreviousMenu("Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 Thus far, we've written the HTML, CSS, and JavaScript for CycleTracker. We added a manifest file defining colors, icons, URL, and other app features. We have a working web app! But it isn't yet a PWA. In this section, we will write the JavaScript required to convert our fully functional web application into a PWA that can be distributed as a standalone app and works seamlessly offline.
 
@@ -394,8 +395,8 @@ In other words, as you are working on your PWA, you don't have to update the ver
 
 ## We're done!
 
-At its core, a PWA is a web application that can be installed and that is progressively enhanced to work offline. We created a fully functional web application. We then added the two features - a manifest file and a service worker - required to convert it to a PWA. If you want to share your app with others, make it available via a secure connection. Alternatively, if you just want to use the cycle tracker yourself, [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection), [install the PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Installing), and enjoy! Once installed, you no longer need to run localhost.
+At its core, a PWA is a web application that can be installed and that is progressively enhanced to work offline. We created a fully functional web application. We then added the two features - a manifest file and a service worker - required to convert it to a PWA. If you want to share your app with others, make it available via a secure connection. Alternatively, if you just want to use the cycle tracker yourself, [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection), [install the PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Installing), and enjoy! Once installed, you no longer need to run localhost.
 
 Congratulations!
 
-{{PreviousMenu("Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

@@ -1,9 +1,10 @@
 ---
-title: "PWA tutorial: Secure connection"
-slug: Web/Progressive_web_apps/Tutorials/Intro/Secure_connection
+title: "CycleTracker: Secure connection"
+short-title: "Secure connection"
+slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 {{PWASidebar}}
 
@@ -19,7 +20,7 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](filefile.jpg)
 
-We are viewing our page using the `file://` protocol. This works for the current state of our codebase, and will continue to suffice as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality). However, manifest files and services workers, both PWA requirements, require a secure connection, as do several other APIs. PWAs need to be served from a web server over `https` or a local development environment, using `localhost`, `127.0.0.1`, with or without a port number. If we view our finished app using the `files://` protocol, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers) we add will fail.
+We are viewing our page using the `file://` protocol. This works for the current state of our codebase, and will continue to suffice as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality). However, manifest files and services workers, both PWA requirements, require a secure connection, as do several other APIs. PWAs need to be served from a web server over `https` or a local development environment, using `localhost`, `127.0.0.1`, with or without a port number. If we view our finished app using the `files://` protocol, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) we add will fail.
 
 > **Note:** Serving your app over `https` isn't only good for PWAs, but for all websites as it ensures the information that transits between your web server and the user's browser is encrypted end to end. Several [Web APIs require secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Even if you aren't creating installable PWAs, as you add features to any web app, you may run into cases where a secure context is required.
 
@@ -92,4 +93,4 @@ Note that you can [configure a custom domain for a GitHub pages site](https://do
 
 We are able to view a styled, static version of the CycleTracker application shell. Now that we know how to view the application we are about to build, let's get to building it. Up next, we create `app.js`, the JavaScript that converts our static design into a fully functional web application that stores data locally, on the users machine.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

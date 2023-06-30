@@ -1,6 +1,7 @@
 ---
 title: Mobile touch controls
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
+page-type: guide
 ---
 
 {{GamesSidebar}}
