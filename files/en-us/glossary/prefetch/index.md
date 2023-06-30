@@ -20,7 +20,8 @@ This allows developers to hint to the browser the likely navigation from the cur
 Note that only these links are prefetched (so `<a>` elements are not), and that they are fetched at lower priority that resources used by the current page, including elements with `fetchPriority="low"`.
 
 ```html
-<link rel="prefetch" href="https://www.example.com/solutions" />
+<link rel="prefetch" href="/app/style.css"> 
+<link rel="prefetch" href="https://example.com/landing-page">
 ```
 
 The fetch request for a `prefetch` operation results an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose), which a server might use to change the cache timeouts for the resources, or perform other special handling.
