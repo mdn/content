@@ -65,7 +65,6 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-dashboard-region", "-webkit-dashboard-region")}}
 - {{CSSxRef("-webkit-font-size-delta", "-webkit-font-size-delta")}}
 - {{CSSxRef("font-smooth", "-webkit-font-smoothing")}}
-- {{CSSxRef("-webkit-highlight", "-webkit-highlight")}}
 - {{CSSxRef("-webkit-hyphenate-character", "-webkit-hyphenate-character")}}
 - {{CSSxRef("-webkit-hyphenate-limit-after", "-webkit-hyphenate-limit-after")}}
 - {{CSSxRef("-webkit-hyphenate-limit-before", "-webkit-hyphenate-limit-before")}}
@@ -431,6 +430,7 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-flow-into`
 - `-webkit-grid-columns` (See [`grid-column)`](/en-US/docs/Web/CSS/grid-column)
 - `-webkit-grid-rows` (See [`grid-row)`](/en-US/docs/Web/CSS/grid-row)
+- `-webkit-highlight`
 - `-webkit-hyphenate-charset`
 - `-webkit-image-set (See {{CSSxRef("image/image-set", "image-set")}})
 - `-webkit-mask-attachment`

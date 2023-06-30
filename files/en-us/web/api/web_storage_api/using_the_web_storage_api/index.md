@@ -170,6 +170,18 @@ fontForm.onchange = populateStorage;
 imageForm.onchange = populateStorage;
 ```
 
+`Storage` only supports storing and retrieving strings. If you want to save other data types, you have to convert them to strings. For plain objects and arrays, you can use {{jsxref("JSON.stringify()")}}.
+
+```js
+const person = { name: "Alex" };
+localStorage.setItem("user", person);
+console.log(localStorage.getItem("user")); // "[object Object]"; not useful!
+localStorage.setItem("user", JSON.stringify(person));
+console.log(JSON.parse(localStorage.getItem("user"))); // { name: "Alex" }
+```
+
+However, there's no generic way to store arbitrary data types. Furthermore, the retrieved object is a [deep copy](/en-US/docs/Glossary/Deep_copy) of the original object and mutations to it do not affect the original object.
+
 ### Responding to storage changes with the StorageEvent
 
 The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object (note that this event is not fired for sessionStorage changes). This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.

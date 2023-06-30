@@ -3,7 +3,7 @@ title: lang
 slug: Web/XPath/Functions/lang
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `lang` function determines whether the context node matches the given language and returns boolean true or false.
 

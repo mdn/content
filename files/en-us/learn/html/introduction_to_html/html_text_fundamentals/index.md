@@ -1,6 +1,7 @@
 ---
 title: HTML text fundamentals
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
@@ -834,6 +835,8 @@ You can nest strong and emphasis inside one another if desired:
 <p>This liquid is <strong>highly toxic</strong> — if you drink it, <strong>you may <em>die</em></strong>.</p>
 ```
 
+{{EmbedLiveSample('Strong importance')}}
+
 ### Active learning: Let's be important
 
 In this active learning section, we've provided an editable example. Inside it, we'd like you to try adding emphasis and strong importance to the words you think need them, just to have some practice.
@@ -1012,6 +1015,8 @@ Always keep an accessibility mindset. The concept of italics isn't very helpful 
   </dd>
 </dl>
 ```
+
+{{EmbedLiveSample('Italic, bold, underline…','100%','270')}}
 
 ## Test your skills!
 

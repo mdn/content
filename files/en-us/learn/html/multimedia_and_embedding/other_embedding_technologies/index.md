@@ -1,6 +1,7 @@
 ---
 title: From object to iframe — other embedding technologies
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -316,26 +317,26 @@ If you find yourself needing to embed plugin content, this is the kind of inform
   <tbody>
     <tr>
       <td>{{glossary("URL")}} of the embedded content</td>
-      <td><a href="/en-US/docs/Web/HTML/Element/src#embed"><code>embed</code></a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/data#object"><code>object</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         <em>accurate </em>{{glossary("MIME type", 'media type')}}
         of the embedded content
       </td>
-      <td><a href="/en-US/docs/Web/HTML/Element/type#embed"><code>embed</code></a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/type#object"><code>object</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

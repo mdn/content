@@ -33,13 +33,13 @@ The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{H
 
 ### maxlength
 
-The maximum number of characters (as UTF-16 code units) the user can enter into the `email` input. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the `email` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
+The maximum string length (measured in UTF-16 code units) that the user can enter into the `email` input. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the `email` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
 The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text value of the field is greater than `maxlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
 ### minlength
 
-The minimum number of characters (as UTF-16 code units) the user can enter into the `email` input. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `email` input has no minimum length.
+The minimum string length (measured in UTF-16 code units) that the user can enter into the `email` input. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `email` input has no minimum length.
 
 The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
@@ -209,7 +209,7 @@ There are two levels of content validation available for `email` inputs. First, 
 Browsers automatically provide validation to ensure that only text that matches the standard format for Internet email addresses is entered into the input box. Browsers use an algorithm equivalent to the following regular expression:
 
 ```js
-/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 ```
 
 To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid, see [Form data validation](/en-US/docs/Learn/Forms/Form_validation).
@@ -350,7 +350,8 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
         <a href="/en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>name`](/en-US/docs/Web/HTML/Element/input#name), [`pattern</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#name"><code>name</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a>,
@@ -374,9 +375,11 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        with no <code>list</code> attribute:
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code><br />
+        with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>

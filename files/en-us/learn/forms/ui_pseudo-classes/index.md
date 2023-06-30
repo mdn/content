@@ -5,7 +5,7 @@ slug: Learn/Forms/UI_pseudo-classes
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
-In the previous articles, we covered the styling of various form controls, in a general manner. This included some usage of pseudo-classes, for example using `:checked` to target a checkbox only when it is selected. In this article, we will explore in detail the different UI pseudo-classes available to us in modern browsers for styling forms in different states.
+In the previous articles, we covered the styling of various form controls in a general manner. This included some usage of pseudo-classes, for example, using `:checked` to target a checkbox only when it is selected. In this article, we explore the different UI pseudo-classes available for styling forms in different states.
 
 <table>
   <tbody>
@@ -34,7 +34,7 @@ In the previous articles, we covered the styling of various form controls, in a 
 
 ## What pseudo-classes do we have available?
 
-The original pseudo-classes available to us (as of [CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes)) that are relevant to forms are:
+The original pseudo-classes (from [CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes)) that are relevant to forms are:
 
 - {{cssxref(":hover")}}: Selects an element only when it is being hovered over by a mouse pointer.
 - {{cssxref(":focus")}}: Selects an element only when it is focused (i.e. by being tabbed to via the keyboard).
@@ -48,14 +48,14 @@ The original pseudo-classes available to us (as of [CSS 2.1](https://www.w3.org/
 
   key is being pressed down in the case of a keyboard activation).
 
-These basic pseudo-classes should be familiar to you now. More recently, the [CSS Selector Level 3](https://www.w3.org/TR/selectors-3/) and [CSS Basic UI Level 3](https://drafts.csswg.org/css-ui-3/#pseudo-classes) added more pseudo-classes related to HTML forms that provide several other useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
+These basic pseudo-classes should be familiar to you now. [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
-- {{cssxref(':required')}} and {{cssxref(':optional')}}: Targets required or optional form controls.
+- {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g. elements that support the [`required`](/en-US/docs/Web/HTML/Attributes/required) HTML attribute)), based on whether they are required or optional.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
-- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target enabled or disabled form controls (e.g. with the `disabled` HTML attribute set), and read-write or read-only form controls (e.g. with the `readonly` HTML attribute set).
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the `checked` attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the `selected` attribute set).
+- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target elements that can be disabled (e.g. elements that support the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) HTML attribute), based on whether they are currently enabled or disabled, and read-write or read-only form controls (e.g. elements with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) HTML attribute set).
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Attributes/checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the [`selected`](/en-US/docs/Web/HTML/Attributes/selected) attribute set).
 
-There are many others too, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems, or not very well-supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
+There are many others, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems. The UI pseudo-classes listed above have excellent browser support, but of course, you should test your form implementations carefully to ensure they work for your target audience.
 
 > **Note:** A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) — but for now we'll keep things simple regarding the form validation, so it doesn't confuse things.
 
@@ -108,24 +108,24 @@ The required controls would have a black border, and the optional control will h
 
 You can also try submitting the form without filling it in, to see the client-side validation error messages browsers give you by default.
 
-The above form isn't bad, but it isn't great either. For a start, we are signalling required versus optional status using color alone, which isn't great for colorblind people. Second, the standard convention on the web for required status is an asterisk (\*), or the word "required" being associated with the controls in question.
+The above form isn't bad, but it isn't great either. For a start, we are signaling required versus optional status using color alone, which isn't great for colorblind people. Second, the standard convention on the web for required status is an asterisk (`*`), or the word "required" being associated with the controls in question.
 
 In the next section, we'll look at a better example of indicating required fields using `:required`, which also digs into using generated content.
 
 > **Note:** You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.
 
-> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}.
+> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute set, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}.
 
 ## Using generated content with pseudo-classes
 
-In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), but we thought now would be a good time to talk about it in a bit more detail.
+In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/CSS_generated_content), but we thought now would be a good time to talk about it in a bit more detail.
 
-The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it's invisible to screen readers; it is part of the document's styles. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
+The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
 
-This is really useful when you want to add a visual indicator to an element, such as a label or icon, but don't want it to be picked up by assistive technologies. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the inner circle when a radio button is selected:
+This is really useful when you want to add a visual indicator to an element, such as a label or icon, when alternative indicators are also available to ensure accessibility for all users. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the a custom radio button's inner circle when a radio button is selected:
 
 ```css
-input[type="radio"]::before {
+input[type="radio"] + label::before {
   display: block;
   content: " ";
   width: 10px;
@@ -138,7 +138,7 @@ input[type="radio"]::before {
   transition: all 0.3s ease-in;
 }
 
-input[type="radio"]:checked::before {
+input[type="radio"]:checked + label::before {
   transform: translate(3px, 3px) scale(1);
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
@@ -146,14 +146,12 @@ input[type="radio"]:checked::before {
 
 This is really useful — screen readers already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.
 
-> **Note:** This also shows how you can combine a pseudo-class and pseudo-element if required.
-
 Back to our required/optional example from before, this time we'll not alter the appearance of the input itself — we'll use generated content to add an indicating label ([see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), and see the [source code here](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)).
 
 First of all, we'll add a paragraph to the top of the form to say what you are looking for:
 
 ```html
-<p>Required fields are labelled with "required".</p>
+<p>Required fields are labeled with "required".</p>
 ```
 
 screen reader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
@@ -178,7 +176,7 @@ fieldset > div {
 }
 ```
 
-The effect this has is that the label and input sit on separate lines because they are both `width: 100%`, but the `<span>` has a width of 0 so it can sit on the same line as the input.
+The effect this has is that the label and input sit on separate lines because they are both `width: 100%`, but the `<span>` has a width of `0` so it can sit on the same line as the input.
 
 Now onto the generated content. We create it using this CSS:
 
@@ -199,7 +197,7 @@ input:required + span::after {
 }
 ```
 
-We set the `<span>` to `position: relative` so that we can set the generated content to `position: absolute` and position it relative to the `<span>` rather than the \<body> (The generated content acts as though it is a child node of the element it is generated on, for the purposes of positioning).
+We set the `<span>` to `position: relative` so that we can set the generated content to `position: absolute` and position it relative to the `<span>` rather than the `<body>` (The generated content acts as though it is a child node of the element it is generated on, for the purposes of positioning).
 
 Then we give the generated content the content "required", which is what we wanted our label to say, and style and position it as we want. The result is seen below.
 
@@ -470,13 +468,13 @@ If you try the live example, you'll see that the top set of form elements are no
   background-color: white;
 }
 
-:is(textarea:-moz-read-write, textarea:read-write) {
+textarea:read-write {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
 ```
 
-Firefox only supported these pseudo-classes with a prefix up to version 78; at which point it started to support the unprefixed version. The full example looks like so:
+The full example looks like this:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
@@ -486,19 +484,19 @@ Firefox only supported these pseudo-classes with a prefix up to version 78; at w
 
 As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "radio buttons")}} and {{HTMLElement("input/checkbox", "checkboxes")}} can be checked or unchecked. But there are a couple of other states to consider too:
 
-- {{cssxref(":default")}}: Matches radios/checkboxes that are checked by default, on page load (i.e. by setting the `checked` attribute on them) These match the {{cssxref(":default")}} pseudo-class, even if the user unchecks them.
+- {{cssxref(":default")}}: Matches radios/checkboxes that are checked by default, on page load (i.e. by setting the `checked` attribute on them). These match the {{cssxref(":default")}} pseudo-class, even if the user unchecks them.
 - {{cssxref(":indeterminate")}}: When radios/checkboxes are neither checked nor unchecked, they are considered _indeterminate_ and will match the {{cssxref(":indeterminate")}} pseudo-class. More on what this means below.
 
 ### :checked
 
 When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
 
-The most common use of this is to add a different style onto the checkbox/radiobutton when it is checked, in cases where you've removed the system default styling with `appearance: none;` and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Using `appearance: none` on radios/checkboxes](/en-US/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes).
+The most common use of this is to add a different style onto the checkbox or radio button when it is checked, in cases where you've removed the system default styling with [`appearance: none;`](/en-US/docs/Web/CSS/appearance) and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Using `appearance: none` on radios/checkboxes](/en-US/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes).
 
 As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
 
 ```css
-input[type="radio"]::before {
+input[type="radio"] + label::before {
   display: block;
   content: " ";
   width: 10px;
@@ -511,7 +509,7 @@ input[type="radio"]::before {
   transition: all 0.3s ease-in;
 }
 
-input[type="radio"]:checked::before {
+input[type="radio"]:checked + label::before {
   transform: translate(3px, 3px) scale(1);
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
@@ -521,7 +519,7 @@ You can try it out here:
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
 
-Basically, we build the styling for the radio button "inner circle" using the `::before` pseudo-element, but set a `scale(0)` [`transform`](/en-US/docs/Web/CSS/transform) on it. We then use a [`transition`](/en-US/docs/Web/CSS/transition) to make it nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning [`width`](/en-US/docs/Web/CSS/width)/[`height`](/en-US/docs/Web/CSS/height) is that you can use [`transform-origin`](/en-US/docs/Web/CSS/transform-origin) to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner.
+Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` [`transform`](/en-US/docs/Web/CSS/transform) on it. We then use a [`transition`](/en-US/docs/Web/CSS/transition) to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning [`width`](/en-US/docs/Web/CSS/width)/[`height`](/en-US/docs/Web/CSS/height) is that you can use [`transform-origin`](/en-US/docs/Web/CSS/transform-origin) to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
 
 ### :default and :indeterminate
 
@@ -535,7 +533,7 @@ Also, the radios/checkboxes mentioned above will be matched by the {{cssxref(":i
 
 This isn't something you'll likely use very often. One use case could be an indicator to tell users that they really need to select a radio button before they move on.
 
-Let's look at a couple of modified versions of the previous example that remind the user what the default option was, and style the radio buttons when indeterminate. Both of these have the following HTML structure for the inputs:
+Let's look at a couple of modified versions of the previous example that remind the user what the default option was, and style the labels of radio buttons when indeterminate. Both of these have the following HTML structure for the inputs:
 
 ```html
 <p>
@@ -576,22 +574,22 @@ For the `:indeterminate` example, we've got no default selected radio button —
 
 ```css
 input[type="radio"]:indeterminate {
-  border: 2px solid red;
-  animation: 0.4s linear infinite alternate border-pulse;
+  outline: 2px solid red;
+  animation: 0.4s linear infinite alternate outline-pulse;
 }
 
-@keyframes border-pulse {
+@keyframes outline-pulse {
   from {
-    border: 2px solid red;
+    outline: 2px solid red;
   }
 
   to {
-    border: 6px solid red;
+    outline: 6px solid red;
   }
 }
 ```
 
-This creates a fun little animated border on the radio buttons, which hopefully indicates that you need to select one of them!
+This creates a fun little animated outline on the radio buttons, which hopefully indicates that you need to select one of them!
 
 See the live result below:
 
@@ -605,8 +603,6 @@ See the live result below:
 
 There are a number of other pseudo-classes of interest, and we don't have space to write about them all in detail here. Let's talk about a few more that you should take the time to investigate.
 
-The following are fairly well-supported in modern browsers:
-
 - The {{cssxref(":focus-within")}} pseudo-class matches an element that has received focus or _contains_ an element that has received focus. This is useful if you want a whole form to highlight in some way when an input inside it is focused.
 - The {{cssxref(":focus-visible")}} pseudo-class matches focused elements that received focus via keyboard interaction (rather than touch or mouse) — useful if you want to show a different style for keyboard focus compared to mouse (or other) focus.
 - The {{cssxref(":placeholder-shown")}} pseudo-class matches {{htmlelement('input')}} and {{htmlelement('textarea')}} elements that have their placeholder showing (i.e. the contents of the [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute) because the value of the element is empty.
@@ -614,7 +610,7 @@ The following are fairly well-supported in modern browsers:
 The following are also interesting, but as yet not well-supported in browsers:
 
 - The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other {{glossary("void element", "void elements")}} like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it is not yet supported in any browser.
-- The [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
+- The [`:user-invalid`](/en-US/docs/Web/CSS/:user-invalid) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
 
 ## Test your skills!
 

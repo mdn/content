@@ -1,6 +1,7 @@
 ---
 title: Multiple-column layout
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

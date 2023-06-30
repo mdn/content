@@ -11,27 +11,17 @@ Now that we've seen what the structure of js13kPWA looks like and have seen the 
 
 ## Service workers explained
 
-Service Workers are a virtual proxy between the browser and the network. They finally fix issues that front-end developers have struggled with for years — most notably how to properly cache the assets of a website and make them available when the user's device is offline.
+Service Workers are a virtual proxy between the browser and the network. They make it possible to properly cache the assets of a website and make them available when the user's device is offline.
 
 They run on a separate thread from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based approach.
 
-They can do a lot more than "just" offering offline capabilities, including handling notifications, performing heavy calculations on a separate thread, etc. Service workers are quite powerful as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely.
+Service workers can do more than offering offline capabilities, including handling notifications or performing heavy calculations. Service workers are quite powerful as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely.
 
-### Security
-
-Because they are so powerful, Service Workers can only be executed in secure contexts (meaning HTTPS). If you want to experiment first before pushing your code to production, you can always test on a localhost or setup GitHub Pages — both support HTTPS.
-
-## Offline First
-
-The "offline first" — or "cache first" — pattern is the most popular strategy for serving content to the user. If a resource is cached and available offline, return it first before trying to download it from the server. If it isn't in the cache already, download it and cache it for future usage.
-
-## "Progressive" in PWA
-
-When implemented properly as a progressive enhancement, service workers can benefit users who have modern browsers that support the API by providing offline support, but won't break anything for those using legacy browsers.
+To learn more about service workers, see [Offline and background operation](Web/Progressive_web_apps/Guides/Offline_and_background_operation).
 
 ## Service workers in the js13kPWA app
 
-Enough theory — let's see some source code!
+Let's see how the js13kPWA app uses Service Workers to provide offline capabilities.
 
 ### Registering the Service Worker
 

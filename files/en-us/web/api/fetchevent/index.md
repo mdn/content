@@ -14,7 +14,7 @@ This is the event type for `fetch` events dispatched on the {{domxref("ServiceWo
 ## Constructor
 
 - {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
-  - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to `fetch` event callbacks.
+  - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects and provides them to `fetch` event callbacks.
 
 ## Instance properties
 
@@ -84,5 +84,6 @@ self.addEventListener("fetch", (event) => {
 
 ## See also
 
+- [`fetch` event](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
