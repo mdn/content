@@ -2195,9 +2195,10 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 ### Access-Control-Allow-Headers wildcard does not cover Authorization
 
 The [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) is a response header to a [CORS preflight request](/en-US/docs/Glossary/Preflight_request), that indicates which request headers may be included in the final request.
-The response directive can contain a wildcard (`*`) indicating all headers except the `Authorization` header are allowed.
-By default Firefox does not follow the specification, and includes `Authorization` in the headers covered by the wildcard.
-Set the preference to `false` to make Firefox follow the specification.
+The response directive can contain a wildcard (`*`), which indicates that the final request may include all headers except the `Authorization` header.
+
+By default, Firefox includes the `Authorization` header in the final request after recieving a response with `Access-Control-Allow-Headers: *`.
+Set the preference to `false` to ensure Firefox does not include the `Authorization` header.
 For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
 
 <table>
@@ -2205,29 +2206,29 @@ For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
     <tr>
       <th>Release channel</th>
       <th>Version added</th>
-      <th>Disabled by default?</th>
+      <th>Enabled by default?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Nightly</th>
       <td>115</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
       <td>115</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Beta</th>
       <td>115</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
       <td>115</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Preference name</th>
