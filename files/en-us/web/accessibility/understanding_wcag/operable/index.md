@@ -507,6 +507,23 @@ The conformance criteria under this guideline ensures that users are able to int
    <td>2.5.6 Concurrent Input Mechanisms (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
    <td>Make sure people can use and switch between different modes of input when interacting with digital content including touchscreen, keyboard, mouse, voice commands, or alternative input devices. An essential exception exists. </td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html">Understanding Concurrent Input Mechanism</a></td>
+   <tr>
+ <td>2.5.7 Dragging Movements (AA)</td>
+ <td> All functionality that uses a dragging movement for operation can be achieved by a single pointer without dragging, unless dragging is essential or the functionality is determined by the user agent and not modified by the author. </td>
+ <td><a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements"> Understanding Dragging Movements</a> </td>
+ <tr>
+ <td> 2.5.8 Target Size Minimum (AA)</td>
+ <td> Target size for pointer inputs should be at least 24 by 24 CSS pixels except for the following areas:
+ <ul>
+ <li> <strong>Spacing:</strong> <p>targets that are less than 24 by 24 CSS pixels are positioned so that if a 24 CSS pixel diameter circle is centered on each target's bounding box, the circles do not intersect with another target or the circle for another undersized target</p>
+ <li> <strong>Equivalent:</strong> <p>The function can be achieved through a different control on the same page that meets this standard</p>
+  <li> <strong>Inline:</strong> <p>The target that is in a sentence or its size is otherwise constrained by the non-target text line-height</p>
+   <li> <strong>User agent control:</strong> <p>The target's size is determined by the user agent and is not modified by the author</p>
+    <li> <strong>Essential:</strong> <p>A particular target's presentation is essential or legally required for the information that is being conveyed.</p>
+ </ul>
+ <td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"> Understanding Target Size Minimum</a> </td>
+</tr>
+ </tr>
   </tr>
  </tbody>
 </table>
