@@ -19,6 +19,8 @@ Browsers will also prefetch content for [`<link>`](/en-US/docs/Web/HTML/Element/
 This allows developers to hint to the browser the likely navigation from the current page.
 Note that only these links are prefetched (so `<a>` elements are not), and that they are fetched at lower priority that resources used by the current page, including elements with `fetchPriority="low"`.
 
+Prefetching can be used to fetch both HTML and sub-resources for a possible next navigation.  A common use case is to have a simple website landing page that fetches more "heavy-weight" resources used by the rest of the site.
+
 ```html
 <link rel="prefetch" href="/app/style.css"> 
 <link rel="prefetch" href="https://example.com/landing-page">
