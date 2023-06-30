@@ -1,6 +1,7 @@
 ---
 title: JavaScript error
 slug: Web/WebDriver/Errors/JavaScriptError
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

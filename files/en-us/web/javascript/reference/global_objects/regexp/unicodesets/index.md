@@ -52,4 +52,4 @@ console.log(regex.unicodeSets); // true
 - {{JSxRef("RegExp.prototype.source")}}
 - {{JSxRef("RegExp.prototype.sticky")}}
 - {{JSxRef("RegExp.prototype.unicode")}}
-- [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) on v8.dev (June 27, 2022)
+- [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) on v8.dev (2022)

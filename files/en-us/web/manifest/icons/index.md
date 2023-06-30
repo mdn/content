@@ -1,6 +1,7 @@
 ---
 title: icons
 slug: Web/Manifest/icons
+page-type: web-manifest-member
 browser-compat: html.manifest.icons
 ---
 

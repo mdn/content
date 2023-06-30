@@ -242,6 +242,42 @@
       {
         "if": {
           "properties": {
+            "slug": { "type": "string", "pattern": "^Web/Manifest/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "web-manifest-member"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/WebDriver/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "webdriver-command",
+                "webdriver-capability",
+                "webdriver-error"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
             "slug": {
               "type": "string",
               "pattern": "^Web/HTTP/Headers/Content-Security-Policy/"
