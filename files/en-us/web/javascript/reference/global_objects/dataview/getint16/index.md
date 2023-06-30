@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.DataView.getInt16
 
 {{JSRef}}
 
-The **`getInt16()`** method gets a signed 16-bit integer
-(short) at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`getInt16()`** method of {{jsxref("DataView")}} instances reads 2 bytes starting at the specified byte offset of this `DataView` and interprets them as a 16-bit signed integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}
 

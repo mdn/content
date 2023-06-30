@@ -88,6 +88,14 @@ Here is a minimalistic template, which we'll be using as a starting point for la
   <head>
     <meta charset="utf-8" />
     <title>Canvas tutorial</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="tutorial" width="150" height="150"></canvas>
     <script>
       function draw() {
         const canvas = document.getElementById("tutorial");
@@ -95,15 +103,8 @@ Here is a minimalistic template, which we'll be using as a starting point for la
           const ctx = canvas.getContext("2d");
         }
       }
+      draw();
     </script>
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body onload="draw();">
-    <canvas id="tutorial" width="150" height="150"></canvas>
   </body>
 </html>
 ```
@@ -124,6 +125,9 @@ To begin, let's take a look at a simple example that draws two intersecting rect
   <head>
     <meta charset="UTF-8" />
     <title>Canvas experiment</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="150" height="150"></canvas>
     <script type="application/javascript">
       function draw() {
         const canvas = document.getElementById("canvas");
@@ -137,10 +141,8 @@ To begin, let's take a look at a simple example that draws two intersecting rect
           ctx.fillRect(30, 30, 50, 50);
         }
       }
+      draw();
     </script>
-  </head>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
 ```

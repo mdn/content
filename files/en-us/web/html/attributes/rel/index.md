@@ -132,7 +132,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     If there are multiple `<link rel="icon">`s, the browser uses their [`media`](/en-US/docs/Web/HTML/Element/link#media), [`type`](/en-US/docs/Web/HTML/Element/link#type), and [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
 
-    > **Note:** Prior to Firefox 83 the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://crbug.com/1121645).
+    > **Note:** The [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute is not supported for `rel="icon"` in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
     > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
     > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
@@ -172,7 +172,8 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - `preconnect`
   - : Provides a hint to the browser suggesting that it open a connection to the linked website in advance, without disclosing any private information or downloading any content, so that when the link is followed the linked content can be fetched more quickly.
 - `prefetch`
-  - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation. The [Link Prefetch FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) has details on which links can be prefetched and on alternative methods.
+  - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.
+    See {{Glossary("prefetch")}} for more information.
 - `preload`
   - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute (and the priority associated with the corresponding destination). See the page for the [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) value.
 - `prerender` {{Deprecated_Inline}} {{Non-standard_Inline}}

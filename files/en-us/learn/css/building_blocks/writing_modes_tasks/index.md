@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Writing modes and logical properties"
 slug: Learn/CSS/Building_blocks/Writing_Modes_Tasks
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

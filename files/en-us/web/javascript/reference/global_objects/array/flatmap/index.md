@@ -138,7 +138,7 @@ console.log([1, 2, 3, 4].flatMap((x) => [, x * 2])); // [2, 4, 6, 8]
 
 ### Calling flatMap() on non-array objects
 
-The `flatMap()` method reads the `length` property of `this` and then accesses each integer index. If the return value of the callback function is not an array, it is always directly appended to the result array.
+The `flatMap()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`. If the return value of the callback function is not an array, it is always directly appended to the result array.
 
 ```js
 const arrayLike = {
@@ -146,6 +146,7 @@ const arrayLike = {
   0: 1,
   1: 2,
   2: 3,
+  3: 4, // ignored by flatMap() since length is 3
 };
 console.log(Array.prototype.flatMap.call(arrayLike, (x) => [x, x * 2]));
 // [1, 2, 2, 4, 3, 6]

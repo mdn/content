@@ -237,7 +237,7 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 The `length` property is [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
 
-The language avoids setting `length` to an [unsafe integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). All built-in methods will throw a {{jsxref("TypeError")}} if `length` will be set to a number greater than 2<sup>53</sup> - 1. However, because the {{jsxref("Array/length", "length")}} property of arrays throws an error if it's set to greater than 2<sup>32</sup>, the safe integer threshold is usually not reached unless the method is called on a non-array object.
+The language avoids setting `length` to an [unsafe integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). All built-in methods will throw a {{jsxref("TypeError")}} if `length` will be set to a number greater than 2<sup>53</sup> - 1. However, because the {{jsxref("Array/length", "length")}} property of arrays throws an error if it's set to greater than 2<sup>32</sup> - 1, the safe integer threshold is usually not reached unless the method is called on a non-array object.
 
 ```js
 Array.prototype.flat.call({}); // []
@@ -253,7 +253,7 @@ console.log(a.length); // 0
 
 #### Array-like objects
 
-The term [_array-like object_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) refers to any object that doesn't throw during the `length` conversion process described above. In practice, such object is expected to actually have a `length` property and to have indexed elements in the range `0` to `length - 1`. (If it doesn't have all indices, it will be functionally equivalent to a [sparse array](#array_methods_and_empty_slots).)
+The term [_array-like object_](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) refers to any object that doesn't throw during the `length` conversion process described above. In practice, such object is expected to actually have a `length` property and to have indexed elements in the range `0` to `length - 1`. (If it doesn't have all indices, it will be functionally equivalent to a [sparse array](#array_methods_and_empty_slots).) Any integer index less than zero or greater than `length - 1` is ignored when an array method operates on an array-like object.
 
 Many DOM objects are array-like — for example, [`NodeList`](/en-US/docs/Web/API/NodeList) and [`HTMLCollection`](/en-US/docs/Web/API/HTMLCollection). The [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is also array-like. You can call array methods on them even if they don't have these methods themselves.
 
