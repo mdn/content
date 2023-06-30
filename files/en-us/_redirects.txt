@@ -5405,7 +5405,7 @@
 /en-US/docs/Learn/tutorial	/en-US/docs/Learn
 /en-US/docs/Learn/tutorial/How_to_build_a_web_site	/en-US/docs/Learn
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
-/en-US/docs/Link_prefetching_FAQ	/en-US/docs/Web/HTTP/Link_prefetching_FAQ
+/en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
@@ -12229,6 +12229,7 @@
 /en-US/docs/Web/HTTP/Headers/Set-Cookie2	/en-US/docs/Web/HTTP/Headers/Set-Cookie
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Index	/en-US/docs/Web/HTTP
+/en-US/docs/Web/HTTP/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Web/HTTP/Pipelining_FAQ	/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /en-US/docs/Web/HTTP/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency

@@ -101769,40 +101769,6 @@
       "fscholz"
     ]
   },
-  "Web/HTTP/Link_prefetching_FAQ": {
-    "modified": "2019-03-18T20:51:38.033Z",
-    "contributors": [
-      "ivdekov",
-      "Tantek",
-      "Luke314",
-      "serv-inc",
-      "jswisher",
-      "amirreza",
-      "yts",
-      "teoli",
-      "trevorh",
-      "ozonemattew",
-      "gebura",
-      "Cdolivei",
-      "mnot",
-      "Sheppy",
-      "Potappo",
-      "FreeKey",
-      "Znerd",
-      "Mumuhrj",
-      "Elvey",
-      "kohei.yoshino",
-      "Mgjbot",
-      "Nickolay",
-      "Life sea",
-      "Taken",
-      "Leofiore",
-      "Waldo",
-      "Corycory",
-      "Andreas Wuest",
-      "Pmash"
-    ]
-  },
   "Web/HTTP/Messages": {
     "modified": "2020-12-03T23:53:07.614Z",
     "contributors": [
