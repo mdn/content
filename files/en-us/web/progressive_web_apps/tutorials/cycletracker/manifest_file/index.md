@@ -1,9 +1,10 @@
 ---
-title: "PWA tutorial: Manifest and iconography"
-slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
+title: "CycleTracker: Manifest and iconography"
+short-title: "Manifest and iconography"
+slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Service_workers", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 {{PWASidebar}}
 
@@ -85,7 +86,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 As the example application is a single page, we can use `"/"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
 
-In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#css_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
+In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
 ```js
 {
@@ -266,6 +267,6 @@ The developer tools are useful in identifying which manifest members are support
 
 ## Up next
 
-To get the PWA benefits from other browsers and all operating systems that support PWAs, we nee to [add a service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers), which we'll do without using a framework.
+To get the PWA benefits from other browsers and all operating systems that support PWAs, we nee to [add a service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), which we'll do without using a framework.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Service_workers", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

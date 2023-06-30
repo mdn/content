@@ -12698,6 +12698,12 @@
 /en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Progressive_web_apps/Safe	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Structural_overview	/en-US/docs/Web/Progressive_web_apps
+/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro	/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker
+/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS	/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
+/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality	/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
+/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file	/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
+/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection	/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
+/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers	/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 /en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /en-US/docs/Web/Reference	/en-US/docs/Web
 /en-US/docs/Web/Reference/API	/en-US/docs/Web/API
