@@ -12,7 +12,7 @@ As an [XML](/en-US/docs/Glossary/XML) dialect, [SVG](/en-US/docs/Web/SVG) is nam
 
 A long-standing goal of the various W3C specifications is to make it possible for different types of XML-based content to be mixed together in the same XML or HTML file. For example, SVG and [MathML](/en-US/docs/Web/MathML) might be incorporated directly into an HTML based scientific document. Being able to mix content types like this has many advantages, but it also required a very real problem to be solved.
 
-Naturally, each XML dialect defines the meaning of the markup element names described in its specification. The problem with mixing content from different XML dialects in a single document, is that the elements defined by one dialect may have the same name as elements defined by another. For example, both HTML and SVG have a `<title>` element. How does the user agent distinguish between the two? How do CSS styles distinguish between the two? In fact, how does the user agent tell when content is something it knows about, and not just a meaningless undefined HTML custom elements or an XML file containing arbitrary element names unknown to it?
+Naturally, each XML dialect defines the meaning of the markup element names described in its specification. The problem with mixing content from different XML dialects in a single document is that the elements defined by one dialect may have the same name as elements defined by another. For example, both HTML and SVG have a `<title>` element. How does the user agent distinguish between the two? How do CSS styles distinguish between the two? In fact, how does the user agent tell when content is something it knows about, and not just a meaningless undefined HTML custom element or an XML file containing arbitrary element names unknown to it?
 
 Contrary to popular opinion, the answer to this question is not "it can tell from the `DOCTYPE` declaration". DTDs were never designed with mixed content in mind, and past attempts to create mixed content DTDs are now considered to have failed. XML, and some XML dialects (SVG and HTML included), don't require a `DOCTYPE` declaration. SVG 1.2 doesn't even have one. The fact that `DOCTYPE` declarations (usually) match the content in single content-type files is merely coincidental. DTDs are for validation only, not identification of content. Any user agent that identifies XML content using its `DOCTYPE` declaration is unreliable.
 
@@ -30,22 +30,22 @@ So what do these namespace declarations look like, and where do they go? Here is
 
 The namespace declaration is provided by the `xmlns` parameter. This parameter says that the `<svg>` element and its child elements belong to whichever XML dialect has the namespace name `http://www.w3.org/2000/svg` which is, of course, SVG. Note that the namespace declaration is only provided once on a root element (and is implied if omitted). The declaration defines the _default_ namespace, so the user agent knows that all the `<svg>` element's descendants also belong to the same namespace. User agents check to see if they recognize the namespace name to determine if they know how to handle the markup.
 
-Note that namespace names are just strings, so the fact that the SVG namespace name also looks like a URI isn't important. URIs are commonly used because they are unique, the intention is not to "link" somewhere. (In fact, URIs are used so frequently that the term "namespace URI" is commonly used instead of "namespace name".)
+Note that namespace names are just strings, so the fact that the SVG namespace name also looks like a URI isn't important. URIs are commonly used because they are unique, but the intention is not to "link" somewhere. (In fact, URIs are used so frequently that the term "namespace URI" is commonly used instead of "namespace name".)
 
 #### Redeclaring the default namespace
 
 If all the descendants of the root element are also defined to be in the default namespace, how do you mix in content from another namespace? To include the SVG namespace in HTML, you include `<svg>`. In XML, you declare a namespace. Here's a short example.
 
 ```xml
-  <report xmlns="https://www.acme.org/reports">
-      <title>Some stats</title>
-      <summary>...</summary>
-
-      <statTable xmlns="https://www.acme.org/tables">
-            <content>...</content>
-            <summary xmlns="https://www.acme.org/reports">...</summary> <!-- redeclaring root's default namespace -->
-     </statTable>
-  </report>
+<report xmlns="https://www.acme.org/reports">
+  <title>Some stats</title>
+  <summary>...</summary>
+  <statTable xmlns="https://www.acme.org/tables">
+    <content>...</content>
+    <!-- redeclaring root's default namespace -->
+    <summary xmlns="https://www.acme.org/reports">...</summary>
+  </statTable>
+</report>
 ```
 
 In this example, the `xmlns` attribute on the root `<report>` element declares the default namespace to be `https://www.acme.org/reports`, or `reports`. As a result, it and all its child elements are interpreted by the user agent as belonging to `reports`, except for the `<content>` element, which exists in the `https://www.acme.org/tables`, or `tables`, namespace. The `<summary>` element has its own `xmlns` parameter, and by redeclaring the `reports` namespace, this tells the user agent that the `<summary>` element and its descendants (unless they also redeclare an alternative namespace) belong to `reports`.
@@ -54,11 +54,11 @@ With HTML, `http://www.w3.org/1999/xhtml` is the implied namespace. With SVG, it
 
 #### Declaring namespace prefixes
 
-XML dialects not only define their own elements, but also they also declare their own parameters.
+XML dialects not only define their own elements, but they also declare their own parameters.
 
 By default, parameters don't have a namespace at all. They are only known to be unique because they appear on an element that itself has a unique name. However, sometimes it is necessary to define parameters so that they can be reused on many different elements and still be considered to be the same parameter, independently of the element with which they are used. A very good example of this is the `href` parameter defined by the {{glossary("XLink")}} specification. This parameter is commonly used by other XML dialects as a means to link to external resources. But how do you tell the user agent which dialect the parameter belongs to, in this case `XLink`? Consider the following example.
 
-```html
+```xml
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -257,7 +257,7 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was cre
   </tbody>
 </table>
 
-The first parameter for all the DOM2 namespace-aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](https://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for parameters without a prefix do not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) parameters**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
+The first parameter for all the DOM2 namespace-aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](https://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) parameters**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
 
 ```js
 document.createElementNS("http://www.w3.org/2000/svg", "rect");
