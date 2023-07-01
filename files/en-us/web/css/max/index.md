@@ -36,7 +36,7 @@ You can use different units for each value in your expression. You may also use 
 
 ### Setting a minimum size for a font
 
-Another use case for the CSS functions is to allow a font size to grow while ensuring it is at least a minimum size, enabling responsive font sizes while ensuring legibility.
+Another use case for the CSS function is to allow a font size to grow while ensuring it is at least a minimum size, enabling responsive font sizes while ensuring legibility.
 
 Let's look at some CSS:
 
