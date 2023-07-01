@@ -1,6 +1,6 @@
 ---
 title: "CycleTracker: Secure connection"
-short-title: "Secure connection"
+short-title: Secure connection
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "CycleTracker: Manifest and iconography"
-short-title: "Manifest and iconography"
+short-title: Manifest and iconography
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
 ---
 

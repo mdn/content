@@ -12,7 +12,7 @@ If the user then chooses to navigate to the page, display of its content can be 
 Prerendering might be used, for example, to fetch the page resources linked by a "Next" button, or a link popup that a user hovers over, or the likely page target of the URL being entered into the address bar.
 
 ```html
-<link rel="prerender" href="https://example.com/content/to/prerender">
+<link rel="prerender" href="https://example.com/content/to/prerender" />
 ```
 
 Prerendering results in faster display time than prefetching and hence a better user experience, at the cost of more resources being consumed.
