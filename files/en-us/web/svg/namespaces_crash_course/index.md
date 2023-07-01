@@ -34,7 +34,7 @@ Note that namespace names are just strings, so the fact that the SVG namespace n
 
 #### Redeclaring the default namespace
 
-If all the descendants of the root element are also defined to be in the default namespace, how do you mix in content from another namespace? To include the SVG namespace in HTML, you include `<svg>`.  In XML, you declare a namespace. Here's a short example.
+If all the descendants of the root element are also defined to be in the default namespace, how do you mix in content from another namespace? To include the SVG namespace in HTML, you include `<svg>`. In XML, you declare a namespace. Here's a short example.
 
 ```html
   <report xmlns="https://www.acme.org/reports">
