@@ -9,6 +9,7 @@ browser-compat: api.RTCPeerConnection.icecandidate_event
 {{APIRef("WebRTC")}}
 
 An **`icecandidate`** event is sent to an {{domxref("RTCPeerConnection")}} when:
+
 - An {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}},
 - Every {{domxref("RTCIceCandidate")}} correlated with a particular Username Fragment and Password combination (a **generation**) has been so identified and added, and
 - All ICE gathering on all transports is complete.
