@@ -62,7 +62,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.text()")}}
   - : Returns a promise that resolves with a text representation of the request body.
 
-> **Note:** The request body functions can be run only once; subsequent calls will raise an error showing that the body stream has already used.
+> **Note:** The request body functions can be run only once; subsequent calls will reject with TypeError showing that the body stream has already used.
 
 ## Examples
 
