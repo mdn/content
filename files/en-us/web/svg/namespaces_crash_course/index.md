@@ -52,7 +52,6 @@ In this example, the `xmlns` attribute on the root `<report>` element declares t
 
 With HTML, `http://www.w3.org/1999/xhtml` is the implied namespace. With SVG, it is `http://www.w3.org/2000/svg`. MathML is `http://www.w3.org/1998/Math/MathML`.
 
-
 #### Declaring namespace prefixes
 
 XML dialects not only define their own elements, but also they also declare their own parameters.
