@@ -333,6 +333,18 @@ Once you've created a virtual environment, and called `workon` to enter it, you 
 pip3 install django~=4.0
 ```
 
+> **Note:** If the above Windows command does not wrk, try updating _pip_ version first:
+>
+> ```bash
+> py -m pip install --upgrade pip
+> ```
+>Then run the following command in command prompt:
+> > ```bash
+> py -3 -m pip install django
+> ```
+> (_py -3 -m pip_) is a workwaround instead of _pip3_ 
+
+
 You can test that Django is installed by running the following command (this just tests that Python can find the Django module):
 
 ```bash
