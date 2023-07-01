@@ -37,20 +37,21 @@ Note that namespace names are just strings, so the fact that the SVG namespace n
 If all the descendants of the root element are also defined to be in the default namespace, how do you mix in content from another namespace? You redefine the default namespace! Here's a short example.
 
 ```html
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <body>
-    <!-- some XHTML tags here -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-      <!-- some SVG tags here -->
-    </svg>
-    <!-- some XHTML tags here -->
-  </body>
-</html>
+  <report xmlns="https://www.acme.org/reports">
+      <title>Some stats</title>
+      <summary>...</summary>
+
+      <statTable xmlns="https://www.acme.org/tables">
+            <content>...</content>
+            <summary xmlns="https://www.acme.org/reports">...</summary> <!-- redeclaring root's default namespace -->
+     </statTable>
+  </report>
 ```
 
-In this example, the `xmlns` parameter on the root `<html>` element declares the default namespace to be XHTML. As a result, it and all its child elements are interpreted by the user agent as belonging to XHTML, except for the `<svg>` element. The `<svg>` element has its own `xmlns` parameter, and by redeclaring the default namespace, this tells the user agent that the `<svg>` element and its descendants (unless they also redeclare the default namespace) belong to SVG.
+In this example, the `xmlns` attribute on the root `<report>` element declares the default namespace to be `https://www.acme.org/reports`, or `reports`. As a result, it and all its child elements are interpreted by the user agent as belonging to `reports`, except for the `<content>` element, which exists in the `https://www.acme.org/tables`, or `tables`, namespace. The `<summary>` element has its own `xmlns` parameter, and by redeclaring the `reports` namespace, this tells the user agent that the `<summary>` element and its descendants (unless they also redeclare an alternative namespace) belong to `reports`.
 
-This example was for illustrative purposes only. With HTML, `http://www.w3.org/1999/xhtml` is the implied namespace. It does not need to be explicitly declared.
+With HTML, `http://www.w3.org/1999/xhtml` is the implied namespace. With SVG, it is `http://www.w3.org/2000/svg`. MathML is `http://www.w3.org/1998/Math/MathML`.
+
 
 #### Declaring namespace prefixes
 
