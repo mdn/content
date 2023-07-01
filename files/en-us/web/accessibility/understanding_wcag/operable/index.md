@@ -460,6 +460,44 @@ The conformance criteria under this guideline relate to ways in which users can 
         </p>
       </td>
     </tr>
+    <tr>
+    <td> 2.4.11 Focus Not Obscured (Minimum) (AA)</td>
+    <td>
+    <p> When a user interface component receives keyboard focus, the component is not entirely hidden due to containing author-created content.</p>
+    <p> <strong>Note:</strong> If a configurable interface's content can be repositioned by the user, then only the initial positions of user-movable content is considered for testing and conforms to this standard. Also, content opened by the user may obscure the component receiving focus. Futhermote, if the <em>user</em> can reveal the focused component without changing the keyboard focus, the component with focus is not considered hidden due to author-created content.</p>
+    </td>
+    <td>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum"> Understanding Focus Not Obscured (Minimum) </a> to learn more about this standard.</p>
+    </td>
+    </tr>
+    <tr>
+    <td> 2.4.12 Focus Not Obscured (Enhanced) (AAA) </td>
+    <td>
+    <p> Follows the rules as 2.4.11 except if the interface is configurable enough to enable the user to content such as toolbars and non-modal dialogs, then only the initial positions of user-movable content are considered for testing and meeting of this standard.</p>
+    </td>
+    <td>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced"> Understanding Focus Not Obscured (Enhanced) (Level AAA) </a> to learn more about this standard.</p> </td>
+    </td>
+    </tr>
+    <tr>
+    <td> 2.4.13 Focus Appearance (AAA)</td>
+    <td>
+    <p>
+    When the keyboard focus indicator is visible, an area of the focus indicator meets all the following:
+    <ul>
+<li> Must be at least as large as the area of a 2 CSS pixel thick perimeter of the unfocused component or sub-component</li>
+<li> Needs to have a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused states</li>
+</ul>
+<p> The exceptions to this are:
+<ul>
+<li>The focus indicator is determined by the user and cannot be adjusted by the author </li>
+<li> The focus indicator and the indicator's background color are not modified by the author.</li>
+</ul>
+</p>
+<td><p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html"> Understanding Focus Appearance (Level AAA)</a> to learn more about this standard.</p> </td>
+    </p>
+    </td>
+    </tr>
   </tbody>
 </table>
 
