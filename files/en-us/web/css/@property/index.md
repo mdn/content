@@ -36,34 +36,91 @@ A valid `@property` rule represents a custom property registration, with the pro
 
 Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
 
-## Examples
-
-Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, as a color, a default value, and not allow it to inherit its value:
-
-Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
-
-```css
-@property --my-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
-}
-```
-
-Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}:
-
-```js
-window.CSS.registerProperty({
-  name: "--my-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "#c0ffee",
-});
-```
-
 ## Formal syntax
 
 {{csssyntax}}
+
+## Examples
+
+In this example we define two custom properties `--item-size` and `--item-color`, that we'll use to style items.
+
+Following code defines `--item-size` property using CSS {{cssxref('@property')}} at-rule. The property accepts only [percentage](/en-US/docs/Web/CSS/@property/syntax#percentage) values. That means items' size will always be relative to its parent's size. Also, the property is inheritable.
+
+```css
+@property --item-size {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 40%;
+}
+```
+
+For defining `--item-color` let us use [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}, which is equivalent to `@property` at-rule. The property accepts only color values and it is not inherited.
+
+```js
+window.CSS.registerProperty({
+  name: "--item-color",
+  syntax: "<color>",
+  inherits: false,
+  initialValue: "aqua",
+});
+```
+
+Following code creates the items that we want to style using our custom properties.
+
+```html
+<div class="container">
+  <div class="item one">Item one</div>
+  <div class="item two">Item two</div>
+  <div class="item three">Item three</div>
+</div>
+```
+
+Now let us style the items.
+
+```css
+.container {
+  display: flex;
+  height: 200px;
+  border: 1px dashed black;
+
+  /* set custom property values on parent */
+  --item-size: 20%;
+  --item-color: orange;
+}
+
+/* use custom properties to set item size and background color */
+.item {
+  width: var(--item-size);
+  height: var(--item-size);
+  background-color: var(--item-color);
+}
+
+/* set custom property values on element itself */
+.two {
+  --item-size: initial;
+  --item-color: inherit;
+}
+
+.three {
+  /* invalid values */
+  --item-size: 1000px;
+  --item-color: xyz;
+}
+```
+
+{{ EmbedLiveSample('examples', '100%', '250px') }}
+
+In the output above, for the property `--item-size`:
+
+- for item one, as we have not set any value in any CSS rule for the item, value `20%` is inherited from the parent `.container`.
+- for item two, the `initial` value means to use the default `40%` from the property definition.
+- for item three, value `1000px` is not a valid value, because it is not a percentage. So the inherited value `20%` is used.
+
+In the output above, for the property `--item-color`:
+
+- for item one, as the property is not inheritable and it is not set in any CSS rule for the item, default value `aqua` is used.
+- for item two, using `inherit` we've forced the inheritance, even though the property is not inheritable, the value `orange` set on parent is used.
+- for item three, value `xyz` is an invalid color, so default `aqua` is used.
 
 ## Specifications
 
