@@ -8,7 +8,12 @@ browser-compat: api.RTCPeerConnection.icecandidate_event
 
 {{APIRef("WebRTC")}}
 
-An **`icecandidate`** event is sent to an {{domxref("RTCPeerConnection")}} when A) an {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}}, B) every {{domxref("RTCIceCandidate")}} correlated with a particular Username Fragment and Password combination (a **generation**) has been so identified and added, and C) all ICE gathering on all transports is complete. In the first two cases, the event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.
+An **`icecandidate`** event is sent to an {{domxref("RTCPeerConnection")}} when:
+ * An {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}},
+ * Every {{domxref("RTCIceCandidate")}} correlated with a particular Username Fragment and Password combination (a **generation**) has been so identified and added, and
+ * All ICE gathering on all transports is complete.
+
+In the first two cases, the event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.
 
 This event is not cancelable and does not bubble.
 
@@ -33,7 +38,7 @@ An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
 _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
 
 - {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
-  - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or the empty string if this event indicates that there are no further candidates to come.
+  - : Indicates the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or the empty string if this event indicates that there are no further candidates to come.
 
 ## Description
 
