@@ -206,16 +206,17 @@ body:has(video):has(audio) {
 
 ## Analogy between :has() and regular expressions
 
-Interestingly, we can relate some CSS `:has` constructs with JavaScript [Regular expressions'](/en-US/docs/Web/JavaScript/Reference/Regular_expressions) [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion), because they both allow you to select elements (strings in regular expressions), based on a condition without actually selecting the condition matching element(string) itself.
+Interestingly, we can relate some CSS `:has` constructs with the [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) in regular expressions, because they both allow you to select elements (strings in regular expressions) based on a condition without actually selecting the condition matching the element (string) itself.
 
 ### Positive lookahead (?=pattern)
 
-In regular expression `abc(?=xyz)` the string `abc` is matched only if it is immedietly followed by string `xyz`. As it is lookahead operation the `xyz` is not included in the match.\
-Analogus construct for it in CSS would be `.abc:has(+ .xyz)`: it selects element `.abc` only if there is an adjecent sibling `.xyz`. The part `:has(+ .xyz)` acts as lookahead operation because element `.abc` is selcted and not the element `.xyz`.
+In the regular expression `abc(?=xyz)`, the string `abc` is matched only if it is immediately followed by the string `xyz`. As it is a lookahead operation, the `xyz` is not included in the match.
 
-### Negative lookahead (?!=pattern)
+The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the element `.abc` only if there is an adjacent sibling `.xyz`. The part `:has(+ .xyz)` acts as a lookahead operation because the element `.abc` is selected and not the element `.xyz`.
 
-Similarly, for negative lookahead case, for the regular expression `abc(?!xyz)` the string `abc` is matched only if it is _not_ followed by `xyz`. Anologus CSS construct for it would be `.abc:has(+ :not(.xyz))`, i.e. don't select element `.abc` if the next element is `.xyz`.
+### Negative lookahead (?!pattern)
+
+Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz`.
 
 ## Specifications
 
