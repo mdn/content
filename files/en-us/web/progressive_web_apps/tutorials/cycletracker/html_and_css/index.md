@@ -1,6 +1,6 @@
 ---
 title: "CycleTracker: Base HTML and CSS"
-short-title: "Base HTML and CSS"
+short-title: Base HTML and CSS
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 ---
 
