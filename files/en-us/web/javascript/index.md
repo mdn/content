@@ -75,7 +75,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
   - : Explanation of the widely misunderstood and underestimated prototype-based inheritance.
 - [Memory Management](/en-US/docs/Web/JavaScript/Memory_management)
   - : Memory life cycle and garbage collection in JavaScript.
-- [The Event Loop](/en-US/docs/Web/JavaScript/Event_loop)
+- [The event loop](/en-US/docs/Web/JavaScript/Event_loop)
   - : JavaScript has a runtime model based on an "event loop".
 
 ## Reference
