@@ -36,7 +36,7 @@ Note that namespace names are just strings, so the fact that the SVG namespace n
 
 If all the descendants of the root element are also defined to be in the default namespace, how do you mix in content from another namespace? To include the SVG namespace in HTML, you include `<svg>`. In XML, you declare a namespace. Here's a short example.
 
-```html
+```xml
   <report xmlns="https://www.acme.org/reports">
       <title>Some stats</title>
       <summary>...</summary>
