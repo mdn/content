@@ -1,6 +1,7 @@
 ---
 title: Audio for Web games
 slug: Games/Techniques/Audio_for_Web_Games
+page-type: guide
 ---
 
 {{GamesSidebar}}

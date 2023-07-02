@@ -1,6 +1,7 @@
 ---
 title: name
 slug: Web/Manifest/name
+page-type: web-manifest-member
 browser-compat: html.manifest.name
 ---
 
