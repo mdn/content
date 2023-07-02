@@ -22,8 +22,8 @@ Note that only these links are prefetched (so `<a>` elements are not), and that 
 Prefetching can be used to fetch both HTML and sub-resources for a possible next navigation. A common use case is to have a simple website landing page that fetches more "heavy-weight" resources used by the rest of the site.
 
 ```html
-<link rel="prefetch" href="/app/style.css">
-<link rel="prefetch" href="https://example.com/landing-page">
+<link rel="prefetch" href="/app/style.css" />
+<link rel="prefetch" href="https://example.com/landing-page" />
 ```
 
 The fetch request for a `prefetch` operation results an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose), which a server might use to change the cache timeouts for the resources, or perform other special handling.
@@ -39,7 +39,7 @@ If a response is returned, it is cached with the request in the HTTP cache.
 [DNS prefetching](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch) resolves domain names in advance thereby speeding up load times by reducing the time associated with domain lookup at request time.
 
 ```html
-<link rel="dns-prefetch" href="https://example.com/">
+<link rel="dns-prefetch" href="https://example.com/" />
 ```
 
 ## See also

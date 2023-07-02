@@ -5742,6 +5742,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_methods_of_installing_add-ons/Installing_add-ons_in_an_enterprise_environment	https://extensionworkshop.com/documentation/enterprise/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_methods_of_installing_add-ons/Sideloading_add-ons	https://extensionworkshop.com/documentation/publish/distribute-sideloading/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension_	/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Building_a_cross_browser_extension	/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Context_menu_items	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
