@@ -56,7 +56,7 @@ Here are some example constraints objects for `getDisplayMedia()` that make
 use of the `displaySurface` property.
 
 ```js
-dsConstraints = { displaySurface: 'window' }; // 'browser' and 'monitor' are also possible
+dsConstraints = { displaySurface: "window" }; // 'browser' and 'monitor' are also possible
 applyConstraints(dsConstraints);
 // The user still may choose to share the monitor or the browser,
 // but we indicated that a window is preferred.
