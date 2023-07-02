@@ -105,11 +105,11 @@ invalid key:
 #### JavaScript
 
 And here's the JavaScript code that does the job. First, listen for
-{{domxref("Element/keypress_event", "keypress")}} events:
+{{domxref("Element/keydown_event", "keydown")}} events:
 
 ```js
 const myTextbox = document.getElementById("my-textbox");
-myTextbox.addEventListener("keypress", checkName, false);
+myTextbox.addEventListener("keydown", checkName, false);
 ```
 
 The `checkName()` function, which looks at the pressed key and decides
