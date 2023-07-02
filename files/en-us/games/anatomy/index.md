@@ -1,6 +1,7 @@
 ---
 title: Anatomy of a video game
 slug: Games/Anatomy
+page-type: guide
 ---
 
 {{GamesSidebar}}
