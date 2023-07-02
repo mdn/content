@@ -281,7 +281,7 @@ At this point, you may see a bunch of scripts being run (the same scripts as for
 >
 > ```bash
 > cd ~  # Navigate to my home directory
-> ls -la #List the content of the directory. YOu should see .bash_profile
+> ls -la #List the content of the directory. You should see .bash_profile
 > nano .bash_profile # Open the file in the nano text editor, within the terminal
 > # Scroll to the end of the file, and copy in the lines above
 > # Use Ctrl+X to exit nano, choose Y to save the file.

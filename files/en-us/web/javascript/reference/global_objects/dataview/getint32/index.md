@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.DataView.getInt32
 
 {{JSRef}}
 
-The **`getInt32()`** method gets a signed 32-bit integer (long)
-at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`getInt32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit signed integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getint32.html")}}
 

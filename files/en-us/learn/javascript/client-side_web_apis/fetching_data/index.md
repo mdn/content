@@ -259,7 +259,7 @@ This article shows how to start working with Fetch to fetch data from the server
 
 There are however a lot of different subjects discussed in this article, which has only really scratched the surface. For a lot more detail on these subjects, try the following articles:
 
-- [Ajax — Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+- [Ajax](/en-US/docs/Web/Guide/AJAX)
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)

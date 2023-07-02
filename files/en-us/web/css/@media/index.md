@@ -126,7 +126,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/scripting", "scripting")}} {{Experimental_Inline}}
   - : Detects whether scripting (i.e. JavaScript) is available.
     Added in Media Queries Level 5.
-- {{cssxref("@media/update-frequency", "update")}}
+- {{cssxref("@media/update", "update")}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}

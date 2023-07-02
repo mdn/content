@@ -1,6 +1,7 @@
 ---
 title: Building up a basic demo with A-Frame
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
+page-type: guide
 ---
 
 {{GamesSidebar}}

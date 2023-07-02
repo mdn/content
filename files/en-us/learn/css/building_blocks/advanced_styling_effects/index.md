@@ -1,6 +1,7 @@
 ---
 title: Advanced styling effects
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
+page-type: guide
 ---
 
 {{LearnSidebar}}

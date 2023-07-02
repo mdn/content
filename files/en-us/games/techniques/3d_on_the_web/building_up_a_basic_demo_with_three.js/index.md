@@ -1,6 +1,7 @@
 ---
 title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
+page-type: guide
 ---
 
 {{GamesSidebar}}
