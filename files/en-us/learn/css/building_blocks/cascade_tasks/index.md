@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: The Cascade"
 slug: Learn/CSS/Building_blocks/Cascade_tasks
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

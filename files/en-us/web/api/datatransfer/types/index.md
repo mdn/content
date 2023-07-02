@@ -8,21 +8,15 @@ browser-compat: api.DataTransfer.types
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransfer.types`** read-only property returns an
-array of the drag data formats (as strings) that were set in
-the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. The order of the formats is the same order as the data
-included in the drag operation.
-
-The formats are Unicode strings giving the type or format of the data, generally given
-by a MIME type. Some values that are not MIME types are special-cased for legacy reasons
-(for example "`text`").
+The **`DataTransfer.types`** read-only property returns the available types
+that exist in the {{domxref("DataTransfer.items","items")}}.
 
 ## Value
 
-An array of the data formats used in the drag operation. Each format is a
-string. If the drag operation included no data, this list
-will be empty. If any files are included in the drag operation, then one of the types
-will be the string `Files`.
+An array of the data formats used in the drag operation. Each format is a string
+which is generally a MIME type such as `text/plain` or `text/html`. If the drag
+operation included no data, this list will be empty. If any files are included in
+the drag operation, then one of the types will be the string `Files`.
 
 ## Examples
 

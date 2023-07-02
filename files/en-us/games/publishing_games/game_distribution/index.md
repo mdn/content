@@ -1,6 +1,7 @@
 ---
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
+page-type: guide
 ---
 
 {{GamesSidebar}}

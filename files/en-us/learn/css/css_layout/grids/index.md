@@ -1,6 +1,7 @@
 ---
 title: Grids
 slug: Learn/CSS/CSS_layout/Grids
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}

@@ -1,6 +1,7 @@
 ---
 title: Dealing with files
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}

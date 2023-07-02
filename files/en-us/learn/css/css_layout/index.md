@@ -1,6 +1,7 @@
 ---
 title: CSS layout
 slug: Learn/CSS/CSS_layout
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: Move the ball
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+page-type: guide
 ---
 
 {{GamesSidebar}}

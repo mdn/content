@@ -1,6 +1,7 @@
 ---
 title: CSS styling text
 slug: Learn/CSS/Styling_text
+page-type: learn-module
 ---
 
 {{LearnSidebar}}
