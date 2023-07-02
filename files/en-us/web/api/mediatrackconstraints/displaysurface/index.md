@@ -10,7 +10,7 @@ browser-compat: api.MediaTrackConstraints.displaySurface
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`displaySurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the preferred value for the {{domxref("MediaTrackSettings.displaySurface","displaySurface")}} constrainable property.
 
-This is set by the application to identify to the user agent the type of display surface (window, browser, or monitor at this time) preferred by the application. It has no effect on what the user can choose to share, but may be used to present the options in a different order.
+This is set by the application to identify to the user agent the type of display surface (window, browser, or monitor) preferred by the application. It has no effect on what the user can choose to share, but may be used to present the options in a different order.
 
 If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.displaySurface")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
