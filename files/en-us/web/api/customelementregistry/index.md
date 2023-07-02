@@ -16,7 +16,7 @@ The **`CustomElementRegistry`** interface provides methods for registering custo
 - {{domxref("CustomElementRegistry.get()")}}
   - : Returns the constructor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.
 - {{domxref("CustomElementRegistry.getName()")}}
-  - : Returns the name for the already defined custom element, or `null` if the custom element is not defined.
+  - : Returns the name for the already-defined custom element, or `null` if the custom element is not defined.
 - {{domxref("CustomElementRegistry.upgrade()")}}
   - : Upgrades a custom element directly, even before it is connected to its shadow root.
 - {{domxref("CustomElementRegistry.whenDefined()")}}
