@@ -17,7 +17,7 @@ If needed, you can determine whether or not this constraint is supported by chec
 ## Value
 
 A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) which specifies the type of display surface preferred by the application.
-This value _does not_ add or remove display sources in the browser's user interface, but may reorder them. You can't use this property to limit the user to a subset of the three display-surface values `window`, `browser`, and `monitor` — but, as you will see below, you can see what was chosen, and reject it.
+This value _does not_ add or remove display sources in the browser's user interface, but may reorder them. You can't use this property to limit the user to a subset of the three display-surface values `window`, `browser`, and `monitor` — but, as you will see below, you can see what was chosen, and reject it.
 
 See [how constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#how_constraints_are_defined).
 
