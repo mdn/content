@@ -239,7 +239,7 @@ async function logChunks(url, { signal }) {
 // A mock push source.
 // Used to simulate some random data arriving
 class MockPushSource {
-  // total amount of data to to stream from the push source
+  // total amount of data to stream from the push source
   static #maxData = 90;
   // total data read so far (capped to maxData)
   #dataRead = 0;
