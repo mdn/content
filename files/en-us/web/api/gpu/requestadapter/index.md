@@ -38,7 +38,7 @@ requestAdapter(options)
 
         This hint's primary purpose is to influence which GPU is used in a multi-GPU system. For instance, some laptops have a low-power integrated GPU and a high-performance discrete GPU. Different factors may affect which adapter is returned including battery status, attached displays, or removable GPUs.
 
-        > **Note:** On dual-GPU macOS devices, if `requestAdapter()` is called without a `powerPreference` option, the high-performance discrete GPU is returned when the user's device is on AC power. Otherwise, the low-power integrated GPU is returned.
+        > **Note:** On Chrome running on dual-GPU macOS devices, if `requestAdapter()` is called without a `powerPreference` option, the high-performance discrete GPU is returned when the user's device is on AC power. Otherwise, the low-power integrated GPU is returned.
 
 ### Fallback adapters
 

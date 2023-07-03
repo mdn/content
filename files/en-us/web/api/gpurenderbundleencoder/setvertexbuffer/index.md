@@ -79,7 +79,7 @@ The above snippet is taken from the WebGPU Samples [Animometer example](https://
 
 ```js
 // Set vertex buffer in slot 0
-passEncoder.setVertexBuffer(0, myVertexBuffer);
+passEncoder.setVertexBuffer(0, vertexBuffer);
 
 // Later, unset vertex buffer in slot 0
 passEncoder.setVertexBuffer(0, null);

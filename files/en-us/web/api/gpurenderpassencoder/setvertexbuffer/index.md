@@ -90,7 +90,7 @@ device.queue.submit([commandEncoder.finish()]);
 
 ```js
 // Set vertex buffer in slot 0
-passEncoder.setVertexBuffer(0, myVertexBuffer);
+passEncoder.setVertexBuffer(0, vertexBuffer);
 
 // Later, unset vertex buffer in slot 0
 passEncoder.setVertexBuffer(0, null);
