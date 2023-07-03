@@ -105,7 +105,7 @@ Notification.requestPermission().then((result) => {
       });
     });
   }
-})
+});
 
 self.addEventListener(
   "notificationclick",
