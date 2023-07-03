@@ -70,26 +70,26 @@ This example visually compares the initial offset starting position of an elemen
 
 ```html hidden
 <div id="wrap">
-     <div class="box">+</div>
-     <div class="box box0">+</div>
+  <div class="box">+</div>
+  <div class="box box0">+</div>
 </div>
 
 <div id="wrap">
-     <div class="box">+</div>
-     <div class="box box1">+</div>
-     <p>offset-position: normal;</p>
+  <div class="box">+</div>
+  <div class="box box1">+</div>
+  <p>offset-position: normal;</p>
 </div>
 
 <div id="wrap">
-     <div class="box">+</div>
-     <div class="box box2">+</div>
-     <p>offset-position: auto;</p>
+  <div class="box">+</div>
+  <div class="box box2">+</div>
+  <p>offset-position: auto;</p>
 </div>
 
 <div id="wrap">
-     <div class="box">+</div>
-     <div class="box box3">+</div>
-     <p>offset-position: left top;</p>
+  <div class="box">+</div>
+  <div class="box box3">+</div>
+  <p>offset-position: left top;</p>
 </div>
 ```
 
