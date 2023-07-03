@@ -87,5 +87,5 @@ fileInput.addEventListener("change", async () => {
 ## See also
 
 - [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file): the file input element
-- [`text() method`](https://developer.mozilla.org/en-US/docs/Web/API/Blob/text): .text()
+- [`text() method`](/en-US/docs/Web/API/Blob/text): .text()
 - The {{domxref("DataTransfer")}} interface
