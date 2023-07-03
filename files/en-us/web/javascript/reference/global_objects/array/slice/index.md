@@ -117,6 +117,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 33, // ignored by slice() since length is 3
 };
 console.log(Array.prototype.slice.call(arrayLike, 1, 3));
 // [ 3, 4 ]

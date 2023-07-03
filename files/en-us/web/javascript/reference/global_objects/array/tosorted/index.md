@@ -85,6 +85,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
+  3: 3, // ignored by toSorted() since length is 3
 };
 console.log(Array.prototype.toSorted.call(arrayLike));
 // [4, 5, undefined]

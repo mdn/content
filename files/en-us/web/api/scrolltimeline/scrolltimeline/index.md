@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScrollTimeline.ScrollTimeline
 ---
 
-{{APIRef("History API")}}
+{{APIRef("History API")}}{{SeeCompatTable}}
 
 The **`ScrollTimeline()`** constructor creates a new {{domxref("ScrollTimeline")}} object instance.
 

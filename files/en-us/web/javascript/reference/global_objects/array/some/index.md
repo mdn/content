@@ -126,7 +126,7 @@ console.log([1, undefined, 1].some((x) => x !== 1)); // true
 
 ### Calling some() on non-array objects
 
-The `some()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `true`.
+The `some()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length` until they all have been accessed or `callbackFn` returns `true`.
 
 ```js
 const arrayLike = {
@@ -134,6 +134,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: 3, // ignored by some() since length is 3
 };
 console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 // false

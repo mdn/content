@@ -75,5 +75,5 @@ In most cases, flow layout works as you would expect it to when changing the wri
 ## See also
 
 - [Writing Modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
-- [Writing modes and CSS layout](https://www.smashingmagazine.com/2019/08/writing-modes-layout/) on Smashing Magazine (August 6, 2019)
-- [CSS writing modes](https://24ways.org/2016/css-writing-modes/) on 24ways.org (December 23, 2016)
+- [Writing modes and CSS layout](https://www.smashingmagazine.com/2019/08/writing-modes-layout/) on Smashing Magazine (2019)
+- [CSS writing modes](https://24ways.org/2016/css-writing-modes/) on 24ways.org (2016)

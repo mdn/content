@@ -149,39 +149,9 @@ One of the biggest problems is the availability of APIs. For that reason, it's c
 
 [The principles of unobtrusive JavaScript](https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) (originally written by Peter-Paul Koch for Dev.Opera.com) describes these ideas very well.
 
-### The Modernizr library
-
-There are many cases where a good "polyfill" can help a lot by providing a missing API. A [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill/) is a bit of JavaScript that "fills in the holes" in the functionality of legacy browsers. While they can be used to improve support for any functionality, using them for JavaScript is less risky than for CSS or HTML; there many cases where JavaScript can break (network issues, script conflicts, etc.). But for JavaScript, if you work with unobstructive JavaScript in mind, if polyfills are missing, it's no big deal.
-
-The best way to polyfill missing API is by using the [Modernizr](https://modernizr.com) library and its spin-off project: [YepNope](https://yepnopejs.com). Modernizr is a library that allows you to test the availability of functionality in order to act accordingly. YepNope is a conditional loading library.
-
-Here is an example:
-
-```js
-Modernizr.load({
-  // This tests if your browser supports the Form validation API
-  test: Modernizr.formvalidation,
-
-  // If the browser does not support it, the following polyfill is loaded
-  nope: "form-validation-API-polyfill.js",
-
-  // In any case, your core App file that depends on that API is loaded
-  both: "app.js",
-
-  // Once both files are loaded, this function is called in order to initialize the App.
-  complete() {
-    app.init();
-  },
-});
-```
-
-The Modernizr team conveniently maintains [a list of great polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Just pick what you need.
-
-> **Note:** Modernizr has other awesome features to help you in dealing with unobstructive JavaScript and graceful degradation techniques. Please [read the Modernizr documentation](https://modernizr.com/docs/).
-
 ### Pay attention to performance
 
-Even though scripts like Modernizr are very aware of performance, loading a 200 kilobyte polyfill can affect the performance of your application. This is especially critical with legacy browsers; many of them have a very slow JavaScript engine that can make the execution of all your polyfills painful for the user. Performance is a subject on its own, but legacy browsers are very sensitive to it: basically, they are slow and the more polyfills they need, the more JavaScript they have to process. So they are doubly burdened compared to modern browsers. Test your code with legacy browsers to see how they actually perform. Sometimes, dropping some functionality leads to a better user experience than having exactly the same functionality in all browsers. As a last reminder, just always think about the end users.
+Even though some polyfills are very aware of performance, loading additional scripts can affect the performance of your application. This is especially critical with legacy browsers; many of them have a very slow JavaScript engine that can make the execution of all your polyfills painful for the user. Performance is a subject on its own, but legacy browsers are very sensitive to it: basically, they are slow and the more polyfills they need, the more JavaScript they have to process. So they are doubly burdened compared to modern browsers. Test your code with legacy browsers to see how they actually perform. Sometimes, dropping some functionality leads to a better user experience than having exactly the same functionality in all browsers. As a last reminder, just always think about the end users.
 
 ## Conclusion
 
