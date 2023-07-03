@@ -7,7 +7,7 @@ browser-compat: html.elements.search
 
 {{HTMLSidebar}}
 
-The **`<search>`** [HTML](/en-US/docs/Web/HTML) element represents a part that contains a set of form controls or other content related to performing a search or filtering operation. This could be a search of the web site or application, a way of searching or filtering search results on the current web page, or a global or internet-wide search function.
+The **`<search>`** [HTML](/en-US/docs/Web/HTML) element represents a part that contains a set of form controls or other content related to performing a search or filtering operation. This could be a search of the website or application, a way of searching or filtering search results on the current web page, or a global or internet-wide search function.
 
 ## Attributes
 
@@ -109,8 +109,7 @@ A page with two search features. The first is a global site search located on th
         <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, 
-        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
@@ -132,12 +131,7 @@ A page with two search features. The first is a global site search located on th
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role"><code>form</code></a>, 
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, 
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, 
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, 
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, 
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role"><code>form</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
       </td>
     </tr>
     <tr>
