@@ -1,6 +1,7 @@
 ---
 title: "Express Tutorial Part 4: Routes and controllers"
 slug: Learn/Server-side/Express_Nodejs/routes
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}

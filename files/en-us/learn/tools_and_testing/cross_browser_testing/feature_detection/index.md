@@ -1,6 +1,7 @@
 ---
 title: Implementing feature detection
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}

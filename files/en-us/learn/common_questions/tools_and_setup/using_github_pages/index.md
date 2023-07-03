@@ -1,6 +1,7 @@
 ---
 title: How do I use GitHub Pages?
 slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

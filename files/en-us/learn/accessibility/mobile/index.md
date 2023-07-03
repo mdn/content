@@ -1,6 +1,7 @@
 ---
 title: Mobile accessibility
 slug: Learn/Accessibility/Mobile
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
