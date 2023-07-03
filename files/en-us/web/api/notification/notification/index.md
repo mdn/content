@@ -84,7 +84,7 @@ new Notification(title, options)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if:
+  - : Thrown if one of the following is true:
     - `options.silent` is `true` and `options.vibrate` is specified.
     - `options.renotify` is `true` but `options.tag` is empty.
 
