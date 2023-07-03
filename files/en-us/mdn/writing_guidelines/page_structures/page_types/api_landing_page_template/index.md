@@ -12,7 +12,7 @@ page-type: mdn-writing-guide
 >
 > **Page front matter:**
 >
-> The frontmatter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular interface.
 >
 > ```md
@@ -44,7 +44,7 @@ page-type: mdn-writing-guide
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+> A number of macro calls appear at the top of the content section (immediately below the page front matter).
 > You should update or delete them according to the advice below:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).

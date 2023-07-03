@@ -13,7 +13,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > **Page front matter:**
 >
-> The frontmatter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular property.
 >
 > ```md
@@ -56,7 +56,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+> A number of macro calls appear at the top of the content section (immediately below the page front matter).
 > You should update or delete them according to the advice below:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
@@ -75,7 +75,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{APIRef("GroupDataName")}}{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
 
 The summary paragraph — start by naming the property, saying what interface it is part of, and saying what it does.
 This should ideally be 1 or 2 short sentences.
@@ -125,15 +125,16 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
 
 ## See also
 
-Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2
+- external_link (year)

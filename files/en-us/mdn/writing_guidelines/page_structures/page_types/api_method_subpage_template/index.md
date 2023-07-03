@@ -13,7 +13,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 >
 > **Page front matter:**
 >
-> The frontmatter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular method.
 >
 > ```md
@@ -58,7 +58,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+> A number of macro calls appear at the top of the content section (immediately below the page front matter).
 > You should update or delete them according to the advice below:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
@@ -77,7 +77,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{APIRef("GroupDataName")}}{{SeeCompatTable}}{{SecureContext_header}}{{Deprecated_Header}}
+{{SeeCompatTable}}{{SecureContext_header}}{{Deprecated_Header}}
 
 The summary paragraph — start by naming the method, saying what interface it is part of, and saying what it does.
 This should ideally be 1 or 2 short sentences. You could copy most of this from the method's summary on the corresponding API reference page.
@@ -103,10 +103,12 @@ If the method doesn't return anything, just put "None ({{jsxref('undefined')}}).
 
 ### Exceptions
 
+Include a list of all the exceptions that the constructor can raise. Include one term and definition for each exception.
+
 - `Exception1`
-  - : Include a list of all the exceptions that the method can raise, along with descriptions of how that exception is raised. Include one term and definition for each exception.
+  - : Include descriptions of how the exception is raised.
 - `Exception2`
-  - : etc.
+  - : Include descriptions of how the exception is raised.
 
 Note that we have two kinds of exceptions: {{domxref("DOMException")}} objects and regular JavaScript exceptions, like {{jsxref("TypeError")}} and {{jsxref("RangeError")}}. A web developer needs to know:
 
@@ -162,15 +164,16 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
 
 ## See also
 
-Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2
+- external_link (year)
