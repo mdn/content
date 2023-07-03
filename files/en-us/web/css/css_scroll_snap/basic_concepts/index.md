@@ -79,7 +79,7 @@ With this property definition, you can ensure that users see each section of the
 ## See also
 
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/) on web.dev (August 13, 2021)
-- [Practical CSS scroll snapping](https://css-tricks.com/practical-css-scroll-snapping/) on CSS-Tricks (June 18, 2020)
-- [CSS scroll snap](https://12daysofweb.dev/2022/css-scroll-snap/) on 12 Days of Web (December 7, 2019)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/) on web.dev (2021)
+- [Practical CSS scroll snapping](https://css-tricks.com/practical-css-scroll-snapping/) on CSS-Tricks (2020)
+- [CSS scroll snap](https://12daysofweb.dev/2022/css-scroll-snap/) on 12 Days of Web (2019)
 - [Scroll snap examples](https://codepen.io/collection/KpqBGW) on Codepen

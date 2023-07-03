@@ -1,6 +1,7 @@
 ---
 title: HTML basics
 slug: Learn/Getting_started_with_the_web/HTML_basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
