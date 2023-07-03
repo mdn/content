@@ -36,6 +36,16 @@ These page types are not specific to a particular MDN technology area:
 
 This section lists page types that are specific to a single area of MDN.
 
+### Learning Area page types
+
+This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn/CSS).
+- `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Introduction to HTML_](/en-US/docs/Learn/HTML/Introduction_to_HTML).
+- `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn/Accessibility/Mobile).
+- `learn-module-assessment` a special guide with an activity allowing to asess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn/Forms/Test_your_skills:_Basic_controls).
+- `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name).
+
 ### Accessibility page types
 
 This section lists `page-type` values for pages under [Web/Accessibility](/en-US/docs/Web/Accessibility). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
