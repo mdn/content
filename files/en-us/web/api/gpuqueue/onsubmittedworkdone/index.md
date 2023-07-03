@@ -18,7 +18,7 @@ This includes the completion of any {{domxref("GPUBuffer.mapAsync", "mapAsync()"
 Note: In most cases, you do _not_ need to call `onSubmittedWorkDown()`. You do **_not_** need to call it for mapping a buffer. `mapAsync` guarantees work submitted
 to the queue before calling `mapAsync` happens before the `mapAsync` returns (see [WebGPU spec: section 5.2](https://www.w3.org/TR/webgpu/#buffer-mapping))
 
-The two use-cases for `onSubmittedWorkDone`
+The two use cases for `onSubmittedWorkDone`
 
 1. Waiting for multiple buffer mapping (slow)
 
