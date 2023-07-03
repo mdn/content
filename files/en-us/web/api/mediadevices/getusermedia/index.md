@@ -290,7 +290,7 @@ be rejected with `OverconstrainedError`, and the user will not be
 prompted.
 
 The reason for the difference in behavior is that the keywords `min`,
-`max`, and `exact` are inherently mandatory — whereas plain
+`max`, and `exact` are inherently mandatory — whereas plain
 values and a keyword called `ideal` are not. Here's a full example:
 
 ```js
