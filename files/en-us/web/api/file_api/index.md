@@ -70,9 +70,8 @@ fileInput.addEventListener("change", async () => {
   const [file] = fileInput.files;
 
   if (file) {
-      output.innerText = await file.text()
+    output.innerText = await file.text();
   }
-
 });
 ```
 
