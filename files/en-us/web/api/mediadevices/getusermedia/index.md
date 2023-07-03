@@ -303,7 +303,7 @@ getUserMedia({
 });
 ```
 
-An `ideal` value, when used, has gravity, which means that the browser
+An `ideal` value, when used, has gravity — which means that the browser
 will try to find the setting (and camera, if you have more than one), with the
 smallest [fitness distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
 
