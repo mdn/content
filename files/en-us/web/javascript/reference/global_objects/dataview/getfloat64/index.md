@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.DataView.getFloat64
 
 {{JSRef}}
 
-The **`getFloat64()`** method gets a signed 64-bit float
-(double) at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`getFloat64()`** method of {{jsxref("DataView")}} instances reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit float.
 
 {{EmbedInteractiveExample("pages/js/dataview-getfloat64.html")}}
 

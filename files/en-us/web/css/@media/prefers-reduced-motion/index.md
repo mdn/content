@@ -130,5 +130,5 @@ You can enable the setting for reducing motion on [your device](#user_preference
 
 ## See also
 
-- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/) on CSS-Tricks (April 24, 2019)
-- [Responsive design for motion](https://webkit.org/blog/7551/responsive-design-for-motion/) on WebKit Blog (May 15, 2017)
+- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/) on CSS-Tricks (2019)
+- [Responsive design for motion](https://webkit.org/blog/7551/responsive-design-for-motion/) on WebKit Blog (2017)

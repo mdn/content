@@ -22,7 +22,7 @@ This property is a shorthand for the following CSS properties:
 - [`animation-iteration-count`](/en-US/docs/Web/CSS/animation-iteration-count)
 - [`animation-name`](/en-US/docs/Web/CSS/animation-name)
 - [`animation-play-state`](/en-US/docs/Web/CSS/animation-play-state)
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timing-function)
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
 - [`animation-timing-function`](/en-US/docs/Web/CSS/animation-timing-function)
 
 ## Syntax

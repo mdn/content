@@ -1,6 +1,7 @@
 ---
 title: webSocketUrl
 slug: Web/WebDriver/Capabilities/webSocketUrl
+page-type: webdriver-capability
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}

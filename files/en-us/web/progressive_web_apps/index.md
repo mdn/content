@@ -52,7 +52,7 @@ These guides give concrete detailed instructions for how to implement specific P
 
 In these tutorials, you'll build a PWA from scratch. Tutorials walk through the steps of creating an app, from start to finish, explaining how the different features of the app are implemented.
 
-- [Creating your first PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro)
+- [Creating your first PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker)
   - : This novice-level tutorial walks through the creation of a PWA to track menstrual cycles. Lessons include a walk through of the HTML, CSS, and JavaScript required to create a fully functional web app, setting up a testing environment, and complete explanations guiding the learner through upgrading the web app into a PWA; including developing and inspecting a manifest, adding a service worker, and using the service worker to delete stale caches.
 - [Deep dive into PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames)
   - : This intermediate-level tutorial walks through the creation of a PWA that lists information about games submitted to the A-Frame category in the [js13kGames 2017](https://2017.js13kgames.com/) competition. This tutorial includes all the basics for creating a PWA, with additional features, including notifications, push, and app performance.
@@ -116,4 +116,4 @@ The following APIs can be used by a service worker to perform tasks in the backg
 
 - [Progressive web apps](https://web.dev/progressive-web-apps/) on web.dev
 - [Learn PWA](https://web.dev/learn/pwa/) on web.dev
-- [Progressive web apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) on learn.microsoft.com (January 24, 2023)
+- [Progressive web apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) on learn.microsoft.com (2023)
