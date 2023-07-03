@@ -57,8 +57,8 @@ A link is included in content box above to demonstrate the effects of keyboard f
 
 - {{CSSxRef("scrollbar-width")}} CSS property
 - {{CSSxRef("scrollbar-color")}} CSS property
-- {{CSSxRef("scroll-behavior")}} CSS property
 - {{CSSxRef("scrollbar-gutter")}} CSS property
+- {{CSSxRef("scroll-behavior")}} CSS property
 - {{cssxref("scroll-margin")}} CSS shorthand property
 - {{cssxref("scroll-padding")}} CSS shorthand property
 - {{cssxref("scroll-snap-align")}} CSS property
