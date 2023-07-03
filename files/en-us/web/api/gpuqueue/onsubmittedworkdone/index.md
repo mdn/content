@@ -15,10 +15,10 @@ The **`onSubmittedWorkDone()`** method of the
 
 This includes the completion of any {{domxref("GPUBuffer.mapAsync", "mapAsync()")}} calls made on `GPUBuffer`s used in commands submitted to the queue, before `onSubmittedWorkDone()` is called.
 
-Note: In most cases, you do NOT need to call `onSubmittedWorkDown()`. You do **NOT** need to call it for mapping a buffer. `mapAsync` guarantees work submitted
+Note: In most cases, you do _not_ need to call `onSubmittedWorkDown()`. You do **_not_** need to call it for mapping a buffer. `mapAsync` guarantees work submitted
 to the queue before calling `mapAsync` happens before the `mapAsync` returns (see [WebGPU spec: section 5.2](https://www.w3.org/TR/webgpu/#buffer-mapping))
 
-The 2 use-cases for `onSubmittedWorkDone`
+The two use-cases for `onSubmittedWorkDone`
 
 1. Waiting for multiple buffer mapping (slow)
 
@@ -45,8 +45,8 @@ The 2 use-cases for `onSubmittedWorkDone`
    data3 = buffer3.getMappedRange();
    ```
 
-   The reason the 2nd method is slow is the implementation may be able to map the buffers before all the submitted work is done.
-   For example, if all the buffers are finished being used but more work, un-related to the buffers, is already submitted then
+   The reason the second method is slow is, the implementation may be able to map the buffers before all the submitted work is done.
+   For example, if all the buffers are finished being used, but more work (unrelated to the buffers) is already submitted, then
    you'll end up waiting longer using the second method than the first.
 
 2. Throttling work
