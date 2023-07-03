@@ -1,9 +1,9 @@
 ---
-title: "PWA tutorial: Introduction"
-slug: Web/Progressive_web_apps/Tutorials/Intro
+title: CycleTracker
+slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 ---
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS")}}
 
 {{PWASidebar}}
 
@@ -38,15 +38,15 @@ Once installed, PWAs can be made to appear and act similarly to other applicatio
 
 - Application window
 
-  - : With a [manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file#app_presentation) setting, we'll make CycleTracker open in its own application window, meaning installed PWAs are similar to other installed applications.
+  - : With a [manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#app_presentation) setting, we'll make CycleTracker open in its own application window, meaning installed PWAs are similar to other installed applications.
 
 - Application icon
 
-  - : PWAs display an application icon in the same location as other installed applications installed on the users' operating system. This can be an icon on the homescreen, in the toolbar, in the application's folder, or wherever the device displays application icons. We'll learn how to [declare icons](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file#app_iconography) for CycleTracker, so, once installed, our PWA can appear like any other installed application on the user's device.
+  - : PWAs display an application icon in the same location as other installed applications installed on the users' operating system. This can be an icon on the homescreen, in the toolbar, in the application's folder, or wherever the device displays application icons. We'll learn how to [declare icons](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#app_iconography) for CycleTracker, so, once installed, our PWA can appear like any other installed application on the user's device.
 
 - Works offline
 
-  - : Internet access is initially required to download the application and is also required when syncing data with the server or other users. This is required of all applications, not just PWAs. We'll add a [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers) to create an offline experience, meaning CycleTracker will work even when if user loses internet access. We will only touch on the power of PWA offline support. Service workers can be used to make PWAs work offline just like any other installed application. If a user makes changes while offline, service workers enable PWAs to sync data once connectivity is restored. With service workers, the user doesn't need to be actively engaging with the PWA, in fact, the PWA doesn't even need to be open, for it to send and retrieve server data.
+  - : Internet access is initially required to download the application and is also required when syncing data with the server or other users. This is required of all applications, not just PWAs. We'll add a [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) to create an offline experience, meaning CycleTracker will work even when if user loses internet access. We will only touch on the power of PWA offline support. Service workers can be used to make PWAs work offline just like any other installed application. If a user makes changes while offline, service workers enable PWAs to sync data once connectivity is restored. With service workers, the user doesn't need to be actively engaging with the PWA, in fact, the PWA doesn't even need to be open, for it to send and retrieve server data.
 
 ## CycleTracker PWA lessons
 
@@ -54,33 +54,33 @@ The base web application for this PWA tutorial is a period tracker, in which the
 
 The steps include:
 
-- [App HTML and CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS)
+- [App HTML and CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS)
 
   - : Line by line explanation of HTML for the static content of the website, the CycleTracker static content, along with the CSS to style that content.
 
-- [Local development environment or secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection)
+- [Local development environment or secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)
 
   - : While all websites should be served over https, with PWAs, https is a requirement. Service workers, and therefore PWAs, are restricted to secure contexts including SSL contexts served with the `https://` protocol and locally-delivered resources, including `127.0.0.1` and `localhost` URLs served with the `http://` protocol. We will look at the page in the current state with the `file://` protocol, then cover options for creating a secure localhost connection to test your code as we progress thru the tutorial steps. We also look at serving your PWA with GitHub pages.
 
-- [JavaScript and LocalStorage](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality)
+- [JavaScript and LocalStorage](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)
 
   - : Full explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA, using `localStorage` to store period information.
 
-- [Manifest: identity, appearance, and iconography](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file)
+- [Manifest: identity, appearance, and iconography](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)
 
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport. We also look at debugging the manifest file with browser developer tools.
 
-- [Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers)
+- [Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers)
 
   - : The service worker enables the application to work offline. With the secure connection in the previous step, the initial visit to a page provides its baseline functionality while the service worker downloads. After a service worker is installed and activated, it controls the page to offer improved reliability and speed.
 
 <!--
 
-- [Offline experience](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/offline)
+- [Offline experience](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/offline)
 
   - : With JavaScript, we will determine whether the user is online or offline. When offline, they will be shown an offline experience that informs the user they are offline. When online, the experience will be similar to the website, but the installation button will not be visible.
 
-- [Session storage](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Storage)
+- [Session storage](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Storage)
   - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA.
 -->
 
@@ -90,4 +90,4 @@ While a secure connection is a requirement, there are no software requirements f
 
 You can try the [live period tracker](https://mdn.github.io/pwa-examples/cycletracker/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker) on GitHub.
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS")}}

@@ -108,7 +108,7 @@ The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)
 - `configURL`
   - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for more information.
 - `clientId`
-  - : A string specifying the the RP's client identifier, issued by the IdP to the RP in a completely separate process specific to the IdP.
+  - : A string specifying the RP's client identifier, issued by the IdP to the RP in a completely separate process specific to the IdP.
 - `nonce` {{optional_inline}}
   - : A random string that can be included to ensure the response is issued for this specific request, and prevent {{glossary("replay attack", "replay attacks")}}.
 
