@@ -1,6 +1,7 @@
 ---
 title: Updating extensions for Firefox 4
 slug: Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

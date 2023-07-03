@@ -1,6 +1,7 @@
 ---
 title: Firefox 112 for developers
 slug: Mozilla/Firefox/Releases/112
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

@@ -162,3 +162,9 @@ This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtens
 This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
 - `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/description).
+
+### Firefox page types
+
+This section lists `page-type` values for pages under [Mozilla/Firefox](/en-US/docs/Mozilla/Firefox). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `firefox-release-notes`: the release notes for a given Firefox, like [_Firefox 115 for developers_](/en-US/docs/Mozilla/Firefox/Releases/115).
