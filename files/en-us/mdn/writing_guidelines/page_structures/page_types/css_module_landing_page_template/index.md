@@ -29,7 +29,7 @@ page-type: mdn-writing-guide
 > - **title**
 >   - : The `title` value is displayed at the top of the page.
 >     This is the text "CSS" followed by the name of the module.
->     For example, the module landing page for the [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module is _CSS grid layout_.
+>     For example, the title for the [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module landing page is _CSS grid layout_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted as `Web/CSS/CSS_NameOfTheModule`.
@@ -59,10 +59,14 @@ This should ideally be one or two short sentences.
 
 ## NameOfTheModule in action
 
-In this section, include an interactive example of the module that helps to demonstrate the usefulness or the power of various properties provided by this module. The purpose of this section is to create interest and curiosity in the mind of the readers learning about this module and the possibilities. Provide a short description of how readers can interact with the example. Don't go into a lot of detail in this section, and don't include code snippets. Add a link to the source code for the example in the [`css-examples`](https://github.com/mdn/css-examples/tree/main/modules) repository. For example, for the filter effects module interactive example, you would say:
+In this section, include an interactive example of the module that helps to demonstrate the usefulness or the power of various properties provided by this module. The purpose of this section is to demonstrate a few use cases and to create interest and curiosity in the mind of the readers learning about this module.
+
+Provide a short description of how readers can interact with the example. Don't go into a lot of detail to explain the example, and don't include code snippets. Add a link to the source code for the example in the [`css-examples`](https://github.com/mdn/css-examples/tree/main/modules) repository. For example, for the filter effects module interactive example, you would say:
 "To see the code for this example, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/filters.html)."
 
 ## Reference
+
+Create the relevant subsections to list the related properties, functions, data types, and so on.
 
 ### Properties
 
@@ -97,7 +101,7 @@ List the related API and interfaces provided by the module. Omit this section if
 
 ## Related concepts
 
-List all properties, data types, or glossary terms that may be relevant or related to this module.
+List all other properties, data types, or glossary terms that may be relevant or related to this module.
 
 ## Specifications
 

@@ -45,7 +45,7 @@ If the work is more significant, then you should consider a few factors when pri
 
 If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Communication_channels).
 
-## The page-type front matter key
+## Front matter key for page types
 
 We have defined a front matter key `page-type` to clearly identify the type of MDN pages. The templates linked below indicate which `page-type` values you should set for each page type.
 
@@ -128,6 +128,27 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 ### Templates
 
 - [SVG element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
+
+## CSS module landing page
+
+Every **[CSS](/en-US/docs/Web/CSS) module** links to a specification that provides support for certain features and implementations in CSS. For example, the specification linked to the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module describes the margin and padding properties that let you create spacing in and around a CSS box.
+
+A **CSS module landing page** provides an overview of the features that the module provides and lists all the properties, data types, CSS functions, and so on offered by the module. The CSS module landing page also provides a quick demonstration of what can be achieved using the properties of the module through an interactive example.
+The module landing page serves primarily as a _navigation_ page, but also functions as an at-a-glance _reference_ page for the module.
+
+Some related properties and features that belong in other modules but are closely related to the functionality offered by the module you are documenting can also be covered in a _Related concepts_ section.
+For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/CSS_animations#related_concepts) section of the CSS animations module landing page.
+
+### Examples
+
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface)
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+
+### Templates
+
+- [CSS module landing page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template)
 
 ## CSS feature reference page
 
