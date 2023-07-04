@@ -120,7 +120,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/autofocus">autofocus</a></code>
+        <code><a href="/en-us/web/html/global_attributes/autofocus">autofocus</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
