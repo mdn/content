@@ -87,8 +87,8 @@ Explicitly specifying missing components is useful in [color interpolation](#int
 
 ```css
 /* These are equivalent */
-background-color: oklab(50% none -0.25);
-background-color: oklab(50% 0 -0.25);
+color: oklab(50% none -0.25);
+color: oklab(50% 0 -0.25);
 
 /* These are equivalent */
 background-color: hsl(none 100% 50%);
@@ -102,8 +102,6 @@ Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [tra
 When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/computed_value) are interpolated linearly, with interpolation's speed being determined by the [timing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overriden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
 
 ### Interpolation with missing components
-
-Missing components can be used to interpolate only certain components of a color.
 
 #### Simple case
 
