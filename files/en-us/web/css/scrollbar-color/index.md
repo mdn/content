@@ -83,7 +83,7 @@ When using `scrollbar-color` property with specific color values, authors should
   width: 300px;
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: #007 #bada55;
 }
 ```
 
