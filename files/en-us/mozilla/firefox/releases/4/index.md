@@ -1,6 +1,7 @@
 ---
 title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

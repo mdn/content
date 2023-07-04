@@ -1,6 +1,7 @@
 ---
 title: Adding feed readers to Firefox
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
