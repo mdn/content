@@ -3,7 +3,7 @@ title: <xsl:comment>
 slug: Web/XSLT/Element/comment
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:comment>` element writes a comment to the output document. It must include only text.
 

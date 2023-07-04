@@ -87,11 +87,12 @@ console.log([1, , 3].findIndex((x) => x === undefined)); // 1
 
 ### Calling findIndex() on non-array objects
 
-The `findIndex()` method reads the `length` property of `this` and then accesses each integer index.
+The `findIndex()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
   length: 3,
+  "-1": 0.1, // ignored by findIndex() since -1 < 0
   0: 2,
   1: 7.3,
   2: 4,

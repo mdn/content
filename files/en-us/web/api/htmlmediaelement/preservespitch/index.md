@@ -46,23 +46,12 @@ div {
 
 ```js
 const audio = document.querySelector("audio");
-// When the audio starts playing...
-audio.addEventListener(
-  "play",
-  () => {
-    // Handle page visibility change:
-    // - If the page is hidden, pause the video
-    // - If the page is shown, play the video
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) {
-        audio.pause();
-      } else {
-        audio.play();
-      }
-    });
-  },
-  { once: true }
-);
+document.getElementById("rate").addEventListener("change", (e) => {
+  audio.playbackRate = e.target.value;
+});
+document.getElementById("pitch").addEventListener("change", (e) => {
+  audio.preservesPitch = e.target.checked;
+});
 ```
 
 {{EmbedLiveSample("Setting the preservesPitch property")}}

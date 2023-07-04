@@ -3,12 +3,10 @@ title: "HTMLElement: hidePopover() method"
 short-title: hidePopover()
 slug: Web/API/HTMLElement/hidePopover
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HTMLElement.hidePopover
 ---
 
-{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
+{{ APIRef("HTML DOM") }}
 
 The **`hidePopover()`** method of the {{domxref("HTMLElement")}} interface hides a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) by removing it from the {{glossary("top layer")}} and styling it with `display: none`.
 

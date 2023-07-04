@@ -20,7 +20,7 @@ The following two filter properties of the CSS filter effects module enable you 
 
 - Using the {{cssxref("filter")}} property, you can apply filter effects such as blur, drop-shadow, and sepia to an element before the element is rendered. The filters effects are applied directly on the element, including the element's contents, borders, and padding.
 
-- Using the the {{cssxref("backdrop-filter")}} property, you can apply graphical effects to the area behind an element (the element's "backdrop"). The `backdrop-filter` property is often used to make the foreground content more legible, especially when the larger area on which the content is placed otherwise does not provide enough contrast for the content. The filter effects are applied only to the background of the element and not to the element's content.
+- Using the {{cssxref("backdrop-filter")}} property, you can apply graphical effects to the area behind an element (the element's "backdrop"). The `backdrop-filter` property is often used to make the foreground content more legible, especially when the larger area on which the content is placed otherwise does not provide enough contrast for the content. The filter effects are applied only to the background of the element and not to the element's content.
 
 The `filter` and `backdrop-filter` properties accept a space-separated list of filters, which are applied in the order declared.
 

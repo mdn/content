@@ -1,6 +1,7 @@
 ---
 title: Making PWAs installable
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
+page-type: guide
 ---
 
 {{PWASidebar}}

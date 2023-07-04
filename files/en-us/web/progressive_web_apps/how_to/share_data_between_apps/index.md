@@ -1,6 +1,7 @@
 ---
 title: Share data between apps
 slug: Web/Progressive_web_apps/How_to/Share_data_between_apps
+page-type: how-to
 ---
 
 {{PWASidebar}}

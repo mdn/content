@@ -1,6 +1,7 @@
 ---
 title: HTML tables
 slug: Learn/HTML/Tables
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

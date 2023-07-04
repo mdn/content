@@ -1,6 +1,7 @@
 ---
 title: User input and controls
 slug: Web/Guide/User_input_methods
+page-type: guide
 ---
 
 <section id="Quick_links">

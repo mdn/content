@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: CSS and JavaScript accessibility"
 slug: Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

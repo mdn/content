@@ -190,7 +190,7 @@ This works because by default, `::view-transition-group` transitions width and h
 
 ### Controlling animations with JavaScript
 
-The {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns a {{domxref("ViewTransition")}} object instance, which contains several promise members allowing you to run JavaScript in response to different states of the transition being reached. For example, {{domxref("ViewTransition.ready")}} fulfills once the pseudo-element tree is created and the animation is about to start, whereas {{domxref("ViewTransition.finished")}} fulfills once the the animation is finished, and the new page view is visible and interactive to the user.
+The {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns a {{domxref("ViewTransition")}} object instance, which contains several promise members allowing you to run JavaScript in response to different states of the transition being reached. For example, {{domxref("ViewTransition.ready")}} fulfills once the pseudo-element tree is created and the animation is about to start, whereas {{domxref("ViewTransition.finished")}} fulfills once the animation is finished, and the new page view is visible and interactive to the user.
 
 For example, the following JavaScript could be used to create a circular reveal view transition emanating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
 

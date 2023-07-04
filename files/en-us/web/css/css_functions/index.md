@@ -185,17 +185,17 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Defines a given color according to its hue, saturation, lightness and alpha (transparency) components.
 - {{CSSxRef("color_value/hwb", "hwb()")}}
   - : Defines a given color according to its hue, whiteness and blackness components.
-- {{CSSxRef("color_value/lch", "lch()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/lch", "lch()")}}
   - : Defines a given color according to its lightness, chroma and hue components.
-- {{CSSxRef("color_value/oklch", "oklch()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/oklch", "oklch()")}}
   - : Defines a given color according to its lightness, chroma, hue and alpha (transparency) components.
-- {{CSSxRef("color_value/lab", "lab()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/lab", "lab()")}}
   - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the lab colorspace.
-- {{CSSxRef("color_value/oklab", "oklab()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/oklab", "oklab()")}}
   - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the lab colorspace and alpha (transparency).
-- {{CSSxRef("color_value/color", "color()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/color", "color()")}}
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
-- {{CSSxRef("color_value/color-mix", "color-mix()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/color-mix", "color-mix()")}}
   - : Mixes two color values in a given colorspace by a given amount.
 - {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
   - : Selects the highest color contrast from a list of colors, compare to a base color value.
@@ -275,7 +275,7 @@ The following functions are used as a value of properties to reference a value d
 
 ## Grid functions
 
-The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 - {{CSSxRef("fit-content", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
@@ -312,10 +312,12 @@ The following functions are used as a value in transition and animation properti
 
 ## Animation functions
 
-The following functions are used as a value of different {{CSSxRef("animation")}} properties.
+The following functions are used as a value of different `animation-timeline` properties. See {{CSSxRef("animation-timeline")}} for more details about these.
 
-- {{cssxref("animation-timeline/scroll", "scroll()")}} {{Experimental_Inline}}
-  - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous scroll progress timeline_.
+- {{cssxref("animation-timeline/view", "view()")}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous view progress timeline_.
 
 ## See also
 

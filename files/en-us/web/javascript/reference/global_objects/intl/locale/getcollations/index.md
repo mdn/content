@@ -56,13 +56,13 @@ Below is a list of the supported collation types, adapted from the [Unicode coll
     > **Warning:** Do not use explicitly. This is the old name for the default ordering for Swedish [whose collation naming used to differ from other languages](https://unicode-org.atlassian.net/browse/CLDR-15603). Since this was the default, request `sv` instead of requesting `sv-u-co-reformed`.
 - `search`
   - : Special collation type for string search
-    > **Warning:** Do not use. In [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), this collation is activated via the `search` value for the `usage` option. Furthermore, there is currently no API for actually using the collator for search.
+    > **Warning:** Do not use as a collation type, since in [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), this collation is activated via the `"search"` value for the `usage` option. There is currently no API for substring search, so this is currently only good for filtering a list of strings by trying a full-string match of the key against each list item.
 - `searchjl`
   - : Special collation type for Korean initial consonant search
-    > **Warning:** Do not use. This collation is meant for searching, but [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) provides an API only for sorting.
+    > **Warning:** This collation is not for sorting, even though it is made available through [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) instantiated with usage `"sort"` as opposed to usage `"search"`.
 - `standard`
   - : Default ordering for each language, except Chinese (and, previously, Swedish)
-    > **Warning:** Do not use explicitly. In general, it's unnecessary to specify this explicitly and specifying this for Swedish is problematic in case the naming of the Swedish collations is changed to be consistent with other languages in the future.
+    > **Warning:** Do not use explicitly. In general, it's unnecessary to specify this explicitly and specifying this for Swedish is problematic due to the different meaning for Swedish in the past.
 - `stroke`
   - : Pinyin ordering for Latin, stroke order for CJK characters (for Chinese)
 - `trad`
