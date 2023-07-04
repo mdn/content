@@ -19,7 +19,6 @@ This article provides information about the changes in Firefox 115 that affect d
 ### CSS
 
 - The CSS {{cssxref("animation-composition")}} property is now supported by default. You can use this property to specify the composite operation to use when multiple animations affect the same property simultaneously. ([Firefox bug 1823862](https://bugzil.la/1823862)).
-- The CSS {{cssxref("offset-position")}} property is now supported behind the preference `layout.css.motion-path-offset-position.enabled`, which needs to be set to `true`. A new keyword called `normal` has been added to the syntax of the property. The initial starting position of an element on an {{cssxref("offset-path")}} while using this new keyword depends on the CSS function, {{cssxref("path")}} or {{cssxref("ray")}}, that's used to specify the value of the `offset-path` property. For more information, see {{cssxref("offset-position")}}. ([Firefox bug 1559232](https://bugzil.la/1559232)).
 
 #### Removals
 
