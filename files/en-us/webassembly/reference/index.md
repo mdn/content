@@ -1,6 +1,7 @@
 ---
 title: WebAssembly instruction reference
 slug: WebAssembly/Reference
+page-type: landing-page
 ---
 
 {{WebAssemblySidebar}}

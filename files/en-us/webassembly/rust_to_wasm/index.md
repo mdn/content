@@ -1,6 +1,7 @@
 ---
 title: Compiling from Rust to WebAssembly
 slug: WebAssembly/Rust_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}

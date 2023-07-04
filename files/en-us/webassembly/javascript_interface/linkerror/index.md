@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.LinkError
 slug: WebAssembly/JavaScript_interface/LinkError
+page-type: webassembly-interface
 browser-compat: javascript.builtins.WebAssembly.LinkError
 ---
 

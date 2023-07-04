@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
+page-type: webassembly-function
 browser-compat: javascript.builtins.WebAssembly.validate
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Global set
 slug: WebAssembly/Reference/Variables/Global_set
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

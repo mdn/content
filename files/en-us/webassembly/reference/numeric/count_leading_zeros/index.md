@@ -1,6 +1,7 @@
 ---
 title: Count leading zeros
 slug: WebAssembly/Reference/Numeric/Count_leading_zeros
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

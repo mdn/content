@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/JavaScript_interface/Exception/stack
+page-type: webassembly-instance-property
 status:
   - non-standard
 browser-compat: javascript.builtins.WebAssembly.Exception.stack

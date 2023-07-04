@@ -1,12 +1,13 @@
 ---
 title: WebAssembly.Module.imports()
 slug: WebAssembly/JavaScript_interface/Module/imports
+page-type: webassembly-static-method
 browser-compat: javascript.builtins.WebAssembly.Module.imports
 ---
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.imports()`** function returns an array
+The **`WebAssembly.Module.imports()`** function returns an array
 containing descriptions of all the declared imports of the given `Module`.
 
 ## Syntax

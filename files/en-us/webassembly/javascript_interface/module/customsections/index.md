@@ -1,12 +1,13 @@
 ---
 title: WebAssembly.Module.customSections()
 slug: WebAssembly/JavaScript_interface/Module/customSections
+page-type: webassembly-static-method
 browser-compat: javascript.builtins.WebAssembly.Module.customSections
 ---
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.customSections()`** function returns a copy
+The **`WebAssembly.Module.customSections()`** function returns a copy
 of the contents of all custom sections in the given module with the given string name.
 
 ## Syntax

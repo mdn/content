@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Tag
 slug: WebAssembly/JavaScript_interface/Tag
+page-type: webassembly-interface
 browser-compat: javascript.builtins.WebAssembly.Tag
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: return
 slug: WebAssembly/Reference/Control_flow/return
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

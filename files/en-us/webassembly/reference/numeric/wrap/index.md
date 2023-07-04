@@ -1,6 +1,7 @@
 ---
 title: Wrap
 slug: WebAssembly/Reference/Numeric/Wrap
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

@@ -1,6 +1,7 @@
 ---
 title: WebAssembly
 slug: WebAssembly
+page-type: landing-page
 browser-compat: javascript.builtins.WebAssembly
 ---
 

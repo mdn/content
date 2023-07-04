@@ -1,6 +1,7 @@
 ---
 title: Square root
 slug: WebAssembly/Reference/Numeric/Square_root
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

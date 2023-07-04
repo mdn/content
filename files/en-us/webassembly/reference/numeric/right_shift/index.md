@@ -1,6 +1,7 @@
 ---
 title: Right shift
 slug: WebAssembly/Reference/Numeric/Right_shift
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

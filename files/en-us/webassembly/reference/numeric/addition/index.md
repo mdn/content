@@ -1,6 +1,7 @@
 ---
 title: Addition
 slug: WebAssembly/Reference/Numeric/Addition
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}
