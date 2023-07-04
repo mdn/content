@@ -197,7 +197,10 @@ This doesn't have to be limited to images, or even files of the same type — th
 
 ## Scripting and preloads
 
-Another nice thing about these preloads is that you can execute them with script. For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:
+> **Note:** Use [`<link rel="modulepreload">`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) instead if you are working with [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
+
+Another nice thing about these preloads is that you can execute them with script.
+For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:
 
 ```js
 const preloadLink = document.createElement("link");
