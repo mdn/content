@@ -36,6 +36,8 @@ table-layout: unset;
 
     Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.
 
+    > **Note:** If the table width has a value of `auto` then the automatic table layout is used instead. The fixed layout is _not_ used.
+
 ## Formal definition
 
 {{CSSInfo}}
