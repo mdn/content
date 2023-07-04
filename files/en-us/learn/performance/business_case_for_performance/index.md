@@ -1,6 +1,7 @@
 ---
 title: The business case for web performance
 slug: Learn/Performance/business_case_for_performance
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/CSS", "Learn/Performance/Web_Performance_Basics", "Learn/Performance")}}

@@ -1,6 +1,7 @@
 ---
 title: Firefox 19 for developers
 slug: Mozilla/Firefox/Releases/19
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

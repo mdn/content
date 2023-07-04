@@ -1,6 +1,7 @@
 ---
 title: How do I start to design my website?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

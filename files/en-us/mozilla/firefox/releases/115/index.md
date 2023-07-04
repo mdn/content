@@ -1,6 +1,7 @@
 ---
 title: Firefox 115 for developers
 slug: Mozilla/Firefox/Releases/115
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

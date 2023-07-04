@@ -31,10 +31,10 @@ First of all, if the `<iframe>` is sandboxed, the embedding website needs to add
 
 Now on to the code executed inside the embedded document. In this code:
 
-1. We first use feature detection (`if (document.hasStorageAccess === null) {}`) to check whether the API is supported. If not, we run our code that accesses cookies anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
+1. We first use feature detection (`if (document.hasStorageAccess) {}`) to check whether the API is supported. If not, we run our code that accesses cookies anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
 2. If the API is supported, we call `document.hasStorageAccess()`.
 3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies right away.
-4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access unpartitioned cookies has already been granted (i.e. to another same-site embed).
+4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access unpartitioned cookies has already been granted (i.e. to another same-site embed). We wrap this whole section in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because some browsers don't support the `"storage-access"` permission, which can cause the `query()` call to throw. If it throws, we report that to the console and try running the cookie code anyway.
 5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies.
 6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies.
 7. If the permission state is `"denied"`, the user has denied our requests to access unpartitioned cookies, and our code cannot make use of them.
@@ -45,7 +45,7 @@ function doThingsWithCookies() {
 }
 
 async function handleCookieAccess() {
-  if (document.hasStorageAccess === null) {
+  if (document.hasStorageAccess) {
     // This browser doesn't support the Storage Access API
     // so let's just hope we have access!
     doThingsWithCookies();
@@ -57,30 +57,35 @@ async function handleCookieAccess() {
     } else {
       // Check whether unpartitioned cookie access has been granted
       // to another same-site embed
-      const permission = await navigator.permissions.query({
-        name: "storage-access",
-      });
-
-      if (permission.state === "granted") {
-        // If so, you can just call requestStorageAccess() without a user interaction,
-        // and it will resolve automatically.
-        await document.requestStorageAccess();
-        doThingsWithCookies();
-      } else if (permission.state === "prompt") {
-        // Need to call requestStorageAccess() after a user interaction
-        btn.addEventListener("click", async () => {
-          try {
-            await document.requestStorageAccess();
-            doThingsWithCookies();
-          } catch (err) {
-            // If there is an error obtaining storage access.
-            console.error(`Error obtaining storage access: ${err}.
-                          Please sign in.`);
-          }
+      try {
+        const permission = await navigator.permissions.query({
+          name: "storage-access",
         });
-      } else if (permission.state === "denied") {
-        // User has denied unpartitioned cookie access, so we'll
-        // need to do something else
+
+        if (permission.state === "granted") {
+          // If so, you can just call requestStorageAccess() without a user interaction,
+          // and it will resolve automatically.
+          await document.requestStorageAccess();
+          doThingsWithCookies();
+        } else if (permission.state === "prompt") {
+          // Need to call requestStorageAccess() after a user interaction
+          btn.addEventListener("click", async () => {
+            try {
+              await document.requestStorageAccess();
+              doThingsWithCookies();
+            } catch (err) {
+              // If there is an error obtaining storage access.
+              console.error(`Error obtaining storage access: ${err}.
+                            Please sign in.`);
+            }
+          });
+        } else if (permission.state === "denied") {
+          // User has denied unpartitioned cookie access, so we'll
+          // need to do something else
+        }
+      } catch (error) {
+        console.log(`Could not access permission state. Error: ${error}`);
+        doThingsWithCookies(); // Again, we'll have to hope we have access!
       }
     }
   }
