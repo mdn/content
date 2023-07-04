@@ -1,6 +1,7 @@
 ---
 title: Making PWAs work offline with Service workers
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
+page-type: guide
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

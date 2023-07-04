@@ -1,6 +1,7 @@
 ---
 title: How to use promises
 slug: Learn/JavaScript/Asynchronous/Promises
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}

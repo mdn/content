@@ -1,6 +1,7 @@
 ---
 title: How to fix a website with blocked mixed content
 slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

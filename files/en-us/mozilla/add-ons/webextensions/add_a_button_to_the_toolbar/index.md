@@ -203,13 +203,13 @@ While browser actions are always shown, page actions are only shown in tabs wher
 - [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Browser action examples:
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
-  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)
+  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/main/open-my-page-button)
 
 - [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
 - [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Page action examples:
 
-  - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)
+  - [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out)

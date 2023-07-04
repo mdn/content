@@ -1,6 +1,7 @@
 ---
 title: Firefox 22 for developers
 slug: Mozilla/Firefox/Releases/22
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

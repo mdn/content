@@ -1,6 +1,7 @@
 ---
 title: Associate files with your PWA
 slug: Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
+page-type: how-to
 ---
 
 {{PWASidebar}}

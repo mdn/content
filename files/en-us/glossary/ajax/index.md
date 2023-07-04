@@ -15,7 +15,6 @@ With interactive websites and modern web standards, Ajax is performed using func
 ## See also
 
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
-- [Ajax - Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)

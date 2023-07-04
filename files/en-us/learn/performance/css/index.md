@@ -1,6 +1,7 @@
 ---
 title: CSS performance optimization
 slug: Learn/Performance/CSS
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}

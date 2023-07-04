@@ -1,6 +1,7 @@
 ---
 title: Firefox 114 for developers
 slug: Mozilla/Firefox/Releases/114
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: The web and web standards
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
+page-type: guide
 ---
 
 {{learnsidebar}}

@@ -76,7 +76,7 @@ This capability is similar to features present in languages such as Perl and Pyt
 
 ### Binding and assignment
 
-For both object and array destructuring, there are two kinds of destructuring patterns: _binding pattern_ and _assignment pattern_, with slightly different syntaxes.
+For both object and array destructuring, there are two kinds of destructuring patterns: _{{glossary("binding")}} pattern_ and _assignment pattern_, with slightly different syntaxes.
 
 In binding patterns, the pattern starts with a declaration keyword (`var`, `let`, or `const`). Then, each individual property must either be bound to a variable or further destructured.
 

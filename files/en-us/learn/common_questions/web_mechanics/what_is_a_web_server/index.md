@@ -1,6 +1,7 @@
 ---
 title: What is a web server?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

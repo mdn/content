@@ -1,6 +1,7 @@
 ---
 title: Updating themes for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_themes
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
