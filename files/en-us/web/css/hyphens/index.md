@@ -48,6 +48,8 @@ The `hyphens` property is specified as a single keyword value chosen from the li
 
 > **Note:** The `auto` setting's behavior depends on the language being properly tagged to select the appropriate hyphenation rules. You must specify a language using the `lang` HTML attribute to guarantee that automatic hyphenation is applied in that language.
 
+> **Note:** If you apply `word-break: break-all` then no hyphens are shown, even if the word breaks at a hyphenation point.
+
 ## Suggesting line break opportunities
 
 There are two Unicode characters used to manually specify potential line break points within text:
