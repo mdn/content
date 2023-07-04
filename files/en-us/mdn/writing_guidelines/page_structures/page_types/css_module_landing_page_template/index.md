@@ -21,8 +21,8 @@ page-type: mdn-writing-guide
 > slug: Web/CSS/CSS_NameOfTheModule
 > page-type: css-module
 > spec-urls:
->  - url1
->  - url2
+>   - url1
+>   - url2
 > ---
 > ```
 >
@@ -52,7 +52,6 @@ page-type: mdn-writing-guide
 > ---
 >
 > _Remember to remove this note block before publishing._
->
 
 Begin the content on the page with an introductory paragraph, which names the module and says what it does.
 This should ideally be one or two short sentences.
