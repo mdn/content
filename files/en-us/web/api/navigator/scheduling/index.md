@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Navigator.scheduling
 ---
 
-{{SeeCompatTable}}{{APIRef("Scheduling API")}}
+{{SeeCompatTable}}{{APIRef("Prioritized Task Scheduling API")}}
 
-The **`scheduling`** read-only property of the {{domxref("Navigator")}} interface returns an {{domxref("Scheduling")}} object for the current document.
+The **`scheduling`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Scheduling")}} object for the current document, which provides methods and properties to control scheduling tasks.
 
 ## Value
 
@@ -16,20 +16,7 @@ An {{domxref('Scheduling')}} object.
 
 ## Example
 
-```js
-function executeTasks() {
-  const scheduling = navigator.scheduling;
-  const isInputPending = scheduling.isInputPending();
-
-  if (isInputPending) {
-    setTimeout(isInputPending, 0);
-    return;
-  }
-
-  // imagine `tasks` require more time to execution
-  tasks.forEach(() => task.execute());
-}
-```
+See the {{domxref("Scheduling.isInputPending()")}} page for a full example.
 
 ## Specifications
 
@@ -41,4 +28,4 @@ function executeTasks() {
 
 ## See also
 
-- [Early detection of input events](https://wicg.github.io/is-input-pending)
+- [Optimizing long tasks](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) on web.dev (2022)
