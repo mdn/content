@@ -842,7 +842,8 @@ See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
 
 ### Named view progress timelines property
 
-The CSS [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) property lets you give a name to a `view-timeline`, that is referenced with a [`<custom-dent>`](/en-US/docs/Web/CSS/custom-ident), to animate elements as they appear in the scroller.
+The CSS [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) property lets you give a name to particular element, identifying that its ancestor scroller element is the source of a view progress timeline.
+The name can then be assigned to the `animation-timeline`, which then animates the associated element as it moves through the visible area of its ancestor scroller.
 See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
 
 <table>
