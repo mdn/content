@@ -292,7 +292,6 @@
                 "webassembly-interface",
                 "webassembly-instance-property",
                 "webassembly-instance-method",
-                "webassembly-static-property",
                 "webassembly-static-method",
                 "webassembly-instruction"
               ]
