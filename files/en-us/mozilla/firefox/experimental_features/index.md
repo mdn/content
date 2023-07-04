@@ -924,7 +924,8 @@ See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
 
 ### Anonymous view progress timelines function
 
-The CSS [`view()`](/en-US/docs/Web/CSS/animation-timeline/view) function lets you anonymously animate elements as they appear in the scroller.
+The CSS [`view()`](/en-US/docs/Web/CSS/animation-timeline/view) function lets you specify that the `animation-timeline` for an element is a view progress timeline, which will animate the element as it moves through the visible area of its ancestor scroller.
+The function defines the axis of the parent element that supplies the timeline, along with the inset within the visible area at which the animation starts and begins.
 See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
 
 <table>
