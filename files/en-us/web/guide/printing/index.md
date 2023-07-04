@@ -1,6 +1,7 @@
 ---
 title: Printing
 slug: Web/Guide/Printing
+page-type: guide
 ---
 
 <section id="Quick_links">
