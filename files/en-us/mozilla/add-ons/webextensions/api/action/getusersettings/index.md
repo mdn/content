@@ -32,7 +32,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
   - : An object containing the user-specified settings for the browser action with these properties:
 
     - `isOnToolbar` {{optional_inline}}
-      - : `boolean`. Whether the user has pinned the browser action's icon to the browser's toolbar.
+      - : `boolean`. Whether the user has pinned the action's icon to the chrome. This setting does not indicate whether the action icon is visible in the chrome. The icon's visibility depends on the size of the browser window and layout of the chrome.
 
 ## Examples
 
