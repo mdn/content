@@ -1,6 +1,7 @@
 ---
 title: What text editors are available?
 slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

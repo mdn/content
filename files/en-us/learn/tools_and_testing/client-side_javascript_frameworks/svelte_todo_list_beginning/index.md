@@ -1,6 +1,7 @@
 ---
 title: Starting our Svelte to-do list app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

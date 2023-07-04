@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: JSON"
 slug: Learn/JavaScript/Objects/Test_your_skills:_JSON
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

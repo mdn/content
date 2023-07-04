@@ -1,6 +1,7 @@
 ---
 title: MathML tables
 slug: Learn/MathML/First_steps/Tables
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}

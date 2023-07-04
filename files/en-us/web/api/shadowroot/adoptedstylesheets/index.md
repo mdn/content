@@ -16,7 +16,7 @@ The same constructed stylesheet can be adopted by multiple {{domxref("ShadowRoot
 Changing an adopted stylesheet will affect all the adopting objects.
 
 Stylesheets in the `adoptedStyleSheets` property are considered along with the shadow DOM's other stylesheets.
-For the purpose of determining the final computed CSS of any element, they are considered to have been added _after_ the other stylesheets in the shadow DOM ([`ShadowRoot.styleSheets`](/en-US/docs/Web/API/Document/styleSheets)).
+For the purpose of determining the final computed CSS of any element, they are considered to have been added _after_ the other stylesheets in the shadow DOM ([`ShadowRoot.styleSheets`](/en-US/docs/Web/API/ShadowRoot/styleSheets)).
 
 Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet), and from within the same parent {{domxref("Document")}} as the shadow root, may be adopted.
 

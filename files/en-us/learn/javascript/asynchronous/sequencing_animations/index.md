@@ -1,6 +1,7 @@
 ---
 title: Sequencing animations
 slug: Learn/JavaScript/Asynchronous/Sequencing_animations
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}

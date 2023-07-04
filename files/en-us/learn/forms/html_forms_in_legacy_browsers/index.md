@@ -1,6 +1,7 @@
 ---
 title: HTML forms in legacy browsers
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
+page-type: guide
 ---
 
 {{LearnSidebar}}

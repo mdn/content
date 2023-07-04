@@ -1,6 +1,7 @@
 ---
 title: Firefox 21 for developers
 slug: Mozilla/Firefox/Releases/21
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
