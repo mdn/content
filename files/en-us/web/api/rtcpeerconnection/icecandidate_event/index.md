@@ -36,10 +36,12 @@ An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
+_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements the following property_.
 
 - {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
-  - : Indicates the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or the empty string if this event indicates that there are no further candidates to come.
+  - : Indicates the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event.
+  - : The empty string if this event indicates that there are no further candidates to come in this **generation**.
+  - : `null` if all ICE gathering on all transports is complete.
 
 ## Description
 
@@ -73,7 +75,7 @@ The end-of-candidates indication is described in [section 9.3 of the Trickle ICE
 
 Once all ICE transports have finished gathering candidates and the value of the {{domxref("RTCPeerConnection")}} object's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has made the transition to `complete`, an `icecandidate` event is sent with the value of `candidate` set to `null`.
 
-This signal exists for backward compatibility purposes and does _not_ need to be delivered onward to the remote peer (which is why the code snippet above checks to see if `event.candidate` is `null` prior to sending the candidate along.
+This signal exists for backward compatibility purposes and does _not_ need to be delivered onward to the remote peer (which is why the code snippet above checks to see if `event.candidate` is `null` prior to sending the candidate along).
 
 If you need to perform any special actions when there are no further candidates expected, you're much better off watching the ICE gathering state by watching for {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events:
 
