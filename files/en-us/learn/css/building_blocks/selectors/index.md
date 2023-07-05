@@ -1,6 +1,7 @@
 ---
 title: CSS selectors
 slug: Learn/CSS/Building_blocks/Selectors
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}

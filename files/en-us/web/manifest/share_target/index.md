@@ -1,6 +1,7 @@
 ---
 title: share_target
 slug: Web/Manifest/share_target
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.share_target

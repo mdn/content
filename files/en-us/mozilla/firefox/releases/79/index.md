@@ -1,6 +1,7 @@
 ---
 title: Firefox 79 for developers
 slug: Mozilla/Firefox/Releases/79
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

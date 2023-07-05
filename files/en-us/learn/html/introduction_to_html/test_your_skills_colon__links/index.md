@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Links"
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

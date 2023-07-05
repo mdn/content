@@ -1,6 +1,7 @@
 ---
 title: State Partitioning
 slug: Web/Privacy/State_Partitioning
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}

@@ -51,14 +51,13 @@ comparing the modification dates of documents. Here is a possible example of how
 an alert message when the page changes (see also: [JavaScript cookies API](/en-US/docs/Web/API/Document/cookie)):
 
 ```js
+// Match 'timestamp' in 'last_modif=timestamp'
+// e.g. '1687964614822' in 'last_modif=1687964614822'
+const pattern = /last_modif\s*=\s*([^;]*)/;
+
 if (
   Date.parse(document.lastModified) >
-  parseFloat(
-    document.cookie.replace(
-      /(?:(?:^|.*;)\s*last_modif\s*=\s*([^;]*).*$)|^.*$/,
-      "$1"
-    ) || "0"
-  )
+  (parseFloat(document.cookie.match(pattern)?.[1]) || 0)
 ) {
   document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
     location.pathname
@@ -70,15 +69,12 @@ if (
 …the same example, but skipping the first visit:
 
 ```js
-const lastVisit = parseFloat(
-  document.cookie.replace(
-    /(?:(?:^|.*;)\s*last_modif\s*=\s*([^;]*).*$)|^.*$/,
-    "$1"
-  )
-);
+const pattern = /last_modif\s*=\s*([^;]*)/;
+
+const lastVisit = parseFloat(document.cookie.replace(pattern, "$1"));
 const lastModif = Date.parse(document.lastModified);
 
-if (isNaN(lastVisit) || lastModif > lastVisit) {
+if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
   document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
     location.pathname
   }`;

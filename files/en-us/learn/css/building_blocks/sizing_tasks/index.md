@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Sizing"
 slug: Learn/CSS/Building_blocks/Sizing_tasks
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

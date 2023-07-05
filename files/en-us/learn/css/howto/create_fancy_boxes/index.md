@@ -1,6 +1,7 @@
 ---
-title: create fancy boxes
-slug: Learn/CSS/Howto/create_fancy_boxes
+title: Create fancy boxes
+slug: Learn/CSS/Howto/Create_fancy_boxes
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

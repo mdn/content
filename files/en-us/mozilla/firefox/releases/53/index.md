@@ -1,6 +1,7 @@
 ---
 title: Firefox 53 for developers
 slug: Mozilla/Firefox/Releases/53
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

@@ -185,17 +185,17 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Defines a given color according to its hue, saturation, lightness and alpha (transparency) components.
 - {{CSSxRef("color_value/hwb", "hwb()")}}
   - : Defines a given color according to its hue, whiteness and blackness components.
-- {{CSSxRef("color_value/lch", "lch()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/lch", "lch()")}}
   - : Defines a given color according to its lightness, chroma and hue components.
-- {{CSSxRef("color_value/oklch", "oklch()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/oklch", "oklch()")}}
   - : Defines a given color according to its lightness, chroma, hue and alpha (transparency) components.
-- {{CSSxRef("color_value/lab", "lab()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/lab", "lab()")}}
   - : Defines a given color according to its lightness, a-axis distance and b-axis distance in the lab colorspace.
-- {{CSSxRef("color_value/oklab", "oklab()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/oklab", "oklab()")}}
   - : Defines a given color according to its lightness, a-axis distance, b-axis distance in the lab colorspace and alpha (transparency).
-- {{CSSxRef("color_value/color", "color()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/color", "color()")}}
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
-- {{CSSxRef("color_value/color-mix", "color-mix()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/color-mix", "color-mix()")}}
   - : Mixes two color values in a given colorspace by a given amount.
 - {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
   - : Selects the highest color contrast from a list of colors, compare to a base color value.

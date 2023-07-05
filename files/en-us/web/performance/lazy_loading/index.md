@@ -1,6 +1,7 @@
 ---
 title: Lazy loading
 slug: Web/Performance/Lazy_loading
+page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
 

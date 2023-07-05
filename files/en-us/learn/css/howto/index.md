@@ -1,6 +1,7 @@
 ---
 title: Use CSS to solve common problems
 slug: Learn/CSS/Howto
+page-type: landing-page
 ---
 
 {{LearnSidebar}}

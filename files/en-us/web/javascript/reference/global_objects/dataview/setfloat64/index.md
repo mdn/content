@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.DataView.setFloat64
 
 {{JSRef}}
 
-The **`setFloat64()`** method stores a signed 64-bit float
-(double) value at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`setFloat64()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 64-bit float in the 8 bytes starting at the specified byte offset of this `DataView`.
 
 {{EmbedInteractiveExample("pages/js/dataview-setfloat64.html")}}
 

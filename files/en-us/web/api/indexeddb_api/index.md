@@ -19,7 +19,6 @@ IndexedDB is a transactional database system, like an SQL-based RDBMS. However, 
 
 - Read more about [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology).
 - Learn to use IndexedDB asynchronously from first principles with our [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) guide.
-- Combine IndexedDB for storing data offline with Service Workers for storing assets offline, as outlined in [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers).
 
 > **Note:** Like most web storage solutions, IndexedDB follows a [same-origin policy](https://www.w3.org/Security/wiki/Same_Origin_Policy). So while you can access stored data within a domain, you cannot access data across different domains.
 
@@ -80,12 +79,7 @@ This specification fires events with the following custom interface:
 
 ## See also
 
-- [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to Web SQL (deprecated) and then localStorage in browsers that don't support IndexedDB.
-- [Dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
-- [JsStore](https://jsstore.net/): An IndexedDB wrapper with SQL like syntax.
-- [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory mongodb backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
-- [PouchDB](https://pouchdb.com): A client-side implementation of CouchDB in the browser using IndexedDB
-- [idb](https://www.npmjs.com/package/idb): A tiny (\~1.15k) library that mostly mirrors the IndexedDB API, but with small improvements that make a big difference to usability.
-- [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
-- [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.
-- [RxDB](https://rxdb.info/) A NoSQL client side database that can be used on top of IndexedDB. Supports indexes, compression and replication. Also adds cross tab functionality and observability to IndexedDB.
+- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
+- [Window: localStorage property](/en-US/docs/Web/API/Window/localStorage)
+- [Window: sessionStorage property](/en-US/docs/Web/API/Window/sessionStorage)
+- [StorageEvent](/en-US/docs/Web/API/StorageEvent)
