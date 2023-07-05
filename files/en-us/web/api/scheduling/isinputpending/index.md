@@ -54,7 +54,7 @@ async function main() {
 }
 ```
 
-This allows you to avoid blocking the main thread when the user is actively interacting with the page, potentially providing a smoother user experience.
+This allows you to avoid blocking the main thread when the user is actively interacting with the page, potentially providing a smoother user experience. However, by only yielding when necessary, we can continue running the current task when that is not necessary, therefore avoiding tasks being placed at the back of the queue behind any non-input related tasks that were scheduled after the current one.
 
 ## Specifications
 
