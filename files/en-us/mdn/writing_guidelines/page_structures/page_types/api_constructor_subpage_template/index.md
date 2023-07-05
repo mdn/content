@@ -13,7 +13,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >
 > **Page front matter:**
 >
-> The frontmatter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the constructor.
 >
 > ```md
@@ -53,7 +53,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+> A number of macro calls appear at the top of the content section (immediately below the page front matter).
 > You should update or delete them according to the advice below:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
@@ -69,12 +69,14 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> _Remember to remove this whole explanatory note before publishing_
+> A sample of the **Experimental**, **Secure context**, and **Deprecated** banners is shown right after this note block.
+>
+> _Remember to remove this whole explanatory note before publishing._
 
 {{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
 
-The summary paragraph — start by naming the constructor, and saying what it does.
-This should ideally be 1 or 2 short sentences.
+Begin the content on the page with an introductory paragraph — start by naming the constructor and saying what it does.
+This should ideally be one or two short sentences.
 You could copy most of this from the constructor's summary on the corresponding API reference page.
 
 ## Syntax

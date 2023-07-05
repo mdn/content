@@ -7,7 +7,7 @@ browser-compat: path.to.feature.NameOfTheInterface
 
 {{MDNSidebar}}
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> **Note:** _Remove this whole explanatory note before publishing._
 >
 > ---
 >
@@ -56,6 +56,10 @@ browser-compat: path.to.feature.NameOfTheInterface
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts). If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
 > - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). If it isn't, then you can remove the macro call.
 > - `\{{Interface_Overview("<em>GroupDataName</em>")}} {{Experimental_Inline}}` — this generates the main body of the page (Constructor, Properties, Methods and Events).
+>
+> A sample of the **Experimental**, **Secure context**, and **Deprecated** banners is shown right after this note block.
+>
+> _Remember to remove this whole explanatory note before publishing._
 
 {{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
 
@@ -63,46 +67,56 @@ The summary paragraph — start by naming the interface, saying what API it is p
 
 {{InheritanceDiagram}}
 
+_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) in the sections below, remove the backticks and backslash in the markdown file._
+
 ## Constructor
 
-- {{DOMxRef("NameOfTheInterface.NameOfTheInterface", "NameOfTheInterface()")}}
-  - : Creates a new instance of the {{DOMxRef("NameOfTheInterface")}} object.
+- `\{{DOMxRef("NameOfTheInterface.NameOfTheInterface", "NameOfTheInterface()")}}`
+  - : Creates a new instance of the `NameOfTheInterface` object.
 
 ## Static properties
 
-_Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+_Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
-- {{DOMxRef("NameOfTheInterface.staticProperty1")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Include a brief description of the property and what it does here. Include one term and definition for each property. If the property is not readonly/experimental/deprecated, remove the relevant macro calls.
-- {{DOMxRef("NameOfTheInterface.staticProperty2")}}
-  - : etc.
+Include one term and definition for each property.
+
+- `\{{DOMxRef("NameOfTheInterface.staticProperty1")}}` {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.staticProperty2")}}`
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
 
 ## Instance properties
 
-_Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+_Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
-- {{DOMxRef("NameOfTheInterface.property1")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Include a brief description of the property and what it does here. Include one term and definition for each property. If the property is not readonly/experimental/deprecated, remove the relevant macro calls.
-- {{DOMxRef("NameOfTheInterface.property2")}}
-  - : etc.
+Include one term and definition for each property.
+
+- `\{{DOMxRef("NameOfTheInterface.property1")}}` {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.property2")}}`
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
 
 ## Static methods
 
-_Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+_Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
-- {{DOMxRef("NameOfTheInterface.staticMethod1()")}} {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : Include a brief description of the method and what it does here. Include one term and definition for each method. If the method is not experimental/deprecated, remove the relevant macro calls.
-- {{DOMxRef("NameOfTheInterface.staticMethod2()")}}
-  - : etc.
+Include one term and definition for each method.
+
+- `\{{DOMxRef("NameOfTheInterface.staticMethod1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.staticMethod2()")}}`
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
 
 ## Instance methods
 
-_Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+_Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
-- {{DOMxRef("NameOfTheInterface.method1()")}} {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : Include a brief description of the method and what it does here. Include one term and definition for each method. If the method is not experimental/deprecated, remove the relevant macro calls.
-- {{DOMxRef("NameOfTheInterface.method2()")}}
-  - : etc.
+Include one term and definition for each method.
+
+- `\{{DOMxRef("NameOfTheInterface.method1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.method2()")}}`
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
 
 ## Events
 
@@ -114,8 +128,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - [`eventname2`](#)
   - : Fired when _(include a description of when the event fires)_.
     Also available via the `oneventname2` property.
-- etc.
-  - : Fired when…
 
 ## Examples
 
@@ -159,9 +171,13 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 `\{{Specifications}}`
 
+_To use this macro, remove the backticks and backslash in the markdown file._
+
 ## Browser compatibility
 
 `\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 

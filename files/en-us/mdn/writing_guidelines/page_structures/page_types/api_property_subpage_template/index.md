@@ -7,7 +7,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 
 {{MDNSidebar}}
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> **Note:** _Remove this whole explanatory note before publishing._
 >
 > ---
 >
@@ -70,15 +70,16 @@ browser-compat: path.to.feature.NameOfTheProperty
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
->   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> _Remember to remove this whole explanatory note before publishing_
+> A sample of the **Experimental**, **Secure context**, and **Deprecated** banners is shown right after this note block.
+>
+> _Remember to remove this whole explanatory note before publishing._
 
 {{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
 
-The summary paragraph — start by naming the property, saying what interface it is part of, and saying what it does.
-This should ideally be 1 or 2 short sentences.
+Begin the content on the page with an introductory paragraph — start by naming the property, saying what interface it is part of, and saying what it does.
+This should ideally be one or two short sentences.
 You could copy most of this from the property's summary on the corresponding API reference page. Include whether it is read-only or not.
 
 ## Value
@@ -127,9 +128,13 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 `\{{Specifications}}`
 
+_To use this macro, remove the backticks and backslash in the markdown file._
+
 ## Browser compatibility
 
 `\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
