@@ -146,5 +146,5 @@ If you want to be able to print an external page without opening it, you can uti
 - [`window.print`](/en-US/docs/Web/API/Window/print)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} event
 - {{ domxref("window.afterprint_event", "afterprint") }} event
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("@media")}}
