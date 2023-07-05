@@ -84,3 +84,5 @@ document.body.appendChild(img);
 
 - The {{domxref("HTMLImageElement.decode()")}} method
 - The {{htmlelement("img")}} element `decoding` attribute.
+- [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) on tunetheweb.com (2023)
+- 
