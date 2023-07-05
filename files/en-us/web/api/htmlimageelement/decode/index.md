@@ -54,10 +54,7 @@ low-resolution image with the full-resolution one that's now available.
 ### Basic usage
 
 The following example shows how to use the `decode()` method to control when
-an image is appended to the DOM. Without a {{jsxref('Promise')}}-returning method, you
-would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler, such as by using
-the {{domxref("HTMLImageElement.load_event", "img.onload")}} event handler, and by
-handling the error in the {{domxref("Element/error_event", "error")}} event's handler.
+an image is appended to the DOM.
 
 ```js
 const img = new Image();
@@ -71,6 +68,10 @@ img
     // Do something with the error.
   });
 ```
+
+> **Note:** Without a {{jsxref('Promise')}}-returning method, you
+> would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler,
+> and handle the error in the {{domxref("Element/error_event", "error")}} event's handler.
 
 ### Avoiding empty images
 
@@ -105,3 +106,8 @@ This is particularly useful if you're dynamically swapping an existing image for
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) on tunetheweb.com (2023)
+- The {{domxref("HTMLImageElement.decoding")}} property

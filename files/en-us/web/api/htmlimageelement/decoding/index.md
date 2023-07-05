@@ -19,15 +19,18 @@ A string representing the decoding hint. Possible values are:
 - `"async"`
   - : Decode the image asynchronously and allow other content to be rendered before this completes.
 - `"auto"`
-  - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value, but different browsers have different default values — Chromium defaults to `"sync"`, Firefox defaults to `"async"`, and Safari seems to use different values in different circumstances.
+  - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value, but different browsers have different defaults:
+    - Chromium defaults to `"sync"`.
+    - Firefox defaults to `"async"`.
+    - Safari defaults to `"sync"` except in a small number of circumstances.
 
 ## Usage notes
 
-In theory, this property provides a hint to the browser as to whether it should perform image decoding along with other tasks in a single step (`"sync"`), or allow other content to be rendered before this completes. (`"async"`). In reality, the `decoding` attribute for APIs is often not that useful, and there are often better ways of handling this.
+The `decoding` property provides a hint to the browser as to whether it should perform image decoding along with other tasks in a single step (`"sync"`), or allow other content to be rendered before this completes (`"async"`). In reality, the differences between the two values are often difficult to perceive and, where there are differences, there is often a better way.
 
-For images that are not downloaded before being inserted into the DOM, the browser will likely render the empty image initially, and then handle the image when it is available, independently of the other content anyway.
+For images that are inserted into the DOM inside the viewport, `"async"` can result in flashes of unstyled content, while `"sync"` can result in small amounts of jank. Using the {{domxref("HTMLImageElement.decode()")}} method is usually a better way to achieve atomic presentation without holding up other content.
 
-For images that are downloaded before being inserted into the DOM, using the {{domxref("HTMLImageElement.decode()")}} method is a better way to assure atomic presentation without holding up other content.
+For images inserted into the DOM outside of the viewport, modern browsers will usually decode them before they are scrolled into view and there will be no noticeable difference using either value.
 
 ## Examples
 
@@ -83,6 +86,5 @@ document.body.appendChild(img);
 ## See also
 
 - The {{domxref("HTMLImageElement.decode()")}} method
-- The {{htmlelement("img")}} element `decoding` attribute.
+- The {{htmlelement("img")}} element `decoding` attribute
 - [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) on tunetheweb.com (2023)
-- 

@@ -74,5 +74,5 @@ This is particularly useful if you're dynamically swapping an existing image for
 
 ## See also
 
-- {{domxref("HTMLImageElement.decode()")}}: The same thing, but for HTML
-  {{HTMLElement("image")}} elements
+- {{domxref("HTMLImageElement.decode()")}}: The same thing, but for HTML `<img>` elements
+- [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) on tunetheweb.com (2023)
