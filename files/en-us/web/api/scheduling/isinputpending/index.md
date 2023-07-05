@@ -24,7 +24,7 @@ isInputPending(options)
 - `options` {{optional_inline}}
   - : An object providing options. Currently, the only option is:
     - `includeContinuous` {{optional_inline}}
-      - : A boolean, which is `false` by default. If set to `true`, it indicates that continuous events should be considered when checking for pending input. Continuous events are trusted events (which are events dispatched by the browser) that are fired successively, such as [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event), [`wheel`](/en-US/docs/Web/API/Element/wheel_event), [`touchmove`](/en-US/docs/Web/API/Element/touchmove_event), [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event), [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event), and [`pointerrawupdate`](/en-US/docs/Web/API/Element/pointerrawupdate_event).
+      - : A {{jsxref("Boolean")}}, which is `false` by default. If set to `true`, it indicates that continuous events should be considered when checking for pending input. Continuous events are trusted events (which are events dispatched by the browser) that are fired successively, such as {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("HTMLElement/drag_event", "drag")}}, {{domxref("Element/pointermove_event", "pointermove")}}, and {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}.
 
 ### Return value
 
