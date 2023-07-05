@@ -45,9 +45,9 @@ Before invoking a conditional WebAuthn API call, check if:
 ```js
 // Availability of `window.PublicKeyCredential` means WebAuthn is usable.
 if (window.PublicKeyCredential &&
-    PublicKeyCredential.​​isConditionalMediationAvailable) {
+    PublicKeyCredential.isConditionalMediationAvailable) {
   // Check if conditional mediation is available.
-  const isCMA = await PublicKeyCredential.​​isConditionalMediationAvailable();
+  const isCMA = await PublicKeyCredential.isConditionalMediationAvailable();
   if (isCMA) {
     // Call WebAuthn authentication
     const publicKeyCredentialRequestOptions = {
