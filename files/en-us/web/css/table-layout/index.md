@@ -30,12 +30,12 @@ table-layout: unset;
 
 - `auto`
 
-  - : By default, most browsers use an automatic table layout algorithm. The widths of the table and its cells are adjusted to fit the content.
+  - : The automatic table layout algorithm is used. The widths of the table and its cells are adjusted to fit the content. Most browsers use this algorithm by default.
 
 - `fixed`
 
-  - : For this value the table's _width needs to be specified explicitly_ with the `width` property. The `width` value `auto` makes UA use the automatic table layout algorithm, in such case this value has no effect.\
-    This is a faster algorithm, because the horizontal layout of the table depends only on the table's width, the width of the columns, and borders or cell spacing. The horizontal layout doesn't depend on the contents of the cells, because it depends only on explicitly set widths.
+  - : The fixed table layout algorithm is used. When using this keyword, the table's width _needs to be specified explicitly_ using the [`width`](/en-US/docs/Web/CSS/width) property. If the value of the `width` property is set to `auto`or is not specified, the browser uses the automatic table layout algorithm, in which case the `fixed` value has no effect.\
+    The fixed table layout algorithm is faster than the automatic layout algorithm because the horizontal layout of the table depends only on the table's width, the width of the columns, and borders or cell spacing. The horizontal layout doesn't depend on the contents of the cells because it depends only on explicitly set widths.
 
     In the fixed table layout algorithm, the width of each column is determined as follows:
 
