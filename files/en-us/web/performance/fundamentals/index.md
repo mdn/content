@@ -110,7 +110,7 @@ The first important thing for high frame rate is to choose the right tool. Use H
 
 For content drawn using Canvas, it's up to the developer to hit frame rate targets: they have direct control over what's drawn.
 
-For HTML and CSS content, the path to high frame rate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling frame rate over a target. CSS [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
+For HTML and CSS content, the path to high frame rate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling frame rate over a target. CSS [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
 
 Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:
 

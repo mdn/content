@@ -195,7 +195,7 @@ Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("
 
 To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
 
-> **Note:** The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
+> **Note:** The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 
 #### Selector support
 
@@ -259,7 +259,7 @@ If you do need to include modern features, test for feature support using [`@sup
 
 #### Responsive design problems
 
-Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/Media_Queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [our guide to responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design).
+Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/CSS_media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [our guide to responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design).
 
 Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from [media queries](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design#media_queries) to more complex [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('image')}} element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
 

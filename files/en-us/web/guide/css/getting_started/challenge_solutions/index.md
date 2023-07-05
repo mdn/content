@@ -273,7 +273,7 @@ The challenges on page [Tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_ta
 
 ## Media
 
-The challenges on page [Media](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) are:
+The challenges on page [Media](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) are:
 
 ### Separate print style file
 
