@@ -45,3 +45,4 @@ Allowed values:
 ## See also
 
 - [SVGImageElement: decoding property](/en-US/docs/Web/API/SVGImageElement/decoding)
+- [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) on tunetheweb.com (2023)
