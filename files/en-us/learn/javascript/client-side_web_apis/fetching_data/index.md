@@ -1,6 +1,7 @@
 ---
 title: Fetching data from the server
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

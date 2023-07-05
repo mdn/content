@@ -334,7 +334,7 @@ setX(6);
 console.log(getX()); // 6
 ```
 
-Closures can close over imported values as well, which are regarded as _live bindings_, because when the original value changes, the imported one changes accordingly.
+Closures can close over imported values as well, which are regarded as _live {{glossary("binding", "bindings")}}_, because when the original value changes, the imported one changes accordingly.
 
 ```js
 // myModule.js

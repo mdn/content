@@ -1,6 +1,7 @@
 ---
 title: Video player styling basics
 slug: Web/Guide/Audio_and_video_delivery/Video_player_styling_basics
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}

@@ -1,6 +1,7 @@
 ---
 title: Firefox tracking protection
 slug: Web/Privacy/Firefox_tracking_protection
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}

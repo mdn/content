@@ -1,6 +1,7 @@
 ---
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
+page-type: guide
 ---
 
 <section id="Quick_links">

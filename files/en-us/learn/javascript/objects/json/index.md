@@ -1,6 +1,7 @@
 ---
 title: Working with JSON
 slug: Learn/JavaScript/Objects/JSON
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

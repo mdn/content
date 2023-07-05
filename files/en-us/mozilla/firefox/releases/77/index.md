@@ -1,6 +1,7 @@
 ---
 title: Firefox 77 for developers
 slug: Mozilla/Firefox/Releases/77
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

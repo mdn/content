@@ -1,6 +1,7 @@
 ---
 title: Progressive web app structure
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
+page-type: guide
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
