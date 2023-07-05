@@ -840,6 +840,89 @@ See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
   </tbody>
 </table>
 
+### Named view progress timelines property
+
+The CSS [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) property lets you give a name to a `view-timeline`, that is referenced with a [`<custom-dent>`](/en-US/docs/Web/CSS/custom-ident), to animate elements as they appear in the scroller.
+See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Anonymous view progress timelines function
+
+The CSS [`view()`](/en-US/docs/Web/CSS/animation-timeline/view) function lets you specify that the `animation-timeline` for an element is a view progress timeline, which will animate the element as it moves through the visible area of its ancestor scroller.
+The function defines the axis of the parent element that supplies the timeline, along with the inset within the visible area at which the animation starts and begins.
+See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### offset-position property
 
 The CSS {{cssxref("offset-position")}} property defines the initial position of an element on a path. A new keyword called `normal` has been added to the syntax of the property. When using this keyword, the initial starting position of an element on an {{cssxref("offset-path")}} depends on the CSS function used – {{cssxref("path")}} or {{cssxref("ray")}} – to specify the value of the `offset-path` property. For more information, see {{cssxref("offset-position")}}. See ([Firefox bug 1559232](https://bugzil.la/1559232)) for more details.
