@@ -30,7 +30,7 @@ If used as a getter, returns the object's `[[Prototype]]`.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if attempting to set the prototype of a [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible) object or an [immutable prototype exotic object](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window).
+  - : Thrown if attempting to set the prototype of a [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible) object or an [immutable prototype exotic object](https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window).
 
 ## Description
 

@@ -1,6 +1,7 @@
 ---
 title: Floats
 slug: Learn/CSS/CSS_layout/Floats
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
@@ -340,6 +341,7 @@ In your CSS, add the following rule for the `.wrapper` class and then reload the
   background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
+  overflow: auto;
 }
 ```
 
@@ -386,6 +388,7 @@ body {
   background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
+  overflow: auto;
 }
 
 .box {

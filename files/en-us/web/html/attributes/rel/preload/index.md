@@ -149,7 +149,7 @@ Not only are we providing the MIME type hints in the `type` attributes, but we a
 
 ## Including media
 
-One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Element/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), allowing you to do responsive preloading!
+One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Element/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), allowing you to do responsive preloading!
 
 Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
 
@@ -189,7 +189,7 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 </body>
 ```
 
-We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for more).
+We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for more).
 
 This makes it much more likely that the font will be available for the page render, cutting down on FOUT (flash of unstyled text).
 
@@ -221,7 +221,7 @@ This is useful when you want to preload a script, but then defer execution until
 
 Other preloading features exist, but none are quite as fit for purpose as `<link rel="preload">`:
 
-- `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the **_next_** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See [Link prefetching FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) for more details.
+- `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the **_next_** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See {{Glossary("prefetch")}} for more details.
 - `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users' bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/) instead.
 - `<link rel="subresource">` {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as `preload`, but it had a problem: there was no way to work out a priority for the items (`as` didn't exist back then), so they all got fetched with fairly low priority.
 - There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.

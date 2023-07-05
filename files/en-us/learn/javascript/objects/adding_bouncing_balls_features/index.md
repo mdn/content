@@ -1,6 +1,7 @@
 ---
 title: Adding features to our bouncing balls demo
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

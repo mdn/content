@@ -1,6 +1,7 @@
 ---
 title: Measuring performance
 slug: Learn/Performance/Measuring_performance
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}

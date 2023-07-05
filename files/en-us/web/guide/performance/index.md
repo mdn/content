@@ -1,6 +1,7 @@
 ---
 title: Optimization and performance
 slug: Web/Guide/Performance
+page-type: landing-page
 ---
 
 <section id="Quick_links">

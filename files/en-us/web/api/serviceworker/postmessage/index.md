@@ -67,9 +67,9 @@ In order to receive the message, the service worker, in `service-worker.js` has 
 
 ```js
 // This must be in `service-worker.js`
-addEventListener("message", (event) =>
+addEventListener("message", (event) => {
   console.log(`Message received: ${event.data}`);
-);
+});
 ```
 
 Note that the service worker can send back messages to the main thread using the {{domxref("Client.postMessage()", "postMessage()")}} method. To receive it, the main thread needs to listen for a {{domxref("ServiceWorkerContainer.message_event", "message")}} event on the {{domxref("ServiceWorkerContainer")}} object.

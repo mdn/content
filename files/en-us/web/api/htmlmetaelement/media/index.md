@@ -66,4 +66,4 @@ document.head.appendChild(meta);
 ## See also
 
 - {{HTMLElement("meta")}}
-- [Possible values for media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Possible values for media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

@@ -1,6 +1,7 @@
 ---
 title: ICC color correction in Firefox
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

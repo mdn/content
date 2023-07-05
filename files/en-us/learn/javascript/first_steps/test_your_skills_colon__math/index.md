@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Math"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

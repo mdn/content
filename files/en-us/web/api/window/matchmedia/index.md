@@ -10,7 +10,7 @@ browser-compat: api.Window.matchMedia
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
 returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if
-the {{domxref("document")}} matches the [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) string,
+the {{domxref("document")}} matches the [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) string,
 as well as to monitor the document to detect when it matches (or stops matching) that
 media query.
 
@@ -89,7 +89,7 @@ A simple `<span>` to receive the output.
 
 {{EmbedLiveSample("Examples", "100%", "60")}}
 
-See [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for additional code examples.
+See [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for additional code examples.
 
 ## Specifications
 
@@ -101,6 +101,6 @@ See [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/T
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}

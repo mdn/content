@@ -230,7 +230,7 @@ console.log(parsed);
 
 ### BigInt coercion
 
-Many built-in operations that expect BigInts first coerce their arguments to BigInts. [The operation](https://tc39.es/ecma262/#sec-tobigint) can be summarized as follows:
+Many built-in operations that expect BigInts first coerce their arguments to BigInts. [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tobigint) can be summarized as follows:
 
 - BigInts are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.

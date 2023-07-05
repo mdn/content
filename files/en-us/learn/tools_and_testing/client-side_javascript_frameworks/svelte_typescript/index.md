@@ -1,6 +1,7 @@
 ---
 title: TypeScript support in Svelte
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

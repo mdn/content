@@ -1580,7 +1580,9 @@
         "AnimationTimeline",
         "AnimationPlaybackEvent",
         "DocumentTimeline",
-        "KeyframeEffect"
+        "KeyframeEffect",
+        "ScrollTimeline",
+        "ViewTimeline"
       ],
       "methods": [
         "Document.getAnimations()",

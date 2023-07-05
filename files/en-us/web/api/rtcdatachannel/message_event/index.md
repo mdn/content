@@ -52,7 +52,7 @@ For a given {{domxref("RTCDataChannel")}}, `dc`, created for a peer connection u
 ```js
 dc.addEventListener(
   "message",
-  (ev) => {
+  (event) => {
     let newParagraph = document.createElement("p");
     let textNode = document.createTextNode(event.data);
     newParagraph.appendChild(textNode);
@@ -68,7 +68,7 @@ Lines 2-4 create the new paragraph element and add the message data to it as a n
 You can also use an `RTCDataChannel` object's {{domxref("RTCDataChannel.message_event", "onmessage")}} event handler property to set the event handler:
 
 ```js
-dc.onmessage = (ev) => {
+dc.onmessage = (event) => {
   let newParagraph = document.createElement("p");
   let textNode = document.createTextNode(event.data);
   newParagraph.appendChild(textNode);

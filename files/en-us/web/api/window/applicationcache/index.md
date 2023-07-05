@@ -9,9 +9,12 @@ status:
 browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
 
-{{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}{{SecureContext_Header}}
+{{APIRef}}
 
-> **Warning:**: Application cache is being removed from web platform. Consider using [service workers](/en-US/docs/Web/API/Service_Worker_API) instead.
+> **Warning:** Application cache has been removed from web platform.
+> Use [service workers](/en-US/docs/Web/API/Service_Worker_API) instead.
+
+{{Deprecated_Header}}{{SecureContext_Header}}
 
 Returns a reference to the application cache object for the window.
 

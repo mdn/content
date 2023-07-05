@@ -1,6 +1,7 @@
 ---
 title: Sending form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}

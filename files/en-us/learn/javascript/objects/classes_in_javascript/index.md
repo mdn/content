@@ -1,6 +1,7 @@
 ---
 title: Classes in JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
@@ -177,6 +178,8 @@ summers.canStudyArchery(); // true
 
 summers.#year; // SyntaxError
 ```
+
+> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
 Private data properties must be declared in the class declaration, and their names start with `#`.
 

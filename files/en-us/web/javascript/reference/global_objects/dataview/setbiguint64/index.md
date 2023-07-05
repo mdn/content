@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.DataView.setBigUint64
 
 {{JSRef}}
 
-The **`setBigUint64()`** method stores an unsigned 64-bit
-integer (unsigned long long) value at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`setBigUint64()`** method of {{jsxref("DataView")}} instances takes a BigInt and stores it as a 64-bit unsigned integer in the 8 bytes starting at the specified byte offset of this `DataView`.
 
 {{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}
 

@@ -1,6 +1,7 @@
 ---
 title: Firefox release notes for developers
 slug: Mozilla/Firefox/Releases
+page-type: landing-page
 ---
 
 {{FirefoxSidebar}}
