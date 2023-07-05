@@ -2,6 +2,7 @@
 title: "CycleTracker: Base HTML and CSS"
 short-title: Base HTML and CSS
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
+page-type: tutorial-chapter
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

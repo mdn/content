@@ -1,6 +1,7 @@
 ---
 title: Web security
 slug: Web/Security
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages}}

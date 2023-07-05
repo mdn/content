@@ -48,14 +48,14 @@ This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn)
 
 ### Accessibility page types
 
-This section lists `page-type` values for pages under [Web/Accessibility](/en-US/docs/Web/Accessibility). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/Accessibility](/en-US/docs/Web/Accessibility). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `aria-role`: an ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Roles), like [`section`](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role).
 - `aria-attribute`: an ARIA [attribute](eb/Accessibility/ARIA/Attributes), like [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort).
 
 ### CSS page types
 
-This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/At-rule), like {{cssxref("@charset")}}.
 - `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/@counter-style/prefix).
@@ -80,7 +80,7 @@ This section lists `page-type` values for pages under [Glossary](/en-US/docs/Glo
 
 ### HTML page types
 
-This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web/HTML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web/HTML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `html-attribute`: an HTML attribute, like [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete).
 - `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch).
@@ -88,7 +88,7 @@ This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web
 
 ### HTTP page types
 
-This section lists `page-type` values for pages under [Web/HTTP](/en-US/docs/Web/HTTP). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/HTTP](/en-US/docs/Web/HTTP). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `http-csp-directive`: a [CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) directive, like [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 - `http-cors-error`: a [CORS](/en-US/docs/Web/HTTP/CORS) error, like [`CORSDidNotSucceed`](/en-US/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed).
@@ -99,7 +99,7 @@ This section lists `page-type` values for pages under [Web/HTTP](/en-US/docs/Web
 
 ### JavaScript page types
 
-This section lists `page-type` values for pages under [Web/JavaScript](/en-US/docs/Web/JavaScript). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/JavaScript](/en-US/docs/Web/JavaScript). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `javascript-class`: a definition of a built-in object, like [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 - `javascript-constructor`: an object constructor, like [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
@@ -119,21 +119,21 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 
 ### MathML page types
 
-This section lists `page-type` values for pages under [Web/MathML](/en-US/docs/Web/MathML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/MathML](/en-US/docs/Web/MathML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `mathml-attribute`: an MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Global_attributes/mathcolor).
 - `mathml-element`: an HTML element, like [`<msqrt>`](/en-US/docs/Web/MathML/Element/msqrt).
 
 ### SVG page types
 
-This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/SVG). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/SVG). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `svg-attribute`: an SVG attribute, like [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin).
 - `svg-element`: an SVG element, like [`<circle>`](/en-US/docs/Web/SVG/Element/circle).
 
 ### Web API page types
 
-This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `web-api-overview`: gives an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 - `web-api-global-function`: a global function, like [`fetch()`](/en-US/docs/Web/API/fetch).
@@ -150,7 +150,7 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 
 ### WebDriver
 
-This section lists `page-type` values for pages under [Web/WebDriver](/en-US/docs/Web/WebDriver). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/WebDriver](/en-US/docs/Web/WebDriver). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Commands/CloseWindow).
 - `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts).
@@ -158,7 +158,7 @@ This section lists `page-type` values for pages under [Web/WebDriver](/en-US/doc
 
 ### WebExtensions page types
 
-This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `webextension-api`: a WebExtension API, like [`alarms`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms).
 - `webextension-api-event`: a WebExtension API event, like [`action.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action/onClicked).
@@ -169,6 +169,12 @@ This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtens
 
 ### Web Manifest page types
 
-This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/description).
+
+### Firefox page types
+
+This section lists `page-type` values for pages under [Mozilla/Firefox](/en-US/docs/Mozilla/Firefox). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+
+- `firefox-release-notes`: the release notes for a particular Firefox version, such as [_Firefox 115 for developers_](/en-US/docs/Mozilla/Firefox/Releases/115).
