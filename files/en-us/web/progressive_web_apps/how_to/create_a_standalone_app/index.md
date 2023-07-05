@@ -1,6 +1,7 @@
 ---
 title: Create a standalone app
 slug: Web/Progressive_web_apps/How_to/Create_a_standalone_app
+page-type: how-to
 ---
 
 {{PWASidebar}}

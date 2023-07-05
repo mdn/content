@@ -19,7 +19,7 @@ page-type: firefox-release-notes
 ### CSS
 
 - The support for the keyword `local` as a value of the {{cssxref("background-attachment")}} CSS property has been added ([Firefox bug 483446](https://bugzil.la/483446)).
-- Support of a non-standard Mozilla-only media query to determine the operating system version has been added: [`-moz-os-version`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-os-version) ([Firefox bug 810399](https://bugzil.la/810399)). The property is currently only implemented on Windows.
+- Support of a non-standard Mozilla-only media query to determine the operating system version has been added: [`-moz-os-version`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version) ([Firefox bug 810399](https://bugzil.la/810399)). The property is currently only implemented on Windows.
 - The `-moz-osx-font-smoothing` CSS property has been added ([Firefox bug 857142](https://bugzil.la/857142)).
 - Our experimental support for {{cssxref("filter")}} now supports the `hue-rotate()` functional notation ([Firefox bug 897392](https://bugzil.la/897392)). It is still preffed off by default.
 - `page-break-inside`: `avoid` is now working with the height of a block ([Firefox bug 883676](https://bugzil.la/883676)).

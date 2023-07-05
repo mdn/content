@@ -1,6 +1,7 @@
 ---
 title: Optimizing startup performance
 slug: Web/Performance/Optimizing_startup_performance
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

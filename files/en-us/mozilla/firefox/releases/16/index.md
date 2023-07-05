@@ -29,7 +29,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 - The {{cssxref("box-sizing", "-moz-box-sizing")}} implementation has been updated to apply to table cells too ([bug 338554](https://bugzil.la/338554)).
 - Support for the standard, unprefixed version of {{cssxref("calc", "calc()")}} has been landed ([bug 771678](https://bugzil.la/771678)).
 - The {{cssxref("&lt;resolution&gt;")}} CSS data type has been extended to support the `dppx` ([bug 741644](https://bugzil.la/741644)).
-- On screen, for [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), `dppx`, `dpi`, and `dpcm` are now representing values based on CSS pixels and no more with the physical units ([bug 771390](https://bugzil.la/771390)).
+- On screen, for [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), `dppx`, `dpi`, and `dpcm` are now representing values based on CSS pixels and no more with the physical units ([bug 771390](https://bugzil.la/771390)).
 - Three new pseudo-classes `:-moz-meter-optimum`, `:-moz-meter-sub-optimum`, and `:-moz-meter-sub-sub-optimum` have been added for accessing/styling a {{HTMLElement("meter")}} element in a particular state ([bug 660238](https://bugzil.la/660238)).
 - The {{cssxref("appearance")}} property gains two new values: `meterbar` and `meterchunk`. They represent components inside the {{HTMLElement("meter")}} element ([bug 659999](https://bugzil.la/659999)).
 - The {{cssxref("min-width")}} and {{cssxref("min-height")}} now supports the `auto` keyword for flex items (and resolves to `0` for other items) ([Firefox bug 763689](https://bugzil.la/763689)).

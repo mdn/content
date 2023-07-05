@@ -1,6 +1,7 @@
 ---
 title: Audio and video manipulation
 slug: Web/Guide/Audio_and_video_manipulation
+page-type: guide
 ---
 
 <section id="Quick_links">
