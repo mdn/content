@@ -453,6 +453,14 @@
       "properties": [],
       "events": []
     },
+    "Fenced Frame API": {
+      "overview": ["Fenced Frame API"],
+      "guides": [],
+      "interfaces": ["Fence", "FencedFrameConfig", "HTMLFencedFrameElement"],
+      "methods": [],
+      "properties": ["Window.fence"],
+      "events": []
+    },
     "File API": {
       "overview": ["File API"],
       "guides": ["/docs/Web/API/File_API/Using_files_from_web_applications"],
