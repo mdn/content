@@ -41,7 +41,7 @@ Content:Learn:Client-side:
 Content:Learn:Cross-Browser-Testing:
   - files/en-us/learn/tools_and_testing/cross_browser_testing/**/*
 Content:Learn:CSS:
-  - files/en-us/learn/css
+  - files/en-us/learn/css/**/*
 Content:Learn:Django:
   - files/en-us/learn/server-side/django/**/*
 Content:Learn:Express:
