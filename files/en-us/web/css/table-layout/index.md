@@ -30,13 +30,17 @@ table-layout: unset;
 
 - `auto`
   - : By default, most browsers use an automatic table layout algorithm. The widths of the table and its cells are adjusted to fit the content.
+
 - `fixed`
+  - : For this value the table's _width needs to be specified explicitly_ with the `width` property. The `width` value `auto` makes UA use the automatic table layout algorithm, in such case this value has no effect.\
+   This is a faster algorithm, because the horizontal layout of the table depends only on the table's width, the width of the columns, and borders or cell spacing. The horizontal layout doesn't depend on the contents of the cells, because it depends only on explicitly set widths.
 
-  - : Table and column widths are set by the widths of `table` and `col` elements or by the width of the first row of cells. Cells in subsequent rows do not affect column widths.
+    In the fixed table layout algorithm, the width of each column is determined as follows:
+    - A column element with explicit width sets the width for that column.
+    - Otherwise, a cell in the first row with explicit width determines the width for that column.
+    - Otherwise, the column gets the width from the shared remaining horizontal space.
 
-    Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.
-
-    > **Note:** If the table width has a value of `auto` then the automatic table layout is used instead. The fixed layout is _not_ used.
+    With this algorithm the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.
 
 ## Formal definition
 
