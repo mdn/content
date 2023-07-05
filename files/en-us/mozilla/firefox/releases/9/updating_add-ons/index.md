@@ -1,6 +1,7 @@
 ---
 title: Updating add-ons for Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

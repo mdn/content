@@ -1,6 +1,7 @@
 ---
 title: Web performance
 slug: Web/Performance
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubPages}}

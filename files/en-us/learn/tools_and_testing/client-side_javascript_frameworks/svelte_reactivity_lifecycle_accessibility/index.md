@@ -1,6 +1,7 @@
 ---
 title: "Advanced Svelte: Reactivity, lifecycle, accessibility"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

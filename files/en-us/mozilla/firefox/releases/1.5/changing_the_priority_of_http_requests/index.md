@@ -1,6 +1,7 @@
 ---
 title: Changing the Priority of HTTP Requests (Non-Standard)
 slug: Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

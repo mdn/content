@@ -1,6 +1,7 @@
 ---
 title: Firefox 78 for developers
 slug: Mozilla/Firefox/Releases/78
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

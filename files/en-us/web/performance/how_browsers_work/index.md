@@ -1,6 +1,7 @@
 ---
 title: "Populating the page: how browsers work"
 slug: Web/Performance/How_browsers_work
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

@@ -6,48 +6,57 @@ page-type: web-api-instance-method
 browser-compat: api.Scheduling.isInputPending
 ---
 
-{{SeeCompatTable}}{{APIRef("Scheduling API")}}
+{{SeeCompatTable}}{{APIRef("Prioritized Task Scheduling API")}}
 
-The `isInputPending()` method allows you to check whether there are pending input events in the event queue, indicating that the user has interacted with the page or the system is about to dispatch such events.
+The **`isInputPending()`** method of the {{domxref("Scheduling")}} interface allows you to check whether there are pending input events in the event queue, indicating that the user is attempting to interact with the page.
 
-This feature can be useful in scenarios where you want to check if there are any pending input events before performing a long-running operation or updating the UI. By checking the value of navigator.scheduling.isInputPending, you can avoid blocking the main thread when the user is interacting with the page.
+This feature is useful in situations where you have a queue of tasks to run, and you want to yield to the main thread regularly to allow user interaction to occur so that the app is kept as responsive and performant as possible. `isInputPending()` allows you to yield only when there is input pending, rather than having to do it at arbitrary intervals.
+
+`isInputPending()` is called using `navigator.scheduling.isInputPending()`.
 
 ## Syntax
 
 ```js-nolint
-navigator.scheduling.isInputPending(options)
+isInputPending()
+isInputPending(options)
 ```
 
 ### Parameters
 
-- `options`
+- `options` {{optional_inline}}
+  - : An object providing options. Currently, the only option is:
+    - `includeContinuous` {{optional_inline}}
+      - : A boolean, which is `false` by default. If set to `true`, it indicates that continuous events should be considered when checking for pending input. Continuous events are trusted events (events dispatched by the browser) that are fired successively, such as {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("HTMLElement/drag_event", "drag")}}, {{domxref("Element/pointermove_event", "pointermove")}}, and {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}.
 
-  - : An object containing options.
-    - `includeContinuous`: A boolean (optional), indicate that continuous input events should also be considered when checking for pending input.
+### Return value
 
-## Value
-
-A boolean.
-
-The `navigator.scheduling.isInputPending()` method returns a Boolean value, indicating whether there are pending input events or not. It can have one of the following three possible values:
-
-- `true`: Indicates that there are input events pending in the event queue.
-
-- `false`: Indicates that there are no input events pending in the event queue.
-
-- `undefined`: Indicates that the browser does not support this feature or it is not enabled.
+A boolean that indicates whether there are pending input events in the event queue (`true`) or not (`false`).
 
 ## Examples
 
+We can use `isInputPending()` inside a task runner structure to run the `yield()` function only when the user is attempting to interact with the page:
+
 ```js
-if (navigator.scheduling && navigator.scheduling.isInputPending()) {
-  console.log("Input events are pending!");
-} else {
-  console.log("No input events pending.");
+async function main() {
+  // Create an array of functions to run
+  const tasks = [a, b, c, d, e];
+
+  while (tasks.length > 0) {
+    // Yield to a pending user input
+    if (navigator.scheduling.isInputPending()) {
+      await yield();
+    } else {
+      // Shift the first task off the tasks array
+      const task = tasks.shift();
+
+      // Run the task
+      task();
+    }
+  }
 }
 ```
 
-After checking the input event status, you can proceed with performing a long-running operation or updating the UI. This allows you to avoid blocking the main thread when the user is actively interacting with the page, potentially providing a smoother user experience.
+This allows you to avoid blocking the main thread when the user is actively interacting with the page, potentially providing a smoother user experience. However, by only yielding when necessary, we can continue running the current task when there are no user inputs to process. This also avoids tasks being placed at the back of the queue behind other non-essential browser-initiated tasks that were scheduled after the current one.
 
 ## Specifications
 
@@ -56,3 +65,9 @@ After checking the input event status, you can proceed with performing a long-ru
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Faster input events with Facebook's first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/) on engineering.fb.com (2019)
+- [Better JS scheduling with isInputPending()](https://developer.chrome.com/articles/isinputpending/) on developer.chrome.com (2020)
+- [Optimizing long tasks](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) on web.dev (2022)

@@ -16,7 +16,7 @@ aspect ratios—as the document state changes to match different media
 conditions.
 
 Each condition is specified using the same conditional format used
-by [media queries](/en-US/docs/Web/CSS/Media_Queries).
+by [media queries](/en-US/docs/Web/CSS/CSS_media_queries).
 
 ## Value
 
@@ -32,7 +32,7 @@ Each source size descriptor consists of a media condition as defined by the medi
 queries standard. Because a source size descriptor is used to specify the width to use
 for the image during layout of the page, the media condition is typically (but not
 necessarily) based entirely on width information. See
-[Using media queries, Syntax](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax) for
+[Using media queries, Syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax) for
 details on how to construct a media condition.
 
 ### Source size values
@@ -157,7 +157,7 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

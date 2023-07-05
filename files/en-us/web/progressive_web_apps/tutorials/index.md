@@ -1,6 +1,7 @@
 ---
 title: Tutorials
 slug: Web/Progressive_web_apps/Tutorials
+page-type: landing-page
 ---
 
 {{PWASidebar}}

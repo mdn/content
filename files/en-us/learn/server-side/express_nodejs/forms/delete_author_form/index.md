@@ -1,6 +1,7 @@
 ---
 title: Delete Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
+page-type: learn-module-chapter
 ---
 
 This subarticle shows how to define a page to delete `Author` objects.

@@ -23,7 +23,7 @@ They are grouped by complexity so that you can choose the most appropriate for y
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
   - : CSS allows you to resize images used as an element's background.
     This tutorial describes how to achieve this in a simple way.
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays.
     Media queries are the fundamental building blocks in building websites that render everywhere in their best quality.
 - [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)

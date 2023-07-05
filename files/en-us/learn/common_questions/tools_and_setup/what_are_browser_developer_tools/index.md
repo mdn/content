@@ -1,6 +1,7 @@
 ---
 title: What are browser developer tools?
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

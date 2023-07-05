@@ -149,7 +149,7 @@ Not only are we providing the MIME type hints in the `type` attributes, but we a
 
 ## Including media
 
-One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Element/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), allowing you to do responsive preloading!
+One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Element/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), allowing you to do responsive preloading!
 
 Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
 
@@ -189,7 +189,7 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 </body>
 ```
 
-We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for more).
+We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for more).
 
 This makes it much more likely that the font will be available for the page render, cutting down on FOUT (flash of unstyled text).
 

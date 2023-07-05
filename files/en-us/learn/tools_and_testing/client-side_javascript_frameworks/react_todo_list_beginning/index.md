@@ -1,6 +1,7 @@
 ---
 title: Beginning our React todo list
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

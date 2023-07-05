@@ -1,6 +1,7 @@
 ---
 title: Setting up your own test automation environment
 slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
