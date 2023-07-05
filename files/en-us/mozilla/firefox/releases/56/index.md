@@ -22,7 +22,7 @@ Firefox 56 was released on September 28, 2017. This article lists key changes th
 
 ### CSS
 
-- Implemented the proprietary Mozilla-specific {{cssxref("&lt;color&gt;")}} values `-moz-win-accentcolor` and `-moz-win-accentcolortext` (see [Firefox bug 1344910](https://bugzil.la/1344910)), and the proprietary media query [`-moz-windows-accent-color-in-titlebar`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) (see [Firefox bug 1379938](https://bugzil.la/1379938)).
+- Implemented the proprietary Mozilla-specific {{cssxref("&lt;color&gt;")}} values `-moz-win-accentcolor` and `-moz-win-accentcolortext` (see [Firefox bug 1344910](https://bugzil.la/1344910)), and the proprietary media query [`-moz-windows-accent-color-in-titlebar`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) (see [Firefox bug 1379938](https://bugzil.la/1379938)).
 
 ### SVG
 
