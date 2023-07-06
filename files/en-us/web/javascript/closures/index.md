@@ -304,10 +304,8 @@ Closures can capture variables in block scopes and module scopes as well. For ex
 ```js
 function outer() {
   const x = 5;
-  if (Math.random() > 0.5) {
-    const y = 6;
-    return () => console.log(x, y);
-  }
+  const y = 6;
+  return () => console.log(x, y);
 }
 
 outer()(); // Logs 5 6
