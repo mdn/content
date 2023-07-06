@@ -1,6 +1,7 @@
 ---
 title: Ember resources and troubleshooting
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

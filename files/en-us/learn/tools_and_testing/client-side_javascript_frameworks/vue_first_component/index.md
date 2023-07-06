@@ -1,6 +1,7 @@
 ---
 title: Creating our first Vue component
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

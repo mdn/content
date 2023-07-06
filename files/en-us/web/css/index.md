@@ -65,7 +65,7 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
   - [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
   - [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
   - [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
-  - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
+  - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
   - [Animation](/en-US/docs/Web/CSS/animation)
 
 ## Cookbook

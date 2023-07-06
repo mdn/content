@@ -1,6 +1,7 @@
 ---
 title: Firefox 113 for developers
 slug: Mozilla/Firefox/Releases/113
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
