@@ -522,7 +522,7 @@ You can now open this file in a web browser to see what the rendered code looks 
 - Edit the paragraph content to include text about a topic that you find interesting.
 - Make important words stand out in bold by wrapping them inside a `<strong>` opening tag and `</strong>` closing tag.
 - Add a link to your paragraph, as [explained earlier in the article](#active_learning_adding_attributes_to_an_element).
-  
+
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
 ```html hidden
@@ -747,10 +747,12 @@ You made it to the end of the article! We hope you enjoyed your tour of the basi
 
 At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent articles of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.
 
-> **Note:** As you start to learn more about HTML, consider learning the basics of Cascading Style Sheets, or [CSS](/en-US/docs/Learn/CSS). CSS is the language used to style web pages: for example, changing fonts or colors, or altering the page layout. HTML and CSS work well together, as you will soon discover.
+> **Note:** As you start to learn more about HTML, consider learning the basics of Cascading Style Sheets, or [CSS][def]. CSS is the language used to style web pages: for example, changing fonts or colors, or altering the page layout. HTML and CSS work well together, as you will soon discover.
 
 ## See also
 
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+
+[def]: /en-US/docs/Learn/CSS
