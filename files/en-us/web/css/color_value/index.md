@@ -131,6 +131,8 @@ In the general case, missing components are first transferred into the converted
 | Lightness    | `L`        |
 | Colorfulness | `C`, `S`   |
 | Hue          | `H`        |
+| a            | `a`        |
+| b            | `b`        |
 
 For example:
 
