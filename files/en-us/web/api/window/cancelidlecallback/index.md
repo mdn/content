@@ -41,7 +41,3 @@ in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)
