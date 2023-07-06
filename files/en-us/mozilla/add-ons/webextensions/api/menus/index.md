@@ -48,7 +48,9 @@ Only for items in a submenu, you can specify custom icons by passing the `icons`
 
 Here's a context menu containing 4 items: a normal item, two radio items with separators on each side, and a checkbox. The radio items are given custom icons.
 
-![Context menu with four items labeled remove me, Greenify, Bluify, and uncheck me. Greenify and Bluify are radio buttons given custom icons.](menus-4.png)You could create a submenu like this using code like:
+![Context menu with four items labeled remove me, Greenify, Bluify, and uncheck me. Greenify and Bluify are radio buttons given custom icons.](menus-4.png)
+
+You could create a submenu like this using code like:
 
 ```js
 browser.menus.create({

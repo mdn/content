@@ -42,7 +42,7 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 - [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
   - : Turns a {{htmlelement("button")}} or {{htmlelement("input")}} element into a popover control button; takes the ID of the popover element to control as its value.
 - [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
-  - : Specifies the the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on the popover element being controlled by a control {{htmlelement("button")}} or {{htmlelement("input")}}.
+  - : Specifies the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on the popover element being controlled by a control {{htmlelement("button")}} or {{htmlelement("input")}}.
 
 ## CSS features
 

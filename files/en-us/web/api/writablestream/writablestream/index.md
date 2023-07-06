@@ -166,7 +166,7 @@ less than obvious. To see how backpressure is implemented look for three things.
   `defaultWriter.write()` (line 11).
 - The `defaultWriter.ready` property returns a promise that resolves when
   the sink (the first property of the `WritableStream` constructor) is done
-  writing data. The data source can wither write more data (line 11) or call
+  writing data. The data source can either write more data (line 11) or call
   `close()` (line 24). Calling `close()` too early can prevent
   data from being written. This is why the example calls
   `defaultWriter.ready` twice (lines 9 and 22).

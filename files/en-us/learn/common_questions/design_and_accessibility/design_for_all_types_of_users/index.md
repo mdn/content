@@ -1,6 +1,7 @@
 ---
 title: How can we design for all types of users?
 slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

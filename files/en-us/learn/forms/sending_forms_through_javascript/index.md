@@ -1,6 +1,7 @@
 ---
 title: Sending forms through JavaScript
 slug: Learn/Forms/Sending_forms_through_JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

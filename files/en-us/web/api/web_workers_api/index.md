@@ -44,8 +44,12 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("clearInterval", "clearInterval()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("queueMicrotask()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
+- {{domxref("structuredClone()")}}
+- {{domxref("window.requestAnimationFrame")}} (dedicated workers only)
+- {{domxref("window.cancelAnimationFrame")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
@@ -71,10 +75,13 @@ The following Web APIs are available to workers:
 - {{domxref("FileReader")}}
 - {{domxref("FileReaderSync")}} (only works in workers!)
 - {{domxref("FormData")}}
+- {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
+- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} (dedicated workers only)
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
+- {{domxref("OffscreenCanvas")}} (and all the canvas context APIs)
 - {{domxref("Performance_API","Performance API")}}, including:
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
@@ -82,11 +89,10 @@ The following Web APIs are available to workers:
   - {{domxref("PerformanceMark")}}
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
-- {{jsxref("Promise")}}
 - [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
 - {{domxref("URL_API","URL API")}} (e.g. {{domxref("URL")}})
-- [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}}
+- {{domxref('WebCodecs_API','','','true')}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
 

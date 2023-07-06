@@ -89,7 +89,7 @@ In this example, when the user hovers over the element, there is a one-second de
 
 #### CSS
 
-We include two {{cssxref("time")}} values. In the `transition` shorthand, the first `<time>` value is the `transition-duration`. The second time value is the `transition-delay`. Both default to `0s` if omitted. 
+We include two {{cssxref("time")}} values. In the `transition` shorthand, the first `<time>` value is the `transition-duration`. The second time value is the `transition-delay`. Both default to `0s` if omitted.
 
 ```css
 .target {

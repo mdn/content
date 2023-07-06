@@ -1,6 +1,7 @@
 ---
 title: Client-side form validation
 slug: Learn/Forms/Form_validation
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}

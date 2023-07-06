@@ -1,6 +1,7 @@
 ---
 title: The add-on bar
 slug: Mozilla/Firefox/Releases/4/The_add-on_bar
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

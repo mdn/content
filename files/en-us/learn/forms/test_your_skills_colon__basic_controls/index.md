@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Basic controls"
 slug: Learn/Forms/Test_your_skills:_Basic_controls
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

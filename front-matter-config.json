@@ -72,6 +72,27 @@
       },
       {
         "if": {
+          "properties": { "slug": { "type": "string", "pattern": "^Learn/" } }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "learn-topic",
+                "learn-module",
+                "learn-module-chapter",
+                "learn-module-assessment",
+                "learn-faq"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
           "properties": { "slug": { "type": "string", "pattern": "^MDN/" } }
         },
         "then": {
@@ -82,6 +103,21 @@
                 "mdn-community-guide",
                 "mdn-writing-guide"
               ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Mozilla/Firefox" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "firefox-release-notes"]
             }
           }
         },
@@ -414,7 +450,13 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "how-to",
+                "tutorial",
+                "tutorial-chapter"
+              ]
             }
           }
         },

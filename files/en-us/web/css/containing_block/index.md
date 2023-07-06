@@ -36,9 +36,10 @@ The process for identifying the containing block depends entirely on the value o
 
    1. A {{cssxref("transform")}} or {{cssxref("perspective")}} value other than `none`
    2. A {{cssxref("will-change")}} value of `transform` or `perspective`
-   3. A {{cssxref("filter")}} value other than `none` or a `will-change` value of `filter` (only works on Firefox).
+   3. A {{cssxref("filter")}} value other than `none` or a `will-change` value of `filter` (only works on Firefox)
    4. A {{cssxref("contain")}} value of `layout`, `paint`, `strict` or `content` (e.g. `contain: paint;`)
-   5. A {{cssxref("backdrop-filter")}} other than `none` (e.g. `backdrop-filter: blur(10px);`)
+   5. A {{cssxref("container-type")}} value other than `normal`
+   6. A {{cssxref("backdrop-filter")}} other than `none` (e.g. `backdrop-filter: blur(10px);`)
 
 > **Note:** The containing block in which the root element ({{HTMLElement("html")}}) resides is a rectangle called the **initial containing block**. It has the dimensions of the viewport (for continuous media) or the page area (for paged media).
 

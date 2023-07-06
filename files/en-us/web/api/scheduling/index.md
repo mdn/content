@@ -5,31 +5,18 @@ page-type: web-api-interface
 browser-compat: api.Scheduling
 ---
 
-{{SeeCompatTable}}{{APIRef("Scheduling API")}}
+{{SeeCompatTable}}{{APIRef("Prioritized Task Scheduling API")}}
 
 The **`Scheduling`** object provides methods and properties to control scheduling tasks within the current document.
 
 ## Instance methods
 
 - {{domxref("Scheduling.isInputPending", "isInputPending()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Boolean")}}
+  - : Returns a boolean that indicates whether there are pending input events in the event queue, meaning that the user is attempting to interact with the page.
 
 ## Example
 
-```js
-function executeTasks() {
-  const scheduling = navigator.scheduling;
-  const isInputPending = scheduling.isInputPending();
-
-  if (isInputPending) {
-    setTimeout(isInputPending, 0);
-    return;
-  }
-
-  // imagine `tasks` require more time to execution
-  tasks.forEach(() => task.execute());
-}
-```
+See the {{domxref("Scheduling.isInputPending()")}} page for a full example.
 
 ## Specifications
 
@@ -41,4 +28,6 @@ function executeTasks() {
 
 ## See also
 
-- [Early detection of input events](https://wicg.github.io/is-input-pending)
+- [Faster input events with Facebook's first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/) on engineering.fb.com (2019)
+- [Better JS scheduling with isInputPending()](https://developer.chrome.com/articles/isinputpending/) on developer.chrome.com (2020)
+- [Optimizing long tasks](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) on web.dev (2022)

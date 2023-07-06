@@ -1,6 +1,7 @@
 ---
 title: JavaScript object basics
 slug: Learn/JavaScript/Objects/Basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

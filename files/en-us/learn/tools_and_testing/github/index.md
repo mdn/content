@@ -1,6 +1,7 @@
 ---
 title: Git and GitHub
 slug: Learn/Tools_and_testing/GitHub
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

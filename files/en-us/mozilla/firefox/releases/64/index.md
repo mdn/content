@@ -1,6 +1,7 @@
 ---
 title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

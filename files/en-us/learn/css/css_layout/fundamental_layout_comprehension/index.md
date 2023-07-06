@@ -1,6 +1,7 @@
 ---
 title: Fundamental layout comprehension
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}
