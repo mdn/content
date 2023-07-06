@@ -42,9 +42,9 @@ Unknown descriptors are invalid and ignored, but do not invalidate the `@propert
 
 ## Examples
 
-In this example we define two custom properties `--item-size` and `--item-color`, that we'll use to style items.
+In this example, we define two custom properties, `--item-size` and `--item-color`, that we'll use to style items.
 
-Following code defines `--item-size` property using CSS {{cssxref('@property')}} at-rule. The property accepts only [percentage](/en-US/docs/Web/CSS/@property/syntax#percentage) values. That means items' size will always be relative to its parent's size. Also, the property is inheritable.
+The following code defines `--item-size` property using CSS {{cssxref('@property')}} at-rule. The property accepts only [percentage](/en-US/docs/Web/CSS/percentage) values. That means an item's size will always be relative to its parent's size. The property is inheritable.
 
 ```css
 @property --item-size {
@@ -54,7 +54,7 @@ Following code defines `--item-size` property using CSS {{cssxref('@property')}}
 }
 ```
 
-For defining `--item-color` let us use [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'registerProperty')}}, which is equivalent to `@property` at-rule. The property accepts only color values and it is not inherited.
+For defining `--item-color` we'll use [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'registerProperty')}}, which is equivalent to `@property` at-rule. The property accepts only color values and is not inherited.
 
 ```js
 window.CSS.registerProperty({
@@ -65,7 +65,7 @@ window.CSS.registerProperty({
 });
 ```
 
-Following code creates the items that we want to style using our custom properties.
+The following code creates the items styled using our custom properties.
 
 ```html
 <div class="container">
