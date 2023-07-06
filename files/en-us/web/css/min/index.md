@@ -11,7 +11,7 @@ The **`min()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 {{EmbedInteractiveExample("pages/css/function-min.html")}}
 
-In the first above example, the width will be at most 200px, but will be smaller if the viewport is less than 400px wide (in which case 1vw would be 4px, so 50vw would be 200px). Think this technique of using `min(<relative unit>, <absolute unit>)` as providing the _maximum_ value a property can have, because the value in absolute unit fixes the maximum.
+In the first above example, the width will be at most 200px, but will be smaller if the viewport is less than 400px wide (in which case 1vw would be 4px, so 50vw would be 200px). This technique uses an absolute unit to specify a fixed maximum value for the property, and a relative unit to allow the value to shrink to suit smaller viewports.
 
 ## Syntax
 
