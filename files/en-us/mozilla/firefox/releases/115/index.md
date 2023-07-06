@@ -14,6 +14,9 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### HTML
 
+- The [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) keyword for the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute of the {{HTMLElement("link")}} element is now supported.
+  This allows early (and asynchronous) fetching of [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) and their dependencies in parallel, which are then stored in the document's module map ([Firefox bug 1425310](https://bugzil.la/1425310)).
+
 #### Removals
 
 ### CSS
