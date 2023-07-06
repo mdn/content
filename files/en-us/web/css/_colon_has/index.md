@@ -206,7 +206,7 @@ body:has(video):has(audio) {
 
 ## Analogy between :has() and regular expressions
 
-Interestingly, we can relate some CSS `:has` constructs with the [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) in regular expressions, because they both allow you to select elements (strings in regular expressions) based on a condition without actually selecting the condition matching the element (string) itself.
+Interestingly, we can relate some CSS `:has()` constructs with the [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) in regular expressions because they both allow you to select elements (or strings in regular expressions) based on a condition without actually selecting the condition matching the element (or string) itself.
 
 ### Positive lookahead (?=pattern)
 
