@@ -1,6 +1,7 @@
 ---
 title: Client-side storage
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

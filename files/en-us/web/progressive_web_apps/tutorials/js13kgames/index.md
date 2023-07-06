@@ -1,6 +1,7 @@
 ---
 title: js13kGames
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
+page-type: landing-page
 ---
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

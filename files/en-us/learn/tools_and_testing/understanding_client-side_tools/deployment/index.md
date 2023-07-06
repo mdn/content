@@ -1,6 +1,7 @@
 ---
 title: Deploying our app
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Deployment
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

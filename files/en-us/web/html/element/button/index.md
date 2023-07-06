@@ -81,7 +81,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `popovertargetaction`
 
-  - : Specifies the the action to be performed on a popover element being controlled by a control `<button>`. Possible values are:
+  - : Specifies the action to be performed on a popover element being controlled by a control `<button>`. Possible values are:
 
     - `"hide"`
       - : The button will hide a shown popover. If you try to hide an already hidden popover, no action will be taken.

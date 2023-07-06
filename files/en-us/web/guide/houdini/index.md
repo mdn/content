@@ -1,6 +1,7 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
+page-type: guide
 ---
 
 <section id="Quick_links">

@@ -1,6 +1,7 @@
 ---
 title: Build your own function
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}

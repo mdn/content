@@ -16,7 +16,7 @@ To try these examples, clone the repository then:
 
 1. load the extension from its source folder using the [Load Temporary Add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) feature. The extension stays loaded until you restart Firefox.
 2. open the extension's source folder at the command-line and use [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) to run the extension. The extension stays loaded until you restart Firefox.
-3. in Firefox use **File** > **Open File** and find the example in the [`build`](https://github.com/mdn/webextensions-examples/tree/master/build) folder. The `build` folder contains built and signed versions of all the examples. This permanently installs the example.
+3. in Firefox use **File** > **Open File** and find the example in the [`build`](https://github.com/mdn/webextensions-examples/tree/main/build) folder. The `build` folder contains built and signed versions of all the examples. This permanently installs the example.
 
 > **Warning:** Please do not submit these WebExtension examples to addons.mozilla.org (AMO); you do not have to sign the add-on WebExtension examples to run them. Follow the steps above.
 

@@ -1,6 +1,7 @@
 ---
 title: Introducing workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}

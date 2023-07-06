@@ -1,6 +1,7 @@
 ---
 title: What is a Domain Name?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

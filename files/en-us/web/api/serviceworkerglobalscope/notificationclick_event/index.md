@@ -91,7 +91,7 @@ You can handle event actions using `event.action` within a {{domxref("ServiceWor
 
 ```js
 navigator.serviceWorker.register("sw.js");
-Notification.requestPermission((result) => {
+Notification.requestPermission().then((result) => {
   if (result === "granted") {
     navigator.serviceWorker.ready.then((registration) => {
       // Show a notification that includes an action titled Archive.

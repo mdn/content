@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: variables"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

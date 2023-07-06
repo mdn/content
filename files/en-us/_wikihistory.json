@@ -15531,10 +15531,6 @@
       "ccarruitero"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Browser_actions": {
-    "modified": "2020-06-22T16:28:46.685Z",
-    "contributors": ["wbamberg", "hellosct1", "andrewtruongmoz"]
-  },
   "Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json": {
     "modified": "2020-11-03T15:02:11.613Z",
     "contributors": ["9999472", "wbamberg", "marcoscaceres", "ExE-Boss"]
@@ -15909,7 +15905,7 @@
       "beizaibeifang19"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/What_next_": {
+  "Mozilla/Add-ons/WebExtensions/What_next": {
     "modified": "2020-06-22T16:29:27.034Z",
     "contributors": ["rebloor"]
   },
@@ -16416,17 +16412,6 @@
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2020-06-22T16:29:16.250Z",
-    "contributors": [
-      "SphinxKnight",
-      "nsrd2014",
-      "Zearin_Galaurum",
-      "rebloor",
-      "wbamberg",
-      "andrewtruongmoz"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles": {
     "modified": "2020-10-15T21:55:38.956Z",
     "contributors": ["irenesmith", "ExE-Boss", "stoyanster", "wbamberg"]
@@ -16530,6 +16515,17 @@
       "ericjung",
       "hellosct1",
       "wbamberg"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2020-06-22T16:29:16.250Z",
+    "contributors": [
+      "SphinxKnight",
+      "nsrd2014",
+      "Zearin_Galaurum",
+      "rebloor",
+      "wbamberg",
+      "andrewtruongmoz"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {

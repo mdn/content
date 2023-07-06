@@ -1,6 +1,7 @@
 ---
 title: Mobile-friendliness
 slug: Web/Guide/Mobile/Mobile-friendliness
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}

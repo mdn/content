@@ -310,7 +310,7 @@ function updateStatus() {
       a.textContent = `${i}: ${axis.toFixed(4)}`;
       a.setAttribute("value", axis + 1);
     });
-  }
+  });
 
   requestAnimationFrame(updateStatus);
 }

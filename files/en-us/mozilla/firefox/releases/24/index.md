@@ -1,6 +1,7 @@
 ---
 title: Firefox 24 for developers
 slug: Mozilla/Firefox/Releases/24
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

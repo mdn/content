@@ -11,7 +11,7 @@ The `combobox` role identifies an element as an `input` that controls another el
 
 ## Description
 
-A `combobox` is a composite widget that combines a named input field with a popup providing possible values for that input field. The purpose of a this widget is to improve user experience by helping the user select a value without having to type in the complete value and, optionally depending whether supported values are limited, preventing the user from entering invalid or otherwise unsupported values.
+A `combobox` is a composite widget that combines a named input field with a popup providing possible values for that input field. The purpose of this widget is to improve user experience by helping the user select a value without having to type in the complete value and, optionally depending whether supported values are limited, preventing the user from entering invalid or otherwise unsupported values.
 
 The `combobox` role is set on input that controls another element, such as a listbox or grid, that can dynamically pop up to help the user set the value of the input.
 

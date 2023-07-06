@@ -1,6 +1,7 @@
 ---
 title: Advanced form styling
 slug: Learn/Forms/Advanced_form_styling
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
