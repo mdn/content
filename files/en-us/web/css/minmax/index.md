@@ -59,7 +59,8 @@ If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min
 - `min-content`
   - : Represents the largest min-content contribution of the grid items occupying the grid track.
 - `auto`
-  - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
+  - : As a _maximum_, identical to `max-content`. However, unlike `max-content`, allows expansion of the track by the `align-content` and `justify-content` property values like `normal` and `stretch`.\
+    As a _minimum_ it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
 
 ### Formal syntax
 
