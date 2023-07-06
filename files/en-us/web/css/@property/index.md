@@ -7,7 +7,7 @@ browser-compat: css.at-rules.property
 
 {{CSSRef}}
 
-The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs, it allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, setting default values, and define whether a property can inherit values or not.
+The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs. It allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
 
 The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JS. Valid `@property` rules result in a registered custom property, as if {{domxref('CSS.registerProperty_static', 'registerProperty')}} had been called with equivalent parameters.
 
