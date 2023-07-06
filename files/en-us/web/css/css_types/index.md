@@ -33,11 +33,11 @@ These types include keywords and identifiers as well as strings, and URLs.
   - : All properties, including custom properties, accept the CSS-wide keywords
     - {{CSSXref("initial")}}
       - : The value specified as the property's initial value.
-    - {{CSSXref(inherit")}}
-      - : The computed value of the property on the element's parent.'
-    - {{CSSXref(revert")}}
+    - {{CSSXref("inherit")}}
+      - : The computed value of the property on the element's parent.
+    - {{CSSXref("revert")}}
       - : Rolls back the cascade to the value of the earlier origin.
-    - {{CSSXref(unset")}}
+    - {{CSSXref("unset")}}
       - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : A user-defined identifier, for example the name assigned using the {{cssxref("grid-area")}} property.
