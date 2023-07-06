@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
-In this article we cover the absolute basics of HTML. To get you started, this article defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too!
+In this article, we cover the absolute basics of HTML. To get you started, this article defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too!
 
 <table>
   <tbody>
@@ -260,7 +260,7 @@ Edit the line below in the _Input_ area to turn it into a link to your favorite 
 2. Add the `href` attribute and the `title` attribute.
 3. Specify the `target` attribute to open the link in the new tab.
 
-You will be able to see your changes update live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute and, when clicked, opens a new tab and navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name, and between each attribute.
+You will be able to see your changes live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute and, when clicked, opens a new tab and navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name, and between each attribute.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
@@ -503,7 +503,7 @@ Here we have:
 5. `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
 6. `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
 
-### Active learning: Adding some features to an HTML document
+### Active learning: Experiment with An HTML document
 
 If you want to experiment with writing some HTML on your local computer, you can:
 
@@ -514,7 +514,7 @@ If you want to experiment with writing some HTML on your local computer, you can
 
 > **Note:** You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
-You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially the page looks like this:
+You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially, the page looks like this:
 
 ![A simple HTML page that says This is my page](template-screenshot.png)In this exercise, you can edit the code locally on your computer, as described previously, or you can edit it in the sample window below (the editable sample window represents just the contents of the {{htmlelement("body")}} element, in this case). Sharpen your skills by implementing the following tasks:
 
@@ -522,7 +522,7 @@ You can now open this file in a web browser to see what the rendered code looks 
 - Edit the paragraph content to include text about a topic that you find interesting.
 - Make important words stand out in bold by wrapping them inside a `<strong>` opening tag and `</strong>` closing tag.
 - Add a link to your paragraph, as [explained earlier in the article](#active_learning_adding_attributes_to_an_element).
-- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](#empty_elements). Earn bonus points if you manage to link to a different image (either locally on your computer, or somewhere else on the web).
+
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
@@ -673,7 +673,7 @@ In the examples above, you may have noticed that a lot of whitespace is included
         silly.</p>
 ```
 
-No matter how much whitespace you use inside HTML element content (which can include one or more space character, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.
+No matter how much whitespace you use inside HTML element content (which can include one or more space characters, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.
 
 It can be easier to understand what is going on in your code if you have it nicely formatted. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you to choose the style of formatting (how many spaces for each level of indentation, for example), but you should consider formatting it.
 
@@ -698,7 +698,7 @@ console.log(whitespace);
 
 ## Entity references: Including special characters in HTML
 
-In HTML, the characters `<`, `>`,`"`,`'` and `&` are special characters. They are parts of the HTML syntax itself. So how do you include one of these special characters in your text? For example, if you want to use an ampersand or less-than sign, and not have it interpreted as code.
+In HTML, the characters `<`, `>`,`"`,`'`, and `&` are special characters. They are parts of the HTML syntax itself. So how do you include one of these special characters in your text? For example, if you want to use an ampersand or less-than sign, and not have it interpreted as code.
 
 You do this with character references. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
 
