@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### APIs
 
-- The [`Response: json()` static method](/en-US/docs/Web/API/Response/json_static) is now supported, making it easier to construct {{domxref("Response")}} objects for returning JSON data.
+- The [`Response.json()`](/en-US/docs/Web/API/Response/json_static) static method is now supported, making it easier to construct {{domxref("Response")}} objects for returning JSON data.
   The method will be useful for [service workers](/en-US/docs/Web/API/Service_Worker_API) and any other code that needs to respond to browser requests with JSON data ([Firefox bug 1758943](https://bugzil.la/1758943)).
 - The [`URL.canParse()`](/en-US/docs/Web/API/URL/canParse_static) static method can now be used to parse and validate an absolute URL, or a relative URL and base URL.
   This provides a fast and easy way to check if URLs are valid, instead of constructing them within a `try...catch` block and handling exceptions.
