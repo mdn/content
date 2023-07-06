@@ -1,6 +1,7 @@
 ---
 title: Firefox 3.5 for developers
 slug: Mozilla/Firefox/Releases/3.5
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

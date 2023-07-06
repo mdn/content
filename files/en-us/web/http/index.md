@@ -1,6 +1,7 @@
 ---
 title: HTTP
 slug: Web/HTTP
+page-type: landing-page
 ---
 
 {{HTTPSidebar}}

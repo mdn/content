@@ -1,6 +1,7 @@
 ---
 title: scripting.ExecutionWorld
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/ExecutionWorld
+page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.ExecutionWorld
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Blocked: All third-party storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedForeign
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}

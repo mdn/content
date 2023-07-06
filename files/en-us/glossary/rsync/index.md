@@ -1,6 +1,7 @@
 ---
 title: Rsync
 slug: Glossary/Rsync
+page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}

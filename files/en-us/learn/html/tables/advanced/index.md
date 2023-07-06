@@ -1,6 +1,7 @@
 ---
 title: HTML table advanced features and accessibility
 slug: Learn/HTML/Tables/Advanced
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

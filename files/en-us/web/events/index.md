@@ -1,6 +1,7 @@
 ---
 title: Event reference
 slug: Web/Events
+page-type: landing-page
 spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Caching
 slug: Web/Progressive_web_apps/Guides/Caching
+page-type: guide
 ---
 
 {{PWASidebar}}

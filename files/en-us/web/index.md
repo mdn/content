@@ -1,6 +1,7 @@
 ---
 title: Web technology for developers
 slug: Web
+page-type: landing-page
 ---
 
 <section id="Quick_links">

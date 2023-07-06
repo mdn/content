@@ -1,6 +1,7 @@
 ---
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
