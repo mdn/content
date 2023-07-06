@@ -350,7 +350,7 @@ CSS [@rules](/en-US/docs/Web/CSS/At-rule) (pronounced "at-rules") provide instru
 @import "styles2.css";
 ```
 
-One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/Media_Queries). Media queries use conditional logic for applying CSS styling.
+One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Media queries use conditional logic for applying CSS styling.
 
 In the example below, the stylesheet defines a default pink background for the `<body>` element. However, a media query follows that defines a blue background if the browser viewport is wider than 30em.
 

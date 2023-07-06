@@ -1,6 +1,7 @@
 ---
 title: Firefox 33 for developers
 slug: Mozilla/Firefox/Releases/33
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

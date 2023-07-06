@@ -1,6 +1,7 @@
 ---
 title: Making decisions in your code — conditionals
 slug: Learn/JavaScript/Building_blocks/conditionals
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

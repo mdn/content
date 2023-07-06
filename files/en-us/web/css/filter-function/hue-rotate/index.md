@@ -81,7 +81,7 @@ p {
 
 ### With the filter property
 
-This example applies a `hue-rotate()` filter via the `filter` CSS property adding the color shift to to the entire element, including content, border, and background image.
+This example applies a `hue-rotate()` filter via the `filter` CSS property adding the color shift to the entire element, including content, border, and background image.
 
 ```css
 p {

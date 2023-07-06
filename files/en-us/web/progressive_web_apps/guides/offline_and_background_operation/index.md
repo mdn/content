@@ -1,6 +1,7 @@
 ---
 title: Offline and background operation
 slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
+page-type: guide
 ---
 
 {{PWASidebar}}

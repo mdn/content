@@ -54,7 +54,7 @@ A `function` expression is very similar to, and has almost the same syntax as, a
 
 ### Function expression hoisting
 
-Function expressions in JavaScript are not hoisted, unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function#function_declaration_hoisting). You can't use function expressions before you create them:
+Function expressions in JavaScript are not hoisted, unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function#hoisting). You can't use function expressions before you create them:
 
 ```js
 console.log(notHoisted); // undefined
@@ -86,6 +86,19 @@ math.factit(3); //3;2;1;
 ```
 
 If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property of the function is set to that name, instead of the implicit name inferred from syntax (such as the variable the function is assigned to).
+
+Unlike declarations, the name of the function expressions is read-only.
+
+```js
+function foo() {
+  foo = 1;
+}
+foo();
+console.log(foo); // 1
+(function foo() {
+  foo = 1; // TypeError: Assignment to constant variable.
+})();
+```
 
 ## Examples
 

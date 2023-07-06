@@ -1,6 +1,7 @@
 ---
 title: Touch Event Horizon
 slug: Games/Tutorials/Touch_Event_Horizon
+page-type: guide
 ---
 
 {{GamesSidebar}}

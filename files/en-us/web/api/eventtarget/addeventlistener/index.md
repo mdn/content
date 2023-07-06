@@ -201,9 +201,7 @@ event on the element `someElement`. For the third parameter, if
 `true`; otherwise, we know that we need to pass a Boolean, and we pass
 `false` as the value of the `useCapture` parameter.
 
-If you'd prefer, you can use a third-party library like [Modernizr](https://modernizr.com/docs) or [Detect It](https://github.com/rafgraph/detect-it) to do this test for you.
-
-You can learn more from the article about
+You can learn more in the [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) documentation and the explainer about
 [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection)
 from the [Web Incubator Community Group](https://wicg.github.io/admin/charter.html).
 

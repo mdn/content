@@ -1,6 +1,7 @@
 ---
 title: Firefox 44 for developers
 slug: Mozilla/Firefox/Releases/44
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

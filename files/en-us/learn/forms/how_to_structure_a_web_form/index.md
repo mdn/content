@@ -1,6 +1,7 @@
 ---
 title: How to structure a web form
 slug: Learn/Forms/How_to_structure_a_web_form
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}

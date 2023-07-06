@@ -1,7 +1,8 @@
 ---
 title: "CycleTracker: Service workers"
-short-title: "Service workers"
+short-title: Service workers
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
+page-type: tutorial-chapter
 ---
 
 {{PWASidebar}}

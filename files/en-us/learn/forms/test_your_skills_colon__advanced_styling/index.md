@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Advanced styling"
 slug: Learn/Forms/Test_your_skills:_Advanced_styling
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

@@ -1,7 +1,8 @@
 ---
 title: "CycleTracker: Secure connection"
-short-title: "Secure connection"
+short-title: Secure connection
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
+page-type: tutorial-chapter
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

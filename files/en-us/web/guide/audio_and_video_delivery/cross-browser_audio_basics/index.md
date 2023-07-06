@@ -1,6 +1,7 @@
 ---
 title: Cross-browser audio basics
 slug: Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
