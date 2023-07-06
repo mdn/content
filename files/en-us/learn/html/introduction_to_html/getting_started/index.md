@@ -436,7 +436,7 @@ Always include the attribute quotes. It avoids such problems, and results in mor
 
 ### Single or double quotes?
 
-In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
+In this article, you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
 
 ```html-nolint
 <a href='https://www.example.com'>A link to my example.</a>
@@ -499,7 +499,7 @@ Here we have:
 
 2. `<html></html>`: The {{htmlelement("html")}} element. This element wraps all the content on the page. It is sometimes known as the root element.
 3. `<head></head>`: The {{htmlelement("head")}} element. This element acts as a container for everything you want to include on the HTML page, **that isn't the content** the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You will learn more about this in the next article of the series.
-4. `<meta charset="utf-8">`: The {{htmlelement("meta")}} element. This element represents metadata that cannot be represented by other HTML meta-related elements, like {{htmlelement("base")}}, {{htmlelement("link")}}, {{htmlelement("script")}}, {{htmlelement("style")}} or {{htmlelement("title")}}. The [`charset`](/en-US/docs/Web/HTML/Element/meta#charset) attributes sets the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.
+4. `<meta charset="utf-8">`: The {{htmlelement("meta")}} element. This element represents metadata that cannot be represented by other HTML meta-related elements, like {{htmlelement("base")}}, {{htmlelement("link")}}, {{htmlelement("script")}}, {{htmlelement("style")}} or {{htmlelement("title")}}. The [`charset`](/en-US/docs/Web/HTML/Element/meta#charset) attributes set the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.
 5. `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
 6. `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
 
@@ -522,8 +522,7 @@ You can now open this file in a web browser to see what the rendered code looks 
 - Edit the paragraph content to include text about a topic that you find interesting.
 - Make important words stand out in bold by wrapping them inside a `<strong>` opening tag and `</strong>` closing tag.
 - Add a link to your paragraph, as [explained earlier in the article](#active_learning_adding_attributes_to_an_element).
-
-
+  
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
 ```html hidden
