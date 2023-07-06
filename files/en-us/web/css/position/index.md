@@ -40,13 +40,13 @@ position: unset;
 
 - `absolute`
 
-  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest [positioned](#types_of_positioning) ancestor, if any; otherwise, it is placed relative to the initial [containing block](/en-US/docs/Web/CSS/Containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
+  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
     This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) when the value of `z-index` is not `auto`. The margins of absolutely positioned boxes do not [collapse](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) with other margins.
 
 - `fixed`
 
-  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial [containing block](/en-US/docs/Web/CSS/Containing_block) established by the {{glossary("viewport")}}, except when one of its ancestors has a `transform`, `perspective`, or `filter` property set to something other than `none` (see the [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), or the [`will-change`](/en-US/docs/Web/CSS/will-change) property is set to `transform`, in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with `perspective` and `filter` contributing to containing block formation.) Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
+  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
     This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). In printed documents, the element is placed in the same position on _every page_.
 
