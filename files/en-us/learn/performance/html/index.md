@@ -249,7 +249,7 @@ The fetching of other resources (such as images, videos, or font files) linked t
 <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4" />
 ```
 
-Upon coming across a `rel="preload"` link, the browser will fetch the referenced resource as soon as possible and make it available in the browser cache so that it will be ready for use sooner when it is referenced in subsequent code. It is useful to preload high priority resources that the user will encounter early on in a page so that the experience is as smooth and possible.
+Upon coming across a `rel="preload"` link, the browser will fetch the referenced resource as soon as possible and make it available in the browser cache so that it will be ready for use sooner when it is referenced in subsequent code. It is useful to preload high-priority resources that the user will encounter early on in a page so that the experience is as smooth as possible.
 
 See the following articles for detailed information on using `rel="preload"`:
 
