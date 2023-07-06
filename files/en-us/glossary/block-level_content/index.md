@@ -39,8 +39,6 @@ p {
 
 {{EmbedLiveSample("Examples")}}
 
-Just a random change to a page with a live sample.
-
 ## See also
 
 - [Inline-level content](/en-US/docs/Glossary/Inline-level_content)
