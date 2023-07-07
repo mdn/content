@@ -143,5 +143,5 @@ See the [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and 
 ## See also
 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- [CSS selector structure](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure)
-- [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
