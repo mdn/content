@@ -28,7 +28,7 @@ A web app manifest is a JSON file that tells the browser how the PWA should appe
 The manifest is included using a {{HTMLElement("link")}} element in the app's HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <link rel="manifest" href="manifest.json" />

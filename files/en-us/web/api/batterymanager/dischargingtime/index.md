@@ -37,7 +37,7 @@ navigator.getBattery().then((battery) => {
   const time = battery.dischargingTime;
 
   document.querySelector(
-    "#dischargingTime"
+    "#dischargingTime",
   ).textContent = `Remaining time to fully discharge the battery: ${time}`;
 });
 ```

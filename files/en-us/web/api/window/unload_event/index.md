@@ -68,7 +68,7 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -91,7 +91,7 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 Below, the content of `child-frame.html`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

@@ -54,7 +54,7 @@ window.onload = () => {
       c.innerHTML = p.value;
       v.playbackRate = p.value;
     },
-    false
+    false,
   );
 };
 ```

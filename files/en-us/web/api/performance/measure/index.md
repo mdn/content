@@ -124,7 +124,7 @@ Given two of your own markers `"login-started"` and `"login-finished"`, you can 
 const loginMeasure = performance.measure(
   "login-duration",
   "login-started",
-  "login-finished"
+  "login-finished",
 );
 console.log(loginMeasure.duration);
 ```

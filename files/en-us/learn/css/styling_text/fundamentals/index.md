@@ -432,7 +432,9 @@ You can apply multiple shadows to the same text by including multiple shadow val
 
 ```css
 h1 {
-  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
 }
 ```
 
@@ -514,7 +516,9 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
   text-align: center;
 }
 
@@ -565,7 +569,9 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
   text-align: center;
 }
 
@@ -620,7 +626,9 @@ html {
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -685,7 +693,10 @@ A forward slash has to be put in between the {{cssxref("font-size")}} and {{cssx
 A full example would look like this:
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## Active learning: Playing with styling text

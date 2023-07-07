@@ -49,7 +49,7 @@ self.addEventListener("contentdelete", (event) => {
       Promise.all([
         cache.delete(`/icon/${event.id}`),
         cache.delete(`/content/${event.id}`),
-      ])
+      ]),
     );
   event.waitUntil(deletion);
 });

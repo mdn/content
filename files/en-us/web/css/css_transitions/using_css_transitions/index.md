@@ -85,7 +85,11 @@ This example performs a four-second font size transition with a two-second delay
   width: 100px;
   height: 100px;
   background-color: #0000ff;
-  transition: width 2s, height 2s, background-color 2s, rotate 2s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    rotate 2s;
 }
 
 .box:hover {
@@ -209,7 +213,7 @@ document.addEventListener(
     f.style.transform = `translateY(${ev.clientY - 25}px)`;
     f.style.transform += `translateX(${ev.clientX - 25}px)`;
   },
-  false
+  false,
 );
 ```
 

@@ -215,16 +215,18 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 ```css
 @font-face {
   font-family: "handwriting";
-  src: url("fonts/journal-webfont.woff2") format("woff2"), url("fonts/journal-webfont.woff")
-      format("woff");
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "typewriter";
-  src: url("fonts/momot___-webfont.woff2") format("woff2"), url("fonts/momot___-webfont.woff")
-      format("woff");
+  src:
+    url("fonts/momot___-webfont.woff2") format("woff2"),
+    url("fonts/momot___-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -257,7 +259,9 @@ Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and 
 
 ```css
 h1 {
-  font: 1em "typewriter", monospace;
+  font:
+    1em "typewriter",
+    monospace;
   align-self: end;
 }
 
@@ -277,7 +281,9 @@ Now we can start working on the form elements themselves. First, let's ensure th
 
 ```css
 label {
-  font: 0.8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
@@ -286,7 +292,10 @@ The text fields require some common rules. In other words, we remove their {{css
 ```css
 input,
 textarea {
-  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
   border: none;
   padding: 0 10px;
   margin: 0;

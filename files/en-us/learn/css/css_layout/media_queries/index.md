@@ -220,7 +220,10 @@ Our starting point is an HTML document with some CSS applied to add background c
 body {
   width: 90%;
   margin: 2em auto;
-  font: 1em/1.3 Arial, Helvetica, sans-serif;
+  font:
+    1em/1.3 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 a:link,

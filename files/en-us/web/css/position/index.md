@@ -342,7 +342,10 @@ dt {
   border-bottom: 1px solid #989ea4;
   border-top: 1px solid #717d85;
   color: #fff;
-  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  font:
+    bold 18px/21px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
@@ -351,7 +354,10 @@ dt {
 }
 
 dd {
-  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  font:
+    bold 20px/45px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 0 0 0 12px;
   white-space: nowrap;
