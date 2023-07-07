@@ -1,6 +1,7 @@
 ---
 title: UI pseudo-classes
 slug: Learn/Forms/UI_pseudo-classes
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
@@ -407,7 +408,7 @@ document.addEventListener(
       .getElementById("billing-checkbox")
       .addEventListener("change", toggleBilling);
   },
-  false
+  false,
 );
 
 function toggleBilling() {

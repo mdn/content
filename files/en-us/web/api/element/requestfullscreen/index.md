@@ -114,7 +114,7 @@ function toggleFullscreen() {
   if (!document.fullscreenElement) {
     elem.requestFullscreen().catch((err) => {
       alert(
-        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`
+        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
       );
     });
   } else {
@@ -149,7 +149,7 @@ elem
   .then(() => {})
   .catch((err) => {
     alert(
-      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`
+      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`,
     );
   });
 ```

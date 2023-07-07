@@ -1,6 +1,7 @@
 ---
 title: Privacy, permissions, and information security
 slug: Web/Privacy
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages}}

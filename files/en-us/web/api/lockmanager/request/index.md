@@ -114,7 +114,7 @@ async function do_read() {
     { mode: "shared" },
     async (lock) => {
       // Read code here.
-    }
+    },
   );
 }
 ```
@@ -129,7 +129,7 @@ async function do_write() {
     { mode: "exclusive" },
     async (lock) => {
       // Write code here.
-    }
+    },
   );
 }
 ```
@@ -152,7 +152,7 @@ await navigator.locks.request(
 
     // The lock was granted, and no other running code in this origin is holding
     // the 'my_res_lock' lock until this returns.
-  }
+  },
 );
 ```
 
@@ -171,7 +171,7 @@ try {
     { signal: controller.signal },
     async (lock) => {
       // The lock was acquired!
-    }
+    },
   );
 } catch (ex) {
   if (ex.name === "AbortError") {

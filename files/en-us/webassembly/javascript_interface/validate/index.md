@@ -47,7 +47,7 @@ fetch("simple.wasm")
   .then((bytes) => {
     const valid = WebAssembly.validate(bytes);
     console.log(
-      `The given bytes are ${valid ? "" : "not "}a valid Wasm module`
+      `The given bytes are ${valid ? "" : "not "}a valid Wasm module`,
     );
   });
 ```

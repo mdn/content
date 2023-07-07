@@ -77,7 +77,7 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
     console.log(tbl.length);
     console.log(tbl.get(0)());
     console.log(tbl.get(1)());
-  }
+  },
 );
 ```
 

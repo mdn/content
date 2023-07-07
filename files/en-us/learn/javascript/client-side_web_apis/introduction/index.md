@@ -1,6 +1,7 @@
 ---
 title: Introduction to web APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}

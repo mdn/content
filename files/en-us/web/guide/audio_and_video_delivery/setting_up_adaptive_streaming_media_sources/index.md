@@ -1,6 +1,7 @@
 ---
 title: Setting up adaptive streaming media sources
 slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}

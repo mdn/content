@@ -29,7 +29,7 @@ Let's start by setting up an environment to create something with A-Frame. We'll
 The first step is to create an HTML document — inside your project directory, create a new `index.html` file, and save the follow HTML inside it:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

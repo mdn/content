@@ -1,6 +1,7 @@
 ---
 title: Full page zoom
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -28,7 +29,7 @@ var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");
 var contViewer = iframe.docShell.contentViewer;
 var docViewer = contViewer.QueryInterface(
-  Components.interfaces.nsIMarkupDocumentViewer
+  Components.interfaces.nsIMarkupDocumentViewer,
 );
 docViewer.fullZoom = zoom;
 ```

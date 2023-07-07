@@ -97,7 +97,7 @@ function pointermoveHandler(ev) {
 
   // Find this event in the cache and update its record with this event
   const index = evCache.findIndex(
-    (cachedEv) => cachedEv.pointerId === ev.pointerId
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
   );
   evCache[index] = ev;
 
@@ -180,7 +180,7 @@ This function helps manage the global event caches `evCache`.
 function removeEvent(ev) {
   // Remove this event from the target's cache
   const index = evCache.findIndex(
-    (cachedEv) => cachedEv.pointerId === ev.pointerId
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
   );
   evCache.splice(index, 1);
 }

@@ -1,6 +1,7 @@
 ---
 title: Package management basics
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -188,7 +189,7 @@ Parcel expects an `index.html` and an `index.js` file to work with, but otherwis
 So now we need to add an `index.html` file to our working directory. Create `index.html` in your test directory, and give it the following contents:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

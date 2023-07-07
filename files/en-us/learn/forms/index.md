@@ -1,6 +1,7 @@
 ---
 title: Web forms — Working with user data
 slug: Learn/Forms
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

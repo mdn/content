@@ -53,7 +53,7 @@ self.addEventListener("notificationclick", (event) => {
           if (client.url === "/" && "focus" in client) return client.focus();
         }
         if (clients.openWindow) return clients.openWindow("/");
-      })
+      }),
   );
 });
 ```

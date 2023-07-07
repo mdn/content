@@ -1,6 +1,7 @@
 ---
 title: Share data between apps
 slug: Web/Progressive_web_apps/How_to/Share_data_between_apps
+page-type: how-to
 ---
 
 {{PWASidebar}}
@@ -273,7 +274,7 @@ self.addEventListener("fetch", (event) => {
 
       // Redirect the user to a URL that shows the imported files.
       return Response.redirect("/display-new-files", 303);
-    })()
+    })(),
   );
 });
 ```

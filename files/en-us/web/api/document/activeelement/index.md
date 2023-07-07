@@ -59,7 +59,7 @@ function onMouseUp(e) {
   const activeTextarea = document.activeElement;
   const selection = activeTextarea.value.substring(
     activeTextarea.selectionStart,
-    activeTextarea.selectionEnd
+    activeTextarea.selectionEnd,
   );
 
   const outputElement = document.getElementById("output-element");

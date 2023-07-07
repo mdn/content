@@ -1,6 +1,7 @@
 ---
 title: Firefox 115 for developers
 slug: Mozilla/Firefox/Releases/115
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -12,6 +13,9 @@ This article provides information about the changes in Firefox 115 that affect d
 ### Developer Tools
 
 ### HTML
+
+- The [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) keyword for the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute of the {{HTMLElement("link")}} element is now supported.
+  This allows early (and asynchronous) fetching of [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) and their dependencies in parallel, which are then stored in the document's module map ([Firefox bug 1425310](https://bugzil.la/1425310)).
 
 #### Removals
 
@@ -37,6 +41,9 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### HTTP
 
+- The [`Sec-Purpose`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is now included in requests to {{Glossary("Prefetch")}} resources.
+  This allows servers to provide any special handling that might be needed, such as adjusting the caching expiry for the request ([Firefox bug 1836328](https://bugzil.la/1836328)).
+
 #### Removals
 
 ### Security
@@ -45,7 +52,7 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### APIs
 
-- The [`Response: json()` static method](/en-US/docs/Web/API/Response/json_static) is now supported, making it easier to construct {{domxref("Response")}} objects for returning JSON data.
+- The [`Response.json()`](/en-US/docs/Web/API/Response/json_static) static method is now supported, making it easier to construct {{domxref("Response")}} objects for returning JSON data.
   The method will be useful for [service workers](/en-US/docs/Web/API/Service_Worker_API) and any other code that needs to respond to browser requests with JSON data ([Firefox bug 1758943](https://bugzil.la/1758943)).
 - The [`URL.canParse()`](/en-US/docs/Web/API/URL/canParse_static) static method can now be used to parse and validate an absolute URL, or a relative URL and base URL.
   This provides a fast and easy way to check if URLs are valid, instead of constructing them within a `try...catch` block and handling exceptions.
@@ -70,7 +77,15 @@ This article provides information about the changes in Firefox 115 that affect d
 
 #### WebDriver BiDi
 
+- The payload now always includes stack traces for responses and events without capping it after the first 50 "throw" usages in a realm ([Firefox bug 1791715](https://bugzil.la/1791715)).
+- When using `input.performActions`, any ongoing wheel transaction is now reset at the end of the command to not retain state and to not leak into following actions within the same tab ([Firefox bug 1821733](https://bugzil.la/1821733)).
+- When using a `pointerMove` action with `input.performActions`, an invalid element origin now correctly raises a "no such error" failure ([Firefox bug 1832028](https://bugzil.la/1832028)).
+- A race condition for the initial page load has been fixed that could appear when directly interacting with a newly opened tab or window ([Firefox bug 1832891](https://bugzil.la/1832891)).
+
 #### Marionette
+
+- Both the commands `WebDriver:GetComputedLabel` and `WebDriver:GetComputedRole` now correctly wait for the requested accessibility object for an element to exist if it just got inserted into the DOM ([Firefox bug 1828816](https://bugzil.la/1828816)).
+- All instances of `window.setTimeout()` in our privileged code running in content processes now use a variant timer that is not affected by the throttling of the timers in case the given tab for automation is in the background.
 
 ## Changes for add-on developers
 

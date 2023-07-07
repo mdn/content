@@ -24,7 +24,7 @@ async function runXR(xrSession) {
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(
-      new XRRigidTransform(viewerStartPosition, viewerStartOrientation)
+      new XRRigidTransform(viewerStartPosition, viewerStartOrientation),
     );
     animationFrameRequestID = xrSession.requestAnimationFrame(myDrawFrame);
   }

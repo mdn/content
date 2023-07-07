@@ -15,7 +15,7 @@ The following example shows an HTML document and corresponding "XHTML" document,
 ```html
 <!-- Content-Type: text/html -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

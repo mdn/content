@@ -15,7 +15,7 @@ This article and its associated example shows how to use inline [SVG](/en-US/doc
 To include an inline SVG in an HTML file, paste the entire SVG file into the HTML file.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

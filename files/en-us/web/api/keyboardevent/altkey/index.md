@@ -19,7 +19,7 @@ A boolean value.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -37,7 +37,7 @@ A boolean value.
             "\n" +
             "ALT key KeyDown: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>
