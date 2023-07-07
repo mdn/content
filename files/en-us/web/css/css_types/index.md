@@ -30,7 +30,9 @@ These types include keywords and identifiers as well as strings, and URLs.
 - Pre-defined keywords
   - : Keywords with a pre-defined meaning, for example, the value of `collapse` for the {{cssxref("border-collapse")}} property.
 - CSS-wide keywords
-  - : All properties, including custom properties, accept the CSS-wide keywords
+
+  - : All properties, including custom properties, accept the CSS-wide keywords:
+  
     - {{CSSXref("initial")}}
       - : The value specified as the property's initial value.
     - {{CSSXref("inherit")}}
