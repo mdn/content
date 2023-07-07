@@ -71,4 +71,4 @@ browser.omnibox.onInputEntered.addListener((text, disposition) => {
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [firefox-code-search](https://github.com/mdn/webextensions-examples/tree/master/firefox-code-search) example which customizes the search bar.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [firefox-code-search](https://github.com/mdn/webextensions-examples/tree/main/firefox-code-search) example which customizes the search bar.

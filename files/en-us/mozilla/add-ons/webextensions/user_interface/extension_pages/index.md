@@ -74,4 +74,4 @@ For details on how to design your web page's to match the style of Firefox, see 
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [window-manipulator](https://github.com/mdn/webextensions-examples/tree/master/window-manipulator) example, which implements several of the options for creating windows.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [window-manipulator](https://github.com/mdn/webextensions-examples/tree/main/window-manipulator) example, which implements several of the options for creating windows.

@@ -59,7 +59,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
 
 - manifest.json
 
-  - : Here is the [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json):
+  - : Here is the [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json):
 
     ```json
     {
@@ -68,7 +68,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
         "default_popup": "tabs.html"
       },
       "description": "A list of methods you can perform on a tab.",
-      "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
+      "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs",
       "manifest_version": 2,
       "name": "Tabs, tabs, tabs",
       "permissions": [
@@ -126,7 +126,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
     3. `tabs.js` is called.
 
 - tabs.js
-  - : In [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js), we'll see how the list of tabs is built and added to the popup.
+  - : In [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js), we'll see how the list of tabs is built and added to the popup.
 
 #### Creating the popup
 
@@ -261,10 +261,10 @@ But first, here is a demonstration of the feature in action:
 {{EmbedYouTube("-lJRzTIvhxo")}}
 
 - manifest.json
-  - : None of the functions require a permission to operate, so there are no features in the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json) file that need to be highlighted.
+  - : None of the functions require a permission to operate, so there are no features in the [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) file that need to be highlighted.
 - tabs.html
 
-  - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html) defines the "menu" displayed in the popup, which includes the "Move active tab to the beginning of the window list" option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an `id`, which is used in `tabs.js` to determine which menu item is being requested.
+  - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) defines the "menu" displayed in the popup, which includes the "Move active tab to the beginning of the window list" option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an `id`, which is used in `tabs.js` to determine which menu item is being requested.
 
     ```html
     <a href="#" id="tabs-move-beginning">
@@ -283,7 +283,7 @@ But first, here is a demonstration of the feature in action:
 
 - tabs.js
 
-  - : To implement the "menu" defined in `tabs.html`, [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js) includes a listener for clicks in `tabs.html`:
+  - : To implement the "menu" defined in `tabs.html`, [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) includes a listener for clicks in `tabs.html`:
 
     ```js
     document.addEventListener("click", (e) => {
@@ -377,12 +377,12 @@ The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tab
 Let's take a look at how the zoom in is implemented.
 
 - manifest.json
-  - : None of the zoom functions require permissions, so there are no features in the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json) file that need to be highlighted.
+  - : None of the zoom functions require permissions, so there are no features in the [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) file that need to be highlighted.
 - tabs.html
-  - : We have already discussed how the [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html) defines the options for this extension, nothing new or unique is done to provide the zoom options.
+  - : We have already discussed how the [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) defines the options for this extension, nothing new or unique is done to provide the zoom options.
 - tabs.js
 
-  - : [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js) starts by defining several constants used in the zoom code:
+  - : [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) starts by defining several constants used in the zoom code:
 
     ```js
     const ZOOM_INCREMENT = 0.2;
@@ -424,7 +424,7 @@ This can be useful, for example, if you want to highlight certain page elements 
 
 ### How to example
 
-The [apply-css](https://github.com/mdn/webextensions-examples/tree/master/apply-css) example uses these features to add a red border to the web page in the active tab. Here is the feature in action:
+The [apply-css](https://github.com/mdn/webextensions-examples/tree/main/apply-css) example uses these features to add a red border to the web page in the active tab. Here is the feature in action:
 
 {{EmbedYouTube("bcK-GT2Dyhs")}}
 
@@ -432,7 +432,7 @@ Let's walk through how it's set up.
 
 - manifest.json
 
-  - : The [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/master/apply-css/manifest.json) requests permissions required to use the CSS features. You need either:
+  - : The [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/manifest.json) requests permissions required to use the CSS features. You need either:
 
     - `"tabs"` permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions); or,
     - `"activeTab"` permission.
@@ -446,7 +446,7 @@ Let's walk through how it's set up.
       "manifest_version": 2,
       "name": "apply-css",
       "version": "1.0",
-      "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+      "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/apply-css",
 
       "background": {
         "scripts": ["background.js"]
@@ -469,7 +469,7 @@ Let's walk through how it's set up.
 
 - background.js
 
-  - : On startup, [`background.js`](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js) sets some constants to define the CSS to be applied, titles for the "page action", and a list of protocols the extension will work in:
+  - : On startup, [`background.js`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/background.js) sets some constants to define the CSS to be applied, titles for the "page action", and a list of protocols the extension will work in:
 
     ```js
     const CSS = "body { border: 20px solid red; }";
