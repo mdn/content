@@ -17,7 +17,7 @@ A read-only array-like `MediaList` object.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

@@ -17,7 +17,7 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
 > **Note:** Update your "index.html" so it looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

@@ -43,7 +43,7 @@ When a browser executes this code, it should let the user choose how to handle t
 ### Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -74,7 +74,7 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 ### Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Web Protocol Handler Sample - Test</title>

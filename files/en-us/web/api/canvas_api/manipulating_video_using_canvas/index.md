@@ -15,7 +15,7 @@ By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/vide
 The HTML document used to render this content is shown below.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

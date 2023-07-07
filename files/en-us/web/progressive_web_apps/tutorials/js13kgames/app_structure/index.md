@@ -19,7 +19,7 @@ The [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) website structure i
 From the HTML point of view, the app shell is everything outside the content section:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

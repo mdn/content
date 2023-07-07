@@ -24,7 +24,7 @@ This example shows the use of the `types` and
 {{domxref("DataTransfer.items","items")}} properties.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <title>Examples of DataTransfer.{types,items} properties</title>
   <meta content="width=device-width" />

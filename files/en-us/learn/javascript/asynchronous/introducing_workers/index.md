@@ -101,7 +101,7 @@ For this example, start by making a local copy of the files at <https://github.c
 The "index.html" file and the "style.css" files are already complete:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

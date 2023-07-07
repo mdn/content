@@ -475,7 +475,7 @@ Instead, you need to do this:
 Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

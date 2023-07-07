@@ -54,7 +54,7 @@ This allows you to upload a file to a server; it displays a progress bar while t
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

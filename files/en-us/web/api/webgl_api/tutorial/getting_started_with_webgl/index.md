@@ -26,7 +26,7 @@ First, create two new files:
 The "index.html" file should contain the following:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

@@ -30,7 +30,7 @@ A live {{domxref("NodeList")}} collection, meaning it automatically updates as n
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Example: using document.getElementsByName</title>

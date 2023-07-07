@@ -104,7 +104,7 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 This example specifies a downloadable font to use, applying it to the entire body of the document:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
