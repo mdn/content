@@ -9,7 +9,7 @@ browser-compat: css.at-rules.property
 
 The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs. It allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
 
-The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JS. Valid `@property` rules result in a registered custom property, as if {{domxref('CSS.registerProperty_static', 'registerProperty')}} had been called with equivalent parameters.
+The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JS. Valid `@property` rules result in a registered custom property, as if {{domxref('CSS.registerProperty_static', 'registerProperty()')}} had been called with equivalent parameters.
 
 ## Syntax
 
@@ -42,9 +42,18 @@ Unknown descriptors are invalid and ignored, but do not invalidate the `@propert
 
 ## Examples
 
-In this example, we define two custom properties, `--item-size` and `--item-color`, that we'll use to style items.
+In this example, we define two custom properties, `--item-size` and `--item-color`, that we'll use to define the size (width and height) and background color of the three following items.
 
-The following code defines `--item-size` property using CSS {{cssxref('@property')}} at-rule. The property accepts only [percentage](/en-US/docs/Web/CSS/percentage) values. That means an item's size will always be relative to its parent's size. The property is inheritable.
+```html
+<div class="container">
+  <div class="item one">Item one</div>
+  <div class="item two">Item two</div>
+  <div class="item three">Item three</div>
+</div>
+\```
+
+
+The following code uses the CSS `@property` at-rule to define a custom property named `--item-size`. The property sets the initial value to `40%`, limiting valid values to [percentage](/en-US/docs/Web/CSS/percentage) values only. This means, when used as the value for an item's size, its size will always be relative to its parent's size. The property is inheritable.
 
 ```css
 @property --item-size {
@@ -54,7 +63,7 @@ The following code defines `--item-size` property using CSS {{cssxref('@property
 }
 ```
 
-For defining `--item-color` we'll use [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'registerProperty')}}, which is equivalent to `@property` at-rule. The property accepts only color values and is not inherited.
+We define a second custom property, `--item-color`, using  [JavaScript](/en-US/docs/Web/JavaScript) instead of CSS. The JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} method is equivalent to `@property` at-rule. The property is defined to have an initial value of `aqua`, to accept only [`<color>`](/en-US/docs/Web/CSS/color_value) values, and is not inherited.
 
 ```js
 window.CSS.registerProperty({
@@ -67,15 +76,7 @@ window.CSS.registerProperty({
 
 The following code creates the items styled using our custom properties.
 
-```html
-<div class="container">
-  <div class="item one">Item one</div>
-  <div class="item two">Item two</div>
-  <div class="item three">Item three</div>
-</div>
-```
-
-Now let us style the items.
+We use the two custom properties to style the items:
 
 ```css
 .container {
