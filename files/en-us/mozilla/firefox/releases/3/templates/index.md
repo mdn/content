@@ -1,6 +1,7 @@
 ---
 title: Templates in Firefox 3
 slug: Mozilla/Firefox/Releases/3/Templates
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

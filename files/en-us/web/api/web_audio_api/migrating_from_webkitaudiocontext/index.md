@@ -108,7 +108,7 @@ xhr.onload = () => {
     },
     () => {
       alert("Decoding the audio buffer failed");
-    }
+    },
   );
 };
 ```

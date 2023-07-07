@@ -1,6 +1,7 @@
 ---
 title: Practical positioning examples
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
+page-type: guide
 ---
 
 {{LearnSidebar}}

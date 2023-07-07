@@ -1,6 +1,7 @@
 ---
 title: Firefox 108 for developers
 slug: Mozilla/Firefox/Releases/108
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

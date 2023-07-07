@@ -1,6 +1,7 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
@@ -404,7 +405,7 @@ const Athlete = mongoose.model("Athlete", yourSchema);
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
 const tennisPlayers = await Athlete.find(
   { sport: "Tennis" },
-  "name age"
+  "name age",
 ).exec();
 ```
 

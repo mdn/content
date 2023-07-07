@@ -207,5 +207,5 @@ A PWA should clean up any old versions of its cache in the service worker's {{do
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
-- [Strategies for service worker caching](https://developer.chrome.com/docs/workbox/caching-strategies-overview) on developer.chrome.com (September 24, 2021)
-- [The Offline Cookbook](https://web.dev/offline-cookbook/) on web.dev (September 28, 2020)
+- [Strategies for service worker caching](https://developer.chrome.com/docs/workbox/caching-strategies-overview) on developer.chrome.com (2021)
+- [The Offline Cookbook](https://web.dev/offline-cookbook/) on web.dev (2020)

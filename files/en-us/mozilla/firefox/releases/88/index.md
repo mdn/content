@@ -1,6 +1,7 @@
 ---
 title: Firefox 88 for developers
 slug: Mozilla/Firefox/Releases/88
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

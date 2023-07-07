@@ -1,6 +1,7 @@
 ---
 title: Introduction to automated testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -230,7 +231,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
        .pipe(
          autoprefixer({
            cascade: false,
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
    }
@@ -292,7 +293,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
        .pipe(
          babel({
            presets: ["@babel/env"],
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
    }
@@ -600,7 +601,7 @@ function getSessionsInBuild(build) {
     { uri: `${baseUrl}builds/${buildId}/sessions.json` },
     (err, res, body) => {
       console.log(JSON.parse(body));
-    }
+    },
   );
   /* Response:
   [

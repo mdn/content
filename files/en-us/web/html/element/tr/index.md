@@ -336,7 +336,11 @@ This time, the HTML is unchanged, so let's dive right into the CSS.
 ```css
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 thead > tr {
@@ -415,7 +419,11 @@ The CSS is much more involved this time. It's not complicated, but there's a lot
 ```css
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }

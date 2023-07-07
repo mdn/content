@@ -73,7 +73,7 @@ console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"
 ```
 
-The constructor with raise an exception if the URL cannot be parsed to a valid URL.
+The constructor will raise an exception if the URL cannot be parsed to a valid URL.
 You can either call the above code in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block or use the [`canParse()`](/en-US/docs/Web/API/URL/canParse_static) static method to first check the URL is valid:
 
 ```js
@@ -114,7 +114,7 @@ The {{domxref("URL.toString", "toString()")}} method of `URL` just returns the v
 
 ```js
 const response = await fetch(
-  new URL("http://www.example.com/démonstration.html")
+  new URL("http://www.example.com/démonstration.html"),
 );
 ```
 

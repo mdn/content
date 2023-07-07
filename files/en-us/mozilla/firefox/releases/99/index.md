@@ -1,6 +1,7 @@
 ---
 title: Firefox 99 for developers
 slug: Mozilla/Firefox/Releases/99
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

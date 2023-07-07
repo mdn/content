@@ -38,7 +38,7 @@ lifeLostText = game.add.text(
   game.world.width * 0.5,
   game.world.height * 0.5,
   "Life lost, click to continue",
-  { font: "18px Arial", fill: "#0095DD" }
+  { font: "18px Arial", fill: "#0095DD" },
 );
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
@@ -64,14 +64,14 @@ livesText = game.add.text(
   game.world.width - 5,
   5,
   `Lives: ${lives}`,
-  textStyle
+  textStyle,
 );
 livesText.anchor.set(1, 0);
 lifeLostText = game.add.text(
   game.world.width * 0.5,
   game.world.height * 0.5,
   "Life lost, click to continue",
-  textStyle
+  textStyle,
 );
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;

@@ -76,7 +76,7 @@ writeTexture(destination, data, dataLayout, size)
     - `rowsPerImage` {{optional_inline}}
       - : The number of block rows per single image of the texture. `bytesPerRow` &times; `rowsPerImage` will give you the stride, in bytes, between the start of each complete image. This is required if there are multiple images to copy.
 - `size`
-  - : An object or array specifying the the extent of the copy — the far corner of the texture region to write the data to. Together with `destination.origin`, this defines the full extent of the region to copy to. See `destination.origin` for examples of the object/array structure.
+  - : An object or array specifying the extent of the copy — the far corner of the texture region to write the data to. Together with `destination.origin`, this defines the full extent of the region to copy to. See `destination.origin` for examples of the object/array structure.
 
 ### Return value
 

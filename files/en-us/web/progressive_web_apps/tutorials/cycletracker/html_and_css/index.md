@@ -1,9 +1,11 @@
 ---
-title: "PWA tutorial: Base HTML and CSS"
-slug: Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS
+title: "CycleTracker: Base HTML and CSS"
+short-title: Base HTML and CSS
+slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
+page-type: tutorial-chapter
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 {{PWASidebar}}
 
@@ -16,14 +18,14 @@ We create an HTML file, with meta data in the head and a static web page contain
 
 To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web), an introduction to web development series.
 
-In the next sections, we'll set up a [local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection) and take a look at our progress before adding [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) to convert the static content created in this section into a functional web application. Once we have a functioning app will we have something that we can progressively enhance into a PWA that is installable and works offline.
+In the next sections, we'll set up a [local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) and take a look at our progress before adding [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert the static content created in this section into a functional web application. Once we have a functioning app will we have something that we can progressively enhance into a PWA that is installable and works offline.
 
 ## Static web content
 
 Our static site HTML, with placeholder {{HTMLElement("link")}} and {{HTMLElement("script")}} elements for yet-to-be-created external CSS and JavaScript files, is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -58,18 +60,18 @@ Copy this HTML and save it in a file called `index.html`.
 
 ## HTML content
 
-Even if the HTML in `index.html` is familiar to you, we recommend reading thru this section before adding some [temporary hard-coded data](#temporary-hard-coded-results-text), adding CSS to a [`styles.css`](#css-content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) that makes this web page function.
+Even if the HTML in `index.html` is familiar to you, we recommend reading thru this section before adding some [temporary hard-coded data](#temporary-hard-coded-results-text), adding CSS to a [`styles.css`](#css-content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that makes this web page function.
 
 The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute defining the primary language of the page.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <!-- the <head> and <body> will go here -->
 </html>
@@ -106,7 +108,7 @@ For right now, the last component we include in the `<head>` is a {{HTMLelement(
 
 The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute – and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
 
-We will revisit the `<link>` element and its `rel` attribute in a future section when we include the [link to the manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file#adding_the_manifest_to_the_app) file.
+We will revisit the `<link>` element and its `rel` attribute in a future section when we include the [link to the manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app) file.
 
 ### Document body
 
@@ -336,8 +338,8 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 
 ## Up next
 
-Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) to convert this static content into web app and then enhancing it into a progressive web app with a [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file) and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers), we'll [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection) to view our progress.
+Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert this static content into web app and then enhancing it into a progressive web app with a [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), we'll [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) to view our progress.
 
 Until then, you can view the [static CycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and download the [CycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) from GitHub.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

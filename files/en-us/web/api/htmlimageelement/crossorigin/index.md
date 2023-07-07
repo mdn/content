@@ -85,7 +85,10 @@ loadImage(imageUrl);
 
 ```css
 body {
-  font: 1.125rem/1.5, Helvetica, sans-serif;
+  font:
+    1.125rem/1.5,
+    Helvetica,
+    sans-serif;
 }
 
 .container {

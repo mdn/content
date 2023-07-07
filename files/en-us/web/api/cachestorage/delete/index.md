@@ -50,9 +50,9 @@ this.addEventListener("activate", (event) => {
           if (!cachesToKeep.includes(key)) {
             return caches.delete(key);
           }
-        })
-      )
-    )
+        }),
+      ),
+    ),
   );
 });
 ```

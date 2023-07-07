@@ -1,6 +1,7 @@
 ---
 title: Insecure certificate
 slug: Web/WebDriver/Errors/InsecureCertificate
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

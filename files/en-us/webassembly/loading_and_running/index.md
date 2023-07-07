@@ -27,7 +27,7 @@ The quickest, most efficient way to fetch a Wasm module is using the newer [`Web
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
   (results) => {
     // Do something with the results!
-  }
+  },
 );
 ```
 
@@ -73,7 +73,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
     // or access the elements of an exported table:
     const table = obj.instance.exports.table;
     console.log(table.get(0)());
-  }
+  },
 );
 ```
 

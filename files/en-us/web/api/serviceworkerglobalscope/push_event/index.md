@@ -54,7 +54,7 @@ self.addEventListener(
         break;
     }
   },
-  false
+  false,
 );
 ```
 

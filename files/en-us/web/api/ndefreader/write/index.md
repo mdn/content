@@ -142,7 +142,7 @@ function write(data, { timeout } = {}) {
       (event) => {
         ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
       },
-      { once: true }
+      { once: true },
     );
   });
 }

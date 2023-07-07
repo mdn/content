@@ -1,6 +1,7 @@
 ---
 title: Functions — reusable blocks of code
 slug: Learn/JavaScript/Building_blocks/Functions
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
@@ -254,7 +255,7 @@ console.log(doubled); // [2, 4, 6]
 
 The `map()` method takes each item in the array in turn, passing it into the given function. It then takes the value returned by that function and adds it to a new array.
 
-So in the example above, `(item) => item * 2` is the arrow function equivalent of:
+So in the example above, `item => item * 2` is the arrow function equivalent of:
 
 ```js
 function doubleItem(item) {
@@ -266,7 +267,7 @@ You can use the same concise syntax to rewrite the `addEventListener` example.
 
 ```js
 textBox.addEventListener("keydown", (event) =>
-  console.log(`You pressed "${event.key}".`)
+  console.log(`You pressed "${event.key}".`),
 );
 ```
 

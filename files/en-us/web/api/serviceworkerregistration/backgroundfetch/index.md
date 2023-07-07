@@ -36,7 +36,7 @@ async function requestBackgroundFetch(movieData) {
       title: "Downloading my movie",
       downloadTotal: 60 * 1024 * 1024,
       label: "Downloading a show",
-    }
+    },
   );
   //...
 }

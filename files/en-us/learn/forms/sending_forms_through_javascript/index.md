@@ -1,6 +1,7 @@
 ---
 title: Sending forms through JavaScript
 slug: Learn/Forms/Sending_forms_through_JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -66,7 +67,7 @@ function sendData(data) {
   // Turn the data object into an array of URL-encoded key/value pairs.
   for (const [name, value] of Object.entries(data)) {
     urlEncodedDataPairs.push(
-      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`
+      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`,
     );
   }
 
@@ -350,7 +351,7 @@ window.addEventListener("load", () => {
     // Add the required HTTP header to handle a multipart form data POST request
     XHR.setRequestHeader(
       "Content-Type",
-      `multipart/form-data; boundary=${boundary}`
+      `multipart/form-data; boundary=${boundary}`,
     );
 
     // Send the data
