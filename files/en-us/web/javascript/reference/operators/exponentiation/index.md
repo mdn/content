@@ -7,7 +7,7 @@ browser-compat: javascript.operators.exponentiation
 
 {{jsSidebar("Operators")}}
 
-The **exponentiation** (`**`) operator returns the result of raising the first operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}}, except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
+The **exponentiation (`**`)** operator returns the result of raising the first operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}}, except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
 
@@ -63,8 +63,8 @@ Number(2n) ** 2; // 4
 
 ### Associativity
 
-```js
-2 ** (3 ** 2); // 512
+```js-nolint
+2 ** 3 ** 2; // 512
 2 ** (3 ** 2); // 512
 (2 ** 3) ** 2; // 64
 ```
