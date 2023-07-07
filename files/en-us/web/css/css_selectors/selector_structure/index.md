@@ -100,5 +100,5 @@ The {{cssxref("is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-clas
 - [Forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list)
 - {{DOMXref("Document.querySelector()")}}
 - {{DOMXref("Document.querySelectorAll()")}}
-- [CSS selectors module](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS pseudo-elements module](/en-US/docs/Web/CSS/CSS_pseudo)
