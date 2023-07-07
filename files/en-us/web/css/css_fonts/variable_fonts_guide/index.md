@@ -50,7 +50,9 @@ In this section we'll demonstrate the five registered axes defined with examples
 1. When using `font-variation-settings` it is important to note that axis names are case-sensitive. The registered axis names must be in lower case, and custom axes must be in upper case. For example:
 
    ```css
-   font-variation-settings: "wght" 375, "GRAD" 88;
+   font-variation-settings:
+     "wght" 375,
+     "GRAD" 88;
    ```
 
    `wght` (weight) is a registered axis, and `GRAD` (grade) is a custom one.

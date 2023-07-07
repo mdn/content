@@ -430,12 +430,12 @@ console.log(pattern.hash); // ''
 
 // Prints `true`
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg")
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg"),
 );
 
 // Prints `false` because the search component does not match
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1")
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1"),
 );
 ```
 
@@ -492,7 +492,7 @@ console.log(
   pattern.test({
     pathname: "/foo/bar",
     baseURL: "https://example.com/baz",
-  })
+  }),
 );
 
 // Prints `true` as the hostname in the second argument base URL matches.
@@ -723,7 +723,7 @@ const pattern = new URLPattern({
 });
 
 const result = pattern.exec(
-  "http://foo:bar@sub.example.com/product/view?q=12345"
+  "http://foo:bar@sub.example.com/product/view?q=12345",
 );
 
 console.log(result.username.groups.user); // 'foo'

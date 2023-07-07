@@ -24,7 +24,7 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <title>HTML Standard</title>
 <body>
   <hgroup id="document-title">

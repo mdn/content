@@ -99,7 +99,7 @@ If your site is `burgers.example.com`, you can register a protocol handler for i
 ```js
 navigator.registerProtocolHandler(
   "web+burger",
-  "https://burgers.example.com/?burger=%s"
+  "https://burgers.example.com/?burger=%s",
 );
 ```
 

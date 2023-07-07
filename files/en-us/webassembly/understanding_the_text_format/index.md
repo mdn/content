@@ -250,7 +250,7 @@ const importObject = {
 WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
   (obj) => {
     obj.instance.exports.logIt();
-  }
+  },
 );
 ```
 
@@ -349,7 +349,7 @@ const importObject = {
 WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
   (obj) => {
     obj.instance.exports.writeHi();
-  }
+  },
 );
 ```
 

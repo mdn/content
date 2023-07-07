@@ -115,7 +115,7 @@ const buttonEnclave = this.add.button(
   10,
   "logo-enclave",
   this.clickEnclave,
-  this
+  this,
 );
 ```
 
@@ -129,7 +129,7 @@ this.buttonShoot = this.add.button(
   0,
   "button-alpha",
   null,
-  this
+  this,
 );
 this.buttonShoot.onInputDown.add(this.goShootPressed, this);
 this.buttonShoot.onInputUp.add(this.goShootReleased, this);

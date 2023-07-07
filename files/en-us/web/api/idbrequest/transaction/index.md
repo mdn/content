@@ -64,7 +64,7 @@ objectStoreTitleRequest.onsuccess = () => {
 
   // Log the transaction that originated this request
   console.log(
-    `The transaction that originated this request is ${updateTitleRequest.transaction}`
+    `The transaction that originated this request is ${updateTitleRequest.transaction}`,
   );
 
   // When this new request succeeds, run the displayData()

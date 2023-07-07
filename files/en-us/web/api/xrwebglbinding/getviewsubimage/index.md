@@ -61,14 +61,14 @@ function onXRFrame(time, xrFrame) {
       gl.COLOR_ATTACHMENT0,
       gl.TEXTURE_2D,
       subImage.colorTexture,
-      0
+      0,
     );
     gl.framebufferTexture2D(
       gl.FRAMEBUFFER,
       gl.DEPTH_ATTACHMENT,
       gl.TEXTURE_2D,
       subImage.depthStencilTexture,
-      0
+      0,
     );
     const viewport = subImage.viewport;
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);

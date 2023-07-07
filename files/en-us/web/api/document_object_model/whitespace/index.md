@@ -40,7 +40,7 @@ Any whitespace characters that are outside of HTML elements in the original docu
 Take the following document, for example:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

@@ -29,7 +29,7 @@ Instead of creating a `Clipboard` object through instantiation, you access the s
 navigator.clipboard
   .readText()
   .then(
-    (clipText) => (document.querySelector(".editor").innerText += clipText)
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
   );
 ```
 

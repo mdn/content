@@ -19,7 +19,7 @@ An {{domxref("HTMLHeadElement")}}.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <head id="my-document-head">
   <title>Example: using document.head</title>
 </head>

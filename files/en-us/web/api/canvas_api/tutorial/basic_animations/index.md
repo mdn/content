@@ -82,7 +82,7 @@ function draw() {
   const time = new Date();
   ctx.rotate(
     ((2 * Math.PI) / 60) * time.getSeconds() +
-      ((2 * Math.PI) / 60000) * time.getMilliseconds()
+      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
   );
   ctx.translate(105, 0);
   ctx.fillRect(0, -12, 40, 24); // Shadow
@@ -92,7 +92,7 @@ function draw() {
   ctx.save();
   ctx.rotate(
     ((2 * Math.PI) / 6) * time.getSeconds() +
-      ((2 * Math.PI) / 6000) * time.getMilliseconds()
+      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
   );
   ctx.translate(0, 28.5);
   ctx.drawImage(moon, -3.5, -3.5);
@@ -180,7 +180,7 @@ function clock() {
   // Write Hours
   ctx.save();
   ctx.rotate(
-    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec
+    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
   );
   ctx.lineWidth = 14;
   ctx.beginPath();
@@ -395,7 +395,7 @@ addEventListener(
     cursor.x = e.touches[0].clientX;
     cursor.y = e.touches[0].clientY;
   },
-  { passive: false }
+  { passive: false },
 );
 
 addEventListener("resize", () => setSize());
@@ -407,7 +407,7 @@ function generateParticles(amount) {
       innerHeight / 2,
       4,
       generateColor(),
-      0.02
+      0.02,
     );
   }
 }

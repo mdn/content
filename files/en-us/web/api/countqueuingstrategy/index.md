@@ -42,7 +42,7 @@ const writableStream = new WritableStream(
       console.log("Sink error:", err);
     },
   },
-  queueingStrategy
+  queueingStrategy,
 );
 
 const size = queueingStrategy.size();

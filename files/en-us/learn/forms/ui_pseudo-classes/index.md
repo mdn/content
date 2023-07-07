@@ -408,7 +408,7 @@ document.addEventListener(
       .getElementById("billing-checkbox")
       .addEventListener("change", toggleBilling);
   },
-  false
+  false,
 );
 
 function toggleBilling() {

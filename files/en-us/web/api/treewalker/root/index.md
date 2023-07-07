@@ -26,7 +26,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 root = treeWalker.root; // document.body in this case
 ```
