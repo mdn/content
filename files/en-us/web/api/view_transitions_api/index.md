@@ -302,3 +302,4 @@ This animation also requires the following CSS, to turn off the default CSS anim
 ## See also
 
 - [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [View Transitions API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/)
