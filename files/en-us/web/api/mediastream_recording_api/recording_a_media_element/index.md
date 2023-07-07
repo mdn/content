@@ -55,7 +55,10 @@ Below the playback element is a button for downloading the recorded video.
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {

@@ -962,7 +962,10 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 

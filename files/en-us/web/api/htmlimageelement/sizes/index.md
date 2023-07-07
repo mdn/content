@@ -106,7 +106,12 @@ article {
   border: 4em solid #880e4f;
   border-radius: 7em;
   padding: 1.5em;
-  font: 16px "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+  font:
+    16px "Open Sans",
+    Verdana,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 article img {

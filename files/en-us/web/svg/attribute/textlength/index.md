@@ -72,7 +72,10 @@ Let's create a simple example that presents text you can resize using an {{HTMLE
 
 ```css
 .controls {
-  font: 16px "Open Sans", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 

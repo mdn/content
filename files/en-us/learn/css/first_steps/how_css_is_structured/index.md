@@ -425,7 +425,10 @@ CSS comments begin with `/*` and end with `*/`. In the example below, comments m
 /* Handle basic element styling */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -482,7 +485,10 @@ In the example below, each declaration (and rule start/end) has its own line. Th
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;

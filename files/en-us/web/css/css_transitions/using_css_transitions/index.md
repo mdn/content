@@ -85,7 +85,11 @@ This example performs a four-second font size transition with a two-second delay
   width: 100px;
   height: 100px;
   background-color: #0000ff;
-  transition: width 2s, height 2s, background-color 2s, rotate 2s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    rotate 2s;
 }
 
 .box:hover {

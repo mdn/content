@@ -175,7 +175,9 @@ Here is a simple exercise to verify whether you understood the relation between 
 
 ```css hidden
 math {
-  font-family: Latin Modern Math, STIX Two Math;
+  font-family:
+    Latin Modern Math,
+    STIX Two Math;
   font-size: 200%;
 }
 math .highlight {

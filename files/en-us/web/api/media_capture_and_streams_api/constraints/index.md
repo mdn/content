@@ -230,7 +230,10 @@ The HTML and CSS for this example are pretty simple, and aren't shown here. You 
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
