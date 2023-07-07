@@ -50,7 +50,7 @@ In this example, we define two custom properties, `--item-size` and `--item-colo
   <div class="item two">Item two</div>
   <div class="item three">Item three</div>
 </div>
-\```
+```
 
 
 The following code uses the CSS `@property` at-rule to define a custom property named `--item-size`. The property sets the initial value to `40%`, limiting valid values to [percentage](/en-US/docs/Web/CSS/percentage) values only. This means, when used as the value for an item's size, its size will always be relative to its parent's size. The property is inheritable.
