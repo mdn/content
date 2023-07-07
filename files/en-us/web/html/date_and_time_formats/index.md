@@ -395,7 +395,7 @@ While this format allows for time zones between -23:59 and +23:59, the current r
 
 ## Date issues
 
-Because of data storage and precision issues, you may want to be aware of a few client-side and server-side issues. 
+Because of data storage and precision issues, you may want to be aware of a few client-side and server-side issues.
 
 ### The Y2K38 Problem (often server-side)
 
