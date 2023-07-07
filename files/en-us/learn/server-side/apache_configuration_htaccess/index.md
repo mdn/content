@@ -1,6 +1,7 @@
 ---
 title: "Apache Configuration: .htaccess"
 slug: Learn/Server-side/Apache_Configuration_htaccess
+page-type: guide
 ---
 
 {{LearnSidebar}}

@@ -473,7 +473,7 @@ index.openCursor().onsuccess = (event) => {
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
     console.log(
-      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`
+      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`,
     );
     cursor.continue();
   }
@@ -591,7 +591,7 @@ function useDatabase(db) {
   db.onversionchange = (event) => {
     db.close();
     console.log(
-      "A new version of this page is ready. Please reload or close this tab!"
+      "A new version of this page is ready. Please reload or close this tab!",
     );
   };
 

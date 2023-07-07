@@ -62,7 +62,12 @@ The CSS used for this example is shown below.
   border: 2px solid darkblue;
   background-color: blue;
   color: white;
-  font: 16px "Zilla", "Open Sans", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Zilla",
+    "Open Sans",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: How to center an item
 slug: Learn/CSS/Howto/Center_an_item
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

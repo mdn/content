@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.DataView.getBigInt64
 
 {{JSRef}}
 
-The **`getBigInt64()`** method gets a signed 64-bit integer
-(long long) at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`getBigInt64()`** method of {{jsxref("DataView")}} instances reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit signed integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getbigint64.html")}}
 

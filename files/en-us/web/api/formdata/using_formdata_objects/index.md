@@ -130,7 +130,7 @@ form.addEventListener(
     request.send(formData);
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 

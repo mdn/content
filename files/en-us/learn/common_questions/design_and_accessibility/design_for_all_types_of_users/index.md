@@ -1,6 +1,7 @@
 ---
 title: How can we design for all types of users?
 slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -89,7 +90,7 @@ Suppose we wanted a base font size of 16px and an h1 (main heading) at the equiv
 Here is the HTML we're using:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -181,7 +182,7 @@ Of course the problem doesn't go away when we switch to the Web. The reader's ey
 To achieve this, you can specify a size for your text's container. Let's consider this HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

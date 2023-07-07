@@ -52,28 +52,28 @@ gl.framebufferTexture2D(
   ext.COLOR_ATTACHMENT0_WEBGL,
   gl.TEXTURE_2D,
   tx[0],
-  0
+  0,
 );
 gl.framebufferTexture2D(
   gl.FRAMEBUFFER,
   ext.COLOR_ATTACHMENT1_WEBGL,
   gl.TEXTURE_2D,
   tx[1],
-  0
+  0,
 );
 gl.framebufferTexture2D(
   gl.FRAMEBUFFER,
   ext.COLOR_ATTACHMENT2_WEBGL,
   gl.TEXTURE_2D,
   tx[2],
-  0
+  0,
 );
 gl.framebufferTexture2D(
   gl.FRAMEBUFFER,
   ext.COLOR_ATTACHMENT3_WEBGL,
   gl.TEXTURE_2D,
   tx[3],
-  0
+  0,
 );
 ```
 

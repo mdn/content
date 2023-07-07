@@ -1,12 +1,12 @@
 ---
-title: CSS Animations tips and tricks
+title: CSS animation tips and tricks
 slug: Web/CSS/CSS_animations/Tips
 page-type: guide
 ---
 
 {{CSSRef}}
 
-CSS Animations make it possible to do incredible things with the elements that make up your documents and apps. However, there are things you might want to do that aren't obvious, or clever ways to do things that you might not come up with right away. This article is a collection of tips and tricks we've found that may make your work easier, including how to run a stopped animation again.
+CSS animations make it possible to do incredible things with the elements that make up your documents and apps. However, there are things you might want to do that aren't obvious, or clever ways to do things that you might not come up with right away. This article is a collection of tips and tricks we've found that may make your work easier, including how to run a stopped animation again.
 
 ## Run an animation again
 
@@ -40,7 +40,10 @@ Now we'll define the animation itself using CSS. Some CSS that's not important (
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -147,7 +150,7 @@ const listener = (e) => {
   watchme.className = "slidein stopped";
 };
 watchme.addEventListener("click", () =>
-  watchme.addEventListener("animationiteration", listener, false)
+  watchme.addEventListener("animationiteration", listener, false),
 );
 ```
 
@@ -155,5 +158,5 @@ Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("Window.requestAnimationFrame()")}}

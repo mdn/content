@@ -1,6 +1,7 @@
 ---
 title: Define your app icons
 slug: Web/Progressive_web_apps/How_to/Define_app_icons
+page-type: how-to
 ---
 
 {{PWASidebar}}

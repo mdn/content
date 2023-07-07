@@ -1,6 +1,7 @@
 ---
 title: Introduction to automated testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -177,12 +178,11 @@ To use each plugin, you need to first install it via npm, then require any depen
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function html(cb) {
+   function html() {
      return gulp
        .src("src/index.html")
        .pipe(htmltidy())
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
@@ -223,7 +223,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function css(cb) {
+   function css() {
      return gulp
        .src("src/style.css")
        .pipe(csslint())
@@ -231,10 +231,9 @@ In the input version of the file, you may have noticed that we put an empty {{ht
        .pipe(
          autoprefixer({
            cascade: false,
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
@@ -286,7 +285,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function js(cb) {
+   function js() {
      return gulp
        .src("src/main.js")
        .pipe(jshint())
@@ -294,10 +293,9 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
        .pipe(
          babel({
            presets: ["@babel/env"],
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
-     cb();
    }
    ```
 
@@ -603,7 +601,7 @@ function getSessionsInBuild(build) {
     { uri: `${baseUrl}builds/${buildId}/sessions.json` },
     (err, res, body) => {
       console.log(JSON.parse(body));
-    }
+    },
   );
   /* Response:
   [

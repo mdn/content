@@ -1,6 +1,7 @@
 ---
 title: Getting started with React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -96,7 +97,7 @@ Of course, your browser can't read JSX without help. When compiled (using a tool
 const header = React.createElement(
   "header",
   null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -309,7 +310,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
@@ -346,7 +347,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 

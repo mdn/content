@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.DataView.setUint16
 
 {{JSRef}}
 
-The **`setUint16()`** method stores an unsigned 16-bit integer
-(unsigned short) value at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`setUint16()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 16-bit unsigned integer in the 2 bytes at the specified byte offset of this `DataView`.
 
 {{EmbedInteractiveExample("pages/js/dataview-setuint16.html")}}
 

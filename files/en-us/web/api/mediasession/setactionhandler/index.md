@@ -232,7 +232,7 @@ function handleSeek(details) {
     case "seekforward":
       audio.currentTime = Math.min(
         audio.currentTime + skipTime,
-        audio.duration
+        audio.duration,
       );
       break;
     case "seekbackward":

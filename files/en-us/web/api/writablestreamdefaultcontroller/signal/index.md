@@ -26,7 +26,7 @@ const writingStream = new WritableStream({
   write(controller) {
     return new Promise((resolve, reject) => {
       controller.signal.addEventListener("abort", () =>
-        reject(controller.signal.reason)
+        reject(controller.signal.reason),
       );
 
       // Do nothing but wait with the data: it is a local sink

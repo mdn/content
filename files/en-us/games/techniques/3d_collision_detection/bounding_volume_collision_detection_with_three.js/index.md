@@ -1,6 +1,7 @@
 ---
 title: Bounding volume collision detection with THREE.js
 slug: Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -18,13 +19,13 @@ To create a **`Box3` instance**, we need to provide the **lower and upper bounda
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({})
+  new MeshNormalMaterial({}),
 );
 
 knot.geometry.computeBoundingBox();
 const knotBBox = new Box3(
   knot.geometry.boundingBox.min,
-  knot.geometry.boundingBox.max
+  knot.geometry.boundingBox.max,
 );
 ```
 
@@ -35,7 +36,7 @@ A more simple alternative that fixes the previous issue is to set those boundari
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({})
+  new MeshNormalMaterial({}),
 );
 
 const knotBBox = new Box3(new THREE.Vector3(), new THREE.Vector3());
@@ -49,12 +50,12 @@ Instantiating **`Sphere` objects** is similar. We need to provide the sphere's c
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({})
+  new MeshNormalMaterial({}),
 );
 
 const knotBSphere = new Sphere(
   knot.position,
-  knot.geometry.boundingSphere.radius
+  knot.geometry.boundingSphere.radius,
 );
 ```
 
@@ -143,7 +144,7 @@ To use it, we need to create a new `BoxHelper` instance and supply the geometry 
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new THREE.MeshNormalMaterial({})
+  new THREE.MeshNormalMaterial({}),
 );
 const knotBoxHelper = new THREE.BoxHelper(knot, 0x00ff00);
 scene.add(knotBoxHelper);

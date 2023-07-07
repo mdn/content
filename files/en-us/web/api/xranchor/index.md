@@ -42,7 +42,7 @@ frame.createAnchor(anchorPose, referenceSpace).then(
   },
   (error) => {
     console.error(`Could not create anchor: ${error}`);
-  }
+  },
 );
 ```
 

@@ -47,7 +47,7 @@ Using `addEventListener()`:
 navigator.windowControlsOverlay.addEventListener("geometrychange", (event) => {
   const { x, y, width, height } = event.titlebarAreaRect;
   console.log(
-    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`
+    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`,
   );
 });
 ```
@@ -58,7 +58,7 @@ Using the `ongeometrychange` event handler property:
 navigator.windowControlsOverlay.ongeometrychange = (event) => {
   const { x, y, width, height } = event.titlebarAreaRect;
   console.log(
-    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`
+    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`,
   );
 };
 ```

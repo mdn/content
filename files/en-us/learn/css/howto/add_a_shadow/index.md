@@ -1,6 +1,7 @@
 ---
 title: How to add a shadow to an element
 slug: Learn/CSS/Howto/Add_a_shadow
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

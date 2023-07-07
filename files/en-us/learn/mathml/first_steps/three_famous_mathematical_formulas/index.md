@@ -1,6 +1,7 @@
 ---
 title: Three famous mathematical formulas
 slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
@@ -91,7 +92,7 @@ using the following expression:
 To get this assessment started, you can rely on our usual HTML template. By default it uses UTF-8 encoding, special Web fonts for the `<body>` and `<math>` tags (with similar look & feel as the LaTeX output). The goal is to replace the question marks `???` with actual MathML content.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

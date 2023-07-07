@@ -24,7 +24,10 @@ animation-name: sliding-vertically;
 
 /* Multiple animations */
 animation-name: test1, animation4;
-animation-name: none, -moz-specific, sliding;
+animation-name:
+  none,
+  -moz-specific,
+  sliding;
 
 /* Global values */
 animation-name: inherit;
