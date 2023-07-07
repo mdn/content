@@ -39,8 +39,7 @@ An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
 _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements the following property_.
 
 - {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
-  - : Indicates the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event.
-     This will be the empty string if the event indicates that there are no further candidates to come in this **generation**, or `null` if all ICE gathering on all transports is complete.
+  - : Indicates the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event. This will be the empty string if the event indicates that there are no further candidates to come in this **generation**, or `null` if all ICE gathering on all transports is complete.
 
 ## Description
 
