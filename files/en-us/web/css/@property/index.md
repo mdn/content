@@ -108,17 +108,13 @@ We use the two custom properties to style the items:
 
 {{ EmbedLiveSample('examples', '100%', '250px') }}
 
-In the output above, for the property `--item-size`:
+The two custom properties,  `--item-size: 20%` and `--item-color: orange;` are set on the `container` parent, overriding the `40%` and `aqua` default values set when these custom properties were defined. The size is set to be inheritable; the color is not.
 
-- for item one, as we have not set any value in any CSS rule for the item, value `20%` is inherited from the parent `.container`.
-- for item two, the `initial` value means to use the default `40%` from the property definition.
-- for item three, value `1000px` is not a valid value, because it is not a percentage. So the inherited value `20%` is used.
+For item one, none of these custom properties have been set. The `--item-size` is inheritable, so the value `20%` set on its parent `container` is used. On the other hand, the property `--item-color` is not inheritable, so the value `orange` set on the parent is not considered. Instead the default initial value `aqua` is  used.
 
-In the output above, for the property `--item-color`:
+For item two, CSS global keywords are set for both custom properties which are valid values for all value types and therefore valid no matter the `syntax` descriptor value. The `--item-size` is set to `initial` and uses the `initial-value: 40%;` set in the `@property` declaration.  The `initial` value means the`initialValue` value for the property is used. The `--item-color` is set to `inherit`, explicitly inheriting the `orange` value from its parent even though the custom property is set to otherwise not be inherited. This is why item two is orange.
 
-- for item one, as the property is not inheritable and it is not set in any CSS rule for the item, default value `aqua` is used.
-- for item two, using `inherit` we've forced the inheritance, even though the property is not inheritable, the value `orange` set on parent is used.
-- for item three, value `xyz` is an invalid color, so default `aqua` is used.
+For item three, the `--item-size` value gets set to `1000px`. While `1000px` is a {{cssxref("length") value, the `@property` declaration require the value be a `<percentage>`, so the declaration is not valid and is ignored, meaning the inheritable `20%` set on the parent is used. The `xyz` value is also invalid. As `registerProperty()` set `--item-color` to not be inherited, default initial value of `aqua` is used and not the parent's `orange` value.
 
 ## Specifications
 
