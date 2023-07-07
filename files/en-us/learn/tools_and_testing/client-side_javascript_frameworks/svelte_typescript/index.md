@@ -244,7 +244,7 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 
 6. Now from `Todos.svelte` we will instantiate a `Todo` component with a literal object as its parameter before the call to the `MoreActions` component, like this:
 
-   ```html
+   ```svelte
    <hr />
 
    <Todo todo={ { name: 'a new task with no id!', completed: false } } />
@@ -394,7 +394,7 @@ Now we'll take care of the `FilterButton` component.
 
 4. Now we will use this from the `FilterButton` component. Replace the content of the `FilterButton.svelte` file with the following:
 
-   ```html
+   ```svelte
    <!-- components/FilterButton.svelte -->
    <script lang="ts">
      import { Filter } from "../types/filter.enum";
@@ -403,53 +403,17 @@ Now we'll take care of the `FilterButton` component.
    </script>
 
    <div class="filters btn-group stack-exception">
-     <button
-       class="btn toggle-btn"
-       class:btn__primary="{filter"
-       =""
-       =""
-       ="Filter.ALL}"
-       aria-pressed="{filter"
-       =""
-       =""
-       ="Filter.ALL}"
-       on:click="{()"
-       ="">
-       filter = Filter.ALL} >
+     <button class="btn toggle-btn" class:btn__primary={filter === "all"} aria-pressed={filter === "all"} on:click={()=> filter = "all"} >
        <span class="visually-hidden">Show</span>
        <span>All</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button
-       class="btn toggle-btn"
-       class:btn__primary="{filter"
-       =""
-       =""
-       ="Filter.ACTIVE}"
-       aria-pressed="{filter"
-       =""
-       =""
-       ="Filter.ACTIVE}"
-       on:click="{()"
-       ="">
-       filter = Filter.ACTIVE} >
+     <button class="btn toggle-btn" class:btn__primary={filter === "active"} aria-pressed={filter === "active"} on:click={()=> filter = "active"} >
        <span class="visually-hidden">Show</span>
        <span>Active</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button
-       class="btn toggle-btn"
-       class:btn__primary="{filter"
-       =""
-       =""
-       ="Filter.COMPLETED}"
-       aria-pressed="{filter"
-       =""
-       =""
-       ="Filter.COMPLETED}"
-       on:click="{()"
-       ="">
-       filter = Filter.COMPLETED} >
+     <button class="btn toggle-btn" class:btn__primary={filter === "completed"} aria-pressed={filter === "completed"} on:click={()=> filter = "completed"} >
        <span class="visually-hidden">Show</span>
        <span>Completed</span>
        <span class="visually-hidden">tasks</span>
@@ -614,7 +578,7 @@ Let's fix it.
 
    To fix it, replace `tabindex="-1"` with `tabindex={-1}`, like this:
 
-   ```html
+   ```svelte
    <h2 id="list-heading" bind:this="{headingEl}" tabindex="{-1}">
      {completedTodos} out of {totalTodos} items completed
    </h2>
@@ -811,7 +775,7 @@ Now if we try to create a `localStore` with something that cannot be converted t
 
 And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
 
-```html
+```svelte
 <!-- App.svelte -->
 <script lang="ts">
   import Todos from "./components/Todos.svelte";
