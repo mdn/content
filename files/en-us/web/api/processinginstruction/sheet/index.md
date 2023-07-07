@@ -19,7 +19,7 @@ The associated {{DOMxref("Stylesheet")}} object, or `null` if there are none.
 
 ## Example
 
-```html
+```html-nolint
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="rule.css"?>
 …
