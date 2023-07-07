@@ -245,7 +245,7 @@ const obj2 = { __proto__: null };
 console.log(Object.getPrototypeOf(obj2)); // null
 
 const protoObj = {};
-const obj3 = { "__proto__": protoObj };
+const obj3 = { __proto__: protoObj };
 console.log(Object.getPrototypeOf(obj3) === protoObj); // true
 
 const obj4 = { __proto__: "not an object or null" };
