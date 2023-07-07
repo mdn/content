@@ -62,17 +62,17 @@ let updating = browser.menus.update(
 
         ```json
         "icons": {
-              "16": "path/to/geo-16.png",
-              "32": "path/to/geo-32.png"
-            }
+          "16": "path/to/geo-16.png",
+          "32": "path/to/geo-32.png"
+        }
         ```
 
         Alternatively, you can specify a single SVG icon, and it will be scaled appropriately:
 
         ```json
         "icons": {
-              "16": "path/to/geo.svg"
-            }
+          "16": "path/to/geo.svg"
+        }
         ```
 
         > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.

@@ -42,7 +42,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 let testPermissions1 = {
   origins: ["*://mozilla.org/"],
-  permissions: ["tabs"]
+  permissions: ["tabs"],
 };
 
 const testResult1 = await browser.permissions.contains(testPermissions1);
@@ -50,7 +50,7 @@ console.log(testResult1); // true
 
 let testPermissions2 = {
   origins: ["*://mozilla.org/"],
-  permissions: ["tabs", "alarms"]
+  permissions: ["tabs", "alarms"],
 };
 
 const testResult2 = await browser.permissions.contains(testPermissions2);
@@ -58,20 +58,18 @@ console.log(testResult2); // false, "alarms" doesn't match
 
 let testPermissions3 = {
   origins: ["https://developer.mozilla.org/"],
-  permissions: ["tabs", "webRequest"]
+  permissions: ["tabs", "webRequest"],
 };
 
 const testResult3 = await browser.permissions.contains(testPermissions3);
-console.log(testResult3); // true: "https://developer.mozilla.org/"
-                          // matches: "*://*.mozilla.org/*"
+console.log(testResult3); // true: "https://developer.mozilla.org/",  matches: "*://*.mozilla.org/*"
 
 let testPermissions4 = {
-  origins: ["https://example.org/"]
+  origins: ["https://example.org/"],
 };
 
 const testResult4 = await browser.permissions.contains(testPermissions4);
-console.log(testResult4); // false, "https://example.org/"
-                          // does not match
+console.log(testResult4); // false, "https://example.org/", does not match
 ```
 
 {{WebExtExamples}}
