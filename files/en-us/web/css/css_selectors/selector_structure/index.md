@@ -78,7 +78,7 @@ article.heading {
 }
 ```
 
-If any selectors in a selector list are [invalid](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), the entire list is invalidated.
+If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Selector_list#valid_and_invalid_selector_lists) list is invalid, the entire selector list is invalidated.
 
 ```css
 #main,
