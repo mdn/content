@@ -13,7 +13,7 @@ Animations that involve transitioning between two states are often called _impli
 
 ![A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions.](transitionsprinciple.png)
 
-CSS transitions let you decide which properties to animate (by _listing them explicitly_), when the animation will start (by setting a _delay)_, how long the transition will last (by setting a _duration_), and how the transition will run (by defining a _timing function_, e.g., linearly or quick at the beginning, slow at the end).
+CSS transitions let you decide which properties to animate (by [_listing them explicitly_](/en-US/docs/Web/CSS/transition-property)), when the animation will start (by setting a [_delay_](/en-US/docs/Web/CSS/transition-delay)), how long the transition will last (by setting a [_duration_](/en-US/docs/Web/CSS/transition-duration)), and how the transition will run (by defining an [_easing function_](/en-US/docs/Web/CSS/transition-timing-function), e.g., linearly or quick at the beginning, slow at the end).
 
 ## Which CSS properties can be transitioned?
 
@@ -32,7 +32,7 @@ You can control the individual components of the transition with the following s
 - {{cssxref("transition-duration")}}
   - : Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
 - {{cssxref("transition-timing-function")}}
-  - : Specifies a function to define how intermediate values for properties are computed. _Timing functions_ determine how intermediate values of the transition are calculated. Most [timing functions](/en-US/docs/Web/CSS/easing-function) can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from [Easing Functions Cheat Sheet](https://easings.net/).
+  - : Specifies a function to define how intermediate values for properties are computed. _Easing functions_ determine how intermediate values of the transition are calculated. Most [easing functions](/en-US/docs/Web/CSS/easing-function) can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from [Easing functions cheat sheet](https://easings.net/).
 - {{cssxref("transition-delay")}}
   - : Defines how long to wait between the time a property is changed and the transition actually begins.
 
