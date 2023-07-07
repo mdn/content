@@ -73,7 +73,6 @@ window.CSS.registerProperty({
 });
 ```
 
-The following code creates the items styled using our custom properties.
 
 We use the two custom properties to style the items:
 
