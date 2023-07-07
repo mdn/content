@@ -382,7 +382,7 @@ colorPicker.addEventListener(
   (event) => {
     box.style.borderColor = event.target.value;
   },
-  false
+  false,
 );
 
 colorPicker.addEventListener(
@@ -390,7 +390,7 @@ colorPicker.addEventListener(
   (event) => {
     output.innerText = `Color set to ${colorPicker.value}.`;
   },
-  false
+  false,
 );
 ```
 

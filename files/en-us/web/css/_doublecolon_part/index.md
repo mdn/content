@@ -88,7 +88,7 @@ globalThis.customElements.define(
     constructor() {
       super().attachShadow({ mode: "open" }).append(template.content);
     }
-  }
+  },
 );
 ```
 

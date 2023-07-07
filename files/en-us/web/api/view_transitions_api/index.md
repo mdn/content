@@ -212,7 +212,7 @@ function spaNavigate(data) {
   // Get the distance to the furthest corner
   const endRadius = Math.hypot(
     Math.max(x, innerWidth - x),
-    Math.max(y, innerHeight - y)
+    Math.max(y, innerHeight - y),
   );
 
   // Create a transition:
@@ -235,7 +235,7 @@ function spaNavigate(data) {
         easing: "ease-in",
         // Specify which pseudo-element to animate
         pseudoElement: "::view-transition-new(root)",
-      }
+      },
     );
   });
 }

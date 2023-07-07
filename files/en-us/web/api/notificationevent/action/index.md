@@ -31,7 +31,7 @@ self.addEventListener(
       clients.openWindow("/reader");
     }
   },
-  false
+  false,
 );
 ```
 

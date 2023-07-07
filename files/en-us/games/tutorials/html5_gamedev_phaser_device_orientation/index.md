@@ -135,12 +135,12 @@ Ball.Preloader.prototype = {
     this.preloadBg = this.add.sprite(
       (Ball._WIDTH - 297) * 0.5,
       (Ball._HEIGHT - 145) * 0.5,
-      "preloaderBg"
+      "preloaderBg",
     );
     this.preloadBar = this.add.sprite(
       (Ball._WIDTH - 158) * 0.5,
       (Ball._HEIGHT - 50) * 0.5,
-      "preloaderBar"
+      "preloaderBar",
     );
     this.load.setPreloadSprite(this.preloadBar);
 
@@ -181,7 +181,7 @@ Ball.MainMenu.prototype = {
       this,
       2,
       0,
-      1
+      1,
     );
     this.startButton.anchor.set(0.5, 0);
     this.startButton.input.useHandCursor = true;
@@ -218,7 +218,7 @@ Ball.Howto.prototype = {
       0,
       "screen-howtoplay",
       this.startGame,
-      this
+      this,
     );
   },
   startGame() {
@@ -400,14 +400,14 @@ this.physics.arcade.collide(
   this.borderGroup,
   this.wallCollision,
   null,
-  this
+  this,
 );
 this.physics.arcade.collide(
   this.ball,
   this.levels[this.level - 1],
   this.wallCollision,
   null,
-  this
+  this,
 );
 ```
 
@@ -463,13 +463,13 @@ this.timerText = this.game.add.text(
   15,
   15,
   `Time: ${this.timer}`,
-  this.fontBig
+  this.fontBig,
 );
 this.totalTimeText = this.game.add.text(
   120,
   30,
   `Total time: ${this.totalTimer}`,
-  this.fontSmall
+  this.fontSmall,
 );
 ```
 

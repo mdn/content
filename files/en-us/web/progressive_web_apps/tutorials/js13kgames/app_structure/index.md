@@ -200,7 +200,7 @@ self.addEventListener("install", (e) => {
       const cache = await caches.open(cacheName);
       console.log("[Service Worker] Caching all: app shell and content");
       await cache.addAll(contentToCache);
-    })()
+    })(),
   );
 });
 ```
@@ -221,7 +221,7 @@ self.addEventListener("fetch", (e) => {
       console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
       cache.put(e.request, response.clone());
       return response;
-    })()
+    })(),
   );
 });
 ```

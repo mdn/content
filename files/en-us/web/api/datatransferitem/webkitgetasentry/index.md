@@ -132,7 +132,7 @@ dropzone.addEventListener(
   (event) => {
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -155,7 +155,7 @@ dropzone.addEventListener(
       }
     }
   },
-  false
+  false,
 );
 ```
 

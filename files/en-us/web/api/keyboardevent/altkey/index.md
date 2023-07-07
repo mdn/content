@@ -37,7 +37,7 @@ A boolean value.
             "\n" +
             "ALT key KeyDown: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>

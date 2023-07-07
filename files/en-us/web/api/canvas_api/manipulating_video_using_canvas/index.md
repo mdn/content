@@ -89,7 +89,7 @@ processor.doLoad = function doLoad() {
       this.height = video.videoHeight / 2;
       this.timerCallback();
     },
-    false
+    false,
   );
 };
 ```

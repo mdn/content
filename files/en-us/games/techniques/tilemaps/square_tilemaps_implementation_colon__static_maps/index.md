@@ -84,7 +84,7 @@ for (let c = 0; c < map.cols; c++) {
         c * map.tsize, // target x
         r * map.tsize, // target y
         map.tsize, // target width
-        map.tsize // target height
+        map.tsize, // target height
       );
     }
   }

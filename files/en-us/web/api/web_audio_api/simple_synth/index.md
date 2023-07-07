@@ -397,9 +397,9 @@ if (!Object.entries) {
       (e, k) =>
         concat(
           e,
-          typeof k === "string" && isEnumerable(O, k) ? [[k, O[k]]] : []
+          typeof k === "string" && isEnumerable(O, k) ? [[k, O[k]]] : [],
         ),
-      []
+      [],
     );
   };
 }

@@ -133,7 +133,7 @@ importScripts(); /* imports nothing */
 importScripts("foo.js"); /* imports just "foo.js" */
 importScripts("foo.js", "bar.js"); /* imports two scripts */
 importScripts(
-  "//example.com/hello.js"
+  "//example.com/hello.js",
 ); /* You can import scripts from other origins */
 ```
 
@@ -348,7 +348,7 @@ Here we let the worker handle two simple operations for illustration: getting th
 this.sendQuery = (queryMethod, ...queryMethodArguments) => {
   if (!queryMethod) {
     throw new TypeError(
-      "QueryableWorker.sendQuery takes at least one argument"
+      "QueryableWorker.sendQuery takes at least one argument",
     );
   }
   worker.postMessage({
@@ -369,7 +369,7 @@ worker.onmessage = (event) => {
   ) {
     listeners[event.data.queryMethodListener].apply(
       instance,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     this.defaultListener.call(instance, event.data);
@@ -418,7 +418,7 @@ onmessage = (event) => {
   ) {
     queryableFunctions[event.data.queryMethod].apply(
       self,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     defaultReply(event.data);
@@ -478,7 +478,7 @@ Here are the full implementation:
         this.sendQuery = (queryMethod, ...queryMethodArguments) => {
           if (!queryMethod) {
             throw new TypeError(
-              "QueryableWorker.sendQuery takes at least one argument"
+              "QueryableWorker.sendQuery takes at least one argument",
             );
           }
           worker.postMessage({
@@ -495,7 +495,7 @@ Here are the full implementation:
           ) {
             listeners[event.data.queryMethodListener].apply(
               instance,
-              event.data.queryMethodArguments
+              event.data.queryMethodArguments,
             );
           } else {
             this.defaultListener.call(instance, event.data);
@@ -511,7 +511,7 @@ Here are the full implementation:
         document
           .getElementById("firstLink")
           .parentNode.appendChild(
-            document.createTextNode(`The difference is ${result}!`)
+            document.createTextNode(`The difference is ${result}!`),
           );
       });
 
@@ -584,7 +584,7 @@ onmessage = (event) => {
   ) {
     queryableFunctions[event.data.queryMethod].apply(
       self,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     defaultReply(event.data);
@@ -647,8 +647,8 @@ There is not an "official" way to embed the code of a worker within a web page, 
         Array.prototype.map.call(
           document.querySelectorAll("script[type='text\/js-worker']"),
           (script) => script.textContent,
-          { type: "text/javascript" }
-        )
+          { type: "text/javascript" },
+        ),
       );
 
       // Creating a new document.worker property containing all our "text/js-worker" scripts.

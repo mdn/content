@@ -270,7 +270,7 @@ startup = () => {
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(
       intersectionCallback,
-      observerOptions
+      observerOptions,
     );
     observers[i].observe(document.querySelector(`#${boxID}`));
   }
@@ -409,7 +409,7 @@ window.addEventListener(
 
     createObserver();
   },
-  false
+  false,
 );
 ```
 
@@ -557,12 +557,12 @@ function handleIntersect(entries, observer) {
     if (entry.intersectionRatio > prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace(
         "ratio",
-        entry.intersectionRatio
+        entry.intersectionRatio,
       );
     } else {
       entry.target.style.backgroundColor = decreasingColor.replace(
         "ratio",
-        entry.intersectionRatio
+        entry.intersectionRatio,
       );
     }
 

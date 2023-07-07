@@ -32,7 +32,7 @@ someElement.addEventListener(
     console.log(`metaKey = ${e.metaKey}`);
     console.log(`shiftKey = ${e.shiftKey}`);
   },
-  false
+  false,
 );
 ```
 

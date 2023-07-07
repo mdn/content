@@ -132,7 +132,7 @@ addEventListener("DOMContentLoaded", () => {
       () => {
         xhr.abort();
       },
-      { once: true }
+      { once: true },
     );
 
     // When the upload starts, we display the progress bar

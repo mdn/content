@@ -230,7 +230,7 @@ math {
 
 ```js hidden
 const scriptedElements = Array.from(
-  document.querySelectorAll("msub, msup, msubsup, munder, mover, munderover")
+  document.querySelectorAll("msub, msup, msubsup, munder, mover, munderover"),
 );
 const outputDiv = document.getElementById("output");
 function clearHighlight() {
@@ -244,7 +244,7 @@ scriptedElements.forEach((scripted) => {
     scripted.classList.add("highlight");
     outputDiv.insertAdjacentHTML(
       "beforeend",
-      `<p><strong>You clicked an <code>&lt;${scripted.tagName}&gt;</code> element.</strong></p>`
+      `<p><strong>You clicked an <code>&lt;${scripted.tagName}&gt;</code> element.</strong></p>`,
     );
   });
 });

@@ -267,7 +267,7 @@ You can use the same concise syntax to rewrite the `addEventListener` example.
 
 ```js
 textBox.addEventListener("keydown", (event) =>
-  console.log(`You pressed "${event.key}".`)
+  console.log(`You pressed "${event.key}".`),
 );
 ```
 

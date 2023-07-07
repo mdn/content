@@ -147,7 +147,7 @@ const listener = (e) => {
   watchme.className = "slidein stopped";
 };
 watchme.addEventListener("click", () =>
-  watchme.addEventListener("animationiteration", listener, false)
+  watchme.addEventListener("animationiteration", listener, false),
 );
 ```
 

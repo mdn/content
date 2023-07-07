@@ -104,7 +104,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
           posX,
           canvas.height - barHeight / 2,
           barWidth,
-          barHeight / 2
+          barHeight / 2,
         );
         posX += barWidth + 1;
       }

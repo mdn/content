@@ -24,7 +24,7 @@ Setting up a web application as a protocol handler is not a difficult process. B
 navigator.registerProtocolHandler(
   "web+burger",
   "http://www.google.co.uk/?uri=%s",
-  "Burger handler"
+  "Burger handler",
 );
 ```
 
@@ -53,7 +53,7 @@ When a browser executes this code, it should let the user choose how to handle t
       navigator.registerProtocolHandler(
         "web+burger",
         "http://www.google.co.uk/?uri=%s",
-        "Burger handler"
+        "Burger handler",
       );
     </script>
   </head>

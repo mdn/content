@@ -67,7 +67,7 @@ Note that if you want to `POST` data, you may have to set the MIME type of the r
 ```js
 httpRequest.setRequestHeader(
   "Content-Type",
-  "application/x-www-form-urlencoded"
+  "application/x-www-form-urlencoded",
 );
 ```
 
@@ -246,7 +246,7 @@ function makeRequest(url, userName) {
   httpRequest.open("POST", url);
   httpRequest.setRequestHeader(
     "Content-Type",
-    "application/x-www-form-urlencoded"
+    "application/x-www-form-urlencoded",
   );
   httpRequest.send(`userName=${encodeURIComponent(userName)}`);
 }

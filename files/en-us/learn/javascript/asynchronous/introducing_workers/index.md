@@ -76,7 +76,7 @@ document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
   document.querySelector(
-    "#output"
+    "#output",
   ).textContent = `Finished generating ${quota} primes!`;
 });
 
@@ -160,7 +160,7 @@ document.querySelector("#generate").addEventListener("click", () => {
 // primes that were generated, taken from the message data.
 worker.addEventListener("message", (message) => {
   document.querySelector(
-    "#output"
+    "#output",
   ).textContent = `Finished generating ${message.data} primes!`;
 });
 

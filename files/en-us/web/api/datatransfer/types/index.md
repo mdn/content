@@ -63,7 +63,7 @@ This example shows the use of the `types` and
       // Print each item's "kind" and "type"
       for (let i = 0; i < ev.dataTransfer.items.length; i++) {
         console.log(
-          `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`
+          `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`,
         );
       }
     }

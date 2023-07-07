@@ -168,7 +168,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -365,7 +365,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -635,7 +635,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;

@@ -146,7 +146,7 @@ The above has given you a little taste of what you can do, but let's go further 
 
    ```js
    const text = document.createTextNode(
-     " — the premier source for web development knowledge."
+     " — the premier source for web development knowledge.",
    );
    ```
 

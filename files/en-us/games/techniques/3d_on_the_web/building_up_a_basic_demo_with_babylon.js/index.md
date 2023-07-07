@@ -98,7 +98,7 @@ Now the setup code is in place we need to think about implementing the standard 
 const camera = new BABYLON.FreeCamera(
   "camera",
   new BABYLON.Vector3(0, 0, -10),
-  scene
+  scene,
 );
 ```
 
@@ -114,7 +114,7 @@ There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/
 const light = new BABYLON.PointLight(
   "light",
   new BABYLON.Vector3(10, 10, 0),
-  scene
+  scene,
 );
 ```
 

@@ -80,7 +80,7 @@ document.getElementById("okButton").addEventListener(
     document.getElementById("welcome").hidden = true;
     document.getElementById("awesome").hidden = false;
   },
-  false
+  false,
 );
 ```
 

@@ -436,7 +436,7 @@ document.getElementById("startButton").addEventListener(
   () => {
     startVideo();
   },
-  false
+  false,
 );
 ```
 
@@ -479,7 +479,7 @@ document.getElementById("applyButton").addEventListener(
       }
     }
   },
-  false
+  false,
 );
 ```
 
@@ -557,7 +557,7 @@ function log(msg) {
 
 function handleError(reason) {
   log(
-    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`
+    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`,
   );
 }
 ```

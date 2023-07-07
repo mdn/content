@@ -52,7 +52,7 @@ self.addEventListener("install", (event) => {
 
   console.log(
     "Handling install event. Resources to pre-fetch:",
-    urlsToPrefetch
+    urlsToPrefetch,
   );
 
   event.waitUntil(
@@ -63,7 +63,7 @@ self.addEventListener("install", (event) => {
           .addAll(
             urlsToPrefetch.map((urlToPrefetch) => {
               return new Request(urlToPrefetch, { mode: "no-cors" });
-            })
+            }),
           )
           .then(() => {
             console.log("All resources have been fetched and cached.");
@@ -71,7 +71,7 @@ self.addEventListener("install", (event) => {
       })
       .catch((error) => {
         console.error("Pre-fetching failed:", error);
-      })
+      }),
   );
 });
 ```

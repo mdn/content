@@ -125,7 +125,7 @@ function applyMouseMovement(refSpace) {
       y: inverseOrientation[1],
       z: inverseOrientation[2],
       w: inverseOrientation[3],
-    }
+    },
   );
   mat4.copy(mouseMatrix, newTransform.matrix);
 

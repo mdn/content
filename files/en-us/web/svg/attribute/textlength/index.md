@@ -139,11 +139,11 @@ widthSlider.addEventListener(
   (event) => {
     textElement.textLength.baseVal.newValueSpecifiedUnits(
       SVGLength.SVG_LENGTHTYPE_PX,
-      widthSlider.valueAsNumber
+      widthSlider.valueAsNumber,
     );
     widthDisplay.innerText = widthSlider.value;
   },
-  false
+  false,
 );
 
 widthSlider.dispatchEvent(new Event("input"));

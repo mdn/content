@@ -225,7 +225,7 @@ startButton.addEventListener(
         downloadButton.download = "RecordedVideo.webm";
 
         log(
-          `Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`
+          `Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`,
         );
       })
       .catch((error) => {
@@ -236,7 +236,7 @@ startButton.addEventListener(
         }
       });
   },
-  false
+  false,
 );
 ```
 
@@ -269,7 +269,7 @@ stopButton.addEventListener(
   () => {
     stop(preview.srcObject);
   },
-  false
+  false,
 );
 ```
 

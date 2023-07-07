@@ -66,12 +66,12 @@ If you want to be able to automatically close a [popup window](/en-US/docs/Web/A
         const my_window = window.open(
           "",
           "mywindow",
-          "status=1,width=350,height=150"
+          "status=1,width=350,height=150",
         );
         my_window.document.write("<html><head><title>Print Me</title></head>");
         my_window.document.write('<body onafterprint="self.close()">');
         my_window.document.write(
-          "<p>When you print this window, it will close afterward.</p>"
+          "<p>When you print this window, it will close afterward.</p>",
         );
         my_window.document.write("</body></html>");
       }

@@ -82,7 +82,7 @@ function getData() {
         myBuffer = buffer;
         source.buffer = myBuffer;
       },
-      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+      (e) => console.error(`Error with decoding audio data: ${e.err}`),
     );
   };
   request.send();

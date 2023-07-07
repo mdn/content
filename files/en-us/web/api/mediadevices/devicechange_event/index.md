@@ -135,7 +135,7 @@ startButton.addEventListener(
         log(`${err.name}: ${err.message}`);
       });
   },
-  false
+  false,
 );
 ```
 
