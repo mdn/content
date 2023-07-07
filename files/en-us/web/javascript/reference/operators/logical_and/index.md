@@ -82,9 +82,9 @@ console.log(A() && B());
 The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js
-true || false && false; // true
+true || (false && false); // true
 true && (false || false); // false
-(2 === 3) || (4 < 0) && (1 === 1); // false
+2 === 3 || (4 < 0 && 1 === 1); // false
 ```
 
 ## Examples

@@ -63,10 +63,13 @@ The ternary operator is right-associative, which means it can be "chained" in th
 
 ```js
 function example() {
-  return condition1 ? value1
-        : condition2 ? value2
-        : condition3 ? value3
-        : value4;
+  return condition1
+    ? value1
+    : condition2
+    ? value2
+    : condition3
+    ? value3
+    : value4;
 }
 ```
 

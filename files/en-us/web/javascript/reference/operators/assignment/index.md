@@ -39,7 +39,7 @@ The assignment expression itself evaluates to the value of the right-hand side, 
 ```js
 let x;
 console.log(x); // undefined
-console.log(x = 2); // 2
+console.log((x = 2)); // 2
 console.log(x); // 2
 ```
 
