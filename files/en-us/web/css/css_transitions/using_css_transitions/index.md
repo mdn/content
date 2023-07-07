@@ -13,7 +13,7 @@ Animations that involve transitioning between two states are often called _impli
 
 ![A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions.](transitionsprinciple.png)
 
-CSS transitions let you decide which properties to animate (by _listing them explicitly_), when the animation will start (by setting a _delay)_, how long the transition will last (by setting a _duration_), and how the transition will run (by defining an _easing function_, e.g., linearly or quick at the beginning, slow at the end).
+CSS transitions let you decide which properties to animate (by [_listing them explicitly_](/en-US/docs/Web/CSS/transition-property)), when the animation will start (by setting a [_delay_](/en-US/docs/Web/CSS/transition-delay)), how long the transition will last (by setting a [_duration_](/en-US/docs/Web/CSS/transition-duration)), and how the transition will run (by defining an [_easing function_](/en-US/docs/Web/CSS/transition-timing-function), e.g., linearly or quick at the beginning, slow at the end).
 
 ## Which CSS properties can be transitioned?
 
