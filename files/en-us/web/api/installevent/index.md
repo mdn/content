@@ -16,7 +16,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 {{InheritanceDiagram}}
 
-> **Note:** Use the non-deprecated ServiceWorkerGlobalScope [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) event instead.
+> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall()` handler to catch events of this type, instead handle the (non-deprecated) [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) using a listener added with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 
 ## Constructor
 
