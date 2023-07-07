@@ -1,5 +1,5 @@
 ---
-title: "TypeError: \"x\" is not a non-null object"
+title: 'TypeError: "x" is not a non-null object'
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
 page-type: javascript-error
 ---
