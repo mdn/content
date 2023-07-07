@@ -42,7 +42,7 @@ musicTrack.addEventListener(
   (event) => {
     document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
   },
-  false
+  false,
 );
 
 musicTrack.addEventListener(
@@ -50,7 +50,7 @@ musicTrack.addEventListener(
   (event) => {
     document.getElementById("timeline-widget").style.backgroundColor = "#fff";
   },
-  false
+  false,
 );
 ```
 

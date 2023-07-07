@@ -72,7 +72,7 @@ function showLoc() {
   ];
   for (const prop in location) {
     logLines.push(
-      `${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`
+      `${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`,
     );
   }
   alert(logLines.join("\n"));
@@ -97,7 +97,7 @@ taken by the server, the current document is reloaded with the modified search s
 ### Example 6: Using bookmarks without changing the `hash` property
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -402,10 +402,10 @@ const showBookmark = (() => {
     }
     _isBot = true;
     document.documentElement.scrollTop = Math.round(
-      _scrollY + ((_nodeY - _scrollY) * _itFrame) / frames
+      _scrollY + ((_nodeY - _scrollY) * _itFrame) / frames,
     );
     document.documentElement.scrollLeft = Math.round(
-      _scrollX + ((_nodeX - _scrollX) * _itFrame) / frames
+      _scrollX + ((_nodeX - _scrollX) * _itFrame) / frames,
     );
     if (_useHash && _itFrame === frames) {
       location.hash = _bookMark;

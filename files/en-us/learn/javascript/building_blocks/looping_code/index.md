@@ -88,7 +88,7 @@ function draw() {
       random(canvas.height),
       random(50),
       0,
-      2 * Math.PI
+      2 * Math.PI,
     );
     ctx.fill();
   }
@@ -110,7 +110,7 @@ for (let i = 0; i < 100; i++) {
     random(canvas.height),
     random(50),
     0,
-    2 * Math.PI
+    2 * Math.PI,
   );
   ctx.fill();
 }
@@ -132,7 +132,7 @@ ctx.arc(
   random(canvas.height),
   random(50),
   0,
-  2 * Math.PI
+  2 * Math.PI,
 );
 ctx.fill();
 ```
@@ -726,7 +726,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;
@@ -907,7 +907,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;

@@ -77,7 +77,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -131,7 +134,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -181,7 +187,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -248,7 +257,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -310,7 +322,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -395,7 +410,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -500,7 +518,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 header,
@@ -599,7 +620,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {

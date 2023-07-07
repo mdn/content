@@ -465,7 +465,9 @@ body {
 }
 
 .view-box {
-  box-shadow: 1rem 1rem 0 #efefef inset, -1rem -1rem 0 #efefef inset;
+  box-shadow:
+    1rem 1rem 0 #efefef inset,
+    -1rem -1rem 0 #efefef inset;
 }
 
 .container.view-box::after {

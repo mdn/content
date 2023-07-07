@@ -39,7 +39,7 @@ in a developer tools console.
 ```js
 const css = CSSStyleValue.parse(
   "transform",
-  "translate3d(10px,10px,0) scale(0.5)"
+  "translate3d(10px,10px,0) scale(0.5)",
 );
 ```
 

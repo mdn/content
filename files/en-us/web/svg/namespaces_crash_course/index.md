@@ -281,7 +281,7 @@ For setting parameters that have a namespace, it is recommended (but not require
 elt.setAttributeNS(
   "http://www.w3.org/1999/xlink",
   "xlink:href",
-  "otherdoc.svg"
+  "otherdoc.svg",
 );
 ```
 

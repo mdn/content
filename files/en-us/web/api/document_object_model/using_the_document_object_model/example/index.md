@@ -20,7 +20,7 @@ page-type: guide
         para.firstChild.data = "This is the first paragraph.";
         // create a new Text node for the second paragraph
         const newText = document.createTextNode(
-          "This is the second paragraph."
+          "This is the second paragraph.",
         );
         // create a new Element to be the second paragraph
         const newElement = document.createElement("P");

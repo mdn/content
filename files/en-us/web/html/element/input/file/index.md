@@ -324,7 +324,7 @@ function updateImageDisplay() {
       const para = document.createElement("p");
       if (validFileType(file)) {
         para.textContent = `File name ${file.name}, file size ${returnFileSize(
-          file.size
+          file.size,
         )}.`;
         const image = document.createElement("img");
         image.src = URL.createObjectURL(file);

@@ -416,7 +416,7 @@ addEventListener("fetch", (event) => {
   event.respondWith(
     new Response(myBody, {
       headers: { "Content-Type": "text/plain" },
-    })
+    }),
   );
 });
 ```

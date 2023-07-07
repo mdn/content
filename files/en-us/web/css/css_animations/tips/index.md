@@ -40,7 +40,10 @@ Now we'll define the animation itself using CSS. Some CSS that's not important (
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -147,7 +150,7 @@ const listener = (e) => {
   watchme.className = "slidein stopped";
 };
 watchme.addEventListener("click", () =>
-  watchme.addEventListener("animationiteration", listener, false)
+  watchme.addEventListener("animationiteration", listener, false),
 );
 ```
 

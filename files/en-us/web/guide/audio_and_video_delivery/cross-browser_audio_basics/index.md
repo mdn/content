@@ -486,7 +486,7 @@ window.onload = () => {
   audio.addEventListener("timeupdate", () => {
     // Sets the percentage
     bar.style.width = `${Math.floor(
-      (audio.currentTime / audio.duration) * 100
+      (audio.currentTime / audio.duration) * 100,
     )}%`;
   });
 };

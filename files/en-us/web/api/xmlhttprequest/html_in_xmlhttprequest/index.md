@@ -86,7 +86,7 @@ function detectHtmlInXhr(callback) {
           xhr.responseXML &&
           xhr.responseXML.title &&
           xhr.responseXML.title === "&&<"
-        )
+        ),
       );
     }
   };

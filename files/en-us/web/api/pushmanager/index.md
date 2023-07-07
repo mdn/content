@@ -57,7 +57,7 @@ navigator.serviceWorker
       },
       (error) => {
         console.error(error);
-      }
+      },
     );
   });
 ```

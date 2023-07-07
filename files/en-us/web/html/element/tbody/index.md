@@ -165,7 +165,11 @@ The CSS to style our table is shown next.
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -274,7 +278,11 @@ Then each remaining row in each major's `<tbody>` consists of two cells: the fir
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 
 th,

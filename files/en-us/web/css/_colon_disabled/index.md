@@ -64,7 +64,7 @@ document.addEventListener(
     // Attach `change` event listener to checkbox
     document.getElementById("billing-checkbox").onchange = toggleBilling;
   },
-  false
+  false,
 );
 
 function toggleBilling() {

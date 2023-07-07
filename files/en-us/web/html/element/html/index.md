@@ -72,7 +72,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- … -->

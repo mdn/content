@@ -231,10 +231,10 @@ function displayPoseStats(pose) {
     : "Orientation not reported";
 
   linVelStats.textContent = `Linear velocity: ${formatCoords(
-    pose.linearVelocity
+    pose.linearVelocity,
   )}`;
   angVelStats.textContent = `Angular velocity: ${formatCoords(
-    pose.angularVelocity
+    pose.angularVelocity,
   )}`;
 
   linAccStats.textContent = pose.linearAcceleration

@@ -176,7 +176,7 @@ const transform = createPerspectiveMatrix(viewport, 130, 1, 100);
 const translateVec = vec3.fromValues(
   -trackDistance,
   -craneDistance,
-  pushDistance
+  pushDistance,
 );
 mat4.translate(transform, transform, translateVec);
 ```
@@ -389,7 +389,7 @@ function myAnimationFrameCallback(time, frame) {
   const pose = frame.getViewerPose(adjustedRefSpace);
 
   animationFrameRequestID = frame.session.requestAnimationFrame(
-    myAnimationFrameCallback
+    myAnimationFrameCallback,
   );
 
   if (pose) {
