@@ -1,13 +1,13 @@
 ---
 title: CSS selector structure
-slug: Web/CSS/CSS_Selectors/Selector_structure
+slug: Web/CSS/CSS_selectors/Selector_structure
 page-type: guide
 spec-urls: https://drafts.csswg.org/selectors/
 ---
 
 {{CSSRef("Selectors")}}
 
-The CSS selector represents a particular pattern of element or elements in a tree structure. The term "selector" can refer to a [simple selector](#simple-selector), [compound selector](#compound-selector), or [complex selector](#complex-selector). When included in the `:has()` selector as a parameter, these selectors are [relative selectors](#relative-selector), representing elements relative to one or more anchor elements.
+The CSS selector represents a particular pattern of element or elements in a tree structure. The term "selector" can refer to a [simple selector](#simple-selector), a [compound selector](#compound-selector), or a [complex selector](#complex-selector). When included in the `:has()` pseudo-class as a parameter, these selectors are referred to as [relative selectors](#relative-selector), representing elements relative to one or more anchor elements.
 
 These selectors can be combined into a comma-separated [selector list](#selector-list). If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Selector_list##valid_and_invalid_selector_lists) list is invalid, the entire selector list is invalidated.
 
@@ -39,7 +39,7 @@ In a compound selector, the [type selector](/en-US/docs/Web/CSS/Type_selectors) 
 
 ### Complex selector
 
-A **complex selector** is a sequence of one or more simple and/or compound selectors that are separated by combinators, include the white space [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
+A **complex selector** is a sequence of one or more simple and/or compound selectors that are separated by combinators, including the white space [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
 
 A complex selector represents a set of simultaneous conditions on a set of elements.
 
@@ -96,7 +96,7 @@ The {{cssxref("is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-clas
 
 ## See also
 
-- [CSS selectors and combinators](/en-US/docs/Web/CSS//selectors_and_combinators)
+- [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [Forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list)
 - {{DOMXref("Document.querySelector()")}}
 - {{DOMXref("Document.querySelectorAll()")}}
