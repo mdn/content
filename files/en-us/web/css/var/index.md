@@ -15,21 +15,38 @@ The `var()` function cannot be used in property names, selectors or anything els
 
 ## Syntax
 
+```css
+/* Simple usage */
+var(--custom-prop);
+
+/* With fallback */
+var(--custom-prop,);  /* empty value as fallback */
+var(--custom-prop, initial); /* initial value of the property as fallback */
+var(--custom-prop, #FF0000);
+var(--my-background, linear-gradient(transparent, aqua), pink);
+var(--custom-prop, var(--default-value));
+var(--custom-prop, var(--default-value, red));
+```
+
 The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is invalid, the function uses the second value.
 
-{{csssyntax}}
-
-> **Note:** The syntax of the fallback, like that of custom properties, allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue`; that is, anything between the first comma and the end of the function is considered a fallback value.
+The syntax of the fallback, like that of custom properties, allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue`; that is, anything between the first comma and the end of the function is considered a fallback value.
 
 ### Values
 
 - `<custom-property-name>`
+
   - : A custom property's name represented by an identifier that starts with two dashes. Custom properties are solely for use by authors and users; CSS will never give them a meaning beyond what is presented here.
+
 - `<declaration-value>`
 
   - : The custom property's fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax.
 
     > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is invalid or missing, the `var()` should be replaced with nothing.
+
+### Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 
@@ -82,11 +99,10 @@ In this example, the background color of the HTML body will be pink even though 
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="1.css"></link>
-    <link rel="stylesheet" href="2.css"></link>
+    <link rel="stylesheet" href="1.css" />
+    <link rel="stylesheet" href="2.css" />
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
