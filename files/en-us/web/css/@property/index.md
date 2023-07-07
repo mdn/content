@@ -114,7 +114,7 @@ For item one, none of these custom properties have been set. The `--item-size` i
 
 For item two, CSS global keywords are set for both custom properties which are valid values for all value types and therefore valid no matter the `syntax` descriptor value. The `--item-size` is set to `initial` and uses the `initial-value: 40%;` set in the `@property` declaration.  The `initial` value means the`initialValue` value for the property is used. The `--item-color` is set to `inherit`, explicitly inheriting the `orange` value from its parent even though the custom property is set to otherwise not be inherited. This is why item two is orange.
 
-For item three, the `--item-size` value gets set to `1000px`. While `1000px` is a {{cssxref("length") value, the `@property` declaration require the value be a `<percentage>`, so the declaration is not valid and is ignored, meaning the inheritable `20%` set on the parent is used. The `xyz` value is also invalid. As `registerProperty()` set `--item-color` to not be inherited, default initial value of `aqua` is used and not the parent's `orange` value.
+For item three, the `--item-size` value gets set to `1000px`. While `1000px` is a {{cssxref("length") value, the `@property` declaration requires the value be a `<percentage>`, so the declaration is not valid and is ignored, meaning the inheritable `20%` set on the parent is used. The `xyz` value is also invalid. As `registerProperty()` set `--item-color` to not be inherited, the default initial value of `aqua` is used and not the parent's `orange` value.
 
 ## Specifications
 
