@@ -236,6 +236,18 @@ Here are some popular editors:
       </td>
     </tr>
     <tr>
+      <td><a href="https://www.pspad.com/">PSPad</a></td>
+      <td>Closed source</td>
+      <td>Free</td>
+      <td>Windows</td>
+      <td>
+        <a href="https://www.pspad.com/en/faq.htm">FAQ</a>,
+        <a href="https://forum.pspad.com/" rel="external">Forum</a>
+      </td>
+      <td><a href="https://www.pspad.com/en/helpfiles.htm">Online Help</a></td>
+      <td><a href="https://www.pspad.com/en/pspad-extensions.php">Yes</a></td>
+    </tr>
+    <tr>
       <td>
         <a href="https://www.sublimetext.com/" rel="external">Sublime Text</a>
       </td>
