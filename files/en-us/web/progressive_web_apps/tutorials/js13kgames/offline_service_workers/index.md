@@ -18,7 +18,7 @@ They run on a separate thread from the main JavaScript code of our page, and don
 
 Service workers can do more than offering offline capabilities, including handling notifications or performing heavy calculations. Service workers are quite powerful as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely.
 
-To learn more about service workers, see [Offline and background operation](Web/Progressive_web_apps/Guides/Offline_and_background_operation).
+To learn more about service workers, see [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
 
 ## Service workers in the js13kPWA app
 
