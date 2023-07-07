@@ -138,8 +138,6 @@ CSS [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), prefixed with two co
 
 {{Specifications}}
 
-## Browser compatibility
-
 See the [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#specifications) specification tables for details on those.
 
 ## See also
