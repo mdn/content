@@ -9,9 +9,9 @@ browser-compat: css.at-rules.namespace
 
 The **CSS namespaces** module defines the syntax for using {{glossary("namespace", "namespaces")}} in CSS.
 
-CSS isn't just for HTML. A single stylesheet may be used to style SVG, MathML, XML, HTML, each of which has a different namespace, or a document containing multiple namespaces. Element tag names are not all unique to a single language. For example, The `<a>` element isn't limited to HTML. You may want to use different CSS style for your SVG differently than for your HTML links, or ensure that {{domxref("Document.querySelectorAll", "querySelectorAll(\"a\")")}} selects the right kind of element. [The `@namespace` rule](/en-US/docs/Web/CSS/@namespace), defined in this module, enable distinguishing between same-named elements in different namespaces.
+CSS isn't just for styling HTML. A stylesheet may be used to style SVG, MathML, XML, or HTML, each of which has a different namespace or a document containing multiple namespaces. Element tag names are not unique to a single language. For example, the `<a>` element isn't limited to HTML. You may want to use different CSS style for your SVG differently than for your HTML links or ensure that {{domxref("Document.querySelectorAll", "querySelectorAll(\"a\")")}} selects the right kind of element. The [`@namespace`](/en-US/docs/Web/CSS/@namespace) at-rule defined in this module enables distinguishing between same-named elements in different namespaces.
 
-The `@namespace` rule is used for declaring a default namespace and for binding namespaces to namespace prefixes. The namespaces module also defines the syntax for using these prefixes to represent namespace-qualified names. That's it. What a name means, or if the name is even valid, depends on the context and host language.
+The `@namespace` rule is used for declaring a default namespace and for binding namespaces to namespace prefixes. The namespaces module also defines the syntax for using these prefixes to represent namespace-qualified names. That's it. What a name means or if the name is even valid depends on the context and host language.
 
 ## Reference
 
@@ -28,8 +28,8 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 ## Related concepts
 
 - CSS [namespace separator (`|`)](/en-US/docs/Web/CSS/Namespace_separator) combinator
-- [CSS type selector](/en-US/docs/Web/CSS/Type_selectors)
-- [CSS universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+- CSS [type selectors](/en-US/docs/Web/CSS/Type_selectors)
+- CSS [universal selector](/en-US/docs/Web/CSS/Universal_selectors)
 - {{DOMXRef("CSSNamespaceRule")}} interface
   - {{DOMXRef("CSSNamespaceRule.namespaceURI")}} property
   - {{DOMXRef("CSSNamespaceRule.prefix")}} property
@@ -47,7 +47,7 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 - [`NamedNodeMap.getNamedItemNS()`](/en-US/docs/Web/API/NamedNodeMap/getNamedItemNS) method
 - [`NamedNodeMap.removeNamedItemNS()`](/en-US/docs/Web/API/NamedNodeMap/removeNamedItemNS) method
 - [`NamedNodeMap.setNamedItemNS()`](/en-US/docs/Web/API/NamedNodeMap/setNamedItemNS) method
-- {{glossary("namespace")}} glossary term
+- {{glossary("Namespace")}} glossary term
 
 ## Specifications
 
@@ -59,8 +59,8 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 
 ## See also
 
-- [CSS Namespace example in SVG](/en-US/docs/Web/SVG/Element/a#example)
-- [CSS `url()` functions](/en-US/docs/Web/CSS/url)
+- [`<a>`](/en-US/docs/Web/SVG/Element/a#example) SVG element
+- [CSS `url()` function](/en-US/docs/Web/CSS/url)
 - [CSS at-rules](/en-US/docs/Web/CSS/At-rule)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/At-rule-functions)
-- [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
