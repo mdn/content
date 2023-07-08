@@ -67,7 +67,9 @@ async function requestPermissions() {
   console.log(`Current permissions:`, currentPermissions);
 }
 
-document.querySelector("#request").addEventListener("click", requestPermissions);
+document
+  .querySelector("#request")
+  .addEventListener("click", requestPermissions);
 ```
 
 {{WebExtExamples}}

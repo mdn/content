@@ -85,7 +85,10 @@ function logOnReferenceFragmentUpdated(details) {
   console.log(`Transition qualifiers: ${details.transitionQualifiers}`);
 }
 
-browser.webNavigation.onReferenceFragmentUpdated.addListener(logOnReferenceFragmentUpdated, filter);
+browser.webNavigation.onReferenceFragmentUpdated.addListener(
+  logOnReferenceFragmentUpdated,
+  filter
+);
 ```
 
 {{WebExtExamples}}

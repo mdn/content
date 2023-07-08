@@ -168,7 +168,8 @@ Events have three functions:
 This code sets an extra cookie when requesting a resource from the target URL:
 
 ```js
-let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+let targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
@@ -193,7 +194,8 @@ browser.webRequest.onHeadersReceived.addListener(
 This code does the same thing the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
 ```js
-const targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+const targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
