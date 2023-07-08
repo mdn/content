@@ -1,5 +1,5 @@
 ---
-title: "<search>: The Generic search element"
+title: "<search>: The generic search element"
 slug: Web/HTML/Element/search
 page-type: html-element
 browser-compat: html.elements.search
@@ -7,7 +7,7 @@ browser-compat: html.elements.search
 
 {{HTMLSidebar}}
 
-The **`<search>`** [HTML](/en-US/docs/Web/HTML) element represents a part that contains a set of form controls or other content related to performing a search or filtering operation. This could be a search of the website or application, a way of searching or filtering search results on the current web page, or a global or internet-wide search function.
+The **`<search>`** [HTML](/en-US/docs/Web/HTML) element is a container representing the parts of the document or application with form controls or other content related to performing a search or filtering operation. The `<search>` element semantically identifies the purpose of the element's contents as having search or filtering capabilities. The search or filtering functionality can be for the website or application, the current web page or document, or the entire Internet or subsection thereof. 
 
 ## Attributes
 
@@ -15,34 +15,34 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-It's not appropriate to use the `<search>` element just for presenting search results, though suggestions and links as part of "quick search" results can be included as part of a search feature. Rather, a returned web page of search results would instead be expected to be presented as part of the main content of that web page.
+The `<search>` element is not for presenting search results. Rather, search or filtered results should be presented as part of the main content of that web page. That said, suggestions and links that are part of "quick search" functionality within the search or filtering functionality are appropriately nested within the contents of the `<search>` element as they are search features. 
 
 ## Examples
 
 ### Header search form
 
-Include a search form within a website header to perform a simple site-wide search.
+This example demonstrates the use of `<search>` as the container for a search within a website header to perform a simple site-wide search. The `<search>` is a semantic container for the {{HTMLElement("form")}} that submits the user-entered search query to a server.
 
 ```html
 <header>
-  <h1>Movies website</h1>
+  <h1>Movie website</h1>
   <search>
     <form action="./search/">
       <label for="movie">Find a Movie</label>
-      <input type="search" id="movie" name="q">
+      <input type="search" id="movie" name="q" />
       <button type="submit">Search</button>
     </form>
   </search>
 </header>
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample('Header search form')}}
 
 ### Web app search
 
-JavaScript search functionality in a web application. No form element to perform a server-side submission, but for semantics a search element represents search and filtering capabilities.
+This example demonstrates potential DOM content when dynamically including JavaScript search functionality in a web application. When search functionality is implemented entirely with JavaScript, if no form is submitted, neither a {{HTMLElement("form")}} element nor a submit {{HTMLElement("button")}} is required. For semantics, the `<search>` element is included to contain the search and filtering capabilities.
 
 ```html
 <search>
@@ -67,13 +67,15 @@ JavaScript search functionality in a web application. No form element to perform
 </search>
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample('Web app search')}}
 
+> **Note:** Remember that some users don't have JavaScript, and none of your users have JavaScript running until the JavaScript is successfully downloaded, parsed, and executed, ensure your users can access the content of your site with JavaScript disabled.
+
 ### Multiple searches
 
-A page with two search features. The first is a global site search located on the header. The second is a search and filter based on the page context, in our example a car search.
+This example demonstrates a page with two search features. The first is a global site search located on the header. The second is a search and filter based on the page context, in our example a car search.
 
 ```html
 <body>
@@ -96,7 +98,7 @@ A page with two search features. The first is a global site search located on th
 </body>
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample('Multiple searches')}}
 
