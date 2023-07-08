@@ -72,12 +72,8 @@ Logs the target URLs and extra transition information for `onReferenceFragmentUp
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnReferenceFragmentUpdated(details) {
   console.log(`onReferenceFragmentUpdated: ${details.url}`);

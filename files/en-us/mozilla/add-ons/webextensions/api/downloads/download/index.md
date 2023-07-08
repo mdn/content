@@ -90,9 +90,9 @@ function onFailed(error) {
 let downloadUrl = "https://example.org/image.png";
 
 let downloading = browser.downloads.download({
-  url : downloadUrl,
-  filename : 'my-image-again.png',
-  conflictAction : 'uniquify'
+  url: downloadUrl,
+  filename: "my-image-again.png",
+  conflictAction: "uniquify",
 });
 
 downloading.then(onStartedDownload, onFailed);

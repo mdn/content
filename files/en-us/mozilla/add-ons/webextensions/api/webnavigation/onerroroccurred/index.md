@@ -86,12 +86,8 @@ Logs the target URLs for `onErrorOccurred`, if the target URL's `hostname` conta
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnErrorOccurred(details) {
   console.log(`onErrorOccurred: ${details.url}`);

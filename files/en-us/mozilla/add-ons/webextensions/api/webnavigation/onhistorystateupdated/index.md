@@ -72,12 +72,8 @@ Logs the target URLs and extra transition information for `onHistoryStateUpdated
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnHistoryStateUpdated(details) {
   console.log(`onHistoryStateUpdated: ${details.url}`);
