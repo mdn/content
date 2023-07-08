@@ -104,7 +104,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   let creating = browser.windows.create({
-    tabId: tab.id
+    tabId: tab.id,
   });
   creating.then(onCreated, onError);
 });
@@ -129,7 +129,7 @@ browser.browserAction.onClicked.addListener((tab) => {
     url: popupURL,
     type: "popup",
     height: 200,
-    width: 200
+    width: 200,
   });
   creating.then(onCreated, onError);
 

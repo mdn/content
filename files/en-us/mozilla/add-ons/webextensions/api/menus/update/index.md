@@ -126,13 +126,13 @@ function onError() {
 browser.menus.create({
   id: "do-not-click-me",
   title: "Do not click this button",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "do-not-click-me") {
     let updating = browser.menus.update(info.menuItemId, {
-      title: "Do not click this button again"
+      title: "Do not click this button again",
     });
     updating.then(onUpdated, onError);
   }

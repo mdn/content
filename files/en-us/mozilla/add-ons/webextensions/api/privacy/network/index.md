@@ -66,7 +66,7 @@ browser.browserAction.onClicked.addListener(() => {
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
       let setting = browser.privacy.network.webRTCIPHandlingPolicy.set({
-        value: "default_public_interface_only"
+        value: "default_public_interface_only",
       });
       setting.then(onSet);
     } else {

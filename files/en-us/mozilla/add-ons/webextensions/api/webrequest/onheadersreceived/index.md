@@ -175,7 +175,7 @@ let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition"
 function setCookie(e) {
   const setMyCookie = {
     name: "Set-Cookie",
-    value: "my-cookie1=my-cookie-value1"
+    value: "my-cookie1=my-cookie-value1",
   };
   e.responseHeaders.push(setMyCookie);
   return { responseHeaders: e.responseHeaders };
@@ -203,7 +203,7 @@ function setCookieAsync(e) {
     setTimeout(() => {
       const setMyCookie = {
         name: "Set-Cookie",
-        value: "my-cookie1=my-cookie-value1"
+        value: "my-cookie1=my-cookie-value1",
       };
       e.responseHeaders.push(setMyCookie);
       resolve({ responseHeaders: e.responseHeaders });

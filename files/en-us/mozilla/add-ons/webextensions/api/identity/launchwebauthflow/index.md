@@ -86,7 +86,7 @@ function authorize() {
 
   return browser.identity.launchWebAuthFlow({
     interactive: true,
-    url: authURL
+    url: authURL,
   });
 }
 

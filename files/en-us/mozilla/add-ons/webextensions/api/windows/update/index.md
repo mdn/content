@@ -70,7 +70,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
   let updating = browser.windows.update(tab.windowId, {
     left: 0,
-    top: 0
+    top: 0,
   });
   updating.then(onUpdated, onError);
 

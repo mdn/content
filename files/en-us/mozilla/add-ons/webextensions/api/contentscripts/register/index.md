@@ -76,7 +76,7 @@ async function register(hosts, code) {
   return await browser.contentScripts.register({
     matches: [hosts],
     js: [{code}],
-    runAt: "document_idle"
+    runAt: "document_idle",
   });
 
 }
@@ -88,10 +88,10 @@ This code registers the JS file at content_scripts/example.js:
 
 ```js
 const scriptObj = await browser.contentScripts.register({
-  "js": [{file: "/content_scripts/example.js"}],
-  "matches": ["<all_urls>"],
-  "allFrames": true,
-  "runAt": "document_start"
+  js: [{ file: "/content_scripts/example.js" }],
+  matches: ["<all_urls>"],
+  allFrames: true,
+  runAt: "document_start",
 });
 ```
 

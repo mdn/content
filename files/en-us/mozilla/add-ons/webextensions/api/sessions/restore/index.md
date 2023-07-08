@@ -56,7 +56,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreMostRecent, onError);
 });

@@ -67,7 +67,7 @@ function onError(error) {
 function removeCookie(tabs) {
   let removing = browser.cookies.remove({
     url: tabs[0].url,
-    name: "favorite-color"
+    name: "favorite-color",
   });
   removing.then(onRemoved, onError);
 }

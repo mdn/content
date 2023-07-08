@@ -38,10 +38,12 @@ async function register() {
 
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
-    js: [{
-      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
-    }],
-    runAt: "document_idle"
+    js: [
+      {
+        code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'",
+      },
+    ],
+    runAt: "document_idle",
   });
 
 }
