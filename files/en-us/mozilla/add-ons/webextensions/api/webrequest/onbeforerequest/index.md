@@ -207,7 +207,7 @@ function cancel(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   cancel,
-  {urls: [pattern], types: ["image"]},
+  { urls: [pattern], types: ["image"] },
   ["blocking"]
 );
 ```
@@ -232,7 +232,7 @@ function redirect(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
+  { urls: [pattern], types: ["image"] },
   ["blocking"]
 );
 ```
@@ -261,7 +261,7 @@ function redirectAsync(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirectAsync,
-  {urls: [pattern], types: ["image"]},
+  { urls: [pattern], types: ["image"] },
   ["blocking"]
 );
 ```
@@ -285,7 +285,7 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: [pattern], types: ["image"]},
+  { urls: [pattern], types: ["image"] },
   ["blocking"]
 );
 ```
@@ -312,7 +312,7 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: [pattern], types: ["image"]},
+  { urls: [pattern], types: ["image"] },
   ["blocking"]
 );
 ```

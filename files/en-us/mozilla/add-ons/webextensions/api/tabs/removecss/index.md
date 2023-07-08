@@ -58,11 +58,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let insertingCSS = browser.tabs.insertCSS(2, {code: css});
+let insertingCSS = browser.tabs.insertCSS(2, { code: css });
 insertingCSS.then(null, onError);
 
 browser.browserAction.onClicked.addListener(() => {
-  let removing = browser.tabs.removeCSS(2, {code: css});
+  let removing = browser.tabs.removeCSS(2, { code: css });
   removing.then(null, onError);
 });
 ```

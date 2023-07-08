@@ -75,8 +75,8 @@ async function register(hosts, code) {
 
   return await browser.contentScripts.register({
     matches: [hosts],
-    js: [{code}],
-    runAt: "document_idle"
+    js: [{ code }],
+    runAt: "document_idle",
   });
 
 }

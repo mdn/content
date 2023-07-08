@@ -84,8 +84,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   let creating = browser.windows.create({
-    url: ["https://developer.mozilla.org",
-          "https://addons.mozilla.org"]
+    url: ["https://developer.mozilla.org", "https://addons.mozilla.org"],
   });
   creating.then(onCreated, onError);
 });

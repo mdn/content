@@ -60,7 +60,7 @@ function onRemoved() {
   searching.then(onGot);
 }
 
-let deletingUrl = browser.history.deleteUrl({url: urlToRemove});
+let deletingUrl = browser.history.deleteUrl({ url: urlToRemove });
 
 deletingUrl.then(onRemoved);
 ```
@@ -79,7 +79,7 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 function onGot(results) {
   if (results.length) {
     console.log(`Removing: ${results[0].url}`);
-    browser.history.deleteUrl({url: results[0].url});
+    browser.history.deleteUrl({ url: results[0].url });
   }
 }
 

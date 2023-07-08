@@ -63,8 +63,9 @@ async function logSubject(details) {
   }
 }
 
-browser.webRequest.onHeadersReceived.addListener(logSubject,
-  {urls: ["https://*.mozilla.org/*"]},
+browser.webRequest.onHeadersReceived.addListener(
+  logSubject,
+  { urls: ["https://*.mozilla.org/*"] },
   ["blocking"]
 );
 ```
@@ -88,8 +89,9 @@ async function logRoot(details) {
   }
 }
 
-browser.webRequest.onHeadersReceived.addListener(logRoot,
-  {urls: ["https://*.mozilla.org/*"]},
+browser.webRequest.onHeadersReceived.addListener(
+  logRoot,
+  { urls: ["https://*.mozilla.org/*"] },
   ["blocking"]
 );
 ```

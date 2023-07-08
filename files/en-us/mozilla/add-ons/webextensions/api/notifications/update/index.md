@@ -81,10 +81,9 @@ browser.browserAction.onClicked.addListener(() => {
       message: "Something something cake",
       progress,
     });
-    browser.alarms.create(
-      "cake-progress",
-      { periodInMinutes: CAKE_PREP_INTERVAL }
-    );
+    browser.alarms.create("cake-progress", {
+      periodInMinutes: CAKE_PREP_INTERVAL,
+    });
   });
 });
 ```
