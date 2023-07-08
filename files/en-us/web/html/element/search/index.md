@@ -7,7 +7,7 @@ browser-compat: html.elements.search
 
 {{HTMLSidebar}}
 
-The **`<search>`** [HTML](/en-US/docs/Web/HTML) element is a container representing the parts of the document or application with form controls or other content related to performing a search or filtering operation. The `<search>` element semantically identifies the purpose of the element's contents as having search or filtering capabilities. The search or filtering functionality can be for the website or application, the current web page or document, or the entire Internet or subsection thereof. 
+The **`<search>`** [HTML](/en-US/docs/Web/HTML) element is a container representing the parts of the document or application with form controls or other content related to performing a search or filtering operation. The `<search>` element semantically identifies the purpose of the element's contents as having search or filtering capabilities. The search or filtering functionality can be for the website or application, the current web page or document, or the entire Internet or subsection thereof.
 
 ## Attributes
 
@@ -15,13 +15,15 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-The `<search>` element is not for presenting search results. Rather, search or filtered results should be presented as part of the main content of that web page. That said, suggestions and links that are part of "quick search" functionality within the search or filtering functionality are appropriately nested within the contents of the `<search>` element as they are search features. 
+The `<search>` element is not for presenting search results. Rather, search or filtered results should be presented as part of the main content of that web page. That said, suggestions and links that are part of "quick search" functionality within the search or filtering functionality are appropriately nested within the contents of the `<search>` element as they are search features.
 
 ## Examples
 
 ### Header search form
 
 This example demonstrates the use of `<search>` as the container for a search within a website header to perform a simple site-wide search. The `<search>` is a semantic container for the {{HTMLElement("form")}} that submits the user-entered search query to a server.
+
+#### HMTL
 
 ```html
 <header>
@@ -43,6 +45,8 @@ This example demonstrates the use of `<search>` as the container for a search wi
 ### Web app search
 
 This example demonstrates potential DOM content when dynamically including JavaScript search functionality in a web application. When search functionality is implemented entirely with JavaScript, if no form is submitted, neither a {{HTMLElement("form")}} element nor a submit {{HTMLElement("button")}} is required. For semantics, the `<search>` element is included to contain the search and filtering capabilities.
+
+#### HMTL
 
 ```html
 <search>
@@ -76,6 +80,8 @@ This example demonstrates potential DOM content when dynamically including JavaS
 ### Multiple searches
 
 This example demonstrates a page with two search features. The first is a global site search located on the header. The second is a search and filter based on the page context, in our example a car search.
+
+#### HMTL
 
 ```html
 <body>
