@@ -27,7 +27,6 @@ Using a suitable [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setu
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -44,7 +43,6 @@ Using a suitable [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setu
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 

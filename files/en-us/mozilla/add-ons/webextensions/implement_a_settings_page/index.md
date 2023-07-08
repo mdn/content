@@ -95,7 +95,7 @@ We've added three new manifest keys:
 Next, because we've promised to provide `options.html`, let's create it. Create a file with that name inside the `settings` directory, and give it the following contents:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -120,7 +120,7 @@ Create `options.js`, again in the `settings` directory, and give it the followin
 function saveOptions(e) {
   e.preventDefault();
   browser.storage.sync.set({
-    color: document.querySelector("#color").value
+    color: document.querySelector("#color").value,
   });
 }
 

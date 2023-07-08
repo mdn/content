@@ -366,7 +366,7 @@ If Firefox can't find an exact match for the size it wants, then it will pick th
 A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json

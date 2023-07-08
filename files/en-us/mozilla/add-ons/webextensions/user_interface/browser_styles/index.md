@@ -476,7 +476,9 @@ body {
   background: #fcfcfc;
   background-clip: padding-box;
   border: 1px solid rgba(24, 26, 27, 0.2);
-  box-shadow: 0 3px 5px rgba(24, 26, 27, 0.1), 0 0 7px rgba(24, 26, 27, 0.1);
+  box-shadow:
+    0 3px 5px rgba(24, 26, 27, 0.1),
+    0 0 7px rgba(24, 26, 27, 0.1);
   box-sizing: content-box;
   margin: 2em auto 0.5em;
   width: 384px;

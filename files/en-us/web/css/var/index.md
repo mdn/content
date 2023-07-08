@@ -95,7 +95,7 @@ In this example, the background color of the HTML body will be pink even though 
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

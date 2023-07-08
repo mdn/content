@@ -7,7 +7,7 @@ build/
 
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:
-/files/en-us/mozilla/add-ons/**/*.md
+/files/en-us/mozilla/add-ons/webextensions/api/**/*.md
 
 # XXX Ignored until https://github.com/prettier/prettier/issues/15032 is fixed
 /files/en-us/web/javascript/reference/operators/exponentiation/index.md
