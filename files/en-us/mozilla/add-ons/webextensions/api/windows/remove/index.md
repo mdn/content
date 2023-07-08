@@ -46,10 +46,8 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let removing = browser.windows.remove(tab.windowId);
   removing.then(onRemoved, onError);
-
 });
 ```
 
