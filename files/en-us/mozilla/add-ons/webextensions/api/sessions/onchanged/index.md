@@ -44,7 +44,7 @@ This very annoying extension listens for `onChanged`, then immediately restores 
 ```js
 function restoreSession(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];

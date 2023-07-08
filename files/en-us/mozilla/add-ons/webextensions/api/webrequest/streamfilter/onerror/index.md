@@ -29,7 +29,7 @@ function listener(details) {
 
   filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`);
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
