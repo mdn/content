@@ -37,6 +37,12 @@ A boolean that indicates whether there are pending input events in the event que
 We can use `isInputPending()` inside a task runner structure to run the `yield()` function only when the user is attempting to interact with the page:
 
 ```js
+function yield() {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 0);
+  });
+}
+
 async function main() {
   // Create an array of functions to run
   const tasks = [a, b, c, d, e];
