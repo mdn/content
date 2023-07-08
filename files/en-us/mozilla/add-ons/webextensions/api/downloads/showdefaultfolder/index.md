@@ -28,7 +28,7 @@ None.
 The following snippet contains a show button, which when clicked invokes `showDefaultFolder()` to open the default downloads folder in the platform's file manager:
 
 ```js
-let showBtn = document.querySelector('.show');
+let showBtn = document.querySelector(".show");
 
 showBtn.onclick = () => {
   browser.downloads.showDefaultFolder();
