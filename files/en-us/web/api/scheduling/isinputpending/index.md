@@ -3,6 +3,8 @@ title: "Scheduling: isInputPending() method"
 short-title: isInputPending()
 slug: Web/API/Scheduling/isInputPending
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Scheduling.isInputPending
 ---
 
