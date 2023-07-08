@@ -64,7 +64,7 @@ for (let c = startCol; c <= endCol; c++) {
         Math.round(x), // target x
         Math.round(y), // target y
         map.tsize, // target width
-        map.tsize // target height
+        map.tsize, // target height
       );
     }
   }

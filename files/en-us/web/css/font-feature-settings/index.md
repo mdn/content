@@ -21,7 +21,9 @@ font-feature-settings: normal;
 font-feature-settings: "smcp";
 font-feature-settings: "smcp" on;
 font-feature-settings: "swsh" 2;
-font-feature-settings: "smcp", "swsh" 2;
+font-feature-settings:
+  "smcp",
+  "swsh" 2;
 
 /* Global values */
 font-feature-settings: inherit;

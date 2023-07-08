@@ -28,7 +28,7 @@ There are two different ways to format keyframes:
          color: "#000",
        },
      ],
-     2000
+     2000,
    );
    ```
 
@@ -37,7 +37,7 @@ There are two different ways to format keyframes:
    ```js
    element.animate(
      [{ opacity: 1 }, { opacity: 0.1, offset: 0.7 }, { opacity: 0 }],
-     2000
+     2000,
    );
    ```
 
@@ -54,7 +54,7 @@ There are two different ways to format keyframes:
        { opacity: 0.1, easing: "ease-in" },
        { opacity: 0 },
      ],
-     2000
+     2000,
    );
    ```
 
@@ -68,7 +68,7 @@ There are two different ways to format keyframes:
        opacity: [0, 1], // [ from, to ]
        color: ["#fff", "#000"], // [ from, to ]
      },
-     2000
+     2000,
    );
    ```
 
@@ -80,7 +80,7 @@ There are two different ways to format keyframes:
        opacity: [0, 1], // offset: 0, 1
        backgroundColor: ["red", "yellow", "green"], // offset: 0, 0.5, 1
      },
-     2000
+     2000,
    );
    ```
 
@@ -93,7 +93,7 @@ There are two different ways to format keyframes:
        offset: [0, 0.8], // Shorthand for [ 0, 0.8, 1 ]
        easing: ["ease-in", "ease-out"],
      },
-     2000
+     2000,
    );
    ```
 

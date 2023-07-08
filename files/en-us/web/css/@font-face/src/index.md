@@ -33,11 +33,14 @@ src: url(path/to/font.woff) format("woff");
 src: url(path/to/font.otf) format("opentype");
 
 /* Multiple resources */
-src: url(path/to/font.woff) format("woff"), url(path/to/font.otf) format("opentype");
+src:
+  url(path/to/font.woff) format("woff"),
+  url(path/to/font.otf) format("opentype");
 
 /* Multiple resources with font format and technologies */
-src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trickster-outline.otf")
-    format(opentype);
+src:
+  url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
+  url("trickster-outline.otf") format(opentype);
 ```
 
 ### Values
@@ -207,8 +210,9 @@ A color font will be activated if the user agent supports it, and an `opentype` 
 ```css
 @font-face {
   font-family: "Trickster";
-  src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trickster-outline.otf")
-      format(opentype);
+  src:
+    url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
+    url("trickster-outline.otf") format(opentype);
 }
 
 /* Using the font face */
@@ -228,8 +232,9 @@ For example:
 ```css
 @font-face {
   font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
-      format(opentype);
+  src:
+    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
+    url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 
@@ -244,8 +249,9 @@ Note that multiple `src` descriptors are attempted in reverse-order, so at the e
   font-family: "MgOpenModernaBold";
   src: url("MgOpenModernaBold.otf") format(opentype);
   src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
-      format(opentype);
+  src:
+    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
+    url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 

@@ -45,7 +45,10 @@ animation-timeline: view(axis inset);
 
 /* Multiple animations */
 animation-timeline: test1, animation4;
-animation-timeline: none, -moz-specific, sliding;
+animation-timeline:
+  none,
+  -moz-specific,
+  sliding;
 
 /* Global values */
 animation-timeline: inherit;

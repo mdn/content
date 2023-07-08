@@ -50,7 +50,7 @@ dc.addEventListener(
 
     messageInputBox.focus();
   },
-  false
+  false,
 );
 ```
 

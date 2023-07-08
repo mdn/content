@@ -108,7 +108,7 @@ pc.addEventListener(
       });
     }
   },
-  false
+  false,
 );
 ```
 

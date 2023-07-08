@@ -42,7 +42,7 @@ window.addEventListener(
       event.preventDefault();
     }
   },
-  true
+  true,
 );
 ```
 

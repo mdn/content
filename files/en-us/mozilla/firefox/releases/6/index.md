@@ -47,7 +47,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 ### DOM
 
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : You can now test the result of a media query string programmatically using the {{ domxref("window.matchMedia()") }} method and the {{ domxref("MediaQueryList") }} interface.
 - [Touch events](/en-US/docs/Web/API/Touch_events)
   - : Firefox 6 adds support for W3C standard touch events; these make it easy to interpret one or more touches at a time on touch-sensitive surfaces such as touch screens and trackpads.

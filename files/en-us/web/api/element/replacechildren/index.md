@@ -148,7 +148,7 @@ yesBtn.addEventListener("click", () => {
 
 noBtn.addEventListener("click", () => {
   const selectedTransferOptions = document.querySelectorAll(
-    "#yes option:checked"
+    "#yes option:checked",
   );
   const existingNoOptions = document.querySelectorAll("#no option");
   noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);

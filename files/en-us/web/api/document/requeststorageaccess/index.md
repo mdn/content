@@ -55,7 +55,7 @@ document.requestStorageAccess().then(
   },
   () => {
     console.log("access denied");
-  }
+  },
 );
 ```
 

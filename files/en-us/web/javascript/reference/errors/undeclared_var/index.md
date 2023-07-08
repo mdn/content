@@ -1,5 +1,5 @@
 ---
-title: "ReferenceError: assignment to undeclared variable \"x\""
+title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
 page-type: javascript-error
 ---

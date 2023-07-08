@@ -144,7 +144,9 @@ In our example (sorted according to the final rendering order):
 }
 html {
   padding: 20px;
-  font: 12px/20px Arial, sans-serif;
+  font:
+    12px/20px Arial,
+    sans-serif;
 }
 div {
   opacity: 0.7;

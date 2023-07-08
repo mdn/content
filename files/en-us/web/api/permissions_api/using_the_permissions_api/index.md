@@ -61,7 +61,7 @@ function handlePermission() {
       navigator.geolocation.getCurrentPosition(
         revealPosition,
         positionDenied,
-        geoSettings
+        geoSettings,
       );
     } else if (result.state === "denied") {
       report(result.state);

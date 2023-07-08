@@ -239,7 +239,11 @@ blockquote::before,
 blockquote::after {
   position: absolute;
   height: 3rem;
-  font: 6rem/100% Georgia, "Times New Roman", Times, serif;
+  font:
+    6rem/100% Georgia,
+    "Times New Roman",
+    Times,
+    serif;
 }
 
 blockquote::before {

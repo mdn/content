@@ -286,7 +286,7 @@ function draw() {
       sizePicker.value,
       degToRad(0),
       degToRad(360),
-      false
+      false,
     );
     ctx.fill();
   }

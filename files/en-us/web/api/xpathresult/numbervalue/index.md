@@ -46,7 +46,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.NUMBER_TYPE,
-  null
+  null,
 );
 document.querySelector("output").textContent = result.numberValue;
 ```

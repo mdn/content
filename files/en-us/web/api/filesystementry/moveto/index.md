@@ -85,12 +85,12 @@ workingDirectory.getFile(
           (dirEntry) => {
             fileEntry.moveTo(dirEntry);
           },
-          handleError
+          handleError,
         );
       }
     });
   },
-  handleError
+  handleError,
 );
 ```
 
