@@ -175,7 +175,7 @@ const alignContentAlignment = document.getElementById("alignContentAlignment");
 alignContentAlignment.addEventListener("change", update);
 
 const justifyContentAlignment = document.getElementById(
-  "justifyContentAlignment"
+  "justifyContentAlignment",
 );
 justifyContentAlignment.addEventListener("change", update);
 

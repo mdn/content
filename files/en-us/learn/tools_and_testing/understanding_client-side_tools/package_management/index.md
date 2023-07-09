@@ -189,7 +189,7 @@ Parcel expects an `index.html` and an `index.js` file to work with, but otherwis
 So now we need to add an `index.html` file to our working directory. Create `index.html` in your test directory, and give it the following contents:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

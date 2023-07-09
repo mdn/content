@@ -1,6 +1,7 @@
 ---
 title: Display a badge on the app icon
 slug: Web/Progressive_web_apps/How_to/Display_badge_on_app_icon
+page-type: how-to
 ---
 
 {{PWASidebar}}

@@ -1,6 +1,7 @@
 ---
 title: "Referer header: privacy and security concerns"
 slug: Web/Security/Referer_header:_privacy_and_security_concerns
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

@@ -1,6 +1,7 @@
 ---
 title: Parsing and serializing XML
 slug: Web/Guide/Parsing_and_serializing_XML
+page-type: guide
 ---
 
 <section id="Quick_links">

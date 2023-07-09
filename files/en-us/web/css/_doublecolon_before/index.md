@@ -141,7 +141,7 @@ list.addEventListener(
       ev.target.classList.toggle("done");
     }
   },
-  false
+  false,
 );
 ```
 

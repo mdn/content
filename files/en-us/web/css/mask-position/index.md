@@ -24,7 +24,9 @@ mask-position: 10% 8em;
 
 /* Multiple values */
 mask-position: top right;
-mask-position: 1rem 1rem, center;
+mask-position:
+  1rem 1rem,
+  center;
 
 /* Global values */
 mask-position: inherit;

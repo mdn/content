@@ -1,6 +1,7 @@
 ---
 title: Developer guides
 slug: Web/Guide
+page-type: landing-page
 ---
 
 <section id="Quick_links">

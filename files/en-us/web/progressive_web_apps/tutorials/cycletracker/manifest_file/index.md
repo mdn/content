@@ -2,6 +2,7 @@
 title: "CycleTracker: Manifest and iconography"
 short-title: Manifest and iconography
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
+page-type: tutorial-chapter
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

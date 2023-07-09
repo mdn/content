@@ -103,7 +103,7 @@ form.addEventListener(
   (event) => {
     event.target.style.background = "pink";
   },
-  true
+  true,
 );
 
 form.addEventListener(
@@ -111,7 +111,7 @@ form.addEventListener(
   (event) => {
     event.target.style.background = "";
   },
-  true
+  true,
 );
 ```
 

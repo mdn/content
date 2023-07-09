@@ -64,7 +64,7 @@ You can also use {{domxref("XSLTProcessor.transformToFragment()")}} which will r
 const ownerDocument = document.implementation.createDocument("", "test", null);
 const newFragment = processor.transformToFragment(
   domToBeTransformed,
-  ownerDocument
+  ownerDocument,
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Interfaces moved in Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Interfaces_moved
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

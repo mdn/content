@@ -2,6 +2,7 @@
 title: "CycleTracker: Service workers"
 short-title: Service workers
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
+page-type: tutorial-chapter
 ---
 
 {{PWASidebar}}
@@ -340,7 +341,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");

@@ -122,7 +122,7 @@ function checkName(evt) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "Please use lowercase letters only.\n" + `charCode: ${charCode}\n`
+        "Please use lowercase letters only.\n" + `charCode: ${charCode}\n`,
       );
     }
   }

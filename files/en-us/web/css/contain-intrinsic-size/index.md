@@ -104,11 +104,11 @@ The code below adds styles to, and removes styles from, the containing element b
 ```js
 const containedElement = document.querySelector("#contained_element");
 const intrinsicSizeSelector = document.querySelector(
-  "#contain_intrinsic_size_selector"
+  "#contain_intrinsic_size_selector",
 );
 const containSelector = document.querySelector("#contain_selector");
 const contentVisibilitySelector = document.querySelector(
-  "#content_visibility_selector"
+  "#content_visibility_selector",
 );
 
 containedElement.style["contain-intrinsic-size"] =

@@ -96,7 +96,8 @@ This module assumes that you've installed Django into a virtual environment, and
 
 ## Installing Python 3
 
-In order to use Django you will have to install Python on your operating system. If you're using _Python 3_ then you will also need the [Python Package Index](https://pypi.org/) tool — _pip3_ — which is used to manage (install, update, and remove) Python packages/libraries used by Django and your other Python apps.
+In order to use Django you must have Python 3 on your operating system.
+You will also need the [Python Package Index](https://pypi.org/) tool — _pip3_ — which is used to manage (install, update, and remove) Python packages/libraries used by Django and your other Python apps.
 
 This section briefly explains how you can check what versions of Python are present, and install new versions as needed, for Ubuntu Linux 20.04, macOS, and Windows 10.
 
@@ -125,7 +126,8 @@ sudo apt install python3-pip
 
 ### macOS
 
-macOS "El Capitan" and other more recent versions do not include Python 3. You can confirm this by running the following commands in the zsh or bash terminal:
+macOS does not include Python 3 by default (Python 2 is included on older versions).
+You can confirm this by running the following commands in the zsh or bash terminal:
 
 ```bash
 $ python3 -V
@@ -179,12 +181,46 @@ The Windows installer incorporates _pip3_ (the Python package manager) by defaul
 You can list installed packages as shown:
 
 ```bash
-pip3 list
+py -3 -m pip list
 ```
 
 > **Note:** The installer should set up everything you need for the above command to work.
 > If however you get a message that Python cannot be found, you may have forgotten to add it to your system path.
 > You can do this by running the installer again, selecting "Modify", and checking the box labeled "Add Python to environment variables" on the second page.
+
+## Calling Python 3 and pip3
+
+You will note that in the previous sections we use different commands to call Python 3 and pip on different operating systems.
+
+If you only have Python 3 installed (and not Python 2), the bare commands `python` and `pip` can generally be used to run Python and pip on any operating system.
+If this is allowed on your system you will get a version "3" string when you run `-V` with the bare commands, as shown:
+
+```
+> python -V
+  Python 3.10.2
+
+> pip -V
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+```
+
+If Python 2 is installed then to use version 3 you should prefix commands with `python3` and `pip3` on Linux/macOS, and `py -3` and `py -3 -m pip` on Windows:
+
+```bash
+# Windows
+py -3 -V
+ Python 3.10.2
+
+py -3 -m pip list
+
+# Linux/macOS
+$ python3 -V
+ Python 3.10.2
+
+$ pip3 -V
+  pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+```
+
+The instructions below show the platform specific commands as they work on more systems.
 
 ## Using Django inside a Python virtual environment
 
@@ -293,7 +329,7 @@ At this point, you may see a bunch of scripts being run (the same scripts as for
 Installing [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) is even simpler than setting up _virtualenvwrapper_ because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
 
 ```bash
-pip3 install virtualenvwrapper-win
+py -3 -m pip install virtualenvwrapper-win
 ```
 
 Now you can create a new virtual environment with the `mkvirtualenv` command
@@ -331,7 +367,11 @@ There are just a few other useful commands that you should know (there are more 
 Once you've created a virtual environment, and called `workon` to enter it, you can use _pip3_ to install Django.
 
 ```bash
-pip3 install django~=4.0
+# Linux/macOS
+python3 -m pip install django~=4.0
+
+# Windows
+py -3 -m pip install django~=4.0
 ```
 
 You can test that Django is installed by running the following command (this just tests that Python can find the Django module):

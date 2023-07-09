@@ -1,6 +1,7 @@
 ---
 title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

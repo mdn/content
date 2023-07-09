@@ -1,6 +1,7 @@
 ---
 title: Updating extensions for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

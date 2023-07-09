@@ -1,6 +1,7 @@
 ---
 title: CycleTracker
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker
+page-type: tutorial
 ---
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS")}}

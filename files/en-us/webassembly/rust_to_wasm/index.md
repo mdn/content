@@ -224,7 +224,7 @@ Let's start by creating a file named `index.html` in the root of the project, so
 Put the following content in the `index.html` file:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -333,7 +333,7 @@ This imports the new module from the `node_modules` folder. This isn't considere
 Finally, we need to add a HTML file to load the JavaScript. Create an `index.html` file and add the following:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

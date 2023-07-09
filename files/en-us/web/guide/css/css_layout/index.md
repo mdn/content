@@ -1,6 +1,7 @@
 ---
 title: CSS Layout
 slug: Web/Guide/CSS/CSS_Layout
+page-type: guide
 ---
 
 There are a number of methods that you can use to lay out your web pages and applications. MDN contains a number of in-depth guides to the different methods, and this page provides an overview of them all.

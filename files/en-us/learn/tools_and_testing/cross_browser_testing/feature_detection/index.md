@@ -85,7 +85,7 @@ In our conditional statement, we test to see if the{{cssxref("grid-template-colu
 
 #### @supports
 
-CSS has a native feature detection mechanism: the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/Media_Queries) except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported, similar to `CSS.supports()`.
+CSS has a native feature detection mechanism: the {{cssxref("@supports")}} at-rule. This works in a similar manner to [media queries](/en-US/docs/Web/CSS/CSS_media_queries) except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported, similar to `CSS.supports()`.
 
 For example, we could rewrite our previous example to use `@supports`:
 

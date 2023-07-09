@@ -23,7 +23,7 @@ function evaluateXPath(aNode, aExpr) {
   const nsResolver = xpe.createNSResolver(
     aNode.ownerDocument === null
       ? aNode.documentElement
-      : aNode.ownerDocument.documentElement
+      : aNode.ownerDocument.documentElement,
   );
   const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   const found = [];
@@ -103,7 +103,7 @@ function docEvaluateArray(expr, doc, context, resolver) {
     context,
     resolver,
     XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-    null
+    null,
   );
   for (let i = 0; i < result.snapshotLength; i++) {
     a.push(result.snapshotItem(i));

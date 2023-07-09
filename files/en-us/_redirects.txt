@@ -5769,6 +5769,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtension_i18n	/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions_	/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
+/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_	/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next
 /en-US/docs/Mozilla/Add-ons/WebExtensions/devtools.inspectedWindow	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 /en-US/docs/Mozilla/Add-ons/WebExtensions/devtools_panels	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /en-US/docs/Mozilla/Add-ons/WebExtensions/differences_between_extensions_API_implementations	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations

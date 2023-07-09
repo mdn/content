@@ -2,6 +2,7 @@
 title: "CycleTracker: JavaScript functionality"
 short-title: JavaScript functionality
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
+page-type: tutorial-chapter
 ---
 
 {{PWASidebar}}
@@ -202,7 +203,7 @@ function renderPastPeriods() {
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
     periodEl.textContent = `From ${formatDate(
-      period.startDate
+      period.startDate,
     )} to ${formatDate(period.endDate)}`;
     pastPeriodList.appendChild(periodEl);
   });
@@ -293,7 +294,7 @@ function renderPastPeriods() {
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
     periodEl.textContent = `From ${formatDate(
-      period.startDate
+      period.startDate,
     )} to ${formatDate(period.endDate)}`;
     pastPeriodList.appendChild(periodEl);
   });

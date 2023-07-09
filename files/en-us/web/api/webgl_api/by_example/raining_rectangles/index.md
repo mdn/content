@@ -79,7 +79,7 @@ function drawAnimation() {
     rainingRect.position[0],
     rainingRect.position[1],
     rainingRect.size[0],
-    rainingRect.size[1]
+    rainingRect.size[1],
   );
   gl.clear(gl.COLOR_BUFFER_BIT);
   rainingRect.position[1] -= rainingRect.velocity;

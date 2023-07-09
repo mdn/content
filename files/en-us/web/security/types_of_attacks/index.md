@@ -1,6 +1,7 @@
 ---
 title: Types of attacks
 slug: Web/Security/Types_of_attacks
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
