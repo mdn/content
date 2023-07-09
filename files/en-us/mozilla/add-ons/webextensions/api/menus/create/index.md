@@ -121,7 +121,7 @@ This example creates a context menu item that's shown when the user has selected
 browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
-  contexts: ["selection"]
+  contexts: ["selection"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
@@ -164,11 +164,11 @@ let makeItGreen = 'document.body.style.border = "5px solid green"';
 browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "radio-blue") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItBlue
+      code: makeItBlue,
     });
   } else if (info.menuItemId === "radio-green") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItGreen
+      code: makeItGreen,
     });
   }
 });

@@ -18,9 +18,9 @@ You must have the permission for the page's URL—either explicitly, as a [host 
 You can also inject code into pages packaged with your own extension:
 
 ```js
-browser.tabs.create({url: "/my-page.html"}).then(() => {
+browser.tabs.create({ url: "/my-page.html" }).then(() => {
   browser.tabs.executeScript({
-    code: `console.log('location:', window.location.href);`
+    code: `console.log('location:', window.location.href);`,
   });
 });
 ```
@@ -134,7 +134,7 @@ function onError(error) {
 const makeItGreen = 'document.body.style.border = "5px solid green"';
 
 const executing = browser.tabs.executeScript({
-  code: makeItGreen
+  code: makeItGreen,
 });
 executing.then(onExecuted, onError);
 ```
@@ -152,7 +152,7 @@ function onError(error) {
 
 const executing = browser.tabs.executeScript({
   file: "/content-script.js",
-  allFrames: true
+  allFrames: true,
 });
 executing.then(onExecuted, onError);
 ```
@@ -168,9 +168,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-const executing = browser.tabs.executeScript(
-  2, {
-    file: "/content-script.js"
+const executing = browser.tabs.executeScript(2, {
+  file: "/content-script.js",
 });
 executing.then(onExecuted, onError);
 ```

@@ -44,7 +44,7 @@ This code forgets the single most recently-closed session, whether it's a tab or
 ```js
 function forgetMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];

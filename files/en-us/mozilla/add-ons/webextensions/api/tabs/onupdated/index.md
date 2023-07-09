@@ -144,8 +144,8 @@ const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
-  urls: [pattern1, pattern2]
-}
+  urls: [pattern1, pattern2],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -160,8 +160,8 @@ Log changes only to the `pinned` property of tabs (that is, pin and unpin action
 
 ```js
 const filter = {
-  properties: ["pinned"]
-}
+  properties: ["pinned"],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -180,8 +180,8 @@ const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
   urls: [pattern1, pattern2],
-  properties: ["pinned"]
-}
+  properties: ["pinned"],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -201,8 +201,8 @@ const pattern2 = "https://twitter.com/mozdevnet";
 const filter = {
   urls: [pattern1, pattern2],
   properties: ["pinned"],
-  windowId: browser.windows.WINDOW_ID_CURRENT
-}
+  windowId: browser.windows.WINDOW_ID_CURRENT,
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);

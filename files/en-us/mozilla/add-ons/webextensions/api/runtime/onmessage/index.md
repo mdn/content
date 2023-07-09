@@ -158,7 +158,9 @@ function handleError(error) {
 }
 
 function sendMessage(e) {
-  const sending = browser.runtime.sendMessage({content: "message from the content script"});
+  const sending = browser.runtime.sendMessage({
+    content: "message from the content script",
+  });
   sending.then(handleResponse, handleError);
 }
 

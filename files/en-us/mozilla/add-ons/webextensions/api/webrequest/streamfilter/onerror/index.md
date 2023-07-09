@@ -29,7 +29,7 @@ function listener(details) {
 
   filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`);
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -47,7 +47,7 @@ function listener(details) {
 
   filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`); // Error: Invalid request ID
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(

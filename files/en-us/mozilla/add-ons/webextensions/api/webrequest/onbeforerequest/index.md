@@ -223,7 +223,8 @@ let pattern = "https://developer.mozilla.org/*";
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
   return {
-    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
+    redirectUrl:
+      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
   };
 }
 
