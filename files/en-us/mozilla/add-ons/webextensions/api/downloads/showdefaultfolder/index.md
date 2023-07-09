@@ -32,7 +32,7 @@ let showBtn = document.querySelector(".show");
 
 showBtn.onclick = () => {
   browser.downloads.showDefaultFolder();
-}
+};
 ```
 
 {{WebExtExamples}}

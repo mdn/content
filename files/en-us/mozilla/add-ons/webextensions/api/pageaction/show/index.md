@@ -48,9 +48,9 @@ browser.contextMenus.create({
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "show") {
-    browser.pageAction.show(tab.id)
+    browser.pageAction.show(tab.id);
   }
-})
+});
 ```
 
 {{WebExtExamples}}

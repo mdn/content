@@ -49,7 +49,7 @@ function listener(details) {
     str = str.replace(/Example/g, "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
-  }
+  };
 
   //return {}; // not needed
 }
