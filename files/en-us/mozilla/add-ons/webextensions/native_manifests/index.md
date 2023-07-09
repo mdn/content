@@ -442,15 +442,15 @@ For global visibility, store the manifest in either:
 or:
 
 ```
-    /usr/lib64/mozilla/native-messaging-hosts/<name>.json
+/usr/lib64/mozilla/native-messaging-hosts/<name>.json
 ```
 
 ```
-    /usr/lib64/mozilla/managed-storage/<name>.json
+/usr/lib64/mozilla/managed-storage/<name>.json
 ```
 
 ```
-    /usr/lib64/mozilla/pkcs11-modules/<name>.json
+/usr/lib64/mozilla/pkcs11-modules/<name>.json
 ```
 
 For per-user visibility, store the manifest in:
