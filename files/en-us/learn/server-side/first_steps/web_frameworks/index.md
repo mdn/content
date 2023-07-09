@@ -312,6 +312,14 @@ Although definitely not the only framework based on [Java](https://www.java.com)
 
 It can be used for small problems but its strength is building larger scale applications that use a cloud approach. Usually multiple applications run in parallel talking to each other, with some providing user interaction and others doing back end work (e.g. accessing databases or other services). Load balancers help to ensure redundancy and reliability or allow geolocated handling of user requests to ensure responsiveness.
 
+### HappyX (Nim)
+[HappyX](https://hapticx.github.io/happyx) is macro-oriented full-stack web framework written in Nim. With this web framework you can easily create modern and effectively web apps.
+
+Some features provided by HappyX are:
+- Powerful route system: path params, routing, mounting.
+- Full-stack HTTP/WS client/server.
+- Own DSL (Domain-specific language) to write web apps fast and effecively.
+
 ## Summary
 
 This article has shown that web frameworks can make it easier to develop and maintain server-side code. It has also provided a high level overview of a few popular frameworks, and discussed criteria for choosing a web application framework. You should now have at least an idea of how to choose a web framework for your own server-side development. If not, then don't worry — later on in the course we'll give you detailed tutorials on Django and Express to give you some experience of actually working with a web framework.
