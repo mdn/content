@@ -83,7 +83,7 @@ function authorize() {
   authURL += `?client_id=${clientID}`;
   authURL += `&response_type=token`;
   authURL += `&redirect_uri=${encodeURIComponent(redirectURL)}`;
-  authURL += `&scope=${encodeURIComponent(scopes.join(' '))}`;
+  authURL += `&scope=${encodeURIComponent(scopes.join(" "))}`;
 
   return browser.identity.launchWebAuthFlow({
     interactive: true,

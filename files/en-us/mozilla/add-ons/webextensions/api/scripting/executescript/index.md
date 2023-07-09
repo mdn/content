@@ -66,7 +66,8 @@ Each `InjectionResult` object has these properties:
 The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
 
 ```js
-let foo='my result'; foo;
+let foo = "my result";
+foo;
 ```
 
 Here the results array contains the string "`my result`" as an element.

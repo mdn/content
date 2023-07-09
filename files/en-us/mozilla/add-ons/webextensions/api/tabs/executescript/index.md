@@ -106,7 +106,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any `console.log()` output) if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). For example, consider a script like this:
 
 ```js
-let foo='my result'; foo;
+let foo = "my result";
+foo;
 ```
 
 Here the results array will contain the string "`my result`" as an element.
