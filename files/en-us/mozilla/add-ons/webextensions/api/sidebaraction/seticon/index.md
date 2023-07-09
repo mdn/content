@@ -108,13 +108,13 @@ function toggle(tab) {
   if (on) {
     browser.sidebarAction.setIcon({
       path: "off.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = false;
   } else {
     browser.sidebarAction.setIcon({
       path: "on.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = true;
   }

@@ -87,7 +87,9 @@ function handleProxyRequest(requestInfo) {
   return {type: "direct"};
 }
 
-browser.proxy.onRequest.addListener(handleProxyRequest, {urls: ["<all_urls>"]});
+browser.proxy.onRequest.addListener(handleProxyRequest, {
+  urls: ["<all_urls>"],
+});
 ```
 
 {{WebExtExamples}}

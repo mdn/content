@@ -59,7 +59,8 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let gettingActive = browser.tabs.query({
-    currentWindow: true, active: true
+    currentWindow: true,
+    active: true,
   });
   gettingActive.then(connectToTab, onError);
 });

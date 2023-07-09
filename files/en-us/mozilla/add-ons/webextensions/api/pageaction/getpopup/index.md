@@ -47,7 +47,7 @@ function gotPopup(popupURL) {
 
 browser.contextMenus.create({
   id: "get-popup",
-  title: "Get popup URL"
+  title: "Get popup URL",
 });
 
 browser.contextMenus.onClicked.addListener((info, tab) => {

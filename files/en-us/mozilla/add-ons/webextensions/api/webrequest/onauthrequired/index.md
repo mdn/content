@@ -224,8 +224,8 @@ const target = "https://intranet.company.com/";
 
 const myCredentials = {
   username: "me@company.com",
-  password: "zDR$ERHGDFy"
-}
+  password: "zDR$ERHGDFy",
+};
 
 const pendingRequests = [];
 
