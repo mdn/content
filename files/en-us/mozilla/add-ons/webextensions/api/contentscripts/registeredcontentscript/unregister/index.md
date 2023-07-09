@@ -35,7 +35,6 @@ This code toggles a registered content script on a browser action click:
 let registered = null;
 
 async function register() {
-
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
     js: [{
@@ -43,7 +42,6 @@ async function register() {
     }],
     runAt: "document_idle"
   });
-
 }
 
 function toggle() {

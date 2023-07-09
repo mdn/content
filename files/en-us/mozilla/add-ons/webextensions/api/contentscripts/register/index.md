@@ -73,13 +73,11 @@ const defaultCode =
   "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
 
 async function register(hosts, code) {
-
   return await browser.contentScripts.register({
     matches: [hosts],
     js: [{code}],
     runAt: "document_idle"
   });
-
 }
 
 let registered = register(defaultHosts, defaultCode);

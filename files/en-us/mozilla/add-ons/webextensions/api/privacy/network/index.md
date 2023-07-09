@@ -59,7 +59,6 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
   let getting = browser.privacy.network.webRTCIPHandlingPolicy.get({});
   getting.then((got) => {
     console.log(got.value);
@@ -75,7 +74,6 @@ browser.browserAction.onClicked.addListener(() => {
       console.log("Not able to set webRTCIPHandlingPolicy");
     }
   });
-
 });
 ```
 

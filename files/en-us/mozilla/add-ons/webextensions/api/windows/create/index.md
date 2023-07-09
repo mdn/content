@@ -122,7 +122,6 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let popupURL = browser.extension.getURL("popup/popup.html");
 
   let creating = browser.windows.create({
@@ -132,7 +131,6 @@ browser.browserAction.onClicked.addListener((tab) => {
     width: 200
   });
   creating.then(onCreated, onError);
-
 });
 ```
 

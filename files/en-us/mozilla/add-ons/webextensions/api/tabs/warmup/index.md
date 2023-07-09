@@ -49,7 +49,6 @@ function onFailure(error) {
 }
 
 async function warmupMDN() {
-
   const mdnTabs = await browser.tabs.query({
     currentWindow: true,
     url: "https://developer.mozilla.org/*"
@@ -59,7 +58,6 @@ async function warmupMDN() {
     const warming = browser.tabs.warmup(mdnTabs[0].id);
     warming.then(onSuccess, onFailure);
   }
-
 }
 
 browser.browserAction.onClicked.addListener(warmupMDN);

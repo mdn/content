@@ -51,7 +51,6 @@ const permissionsToRequest = {
 }
 
 async function requestPermissions() {
-
   function onResponse(response) {
     if (response) {
       console.log("Permission was granted");
