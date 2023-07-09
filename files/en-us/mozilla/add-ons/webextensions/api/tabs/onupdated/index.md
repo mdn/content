@@ -189,9 +189,7 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(
-  handleUpdated,
-  filter);
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
 Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet` where the tab was part of the current browser window when the update event fired:
@@ -212,9 +210,7 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(
-  handleUpdated,
-  filter);
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
 {{WebExtExamples}}

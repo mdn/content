@@ -184,10 +184,9 @@ function logURL(requestDetails) {
   console.log(`Loading: ${requestDetails.url}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 This code cancels requests for images that are made to URLs under "https\://developer.mozilla.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
@@ -244,7 +243,8 @@ This code is exactly like the previous example, except that the listener handles
 let pattern = "https://developer.mozilla.org/*";
 
 // URL we will redirect to
-let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
+let redirectUrl =
+  "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
 
 // redirect function returns a Promise
 // which is resolved with the redirect URL when a timer expires
@@ -294,7 +294,7 @@ Here's another version:
 
 ```js
 function randomColor() {
-  return `#${Math.floor(Math.random()*16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 const pattern = "https://developer.mozilla.org/*";

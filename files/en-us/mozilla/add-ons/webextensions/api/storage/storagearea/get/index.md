@@ -127,7 +127,7 @@ let gettingItem = browser.storage.local.get({
 
 ```js
 chrome.storage.local.get("kitten", (items) => {
-  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
@@ -142,7 +142,9 @@ chrome.storage.local.get("kitten", (items) => {
 Or using a Promise
 
 ```js
-let gettingItem = new Promise((resolve) => chrome.storage.local.get("kitten", resolve));
+let gettingItem = new Promise((resolve) =>
+  chrome.storage.local.get("kitten", resolve)
+);
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
 

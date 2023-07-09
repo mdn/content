@@ -34,10 +34,12 @@ You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified
 
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
-  console.log(`Cookie changed: \n`
-    + ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n`
-    + ` * Cause: ${changeInfo.cause}\n`
-    + ` * Removed: ${changeInfo.removed}`);
+  console.log(
+    `Cookie changed: \n` +
+      ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
+      ` * Cause: ${changeInfo.cause}\n` +
+      ` * Removed: ${changeInfo.removed}`
+  );
 });
 ```
 

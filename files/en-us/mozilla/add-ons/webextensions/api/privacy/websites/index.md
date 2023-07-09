@@ -86,10 +86,12 @@ browser.browserAction.onClicked.addListener(() => {
   let getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
   getting.then((got) => {
     console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
+    if (
+      got.levelOfControl === "controlled_by_this_extension" ||
+      got.levelOfControl === "controllable_by_this_extension"
+    ) {
       let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-        value: true
+        value: true,
       });
       setting.then(onSet);
     } else {

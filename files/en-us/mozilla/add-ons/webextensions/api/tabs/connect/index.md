@@ -46,11 +46,10 @@ In this example a background script listens for a click on a [browser action](/e
 ```js
 function connectToTab(tabs) {
   if (tabs.length > 0) {
-    let examplePort = browser.tabs.connect(
-      tabs[0].id,
-      {name: "tabs-connect-example"}
-    );
-    examplePort.postMessage({greeting: "Hi from background script"});
+    let examplePort = browser.tabs.connect(tabs[0].id, {
+      name: "tabs-connect-example",
+    });
+    examplePort.postMessage({ greeting: "Hi from background script" });
   }
 }
 

@@ -84,24 +84,22 @@ Events have three functions:
     >
     > ```js example-bad
     > // don't do this
-    > browser.runtime.onMessage.addListener(
-    >   async (data, sender) => {
-    >     if (data.type === 'handle_me') { return 'done'; }
+    > browser.runtime.onMessage.addListener(async (data, sender) => {
+    >   if (data.type === "handle_me") {
+    >     return "done";
     >   }
-    > );
+    > });
     > ```
     >
     > If you only want the listener to respond to messages of a certain type, you must define the listener as a non-`async` function, and return a Promise only for the messages the listener is meant to respond to — and otherwise return false or undefined:
     >
     > ```js example-good
-    > browser.runtime.onMessage.addListener(
-    >   (data, sender) => {
-    >     if (data.type === 'handle_me') {
-    >       return Promise.resolve('done');
-    >     }
-    >     return false;
+    > browser.runtime.onMessage.addListener((data, sender) => {
+    >   if (data.type === "handle_me") {
+    >     return Promise.resolve("done");
     >   }
-    > );
+    >   return false;
+    > });
     > ```
 
 ## Browser compatibility
@@ -226,9 +224,11 @@ function handleResponse(isBookmarked) {
   }
 }
 
-browser.runtime.sendMessage({
-  url: firstLink.href
-}).then(handleResponse);
+browser.runtime
+  .sendMessage({
+    url: firstLink.href,
+  })
+  .then(handleResponse);
 ```
 
 Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
@@ -237,9 +237,11 @@ Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` 
 // background-script.js
 
 function isBookmarked(message, sender, response) {
-  return browser.bookmarks.search({
-    url: message.url
-  }).then((results) => results.length > 0);
+  return browser.bookmarks
+    .search({
+      url: message.url,
+    })
+    .then((results) => results.length > 0);
 }
 
 browser.runtime.onMessage.addListener(isBookmarked);
