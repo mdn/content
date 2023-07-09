@@ -85,7 +85,10 @@ function logOnHistoryStateUpdated(details) {
   console.log(`Transition qualifiers: ${details.transitionQualifiers}`);
 }
 
-browser.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
+browser.webNavigation.onHistoryStateUpdated.addListener(
+  logOnHistoryStateUpdated,
+  filter
+);
 ```
 
 {{WebExtExamples}}

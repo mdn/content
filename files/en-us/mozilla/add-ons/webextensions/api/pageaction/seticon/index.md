@@ -83,7 +83,8 @@ Set the icon for the page action when the user clicks it:
 ```js
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.setIcon({
-    tabId: tab.id, path: "icons/icon-48.png"
+    tabId: tab.id,
+    path: "icons/icon-48.png",
   });
 });
 ```

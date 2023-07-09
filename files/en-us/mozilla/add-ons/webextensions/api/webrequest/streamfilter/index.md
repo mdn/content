@@ -25,7 +25,7 @@ You can listen to each event by assigning a listener function to its attribute:
 ```js
 filter.onstart = (event) => {
   console.log("started");
-}
+};
 ```
 
 Note that the request is blocked during the execution of any event listeners.
@@ -83,17 +83,17 @@ function listener(details) {
 
   filter.onstart = (event) => {
     console.log("started");
-  }
+  };
 
   filter.ondata = (event) => {
     console.log(event.data);
     filter.write(event.data);
-  }
+  };
 
   filter.onstop = (event) => {
     console.log("finished");
     filter.disconnect();
-  }
+  };
 
   //return {}; // not needed
 }

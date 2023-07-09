@@ -77,7 +77,7 @@ function setCookie(tabs) {
   browser.cookies.set({
     url: tabs[0].url,
     name: "favorite-color",
-    value: "red"
+    value: "red",
   });
 }
 ```

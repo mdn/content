@@ -33,23 +33,23 @@ A string that describes the current status of the request. It will be one of the
 ```js
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
-  console.log(filter.status);          // uninitialized
+  console.log(filter.status); // uninitialized
 
   filter.onstart = (event) => {
-    console.log(filter.status);        // transferringdata
-  }
+    console.log(filter.status); // transferringdata
+  };
 
   filter.ondata = (event) => {
-    console.log(filter.status);        // transferringdata
+    console.log(filter.status); // transferringdata
     // pass through the response data
     filter.write(event.data);
-  }
+  };
 
   filter.onstop = (event) => {
-    console.log(filter.status);        // finishedtransferringdata
+    console.log(filter.status); // finishedtransferringdata
     filter.disconnect();
-    console.log(filter.status);        // disconnected
-  }
+    console.log(filter.status); // disconnected
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(

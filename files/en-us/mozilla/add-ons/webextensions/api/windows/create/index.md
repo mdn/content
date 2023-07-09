@@ -103,7 +103,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   let creating = browser.windows.create({
-    tabId: tab.id
+    tabId: tab.id,
   });
   creating.then(onCreated, onError);
 });
@@ -121,17 +121,15 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let popupURL = browser.extension.getURL("popup/popup.html");
 
   let creating = browser.windows.create({
     url: popupURL,
     type: "popup",
     height: 200,
-    width: 200
+    width: 200,
   });
   creating.then(onCreated, onError);
-
 });
 ```
 

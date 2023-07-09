@@ -140,7 +140,8 @@ The following snippet updates the icon when the user clicks it, but only for the
 ```js
 browser.action.onClicked.addListener((tab) => {
   browser.action.setIcon({
-    tabId: tab.id, path: "icons/updated-48.png"
+    tabId: tab.id,
+    path: "icons/updated-48.png",
   });
 });
 ```

@@ -59,29 +59,27 @@ function gotMonster(item) {
 }
 
 function onError(error) {
-  console.log(error)
+  console.log(error);
 }
 
 // define 2 objects
 let monster = {
   name: "Kraken",
   tentacles: true,
-  eyeCount: 10
-}
+  eyeCount: 10,
+};
 
 let kitten = {
   name: "Moggy",
   tentacles: false,
-  eyeCount: 2
-}
+  eyeCount: 2,
+};
 
 // store the objects
 browser.storage.local.set({ kitten, monster }).then(setItem, onError);
 
-browser.storage.local.get("kitten")
-  .then(gotKitten, onError);
-browser.storage.local.get("monster")
-  .then(gotMonster, onError);
+browser.storage.local.get("kitten").then(gotKitten, onError);
+browser.storage.local.get("monster").then(gotMonster, onError);
 ```
 
 {{WebExtExamples}}

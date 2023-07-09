@@ -107,7 +107,7 @@ function onError(error) {
 function updateFirstTab(tabs) {
   let updating = browser.tabs.update(tabs[0].id, {
     active: true,
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
   updating.then(onUpdated, onError);
 }
