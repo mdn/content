@@ -16,7 +16,7 @@ The **`:scope`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 }
 ```
 
-Currently, when used in a stylesheet, `:scope` is the same as {{cssxref(":root")}}, as currently, there is no way to explicitly establish a scoped element. When used from a DOM API, such as {{domxref("Element.querySelector", "querySelector()")}}, {{domxref("Element.querySelectorAll", "querySelectorAll()")}}, {{domxref("Element.matches", "matches()")}}, or {{domxref("Element.closest()")}}, `:scope` matches the element on which the method was called.
+When used in a stylesheet, `:scope` is the same as {{cssxref(":root")}}, as there is currently no way to explicitly establish a scoped element. When used from a DOM API, such as {{domxref("Element.querySelector", "querySelector()")}}, {{domxref("Element.querySelectorAll", "querySelectorAll()")}}, {{domxref("Element.matches", "matches()")}}, or {{domxref("Element.closest()")}}, `:scope` matches the element on which the method was called.
 
 ## Syntax
 
