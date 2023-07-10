@@ -380,7 +380,7 @@ The script into which you import the module features basically acts as the top-l
 You can only use `import` and `export` statements inside modules, not regular scripts.
 
 > **Note:** Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreloaded"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
-> This can significantly reducing load time when the modules are used.
+> This can significantly reduce load time when the modules are used.
 
 ## Other differences between modules and standard scripts
 
