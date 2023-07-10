@@ -135,7 +135,7 @@ Generally you will need to check the relevant specifications for these (keys for
 - `userhash` {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
 
-### HOBA
+### HTTP Origin-Bound Authentication (HOBA)
 
 - `<challenge>`
   - : A sequence of fields concatenated into a string in the format of '\<len\>:\<value\>'.
