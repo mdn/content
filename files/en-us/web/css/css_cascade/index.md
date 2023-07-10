@@ -44,7 +44,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - {{DOMXRef("CSSLayerStatementRule")}}
 - {{DOMXRef("CSSRule")}}
 
-### Definitions
+### Key concepts and definitions
 
 - {{cssxref("Specificity")}}
 - [Cascade origin and importance](/en-US/docs/Web/CSS/Cascade)
