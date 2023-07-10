@@ -135,6 +135,16 @@ Generally you will need to check the relevant specifications for these (keys for
 - `userhash` {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
 
+### HOBA 
+
+- `<challenge>`
+  - : A sequence of fields concatenated into a string in the format of '<len>:<value>'.
+    A to-be-signed string that is defined by RFC 7486.
+- `<max-age>`
+  - : The number of seconds from the time the HTTP response is emitted for which responses to this challenge can be accepted.
+- `realm` {{optional_inline}}
+  - : The scope of protection in the manner described in HTTP/1.1, Authentication RFC7235
+
 ## Examples
 
 ### Basic authentication
@@ -212,6 +222,20 @@ Authorization: Digest username="Mufasa",
     response="753927fa0e85d155564e2e272a28d1802ca10daf449
         6794697cf8db5856cb6c1",
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
+```
+
+### HOBA Authentication
+
+```http
+WWW-Authenticate: HOBA max-age="180", challenge="16:MTEyMzEyMzEyMw==1:028:https://www.example.com:80800:3:MTI48:NjgxNDdjOTctNDYxYi00MzEwLWJlOWItNGM3MDcyMzdhYjUz"
+```
+
+In the sample above, the to-be-signed blob challenge created is made from these parts: www.example.com using port 8080, the nonce is '1123123123', the algorithm for signing is RSA-SHA256, the key identifier is 123, and finally the challenge is '68147c97-461b-4310-be9b-4c707237ab53'.
+
+As per RFC7486, a client would receive this header, extract the challenge, sign it with their private key that corresponds to key identifier 123 in our example using RSA-SHA256, and then send the result in the Authorization header as a dot-separated key id, challenge, nonce, and signature.
+
+```http
+Authorization: 123.16:MTEyMzEyMzEyMw==1:028:https://www.example.com:80800:3:MTI48:NjgxNDdjOTctNDYxYi00MzEwLWJlOWItNGM3MDcyMzdhYjUz.1123123123.<signature-of-challenge>
 ```
 
 ## Specifications
