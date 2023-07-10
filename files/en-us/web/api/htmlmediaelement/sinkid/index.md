@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.sinkId
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.sinkId`** read-only property of the [Web Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) returns a string that is the unique ID of the audio device delivering output.
+The **`HTMLMediaElement.sinkId`** read-only property of the [Web Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) returns a string that is the unique ID of the device to be used for playing audio output.
 If the user agent default device is being used, it returns an empty string.
 
 This ID should be one of the {{domxref("MediaDeviceInfo.deviceId")}} values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
