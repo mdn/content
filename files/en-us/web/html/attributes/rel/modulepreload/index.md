@@ -9,6 +9,11 @@ browser-compat: html.elements.link.rel.modulepreload
 
 The **`modulepreload`** keyword, for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute of the {{HTMLElement("link")}} element, provides a declarative way to preemptively fetch a [module script](/en-US/docs/Web/JavaScript/Guide/Modules), parse and compile it, and store it in the document's module map for later execution.
 
+Preloading allows modules and their dependencies to be downloaded early, and can also significantly reduce the overall download and processing time.
+This is because it allows pages to fetch modules in parallel, instead of sequentially as each module is processed and its dependencies are discovered.
+Note however that you can't just preload everything!
+What you choose to preload must be balanced against other operations that might then be starved, adversely affecting user experience.
+
 Links with `rel="modulepreload"` are similar to those with [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload).
 The main difference is that `preload` just downloads the file and stores it in the cache, while `modulepreload` gets the module, parses and compiles it, and puts the results into the module map so that it is ready to execute.
 
