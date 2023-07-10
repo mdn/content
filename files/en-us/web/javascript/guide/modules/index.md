@@ -379,6 +379,9 @@ The script into which you import the module features basically acts as the top-l
 
 You can only use `import` and `export` statements inside modules, not regular scripts.
 
+> **Note:** Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreloaded"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+> This can significantly reduce load time when the modules are used.
+
 ## Other differences between modules and standard scripts
 
 - You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
