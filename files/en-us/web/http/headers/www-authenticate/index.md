@@ -226,13 +226,15 @@ Authorization: Digest username="Mufasa",
 
 ### HOBA Authentication
 
+A server that supports HOBA authentication might have a `WWW-Authenticate` response header which looks like this:
+
 ```http
 WWW-Authenticate: HOBA max-age="180", challenge="16:MTEyMzEyMzEyMw==1:028:https://www.example.com:80800:3:MTI48:NjgxNDdjOTctNDYxYi00MzEwLWJlOWItNGM3MDcyMzdhYjUz"
 ```
 
-In the sample above, the to-be-signed blob challenge created is made from these parts: www.example.com using port 8080, the nonce is '1123123123', the algorithm for signing is RSA-SHA256, the key identifier is 123, and finally the challenge is '68147c97-461b-4310-be9b-4c707237ab53'.
+The to-be-signed blob challenge is made from these parts: www.example.com using port 8080, the nonce is '1123123123', the algorithm for signing is RSA-SHA256, the key identifier is 123, and finally the challenge is '68147c97-461b-4310-be9b-4c707237ab53'.
 
-As per RFC7486, a client would receive this header, extract the challenge, sign it with their private key that corresponds to key identifier 123 in our example using RSA-SHA256, and then send the result in the Authorization header as a dot-separated key id, challenge, nonce, and signature.
+A client would receive this header, extract the challenge, sign it with their private key that corresponds to key identifier 123 in our example using RSA-SHA256, and then send the result in the `Authorization` header as a dot-separated key id, challenge, nonce, and signature.
 
 ```http
 Authorization: 123.16:MTEyMzEyMzEyMw==1:028:https://www.example.com:80800:3:MTI48:NjgxNDdjOTctNDYxYi00MzEwLWJlOWItNGM3MDcyMzdhYjUz.1123123123.<signature-of-challenge>
