@@ -37,7 +37,7 @@ querySelector(selectors)
 ### Return value
 
 An {{domxref("Element")}} object representing the first element in the document
-that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), or `null` is returned if there are no matches.
 
 If you need a list of all elements matching the specified selectors, you should use
 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} instead.
