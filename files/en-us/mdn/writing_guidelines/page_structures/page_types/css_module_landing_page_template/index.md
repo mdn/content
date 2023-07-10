@@ -38,8 +38,11 @@ page-type: mdn-writing-guide
 >   - : The `page-type` value for CSS module landing pages is `css-module`.
 > - **spec-urls**
 >   - : The `spec-urls` value is a URL of the specification. In case there is more than one version of the specification that is relevant, present them in a bulleted list. For example, the value for `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module landing page is:
+>
+>     ```plain
 >     - `https://drafts.fxtf.org/filter-effects-2/`
 >     - `https://drafts.fxtf.org/filter-effects-1/`
+>     ```
 >
 > ---
 >
