@@ -461,13 +461,13 @@ However, if you use one type of quote, you can include the other type of quote _
 To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
 
 ```html-nolint example-bad
-<a href='https://www.example.com' title='Isn't this fun?'>A link to my example.</a>
+<a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
 ```
 
 Instead, you need to do this:
 
 ```html-nolint
-<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="https://www.example.com" title="An &quot;interesting&quot; reference">A link to my example.</a>
 ```
 
 ## Anatomy of an HTML document
