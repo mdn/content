@@ -503,7 +503,7 @@ Here we have:
 5. `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
 6. `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
 
-### Active learning: Experiment with An HTML document
+### Active learning: Adding some features to an HTML document
 
 If you want to experiment with writing some HTML on your local computer, you can:
 
