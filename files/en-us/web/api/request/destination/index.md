@@ -13,7 +13,7 @@ property of the **{{domxref("Request")}}** interface returns a string
 describing the type of content being requested.
 
 The string must be one of the `audio`, `audioworklet`,
-`document`, `embed`, `font`, `frame`,
+`document`, `embed`, `fencedframe`, `font`, `frame`,
 `iframe`, `image`, `manifest`, `object`,
 `paintworklet`, `report`, `script`, `sharedworker`,
 `style`, `track`, `video`, `worker`
@@ -48,6 +48,8 @@ Possible values are:
   - : The target is a document (HTML or XML).
 - `"embed"`
   - : The target is embedded content.
+- `"fencedframe"`
+  - : The target is a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 - `"font"`
   - : The target is a font.
 - `"image"`

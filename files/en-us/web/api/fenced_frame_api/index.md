@@ -33,7 +33,7 @@ Most modern browsers are working on mechanisms to partition storage so that cook
 - The [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) provides access to unpartitioned cross-site data in a secure environment, calculating and/or displaying results in a `<fencedframe>`. For example:
   - Advertisers can measure the reach of an ad, or serve subsequent ads based on which ones users have already seen on other sites.
   - Developers can do A/B testing, showing variants to a user based on a group they are assigned to, or based on how many users have seen each one already.
-  - Businesses can customize the user's experience based on what they have seen on other sites. For example, if they have already purchased membership, you might not want to show them membership sign-up adverts across your other properties.
+  - Businesses can customize the user's experience based on what they have seen on other sites. For example, if they have already purchased membership, you might not want to show them membership sign-up ads across your other properties.
 - The [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/) allows developers to implement interest group-based advertising, namely remarketing and custom audience use cases. It can evaluate multiple bids for ad space and display the winning ad in a `<fencedframe>`.
 - The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) can gather data from `<fencedframe>`s (originating from shared storage or the Protected Audience API) and create aggregated reports.
 
@@ -61,11 +61,11 @@ The `FencedFrameConfig` has several internal properties. `url` for example conta
 
 > **Note:** `FencedFrameConfig` has a {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} method that is used to pass in data from the embedding document to the `<fencedframe>`'s shared storage. It could for example be accessed in a {{domxref("Worklet")}} via the `<fencedframe>` and used to generate a report. See the [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) for more details.
 
-### Accessing fenced frame functionality on the Frame object
+### Accessing fenced frame functionality on the `Fence` object
 
-Inside documents embedded in `<fencedframe>`s, JavaScript has access to a {{domxref("Window.frame")}} property that returns a {{domxref("Frame")}} instance for that document. This object contains several functions specifically relevant to fenced frame API functionality.
+Inside documents embedded in `<fencedframe>`s, JavaScript has access to a {{domxref("Window.fence")}} property that returns a {{domxref("Fence")}} instance for that document. This object contains several functions specifically relevant to fenced frame API functionality.
 
-For example, {{domxref("Frame.reportEvent()")}} provides a way to trigger the submission of reports defined via the [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/).
+For example, {{domxref("Fence.reportEvent()")}} provides a way to trigger the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specified URLs, for the purpose of collecting ad auction results. This data could then be reported via the [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/).
 
 ### HTTP headers
 
@@ -85,15 +85,15 @@ Supports-Loading-Mode: fenced-frame
 
 - {{domxref("FencedFrameConfig")}}
   - : Represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/) and set as the value of {{domxref("HTMLFencedFrameElement.config")}}.
-- {{domxref("Frame")}}
+- {{domxref("Fence")}}
   - : Contains several functions relevant to fenced frame functionality. Available only to documents embedded inside a `<fencedframe>`.
 - {{domxref("HTMLFencedFrameElement")}}
   - : Represents a `<fencedframe>` element in JavaScript and provides properties to configure it.
 
 ### Extensions to other interfaces
 
-- {{domxref("Window.frame")}}
-  - : Returns a {{domxref("Frame")}} object instance for the current document context. Available only to documents embedded inside a `<fencedframe>`.
+- {{domxref("Window.fence")}}
+  - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a `<fencedframe>`.
 
 ## Examples
 
