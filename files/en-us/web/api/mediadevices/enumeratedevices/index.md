@@ -11,8 +11,8 @@ browser-compat: api.MediaDevices.enumerateDevices
 The {{domxref("MediaDevices")}} method **`enumerateDevices()`** requests a list of the available media input and output devices, such as microphones, cameras, headsets, and so forth.
 The returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} array describing the devices.
 
-Access to particular devices is gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
-The list of returned devices will omit any devices for which the corresponding permission has not been granted, including: [`microphone`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/microphone), [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera), [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) (for output devices), and so on.
+The list of returned list will omit any devices that are blocked by the document [Permission Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy): [`microphone`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/microphone), [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera), [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) (for output devices), and so on.
+Access to particular non-default devices is also gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API), and the list will omit devices for which the user has not granted explicit permission.
 
 ## Syntax
 
@@ -26,11 +26,11 @@ None.
 
 ### Return value
 
-A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled. Each object in the array describes one of the available media input and output devices.
+A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled.
+Each object in the array describes one of the available media input and output devices.
 The order is significant — the default capture devices will be listed first.
 
-Only device types for which permission has been granted are "available".
-Also note that if a [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to block use of audio outputs, they won't be available in the list.
+Other than default devices, only devices for which permission has been granted are "available".
 
 If enumeration fails, the promise is rejected.
 
