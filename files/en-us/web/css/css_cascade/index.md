@@ -35,12 +35,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - {{cssxref("revert")}}
 - {{cssxref("revert-layer")}} {{Experimental_Inline}}
 - {{cssxref("unset")}}
-
-### Concepts
-
-- {{cssxref("Specificity")}}
-- {{cssxref("important", "!important")}}
-- [Cascade origin and importance](/en-US/docs/Web/CSS/Cascade)
+- {{cssxref("important", "!important")}} flag
 
 ### Interfaces
 
@@ -51,6 +46,8 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 ### Definitions
 
+- {{cssxref("Specificity")}}
+- [Cascade origin and importance](/en-US/docs/Web/CSS/Cascade)
 - [Values](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [actual value](/en-US/docs/Web/CSS/actual_value)
   - [computed value](/en-US/docs/Web/CSS/computed_value)
