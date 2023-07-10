@@ -15,7 +15,21 @@ The **`Intl.Locale`** object is a standard built-in property of the Intl object 
 
 The **`Intl.Locale`** object was created to allow for easier manipulation of Unicode locales. Unicode represents locales with a string, called a _locale identifier_. The locale identifier consists of a _language identifier_ and _extension tags_. Language identifiers are the core of the locale, consisting of _language_, _script_, and _region subtags_. Additional information about the locale is stored in the optional _extension tags_. Extension tags hold information about locale aspects such as calendar type, clock type, and numbering system type.
 
-Traditionally, the Intl API used strings to represent locales, just as Unicode does. This is a simple and lightweight solution that works well. Adding a Locale class, however, adds ease of parsing and manipulating the language, script, and region, as well as extension tags.
+Traditionally, the Intl API used strings to represent locales, just as Unicode does. This is a simple and lightweight solution that works well. Adding a Locale class, however, adds ease of parsing and manipulating the language, script, and region, as well as extension tags. The following properties of `Intl.Locale` correspond to Unicode locale identifier subtags:
+
+| Property                                                     | Corresponding subtag         |
+| ------------------------------------------------------------ | ---------------------------- |
+| {{jsxref("Intl/Locale/language", "language")}}               | `language` (first part)      |
+| {{jsxref("Intl/Locale/script", "script")}}                   | `script` (second part)       |
+| {{jsxref("Intl/Locale/region", "region")}}                   | `region` (second/third part) |
+| {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` (extension)             |
+| {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` (extension)             |
+| {{jsxref("Intl/Locale/collation", "collation")}}             | `co` (extension)             |
+| {{jsxref("Intl/Locale/hourCycle", "hourCycle")}}             | `hc` (extension)             |
+| {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` (extension)             |
+| {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` (extension)             |
+
+The information above is exactly provided as-is when the `Locale` object is constructed, without consulting any external database. The `Intl.Locale` object additionally provides some methods that return information about the locale's real-world information, such as available calendars, collations, and numbering systems.
 
 ## Constructor
 
