@@ -135,10 +135,10 @@ Generally you will need to check the relevant specifications for these (keys for
 - `userhash` {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
 
-### HOBA 
+### HOBA
 
 - `<challenge>`
-  - : A sequence of fields concatenated into a string in the format of '<len>:<value>'.
+  - : A sequence of fields concatenated into a string in the format of '\<len\>:\<value\>'.
     A to-be-signed string that is defined by RFC 7486.
 - `<max-age>`
   - : The number of seconds from the time the HTTP response is emitted for which responses to this challenge can be accepted.
