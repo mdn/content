@@ -144,8 +144,6 @@ For an {{htmlelement("iframe")}} or {{htmlelement("fencedframe")}} to have a fea
 
 > **Note:** All of the examples below are written for `<iframe>`s, but will work the same way for `<fencedframe>`s.
 
-THIS BIT NEEDS TO CHANGE, BUT I DON'T UNDERSTAND THE PERMISSION-POLICY SECTION IN THE SPEC: https://wicg.github.io/fenced-frame/#permissions-policy-changes
-
 The general syntax looks like this:
 
 ```html

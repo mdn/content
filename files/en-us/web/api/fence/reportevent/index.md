@@ -36,8 +36,8 @@ reportEvent(event)
           - `"seller"`: The top-level seller running the ad auction.
           - `"component-seller"`: The seller for a component auction in a multi-level auction.
           - `"direct-seller"`: The seller that ran the top-level or component auction that the buyer bid in.
-          - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) select URL. HOW IS ONE OF THESE DESTINATION URLS CREATED VIA SHARED STORAGE?
-    - If the value is a string ... TODO, NO INFORMATION AVAILABLE ANYWHERE ABOUT WHAT THIS STRING MIGHT LOOK LIKE OR HOW IT WORKS.
+          - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) select
+    - If the value is a string ... TODO
 
 ### Return value
 

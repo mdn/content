@@ -28,8 +28,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
 
-    THIS BIT NEEDS TO CHANGE, BUT I DON'T UNDERSTAND THE PERMISSION-POLICY SECTION IN THE SPEC: https://wicg.github.io/fenced-frame/#permissions-policy-changes
-
 - `height`
 
   - : The height of the fenced frame in CSS pixels. The default is `150`.
