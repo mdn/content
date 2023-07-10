@@ -23,7 +23,7 @@ Querying permissions in the main thread is [broadly supported](/en-US/docs/Web/A
 Many APIs now enable permission querying, such as the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), [Notifications API](/en-US/docs/Web/API/Notifications_API)
 
 - [Push API](/en-US/docs/Web/API/Push_API), [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API).
-A list of many permission enabled APIs is provided in the [API Overview](/en-US/docs/Web/API/Permissions_API#permission-aware_apis), and you can get a sense of browser support in the [compatibility table here](/en-US/docs/Web/API/Permissions_API#api.permissions).
+  A list of many permission enabled APIs is provided in the [API Overview](/en-US/docs/Web/API/Permissions_API#permission-aware_apis), and you can get a sense of browser support in the [compatibility table here](/en-US/docs/Web/API/Permissions_API#api.permissions).
 
 {{domxref("Permissions")}} has other methods to specifically request permission to use an API, and to revoke permission, but these are deprecated (non-standard, and/or not broadly supported).
 
