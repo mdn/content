@@ -1,6 +1,7 @@
 ---
 title: XPath snippets
 slug: Web/XPath/Snippets
+page-type: guide
 ---
 
 {{XsltSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: Common (exsl)
 slug: Web/EXSLT/exsl
+page-type: landing-page
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

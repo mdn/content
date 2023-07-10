@@ -173,6 +173,25 @@ This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs
 
 - `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/description).
 
+### XPath page types
+
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+
+- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Functions/ceiling)
+
+### XSLT page types
+
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+
+- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/WWeb/XSLT/Element/message).
+- `xslt-axis`: an axis of XSLT, like [`ancestor`](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor).
+
+### EXSLT page types
+
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+
+- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/EXSLT/exsl/node-set).
+
 ### Firefox page types
 
 This section lists `page-type` values for pages under [Mozilla/Firefox](/en-US/docs/Mozilla/Firefox). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.

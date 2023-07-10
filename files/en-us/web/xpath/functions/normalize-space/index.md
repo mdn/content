@@ -1,6 +1,7 @@
 ---
 title: normalize-space
 slug: Web/XPath/Functions/normalize-space
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
