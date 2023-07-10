@@ -755,4 +755,3 @@ At this point, you should understand what HTML looks like, and how it works at a
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
-[def]: /en-US/docs/Learn/CSS
