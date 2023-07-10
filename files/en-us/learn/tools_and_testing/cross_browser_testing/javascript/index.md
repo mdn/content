@@ -138,7 +138,7 @@ Try inserting the following line just below line 31 (bolded above):
 console.log("Response value: ", superHeroes);
 ```
 
-Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
+Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before.
 
 The `console.log()` output shows that the `superHeroes` object doesn't appear to contain anything. A very common problem with async requests like this is when you try to do something with the `response` object before it has actually been returned from the network. Let's fix this problem by running the code once the `load` event has been fired — remove the `console.log()` line, and update this code block:
 
