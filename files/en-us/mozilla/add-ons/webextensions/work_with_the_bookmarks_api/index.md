@@ -54,7 +54,7 @@ The Bookmarks API lets your extension do the things users can do with bookmarks 
 
 ## Example walkthrough
 
-To gain an understanding of how to work with the Bookmarks API let's take a look at the [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it) example. This example adds a toolbar icon ({{WebExtAPIRef("browserAction")}}) which, when clicked, adds or removes the current page from bookmarks. If the page is bookmarked (or removed from bookmarks) in some other way, the icon is updated to show the state of the page's bookmarking.
+To gain an understanding of how to work with the Bookmarks API let's take a look at the [bookmark-it](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it) example. This example adds a toolbar icon ({{WebExtAPIRef("browserAction")}}) which, when clicked, adds or removes the current page from bookmarks. If the page is bookmarked (or removed from bookmarks) in some other way, the icon is updated to show the state of the page's bookmarking.
 
 This video shows the extension in action:
 
@@ -62,7 +62,7 @@ This video shows the extension in action:
 
 ### manifest.json
 
-The [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/manifest.json) describes the extension:
+The [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/bookmark-it/manifest.json) describes the extension:
 
 ```json
 {
@@ -70,7 +70,7 @@ The [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/bo
   "name": "Bookmark it!",
   "version": "1.1",
   "description": "A simple bookmark button",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/bookmark-it",
 ```
 
 Defines the icons that'll be used to represent the extension, in places such as the add-on manager.
@@ -112,7 +112,7 @@ Defines the background script that'll add and remove the page's bookmark and set
 
 ### background.js
 
-As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updateTab()` with this code:
+As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/main/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updateTab()` with this code:
 
 ```js
   let gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});

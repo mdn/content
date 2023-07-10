@@ -18,7 +18,7 @@ Options pages have a Content Security Policy that restricts the sources from whi
 
 ## Specifying the options page
 
-To create an options page, write an HTML file defining the page. This page can include CSS and JavaScript files, like a normal web page. This page, from the [favourite-color](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) example, includes a JavaScript file:
+To create an options page, write an HTML file defining the page. This page can include CSS and JavaScript files, like a normal web page. This page, from the [favourite-color](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) example, includes a JavaScript file:
 
 ```html
 <!DOCTYPE html>
@@ -59,4 +59,4 @@ For details on how to design your options content to match the style of Firefox,
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [favourite-color](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) example which implements options page features.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [favourite-color](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) example which implements options page features.

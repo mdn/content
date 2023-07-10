@@ -8,7 +8,7 @@ page-type: guide
 
 The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as [i18n.js](http://i18njs.com/).
 
-> **Note:** The example extension featured in this article — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) — is available on GitHub. Follow along with the source code as you go through the sections below.
+> **Note:** The example extension featured in this article — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) — is available on GitHub. Follow along with the source code as you go through the sections below.
 
 ## Anatomy of an internationalized extension
 
@@ -56,7 +56,7 @@ Note that if the subtag includes a basic language plus a regional variant, then 
 
 So [for example, in our sample app](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n/_locales) we have directories for "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese). Each one of these has a `messages.json` file inside it.
 
-Let's now look at the structure of one of these files ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)):
+Let's now look at the structure of one of these files ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/_locales/en/messages.json)):
 
 ```json
 {
@@ -98,7 +98,7 @@ There are a couple of different tasks to carry out to internationalize your mani
 
 ### Retrieving localized strings in manifests
 
-Your [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/manifest.json) includes strings that are displayed to the user, such as the extension's name and description. If you internationalize these strings and put the appropriate translations of them in messages.json, then the correct translation of the string will be displayed to the user, based on the current locale, like so.
+Your [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/manifest.json) includes strings that are displayed to the user, such as the extension's name and description. If you internationalize these strings and put the appropriate translations of them in messages.json, then the correct translation of the string will be displayed to the user, based on the current locale, like so.
 
 To internationalize strings, specify them like this:
 
@@ -151,7 +151,7 @@ So, you've got your message strings set up, and your manifest. Now you just need
 - The {{WebExtAPIRef("i18n.getAcceptLanguages()")}} and {{WebExtAPIRef("i18n.getUILanguage()")}} methods could be used if you needed to customize the UI depending on the locale — perhaps you might want to show preferences specific to the users' preferred languages higher up in a prefs list, or display cultural information relevant only to a certain language, or format displayed dates appropriately according to the browser locale.
 - The {{WebExtAPIRef("i18n.detectLanguage()")}} method could be used to detect the language of user-submitted content, and format it appropriately.
 
-In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
+In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/background-script.js) contains the following lines:
 
 ```js
 let title = browser.i18n.getMessage("notificationTitle");
@@ -398,4 +398,4 @@ Then, for each locale supported in the extension you want to test, follow the in
 
 Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place.
 
-If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.
+If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.
