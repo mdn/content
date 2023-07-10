@@ -7,18 +7,22 @@ browser-compat: html.elements.link.rel.modulepreload
 
 {{HTMLSidebar}}
 
-The **`modulepreload`** keyword, for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute of the {{HTMLElement("link")}} element, provides a declarative way to preemptively fetch a [module script](/en-US/docs/Web/JavaScript/Guide/Modules) and store it in the document's module map for later evaluation.
+The **`modulepreload`** keyword, for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute of the {{HTMLElement("link")}} element, provides a declarative way to preemptively fetch a [module script](/en-US/docs/Web/JavaScript/Guide/Modules), parse and compile it, and store it in the document's module map for later execution.
 
 Links with `rel="modulepreload"` are similar to those with [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload).
-The main differences are that `modulepreload` puts the results into the module map, and that the fetch operation follows the normal rules for modules, in particular with respect to the use of `crossorigin`.
+The main difference is that `preload` just downloads the file and stores it in the cache, while `modulepreload` gets the module, parses and compiles it, and puts the results into the module map so that it is ready to execute.
 
-The destination of the preloaded module, which indicates how the resource is to be used, is optional and defaults to `"script"`.
-The value can be set using the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute to `"script"` or any script-like destination, such as `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"`, or `"worker"`.
-An error is fired on the element if any other destination is set.
+When using `modulepreload` the fetch request mode is always [`cors`](/en-US/docs/Web/API/Request/mode#cors), and the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) property is used to determine the request [credential mode](/en-US/docs/Web/API/Request/credentials).
+If `crossorigin` is set to `anonymous` or `""` (default), then the credentials mode is [`same-origin`](/en-US/docs/Web/API/Request/credentials#same-origin), and user credentials such as cookies and authentication are only sent for requests with the `same-origin`.
+If `crossorigin` is set to [`use-credentials`](/en-US/docs/Web/HTML/Attributes/crossorigin#use-credentials) then the credentials mode is [`include`](/en-US/docs/Web/API/Request/credentials#include), and user credentials for both single- and cross-origin requests.
+
+The [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute is optional for links with `rel="modulepreload"`, and defaults to `"script"`.
+It can be set to `"script"` or any script-like destination, such as `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"`, or `"worker"`.
+An [`Event`](/en-US/docs/Web/API/Event/Event) named "error" is fired on the element if any other destination is used.
 
 A browser _may_ additionally also choose to automatically fetch any dependencies of the module resource.
-Note however that this is a browser-specific optimization — the only way to ensure that the browser will try to preload a module's dependencies is to individually specify them!
-Further, the `load` or `error` events fire immediately following success or failure of loading the _specified_ resources.
+Note however that this is a browser-specific optimization — the only approach to ensure that all browsers will try to preload a module's dependencies is to individually specify them!
+Further, the events named `load` or `error` fire immediately following success or failure of loading the _specified_ resources.
 If dependencies are automatically fetched, no additional events are fired in the main thread (although you might monitor additional requests in a service worker or on the server).
 
 ## Examples
@@ -87,3 +91,7 @@ By the time `main.js` has been parsed and its dependencies are known, they have 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Preloading modules](https://developer.chrome.com/blog/modulepreload) (developer.chrome.com)
