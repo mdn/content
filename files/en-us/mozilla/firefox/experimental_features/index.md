@@ -1016,7 +1016,7 @@ See [tc39/proposal-is-usv-string](https://github.com/tc39/proposal-is-usv-string
 
 #### Hit regions
 
-Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools.
+Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you to define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools.
 
 <table>
   <thead>
@@ -2064,7 +2064,7 @@ This also changes the console warning; if the upgrade succeeds, the message indi
 ### Permissions Policy / Feature policy
 
 [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-Note that this is implemented in Firefox as "**Feature Policy**, the name used in an earlier version of the specification.
+Note that this is implemented in Firefox as **Feature Policy**, the name used in an earlier version of the specification.
 
 <table>
   <thead>
@@ -2238,7 +2238,7 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 The [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) is a response header to a [CORS preflight request](/en-US/docs/Glossary/Preflight_request), that indicates which request headers may be included in the final request.
 The response directive can contain a wildcard (`*`), which indicates that the final request may include all headers except the `Authorization` header.
 
-By default, Firefox includes the `Authorization` header in the final request after recieving a response with `Access-Control-Allow-Headers: *`.
+By default, Firefox includes the `Authorization` header in the final request after receiving a response with `Access-Control-Allow-Headers: *`.
 Set the preference to `false` to ensure Firefox does not include the `Authorization` header.
 For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
 
