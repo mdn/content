@@ -752,10 +752,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.3.0.tgz#a71994a571ee3801b277e54f6d4022738ea0ecc4"
   integrity sha512-TrVSwoxpNKImgvHdAUDRleHJXWjBOgrri+C1OogMSwOPeIPZ0gEdym4cRQWv7VGHnkHCZ/PwR01XQaWlD00KFA==
 
-"@mdn/yari@2.28.0":
-  version "2.28.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.28.0.tgz#b269b7137f28215d7c207038ef2f11a78f1cb775"
-  integrity sha512-HM/WLCM0iA/vVDS8rtO1eWdLcovFuLPMzkYOY2hwTVkGW+51qODaCrgWtiq34dg3fb01bXzDg+ARb9W7PDlJ7w==
+"@mdn/yari@2.28.1":
+  version "2.28.1"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.28.1.tgz#1682be14249844f0cf918d617d2e3edc926109a9"
+  integrity sha512-6geSXGOVGzE6SiSc7p79333CMcXwrzuUq8WukzOPXCzz0mRIG+ctIPcR3nuKuXwMmKWz9vPHV9aiMQO/7elXKA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@codemirror/lang-css" "^6.2.0"
