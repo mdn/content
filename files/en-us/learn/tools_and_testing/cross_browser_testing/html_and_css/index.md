@@ -67,17 +67,7 @@ There are many online linter applications, the best of which are probably [Dirty
 
 However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.
 
-Many code editors have linter plugins. GitHub's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
-
-1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
-3. In the _Search packages_ text field, type "lint" and press Enter/Return to search for linting-related packages.
-4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
-5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
-
-![Screen shot showing how html tidy points out a missing quote.](atom-htmltidy.png)![CSSLint lists errors including missing brackets, and warning such as too high specificity.](atom-csslint.png)
-
-Other popular editors have similar linting packages available. For example, see:
+Many code editors have linter plugins. For example, see:
 
 - [SublimeLinter](https://www.sublimelinter.com/) for Sublime Text
 - [Notepad++ linter](https://sourceforge.net/projects/notepad-linter/)
