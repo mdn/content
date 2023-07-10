@@ -260,7 +260,7 @@ Edit the line below in the _Input_ area to turn it into a link to your favorite 
 2. Add the `href` attribute and the `title` attribute.
 3. Specify the `target` attribute to open the link in the new tab.
 
-You will be able to see your changes live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute and, when clicked, opens a new tab and navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name, and between each attribute.
+You will be able to see your changes live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute and, when clicked, opens a new tab and navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name and between each attribute.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
