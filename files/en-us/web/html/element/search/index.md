@@ -52,10 +52,10 @@ This example demonstrates potential DOM content when dynamically including JavaS
 <search>
   <label>
     Find and filter your query
-    <input type="search" id="query">
+    <input type="search" id="query" />
   </label>
   <label>
-    <input type="checkbox" id="exact-only">
+    <input type="checkbox" id="exact-only" />
     Exact matches only
   </label>
 
@@ -87,17 +87,15 @@ This example demonstrates a page with two search features. The first is a global
 <body>
   <header>
     <h1>Car rental agency</h1>
-    <search title="Website">
-      ...
-    </search>
+    <search title="Website"> ... </search>
   </header>
   <main>
     <h2>Cars available for rent</h2>
-     <search title="Cars">
-       <h3>Filter results</h3>
-       ...
-     </search>
-     <article>
+    <search title="Cars">
+      <h3>Filter results</h3>
+      ...
+    </search>
+    <article>
       <!-- search result content -->
     </article>
   </main>
