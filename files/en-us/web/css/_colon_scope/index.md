@@ -30,7 +30,7 @@ Currently, when used in a stylesheet, `:scope` is the same as {{cssxref(":root")
 
 ### Identity match
 
-This example demonstrates using the `:scope` pseudo-class with the {{domxref("Element.matches()")}} method to match the element on which it's called. In this example, if `:scope` is supported, and the paragraph is within the `:root`'s scope, text is displayed in the placeholder "output" paragraph. 
+This example demonstrates using the `:scope` pseudo-class with the {{domxref("Element.matches()")}} method to match the element on which it's called. In this example, if `:scope` is supported, and the paragraph is within the `:root`'s scope, text is displayed in the placeholder "output" paragraph.
 
 #### JavaScript
 
