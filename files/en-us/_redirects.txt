@@ -5758,7 +5758,6 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Popups	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_the_Add-on_SDK	https://extensionworkshop.com/documentation/develop/comparison-with-the-add-on-sdk/
-/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisities	/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Promoting_your_extension_or_theme	https://extensionworkshop.com/documentation/publish/promoting-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Retiring_your_extension	https://extensionworkshop.com/documentation/manage/retiring-your-extension/
