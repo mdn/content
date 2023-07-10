@@ -87,7 +87,7 @@ This example demonstrates a page with two search features. The first is a global
 <body>
   <header>
     <h1>Car rental agency</h1>
-    <search title="Website"> ... </search>
+    <search title="Website">...</search>
   </header>
   <main>
     <h2>Cars available for rent</h2>
