@@ -8,19 +8,22 @@ browser-compat:
   - api.MediaDevices.selectAudioOutput
   - api.HTMLMediaElement.setSinkId
   - api.HTMLMediaElement.sinkId
+  - http.headers.Permissions-Policy.speaker-selection
 ---
 
 {{DefaultAPISidebar("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-The **Audio Output Devices API** allows web applications to prompt users about what audio output device should be used for playback.
+The **Audio Output Devices API** allows web applications to prompt users about what output device should be used for audio playback.
 
 ## Concepts and usage
 
 Operating systems commonly allow users to specify that audio should be played from speakers, a Bluetooth headset, or some other audio output device.
-This API allows applications to provide this same functionality from within a web page, which may provide a better user experience.
+This API allows applications to provide this same functionality from within a web page.
 
-Setting a particular audio output device requires explicit user permission, as the user may be in a location where playing audio is not appropriate through some output devices.
-For more information see [Security requirements](#security-requirements) below.
+Even if allowed by a permission policy, access to a particular audio output device still requires explicit user permission, as the user may be in a location where playing audio is not appropriate through some output devices.
+
+The API provides the [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput) method that allows users to select their desired audio output from those that are allowed by the [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) for the document.
+The selected device then has user permission, allowing it to be enumerated with [`MediaDevices.enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices) and set as the audio output device using [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId).
 
 Audio devices may arbitrarily connect and disconnect.
 Applications that wish to react to this kind of change can listen to the [`devicechange` event](/en-US/docs/Web/API/MediaDevices/devicechange_event) and use [`enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices) to determine if `sinkId` is present in the returned devices.
@@ -32,8 +35,14 @@ This might trigger, for example, pausing or unpausing playback.
 
 The Audio Output Devices API extends the following APIs, adding the listed features:
 
+#### MediaDevices
+
 - [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput)
   - : This method prompts the user to select a specific audio output device, for example a speaker or headset.
+    Selecting a device grants user permission to use that device and returns information about the device, including its ID.
+
+#### HTMLMediaElement
+
 - [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId)
   - : This method sets the ID of the audio device to use for output, which will be used if permitted.
 - [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId)
@@ -41,20 +50,57 @@ The Audio Output Devices API extends the following APIs, adding the listed featu
 
 ## Security requirements
 
-Access to [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput) is subject to the following constraints:
+Access to the API is subject to the following constraints:
 
-- It may only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
-- [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
-  The user has to interact with the page or a UI element for this feature to work.
-- The user must explicitly grant permission to use the audio output device through a user-agent specific mechanism, or have previously granted permission.
-  Note that if access is denied by a permission policy it cannot be granted by a user permission.
+- All methods and properties may only be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
-User permission to set the output device is also implicitly granted if the user has already granted permission to use a media input device in the same group, using [`MediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia).
+- [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput) grants user permission for a selected device to be used as the audio output sink:
 
-Other methods/properties also require a secure context and the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) permission policy.
+  - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+    The user has to interact with the page or a UI element for the method to be called.
+
+- [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId) sets a permitted ID as the audio output:
+
+  - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - User permission is required to set a non-default device ID.
+    - This can come from selection in the prompt launched by `MediaDevices.selectAudioOutput()`
+    - User permission to set the output device is also implicitly granted if the user has already granted permission to use a media input device in the same group with [`MediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia).
 
 The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query), passing a permission descriptor with the `speaker-selection` permission.
+
+## Examples
+
+Here's an example of using `selectAudioOutput()`, within a function that is triggered by a button click, and then setting the selected device as the audio output.
+
+The code first checks if `selectAudioOutput()` is supported, and if it is, uses it to select an output and return a [device ID](/en-US/docs/Web/API/MediaDeviceInfo/deviceId).
+We then play some some audio using the default output, and then call `setSinkId()`  in order to switch to the selected output device.
+
+```js
+document.querySelector("#myButton").addEventListener("click", () => {
+  if (!navigator.mediaDevices.selectAudioOutput) {
+    console.log("selectAudioOutput() not supported or not in secure context.");
+    return;
+  }
+
+// Display prompt to select device
+const audioDevice = await navigator.mediaDevices.selectAudioOutput();
+
+// Create an audio element and start playing audio on the default device
+const audio = document.createElement("audio");
+audio.src = "https://example.com/audio.mp3";
+audio.play();
+
+// Change the sink to the selected audio output device.
+audio.setSinkId(audioDevice.deviceId);
+});
+```
+
+Note that the output details might look something like this:
+
+```bash
+audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2NbxqgowQJLWbwo+5ablCVVJwRM3k=
+```
 
 ## Specifications
 
