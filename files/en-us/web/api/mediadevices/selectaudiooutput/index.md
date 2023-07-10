@@ -109,4 +109,6 @@ audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2Nbxqg
 
 ## See also
 
+- [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId)
+- [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
