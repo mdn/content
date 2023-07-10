@@ -10,7 +10,13 @@ browser-compat: api.MediaDevices.selectAudioOutput
 
 {{APIRef("WebRTC")}} {{SeeCompatTable}}
 
-The {{domxref("MediaDevices")}} method **`selectAudioOutput()`** prompts the user to select a specific audio output device, for example a speaker or headset.
+The {{domxref("MediaDevices.selectAudioOutput()")}} method of the [Web Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) prompts the user to select an audio output device, such as a speaker or headset, and grants user-permission to use the selected device as an audio output sink.
+
+Following selection, if the device is available it can be enumerated using [`MediaDevices.enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices) and set as the audio output sink using [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId).
+
+The method can only be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) with [transient user activation](/en-US/docs/Web/Security/User_activation), and will only offer audio output devices if allowed by the page [`Permission-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection).
+For more information see the [security requirements](#security_requirements).
+
 On success, the returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} describing the selected device.
 
 ## Syntax
@@ -28,13 +34,15 @@ selectAudioOutput(options)
 
     - `deviceId` {{Optional_Inline}}
 
-      - : A string representing the id of the (only) device to display in the prompt (with default value: "").
+      - : A string representing the id of a single device to display in the prompt.
+        If not set, all audio output devices for which permission is not explicitly denied will be displayed.
+
+        The option is intended for applications that want to use persisted device ids.
 
         > **Note:** A user agent may choose to skip prompting the user if a specified non-null id was previously exposed to the user by `selectAudioOutput()` in an earlier session.
         > In this case the user agent may simply resolve with this device id, or a new id for the same device if it has changed.
         >
-        > This is intended for applications that want to use persisted device ids.
-        > The ids _must be passed_ through `selectAudioOutput()` successfully before they will work with {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}}.
+        > Note that persisted ids _must be passed_ through `selectAudioOutput()` successfully before they will work with {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}}.
 
 ### Return value
 
@@ -58,8 +66,6 @@ Access to the API is subject to the following constraints:
 - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
   The user has to interact with the page or a UI element for this feature to work.
 - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
-- The user must explicitly grant permission to use the audio output device through a user-agent specific mechanism, or have previously granted permission.
-  Note that if access is denied by a permission policy it cannot be granted by a user permission.
 
 The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query), passing a permission descriptor with the `speaker-selection` permission.
 
