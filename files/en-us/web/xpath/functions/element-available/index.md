@@ -1,6 +1,7 @@
 ---
 title: element-available
 slug: Web/XPath/Functions/element-available
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

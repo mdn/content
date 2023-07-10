@@ -1,6 +1,7 @@
 ---
 title: <xsl:param>
 slug: Web/XSLT/Element/param
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

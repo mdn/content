@@ -1,6 +1,7 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
+page-type: guide
 ---
 
 {{XsltSidebar}}

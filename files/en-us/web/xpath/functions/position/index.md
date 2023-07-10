@@ -1,6 +1,7 @@
 ---
 title: position
 slug: Web/XPath/Functions/position
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

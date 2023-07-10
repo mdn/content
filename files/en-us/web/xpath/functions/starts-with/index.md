@@ -1,6 +1,7 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
