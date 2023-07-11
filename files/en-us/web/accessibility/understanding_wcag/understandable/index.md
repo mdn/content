@@ -475,7 +475,7 @@ This guideline centers around helping users enter correct information when requi
       <td>Again, see 3.3.4.</td>
       </tr>
       <tr>
-      <td> 3.3.7 Redundant Entry (A) </td>
+      <td> 3.3.7 Redundant entry (A) </td>
       <td>
       Required information that is previously entered or provided by the user in the same process is either auto-populated or available for the user to choose.
       </td>
