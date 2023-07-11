@@ -190,7 +190,7 @@ question, you can do something like this:
 someElement.addEventListener(
   "mouseup",
   handleMouseUp,
-  passiveSupported ? { passive: true } : false
+  passiveSupported ? { passive: true } : false,
 );
 ```
 
@@ -325,7 +325,7 @@ el.addEventListener(
   function () {
     modifyText("four");
   },
-  false
+  false,
 );
 ```
 
@@ -371,7 +371,7 @@ el.addEventListener(
   () => {
     modifyText("four");
   },
-  false
+  false,
 );
 ```
 
@@ -737,7 +737,7 @@ myButton.addEventListener(
   "click",
   function () {
     console.log(this); // Expected Value: 'Data'
-  }.bind(someString)
+  }.bind(someString),
 );
 ```
 
@@ -839,7 +839,7 @@ for (const elt of elts) {
     (e) => {
       // Do something
     },
-    false
+    false,
   );
 }
 
@@ -882,7 +882,7 @@ try {
       get() {
         passiveIfSupported = { passive: true };
       },
-    })
+    }),
   );
 } catch (err) {}
 
@@ -892,7 +892,7 @@ window.addEventListener(
     /* do something */
     // can't use event.preventDefault();
   },
-  passiveIfSupported
+  passiveIfSupported,
 );
 ```
 

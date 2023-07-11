@@ -28,17 +28,21 @@ In formal CSS syntax, data types are denoted by a keyword placed between the ine
 These types include keywords and identifiers as well as strings, and URLs.
 
 - Pre-defined keywords
-  - : Keywords with a pre-defined meaning, for example the value of `collapse` for the {{cssxref("border-collapse")}} property.
-- CSS-wide keyword: `initial`
-  - : The value specified as the property's initial value.
-- CSS-wide keyword: `inherit`
-  - : The computed value of the property on the element's parent.
-- CSS-wide keyword: `unset`
-  - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
+  - : Keywords with a pre-defined meaning, for example, the value of `collapse` for the {{cssxref("border-collapse")}} property.
+- CSS-wide keywords
+  - : All properties, including custom properties, accept the CSS-wide keywords:
+    - {{CSSXref("initial")}}
+      - : The value specified as the property's initial value.
+    - {{CSSXref("inherit")}}
+      - : The computed value of the property on the element's parent.
+    - {{CSSXref("revert")}}
+      - : Rolls back the cascade to the value of the earlier origin.
+    - {{CSSXref("unset")}}
+      - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : A user-defined identifier, for example the name assigned using the {{cssxref("grid-area")}} property.
 - {{cssxref("&lt;dashed-ident&gt;")}}
-  - : A `<custom-ident>` with the additional restriction that it must start with two dashes, for example with [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
+  - : A `<custom-ident>` with the additional restriction that it must start with two dashes, for example, with [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
 - {{cssxref("&lt;string&gt;")}}
   - : A quoted string, such as used for a value of the {{cssxref("content")}} property.
 - {{cssxref("&lt;url&gt;", "url()")}}

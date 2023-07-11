@@ -55,12 +55,12 @@ const rabbitDownKeyframes = new KeyframeEffect(
     { transform: "translateY(0%)" }, // keyframe
     { transform: "translateY(100%)" }, // keyframe
   ],
-  { duration: 3000, fill: "forwards" } // keyframe options
+  { duration: 3000, fill: "forwards" }, // keyframe options
 );
 
 const rabbitDownAnimation = new Animation(
   rabbitDownKeyframes,
-  document.timeline
+  document.timeline,
 );
 
 // Play rabbit animation

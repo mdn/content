@@ -1,6 +1,7 @@
 ---
 title: Handling common HTML and CSS problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -66,17 +67,7 @@ There are many online linter applications, the best of which are probably [Dirty
 
 However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.
 
-Many code editors have linter plugins. GitHub's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
-
-1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
-3. In the _Search packages_ text field, type "lint" and press Enter/Return to search for linting-related packages.
-4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
-5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
-
-![Screen shot showing how html tidy points out a missing quote.](atom-htmltidy.png)![CSSLint lists errors including missing brackets, and warning such as too high specificity.](atom-csslint.png)
-
-Other popular editors have similar linting packages available. For example, see:
+Many code editors have linter plugins. For example, see:
 
 - [SublimeLinter](https://www.sublimelinter.com/) for Sublime Text
 - [Notepad++ linter](https://sourceforge.net/projects/notepad-linter/)
@@ -174,8 +165,9 @@ button {
 
   background-color: #ff0000;
   background-color: rgb(255 0 0 / 1);
-  box-shadow: inset 1px 1px 3px rgb(255 255 255 / 0.4), inset -1px -1px 3px rgb(0
-          0 0 / 0.4);
+  box-shadow:
+    inset 1px 1px 3px rgb(255 255 255 / 0.4),
+    inset -1px -1px 3px rgb(0 0 0 / 0.4);
 }
 
 button:hover {
@@ -183,8 +175,9 @@ button:hover {
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgb(0 0 0 / 0.4), inset -1px -1px 3px rgb(255
-          255 255 / 0.4);
+  box-shadow:
+    inset 1px 1px 3px rgb(0 0 0 / 0.4),
+    inset -1px -1px 3px rgb(255 255 255 / 0.4);
 }
 ```
 
@@ -194,7 +187,7 @@ Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("
 
 To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
 
-> **Note:** The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
+> **Note:** The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 
 #### Selector support
 
@@ -258,7 +251,7 @@ If you do need to include modern features, test for feature support using [`@sup
 
 #### Responsive design problems
 
-Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/Media_Queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [our guide to responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design).
+Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/CSS_media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [our guide to responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design).
 
 Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from [media queries](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design#media_queries) to more complex [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('image')}} element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
 

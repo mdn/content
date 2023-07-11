@@ -1,6 +1,7 @@
 ---
 title: Cross browser testing
 slug: Learn/Tools_and_testing/Cross_browser_testing
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

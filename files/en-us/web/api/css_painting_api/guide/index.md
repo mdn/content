@@ -44,7 +44,7 @@ registerPaint(
       ctx.fillStyle = "hsl(55 90% 60% / 1.0)";
       ctx.fillRect(0, 15, 200, 20); /* order: x, y, w, h */
     }
-  }
+  },
 );
 ```
 
@@ -132,7 +132,7 @@ registerPaint(
       ctx.fillStyle = "hsl(55 90% 60% / 1.0)";
       ctx.fillRect(0, size.height / 3, size.width * 0.4, size.height * 0.6);
     }
-  }
+  },
 );
 ```
 
@@ -201,7 +201,7 @@ registerPaint(
     paint(drawingContext, elementSize, styleMap) {
       // Paint code goes here.
     }
-  }
+  },
 );
 ```
 
@@ -245,10 +245,10 @@ registerPaint(
         0,
         size.height / 3,
         size.width * 0.4 - props.get("--widthSubtractor"),
-        size.height * 0.6
+        size.height * 0.6,
       );
     }
-  }
+  },
 );
 ```
 
@@ -361,18 +361,18 @@ registerPaint(
         ctx.lineTo(blockWidth + start * 10 + 20, y);
         ctx.lineTo(
           blockWidth + start * 10 + 20 + highlightHeight,
-          highlightHeight
+          highlightHeight,
         );
         ctx.lineTo(
           blockWidth + start * 10 + 10 + highlightHeight,
-          highlightHeight
+          highlightHeight,
         );
         ctx.lineTo(blockWidth + start * 10 + 10, y);
         ctx.closePath();
         ctx.fill();
       }
     } // paint
-  }
+  },
 );
 ```
 
@@ -572,7 +572,7 @@ registerPaint(
         ctx.stroke();
       }
     } // paint
-  }
+  },
 );
 ```
 

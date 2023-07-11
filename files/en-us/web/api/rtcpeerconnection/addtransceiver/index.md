@@ -57,7 +57,7 @@ The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the m
 
 - `InvalidStateError` {{domxref("DOMException")}}
 
-  - : Thrown if the the method is called when the associated connection is closed.
+  - : Thrown if the method is called when the associated connection is closed.
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the `sendEncodings` argument is used, and contains a read-only parameter other than `rid`.

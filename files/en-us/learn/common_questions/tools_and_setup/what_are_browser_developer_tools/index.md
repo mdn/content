@@ -1,6 +1,7 @@
 ---
 title: What are browser developer tools?
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -174,7 +175,7 @@ document.querySelector("html").style.backgroundColor = "purple";
 const loginImage = document.createElement("img");
 loginImage.setAttribute(
   "src",
-  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
 );
 document.querySelector("h1").appendChild(loginImage);
 ```
@@ -193,7 +194,7 @@ document.cheeseSelector("html").style.backgroundColor = "purple";
 const loginImage = document.createElement("img");
 banana.setAttribute(
   "src",
-  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
 );
 document.querySelector("h1").appendChild(loginImage);
 ```

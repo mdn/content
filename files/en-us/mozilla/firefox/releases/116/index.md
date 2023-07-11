@@ -1,11 +1,12 @@
 ---
 title: Firefox 116 for developers
 slug: Mozilla/Firefox/Releases/116
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 115 that affect developers. Firefox 116 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [August 01, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 116 that affect developers. Firefox 116 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [August 01, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Changes for web developers
 
@@ -29,6 +30,8 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### HTTP
 
+- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) now supports specifying [external JavaScript files to be whitelisted using hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#whitelisting_external_scripts_using_hashes), where previously only inline scripts could be whitelisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
+
 #### Removals
 
 ### Security
@@ -40,6 +43,10 @@ This article provides information about the changes in Firefox 115 that affect d
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- The [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) is now supported on all platforms except for Android.
+  This API allows web applications to redirect audio output to a permitted Bluetooth headset, speakerphone, or other device, instead of having to use the browser or underlying OS default.
+  Affected APIs include {{domxref("MediaDevices.selectAudioOutput()")}}, {{domxref("MediaDevices.enumerateDevices()")}}, [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId), [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId), and the permission policy [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection "[Firefox bug 1498512](https://bugzil.la/1498512").
 
 #### Removals
 

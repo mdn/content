@@ -30,7 +30,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.2",
-    "@mdn/yari": "2.27.0",
+    "@mdn/yari": "2.28.1",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "async": "^3.2.4",
@@ -45,9 +45,9 @@
     "lint-staged": "13.2.3",
     "markdownlint-cli2": "0.8.1",
     "markdownlint-rule-search-replace": "1.1.0",
-    "prettier": "2.8.8"
+    "prettier": "3.0.0"
   },
   "devDependencies": {
-    "jest": "^29.5.0"
+    "jest": "^29.6.1"
   }
 }

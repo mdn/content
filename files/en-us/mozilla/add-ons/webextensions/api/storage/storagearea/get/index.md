@@ -52,8 +52,8 @@ Suppose storage contains two items:
 // storage contains two items,
 // "kitten" and "monster"
 browser.storage.local.set({
-  kitten:  {name:"Mog", eats:"mice"},
-  monster: {name:"Kraken", eats:"people"}
+  kitten: { name: "Mog", eats: "mice" },
+  monster: { name: "Kraken", eats: "people" },
 });
 ```
 
@@ -100,7 +100,11 @@ gettingItem.then(onGot, onError);
 With an array of object names, retrieve all matches:
 
 ```js
-let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+let gettingItem = browser.storage.local.get([
+  "kitten",
+  "monster",
+  "grapefruit",
+]);
 gettingItem.then(onGot, onError);
 
 // -> Object { kitten: Object, monster: Object }
@@ -114,8 +118,8 @@ let gettingItem = browser.storage.local.get({
   monster: "no monster",
   grapefruit: {
     name: "Grape Fruit",
-    eats: "Water"
-  }
+    eats: "Water",
+  },
 });
 
 // -> Object { kitten: Object, monster: Object, grapefruit: Object }
@@ -127,7 +131,7 @@ let gettingItem = browser.storage.local.get({
 
 ```js
 chrome.storage.local.get("kitten", (items) => {
-  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
@@ -142,7 +146,9 @@ chrome.storage.local.get("kitten", (items) => {
 Or using a Promise
 
 ```js
-let gettingItem = new Promise((resolve) => chrome.storage.local.get("kitten", resolve));
+let gettingItem = new Promise((resolve) =>
+  chrome.storage.local.get("kitten", resolve)
+);
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
 

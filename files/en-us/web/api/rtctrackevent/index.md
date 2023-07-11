@@ -58,7 +58,7 @@ peerConnection.addEventListener(
     let videoElement = document.getElementById("videobox");
     videoElement.srcObject = e.streams[0];
   },
-  false
+  false,
 );
 ```
 

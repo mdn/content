@@ -28,7 +28,7 @@ navigator.locks.request("net_db_sync", show_lock_properties);
 navigator.locks.request(
   "another_lock",
   { mode: "shared" },
-  show_lock_properties
+  show_lock_properties,
 );
 
 function show_lock_properties(lock) {

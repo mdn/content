@@ -61,7 +61,7 @@ function increment() {
 ```js example-bad
 let containingIndex = 0;
 const matrix = [
-  [1, 2, 3], 
+  [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];

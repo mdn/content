@@ -38,7 +38,7 @@ const stream = new WritableStream(
   {
     highWaterMark: 3,
     size: () => 1,
-  }
+  },
 );
 ```
 
@@ -82,7 +82,7 @@ const writableStream = new WritableStream(
       console.error("Sink error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 ```
 

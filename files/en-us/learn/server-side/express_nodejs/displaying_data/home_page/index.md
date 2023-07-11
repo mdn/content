@@ -1,6 +1,7 @@
 ---
 title: Home page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
+page-type: learn-module-chapter
 ---
 
 The first page we'll create will be the website home page, which is accessible from either the site (`/`) or catalog (`catalog/`) root. This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.

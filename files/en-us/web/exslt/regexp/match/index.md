@@ -1,6 +1,7 @@
 ---
 title: regexp:match()
 slug: Web/EXSLT/regexp/match
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

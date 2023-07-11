@@ -1,6 +1,7 @@
 ---
 title: Firefox 73 for developers
 slug: Mozilla/Firefox/Releases/73
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

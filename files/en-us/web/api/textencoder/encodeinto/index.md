@@ -49,7 +49,7 @@ const encoder = new TextEncoder();
 function encodeIntoAtPosition(string, u8array, position) {
   return encoder.encodeInto(
     string,
-    position ? u8array.subarray(position | 0) : u8array
+    position ? u8array.subarray(position | 0) : u8array,
   );
 }
 
@@ -96,7 +96,7 @@ const encoder = new TextEncoder();
 function encodeIntoWithSentinel(string, u8array, position) {
   const stats = encoder.encodeInto(
     string,
-    position ? u8array.subarray(position | 0) : u8array
+    position ? u8array.subarray(position | 0) : u8array,
   );
   if (stats.written < u8array.length) u8array[stats.written] = 0; // append null if room
   return stats;

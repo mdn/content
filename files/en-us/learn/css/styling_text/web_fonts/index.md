@@ -139,8 +139,9 @@ To implement these fonts in your demo, follow these steps:
    ```css
    @font-face {
      font-family: "zantrokeregular";
-     src: url("fonts/zantroke-webfont.woff2") format("woff2"), url("fonts/zantroke-webfont.woff")
-         format("woff");
+     src:
+       url("fonts/zantroke-webfont.woff2") format("woff2"),
+       url("fonts/zantroke-webfont.woff") format("woff");
      font-weight: normal;
      font-style: normal;
    }
@@ -178,8 +179,9 @@ Let's explore that `@font-face` syntax generated for you by Fontsquirrel. This i
 ```css
 @font-face {
   font-family: "zantrokeregular";
-  src: url("zantroke-webfont.woff2") format("woff2"), url("zantroke-webfont.woff")
-      format("woff");
+  src:
+    url("zantroke-webfont.woff2") format("woff2"),
+    url("zantroke-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

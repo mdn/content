@@ -1,6 +1,7 @@
 ---
 title: Handling common JavaScript problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -71,17 +72,7 @@ The [JSHint homepage](https://jshint.com/) provides an online linter, which allo
 
 #### Code editor plugins
 
-It is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle. Many code editors have linter plugins, for example GitHub's [Atom](https://atom.io/) code editor has a JSHint plugin available.
-
-To install it:
-
-1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
-3. In the _Search packages_ text field, type "jslint" and press Enter/Return to search for linting-related packages.
-4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-jshint** plugin.
-5. After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
-
-![Screenshot of the JS Hint app. The narrow left panel is a file explorer or tree. The right panel has two sections. The top has a tab open to a color-coded and line-numbered JavaScript file. The very bottom has errors and warnings. Errors are red, and warnings are orange. If there is an error or warning on a line, there is a red or orange dot, respectively, next to the line number.](jshint-linter.png)Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
+It is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle. Many code editors have linter plugins. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
 
 #### Other uses
 
@@ -147,7 +138,7 @@ Try inserting the following line just below line 31 (bolded above):
 console.log("Response value: ", superHeroes);
 ```
 
-Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
+Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before.
 
 The `console.log()` output shows that the `superHeroes` object doesn't appear to contain anything. A very common problem with async requests like this is when you try to do something with the `response` object before it has actually been returned from the network. Let's fix this problem by running the code once the `load` event has been fired — remove the `console.log()` line, and update this code block:
 

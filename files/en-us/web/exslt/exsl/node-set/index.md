@@ -1,6 +1,7 @@
 ---
 title: exsl:node-set()
 slug: Web/EXSLT/exsl/node-set
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

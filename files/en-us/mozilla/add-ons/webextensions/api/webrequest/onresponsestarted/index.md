@@ -160,10 +160,9 @@ function logResponse(responseDetails) {
   console.log(responseDetails.statusLine);
 }
 
-browser.webRequest.onResponseStarted.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onResponseStarted.addListener(logResponse, {
+  urls: [target],
+});
 ```
 
 {{WebExtExamples}}

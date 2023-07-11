@@ -110,6 +110,21 @@
       },
       {
         "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Mozilla/Firefox" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "firefox-release-notes"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
           "properties": { "slug": { "type": "string", "pattern": "^Web/SVG/" } }
         },
         "then": {
@@ -435,7 +450,58 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "how-to",
+                "tutorial",
+                "tutorial-chapter"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/XPath" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "xpath-function"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/EXSLT" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "exslt-function"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/XSLT" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "xslt-element", "xslt-axis"]
             }
           }
         },

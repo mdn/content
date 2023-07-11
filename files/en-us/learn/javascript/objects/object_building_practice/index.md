@@ -1,6 +1,7 @@
 ---
 title: Object building practice
 slug: Learn/JavaScript/Objects/Object_building_practice
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
@@ -212,7 +213,7 @@ while (balls.length < 25) {
     random(-7, 7),
     random(-7, 7),
     randomRGB(),
-    size
+    size,
   );
 
   balls.push(ball);

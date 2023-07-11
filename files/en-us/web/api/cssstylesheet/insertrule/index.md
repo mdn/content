@@ -119,7 +119,7 @@ function addStylesheetRules(rules) {
     // Insert CSS Rule
     styleSheet.insertRule(
       `${selector}{${propStr}}`,
-      styleSheet.cssRules.length
+      styleSheet.cssRules.length,
     );
   }
 }

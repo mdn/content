@@ -79,7 +79,7 @@ To run a series of asynchronous operations sequentially or concurrently, see [pr
 
 ### Using forEach() on sparse arrays
 
-```js
+```js-nolint
 const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 

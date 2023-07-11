@@ -1,6 +1,7 @@
 ---
 title: <xsl:apply-templates>
 slug: Web/XSLT/Element/apply-templates
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

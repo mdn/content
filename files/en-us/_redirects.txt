@@ -5741,8 +5741,8 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_methods_of_installing_add-ons/Installing_add-ons_for_use_with_a_desktop_app	https://extensionworkshop.com/documentation/publish/distribute-for-desktop-apps/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_methods_of_installing_add-ons/Installing_add-ons_in_an_enterprise_environment	https://extensionworkshop.com/documentation/enterprise/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_methods_of_installing_add-ons/Sideloading_add-ons	https://extensionworkshop.com/documentation/publish/distribute-sideloading/
-/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension_	/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Building_a_cross_browser_extension	/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Context_menu_items	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
@@ -5758,7 +5758,6 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Popups	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_the_Add-on_SDK	https://extensionworkshop.com/documentation/develop/comparison-with-the-add-on-sdk/
-/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisities	/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Promoting_your_extension_or_theme	https://extensionworkshop.com/documentation/publish/promoting-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Retiring_your_extension	https://extensionworkshop.com/documentation/manage/retiring-your-extension/
@@ -5769,12 +5768,14 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtension_i18n	/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions_	/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
+/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_	/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next
 /en-US/docs/Mozilla/Add-ons/WebExtensions/devtools.inspectedWindow	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 /en-US/docs/Mozilla/Add-ons/WebExtensions/devtools_panels	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /en-US/docs/Mozilla/Add-ons/WebExtensions/differences_between_extensions_API_implementations	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /en-US/docs/Mozilla/Add-ons/WebExtensions/omnibox	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox
 /en-US/docs/Mozilla/Add-ons/WebExtensions/omnibox/OnInputEnteredDisposition	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
+/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 /en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext	https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
 /en-US/docs/Mozilla/Command_Line_Options	https://wiki.mozilla.org/Firefox/CommandLineOptions

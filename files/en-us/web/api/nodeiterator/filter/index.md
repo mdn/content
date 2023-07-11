@@ -33,7 +33,7 @@ const nodeIterator = document.createNodeIterator(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 nodeFilter = nodeIterator.filter;
 ```
