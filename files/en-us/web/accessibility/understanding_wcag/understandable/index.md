@@ -482,7 +482,7 @@ This guideline centers around helping users enter correct information when requi
       <td>Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">Understanding redundant entry</a> to learn more.</td>
       </tr>
       <tr>
-      <td> 3.3.8 Accessible Authentication (Minimum) (AA)
+      <td> 3.3.8 Accessible authentication (Minimum) (AA)
       </td>
       <td>
 States that cognitive function tests like remembering a password is not required for any step in an authentication process unless said provides an alternative, object recognition/personal content(e.g., images, videos, and audio), or mechanicism(e.g., copy and paste and autosave passwords).
