@@ -111,7 +111,7 @@ h2 + p + p {
   Nothing selectors match; not even the last one.
 </h2>
 <p>The first paragraph is underlined. All the paragraphs are 1.1rem</p>
-<p>The second paragraph is red. This and the following paragraphs are italic</p>
+<p>The second paragraph is red. This and the following paragraphs are italic.</p>
 <p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
 <p class="myClass">
   Monospace font as this both is myClass and is a child of #myId. It is also
