@@ -253,4 +253,4 @@ Web Components is an HTML-related technology that makes it possible to, essentia
 | {{HTMLElement("xmp")}}       | Renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML2 specification recommended that it should be rendered wide enough to allow 80 characters per line.                                                                                                                                                                                                                         |
 ## See also
 
-- {{DOMXref("Element") interface
+- {{DOMXref("Element")}} interface
