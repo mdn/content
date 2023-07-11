@@ -97,7 +97,7 @@ h2 + p + p {
   text-decoration: underline;
 }
 #myId > .myClass {
-  outline: 3px dashed #red;
+  outline: 3px dashed red;
 }
 > p {
   font-size: 1.1rem;
