@@ -59,7 +59,7 @@ Here is a little example:
       <label for="size_2">Medium</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large" required />
+      <input type="radio" name="size" id="size_3" value="large" />
       <label for="size_3">Large</label>
     </p>
   </fieldset>
