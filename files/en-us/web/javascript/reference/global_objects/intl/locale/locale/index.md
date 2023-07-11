@@ -23,7 +23,7 @@ new Intl.Locale(tag, options)
 ### Parameters
 
 - `tag`
-  - : The Unicode locale identifier string. For the syntax of locale identifier strings, see the [Intl main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument). Note that the `Intl.Locale` constructor, unlike most other `Intl` constructors, does not accept an array locales or `undefined`.
+  - : The Unicode locale identifier string. For the syntax of locale identifier strings, see the [Intl main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument). Note that the `Intl.Locale` constructor, unlike most other `Intl` constructors, does not accept an array of locales or `undefined`.
 - `options`
   - : An object that contains configuration for the Locale. Option values here take priority over extension keys in the locale identifier. Possible properties are:
     - `language`
