@@ -479,7 +479,7 @@ This guideline centers around helping users enter correct information when requi
       <td>
       Information that is required that was previously entered or provided by the user in the same process or user flow is either auto-populated or made selectable to the user from a list of options, unless re-entering the information is essential or required for security reasons, or if the information is no longer valid.
       </td>
-      <td> <strong> Note:</strong> This criteria is not applicable for certain situations. Check out <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/#337-redundant-entry-a">the note in WCAG 3.3.7</a> to learn more.</td>
+      <td>Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">Understanding redundant entry</a> to learn more.</td>
       </tr>
       <tr>
       <td> 3.3.8 Accessible Authentication (Minimum) (AA)
