@@ -490,7 +490,7 @@ The conformance criteria under this guideline relate to ways in which users can 
 </ul>
 <p> The exceptions to this are:
 <ul>
-<li>The focus indicator is determined by the user and cannot be adjusted by the author </li>
+<li>The focus indicator is determined by the user and cannot be adjusted by the author.</li>
 <li>The focus indicator and the indicator's background color are not modified by the author.</li>
 </ul>
 </p>
