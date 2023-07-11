@@ -2,7 +2,7 @@
 title: CSS pseudo-element module
 slug: Web/CSS/CSS_pseudo
 page-type: css-module
-spec-urls: https://drafts.csswg.org/pseudo/
+spec-urls: https://drafts.csswg.org/css-pseudo/
 ---
 
 {{CSSRef}}
@@ -46,11 +46,14 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 
 - CSS {{cssxref("content")}} property
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_genererated_content) module
-- [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes) allow the selection of elements based on state information that is not contained in the document tree.
-- [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
-- [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [CSS selectors]()
+  - [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
+  - [Combinators](/en-US/docs/Web/CSS/CSS_Selectors/selectors_and_combinators#combinators)
+  - [Class selector](/en-US/docs/Web/CSS/Class_selectors)
+  - [ID selector](/en-US/docs/Web/CSS/ID_selectors)
+  - [Type selector](/en-US/docs/Web/CSS/Type_selectors)
+  - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
+  - [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
 - [cascade layer]()
 - fragment
 - placeholder attribute
