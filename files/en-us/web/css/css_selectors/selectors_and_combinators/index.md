@@ -2,7 +2,7 @@
 title: CSS selectors and combinators
 slug: Web/CSS/CSS_selectors/Selectors_and_combinators
 page-type: guide
-spec-urls: 
+spec-urls:
   - https://drafts.csswg.org/selectors/
   - https://drafts.csswg.org/css-pseudo/
 ---
@@ -109,11 +109,19 @@ h2 + p + p {
 #### HTML
 
 ```html
-<h2 class="myClass" id="myId">No selectors match. <span class="myClass">This span has an outline</span> as it is both myClass and a child of #myId.</h2>
+<h2 class="myClass" id="myId">
+  No selectors match. <span class="myClass">This span has an outline</span> as
+  it is both myClass and a child of #myId.
+</h2>
 <p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
-<p>The second paragraph is red. This and the following paragraphs are italic.</p>
+<p>
+  The second paragraph is red. This and the following paragraphs are italic.
+</p>
 <p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
-<p class="myClass">Does not have an outline; this is a sibling of H2, not a child. It is italic and 1.1rem.</p>
+<p class="myClass">
+  Does not have an outline; this is a sibling of H2, not a child. It is italic
+  and 1.1rem.
+</p>
 ```
 
 #### Result
