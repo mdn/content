@@ -42,14 +42,13 @@ This is an example rule that blocks all script requests originating from `"foo.c
 
 ```json
 {
-  "id" : 1,
+  "id": 1,
   "priority": 1,
-  "action" : { "type" : "block" },
-  "condition" : 
-  {
-    "urlFilter" : "abc",
-    "initiatorDomains" : ["foo.com"],
-    "resourceTypes" : ["script"]
+  "action": { "type": "block" },
+  "condition": {
+    "urlFilter": "abc",
+    "initiatorDomains": ["foo.com"],
+    "resourceTypes": ["script"]
   }
 }
 ```

@@ -33,7 +33,7 @@ browser.contextMenus.create(
     title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
     contexts: ["selection"],
   },
-  onCreated
+  onCreated,
 );
 ```
 
