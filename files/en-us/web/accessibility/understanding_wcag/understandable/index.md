@@ -490,11 +490,11 @@ States that cognitive function tests like remembering a password is not required
       <td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication"> the full documentation</a> for this standard to learn more. </td>
     </tr>
     <tr>
-    <td> 3.3.9 Accessible Authentication (Enhanced) (AAA) </td>
+ <td> 3.3.9 Accessible Authentication (Enhanced) (AAA) </td>
     <td>
-Cognitive function tests like remembering a password is not required for any step in an authentication process unless that step either provides an alternative or mechanicism.
+A cognitive function test, like remembering a password, must not be required for any step in an authentication process without providing an alternative that does not rely on a cognitive function test or provides a mechanism to assist the user in completing the cognitive function test. Authentication tests that require the user to recognize objects or identify non-text content the user provided to the website are allowed.
     </td>
-<td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced"> the full documentation</a> for this standard to learn more.</td>
+<td> Check out the <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced">enhanced accessible authentication documentation (AAA)</a> to learn more.</td>
     </tr>
   </tbody>
 </table>
