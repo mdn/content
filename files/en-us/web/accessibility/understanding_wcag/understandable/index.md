@@ -485,7 +485,7 @@ This guideline centers around helping users enter correct information when requi
       <td> 3.3.8 Accessible authentication (Minimum) (AA)
       </td>
       <td>
-States that cognitive function tests like remembering a password is not required for any step in an authentication process unless said provides an alternative, object recognition/personal content(e.g., images, videos, and audio), or mechanicism(e.g., copy and paste and autosave passwords).
+Cognitive function tests, like remembering a password, are not required for any step in an authentication process unless an alternative is provided, such as an object or personal content (e.g., images, videos, and audio) recognition, or a mechanism to assist (e.g., copy and paste and autosave passwords).
       </td>
       <td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication"> the full documentation</a> for this standard to learn more. </td>
     </tr>
