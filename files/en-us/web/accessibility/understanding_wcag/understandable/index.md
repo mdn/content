@@ -284,14 +284,14 @@ This guideline focuses on making user interfaces intuitive and understandable.
           functionality if possible.
         </p>
       </td>
+ </tr>
       <tr>
-      <td> 3.2.6 Consistent Help (A)</td>
-      <td> <p> Web pages that contain help mechanicisms like self-help options or human contact details need to occur in the same order as other page content, unless a change is initiated by the user, especially if said mechanicisms are repeated on multiple web pages within a set of web pages</p>
-      <td> <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication"> the full documentation</a> for this standard to learn more. </p>
+      <td> 3.2.6 Consistent help (A)</td>
+      <td> <p> Web pages that contain help mechanisms, including self-help options and human contact details, that are repeated on multiple web pages, need to place those mechanisms in the same order on all pages, unless a change is initiated by the user.</p>
+      <td> <p> Check out the <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help">consistent help documentation</a> for this standard to learn more. </p>
       </td>
       </td>
       <tr>
-</tr>
     </tr>
   </tbody>
 </table>
