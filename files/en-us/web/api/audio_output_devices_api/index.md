@@ -77,7 +77,7 @@ The code first checks if `selectAudioOutput()` is supported, and if it is, uses 
 We then play some some audio using the default output, and then call `setSinkId()`  in order to switch to the selected output device.
 
 ```js
-document.querySelector("#myButton").addEventListener("click", () => {
+document.querySelector("#myButton").addEventListener("click", async () => {
   if (!navigator.mediaDevices.selectAudioOutput) {
     console.log("selectAudioOutput() not supported or not in secure context.");
     return;

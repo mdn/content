@@ -34,13 +34,14 @@ selectAudioOutput(options)
 
     - `deviceId` {{Optional_Inline}}
 
-      - : A string representing the id of a single device to display in the prompt.
-        If not set, all audio output devices for which permission is not explicitly denied will be displayed.
+      - : A string representing the id of a single previously exposed/permitted device.
+        If not set, a prompt with all available audio output devices will be displayed.
 
         The option is intended for applications that want to use persisted device ids.
 
         > **Note:** A user agent may choose to skip prompting the user if a specified non-null id was previously exposed to the user by `selectAudioOutput()` in an earlier session.
         > In this case the user agent may simply resolve with this device id, or a new id for the same device if it has changed.
+        > If permission for the specified device was previously granted but has since been revoked, the user-agent might display all allowed devices, highlighting the one with the specified ID.
         >
         > Note that persisted ids _must be passed_ through `selectAudioOutput()` successfully before they will work with {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}}.
 
