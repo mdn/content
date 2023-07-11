@@ -467,11 +467,11 @@ The conformance criteria under this guideline relate to ways in which users can 
     <p> <strong>Note:</strong> If the interface's content can be repositioned by the user, then only the initial position of the user-movable content is considered for testing to conform to this standard. Also, content opened by the user may obscure the component receiving focus. Furthermore, if the user can reveal the focused component without changing keyboard focus, the component with focus is not considered hidden for conformance and testing purposes.</p>
     </td>
     <td>
-    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum"> Understanding Focus Not Obscured (Minimum) </a> to learn more about this standard.</p>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum"> Understanding focus not obscured (Minimum) </a> to learn more about this standard.</p>
     </td>
     </tr>
     <tr>
-    <td> 2.4.12 Focus Not Obscured (Enhanced) (AAA) </td>
+    <td> 2.4.12 Focus not obscured (Enhanced) (AAA) </td>
     <td>
     <p> Follows the rules as 2.4.11 except if the interface is configurable enough to enable the user to content such as toolbars and non-modal dialogs, then only the initial positions of user-movable content are considered for testing and meeting of this standard.</p>
     </td>
