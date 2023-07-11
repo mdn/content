@@ -393,7 +393,7 @@ Next, let's change the page title to a personalized welcome message when the use
    <button>Change user</button>
    ```
 
-2. In `main.js`, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
+2. In `main.js`, place the following code at the top of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
 
    ```js
    let myButton = document.querySelector("button");
