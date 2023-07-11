@@ -491,7 +491,7 @@ The conformance criteria under this guideline relate to ways in which users can 
 <p> The exceptions to this are:
 <ul>
 <li>The focus indicator is determined by the user and cannot be adjusted by the author </li>
-<li> The focus indicator and the indicator's background color are not modified by the author.</li>
+<li>The focus indicator and the indicator's background color are not modified by the author.</li>
 </ul>
 </p>
 <td><p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html"> Understanding Focus Appearance (Level AAA)</a> to learn more about this standard.</p> </td>
