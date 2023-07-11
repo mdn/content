@@ -158,7 +158,7 @@ One of the few cases in which a synchronous request does not usually block execu
 **`example.html`** (the main page):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

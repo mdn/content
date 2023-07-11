@@ -444,7 +444,7 @@ const stream = new ReadableStream(
   {
     highWaterMark: 3,
     size: () => 1,
-  }
+  },
 );
 ```
 

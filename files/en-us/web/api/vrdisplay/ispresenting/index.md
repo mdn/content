@@ -37,7 +37,7 @@ function onVRExitPresent() {
         errMsg += `<br/>${err.message}`;
       }
       VRSamplesUtil.addError(errMsg, 2000);
-    }
+    },
   );
 }
 ```

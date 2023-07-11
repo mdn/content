@@ -45,7 +45,7 @@ elem.addEventListener(
   (e) => {
     // e.target matches elem
   },
-  false
+  false,
 );
 
 // Target can be any Element or other EventTarget.

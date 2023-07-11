@@ -1,6 +1,7 @@
 ---
 title: math:max()
 slug: Web/EXSLT/math/max
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

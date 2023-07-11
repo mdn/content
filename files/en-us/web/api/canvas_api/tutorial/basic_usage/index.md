@@ -83,7 +83,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 > **Note:** it is not good practice to embed a script inside HTML. We do it here to keep the example concise.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -120,7 +120,7 @@ Here is how a template would look in action. As shown here, it is initially blan
 To begin, let's take a look at a simple example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

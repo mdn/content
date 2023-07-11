@@ -206,7 +206,7 @@ const webPush = require("web-push");
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
   console.log(
     "You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY " +
-      "environment variables. You can use the following ones:"
+      "environment variables. You can use the following ones:",
   );
   console.log(webPush.generateVAPIDKeys());
   return;
@@ -215,7 +215,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 webPush.setVapidDetails(
   "https://example.com",
   process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
@@ -264,7 +264,7 @@ self.addEventListener("push", (event) => {
   event.waitUntil(
     self.registration.showNotification("ServiceWorker Cookbook", {
       body: payload,
-    })
+    }),
   );
 });
 ```

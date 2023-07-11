@@ -52,7 +52,7 @@ The code below sets up handlers for primary action events in order to determine 
 xrSession.addEventListener("select", (event) => {
   let targetRayPose = event.frame.getPose(
     event.inputSource.targetRaySpace,
-    myRefSpace
+    myRefSpace,
   );
 
   if (targetRayPose) {

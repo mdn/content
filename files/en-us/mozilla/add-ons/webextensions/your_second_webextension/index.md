@@ -36,7 +36,7 @@ It's a simple extension, but shows many of the basic concepts of the WebExtensio
 - communicating between content scripts and the rest of the extension
 - packaging resources with your extension that can be used by web pages
 
-You can find [complete source code for the extension on GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify).
+You can find [complete source code for the extension on GitHub](https://github.com/mdn/webextensions-examples/tree/main/beastify).
 
 ## Writing the extension
 
@@ -58,14 +58,12 @@ Now create a new file called "manifest.json", and give it the following contents
   "version": "1.0",
 
   "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -99,7 +97,7 @@ Note that all paths given are relative to manifest.json itself.
 
 The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager (you can open this by visiting the URL "about:addons"). Our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-48.png".
 
-Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/), and used under the terms of its license.
+Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/), and used under the terms of its license.
 
 If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
 
@@ -114,7 +112,7 @@ If you choose to supply your own icon, It should be 48x48 pixels. You could also
 
 The toolbar button also needs an icon, and our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-32.png".
 
-Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](http://www.iconbeast.com/free/) and used under the terms of its [license](http://www.iconbeast.com/faq/).
+Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](http://www.iconbeast.com/free/) and used under the terms of its [license](http://www.iconbeast.com/faq/).
 
 If you don't supply a popup, then a click event is dispatched to your extension when the user clicks the button. If you do supply a popup, the click event is not dispatched, but instead, the popup is opened. We want a popup, so let's create that next.
 
@@ -139,7 +137,7 @@ touch choose_beast.html choose_beast.css choose_beast.js
 The HTML file looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -171,7 +169,8 @@ Note that we include the CSS and JS files from this file, just like a web page.
 The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `<div id="error-content"...` element will be hidden by default.
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -187,19 +186,19 @@ button {
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-  background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 button:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 button[type="reset"] {
-  background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 button[type="reset"]:hover {
-  background-color: #EAEA9D;
+  background-color: #eaea9d;
 }
 ```
 
@@ -246,7 +245,7 @@ function listenForClicks() {
         const url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
-          beastURL: url
+          beastURL: url,
         });
       });
     }
@@ -277,13 +276,15 @@ function listenForClicks() {
     if (e.target.tagName !== "BUTTON" || !e.target.closest("#popup-content")) {
       // Ignore when click is not on a button within <div id="popup-content">.
       return;
-    } 
+    }
     if (e.target.type === "reset") {
-      browser.tabs.query({active: true, currentWindow: true})
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(reset)
         .catch(reportError);
     } else {
-      browser.tabs.query({active: true, currentWindow: true})
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(beastify)
         .catch(reportError);
     }
@@ -397,7 +398,7 @@ After that, the place to start is line 40, where the content script listens for 
 
 Finally, we need to include the images of the beasts.
 
-Create a new directory called "beasts", and add the three images in that directory, with the appropriate names. You can get the images from [the GitHub repository](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), or from here:
+Create a new directory called "beasts", and add the three images in that directory, with the appropriate names. You can get the images from [the GitHub repository](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts), or from here:
 
 ![A brown frog.](frog.jpg)
 

@@ -31,13 +31,13 @@ The rest of this page summarizes these and other incompatibilities.
 - **In Firefox:** The equivalent APIs are accessed using the `browser` namespace.
 
   ```js
-  browser.browserAction.setIcon({path: "path/to/icon.png"});
+  browser.browserAction.setIcon({ path: "path/to/icon.png" });
   ```
 
 - **In Chrome:** Extensions access privileged JavaScript APIs using the `chrome` namespace.
 
   ```js
-  chrome.browserAction.setIcon({path: "path/to/icon.png"});
+  chrome.browserAction.setIcon({ path: "path/to/icon.png" });
   ```
 
 ### Callbacks and promises
@@ -53,9 +53,9 @@ The rest of this page summarizes these and other incompatibilities.
     console.error(e);
   }
 
-  let setCookie = browser.cookies.set(
-    {url: "https://developer.mozilla.org/"}
-  );
+  let setCookie = browser.cookies.set({
+    url: "https://developer.mozilla.org/",
+  });
   setCookie.then(logCookie, logError);
   ```
 
@@ -70,10 +70,7 @@ The rest of this page summarizes these and other incompatibilities.
     }
   }
 
-  chrome.cookies.set(
-    {url: "https://developer.mozilla.org/"},
-    logCookie
-  );
+  chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
   ```
 
 ### Firefox supports both the chrome and browser namespaces

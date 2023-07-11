@@ -237,7 +237,7 @@ A property definition of the form `__proto__: value` or `"__proto__": value` doe
 
 Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
-```js
+```js-nolint
 const obj1 = {};
 console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
 

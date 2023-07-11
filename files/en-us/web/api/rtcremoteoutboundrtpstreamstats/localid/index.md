@@ -118,12 +118,12 @@ async function networkTestStop(pc) {
           const startInboundStats = findReportEntry(
             startReport,
             "remoteId",
-            startRemoteOutbound.id
+            startRemoteOutbound.id,
           );
           const endInboundStats = findReportEntry(
             endReport,
             "remoteId",
-            endRemoteOutbound.id
+            endRemoteOutbound.id,
           );
           // Elapsed time in seconds
           const elapsedTime =
@@ -145,7 +145,7 @@ async function networkTestStop(pc) {
           let frameString = "";
           if (!isNaN(framesDecoded)) {
             frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(
-              2
+              2,
             )} FPS.<br>`;
           }
 

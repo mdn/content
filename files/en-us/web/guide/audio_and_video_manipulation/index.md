@@ -77,7 +77,7 @@ const processor = {
         this.height = this.video.height;
         this.timerCallback();
       },
-      false
+      false,
     );
   },
 
@@ -228,7 +228,7 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 ```js
 const context = new AudioContext();
 const audioSource = context.createMediaElementSource(
-  document.getElementById("my-video")
+  document.getElementById("my-video"),
 );
 const filter = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -270,7 +270,7 @@ filter.gain.value = 25;
 ```js hidden
 const context = new AudioContext();
 const audioSource = context.createMediaElementSource(
-  document.getElementById("my-video")
+  document.getElementById("my-video"),
 );
 const filter = context.createBiquadFilter();
 audioSource.connect(filter);

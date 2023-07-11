@@ -226,7 +226,7 @@ Another event, `timeupdate`, is raised periodically as the video is being played
 video.addEventListener("timeupdate", () => {
   progress.value = video.currentTime;
   progressBar.style.width = `${Math.floor(
-    (video.currentTime * 100) / video.duration
+    (video.currentTime * 100) / video.duration,
   )}%`;
 });
 ```
@@ -241,7 +241,7 @@ video.addEventListener("timeupdate", () => {
     progress.setAttribute("max", video.duration);
   progress.value = video.currentTime;
   progressBar.style.width = `${Math.floor(
-    (video.currentTime * 100) / video.duration
+    (video.currentTime * 100) / video.duration,
   )}%`;
 });
 ```

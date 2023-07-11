@@ -1,6 +1,7 @@
 ---
 title: substring-before
 slug: Web/XPath/Functions/substring-before
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

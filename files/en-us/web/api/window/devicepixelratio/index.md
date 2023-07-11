@@ -107,7 +107,9 @@ In this example, we'll set up a media query and watch it to see when the device 
 
 ```css
 body {
-  font: 22px arial, sans-serif;
+  font:
+    22px arial,
+    sans-serif;
 }
 
 #container {

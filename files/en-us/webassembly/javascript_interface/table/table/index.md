@@ -89,7 +89,7 @@ We instantiate `table2.wasm` using the [`WebAssembly.instantiateStreaming()`](/e
 ```js
 const instantiating = WebAssembly.instantiateStreaming(
   fetch("table2.wasm"),
-  importObject
+  importObject,
 );
 ```
 

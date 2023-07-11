@@ -45,7 +45,9 @@ A simple `<span>` to receive the output.
 
 ```css hidden
 .mq-value {
-  font: 18px arial, sans-serif;
+  font:
+    18px arial,
+    sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;

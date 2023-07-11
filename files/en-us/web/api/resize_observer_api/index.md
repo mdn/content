@@ -48,12 +48,12 @@ const resizeObserver = new ResizeObserver((entries) => {
     if (entry.borderBoxSize) {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.borderBoxSize[0].inlineSize,
-        entry.borderBoxSize[0].blockSize
+        entry.borderBoxSize[0].blockSize,
       );
     } else {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.contentRect.width,
-        entry.contentRect.height
+        entry.contentRect.height,
       );
     }
   }

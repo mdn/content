@@ -58,7 +58,7 @@ if (window.DeviceOrientationEvent) {
 
       handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
     },
-    true
+    true,
   );
 }
 

@@ -25,7 +25,7 @@ To change the priority of an HTTP request, you need access to the `nsIChannel` t
 
 ```js
 var ios = Components.classes["@mozilla.org/network/io-service;1"].getService(
-  Components.interfaces.nsIIOService
+  Components.interfaces.nsIIOService,
 );
 var ch = ios.newChannel("https://www.example.com/", null, null);
 ```

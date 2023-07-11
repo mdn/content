@@ -63,7 +63,7 @@ const day = {
 browser.menus.create({
   id: "set-theme",
   title: "set theme",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 async function updateThemeForCurrentWindow() {

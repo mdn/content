@@ -45,7 +45,7 @@ browser.devtools.panels
   .create(
     "My Panel", // title
     "icons/star.png", // icon
-    "devtools/panel/panel.html" // content
+    "devtools/panel/panel.html", // content
   )
   .then((newPanel) => {
     newPanel.onShown.addListener(handleShown);
@@ -65,4 +65,4 @@ For details on how to create icons to use with your developer tools panel, see [
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [devtools-panels](https://github.com/mdn/webextensions-examples/tree/master/devtools-panels) example which implements a devtools panel.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [devtools-panels](https://github.com/mdn/webextensions-examples/tree/main/devtools-panels) example which implements a devtools panel.

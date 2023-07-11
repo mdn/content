@@ -174,19 +174,19 @@ If you have multiple content scripts communicating at the same time, you might w
 ```js
 // background-script.js
 
-let ports = []
+let ports = [];
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id] = p;
   // …
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
   ports.forEach((p) => {
-        p.postMessage({greeting: "they clicked the button!"})
-    })
+    p.postMessage({ greeting: "they clicked the button!" });
+  });
 });
 ```
 

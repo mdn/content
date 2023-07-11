@@ -34,7 +34,7 @@ The following example finds the element with the highest layout shift score, and
 ```js
 function getCLSDebugTarget(entries) {
   const largestEntry = entries.reduce((a, b) =>
-    a && a.value > b.value ? a : b
+    a && a.value > b.value ? a : b,
   );
   if (largestEntry?.sources?.length) {
     const largestSource = largestEntry.sources.reduce((a, b) => {

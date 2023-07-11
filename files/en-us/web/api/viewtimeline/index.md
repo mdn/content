@@ -146,7 +146,7 @@ subject.animate(
   {
     fill: "both",
     timeline,
-  }
+  },
 );
 
 output.textContent += `Subject element: ${timeline.subject.nodeName}, `;
