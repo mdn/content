@@ -461,7 +461,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
     </tr>
     <tr>
-    <td> 2.4.11 Focus Not Obscured (Minimum) (AA)</td>
+    <td> 2.4.11 Focus not obscured (Minimum) (AA)</td>
     <td>
     <p> When a user interface component receives keyboard focus, the component is not entirely hidden due to containing author-created content.</p>
     <p> <strong>Note:</strong> If a configurable interface's content can be repositioned by the user, then only the initial positions of user-movable content is considered for testing and conforms to this standard. Also, content opened by the user may obscure the component receiving focus. Futhermote, if the <em>user</em> can reveal the focused component without changing the keyboard focus, the component with focus is not considered hidden due to author-created content.</p>
