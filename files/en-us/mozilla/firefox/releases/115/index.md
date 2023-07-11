@@ -22,6 +22,7 @@ This article provides information about the changes in Firefox 115 that affect d
 ### CSS
 
 - The CSS {{cssxref("animation-composition")}} property is now supported by default. You can use this property to specify the composite operation to use when multiple animations affect the same property simultaneously. ([Firefox bug 1823862](https://bugzil.la/1823862)).
+- The `supports-conditions` in the CSS {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) `supports()` function is now supported by default. This feature allows stylesheets to be imported only if the specified feature is supported in the user's browser. ([Firefox bug 1830779](https://bugzil.la/1830779)).
 
 #### Removals
 
