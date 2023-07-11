@@ -104,7 +104,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>
           The
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
+            href="https://github.com/mdn/webextensions-examples/tree/main/latest-download"
             >latest-download</a
           >
           example extension uses <code>browser_style</code> in its popup.
@@ -366,7 +366,7 @@ If Firefox can't find an exact match for the size it wants, then it will pick th
 A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json

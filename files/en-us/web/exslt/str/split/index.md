@@ -1,6 +1,7 @@
 ---
 title: str:split()
 slug: Web/EXSLT/str/split
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

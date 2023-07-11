@@ -39,7 +39,7 @@ Toggles the sidebar when the user selects an item from the context menu:
 browser.menus.create({
   id: "toggle-sidebar",
   title: "Toggle sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

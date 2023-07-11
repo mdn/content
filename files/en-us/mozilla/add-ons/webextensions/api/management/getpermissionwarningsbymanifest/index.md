@@ -58,7 +58,8 @@ function gotError(error) {
   console.log(`Error: ${error}`);
 }
 
-let gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
+let gettingWarnings =
+  browser.management.getPermissionWarningsByManifest(manifestString);
 gettingWarnings.then(gotWarnings, gotError);
 ```
 

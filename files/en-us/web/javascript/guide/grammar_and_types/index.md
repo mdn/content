@@ -388,7 +388,7 @@ Understanding the behavior of extra commas is important to understanding JavaScr
 
 However, when writing your own code, you should explicitly declare the missing elements as `undefined`, or at least insert a comment to highlight its absence. Doing this increases your code's clarity and maintainability.
 
-```js
+```js-nolint
 const myList = ["home", /* empty */, "school", /* empty */, ];
 ```
 

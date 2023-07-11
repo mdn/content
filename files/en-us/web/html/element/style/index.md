@@ -43,7 +43,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 In the following example, we apply a very simple stylesheet to a document:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -69,7 +69,7 @@ In the following example, we apply a very simple stylesheet to a document:
 In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/Specificity).
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -104,7 +104,7 @@ In this example we've included two `<style>` elements — notice how the conflic
 In this example we build on the previous one, including a `media` attribute on the second `<style>` element so it is only applied when the viewport is less than 500px in width.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

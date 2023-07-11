@@ -1,6 +1,7 @@
 ---
 title: math:min()
 slug: Web/EXSLT/math/min
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

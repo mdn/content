@@ -106,7 +106,12 @@ article {
   border: 4em solid #880e4f;
   border-radius: 7em;
   padding: 1.5em;
-  font: 16px "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+  font:
+    16px "Open Sans",
+    Verdana,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 article img {
@@ -132,12 +137,12 @@ const break50 = document.getElementById("break50");
 
 break40.addEventListener(
   "click",
-  () => (image.sizes = image.sizes.replace(/50em,/, "40em,"))
+  () => (image.sizes = image.sizes.replace(/50em,/, "40em,")),
 );
 
 break50.addEventListener(
   "click",
-  () => (image.sizes = image.sizes.replace(/40em,/, "50em,"))
+  () => (image.sizes = image.sizes.replace(/40em,/, "50em,")),
 );
 ```
 

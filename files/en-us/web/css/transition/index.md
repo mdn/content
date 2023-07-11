@@ -39,7 +39,9 @@ transition: margin-right 4s ease-in-out;
 transition: margin-right 4s ease-in-out 1s;
 
 /* Apply to 2 properties */
-transition: margin-right 4s, color 1s;
+transition:
+  margin-right 4s,
+  color 1s;
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out;

@@ -46,7 +46,7 @@ iceTransport.addEventListener(
     localProtoElem.innerText = pair.local.protocol.toUpperCase();
     remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
   },
-  false
+  false,
 );
 ```
 

@@ -90,7 +90,7 @@ fetch("./lorem-ipsum.txt").then((response) =>
   response.body
     .pipeThrough(new TextDecoderStream())
     .pipeThrough(upperCaseStream())
-    .pipeTo(appendToDOMStream(document.body))
+    .pipeTo(appendToDOMStream(document.body)),
 );
 ```
 

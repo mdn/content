@@ -193,7 +193,10 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 }
 
 .label {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
   position: absolute;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.7);
@@ -270,7 +273,7 @@ startup = () => {
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(
       intersectionCallback,
-      observerOptions
+      observerOptions,
     );
     observers[i].observe(document.querySelector(`#${boxID}`));
   }
@@ -361,7 +364,9 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
 #box {
   background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
-  transition: background-color 1s, border 1s;
+  transition:
+    background-color 1s,
+    border 1s;
   width: 350px;
   height: 350px;
   display: flex;
@@ -409,7 +414,7 @@ window.addEventListener(
 
     createObserver();
   },
-  false
+  false,
 );
 ```
 
@@ -557,12 +562,12 @@ function handleIntersect(entries, observer) {
     if (entry.intersectionRatio > prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace(
         "ratio",
-        entry.intersectionRatio
+        entry.intersectionRatio,
       );
     } else {
       entry.target.style.backgroundColor = decreasingColor.replace(
         "ratio",
-        entry.intersectionRatio
+        entry.intersectionRatio,
       );
     }
 

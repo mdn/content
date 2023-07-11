@@ -63,7 +63,7 @@ Here are some popular editors:
   </thead>
   <tbody>
     <tr>
-      <td><a href="http://bluefish.openoffice.nl">Bluefish</a></td>
+      <td><a href="https://bluefish.openoffice.nl">Bluefish</a></td>
       <td>GPL 3</td>
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
@@ -72,11 +72,11 @@ Here are some popular editors:
           >Mailing list</a
         >, <a href="https://bfwiki.tellefsen.net/index.php/Main_Page">wiki</a>
       </td>
-      <td><a href="http://bluefish.openoffice.nl/manual/">Online Manual</a></td>
+      <td><a href="https://bluefish.openoffice.nl/manual/">Online Manual</a></td>
       <td>Yes</td>
     </tr>
     <tr>
-      <td><a href="http://brackets.io/" rel="external">Brackets</a></td>
+      <td><a href="https://brackets.io/" rel="external">Brackets</a></td>
       <td>MIT/BSD</td>
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
@@ -112,12 +112,12 @@ Here are some popular editors:
       <td><a href="https://extensions.panic.com/">Yes</a></td>
     </tr>
     <tr>
-      <td><a href="http://www.codelobster.com">CodeLobster</a></td>
+      <td><a href="https://www.codelobster.com">CodeLobster</a></td>
       <td>Closed source</td>
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="http://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
+        <a href="https://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
       </td>
       <td><a href="https://www.codelobsteride.com/help/">Online Manual</a></td>
       <td>Yes</td>
@@ -201,7 +201,7 @@ Here are some popular editors:
       <td>MPL</td>
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
-      <td><a href="http://forum.komodoide.com/" rel="external">Forum</a></td>
+      <td><a href="https://community.komodoide.com/" rel="external">Forum</a></td>
       <td>
         <a href="https://docs.activestate.com/komodo" rel="external"
           >Online Manual</a
@@ -242,10 +242,10 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows</td>
       <td>
-        <a href="http://gogogadgetscott.info/pspad/dotazy.htm">FAQ</a>,
+        <a href="https://www.pspad.com/en/faq.htm">FAQ</a>,
         <a href="https://forum.pspad.com/" rel="external">Forum</a>
       </td>
-      <td><a href="http://gogogadgetscott.info/pspad/">Online Help</a></td>
+      <td><a href="https://www.pspad.com/en/helpfiles.htm">Online Help</a></td>
       <td><a href="https://www.pspad.com/en/pspad-extensions.php">Yes</a></td>
     </tr>
     <tr>
@@ -325,7 +325,7 @@ Here are some popular editors:
       <td><a href="https://www.vim.org/" rel="external">Vim</a></td>
       <td>
         <a
-          href="http://vimdoc.sourceforge.net/htmldoc/uganda.html#license"
+          href="https://vimdoc.sourceforge.net/htmldoc/uganda.html#license"
           rel="external"
           >Specific open license</a
         >
@@ -337,7 +337,7 @@ Here are some popular editors:
           >Mailing list</a
         >
       </td>
-      <td><a href="http://vimdoc.sourceforge.net/">Online Manual</a></td>
+      <td><a href="https://vimdoc.sourceforge.net/">Online Manual</a></td>
       <td>
         <a
           href="https://www.vim.org/scripts/script_search_results.php?order_by=creation_date&#x26;direction=descending"
@@ -425,7 +425,7 @@ If you aren't sure which features you want, or your favorite editor lacks those 
 
 If you like _lots_ of features and your editor is slowing down because of all your plugins, try using an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (integrated development environment). An IDE provides many tools in one interface and it's a bit daunting for beginners, but always an option if your text editor feels too limited. Here are some popular IDEs:
 
-- [Aptana Studio](http://www.aptana.com/)
+- [Aptana Studio](https://www.axway.com/en/aptana)
 - [Eclipse](https://www.eclipse.org/)
 - [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
 - [NetBeans IDE](https://netbeans.apache.org//)

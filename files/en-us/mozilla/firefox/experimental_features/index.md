@@ -476,46 +476,11 @@ Earlier called "scroll-linked animations", a scroll-driven animation depends on 
 The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
 The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
+When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}. The longhand and shorthand properties are both available behind the preference.
+
 You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
-For more information, see [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>101</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.scroll-linked-animations.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}. The longhand and shorthand properties are now available behind the preference `layout.css.scroll-driven-animations.enabled`. For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), and [Firefox bug 1809005](https://bugzil.la/1809005).
+For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
 <table>
   <thead>
@@ -1100,7 +1065,7 @@ See [tc39/proposal-is-usv-string](https://github.com/tc39/proposal-is-usv-string
 
 #### Hit regions
 
-Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools.
+Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you to define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools.
 
 <table>
   <thead>
@@ -1178,48 +1143,6 @@ The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webgpu.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Audio Output API
-
-#### MediaDevices.selectAudioOutput()
-
-{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt on desktop systems, from which users can select their desired audio output. See [Firefox bug 1699026](https://bugzil.la/1699026).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>media.setsinkid.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2148,7 +2071,7 @@ This also changes the console warning; if the upgrade succeeds, the message indi
 ### Permissions Policy / Feature policy
 
 [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-Note that this is implemented in Firefox as "**Feature Policy**, the name used in an earlier version of the specification.
+Note that this is implemented in Firefox as **Feature Policy**, the name used in an earlier version of the specification.
 
 <table>
   <thead>
@@ -2322,7 +2245,7 @@ For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
 The [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) is a response header to a [CORS preflight request](/en-US/docs/Glossary/Preflight_request), that indicates which request headers may be included in the final request.
 The response directive can contain a wildcard (`*`), which indicates that the final request may include all headers except the `Authorization` header.
 
-By default, Firefox includes the `Authorization` header in the final request after recieving a response with `Access-Control-Allow-Headers: *`.
+By default, Firefox includes the `Authorization` header in the final request after receiving a response with `Access-Control-Allow-Headers: *`.
 Set the preference to `false` to ensure Firefox does not include the `Authorization` header.
 For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
 

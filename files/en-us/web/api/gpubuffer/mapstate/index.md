@@ -41,7 +41,7 @@ console.log(stagingBuffer.mapState); // "unmapped"
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
   0, // Offset
-  BUFFER_SIZE // Length
+  BUFFER_SIZE, // Length
 );
 
 console.log(stagingBuffer.mapState); // "mapped"

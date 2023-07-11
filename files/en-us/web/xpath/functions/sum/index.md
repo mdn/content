@@ -1,6 +1,7 @@
 ---
 title: sum
 slug: Web/XPath/Functions/sum
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

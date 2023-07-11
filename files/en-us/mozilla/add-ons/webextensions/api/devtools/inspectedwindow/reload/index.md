@@ -43,8 +43,8 @@ const reloadButton = document.querySelector("#reload-button");
 
 reloadButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.reload({
-    injectedScript:"alert(navigator.userAgent);",
-    userAgent: "Not a real UA"
+    injectedScript: "alert(navigator.userAgent);",
+    userAgent: "Not a real UA",
   });
 });
 ```

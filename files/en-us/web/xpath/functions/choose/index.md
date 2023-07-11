@@ -1,6 +1,7 @@
 ---
 title: choose
 slug: Web/XPath/Functions/choose
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

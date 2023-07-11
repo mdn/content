@@ -100,7 +100,7 @@ function calcFrequencyResponse() {
   biquadFilter.getFrequencyResponse(
     myFrequencyArray,
     magResponseOutput,
-    phaseResponseOutput
+    phaseResponseOutput,
   );
 
   for (let i = 0; i <= myFrequencyArray.length - 1; i++) {

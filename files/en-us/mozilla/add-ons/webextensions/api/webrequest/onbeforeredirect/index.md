@@ -160,10 +160,9 @@ function logResponse(responseDetails) {
   console.log(responseDetails.redirectUrl);
 }
 
-browser.webRequest.onBeforeRedirect.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onBeforeRedirect.addListener(logResponse, {
+  urls: [target],
+});
 ```
 
 {{WebExtExamples}}

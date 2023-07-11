@@ -44,7 +44,7 @@ const font = new FontFace(
     style: "normal",
     weight: "400",
     stretch: "condensed",
-  }
+  },
 );
 
 document.fonts.add(font);

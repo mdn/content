@@ -37,7 +37,7 @@ You can use the `orientationchange` event in an {{domxref("EventTarget/addEventL
 ```js
 window.addEventListener("orientationchange", (event) => {
   console.log(
-    `the orientation of the device is now ${event.target.screen.orientation.angle}`
+    `the orientation of the device is now ${event.target.screen.orientation.angle}`,
   );
 });
 ```
@@ -47,7 +47,7 @@ Or use the `onorientationchange` event handler property:
 ```js
 window.onorientationchange = (event) => {
   console.log(
-    `the orientation of the device is now ${event.target.screen.orientation.angle}`
+    `the orientation of the device is now ${event.target.screen.orientation.angle}`,
   );
 };
 ```

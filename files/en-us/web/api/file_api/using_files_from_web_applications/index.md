@@ -62,7 +62,7 @@ There are three attributes provided by the {{DOMxRef("File")}} object that conta
 The following example shows a possible use of the `size` property:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -106,7 +106,7 @@ The following example shows a possible use of the `size` property:
           ];
           const exponent = Math.min(
             Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1
+            units.length - 1,
           );
           const approx = numberOfBytes / 1024 ** exponent;
           const output =
@@ -120,7 +120,7 @@ The following example shows a possible use of the `size` property:
             uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
         },
-        false
+        false,
       );
     </script>
   </body>
@@ -156,7 +156,7 @@ fileSelect.addEventListener(
       fileElem.click();
     }
   },
-  false
+  false,
 );
 ```
 
@@ -328,7 +328,7 @@ fileSelect.addEventListener(
     }
     e.preventDefault(); // prevent navigation to "#"
   },
-  false
+  false,
 );
 
 fileElem.addEventListener("change", handleFiles, false);
@@ -418,7 +418,7 @@ function FileUpload(img, file) {
         self.ctrl.update(percentage);
       }
     },
-    false
+    false,
   );
 
   xhr.upload.addEventListener(
@@ -428,11 +428,11 @@ function FileUpload(img, file) {
       const canvas = self.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
-    false
+    false,
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
@@ -456,7 +456,7 @@ function createThrobber(img) {
       0,
       0,
       (throbberWidth * percent) / 100,
-      throbberHeight
+      throbberHeight,
     );
     if (percent === 100) {
       throbber.ctx.fillStyle = "green";

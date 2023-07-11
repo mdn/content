@@ -35,7 +35,7 @@ The devtools page doesn't have any visible DOM, but can include JavaScript sourc
 Note that the devtools page does not get access to any other WebExtension APIs, and the background page doesn't get access to the devtools APIs. Instead, the devtools page and the background page must communicate using the `runtime` messaging APIs. Here's an example:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -56,14 +56,16 @@ The devtools window hosts a number of separate tools - the JavaScript Debugger, 
 Using the `devtools.panels.create()` API, you can create your own panel in the devtools window:
 
 ```js
-browser.devtools.panels.create(
-  "My Panel",                      // title
-  "/icons/star.png",               // icon
-  "/devtools/panel/panel.html"     // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(initialisePanel);
-  newPanel.onHidden.addListener(unInitialisePanel);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "/icons/star.png", // icon
+    "/devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(initialisePanel);
+    newPanel.onHidden.addListener(unInitialisePanel);
+  });
 ```
 
 This takes three mandatory arguments: the panel's title, icon, and content. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which resolves to a `devtools.panels.ExtensionPanel` object representing the new panel.
@@ -96,7 +98,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 window.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -106,7 +108,7 @@ window.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 

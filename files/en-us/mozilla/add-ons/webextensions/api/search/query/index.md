@@ -44,7 +44,7 @@ A search with the results shown in the current tab (default):
 ```js
 function search() {
   browser.search.query({
-    text: "styracosaurus"
+    text: "styracosaurus",
   });
 }
 
@@ -57,7 +57,7 @@ A search with the results shown in a new window:
 function search() {
   browser.search.query({
     text: "styracosaurus",
-    disposition: "NEW_WINDOW"
+    disposition: "NEW_WINDOW",
   });
 }
 
@@ -70,7 +70,7 @@ A search with the results shown in a specific tab:
 function search(tab) {
   browser.search.query({
     query: "styracosaurus",
-    tabId: tab.id
+    tabId: tab.id,
   });
 }
 
