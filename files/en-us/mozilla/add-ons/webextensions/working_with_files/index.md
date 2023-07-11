@@ -21,7 +21,7 @@ For each of these mechanisms, we introduce their use with references to the rele
 This mechanism enables you to get a file from your website (or any location you can define as a URL) to the user's computer. The key method is {{WebExtAPIRef("downloads.download()")}}, which in its simplest form accepts a URL and downloads the file from that URL to the user's default downloads folder:
 
 ```js
-browser.downloads.download({url: "https://example.org/image.png"})
+browser.downloads.download({ url: "https://example.org/image.png" });
 ```
 
 You can let the user download to a location of their choice by specifying the `saveAs` parameter.
@@ -80,11 +80,11 @@ The workings of the library can be understood by viewing [image-store.js](https:
 
 ```js
 async function saveCollectedBlobs(collectionName, collectedBlobs) {
- const storedImages = await getFileStorage({name: "stored-images"});
+  const storedImages = await getFileStorage({ name: "stored-images" });
 
- for (const item of collectedBlobs) {
+  for (const item of collectedBlobs) {
     await storedImages.put(`${collectionName}/${item.uuid}`, item.blob);
- }
+  }
 }
 ```
 
@@ -98,15 +98,15 @@ If the image being stored has the same name as one already in the database, it i
 
 ```js
 export async function loadStoredImages(filter) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- let listOptions = filter ? {includes: filter} : undefined;
- const imagesList = await imagesStore.list(listOptions);
- let storedImages = [];
- for (const storedName of imagesList) {
+  const imagesStore = await getFileStorage({ name: "stored-images" });
+  let listOptions = filter ? { includes: filter } : undefined;
+  const imagesList = await imagesStore.list(listOptions);
+  let storedImages = [];
+  for (const storedName of imagesList) {
     const blob = await imagesStore.get(storedName);
-    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
- }
- return storedImages;
+    storedImages.push({ storedName, blobUrl: URL.createObjectURL(blob) });
+  }
+  return storedImages;
 }
 ```
 
@@ -118,11 +118,11 @@ Note the use of [`URL.createObjectURL(blob)`](/en-US/docs/Web/API/URL/createObje
 
 ```js
 async function removeStoredImages(storedImages) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- for (const storedImage of storedImages) {
+  const imagesStore = await getFileStorage({ name: "stored-images" });
+  for (const storedImage of storedImages) {
     URL.revokeObjectURL(storedImage.blobUrl);
     await imagesStore.remove(storedImage.storedName);
- }
+  }
 }
 ```
 

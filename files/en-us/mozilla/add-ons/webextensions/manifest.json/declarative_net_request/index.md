@@ -87,6 +87,7 @@ The `"declarative_net_request"` key is an object that must contain the `"rule_re
 ```
 
 ## Example extensions
+
 <!-- Ideally we'd use the WebExtExamples template, but examples are not categorized by manifest keys yet - https://github.com/mdn/webextensions-examples/issues/524 -->
 
 - [dnr-block-only](https://github.com/mdn/webextensions-examples/tree/main/dnr-block-only)

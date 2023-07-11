@@ -67,14 +67,15 @@ In Manifest V3, the `web_accessible_resources` key is an array of objects like t
   // …
   "web_accessible_resources": [
     {
-      "resources": [ "test1.png", "test2.png" ],
-      "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
-    }, {
-      "resources": [ "test3.png", "test4.png" ],
-      "matches": [ "https://web-accessible-resources-2.glitch.me/*" ],
+      "resources": ["test1.png", "test2.png"],
+      "matches": ["https://web-accessible-resources-1.glitch.me/*"]
+    },
+    {
+      "resources": ["test3.png", "test4.png"],
+      "matches": ["https://web-accessible-resources-2.glitch.me/*"],
       "use_dynamic_url": true
     }
-  ],
+  ]
   // …
 }
 ```
@@ -219,6 +220,7 @@ For example, if the resource only needs to be accessible to web pages at example
 ```
 
 ## Example extensions
+
 <!-- Ideally we'd use the WebExtExamples template, but examples are not categorized by manifest keys yet - https://github.com/mdn/webextensions-examples/issues/524 -->
 
 - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)

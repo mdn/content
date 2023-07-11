@@ -45,7 +45,7 @@ browser.devtools.panels
   .create(
     "My Panel", // title
     "icons/star.png", // icon
-    "devtools/panel/panel.html" // content
+    "devtools/panel/panel.html", // content
   )
   .then((newPanel) => {
     newPanel.onShown.addListener(handleShown);

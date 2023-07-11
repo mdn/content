@@ -115,8 +115,11 @@ Defines the background script that'll add and remove the page's bookmark and set
 As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/main/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updateTab()` with this code:
 
 ```js
-  let gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-  gettingActiveTab.then(updateTab);
+let gettingActiveTab = browser.tabs.query({
+  active: true,
+  currentWindow: true,
+});
+gettingActiveTab.then(updateTab);
 ```
 
 `updateTab()` first passes the active tab's URL to `isSupportedProtocol()`:
@@ -131,12 +134,12 @@ As with any background script, [background.js](https://github.com/mdn/webextensi
 `isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab's URL, the extension takes advantage of the [HTMLAnchorElement](/en-US/docs/Web/API/HTMLAnchorElement) by adding the tab's URL to an `<a>` element and then getting the protocol using the `protocol` property.
 
 ```js
-  function isSupportedProtocol(urlString) {
-    let supportedProtocols = ["https:", "http:", "file:"];
-    let url = document.createElement('a');
-    url.href = urlString;
-    return supportedProtocols.includes(url.protocol);
-  }
+function isSupportedProtocol(urlString) {
+  let supportedProtocols = ["https:", "http:", "file:"];
+  let url = document.createElement("a");
+  url.href = urlString;
+  return supportedProtocols.includes(url.protocol);
+}
 ```
 
 If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`:
@@ -153,19 +156,21 @@ If the protocol is one supported by bookmarks, the extension determines if the t
 ```js
 function updateIcon() {
   browser.browserAction.setIcon({
-    path: currentBookmark ? {
-      19: "icons/star-filled-19.png",
-      38: "icons/star-filled-38.png"
-    } : {
-      19: "icons/star-empty-19.png",
-      38: "icons/star-empty-38.png"
-    },
-    tabId: currentTab.id
+    path: currentBookmark
+      ? {
+          19: "icons/star-filled-19.png",
+          38: "icons/star-filled-38.png",
+        }
+      : {
+          19: "icons/star-empty-19.png",
+          38: "icons/star-empty-38.png",
+        },
+    tabId: currentTab.id,
   });
   browser.browserAction.setTitle({
     // Screen readers can see the title
-    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
-    tabId: currentTab.id
+    title: currentBookmark ? "Unbookmark it!" : "Bookmark it!",
+    tabId: currentTab.id,
   });
 }
 ```
@@ -183,7 +188,7 @@ function toggleBookmark() {
   if (currentBookmark) {
     browser.bookmarks.remove(currentBookmark.id);
   } else {
-    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
+    browser.bookmarks.create({ title: currentTab.title, url: currentTab.url });
   }
 }
 ```

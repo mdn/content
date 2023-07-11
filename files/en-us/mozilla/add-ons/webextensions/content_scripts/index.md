@@ -24,12 +24,16 @@ Content scripts can only access [a small subset of the WebExtension APIs](#webex
 
 You can load a content script into a web page in one of three ways:
 
+<!-- markdownlint-disable MD005 -->
+
 1. - At install time, into pages that match URL patterns.
-     - : Using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your `manifest.json`, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+   - : Using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your `manifest.json`, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 2. - At runtime, into pages that match URL patterns.
-     - : Using {{WebExtAPIRef("scripting.registerContentScripts()")}} or (only in Manifest V2 in Firefox) {{WebExtAPIRef("contentScripts")}}, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). (This is similar to method 1, _except_ that you can add and remove content scripts at runtime.)
+   - : Using {{WebExtAPIRef("scripting.registerContentScripts()")}} or (only in Manifest V2 in Firefox) {{WebExtAPIRef("contentScripts")}}, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). (This is similar to method 1, _except_ that you can add and remove content scripts at runtime.)
 3. - At runtime, into specific tabs.
-     - : Using {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).)
+   - : Using {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).)
+
+<!-- markdownlint-enable MD005 -->
 
 There is only one global scope _per frame, per extension_. This means that variables from one content script can directly be accessed by another content script, regardless of how the content script was loaded.
 
@@ -86,7 +90,7 @@ As noted at ["Content script environment" at Chrome incompatibilities](/en-US/do
 Consider a web page like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -115,7 +119,7 @@ window.foo = "This global variable was added by a page script";
 // redefine the built-in window.confirm() function
 window.confirm = () => {
   alert("The page script has also redefined 'confirm'");
-}
+};
 ```
 
 Now an extension injects a content script into the page:
@@ -128,7 +132,7 @@ let pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
 // can't see properties added by page-script.js
-console.log(window.foo);  // undefined
+console.log(window.foo); // undefined
 
 // sees the original form of redefined properties
 window.confirm("Are you sure?"); // calls the original window.confirm()
@@ -286,7 +290,7 @@ function notifyExtension(e) {
   if (e.target.tagName !== "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -299,10 +303,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "You clicked a link!",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "You clicked a link!",
+    message: message.url,
   });
 }
 ```
@@ -342,8 +346,8 @@ For example, as soon as it loads, the following content script:
 ```js
 // content-script.js
 
-let myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+let myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
 myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
@@ -351,7 +355,7 @@ myPort.onMessage.addListener((m) => {
 });
 
 document.body.addEventListener("click", () => {
-  myPort.postMessage({greeting: "they clicked the page!"});
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -373,16 +377,18 @@ let portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
+  portFromCS.postMessage({ greeting: "hi there content script!" });
   portFromCS.onMessage.addListener((m) => {
-    portFromCS.postMessage({greeting: `In background script, received message from content script: ${m.greeting}`});
+    portFromCS.postMessage({
+      greeting: `In background script, received message from content script: ${m.greeting}`,
+    });
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 
@@ -393,19 +399,19 @@ If you have multiple content scripts communicating at the same time, you might w
 ```js
 // background-script.js
 
-let ports = []
+let ports = [];
 
 function connected(p) {
-  ports[p.sender.tab.id] = p
+  ports[p.sender.tab.id] = p;
   // …
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
   ports.forEach((p) => {
-        p.postMessage({greeting: "they clicked the button!"})
-    })
+    p.postMessage({ greeting: "they clicked the button!" });
+  });
 });
 ```
 
@@ -436,10 +442,13 @@ let messenger = document.getElementById("from-page-script");
 messenger.addEventListener("click", messageContentScript);
 
 function messageContentScript() {
-  window.postMessage({
-    direction: "from-page-script",
-    message: "Message from the page"
-  }, "*");
+  window.postMessage(
+    {
+      direction: "from-page-script",
+      message: "Message from the page",
+    },
+    "*",
+  );
 }
 ```
 
@@ -494,15 +503,18 @@ For example, consider a content script like this:
 ```js
 // content-script.js
 
-window.eval('window.x = 1;');
-eval('window.y = 2');
+window.eval("window.x = 1;");
+eval("window.y = 2");
 
 console.log(`In content script, window.x: ${window.x}`);
 console.log(`In content script, window.y: ${window.y}`);
 
-window.postMessage({
-  message: "check"
-}, "*");
+window.postMessage(
+  {
+    message: "check",
+  },
+  "*",
+);
 ```
 
 This code just creates some variables `x` and `y` using `window.eval()` and `eval()`, logs their values, and then messages the page.
@@ -549,11 +561,11 @@ The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInter
 >
 > console.log = () => {
 >   original(true);
-> }
+> };
 > ```
 >
 > ```js example-bad
 > // content-script.js calls the redefined version
 >
-> window.eval('console.log(false)');
+> window.eval("console.log(false)");
 > ```
