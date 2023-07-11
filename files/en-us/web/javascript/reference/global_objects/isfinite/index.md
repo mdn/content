@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.isFinite
 
 {{jsSidebar("Objects")}}
 
-The **`isFinite()`** function determines whether a value is {{jsxref("NaN")}} or ±{{jsxref("Infinity")}} when converted to a number. Because coercion inside the `isFinite()` function can be [surprising](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description), you may alternatively want to use {{jsxref("Number.isFinite()")}}.
+The **`isFinite()`** function determines whether a value is finite when converted to a number. A finite number is one that's not {{jsxref("NaN")}} or ±{{jsxref("Infinity")}}. Because coercion inside the `isFinite()` function can be [surprising](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description), you may alternatively want to use {{jsxref("Number.isFinite()")}}.
 
 {{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
