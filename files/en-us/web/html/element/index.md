@@ -251,6 +251,7 @@ Web Components is an HTML-related technology that makes it possible to, essentia
 | {{HTMLElement("strike")}}    | Places a strikethrough (horizontal line) over text.                                                                                                                                                                                                                                                                                                                                                                                                   |
 | {{HTMLElement("tt")}}        | Creates inline text which is presented using the user agent default monospace font face. This element was created for the purpose of rendering text as it would be displayed on a fixed-width display such as a teletype, text-only screen, or line printer.                                                                                                                                                                                          |
 | {{HTMLElement("xmp")}}       | Renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML2 specification recommended that it should be rendered wide enough to allow 80 characters per line.                                                                                                                                                                                                                         |
+
 ## See also
 
 - {{DOMXref("Element")}} interface
