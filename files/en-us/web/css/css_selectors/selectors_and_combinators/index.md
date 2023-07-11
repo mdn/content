@@ -58,15 +58,27 @@ p.myClass#myId {
 
 Using CSS combinators, we can combine selectors to select DOM nodes based on their relationship to other elements within the document node tree. This combining of selectors with combinators creates [complex selectors](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#complex_selector).
 
+### Descendant combinator
+
 The [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), denoted with one or more spaces, selects nodes that are descendants of the first element. For example, `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.
+
+### Child combinator
 
 The [child combinator](/en-US/docs/Web/CSS/Child_combinator) is more specific than the descendant combinator. Denoted with the greater than character (`>`), the child combinator selects nodes that are direct children of the first element. Comparing with our previous example, `div > span` will match only the {{HTMLElement("span")}} elements that are direct children of a {{HTMLElement("div")}} element.
 
+### General sibling combinator
+
 In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
+
+### Adjacent sibling combinator
 
 The [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), denoted by the plus symbol (`+`), is similar to the general sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
 
+### Column combinator
+
 There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters ( `||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+
+### Namespace separator
 
 The [namespace separator](/en-US/docs/Web/CSS/Namespace_separator) is another combinator that is generally used in conjunction with the {{CSSXref("@namespace")}} at-rule. This combinator is denoted by a single pipe character (`|`). It enables limiting [type selectors](/en-US/docs/Web/CSS/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) to a specific namespace. For example, by defining a namespace such as `@namespace SVG url('http://www.w3.org/2000/svg');`, you can include selectors that target elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document. Namespacing can be useful to target MathML, SVG, or other XML-based content within your HTML.
 
@@ -99,10 +111,10 @@ h2 + p + p {
   Nothing selectors match; not even the last one.
 </h2>
 <p>The first paragraph is underlined. All the paragraphs are 1.1rem</p>
-<p>The second paragraph is red. This and the next paragraphs are italic</p>
+<p>The second paragraph is red. This and the following paragraphs are italic</p>
 <p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
 <p class="myClass">
-  Monospace font as this is a child of #myId. It is also italic and 1.1rem.
+  Monospace font as this both is myClass and is a child of #myId. It is also italic and 1.1rem.
 </p>
 ```
 
