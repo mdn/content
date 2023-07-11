@@ -97,7 +97,7 @@ h2 + p + p {
   text-decoration: underline;
 }
 #myId > .myClass {
-  outline: 1px dashed #c0ffee;
+  outline: 3px dashed #red;
 }
 > p {
   font-size: 1.1rem;
@@ -108,15 +108,14 @@ h2 + p + p {
 
 ```html
 <h2 class="myClass" id="myId">
-  Nothing selectors match; not even the last one.
-  But <span class="myClass">this span has an outline</span>
+  No selectors match. <span class="myClass">This span has an outline</span>
   as it is both myClass and a child of #myId.
 </h2>
 <p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
 <p>The second paragraph is red. This and the following paragraphs are italic.</p>
 <p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
 <p class="myClass">
-  Has does NOT have an outline. It is a sibling of H2, not a child. It is
+  Does not have an outline; this is a sibling of H2, not a child. It is
   italic and 1.1rem.
 </p>
 ```
