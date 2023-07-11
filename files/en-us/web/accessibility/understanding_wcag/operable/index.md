@@ -479,25 +479,24 @@ The conformance criteria under this guideline relate to ways in which users can 
     <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced"> Understanding focus not obscured (Enhanced) (Level AAA) </a> to learn more about this standard.</p> </td>
     </td>
     </tr>
-    <tr>
-    <td> 2.4.13 Focus appearance (AAA)</td>
-    <td>
-    <p>
-    When the keyboard focus indicator is visible, an area of the focus indicator meets all the following:
+<tr>
+  <td> 2.4.13 Focus appearance (AAA)</td>
+  <td>
+    <p>When the keyboard focus indicator is visible, the area of the focus indicator meets all the following:</p>
     <ul>
-<li>Must be at least as large as the area of a <code>2px</code> thick perimeter of the unfocused component or sub-component.</li>
-<li> Needs to have a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused states</li>
-</ul>
-<p> The exceptions to this are:
-<ul>
-<li>The focus indicator is determined by the user and cannot be adjusted by the author.</li>
-<li>The focus indicator and the indicator's background color are not modified by the author.</li>
-</ul>
-</p>
-<td><p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html"> Understanding Focus Appearance (Level AAA)</a> to learn more about this standard.</p> </td>
-    </p>
-    </td>
-    </tr>
+      <li>Must be at least as large as the area of a <code>2px</code> thick perimeter of the unfocused component or sub-component, which includes component's content, border, and background, excluding outer shadows or glow effects.</li>
+      <li>Needs to have a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused states</li>
+    </ul>
+    <p> The exceptions to this are:</p>
+    <ul>
+      <li>The focus indicator is determined by the user and cannot be adjusted by the author.</li>
+      <li>The focus indicator and the indicator's background color are not modified by the author.</li>
+    </ul>
+  </td>
+  <td>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html"> Understanding focus appearance (Level AAA)</a> to learn more about this standard.</p>
+  </td>
+</tr>
   </tbody>
 </table>
 
