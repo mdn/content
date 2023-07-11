@@ -1,6 +1,7 @@
 ---
 title: Example
 slug: Learn/Forms/How_to_structure_a_web_form/Example
+page-type: learn-module-chapter
 ---
 
 This the example for a basic payment form for the article [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form).

@@ -1,6 +1,7 @@
 ---
 title: Silly story generator
 slug: Learn/JavaScript/First_steps/Silly_story_generator
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

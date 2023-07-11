@@ -1,6 +1,7 @@
 ---
 title: Changing the Priority of HTTP Requests (Non-Standard)
 slug: Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -24,7 +25,7 @@ To change the priority of an HTTP request, you need access to the `nsIChannel` t
 
 ```js
 var ios = Components.classes["@mozilla.org/network/io-service;1"].getService(
-  Components.interfaces.nsIIOService
+  Components.interfaces.nsIIOService,
 );
 var ch = ios.newChannel("https://www.example.com/", null, null);
 ```

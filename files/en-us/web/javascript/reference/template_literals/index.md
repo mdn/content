@@ -294,7 +294,7 @@ This is useful for many tools which give special treatment to literals tagged by
 ```js
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
 // Some formatters will format this literal's content as HTML
-const doc = html`<!DOCTYPE html>
+const doc = html`<!doctype html>
   <html lang="en-US">
     <head>
       <title>Hello</title>
@@ -358,4 +358,4 @@ const bad = `bad escape sequence: \unicode`;
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [ES6 in Depth: Template strings](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/) on hacks.mozilla.org (May 14, 2015)
+- [ES6 in Depth: Template strings](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/) on hacks.mozilla.org (2015)

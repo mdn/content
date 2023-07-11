@@ -42,11 +42,13 @@ The `hyphens` property is specified as a single keyword value chosen from the li
 - `none`
   - : Words are not broken at line breaks, even if characters inside the words suggest line break points. Lines will only wrap at whitespace.
 - `manual`
-  - : Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See [Suggesting line break opportunities](#suggesting_line_break_opportunities) below for details.
+  - : Default value. Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See [Suggesting line break opportunities](#suggesting_line_break_opportunities) below for details.
 - `auto`
   - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. However, suggested line break opportunities (see [Suggesting line break opportunities](#suggesting_line_break_opportunities) below) will override automatic break point selection when present.
 
 > **Note:** The `auto` setting's behavior depends on the language being properly tagged to select the appropriate hyphenation rules. You must specify a language using the `lang` HTML attribute to guarantee that automatic hyphenation is applied in that language.
+
+> **Note:** If you apply [`word-break: break-all`](/en-US/docs/Web/CSS/word-break#break-all) then no hyphens are shown, even if the word breaks at a hyphenation point.
 
 ## Suggesting line break opportunities
 

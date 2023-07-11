@@ -154,11 +154,12 @@ array.find((value, index) => {
 
 ### Calling find() on non-array objects
 
-The `find()` method reads the `length` property of `this` and then accesses each integer index.
+The `find()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
   length: 3,
+  "-1": 0.1, // ignored by find() since -1 < 0
   0: 2,
   1: 7.3,
   2: 4,

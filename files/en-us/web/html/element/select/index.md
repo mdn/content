@@ -522,7 +522,7 @@ for (const select of selects) {
     ...Array.from(options).map((e) => {
       span.innerText = e.label;
       return div.offsetWidth;
-    })
+    }),
   );
 
   console.log(width);

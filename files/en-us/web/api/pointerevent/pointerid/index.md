@@ -33,7 +33,7 @@ target.addEventListener(
     // to current event's ID and handle accordingly
     if (id === event.pointerId) process_event(event);
   },
-  false
+  false,
 );
 ```
 

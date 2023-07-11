@@ -151,12 +151,12 @@ localConnection
   .createOffer()
   .then((offer) => localConnection.setLocalDescription(offer))
   .then(() =>
-    remoteConnection.setRemoteDescription(localConnection.localDescription)
+    remoteConnection.setRemoteDescription(localConnection.localDescription),
   )
   .then(() => remoteConnection.createAnswer())
   .then((answer) => remoteConnection.setLocalDescription(answer))
   .then(() =>
-    localConnection.setRemoteDescription(remoteConnection.localDescription)
+    localConnection.setRemoteDescription(remoteConnection.localDescription),
   )
   .catch(handleCreateDescriptionError);
 ```
@@ -249,7 +249,7 @@ Our example's remote peer, on the other hand, ignores the status change events, 
 function handleReceiveChannelStatusChange(event) {
   if (receiveChannel) {
     console.log(
-      `Receive channel's status has changed to ${receiveChannel.readyState}`
+      `Receive channel's status has changed to ${receiveChannel.readyState}`,
     );
   }
 }

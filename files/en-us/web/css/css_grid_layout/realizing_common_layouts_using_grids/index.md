@@ -25,7 +25,10 @@ The markup is a container with elements inside for a header, footer, main conten
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 
 .wrapper > * {
@@ -106,7 +109,7 @@ This will not create any layout, however the items now have names we can use to 
 }
 ```
 
-With our mobile layout in place, we can now proceed to add a [media query](/en-US/docs/Web/CSS/Media_Queries) to adapt this layout for bigger screens with enough real estate to display two columns.
+With our mobile layout in place, we can now proceed to add a [media query](/en-US/docs/Web/CSS/CSS_media_queries) to adapt this layout for bigger screens with enough real estate to display two columns.
 
 ```css
 @media (min-width: 500px) {
@@ -161,7 +164,10 @@ If you have been working with one of the many frameworks or grid systems you may
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -235,7 +241,10 @@ To see how this layout method works in practice, we can create the same layout t
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 
 .wrapper > * {
@@ -361,7 +370,7 @@ Something to note as we create this layout is that we haven't needed to explicit
 
 ## A product listing with auto-placement
 
-Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid can make it very easy to create these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/Media_Queries) to make it so. In this next example I'm combining CSS Grid and Flexbox Layouts to make a simple product listing layout.
+Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid can make it very easy to create these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/CSS_media_queries) to make it so. In this next example I'm combining CSS Grid and Flexbox Layouts to make a simple product listing layout.
 
 The markup for my listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.
 
@@ -427,7 +436,10 @@ img {
   display: block;
 }
 body {
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 a:link,
 a:visited {
@@ -534,7 +546,10 @@ img {
   display: block;
 }
 body {
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 a:link,
 a:visited {
@@ -591,6 +606,6 @@ The best way to learn to use grid layout is to continue to build examples like t
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
 - [CSS Layout: Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (February 9, 2023)
+- [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (2023)
 - [Grid by example](https://gridbyexample.com)
 - [CSS grid website layout examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm) on quackit.com

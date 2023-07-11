@@ -56,7 +56,7 @@ document.getElementById("closeButton").addEventListener(
     pc.removeStream(videoStream);
     pc.close();
   },
-  false
+  false,
 );
 ```
 

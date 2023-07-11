@@ -40,11 +40,9 @@ In the live example below try changing `flex: auto` to `flex: 1`. This is the sh
 
 ## Split navigation
 
-Another way to align items on the main axis is to use auto margins. This enables the design pattern of a navigation bar where one group of items are aligned left and another group aligned right.
+Another way to align items on the main axis is to use auto margins. This enables the design pattern of a navigation bar where one group of items are aligned left and another group aligned right. Here we are using the auto margins technique described in [Using auto margins for main axis alignment](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#using_auto_margins_for_main_axis_alignment).
 
-Here we are using the auto margins technique described in [Using auto margins for main axis alignment](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#using_auto_margins_for_main_axis_alignment). The items are aligned on the main axis with `flex-start` as this is the initial behavior of flexbox, and we are aligning the item on the right by giving it a left margin of auto. You can move the class from one item to another to change where the split happens.
-
-Also in this example we are using margins on the flex items to create a gap between items, and a negative margin on the container in order that the items still remain flush with the right and left edges. Until the `gap` properties from the Box Alignment specification are implemented in flexbox, we have to use margins in this way if we want to create a gutter between items.
+The items are aligned on the main axis with `flex-start` as this is the initial behavior of flexbox. The [`gap`](/en-US/docs/Web/CSS/gap) property has been used to create gaps between items. And we are aligning the last item to the right by giving it a left margin of auto. You can move the class from one item to another to change where the split happens.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/split-navigation.html", '100%', 550)}}
 

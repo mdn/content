@@ -75,7 +75,7 @@ gl.vertexAttribPointer(
   gl.FLOAT,
   false,
   0,
-  0
+  0,
 );
 
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);

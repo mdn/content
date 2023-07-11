@@ -14,27 +14,25 @@ You can access the APIs using the `browser` namespace:
 
 ```js
 function logTabs(tabs) {
-  console.log(tabs)
+  console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs)
+browser.tabs.query({ currentWindow: true }, logTabs);
 ```
 
 Many of the APIs are asynchronous, returning a {{JSxRef("Promise")}}:
 
 ```js
 function logCookie(c) {
-  console.log(c)
+  console.log(c);
 }
 
 function logError(e) {
-  console.error(e)
+  console.error(e);
 }
 
-let setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
-setCookie.then(logCookie, logError)
+let setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
+setCookie.then(logCookie, logError);
 ```
 
 ## Browser API differences

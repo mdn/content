@@ -1,6 +1,7 @@
 ---
 title: Asynchronous JavaScript
 slug: Learn/JavaScript/Asynchronous
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: How CSS works
 slug: Learn/CSS/First_steps/How_CSS_works
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

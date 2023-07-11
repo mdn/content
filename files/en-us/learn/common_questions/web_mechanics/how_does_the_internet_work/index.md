@@ -1,6 +1,7 @@
 ---
 title: How does the Internet work?
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

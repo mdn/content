@@ -1,6 +1,7 @@
 ---
 title: "Express Tutorial Part 5: Displaying library data"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}

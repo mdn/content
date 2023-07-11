@@ -66,7 +66,7 @@ async function deleteFile(e) {
     if (handle.name === e.target.id + ".txt") {
       await handle.remove();
       savedFileRefs = savedFileRefs.filter(
-        (handle) => handle.name !== e.target.id + ".txt"
+        (handle) => handle.name !== e.target.id + ".txt",
       );
       e.target.parentElement.parentElement.removeChild(e.target.parentElement);
     }

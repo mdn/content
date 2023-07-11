@@ -159,7 +159,7 @@ function randomColor() {
 
 const stylesheet = document.styleSheets[1];
 const boxParaRule = [...stylesheet.cssRules].find(
-  (r) => r.selectorText === ".box p"
+  (r) => r.selectorText === ".box p",
 );
 
 function setRandomBorder() {

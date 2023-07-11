@@ -17,7 +17,7 @@ You can filter this event, making it only fire for tabs whose URLs match specifi
 
 ```js-nolint
 browser.tabs.onUpdated.addListener(
-  listener,  // function
+  listener, // function
   filter     // optional object
 )
 browser.tabs.onUpdated.removeListener(listener)
@@ -59,6 +59,7 @@ Events have three functions:
       - : `Array`. An array of strings consisting of supported {{WebExtAPIRef("tabs.Tab")}} object property names. Fires the event only for changes to one of the properties named in the array. These properties can be used:
 
         - "attention"
+        - "autoDiscardable"
         - "audible"
         - "discarded"
         - "favIconUrl"
@@ -87,6 +88,8 @@ Lists the changes to the state of the tab that is updated. To learn more about t
   - : `boolean`. Indicates whether the tab is drawing attention. For example, `attention` is `true` when the tab displays a modal dialog.
 - `audible` {{optional_inline}}
   - : `boolean`. The tab's new audible state.
+- `autoDiscardable` {{optional_inline}}
+  - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
 - `discarded` {{optional_inline}}
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory but is visible in the tab strip. Its content gets reloaded the next time it's activated.
 - `favIconUrl` {{optional_inline}}
@@ -141,8 +144,8 @@ const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
-  urls: [pattern1, pattern2]
-}
+  urls: [pattern1, pattern2],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -157,8 +160,8 @@ Log changes only to the `pinned` property of tabs (that is, pin and unpin action
 
 ```js
 const filter = {
-  properties: ["pinned"]
-}
+  properties: ["pinned"],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -177,8 +180,8 @@ const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
   urls: [pattern1, pattern2],
-  properties: ["pinned"]
-}
+  properties: ["pinned"],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -186,9 +189,7 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(
-  handleUpdated,
-  filter);
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
 Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet` where the tab was part of the current browser window when the update event fired:
@@ -200,8 +201,8 @@ const pattern2 = "https://twitter.com/mozdevnet";
 const filter = {
   urls: [pattern1, pattern2],
   properties: ["pinned"],
-  windowId: browser.windows.WINDOW_ID_CURRENT
-}
+  windowId: browser.windows.WINDOW_ID_CURRENT,
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -209,9 +210,7 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(
-  handleUpdated,
-  filter);
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
 {{WebExtExamples}}

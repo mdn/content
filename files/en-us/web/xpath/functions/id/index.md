@@ -1,6 +1,7 @@
 ---
 title: id
 slug: Web/XPath/Functions/id
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

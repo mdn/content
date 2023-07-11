@@ -22,7 +22,7 @@ A string containing the stylesheet's URI.
 On a local Windows machine:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

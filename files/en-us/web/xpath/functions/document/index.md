@@ -1,6 +1,7 @@
 ---
 title: document
 slug: Web/XPath/Functions/document
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

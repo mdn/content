@@ -16,7 +16,7 @@ Before diving in and writing huge chunks of CSS, plan your styles carefully. Wha
 
 ### Use flexible/relative units
 
-For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [Responsive design building blocks](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids) article.
+For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [guide to CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units).
 
 ### Don't use preprocessors
 
@@ -117,7 +117,7 @@ Usually, when teaching the specifics of CSS syntax, it is clearer and more obvio
 
 ## Mobile-first media queries
 
-In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in the [Mobile First](/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first) article.
+In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in the [Mobile First](/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first) article.
 
 ```css example-good
 /* Default CSS layout for narrow screens */

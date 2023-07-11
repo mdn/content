@@ -70,7 +70,7 @@ window.addEventListener(
       /* the page isn't being discarded, so it can be reused later */
     }
   },
-  false
+  false,
 );
 ```
 

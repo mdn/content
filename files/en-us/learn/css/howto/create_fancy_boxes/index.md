@@ -1,6 +1,7 @@
 ---
-title: create fancy boxes
-slug: Learn/CSS/Howto/create_fancy_boxes
+title: Create fancy boxes
+slug: Learn/CSS/Howto/Create_fancy_boxes
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}
@@ -238,7 +239,11 @@ blockquote::before,
 blockquote::after {
   position: absolute;
   height: 3rem;
-  font: 6rem/100% Georgia, "Times New Roman", Times, serif;
+  font:
+    6rem/100% Georgia,
+    "Times New Roman",
+    Times,
+    serif;
 }
 
 blockquote::before {

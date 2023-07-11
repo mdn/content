@@ -1,6 +1,7 @@
 ---
 title: <xsl:key>
 slug: Web/XSLT/Element/key
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

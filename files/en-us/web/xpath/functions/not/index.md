@@ -1,6 +1,7 @@
 ---
 title: not
 slug: Web/XPath/Functions/not
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

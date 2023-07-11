@@ -1,6 +1,7 @@
 ---
 title: Unconventional controls
 slug: Games/Techniques/Control_mechanisms/Other
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -35,7 +36,7 @@ window.addEventListener(
   (event) => {
     console.log(event.keyCode);
   },
-  true
+  true,
 );
 ```
 
@@ -61,7 +62,7 @@ window.addEventListener(
       // …
     }
   },
-  true
+  true,
 );
 ```
 

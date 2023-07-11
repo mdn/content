@@ -1,6 +1,7 @@
 ---
 title: <xsl:decimal-format>
 slug: Web/XSLT/Element/decimal-format
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

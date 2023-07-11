@@ -1,6 +1,7 @@
 ---
 title: For further reading
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
+page-type: guide
 ---
 
 {{XsltSidebar}}

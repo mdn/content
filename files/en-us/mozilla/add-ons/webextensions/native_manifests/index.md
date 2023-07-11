@@ -152,7 +152,7 @@ For example, here's a manifest for the `ping_pong` native application:
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -221,8 +221,7 @@ For example:
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
+  "data": {
     "color": "management thinks it should be blue!"
   }
 }
@@ -231,7 +230,7 @@ For example:
 Given this JSON manifest, the `favourite-color-examples@mozilla.org` extension could access the data using code like this:
 
 ```js
-let storageItem = browser.storage.managed.get('color');
+let storageItem = browser.storage.managed.get("color");
 storageItem.then((res) => {
   console.log(`Managed color is: ${res.color}`);
 });
@@ -373,7 +372,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 The key should have a single default value, which is the path to the manifest.
 
-> **Warning:** As of Firefox 64, the 32-bit registry view ([Wow6432Node)](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
+> **Warning:** As of Firefox 64, the 32-bit registry view [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
 >
 > **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://docs.microsoft.com/windows/win32/winprog64/accessing-an-alternate-registry-view).
 
@@ -442,15 +441,15 @@ For global visibility, store the manifest in either:
 or:
 
 ```
-    /usr/lib64/mozilla/native-messaging-hosts/<name>.json
+/usr/lib64/mozilla/native-messaging-hosts/<name>.json
 ```
 
 ```
-    /usr/lib64/mozilla/managed-storage/<name>.json
+/usr/lib64/mozilla/managed-storage/<name>.json
 ```
 
 ```
-    /usr/lib64/mozilla/pkcs11-modules/<name>.json
+/usr/lib64/mozilla/pkcs11-modules/<name>.json
 ```
 
 For per-user visibility, store the manifest in:

@@ -1,6 +1,7 @@
 ---
 title: Marking up a letter
 slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}

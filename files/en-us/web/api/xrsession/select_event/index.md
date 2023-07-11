@@ -62,7 +62,7 @@ xrSession.addEventListener("select", (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(
       event.inputSource.targetRaySpace,
-      myRefSpace
+      myRefSpace,
     );
     if (targetRayPose) {
       myHandleSelectWithRay(targetRayPose.transform);
@@ -78,7 +78,7 @@ xrSession.onselect = (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(
       event.inputSource.targetRaySpace,
-      myRefSpace
+      myRefSpace,
     );
     if (targetRayPose) {
       myHandleSelectWithRay(targetRayPose.transform);

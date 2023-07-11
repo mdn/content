@@ -50,7 +50,7 @@ const animation = text.animate(
     { transform: "rotate(180deg)" },
     { transform: "rotate(360deg)" },
   ],
-  { duration: 3000, iterations: Infinity, pseudoElement: "::after" }
+  { duration: 3000, iterations: Infinity, pseudoElement: "::after" },
 );
 
 // Get the value of KeyframeEffect.pseudoElement

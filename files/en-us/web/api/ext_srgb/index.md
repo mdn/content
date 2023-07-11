@@ -44,7 +44,7 @@ gl.texImage2D(
   0,
   ext.SRGB_EXT,
   gl.UNSIGNED_BYTE,
-  image
+  image,
 );
 ```
 

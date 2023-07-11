@@ -40,7 +40,7 @@ self.addEventListener("canmakepayment", (e) => {
         .catch((error) => {
           reject(error);
         });
-    })
+    }),
   );
 });
 ```
