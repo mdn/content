@@ -74,7 +74,7 @@ The permission status can be queried using the [Permissions API](/en-US/docs/Web
 Here's an example of using `selectAudioOutput()`, within a function that is triggered by a button click, and then setting the selected device as the audio output.
 
 The code first checks if `selectAudioOutput()` is supported, and if it is, uses it to select an output and return a [device ID](/en-US/docs/Web/API/MediaDeviceInfo/deviceId).
-We then play some some audio using the default output, and then call `setSinkId()`  in order to switch to the selected output device.
+We then play some some audio using the default output, and then call `setSinkId()` in order to switch to the selected output device.
 
 ```js
 document.querySelector("#myButton").addEventListener("click", async () => {
@@ -83,23 +83,25 @@ document.querySelector("#myButton").addEventListener("click", async () => {
     return;
   }
 
-// Display prompt to select device
-const audioDevice = await navigator.mediaDevices.selectAudioOutput();
+  // Display prompt to select device
+  const audioDevice = await navigator.mediaDevices.selectAudioOutput();
 
-// Create an audio element and start playing audio on the default device
-const audio = document.createElement("audio");
-audio.src = "https://example.com/audio.mp3";
-audio.play();
+  // Create an audio element and start playing audio on the default device
+  const audio = document.createElement("audio");
+  audio.src = "https://example.com/audio.mp3";
+  audio.play();
 
-// Change the sink to the selected audio output device.
-audio.setSinkId(audioDevice.deviceId);
+  // Change the sink to the selected audio output device.
+  audio.setSinkId(audioDevice.deviceId);
 });
 ```
 
 Note that if you log the output details, they might look something like this:
 
 ```js
-console.log(`${audioDevice.kind}: ${audioDevice.label} id = ${audioDevice.deviceId}`);
+console.log(
+  `${audioDevice.kind}: ${audioDevice.label} id = ${audioDevice.deviceId}`
+);
 // audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2NbxqgowQJLWbwo+5ablCVVJwRM3k=
 ```
 
