@@ -480,7 +480,7 @@ The conformance criteria under this guideline relate to ways in which users can 
     </td>
     </tr>
     <tr>
-    <td> 2.4.13 Focus Appearance (AAA)</td>
+    <td> 2.4.13 Focus appearance (AAA)</td>
     <td>
     <p>
     When the keyboard focus indicator is visible, an area of the focus indicator meets all the following:
