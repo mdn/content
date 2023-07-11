@@ -485,7 +485,7 @@ The conformance criteria under this guideline relate to ways in which users can 
     <p>
     When the keyboard focus indicator is visible, an area of the focus indicator meets all the following:
     <ul>
-<li> Must be at least as large as the area of a 2 CSS pixel thick perimeter of the unfocused component or sub-component</li>
+<li>Must be at least as large as the area of a <code>2px</code> thick perimeter of the unfocused component or sub-component.</li>
 <li> Needs to have a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused states</li>
 </ul>
 <p> The exceptions to this are:
