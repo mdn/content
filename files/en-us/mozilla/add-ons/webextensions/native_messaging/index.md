@@ -25,7 +25,7 @@ Support for native messaging in extensions is mostly compatible with Chrome, wit
 - The app manifest lists `allowed_extensions` as an array of app IDs, while Chrome lists `allowed_origins`, as an array of `"chrome-extension"` URLs.
 - The app manifest is stored in a different location [compared to Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location).
 
-There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
+There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/main/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
 
 ## Setup
 

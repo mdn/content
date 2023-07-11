@@ -30,7 +30,7 @@ In the final couple of articles in the series, we will solidify your tooling kno
 
 There really are unlimited combinations of tools and ways to use them, what you see in this article and the next is only _one_ way that the featured tools can be used for a project.
 
-> **Note:** It's also worth repeating that not all of these tools need to be run on the command line. Many of today's code editors (such as VS Code and Atom) have integration support for a _lot_ of tools via plugins.
+> **Note:** It's also worth repeating that not all of these tools need to be run on the command line. Many of today's code editors (such as VS Code) have integration support for a _lot_ of tools via plugins.
 
 ## Introducing our case study
 

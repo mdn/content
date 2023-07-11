@@ -32,14 +32,14 @@ The downloads API also provides features to cancel, pause, resume, erase, and re
 
 To use this API, you need to have the `"downloads"` [API permission](/en-US/docs/Web/API/Permissions#api_permissions) specified in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-Example: [Latest download](https://github.com/mdn/webextensions-examples/tree/master/latest-download)
+Example: [Latest download](https://github.com/mdn/webextensions-examples/tree/main/latest-download)
 API reference: [downloads API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
 
 ## Open files in an extension using a file picker
 
 If you want to work with a file from the user's computer one option is to let the user select a file using the computer's file browser. Either create a new page or inject code into an existing page to use the `file` type of the HTML `input` element to offer the user a file picker. Once the user has picked a file or files, the script associated with the page can access the content of the file using the [DOM File API](/en-US/docs/Web/API/File), in the same way a web application does.
 
-Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
+Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/main/imagify)
 Guide: [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | [DOM File API](/en-US/docs/Web/API/File)
 
@@ -49,7 +49,7 @@ API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | 
 
 The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a 'drop zone' that fits with your UI, then add listeners for the [`dragenter`](/en-US/docs/Web/API/Document/dragenter_event), [`dragover`](/en-US/docs/Web/API/Document/dragover_event), and [`drop`](/en-US/docs/Web/API/Document/drop_event) events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the `dataTransfer` property using [`DataTransfer.files`](/en-US/docs/Web/API/DataTransfer/files). Your code can then access and manipulate the files using the [DOM File API](/en-US/docs/Web/API/File).
 
-Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
+Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/main/imagify)
 Guides: [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) | [File drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
 API references: [DOM File API](/en-US/docs/Web/API/File)
 
@@ -70,11 +70,11 @@ The key features of the library are:
     - get to retrieve a file or blob from the database.
     - remove to delete a file or blob from the database.
 
-The [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain) example illustrates how to use most of these features.
+The [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/main/store-collected-images/webextension-plain) example illustrates how to use most of these features.
 
 The Store Collected Images example lets users add images to a collection using an option on the image context menu. Selected images are collected in a popup and can be saved to a named collection. A toolbar button ({{WebExtAPIRef("browserAction")}}) opens a navigate collection page, on which the user can view and delete saved images, with a filter option to narrow choices. [See the example in action](https://www.youtube.com/watch?v=t6aVqMMe2Rc&ab_channel=LucaGreco).
 
-The workings of the library can be understood by viewing [image-store.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/utils/image-store.js) in /utils/:
+The workings of the library can be understood by viewing [image-store.js](https://github.com/mdn/webextensions-examples/blob/main/store-collected-images/webextension-plain/utils/image-store.js) in /utils/:
 
 ### Creating the store and saving the images
 
@@ -112,7 +112,7 @@ export async function loadStoredImages(filter) {
 
 `loadStoredImages()` is called when the user clicks view or reload in the navigate collection page. `getFileStorage()` opens the `"stored-images"` database, then `imagesStore.list()` gets a filtered list of the stored images. This list is then used to retrieve images with `imagesStore.get()` and build a list to return to the UI.
 
-Note the use of [`URL.createObjectURL(blob)`](/en-US/docs/Web/API/URL/createObjectURL) to create a URL that references the image blob. This URL is then used in the UI ([navigate-collection.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js)[collection.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js)) to display the image.
+Note the use of [`URL.createObjectURL(blob)`](/en-US/docs/Web/API/URL/createObjectURL) to create a URL that references the image blob. This URL is then used in the UI ([navigate-collection.js](https://github.com/mdn/webextensions-examples/blob/main/store-collected-images/webextension-plain/navigate-collection.js)) to display the image.
 
 ### Delete collected images
 
@@ -132,7 +132,7 @@ Note the use of [`URL.revokeObjectURL()`](/en-US/docs/Web/API/URL/revokeObjectUR
 
 Once the blob URL has been revoked, any attempt to load it will result in an error. For example, if the blob URL was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob URLs from generated HTML elements when the blob URL is revoked.
 
-Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
+Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/main/store-collected-images/webextension-plain)
 API References: [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > **Note:** You can also use the full Web [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage).
@@ -152,6 +152,6 @@ To add the file or blob you want the native application to process use [`JSON.st
 
 To use this method the extension must request the `"nativeMessaging"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) in its `manifest.json` file. Where optional permission is used, remember to check that permission has being granted and where necessary request permission from the user with the {{WebExtAPIRef("permissions")}} API. Reciprocally, the native application must grant permission for the extension by including its ID in the `"allowed_extensions"` field of the app manifest.
 
-Example: [Native Messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) (illustrates simple messaging only)
+Example: [Native Messaging](https://github.com/mdn/webextensions-examples/tree/main/native-messaging) (illustrates simple messaging only)
 Guides: [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
 API references: [runtime API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime)

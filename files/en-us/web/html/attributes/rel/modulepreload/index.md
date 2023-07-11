@@ -48,7 +48,7 @@ The HTML for the example below shows how `main.js` is fetched in a `<script>` el
 Only after `main.js` has loaded does the browser discover and fetch the two dependency modules.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -69,7 +69,7 @@ This is much faster because the three modules all start downloading asynchronous
 By the time `main.js` has been parsed and its dependencies are known, they have already been fetched and downloaded.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

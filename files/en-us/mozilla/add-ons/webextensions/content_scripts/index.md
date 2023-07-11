@@ -307,7 +307,7 @@ function notify(message) {
 }
 ```
 
-(This example code is lightly adapted from the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example on GitHub.)
+(This example code is lightly adapted from the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) example on GitHub.)
 
 ### Connection-based messaging
 
