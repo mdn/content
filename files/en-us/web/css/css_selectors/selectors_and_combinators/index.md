@@ -97,7 +97,7 @@ h2 + p + p {
   text-decoration: underline;
 }
 #myId > .myClass {
-  font-family: monospace;
+  outline: 1px dashed #c0ffee;
 }
 > p {
   font-size: 1.1rem;
@@ -114,7 +114,7 @@ h2 + p + p {
 <p>The second paragraph is red. This and the following paragraphs are italic.</p>
 <p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
 <p class="myClass">
-  Underlined, as this both is myClass and is a child of #myId. It is also
+  Has an outline, as this both is myClass and is a child of #myId. It is also
   italic and 1.1rem.
 </p>
 ```
