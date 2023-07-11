@@ -96,10 +96,11 @@ audio.setSinkId(audioDevice.deviceId);
 });
 ```
 
-Note that the output details might look something like this:
+Note that if you log the output details, they might look something like this:
 
-```bash
-audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2NbxqgowQJLWbwo+5ablCVVJwRM3k=
+```js
+console.log(`${audioDevice.kind}: ${audioDevice.label} id = ${audioDevice.deviceId}`);
+// audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2NbxqgowQJLWbwo+5ablCVVJwRM3k=
 ```
 
 ## Specifications
