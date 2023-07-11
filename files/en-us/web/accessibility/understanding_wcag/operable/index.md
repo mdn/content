@@ -473,7 +473,7 @@ The conformance criteria under this guideline relate to ways in which users can 
     <tr>
     <td> 2.4.12 Focus not obscured (Enhanced) (AAA) </td>
     <td>
-    <p> Follows the rules as 2.4.11 except if the interface is configurable enough to enable the user to content such as toolbars and non-modal dialogs, then only the initial positions of user-movable content are considered for testing and meeting of this standard.</p>
+    <p> Follows the rules as 2.4.11 except when a user interface component receives focus, no part of the component can be hidden by author-created content. If the interface is configurable, only the initial positions of user-movable content are considered for testing and meeting of this standard.</p>
     </td>
     <td>
     <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced"> Understanding focus not obscured (Enhanced) (Level AAA) </a> to learn more about this standard.</p> </td>
