@@ -74,12 +74,8 @@ Logs the target URLs and extra transition information for `onCommitted`, if the 
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCommitted(details) {
   console.log(`target URL: ${details.url}`);

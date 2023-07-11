@@ -70,12 +70,8 @@ Logs the target URLs for `onBeforeNavigate`, if the target's hostname contains "
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnBefore(details) {
   console.log(`onBeforeNavigate to: ${details.url}`);

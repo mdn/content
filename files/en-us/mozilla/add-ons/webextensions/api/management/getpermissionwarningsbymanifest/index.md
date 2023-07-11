@@ -42,11 +42,11 @@ Log the permission warnings for the given manifest file:
 
 ```js
 let manifest = {
-  "manifest_version": 2,
-  "name": "test",
-  "version": "1.0",
-  "permissions": ["management", "<all_urls>"]
-}
+  manifest_version: 2,
+  name: "test",
+  version: "1.0",
+  permissions: ["management", "<all_urls>"],
+};
 
 let manifestString = JSON.stringify(manifest);
 
