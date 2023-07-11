@@ -473,6 +473,7 @@ This guideline centers around helping users enter correct information when requi
         input situations, not just ones involving sensitive data.
       </td>
       <td>Again, see 3.3.4.</td>
+      </tr>
       <tr>
       <td> 3.3.7 Redundant Entry (A) </td>
       <td>
