@@ -44,8 +44,7 @@ function listener(details) {
       filter.resume();
       filter.disconnect();
     }, 1000);
-
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(

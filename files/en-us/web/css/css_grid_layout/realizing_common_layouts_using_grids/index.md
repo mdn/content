@@ -25,7 +25,10 @@ The markup is a container with elements inside for a header, footer, main conten
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 
 .wrapper > * {
@@ -161,7 +164,10 @@ If you have been working with one of the many frameworks or grid systems you may
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -235,7 +241,10 @@ To see how this layout method works in practice, we can create the same layout t
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 
 .wrapper > * {
@@ -427,7 +436,10 @@ img {
   display: block;
 }
 body {
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 a:link,
 a:visited {
@@ -534,7 +546,10 @@ img {
   display: block;
 }
 body {
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 a:link,
 a:visited {

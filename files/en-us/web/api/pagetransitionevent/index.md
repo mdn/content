@@ -28,7 +28,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <body></body>
 </html>

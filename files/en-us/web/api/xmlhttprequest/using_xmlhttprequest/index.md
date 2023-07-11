@@ -224,7 +224,7 @@ req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
   console.log(
-    "The transfer finished (although we don't know if it succeeded or not)."
+    "The transfer finished (although we don't know if it succeeded or not).",
   );
 }
 ```
@@ -244,7 +244,7 @@ function getHeaderTime() {
 const req = new XMLHttpRequest();
 req.open(
   "HEAD", // use HEAD when you only need the headers
-  "yourpage.html"
+  "yourpage.html",
 );
 req.onload = getHeaderTime;
 req.send();
@@ -257,7 +257,7 @@ Let's create two functions:
 ```js
 function getHeaderTime() {
   const lastVisit = parseFloat(
-    window.localStorage.getItem(`lm_${this.filepath}`)
+    window.localStorage.getItem(`lm_${this.filepath}`),
   );
   const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -284,8 +284,8 @@ And to test:
 ifHasChanged("yourpage.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified
-    ).toLocaleString()}!`
+      nModified,
+    ).toLocaleString()}!`,
   );
 });
 ```

@@ -101,7 +101,7 @@ async function init() {
   };
 
   const renderPipeline = await device.createRenderPipelineAsync(
-    pipelineDescriptor
+    pipelineDescriptor,
   );
 
   // ...

@@ -175,7 +175,8 @@ const targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-const ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+const ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -215,7 +216,8 @@ const targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-const ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+const ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".

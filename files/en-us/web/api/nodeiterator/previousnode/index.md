@@ -44,7 +44,7 @@ const nodeIterator = document.createNodeIterator(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 previousNode = nodeIterator.previousNode(); // same result, since we backtracked to the previous node

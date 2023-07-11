@@ -31,7 +31,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 nodeFilter = treeWalker.filter; // document.body in this case
 ```

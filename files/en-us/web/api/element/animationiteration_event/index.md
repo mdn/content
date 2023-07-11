@@ -115,10 +115,10 @@ animated.onanimationiteration = () => {
 ```js
 const animation = document.querySelector("p.animation");
 const animationEventLog = document.querySelector(
-  ".animation-example>.event-log"
+  ".animation-example>.event-log",
 );
 const applyAnimation = document.querySelector(
-  ".animation-example>button.activate"
+  ".animation-example>button.activate",
 );
 let iterationCount = 0;
 

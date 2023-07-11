@@ -24,7 +24,7 @@ const anchors = document.getElementsByTagName("a");
 for (const anchor of anchors) {
   const list = anchor.relList;
   console.log(
-    `New anchor node found with ${list.length} link types in relList.`
+    `New anchor node found with ${list.length} link types in relList.`,
   );
   list.forEach((relValue) => {
     console.log(relValue);

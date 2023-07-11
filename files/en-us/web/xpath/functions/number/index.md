@@ -1,6 +1,7 @@
 ---
 title: number
 slug: Web/XPath/Functions/number
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

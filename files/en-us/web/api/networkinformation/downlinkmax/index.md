@@ -39,7 +39,7 @@ function logConnectionType() {
   }
 
   console.log(
-    `Current connection type: ${connectionType} (downlink max: ${downlinkMax})`
+    `Current connection type: ${connectionType} (downlink max: ${downlinkMax})`,
   );
 }
 

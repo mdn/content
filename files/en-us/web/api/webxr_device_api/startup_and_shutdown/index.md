@@ -231,8 +231,8 @@ async function runSession(session) {
   worldData.referenceSpace = referenceSpace.getOffsetReferenceSpace(
     new XRRigidTransform(
       worldData.playerSpawnPosition,
-      worldData.playerSpawnOrientation
-    )
+      worldData.playerSpawnOrientation,
+    ),
   );
   worldData.animationFrameRequestID =
     worldData.session.requestAnimationFrame(onDrawFrame);

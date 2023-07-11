@@ -46,7 +46,7 @@ This code snippet creates an `XRRigidTransform` to specify the offset and orient
 xrSession.requestReferenceSpace(refSpaceType).then((refSpace) => {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-    new XRRigidTransform(viewerStartPosition, cubeOrientation)
+    new XRRigidTransform(viewerStartPosition, cubeOrientation),
   );
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 });

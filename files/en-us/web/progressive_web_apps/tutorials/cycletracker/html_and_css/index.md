@@ -25,7 +25,7 @@ In the next sections, we'll set up a [local development environment](/en-US/docs
 Our static site HTML, with placeholder {{HTMLElement("link")}} and {{HTMLElement("script")}} elements for yet-to-be-created external CSS and JavaScript files, is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -65,13 +65,13 @@ Even if the HTML in `index.html` is familiar to you, we recommend reading thru t
 The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute defining the primary language of the page.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <!-- the <head> and <body> will go here -->
 </html>

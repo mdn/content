@@ -65,7 +65,7 @@ function draw() {
     ctx.fillStyle = "#fff";
     ctx.translate(
       75 - Math.floor(Math.random() * 150),
-      75 - Math.floor(Math.random() * 150)
+      75 - Math.floor(Math.random() * 150),
     );
     drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();

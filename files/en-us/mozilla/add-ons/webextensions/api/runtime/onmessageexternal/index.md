@@ -72,10 +72,7 @@ In this example the extension "blue\@mozilla.org" sends a message to the extensi
 // sender: browser.runtime.id === "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
-browser.runtime.sendMessage(
-    "red@mozilla.org",
-    "my message"
-  );
+browser.runtime.sendMessage("red@mozilla.org", "my message");
 ```
 
 ```js

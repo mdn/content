@@ -57,7 +57,7 @@ const subject = "World";
 const header = React.createElement(
   "header",
   null,
-  React.createElement("h1", null, "Hello, ", subject, "!")
+  React.createElement("h1", null, "Hello, ", subject, "!"),
 );
 ```
 

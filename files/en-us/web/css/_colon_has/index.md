@@ -7,7 +7,7 @@ browser-compat: css.selectors.has
 
 {{CSSRef}}
 
-The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
+The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
 
 ```css
 /* Selects an h1 heading with a
@@ -229,7 +229,8 @@ Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz
 ## See also
 
 - [`:is()`](/en-US/docs/Web/CSS/:is), [`:where()`](/en-US/docs/Web/CSS/:where), [`:not()`](/en-US/docs/Web/CSS/:not)
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
-- [CSS combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+- [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
+- [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors/)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)

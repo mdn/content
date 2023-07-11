@@ -74,10 +74,10 @@ registerPaint(
         0,
         size.height / 3,
         size.width * 0.4 - props.get("--widthSubtractor"),
-        size.height * 0.6
+        size.height * 0.6,
       );
     }
-  }
+  },
 );
 ```
 

@@ -92,7 +92,10 @@ function logOnCreatedNavigationTarget(details) {
   console.log(details.sourceFrameId);
 }
 
-browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigationTarget, filter);
+browser.webNavigation.onCreatedNavigationTarget.addListener(
+  logOnCreatedNavigationTarget,
+  filter
+);
 ```
 
 {{WebExtExamples}}
