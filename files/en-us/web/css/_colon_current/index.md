@@ -17,7 +17,15 @@ The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 ## Syntax
 
-{{csssyntax}}
+```css-nolint
+:current {
+  /* ... */
+}
+
+:current(<compound-selector-list>) {
+  /* ... */
+}
+```
 
 ## Examples
 
