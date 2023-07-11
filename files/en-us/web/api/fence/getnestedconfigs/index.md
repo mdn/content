@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-An array of {{domxref("FencedFrameConfig")}} objects, or `null` if there are no nested `<fencedframe>` elements embedded inside the current `<fencedframe>`.
+An array of {{domxref("FencedFrameConfig")}} objects, or `null` if there are no nested `<fencedframe>` elements embedded inside the current `<fencedframe>` (or if the current `<fencedframe>`'s {{domxref("FencedFrameConfig")}} has its internal `nestedConfigs.visibility` property set to `"opaque"`).
 
 ## Examples
 
