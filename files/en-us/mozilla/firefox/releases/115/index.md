@@ -6,25 +6,19 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 115 that affect developers. Firefox 115 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [July 04, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 115 that affect developers. Firefox 115 was released on July 04, 2023.
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
 - The [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) keyword for the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute of the {{HTMLElement("link")}} element is now supported.
   This allows early (and asynchronous) fetching of [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) and their dependencies in parallel, which are then stored in the document's module map ([Firefox bug 1425310](https://bugzil.la/1425310)).
 
-#### Removals
-
 ### CSS
 
 - The CSS {{cssxref("animation-composition")}} property is now supported by default. You can use this property to specify the composite operation to use when multiple animations affect the same property simultaneously. ([Firefox bug 1823862](https://bugzil.la/1823862)).
 - The `supports-conditions` in the CSS {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) `supports()` function is now supported by default. This feature allows stylesheets to be imported only if the specified feature is supported in the user's browser. ([Firefox bug 1830779](https://bugzil.la/1830779)).
-
-#### Removals
 
 ### JavaScript
 
@@ -34,22 +28,14 @@ This article provides information about the changes in Firefox 115 that affect d
   These methods return a new array with elements that have been shallow copied (similarly named methods without the `to` prefix modify the array elements in place).
   ([Firefox bug 1811057](https://bugzil.la/1811057)).
 
-#### Removals
-
 ### SVG
 
-#### Removals
+No notable changes.
 
 ### HTTP
 
 - The [`Sec-Purpose`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is now included in requests to {{Glossary("Prefetch")}} resources.
   This allows servers to provide any special handling that might be needed, such as adjusting the caching expiry for the request ([Firefox bug 1836328](https://bugzil.la/1836328)).
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -62,17 +48,9 @@ This article provides information about the changes in Firefox 115 that affect d
   This allows matching a search parameter on both the `name` and `value`, making it possible to work with query strings that contain multiple search parameters that have the same name.
   ([Firefox bug 1831587](https://bugzil.la/1831587)).
 
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
 #### Removals
 
 - The deprecated `mozPreservesPitch` alias of [HTMLMediaElement.preservesPitch](/en-US/docs/Web/API/HTMLMediaElement/preservesPitch) has been disabled by default, and may be fully removed in a future release ([Firefox bug 1831205](https://bugzil.la/1831205)).
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -93,10 +71,6 @@ This article provides information about the changes in Firefox 115 that affect d
 - To support its deprecation from Manifest V3 extensions, manifest key property [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) defaults to `false` in [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) and [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) for Manifest V3 extensions ([Firefox bug 1830710](https://bugzil.la/1830710)). See [Manifest v3 migration](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for information about transitioning from `browser_style` in Manifest V3 extensions.
 - The {{WebExtAPIRef("commands.onChanged")}} event, which enables web extensions to listen for changes to command shortcuts, has been added ([Firefox bug 1801531](https://bugzil.la/1801531)).
 - Support has been added for {{WebExtAPIRef("storage.session")}}, which provides the ability to store data in memory for the duration of the browser session ([Firefox bug 18237131](https://bugzil.la/1823713)).
-
-### Removals
-
-### Other
 
 ## Older versions
 
