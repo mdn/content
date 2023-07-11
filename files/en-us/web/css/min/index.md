@@ -44,7 +44,7 @@ When using `min()` to set a maximum font size, ensure that the font can still be
 
 ### Setting a maximum size for a label and input
 
-Another use case for CSS functions is to set a maximum size on responsive form controls: enabling the width of labels and inputs to shrink as the width of the form shrinks.
+Another use case for `min()` is to set a maximum size on responsive form controls: enabling the width of labels and inputs to shrink as the width of the form shrinks.
 
 Let's look at some CSS:
 
