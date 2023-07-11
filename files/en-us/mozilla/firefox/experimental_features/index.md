@@ -1063,48 +1063,6 @@ The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for 
   </tbody>
 </table>
 
-### Audio Output API
-
-#### MediaDevices.selectAudioOutput()
-
-{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt on desktop systems, from which users can select their desired audio output. See [Firefox bug 1699026](https://bugzil.la/1699026).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>88</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>media.setsinkid.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### WebRTC and media
 
 The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
