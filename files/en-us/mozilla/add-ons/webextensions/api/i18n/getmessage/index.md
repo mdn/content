@@ -15,7 +15,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ```js-nolint
 browser.i18n.getMessage(
-  messageName,  // string
+  messageName, // string
   substitutions // optional any
 )
 ```
@@ -60,9 +60,9 @@ This would work with a \_locales/en/messages.json file containing:
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }

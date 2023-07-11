@@ -25,7 +25,7 @@ In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.set
 ```js
 browser.omnibox.setDefaultSuggestion({
   description: `Search the Firefox codebase
-    (e.g. "hello world" | "path:omnibox.js onInputChanged")`
+    (e.g. "hello world" | "path:omnibox.js onInputChanged")`,
 });
 ```
 
@@ -33,14 +33,12 @@ You can then add the code to provide the customized content by listening for {{W
 
 ```js
 browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
-  let headers = new Headers({"Accept": "application/json"});
-  let init = {method: 'GET', headers};
+  let headers = new Headers({ Accept: "application/json" });
+  let init = { method: "GET", headers };
   let url = buildSearchURL(text);
   let request = new Request(url, init);
 
-  fetch(request)
-    .then(createSuggestionsFromResponse)
-    .then(addSuggestions);
+  fetch(request).then(createSuggestionsFromResponse).then(addSuggestions);
 });
 ```
 
@@ -57,13 +55,13 @@ browser.omnibox.onInputEntered.addListener((text, disposition) => {
   }
   switch (disposition) {
     case "currentTab":
-      browser.tabs.update({url});
+      browser.tabs.update({ url });
       break;
     case "newForegroundTab":
-      browser.tabs.create({url});
+      browser.tabs.create({ url });
       break;
     case "newBackgroundTab":
-      browser.tabs.create({url, active: false});
+      browser.tabs.create({ url, active: false });
       break;
   }
 });
