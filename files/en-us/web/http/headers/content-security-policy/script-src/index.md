@@ -75,7 +75,7 @@ document.getElementById("btn").addEventListener("click", doSomething);
 If you cannot replace inline event handlers, you can use the `'unsafe-hashes'` source expression to allow them.
 See [Unsafe hashes](#unsafe_hashes) for more information.
 
-### Whitelisting external scripts using a hash
+### Whitelisting external scripts using hashes
 
 Allowing trusted domains, as shown in the section above, is a broad-brushed approach for specifying the locations from which code can safely be loaded.
 This is a pragmatic approach, in particular when your site uses many resources and you have confidence that the trusted site will not be compromised.
