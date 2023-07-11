@@ -26,7 +26,10 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 -webkit-mask-position-y: -1cm;
 
 /* Multiple values */
--webkit-mask-position-y: 50px, 25%, -3em;
+-webkit-mask-position-y:
+  50px,
+  25%,
+  -3em;
 
 /* Global values */
 -webkit-mask-position-y: inherit;

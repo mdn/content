@@ -1,6 +1,7 @@
 ---
 title: CSS building blocks
 slug: Learn/CSS/Building_blocks
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

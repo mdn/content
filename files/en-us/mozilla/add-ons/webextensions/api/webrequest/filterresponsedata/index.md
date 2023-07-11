@@ -56,7 +56,7 @@ filter.onstop = (event) => {
 };
 ```
 
-This example, taken from the [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response) example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:
+This example, taken from the [http-response](https://github.com/mdn/webextensions-examples/tree/main/http-response) example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:
 
 ```js
 function listener(details) {
@@ -68,10 +68,10 @@ function listener(details) {
     let str = decoder.decode(event.data, {stream: true});
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension Example');
+    str = str.replace(/Example/g, "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
-  }
+  };
 
   return {};
 }

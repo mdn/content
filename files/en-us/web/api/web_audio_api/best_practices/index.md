@@ -54,7 +54,7 @@ button.addEventListener(
     const audioCtx = new AudioContext();
     // Do something with the audio context
   },
-  false
+  false,
 );
 ```
 
@@ -72,7 +72,7 @@ button.addEventListener(
       audioCtx.resume();
     }
   },
-  false
+  false,
 );
 ```
 

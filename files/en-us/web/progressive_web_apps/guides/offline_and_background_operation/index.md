@@ -1,6 +1,7 @@
 ---
 title: Offline and background operation
 slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
+page-type: guide
 ---
 
 {{PWASidebar}}
@@ -112,7 +113,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/fallback.html",
-    })
+    }),
   );
 });
 ```
@@ -212,7 +213,7 @@ async function requestBackgroundFetch(movieData) {
       icons: movieIcons,
       title: "Downloading my movie",
       downloadTotal: 60 * 1024 * 1024,
-    }
+    },
   );
   //...
 }
@@ -257,7 +258,7 @@ self.addEventListener("backgroundfetchsuccess", (event) => {
     const registration = event.registration;
     const records = await registration.matchAll();
     const responsePromises = records.map(
-      async (record) => await record.responseReady
+      async (record) => await record.responseReady,
     );
 
     const responses = Promise.all(responsePromises);
@@ -444,8 +445,8 @@ In this section we'll outline these steps. Several of these APIs require explici
 
 ### Guides
 
-- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/) on web.dev (September 22, 2017)
-- [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/) on web.dev (July 28, 2022)
-- [The Periodic Background Sync API](https://developer.chrome.com/articles/periodic-background-sync/) on web.dev (August 18, 2020)
+- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/) on web.dev (2017)
+- [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/) on web.dev (2022)
+- [The Periodic Background Sync API](https://developer.chrome.com/articles/periodic-background-sync/) on web.dev (2020)
 - [Notifications](https://web.dev/notifications/) on web.dev
-- [PWA with offline streaming](https://web.dev/pwa-with-offline-streaming/) on web.dev (July 5, 2021)
+- [PWA with offline streaming](https://web.dev/pwa-with-offline-streaming/) on web.dev (2021)

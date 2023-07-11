@@ -71,7 +71,7 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
   - : Sets the stencil reference value using during stencil tests with the `"replace"` stencil operation (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the properties defining the various stencil operations).
 
 - {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}} {{Experimental_Inline}}
-  - : Sets the current {{domxref("GPUBuffer")}} that will provide vertex data for subsequent drawing commands.
+  - : Sets or unsets the current {{domxref("GPUBuffer")}} that will provide vertex data for subsequent drawing commands.
 - {{domxref("GPURenderPassEncoder.setViewport", "setViewport()")}} {{Experimental_Inline}}
   - : Sets the viewport used during the rasterization stage to linearly map from normalized device coordinates to viewport coordinates.
 

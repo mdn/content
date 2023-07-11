@@ -91,7 +91,7 @@ const p = new Promise((res, rej) => {
 navigator.locks.request(
   "my_resource",
   // Lock is acquired.
-  (lock) => p // Now lock will be held until either resolve() or reject() is called.
+  (lock) => p, // Now lock will be held until either resolve() or reject() is called.
 );
 ```
 

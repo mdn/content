@@ -79,7 +79,7 @@ To run a series of asynchronous operations sequentially or concurrently, see [pr
 
 ### Using forEach() on sparse arrays
 
-```js
+```js-nolint
 const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 
@@ -247,7 +247,7 @@ console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ### Calling forEach() on non-array objects
 
-The `forEach()` method reads the `length` property of `this` and then accesses each integer index.
+The `forEach()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -255,6 +255,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by forEach() since length is 3
 };
 Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 // 2

@@ -1,6 +1,7 @@
 ---
 title: Set Timeouts
 slug: Web/WebDriver/Commands/SetTimeouts
+page-type: webdriver-command
 browser-compat: webdriver.commands.SetTimeouts
 ---
 

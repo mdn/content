@@ -44,7 +44,7 @@ const transformFeedbackOutputs = ["gl_Position", "anotherOutput"];
 gl.transformFeedbackVaryings(
   shaderProg,
   transformFeedbackOutputs,
-  gl.INTERLEAVED_ATTRIBS
+  gl.INTERLEAVED_ATTRIBS,
 );
 gl.linkProgram(shaderProg);
 ```

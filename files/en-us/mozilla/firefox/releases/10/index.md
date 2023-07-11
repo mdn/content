@@ -1,6 +1,7 @@
 ---
 title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

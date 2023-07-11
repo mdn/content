@@ -49,7 +49,7 @@ customElements.define(
 
       let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
     }
-  }
+  },
 );
 ```
 

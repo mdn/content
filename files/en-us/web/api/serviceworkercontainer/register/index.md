@@ -95,7 +95,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");
@@ -120,7 +120,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");
@@ -143,7 +143,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");
@@ -164,6 +164,6 @@ service worker's location.
 
 ## See also
 
-- [ServiceWorkerRegistration: `unregister()` method](/en-US/docs/Web/API/ServiceWorkerRegistration/unregister) method
+- [ServiceWorkerRegistration: `unregister()` method](/en-US/docs/Web/API/ServiceWorkerRegistration/unregister)
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)

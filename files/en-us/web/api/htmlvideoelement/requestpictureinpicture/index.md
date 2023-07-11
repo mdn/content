@@ -52,7 +52,7 @@ function enterPictureInPicture() {
     pictureInPictureWindow.addEventListener(
       "resize",
       () => onPipWindowResize(),
-      false
+      false,
     );
   });
 }

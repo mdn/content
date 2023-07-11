@@ -60,7 +60,7 @@ const alarm = {
         this.remind(msg);
       },
       1000,
-      "Wake up!"
+      "Wake up!",
     );
   },
 

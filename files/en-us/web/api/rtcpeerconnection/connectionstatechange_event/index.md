@@ -58,7 +58,7 @@ peerConnection.addEventListener(
         break;
     }
   },
-  false
+  false,
 );
 ```
 

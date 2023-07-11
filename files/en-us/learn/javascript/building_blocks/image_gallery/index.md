@@ -1,6 +1,7 @@
 ---
 title: Image gallery
 slug: Learn/JavaScript/Building_blocks/Image_gallery
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

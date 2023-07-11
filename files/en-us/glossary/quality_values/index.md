@@ -40,12 +40,6 @@ text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 
 Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifiers like `text/html;level=1`. These increase the specificity of the value. Their use is extremely rare.
 
-## Browser-specific information
-
-### Firefox
-
-Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ([Firefox bug 672448](https://bugzil.la/672448)).
-
 ## More information
 
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers) using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}.

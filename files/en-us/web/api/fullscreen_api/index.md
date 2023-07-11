@@ -92,7 +92,7 @@ document.addEventListener(
       toggleFullScreen();
     }
   },
-  false
+  false,
 );
 ```
 

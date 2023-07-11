@@ -69,16 +69,15 @@ This example registers the `defaultCode` content script for all `.org` URLs:
 
 ```js
 const defaultHosts = "*://*.org/*";
-const defaultCode = "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
+const defaultCode =
+  "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
 
 async function register(hosts, code) {
-
   return await browser.contentScripts.register({
     matches: [hosts],
     js: [{code}],
-    runAt: "document_idle"
+    runAt: "document_idle",
   });
-
 }
 
 let registered = register(defaultHosts, defaultCode);
@@ -88,10 +87,10 @@ This code registers the JS file at content_scripts/example.js:
 
 ```js
 const scriptObj = await browser.contentScripts.register({
-  "js": [{file: "/content_scripts/example.js"}],
-  "matches": ["<all_urls>"],
-  "allFrames": true,
-  "runAt": "document_start"
+  js: [{ file: "/content_scripts/example.js" }],
+  matches: ["<all_urls>"],
+  allFrames: true,
+  runAt: "document_start",
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

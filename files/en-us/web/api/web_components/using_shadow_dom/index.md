@@ -13,7 +13,7 @@ An important aspect of web components is encapsulation — being able to keep th
 This article assumes you are already familiar with the concept of the [DOM (Document Object Model)](/en-US/docs/Web/API/Document_Object_Model/Introduction) — a tree-like structure of connected nodes that represents the different elements and strings of text appearing in a markup document (usually an HTML document in the case of web documents). As an example, consider the following HTML fragment:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -67,9 +67,9 @@ const shadowClosed = elementRef.attachShadow({ mode: "closed" });
 const myShadowDom = myCustomElem.shadowRoot;
 ```
 
-If you attach a shadow root to a custom element with `mode: closed` set, you won't be able to access the shadow DOM from the outside — `myCustomElem.shadowRoot` returns `null`. This is the case with built in elements that contain shadow DOMs, such as `<video>`.
+If you attach a shadow root to a custom element with `mode: "closed"` set, you won't be able to access the shadow DOM from the outside — `myCustomElem.shadowRoot` returns `null`. This is the case with built in elements that contain shadow DOMs, such as `<video>`.
 
-> **Note:** As [this blog post shows](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af), it is actually fairly easy to work around closed shadow DOMs, and the hassle to completely hide them is often more than it's worth.
+Note that within the same JavaScript realm, this is not a fully secure way to hide the shadow root, because code can override `Element.prototype.attachShadow` so it always uses `mode: "open"`, as [this blog post shows](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af). However, unless you are in an environment where malicious code manipulating globals is a concern, you likely don't have to worry about this. Furthermore, because web extensions don't have access to the window's globals, this still reliably protects the shadow DOM from web extensions.
 
 If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:
 

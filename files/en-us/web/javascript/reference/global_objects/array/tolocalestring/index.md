@@ -76,7 +76,7 @@ console.log([1, , 3].toLocaleString()); // '1,,3'
 
 ### Calling toLocaleString() on non-array objects
 
-The `toLocaleString()` method reads the `length` property of `this` and then accesses each integer index.
+The `toLocaleString()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -84,6 +84,7 @@ const arrayLike = {
   0: 1,
   1: 2,
   2: 3,
+  3: 4, // ignored by toLocaleString() since length is 3
 };
 console.log(Array.prototype.toLocaleString.call(arrayLike));
 // 1,2,3

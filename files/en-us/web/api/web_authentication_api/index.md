@@ -178,9 +178,8 @@ If you wish to authenticate with `get()` in an `<iframe>`, there are a couple of
 
 - [Mozilla Demo](https://webauthn.bin.coffee/) website and its [source code](https://github.com/jcjones/webauthn.bin.coffee).
 - [Google Demo](https://try-webauthn.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
-- [https://webauthn.io/ Demo](https://github.com/duo-labs/webauthn.io) website and its [source code](https://github.com/duo-labs/webauthn.io).
+- [WebAuthn.io demo](https://webauthn.io/) website and its [source code](https://github.com/duo-labs/webauthn.io).
 - [github.com/webauthn-open-source](https://github.com/webauthn-open-source) and its [client source code](https://github.com/webauthn-open-source/webauthn-simple-app) and [server source code](https://github.com/webauthn-open-source/fido2-lib)
-- [OWASP Single Sign-On](https://owasp.org/www-project-sso/)
 
 ### Usage example
 

@@ -1,6 +1,7 @@
 ---
 title: Web audio codec guide
 slug: Web/Media/Formats/Audio_codecs
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

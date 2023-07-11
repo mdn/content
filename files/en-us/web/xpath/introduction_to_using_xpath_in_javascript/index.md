@@ -1,6 +1,7 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
+page-type: guide
 ---
 
 {{XsltSidebar}}
@@ -19,7 +20,7 @@ const xpathResult = document.evaluate(
   contextNode,
   namespaceResolver,
   resultType,
-  result
+  result,
 );
 ```
 
@@ -50,7 +51,7 @@ We create a namespace resolver using the `createNSResolver` method of the [docum
 const nsResolver = document.createNSResolver(
   contextNode.ownerDocument === null
     ? contextNode.documentElement
-    : contextNode.ownerDocument.documentElement
+    : contextNode.ownerDocument.documentElement,
 );
 ```
 
@@ -61,7 +62,7 @@ const xpEvaluator = new XPathEvaluator();
 const nsResolver = xpEvaluator.createNSResolver(
   contextNode.ownerDocument === null
     ? contextNode.documentElement
-    : contextNode.ownerDocument.documentElement
+    : contextNode.ownerDocument.documentElement,
 );
 ```
 
@@ -101,11 +102,11 @@ const paragraphCount = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 
 console.log(
-  `This document contains ${paragraphCount.numberValue} paragraph elements.`
+  `This document contains ${paragraphCount.numberValue} paragraph elements.`,
 );
 ```
 
@@ -117,11 +118,11 @@ const paragraphCount = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 
 console.log(
-  `This document contains ${paragraphCount.stringValue} paragraph elements.`
+  `This document contains ${paragraphCount.stringValue} paragraph elements.`,
 );
 ```
 
@@ -154,7 +155,7 @@ const iterator = document.evaluate(
   documentNode,
   null,
   XPathResult.UNORDERED_NODE_ITERATOR_TYPE,
-  null
+  null,
 );
 
 try {
@@ -186,7 +187,7 @@ const nodesSnapshot = document.evaluate(
   documentNode,
   null,
   XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-  null
+  null,
 );
 
 for (let i = 0; i < nodesSnapshot.snapshotLength; i++) {
@@ -211,11 +212,11 @@ const firstPhoneNumber = document.evaluate(
   documentNode,
   null,
   XPathResult.FIRST_ORDERED_NODE_TYPE,
-  null
+  null,
 );
 
 console.log(
-  `The first phone number found is ${firstPhoneNumber.singleNodeValue.textContent}`
+  `The first phone number found is ${firstPhoneNumber.singleNodeValue.textContent}`,
 );
 ```
 
@@ -241,7 +242,7 @@ const headings = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 
@@ -299,7 +300,7 @@ const xmlDoc = req.responseXML;
 const nsResolver = xmlDoc.createNSResolver(
   xmlDoc.ownerDocument === null
     ? xmlDoc.documentElement
-    : xmlDoc.ownerDocument.documentElement
+    : xmlDoc.ownerDocument.documentElement,
 );
 
 const personIterator = xmlDoc.evaluate(
@@ -307,7 +308,7 @@ const personIterator = xmlDoc.evaluate(
   xmlDoc,
   nsResolver,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 
@@ -343,7 +344,7 @@ document.evaluate(
   document,
   nsResolver,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 

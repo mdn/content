@@ -76,7 +76,7 @@ This example uses `whatToShow` to transform text contents into upper case. Note 
 ```js
 const treeWalker = document.createTreeWalker(
   document.querySelector("#root"),
-  NodeFilter.SHOW_TEXT
+  NodeFilter.SHOW_TEXT,
 );
 
 let currentNode;
@@ -149,7 +149,7 @@ const treeWalker = document.createTreeWalker(
       ? NodeFilter.FILTER_REJECT
       : node.closest(".escape")
       ? NodeFilter.FILTER_ACCEPT
-      : NodeFilter.FILTER_SKIP
+      : NodeFilter.FILTER_SKIP,
 );
 
 let currentNode;
@@ -160,7 +160,7 @@ while ((currentNode = treeWalker.nextNode())) {
     (node) =>
       node.nodeName === "#text" && !/^\s*$/.test(node.data)
         ? NodeFilter.FILTER_ACCEPT
-        : NodeFilter.FILTER_REJECT
+        : NodeFilter.FILTER_REJECT,
   );
 
   let currentTextNode;

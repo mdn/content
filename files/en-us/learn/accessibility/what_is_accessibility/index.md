@@ -1,6 +1,7 @@
 ---
 title: What is accessibility?
 slug: Learn/Accessibility/What_is_accessibility
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}

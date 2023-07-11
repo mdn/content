@@ -1,6 +1,7 @@
 ---
 title: concat
 slug: Web/XPath/Functions/concat
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
