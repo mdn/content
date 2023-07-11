@@ -51,9 +51,9 @@ C
 
 F
 
+- {{CSSxRef("::file-selector-button")}}
 - {{CSSxRef("::first-letter")}}
 - {{CSSxRef("::first-line")}}
-- {{CSSxRef("::file-selector-button")}}
 
 G
 
