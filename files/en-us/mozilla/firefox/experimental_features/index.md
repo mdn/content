@@ -1239,6 +1239,48 @@ See [Firefox bug 1740530](https://bugzil.la/1740530) for more details.
   </tbody>
 </table>
 
+#### CSS Properties and Values API
+
+The [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) allows developers to register custom CSS properties through JavaScript via [`registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) or in CSS using the [`@property`](/en-US/docs/Web/CSS/@property) at-rule.
+Registering properties using these two methods allows for type checking, default values, and properties that do or do not inherit values from their parent elements.
+See [Firefox bug 1840480](https://bugzil.la/1840480) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>116</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.property-and-value-api.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Service Workers
 
 #### Preloading of service worker resources on navigation
