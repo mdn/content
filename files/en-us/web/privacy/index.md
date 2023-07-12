@@ -71,7 +71,7 @@ Browser vendors are aware of the need to protect user privacy and the negative e
 
 ### HTTPS by default
 
-[Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network, and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. This is good for privacy because it stops third parties from being able to intercept transmitted data and use it maliciously, for example for tracking.
+[Transport Layer Security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. TLS is good for privacy because it stops third parties from being able to intercept transmitted data and use it maliciously, for example for tracking.
 
 Browsers are all moving towards requiring HTTPS by default; this is practically the case already, as you can't do much without it.
 
