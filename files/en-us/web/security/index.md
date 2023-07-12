@@ -65,13 +65,15 @@ Related topics:
 
 Browsers control usage of several "powerful features" in a couple of different ways. By "powerful features", we mean things like a site generating system notifications, using a user's web cam to get access to a media stream, manipulating the system GPU, or using web payments. If a site could just use the APIs that control such features without restriction, malicious developers could do all sorts of things, ranging from annoying users and clogging up their browser/system to create {{glossary("denial of service", "Denial of Service")}} (DoS) attacks, to stealing data and money.
 
-First of all, use of such features is only permitted in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). A secure context is a {{domxref("Window", "window")}} or {{domxref("WorkerGlobalScope", "worker")}} for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS), and for which the potential for communication with contexts that are **not** secure is limited. Secure contexts also help to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing powerful APIs.
+You need to bear the following things in mind when using these browser features:
+
+First, the use of such features is permitted only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). A secure context is a {{domxref("Window", "window")}} or a {{domxref("WorkerGlobalScope", "worker")}} for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS). In a secure context, the potential for communication with contexts that are **not** secure is limited. Secure contexts also help to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing the powerful APIs of the browser.
 
 > **Note:** See also [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). This reference lists web platform features available only in secure contexts.
 
-Second, usage of these features is gated behind a system of user permissions — users have to explicitly opt-in to providing access to such features, meaning that they can't just be used automatically. These permission requests happen automatically, but you can query the state of a API permissions using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+Second, the usage of these features is gated behind a system of user permissions — users have to explicitly opt-in to providing access to such features, meaning that these featured can't be used automatically. The user permission requests happen automatically, but you can query the state of an API permission by using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-In addition, many other features can only be used in response to a user action such as clicking a button, meaning that they need to be invoked from inside an apropriate event handler. This is often called **transient activation**. See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information.
+In addition, many other browser features can be used only in response to a user action such as clicking a button, meaning that they need to be invoked from inside an appropriate event handler. This is often called **transient activation**. See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information.
 
 ## What should client-side developers do?
 
