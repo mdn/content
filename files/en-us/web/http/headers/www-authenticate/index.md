@@ -73,7 +73,7 @@ WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
 
-## Directives
+## [Directives](#directives)
 
 - `<auth-scheme>`
 
@@ -143,7 +143,7 @@ Generally you will need to check the relevant specifications for these (keys for
 - `<max-age>`
   - : The number of seconds from the time the HTTP response is emitted for which responses to this challenge can be accepted.
 - `realm` {{optional_inline}}
-  - : The scope of protection in the manner described in HTTP/1.1, Authentication RFC7235
+  - : As above in the [directives](#directives) section.
 
 ## Examples
 
