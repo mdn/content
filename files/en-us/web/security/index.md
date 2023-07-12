@@ -114,7 +114,7 @@ Consider using tools like [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (C
 
 CSP allows you to add a layer of security by, for example, allowing images or scripts to be loaded only from specific trusted origins. This helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks. These attacks involve a range of malicious activities, including data theft, site defacement, and distribution of malware.
 
-Permissions policy works in a similar way, except that it is more concerned with allowing or blocking access to specific "powerful features" (as mentioned earlier).
+Permissions policy works in a similar way, except that it is more concerned with allowing or blocking access to specific "powerful features" ([as mentioned earlier](#secure_contexts_and_feature_permissions)).
 
 > **Note:** Such policies are very useful to help keep sites secure, especially when you are using a lot of third party code on your site. Be careful however — if you block usage of a feature that a third party script relies on to work, you may end up breaking your site's functionality.
 
