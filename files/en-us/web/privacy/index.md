@@ -176,11 +176,11 @@ The best way to protect user privacy though is by not collecting data at all. Re
 
 Once you have decided what data you are going to collect, you should publish a privacy policy on your site that clearly states:
 
-- What data you are collecting.
-- What you are going to use it for.
-- Who you tend to share it with, if anyone, and an declaration that you will ask for user consent before sharing.
-- How long you will keep the data for before it is deleted.
-- How the user is able to view the data you have collected from them, and delete it if they want to.
+- Data that you collect
+- Ways in which you use the data
+- Parties with whom you tend to share the data, if at all, and a declaration that you will ask for user consent before sharing
+- Duration for which you keep the data for before it is deleted
+- Ways in which users can view the data you have collected from them and a way for them to delete it if they want to
 
 When providing you with data, your users should be given an opportunity to read your privacy policy, and consent to it. They should be able to control if they are happy with this and agree to your terms. And as indicated above, they should also get to see what data of theirs you have collected, and delete it if they want to.
 
