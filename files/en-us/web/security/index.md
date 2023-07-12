@@ -77,7 +77,7 @@ In addition, many other browser features can be used only in response to a user 
 
 ## Security considerations for client-side developers
 
-There are many aspects of web security that need to be thought about on the server- and client-side. The below sections mainly focus on client-side security considerations. You can find a useful summary of security from a server-side perspective that also includes descriptions of common attacks to watch out for at [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security), which is part of our [Server-side website programming](/en-US/docs/Learn/Server-side) learning module.
+There are many aspects of web security that need to be thought about on the server- and client-side. The sections below focus mainly on client-side security considerations. You can find a useful summary of security from a server-side perspective, which also includes descriptions of common attacks to watch out for, at [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) (part of our [Server-side website programming](/en-US/docs/Learn/Server-side) learning module).
 
 ## Store client-side data responsibly
 
