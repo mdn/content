@@ -4,7 +4,7 @@ slug: Web/Privacy
 page-type: guide
 ---
 
-People use websites for several important tasks such as banking, shopping, entertainment, and paying their taxes. In doing so, they are required to share personal information with those sites. Users place a certain level of trust in the sites they share their data with — if that information fell into the wrong hands it could be used to exploit users, for example by profiling them, targetting them with unwanted ads, or even stealing their identity or money.
+People use websites for several important tasks such as banking, shopping, entertainment, and paying their taxes. In doing so, they are required to share personal information with those sites. Users place a certain level of trust in the sites they share their data with. If that information fell into the wrong hands, it could be used to exploit users, for example by profiling them, targeting them with unwanted ads, or even stealing their identity or money.
 
 Modern browsers already have a wealth of features to protect users' privacy on the web, but that's not enough. To create a trustworthy, privacy-respecting experience, developers need to educate their users in good practices (and enforce them) and create sites that collect as little data as possible, use it responsibly, and transport and store it securely.
 
