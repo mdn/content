@@ -137,7 +137,7 @@ Some of the most developed parts of the privacy sandbox project are as follows:
 
 - [Tracking prevention](https://learn.microsoft.com/en-us/microsoft-edge/web-platform/tracking-prevention)
   - : Edge blocks trackers from unvisited sites; in addition, known harmful trackers are blocked by default.
-- Third party cookie default
+- Third-party cookie default
   - : Edge does not yet block third-party cookies by default, but this can be set by users in Settings.
 
 ## What does a developer need to do?
