@@ -103,15 +103,15 @@ This attribute controls whether cookies are sent with cross-site requests and ca
 #### Firefox anti-tracking features
 
 - [Firefox tracking protection](/en-US/docs/Web/Privacy/Firefox_tracking_protection)
-  - : Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites.
+  - : Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs in Firefox for Android), Firefox will block content loaded from domains that track users across sites.
 - [Enhanced tracking protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop)
-  - : Blocks trackers that follow you around online to collect information about your browsing habits and interests without breaking site functionality. It also includes protections against harmful scripts, such as malware that drains your battery.
+  - : This feature blocks trackers that follow you around online to collect information about your browsing habits and interests without breaking site functionality. It also includes protections against harmful scripts, such as malware that drains your battery.
 - [Redirect tracking protection](/en-US/docs/Web/Privacy/Redirect_tracking_protection)
-  - : Firefox includes protection against redirect tracking, which is an abuse of cross-site navigation in which a tracker momentarily redirects a user to their website to use first-party storage to track that user across websites.
+  - : Firefox includes protection against redirect tracking, an abuse of cross-site navigation. In redirect tracking, a tracker momentarily redirects a user to their website for first-party storage to be able to track that user across websites.
 - [State partitioning](/en-US/docs/Web/Privacy/State_Partitioning)
-  - : A reworking of how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse state for cross-site tracking. This is achieved by providing what is effectively a "different", isolated storage location to every website a user visits.
+  - : This concept is a reworking of how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse cross-site tracking. This is achieved by providing what is effectively a "different", isolated storage location to every website a user visits.
 - [Storage access policy](/en-US/docs/Web/Privacy/Storage_Access_Policy)
-  - : A storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies available in Firefox for many years. See also our [Storage Access Policy Errors reference](/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors).
+  - : A storage access policy can block cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies available in Firefox for many years. See also our [Storage Access Policy Errors](/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors) reference.
 - [Total cookie protection](https://blog.mozilla.org/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/)
   - : Firefox gives third-party cookies a separate cookie jar per site, so they can't be tracked across sites
 
