@@ -57,7 +57,7 @@ Tracking data can be used to profile a user and their interests and preferences,
 
 ### Fingerprinting
 
-The process of identifying users by building up a store of data points about them is known as **fingerprinting**. This usually has negative connotations, because it can be used to track user activity across different websites in a covert manner. Think about it — tracking is annoying enough even when you consent to it, but having it happen without consent feels really invasive and erodes trust very quickly.
+The process of identifying users by building up a store of data points about them is known as **fingerprinting**. This process usually has negative connotations because it can be used to track user activity across different websites in a covert manner. Think about it — tracking is annoying enough even when you consent to it, but having it happen without consent feels really invasive and erodes trust very quickly.
 
 Modern browsers take steps to help prevent fingerprinting-based attacks by either not allowing information to be accessed or, where the information must be made available, by introducing variations that prevent it from being used for identification purposes.
 
