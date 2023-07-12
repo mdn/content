@@ -75,7 +75,7 @@ Second, the usage of these features is gated behind a system of user permissions
 
 In addition, many other browser features can be used only in response to a user action such as clicking a button, meaning that they need to be invoked from inside an appropriate event handler. This is often called **transient activation**. See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information.
 
-## What should client-side developers do?
+## Security considerations for client-side developers
 
 There are many aspects of web security that need to be thought about on the server- and client-side. The below sections mainly focus on client-side security considerations. You can find a useful summary of security from a server-side perspective that also includes descriptions of common attacks to watch out for at [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security), which is part of our [Server-side website programming](/en-US/docs/Learn/Server-side) learning module.
 
