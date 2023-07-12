@@ -82,7 +82,7 @@ Related topics are as follows:
 - [HTTP Strict Transport Security (HSTS)](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
   - : HSTS is used by servers to let them protect themselves from protocol downgrade and cookie hijack attacks by letting sites tell clients that they can only use HTTPS to communicate with the server.
 - [HTTP/2](/en-US/docs/Glossary/HTTP_2)
-  - : While HTTP/2 technically does not <em>have</em> to use encryption, most browser developers are only supporting it when used with HTTPS, so it can be thought of in that regard as being security/privacy enhancing.
+  - : While HTTP/2 technically does not <em>have</em> to use encryption, most browser developers support it only when used with HTTPS; so in that regard, it can be thought of as a feature to enhance security/privacy.
 
 ### Opt-in for "powerful features"
 
