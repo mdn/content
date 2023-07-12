@@ -35,7 +35,7 @@ setReportEventDataForAutomaticBeacons(event)
         - `"seller"`: The top-level seller running the ad auction.
         - `"component-seller"`: The seller for a component auction in a multi-level auction.
         - `"direct-seller"`: The seller that ran the top-level or component auction that the buyer bid in.
-        - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) select URL.
+        - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL()")}} method call.
 
 ### Return value
 

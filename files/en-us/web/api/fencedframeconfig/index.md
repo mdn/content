@@ -44,7 +44,9 @@ A `FencedFrameConfig` object maps to internal config information not accessible 
   - : An object containing internal config information, which has the following properties:
 
     - `mappedURL`
-      - : TODO
+      - : An object representing ... (NOT SURE WHAT THIS REPRESENTS), or `null` if it has not been specified. This object contains two properties:
+        - `url`: The URL.
+        - `visibility`: An enumerated value specifying whether the URL should be made available inside the fenced frame (`"transparent"`) or not (`"opaque"`).
     - `containerSize`
       - : An object specifying the size of the containing `<fencedframe>`, or `null` if it has not been specified. This object contains two properties:
         - `height`: A number specifying the height of the containing `<fencedframe>`.
@@ -58,7 +60,7 @@ A `FencedFrameConfig` object maps to internal config information not accessible 
         - `descriptor`: An object describing the interest group, which contains two properties — an `origin` specifying the origin of the advertiser property that set the interest group, and a string specifying the name of the interest group.
         - `visibility`: An enumerated value specifying whether the interest group should be made available inside the fenced frame (`"transparent"`) or not (`"opaque"`).
     - `onNavigateCallback`
-      - : TODO
+      - : A callback function that will be run when the content inside the fenced frame is navigated, as set by ... (NOT SURE HOW THIS IS SET AT PRESENT), or `null` if it has not been specified.
     - `effectiveSandboxFlags`
       - : An object specifying a set of sandbox flags that restrict the ability of content embedded in the fenced frame (equivalent in purpose to the [`<iframe> sandbox` attribute](/en-US/docs/Web/HTML/Element/iframe#sandbox)), or `null` if it has not been specified. This object contains two properties:
         - `flag set`: A set of sandboxed flags.

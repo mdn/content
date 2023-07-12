@@ -27,7 +27,7 @@ reportEvent(event)
   - : an object or a string representing the data to send.
     - If the value is an object, the required properties are as follows:
       - `eventType`
-        - : A string representing the type of event that is being reported — for example you might be interested in how many times an ad is clicked on. This string can be any relevant event name (for example [`click`](/en-US/docs/Web/API/Element/click_event)). This needs to match the event type specified in the associated {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} call(s).
+        - : A string representing the type of event that is being reported — for example you might be interested in how many times an ad is clicked on. This string can be any relevant event name (for example [`click`](/en-US/docs/Web/API/Element/click_event)). This needs to match the event type specified in the associated {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} call in a Protected Audience API worklet.
       - `eventData`
         - : A string representing the data to be sent.
       - `destination`
@@ -36,7 +36,7 @@ reportEvent(event)
           - `"seller"`: The top-level seller running the ad auction.
           - `"component-seller"`: The seller for a component auction in a multi-level auction.
           - `"direct-seller"`: The seller that ran the top-level or component auction that the buyer bid in.
-          - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) select
+          - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL()")}} method call.
     - If the value is a string ... TODO
 
 ### Return value

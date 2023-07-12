@@ -24,9 +24,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `allow`
 
-  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<fencedframe>`. The policy defines what features are available to the `<fencedframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
-
-    > **Note:** A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
+  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<fencedframe>`, which defines what features are available to the `<fencedframe>` based on the origin of the request. Only [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) features can be controlled via a policy set on a fenced frame. See [Permissions policies available to fenced frames](#permissions_policies_available_to_fenced_frames) for more details.
 
 - `height`
 
@@ -35,11 +33,25 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `width`
   - : The width of the fenced frame in CSS pixels. The default is `300`.
 
+## Permissions policies available to fenced frames
+
+Standard web features that can have their availability controlled via [Permissions Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) (for example, [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera) or [`geolocation`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)) are **not available** within fenced frames. This is because permissions delegated from the top-level context to a fenced frame for allowing and denying features could be used as a communication channel, so constitute a privacy threat.
+
+The only features that can be controlled by a policy inside fenced frames are the [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) features designed to be used inside fenced frames:
+
+| Feature                                                                                               | Permissions policy directive |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------- |
+| [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) | `attribution-reporting`      |
+
+> **Note:** More features will be added to the list and they will be better documented as more MDN docs are written on privacy sandbox features.
+
+Currently these are always enabled inside fenced frames. In the future, which ones are enabled will be controllable using the {{htmlelement("fencedframe")}} `allow` attribute. Blocking privacy sandbox features in this manner will also block the fenced frame from loading — there will be no communication channel at all.
+
 ## Focusing across fenced frame boundaries
 
 The ability of the document's active focus to be moved across fenced frame boundaries (i.e. from an element outside the fenced frame to one inside, or vice versa) is limited. User-initiated actions such as a click or a tab can do so, as there is no fingerprinting risk there.
 
-However, trying to traverse the boundary via an API call such as {{domxref("HTMLElement.focus()")}} is prohibited — a malicious script could use a series of such calls to leak inferred information across the boundary. Scripted focus changes that would traverse a fenced frame boundary are skipped NOT SURE IF THIS IS RIGHT; I DIDN'T REALLY UNDERSTAND THE ALGORITHM CHANGES IN THE SPEC
+However, trying to traverse the boundary via an API call such as {{domxref("HTMLElement.focus()")}} is prohibited — a malicious script could use a series of such calls to leak inferred information across the boundary.
 
 ## Positioning and scaling
 

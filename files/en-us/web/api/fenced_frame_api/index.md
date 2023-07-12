@@ -67,6 +67,10 @@ Inside documents embedded in `<fencedframe>`s, JavaScript has access to a {{domx
 
 For example, {{domxref("Fence.reportEvent()")}} provides a way to trigger the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specified URLs, for the purpose of collecting ad auction results. This data could then be reported via the [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/).
 
+### Permissions policy
+
+Only [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) features can be controlled via a policy set on a fenced frame; other policy-controlled features are not available in this context. See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
+
 ### HTTP headers
 
 A {{httpheader("Sec-Fetch-Dest")}} header with a value of `fencedframe` will be set for any requests made from inside a `<fencedframe>`, including child `<iframe>`s embedded within a `<fencedframe>`.
@@ -80,6 +84,23 @@ The server must set a {{httpheader("Supports-Loading-Mode")}} response header wi
 ```http
 Supports-Loading-Mode: fenced-frame
 ```
+
+Other effects of fenced frames on HTTP headers are as follows:
+
+- [User-agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are not available inside fenced frames because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
+- Strict [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) settings are enforced on new browsing contexts opened from inside frenced frames, otherwise they could be used to leak information to other origins. Any new window opened from inside a fenced frame will have [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) and `Cross-Origin-Opener-Policy: same-origin` set to ensure that {{domxref("Window.opener")}} returns `null` and place it in its own browsing context group.
+- [`Content-Security-Policy: fenced-frame-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) has beren added for specifying valid sources for nested browsing contexts loaded into `<fencedframe>` elements.
+- [`Content-Security-Policy: sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) custom settings cannot be inherited by fenced frames, to mitigate privacy issues. For a fenced frame to load, keep it unsandboxed, or explicitly specify the following default attribute set:
+  - `allow-same-origin`
+  - `allow-forms`
+  - `allow-scripts`
+  - `allow-popups`
+  - `allow-popups-to-escape-sandbox`
+  - `allow-top-navigation-by-user-activation`
+
+### `beforeunload` and `unload` events
+
+[`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) and [`unload`](/en-US/docs/Web/API/Window/unload_event) event handlers cannot be used inside fenced frames — they are not widely used and can leak information in the form of a page deletion timestamp. It is good to eliminate as many possible leakages as we can.
 
 ## Interfaces
 

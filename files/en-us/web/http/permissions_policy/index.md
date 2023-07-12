@@ -138,11 +138,11 @@ Permissions-Policy: geolocation=(self https://example.com)
 Permissions-Policy: camera=*
 ```
 
-## iframe and fencedframe syntax
+## iframe syntax
 
-For an {{htmlelement("iframe")}} or {{htmlelement("fencedframe")}} to have a feature enabled its allowed origin must also be in the allowlist for the parent page. Because of this [inheritance behavior](#inheritance_of_policies_for_embedded_content), it is a good idea to specify the widest acceptable support for a feature in the HTTP header, and then specify the subset of support you need in each `<iframe>`/`<fencedframe>`.
+For an {{htmlelement("iframe")}} to have a feature enabled its allowed origin must also be in the allowlist for the parent page. Because of this [inheritance behavior](#inheritance_of_policies_for_embedded_content), it is a good idea to specify the widest acceptable support for a feature in the HTTP header, and then specify the subset of support you need in each `<iframe>`.
 
-> **Note:** All of the examples below are written for `<iframe>`s, but will work the same way for `<fencedframe>`s.
+> **Note:** Only [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) features _can_ be controlled via a policy set on a fenced frame; other policy-controlled features are not available in this context. See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
 
 The general syntax looks like this:
 
