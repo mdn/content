@@ -1,6 +1,7 @@
 ---
 title: Firefox 52 for developers
 slug: Mozilla/Firefox/Releases/52
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

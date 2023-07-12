@@ -1,6 +1,7 @@
 ---
 title: Web performance
 slug: Web/Performance
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubPages}}
@@ -158,7 +159,7 @@ APIs
   - [requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/en-US/docs/Web/API/Beacon_API)
-- Resource Hints - [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/en-US/docs/Web/HTTP/Link_prefetching_FAQ), and prerender
+- Resource Hints - [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
 - [FetchEvent.preloadResponse](/en-US/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/en-US/docs/Web/API/PerformanceServerTiming)
 
@@ -184,6 +185,6 @@ Best Practices
 
   - [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
 
-- [PWA](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers)
+- [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
 - [Caching](/en-US/docs/Web/HTTP/Caching)
 - Content Delivery Networks (CDN)

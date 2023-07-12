@@ -1114,13 +1114,14 @@
       "guides": [],
       "interfaces": [
         "Scheduler",
+        "Scheduling",
         "TaskController",
         "TaskSignal",
         "AbortSignal",
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Window.scheduler"],
+      "properties": ["Navigator.scheduling", "Window.scheduler"],
       "events": []
     },
     "Push API": {

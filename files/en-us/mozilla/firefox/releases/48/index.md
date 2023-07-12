@@ -1,6 +1,7 @@
 ---
 title: Firefox 48 for developers
 slug: Mozilla/Firefox/Releases/48
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

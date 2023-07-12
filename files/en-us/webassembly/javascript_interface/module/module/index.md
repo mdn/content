@@ -65,7 +65,7 @@ fetch("simple.wasm")
   .then((bytes) => {
     const mod = createWasmModule(bytes);
     WebAssembly.instantiate(mod, importObject).then((result) =>
-      result.exports.exported_func()
+      result.exports.exported_func(),
     );
   });
 ```

@@ -1,6 +1,7 @@
 ---
 title: How to make a box semi-transparent
 slug: Learn/CSS/Howto/Make_box_transparent
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

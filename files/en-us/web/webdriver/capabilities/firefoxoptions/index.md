@@ -1,6 +1,7 @@
 ---
 title: firefoxOptions
 slug: Web/WebDriver/Capabilities/firefoxOptions
+page-type: webdriver-capability
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}

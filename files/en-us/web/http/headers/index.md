@@ -305,16 +305,28 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 ### Fetch metadata request headers
 
-{{Glossary("Fetch metadata request header", "Fetch metadata request headers")}} provides information about the context from which the request originated. This allows a server to make decisions about whether a request should be allowed based on where the request came from and how the resource will be used.
+{{Glossary("Fetch metadata request header", "Fetch metadata request headers")}} provide information about the context from which the request originated.
+A server can use them to make decisions about whether a request should be allowed, based on where the request came from and how the resource will be used.
 
 - {{HTTPHeader("Sec-Fetch-Site")}}
-  - : It is a request header that indicates the relationship between a request initiator's origin and its target's origin. It is a Structured Header whose value is a token with possible values `cross-site`, `same-origin`, `same-site`, and `none`.
+  - : Indicates the relationship between a request initiator's origin and its target's origin.
+    It is a Structured Header whose value is a token with possible values `cross-site`, `same-origin`, `same-site`, and `none`.
 - {{HTTPHeader("Sec-Fetch-Mode")}}
-  - : It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values `cors`, `navigate`, `no-cors`, `same-origin`, and `websocket`.
+  - : Indicates the request's mode to a server.
+    It is a Structured Header whose value is a token with possible values `cors`, `navigate`, `no-cors`, `same-origin`, and `websocket`.
 - {{HTTPHeader("Sec-Fetch-User")}}
-  - : It is a request header that indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are `?0` for false and `?1` for true.
+  - : Indicates whether or not a navigation request was triggered by user activation.
+    It is a Structured Header whose value is a boolean so possible values are `?0` for false and `?1` for true.
 - {{HTTPHeader("Sec-Fetch-Dest")}}
-  - : It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, and `xslt`.
+  - : Indicates the request's destination.
+    It is a Structured Header whose value is a token with possible values `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, and `xslt`.
+
+The following request headers are not _strictly_ "fetch metadata request headers", but similarly provide information about the context of how a resource will be used.
+A server might use them to modify its caching behavior, or the information that is returned:
+
+- {{HTTPHeader("Sec-Purpose")}} {{Experimental_Inline}}
+  - : Indicates the purpose of the request, when the purpose is something other than immediate use by the user-agent.
+    The header currently has one possible value, `prefetch`, which indicates that the resource is being fetched preemptively for a possible future navigation.
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
   - : A request header sent in preemptive request to {{domxref("fetch()")}} a resource during service worker boot.
     The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.

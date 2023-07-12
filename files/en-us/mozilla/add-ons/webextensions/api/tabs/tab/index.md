@@ -24,7 +24,7 @@ Values of this type are objects. They contain the following properties:
 - `audible` {{optional_inline}}
   - : `boolean`. Indicates whether the tab is producing sound. However, the user will not hear the sound if the tab is muted (see the `mutedInfo` property).
 - `autoDiscardable` {{optional_inline}}
-  - : `boolean`. Whether the tab can be discarded automatically by the browser when resources are low.
+  - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
 - `cookieStoreId` {{optional_inline}}
   - : `string`. The cookie store of the tab. If different tabs can have different cookie stores (for example, to support [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), you can pass this as the `storeId` option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 - `discarded` {{optional_inline}}

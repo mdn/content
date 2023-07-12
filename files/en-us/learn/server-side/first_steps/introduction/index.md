@@ -1,6 +1,7 @@
 ---
 title: Introduction to the server side
 slug: Learn/Server-side/First_steps/Introduction
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}

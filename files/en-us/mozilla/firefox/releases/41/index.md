@@ -1,6 +1,7 @@
 ---
 title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

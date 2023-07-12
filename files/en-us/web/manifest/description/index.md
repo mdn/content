@@ -1,6 +1,7 @@
 ---
 title: description
 slug: Web/Manifest/description
+page-type: web-manifest-member
 browser-compat: html.manifest.description
 ---
 

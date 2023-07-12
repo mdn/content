@@ -195,5 +195,4 @@ Please see [using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradie
 - {{cssxref("image/image-set","image-set()")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
 - [CSS images module](/en-US/docs/Web/CSS/CSS_images)
-- [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (May 3, 2023)
-- [New functions, gradients, and hues in CSS colors (Level 4)](https://developer.mozilla.org/en-US/blog/css-color-module-level-4/) on MDN blog (May 3, 2023)
+- [New functions, gradients, and hues in CSS colors (Level 4)](https://developer.mozilla.org/en-US/blog/css-color-module-level-4/) on MDN blog (2023)

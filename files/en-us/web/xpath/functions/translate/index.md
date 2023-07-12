@@ -1,6 +1,7 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

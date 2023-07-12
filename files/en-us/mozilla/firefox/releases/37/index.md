@@ -1,6 +1,7 @@
 ---
 title: Firefox 37 for developers
 slug: Mozilla/Firefox/Releases/37
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

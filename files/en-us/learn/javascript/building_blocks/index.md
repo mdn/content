@@ -1,6 +1,7 @@
 ---
 title: JavaScript building blocks
 slug: Learn/JavaScript/Building_blocks
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

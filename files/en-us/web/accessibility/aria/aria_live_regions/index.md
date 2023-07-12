@@ -115,7 +115,7 @@ function renderPlanetInfo(planet) {
 }
 
 const renderPlanetInfoButton = document.querySelector(
-  "#renderPlanetInfoButton"
+  "#renderPlanetInfoButton",
 );
 
 renderPlanetInfoButton.addEventListener("click", (event) => {

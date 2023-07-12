@@ -21,7 +21,7 @@ A string.
 let fontFace = new FontFace(
   "Roboto",
   "url(https://fonts.example.com/roboto.woff2)",
-  { lineGapOverride: "90%" }
+  { lineGapOverride: "90%" },
 );
 console.log(fontFace.lineGapOverride); // 90%
 fontFace.lineGapOverride = "normal";

@@ -88,7 +88,7 @@ console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
 
 ### Calling findLastIndex() on non-array objects
 
-The `findLastIndex()` method reads the `length` property of `this` and then accesses each integer index.
+The `findLastIndex()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -96,6 +96,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLastIndex() since length is 3
 };
 console.log(
   Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),

@@ -1,6 +1,7 @@
 ---
 title: Firefox 8 for developers
 slug: Mozilla/Firefox/Releases/8
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

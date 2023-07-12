@@ -1,6 +1,7 @@
 ---
 title: Firefox 107 for developers
 slug: Mozilla/Firefox/Releases/107
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

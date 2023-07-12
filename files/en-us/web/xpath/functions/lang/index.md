@@ -1,6 +1,7 @@
 ---
 title: lang
 slug: Web/XPath/Functions/lang
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

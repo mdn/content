@@ -1,6 +1,7 @@
 ---
 title: Attribute selectors
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}

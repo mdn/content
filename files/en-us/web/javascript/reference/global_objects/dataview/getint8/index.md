@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.DataView.getInt8
 
 {{JSRef}}
 
-The **`getInt8()`** method gets a signed 8-bit integer (byte)
-at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`getInt8()`** method of {{jsxref("DataView")}} instances reads 1 byte at the specified byte offset of this `DataView` and interprets it as an 8-bit signed integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getint8.html")}}
 

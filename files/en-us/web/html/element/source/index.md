@@ -101,7 +101,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
-    [Media query](/en-US/docs/Web/CSS/Media_Queries) of the resource's intended media.
+    [Media query](/en-US/docs/Web/CSS/CSS_media_queries) of the resource's intended media.
 
 - `height`
 
@@ -159,7 +159,7 @@ With the `<picture>` element, you must always include an `<img>` with a fallback
 ### Picture with height & width attributes example
 
 In this example, three `<source>` elements with `height` and `width` attributes are included in a {{HTMLElement("picture")}} element.
-A [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
+A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
 
 ```html
 <picture>

@@ -172,7 +172,8 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - `preconnect`
   - : Provides a hint to the browser suggesting that it open a connection to the linked website in advance, without disclosing any private information or downloading any content, so that when the link is followed the linked content can be fetched more quickly.
 - `prefetch`
-  - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation. The [Link Prefetch FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) has details on which links can be prefetched and on alternative methods.
+  - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.
+    See {{Glossary("prefetch")}} for more information.
 - `preload`
   - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute (and the priority associated with the corresponding destination). See the page for the [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) value.
 - `prerender` {{Deprecated_Inline}} {{Non-standard_Inline}}

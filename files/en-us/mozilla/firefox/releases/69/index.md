@@ -1,6 +1,7 @@
 ---
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
+page-type: landing-page
 ---
 
 {{FirefoxSidebar}}

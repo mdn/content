@@ -50,7 +50,7 @@ fetch(myRequest)
         product.Name;
       listItem.append(` can be found in ${product.Location}. Cost: `);
       listItem.appendChild(
-        document.createElement("strong")
+        document.createElement("strong"),
       ).textContent = `£${product.Price}`;
       myList.appendChild(listItem);
     }

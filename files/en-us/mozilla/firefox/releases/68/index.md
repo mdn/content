@@ -1,6 +1,7 @@
 ---
 title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

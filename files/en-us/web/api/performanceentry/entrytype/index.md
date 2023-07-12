@@ -105,7 +105,7 @@ const scriptResources = performance
   .getEntries()
   .filter(
     (entry) =>
-      entry.entryType === "resource" && entry.initiatorType === "script"
+      entry.entryType === "resource" && entry.initiatorType === "script",
   );
 console.log(scriptResources);
 ```

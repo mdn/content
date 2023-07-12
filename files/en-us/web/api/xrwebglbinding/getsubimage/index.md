@@ -80,7 +80,7 @@ function onXRFrame(time, xrFrame) {
     gl.FRAMEBUFFER,
     gl.COLOR_ATTACHMENT0,
     subImage.colorTexture,
-    0
+    0,
   );
   let viewport = subImage.viewport;
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);

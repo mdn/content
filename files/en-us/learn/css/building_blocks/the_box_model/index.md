@@ -1,6 +1,7 @@
 ---
 title: The box model
 slug: Learn/CSS/Building_blocks/The_box_model
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
