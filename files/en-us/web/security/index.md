@@ -16,9 +16,9 @@ Modern browsers already have several features to protect users' security on the 
 
 The articles listed here provide an introduction to web security, including information that will help you understand the aspects that can make websites vulnerable and how to secure them.
 
-## The relationship between security and privacy
+## Relationship between security and privacy
 
-Security and privacy are closely-related topics, but they are distinct, and it is worth knowing the difference betwene the two, and how they relate.
+Security and privacy are distinct topics, but they are also closely-related. It is worth knowing the difference between the two and how they relate.
 
 - **Security** is the act of keeping private data and systems protected against unauthorized access. This includes both company (internal) data, and user and partner (external) data.
 
