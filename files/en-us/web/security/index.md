@@ -12,7 +12,7 @@ Sensitive information needs to be protected, and that is the focus of web securi
 - Disable or hijack their services, again causing serious problems with their operation.
 - Put their customer's [privacy](/en-US/docs/Web/Privacy) at risk, making them vulnerable to profiling, targetting, loss of data, identity theft, or even financial loss.
 
-Modern browsers already have several features to protect users' security on the web, but developers also need to employ best practices and code carefully to ensure that their websites are secure. Even simple bugs in your code can result in vulnerabilities that bad people can exploit to steal data and get control of services they shouldn't have control of.
+Modern browsers already have several features to protect users' security on the web, but developers also need to employ best practices and code carefully to ensure that their websites are secure. Even simple bugs in your code can result in vulnerabilities that bad people can exploit to steal data and gain control over services for which they don't have authorization.
 
 This set of articles provides an introduction to web security, including information that may help you understand what can make websites vulnerable, and how to secure them.
 
