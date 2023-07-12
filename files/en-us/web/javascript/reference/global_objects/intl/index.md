@@ -76,7 +76,7 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
   - : Constructor for objects that enable language-sensitive date and time formatting.
 - {{jsxref("Intl.DisplayNames")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
-- {{jsxref("Intl.DurationFormat")}}
+- {{jsxref("Intl.DurationFormat")}} {{Experimental_Inline}}
   - : Constructor for objects that enable locale-sensitive duration formatting.
 - {{jsxref("Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.

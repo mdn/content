@@ -122,7 +122,9 @@ Any additional benefits this feature has for non-typical screen reader users, li
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
+
+_Remember to remove the backticks and backslash to use this macro._
 
 ## Precedence order
 

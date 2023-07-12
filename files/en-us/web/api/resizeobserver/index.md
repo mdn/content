@@ -56,16 +56,16 @@ const resizeObserver = new ResizeObserver((entries) => {
       const contentBoxSize = entry.contentBoxSize[0];
       h1Elem.style.fontSize = `${Math.max(
         1.5,
-        contentBoxSize.inlineSize / 200
+        contentBoxSize.inlineSize / 200,
       )}rem`;
       pElem.style.fontSize = `${Math.max(
         1,
-        contentBoxSize.inlineSize / 600
+        contentBoxSize.inlineSize / 600,
       )}rem`;
     } else {
       h1Elem.style.fontSize = `${Math.max(
         1.5,
-        entry.contentRect.width / 200
+        entry.contentRect.width / 200,
       )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }

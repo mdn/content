@@ -1,6 +1,7 @@
 ---
 title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

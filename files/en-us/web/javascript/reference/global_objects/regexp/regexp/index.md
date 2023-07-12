@@ -48,6 +48,8 @@ RegExp(pattern, flags)
       - : Allows `.` to match newlines.
     - [`u` (unicode)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
       - : Treat `pattern` as a sequence of Unicode code points.
+    - [`v` (unicodeSets)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets)
+      - : An upgrade to the `u` flag that enables set notation in character classes as well as properties of strings.
     - [`y` (sticky)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)
       - : Matches only from the index indicated by the `lastIndex` property of this regular expression in the target string. Does not attempt to match from any later indexes.
 

@@ -22,19 +22,12 @@ oklch(59.69% 0.156 49.77 / .5)
 Functional notation: `oklch(L C H[ / A])`
 
 - `L`
-
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1` or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
-
 - `C`
-
   - : A {{CSSXref("&lt;number&gt;")}} or a {{CSSXref("&lt;percentage&gt;")}}, where `0%` is `0` and `100%` is the number `0.4`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while the maximum is theoretically unbounded (but in practice does not exceed `0.5`).
-
 - `H`
-
-  - : A {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;angle&gt;")}} that specifies the hue angle along the positive "a" axis (toward purplish red), `90deg` points along the positive "b" axis (toward mustard yellow), `180deg` points along the negative "a" axis (toward greenish cyan), and `270deg` points along the negative "b" axis (toward sky blue).
-
+  - : A {{CSSXref("&lt;number&gt;")}} or an {{CSSXref("&lt;angle&gt;")}} representing the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 - `A` {{optional_inline}}
-
   - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
@@ -98,7 +91,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Adjusting_the_lightness_chroma_and_hue_of_a_color')}}
+{{EmbedLiveSample("adjusting_the_lightness_chroma_and_hue_of_a_color")}}
 
 ### Adjusting the alpha value of a color
 
@@ -144,7 +137,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Adjusting_the_alpha_value_of_a_color')}}
+{{EmbedLiveSample("adjusting_the_alpha_value_of_a_color")}}
 
 ## Specifications
 
@@ -156,7 +149,7 @@ div {
 
 ## See also
 
-- The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
 - [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 - [Safari Technology Preview 137 release notes](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/): includes `oklch()` and {{cssxref("color_value/oklab",'oklab()')}} colors

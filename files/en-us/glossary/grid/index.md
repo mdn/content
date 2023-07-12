@@ -4,6 +4,8 @@ slug: Glossary/Grid
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A _CSS grid_ is defined using the `grid` value of the {{cssxref("display")}} property; you can define columns and rows on your grid using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties.
 
 The grid that you define using these properties is described as an _explicit grid_.

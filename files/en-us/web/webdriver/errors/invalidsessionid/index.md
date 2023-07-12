@@ -1,6 +1,7 @@
 ---
 title: Invalid session ID
 slug: Web/WebDriver/Errors/InvalidSessionID
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

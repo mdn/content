@@ -1,6 +1,7 @@
 ---
 title: JavaScript — Dynamic client-side scripting
 slug: Learn/JavaScript
+page-type: learn-topic
 ---
 
 {{LearnSidebar}}

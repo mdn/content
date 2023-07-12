@@ -1,6 +1,7 @@
 ---
 title: Firefox 98 for developers
 slug: Mozilla/Firefox/Releases/98
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

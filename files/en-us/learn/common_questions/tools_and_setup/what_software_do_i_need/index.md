@@ -1,6 +1,7 @@
 ---
 title: What software do I need to build a website?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

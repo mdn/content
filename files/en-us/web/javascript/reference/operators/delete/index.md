@@ -78,7 +78,7 @@ It is important to consider the following scenarios:
 // Since we are using var, this is marked as non-configurable.
 var empCount = 43;
 
-// Creates the property adminName on the global scope.
+// Creates the property EmployeeDetails on the global scope.
 // Since it was defined without "var", it is marked configurable.
 EmployeeDetails = {
   name: "xyz",

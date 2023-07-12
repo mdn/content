@@ -1,6 +1,7 @@
 ---
 title: Writing forward-compatible websites
 slug: Web/Guide/Writing_forward-compatible_websites
+page-type: guide
 ---
 
 <section id="Quick_links">

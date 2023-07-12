@@ -1,6 +1,7 @@
 ---
 title: Supporting older browsers
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

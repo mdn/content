@@ -108,7 +108,7 @@ console.log([1, , 3].indexOf(undefined)); // -1
 
 ### Calling indexOf() on non-array objects
 
-The `indexOf()` method reads the `length` property of `this` and then accesses each integer index.
+The `indexOf()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -116,6 +116,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by indexOf() since length is 3
 };
 console.log(Array.prototype.indexOf.call(arrayLike, 2));
 // 0

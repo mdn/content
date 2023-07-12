@@ -142,7 +142,7 @@ gl.texImage3D(
   0, // border
   gl.RGBA, // format
   gl.UNSIGNED_BYTE, // type
-  new Uint8Array([0xff, 0x00, 0x00, 0x00])
+  new Uint8Array([0xff, 0x00, 0x00, 0x00]),
 ); // data
 ```
 

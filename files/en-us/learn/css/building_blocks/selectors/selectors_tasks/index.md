@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Selectors"
 slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

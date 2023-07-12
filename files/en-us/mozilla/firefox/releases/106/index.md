@@ -1,6 +1,7 @@
 ---
 title: Firefox 106 for developers
 slug: Mozilla/Firefox/Releases/106
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

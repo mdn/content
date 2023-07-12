@@ -1,5 +1,5 @@
 ---
-title: CSS Lists
+title: CSS lists
 slug: Web/CSS/CSS_lists
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-lists/
@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-lists/
 
 {{CSSRef}}
 
-**CSS Lists** is a module of CSS that defines how lists can be laid out and styled.
+The **CSS lists** module defines how lists can be laid out and styled.
 
 ## Reference
 

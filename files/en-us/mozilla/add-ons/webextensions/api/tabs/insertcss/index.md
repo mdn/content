@@ -70,7 +70,6 @@ This example inserts into the currently active tab CSS which is taken from a str
 let css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
@@ -84,7 +83,6 @@ This example inserts CSS which is loaded from a file packaged with the extension
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }

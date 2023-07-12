@@ -4,6 +4,8 @@ slug: Glossary/Localization
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Localization** (l10n) is the process of adapting a software user interface to a specific culture.
 
 The following are common factors to consider:

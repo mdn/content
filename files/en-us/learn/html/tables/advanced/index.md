@@ -101,7 +101,7 @@ Let's put these new elements into action.
 Your finished table should look something like the following:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

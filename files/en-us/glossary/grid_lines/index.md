@@ -4,6 +4,8 @@ slug: Glossary/Grid_Lines
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Grid lines** are created when you define {{glossary("Grid tracks", "tracks")}} in the explicit grid using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Example

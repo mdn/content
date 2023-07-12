@@ -1,6 +1,7 @@
 ---
 title: Codecs in common media types
 slug: Web/Media/Formats/codecs_parameter
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

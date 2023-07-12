@@ -72,7 +72,7 @@ for (const element of [, "a"].entries()) {
 
 ### Calling entries() on non-array objects
 
-The `entries()` method reads the `length` property of `this` and then accesses each integer index.
+The `entries()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -80,6 +80,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "d", // ignored by entries() since length is 3
 };
 for (const entry of Array.prototype.entries.call(arrayLike)) {
   console.log(entry);

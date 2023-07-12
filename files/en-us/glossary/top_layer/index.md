@@ -4,6 +4,8 @@ slug: Glossary/Top_layer
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 The **top layer** is a specific layer in the [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context), which spans the entire width and height of the viewport and sits on top of all other layers displayed in a web document. It is created by the browser to contain elements that should appear on top of all other content on the page.
 
 Elements that will appear in the top layer include:

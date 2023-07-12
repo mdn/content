@@ -4,6 +4,8 @@ slug: Glossary/Accessibility_tree
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 The **accessibility tree** contains {{Glossary("accessibility")}}-related information for most HTML elements.
 
 Browsers convert markup into an internal representation called the _[DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)_. The DOM tree contains objects representing all the markup's elements, attributes, and text nodes. Browsers then create an accessibility tree based on the DOM tree, which is used by platform-specific Accessibility APIs to provide a representation that can be understood by assistive technologies, such as screen readers.

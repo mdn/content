@@ -21,7 +21,7 @@ Values of this type are objects, which can contain the following properties:
   - : A `string` representing the unique identifier for the cookie store.
 - `incognito` {{optional_inline}}
   - : A boolean value that indicates whether this is an incognito cookie store.
-      This property is not supported in Chrome or Safari. However, you can identify incognito cookie stores in Chrome because their `id` is always "1".
+    This property is not supported in Chrome or Safari. However, you can identify incognito cookie stores in Chrome because their `id` is always "1".
 - `tabIds`
   - : An `array` of `integers`, which identifies all of the browser tabs that share this cookie store.
 
@@ -48,7 +48,9 @@ The following code snippet gets all cookie stores and then logs the total number
 ```js
 browser.cookies.getAllCookieStores().then((stores) => {
   const incognitoStores = stores.map((store) => store.incognito);
-  console.log(`Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`);
+  console.log(
+    `Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`
+  );
 });
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Floats
 slug: Learn/CSS/CSS_layout/Floats
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
@@ -84,7 +85,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -207,7 +211,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -280,7 +287,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -340,6 +350,7 @@ In your CSS, add the following rule for the `.wrapper` class and then reload the
   background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
+  overflow: auto;
 }
 ```
 
@@ -379,13 +390,17 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
   background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
+  overflow: auto;
 }
 
 .box {
@@ -453,7 +468,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {

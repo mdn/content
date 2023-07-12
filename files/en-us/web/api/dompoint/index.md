@@ -56,14 +56,14 @@ function onXRFrame(time, xrFrame) {
 
     console.log(
       `XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(
-        position.y
-      )}, z: ${roundToTwo(position.z)}`
+        position.y,
+      )}, z: ${roundToTwo(position.z)}`,
     );
 
     console.log(
       `XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(
-        orientation.y
-      )}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`
+        orientation.y,
+      )}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`,
     );
   }
 }

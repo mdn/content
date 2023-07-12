@@ -1,6 +1,7 @@
 ---
 title: Introduction to HTML Game Development
 slug: Games/Introduction_to_HTML5_Game_Development
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -18,6 +19,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
 ## Web Technologies
 
 <table class="no-markdown standard-table">
+  <caption>Web technologies in game development and their function</caption>
   <thead>
     <tr>
       <th scope="col"><strong>Function</strong></th>

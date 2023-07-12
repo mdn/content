@@ -38,10 +38,6 @@ The size of the margin area is determined by the {{cssxref("margin-top")}}, {{cs
 
 Finally, note that for non-replaced inline elements, the amount of space taken up (the contribution to the height of the line) is determined by the {{cssxref('line-height')}} property, even though the borders and padding are still displayed around the content.
 
-## Specifications
-
-{{Specifications}}
-
 ## See also
 
 - [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)

@@ -1,6 +1,7 @@
 ---
 title: Firefox 100 for developers
 slug: Mozilla/Firefox/Releases/100
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

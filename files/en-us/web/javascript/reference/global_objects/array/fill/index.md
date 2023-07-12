@@ -100,7 +100,7 @@ Note that the array was initially a [sparse array](/en-US/docs/Web/JavaScript/Gu
 
 ### Calling fill() on non-array objects
 
-The `fill()` method reads the `length` property of `this` and sets the value of each integer property from `start` to `end`.
+The `fill()` method reads the `length` property of `this` and sets the value of each integer-keyed property from `start` to `end`.
 
 ```js
 const arrayLike = { length: 2 };

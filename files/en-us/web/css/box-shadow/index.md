@@ -34,7 +34,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* Any number of shadows, separated by commas */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 
 /* Global values */
 box-shadow: inherit;
@@ -121,7 +123,9 @@ In this example, we include three shadows: an inset shadow, a regular drop shado
 ```css
 blockquote {
   padding: 20px;
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+  box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 ```
@@ -146,7 +150,9 @@ We added a margin the size of the widest box-shadow to ensure the shadow doesn't
 
 ```css
 p {
-  box-shadow: 0 0 0 2em #f4aab9, 0 0 0 4em #66ccff;
+  box-shadow:
+    0 0 0 2em #f4aab9,
+    0 0 0 4em #66ccff;
   margin: 4em;
   padding: 1em;
 }

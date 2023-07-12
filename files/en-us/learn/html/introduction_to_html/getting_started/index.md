@@ -1,6 +1,7 @@
 ---
 title: Getting started with HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -167,7 +168,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -364,7 +365,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -460,13 +461,13 @@ However, if you use one type of quote, you can include the other type of quote _
 To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
 
 ```html-nolint example-bad
-<a href='https://www.example.com' title='Isn't this fun?'>A link to my example.</a>
+<a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
 ```
 
 Instead, you need to do this:
 
 ```html-nolint
-<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="https://www.example.com" title="An &quot;interesting&quot; reference">A link to my example.</a>
 ```
 
 ## Anatomy of an HTML document
@@ -474,7 +475,7 @@ Instead, you need to do this:
 Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -634,7 +635,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -658,22 +659,42 @@ textarea.onkeyup = () => {
 };
 ```
 
-{{ EmbedLiveSample('Active_learning_Adding_some_features_to_an_HTML_document', 700, 1075, "", "") }}
+{{ EmbedLiveSample('Active_learning_Adding_some_features_to_an_HTML_document', 700, 500) }}
 
 ### Whitespace in HTML
 
 In the examples above, you may have noticed that a lot of whitespace is included in the code. This is optional. These two code snippets are equivalent:
 
 ```html-nolint
-<p>Dogs are silly.</p>
+<p id="noWhitespace">Dogs are silly.</p>
 
-<p>Dogs        are
-         silly.</p>
+<p id="whitespace">Dogs
+    are
+        silly.</p>
 ```
 
 No matter how much whitespace you use inside HTML element content (which can include one or more space character, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.
 
 It can be easier to understand what is going on in your code if you have it nicely formatted. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you to choose the style of formatting (how many spaces for each level of indentation, for example), but you should consider formatting it.
+
+Let's have a look at how the browser renders the two paragraphs above with and without whitespace:
+
+{{ EmbedLiveSample('Whitespace_in_HTML', 700, 100) }}
+
+> **Note:** Accessing the [innerHTML](/en-US/docs/Web/API/Element/innerHTML) of elements from JavaScript will keep all the whitespace intact.
+> This may return unexpected results if the whitespace is trimmed by the browser.
+
+```js
+const noWhitespace = document.getElementById("noWhitespace").innerHTML;
+console.log(noWhitespace);
+// "Dogs are silly."
+
+const whitespace = document.getElementById("whitespace").innerHTML;
+console.log(whitespace);
+// "Dogs
+//    are
+//        silly."
+```
 
 ## Entity references: Including special characters in HTML
 

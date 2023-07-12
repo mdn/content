@@ -4,6 +4,8 @@ slug: Glossary/Asynchronous
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 The term **asynchronous** refers to two or more objects or events **not** existing or happening at the same time (or multiple related things happening without waiting for the previous one to complete). In computing, the word "asynchronous" is used in two major contexts.
 
 - Networking and communications

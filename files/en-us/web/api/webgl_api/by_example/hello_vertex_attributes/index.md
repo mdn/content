@@ -103,7 +103,7 @@ function setupWebGL(evt) {
     const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
     document.querySelector(
-      "p"
+      "p",
     ).textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
     return;
   }
@@ -122,11 +122,11 @@ function setupWebGL(evt) {
       gl.bufferData(
         gl.ARRAY_BUFFER,
         new Float32Array([clickXinWebGLCoords]),
-        gl.STATIC_DRAW
+        gl.STATIC_DRAW,
       );
       gl.drawArrays(gl.POINTS, 0, 1);
     },
-    false
+    false,
   );
 }
 

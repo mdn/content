@@ -67,7 +67,7 @@ transition-timing-function: unset;
     - `ease-in`
       - : Equal to `cubic-bezier(0.42, 0, 1.0, 1.0)`, starts off slowly, with the transition speed increasing until complete.
     - `ease-out`
-      - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts transitioning quickly, slowing down the transition continues. •
+      - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts transitioning quickly, slowing down as the transition continues.
     - `ease-in-out`
       - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, starts transitioning slowly, speeds up, and then slows down again.
     - `cubic-bezier(p1, p2, p3, p4)`

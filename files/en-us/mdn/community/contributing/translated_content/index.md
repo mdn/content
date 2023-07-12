@@ -12,7 +12,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ## Active locales
 
-> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us for help](/en-US/docs/MDN/Community/Communication_channels).
+> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us](/en-US/docs/MDN/Community/Communication_channels) if you have any questions.
 
 ### Brazilian Portuguese (pt-BR)
 
@@ -48,8 +48,6 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 - Discussions: [Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
 - Current maintainers: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
-
-> **Note:** If you want to discuss unfreezing a currently frozen locale, the [guidelines on what is required can be found here](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale).
 
 ## See also
 

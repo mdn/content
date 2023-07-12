@@ -37,7 +37,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 const node = treeWalker.nextNode(); // returns the first child of root, as it is the next node in document order
 ```

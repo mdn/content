@@ -29,7 +29,8 @@ This example uses `<tt>` to show text entered into, and output by, a terminal ap
 
 ```html
 <p>
-  Enter the following at the telnet command prompt: <code>set localecho</code><br />
+  Enter the following at the telnet command prompt:
+  <code>set localecho</code><br />
 
   The telnet client should display: <tt>Local Echo is on</tt>
 </p>
@@ -55,7 +56,8 @@ tt {
 
 ```html
 <p>
-  Enter the following at the telnet command prompt: <code>set localecho</code><br />
+  Enter the following at the telnet command prompt:
+  <code>set localecho</code><br />
 
   The telnet client should display: <tt>Local Echo is on</tt>
 </p>

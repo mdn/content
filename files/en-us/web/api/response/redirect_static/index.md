@@ -3,7 +3,7 @@ title: "Response: redirect() static method"
 short-title: redirect()
 slug: Web/API/Response/redirect_static
 page-type: web-api-static-method
-browser-compat: api.Response.redirect
+browser-compat: api.Response.redirect_static
 ---
 
 {{APIRef("Fetch API")}}

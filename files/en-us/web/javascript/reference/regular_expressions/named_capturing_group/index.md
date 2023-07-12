@@ -58,8 +58,12 @@ The following example parses a timestamp and an author name from a Git log entry
 
 ```js
 function parseLog(entry) {
-  const { author, timestamp } = /^(?<timestamp>\d+),(?<author>.+)$/.exec(entry).groups;
-  return `${author} committed on ${new Date(parseInt(timestamp) * 1000).toLocaleString()}`;
+  const { author, timestamp } = /^(?<timestamp>\d+),(?<author>.+)$/.exec(
+    entry,
+  ).groups;
+  return `${author} committed on ${new Date(
+    parseInt(timestamp) * 1000,
+  ).toLocaleString()}`;
 }
 
 parseLog("1560979912,Caroline"); // "Caroline committed on 6/19/2019, 5:31:52 PM"
