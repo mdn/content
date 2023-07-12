@@ -43,7 +43,7 @@ This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn)
 - `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn/CSS).
 - `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Introduction to HTML_](/en-US/docs/Learn/HTML/Introduction_to_HTML).
 - `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn/Accessibility/Mobile).
-- `learn-module-assessment` a special guide with an activity allowing to asess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn/Forms/Test_your_skills:_Basic_controls).
+- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn/Forms/Test_your_skills:_Basic_controls).
 - `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name).
 
 ### Accessibility page types
@@ -67,7 +67,7 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-property`: a property, like {{cssxref("background-color")}}.
 - `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
 - `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.
-- `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_Selectors#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Class_selectors).
+- `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Class_selectors).
 - `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties), like {{cssxref("background")}}.
 - `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_Types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
 
@@ -172,6 +172,25 @@ This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtens
 This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/description).
+
+### XPath page types
+
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+
+- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Functions/ceiling)
+
+### XSLT page types
+
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+
+- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/WWeb/XSLT/Element/message).
+- `xslt-axis`: an axis of XSLT, like [`ancestor`](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor).
+
+### EXSLT page types
+
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+
+- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/EXSLT/exsl/node-set).
 
 ### Firefox page types
 

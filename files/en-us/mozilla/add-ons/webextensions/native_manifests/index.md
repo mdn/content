@@ -152,7 +152,7 @@ For example, here's a manifest for the `ping_pong` native application:
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -221,8 +221,7 @@ For example:
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
+  "data": {
     "color": "management thinks it should be blue!"
   }
 }
@@ -231,7 +230,7 @@ For example:
 Given this JSON manifest, the `favourite-color-examples@mozilla.org` extension could access the data using code like this:
 
 ```js
-let storageItem = browser.storage.managed.get('color');
+let storageItem = browser.storage.managed.get("color");
 storageItem.then((res) => {
   console.log(`Managed color is: ${res.color}`);
 });

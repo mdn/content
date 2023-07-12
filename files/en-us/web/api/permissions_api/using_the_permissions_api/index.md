@@ -8,23 +8,24 @@ status:
 
 {{DefaultAPISidebar("Permissions API")}}
 
-This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.
+This article provides a basic guide to using the W3C [Permissions API](/en-US/docs/Web/API/Permissions_API), which provides a programmatic way to query the status of API permissions attributed to the current context.
 
 ## The trouble with asking for permission…
 
-Let's face it, permissions on the Web are a necessary evil, and they are not much fun to deal with as developers.
+Permissions on the Web are a necessary evil, but they are not much fun to deal with as developers.
 
-Historically, different APIs handle their own permissions inconsistently — for example the Notifications API allows for explicit checking of permission status and requesting permission, whereas the Geolocation API doesn't (which causes problems if the user denied the initial permission request, as we'll see below).
+Historically, different APIs handle their own permissions inconsistently — for example the [Notifications API](/en-US/docs/Web/API/Notifications_API) had its own methods for checking the permission status and requesting permission, whereas the [Geolocation API](/en-US/docs/Web/API/Geolocation_API) did not.
 
-The [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the tools to allow developers to implement a better user experience as far as permissions are concerned. For example, it can query whether permission to use a particular API is granted or denied, and specifically request permission to use an API.
+The [Permissions API](/en-US/docs/Web/API/Permissions_API) provides a consistent approach for developers, and allows them to implement a better user experience as far as permissions are concerned.
+Specifically, developers can use {{domxref("Permissions.query()")}} to check whether permission to use a particular API in the current context is granted, denied, or requires specific user permission via a prompt.
+Querying permissions in the main thread is [broadly supported](/en-US/docs/Web/API/Permissions_API#api.navigator.permissions), and also in [Workers](/en-US/docs/Web/API/Permissions_API#api.workernavigator.permissions) (with a notable exception).
 
-At the moment, implementation of the API is at an early stage, so support in browsers is pretty spotty:
+Many APIs now enable permission querying, such as the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), [Notifications API](/en-US/docs/Web/API/Notifications_API)
 
-- It can only be found in Chrome 44 and later and Firefox 43 and later.
-- The only supported method right now is {{domxref("Permissions.query()")}}, which queries permission status.
-- The only two APIs currently recognized by the Permissions API in Chrome are [Geolocation](/en-US/docs/Web/API/Geolocation) and Notification, with Firefox also recognizing [Push](/en-US/docs/Web/API/Push_API) and WebMIDI.
+- [Push API](/en-US/docs/Web/API/Push_API), [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API).
+  A list of many permission enabled APIs is provided in the [API Overview](/en-US/docs/Web/API/Permissions_API#permission-aware_apis), and you can get a sense of browser support in the [compatibility table here](/en-US/docs/Web/API/Permissions_API#api.permissions).
 
-More features will be added as time progresses.
+{{domxref("Permissions")}} has other methods to specifically request permission to use an API, and to revoke permission, but these are deprecated (non-standard, and/or not broadly supported).
 
 ## A simple example
 

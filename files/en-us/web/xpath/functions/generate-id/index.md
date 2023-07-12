@@ -1,6 +1,7 @@
 ---
 title: generate-id
 slug: Web/XPath/Functions/generate-id
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

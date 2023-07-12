@@ -1,6 +1,7 @@
 ---
 title: <xsl:variable>
 slug: Web/XSLT/Element/variable
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}
