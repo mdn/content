@@ -498,7 +498,7 @@ First, the HTML. Again, feel free to build this along with us:
 <form novalidate>
   <p>
     <label for="mail">
-      <span>Please enter an email address:</span>
+      <span>Please enter an email address at least 8 characters long:</span>
       <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
