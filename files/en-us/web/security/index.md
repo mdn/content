@@ -118,7 +118,7 @@ Permissions policy works in a similar way, except that it is more concerned with
 
 ## Maintain data integrity
 
-Following on from the previous section, when you do allow feature and resource usage on your site, you should try to ensure that resources have not been tempered with.
+Following on from the previous section, when you do allow feature and resource usage on your site, you should try to ensure that resources have not been tampered with.
 
 Related topics:
 
