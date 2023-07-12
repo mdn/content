@@ -67,7 +67,7 @@ For example, if a website queries a user's browser for the elapsed time, a compa
 
 ## What do browsers do automatically?
 
-Browser vendors are aware of the need to protect user privacy, and the negative effects of tracking, fingerprinting, etc., on user experience. To this end, they have implemented various features that enhance privacy protection and/or mitigate threats. In this section, we look at different categories of privacy protection that browsers apply automatically.
+Browser vendors are aware of the need to protect user privacy and the negative effects of tracking, fingerprinting, etc., on user experience. To this end, they have implemented various features that enhance privacy protection and/or mitigate threats. In this section, we look at different categories of privacy protection that browsers apply automatically.
 
 ### HTTPS by default
 
