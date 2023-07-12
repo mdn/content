@@ -299,7 +299,7 @@ The basic steps to create the table in sample1.html are:
             const myCurrentCell = document.createElement("td");
             // creates a Text Node
             const currentText = document.createTextNode(
-              `cell is row ${j}, column ${i}`
+              `cell is row ${j}, column ${i}`,
             );
             // appends the Text Node we created into the cell <td>
             myCurrentCell.appendChild(currentText);

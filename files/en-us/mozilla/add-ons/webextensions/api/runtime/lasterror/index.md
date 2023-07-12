@@ -60,9 +60,9 @@ function logError(e) {
   console.error(e);
 }
 
-const setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+const setCookie = browser.cookies.set({
+  url: "https://developer.mozilla.org/",
+});
 
 setCookie.then(logCookie, logError);
 ```

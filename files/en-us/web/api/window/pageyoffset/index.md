@@ -140,7 +140,10 @@ iframe {
 
 #info {
   margin-top: 20px;
-  font: 16px "Open Sans", "Helvetica", "Arial";
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial";
 }
 ```
 

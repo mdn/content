@@ -68,7 +68,7 @@ const uniformIndices = gl.getUniformIndices(program, [
 const uniformOffsets = gl.getActiveUniforms(
   program,
   uniformIndices,
-  gl.UNIFORM_OFFSET
+  gl.UNIFORM_OFFSET,
 );
 ```
 

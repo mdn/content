@@ -52,4 +52,4 @@ For details on how to design your popup's web page to match the style of Firefox
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) example, which implements a browser action with a popup.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify) example, which implements a browser action with a popup.

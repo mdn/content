@@ -1,6 +1,6 @@
 ---
 title: What next?
-slug: Mozilla/Add-ons/WebExtensions/What_next_
+slug: Mozilla/Add-ons/WebExtensions/What_next
 page-type: guide
 ---
 

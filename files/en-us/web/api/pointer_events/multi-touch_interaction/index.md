@@ -193,7 +193,7 @@ function removeEvent(ev) {
   // Remove this event from the target's cache
   const evCache = getCache(ev);
   const index = evCache.findIndex(
-    (cachedEv) => cachedEv.pointerId === ev.pointerId
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
   );
   evCache.splice(index, 1);
 }

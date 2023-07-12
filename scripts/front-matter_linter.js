@@ -44,7 +44,7 @@ async function lintFrontMatter(filesAndDirectories, options) {
   ).flat();
 
   options.config = JSON.parse(
-    await fs.readFile("./front-matter-config.json", "utf-8")
+    await fs.readFile("./front-matter-config.json", "utf-8"),
   );
 
   options.validator = getAjvValidator(options.config.schema);
@@ -58,7 +58,7 @@ async function lintFrontMatter(filesAndDirectories, options) {
     try {
       const [error, fixableError, content] = await checkFrontMatter(
         file,
-        options
+        options,
       );
       if (content) {
         fs.writeFile(file, content);
@@ -115,7 +115,7 @@ program
         return;
       }
       return lintFrontMatter(files, options);
-    })
+    }),
   );
 
 program.run();

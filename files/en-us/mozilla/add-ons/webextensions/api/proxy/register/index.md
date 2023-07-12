@@ -41,7 +41,7 @@ browser.runtime.onMessage.addListener((message, sender) => {
 let messageToProxy = {
   enabled: true,
   foo: "A string",
-  bar: 1234
+  bar: 1234,
 };
 
 browser.runtime.sendMessage(messageToProxy, {toProxyScript: true});
@@ -78,13 +78,13 @@ const proxySpecification = [
     host: "foo.com",
     port: 1080,
     proxyDNS: true,
-    failoverTimeout: 5
+    failoverTimeout: 5,
   },
   {
     type: "socks",
     host: "bar.com",
     port: 1060,
-  }
+  },
 ];
 ```
 

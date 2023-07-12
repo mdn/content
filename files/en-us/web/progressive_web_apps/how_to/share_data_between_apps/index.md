@@ -274,7 +274,7 @@ self.addEventListener("fetch", (event) => {
 
       // Redirect the user to a URL that shows the imported files.
       return Response.redirect("/display-new-files", 303);
-    })()
+    })(),
   );
 });
 ```

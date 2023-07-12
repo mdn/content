@@ -113,7 +113,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/fallback.html",
-    })
+    }),
   );
 });
 ```
@@ -213,7 +213,7 @@ async function requestBackgroundFetch(movieData) {
       icons: movieIcons,
       title: "Downloading my movie",
       downloadTotal: 60 * 1024 * 1024,
-    }
+    },
   );
   //...
 }
@@ -258,7 +258,7 @@ self.addEventListener("backgroundfetchsuccess", (event) => {
     const registration = event.registration;
     const records = await registration.matchAll();
     const responsePromises = records.map(
-      async (record) => await record.responseReady
+      async (record) => await record.responseReady,
     );
 
     const responses = Promise.all(responsePromises);

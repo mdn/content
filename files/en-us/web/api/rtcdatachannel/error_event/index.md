@@ -77,7 +77,7 @@ dc.addEventListener(
       case "idp-load-failure":
         console.error(
           "    Identity provider load failure: HTTP error ",
-          err.httpRequestStatusCode
+          err.httpRequestStatusCode,
         );
         break;
       case "sctp-failure":
@@ -105,10 +105,10 @@ dc.addEventListener(
       " at line ",
       err.lineNumber,
       ", column ",
-      err.columnNumber
+      err.columnNumber,
     );
   },
-  false
+  false,
 );
 ```
 

@@ -113,7 +113,7 @@ function runXHR(url) {
 
 xhrButtonSuccess.addEventListener("click", () => {
   runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json"
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
   );
 });
 
@@ -123,7 +123,7 @@ xhrButtonError.addEventListener("click", () => {
 
 xhrButtonAbort.addEventListener("click", () => {
   runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json"
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
   ).abort();
 });
 ```

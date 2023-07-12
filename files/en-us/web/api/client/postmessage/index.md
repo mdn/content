@@ -57,7 +57,7 @@ addEventListener("fetch", (event) => {
         msg: "Hey I just got a fetch from you!",
         url: event.request.url,
       });
-    })()
+    })(),
   );
 });
 ```

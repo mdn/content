@@ -376,7 +376,7 @@ It also compiles the markup and `<script>` section of every component and stores
 Finally the file `public/index.html` includes the generated `bundle.css` and `bundle.js` files:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

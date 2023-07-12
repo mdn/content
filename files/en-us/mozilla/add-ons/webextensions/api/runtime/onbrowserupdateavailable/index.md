@@ -48,7 +48,9 @@ function handleBrowserUpdateAvailable() {
   // handle event
 }
 
-browser.runtime.onBrowserUpdateAvailable.addListener(handleBrowserUpdateAvailable);
+browser.runtime.onBrowserUpdateAvailable.addListener(
+  handleBrowserUpdateAvailable
+);
 ```
 
 {{WebExtExamples}}

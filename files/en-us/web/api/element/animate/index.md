@@ -150,7 +150,7 @@ document.getElementById("tunnel").animate(
     // timing options
     duration: 1000,
     iterations: Infinity,
-  }
+  },
 );
 ```
 
@@ -190,7 +190,7 @@ img.animate(
     timeline,
     rangeStart: "cover 0%",
     rangeEnd: "cover 100%",
-  }
+  },
 );
 ```
 

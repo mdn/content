@@ -20,6 +20,6 @@ To try these examples, clone the repository then:
 
 > **Warning:** Please do not submit these WebExtension examples to addons.mozilla.org (AMO); you do not have to sign the add-on WebExtension examples to run them. Follow the steps above.
 
-If you want to contribute to the repository, [send us a pull request.](https://github.com/mdn/webextensions-examples/blob/master/CONTRIBUTING.md)
+If you want to contribute to the repository, [send us a pull request.](https://github.com/mdn/webextensions-examples/blob/main/CONTRIBUTING.md)
 
 {{WebExtAllExamples}}

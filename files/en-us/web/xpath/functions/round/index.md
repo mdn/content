@@ -1,6 +1,7 @@
 ---
 title: round
 slug: Web/XPath/Functions/round
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

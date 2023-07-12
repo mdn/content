@@ -26,7 +26,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 In this example, we see a frameset with two frames. In addition, `<noframes>` is used to present an explanatory message if the {{Glossary("user agent")}} doesn't support frames.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <!-- Document metadata goes here -->

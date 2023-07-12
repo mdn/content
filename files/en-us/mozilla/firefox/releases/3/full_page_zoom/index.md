@@ -29,7 +29,7 @@ var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");
 var contViewer = iframe.docShell.contentViewer;
 var docViewer = contViewer.QueryInterface(
-  Components.interfaces.nsIMarkupDocumentViewer
+  Components.interfaces.nsIMarkupDocumentViewer,
 );
 docViewer.fullZoom = zoom;
 ```

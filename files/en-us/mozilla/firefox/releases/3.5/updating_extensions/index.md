@@ -135,7 +135,7 @@ try {
 } catch (ex) {
   try {
     loadContext = aRequest.loadGroup.notificationCallbacks.getInterface(
-      Components.interfaces.nsILoadContext
+      Components.interfaces.nsILoadContext,
     );
   } catch (ex) {
     loadContext = null;
@@ -154,14 +154,14 @@ function getWindowForRequest(request) {
     try {
       if (request.notificationCallbacks) {
         return request.notificationCallbacks.getInterface(
-          Components.interfaces.nsILoadContext
+          Components.interfaces.nsILoadContext,
         ).associatedWindow;
       }
     } catch (e) {}
     try {
       if (request.loadGroup && request.loadGroup.notificationCallbacks) {
         return request.loadGroup.notificationCallbacks.getInterface(
-          Components.interfaces.nsILoadContext
+          Components.interfaces.nsILoadContext,
         ).associatedWindow;
       }
     } catch (e) {}

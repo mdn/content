@@ -90,7 +90,9 @@ p {
   background-color: magenta;
   color: goldenrod;
   border: 1em solid rebeccapurple;
-  box-shadow: inset -5px -5px red, 5px 5px yellow;
+  box-shadow:
+    inset -5px -5px red,
+    5px 5px yellow;
 }
 ```
 
