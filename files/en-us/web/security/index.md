@@ -20,11 +20,11 @@ The articles listed here provide an introduction to web security, including info
 
 Security and privacy are distinct topics, but they are also closely-related. It is worth knowing the difference between the two and how they relate.
 
-- **Security** is the act of keeping private data and systems protected against unauthorized access. This includes both company (internal) data, and user and partner (external) data.
+- **Security** is the act of keeping private data and systems protected against unauthorized access. This includes both company (internal) data and user and partner (external) data.
 
-- **Privacy** refers to the act of giving users the right to control how their data is collected, stored, and used, and not using it irresponsibly. For example, developers should make it very clear to users of their sites what data they are collecting, who else it will be shared with, and what they will use it for. Users must be given a chance to consent to your privacy policy, be able to see what data you have stored, and delete their data if they no longer wish you to have it.
+- **Privacy** refers to the act of giving users the right to control how their data is collected, stored, and used, and not using it irresponsibly. For example, you should clearly communicate to users of your sites the data you are collecting, with whom it will be shared, and how it will be used. Users must be given a chance to consent to your privacy policy, have access to their data you have stored, and delete their data if they no longer wish you to have it.
 
-Good security is essential for good privacy — you could go over to our [Privacy on the web](/en-US/docs/Web/Privacy) guide and follow all the advice listed there, but acting with integrity and having a solid privacy policy are futile if your site is not secure and attackers can just steal data anyway.
+Good security is very essential for good privacy. You could follow all the advice listed in our [Privacy on the web](/en-US/docs/Web/Privacy) guide, but acting with integrity and having a robust privacy policy are futile if your site is not secure and attackers can just steal data anyway.
 
 ## What do browsers do automatically?
 
