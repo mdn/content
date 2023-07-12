@@ -185,8 +185,8 @@ In the four cases, we are checking to see:
 
 - if the `x` coordinate is greater than the width of the canvas (the ball is going off the right edge).
 - if the `x` coordinate is smaller than 0 (the ball is going off the left edge).
-- if the `y` coordinate is greater than the height of the canvas (the ball is going off the bottom edge).
-- if the `y` coordinate is smaller than 0 (the ball is going off the top edge).
+- if the `y` coordinate is greater than the height of the canvas (the ball is going off the top edge).
+- if the `y` coordinate is smaller than 0 (the ball is going off the bottom edge).
 
 In each case, we include the `size` of the ball in the calculation because the `x`/`y` coordinates are in the center of the ball, but we want the edge of the ball to bounce off the perimeter — we don't want the ball to go halfway off the screen before it starts to bounce back.
 
