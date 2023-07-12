@@ -1,15 +1,11 @@
-# Welcome to MDN Web Docs
-
-![github-profile](https://user-images.githubusercontent.com/10350960/166113119-629295f6-c282-42c9-9379-af2de5ad4338.png)
-
-[MDN Web Docs][] is an open-source, collaborative project that documents web technologies including CSS, HTML, JavaScript, and Web APIs.
+This is an open-source, collaborative project that documents web technologies including CSS, HTML, JavaScript, and Web APIs.
 Alongside detailed reference documentation, we provide extensive learning resources for students and beginners getting started with web development.
 
-## MDN's mission
+## Mission
 
-MDN's mission is to provide a blueprint for a better internet and empower a new generation of developers and content creators to build it.
+Our mission is to provide a blueprint for a better internet and empower a new generation of developers and content creators to build it.
 
-The strength of MDN Web Docs lies in its vast community of active readers and contributors.
+The strength of this project lies in its vast community of active readers and contributors.
 Since 2005, approximately 45,000 contributors have created the documentation we know and love.
 Together, contributors have created over 45,000 documents that make up an up-to-date, comprehensive, and free resource for web developers worldwide.
 
@@ -34,17 +30,16 @@ yarn start
 
 Once started, a live preview is available at `http://localhost:5042/`.
 
-## Contribute to MDN Web Docs
+## Contribute
 
-You can contribute to MDN Web Docs and be a part of our community through content contributions, engineering, or translation work.
-The MDN Web Docs project welcomes contributions from everyone who shares our goals and wants to contribute constructively and respectfully within our community.
+You can contribute and be a part of our community through content contributions, engineering, or translation work.
+The project welcomes contributions from everyone who shares our goals and wants to contribute constructively and respectfully within our community.
 
 To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
 By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Get in touch
 
-You can communicate with the MDN Web Docs team and community using the [communication channels][].
+You can communicate with the project team and community using the [communication channels][].
 
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
-[MDN Web Docs]: https://developer.mozilla.org/
