@@ -139,7 +139,7 @@ To protect against this, you should thoroughly sanitize data entered into your f
 
 You should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) for more information.
 
-However, you can't rely on client-side validation alone for security. It is a useful user experience enhancement for your users because it gives them instant validation feedback without having to wait for a round trip to the server. However, it is too easy for a malicious party to bypass (for example they could turn off JavaScript in the browser to bypass JavaScript-based validation), so it should be combined with server-side validation.
+However, you can't rely on client-side validation alone for security. It is a useful user experience enhancement for your users because it gives them instant validation feedback without having to wait for a round trip to the server. At the same time, client-side validation is too easy for a malicious party to bypass (for example, by turning off JavaScript in the browser to bypass JavaScript-based validation), so it should be combined with server-side validation.
 
 Any reputable server-side framework will provide functionality for validating form submissions. In addition, a common best practice is to escape any special characters that form part of executable syntax, thereby making any entered code no longer executable and treated as plain text.
 
