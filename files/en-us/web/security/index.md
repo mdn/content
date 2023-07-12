@@ -26,7 +26,7 @@ Security and privacy are distinct topics, but they are also closely-related. It 
 
 Good security is very essential for good privacy. You could follow all the advice listed in our [Privacy on the web](/en-US/docs/Web/Privacy) guide, but acting with integrity and having a robust privacy policy are futile if your site is not secure and attackers can just steal data anyway.
 
-## What do browsers do automatically?
+## Security services provided by browsers
 
 Web browsers have a strict security model that enforces a good level of fundamental content, connection, and transport security. This section looks at the basics.
 
