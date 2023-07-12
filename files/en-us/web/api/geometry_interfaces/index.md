@@ -6,6 +6,7 @@ browser-compat:
   - api.DOMMatrix
   - api.DOMMatrixReadOnly
   - api.DOMPoint
+  - api.DOMPointReadOnly
   - api.DOMQuad
   - api.DOMRect
   - api.DOMRectReadOnly
@@ -25,6 +26,8 @@ As a web developer, you don't always use the geometry interfaces directly, but i
   - : Read-only version of {{domxref('DOMMatrix')}}.
 - {{domxref('DOMPoint')}}
   - : Represents a 2D or 3D point in a coordinate system; it includes values for the coordinates in up to three dimensions, as well as an optional perspective value.
+- {{domxref('DOMPointReadOnly')}}
+  - : Read-only version of {{domxref('DOMPoint')}}.
 - {{domxref('DOMQuad')}}
   - : Represents a collection of four {{domxref('DOMPoint')}} objects defining the corners of a [quadrilateral](https://en.wikipedia.org/wiki/Quadrilateral).
 - {{domxref('DOMRect')}}

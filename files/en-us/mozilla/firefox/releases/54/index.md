@@ -1,6 +1,7 @@
 ---
 title: Firefox 54 for developers
 slug: Mozilla/Firefox/Releases/54
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

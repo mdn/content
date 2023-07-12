@@ -1,6 +1,7 @@
 ---
 title: What will your website look like?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
+page-type: learn-module-chapter
 status:
   - deprecated
 ---

@@ -1,6 +1,7 @@
 ---
 title: Deployment and next steps
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

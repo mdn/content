@@ -1,6 +1,7 @@
 ---
 title: Privacy on the web
 slug: Web/Privacy
+page-type: guide
 ---
 
 People use websites for several important tasks such as banking, shopping, entertainment, and paying their taxes. In doing so, they are required to share personal information with those sites. Users place a certain level of trust in the sites they share their data with — if that information fell into the wrong hands it could be used to exploit users, for example by profiling them, targetting them with unwanted ads, or even stealing their identity or money.

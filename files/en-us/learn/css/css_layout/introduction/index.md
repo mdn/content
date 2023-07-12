@@ -1,6 +1,7 @@
 ---
 title: Introduction to CSS layout
 slug: Learn/CSS/CSS_layout/Introduction
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}

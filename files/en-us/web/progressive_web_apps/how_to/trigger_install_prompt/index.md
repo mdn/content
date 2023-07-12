@@ -1,6 +1,7 @@
 ---
 title: Trigger installation from your PWA
 slug: Web/Progressive_web_apps/How_to/Trigger_install_prompt
+page-type: how-to
 ---
 
 {{PWASidebar}}
@@ -135,4 +136,4 @@ window.addEventListener("beforeinstallprompt", async (event) => {
 
 - [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event
-- [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (May 19, 2021)
+- [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (2021)

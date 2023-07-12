@@ -408,7 +408,7 @@ td {
 
 In the first table this is just using `:nth-child(even)` the third row has the `hidden` attribute applied to it. So in this instance the 3rd row is not visible and the 2nd & 4th rows are counted as even, which technically they are but visually they are not.
 
-In the second table the _of syntax_ is used to target only the `tr`s that are **not** hidden using `:nth-child(even of :not(hidden))`.
+In the second table the _of syntax_ is used to target only the `tr`s that are **not** hidden using `:nth-child(even of :not([hidden]))`.
 
 {{EmbedLiveSample('Using_of_selector_to_fix_striped_tables', 550, 180)}}
 

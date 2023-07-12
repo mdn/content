@@ -57,17 +57,17 @@ switch (candidate.type) {
     break;
   case "srflx":
     console.log(
-      `Server reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`
+      `Server reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
     );
     break;
   case "prflx":
     console.log(
-      `Peer reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`
+      `Peer reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
     );
     break;
   case "relay":
     console.log(
-      `Relay candidate's address assigned by the TURN server is ${candidate.relatedAddress}; reachable at ${candidate.ip}`
+      `Relay candidate's address assigned by the TURN server is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
     );
     break;
 }

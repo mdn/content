@@ -52,7 +52,7 @@ p ~ span {
   </span>
 </article>
 <span>
-  This span is not red because it it doesn't share a parent with a paragraph
+  This span is not red because it doesn't share a parent with a paragraph
 </span>
 ```
 

@@ -59,4 +59,4 @@ p {
 
 - [color()](/en-US/docs/Web/CSS/color_value/color) function to specify colors in a defined colorspace.
 - [@media](/en-US/docs/Web/CSS/@media) at-rule that is used to specify the color-gamut expression.
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to understand when and how to use a media query.
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to understand when and how to use a media query.

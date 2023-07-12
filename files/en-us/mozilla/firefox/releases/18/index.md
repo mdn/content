@@ -1,6 +1,7 @@
 ---
 title: Firefox 18 for developers
 slug: Mozilla/Firefox/Releases/18
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

@@ -7,7 +7,7 @@ browser-compat: css.properties.orphans
 
 {{CSSRef}}
 
-The **`orphans`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
+The **`orphans`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/CSS_paged_media), region, or [column](/en-US/docs/Web/CSS/CSS_multicol_layout).
 
 ```css
 /* <integer> values */
@@ -93,4 +93,4 @@ p:first-child {
 ## See also
 
 - {{cssxref("widows")}}
-- [Paged media](/en-US/docs/Web/CSS/Paged_Media)
+- [Paged media](/en-US/docs/Web/CSS/CSS_paged_media)

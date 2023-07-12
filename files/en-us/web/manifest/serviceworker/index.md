@@ -1,6 +1,7 @@
 ---
 title: serviceworker
 slug: Web/Manifest/serviceworker
+page-type: web-manifest-member
 status:
   - experimental
   - non-standard

@@ -20,7 +20,7 @@ You manage notifications programmatically, using the {{WebExtAPIRef("notificatio
 "permissions": ["notifications"]
 ```
 
-You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from [notify-link-clicks-i18n:](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
+You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from [notify-link-clicks-i18n:](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
 
 ```js
 const title = browser.i18n.getMessage("notificationTitle");
@@ -49,4 +49,4 @@ For details on how to create icons to use with your notification, see [Iconograp
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example which implements notifications.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) example which implements notifications.

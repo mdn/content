@@ -1,6 +1,7 @@
 ---
 title: Firefox 38 for developers
 slug: Mozilla/Firefox/Releases/38
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

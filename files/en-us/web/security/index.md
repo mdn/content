@@ -1,6 +1,7 @@
 ---
 title: Security on the web
 slug: Web/Security
+page-type: landing-page
 ---
 
 Websites contain several different types of information. Some of it is non-sensitive, for example the copy shown on the public pages. Some of it is sensitive, for example customer usernames, passwords, and banking information, or internal algorithms and private product information.

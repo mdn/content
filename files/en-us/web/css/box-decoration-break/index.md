@@ -63,7 +63,9 @@ An inline element that contains line breaks styled with:
 <style>
   .example {
     background: linear-gradient(to bottom right, yellow, green);
-    box-shadow: 8px 8px 10px 0px deeppink, -5px -5px 5px 0px blue,
+    box-shadow:
+      8px 8px 10px 0px deeppink,
+      -5px -5px 5px 0px blue,
       5px 5px 15px 0px yellow;
     padding: 0em 1em;
     border-radius: 16px;

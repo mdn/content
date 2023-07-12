@@ -1,6 +1,7 @@
 ---
 title: WAI-ARIA basics
 slug: Learn/Accessibility/WAI-ARIA_basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}

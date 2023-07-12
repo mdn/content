@@ -552,8 +552,8 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Correct**: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors for styling checkboxes
 - Don't use the conjunction "and" before the last item in the series.
   - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
-- After an external link and the source website, mention the date or year when the article was published within parentheses. Specify date using the format "January 1, 1900". The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
-  - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)
+- After an external link and the source website, mention the year when the article was published within parentheses. The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
+  - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
 
 #### Order of links
 

@@ -565,7 +565,7 @@ function replaceAd(adBox) {
   console.log(
     `Replacing ad: ${
       adBox.querySelector("h2").innerText
-    } - visible for ${visibleTime}`
+    } - visible for ${visibleTime}`,
   );
 
   loadRandomAd(adBox);

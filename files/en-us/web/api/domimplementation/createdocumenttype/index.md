@@ -40,12 +40,12 @@ A [`DocumentType`](/en-US/docs/Web/API/DocumentType).
 const dt = document.implementation.createDocumentType(
   "svg:svg",
   "-//W3C//DTD SVG 1.1//EN",
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
 );
 const d = document.implementation.createDocument(
   "http://www.w3.org/2000/svg",
   "svg:svg",
-  dt
+  dt,
 );
 alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 ```

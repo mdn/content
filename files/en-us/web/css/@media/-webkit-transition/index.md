@@ -63,5 +63,5 @@ Not part of any standard.
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
 - [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("transition")}} and [using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
-- {{cssxref("@media")}} and [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- {{cssxref("@media")}} and [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("@supports")}} and [using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)

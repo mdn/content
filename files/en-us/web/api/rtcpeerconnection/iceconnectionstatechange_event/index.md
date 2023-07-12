@@ -54,7 +54,7 @@ pc.addEventListener(
     let stateElem = document.querySelector("#call-state");
     stateElem.className = `${pc.iceConnectionState}-state`;
   },
-  false
+  false,
 );
 ```
 

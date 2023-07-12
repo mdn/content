@@ -1,6 +1,7 @@
 ---
 title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

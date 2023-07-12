@@ -1,6 +1,7 @@
 ---
 title: Typesetting a community school homepage
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

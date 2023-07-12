@@ -1,6 +1,7 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}

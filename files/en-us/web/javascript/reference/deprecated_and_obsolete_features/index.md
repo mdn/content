@@ -57,7 +57,7 @@ The following properties are deprecated. This does not affect their use in [repl
 
 The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
-The following regex syntaxes are deprecated and only available in non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode. In unicode mode, they are all syntax errors:
+The following regex syntaxes are deprecated and only available in [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). In Unicode-aware mode, they are all syntax errors:
 
 - [Lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can have [quantifiers](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
 - [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) that do not refer to an existing capturing group become [legacy octal escapes](#escape_sequences).

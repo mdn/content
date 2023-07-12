@@ -1,6 +1,7 @@
 ---
 title: <xsl:namespace-alias>
 slug: Web/XSLT/Element/namespace-alias
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: Other form controls
 slug: Learn/Forms/Other_form_controls
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}

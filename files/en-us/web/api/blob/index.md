@@ -91,7 +91,7 @@ function showViewLiveResultButton() {
 if (!showViewLiveResultButton()) {
   function typedArrayToURL(typedArray, mimeType) {
     return URL.createObjectURL(
-      new Blob([typedArray.buffer], { type: mimeType })
+      new Blob([typedArray.buffer], { type: mimeType }),
     );
   }
   const bytes = new Uint8Array(59);

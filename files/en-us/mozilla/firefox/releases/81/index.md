@@ -1,6 +1,7 @@
 ---
 title: Firefox 81 for developers
 slug: Mozilla/Firefox/Releases/81
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

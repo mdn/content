@@ -286,7 +286,7 @@ We now render the view for both the left and right eyes. First of all we need to
 
 const projectionMatrixLocation = gl.getUniformLocation(
   shaderProgram,
-  "projMatrix"
+  "projMatrix",
 );
 const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 ```
@@ -303,7 +303,7 @@ gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
 gl.uniformMatrix4fv(
   projectionMatrixLocation,
   false,
-  frameData.leftProjectionMatrix
+  frameData.leftProjectionMatrix,
 );
 gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
 drawGeometry();
@@ -317,7 +317,7 @@ gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
 gl.uniformMatrix4fv(
   projectionMatrixLocation,
   false,
-  frameData.rightProjectionMatrix
+  frameData.rightProjectionMatrix,
 );
 gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
 drawGeometry();
@@ -469,7 +469,7 @@ To demonstrate how they work, our simple demo includes the following example:
 ```js
 window.addEventListener("vrdisplaypresentchange", (e) => {
   console.log(
-    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
   );
 });
 ```

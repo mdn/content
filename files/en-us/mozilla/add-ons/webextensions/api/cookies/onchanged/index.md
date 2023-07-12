@@ -64,10 +64,12 @@ This example listens for `onChanged` events and logs details from the `changeInf
 
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
-  console.log(`Cookie changed: \n`
-    + ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n`
-    + ` * Cause: ${changeInfo.cause}\n`
-    + ` * Removed: ${changeInfo.removed}`);
+  console.log(
+    `Cookie changed: \n` +
+      ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
+      ` * Cause: ${changeInfo.cause}\n` +
+      ` * Removed: ${changeInfo.removed}`
+  );
 });
 ```
 

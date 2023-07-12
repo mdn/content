@@ -138,6 +138,8 @@ These properties are defined on `RegExp.prototype` and shared by all `RegExp` in
   - : Whether or not the search is sticky.
 - {{jsxref("RegExp.prototype.unicode")}}
   - : Whether or not Unicode features are enabled.
+- {{jsxref("RegExp.prototype.unicodeSets")}}
+  - : Whether or not the `v` flag, an upgrade to the `u` mode, is enabled.
 
 These properties are own properties of each `RegExp` instance.
 

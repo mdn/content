@@ -7,8 +7,9 @@ browser-compat: javascript.builtins.String.charAt
 
 {{JSRef}}
 
-The **`charAt()`** method of {{jsxref("String")}} values returns a new string consisting of the
-single UTF-16 code unit located at the specified offset into the string.
+The **`charAt()`** method of {{jsxref("String")}} values returns a new string consisting of the single UTF-16 code unit at the given index.
+
+`charAt()` always indexes the string as a sequence of [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters), so it may return lone surrogates. To get the full Unicode code point at the given index, use {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.fromCodePoint()")}}.
 
 {{EmbedInteractiveExample("pages/js/string-charat.html", "shorter")}}
 
@@ -21,34 +22,28 @@ charAt(index)
 ### Parameters
 
 - `index`
-  - : An integer between `0` and `str.length - 1`. If the
-    `index` cannot be converted to the integer or no
-    `index` is provided, the default is `0`, so the first
-    character of `str` is returned.
+  - : Zero-based index of the character to be returned. [Converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) — `undefined` is converted to 0.
 
 ### Return value
 
-A string representing the character (exactly one UTF-16 code unit) at the specified
-`index`. If `index` is out of range,
-`charAt()` returns an empty string.
+A string representing the character (exactly one UTF-16 code unit) at the specified `index`. If `index` is out of the range of `0` – `str.length - 1`, `charAt()` returns an empty string.
 
 ## Description
 
-Characters in a string are indexed from left to right. The index of the first character
-is `0`, and the index of the last character—in a string called
-`stringName` is `stringName.length - 1`. If
-the `index` you supply is out of this range, JavaScript returns an
-empty string.
+Characters in a string are indexed from left to right. The index of the first character is `0`, and the index of the last character in a string called `str` is `str.length - 1`.
 
-If no `index` is provided to `charAt()`, the default
-is `0`.
+Unicode code points range from `0` to `1114111` (`0x10FFFF`). `charAt()` always returns a character whose value is less than `65536`, because the higher code points are represented by _a pair_ of 16-bit surrogate pseudo-characters. Therefore, in order to get a full character with value greater than `65535`, it is necessary to retrieve not only `charAt(i)`, but also `charAt(i + 1)` (as if manipulating a string with two characters), or to use {{jsxref("String/codePointAt", "codePointAt(i)")}} and {{jsxref("String.fromCodePoint()")}} instead. For information on Unicode, see [UTF-16 characters, Unicode code points, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
+
+`charAt()` is very similar to using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) to access a character at the specified index. The main differences are:
+
+- `charAt()` attempts to convert `index` to an integer, while bracket notation does not, and directly uses `index` as a property name.
+- `charAt()` returns an empty string if `index` is out of range, while bracket notation returns `undefined`.
 
 ## Examples
 
-### Displaying characters at different locations in a string
+### Using charAt()
 
-The following example displays characters at different locations in the string
-"`Brave new world`":
+The following example displays characters at different locations in the string `"Brave new world"`:
 
 ```js
 const anyString = "Brave new world";
@@ -76,104 +71,23 @@ The character at index 4   is 'e'
 The character at index 999 is ''
 ```
 
-### Getting whole characters
-
-The following provides a means of ensuring that going through a string loop always
-provides a whole character, even if the string contains characters that are not in the
-Basic Multi-lingual Plane.
+`charAt()` may return lone surrogates, which are not valid Unicode characters.
 
 ```js
-const str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
-for (let i = 0; i < str.length; i++) {
-  let chr;
-  [chr, i] = getWholeCharAndI(str, i);
-
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning an array with the individual character
-  // and 'i' value (only changed if a surrogate pair)
-
-  console.log(chr);
-}
-
-function getWholeCharAndI(str, i) {
-  const code = str.charCodeAt(i);
-
-  if (Number.isNaN(code)) {
-    return ""; // Position not found
-  }
-  if (code < 0xd800 || code > 0xdfff) {
-    return [str.charAt(i), i]; // Normal character, keeping 'i' the same
-  }
-
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xd800 <= code && code <= 0xdbff) {
-    if (str.length <= i + 1) {
-      throw new Error("High surrogate without following low surrogate");
-    }
-    const next = str.charCodeAt(i + 1);
-    if (next < 0xdc00 || next > 0xdfff) {
-      throw new Error("High surrogate without following low surrogate");
-    }
-    return [str.charAt(i) + str.charAt(i + 1), i + 1];
-  }
-
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
-  if (i === 0) {
-    throw new Error("Low surrogate without preceding high surrogate");
-  }
-
-  const prev = str.charCodeAt(i - 1);
-
-  // (could change last hex to 0xDB7F to treat high private surrogates
-  // as single characters)
-  if (prev < 0xd800 || prev > 0xdbff) {
-    throw new Error("Low surrogate without preceding high surrogate");
-  }
-
-  // Return the next character instead (and increment)
-  return [str.charAt(i + 1), i + 1];
-}
+const str = "𠮷𠮾";
+console.log(str.charAt(0)); // "\ud842", which is not a valid Unicode character
+console.log(str.charAt(1)); // "\udfb7", which is not a valid Unicode character
 ```
 
-### Fixing charAt() to support non-Basic-Multilingual-Plane (BMP) characters
-
-While the previous example may be more useful for programs that must support non-BMP
-characters (since it does not require the caller to know where any non-BMP character
-might appear), in the event that one _does_ wish, in choosing a character by
-index, to treat the surrogate pairs within a string as the single characters they
-represent, one can use the following:
+To get the full Unicode code point at the given index, use an indexing method that splits by Unicode code points, such as {{jsxref("String.prototype.codePointAt()")}} and [spreading strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) into an array of Unicode code points.
 
 ```js
-function fixedCharAt(str, idx) {
-  str = String(str);
-
-  const surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) !== null) {
-    const lastIdx = surrogatePairs.lastIndex;
-    if (lastIdx - 2 < idx) {
-      idx++;
-    } else {
-      break;
-    }
-  }
-
-  if (idx >= str.length || idx < 0) {
-    return "";
-  }
-
-  let ret = str.charAt(idx);
-
-  if (
-    /[\uD800-\uDBFF]/.test(ret) &&
-    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
-  ) {
-    // Go one further, since one of the "characters" is part of a surrogate pair
-    ret += str.charAt(idx + 1);
-  }
-  return ret;
-}
+const str = "𠮷𠮾";
+console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
+console.log([...str][0]); // "𠮷"
 ```
+
+> **Note:** Avoid re-implementing the solutions above using `charAt()`. The detection of lone surrogates and their pairing is complex, and built-in APIs may be more performant as they directly use the internal representation of the string. Install a polyfill for the APIs mentioned above if necessary.
 
 ## Specifications
 

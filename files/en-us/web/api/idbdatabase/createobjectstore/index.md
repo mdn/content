@@ -41,7 +41,7 @@ createObjectStore(name, options)
       - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path)
         to be used by the new object store. If empty or not specified, the
         object store is created without a key path and uses
-        [out-of-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key").
+        [out-of-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key).
         You can also pass in an array as a `keyPath`.
     - `autoIncrement` {{optional_inline}}
       - : If `true`, the object store has a [key generator](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator).

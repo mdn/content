@@ -1,6 +1,7 @@
 ---
 title: The add-on bar
 slug: Mozilla/Firefox/Releases/4/The_add-on_bar
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -51,12 +52,12 @@ if (firstrun) {
 } else {
   try {
     var installedVersion = Services.prefs.getCharPref(
-      "extensions.YOUREXT.installedVersion"
+      "extensions.YOUREXT.installedVersion",
     );
     if (curVersion > installedVersion) {
       Services.prefs.setCharPref(
         "extensions.YOUREXT.installedVersion",
-        curVersion
+        curVersion,
       );
       /* Code related to upgrade */
     }

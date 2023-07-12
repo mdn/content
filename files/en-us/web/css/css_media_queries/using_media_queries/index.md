@@ -53,7 +53,7 @@ Media queries are case-insensitive.
   - {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}} {{experimental_inline}}
   - {{cssxref("@media/resolution", "resolution")}}
   - {{cssxref("@media/scripting", "scripting")}}
-  - {{cssxref("@media/update-frequency", "update")}}
+  - {{cssxref("@media/update", "update")}}
   - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
   - {{cssxref("@media/width", "width")}}.
 

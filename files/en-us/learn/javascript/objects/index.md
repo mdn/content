@@ -1,6 +1,7 @@
 ---
 title: Introducing JavaScript objects
 slug: Learn/JavaScript/Objects
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

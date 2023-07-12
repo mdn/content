@@ -1,6 +1,7 @@
 ---
 title: Firefox 83 for developers
 slug: Mozilla/Firefox/Releases/83
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

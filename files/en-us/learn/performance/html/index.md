@@ -1,6 +1,7 @@
 ---
 title: HTML performance features
 slug: Learn/Performance/HTML
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}

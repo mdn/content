@@ -57,7 +57,7 @@ someElement.addEventListener(
         break;
     }
   },
-  false
+  false,
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Firefox 36 for developers
 slug: Mozilla/Firefox/Releases/36
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -126,7 +127,7 @@ _No change._
   ```js
   var { require } = Cu.import(
     "resource://gre/modules/commonjs/toolkit/require.js",
-    {}
+    {},
   );
   ```
 
