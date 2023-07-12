@@ -40,11 +40,11 @@ This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/W
 
 ### HTTP model for communication
 
-[HTTP](/en-US/docs/Web/HTTP) is the protocol by which web browsers and servers communicate with one another, requesting resources, providing responses (for example providing the requested resource, or detailing why the request failed), and providing security features for that communication.
+[HTTP](/en-US/docs/Web/HTTP) protocol is used by web browsers and servers to communicate with one another, request resources, provide responses (for example, providing the requested resource or detailing why the request failed), and provide security features for that communication.
 
-[Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network, and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. This is good for privacy because it stops third parties from being able to intercept transmitted data and use it maliciously.
+[Transport Layer Security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. TLS is good for privacy because it stops third parties from being able to intercept transmitted data and use it maliciously.
 
-Browsers are all moving towards requiring HTTPS by default; this is practically the case already, as you can't do much without it.
+All browsers are moving towards requiring HTTPS by default; this is practically the case already because you can't do much on the web without this protocol.
 
 Related topics:
 
