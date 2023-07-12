@@ -2,7 +2,9 @@
 title: CSS selectors and combinators
 slug: Web/CSS/CSS_selectors/Selectors_and_combinators
 page-type: guide
-spec-urls: https://drafts.csswg.org/selectors/
+spec-urls:
+  - https://drafts.csswg.org/selectors/
+  - https://drafts.csswg.org/css-pseudo/
 ---
 
 {{CSSRef("Selectors")}}
@@ -19,11 +21,11 @@ The [type selector](/en-US/docs/Web/CSS/Type_selectors) selects all elements tha
 
 The [class selector](/en-US/docs/Web/CSS/Class_selectors) selects all elements that have the given `class` attribute denoted by the class name prefixed with a period (`.`). For example, `.index` will match any element that has `class="index"`. The [ID selector](/en-US/docs/Web/CSS/ID_selectors) selects an element based on the value of its `id` attribute. The selector is the `id` prefixed with an octothorp (`#`). For example, `#toc` will match the element that has `id="toc"`. Both [`class`](/en-US/docs/Web/HTML/Global_attributes/class) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) are global attributes. There should be only one element with a given `id` in a document; but if there is more than one, the ID selector will match all the elements with that `id`.
 
-When combining a type or universal selector with a class or id selector to create a [compound selector](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#compound_selector), the type or universal selector must precede the class or id.
+When combining a type or universal selector with a class or id selector to create a [compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type or universal selector must precede the class or id.
 
 #### CSS
 
-In this example, we declare four [simple selectors](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#simple_selector) and one [compound selector](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#compound_selector) using the four basic selector types, as described above.
+In this example, we declare four [simple selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector) and one [compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) using the four basic selector types, as described above.
 
 ```css
 * {
@@ -56,23 +58,35 @@ p.myClass#myId {
 
 ## Combinators
 
-Using CSS combinators, we can combine selectors to select DOM nodes based on their relationship to other elements within the document node tree. This combining of selectors with combinators creates [complex selectors](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#complex_selector).
+Using CSS combinators, we can combine selectors to select DOM nodes based on their relationship to other elements within the document node tree. This combining of selectors with combinators creates [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector).
+
+### Descendant combinator
 
 The [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), denoted with one or more spaces, selects nodes that are descendants of the first element. For example, `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.
 
+### Child combinator
+
 The [child combinator](/en-US/docs/Web/CSS/Child_combinator) is more specific than the descendant combinator. Denoted with the greater than character (`>`), the child combinator selects nodes that are direct children of the first element. Comparing with our previous example, `div > span` will match only the {{HTMLElement("span")}} elements that are direct children of a {{HTMLElement("div")}} element.
+
+### General sibling combinator
 
 In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
 
+### Adjacent sibling combinator
+
 The [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), denoted by the plus symbol (`+`), is similar to the general sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
 
+### Column combinator
+
 There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters ( `||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+
+### Namespace separator
 
 The [namespace separator](/en-US/docs/Web/CSS/Namespace_separator) is another combinator that is generally used in conjunction with the {{CSSXref("@namespace")}} at-rule. This combinator is denoted by a single pipe character (`|`). It enables limiting [type selectors](/en-US/docs/Web/CSS/Type_selectors) and the [universal selector](/en-US/docs/Web/CSS/Universal_selectors) to a specific namespace. For example, by defining a namespace such as `@namespace SVG url('http://www.w3.org/2000/svg');`, you can include selectors that target elements nested in an SVG namespace only. Declaring `SVG|a` would match links within SVGs and not those in the rest of the document. Namespacing can be useful to target MathML, SVG, or other XML-based content within your HTML.
 
 #### CSS
 
-In this example, we declare five [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector) using [simple selectors](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#simple_selector) combined with combinators.
+In this example, we declare five [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector) using [simple selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector) combined with combinators.
 
 ```css
 h2 + p ~ p {
@@ -85,7 +99,7 @@ h2 + p + p {
   text-decoration: underline;
 }
 #myId > .myClass {
-  font-family: monospace;
+  outline: 3px dashed red;
 }
 > p {
   font-size: 1.1rem;
@@ -96,19 +110,23 @@ h2 + p + p {
 
 ```html
 <h2 class="myClass" id="myId">
-  Nothing selectors match; not even the last one.
+  No selectors match. <span class="myClass">This span has an outline</span> as
+  it is both myClass and a child of #myId.
 </h2>
-<p>The first paragraph is underlined. All the paragraphs are 1.1rem</p>
-<p>The second paragraph is red. This and the next paragraphs are italic</p>
+<p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
+<p>
+  The second paragraph is red. This and the following paragraphs are italic.
+</p>
 <p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
 <p class="myClass">
-  Monospace font as this is a child of #myId. It is also italic and 1.1rem.
+  Does not have an outline; this is a sibling of H2, not a child. It is italic
+  and 1.1rem.
 </p>
 ```
 
 #### Result
 
-{{EmbedLiveSample("Combinators", "100%", 400)}}
+{{EmbedLiveSample("Combinators", "100%", 300)}}
 
 ## Attribute selectors
 
@@ -120,7 +138,7 @@ The case sensitivity of the attribute depends on the language. Generally, in HTM
 ## Pseudo-class selectors
 
 The [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module defines over 60 [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes). Pseudo-classes are [simple selectors](#simple-selector), prefixed with a colon (`:`), that allow the selection of elements based on state information that is not contained in the document tree. {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
-For example, the {{cssxref(":target")}} simple selector targets element of a URL containing a fragment identifier, and the [`a:visited`](/en-US/docs/Web/CSS/:visited) [compound selector](/en-US/docs/Web/CSS/CSS_Selectors/Selector_structure#compound_selector) matches all {{HTMLElement("a")}} elements that have been visited by a user.
+For example, the {{cssxref(":target")}} simple selector targets element of a URL containing a fragment identifier, and the [`a:visited`](/en-US/docs/Web/CSS/:visited) [compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) matches all {{HTMLElement("a")}} elements that have been visited by a user.
 
 The pseudo-classes can be categorized as [element display state](/en-US/docs/Web/CSS/Pseudo-classes#element_display_state_pseudo-classes), [input](/en-US/docs/Web/CSS/Pseudo-classes#input_pseudo-classes), [linguistic](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), [location](/en-US/docs/Web/CSS/Pseudo-classes#location_pseudo-classes), [resource state](/en-US/docs/Web/CSS/Pseudo-classes#resource_state_pseudo-classes), [time-dimensional](/en-US/docs/Web/CSS/Pseudo-classes#time-dimensional_pseudo-classes), [tree-structural](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes), [user action](/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes), and [functional](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes).
 
