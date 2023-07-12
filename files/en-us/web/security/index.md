@@ -30,7 +30,7 @@ Good security is very essential for good privacy. You could follow all the advic
 
 Web browsers have a strict security model that enforces a good level of fundamental content, connection, and transport security. This section looks at the basics.
 
-### Same-origin policy
+### Same-origin policy and CORS
 
 [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) is a fundamental security mechanism of the web that restricts how a document or script loaded from one {{Glossary("origin")}} can interact with a resource from another origin. It helps isolate potentially malicious documents, reducing possible attack vectors.
 
