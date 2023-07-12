@@ -444,7 +444,7 @@ In this article, you will also notice that the attributes are wrapped in double 
 <a href="https://www.example.com">A link to my example.</a>
 ```
 
-Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing quotes that will go wrong:
+Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing of quotes that will go wrong:
 
 ```html-nolint example-bad
 <a href="https://www.example.com'>A link to my example.</a>
@@ -522,6 +522,7 @@ You can now open this file in a web browser to see what the rendered code looks 
 - Edit the paragraph content to include text about a topic that you find interesting.
 - Make important words stand out in bold by wrapping them inside a `<strong>` opening tag and `</strong>` closing tag.
 - Add a link to your paragraph, as [explained earlier in the article](#active_learning_adding_attributes_to_an_element).
+- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#void_elements). Earn bonus points if you manage to link to a different image (either locally on your computer or somewhere else on the web).
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
@@ -709,7 +710,7 @@ You do this with character references. These are special codes that represent ch
 | '                 | `&apos;`                       |
 | &                 | `&amp;`                        |
 
-The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;', quotation for ' \&quot; ' and similarly for others. To find more about entity reference, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
+The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;', quotation for ' \&quot; ' and similarly for others. To find more about entity references, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
 
 In the example below, there are two paragraphs:
 
