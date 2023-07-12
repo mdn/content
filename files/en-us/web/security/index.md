@@ -158,7 +158,7 @@ The following features can help guard against clickjacking:
 
 - [Privacy on the web](/en-US/docs/Web/Privacy)
 - [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
-- [Security Blog](https://blog.mozilla.org/security/)
+- [Mozilla security blog](https://blog.mozilla.org/security/)
 - [Mozilla observatory](https://observatory.mozilla.org/)
 - [OWASP Cheat Sheet series](https://cheatsheetseries.owasp.org/index.html) — a series of detailed documents on different security topics, including how to protect against different types of vulnerability.
 - [Mozilla web security cheat sheet](https://infosec.mozilla.org/guidelines/web_security.html#web-security-cheat-sheet)
