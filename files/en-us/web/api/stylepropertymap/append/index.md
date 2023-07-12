@@ -43,7 +43,7 @@ const buttonEl = document.querySelector("button");
 // append another value to the background-image property set on the attribute
 buttonEl.attributeStyleMap.append(
   "background-image",
-  "linear-gradient(180deg, blue, black)"
+  "linear-gradient(180deg, blue, black)",
 );
 ```
 

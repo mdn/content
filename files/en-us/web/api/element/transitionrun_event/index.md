@@ -46,7 +46,7 @@ This code adds a listener to the `transitionrun` event:
 ```js
 el.addEventListener("transitionrun", () => {
   console.log(
-    "Transition is running but hasn't necessarily started transitioning yet"
+    "Transition is running but hasn't necessarily started transitioning yet",
   );
 });
 ```
@@ -56,7 +56,7 @@ The same, but using the `ontransitionrun` property instead of `addEventListener(
 ```js
 el.ontransitionrun = () => {
   console.log(
-    "Transition started running, and will start transitioning when the transition delay has expired"
+    "Transition started running, and will start transitioning when the transition delay has expired",
   );
 };
 ```

@@ -163,8 +163,8 @@ if (video.textTracks) {
       createMenuItem(
         `subtitles-${video.textTracks[i].language}`,
         video.textTracks[i].language,
-        video.textTracks[i].label
-      )
+        video.textTracks[i].label,
+      ),
     );
   }
   videoContainer.appendChild(subtitlesMenu);

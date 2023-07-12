@@ -33,7 +33,7 @@ someElement.addEventListener(
   (event) => {
     process_angles(event.altitudeAngle, event.azimuthAngle);
   },
-  false
+  false,
 );
 ```
 

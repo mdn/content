@@ -65,7 +65,7 @@ function wasHiddenBeforeFirstContentfulPaint() {
   const visibilityStateEntries =
     performance.getEntriesByType("visibility-state");
   return visibilityStateEntries.some(
-    (e) => e.startTime < fcpEntry.startTime && e.name === "hidden"
+    (e) => e.startTime < fcpEntry.startTime && e.name === "hidden",
   );
 }
 ```

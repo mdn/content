@@ -27,11 +27,18 @@ cursor: zoom-out;
 cursor: url(hand.cur), pointer;
 
 /* URL and coordinates, with mandatory keyword fallback */
-cursor: url(cursor_1.png) 4 12, auto;
-cursor: url(cursor_2.png) 2 2, pointer;
+cursor:
+  url(cursor_1.png) 4 12,
+  auto;
+cursor:
+  url(cursor_2.png) 2 2,
+  pointer;
 
 /* URLs and fallback URLs (some with coordinates), with mandatory keyword fallback */
-cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), /* … ,*/ url(cursor_n.cur) 5 5,
+cursor:
+  url(cursor_1.svg) 4 5,
+  url(cursor_2.svg),
+  /* … ,*/ url(cursor_n.cur) 5 5,
   progress;
 
 /* Global values */

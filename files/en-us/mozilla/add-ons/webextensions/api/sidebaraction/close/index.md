@@ -39,7 +39,7 @@ Close the sidebar when the user selects a context menu item:
 browser.menus.create({
   id: "close-sidebar",
   title: "close sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

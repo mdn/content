@@ -1,6 +1,7 @@
 ---
 title: local-name
 slug: Web/XPath/Functions/local-name
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

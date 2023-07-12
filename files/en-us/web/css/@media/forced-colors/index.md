@@ -90,7 +90,9 @@ This example is a button that normally gets its contrast via {{cssxref("box-shad
 .button {
   border: 0;
   padding: 10px;
-  box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
+  box-shadow:
+    -2px -2px 5px gray,
+    2px 2px 5px gray;
 }
 
 @media (forced-colors: active) {

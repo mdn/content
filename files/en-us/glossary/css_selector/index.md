@@ -26,7 +26,11 @@ div.warning {
 }
 
 #customized {
-  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+  font:
+    16px Lucida Grande,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 

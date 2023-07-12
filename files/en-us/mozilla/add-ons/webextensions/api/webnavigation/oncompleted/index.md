@@ -68,12 +68,8 @@ Logs the target URLs for `onCompleted`, if the target URL's hostname contains "e
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCompleted(details) {
   console.log(`onCompleted: ${details.url}`);

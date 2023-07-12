@@ -54,7 +54,7 @@ The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and open
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 
 /*
@@ -78,7 +78,7 @@ const props = [
   "padding",
   "position",
   "transform",
-  "transition"
+  "transition",
 ];
 
 const baseURL = "https://developer.mozilla.org/en-US/docs/Web/CSS/";
@@ -94,8 +94,8 @@ function getMatchingProperties(input) {
       console.log(prop);
       const suggestion = {
         content: `${baseURL}${prop}`,
-        description: prop
-      }
+        description: prop,
+      };
       result.push(suggestion);
     } else if (result.length !== 0) {
       return result;

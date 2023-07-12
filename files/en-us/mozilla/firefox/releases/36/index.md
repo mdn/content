@@ -127,7 +127,7 @@ _No change._
   ```js
   var { require } = Cu.import(
     "resource://gre/modules/commonjs/toolkit/require.js",
-    {}
+    {},
   );
   ```
 

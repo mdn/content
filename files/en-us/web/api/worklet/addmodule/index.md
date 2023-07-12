@@ -66,7 +66,7 @@ audioWorklet.addModule("modules/bypassFilter.js", {
 
 ```js
 CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js"
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js",
 );
 ```
 

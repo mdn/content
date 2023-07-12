@@ -35,7 +35,7 @@ You can open the index file in your favorite browser to launch the game and try 
 We will be rendering our game on Canvas, but we won't do it manually — this will be taken care of by the framework. Let's set it up: our starting point is the `index.html` file with the following content. You can create this yourself if you want to follow along:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -135,12 +135,12 @@ Ball.Preloader.prototype = {
     this.preloadBg = this.add.sprite(
       (Ball._WIDTH - 297) * 0.5,
       (Ball._HEIGHT - 145) * 0.5,
-      "preloaderBg"
+      "preloaderBg",
     );
     this.preloadBar = this.add.sprite(
       (Ball._WIDTH - 158) * 0.5,
       (Ball._HEIGHT - 50) * 0.5,
-      "preloaderBar"
+      "preloaderBar",
     );
     this.load.setPreloadSprite(this.preloadBar);
 
@@ -181,7 +181,7 @@ Ball.MainMenu.prototype = {
       this,
       2,
       0,
-      1
+      1,
     );
     this.startButton.anchor.set(0.5, 0);
     this.startButton.input.useHandCursor = true;
@@ -218,7 +218,7 @@ Ball.Howto.prototype = {
       0,
       "screen-howtoplay",
       this.startGame,
-      this
+      this,
     );
   },
   startGame() {
@@ -400,14 +400,14 @@ this.physics.arcade.collide(
   this.borderGroup,
   this.wallCollision,
   null,
-  this
+  this,
 );
 this.physics.arcade.collide(
   this.ball,
   this.levels[this.level - 1],
   this.wallCollision,
   null,
-  this
+  this,
 );
 ```
 
@@ -463,13 +463,13 @@ this.timerText = this.game.add.text(
   15,
   15,
   `Time: ${this.timer}`,
-  this.fontBig
+  this.fontBig,
 );
 this.totalTimeText = this.game.add.text(
   120,
   30,
   `Total time: ${this.totalTimer}`,
-  this.fontSmall
+  this.fontSmall,
 );
 ```
 

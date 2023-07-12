@@ -82,16 +82,6 @@ Or what about some kind of button bar for controlling your app? This might not n
 </section>
 ```
 
-Make sure to use some assistive technology and screen-reader-friendly CSS to hide it, like so:
-
-```css
-.hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-```
-
 #### Result
 
 {{EmbedLiveSample('Using a section without a heading')}}

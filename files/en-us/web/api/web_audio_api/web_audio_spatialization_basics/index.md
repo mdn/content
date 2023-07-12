@@ -463,7 +463,7 @@ moveControls.forEach((el) => {
       }
       moving = moveBoombox(direction);
     },
-    false
+    false,
   );
 
   window.addEventListener(
@@ -473,7 +473,7 @@ moveControls.forEach((el) => {
         cancelAnimationFrame(moving.frameId);
       }
     },
-    false
+    false,
   );
 });
 ```
@@ -529,7 +529,7 @@ playButton.addEventListener(
       playButton.dataset.playing = "false";
     }
   },
-  false
+  false,
 );
 ```
 

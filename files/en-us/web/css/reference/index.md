@@ -60,7 +60,7 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Selectors
 
-The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), which allow styles to be conditional based on various features of elements within the DOM.
+The following are the various [selectors](/en-US/docs/Web/CSS/CSS_selectors), which allow styles to be conditional based on various features of elements within the DOM.
 
 ### Basic selectors
 
@@ -101,7 +101,7 @@ Combinators are selectors that establish a relationship between two or more simp
 
 > **Callout:**
 >
-> See also [Selectors in the Selectors Level 4 specification](https://www.w3.org/TR/selectors/#overview).
+> See also [selectors in the Selectors specification](https://drafts.csswg.org/selectors/) and the [pseudo-element specification](https://drafts.csswg.org/css-pseudo/).
 
 ## Concepts
 
@@ -116,8 +116,8 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-- [CSS unit and value types](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS functional notations](/en-US/docs/Web/CSS/CSS_Functions)
+- [CSS unit and value types](/en-US/docs/Web/CSS/CSS_values_and_units)
+- [CSS functional notations](/en-US/docs/Web/CSS/CSS_functions)
 
 ### Values
 

@@ -27,7 +27,7 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 });
 ```
 
-This is useful if a sidebar wants to display different content for different windows. For an example of this, see the ["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+This is useful if a sidebar wants to display different content for different windows. For an example of this, see the ["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/main/annotate-page).
 
 Sidebar documents get access to the same set of privileged JavaScript APIs that the extension's background and popup scripts get. They can get direct access to the background page (unless the sidebar belongs to an incognito mode window) using {{WebExtAPIRef("runtime.getBackgroundPage()")}}, and can interact with content scripts or native applications using messaging APIs like {{WebExtAPIRef("tabs.sendMessage()")}} and {{WebExtAPIRef("runtime.sendNativeMessage()")}}.
 
@@ -57,4 +57,4 @@ For details on how to design a sidebar's web page to match the style of Firefox,
 
 ## Example
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) example which implements a sidebar.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page) example which implements a sidebar.

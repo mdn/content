@@ -59,7 +59,7 @@ After the 8 round trips, the browser is finally able to make the request.
 Once we have an established connection to a web server, the browser sends an initial [HTTP `GET` request](/en-US/docs/Web/HTTP/Methods) on behalf of the user, which for websites is most often an HTML file. Once the server receives the request, it will reply with relevant response headers and the contents of the HTML.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
