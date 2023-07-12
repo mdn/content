@@ -6,7 +6,7 @@ page-type: guide
 
 People use websites for several important tasks such as banking, shopping, entertainment, and paying their taxes. In doing so, they are required to share personal information with those sites. Users place a certain level of trust in the sites they share their data with. If that information fell into the wrong hands, it could be used to exploit users, for example by profiling them, targeting them with unwanted ads, or even stealing their identity or money.
 
-Modern browsers already have a wealth of features to protect users' privacy on the web, but that's not enough. To create a trustworthy, privacy-respecting experience, developers need to educate their users in good practices (and enforce them) and create sites that collect as little data as possible, use it responsibly, and transport and store it securely.
+Modern browsers already have a wealth of features to protect users' privacy on the web, but that's not enough. To create a trustworthy and privacy-respecting experience, developers need to educate their site users in good practices (and enforce them). Developers should also create sites that collect as little data from users as possible, use the data responsibly, and transport and store it securely.
 
 In this article, we define privacy and important related terms, examine browser features that automatically protect user privacy, and look at what users can do to create privacy-respecting web content that minimizes the risk of users' personal information/data being obtained unexpectedly by third parties.
 
