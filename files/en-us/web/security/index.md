@@ -112,7 +112,7 @@ As a general rule, you shouldn't include sensitive data in URLs — if a third p
 
 Consider using tools like [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) to enforce a set of feature and resource usage on your site that makes it harder to introduce vulnerabilities.
 
-CSP allows you to add a layer of security by for example only allowing images or scripts to be loaded from specific trusted origins. This helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks. These attacks are used for everything from data theft to site defacement to the distribution of malware.
+CSP allows you to add a layer of security by, for example, allowing images or scripts to be loaded only from specific trusted origins. This helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks. These attacks involve a range of malicious activities, including data theft, site defacement, and distribution of malware.
 
 Permissions policy works in a similar way, except that it is more concerned with allowing or blocking access to specific "powerful features" (as mentioned earlier).
 
