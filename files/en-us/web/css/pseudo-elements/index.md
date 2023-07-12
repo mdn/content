@@ -2,7 +2,11 @@
 title: Pseudo-elements
 slug: Web/CSS/Pseudo-elements
 page-type: landing-page
-spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
+spec-urls:
+  - https://drafts.csswg.org/css-pseudo/
+  - https://drafts.csswg.org/css-position-4/
+  - https://drafts.csswg.org/css-shadow-parts/
+  - https://w3c.github.io/webvtt/
 ---
 
 {{CSSRef}}
@@ -17,8 +21,6 @@ p::first-line {
 }
 ```
 
-> **Note:** In contrast to pseudo-elements, {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
-
 ## Syntax
 
 ```css
@@ -27,9 +29,11 @@ selector::pseudo-element {
 }
 ```
 
-You can use only one pseudo-element in a selector. It must appear after the simple selectors in the statement.
+Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-classes from pseudo-elements where single colon (`:`) is used.
 
-> **Note:** As a rule, double colons (`::`) should be used instead of a single colon (`:`). This distinguishes pseudo-classes from pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most browsers support both syntaxes for the original pseudo-elements.
+You can use only one pseudo-element in a selector. That single pseudo-element must appear after all the other components in any [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector in which it appears. For example, you can select a paragraph's first line with `p::first-line`, but cannot select first-line's children or a hovered first line. Both `p::first-line > *` and `p::first-line:hover` are invalid. While it is not possible to style a pseudo-element based on its _state_, they can be styled based on the state of the element in which they are found: `p:hover::first-line` is valid.
+
+It is important to note, when a selector list contains an invalid selector, the entire style block is ignored.
 
 ## Alphabetical index
 
@@ -78,45 +82,15 @@ T
 
 - {{CSSxRef("::target-text")}} {{Experimental_Inline}}
 
+> **Note:** Browsers support single colon syntax for the original four pseudo-elements, `::before`, `::after`, `::first-line`, and `::first-letter`, only.
+
 ## Specifications
 
 {{Specifications}}
 
-## Browser compatibility
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Browser</th>
-      <th>Lowest Version</th>
-      <th>Support of</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Firefox (Gecko)</td>
-      <td>1.0 (1.0)</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>1.0 (1.5)</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Opera</td>
-      <td>4.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>Safari (WebKit)</td>
-      <td>1.0 (85)</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## See also
 
+- [CSS pseudo-element](/en-US/docs/Web/CSS/CSS_pseudo) module
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [Building block: pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
