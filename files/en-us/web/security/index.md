@@ -137,7 +137,7 @@ As a general rule, don't trust anything that users enter into forms. Filling out
 
 To protect against this, you should thoroughly sanitize data entered into your forms.
 
-First of all, you should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) for more information.
+You should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) for more information.
 
 However, you can't rely on client-side validation alone for security. It is a useful user experience enhancement for your users because it gives them instant validation feedback without having to wait for a round trip to the server. However, it is too easy for a malicious party to bypass (for example they could turn off JavaScript in the browser to bypass JavaScript-based validation), so it should be combined with server-side validation.
 
