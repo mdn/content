@@ -1367,14 +1367,14 @@ window.addEventListener("load", () => {
         index++;
         // Prevent the default action of the ArrowDown key press.
         // Without this, the page would scroll down when the ArrowDown key is pressed.
-        event.preventDefault(); 
+        event.preventDefault();
       }
 
       // When the user hits the up arrow, we jump to the previous option
       if (event.key === "ArrowUp" && index > 0) {
         index--;
         // Prevent the default action of the ArrowUp key press.
-        event.preventDefault(); 
+        event.preventDefault();
       }
       if (event.key === "Enter" || event.key === " ") {
         // If Enter or Space is pressed, toggle the option list
