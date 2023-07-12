@@ -38,7 +38,7 @@ In general, documents from one origin cannot make requests to other origins. Thi
 
 This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), an HTTP-header-based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
 
-### The general HTTP model
+### HTTP model for communication
 
 [HTTP](/en-US/docs/Web/HTTP) is the protocol by which web browsers and servers communicate with one another, requesting resources, providing responses (for example providing the requested resource, or detailing why the request failed), and providing security features for that communication.
 
