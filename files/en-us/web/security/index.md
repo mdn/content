@@ -133,7 +133,7 @@ Related topics:
 
 ## Sanitize form input
 
-As a general rule, don't trust anything that users enter into forms. Filling out forms online is complicated and tedious, and it is easy for users to enter the wrong data, or data that is in the wrong format. In addition, malicious folks are well-versed in the art of entering specific strings of executable code into form fields (for example SQL or JavaScript) that, if you are not careful, could either execute harmful code on your site, or delete your databases. See [SQL injection](/en-US/docs/Learn/Server-side/First_steps/Website_security#sql_injection) for a good example of how this could happen.
+As a general rule, don't trust anything that users enter into forms. Filling out forms online is complicated and tedious, and it is easy for users to enter wrong data or data in the wrong format. In addition, malicious folks are well-versed in the art of entering specific strings of executable code into form fields (for example, SQL or JavaScript). If you're not careful about handling these types of inputs, it could either execute harmful code on your site or delete your databases. See [SQL injection](/en-US/docs/Learn/Server-side/First_steps/Website_security#sql_injection) for a good example of how this could happen.
 
 To protect against this, you should thoroughly sanitize data entered into your forms.
 
