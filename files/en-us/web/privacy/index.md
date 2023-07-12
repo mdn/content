@@ -152,7 +152,7 @@ Companies collect lots of different data from their users for a variety of diffe
 - Emails, postal addresses, and phone numbers for communication.
 - Age, gender, geographical location, favorite pastimes, and a host of other PII for anything from site personalization to customer satisfaction surveys.
 - Browsing habits on their sites and other sites, to measure page and feature success metrics.
-- And so, so much more.
+And so much more.
 
 When collecting data from your customers, you have an opportunity to behave with integrity, show them that you are trustworthy, and build a great relationship with them, in turn, improving your brand and your chance of success.
 
