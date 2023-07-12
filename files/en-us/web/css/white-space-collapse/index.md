@@ -18,7 +18,6 @@ The **`white-space-collapse`** CSS property controls how {{Glossary("whitespace"
 ```css
 /* Keyword values */
 white-space-collapse: collapse;
-white-space-collapse: discard;
 white-space-collapse: preserve;
 white-space-collapse: preserve-breaks;
 white-space-collapse: preserve-spaces;
@@ -38,8 +37,6 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 
 - `collapse`
   - : White space sequences are [collapsed](#collapsing_of_white_space).
-- `discard`
-  - : All white space in the element is discarded.
 - `preserve`
   - : White space sequences and segment break characters are preserved.
 - `preserve-breaks`
@@ -50,9 +47,9 @@ The `white-space-collapse` property is specified as a single keyword chosen from
   - : The behavior is identical to `preserve`, except that:
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
+    - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
 
-> **Note:** Segment break characters are characters such as line feeds that cause text to break onto new lines.
+> **Note:** _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 
 ## Collapsing of white space
 
@@ -64,7 +61,7 @@ User agents handle white space collapsing as follows:
   - They are converted to spaces in the case of languages that separate words with spaces (like English), or removed altogether in the case of languages that do not separate words with spaces (like Chinese).
 - If spaces are to be collapsed:
   - Spaces or tabs before or after segment breaks are removed.
-  - Sequences of spaces are converted to a single space.
+  - Sequences of spaces are converted, or "collapsed", to a single space.
 - When spaces are preserved, sequences of spaces are treated as non-breaking except that they will soft-wrap at the end of each sequence — i.e. the next line will always start with the next non-space character. In the case of the `break-spaces` value however, a soft wrap could potentially occur after each space, so the next line may start with one or more spaces.
 
 ## Formal definition

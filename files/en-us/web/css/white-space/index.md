@@ -14,7 +14,7 @@ The **`white-space`** CSS property sets how {{Glossary("whitespace", "white spac
 The property specifies two things:
 
 - Whether and how white space is [collapsed](#collapsing_of_white_space).
-- Whether and how lines will wrap.
+- Whether and how lines wrap.
 
 > **Note:** To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
 
