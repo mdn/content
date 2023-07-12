@@ -131,7 +131,7 @@ Some of the most developed parts of the privacy sandbox project are as follows:
 #### Safari anti-tracking features
 
 - [Intelligent Tracking Prevention](https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/)
-  - : Multiple privacy enhancements in the Safari browser to prevent tracking.
+  - : There are multiple privacy enhancements in the Safari browser to prevent tracking.
 
 #### Edge anti-tracking features
 
