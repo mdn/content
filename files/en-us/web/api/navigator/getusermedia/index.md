@@ -88,7 +88,7 @@ if (navigator.getUserMedia) {
     },
     (err) => {
       console.error(`The following error occurred: ${err.name}`);
-    }
+    },
   );
 } else {
   console.log("getUserMedia not supported");

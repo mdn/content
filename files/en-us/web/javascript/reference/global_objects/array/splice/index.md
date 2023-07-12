@@ -19,8 +19,9 @@ To create a new array with a segment removed and/or replaced without mutating th
 ```js-nolint
 splice(start)
 splice(start, deleteCount)
-splice(start, deleteCount, item1)
-splice(start, deleteCount, item1, item2, itemN)
+splice(start, deleteCount, item0)
+splice(start, deleteCount, item0, item1)
+splice(start, deleteCount, item0, item1, /* … ,*/ itemN)
 ```
 
 ### Parameters
@@ -42,7 +43,7 @@ splice(start, deleteCount, item1, item2, itemN)
     If `deleteCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).
 
-- `item1`, …, `itemN` {{optional_inline}}
+- `item0`, …, `itemN` {{optional_inline}}
 
   - : The elements to add to the array, beginning from `start`.
 

@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Tables"
 slug: Learn/CSS/Building_blocks/Tables_tasks
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

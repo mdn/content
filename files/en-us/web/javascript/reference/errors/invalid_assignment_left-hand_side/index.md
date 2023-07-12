@@ -42,7 +42,7 @@ const str = "Hello, "
 
 In the `if` statement, you want to use an equality operator (`===`), and for the string concatenation, the plus (`+`) operator is needed.
 
-```js example-good
+```js-nolint example-good
 if (Math.PI + 1 === 3 || Math.PI + 1 === 4) {
   console.log("no way!");
 }

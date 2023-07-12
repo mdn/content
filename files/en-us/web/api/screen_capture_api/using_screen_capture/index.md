@@ -23,7 +23,7 @@ async function startCapture(displayMediaOptions) {
 
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
+      displayMediaOptions,
     );
   } catch (err) {
     console.error(`Error: ${err}`);
@@ -180,7 +180,7 @@ startElem.addEventListener(
   (evt) => {
     startCapture();
   },
-  false
+  false,
 );
 
 stopElem.addEventListener(
@@ -188,7 +188,7 @@ stopElem.addEventListener(
   (evt) => {
     stopCapture();
   },
-  false
+  false,
 );
 ```
 
@@ -214,7 +214,7 @@ async function startCapture() {
 
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
+      displayMediaOptions,
     );
     dumpOptionsInfo();
   } catch (err) {

@@ -1,6 +1,7 @@
 ---
 title: ceiling
 slug: Web/XPath/Functions/ceiling
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

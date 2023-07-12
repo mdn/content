@@ -1,6 +1,7 @@
 ---
 title: Update Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
+page-type: learn-module-chapter
 ---
 
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
@@ -114,7 +115,7 @@ exports.book_update_post = [
 
       // Mark our selected genres as checked.
       for (const genre of allGenres) {
-        if (book.genre.indexOf(genres._id) > -1) {
+        if (book.genre.indexOf(genre._id) > -1) {
           genre.checked = "true";
         }
       }

@@ -9,7 +9,7 @@ browser-compat: api.Ink
 
 {{DefaultAPISidebar("Ink API")}}{{SeeCompatTable}}
 
-The Ink API allows browsers to directly make use of available OS-level compositors when drawing pen stokes in an inking app feature, thereby reducing latency and increasing performance.
+The Ink API allows browsers to directly make use of available OS-level compositors when drawing pen strokes in an inking app feature, thereby reducing latency and increasing performance.
 
 ## Concepts and usage
 

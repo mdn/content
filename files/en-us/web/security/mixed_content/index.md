@@ -1,6 +1,7 @@
 ---
 title: Mixed content
 slug: Web/Security/Mixed_content
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

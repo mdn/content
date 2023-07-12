@@ -1,6 +1,7 @@
 ---
 title: Firefox 110 for developers
 slug: Mozilla/Firefox/Releases/110
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

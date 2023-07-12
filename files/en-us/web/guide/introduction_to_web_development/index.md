@@ -1,6 +1,7 @@
 ---
 title: Introduction to Web development
 slug: Web/Guide/Introduction_to_Web_development
+page-type: landing-page
 ---
 
 <section id="Quick_links">

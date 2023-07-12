@@ -54,7 +54,7 @@ function onGot(results) {
 function onRemoved() {
   let searching = browser.history.search({
     text: urlToRemove,
-    startTime: 0
+    startTime: 0,
   });
 
   searching.then(onGot);
@@ -86,7 +86,7 @@ function onGot(results) {
 let searching = browser.history.search({
   text: "",
   startTime: 0,
-  maxResults: 1
+  maxResults: 1,
 });
 
 searching.then(onGot);

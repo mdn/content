@@ -163,7 +163,7 @@ const resultSize = api.get_result_size();
 const resultView = new Uint8Array(
   Module.HEAP8.buffer,
   resultPointer,
-  resultSize
+  resultSize,
 );
 const result = new Uint8Array(resultView);
 api.free_result(resultPointer);

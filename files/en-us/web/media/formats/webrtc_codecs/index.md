@@ -1,6 +1,7 @@
 ---
 title: Codecs used by WebRTC
 slug: Web/Media/Formats/WebRTC_codecs
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

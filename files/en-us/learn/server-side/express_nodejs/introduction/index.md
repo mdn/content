@@ -1,6 +1,7 @@
 ---
 title: Express/Node introduction
 slug: Learn/Server-side/Express_Nodejs/Introduction
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}

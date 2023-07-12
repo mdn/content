@@ -1,6 +1,7 @@
 ---
 title: Getting started with HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -167,7 +168,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -364,7 +365,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -460,13 +461,13 @@ However, if you use one type of quote, you can include the other type of quote _
 To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
 
 ```html-nolint example-bad
-<a href='https://www.example.com' title='Isn't this fun?'>A link to my example.</a>
+<a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
 ```
 
 Instead, you need to do this:
 
 ```html-nolint
-<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="https://www.example.com" title="An &quot;interesting&quot; reference">A link to my example.</a>
 ```
 
 ## Anatomy of an HTML document
@@ -474,7 +475,7 @@ Instead, you need to do this:
 Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -634,7 +635,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;

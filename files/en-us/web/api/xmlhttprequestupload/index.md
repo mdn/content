@@ -7,7 +7,7 @@ browser-compat: api.XMLHttpRequestUpload
 
 {{APIRef("XMLHttpRequest")}}
 
-The **`XMLHttpRequestUpload`** interface represents the upload process for a specific {{domxref("XMLHttpRequest")}}. It is an _opaque_ object that represents the underlying, browser-dependant, upload process. It is {{domxref("XMLHttpRequestEventTarget")}} and is can be obtained by calling {{domxref("XMLHttpRequest.upload")}}.
+The **`XMLHttpRequestUpload`** interface represents the upload process for a specific {{domxref("XMLHttpRequest")}}. It is an _opaque_ object that represents the underlying, browser-dependant, upload process. It is an {{domxref("XMLHttpRequestEventTarget")}} and can be obtained by calling {{domxref("XMLHttpRequest.upload")}}.
 
 {{AvailableInWorkers("notservice")}}
 
@@ -54,7 +54,7 @@ This allows you to upload a file to a server; it displays a progress bar while t
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -132,7 +132,7 @@ addEventListener("DOMContentLoaded", () => {
       () => {
         xhr.abort();
       },
-      { once: true }
+      { once: true },
     );
 
     // When the upload starts, we display the progress bar

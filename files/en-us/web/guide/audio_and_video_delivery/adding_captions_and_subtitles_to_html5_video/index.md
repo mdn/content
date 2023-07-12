@@ -1,6 +1,7 @@
 ---
 title: Adding captions and subtitles to HTML video
 slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
@@ -162,8 +163,8 @@ if (video.textTracks) {
       createMenuItem(
         `subtitles-${video.textTracks[i].language}`,
         video.textTracks[i].language,
-        video.textTracks[i].label
-      )
+        video.textTracks[i].label,
+      ),
     );
   }
   videoContainer.appendChild(subtitlesMenu);

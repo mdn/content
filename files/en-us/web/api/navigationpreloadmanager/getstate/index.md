@@ -47,7 +47,7 @@ navigator.serviceWorker.ready
     console.log(state.headerValue); // string
   })
   .catch((e) =>
-    console.error(`NavigationPreloadManager not supported: ${e.message}`)
+    console.error(`NavigationPreloadManager not supported: ${e.message}`),
   );
 ```
 

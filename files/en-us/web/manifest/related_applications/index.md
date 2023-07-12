@@ -1,6 +1,7 @@
 ---
 title: related_applications
 slug: Web/Manifest/related_applications
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.related_applications

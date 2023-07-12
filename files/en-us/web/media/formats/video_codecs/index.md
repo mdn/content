@@ -1,6 +1,7 @@
 ---
 title: Web video codec guide
 slug: Web/Media/Formats/Video_codecs
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

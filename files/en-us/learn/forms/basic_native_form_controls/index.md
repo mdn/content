@@ -1,6 +1,7 @@
 ---
 title: Basic native form controls
 slug: Learn/Forms/Basic_native_form_controls
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}

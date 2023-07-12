@@ -39,7 +39,7 @@ customElements.define(
         .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
         .append(templateContent.cloneNode(true));
     }
-  }
+  },
 );
 
 // Return a reference to the my-paragraph constructor

@@ -1,6 +1,7 @@
 ---
 title: Stale element reference
 slug: Web/WebDriver/Errors/StaleElementReference
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

@@ -187,7 +187,9 @@ This will only be used on browsers that _display_ the alternative text.
 a::before {
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
     " MOZILLA: ";
-  font: x-small Arial, sans-serif;
+  font:
+    x-small Arial,
+    sans-serif;
   color: gray;
 }
 ```

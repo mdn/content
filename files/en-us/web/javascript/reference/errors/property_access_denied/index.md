@@ -1,5 +1,5 @@
 ---
-title: "Error: Permission denied to access property \"x\""
+title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 page-type: javascript-error
 ---
@@ -32,7 +32,7 @@ violated the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 ### No permission to access document
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <iframe

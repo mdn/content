@@ -1,6 +1,7 @@
 ---
 title: <xsl:choose>
 slug: Web/XSLT/Element/choose
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

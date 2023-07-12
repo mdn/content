@@ -1,6 +1,7 @@
 ---
 title: 3D collision detection
 slug: Games/Techniques/3D_collision_detection
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -90,7 +91,7 @@ function isPointInsideSphere(point, sphere) {
   const distance = Math.sqrt(
     (point.x - sphere.x) * (point.x - sphere.x) +
       (point.y - sphere.y) * (point.y - sphere.y) +
-      (point.z - sphere.z) * (point.z - sphere.z)
+      (point.z - sphere.z) * (point.z - sphere.z),
   );
   return distance < sphere.radius;
 }
@@ -117,7 +118,7 @@ function intersect(sphere, other) {
   const distance = Math.sqrt(
     (sphere.x - other.x) * (sphere.x - other.x) +
       (sphere.y - other.y) * (sphere.y - other.y) +
-      (sphere.z - other.z) * (sphere.z - other.z)
+      (sphere.z - other.z) * (sphere.z - other.z),
   );
   return distance < sphere.radius + other.radius;
 }
@@ -142,7 +143,7 @@ function intersect(sphere, box) {
   const distance = Math.sqrt(
     (x - sphere.x) * (x - sphere.x) +
       (y - sphere.y) * (y - sphere.y) +
-      (z - sphere.z) * (z - sphere.z)
+      (z - sphere.z) * (z - sphere.z),
   );
 
   return distance < sphere.radius;

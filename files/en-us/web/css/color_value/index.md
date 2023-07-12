@@ -346,4 +346,4 @@ div:nth-child(6) {
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing the hue angle of a color
 - {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: common properties that use `<color>`
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
-- [New functions, gradients, and hues in CSS colors (Level 4)](https://developer.mozilla.org/en-US/blog/css-color-module-level-4/) on MDN blog (May 3, 2023)
+- [New functions, gradients, and hues in CSS colors (Level 4)](https://developer.mozilla.org/en-US/blog/css-color-module-level-4/) on MDN blog (2023)

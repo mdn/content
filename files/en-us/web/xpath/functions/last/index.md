@@ -1,6 +1,7 @@
 ---
 title: last
 slug: Web/XPath/Functions/last
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

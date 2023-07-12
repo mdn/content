@@ -100,7 +100,7 @@ ext.multiDrawArraysInstancedWEBGL(
   0,
   instanceCounts,
   0,
-  firsts.length
+  firsts.length,
 );
 ```
 

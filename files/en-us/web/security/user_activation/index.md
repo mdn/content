@@ -1,6 +1,7 @@
 ---
 title: Features gated by user activation
 slug: Web/Security/User_activation
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

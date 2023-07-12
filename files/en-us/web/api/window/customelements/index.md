@@ -28,13 +28,13 @@ customElements.define(
     constructor() {
       super();
       const template = document.getElementById(
-        "element-details-template"
+        "element-details-template",
       ).content;
       const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true)
+        template.cloneNode(true),
       );
     }
-  }
+  },
 );
 ```
 

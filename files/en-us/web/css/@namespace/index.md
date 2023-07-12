@@ -33,7 +33,7 @@ Any `@namespace` rules must follow all {{cssxref("@charset")}} and {{cssxref("@i
 
 The `@namespace` rule can also be used to define a **namespace prefix**. When a universal, type, or attribute selector is prefixed with a namespace prefix, then that selector only matches if the namespace _and_ name of the element or attribute matches.
 
-In [HTML5](/en-US/docs/Glossary/HTML5), known [foreign elements](https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements) will automatically be assigned namespaces. This means that HTML elements will act as though they are in the XHTML namespace (`http://www.w3.org/1999/xhtml`), even if there is no `xmlns` attribute anywhere in the document, and the [\<svg>](/en-US/docs/Web/SVG/Element/svg) and [\<math>](/en-US/docs/Web/MathML/Element/math) elements will be assigned their proper namespaces (`http://www.w3.org/2000/svg` and `http://www.w3.org/1998/Math/MathML`).
+In HTML, known [foreign elements](https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements) will automatically be assigned namespaces. This means that HTML elements will act as though they are in the XHTML namespace (`http://www.w3.org/1999/xhtml`), even if there is no `xmlns` attribute anywhere in the document, and the [`<svg>`](/en-US/docs/Web/SVG/Element/svg) and [`<math>`](/en-US/docs/Web/MathML/Element/math) elements will be assigned their proper namespaces (`http://www.w3.org/2000/svg` and `http://www.w3.org/1998/Math/MathML`, respectively).
 
 > **Note:** In XML, unless a prefix is defined directly on an attribute (_e.g._, `xlink:href`), that attribute has no namespace. In other words, attributes do not inherit the namespace of the element they're on. To match this behavior, the default namespace in CSS does not apply to attribute selectors.
 
@@ -72,4 +72,4 @@ svg|a {
 
 ## See also
 
-- [Namespaces crash course](/en-US/docs/Web/SVG/Namespaces_Crash_Course)
+- [Namespaces crash course](/en-US/docs/Web/SVG/Namespaces_crash_course)
