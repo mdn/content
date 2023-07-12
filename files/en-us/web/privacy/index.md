@@ -86,7 +86,7 @@ Related topics are as follows:
 
 ### Opt-in for "powerful features"
 
-So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which basically means HTTP-only. Not only that, but they are gated behind a system of user permissions, so users have to explicitly opt-in to features like notifications, geolocation data, making the browser go into fullscreen mode, accessing media streams from web cams, web payments, etc.
+So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which basically means HTTPS-only. Not only that, but they are gated behind a system of user permissions, so users have to explicitly opt-in to features like notifications, geolocation data, making the browser go into fullscreen mode, accessing media streams from web cams, web payments, etc.
 
 This provides further security and privacy protection.
 
