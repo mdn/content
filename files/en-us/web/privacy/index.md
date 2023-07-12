@@ -49,11 +49,11 @@ Following on from the above section, **personally identifiable information** (PI
 
 Tracking data can be used to profile a user and their interests and preferences, which is usually bad and can be annoying to various degrees. For example:
 
-- **Targetted ads**: Everyone has had the unnerving experience of researching some items to buy on one device, and then suddenly being bombarded by adverts for the same products on all their other devices.
-- **Selling or sharing data**: Some third parties have been known to compile tracking data and then sell it to/share it with others to use for various purposes, like targeted ads. This is obviously highly unethical, and may also be illegal depending on where in the world it happens.
-- **Prejudice via data**: In the worst cases, sharing data could result in the user being unfairly disadvantaged, for example imagine an insurance company finding out data points about a potential customer that they didn't consent to share, and using them as a justification for increasing insurance premiums.
+- **Targeted ads**: Everyone has had the unnerving experience of researching some items to buy on one device and then suddenly being bombarded by adverts for the same products on all their other devices.
+- **Selling or sharing data**: Some third parties have been known to compile tracking data and then sell it to/share it with others to use for various purposes, like targeted ads. This is obviously highly unethical and may also be illegal, depending on where in the world it happens.
+- **Prejudice via data**: In the worst cases, sharing data could result in the user being unfairly disadvantaged. For example, imagine an insurance company finding out data points about a potential customer that they didn't consent to share, and using them as a justification for increasing insurance premiums.
 
-> **Note:** See [What can third-party resources do?](https://web.dev/learn/privacy/third-parties/#what-can-third-party-resources-do) for a useful related scenario description, and additional information.
+> **Note:** See [What can third-party resources do?](https://web.dev/learn/privacy/third-parties/#what-can-third-party-resources-do) for a useful related scenario description and additional information.
 
 ### Fingerprinting
 
