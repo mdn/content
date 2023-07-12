@@ -14,7 +14,7 @@ Sensitive information needs to be protected, and that is the focus of web securi
 
 Modern browsers already have several features to protect users' security on the web, but developers also need to employ best practices and code carefully to ensure that their websites are secure. Even simple bugs in your code can result in vulnerabilities that bad people can exploit to steal data and gain control over services for which they don't have authorization.
 
-This set of articles provides an introduction to web security, including information that may help you understand what can make websites vulnerable, and how to secure them.
+The articles listed here provide an introduction to web security, including information that will help you understand the aspects that can make websites vulnerable and how to secure them.
 
 ## The relationship between security and privacy
 
