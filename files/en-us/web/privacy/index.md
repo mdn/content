@@ -96,9 +96,9 @@ Browsers have implemented several anti-tracking features that automatically enha
 
 For example, one change that was agreed upon and rolled out across all browsers was an update to the {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute default value to `Lax` (see [Changes to the default behavior without SameSite](https://web.dev/samesite-cookies-explained/#changes-to-the-default-behavior-without-samesite)).
 
-This attribute controls whether cookies are sent with cross-site requests, and can provide some protection against tracking and {{glossary("CSRF")}} attacks. However, the default was `None`, and not many developers adopted it, meaning cross-site cookies were being sent **everywhere**. Changing the default value to `Lax` means that cookies are not sent on cross-site requests, such as on requests to load images or frames, but are sent when a user is navigating to the origin site from an external site, for example, when following a link.
+This attribute controls whether cookies are sent with cross-site requests and can provide some protection against tracking and {{glossary("CSRF")}} attacks. However, the default was `None`, and not many developers adopted it, meaning cross-site cookies were being sent **everywhere**. Changing the default value to `Lax` means that cookies are not sent on cross-site requests, such as on requests to load images or frames, but are sent when a user is navigating to the origin site from an external site, for example, when following a link.
 
-> **Note:** browsers are aiming to eventually phase out third party cookies altogether, while providing alternative solutions for common use cases that currently require them.
+> **Note:** Browsers are aiming to eventually phase out third-party cookies altogether, while providing alternative solutions for common use cases that currently require them.
 
 #### Firefox anti-tracking features
 
