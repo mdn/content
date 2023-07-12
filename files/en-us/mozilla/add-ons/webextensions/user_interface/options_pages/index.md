@@ -21,7 +21,7 @@ Options pages have a Content Security Policy that restricts the sources from whi
 To create an options page, write an HTML file defining the page. This page can include CSS and JavaScript files, like a normal web page. This page, from the [favourite-color](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) example, includes a JavaScript file:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>

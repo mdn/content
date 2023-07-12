@@ -40,7 +40,6 @@ Example `manifest.json` file:
 
 ```json
 {
-
   "description": "Native messaging example add-on",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -65,7 +64,6 @@ Example `manifest.json` file:
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
@@ -89,7 +87,7 @@ For example, here's a manifest for the `"ping_pong"` native application:
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -111,7 +109,7 @@ In the example above, the native application is a Python script. It can be diffi
   "description": "Example host for native messaging",
   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -224,9 +222,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  let sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```
@@ -245,62 +241,60 @@ You can quickly get started sending and receiving messages with this NodeJS code
 #!/usr/local/bin/node
 
 (() => {
+  let payloadSize = null;
 
-    let payloadSize = null;
+  // A queue to store the chunks as we read them from stdin.
+  // This queue can be flushed when `payloadSize` data has been read
+  let chunks = [];
 
-    // A queue to store the chunks as we read them from stdin.
-    // This queue can be flushed when `payloadSize` data has been read
-    let chunks = [];
+  // Only read the size once for each payload
+  const sizeHasBeenRead = () => Boolean(payloadSize);
 
-    // Only read the size once for each payload
-    const sizeHasBeenRead = () => Boolean(payloadSize);
+  // All the data has been read, reset everything for the next message
+  const flushChunksQueue = () => {
+    payloadSize = null;
+    chunks.splice(0);
+  };
 
-    // All the data has been read, reset everything for the next message
-    const flushChunksQueue = () => {
-        payloadSize = null;
-        chunks.splice(0);
-    };
+  const processData = () => {
+    // Create one big buffer with all the chunks
+    const stringData = Buffer.concat(chunks);
 
-    const processData = () => {
-        // Create one big buffer with all the chunks
-        const stringData = Buffer.concat(chunks);
+    // The browser will emit the size as a header of the payload,
+    // if it hasn't been read yet, do it.
+    // The next time we'll need to read the payload size is when all of the data
+    // of the current payload has been read (i.e. data.length >= payloadSize + 4)
+    if (!sizeHasBeenRead()) {
+      payloadSize = stringData.readUInt32LE(0);
+    }
 
-        // The browser will emit the size as a header of the payload,
-        // if it hasn't been read yet, do it.
-        // The next time we'll need to read the payload size is when all of the data
-        // of the current payload has been read (i.e. data.length >= payloadSize + 4)
-        if (!sizeHasBeenRead()) {
-            payloadSize = stringData.readUInt32LE(0);
-        }
+    // If the data we have read so far is >= to the size advertised in the header,
+    // it means we have all of the data sent.
+    // We add 4 here because that's the size of the bytes that hold the payloadSize
+    if (stringData.length >= payloadSize + 4) {
+      // Remove the header
+      const contentWithoutSize = stringData.slice(4, payloadSize + 4);
 
-        // If the data we have read so far is >= to the size advertised in the header,
-        // it means we have all of the data sent.
-        // We add 4 here because that's the size of the bytes that hold the payloadSize
-        if (stringData.length >= (payloadSize + 4)) {
-            // Remove the header
-            const contentWithoutSize = stringData.slice(4, (payloadSize + 4));
+      // Reset the read size and the queued chunks
+      flushChunksQueue();
 
-            // Reset the read size and the queued chunks
-            flushChunksQueue();
+      const json = JSON.parse(contentWithoutSize);
+      // Do something with the data…
+    }
+  };
 
-            const json = JSON.parse(contentWithoutSize);
-            // Do something with the data…
-         }
-    };
+  process.stdin.on("readable", () => {
+    // A temporary variable holding the nodejs.Buffer of each
+    // chunk of data read off stdin
+    let chunk = null;
 
-    process.stdin.on('readable', () => {
-        // A temporary variable holding the nodejs.Buffer of each
-        // chunk of data read off stdin
-        let chunk = null;
+    // Read all of the available data
+    while ((chunk = process.stdin.read()) !== null) {
+      chunks.push(chunk);
+    }
 
-        // Read all of the available data
-        while ((chunk = process.stdin.read()) !== null) {
-            chunks.push(chunk);
-        }
-
-        processData();
-
-    });
+    processData();
+  });
 })();
 ```
 
@@ -331,7 +325,7 @@ def get_message():
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
     # https://docs.python.org/3/library/json.html#basic-usage
-    # To get the most compact JSON representation, you should specify 
+    # To get the most compact JSON representation, you should specify
     # (',', ':') to eliminate whitespace.
     # We want the most compact representation because the browser rejects
     # messages that exceed 1 MB.
@@ -377,7 +371,7 @@ def getMessage():
 # given its content.
 def encodeMessage(messageContent):
     # https://docs.python.org/3/library/json.html#basic-usage
-    # To get the most compact JSON representation, you should specify 
+    # To get the most compact JSON representation, you should specify
     # (',', ':') to eliminate whitespace.
     # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
     encodedContent = json.dumps(messageContent, separators=(',', ':')).encode('utf-8')

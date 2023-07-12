@@ -79,12 +79,8 @@ Logs the target URL, source Tab ID, and source frame ID for `onCreatedNavigation
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCreatedNavigationTarget(details) {
   console.log(`onCreatedNavigationTarget: ${details.url}`);
