@@ -34,7 +34,7 @@ Web browsers have a strict security model that enforces a good level of fundamen
 
 [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) is a fundamental security mechanism of the web that restricts how a document or script loaded from one {{Glossary("origin")}} can interact with a resource from another origin. It helps isolate potentially malicious documents, reducing possible attack vectors.
 
-In general, documents from one origin cannot make requests to other origins. This makes sense, as you don't want sites to be able to interfere with one another and access things they shouldn't do. It does make sense to relax this restriction in some circumstances — you may have a couple of sites that interact that you want to request resources from one another, for example using [`fetch()`](/en-US/docs/Web/API/fetch).
+In general, documents from one origin cannot make requests to other origins. This makes sense because you don't want sites to be able to interfere with one another and access things they shouldn't. It does make sense to relax this restriction in some circumstances; for example, you might have multiple sites that interact with each other, and you may want these sites to request resources from one another, such as using [`fetch()`](/en-US/docs/Web/API/fetch).
 
 This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
 
