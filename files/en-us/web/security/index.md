@@ -6,7 +6,7 @@ page-type: landing-page
 
 Websites contain several different types of information. Some of it is non-sensitive, for example the copy shown on the public pages. Some of it is sensitive, for example customer usernames, passwords, and banking information, or internal algorithms and private product information.
 
-Sensitive information needs to be protected, and that is the focus of web security. If that information fell into the wrong hands it could be used to:
+Sensitive information needs to be protected, and that is the focus of web security. If that information fell into the wrong hands, it could be used to:
 
 - Put companies at a competitive disadvantage by sharing their information with competitors.
 - Disable or hijack their services, again causing serious problems with their operation.
