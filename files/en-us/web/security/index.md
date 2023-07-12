@@ -145,7 +145,7 @@ Any reputable server-side framework will provide functionality for validating fo
 
 ## Protect against clickjacking
 
-In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clicking on a UI element that performs some action other than what the user expects. This can be a risk inherent in embedded third party content (make sure you trust what is being embedded into your site), and it can also be combined with phishing.
+In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clicking on a UI element that performs an action different from what the user expects. This can be a risk inherent in embedded third-party content (make sure you trust what is being embedded into your site), and it can also be combined with phishing.
 
 The following features can help guard against clickjacking:
 
