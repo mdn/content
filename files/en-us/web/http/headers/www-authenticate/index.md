@@ -138,8 +138,8 @@ Generally you will need to check the relevant specifications for these (keys for
 ### HTTP Origin-Bound Authentication (HOBA)
 
 - `<challenge>`
-  - : A sequence of fields concatenated into a string in the format of '\<len\>:\<value\>'.
-    A to-be-signed string that is defined by RFC 7486.
+  - : A set of pairs in the format of '\<len\>:\<value\>' concatenated together to be given to a client.
+    The challenge is made of up a nonce, algorithm, origin, realm, key identifier, and the challenge.
 - `<max-age>`
   - : The number of seconds from the time the HTTP response is emitted for which responses to this challenge can be accepted.
 - `realm` {{optional_inline}}
