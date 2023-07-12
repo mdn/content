@@ -38,7 +38,7 @@ It is hard to talk about privacy without also talking about security — they ar
 
 ### Personally identifiable information
 
-Following on the above section, **Personally identifiable information** (PII) is information which can be used, in whole or in part, to track down and/or identify a specific person. For example, if a site leaks a list of users' names and zip codes online, a bad actor could almost certainly use this information to find their full address. Even if a full scale leak does not happen, it is still possible to identify users through less obvious means, such as what browser they are using, what device they are using, if they have certain fonts installed, etc.
+Following on from the above section, **personally identifiable information** (PII) is information that can be used, in whole or in part, to track down and/or identify a specific person. For example, if a site leaks a list of users' names and zip codes online, a bad actor could almost certainly use this information to find their full addresses. Even if a full-scale leak does not happen, it is still possible to identify users through less obvious means, such as the browsers they are using, the devices they are using, specific fonts they have installed, and so on.
 
 ### Tracking
 
