@@ -278,7 +278,7 @@ Another tip is to use event delegation wherever possible — when you have some 
 
 See [Event delegation](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation) for more details, and a useful example.
 
-## Use more efficient code
+## Tips for writing more efficient code
 
 There are several general best practices that will make your code run more efficiently.
 
