@@ -63,7 +63,7 @@ Before looking at the tips contained in this section, it is important to talk ab
 
 The key step here is Step 3 — By default, JavaScript parsing and execution is render-blocking — it blocks parsing of the HTML that appears after the {{htmlelement("script")}} elements that refer to the JavaScript, and it therefore blocks styling and painting. As a result, you need to think carefully about not only what you are downloading, but when, and how that code is being executed.
 
-## Load critical assets as soon as possible
+## Loading critical assets as soon as possible
 
 If a script is really important and you are concerned that it is affecting performance by not being loaded quickly enough, you can load it inside the {{htmlelement("head")}} of the document:
 
