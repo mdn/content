@@ -156,7 +156,7 @@ It is very common for content to be embedded in web pages from other sources. Th
 - Displaying shared content that a user might need across multiple pages, such as a shopping cart or profile information.
 - Displaying third-party content related to the organization's main site, such as a social media posts feed.
 
-This is most commonly done using {{htmlelement("iframe")}} elements, although other less commonly used embedding elements do exist, such as {{htmlelement("object")}} and {{htmlelement("embed")}}. We'll concentrate on `<iframe>`s in this section.
+Embedding content is most commonly done using {{htmlelement("iframe")}} elements, although other less commonly used embedding elements do exist, such as {{htmlelement("object")}} and {{htmlelement("embed")}}. We'll concentrate on `<iframe>`s in this section.
 
 The most important, and key piece of advice is — "don't use embeded `<iframe>`s unless you absolutely have to". If you are creating a page with multiple different panes of information on it, it might sound organizationally sensible to break those up into separate pages and load them into different `<iframe>`s. However, this has a number of problems associated with it in terms of performance and otherwise:
 
