@@ -20,7 +20,7 @@ In older versions, JavaScript code on the web can add a feed reader easily, usin
 navigator.registerContentHandler(
   "application/vnd.mozilla.maybe.feed",
   "https://www.example.com/?feed-feed=%s",
-  "My Feed Reader"
+  "My Feed Reader",
 );
 ```
 

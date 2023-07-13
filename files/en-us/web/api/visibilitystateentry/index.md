@@ -57,7 +57,7 @@ function getVisibilityStateEntries() {
 
 ### Correlating visibility state changes with paint timing
 
-The below function gets a reference to all "`visibility-state`" entries and the "`first-contentful-paint`" entry, then uses {{jsxref("Array.some()")}} to test whether any of the "`hidden`" visibility entries ocurred before the first contentful paint:
+The below function gets a reference to all "`visibility-state`" entries and the "`first-contentful-paint`" entry, then uses {{jsxref("Array.some()")}} to test whether any of the "`hidden`" visibility entries occurred before the first contentful paint:
 
 ```js
 function wasHiddenBeforeFirstContentfulPaint() {
@@ -65,7 +65,7 @@ function wasHiddenBeforeFirstContentfulPaint() {
   const visibilityStateEntries =
     performance.getEntriesByType("visibility-state");
   return visibilityStateEntries.some(
-    (e) => e.startTime < fcpEntry.startTime && e.name === "hidden"
+    (e) => e.startTime < fcpEntry.startTime && e.name === "hidden",
   );
 }
 ```

@@ -43,6 +43,8 @@ The process for identifying the containing block depends entirely on the value o
 
 > **Note:** The containing block in which the root element ({{HTMLElement("html")}}) resides is a rectangle called the **initial containing block**. It has the dimensions of the viewport (for continuous media) or the page area (for paged media).
 
+> **Note:** There are browser inconsistencies with `perspective` and `filter` contributing to containing block formation.
+
 ## Calculating percentage values from the containing block
 
 As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are **box model properties** and **offset properties**:

@@ -202,7 +202,7 @@ document.addEventListener(
   (event) => {
     firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
   },
-  { once: true }
+  { once: true },
 );
 
 // Sends the passed data to an analytics endpoint. This code

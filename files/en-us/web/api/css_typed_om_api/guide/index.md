@@ -198,7 +198,7 @@ for (const value of ofInterest) {
   // Add the type of unit
   const cssUnit = document.createElement("td");
   cssUnit.appendChild(
-    document.createTextNode(allComputedStyles.get(value).unit)
+    document.createTextNode(allComputedStyles.get(value).unit),
   );
   row.appendChild(cssUnit);
 

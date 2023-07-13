@@ -338,10 +338,13 @@ function testPromise() {
       `${thisPromiseCount}) Promise constructor<br>`,
     );
     // This is only an example to create asynchronism
-    setTimeout(() => {
-      // We fulfill the promise
-      resolve(thisPromiseCount);
-    }, Math.random() * 2000 + 1000);
+    setTimeout(
+      () => {
+        // We fulfill the promise
+        resolve(thisPromiseCount);
+      },
+      Math.random() * 2000 + 1000,
+    );
   });
 
   // We define what to do when the promise is resolved with the then() call,
@@ -378,7 +381,7 @@ To better picture this, we can take a closer look at how the realm might be an i
 To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- we have a realm here -->
 <script>
   // we have a realm here as well
@@ -394,7 +397,7 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
 The same concept applies to promises. If we modify the above example a little bit, we get this:
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- we have a realm here -->
 <script>
   // we have a realm here as well
@@ -411,7 +414,7 @@ If we change this so that the `<iframe>` in the document is listening to post me
 
 ```html
 <!-- y.html -->
-<!DOCTYPE html>
+<!doctype html>
 <iframe src="x.html"></iframe>
 <script>
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
@@ -421,7 +424,7 @@ If we change this so that the `<iframe>` in the document is listening to post me
 
 ```html
 <!-- x.html -->
-<!DOCTYPE html>
+<!doctype html>
 <script>
   window.addEventListener(
     "message",

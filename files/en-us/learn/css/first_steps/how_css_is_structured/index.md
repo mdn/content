@@ -48,7 +48,7 @@ An external stylesheet contains CSS in a separate file with a `.css` extension. 
 You reference an external CSS stylesheet from an HTML `<link>` element:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -96,7 +96,7 @@ An internal stylesheet resides within an HTML document. To create an internal st
 The HTML for an internal stylesheet might look like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -129,7 +129,7 @@ But for sites with more than one page, an internal stylesheet becomes a less eff
 Inline styles are CSS declarations that affect a single HTML element, contained within a `style` attribute. The implementation of an inline style in an HTML document might look like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -155,7 +155,7 @@ For the exercise that follows, create a folder on your computer. You can name th
 **index.html:**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -425,7 +425,10 @@ CSS comments begin with `/*` and end with `*/`. In the example below, comments m
 /* Handle basic element styling */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -482,7 +485,10 @@ In the example below, each declaration (and rule start/end) has its own line. Th
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;

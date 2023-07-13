@@ -193,7 +193,7 @@ for (const buttonContainer of buttonContainers) {
   for (const button of buttons) {
     const elementName = button.getAttribute("data-el");
     button.addEventListener("click", () =>
-      insertText(`<${elementName}></${elementName}>`, pasteTarget)
+      insertText(`<${elementName}></${elementName}>`, pasteTarget),
     );
   }
 }

@@ -46,7 +46,7 @@ async function capture() {
 
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
+      displayMediaOptions,
     );
   } catch (err) {
     /* handle the error */

@@ -44,13 +44,12 @@ function listener(details) {
       filter.resume();
       filter.disconnect();
     }, 1000);
-
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
+  { urls: ["https://example.org/"], types: ["main_frame"] },
   ["blocking"]
 );
 ```

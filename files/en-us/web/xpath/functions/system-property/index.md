@@ -1,6 +1,7 @@
 ---
 title: system-property
 slug: Web/XPath/Functions/system-property
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

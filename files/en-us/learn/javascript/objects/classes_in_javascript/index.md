@@ -113,7 +113,7 @@ class Professor extends Person {
 
   introduceSelf() {
     console.log(
-      `My name is ${this.name}, and I will be your ${this.teaches} professor.`
+      `My name is ${this.name}, and I will be your ${this.teaches} professor.`,
     );
   }
 

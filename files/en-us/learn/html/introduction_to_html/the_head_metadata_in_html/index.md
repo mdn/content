@@ -34,7 +34,7 @@ The {{glossary("Head", "head")}} of an HTML document is the part that is not dis
 Let's revisit the simple [HTML document we covered in the previous article](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

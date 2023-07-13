@@ -52,12 +52,12 @@ if (firstrun) {
 } else {
   try {
     var installedVersion = Services.prefs.getCharPref(
-      "extensions.YOUREXT.installedVersion"
+      "extensions.YOUREXT.installedVersion",
     );
     if (curVersion > installedVersion) {
       Services.prefs.setCharPref(
         "extensions.YOUREXT.installedVersion",
-        curVersion
+        curVersion,
       );
       /* Code related to upgrade */
     }

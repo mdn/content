@@ -89,7 +89,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let updating = browser.tabs.update({url: "https://developer.mozilla.org"});
+let updating = browser.tabs.update({ url: "https://developer.mozilla.org" });
 updating.then(onUpdated, onError);
 ```
 
@@ -107,12 +107,12 @@ function onError(error) {
 function updateFirstTab(tabs) {
   let updating = browser.tabs.update(tabs[0].id, {
     active: true,
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
   updating.then(onUpdated, onError);
 }
 
-let querying = browser.tabs.query({currentWindow:true});
+let querying = browser.tabs.query({ currentWindow: true });
 querying.then(updateFirstTab, onError);
 ```
 

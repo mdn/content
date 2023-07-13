@@ -72,7 +72,10 @@ Let's create a simple example that presents text you can resize using an {{HTMLE
 
 ```css
 .controls {
-  font: 16px "Open Sans", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -139,11 +142,11 @@ widthSlider.addEventListener(
   (event) => {
     textElement.textLength.baseVal.newValueSpecifiedUnits(
       SVGLength.SVG_LENGTHTYPE_PX,
-      widthSlider.valueAsNumber
+      widthSlider.valueAsNumber,
     );
     widthDisplay.innerText = widthSlider.value;
   },
-  false
+  false,
 );
 
 widthSlider.dispatchEvent(new Event("input"));
