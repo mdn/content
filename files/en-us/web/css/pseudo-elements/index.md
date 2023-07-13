@@ -11,7 +11,7 @@ spec-urls:
 
 {{CSSRef}}
 
-A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s). 
+A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s).
 
 ## Syntax
 
