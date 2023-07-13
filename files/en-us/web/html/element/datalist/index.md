@@ -175,6 +175,11 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
 ## Browser compatibility
 
 {{Compat}}
+## Accessibility concerns 
+When deciding to use the `<datalist>` element, here are some accessibility issues to be mindful of:
+- Unable zoom along with the browser
+- Cannot be styled for high-contrast mode
+- NVADA and Firefox does not announce anything when the autosuggest popup opens 
 
 ## See also
 
