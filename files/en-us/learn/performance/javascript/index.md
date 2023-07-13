@@ -149,7 +149,7 @@ Most of this happens on the main thread, with exceptions including JavaScript th
 
 When a single task takes longer than 50 ms to run, it is classified as a long task. If the user attempts to interact with the page or an important UI update is requested while a long task is running, their experience will be affected. An expected response or visual update will be delayed, resulting in the UI appearing sluggish or unresponsive.
 
-To mitigate this issue, you need to break down long tasks into smaller tasks. This gives the browser more chances to perform vital user interaction handling or UI rendering updates — it can potentially do them between each smaller task, rather than only before or after the long task. In your JavaScript, you might do this by breaking your code into separate functions. This also makes sense for several other reasons, such as easier maintenance, debugging, writing tests, etc.
+To mitigate this issue, you need to break down long tasks into smaller tasks. This gives the browser more chances to perform vital user interaction handling or UI rendering updates — the browser can potentially do them between each smaller task, rather than only before or after the long task. In your JavaScript, you might do this by breaking your code into separate functions. This also makes sense for several other reasons, such as easier maintenance, debugging, and writing tests.
 
 For example:
 
