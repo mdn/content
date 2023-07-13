@@ -69,7 +69,7 @@ let testPermissions4 = {
 };
 
 const testResult4 = await browser.permissions.contains(testPermissions4);
-console.log(testResult4); // false, "https://example.org/", origins doesn't match
+console.log(testResult4); // false: "https://example.org/", `origins` doesn't match
 ```
 
 {{WebExtExamples}}
