@@ -84,7 +84,7 @@ T
 
 - {{CSSxRef("::target-text")}} {{Experimental_Inline}}
 
-> **Note:** Browsers support single colon syntax for the original four pseudo-elements, `::before`, `::after`, `::first-line`, and `::first-letter`, only.
+> **Note:** Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
 ## Specifications
 
