@@ -30,34 +30,62 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 
 ### Interfaces
 
-- {{DOMxRef('CSSPseudoElement')}} interface
-- {{DOMxRef('Element.pseudo()')}} method
-- {{DOMxRef('CSSPseudoElement.element')}}
+- {{DOMxRef("CSSPseudoElement")}} interface
+  - {{DOMxRef("CSSPseudoElement.element")}} property
+  - {{DOMxRef("CSSPseudoElement.type")}} property
+- {{DOMxRef("Element.pseudo()")}} method
 
 ### Definitions
 
+- {{CSSXref("pseudo-element")}}
+
 ## Guides
+
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+  - Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT
 
 - [Building block: pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
 
+  - :
+
 - [How to: using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
+
+  - :
 
 ## Related concepts
 
+- {{cssxref("::backdrop")}}
+
+- WebVTT: The Web Video Text Tracks Format
+  - {{cssxref("::cue")}}
+  - {{cssxref("::cue( selector )")}}
+  - {{cssxref("::cue-region")}}
+
+- CSS scoping module
+  - {{CSSXref(":host")}}
+  - {{CSSXref(":host_function", ":host()")}}
+  - {{CSSXref(":host-context()")}}
+  - {{CSSXref("::slotted")}}
+
+- CSS shadow parts module
+  - {{CSSXref("::part")}}
+
 - CSS {{cssxref("content")}} property
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_genererated_content) module
-- [CSS selectors]()
+
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
   - [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
   - [Combinators](/en-US/docs/Web/CSS/CSS_Selectors/selectors_and_combinators#combinators)
   - [Class selector](/en-US/docs/Web/CSS/Class_selectors)
   - [ID selector](/en-US/docs/Web/CSS/ID_selectors)
   - [Type selector](/en-US/docs/Web/CSS/Type_selectors)
-  - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
+  - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
   - [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
-- [cascade layer]()
-- fragment
-- placeholder attribute
-- : placeholder-shown selector
+
+- [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute
+- [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) selector
+
+- [Text fragments](/en-US/docs/Web/Text_fragments)
+
 - {{DOMXref("AnimationEvent.pseudoElement")}} property
 - {{DOMXref("KeyframeEffect.pseudoElement")}} property
 - {{DOMXref("TransitionEvent.pseudoElement")}} property
@@ -69,3 +97,7 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 ## See also
 
 - [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS pseudo-classes](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS position](css-position) module
