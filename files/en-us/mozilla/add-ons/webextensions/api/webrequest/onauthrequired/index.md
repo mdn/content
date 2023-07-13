@@ -244,11 +244,11 @@ function provideCredentialsSync(requestDetails) {
   // assume our credentials were bad, and give up.
   if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
-    return {cancel:true};
+    return { cancel: true };
   }
   pendingRequests.push(requestDetails.requestId);
   console.log(`providing credentials for: ${requestDetails.requestId}`);
-  return {authCredentials: myCredentials};
+  return { authCredentials: myCredentials };
 }
 
 browser.webRequest.onAuthRequired.addListener(
@@ -286,8 +286,7 @@ function provideCredentialsAsync(requestDetails) {
   // and give up.
   if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
-    return {cancel: true};
-
+    return { cancel: true };
   } else {
     pendingRequests.push(requestDetails.requestId);
     console.log(`providing credentials for: ${requestDetails.requestId}`);
