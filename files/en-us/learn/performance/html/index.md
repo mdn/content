@@ -118,11 +118,11 @@ Note the use of the `srcset` attribute in this example. As shown in the previous
 </video>
 ```
 
-Note however some key differences:
+There are, however, some key differences between providing sources for images and videos:
 
-- Here we are using `src` rather than `srcset`; you can't specify different resolutions for videos via `srcset`.
+- In the above example, we are using `src` rather than `srcset`; you can't specify different resolutions for videos via `srcset`.
 - Instead, you specify different resolutions inside the different `<source>` elements.
-- Note how here we are also specifying different video formats inside different `<source>` elements, with each format being identified via its MIME type inside the `type` attribute. Browsers will load the first one they come across that they support, where the media query test returns true.
+- Note how we are also specifying different video formats inside different `<source>` elements, with each format being identified via its MIME type inside the `type` attribute. Browsers will load the first one they come across that they support, where the media query test returns true.
 
 ### Lazy loading images
 
