@@ -43,3 +43,4 @@ Alt-Used: alternate.example.net
 ## See also
 
 - {{HTTPHeader("Alt-Svc")}}
+- {{HTTPHeader("Host")}}
