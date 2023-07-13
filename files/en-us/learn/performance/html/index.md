@@ -35,7 +35,7 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
 
 ## Key HTML performance issues
 
-HTML is simple in terms of performance — it is mostly text, which is small in size, and therefore mostly quick to download and render. The key issues are:
+HTML is simple in terms of performance — it is mostly text, which is small in size, and therefore, mostly quick to download and render. The key issues that can impact the performance of a web page include:
 
 - Handling the content of replaced elements such as {{htmlelement("img")}} and {{htmlelement("video")}}. Images and video are large and can add significantly to the weight of the page, therefore it is important to minimize the amount of bytes downloaded as appropriate for the user's device (for example, serve smaller images for mobile) and try to improve perceived performance by only loading images and video when they are needed.
 - Handling the delivery of content embedded (usually in {{htmlelement("iframe")}} elements). Loading content into `<iframe>`s can also impact performance significantly, so it should be considered carefully.
