@@ -35,7 +35,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["<all_urls>"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
