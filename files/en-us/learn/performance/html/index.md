@@ -179,7 +179,8 @@ In the same way as `<img>` elements, you can also use the `loading` attribute to
   src="https://example.com"
   loading="lazy"
   width="600"
-  height="400"></iframe>
+  height="400">
+</iframe>
 ```
 
 See [It's time to lazy-load offscreen iframes!](https://web.dev/iframe-lazy-loading/) for more information.
