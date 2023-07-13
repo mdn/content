@@ -74,7 +74,7 @@ browser.browserAction.onClicked.addListener(() => {
     console.log(`Error: ${error}`);
   }
 
-  let insertingCSS = browser.tabs.insertCSS({code: css});
+  let insertingCSS = browser.tabs.insertCSS({ code: css });
   insertingCSS.then(null, onError);
 });
 ```
@@ -87,7 +87,7 @@ browser.browserAction.onClicked.addListener(() => {
     console.log(`Error: ${error}`);
   }
 
-  let insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  let insertingCSS = browser.tabs.insertCSS(2, { file: "content-style.css" });
   insertingCSS.then(null, onError);
 });
 ```
