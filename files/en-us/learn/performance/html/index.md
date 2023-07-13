@@ -99,7 +99,7 @@ An example is as follows:
 
 The {{htmlelement("source")}} elements contain media queries inside `media` attributes. If a media query returns true, the image referenced in its `<source>` element's `srcset` attribute is loaded. In the above example, if the viewport width is `799px` or less, the `narrow-banner-480w.jpg` image is loaded. Also note how the `<picture>` element includes an `<img>` element, which provides a default image to load in the case of browsers that don't support `<picture>`.
 
-> **Note:** note the use of the `srcset` element here. As shown in the previous section, you can provide different resolutions for each different image source.
+Note the use of the `srcset` attribute in this example. As shown in the previous section, you can provide different resolutions for each image source.
 
 `<video>` elements work in a similar way, in terms of providing different sources:
 
