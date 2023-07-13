@@ -230,7 +230,7 @@ If we put this `<script>` element before the `<p>` element in the source order (
 
 You can fix the above issue by putting the `<script>` element after the `<p>` element (for example at the end of the document body), or by running the code inside a suitable event handler (for example run it on the [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event), which fires when the DOM has been completely parsed).
 
-However, this doesn't solve the problem of waiting for the script to load. Better performance can be achieved by adding the `async` attribute to the `<script>` elements:
+However, this doesn't solve the problem of waiting for the script to load. Better performance can be achieved by adding the `async` attribute to the `<script>` element:
 
 ```html
 <script async src="index.js"></script>
