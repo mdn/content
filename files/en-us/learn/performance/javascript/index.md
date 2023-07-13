@@ -196,7 +196,7 @@ async function main() {
 }
 ```
 
-To improve this further we can use {{domxref("Scheduling.isInputPending", "navigator.scheduling.isInputPending()")}} to run the `yield()` function only when the user is attempting to interact with the page:
+To improve this further, we can use {{domxref("Scheduling.isInputPending", "navigator.scheduling.isInputPending()")}} to run the `yield()` function only when the user is attempting to interact with the page:
 
 ```js
 async function main() {
