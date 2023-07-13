@@ -55,7 +55,7 @@ Before looking at the tips contained in this section, it is important to talk ab
 
 1. The HTML is generally parsed first, in the order in which it appears on the page.
 2. Whenever CSS is encountered, it is parsed to understand the styles that need to be applied to the page. During this time, linked assets such as images and web fonts start to be fetched.
-3. Whenever JavaScript is encountered, it is parsed, evaluated, and run against the page.
+3. Whenever JavaScript is encountered, the browser parses, evaluates, and runs it against the page.
 4. Slightly later on, the browser works out how each HTML element should be styled, given the CSS applied to it.
 5. The styled result is then painted to the screen.
 
