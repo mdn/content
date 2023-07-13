@@ -1,0 +1,10 @@
+{
+    "markdown.validate.ignoredLinks": [
+        "/en-US/docs/Web/HTML",
+        "/en-US/docs/Web/HTML/Global_attributes/id",
+        "/en-US/docs/Web/HTML/Element/input",
+        "/en-US/docs/Web/HTML/Global_attributes",
+        "/en-US/docs/Web/HTML/Content_categories",
+        "/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+    ]
+}
