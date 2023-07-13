@@ -7,7 +7,7 @@ browser-compat: css.types.global_keywords.revert
 
 {{CSSRef}}
 
-The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
+The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property to either user agent set value, user set value, its inherited value (if it is inheritable), or initial value. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
 This keyword removes from the cascade all of the styles that have been overridden until the style being rolled back to is reached.
 
