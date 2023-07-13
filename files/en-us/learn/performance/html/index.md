@@ -190,7 +190,7 @@ See [It's time to lazy-load offscreen iframes!](https://web.dev/iframe-lazy-load
 Ordering of resource loading is important for maximizing perceived and actual performance. When a web page is loaded:
 
 1. The HTML is generally parsed first, in the order in which it appears on the page.
-2. Any found CSS is parsed to understand what styles need to be applied to the page. During this time linked assets such as images and web fonts start to be fetched.
+2. Any found CSS is parsed to understand the styles that need to be applied to the page. During this time, linked assets such as images and web fonts start to be fetched.
 3. Any found JavaScript is parsed, evaluated, and run against the page. By default, this blocks parsing of the HTML that appears after the {{htmlelement("script")}} elements that refer to the JavaScript.
 4. Slightly later on, the browser works out how each HTML element should be styled, given the CSS applied to it.
 5. The styled result is then painted to the screen.
