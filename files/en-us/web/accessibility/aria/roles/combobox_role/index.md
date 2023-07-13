@@ -108,8 +108,8 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [ARIA Best Practices – Combobox](https://www.w3.org/TR/wai-aria-practices/#Combobox)
-- [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.1/#combobox)
+- [ARIA Best Practices – Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
+- [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.2/#combobox)
 - [Accessible combobox module](https://dequelabs.github.io/combobo/demo/) examples by Deque
 
 <section id="Quick_links">

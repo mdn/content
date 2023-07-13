@@ -46,12 +46,12 @@ function listener(details) {
     let encoder = new TextEncoder();
     filter.write(encoder.encode("replacement content"));
     filter.close();
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
+  { urls: ["https://example.org/"], types: ["main_frame"] },
   ["blocking"]
 );
 ```

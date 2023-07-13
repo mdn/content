@@ -1258,7 +1258,7 @@ window.addEventListener("load", () => {
       (event) => {
         toggleOptList(select);
       },
-      false
+      false,
     );
 
     select.addEventListener("focus", (event) => {

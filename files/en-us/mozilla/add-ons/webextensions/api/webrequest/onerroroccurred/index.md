@@ -165,10 +165,7 @@ function logError(responseDetails) {
   console.log(responseDetails.error);
 }
 
-browser.webRequest.onErrorOccurred.addListener(
-  logError,
-  {urls: [target]}
-);
+browser.webRequest.onErrorOccurred.addListener(logError, { urls: [target] });
 ```
 
 {{WebExtExamples}}

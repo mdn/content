@@ -51,16 +51,14 @@ In this example the extension Hansel connects to the extension Gretel:
 
 ```js
 console.log("connecting to Gretel");
-let myPort = browser.runtime.connect(
-  "gretel@mozilla.org"
-);
+let myPort = browser.runtime.connect("gretel@mozilla.org");
 
 myPort.onMessage.addListener((message) => {
   console.log(`From Gretel: ${message.content}`);
 });
 
 browser.browserAction.onClicked.addListener(() => {
-  myPort.postMessage({content: "Hello from Hansel"});
+  myPort.postMessage({ content: "Hello from Hansel" });
 });
 ```
 
@@ -81,7 +79,7 @@ browser.runtime.onConnectExternal.addListener((port) => {
 });
 
 browser.browserAction.onClicked.addListener(() => {
-   portFromHansel.postMessage({content: "Message from Gretel"});
+  portFromHansel.postMessage({ content: "Message from Gretel" });
 });
 ```
 
