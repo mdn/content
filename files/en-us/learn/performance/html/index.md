@@ -257,9 +257,9 @@ See the following articles for detailed information on using `rel="preload"`:
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
 - [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/) on web.dev (2020)
 
-**Note:** You can even use `rel="preload"` to preload CSS and JavaScript files.
+> **Note:** You can use `rel="preload"` to preload CSS and JavaScript files as well.
 
-**Note:** There are other [`rel` values](/en-US/docs/Web/HTML/Attributes/rel) that are also designed to speed up various aspects of page loading, for example `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
+> **Note:** There are other [`rel`](/en-US/docs/Web/HTML/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
 
 {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
 
