@@ -75,7 +75,7 @@ const defaultCode =
 async function register(hosts, code) {
   return await browser.contentScripts.register({
     matches: [hosts],
-    js: [{code}],
+    js: [{ code }],
     runAt: "document_idle",
   });
 }

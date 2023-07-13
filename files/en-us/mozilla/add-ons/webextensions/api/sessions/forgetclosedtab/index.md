@@ -62,8 +62,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.sessions.getRecentlyClosed({maxResults: 1})
-.then(forgetMostRecent, onError);
+browser.sessions
+  .getRecentlyClosed({ maxResults: 1 })
+  .then(forgetMostRecent, onError);
 ```
 
 {{WebExtExamples}}

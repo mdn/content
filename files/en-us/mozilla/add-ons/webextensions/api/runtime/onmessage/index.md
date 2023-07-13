@@ -121,7 +121,7 @@ function notifyExtension(e) {
   if (e.target.tagName !== "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -174,7 +174,7 @@ Here is a version of the corresponding background script, that sends a response 
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
-  sendResponse({response: "response from background script"});
+  sendResponse({ response: "response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -187,7 +187,7 @@ And here is another version which uses {{jsxref("Promise.resolve()")}}:
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
-  return Promise.resolve({response: "response from background script"});
+  return Promise.resolve({ response: "response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -203,7 +203,7 @@ Here is an alternative version of the background script from the previous exampl
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
   setTimeout(() => {
-    sendResponse({response: "async response from background script"});
+    sendResponse({ response: "async response from background script" });
   }, 1000);
   return true;
 }
@@ -257,7 +257,7 @@ If the asynchronous handler doesn't return a Promise, you can explicitly constru
 function handleMessage(request, sender, sendResponse) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve({response: "async response from background script"});
+      resolve({ response: "async response from background script" });
     }, 1000);
   });
 }
