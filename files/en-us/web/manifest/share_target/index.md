@@ -110,7 +110,7 @@ self.addEventListener("fetch", (event) => {
       // function, for example, `/`.
       const responseUrl = await saveBookmark(link);
       return Response.redirect(responseUrl, 303);
-    })()
+    })(),
   );
 });
 ```

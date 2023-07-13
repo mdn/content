@@ -1,6 +1,7 @@
 ---
 title: current
 slug: Web/XPath/Functions/current
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

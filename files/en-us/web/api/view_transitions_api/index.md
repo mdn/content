@@ -212,7 +212,7 @@ function spaNavigate(data) {
   // Get the distance to the furthest corner
   const endRadius = Math.hypot(
     Math.max(x, innerWidth - x),
-    Math.max(y, innerHeight - y)
+    Math.max(y, innerHeight - y),
   );
 
   // Create a transition:
@@ -235,7 +235,7 @@ function spaNavigate(data) {
         easing: "ease-in",
         // Specify which pseudo-element to animate
         pseudoElement: "::view-transition-new(root)",
-      }
+      },
     );
   });
 }
@@ -302,3 +302,4 @@ This animation also requires the following CSS, to turn off the default CSS anim
 ## See also
 
 - [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [View Transitions API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/)

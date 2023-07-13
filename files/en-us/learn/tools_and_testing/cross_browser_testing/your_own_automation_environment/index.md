@@ -249,7 +249,7 @@ You can use any URL to point to your resource, including a `file://` URL to test
 
 ```js
 driver.get(
-  "file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html"
+  "file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html",
 );
 ```
 
@@ -265,7 +265,7 @@ Add this line to the bottom of `quick_test.js` now:
 
 ```js
 driver.get(
-  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
 );
 ```
 
@@ -680,7 +680,7 @@ Let's write an example:
        accessKey,
      })
      .usingServer(
-       `https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`
+       `https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`,
      )
      .build();
 

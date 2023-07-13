@@ -77,7 +77,7 @@ function logEventDuration(entries) {
     console.log(
       `Event handler took: ${
         event.processingEnd - event.processingStart
-      } milliseconds`
+      } milliseconds`,
     );
   }
 }
@@ -95,7 +95,7 @@ for (const event of events) {
   console.log(
     `Event handler took: ${
       event.processingEnd - event.processingStart
-    } milliseconds`
+    } milliseconds`,
   );
 }
 ```
@@ -140,7 +140,7 @@ function perfObserver(list, observer, droppedEntriesCount) {
   });
   if (droppedEntriesCount > 0) {
     console.warn(
-      `${droppedEntriesCount} entries were dropped because the buffer was full.`
+      `${droppedEntriesCount} entries were dropped because the buffer was full.`,
     );
   }
 }

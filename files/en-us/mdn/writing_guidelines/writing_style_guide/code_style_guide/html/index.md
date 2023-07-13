@@ -27,7 +27,7 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible.
 
 ```html example-good
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 ### Document language

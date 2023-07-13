@@ -89,7 +89,7 @@ function prefixScript(url, onloadFunction) {
   }
   document.currentScript.parentNode.insertBefore(
     newScript,
-    document.currentScript
+    document.currentScript,
   );
   newScript.src = url;
 }

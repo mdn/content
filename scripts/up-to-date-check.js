@@ -10,6 +10,6 @@ if (installedYariVersion < availableYariVersion) {
       `the version referenced in package.json (${availableYariVersion}). ` +
       `Please make sure your main git branch is up-to-date with ` +
       `https://github.com/mdn/content/, then run yarn install to ` +
-      `install the latest Yari.`
+      `install the latest Yari.`,
   );
 }

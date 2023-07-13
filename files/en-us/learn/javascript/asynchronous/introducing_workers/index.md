@@ -76,7 +76,7 @@ document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
   document.querySelector(
-    "#output"
+    "#output",
   ).textContent = `Finished generating ${quota} primes!`;
 });
 
@@ -101,7 +101,7 @@ For this example, start by making a local copy of the files at <https://github.c
 The "index.html" file and the "style.css" files are already complete:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -160,7 +160,7 @@ document.querySelector("#generate").addEventListener("click", () => {
 // primes that were generated, taken from the message data.
 worker.addEventListener("message", (message) => {
   document.querySelector(
-    "#output"
+    "#output",
   ).textContent = `Finished generating ${message.data} primes!`;
 });
 

@@ -85,7 +85,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -208,7 +211,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -281,7 +287,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -381,7 +390,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
@@ -456,7 +468,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {

@@ -177,7 +177,7 @@ for (const button of buttons) {
       stopTime = button.getAttribute("data-stop");
       myAudio.play();
     },
-    false
+    false,
   );
 }
 
@@ -188,7 +188,7 @@ myAudio.addEventListener(
       myAudio.pause();
     }
   },
-  false
+  false,
 );
 ```
 

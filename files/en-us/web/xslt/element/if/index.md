@@ -1,6 +1,7 @@
 ---
 title: <xsl:if>
 slug: Web/XSLT/Element/if
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

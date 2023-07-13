@@ -78,7 +78,9 @@ For whatever reason, this is the desired appearance in any rendering environment
   width: 15rem;
   height: 6rem;
   text-align: center;
-  font: 24px "Helvetica", sans-serif;
+  font:
+    24px "Helvetica",
+    sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;

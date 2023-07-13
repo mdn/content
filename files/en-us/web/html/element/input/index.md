@@ -962,7 +962,10 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -1186,7 +1189,7 @@ nameInput.addEventListener("invalid", () => {
     nameInput.setCustomValidity("Enter your username!");
   } else {
     nameInput.setCustomValidity(
-      "Usernames can only contain upper and lowercase letters. Try again!"
+      "Usernames can only contain upper and lowercase letters. Try again!",
     );
   }
 });

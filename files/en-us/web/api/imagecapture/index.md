@@ -96,7 +96,7 @@ function drawCanvas(canvas, img) {
       x,
       y,
       img.width * ratio,
-      img.height * ratio
+      img.height * ratio,
     );
 }
 

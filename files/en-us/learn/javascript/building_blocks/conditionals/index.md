@@ -401,7 +401,9 @@ function update(bgColor, textColor) {
 }
 
 select.addEventListener("change", () =>
-  select.value === "black" ? update("black", "white") : update("white", "black")
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black"),
 );
 ```
 
@@ -619,7 +621,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;
@@ -806,7 +808,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;

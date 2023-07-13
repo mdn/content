@@ -62,16 +62,14 @@ let testPermissions3 = {
 };
 
 const testResult3 = await browser.permissions.contains(testPermissions3);
-console.log(testResult3); // true: "https://developer.mozilla.org/"
-                          // matches: "*://*.mozilla.org/*"
+console.log(testResult3); // true: "https://developer.mozilla.org/", matches: "*://*.mozilla.org/*"
 
 let testPermissions4 = {
   origins: ["https://example.org/"]
 };
 
 const testResult4 = await browser.permissions.contains(testPermissions4);
-console.log(testResult4); // false, "https://example.org/"
-                          // does not match
+console.log(testResult4); // false: "https://example.org/", `origins` doesn't match
 ```
 
 {{WebExtExamples}}
