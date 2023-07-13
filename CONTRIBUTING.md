@@ -346,7 +346,7 @@ You may do this by using the `yarn content add-redirect` command.
 2. Add a redirect with `yarn content add-redirect`. The target page can be a page on MDN or an external URL:
 
    ```sh
-   yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
+   yarn content add-redirect https://developer.mozilla.org/en-US/path/of/deleted/page https://developer.mozilla.org/en-US/path/of/target/page
    ```
 
 3. Commit all of the changed files and pushing your branch to your fork:
