@@ -175,11 +175,7 @@ If you must use `<iframe>`s, then use them sparingly.
 In the same way as `<img>` elements, you can also use the `loading` attribute to instruct the browser to lazy-load `<iframe>` content that is initially offscreen, thereby improving performance:
 
 ```html
-<iframe
-  src="https://example.com"
-  loading="lazy"
-  width="600"
-  height="400">
+<iframe src="https://example.com" loading="lazy" width="600" height="400">
 </iframe>
 ```
 
@@ -191,13 +187,13 @@ Ordering of resource loading is important for maximizing perceived and actual pe
 
 1. The HTML is generally parsed first, in the order in which it appears on the page.
 2. Any found CSS is parsed to understand the styles that need to be applied to the page. During this time, linked assets such as images and web fonts start to be fetched.
-3. Any found JavaScript is parsed, evaluated, and run against the page. By default, this blocks parsing of the HTML that appears after the {{htmlelement("script")}} elements that refer to the JavaScript.
+3. Any found JavaScript is parsed, evaluated, and run against the page. By default, this blocks parsing of the HTML that appears after the {{htmlelement("script")}} elements where the JavaScript is encoountered.
 4. Slightly later on, the browser works out how each HTML element should be styled, given the CSS applied to it.
 5. The styled result is then painted to the screen.
 
 > **Note:** This is a very simplified account of what happens, but it does give you an idea.
 
-There are various HTML features that allow you to modify how resource loading happens to improve performance. We'll explore some of these now.
+Various HTML features allow you to modify how resource loading happens to improve performance. We'll explore some of these now.
 
 ### Handling JavaScript loading
 
