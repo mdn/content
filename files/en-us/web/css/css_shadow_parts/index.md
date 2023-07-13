@@ -40,10 +40,10 @@ By default, elements in a shadow tree are only styleable from within that shadow
 
 - HTML {{HTMLElement("template")}} element
 - HTML {{HTMLElement("slot")}} element
-- {{domxref("Element.part")}}
-- {{domxref("Element.shadowRoot")}}
-- {{domxref("Element.attachShadow()")}}
-- {{domxref("ShadowRoot")}}
+- {{domxref("Element.part")}} property
+- {{domxref("Element.shadowRoot")}} property
+- {{domxref("Element.attachShadow()")}} method
+- {{domxref("ShadowRoot")}} interface
 - CSS scoping module
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
