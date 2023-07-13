@@ -197,7 +197,7 @@ Ordering of resource loading is important for maximizing perceived and actual pe
 
 > **Note:** This is a very simplified account of what happens, but it does give you an idea.
 
-There are various HTML features that allow you to modify how resource loading happens, to improve performance. We'll explore some of these now.
+There are various HTML features that allow you to modify how resource loading happens to improve performance. We'll explore some of these now.
 
 ### Handling JavaScript loading
 
