@@ -41,7 +41,7 @@ HTML is simple in terms of performance — it is mostly text, which is small in 
 - Delivery of embedded content: This is usually the content embedded in {{htmlelement("iframe")}} elements. Loading content into `<iframe>`s can impact performance significantly, so it should be considered carefully.
 - Order of resource loading: To maximize the perceived and actual performance, the HTML should be loaded first, in the order in which it appears on the page. You can then use various features to influence the order of resource loading for better performance. For example, you can preload critical CSS and fonts early, but defer non-critical JavaScript until later on.
 
-> **Note**: There is an argument to be made for simplifying your HTML structure and [minifying](<https://en.wikipedia.org/wiki/Minification_(programming)>) your source code, so that rendering and downloads are faster. However, HTML file size is negligible compared to images and videos, and browser rendering is very fast these days. If your HTML source is so large and complex that it is creating rendering and download performance hits, you probably have bigger problems, and should aim to simplify it and split the content up.
+> **Note:** There is an argument to be made for simplifying your HTML structure and [minifying](<https://en.wikipedia.org/wiki/Minification_(programming)>) your source code, so that rendering and downloads are faster. However, HTML file size is negligible compared to images and videos, and browser rendering is very fast these days. If your HTML source is so large and complex that it is creating rendering and download performance hits, you probably have bigger problems, and should aim to simplify it and split the content up.
 
 ## Responsive handling of replaced elements
 
@@ -53,7 +53,7 @@ In the sections below, we'll summarize how to implement responsive replaced elem
 
 ### Providing different image resolutions via srcset
 
-To provide different resolution versions of the same image depending on the device's resolution and viewport size, you can use the `srcset` and `sizes` attributes.
+To provide different resolution versions of the same image depending on the device's resolution and viewport size, you can use the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
 
 This example provides different size images for different screen widths:
 
@@ -201,7 +201,7 @@ There are various HTML features that allow you to modify how resource loading ha
 
 ### Handling JavaScript loading
 
-Parsing and executing JavaScript blocks the parsing of subsequent DOM content, and therefore increases the time to that content being rendered and usable by the users of the page. A small script won't make much difference, but consider that modern web applications tend to be very JavaScript-heavy.
+Parsing and executing JavaScript blocks the parsing of subsequent DOM content. This increases the time until that content is rendered and usable by the users of the page. A small script won't make much difference, but consider that modern web applications tend to be very JavaScript-heavy.
 
 Another side effect of the default JavaScript parsing behavior is that, if the script being rendered relies on DOM content that appears later on in the page, you'll get errors.
 
