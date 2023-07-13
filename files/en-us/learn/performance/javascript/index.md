@@ -143,7 +143,7 @@ import("./modules/myModule.js").then((module) => {
 
 ### Breaking down long tasks
 
-When the browser runs your JavaScript, it will organize it into tasks that are run sequentially when your JavaScript does work such as making fetch requests, driving user interactions and input through event handlers, JavaScript-driven animation, etc.
+When the browser runs your JavaScript, it will organize the script into tasks that are run sequentially, such as making fetch requests, driving user interactions and input through event handlers, running JavaScript-driven animation, and so on.
 
 Most of this happens on the main thread, with exceptions including JavaScript that runs in [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). The main thread can only run one task at a time.
 
