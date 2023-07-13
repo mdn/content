@@ -299,7 +299,7 @@ There are several general best practices that will make your code run more effic
 
 - **Loops are expensive**: If possible, reduce the amount of loop usage in your code. Where loops are unavoidable:
 
-  - Avoid running the full loop when it is unneccessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found — there is no need to run the other loop iterations:
+  - Avoid running the full loop when it is unneccessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found; there is no need to run further loop iterations:
 
     ```js
     function processGroup(array) {
