@@ -63,17 +63,21 @@ Related topics:
 
 ### Secure contexts and feature permissions
 
-Browsers control usage of several "powerful features" in a couple of different ways. By "powerful features", we mean things like a site generating system notifications, using a user's web cam to get access to a media stream, manipulating the system GPU, or using web payments. If a site could just use the APIs that control such features without restriction, malicious developers could do all sorts of things, ranging from annoying users and clogging up their browser/system to create {{glossary("denial of service", "Denial of Service")}} (DoS) attacks, to stealing data and money.
+Browsers control usage of several "powerful features" in a few different ways. By "powerful features", we mean things like a site generating system notifications, using a user's web cam to get access to a media stream, manipulating the system GPU, and using web payments. If a site could just use the APIs that control such features without restriction, malicious developers could for example:
 
-You need to bear the following things in mind when using these browser features:
+- Annoy users with unneeded notifications and other UI features.
+- Clog up their browser/system to create {{glossary("denial of service", "Denial of Service")}} (DoS) attacks.
+- Steal data or money.
 
-First, the use of such features is permitted only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). A secure context is a {{domxref("Window", "window")}} or a {{domxref("WorkerGlobalScope", "worker")}} for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS). In a secure context, the potential for communication with contexts that are **not** secure is limited. Secure contexts also help to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing the powerful APIs of the browser.
+Such browser features are controlled as follows:
+
+First, usage of such features is permitted only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). A secure context is a {{domxref("Window", "window")}} or a {{domxref("WorkerGlobalScope", "worker")}} for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS). In a secure context, the potential for communication with contexts that are **not** secure is limited. Secure contexts also help to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing the powerful APIs of the browser.
 
 > **Note:** See also [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). This reference lists web platform features available only in secure contexts.
 
 Second, the usage of these features is gated behind a system of user permissions — users have to explicitly opt-in to providing access to such features, meaning that these featured can't be used automatically. The user permission requests happen automatically, but you can query the state of an API permission by using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-In addition, many other browser features can be used only in response to a user action such as clicking a button, meaning that they need to be invoked from inside an appropriate event handler. This is often called **transient activation**. See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information.
+Third, many other browser features can be used only in response to a user action such as clicking a button, meaning that they need to be invoked from inside an appropriate event handler. This is often called **transient activation**. See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information.
 
 ## Security considerations for client-side developers
 
@@ -83,9 +87,11 @@ There are many aspects of web security that need to be thought about on the serv
 
 Handling data responsibly is largely concerned with cutting down on [cookie usage](/en-US/docs/Web/HTTP/Cookies) and being careful about the data you store in them. Traditionally, web developers have used cookies to store all kinds of data, for all kinds of purposes, and it has been easy for attackers to exploit this tendency. As a result, browsers have started to limit what you can do with cross-site cookies, with the aim of removing access to them altogether in the future.
 
-It is a good idea to prepare for this, by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways. For example:
+You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways.
 
-- Use an alternative client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) to persist data. This does have the downside that the data is stored per-origin, so it can't be shared.
+For example:
+
+- Use an alternative client-side storage mechanism such as the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) to persist data. Web storage does have the downside that the data is stored per-origin, so it can't be shared. Note that web storage has two variants — `sessionStorage` and `localStorage`. We would recommend using `sessionStorage` for extra security, as data only persists for the lifetime of the window or tab it exists in. `localStorage` data persists even after the window or tab is closed and reopened. This means that there is a higher chance of it falling into the wrong hands, for example on a shared workstation.
 - Use a technology such as [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless), [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) and/or the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way or block them altogether. These technologies currently have limited browser support.
 - Use a server-side solution for data persistence.
 
@@ -99,14 +105,21 @@ If you want to roll your own solution for collecting user data, make sure you un
 
 Here are some other tips for providing secure logins:
 
-- When collecting user login information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down. See also [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
-- The flipside of this is educating your users against phishing, which is the act of sending a user an email, SMS, etc. containing a link to a site that looks like a site they use every day, but isn't. This is combined with a message designed to trick them into entering their username and password so it can be stolen and then used by an attacker. Some phishing sites can be very sophisticated and hard to distinguish from the real thing. You should educate your users to not trust random links in emails and SMS messages. If they receive a message along the lines of "urgent, you need to log in now to resolve an issue", they should go to the site directly in a clean tab and try logging in rather than following the link. Or they could phone or email you to discuss it.
+- When collecting user login information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down. See also our article on [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+- You should also educate your users about **phishing**. Phishing is the act of sending a user a message (for example an email or SMS) containing a link to a site that looks like a site they use every day, but isn't. This is accompanied by a message designed to trick them into entering their username and password on the site so it can be stolen and then used by an attacker for malicious purposes.
+
+  > **Note:** Some phishing sites can be very sophisticated and hard to distinguish from the real thing. You should therefore educate your users to not trust random links in emails and SMS messages. If they receive a message along the lines of "Urgent, you need to log in now to resolve an issue", they should go to the site directly in a new tab and try logging in directly rather than clicking the link in the message. Or they could phone or email you to discuss it.
+
 - Protect against brute force attacks on login pages with [rate limiting](https://www.cloudflare.com/en-gb/learning/bots/what-is-rate-limiting/), account lockouts after a certain number of unsuccessful attempts, and [CAPTCHA challenges](https://en.wikipedia.org/wiki/CAPTCHA).
-- Manage user login sessions with unique [session IDs](https://en.wikipedia.org/wiki/Session_ID), and automatically log out after periods of inactivity.
+- Manage user login sessions with unique [session IDs](https://en.wikipedia.org/wiki/Session_ID), and automatically log out users after periods of inactivity.
 
-As a general rule, you shouldn't include sensitive data in URLs — if a third party intercepts the URL (for example via the {{httpheader("Referer")}} header), they could steal that information. Use `POST` requests rather than `GET` requests to avoid this. [Referer header policy: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the [Referer HTTP header](/en-US/docs/Web/HTTP/Headers/Referer), and offers advice on mitigating those risks.
+## Don't include sensitive data in URL query strings
 
-> **Note**: Steering away from transmitting sensitive data in URLs via `GET` requests can help protect against {{glossary("CSRF", "cross-site request forgery")}} and [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
+As a general rule you shouldn't [include sensitive data in URL query strings](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url): if a third party intercepts the URL (for example via the {{httpheader("Referer")}} HTTP header), they could steal that information. Even more serious is that these URLs can indexed by public web crawlers, HTTP proxies, and archiving tools such as the [internet archive](https://web.archive.org/), meaning that your sensitive data can be persisted on publicly accessible resources.
+
+Use `POST` requests rather than `GET` requests to avoid these issues. Our article [Referer header policy: Privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the `Referer` header, and offers advice on mitigating those risks.
+
+> **Note:** Steering away from transmitting sensitive data in URLs via `GET` requests can also help protect against {{glossary("CSRF", "cross-site request forgery")}} and [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
 
 ## Enforce usage policies
 
@@ -135,9 +148,10 @@ Related topics:
 
 As a general rule, don't trust anything that users enter into forms. Filling out forms online is complicated and tedious, and it is easy for users to enter wrong data or data in the wrong format. In addition, malicious folks are well-versed in the art of entering specific strings of executable code into form fields (for example, SQL or JavaScript). If you're not careful about handling these types of inputs, it could either execute harmful code on your site or delete your databases. See [SQL injection](/en-US/docs/Learn/Server-side/First_steps/Website_security#sql_injection) for a good example of how this could happen.
 
-To protect against this, you should thoroughly sanitize data entered into your forms.
+To protect against this, you should thoroughly sanitize data entered into your forms:
 
-You should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) for more information.
+- You should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) for more information.
+- You should use output encoding when displaying user input in an application UI to safely display data exactly as a user typed it in, to avoid it being executed as code. See [Output encoding](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding) for more information.
 
 However, you can't rely on client-side validation alone for security. It is a useful user experience enhancement for your users because it gives them instant validation feedback without having to wait for a round trip to the server. At the same time, client-side validation is too easy for a malicious party to bypass (for example, by turning off JavaScript in the browser to bypass JavaScript-based validation), so it should be combined with server-side validation.
 

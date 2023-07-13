@@ -8,19 +8,23 @@ People use websites for several important tasks such as banking, shopping, enter
 
 Modern browsers already have a wealth of features to protect users' privacy on the web, but that's not enough. To create a trustworthy and privacy-respecting experience, developers need to educate their site users in good practices (and enforce them). Developers should also create sites that collect as little data from users as possible, use the data responsibly, and transport and store it securely.
 
-In this article, we define privacy and important related terms, examine browser features that automatically protect user privacy, and look at what users can do to create privacy-respecting web content that minimizes the risk of users' personal information/data being obtained unexpectedly by third parties.
+In this article, we:
 
-## Privacy defined
+- Define privacy and important related terms.
+- Examine browser features that automatically protect user privacy.
+- Look at what users can do to create privacy-respecting web content that minimizes the risk of users' personal information/data being obtained unexpectedly by third parties.
+
+## Defining privacy terms and concepts
 
 Before we look at the various privacy and security features available to use on the web, let's define some important terms.
 
-### What is privacy?
+### Privacy and its relationship with security
 
 It is hard to talk about privacy without also talking about security — they are closely related, and you can't really create privacy-respecting websites without good security. Therefore, we shall define both.
 
-- **Privacy** refers to the act of giving users the right to control how their data is collected, stored, and used, and not using it irresponsibly. For example, developers should make it very clear to users of their sites what data they are collecting, who else it will be shared with, and what they will use it for. Users must be given a chance to consent to your terms of data usage, and also be able to see what items of their data you have stored, and delete them if they no longer wish you to have them. You must also comply with your own terms — nothing erodes user trust like having their data used in ways — and shared with third parties — that they didn't agree to. And this isn't just ethically wrong — it could be against the law. Many parts of the world now have legislation that protect consumer privacy rights (for example the EU's [GDPR](https://gdpr.eu/)).
+- **Privacy** refers to the act of giving users the right to control how their data is collected, stored, and used, and not using it irresponsibly. For example, you should clearly communicate to your users what data you are collecting, with whom it will be shared with, and how it will be used. Users must be given a chance to consent to your terms of data usage, have access to the items of their data you are storing, and delete it if they no longer wish you to have it. You must also comply with your own terms: nothing erodes user trust like having their data used and shared in ways they never consented to. And this isn't just ethically wrong; it could be against the law. Many parts of the world now have legislation that protects consumer privacy rights (for example the EU's [GDPR](https://gdpr.eu/)).
 
-- **Security** is the act of keeping private data and systems protected against unauthorized access. This includes both company (internal) data, and user and partner (external) data. It is no use having a robust privacy policy that causes your users to trust you, if your security is weak and malicious parties can steal their data anyway.
+- **Security** is the act of keeping private data and systems protected against unauthorized access. This includes both company (internal) data, and user and partner (external) data. It is no use having a robust privacy policy that makes your users trust you if your security is weak and malicious parties can steal their data anyway.
 
 ### Personal and private information
 
@@ -65,7 +69,7 @@ For example, if a website queries a user's browser for the elapsed time, a compa
 
 > **Note:** See also [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) over on web.dev for additional useful information.
 
-## What do browsers do automatically?
+## Privacy features provided by browsers
 
 Browser vendors are aware of the need to protect user privacy and the negative effects of tracking, fingerprinting, etc., on user experience. To this end, they have implemented various features that enhance privacy protection and/or mitigate threats. In this section, we look at different categories of privacy protection that browsers apply automatically.
 
@@ -86,15 +90,13 @@ Related topics are as follows:
 
 ### Opt-in for "powerful features"
 
-So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which basically means HTTPS-only. Not only that, but they are gated behind a system of user permissions, so users have to explicitly opt-in to features like notifications, geolocation data, making the browser go into fullscreen mode, accessing media streams from web cams, web payments, etc.
-
-This provides further security and privacy protection.
+So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which basically means HTTPS-only. Not only that, but these web features are gated behind a system of user permissions. Users have to explicitly opt-in to features like allowing notifications, accessing geolocation data, making the browser go into fullscreen mode, accessing media streams from web cams, using web payments, etc.
 
 ### Anti-tracking technology
 
 Browsers have implemented several anti-tracking features that automatically enhance their users' privacy protection. Many of these block or limit the ability of third-party sites embedded in {{htmlelement("iframe")}}s to access cookies set on the top-level domain, run tracking scripts, etc.
 
-For example, one change that was agreed upon and rolled out across all browsers was an update to the {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute default value to `Lax` (see [Changes to the default behavior without SameSite](https://web.dev/samesite-cookies-explained/#changes-to-the-default-behavior-without-samesite)).
+For example, one change that was agreed upon and rolled out across all browsers was an update to the {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value to `Lax` (see [Changes to the default behavior without SameSite](https://web.dev/samesite-cookies-explained/#changes-to-the-default-behavior-without-samesite)).
 
 This attribute controls whether cookies are sent with cross-site requests and can provide some protection against tracking and {{glossary("CSRF")}} attacks. However, the default was `None`, and not many developers adopted it, meaning cross-site cookies were being sent **everywhere**. Changing the default value to `Lax` means that cookies are not sent on cross-site requests, such as on requests to load images or frames, but are sent when a user is navigating to the origin site from an external site, for example, when following a link.
 
@@ -117,7 +119,7 @@ This attribute controls whether cookies are sent with cross-site requests and ca
 
 #### Chrome anti-tracking features
 
-The [privacy sandbox project](https://developer.chrome.com/en/docs/privacy-sandbox/) is a series of proposals to satisfy cross-site use cases without requiring third-party cookies or other tracking mechanisms. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
+Google's [privacy sandbox project](https://developer.chrome.com/en/docs/privacy-sandbox/) is a series of proposals to satisfy cross-site use cases without requiring third-party cookies or other tracking mechanisms. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
 
 Some of the most developed parts of the privacy sandbox project are as follows:
 
@@ -140,9 +142,9 @@ Some of the most developed parts of the privacy sandbox project are as follows:
 - Third-party cookie default
   - : Edge does not yet block third-party cookies by default, but this can be set by users in Settings.
 
-## What does a developer need to do?
+## Privacy considerations for client-side developers
 
-There are several actions web developers can and should take to improve privacy for their users. The below sections discuss the most important ones. Some of the categories are not purely technical tasks as such but will involve collaboration with other team members.
+There are several actions web developers can and should take to improve privacy for their users. The below sections discuss the most important ones. Some of the categories are not purely technical tasks as such and will involve collaboration with other team members.
 
 ## Collect data ethically
 
@@ -152,15 +154,15 @@ Companies collect lots of different data from their users for a variety of diffe
 - Emails, postal addresses, and phone numbers for communication.
 - Age, gender, geographical location, favorite pastimes, and a host of other PII for anything from site personalization to customer satisfaction surveys.
 - Browsing habits on their sites and other sites, to measure page and feature success metrics.
-And so much more.
+  And so much more.
 
 When collecting data from your customers, you have an opportunity to behave with integrity, show them that you are trustworthy, and build a great relationship with them, in turn, improving your brand and your chance of success.
 
 The ethics of data collection can be broken down into three simple principles:
 
-1. Don't collect more data than you need
-2. Communicate clearly how you are going to use it
-3. Delete the data once you have finished with it
+- Don't collect more data than you need
+- Communicate clearly how you are going to use the data you collect
+- Delete the data once you have finished with it
 
 > **Note:** The tips provided below make for a better, more privacy-aware user experience, but many of them are required by law to comply with regulations, for example the [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN) in the EU. You should make sure to find out what regulations apply to you in your locale, and what you need to do to comply with them.
 
@@ -172,7 +174,7 @@ It is good to anonymize data. You should also consider whether you can get what 
 
 The best way to protect user privacy though is by not collecting data at all. Referring to the previous example, you could infer the same data by looking at user purchase history. As another example, users really appreciate being able to buy products anonymously. You shouldn't force them to sign up for an account; it should be their choice.
 
-### Communicate clearly how you are going to use it
+### Communicate clearly how you are going to use the data you collect
 
 Once you have decided what data you are going to collect, you should publish a privacy policy on your site that clearly states:
 
@@ -275,6 +277,7 @@ The below tips offer some guidance on protecting your user's data:
 - [Web security](/en-US/docs/Web/Security)
 - [Learn Privacy](https://web.dev/learn/privacy/) on web.dev
 - [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org
 
 <section id="Quick_links">
 {{ListSubpages("/en-US/docs/Web/Privacy", "1", "0", "1")}}
