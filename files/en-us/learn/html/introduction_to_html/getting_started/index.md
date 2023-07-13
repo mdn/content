@@ -522,7 +522,7 @@ You can now open this file in a web browser to see what the rendered code looks 
 - Edit the paragraph content to include text about a topic that you find interesting.
 - Make important words stand out in bold by wrapping them inside a `<strong>` opening tag and `</strong>` closing tag.
 - Add a link to your paragraph, as [explained earlier in the article](#active_learning_adding_attributes_to_an_element).
-- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#void_elements). Earn bonus points if you manage to link to a different image (either locally on your computer or somewhere else on the web).
+- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#void_elements). Earn bonus points if you manage to link to a different image (either locally on your computer or somewhere else on the web).
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
