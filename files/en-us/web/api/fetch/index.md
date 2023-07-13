@@ -15,11 +15,10 @@ available.
 The promise resolves to the {{domxref("Response")}} object
 representing the response to your request.
 
-A {{domxref("fetch()")}} promise only rejects when a
-network error is encountered (which is usually when there's a permissions issue or
-similar). A {{domxref("fetch()")}} promise _does
-not_ reject on HTTP errors (`404`, etc.). Instead, a
-`then()` handler must check the {{domxref("Response.ok")}} and/or
+A {{domxref("fetch()")}} promise only rejects when a network error is encountered,
+or an HTTP status code that represents a network error such as `407`.
+A {{domxref("fetch()")}} promise _does not_ reject on common HTTP errors such as `404` and `500`.
+Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or
 {{domxref("Response.status")}} properties.
 
 `WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
