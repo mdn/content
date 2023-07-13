@@ -136,7 +136,7 @@ Lazy loading has historically been handled using JavaScript, but browsers now ha
 
 See [Browser-level image lazy loading for the web](https://web.dev/browser-level-image-lazy-loading/) on web.dev for detailed information.
 
-You can also lazy load video content, using the `preload` attribute. For example:
+You can also lazy load video content by using the `preload` attribute. For example:
 
 ```html
 <video controls preload="none" poster="poster.jpg">
