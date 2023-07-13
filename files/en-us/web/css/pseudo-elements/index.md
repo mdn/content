@@ -37,7 +37,7 @@ While it is not possible to select an element based on its _state_ by using pseu
 
 It is important to note, when a selector list contains an invalid selector, the entire style block is ignored.
 
-## Alphabetical index
+## List of pseudo-elements
 
 Pseudo-elements defined by a set of CSS specifications include the following:
 
