@@ -222,7 +222,7 @@ This allows you to avoid blocking the main thread when the user is actively inte
 
 ## Handling JavaScript animations
 
-Animations can improve perceived performance, making interfaces feel snappier and making users feel like progress is being made when they are waiting for a page to load (loading spinners, for example). However, larger animations, and greater numbers of animations will naturally require more processing power to handle, which can degrade performance.
+Animations can improve perceived performance, making interfaces feel snappier and making users feel like progress is being made when they are waiting for a page to load (loading spinners, for example). However, larger animations and a higher number of animations will naturally require more processing power to handle, which can degrade performance.
 
 The most obvious piece of animation advice is to use less animations — cut out any non-essential animations, or consider giving your users a preference they can set to turn off animations, for example if they are using a low-powered device or a mobile device with limited battery power.
 
