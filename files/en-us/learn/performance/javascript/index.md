@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
 
-It is very important to consider how you are using JavaScript on your websites and think about how to mitigate any performance issues that it is causing. While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater potential for negative performance impact — it can significantly impact download times, render-blocking, and CPU and battery usage. This article introduces tips and tricks for optimizing JavaScript.
+It is very important to consider how you are using JavaScript on your websites and think about how to mitigate any performance issues that it might be causing. While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater potential for negative performance impact — it can significantly impact download times, rendering performance, and CPU and battery usage. This article introduces tips and tricks for optimizing JavaScript to enhance the performance of your website.
 
 <table>
   <tbody>
@@ -27,7 +27,7 @@ It is very important to consider how you are using JavaScript on your websites a
       <th scope="row">Objectives:</th>
       <td>
         To learn about the effects of JavaScript on web performance,
-        and understand that JavaScript file size is not the only issue.
+        and how to mitigate or fix related issues.
       </td>
     </tr>
   </tbody>
@@ -38,7 +38,7 @@ It is very important to consider how you are using JavaScript on your websites a
 The most performant, least blocking JavaScript you can use is JavaScript that you don't use at all. You should use as little JavaScript as possible. Some tips to bear in mind:
 
 - **You don't always need a framework**: You might be familiar with using a [JavaScript framework](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks). If you are experienced and confident with using this framework, and like all of the tooling it provides, then it might be your go-to tool for building most projects. However, frameworks are JavaScript-heavy. If you are creating a fairly static experience with few JavaScript requirements, you probably don't need that framework. You might be able to implement what you need using a few lines of standard JavaScript.
-- **Consider a simpler solution**: You might have a flashy, interesting idea about what solution to implement, but is it going to be appreciated by your users? Or would they prefer something simpler?
+- **Consider a simpler solution**: You might have a flashy, interesting solution to implement, but consider whether your users will appreciate it. Would they prefer something simpler?
 - **Remove unused code:** This may sound obvious, but it is surprising how many developers forget to clean up unused functionality that was added during the development process. You need to be careful and deliberate about what is added and removed. All script gets parsed, whether it is used or not; therefore, a quick win to speed up downloads would be to get rid of any functionality not being used. Consider also that often you will only use a small amount of the functionality available in a framework. Is it possible to create a custom build of the framework that only contains the part that you need?
 - **Consider built-in browser features**: It might be that you can use a feature the browser already has, rather than creating your own via JavaScript. For example:
   - Use [built-in client-side form validation](/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation).
@@ -61,7 +61,9 @@ Before looking at the tips contained in this section, it is important to talk ab
 
 > **Note:** This is a very simplified account of what happens, but it does give you an idea.
 
-The key step here is Step 3 — By default, JavaScript parsing and execution is render-blocking — it blocks parsing of the HTML that appears after the {{htmlelement("script")}} elements that refer to the JavaScript, and it therefore blocks styling and painting. As a result, you need to think carefully about not only what you are downloading, but when, and how that code is being executed.
+The key step here is Step 3. By default, JavaScript parsing and execution is render-blocking. This means that the browser blocks parsing of any HTML that appears after the JavaScript is encountered, until it has been handled. Styling and painting are therefore blocked too. As a result, you need to think carefully about not only what you are downloading, but when, and how that code is being executed.
+
+The next few sections provide useful techniques for optimizing the parsing and execution of your JavaScript.
 
 ## Loading critical assets as soon as possible
 
@@ -141,7 +143,7 @@ import("./modules/myModule.js").then((module) => {
 });
 ```
 
-### Breaking down long tasks
+## Breaking down long tasks
 
 When the browser runs your JavaScript, it will organize the script into tasks that are run sequentially, such as making fetch requests, driving user interactions and input through event handlers, running JavaScript-driven animation, and so on.
 
@@ -254,7 +256,7 @@ loop();
 
 You can find a nice introduction to canvas animations at [Drawing graphics > Animations](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#animations), and a more in-depth example at [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice). You can also find a full set of canvas tutorials at [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-### Events
+## Events and performance
 
 Events can be expensive for the browser to track and handle, especially when you are running an event continuously. For example, you might be tracking the position of the mouse using the [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) event to check whether it is still inside a certain area of the page:
 
@@ -266,15 +268,15 @@ function handleMouseMove() {
 elem.addEventListener("mousemove", handleMouseMove);
 ```
 
-You might be running a `<canvas>` game in your page. While the mouse is inside the canvas, you will want to constantly check for mouse movement and cursor position and update the game state — including the score, the time, the position of all the sprites, collision detection information, etc. Once the game is over, you will no longer need to do all that, and in fact it will be a waste of processing power to keeping listening for that event.
+You might be running a `<canvas>` game in your page. While the mouse is inside the canvas, you will want to constantly check for mouse movement and cursor position and update the game state — including the score, the time, the position of all the sprites, collision detection information, etc. Once the game is over, you will no longer need to do all that, and in fact, it will be a waste of processing power to keeping listening for that event.
 
-It is therefore a good idea to clean up after yourself and remove event listeners that are no longer needed. This can be done with {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}:
+It is, therefore, a good idea to remove event listeners that are no longer needed. This can be done using {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}:
 
 ```js
 elem.removeEventListener("mousemove", handleMouseMove);
 ```
 
-Another tip is to use event delegation wherever possible — when you have some code to run when the user interacts with any one of a large number of child elements, you can set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually. Less event listeners to handle means better performance.
+Another tip is to use event delegation wherever possible. When you have some code to run in response to the user interacting with any one of a large number of child elements, you can set an event listener on their parent. Events fired on the child elements will bubble up to their parent, so you don't need to set the event listener on every child individually. Less event listeners to keep track of means better performance.
 
 See [Event delegation](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation) for more details and a useful example.
 
@@ -297,7 +299,7 @@ There are several general best practices that will make your code run more effic
   document.getElementById("tagline").classList.add("fade-in");
   ```
 
-- **Loops are expensive**: If possible, reduce the amount of loop usage in your code. Where loops are unavoidable:
+- **Reduce the amount of looped code**: Loops are expensive, so reduce the amount of loop usage in your code wherever possible. In cases where loops are unavoidable:
 
   - Avoid running the full loop when it is unneccessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found; there is no need to run further loop iterations:
 
