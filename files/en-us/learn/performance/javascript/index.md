@@ -145,7 +145,7 @@ import("./modules/myModule.js").then((module) => {
 
 When the browser runs your JavaScript, it will organize the script into tasks that are run sequentially, such as making fetch requests, driving user interactions and input through event handlers, running JavaScript-driven animation, and so on.
 
-Most of this happens on the main thread, with exceptions including JavaScript that runs in [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). The main thread can only run one task at a time.
+Most of this happens on the main thread, with exceptions including JavaScript that runs in [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). The main thread can run only one task at a time.
 
 When a single task takes longer than 50 ms to run, it is classified as a long task. If the user attempts to interact with the page or an important UI update is requested while a long task is running, their experience will be affected. An expected response or visual update will be delayed, resulting in the UI appearing sluggish or unresponsive.
 
