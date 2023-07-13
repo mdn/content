@@ -66,7 +66,7 @@ This example provides different size images for different screen widths:
   alt="Family portrait" />
 ```
 
-`srcset` provides the intrinsic size of the source images along with their filenames, and `sizes` provides media queries alongside image slot widths that need to be filled in each case. The browser then decides which images makes sense to load for each slot. As an example, if the width is 600px or less, the `max-width: 600px` is true, therefore the slot to fill is said to be `480px`, so the browser will likely choose to load the 480w (480px-wide image). This helps with performance, as browsers are not loading larger images than they need.
+`srcset` provides the intrinsic size of the source images along with their filenames, and `sizes` provides media queries alongside image slot widths that need to be filled in each case. The browser then decides which images makes sense to load for each slot. As an example, if the screen width is `600px` or less, then `max-width: 600px` is true, and therefore, the slot to fill is said to be `480px`. In this case, the browser will likely choose to load the 480w.jpg file (480px-wide image). This helps with performance because browsers don't load larger images than they need.
 
 This example provides different resolution images for different screen resolutions:
 
