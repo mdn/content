@@ -4,6 +4,8 @@ slug: Glossary/Bezier_curve
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **Bézier curve** (pronounced \[bezje]) is a mathematically described curve used in computer graphics and animation. In vector images, they are used to model smooth curves that can be scaled indefinitely.
 
 The curve is defined by a set of control points with a minimum of two. Web related graphics and animations often use cubic Béziers, which are curves with four control points P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>.

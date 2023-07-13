@@ -147,19 +147,36 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 
 ## Examples
 
-### Setting left margin using pixels and percentages
+Percentage values for `margin-left` are relative to the container's inline size.
+
+### CSS
 
 ```css
-.content {
-  margin-left: 5%;
-}
-.sidebox {
-  margin-left: 10px;
-}
-.logo {
-  margin-left: -5px;
+.example {
+  margin-left: 50%;
 }
 ```
+
+### HTML
+
+```html
+<p>
+  A large rose-tree stood near the entrance of the garden: the roses growing on
+  it were white, but there were three gardeners at it, busily painting them red.
+</p>
+<p class="example">
+  Alice thought this a very curious thing, and she went nearer to watch them,
+  and just as she came up to them she heard one of them say, "Look out now,
+  Five! Don't go splashing paint over me like that!"
+</p>
+<p>
+  "I couldn't help it," said Five, in a sulky tone; "Seven jogged my elbow."
+</p>
+```
+
+### Result
+
+{{EmbedLiveSample("","","250")}}
 
 ## Specifications
 

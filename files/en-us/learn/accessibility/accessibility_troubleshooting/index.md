@@ -1,6 +1,7 @@
 ---
 title: "Assessment: Accessibility troubleshooting"
 slug: Learn/Accessibility/Accessibility_troubleshooting
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}

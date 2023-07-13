@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.supportedValuesOf
 
 The **`Intl.supportedValuesOf()`** static method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
 
-Duplicates are omitted and the array is sorted in ascending alphabetic order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function)
+Duplicates are omitted and the array is sorted in ascending lexicographical order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function).
 
 The method can be used to feature-test whether values are supported in a particular implementation and download a polyfill only if necessary.
 It can also be used to build UIs that allow users to select their preferred localized values, for example when the UI is created from WebGL or server-side.

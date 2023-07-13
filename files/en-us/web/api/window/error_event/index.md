@@ -36,7 +36,7 @@ For historical reasons, the `onerror` event handler property, on `Window` object
 
 Note that this only applies to handlers assigned to `onerror`, not to handlers added using `addEventListener()`.
 
-#### Cancelation
+#### Cancellation
 
 Most event handlers assigned to event handler properties can cancel the event's default behavior by returning `false` from the handler:
 

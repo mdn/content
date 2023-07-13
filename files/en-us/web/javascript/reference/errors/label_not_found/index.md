@@ -6,7 +6,7 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "label not found" occurs when a {{jsxref("Statement/break", "break")}} or {{jsxref("Statement/continue", "continue")}} statement references a label that does not exist on any statement that contains the `break` or `continue` statement.
+The JavaScript exception "label not found" occurs when a {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statement references a label that does not exist on any statement that contains the `break` or `continue` statement.
 
 ## Message
 

@@ -13,7 +13,7 @@ The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) al
 
 It accepts an integer as a value, with different results depending on the integer's value:
 
-  > **Note:** If an HTML element renders and has `tabindex` attribute with any valid integer value, the element can be focused with JavaScript (by calling the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method) or visually by clicking with the mouse. The particular `tabindex` value controls whether the element is `tabbable` (i.e. reachable via sequential keyboard navigation, usually with the <kbd>Tab</kbd> key).
+> **Note:** If an HTML element renders and has `tabindex` attribute with any valid integer value, the element can be focused with JavaScript (by calling the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method) or visually by clicking with the mouse. The particular `tabindex` value controls whether the element is `tabbable` (i.e. reachable via sequential keyboard navigation, usually with the <kbd>Tab</kbd> key).
 
 - A _negative value_ (the exact negative value doesn't actually matter, usually `tabindex="-1"`) means that the element is not reachable via sequential keyboard navigation.
 

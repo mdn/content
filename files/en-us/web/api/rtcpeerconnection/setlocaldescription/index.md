@@ -80,7 +80,7 @@ This is equivalent to:
 myPeerConnection
   .createOffer()
   .then((offer) =>
-    myPeerConnection.setLocalDescription(new RTCSessionDescription(offer))
+    myPeerConnection.setLocalDescription(new RTCSessionDescription(offer)),
   );
 ```
 

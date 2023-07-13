@@ -1,6 +1,7 @@
 ---
 title: share_target
 slug: Web/Manifest/share_target
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.share_target
@@ -109,7 +110,7 @@ self.addEventListener("fetch", (event) => {
       // function, for example, `/`.
       const responseUrl = await saveBookmark(link);
       return Response.redirect(responseUrl, 303);
-    })()
+    })(),
   );
 });
 ```

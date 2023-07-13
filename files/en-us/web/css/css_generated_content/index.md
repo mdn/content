@@ -1,6 +1,6 @@
 ---
-title: CSS Generated Content
-slug: Web/CSS/CSS_Generated_Content
+title: CSS generated content
+slug: Web/CSS/CSS_generated_content
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-content/
 ---

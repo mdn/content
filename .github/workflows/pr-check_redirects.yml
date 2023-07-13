@@ -24,6 +24,9 @@ jobs:
 
       - name: Install all yarn packages
         run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check redirects file(s)
         run: yarn content validate-redirects en-us --strict

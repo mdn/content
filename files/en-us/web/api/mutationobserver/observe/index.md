@@ -47,7 +47,7 @@ observe(target, options)
         If this property isn't included, changes to all attributes cause mutation notifications.
     - `attributeOldValue` {{optional_inline}}
       - : Set to `true` to record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes;
-        See [Monitoring attribute values](/en-US/docs/Web/API/MutationObserver#monitoring_attribute_values) for details on watching for attribute changes and value recording.
+        See [Monitoring attribute values](#monitoring_attribute_values) for an example of watching for attribute changes and recording values.
         The default value is `false`.
     - `characterData` {{optional_inline}}
       - : Set to `true` to monitor the specified target node (and, if `subtree` is `true`, its descendants) for changes to the character data contained within the node or nodes.
@@ -155,6 +155,67 @@ observer.observe(userListElement, {
   subtree: true,
 });
 ```
+
+### Monitoring attribute values
+
+In this example we observe an element for attribute value changes, and add a button which toggles the element's [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute between `"ltr"` and `"rtl"`. Inside the observer's callback, we log the old value of the attribute.
+
+#### HTML
+
+```html
+<button id="toggle">Toggle direction</button><br />
+<div id="container">
+  <input type="text" id="rhubarb" dir="ltr" value="Tofu" />
+</div>
+<pre id="output"></pre>
+```
+
+#### CSS
+
+```css
+body {
+  background-color: paleturquoise;
+}
+
+button,
+input,
+pre {
+  margin: 0.5rem;
+}
+```
+
+#### JavaScript
+
+```js
+const toggle = document.querySelector("#toggle");
+const rhubarb = document.querySelector("#rhubarb");
+const observerTarget = document.querySelector("#container");
+const output = document.querySelector("#output");
+
+toggle.addEventListener("click", () => {
+  rhubarb.dir = rhubarb.dir === "ltr" ? "rtl" : "ltr";
+});
+
+const config = {
+  subtree: true,
+  attributeOldValue: true,
+};
+
+const callback = (mutationList) => {
+  for (const mutation of mutationList) {
+    if (mutation.type === "attributes") {
+      output.textContent = `The ${mutation.attributeName} attribute was modified from "${mutation.oldValue}".`;
+    }
+  }
+};
+
+const observer = new MutationObserver(callback);
+observer.observe(observerTarget, config);
+```
+
+#### Result
+
+{{EmbedLiveSample("Monitoring attribute values")}}
 
 ## Specifications
 

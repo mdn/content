@@ -3,7 +3,7 @@ title: "URL: revokeObjectURL() static method"
 short-title: revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL_static
 page-type: web-api-static-method
-browser-compat: api.URL.revokeObjectURL
+browser-compat: api.URL.revokeObjectURL_static
 ---
 
 {{ApiRef("URL API")}}

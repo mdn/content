@@ -72,7 +72,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 
 Used in roles:
 
-- [`table`](/en-US/docs/Web/Accessibility/ARIA/Role/Table_role/)
+- [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
 
 Inherits into roles:
 

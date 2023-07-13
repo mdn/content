@@ -1,6 +1,7 @@
 ---
 title: Firefox 44 for developers
 slug: Mozilla/Firefox/Releases/44
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -21,7 +22,7 @@ Highlights:
 
 ### HTML
 
-- [`<link rel="prefetch">`](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
+- [`<link rel="prefetch">`](/en-US/docs/Glossary/Prefetch) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
 
 ### CSS
 

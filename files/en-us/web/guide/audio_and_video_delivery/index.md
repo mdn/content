@@ -1,6 +1,7 @@
 ---
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -141,7 +142,7 @@ try {
   request.open(
     "GET",
     "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
-    true
+    true,
   );
   request.responseType = "arraybuffer";
 
@@ -186,7 +187,7 @@ if (navigator.mediaDevices) {
     })
     .catch(function onError() {
       alert(
-        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?"
+        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?",
       );
     });
 } else {
@@ -301,7 +302,7 @@ window.onload = () => {
     () => {
       switchState();
     },
-    false
+    false,
   );
 
   window.addEventListener("keypress", checkKey, false);
@@ -468,7 +469,7 @@ lastsource.addEventListener(
     d.innerHTML = v.innerHTML;
     v.parentNode.replaceChild(d, v);
   },
-  false
+  false,
 );
 ```
 

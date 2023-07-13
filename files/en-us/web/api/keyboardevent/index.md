@@ -267,7 +267,7 @@ document.addEventListener(
       alert(`Key pressed ${keyName}`);
     }
   },
-  false
+  false,
 );
 
 document.addEventListener(
@@ -281,7 +281,7 @@ document.addEventListener(
       alert("Control key was released");
     }
   },
-  false
+  false,
 );
 ```
 

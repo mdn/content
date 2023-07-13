@@ -41,7 +41,7 @@ function positionElem() {
     50,
     degToRad(0),
     degToRad(360),
-    false
+    false,
   );
   ctx.fill();
 

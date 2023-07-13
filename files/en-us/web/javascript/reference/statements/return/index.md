@@ -7,8 +7,7 @@ browser-compat: javascript.statements.return
 
 {{jsSidebar("Statements")}}
 
-The **`return`** statement ends function execution and
-specifies a value to be returned to the function caller.
+The **`return`** statement ends function execution and specifies a value to be returned to the function caller.
 
 {{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
@@ -19,59 +18,37 @@ return;
 return expression;
 ```
 
-- `expression`
-  - : The expression whose value is to be returned. If omitted, `undefined` is
-    returned instead.
+- `expression` {{optional_inline}}
+  - : The expression whose value is to be returned. If omitted, `undefined` is returned.
 
 ## Description
 
-When a `return` statement is used in a function body, the execution of the
-function is stopped. If specified, a given value is returned to the function caller. For
-example, the following function returns the square of its argument, `x`,
-where `x` is a number.
+The `return` statement can only be used within function bodies. When a `return` statement is used in a function body, the execution of the function is stopped. The `return` statement has different effects when placed in different functions:
 
-```js
-function square(x) {
-  return x * x;
-}
-const demo = square(3);
-// demo will equal 9
-```
+- In a plain function, the call to that function evaluates to the return value.
+- In an async function, the produced promise is resolved with the returned value.
+- In a generator function, the produced generator object's `next()` method returns `{ done: true, value: returnedValue }`.
+- In an async generator function, the produced async generator object's `next()` method returns a promise fulfilled with `{ done: true, value: returnedValue }`.
 
-If the value is omitted, `undefined` is returned instead.
+If a `return` statement is executed within a {{jsxref("Statements/try...catch", "try")}} block, its `finally` block, if present, is first executed, before the value is actually returned.
 
-The following return statements all break the function execution:
+### Automatic semicolon insertion
 
-```js
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
-```
-
-### Automatic Semicolon Insertion
-
-The `return` statement is affected by
-[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion).
-No line terminator is allowed between the `return` keyword and the expression.
+The syntax forbids line terminators between the `return` keyword and the expression to be returned.
 
 ```js-nolint example-bad
 return
 a + b;
 ```
 
-is transformed by ASI into:
+The code above is transformed by [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) into:
 
 ```js
 return;
 a + b;
 ```
 
-The console will warn "unreachable code after return statement".
-
-> **Note:** Starting with Firefox 40, a warning is shown in the console if
-> unreachable code is found after a `return` statement.
+This makes the function return `undefined` and the `a + b` expression is never evaluated. This may generate [a warning in the console](/en-US/docs/Web/JavaScript/Reference/Errors/Stmt_after_return).
 
 To avoid this problem (to prevent ASI), you could use parentheses:
 

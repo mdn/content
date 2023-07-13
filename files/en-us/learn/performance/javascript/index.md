@@ -1,6 +1,7 @@
 ---
 title: JavaScript performance
 slug: Learn/Performance/JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}

@@ -1,6 +1,7 @@
 ---
 title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

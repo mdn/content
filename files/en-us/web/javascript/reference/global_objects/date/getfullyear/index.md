@@ -34,7 +34,7 @@ Unlike {{jsxref("Date/getYear", "getYear()")}}, the value returned by `getFullYe
 The `fullYear` variable has value `1995`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const fullYear = xmas95.getFullYear();
 
 console.log(fullYear); // 1995

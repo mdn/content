@@ -53,7 +53,7 @@ console.log([1, , 3, 4].toReversed()); // [4, 3, undefined, 1]
 
 ### Calling toReversed() on non-array objects
 
-The `toReversed()` method reads the `length` property of `this`. It then visits each index between `length - 1` and `0` in descending order, and adds the value of that index in the original array to the corresponding index in the new array.
+The `toReversed()` method reads the `length` property of `this`. It then visits each property having an integer key between `length - 1` and `0` in descending order, adding the value of the current property to the end of the array to be returned.
 
 ```js
 const arrayLike = {

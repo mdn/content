@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.toTimeString
 
 {{JSRef}}
 
-The **`toTimeString()`** method returns the time portion of a {{jsxref("Date")}} object interpreted in the local timezone in English.
+The **`toTimeString()`** method of {{jsxref("Date")}} instances returns a string representing the time portion of this date interpreted in the local timezone.
 
 {{EmbedInteractiveExample("pages/js/date-totimestring.html","shorter")}}
 
@@ -19,7 +19,7 @@ toTimeString()
 
 ### Return value
 
-A string representing the time portion of the given date in human-readable form in English.
+A string representing the time portion of the given date (see description for the format). Returns `"Invalid Date"` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Description
 
@@ -35,20 +35,20 @@ A string representing the time portion of the given date in human-readable form 
 
 For example: "04:42:04 GMT+0000 (Coordinated Universal Time)".
 
-- If you want to get the _date_ part, use [`toDateString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString).
-- If you want to get both the date and time, use [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString).
-- If you want to make the date interpreted as UTC instead of local timezone, use [`toUTCString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString).
-- If you want to format the date in a more user-friendly format (e.g. localization), use [`toLocaleTimeString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString).
+- If you only want to get the _date_ part, use {{jsxref("Date/toDateString", "toDateString()")}}.
+- If you want to get both the date and time, use {{jsxref("Date/toString", "toString()")}}.
+- If you want to make the date interpreted as UTC instead of local timezone, use {{jsxref("Date/toUTCString", "toUTCString()")}}.
+- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toLocaleTimeString", "toLocaleTimeString()")}}.
 
 ## Examples
 
-### A basic usage of toTimeString()
+### Using toTimeString()
 
 ```js
-const d = new Date(1993, 6, 28, 14, 39, 7);
+const d = new Date(0);
 
-console.log(d.toString()); // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
-console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)"
+console.log(d.toTimeString()); // "00:00:00 GMT+0000 (Coordinated Universal Time)"
 ```
 
 ## Specifications

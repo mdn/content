@@ -1,6 +1,7 @@
 ---
 title: Introduction to game development for the Web
 slug: Games/Introduction
+page-type: guide
 ---
 
 {{GamesSidebar}}

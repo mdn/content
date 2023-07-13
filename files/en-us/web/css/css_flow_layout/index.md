@@ -1,6 +1,6 @@
 ---
-title: CSS Flow Layout
-slug: Web/CSS/CSS_Flow_Layout
+title: CSS flow layout
+slug: Web/CSS/CSS_flow_layout
 page-type: guide
 ---
 
@@ -20,11 +20,11 @@ The first sentence also includes a span element with a blue background. This is 
 
 ## Guides
 
-- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [In Flow and Out of Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
-- [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
-- [Flow Layout and Writing Modes](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
-- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
+- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [In Flow and Out of Flow](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
+- [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [Flow Layout and Writing Modes](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
 
 ## Reference
 

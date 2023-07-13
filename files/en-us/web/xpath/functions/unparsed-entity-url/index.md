@@ -1,9 +1,10 @@
 ---
 title: unparsed-entity-url
 slug: Web/XPath/Functions/unparsed-entity-url
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `unparsed-entity-url()` function returns the URI of the unparsed entity with the given name. This is non-XML data referenced in the DTD of the source document.
 

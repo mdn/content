@@ -38,10 +38,10 @@ justify-content: space-between; /* Distribute items evenly
                                    The first item is flush with the start,
                                    the last is flush with the end */
 justify-content: space-around; /* Distribute items evenly
-                                   Items have a half-size space
-                                   on either end */
+                                   Start and end gaps are half the size of the space
+                                   between each item */
 justify-content: space-evenly; /* Distribute items evenly
-                                   Items have equal space around them */
+                                   Start, in-between, and end gaps have equal sizes */
 justify-content: stretch; /* Distribute items evenly
                                    Stretch 'auto'-sized items to fit
                                    the container */

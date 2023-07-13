@@ -1,9 +1,10 @@
 ---
 title: not
 slug: Web/XPath/Functions/not
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `not` function evaluates a boolean expression and returns the opposite value.
 

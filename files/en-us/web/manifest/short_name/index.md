@@ -1,6 +1,7 @@
 ---
 title: short_name
 slug: Web/Manifest/short_name
+page-type: web-manifest-member
 browser-compat: html.manifest.short_name
 ---
 

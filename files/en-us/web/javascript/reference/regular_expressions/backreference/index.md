@@ -38,7 +38,7 @@ The backreference must refer to an existent capturing group. If the number it sp
 /(a)\2/u; // SyntaxError: Invalid regular expression: Invalid escape
 ```
 
-In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, invalid backreferences become a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) sequence. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), invalid backreferences become a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) sequence. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
 /(a)\2/.test("a\x02"); // true

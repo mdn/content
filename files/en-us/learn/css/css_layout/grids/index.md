@@ -1,6 +1,7 @@
 ---
 title: Grids
 slug: Learn/CSS/CSS_layout/Grids
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
@@ -76,7 +77,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -130,7 +134,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -180,7 +187,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -247,7 +257,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -300,7 +313,7 @@ If you add extra content, you'll see that the track expands to allow it to fit. 
 
 ### As many columns as will fit
 
-We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword `auto-fill`. For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
+We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword `auto-fit`. For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
 
 Try this in your file now using the CSS below:
 
@@ -309,7 +322,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
@@ -335,7 +351,7 @@ body {
 ```css
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: minmax(100px, auto);
   gap: 20px;
 }
@@ -394,7 +410,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -499,7 +518,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 header,
@@ -598,7 +620,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {

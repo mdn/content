@@ -157,9 +157,11 @@ When the time zone offset is absent, **date-only forms are interpreted as a UTC 
 
 {{jsxref("Date.parse()")}} and the {{jsxref("Date/Date", "Date()")}} constructor both accept strings in the date time string format as input. Furthermore, implementations are allowed to support other date formats when the input fails to match this format.
 
+The {{jsxref("Date/toISOString", "toISOString()")}} method returns a string representation of the date in the date time string format, with the time zone offset always set to `Z` (UTC).
+
 > **Note:** You are encouraged to make sure your input conforms to the date time string format above for maximum compatibility, because support for other formats is not guaranteed. However, there are some formats that are supported in all major implementations — like {{rfc(2822)}} format — in which case their usage can be acceptable. Always conduct [cross-browser tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) to ensure your code works in all target browsers. A library can help if many different formats are to be accommodated.
 
-The {{jsxref("Date/toISOString", "toISOString()")}} method returns a string representation of the date in the date time string format, with the time zone offset always set to `Z` (UTC).
+Non-standard strings can be parsed in any way as desired by the implementation, including the time zone — most implementations use the local time zone by default. Implementations are not required to return invalid date for out-of-bounds date components, although they usually do. A string may have in-bounds date components (with the bounds defined above), but does not represent a date in reality (for example, "February 30"). Implementations behave inconsistently in this case. The [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#examples) page offers more examples about these non-standard cases.
 
 ### Other ways to format a date
 
@@ -292,12 +294,12 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 
 The following examples show several ways to create JavaScript dates:
 
-> **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
+> **Note:** Creating a date from a string has a lot of behavior inconsistencies. See [date time string format](#date_time_string_format) for caveats on using different formats.
 
 ```js
 const today = new Date();
 const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
-const birthday2 = new Date("1995-12-17T03:24:00"); // This is ISO8601-compliant and will work reliably
+const birthday2 = new Date("1995-12-17T03:24:00"); // This is standardized and will work reliably
 const birthday3 = new Date(1995, 11, 17); // the month is 0-indexed
 const birthday4 = new Date(1995, 11, 17, 3, 24, 0);
 const birthday5 = new Date(628021800000); // passing epoch timestamp

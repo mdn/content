@@ -66,7 +66,8 @@ This example opens a modal dialog when the "Show the dialog" button is activated
 <dialog id="favDialog">
   <form>
     <p>
-      <label>Favorite animal:
+      <label>
+        Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>
@@ -90,29 +91,32 @@ This example opens a modal dialog when the "Show the dialog" button is activated
 #### JavaScript
 
 ```js
-const showButton = document.getElementById('showDialog');
-const favDialog = document.getElementById('favDialog');
-const outputBox = document.querySelector('output');
-const selectEl = favDialog.querySelector('select');
-const confirmBtn = favDialog.querySelector('#confirmBtn');
+const showButton = document.getElementById("showDialog");
+const favDialog = document.getElementById("favDialog");
+const outputBox = document.querySelector("output");
+const selectEl = favDialog.querySelector("select");
+const confirmBtn = favDialog.querySelector("#confirmBtn");
 
 // "Show the dialog" button opens the <dialog> modally
-showButton.addEventListener('click', () => {
+showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
 // "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener('change', (e) => {
+selectEl.addEventListener("change", (e) => {
   confirmBtn.value = selectEl.value;
 });
 
 // "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
-favDialog.addEventListener('close', (e) => {
-  outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+favDialog.addEventListener("close", (e) => {
+  outputBox.value =
+    favDialog.returnValue === "default"
+      ? "No return value."
+      : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
 });
 
 // Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
-confirmBtn.addEventListener('click', (event) => {
+confirmBtn.addEventListener("click", (event) => {
   event.preventDefault(); // We don't want to submit this fake form
   favDialog.close(selectEl.value); // Have to send the select box value here.
 });
@@ -134,25 +138,17 @@ It is important to provide a closing mechanism within every `dialog` element. Th
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
-          >sectioning root</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>
       </td>
     </tr>
     <tr>
@@ -163,17 +159,13 @@ It is important to provide a closing mechanism within every `dialog` element. Th
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role"
-          >dialog</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a>
       </td>
     </tr>
     <tr>

@@ -1,6 +1,7 @@
 ---
 title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
+page-type: guide
 ---
 
 {{GamesSidebar}}

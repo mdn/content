@@ -49,7 +49,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/color_value/color)
 - [`color-contrast()`](/en-US/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
-- [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-contrast)
+- [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
 - [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
 
 ### Data types

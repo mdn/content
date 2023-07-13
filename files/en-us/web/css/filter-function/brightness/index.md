@@ -106,7 +106,9 @@ p {
   background-color: magenta;
   color: palegoldenrod;
   border: 1em solid rebeccapurple;
-  box-shadow: inset -5px -5px red, 5px 5px yellow;
+  box-shadow:
+    inset -5px -5px red,
+    5px 5px yellow;
   padding: 0.25rem;
   font-size: 1.25rem;
   font-family: sans-serif;

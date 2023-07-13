@@ -7,8 +7,6 @@ browser-compat: webextensions.manifest
 
 {{AddonSidebar}}{{Compat}}
 
-> **Note:**
-
 ## See also
 
 - [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.with
 
 {{JSRef}}
 
-The **`with()`** method is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of using the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation) to change the value of a given index. It returns a new array with the element at the given index replaced with the given value. This method has the same algorithm as {{jsxref("Array.prototype.with()")}}. _TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+The **`with()`** method is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of using the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) to change the value of a given index. It returns a new array with the element at the given index replaced with the given value. This method has the same algorithm as {{jsxref("Array.prototype.with()")}}. _TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 ## Syntax
 

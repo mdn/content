@@ -1,6 +1,7 @@
 ---
 title: CSS and JavaScript animation performance
 slug: Web/Performance/CSS_JavaScript_animation_performance
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

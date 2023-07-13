@@ -33,13 +33,14 @@ This interface requires a secure context.
 - {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}}
   - : Called when the value of `userState` or `screenState` has changed.
 
-## Instance methods
+## Static methods
 
-- {{domxref("IdleDetector.requestPermission()")}} {{Experimental_Inline}}
-
+- [`IdleDetector.requestPermission()`](/en-us/docs/Web/API/IdleDetector/requestPermission_static) {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves when the user has chosen
     whether to grant the origin access to their idle state. Resolves with
     `"granted"` on acceptance and `"denied"` on refusal.
+
+## Instance methods
 
 - {{domxref("IdleDetector.start()")}} {{Experimental_Inline}}
   - : Returns a `Promise` that resolves when the detector starts listening for

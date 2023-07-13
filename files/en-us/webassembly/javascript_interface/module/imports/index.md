@@ -33,7 +33,7 @@ If module is not a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_int
 
 ### Using imports
 
-The following example compiles a loaded wasm module and queries the module's imports.
+The following example compiles a loaded Wasm module and queries the module's imports.
 
 See imports.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html) and
 [live version](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html).

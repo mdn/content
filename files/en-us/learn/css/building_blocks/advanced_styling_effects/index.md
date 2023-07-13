@@ -1,6 +1,7 @@
 ---
 title: Advanced styling effects
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
+page-type: guide
 ---
 
 {{LearnSidebar}}
@@ -147,7 +148,9 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black, inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    1px 1px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
     inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
@@ -157,7 +160,9 @@ button:hover {
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black, inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    inset 2px 2px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
     inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```

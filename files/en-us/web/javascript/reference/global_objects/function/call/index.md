@@ -32,7 +32,7 @@ The result of calling the function with the specified `this` value and arguments
 
 ## Description
 
-> **Note:** This function is almost identical to {{jsxref("Function/apply", "apply()")}}, except that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments** — for example, `func.apply(this, ['eat', 'bananas'])` vs. `func.call(this, 'eat', 'bananas')`.
+> **Note:** This function is almost identical to {{jsxref("Function/apply", "apply()")}}, except that the function arguments are passed to `call()` individually as a list, while for `apply()` they are combined in one object, typically an array — for example, `func.call(this, "eat", "bananas")` vs. `func.apply(this, ["eat", "bananas"])`.
 
 Normally, when calling a function, the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) inside the function is the object that the function was accessed on. With `call()`, you can assign an arbitrary value as `this` when calling an existing function, without first attaching the function to the object as a property. This allows you to use methods of one object as generic utility functions.
 

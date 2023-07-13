@@ -112,7 +112,7 @@ document.getElementById("alice").animate(
   {
     duration: 3000,
     iterations: Infinity,
-  }
+  },
 );
 ```
 
@@ -125,7 +125,7 @@ document.getElementById("alice").animate(
     { color: "#431236", offset: 0.3 },
     { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
   ],
-  3000
+  3000,
 );
 ```
 
@@ -150,7 +150,7 @@ const nommingCake = document
       fill: "forwards",
       easing: "steps(4, end)",
       duration: aliceChange.effect.getComputedTiming().duration / 2,
-    }
+    },
   );
 ```
 
@@ -296,7 +296,7 @@ const aliceChange = document
       duration: 8000,
       easing: "ease-in-out",
       fill: "both",
-    }
+    },
   );
 ```
 
