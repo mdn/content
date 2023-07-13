@@ -42,13 +42,47 @@ aspect-ratio: unset;
 
 ## Examples
 
-### Examples of values for aspect-ratio
+In this example, on `<div>` elements, width has been set to fixed `100px` and height to `auto`, so the property `aspect-ratio` will affect only the hight of the `<div>` elements.
+
+```html hidden
+<div>1/1</div>
+<div>0.5</div>
+<div>1</div>
+<div>1/0.5</div>
+<div>16/9</div>
+```
+
+```css hidden
+div {
+  display: inline-flex;
+  background-color: lime;
+  justify-content: center;
+}
+```
 
 ```css
-aspect-ratio: 1 / 1;
-aspect-ratio: 16 / 9;
-aspect-ratio: 0.5;
+div {
+  width: 100px;
+  height: auto;
+}
+div:nth-child(1) {
+  aspect-ratio: 1/1;
+}
+div:nth-child(2) {
+  aspect-ratio: 0.5;
+}
+div:nth-child(3) {
+  aspect-ratio: 1;
+}
+div:nth-child(4) {
+  aspect-ratio: 1/0.5;
+}
+div:nth-child(5) {
+  aspect-ratio: 16/9;
+}
 ```
+
+{{EmbedLiveSample('Examples', '100%', '300px')}}
 
 ## Specifications
 
