@@ -240,7 +240,7 @@ This causes the script to be fetched in parallel with the DOM parsing, so it is 
 
 > **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing `DOMContentLoaded`. This has a similar effect to `async`.
 
-Another JavaScript load handling tip is to split your script up into code modules and load each part when required, rather than putting all your code into one giant script and loading it all to begin with. This is done using [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules). Read the linked article for a detailed guide.
+Another JavaScript load handling tip is to split your script up into code modules and load each part when required, instead of putting all your code into one giant script and loading it all at the beginning. This is done using [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules). Read the linked article for a detailed guide.
 
 ### Preloading content with rel="preload"
 
