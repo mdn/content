@@ -58,7 +58,7 @@ browser.userScripts.onBeforeScript.addListener((script) => {
 
   script.metadata; // Access the user script metadata (returns the
   // value of the scriptMetadata property from
-  // the call to userScripts.register.
+  // the call to userScripts.register).
 
   // Export some global properties into the user script sandbox
   // (this method has to be called synchronously from the
