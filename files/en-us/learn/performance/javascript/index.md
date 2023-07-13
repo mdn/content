@@ -103,7 +103,7 @@ import { function } from "important-module.js";
 
 > **Note:** Preloading does not guarantee that the script will be loaded by the time you include it, but it does mean that it will start being downloaded sooner. Render-blocking time will still be shortened, even if it is not completely removed.
 
-## Defer execution of non-critical JavaScript
+## Deferring execution of non-critical JavaScript
 
 On the other hand, you should aim to defer parsing and execution of non-critical JavaScript to later on, when it is needed. Loading it all up-front blocks rendering unnecessarily.
 
