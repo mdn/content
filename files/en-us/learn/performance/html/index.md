@@ -226,7 +226,7 @@ We can apply this script to the page by refering to it in a `<script>` element l
 <script src="index.js"></script>
 ```
 
-If we put this `<script>` element before the `<p>` element in the source order (for example in the {{htmlelement("head")}} element), the page will throw an error (Chrome for example reports "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')" to the console). This occurs because the script relies on the `<p>` element to work, but at the point the script is parsed, the `<p>` does not exist on the page. It has not yet been rendered.
+If we put this `<script>` element before the `<p>` element in the source order (for example, in the {{htmlelement("head")}} element), the page will throw an error (Chrome for example reports "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')" to the console). This occurs because the script relies on the `<p>` element to work, but at the point the script is parsed, the `<p>` element does not exist on the page. It has not yet been rendered.
 
 You can fix the above issue by putting the `<script>` element after the `<p>` element (for example at the end of the document body), or by running the code inside a suitable event handler (for example run it on the [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event), which fires when the DOM has been completely parsed).
 
