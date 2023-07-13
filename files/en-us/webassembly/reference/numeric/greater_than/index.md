@@ -18,7 +18,7 @@ The integer types have separate greater than instructions for signed (**`gt_s`**
 local.get $num
 i32.const 2
 
-;; check if $num is greater then '2'
+;; check if $num is greater than '2'
 i32.gt_u
 
 ;; if $num is greater than the `2`, `1` will be pushed on to the stack,
