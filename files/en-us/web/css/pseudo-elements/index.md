@@ -11,21 +11,23 @@ spec-urls:
 
 {{CSSRef}}
 
-A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, {{CSSxRef("::first-line")}} can be used to change the font of the first line of a paragraph.
-
-```css
-/* The first line of every <p> element. */
-p::first-line {
-  color: blue;
-  text-transform: uppercase;
-}
-```
+A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s). 
 
 ## Syntax
 
 ```css
 selector::pseudo-element {
   property: value;
+}
+```
+
+For example, {{CSSxRef("::first-line")}} can be used to change the font of the first line of a paragraph.
+
+```css
+/* The first line of every <p> element. */
+p::first-line {
+  color: blue;
+  text-transform: uppercase;
 }
 ```
 
