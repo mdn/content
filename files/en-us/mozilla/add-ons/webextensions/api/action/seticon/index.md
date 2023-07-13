@@ -99,15 +99,15 @@ function logResponseHeaders(requestDetails) {
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["<all_urls>"]},
+    { urls: ["<all_urls>"] },
     ["responseHeaders"]
   );
-  browser.action.setIcon({path: "icons/listening-on.svg"});
+  browser.action.setIcon({ path: "icons/listening-on.svg" });
 }
 
 function stopListening() {
   browser.webRequest.onHeadersReceived.removeListener(logResponseHeaders);
-  browser.action.setIcon({path: "icons/listening-off.svg"});
+  browser.action.setIcon({ path: "icons/listening-off.svg" });
 }
 
 function toggleListener() {
@@ -135,7 +135,7 @@ function getImageData() {
 }
 
 browser.action.onClicked.addListener(() => {
-  browser.action.setIcon({imageData: getImageData()});
+  browser.action.setIcon({ imageData: getImageData() });
 });
 ```
 
