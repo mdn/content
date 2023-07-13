@@ -117,7 +117,7 @@ First of all, you can add the `async` attribute to your `<script>` elements:
 </head>
 ```
 
-This causes the script to be fetched in parallel with the DOM parsing, so it will be ready at the same time, and won't block rendering.
+This causes the script to be fetched in parallel with the DOM parsing, so it will be ready at the same time and won't block rendering.
 
 > **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event) event. This has a similar effect to `async`.
 
