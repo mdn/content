@@ -187,7 +187,7 @@ function setCookie(e) {
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
   { urls: [targetPage] },
-  ["blocking", "responseHeaders"]
+  ["blocking", "responseHeaders"],
 );
 ```
 
@@ -220,7 +220,7 @@ function setCookieAsync(e) {
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
   { urls: [targetPage] },
-  ["blocking", "responseHeaders"]
+  ["blocking", "responseHeaders"],
 );
 ```
 

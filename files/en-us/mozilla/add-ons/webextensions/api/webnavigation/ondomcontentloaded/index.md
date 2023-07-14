@@ -77,7 +77,7 @@ function logOnDOMContentLoaded(details) {
 
 browser.webNavigation.onDOMContentLoaded.addListener(
   logOnDOMContentLoaded,
-  filter
+  filter,
 );
 ```
 

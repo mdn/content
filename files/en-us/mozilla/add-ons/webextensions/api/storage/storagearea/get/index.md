@@ -147,7 +147,7 @@ Or using a Promise
 
 ```js
 let gettingItem = new Promise((resolve) =>
-  chrome.storage.local.get("kitten", resolve)
+  chrome.storage.local.get("kitten", resolve),
 );
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
