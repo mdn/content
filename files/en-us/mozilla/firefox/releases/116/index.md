@@ -20,6 +20,11 @@ This article provides information about the changes in Firefox 116 that affect d
 
 #### Removals
 
+### Accessibility (ARIA)
+
+- The [`image`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) role is now supported as a synonym for `img`.
+  This maintains consistency with most role names which are complete words or concatenations of complete words ([Firefox bug 1829269](https://bugzil.la/1829269)).
+
 ### JavaScript
 
 #### Removals
