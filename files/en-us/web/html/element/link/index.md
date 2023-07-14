@@ -30,7 +30,7 @@ There are a number of other icon `rel` values, mainly used to indicate special i
 
 ```html
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="114x114"
   href="apple-icon-114.png"
   type="image/png" />
