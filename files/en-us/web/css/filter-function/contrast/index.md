@@ -75,7 +75,7 @@ p {
 ```html hidden
 <div class="container" style="background-image: url(unity_for_the_people.jpg);">
   <p>
-    Alway ensure there is enough contrast between text and all background
+    Always ensure there is enough contrast between text and all background
     colors. If you think your text may land on top of a background image,
     include a <code>backdrop-filter</code>. Reducing the contrast of background
     colors with the <code>contrast()</code> filter may improve legibility but

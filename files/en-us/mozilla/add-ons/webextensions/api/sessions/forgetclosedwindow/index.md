@@ -48,7 +48,7 @@ function forgetMostRecent(sessionInfos) {
   if (sessionInfo.tab) {
     browser.sessions.forgetClosedTab(
       sessionInfo.tab.windowId,
-      sessionInfo.tab.sessionId
+      sessionInfo.tab.sessionId,
     );
   } else {
     browser.sessions.forgetClosedWindow(sessionInfo.window.sessionId);

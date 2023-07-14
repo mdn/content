@@ -117,7 +117,7 @@ As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg]`
 
 ### Interpolation
 
-`<hue>` values are interpolated as {{CSSXref("&lt;angle&gt;")}} values, and the default interpolation algorithm is [`shorter`](/en-US/docs/Web/CSS/hue-interpolation-method#values). In some color-related CSS functions, this can be overriden by the {{CSSXref("&lt;hue-interpolation-method&gt;")}} component.
+`<hue>` values are interpolated as {{CSSXref("&lt;angle&gt;")}} values, and the default interpolation algorithm is [`shorter`](/en-US/docs/Web/CSS/hue-interpolation-method#values). In some color-related CSS functions, this can be overridden by the {{CSSXref("&lt;hue-interpolation-method&gt;")}} component.
 
 ### Formal syntax
 
