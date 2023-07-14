@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-shadow-parts/
 
 The **CSS shadow parts** module defines the {{CSSXref("::part", "::part()")}} pseudo-element that can be set on a [shadow host](/en-US/docs/Glossary/Shadow_tree). Using this pseudo-element, you can enable shadow hosts to expose the selected element in the shadow tree to the outside page for styling purposes.
 
-By default, elements in a shadow tree are only styleable from within that shadow root. The CSS shadow parts module enables including a [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute on {{HTMLElement("template")}} descendants, exposing the shadow tree node to external styling via the `::part()` pseudo-element.
+By default, elements in a shadow tree can be styled only within their respective shadow roots. The CSS shadow parts module enables including a [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute on {{HTMLElement("template")}} descendants, exposing the shadow tree node to external styling via the `::part()` pseudo-element.
 
 ## Reference
 
