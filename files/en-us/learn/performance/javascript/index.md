@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
 
-It is very important to consider how you are using JavaScript on your websites and think about how to mitigate any performance issues that it might be causing. While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater potential for negative performance impact — it can significantly impact download times, rendering performance, and CPU and battery usage. This article introduces tips and tricks for optimizing JavaScript to enhance the performance of your website.
+It is very important to consider how you are using JavaScript on your websites and think about how to mitigate any performance issues that it might be causing. While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater potential for negative performance impact — it can significantly impact download times, rendering performance, and CPU and battery usage. This article introduces tips and techniques for optimizing JavaScript to enhance the performance of your website.
 
 <table>
   <tbody>
@@ -33,6 +33,12 @@ It is very important to consider how you are using JavaScript on your websites a
   </tbody>
 </table>
 
+## To optimize or not to optimize
+
+The first question you should answer before starting to optimize your code is "what do I need to optimize?". Some of the tips and techniques discussed below are good practices that will benefit just about any web project, whereas some are only needed in certain situations. Trying to apply all these techniques everywhere is probably unnecessary, and may be a waste of your time. You should figure out what performance optimizations are actually needed in each project.
+
+To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/Measuring_performance) of your site. As the previous link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API/). The best way to get started however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn/Performance/Measuring_performance#performance_monitor_tools) tools, to see what parts of the page load are taking a long time and need optimizing.
+
 ## Optimizing JavaScript downloads
 
 The most performant, least blocking JavaScript you can use is JavaScript that you don't use at all. You should use as little JavaScript as possible. Some tips to bear in mind:
@@ -45,9 +51,11 @@ The most performant, least blocking JavaScript you can use is JavaScript that yo
   - Use the browser's own {{htmlelement("video")}} player.
   - Use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) instead of a JavaScript animation library (see also [Handling animations](#handling_animations)).
 
-You should also split your JavaScript into multiple files representing critical and non-critical parts. [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) allow you to do this more efficiently than just using separate external JavaScript files. You can split your code manually, but often a module bundler like [Webpack](https://webpack.js.org/) will do a better job of this.
+You should also split your JavaScript into multiple files representing critical and non-critical parts. [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) allow you to do this more efficiently than just using separate external JavaScript files.
 
 Then you can optimize these smaller files. [Minification](/en-US/docs/Glossary/Minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/GZip_compression) compresses the file further and should be used even if you don't minify your code. [Brotli](/en-US/docs/Glossary/Brotli_compression) is similar to Gzip, but generally outperforms Gzip compression.
+
+You can split and optimize your code manually, but often a module bundler like [Webpack](https://webpack.js.org/) will do a better job of this.
 
 ## Handling parsing and execution
 
@@ -287,18 +295,6 @@ There are several general best practices that will make your code run more effic
 - **Reduce DOM manipulation**: Accessing and updating the DOM is computationally expensive, so you should minimize the amount that your JavaScript does, especially when performing constant DOM animation (see [Handling JavaScript animations](#handling_javascript_animations) above).
 - **Batch DOM changes**: For essential DOM changes, you should batch them into groups that get done together, rather than just firing off each individual change as it occurs. This can reduce the amount of work the browser is doing in real terms, but also improve perceived performance. It can make the UI look smoother to get several updates out of the way in one go, rather than constantly making small updates. A useful tip here is — when you have a large chunk of HTML to add to the page, build the entire fragment first (typically inside a {{domxref("DocumentFragment")}}) and then append it all to the DOM in one go, rather than appending each item separately.
 - **Simplify your HTML**: The simpler your DOM tree is, the faster it can be accessed and manipulated with JavaScript. Think carefully about what your UI needs, and remove unneccessary cruft.
-- **Use `getElementById()`**: {{domxref("Document.getElementById()")}} is more efficient for accessing DOM elements than other options such as {{domxref("Document.querySelector()")}}, despite the fact that the latter is more in-keeping with CSS best practices such as favouring classes over IDs because they have lower specificity. If your script involves a lot of DOM manipulation, consider using `getElementById()` if possible.
-- **Avoid unnecessary variables**: Each variable your code uses adds a small amount of overhead, and these overheads can build up in a more complex script. For a start, manage your code carefully and remove unused variables. In addition, you should think about reducing your code down to remove variables. For example:
-
-  ```js
-  // This uses an unneccessary variable
-  const pElem = document.getElementById("tagline");
-  pElem.classList.add("fade-in");
-
-  // This is more efficient
-  document.getElementById("tagline").classList.add("fade-in");
-  ```
-
 - **Reduce the amount of looped code**: Loops are expensive, so reduce the amount of loop usage in your code wherever possible. In cases where loops are unavoidable:
 
   - Avoid running the full loop when it is unneccessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found; there is no need to run further loop iterations:
@@ -315,15 +311,16 @@ There are several general best practices that will make your code run more effic
     }
     ```
 
-  - Do work that is only needed once outside the loop. This may sound a bit obvious, but it is easy to overlook. As an example, take the above `for` loop:
+  - Do work that is only needed once outside the loop. This may sound a bit obvious, but it is easy to overlook. Take the following snippet, which fetches a JSON object containing data to be processed in some way. In this case the {{domxref("fetch()")}} operation is being done on every iteration of the loop, which is a waste of computing power. Lines 3 and 4 could be moved outside the loop, so the network fetch is only being done once.
 
     ```js
-    // array.length is accessed on every iteration
-    for(let i = 0; i < array.length - 1; i++) { ... };
-
-    // Only access array.length once - more efficient
-    const arrLen = array.length;
-    for(let i = 0; i < arrLen - 1; i++) { ... };
+    async function returnResults(number) {
+      for(let i = 0; i < number; i++) {
+        const response = await fetch(`/results?number=${ number }`);
+        const results = await response.json();
+        processResult(results[i]);
+      }
+    }
     ```
 
 - **Run computation off the main thread**: Earlier on we talked about how JavaScript generally runs tasks on the main thread, and how long operations can block the main thread, potentially leading to bad UI performance. We also showed how to break long tasks up into smaller tasks, mitigating this problem. Another way to handle such problems is to move tasks off the main thread altogether. There are a few ways to achieve this:
