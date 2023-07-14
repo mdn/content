@@ -28,9 +28,12 @@ The previous length of the table.
 
 ### Exceptions
 
-- {{jsxref("RangeError")}}: If the current size added with `elementIncrease` exceeds the Table instance's maximum size capacity.
-- {{jsxref("TypeError")}}: If `value` is not a value of the element type of the table.
-- {{jsxref("RangeError")}}: If there is insufficient memory.
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - If the current size added with `elementIncrease` exceeds the Table instance's maximum size capacity.
+    - If the client doesn't have enough memory for the allocation.
+- {{jsxref("TypeError")}}
+  - : Thrown if `value` is not a value of the element type of the table.
 
 ## Examples
 
