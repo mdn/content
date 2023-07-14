@@ -1,5 +1,5 @@
 ---
-title: CSS shadow parts module
+title: CSS shadow parts
 slug: Web/CSS/CSS_shadow_parts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-shadow-parts/
@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-shadow-parts/
 
 {{CSSRef}}
 
-The **CSS shadow parts** module defines the {{CSSXref("::part", "::part()")}} pseudo-element on shadow hosts, allowing shadow hosts to expose selected shadow tree elements to the outside page for styling purposes.
+The **CSS shadow parts** module defines the {{CSSXref("::part", "::part()")}} pseudo-element that can be set on a [shadow host](/en-US/docs/Glossary/Shadow_tree). Using this pseudo-element, you can enable shadow hosts to expose the selected element in the shadow tree to the outside page for styling purposes.
 
 By default, elements in a shadow tree are only styleable from within that shadow root. The CSS shadow parts module enables including a [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute on {{HTMLElement("template")}} descendants, exposing the shadow tree node to external styling via the `::part()` pseudo-element.
 
@@ -17,7 +17,7 @@ By default, elements in a shadow tree are only styleable from within that shadow
 
 - {{CSSXref("::part", "::part()")}}
 
-### HTML Attributes
+### HTML attributes
 
 - [`part`](/en-US/docs/Web/HTML/Global_attributes#part)
 - [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts)
@@ -34,7 +34,7 @@ By default, elements in a shadow tree are only styleable from within that shadow
 
 - [Web components](/en-US/docs/Web/API/Web_components)
 
-  - : Overview of the different APIs that make enable creating reusable custom elements, or web components.
+  - : Overview of the different APIs that enable creating reusable custom elements or web components.
 
 ## Related concepts
 
@@ -59,4 +59,4 @@ By default, elements in a shadow tree are only styleable from within that shadow
 - [CSS pseudo elements](/en-US/docs/Web/CSS/CSS_pseudo) module
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
-- [Templates: styling outside of the current scope](https://web.dev/learn/html/template/#styling-outside-of-the-current-scope) on web.dev (2023)
+- [Templates: Styling outside of the current scope](https://web.dev/learn/html/template/#styling-outside-of-the-current-scope) on web.dev (2023)
