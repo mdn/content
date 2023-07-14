@@ -90,7 +90,7 @@ function logOnCreatedNavigationTarget(details) {
 
 browser.webNavigation.onCreatedNavigationTarget.addListener(
   logOnCreatedNavigationTarget,
-  filter
+  filter,
 );
 ```
 
