@@ -978,7 +978,8 @@
         "/docs/Web/API/Performance_API/Resource_timing",
         "/docs/Web/API/Performance_API/Navigation_timing",
         "/docs/Web/API/Performance_API/User_timing",
-        "/docs/Web/API/Performance_API/Server_timing"
+        "/docs/Web/API/Performance_API/Server_timing",
+        "/docs/Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons"
       ],
       "interfaces": [
         "EventCounts",
