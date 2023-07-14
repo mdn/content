@@ -140,7 +140,7 @@ You can set the environment variable to "False" on Linux by issuing the followin
 export DJANGO_DEBUG=False
 ```
 
-A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
+A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
 
 ```python
 python3 manage.py check --deploy
@@ -424,7 +424,7 @@ While it will cause no harm, you might as well delete the duplicate previous ref
 
 ```python
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
+# https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -494,7 +494,7 @@ Please delete any other dependencies not listed below, unless you've explicitly 
 
 ```plain
 dj-database-url==0.5.0
-Django==4.0.2
+Django==4.1
 gunicorn==20.1.0
 psycopg2-binary==2.9.3
 wheel==0.37.1
@@ -579,7 +579,7 @@ This is a Django security error that is raised because our source code is not ru
 > **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > We'll show you how to disable it once the site is up and running.
 
-Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts) setting to include your Railway site URL:
+Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.1/ref/settings/#allowed-hosts) setting to include your Railway site URL:
 
 ```python
 ## For example, for a site URL at 'web-production-3640.up.railway.app'
@@ -591,7 +591,7 @@ ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
 # ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
 ```
 
-Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/4.0/ref/settings/#csrf-trusted-origins) key.
+Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/4.1/ref/settings/#csrf-trusted-origins) key.
 Open **/locallibrary/settings.py** and add a line like the one below:
 
 ```python
@@ -738,7 +738,7 @@ The Railway client provides the logs command to show the tail of logs (a more fu
 railway logs
 ```
 
-If you need more information than this can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.0/topics/logging/).
+If you need more information than this can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.1/topics/logging/).
 
 ## Summary
 
@@ -748,13 +748,13 @@ The next step is to read our last few articles, and then complete the assessment
 
 ## See also
 
-- [Deploying Django](https://docs.djangoproject.com/en/4.0/howto/deployment/) (Django docs)
+- [Deploying Django](https://docs.djangoproject.com/en/4.1/howto/deployment/) (Django docs)
 
-  - [Deployment checklist](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/) (Django docs)
-  - [Deploying static files](https://docs.djangoproject.com/en/4.0/howto/static-files/deployment/) (Django docs)
-  - [How to deploy with WSGI](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/) (Django docs)
-  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/modwsgi/) (Django docs)
-  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/gunicorn/) (Django docs)
+  - [Deployment checklist](https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/) (Django docs)
+  - [Deploying static files](https://docs.djangoproject.com/en/4.1/howto/static-files/deployment/) (Django docs)
+  - [How to deploy with WSGI](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/) (Django docs)
+  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/modwsgi/) (Django docs)
+  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Railway Docs
 
