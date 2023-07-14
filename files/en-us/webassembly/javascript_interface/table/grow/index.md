@@ -50,7 +50,7 @@ const table = new WebAssembly.Table({
 });
 ```
 
-Grow the table by 1 unit using `WebAssembly.grow()`:
+Grow the table by 1 element using `Table.grow()`:
 
 ```js
 console.log(table.length); // 2
