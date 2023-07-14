@@ -315,8 +315,8 @@ There are several general best practices that will make your code run more effic
 
     ```js
     async function returnResults(number) {
-      for(let i = 0; i < number; i++) {
-        const response = await fetch(`/results?number=${ number }`);
+      for (let i = 0; i < number; i++) {
+        const response = await fetch(`/results?number=${number}`);
         const results = await response.json();
         processResult(results[i]);
       }
