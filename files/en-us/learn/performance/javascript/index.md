@@ -322,7 +322,7 @@ There are several general best practices that will make your code run more effic
     for(let i = 0; i < array.length - 1; i++) { ... };
 
     // Only access array.length once - more efficient
-    const arrLen = arraylength;
+    const arrLen = array.length;
     for(let i = 0; i < arrLen - 1; i++) { ... };
     ```
 
