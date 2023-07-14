@@ -326,13 +326,13 @@ The `makemigrations` command _creates_ (but does not apply) the migrations for a
 
 The `migrate` command is what applies the migrations to your database. Django tracks which ones have been added to the current database.
 
-> **Note:** See [Migrations](https://docs.djangoproject.com/en/4.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
+> **Note:** See [Migrations](https://docs.djangoproject.com/en/4.1/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
 
 ### Running the website
 
 During development, you can serve the website first using the _development web server_, and then viewing it on your local web browser.
 
-> **Note:** The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/4.0/ref/django-admin/#runserver) (Django docs).
+> **Note:** The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/4.1/ref/django-admin/#runserver) (Django docs).
 
 Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
 
@@ -375,7 +375,7 @@ Now that the skeleton for the [Local Library website](/en-US/docs/Learn/Server-s
 
 ## See also
 
-- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/4.0/intro/tutorial01/) (Django docs)
-- [Applications](https://docs.djangoproject.com/en/4.0/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
+- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/4.1/intro/tutorial01/) (Django docs)
+- [Applications](https://docs.djangoproject.com/en/4.1/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
