@@ -83,7 +83,7 @@ function logOnHistoryStateUpdated(details) {
 
 browser.webNavigation.onHistoryStateUpdated.addListener(
   logOnHistoryStateUpdated,
-  filter
+  filter,
 );
 ```
 

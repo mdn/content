@@ -49,7 +49,7 @@ function handleBrowserUpdateAvailable() {
 }
 
 browser.runtime.onBrowserUpdateAvailable.addListener(
-  handleBrowserUpdateAvailable
+  handleBrowserUpdateAvailable,
 );
 ```
 
