@@ -73,7 +73,7 @@ WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
 
-## [Directives](#directives)
+## Directives
 
 - `<auth-scheme>`
 
