@@ -72,7 +72,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-{{ EmbedLiveSample('mtable_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Alignment with row number')}}
 
 ## Specifications
 

@@ -33,7 +33,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-{{ EmbedLiveSample('mspace_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 
