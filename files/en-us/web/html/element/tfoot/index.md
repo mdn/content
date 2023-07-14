@@ -59,7 +59,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## Examples
 
-Please see the {{HTMLElement("table")}} page for examples on `<tfoot>`.
+See {{HTMLElement("table")}} for examples on `<tfoot>`.
 
 ## Technical summary
 

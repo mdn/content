@@ -118,7 +118,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-Below are some examples showing the use of the `<tbody>` element. For more examples of this element, see the examples for {{ HTMLElement("table", "", "#Examples") }}.
+Below are some examples showing the use of the `<tbody>` element. For more examples of this element, see {{HTMLElement("table")}}.
 
 ### Basic example
 
