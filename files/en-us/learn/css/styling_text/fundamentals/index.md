@@ -283,7 +283,9 @@ In such a case, the browser starts at the beginning of the list and looks to see
 
 It is a good idea to provide a suitable generic font name at the end of the stack so that if none of the listed fonts are available, the browser can at least provide something approximately suitable. To emphasize this point, paragraphs are given the browser's default serif font if no other option is available — which is usually Times New Roman — this is no good for a sans-serif font!
 
-> **Note:** Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
+> **Note:** To avoid mistakes in escaping, it is recommended to quote font family names that contain white space, digits, or punctuation characters other than hyphens like `Trebuchet MS`. Font family names that happen to be the same as a keyword value (`inherit`, `serif`, `sans-serif`, `monospace`, `fantasy`, and `cursive`) must be quoted to prevent confusion with the keywords with the same names. The keywords `initial` and `default` are reserved for future use and must also be quoted when used as font names (https://www.w3.org/TR/CSS2/fonts.html#font-family-prop). The generic font family names (`inherit`, `serif`, `sans-serif`, `monospace`, `cursive`, `fantasy`, `initial` and `default`) MUST NOT be quoted as they are actually keywords. You can also visit (https://mathiasbynens.be/notes/unquoted-font-family).
+
+> **Note:** You can use `Trebuchet MS` even without quotes and it works well. But W3 CSS Validator warns about the whitespace in font family name. Actually this is a CSS Validator bug (https://www.w3.org/Bugs/Public/show_bug.cgi?id=16362). But it's recommended to quote font family names that contain white space to avoid mistakes in escaping.
 
 #### A font-family example
 
