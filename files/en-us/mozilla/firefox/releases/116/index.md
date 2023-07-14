@@ -45,6 +45,9 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### APIs
 
+- The {{domxref("TextMetrics.fontBoundingBoxAscent")}} and {{domxref("TextMetrics.fontBoundingBoxDescent")}} properties are now supported.
+  These metrics return, respectively, the distance above and below the {{domxref("CanvasRenderingContext2D.textBaseline")}} to the bounding rectangle of all the fonts used to render the text ([Firefox bug 1801198](https://bugzil.la/1801198)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
