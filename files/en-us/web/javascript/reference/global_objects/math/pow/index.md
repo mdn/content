@@ -60,7 +60,7 @@ Math.pow(2, 0.5); // 1.4142135623730951 (square root of 2)
 Math.pow(2, 1 / 3); // 1.2599210498948732 (cube root of 2)
 
 // Signed exponents
-Math.pow(7, -2); // 0.02040816326530612 (1/49)
+Math.pow(7, -2); // 0.020408163265306124 (approximately equal to 1/49)
 Math.pow(8, -1 / 3); // 0.5
 
 // Signed bases
