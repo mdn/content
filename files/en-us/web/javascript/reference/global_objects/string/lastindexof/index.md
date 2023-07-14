@@ -68,7 +68,7 @@ expression returns `-1`:
 
 The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}} and
 `lastIndexOf()` to locate values in the string
-"`Brave, Brave New World`".
+`"Brave, Brave New World"`.
 
 ```js
 const anyString = "Brave, Brave New World";
