@@ -1,16 +1,10 @@
 ---
 title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Interface
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.extension
 ---
+
 {{AddonSidebar}}
 
 Utilities related to your extension. Get URLs to resources packages with your extension. Get the [`Window`](/en-US/docs/Web/API/Window) object for your extension's pages. Get the values for various settings.
@@ -24,7 +18,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 
 ## Properties
 
-- {{WebExtAPIRef("extension.lastError")}}
+- {{WebExtAPIRef("extension.lastError")}} {{deprecated_inline}}
   - : Set for the lifetime of a callback if an asynchronous extension API has resulted in an error. If no error has occurred, `lastError` will be {{jsxref("undefined")}}.
 - {{WebExtAPIRef("extension.inIncognitoContext")}}
   - : `True` for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with '`split`' `incognito_behavior`.)
@@ -32,7 +26,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 ## Functions
 
 - {{WebExtAPIRef("extension.getBackgroundPage()")}}
-  - : Returns the [`Window`](/en-US/docs/Web/API/Window) object for the background page running inside the current extension. Returns {{jsxref("null")}} if the extension has no background page.
+  - : Returns the [`Window`](/en-US/docs/Web/API/Window) object for the background page running inside the current extension. Returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the extension has no background page.
 - {{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}
   - : Returns an array of the JavaScript [Window](/en-US/docs/Web/API/Window) objects for each of the tabs running inside the current extension.
 - {{WebExtAPIRef("extension.getURL()")}} {{deprecated_inline}}
@@ -42,7 +36,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 - {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
   - : Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled '_Allowed in Incognito_' checkbox).
 - {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
-  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
+  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
 - {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
   - : Sends a single request to other listeners within the extension.
 - {{WebExtAPIRef("extension.setUpdateUrlData()")}}
@@ -61,11 +55,10 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +85,4 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

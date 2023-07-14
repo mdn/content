@@ -1,24 +1,21 @@
 ---
 title: FileSystemWritableFileStream
 slug: Web/API/FileSystemWritableFileStream
-tags:
-  - File
-  - File System Access API
-  - FileSystemWritableFileStream
-  - Interface
-  - stream
-  - write file
+page-type: web-api-interface
 browser-compat: api.FileSystemWritableFileStream
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`FileSystemWritableFileStream`** interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
-## Properties
+{{InheritanceDiagram}}
+
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("WritableStream")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("WritableStream")}}._
 
@@ -37,7 +34,6 @@ A user defined {{domxref('Blob')}} is then written to the stream which is subseq
 
 ```js
 async function saveFile() {
-
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
 
@@ -56,16 +52,16 @@ The following show different examples of options that can be passed into the `wr
 
 ```js
 // just pass in the data (no options)
-writableStream.write(data)
+writableStream.write(data);
 
 // writes the data to the stream from the determined position
-writableStream.write({ type: "write", position: position, data: data })
+writableStream.write({ type: "write", position, data });
 
 // updates the current file cursor offset to the position specified
-writableStream.write({ type: "seek", position: position })
+writableStream.write({ type: "seek", position });
 
 // resizes the file to be size bytes long
-writableStream.write({ type: "truncate", size: size })
+writableStream.write({ type: "truncate", size });
 ```
 
 ## Specifications

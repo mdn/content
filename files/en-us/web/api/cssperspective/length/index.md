@@ -1,18 +1,12 @@
 ---
-title: CSSPerspective.length
+title: "CSSPerspective: length property"
+short-title: length
 slug: Web/API/CSSPerspective/length
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPerspective
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.CSSPerspective.length
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`length`** property of the
 {{domxref("CSSPerspective")}} interface sets the distance from z=0.
@@ -20,13 +14,7 @@ The **`length`** property of the
 It is used to apply a perspective transform to the element and its content. If the
 value is 0 or a negative number, no perspective transform is applied.
 
-## Syntax
-
-```js
-var length = CSSPerspective.length;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSNumericValue")}}
 

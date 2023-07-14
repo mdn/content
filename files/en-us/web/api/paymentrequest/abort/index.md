@@ -1,35 +1,30 @@
 ---
-title: PaymentRequest.abort()
+title: "PaymentRequest: abort() method"
+short-title: abort()
 slug: Web/API/PaymentRequest/abort
-tags:
-  - API
-  - Experimental
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - abort
+page-type: web-api-instance-method
 browser-compat: api.PaymentRequest.abort
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-The `PaymentRequest.abort()` method of the {{domxref('PaymentRequest')}}
-interface causes the user agent to end the payment request and to remove any user
+{{securecontext_header}}{{APIRef("Payment Request API")}}
+
+The `PaymentRequest.abort()` method of the {{domxref('PaymentRequest')}}
+interface causes the user agent to end the payment request and to remove any user
 interface that might be shown.
 
 ## Syntax
 
-```js
-PaymentRequest.abort();
+```js-nolint
+abort()
 ```
-
-### Returns
-
-Void.
 
 ### Parameters
 
-None
+None.
+
+### Return value
+
+None ({{jsxref('undefined')}}).
 
 ## Examples
 
@@ -37,17 +32,25 @@ The following example sets up a timeout to clear the payment request that might 
 been abandoned or neglected.
 
 ```js
-var request = new PaymentRequest(supportedInstruments, details, options);
+const request = new PaymentRequest(supportedInstruments, details, options);
 
-var paymentTimeout = window.setTimeout(() => {
-  window.clearTimeout(paymentTimeout);
-  request.abort().then(() => {
-    print('Payment timed out after 20 minutes.');
-  }).catch(() => {
-    print('Unable to abort, because the user is currently in the process ' +
-          'of paying.');
-  });
-}, 20 * 60 * 1000);  /* 20 minutes */
+const paymentTimeout = setTimeout(
+  () => {
+    clearTimeout(paymentTimeout);
+    request
+      .abort()
+      .then(() => {
+        print("Payment timed out after 20 minutes.");
+      })
+      .catch(() => {
+        print(
+          "Unable to abort, because the user is currently in the process " +
+            "of paying.",
+        );
+      });
+  },
+  20 * 60 * 1000,
+); /* 20 minutes */
 ```
 
 ## Specifications

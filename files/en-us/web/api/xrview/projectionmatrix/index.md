@@ -1,26 +1,14 @@
 ---
-title: XRView.projectionMatrix
+title: "XRView: projectionMatrix property"
+short-title: projectionMatrix
 slug: Web/API/XRView/projectionMatrix
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR DeviceAPI
-  - XR
-  - XRView
-  - augmented
-  - perspective
-  - projectionMatrix
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRView.projectionMatrix
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRView")}} interface's read-only
 **`projectionMatrix`** property specifies the projection matrix

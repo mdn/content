@@ -1,12 +1,10 @@
 ---
 title: CSS Declaration
 slug: Web/API/CSS_Object_Model/CSS_Declaration
-tags:
-  - CSS
-  - CSS Object Model
-  - CSS Declaration
-  - Reference
+page-type: guide
+spec-urls: https://drafts.csswg.org/cssom/#css-declarations
 ---
+
 {{ APIRef("CSSOM") }}
 
 A **CSS declaration** is an abstract concept not exposed as an object in the DOM. It represents a CSS property and value pairing.
@@ -24,7 +22,7 @@ A CSS declaration has the following associated properties:
 
 ## Basic example
 
-The following example shows a CSS rule with a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) for the {{htmlelement("Heading_elements","&lt;h1&gt;")}} element. The CSS declaration block is the lines between the curly braces, it contains two CSS declarations. One for {{cssxref("font-style")}} and another for {{cssxref("color")}}.
+The following example shows a CSS rule with a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) for the {{htmlelement("Heading_Elements","&lt;h1&gt;")}} element. The CSS declaration block is the lines between the curly braces, it contains two CSS declarations. One for {{cssxref("font-style")}} and another for {{cssxref("color")}}.
 
 ```css
 h1 {
@@ -35,6 +33,4 @@ h1 {
 
 ## Specifications
 
-| Specification                                                                        | Status                   | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------- |
-| {{SpecName('CSSOM', '#css-declarations', 'CSS Declarations')}} | {{Spec2('CSSOM')}} |         |
+{{Specifications}}

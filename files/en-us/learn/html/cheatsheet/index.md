@@ -1,13 +1,12 @@
 ---
-title: HTML Cheatsheet
+title: HTML Cheat Sheet
 slug: Learn/HTML/Cheatsheet
-tags:
-  - Beginner
-  - Draft
-  - Guide
-  - HTML
+page-type: guide
 ---
-While using {{Glossary("HTML")}} it can be very handy to have an easy way to remember how to use HTML tags properly and how to apply them. MDN provides you with an extended [HTML documentation](/en-US/docs/Web/HTML/Element) as well as a deep instructional [HTML how-to](/en-US/docs/Learn/HTML/Howto). However, in many cases we just need some quick hints as we go. That's the whole purpose of the cheatsheet, to give you some quick accurate ready to use code snippets for common usages.
+
+{{LearnSidebar}}
+
+While using {{Glossary("HTML")}} it can be very handy to have an easy way to remember how to use HTML tags properly and how to apply them. MDN provides you with an extended [HTML documentation](/en-US/docs/Web/HTML/Element) as well as a deep instructional [HTML how-to](/en-US/docs/Learn/HTML/Howto). However, in many cases we just need some quick hints as we go. That's the whole purpose of the cheat sheet, to give you some quick accurate ready to use code snippets for common usages.
 
 > **Note:** HTML tags must be used for their semantic, not their appearance. It's always possible to totally change the look and feel of a given tag using {{Glossary("CSS")}} so, when using HTML, take the time to focus on the meaning rather than the appearance.
 
@@ -16,6 +15,7 @@ While using {{Glossary("HTML")}} it can be very handy to have an easy way to r
 An "element" is a single part of a webpage. Some elements are large and hold smaller elements like containers. Some elements are small and are "nested" inside larger ones. By default, "inline elements" appear next to one another in a webpage. They take up only as much width as they need in a page and fit together horizontally like words in a sentence or books shelved side-by-side in a row. All inline elements can be placed within the `<body>` element.
 
 <table class="standard-table">
+  <caption>Inline elements: usage and examples</caption>
   <thead>
     <tr>
       <th scope="col">Usage</th>
@@ -39,7 +39,7 @@ A link to example.org&#x3C;/a>.</pre
       <td>An image</td>
       <td>{{HTMLElement("img")}}</td>
       <td id="img-example">
-        <pre class="brush: html">&#x3C;img src="beast.png" width="25" /></pre>
+        <pre class="brush: html">&#x3C;img src="beast.png" width="50" /></pre>
         {{EmbedLiveSample("img-example", 100, 60)}}
       </td>
     </tr>
@@ -210,11 +210,10 @@ format&#x3C;/code>.</pre
       <td>{{HTMLElement("audio")}}</td>
       <td id="audio-example">
         <pre class="brush: html">
-&#x3C;audio controls="controls">
-  &#x3C;source="t-rex-roar.mp3" type="audio/mpeg">
-  Your browser does not support Audio.
-&#x3C;/audio></pre
-        >
+&#x3C;audio controls>
+  &#x3C;source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+&#x3C;/audio>
+        </pre>
         {{EmbedLiveSample("audio-example", 100, 80)}}
       </td>
     </tr>
@@ -223,9 +222,9 @@ format&#x3C;/code>.</pre
       <td>{{HTMLElement("video")}}</td>
       <td id="video-example">
         <pre class="brush: html">
-&#x3C;video controls  width="250"
+&#x3C;video controls width="250"
   src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
-  The &#x3C;code>video&#x3C;/code> element is unsupported.
+  &#x3C;a href="https://archive.org/download/ElephantsDream/ed_hd.ogv">Download OGV video&#x3C;/a>
 &#x3C;/video></pre
         >
         {{EmbedLiveSample("video-example", 100, 200)}}
@@ -237,6 +236,8 @@ format&#x3C;/code>.</pre
 ## Block elements
 
 "Block elements," on the other hand, take up the entire width of a webpage. They also take up a full line of a webpage; they do not fit together side-by-side. Instead, they stack like paragraphs in an essay or toy blocks in a tower.
+
+> **Note:** Because this cheat sheet is limited to a few elements representing specific structures or having special semantics, the [`div`](/en-US/docs/Web/HTML/Element/div) element is intentionally not included — because the `div` element doesn't represent anything and doesn't have any special semantics.
 
 <table class="standard-table">
   <thead>
@@ -276,7 +277,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td id="details-example">
         <pre class="brush: html">
 &#x3C;details>
-  &#x3C;summary>Html Cheatsheet&#x3C;/summary>
+  &#x3C;summary>Html Cheat Sheet&#x3C;/summary>
   &#x3C;p>Inline elements&#x3C;/p>
   &#x3C;p>Block elements&#x3C;/p>
 &#x3C;/details></pre

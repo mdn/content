@@ -1,24 +1,19 @@
 ---
 title: DataView.prototype.setUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setUint8
 ---
+
 {{JSRef}}
 
-The **`setUint8()`** method stores an unsigned 8-bit integer
-(byte) value at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`setUint8()`** method of {{jsxref("DataView")}} instances takes a number and stores it as an 8-bit unsigned integer in the byte at the specified byte offset of this `DataView`.
 
 {{EmbedInteractiveExample("pages/js/dataview-setuint8.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 setUint8(byteOffset, value)
 ```
 
@@ -44,8 +39,8 @@ setUint8(byteOffset, value)
 ### Using the setUint8 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setUint8(1, 3);
 dataview.getUint8(1); // 3
 ```

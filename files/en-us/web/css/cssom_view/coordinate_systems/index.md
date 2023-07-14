@@ -1,19 +1,12 @@
 ---
 title: Coordinate systems
-slug: Web/CSS/CSSOM_View/Coordinate_systems
-tags:
-  - CSS
-  - CSSOM
-  - CSSOM View
-  - Coordinate systems
-  - Coordinates
-  - Guide
-  - Layout
-  - NeedsContent
+slug: Web/CSS/CSSOM_view/Coordinate_systems
+page-type: guide
 ---
+
 {{CSSRef}}
 
-When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in {{interwiki("wikipedia", "algebra")}}), its position is defined relative to a fixed point in the context. This fixed point is called the {{interwiki("wikipedia", "Origin_(mathematics)", "origin")}}. The position is specified as the number of pixels offset from the origin along each dimension of the context.
+When specifying the location of a pixel in a graphics context (just like when specifying coordinate systems in [algebra](https://en.wikipedia.org/wiki/Algebra)), its position is defined relative to a fixed point in the context. This fixed point is called the [origin](<https://en.wikipedia.org/wiki/Origin_(mathematics)>). The position is specified as the number of pixels offset from the origin along each dimension of the context.
 
 This guide describes the standard coordinate systems used by the CSS object model. These are generally only different in terms of where their origin is located.
 
@@ -23,7 +16,7 @@ In the coordinate systems used by web technologies, convention dictates that the
 
 On the web, the default origin is the _top_-left corner of a given context (with positive y-coordinate values being below the origin). Note that this is unlike most mathematical models, where the origin is at the _bottom_-left corner, with positive y-coordinate values being above the origin.
 
-When drawing 3D graphics, or using a third dimension to layer objects from front to back, the _z-coordinate_ is also used. This specifies the distance away from the viewer if positive and toward the viewer if negative.
+When using the third dimension to layer objects from front to back, we use the z-axis. The z-axis runs from the viewer to the screen's surface. The CSS z-index attribute affects where positioned elements sit on this axis, giving the effect of moving away from or toward the viewer.
 
 > **Note:** It's actually possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.
 
@@ -72,8 +65,8 @@ let inner = document.querySelector(".inner");
 let log = document.querySelector(".log");
 
 function setCoords(e, type) {
-  let idX = type + "X";
-  let idY = type + "Y";
+  const idX = `${type}X`;
+  const idY = `${type}Y`;
 
   document.getElementById(idX).innerText = e[idX];
   document.getElementById(idY).innerText = e[idY];
@@ -103,7 +96,7 @@ inner.addEventListener("mouseleave", update, false);
 
 The event handler is in the `update()` method. It calls `setCoords()` once for each coordinate system, passing in the event that occurred.
 
-Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types {{event("mouseenter")}}, {{event("mousemove")}}, and {{event("mouseleave")}}.
+Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mousemove_event", "mousemove")}}, and {{domxref("Element/mouseleave_event", "mouseleave")}}.
 
 ### HTML
 
@@ -175,7 +168,7 @@ Here you can see the results in action. As you mouse in and around the blue box,
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms): how to alter a coordinate system
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
 - Coordinates of a mouse event:
 
   - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}

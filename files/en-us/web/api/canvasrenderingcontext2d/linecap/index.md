@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.lineCap
+title: "CanvasRenderingContext2D: lineCap property"
+short-title: lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.lineCap
 ---
+
 {{APIRef}}
 
 The
@@ -16,17 +13,12 @@ The
 property of the Canvas 2D API determines the shape used to draw the end points of lines.
 
 > **Note:** Lines can be drawn with the
-> {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-## Syntax
+## Value
 
-```js
-ctx.lineCap = "butt" || "round" || "square";
-```
-
-### Options
+One of the following:
 
 - `"butt"`
   - : The ends of lines are squared off at the endpoints. Default value.
@@ -51,13 +43,13 @@ This example rounds the end caps of a straight line.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineWidth = 15;
-ctx.lineCap = 'round';
+ctx.lineCap = "round";
 ctx.lineTo(100, 100);
 ctx.stroke();
 ```
@@ -83,12 +75,11 @@ half the height of the line thickness.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const lineCap = ['butt', 'round', 'square'];
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw guides
-ctx.strokeStyle = '#09f';
+ctx.strokeStyle = "#09f";
 ctx.beginPath();
 ctx.moveTo(10, 10);
 ctx.lineTo(140, 10);
@@ -97,15 +88,15 @@ ctx.lineTo(140, 140);
 ctx.stroke();
 
 // Draw lines
-ctx.strokeStyle = 'black';
-for (let i = 0; i < lineCap.length; i++) {
+ctx.strokeStyle = "black";
+["butt", "round", "square"].forEach((lineCap, i) => {
   ctx.lineWidth = 15;
-  ctx.lineCap = lineCap[i];
+  ctx.lineCap = lineCap;
   ctx.beginPath();
   ctx.moveTo(25 + i * 50, 10);
   ctx.lineTo(25 + i * 50, 140);
   ctx.stroke();
-}
+});
 ```
 
 {{EmbedLiveSample("Comparison_of_line_caps", "180", "180",
@@ -129,5 +120,4 @@ for (let i = 0; i < lineCap.length; i++) {
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineWidth")}}
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
-- [Applying
-  styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

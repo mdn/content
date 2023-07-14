@@ -1,11 +1,9 @@
 ---
 title: Use CSS to solve common problems
 slug: Learn/CSS/Howto
-tags:
-  - Beginner
-  - CSS
-  - Learn
+page-type: landing-page
 ---
+
 {{LearnSidebar}}
 
 This page rounds up questions and answers, and other material on the MDN site that can help you to solve common CSS problems.
@@ -56,4 +54,4 @@ This page rounds up questions and answers, and other material on the MDN site th
 - [Using CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 - [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
 
-> **Note:** We have a cookbook dedicated to [CSS Layout solutions](/en-US/docs/Web/CSS/Layout_cookbook), with fully worked examples and explanations of common layout tasks.
+> **Note:** We have a cookbook dedicated to [CSS Layout solutions](/en-US/docs/Web/CSS/Layout_cookbook), with fully working examples and explanations of common layout tasks. Also check out [Practical Positioning Examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), which shows how you can use positioning to create a tabbed info box, and a sliding hidden panel.

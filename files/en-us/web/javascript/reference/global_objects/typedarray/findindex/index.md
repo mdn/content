@@ -1,17 +1,10 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findIndex
 ---
+
 {{JSRef}}
 
 The **`findIndex()`** method returns an **index**
@@ -25,38 +18,23 @@ See also the {{jsxref("TypedArray.find", "find()")}} method, which returns the
 
 ## Syntax
 
-```js
-// Arrow function
-findIndex((element) => { ... } )
-findIndex((element, index) => { ... } )
-findIndex((element, index, array) => { ... } )
-
-// Callback function
+```js-nolint
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
-
-// Inline callback function
-findIndex(function(element) { ... })
-findIndex(function(element, index) { ... })
-findIndex(function(element, index, array){ ... })
-findIndex(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function to execute on each value in the typed array, taking three arguments:
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the typed array.
     - `index`
       - : The index of the current element being processed in the typed array.
     - `array`
       - : The typed array `findIndex()` was called upon.
-
 - `thisArg` {{optional_inline}}
-  - : Object to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
@@ -100,7 +78,7 @@ number (or returns `-1` if there is no prime number).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
+  let start = 2;
   while (start <= Math.sqrt(element)) {
     if (element % start++ < 1) {
       return false;
@@ -109,49 +87,11 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-var uint8 = new Uint8Array([4, 6, 8, 12]);
-var uint16 = new Uint16Array([4, 6, 7, 12]);
+const uint8 = new Uint8Array([4, 6, 8, 12]);
+const uint16 = new Uint16Array([4, 6, 7, 12]);
 
 console.log(uint8.findIndex(isPrime)); // -1, not found
 console.log(uint16.findIndex(isPrime)); // 2
-```
-
-## Polyfill
-
-```js
-TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
-        'use strict';
-        if (!this) {
-          throw new TypeError('Array.prototype.some called on null or undefined');
-        }
-
-        if (typeof(evaluator) !== 'function') {
-            if (typeof(evaluator) === 'string') {
-                // Attempt to convert it to a function
-                if ( ! (evaluator = eval(evaluator)) ){
-                    throw new TypeError();
-                }
-            } else {
-                throw new TypeError();
-            }
-        }
-
-        var i;
-        if (thisArg === undefined) {  // Optimize for thisArg
-            for (i in this) {
-                if (evaluator(this[i], i, this)) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-        for (i in this) {
-            if (evaluator.call(thisArg, this[i], i, this)) {
-                return i;
-            }
-        }
-        return -1;
-};
 ```
 
 ## Specifications
@@ -164,6 +104,6 @@ TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.fin
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.findIndex` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}

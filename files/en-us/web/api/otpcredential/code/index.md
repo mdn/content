@@ -1,42 +1,38 @@
 ---
-title: OTPCredential.code
+title: "OTPCredential: code property"
+short-title: code
 slug: Web/API/OTPCredential/code
-tags:
-  - API
-  - Property
-  - Reference
-  - code
-  - OTPCredential
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.OTPCredential.code
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
+
+{{SecureContext_Header}}{{APIRef("WebOTP API")}}{{SeeCompatTable}}
 
 The **`code`** property of the {{domxref("OTPCredential")}} interface returns the one-time password.
 
-## Syntax
+## Value
 
-```js
-let code = OTPCredential.code;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the one-time password.
+A string containing the one-time password.
 
 ## Examples
 
 The below code uses the value of `code` to complete an input form element. [See this code as part of a simple demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
 
 ```js
-navigator.credentials.get({
-  otp: { transport:['sms'] },
-  signal: ac.signal
-}).then(otp => {
-  input.value = otp.code;
-  if (form) form.submit();
-}).catch(err => {
-  console.log(err);
-});
+navigator.credentials
+  .get({
+    otp: { transport: ["sms"] },
+    signal: ac.signal,
+  })
+  .then((otp) => {
+    input.value = otp.code;
+    if (form) form.submit();
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ## Specifications

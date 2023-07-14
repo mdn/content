@@ -1,29 +1,16 @@
 ---
-title: PageTransitionEvent.persisted
+title: "PageTransitionEvent: persisted property"
+short-title: persisted
 slug: Web/API/PageTransitionEvent/persisted
-tags:
-  - API
-  - PageTransitionEvent
-  - Property
-  - Reference
-  - Web API
+page-type: web-api-instance-property
 browser-compat: api.PageTransitionEvent.persisted
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`persisted`** read-only property indicates if a webpage is loading from a cache.
 
-## Syntax
-
-```js
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted) {
-    console.log('Page was loaded from cache.');
-  }
-});
-```
-
-### Value
+## Value
 
 A boolean value.
 

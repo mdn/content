@@ -1,37 +1,24 @@
 ---
-title: SecurityPolicyViolationEvent.referrer
+title: "SecurityPolicyViolationEvent: referrer property"
+short-title: referrer
 slug: Web/API/SecurityPolicyViolationEvent/referrer
-tags:
-  - API
-  - CSP
-  - Experimental
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - referrer
+page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.referrer
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+
+{{HTTPSidebar}}
 
 The **`referrer`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}}
+{{domxref("SecurityPolicyViolationEvent")}} interface is a string
 representing the referrer of the resources whose policy was violated. This will be a URL
 or `null`.
 
-## Syntax
+## Value
 
-```js
-let referrer = violationEventInstance.referrer;
-```
-
-### Value
-
-A {{domxref("USVString")}} representing the URL of the referrer of the violating
+A string representing the URL of the referrer of the violating
 resources.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

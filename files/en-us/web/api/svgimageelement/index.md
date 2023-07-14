@@ -1,33 +1,24 @@
 ---
 title: SVGImageElement
 slug: Web/API/SVGImageElement
-tags:
-  - API
-  - Image
-  - Interface
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
+page-type: web-api-interface
 browser-compat: api.SVGImageElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGImageElement`** interface corresponds to the {{SVGElement("image")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
 - {{domxref("SVGImageElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("image")}} element.
-- {{domxref("SVGImageElement.crossOrigin")}}
-  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.decoding")}}
-  - : A {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image.
+  - : A string representing a hint given to the browser on how it should decode the image.
 - {{domxref("SVGImageElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.preserveAspectRatio")}} {{ReadOnlyInline}}
@@ -39,7 +30,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGImageElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given {{SVGElement("image")}} element.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}._
 

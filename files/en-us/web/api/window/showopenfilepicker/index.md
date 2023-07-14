@@ -1,15 +1,14 @@
 ---
-title: Window.showOpenFilePicker()
+title: "Window: showOpenFilePicker() method"
+short-title: showOpenFilePicker()
 slug: Web/API/Window/showOpenFilePicker
-tags:
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Window.showOpenFilePicker
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showOpenFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to select a file
@@ -17,40 +16,48 @@ or multiple files and returns a handle for the file(s).
 
 ## Syntax
 
-```js
-var FileSystemHandles = Window.showOpenFilePicker();
+```js-nolint
+showOpenFilePicker()
 ```
 
 ### Parameters
 
-- _options_ {{optional_inline}}
+- `options` {{Optional_Inline}}
 
-  - : An optional object containing options, which are as follows:
+  - : An object containing options, which are as follows:
 
-    - `multiple`: A {{jsxref('Boolean')}}. Default `false`. When
-      set to `true` multiple files may be selected.
-    - `excludeAcceptAllOption`:A {{jsxref('Boolean')}}. Default
-      `false`. By default the picker should include an option to not apply
-      any file type filters (instigated with the type option below). Setting this option
-      to `true` means that option is _not_ available.
-    - `types`: An {{jsxref('Array')}} of allowed file types to pick. Each
-      item is an object with the following options:
+    - `multiple`
+      - : A boolean value that defaults to `false`. When
+        set to `true` multiple files may be selected.
+    - `excludeAcceptAllOption`
+      - : A boolean value that defaults to
+        `false`. By default the picker should include an option to not apply
+        any file type filters (instigated with the type option below). Setting this option
+        to `true` means that option is _not_ available.
+    - `types`
 
-      - `description`: An optional description of the category of files
-        types allowed.
-      - `accept`: An {{jsxref('Object')}} with the keys set to the [MIME
-        type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
-        for an example).
+      - : An {{jsxref('Array')}} of allowed file types to pick. Each
+        item is an object with the following options:
+
+        - `description`
+          - : An optional description of the category of files types allowed.
+        - `accept`
+          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
+            for an example).
 
 ### Return value
 
-A {{jsxref('Array')}} of {{domxref('FileSystemFileHandle')}} objects.
+A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}} of {{domxref('FileSystemFileHandle')}} objects.
 
 ### Exceptions
 
 - `AbortError`
   - : An AbortError is thrown if a user dismisses the prompt without making a selection or
     if a file selected is deemed too sensitive or dangerous to be exposed to the website.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 
@@ -62,14 +69,14 @@ selection.
 const pickerOpts = {
   types: [
     {
-      description: 'Images',
+      description: "Images",
       accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
+        "image/*": [".png", ".gif", ".jpeg", ".jpg"],
+      },
     },
   ],
   excludeAcceptAllOption: true,
-  multiple: false
+  multiple: false,
 };
 ```
 
@@ -99,5 +106,4 @@ async function getFile() {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

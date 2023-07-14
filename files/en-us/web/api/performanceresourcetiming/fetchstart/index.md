@@ -1,70 +1,59 @@
 ---
-title: PerformanceResourceTiming.fetchStart
+title: "PerformanceResourceTiming: fetchStart property"
+short-title: fetchStart
 slug: Web/API/PerformanceResourceTiming/fetchStart
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.fetchStart
 ---
-{{APIRef("Resource Timing API")}}
 
-The **`fetchStart`** read-only property represents a
-{{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts to
-fetch the resource.
+{{APIRef("Performance API")}}
 
-If there are HTTP redirects the property returns the time immediately before the user
-agent starts to fetch the final resource in the redirection.
+The **`fetchStart`** read-only property represents a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts to fetch the resource.
 
-{{AvailableInWorkers}}
+If there are HTTP redirects, the property returns the time immediately before the user agent starts to fetch the final resource in the redirection.
 
-## Syntax
+Unlike many other `PerformanceResourceTiming` properties, the `fetchStart` property is available for cross-origin requests without the need of the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header.
 
-```js
-resource.fetchStart;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the
 resource.
 
-## Example
+## Examples
 
-In the following example, the value of the `*Start` and `*End`
-properties of all "`resource`"
-{{domxref("PerformanceEntry.entryType","type")}} events are logged.
+### Measuring time to fetch (without redirects)
+
+The `fetchStart` and {{domxref("PerformanceResourceTiming.responseEnd", "responseEnd")}} properties can be used to measure the overall time it took to fetch the final resource (without redirects). If you want to include redirects, the overall time to fetch is provided in the {{domxref("PerformanceEntry.duration", "duration")}} property.
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+const timeToFetch = entry.responseEnd - entry.fetchStart;
+```
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const timeToFetch = entry.responseEnd - entry.fetchStart;
+    if (timeToFetch > 0) {
+      console.log(`${entry.name}: Time to fetch: ${timeToFetch}ms`);
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const timeToFetch = entry.responseEnd - entry.fetchStart;
+  if (timeToFetch > 0) {
+    console.log(`${entry.name}: Time to fetch: ${timeToFetch}ms`);
   }
-}
+});
 ```
 
 ## Specifications

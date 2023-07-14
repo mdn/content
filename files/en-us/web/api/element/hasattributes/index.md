@@ -1,14 +1,11 @@
 ---
-title: Element.hasAttributes()
+title: "Element: hasAttributes() method"
+short-title: hasAttributes()
 slug: Web/API/Element/hasAttributes
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Element.hasAttributes
 ---
+
 {{ApiRef("DOM")}}
 
 The **`hasAttributes()`** method of the {{domxref("Element")}}
@@ -17,32 +14,25 @@ attributes or not.
 
 ## Syntax
 
-```js
-var result = element.hasAttributes();
+```js-nolint
+hasAttributes()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-- `result`
-  - : holds the return value `true` or `false`.
+A boolean.
 
 ## Examples
 
 ```js
-let foo = document.getElementById('foo');
+let foo = document.getElementById("foo");
 if (foo.hasAttributes()) {
   // Do something with 'foo.attributes'
 }
-```
-
-## Polyfill
-
-```js
-;(function(prototype) {
-  prototype.hasAttributes = prototype.hasAttributes || function() {
-    return (this.attributes.length > 0);
-  }
-})(Element.prototype);
 ```
 
 ## Specifications

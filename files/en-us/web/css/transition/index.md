@@ -1,17 +1,13 @@
 ---
 title: transition
 slug: Web/CSS/transition
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.transition
 ---
+
 {{CSSRef}}
 
-The **`transition`** [CSS ](/en-US/docs/Web/CSS)property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}.
+The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}.
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 
@@ -43,7 +39,9 @@ transition: margin-right 4s ease-in-out;
 transition: margin-right 4s ease-in-out 1s;
 
 /* Apply to 2 properties */
-transition: margin-right 4s, color 1s;
+transition:
+  margin-right 4s,
+  color 1s;
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out;
@@ -52,6 +50,7 @@ transition: all 0.5s ease-out;
 transition: inherit;
 transition: initial;
 transition: revert;
+transition: revert-layer;
 transition: unset;
 ```
 
@@ -82,7 +81,7 @@ See [how things are handled](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_trans
 
 ### Simple example
 
-This example performs a four-second font size transition with a one-second delay when the user hovers over the element.
+In this example, when the user hovers over the element, there is a one-second delay before the four-second `font-size` transition occurs.
 
 #### HTML
 
@@ -91,6 +90,8 @@ This example performs a four-second font size transition with a one-second delay
 ```
 
 #### CSS
+
+We include two {{cssxref("time")}} values. In the `transition` shorthand, the first `<time>` value is the `transition-duration`. The second time value is the `transition-delay`. Both default to `0s` if omitted.
 
 ```css
 .target {

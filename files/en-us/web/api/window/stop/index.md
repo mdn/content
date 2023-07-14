@@ -1,16 +1,11 @@
 ---
-title: Window.stop()
+title: "Window: stop() method"
+short-title: stop()
 slug: Web/API/Window/stop
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - stop
+page-type: web-api-instance-method
 browser-compat: api.Window.stop
 ---
+
 {{APIRef}}
 
 The **`window.stop()`** stops further resource loading in the current
@@ -22,11 +17,19 @@ objects.
 
 ## Syntax
 
-```js
-window.stop()
+```js-nolint
+stop()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 window.stop();

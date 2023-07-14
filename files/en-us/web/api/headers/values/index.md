@@ -1,16 +1,12 @@
 ---
-title: Headers.values()
+title: "Headers: values() method"
+short-title: values()
 slug: Web/API/Headers/values
-tags:
-  - API
-  - Experimental
-  - Fetch API
-  - Headers
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Headers.values
 ---
-{{APIRef}}
+
+{{APIRef("Fetch API")}}
 
 The **`Headers.values()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
@@ -20,32 +16,38 @@ in this object. The values are {{jsxref("String")}} objects.
 
 ## Syntax
 
-```js
-headers.values();
+```js-nolint
+values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test Headers object
-var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // Display the values
-for (var value of myHeaders.values()) {
-   console.log(value);
+for (const value of myHeaders.values()) {
+  console.log(value);
 }
 ```
 
 The result is:
 
-    text/xml
-    Accept-Language
+```
+text/xml
+Accept-Language
+```
 
 ## Browser compatibility
 

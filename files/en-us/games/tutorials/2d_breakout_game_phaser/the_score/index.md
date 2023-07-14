@@ -1,23 +1,16 @@
 ---
 title: The score
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - scoring
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 
 This is the **11th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html).
 
-Having a score can also make the game more interesting — you can try to beat your own highscore, or your friend's. In this article we'll add a scoring system to our game.
+Having a score can also make the game more interesting — you can try to beat your own high score, or your friend's. In this article we'll add a scoring system to our game.
 
 We will use a separate variable for storing the score and Phaser's `text()` method to print it out onto the screen.
 
@@ -26,9 +19,9 @@ We will use a separate variable for storing the score and Phaser's `text()` meth
 Add two new variables right after the previously defined ones:
 
 ```js
-// ...
-var scoreText;
-var score = 0;
+// …
+let scoreText;
+let score = 0;
 ```
 
 ## Adding score text to the game display
@@ -36,7 +29,10 @@ var score = 0;
 Now add this line at the end of the `create()` function:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+scoreText = game.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 ```
 
 The `text()` method can take four parameters:
@@ -53,9 +49,9 @@ We will increase the number of points every time the ball hits a brick and updat
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText(`Points: ${score}`);
 }
 ```
 

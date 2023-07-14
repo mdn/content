@@ -1,24 +1,15 @@
 ---
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - set
+page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.set
 ---
+
 {{AddonSidebar()}}
 
 Stores one or more items in the storage area, or update existing items.
 
-When you store or update a value using this API, the {{WebExtAPIRef("storage.onChanged")}} event will fire.
+When you store or update a value using this API, the {{WebExtAPIRef("storage.onChanged")}} event fires.
 
 Note that when storing items in the [`sync`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) storage area, the browser enforces quotas on the amount of data each extension can store. See [Storage quotas for sync data](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data).
 
@@ -26,7 +17,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let settingItem = browser.storage.<storageType>.set(
   keys             // object
 )
@@ -68,32 +59,29 @@ function gotMonster(item) {
 }
 
 function onError(error) {
-  console.log(error)
+  console.log(error);
 }
 
 // define 2 objects
 let monster = {
   name: "Kraken",
   tentacles: true,
-  eyeCount: 10
-}
+  eyeCount: 10,
+};
 
 let kitten = {
   name: "Moggy",
   tentacles: false,
-  eyeCount: 2
-}
+  eyeCount: 2,
+};
 
 // store the objects
-browser.storage.local.set({kitten, monster})
-  .then(setItem, onError);
+browser.storage.local.set({ kitten, monster }).then(setItem, onError);
 
-browser.storage.local.get("kitten")
-  .then(gotKitten, onError);
-browser.storage.local.get("monster")
-  .then(gotMonster, onError);
+browser.storage.local.get("kitten").then(gotKitten, onError);
+browser.storage.local.get("monster").then(gotMonster, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

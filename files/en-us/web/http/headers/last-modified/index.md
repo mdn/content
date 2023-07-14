@@ -1,13 +1,10 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
+page-type: http-header
 browser-compat: http.headers.Last-Modified
 ---
+
 {{HTTPSidebar}}
 
 The **`Last-Modified`** response HTTP header contains a date
@@ -17,11 +14,13 @@ than an {{HTTPHeader("ETag")}} header, it is a fallback mechanism. Conditional r
 containing {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}}
 headers make use of this field.
 
+`Last-Modified` is also used by [crawlers](/en-US/docs/Glossary/Crawler) to adjust crawl frequency, by browsers in [heuristic caching](/en-US/docs/Web/HTTP/Caching#heuristic_caching), and by content management systems (CMS) to display the time the content was last modified.
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
+      <td>{{Glossary("Representation header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -38,7 +37,7 @@ headers make use of this field.
 
 ## Syntax
 
-```
+```http
 Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -64,7 +63,7 @@ Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
-```
+```http
 Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

@@ -1,33 +1,20 @@
 ---
-title: MediaSession.playbackState
+title: "MediaSession: playbackState property"
+short-title: playbackState
 slug: Web/API/MediaSession/playbackState
-tags:
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Property
-  - Reference
-  - Video
-  - playbackState
+page-type: web-api-instance-property
 browser-compat: api.MediaSession.playbackState
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`playbackState`** property of the
 {{domxref("MediaSession")}} interface indicates whether the current media session is
 playing or paused.
 
-## Syntax
+## Value
 
-```js
-let playbackState = mediaSession.playbackState;
-mediaSession.playbackState = playbackState;
-```
-
-### Value
-
-A {{domxref("DOMString")}} indicating the current playback state of the media session.
+A string indicating the current playback state of the media session.
 The value may be one of the following:
 
 - `none`
@@ -48,28 +35,28 @@ callbacks with the relevant action handlers. Each function harnesses the
 const actionHandlers = [
   // play
   [
-    'play',
-    async function() {
+    "play",
+    async () => {
       // play our audio
       await audioEl.play();
       // set playback state
       navigator.mediaSession.playbackState = "playing";
       // update our status element
-      updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
-    }
+      updateStatus(allMeta[index], "Action: play  |  Track is playing…");
+    },
   ],
   [
-    'pause',
+    "pause",
     () => {
       // pause out audio
       audioEl.pause();
       // set playback state
       navigator.mediaSession.playbackState = "paused";
       // update our status element
-      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
-    }
+      updateStatus(allMeta[index], "Action: pause  |  Track has been paused…");
+    },
   ],
-]
+];
 
 for (const [action, handler] of actionHandlers) {
   try {

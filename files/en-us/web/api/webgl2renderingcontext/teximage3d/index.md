@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.texImage3D()
+title: "WebGL2RenderingContext: texImage3D() method"
+short-title: texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texImage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.texImage3D()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a three-dimensional
@@ -16,16 +13,11 @@ texture image.
 
 ## Syntax
 
-```js
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, GLintptr offset);
-
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLCanvasElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLImageElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, HTMLVideoElement source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ImageBitmap source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ImageData source);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ArrayBufferView? srcData);
-void gl.texImage3D(target, level, internalformat, width, height, depth, border, format, type, ArrayBufferView srcData, srcOffset);
+```js-nolint
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, offset)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, source)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData)
+texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData, srcOffset)
 ```
 
 ### Parameters
@@ -40,7 +32,7 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
 
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the color components in the texture. Possible
@@ -57,7 +49,7 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
     - `gl.R8`
     - `gl.R16F`
-    - `gl.`R32F
+    - `gl.R32F`
     - `gl.R8UI`
     - `gl.RG8`
     - `gl.RG16F`
@@ -89,8 +81,7 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the width of the border. Must be 0.
 - `format`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. The correct
-    combinations with `internalformat` are listed in [this
-    table](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
+    combinations with `internalformat` are listed in [this table](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
 - `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
@@ -113,41 +104,46 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
     - `gl.UNSIGNED_INT_24_8`
     - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
-      {{jsxref("null")}})
+      [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `source`
 
   - : One of the following objects can be used as a pixel source for the texture:
 
-    - {{domxref("ArrayBufferView")}},
     - {{domxref("ImageBitmap")}},
     - {{domxref("ImageData")}},
     - {{domxref("HTMLImageElement")}},
     - {{domxref("HTMLCanvasElement")}},
     - {{domxref("HTMLVideoElement")}}.
 
-- offset
+- `srcData`
+
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
+
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
     store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the
     `WebGLBuffer` bound to the `PIXEL_UNPACK_BUFFER` target.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-gl.texImage3D(gl.TEXTURE_3D,
-              0,                                          // level
-              gl.RGBA,                                    // internalFormat
-              1,                                          // width
-              1,                                          // height
-              1,                                          // depth
-              0,                                          // border
-              gl.RGBA,                                    // format
-              gl.UNSIGNED_BYTE,                           // type
-              new Uint8Array([0xff, 0x00, 0x00, 0x00]));  // data
+gl.texImage3D(
+  gl.TEXTURE_3D,
+  0, // level
+  gl.RGBA, // internalFormat
+  1, // width
+  1, // height
+  1, // depth
+  0, // border
+  gl.RGBA, // format
+  gl.UNSIGNED_BYTE, // type
+  new Uint8Array([0xff, 0x00, 0x00, 0x00]),
+); // data
 ```
 
 ## Specifications

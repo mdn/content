@@ -1,15 +1,11 @@
 ---
-title: ReadableStreamDefaultController.enqueue()
+title: "ReadableStreamDefaultController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - enqueue
+page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.enqueue
 ---
+
 {{APIRef("Streams")}}
 
 The **`enqueue()`** method of the
@@ -18,29 +14,28 @@ associated stream.
 
 ## Syntax
 
-```js
-readableStreamDefaultController.enqueue(chunk);
+```js-nolint
+enqueue(chunk)
 ```
 
 ### Parameters
 
-- _chunk_
+- `chunk`
   - : The chunk to enqueue.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 
 In the following simple example, a custom `ReadableStream` is created using
-a constructor (see our [Simple random
-stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
+a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
 random string of text every second and enqueues it into the stream — see
 `controller.enqueue(string)`. A `cancel()` function is also
 provided to stop the generation if {{domxref("ReadableStream.cancel()")}} is called for
@@ -51,6 +46,7 @@ When a button is pressed, the generation is stopped, the stream is closed using
 which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -60,16 +56,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // show it on the screen
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -78,7 +74,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -89,3 +85,8 @@ const stream = new ReadableStream({
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

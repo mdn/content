@@ -1,31 +1,21 @@
 ---
-title: TaskAttributionTiming.containerName
+title: "TaskAttributionTiming: containerName property"
+short-title: containerName
 slug: Web/API/TaskAttributionTiming/containerName
-tags:
-  - API
-  - Long Tasks API
-  - Performance
-  - Property
-  - Reference
-  - TaskAttributionTiming
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TaskAttributionTiming.containerName
 ---
-{{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-The **`containerName`** readonly property of the
-{{domxref("TaskAttributionTiming")}} interface returns the container's `name`
-attribute. A container is the iframe, embed or object etc. that is being implicated, on
-the whole, for a long task.
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
-## Syntax
+The **`containerName`** readonly property of the {{domxref("TaskAttributionTiming")}} interface returns the container's `name`
+attribute. A container is the iframe, embed or object etc. that is being implicated, on the whole, for a long task.
 
-```js
-var containerName = TaskAttributionTiming.containerName;
-```
+## Value
 
-### Value
-
-A {{domxref("DOMString")}} containing the container's `name` attribute.
+A string containing the container's `name` HTML content attribute (e.g. [`<iframe name="myIframe"`](/en-US/docs/Web/HTML/Element/iframe#name) or [`<object name="myObject"`](/en-US/docs/Web/HTML/Element/object#name)).
 
 ## Specifications
 

@@ -1,13 +1,10 @@
 ---
 title: Child combinator
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-combinator
 browser-compat: css.selectors.child
 ---
+
 {{CSSRef("Selectors")}}
 
 The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first.
@@ -15,7 +12,7 @@ The **child combinator** (`>`) is placed between two CSS selectors. It matches o
 ```css
 /* List items that are children of the "my-things" list */
 ul.my-things > li {
-  margin: 2em;
+  margin: 2em;
 }
 ```
 
@@ -37,7 +34,7 @@ span {
 }
 
 div > span {
-  background-color: DodgerBlue;
+  background-color: yellow;
 }
 ```
 
@@ -45,7 +42,8 @@ div > span {
 
 ```html
 <div>
-  <span>Span #1, in the div.
+  <span>
+    Span #1, in the div.
     <span>Span #2, in the span that's in the div.</span>
   </span>
 </div>
@@ -58,11 +56,7 @@ div > span {
 
 ## Specifications
 
-| Specification                                                                                        | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#child-combinators", "child combinator")}}     | {{Spec2("CSS4 Selectors")}} |                     |
-| {{SpecName("CSS3 Selectors", "#child-combinators", "child combinators")}}     | {{Spec2("CSS3 Selectors")}} | No change.          |
-| {{SpecName("CSS2.1", "selector.html#child-selectors", "child selectors")}} | {{Spec2("CSS2.1")}}             | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

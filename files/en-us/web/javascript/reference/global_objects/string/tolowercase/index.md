@@ -1,14 +1,10 @@
 ---
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toLowerCase
 ---
+
 {{JSRef}}
 
 The **`toLowerCase()`** method returns the calling string value
@@ -18,7 +14,7 @@ converted to lower case.
 
 ## Syntax
 
-```js
+```js-nolint
 toLowerCase()
 ```
 
@@ -37,7 +33,7 @@ lower case. `toLowerCase()` does not affect the value of the string
 ### Using `toLowerCase()`
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## Specifications

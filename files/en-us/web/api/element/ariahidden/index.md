@@ -1,28 +1,18 @@
 ---
-title: Element.ariaHidden
+title: "Element: ariaHidden property"
+short-title: ariaHidden
 slug: Web/API/Element/ariaHidden
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaHidden
-  - AriaAttributes
-  - AriaMixin
-  - Element
+page-type: web-api-instance-property
 browser-compat: api.Element.ariaHidden
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaHidden`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute) attribute, which indicates whether the element is exposed to an accessibility API.
+The **`ariaHidden`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)) attribute, which indicates whether the element is exposed to an accessibility API.
 
-## Syntax
+## Value
 
-    var ariaHidden = element.ariaHidden;
-    element.ariaHidden = ariaHidden
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is hidden from the accessibility API.
@@ -33,16 +23,16 @@ A {{domxref("DOMString")}} with one of the following values:
 
 ## Examples
 
-In this example the `aria-hidden` attribute on the element with an ID of `hidden` is set to "true". Using `ariaHidden` we update the value to "false".
+In this example the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute on the element with an ID of `hidden` is set to "true". Using `ariaHidden` we update the value to "false".
 
 ```html
 <div id="hidden" aria-hidden="true">Some things are better left unsaid.</div>
 ```
 
 ```js
-let el = document.getElementById('hidden');
+let el = document.getElementById("hidden");
 console.log(el.ariaHidden); // true
-el.ariaHidden = "false"
+el.ariaHidden = "false";
 console.log(el.ariaHidden); // false
 ```
 

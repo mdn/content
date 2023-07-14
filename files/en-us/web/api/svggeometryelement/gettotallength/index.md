@@ -1,16 +1,11 @@
 ---
-title: SVGGeometryElement.getTotalLength()
+title: "SVGGeometryElement: getTotalLength() method"
+short-title: getTotalLength()
 slug: Web/API/SVGGeometryElement/getTotalLength
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-instance-method
 browser-compat: api.SVGGeometryElement.getTotalLength
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.getTotalLength()`** method returns
@@ -18,9 +13,13 @@ the user agent's computed value for the total length of the path in user units.
 
 ## Syntax
 
-```js
-float someElement.getTotalLength();
+```js-nolint
+getTotalLength()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

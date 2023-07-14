@@ -1,29 +1,22 @@
 ---
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method returns a new typed array (with a new
 underlying buffer), that contains a copy of a portion of the original typed array. This
 method has the same algorithm as {{jsxref("Array.prototype.slice()")}}.
-_TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+_TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-slice.html","shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)
@@ -62,7 +55,7 @@ A new typed array containing the extracted elements.
 
 ## Description
 
-The `slice` method does not alter the original typed array, but instead returns a copy of a portion of the original typed array. As typed arrays only store primitive values, the copy the `slice` method returns is always a shallow copy.
+The `slice` method does not alter the original typed array, but instead returns a copy of a portion of the original typed array. As typed arrays only store primitive values, the copy the `slice` method returns is always a [deep copy](/en-US/docs/Glossary/Deep_copy).
 
 If an element is changed in either typed array, the other typed array is not affected.
 
@@ -71,32 +64,12 @@ If an element is changed in either typed array, the other typed array is not aff
 ### Return a portion of an existing typed array
 
 ```js
-const uint8 = new Uint8Array([1,2,3]);
-uint8.slice(1);   // Uint8Array [ 2, 3 ]
-uint8.slice(2);   // Uint8Array [ 3 ]
-uint8.slice(-2);  // Uint8Array [ 2, 3 ]
-uint8.slice(0,1); // Uint8Array [ 1 ]
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.slice(1); // Uint8Array [ 2, 3 ]
+uint8.slice(2); // Uint8Array [ 3 ]
+uint8.slice(-2); // Uint8Array [ 2, 3 ]
+uint8.slice(0, 1); // Uint8Array [ 1 ]
 ```
-
-## Polyfill
-
-Since there is no global object with the name _TypedArray_, polyfilling must be
-done on an "as needed" basis.
-
-```js
-if (!Uint8Array.prototype.slice) {
-  Object.defineProperty(Uint8Array.prototype, 'slice', {
-    value: function (begin, end)
-     {
-        return new Uint8Array(Array.prototype.slice.call(this, begin, end));
-     }
-  });
-}
-```
-
-If you need to support truly obsolete JavaScript engines that don't support
-{{jsxref("Object.defineProperty")}}, it's best not to polyfill
-`TypedArray.prototype` methods at all, as you can't make them non-enumerable.
 
 ## Specifications
 
@@ -108,5 +81,5 @@ If you need to support truly obsolete JavaScript engines that don't support
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.slice` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("Array.prototype.slice()")}}

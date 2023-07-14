@@ -1,29 +1,19 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.service
+title: "BluetoothRemoteGATTCharacteristic: service property"
+short-title: service
 slug: Web/API/BluetoothRemoteGATTCharacteristic/service
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Property
-  - Reference
-  - Service
-  - Web Bluetooth API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.service
 ---
-{{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTCharacteristic.service`** read-only
-property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-## Syntax
+The **`BluetoothRemoteGATTCharacteristic.service`** read-only
+property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
 
-```js
-var bluetoothRemoteGATTServiceInstance = BluetoothRemoteGATTCharacteristic.service
-```
-
-### Returns
+## Value
 
 An instance {{domxref("BluetoothRemoteGATTService")}}.
 

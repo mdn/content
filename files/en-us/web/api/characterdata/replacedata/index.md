@@ -1,22 +1,18 @@
 ---
-title: CharacterData.replaceData()
+title: "CharacterData: replaceData() method"
+short-title: replaceData()
 slug: Web/API/CharacterData/replaceData
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CharacterData.replaceData
 ---
+
 {{APIRef("DOM")}}
 
-The **`replaceData()`** of the {{domxref("CharacterData")}} interface
-replace a part of the data inside the node with the string given in paramater.
-
-This method is similar to `insertData()`, but `replaceData()` allows
-overwriting a certain number of bytes.
+The **`replaceData()`** method of the {{domxref("CharacterData")}} interface removes a certain number of characters of the existing text in a given `CharacterData` node and replaces those characters with the text provided.
 
 ## Syntax
 
-```js
+```js-nolint
 characterData.replaceData(offset, count, data)
 ```
 
@@ -34,6 +30,11 @@ characterData.replaceData(offset, count, data)
 
 None.
 
+## Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if `offset` or `count` is negative or `offset` is greater than the length of the contained data.
+
 ## Example
 
 ```html
@@ -41,8 +42,8 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.replaceData(2, 4, "replaced");
 ```
@@ -59,5 +60,7 @@ textnode.replaceData(2, 4, "replaced");
 
 ## See also
 
-- {{domxref("CharacterData.appendData()")}}, {{domxref("CharacterData.deleteData()")}}, {{domxref("CharacterData.insertData()")}}
+- {{domxref("CharacterData.appendData()")}}
+- {{domxref("CharacterData.deleteData()")}}
+- {{domxref("CharacterData.insertData()")}}
 - {{domxref("CharacterData.data")}}

@@ -1,21 +1,18 @@
 ---
 title: Updating add-ons for Firefox 8
 slug: Mozilla/Firefox/Releases/8/Updating_add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox 8
-  - Guide
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information on steps you need to take in order to update your existing add-on for compatibility with Firefox 8. See [Firefox 8 for developers](/en-US/docs/Mozilla/Firefox/Releases/8) for a complete list of everything that changed in Firefox 8.
 
 ## Do you need to do anything at all?
 
-If your add-on is distributed on [addons.mozilla.org](http://addons.mozilla.org) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 8.
+If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 8.
 
-So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
+So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
 > **Note:** You should still test your add-on on Firefox 8, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 
@@ -31,8 +28,8 @@ You can avoid this by setting the preference `extensions.autoDisableScopes` to 1
 
 As part of our ongoing effort to streamline Gecko's internals, a few interfaces have been merged together:
 
-- {{ interface("nsIDOMWindowInternal") }} has been merged into {{ interface("nsIDOMWindow") }}. The `nsIDOMWindowInternal` interface still exists, but is empty, and will be removed entirely in Firefox 9. You should update any code that relies on the existence of `nsIDOMWindowInternal` to look for `nsIDOMWindow` instead.
-- All of the sub-interfaces of {{ interface("nsISelection") }} have been merged into the base `nsISelection` interface. If by some chance you were previously looking for {{ interface("nsISelection2") }} or {{ interface("nsISelection3") }}, you should update your code.
+- `nsIDOMWindowInternal` has been merged into `nsIDOMWindow`. The `nsIDOMWindowInternal` interface still exists, but is empty, and will be removed entirely in Firefox 9. You should update any code that relies on the existence of `nsIDOMWindowInternal` to look for `nsIDOMWindow` instead.
+- All of the sub-interfaces of `nsISelection` have been merged into the base `nsISelection` interface. If by some chance you were previously looking for `nsISelection2` or `nsISelection3`, you should update your code.
 
 ## Date handling improved
 

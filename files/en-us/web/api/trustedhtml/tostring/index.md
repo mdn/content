@@ -1,25 +1,28 @@
 ---
-title: TrustedHTML.toString()
+title: "TrustedHTML: toString() method"
+short-title: toString()
 slug: Web/API/TrustedHTML/toString
-tags:
-  - API
-  - Method
-  - Reference
-  - toString
-  - TrustedHTML
+page-type: web-api-instance-method
 browser-compat: api.TrustedHTML.toString
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`toString()`** method of the {{domxref("TrustedHTML")}} interface returns a string which may safely inserted into an injection sink.
 
 ## Syntax
 
-    var str = TrustedHTML.toString();
+```js-nolint
+toString()
+```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing the sanitized HTML.
+A string containing the sanitized HTML.
 
 ## Examples
 
@@ -27,7 +30,7 @@ The constant `escaped` is an object created via the Trusted Types policy escapeH
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<"),
 });
 
 const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");

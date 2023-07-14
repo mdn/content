@@ -1,55 +1,45 @@
 ---
-title: 'PaymentResponse: payerdetailchange event'
+title: "PaymentResponse: payerdetailchange event"
+short-title: payerdetailchange
 slug: Web/API/PaymentResponse/payerdetailchange_event
-tags:
-  - Commerce
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Response
-  - Validation
-  - events
-  - payerdetail
-  - payment
-  - validate
+page-type: web-api-event
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.payerdetailchange_event
 ---
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-**`payerdetailchange`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form.
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+
+A **`payerdetailchange`** event is fired by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form. This can happen when the payer is retrying to submit its details after an error has been detected.
 
 The event handler for `payerdetailchange` should check each value in the form that has changed and ensure that the values are valid. If any are invalid, appropriate error messages should be configured and the {{domxref("PaymentResponse.retry", "retry()")}} method should be called on the {{domxref("PaymentResponse")}} to ask the user to update the invalid entries.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("PaymentRequestUpdateEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange"
-            >onpayerdetailchange</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("payerdetailchange", async (event) => {});
+
+onpayerdetailchange = async (event) => {};
+```
+
+## Event type
+
+A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PaymentRequestUpdateEvent")}}
+
+## Event properties
+
+Although this event type is {{domxref("PaymentRequestUpdateEvent")}}, it doesn't implement any property that is not already on {{domxref("Event")}}.
 
 ## Examples
 
-In the example below, `onpayerdetailchange` is used to set up a listener for the {{event("payerdetailchange")}} event in order to validate the information entered by the user, requesting that any mistakes be corrected
+In the example below, `onpayerdetailchange` is used to set up a listener for the `payerdetailchange` event in order to validate the information entered by the user, requesting that any mistakes be corrected
 
 ```js
 // Options for PaymentRequest(), indicating that shipping address,
@@ -75,7 +65,7 @@ let {
 // Set up a handler for payerdetailchange events, to
 // request corrections as needed.
 
-response.onpayerdetailchange = async ev => {
+response.onpayerdetailchange = async (ev) => {
   const promisesToValidate = [];
   const { payerName, payerEmail, payerPhone } = response;
 
@@ -99,8 +89,8 @@ response.onpayerdetailchange = async ev => {
   // As each validation promise resolves, add the results of the
   // validation to the errors list
 
-  const errors = await Promise.all(promisesToValidate).then(results =>
-    results.reduce((errors, result), Object.assign(errors, result))
+  const errors = await Promise.all(promisesToValidate).then((results) =>
+    results.reduce((errors, result), Object.assign(errors, result)),
   );
 
   // If we found any errors, wait for them to be corrected
@@ -127,9 +117,9 @@ await response.retry({
 You could also set up the event handler using the `addEventListener()` method:
 
 ```js
-response.addEventListener("payerdetailchange", async ev => {
-  ...
-}
+response.addEventListener("payerdetailchange", async (ev) => {
+  // …
+});
 ```
 
 ## Browser compatibility
@@ -141,7 +131,6 @@ response.addEventListener("payerdetailchange", async ev => {
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref("PaymentResponse")}}
-- [`payerdetailchange`](/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event)
 - [`paymentmethodchange`](/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event)
 - [`shippingaddresschange`](/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event)
 - [`shippingoptionchange`](/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event)

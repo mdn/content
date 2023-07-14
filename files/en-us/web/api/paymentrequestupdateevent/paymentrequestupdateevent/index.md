@@ -1,17 +1,11 @@
 ---
-title: PaymentRequestUpdateEvent()
+title: "PaymentRequestUpdateEvent: PaymentRequestUpdateEvent() constructor"
+short-title: PaymentRequestUpdateEvent()
 slug: Web/API/PaymentRequestUpdateEvent/PaymentRequestUpdateEvent
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Payment Request
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Secure context
+page-type: web-api-constructor
 browser-compat: api.PaymentRequestUpdateEvent.PaymentRequestUpdateEvent
 ---
+
 {{APIRef("Payment Request API")}}{{securecontext_header}}
 
 The **`PaymentRequestUpdateEvent()`** constructor creates a new
@@ -22,8 +16,8 @@ are made by passing options to the
 
 ## Syntax
 
-```js
-var paymentRequestUpdateEvent = new PaymentRequestUpdateEvent()
+```js-nolint
+new PaymentRequestUpdateEvent()
 ```
 
 ### Parameters

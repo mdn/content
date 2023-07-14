@@ -1,12 +1,10 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - HTTP
-  - Headers
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Encoding`** {{Glossary("representation header")}} lists any encodings that have been applied to the representation (message payload), and in what order.
@@ -32,7 +30,7 @@ Servers are encouraged to compress data as much as possible, and should use cont
 
 ## Syntax
 
-```
+```http
 Content-Encoding: gzip
 Content-Encoding: compress
 Content-Encoding: deflate
@@ -58,11 +56,10 @@ Content-Encoding: deflate, gzip
     because of a patent issue (it expired in 2003).
 - `deflate`
   - : Using the [zlib](https://en.wikipedia.org/wiki/Zlib)
-    structure (defined in [RFC 1950](https://datatracker.ietf.org/doc/html/rfc1950)) with the [_deflate_](https://en.wikipedia.org/wiki/DEFLATE) compression
-    algorithm (defined in [RFC 1951](https://datatracker.ietf.org/doc/html/rfc1951)).
-- `br`
-  - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli)
-    algorithm.
+    structure (defined in {{rfc(1950)}}) with the [deflate](https://en.wikipedia.org/wiki/Deflate) compression
+    algorithm (defined in {{rfc(1951)}}).
+- `br` {{Non-standard_Inline}}
+  - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm.
 
 ## Examples
 
@@ -72,14 +69,14 @@ On the client side, you can advertise a list of compression schemes that will be
 along in an HTTP request. The {{HTTPHeader("Accept-Encoding")}} header is used for
 negotiating content encoding.
 
-```
+```http
 Accept-Encoding: gzip, deflate
 ```
 
 The server responds with the scheme used, indicated by the
 `Content-Encoding` response header.
 
-```
+```http
 Content-Encoding: gzip
 ```
 

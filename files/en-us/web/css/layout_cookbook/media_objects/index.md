@@ -1,21 +1,17 @@
 ---
-title: 'Recipe: Media objects'
+title: "Recipe: Media objects"
 slug: Web/CSS/Layout_cookbook/Media_objects
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Media object
-  - cookbook
-  - fit-content
-  - float
-  - grid
+page-type: guide
+browser-compat:
+  - css.properties.grid-template-areas
+  - css.properties.float
 ---
+
 {{CSSRef}}
 
 The _Media Object_ is a pattern we see all over the web. [Named by Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) it refers to a two-column box with an image on one side and descriptive text on the other, e.g. a facebook post or tweet.
 
-![](media-object.png)
+![Example of a media object with profile image on the left side and lorem ipsum text to the right filling up 80% of the space](media-object.png)
 
 ## Requirements
 
@@ -33,13 +29,13 @@ Media Object pattern needs some or all of the following characteristics:
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects--download.html)
 
 ## Choices made
 
 I have chosen to use [Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) for the media object as it allows me to control the layout in two dimensions when I need to. This means that when we have a footer, with short content above, the footer can be pushed down to the bottom of the media object.
 
-Another reason to use Grid Layout is in order that I can use {{cssxref("fit-content")}} for the track sizing of the image. By using `fit-content` with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the `max-content` size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width ")}} of 100% applied, it scales down so that it continues to fit inside the column.
+Another reason to use Grid Layout is in order that I can use {{cssxref("fit-content")}} for the track sizing of the image. By using `fit-content` with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the `max-content` size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width")}} of 100% applied, it scales down so that it continues to fit inside the column.
 
 By using {{cssxref("grid-template-areas")}} to achieve the layout, I can see the pattern in the CSS. I define my grid once we have a max-width of 500 pixels, so on smaller devices the media object stacks.
 
@@ -55,11 +51,11 @@ There are a number of possible fallbacks for this pattern, depending on the brow
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects-fallback--download.html)
 
-Once floated elements become grid items the float no longer applies so you don’t need to do anything special to clear the float.
+Once floated elements become grid items the float no longer applies so you don't need to do anything special to clear the float.
 
-What you will need to do is remove any margins applied to the item, and any widths which we don’t need in a grid context (we have the {{cssxref("gap")}} property to control it in grids, and the track takes control of the sizing).
+What you will need to do is remove any margins applied to the item, and any widths which we don't need in a grid context (we have the {{cssxref("gap")}} property to control it in grids, and the track takes control of the sizing).
 
 ## Relevant resources on MDN
 
@@ -71,12 +67,4 @@ What you will need to do is remove any margins applied to the item, and any widt
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-#### grid-template-areas
-
-{{Compat("css.properties.grid-template-areas")}}
-
-#### float
-
-{{Compat("css.properties.float")}}
+{{Compat}}

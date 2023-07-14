@@ -1,0 +1,165 @@
+---
+title: calc()
+slug: Web/CSS/calc
+page-type: css-function
+browser-compat: css.types.calc
+---
+
+{{CSSRef}}
+
+The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}} values.
+
+{{EmbedInteractiveExample("pages/css/function-calc.html")}}
+
+## Syntax
+
+```css
+/* property: calc(expression) */
+width: calc(100% - 80px);
+```
+
+The `calc()` function takes a single expression as its parameter, with the expression's result used as the value. The expression can be any simple expression combining the following operators, using standard [operator precedence rules](/en-US/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
+
+- `+`
+  - : Addition.
+- `-`
+  - : Subtraction.
+- `*`
+  - : Multiplication. At least one of the arguments must be a {{cssxref("&lt;number&gt;")}}.
+- `/`
+  - : Division. The right-hand side must be a {{cssxref("&lt;number&gt;")}}.
+
+The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression, if you wish. You may also use parentheses to establish computation order when needed.
+
+### Notes
+
+Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math which means there's a few cases to be aware of regarding the `infinity` and `NaN` constants.
+For more details on how constants are serialized, see the [`calc-constant`](/en-US/docs/Web/CSS/calc-constant) page.
+
+In addition, the following notes apply:
+
+- The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. For instance, `calc(50% -8px)` will be parsed as "a percentage followed by a negative length" — which is an invalid expression — while `calc(50% - 8px)` is "a percentage followed by a subtraction operator and a length". Likewise, `calc(8px + -50%)` is treated as "a length followed by an addition operator and a negative percentage".
+- The `*` and `/` operators do not require whitespace, but adding it for consistency is recommended.
+- Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
+- It is permitted to nest `calc()` functions, in which case the inner ones are treated as simple parentheses.
+- For lengths, you can't use `0` to mean `0px` (or another length unit); instead, you must use the version with the unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid.
+- The `calc()` function cannot directly substitute the numeric value for percentage types; for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
+
+### Formal syntax
+
+{{csssyntax}}
+
+## Accessibility concerns
+
+When `calc()` is used for controlling text size, be sure that one of the values includes a [relative length unit](/en-US/docs/Web/CSS/length#relative_length_units), for example:
+
+```css
+h1 {
+  font-size: calc(1.5rem + 3vw);
+}
+```
+
+This ensures that text size will scale if the page is zoomed.
+
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+
+## Usage with integers
+
+When **`calc()`** is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example:
+
+```css
+.modal {
+  z-index: calc(3 / 2);
+}
+```
+
+This will give `.modal` a final `z-index` value of 2.
+
+## Examples
+
+### Positioning an object on screen with a margin
+
+`calc()` makes it easy to position an object with a set margin. In this example, the CSS creates a banner that stretches across the window, with a 40-pixel gap between both sides of the banner and the edges of the window:
+
+```css
+.banner {
+  position: absolute;
+  left: 40px;
+  width: calc(100% - 80px);
+  border: solid black 1px;
+  box-shadow: 1px 2px;
+  background-color: yellow;
+  padding: 6px;
+  text-align: center;
+  box-sizing: border-box;
+}
+```
+
+```html
+<div class="banner">This is a banner!</div>
+```
+
+{{EmbedLiveSample('Positioning_an_object_on_screen_with_a_margin', 'auto', '60')}}
+
+### Automatically sizing form fields to fit their container
+
+Another use case for `calc()` is to help ensure that form fields fit in the available space, without extruding past the edge of their container, while maintaining an appropriate margin.
+
+Let's look at some CSS:
+
+```css
+input {
+  padding: 2px;
+  display: block;
+  width: calc(100% - 1em);
+}
+
+#form-box {
+  width: calc(100% / 6);
+  border: 1px solid black;
+  padding: 4px;
+}
+```
+
+Here, the form itself is established to use 1/6 of the available window width. Then, to ensure that input fields retain an appropriate size, we use `calc()` again to establish that they should be the width of their container minus 1em. Then, the following HTML makes use of this CSS:
+
+```html
+<form>
+  <div id="form-box">
+    <label for="misc">Type something:</label>
+    <input type="text" id="misc" name="misc" />
+  </div>
+</form>
+```
+
+{{EmbedLiveSample('Automatically_sizing_form_fields_to_fit_their_container', '700', '80')}}
+
+### Nested `calc()` with CSS Variables
+
+You can also use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_Variables). Consider the following code:
+
+```css
+.foo {
+  --widthA: 100px;
+  --widthB: calc(var(--widthA) / 2);
+  --widthC: calc(var(--widthB) / 2);
+  width: var(--widthC);
+}
+```
+
+After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2) / 2)`, then when it's assigned to `.foo`'s width property, all inner `calc()`s (no matter how deeply nested) will be flattened to just parentheses, so the `width` property's value will be eventually `calc((100px / 2) / 2)`, i.e. `25px`. In short: a `calc()` inside of a `calc()` is identical to just parentheses.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{CSSxRef("&lt;calc-constant&gt;")}}
+- [CSS functions](/en-US/docs/Web/CSS/CSS_Functions)
+- [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

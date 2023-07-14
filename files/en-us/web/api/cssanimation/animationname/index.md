@@ -1,30 +1,21 @@
 ---
-title: CSSAnimation
+title: "CSSAnimation: animationName property"
+short-title: animationName
 slug: Web/API/CSSAnimation/animationName
-tags:
-  - API
-  - Animation
-  - CSSAnimation
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CSSAnimation.animationName
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Animations")}}
 
 The **`animationName`** property of the
 {{domxref("CSSAnimation")}} interface returns the {{CSSXref("animation-name")}}. This
 specifies one or more keyframe at-rules which describe the animation applied to the
 element.
 
-## Syntax
+## Value
 
-```js
-const animationName = CSSAnimation.animationName;
-```
-
-### Value
-
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

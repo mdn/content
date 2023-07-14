@@ -1,16 +1,11 @@
 ---
-title: Clients.matchAll()
+title: "Clients: matchAll() method"
+short-title: matchAll()
 slug: Web/API/Clients/matchAll
-tags:
-  - API
-  - Clients
-  - Experimental
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
+page-type: web-api-instance-method
 browser-compat: api.Clients.matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`matchAll()`** method of the {{domxref("Clients")}}
@@ -22,10 +17,9 @@ service worker.
 
 ## Syntax
 
-```js
-self.clients.matchAll(options).then(function(clients) {
-  // do something with your clients list
-});
+```js-nolint
+matchAll()
+matchAll(options)
 ```
 
 ### Parameters
@@ -35,14 +29,16 @@ self.clients.matchAll(options).then(function(clients) {
   - : An options object allowing you to set options for the matching operation. Available
     options are:
 
-    - `includeUncontrolled`: A boolean value — if set to
-      `true`, the matching operation will return all service worker clients
-      who share the same origin as the current service worker. Otherwise, it returns
-      only the service worker clients controlled by the current service worker. The
-      default is `false`.
-    - `type`: Sets the type of clients you want matched. Available values
-      are `"window"`, `"worker"`, `"sharedworker"`, and
-      `"all"`. The default is `"window"`.
+    - `includeUncontrolled`
+      - : A boolean value — if set to
+        `true`, the matching operation will return all service worker clients
+        who share the same origin as the current service worker. Otherwise, it returns
+        only the service worker clients controlled by the current service worker. The
+        default is `false`.
+    - `type`
+      - : Sets the type of clients you want matched. Available values
+        are `"window"`, `"worker"`, `"sharedworker"`, and
+        `"all"`. The default is `"window"`.
 
 ### Return value
 
@@ -53,10 +49,10 @@ order, correct as per spec.
 ## Examples
 
 ```js
-clients.matchAll(options).then(function(clientList) {
-  for (var i = 0 ; i < clientList.length ; i++) {
-    if (clientList[i].url === 'index.html') {
-      clients.openWindow(clientList[i]);
+clients.matchAll(options).then((clientList) => {
+  for (const client of clientList) {
+    if (client.url === "index.html") {
+      clients.openWindow(client);
       // or do something else involving the matching client
     }
   }

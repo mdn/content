@@ -1,0 +1,53 @@
+---
+title: "WorkerNavigator: mediaCapabilities property"
+short-title: mediaCapabilities
+slug: Web/API/WorkerNavigator/mediaCapabilities
+page-type: web-api-instance-property
+browser-compat: api.WorkerNavigator.mediaCapabilities
+---
+
+{{APIRef("HTML DOM")}}
+
+The read-only **`WorkerNavigator.mediaCapabilities`** property
+returns a {{domxref("MediaCapabilities")}} object that can expose information about the
+decoding and encoding capabilities for a given format and output capabilities as defined
+by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API).
+
+## Value
+
+A {{domxref("MediaCapabilities")}} object.
+
+## Examples
+
+```js
+navigator.mediaCapabilities
+  .decodingInfo({
+    type: "file",
+    audio: {
+      contentType: "audio/mp3",
+      channels: 2,
+      bitrate: 132700,
+      samplerate: 5200,
+    },
+  })
+  .then((result) => {
+    console.log(
+      `This configuration is ${result.supported ? "" : "not "}supported,`,
+    );
+    console.log(`${result.smooth ? "" : "not "}smooth, and`);
+    console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
+  });
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
+- {{domxref("WorkerNavigator")}}

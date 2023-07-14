@@ -1,14 +1,10 @@
 ---
 title: Adjacent sibling combinator
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-combinator
 browser-compat: css.selectors.adjacent_sibling
 ---
+
 {{CSSRef("Selectors")}}
 
 The **adjacent sibling combinator** (`+`) separates two selectors and matches the second element only if it _immediately_ follows the first element, and both are children of the same parent {{DOMxRef("element")}}.

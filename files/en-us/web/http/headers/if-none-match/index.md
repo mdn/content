@@ -1,14 +1,10 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - Conditional Requests
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.If-None-Match
 ---
+
 {{HTTPSidebar}}
 
 The **`If-None-Match`** HTTP request header makes the request conditional. For {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, the server will return the requested resource, with a {{HTTPStatus("200")}} status, only if it doesn't have an {{HTTPHeader("ETag")}} matching the given ones. For other methods, the request will be processed only if the eventually existing resource's {{HTTPHeader("ETag")}} doesn't match any of the values listed.
@@ -39,7 +35,7 @@ There are two common use cases:
 
 ## Syntax
 
-```
+```http
 If-None-Match: "<etag_value>"
 If-None-Match: "<etag_value>", "<etag_value>", …
 If-None-Match: *
@@ -54,12 +50,12 @@ If-None-Match: *
 
 ## Examples
 
-```
-    If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
+```http
+If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
 
-    If-None-Match: W/"67ab43", "54ed21", "7892dd"
+If-None-Match: W/"67ab43", "54ed21", "7892dd"
 
-    If-None-Match: *
+If-None-Match: *
 ```
 
 ## Specifications

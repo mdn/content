@@ -1,35 +1,18 @@
 ---
-title: RTCErrorEvent.error
+title: "RTCErrorEvent: error property"
+short-title: error
 slug: Web/API/RTCErrorEvent/error
-tags:
-  - API
-  - Audio
-  - Error
-  - Error Handling
-  - Media
-  - Property
-  - RTCError
-  - RTCErrorEvent
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
+page-type: web-api-instance-property
 browser-compat: api.RTCErrorEvent.error
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The read-only {{domxref("RTCErrorEvent")}} property **`error`**
 contains an {{domxref("RTCError")}} object describing the details of the error which the
 event is announcing.
 
-## Syntax
-
-```js
-let errorInfo = rtcErrorEvent.error;
-```
-
-### Value
+## Value
 
 An {{domxref("RTCError")}} object whose properties provide details about the error
 which has occurred in the context of a {{Glossary("WebRTC")}} operation.
@@ -67,7 +50,7 @@ function to be called.
 
 The above example uses {{domxref("EventTarget.addEventListener",
   "addEventListener()")}} to add the handler for `error` events. You can also
-use the `RTCDataChannel` object's {{domxref("RTCDataChannel.onerror",
+use the `RTCDataChannel` object's {{domxref("RTCDataChannel.error_event",
   "onerror")}} event handler property, like this:
 
 ```js

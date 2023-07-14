@@ -1,13 +1,11 @@
 ---
-title: Range.deleteContents()
+title: "Range: deleteContents() method"
+short-title: deleteContents()
 slug: Web/API/Range/deleteContents
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
+page-type: web-api-instance-method
 browser-compat: api.Range.deleteContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.deleteContents()`** method removes the contents of
@@ -18,11 +16,19 @@ Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
 
 ## Syntax
 
-```js
-range.deleteContents()
+```js-nolint
+deleteContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 range = document.createRange();

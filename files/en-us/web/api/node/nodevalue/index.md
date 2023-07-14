@@ -1,11 +1,11 @@
 ---
-title: Node.nodeValue
+title: "Node: nodeValue property"
+short-title: nodeValue
 slug: Web/API/Node/nodeValue
-tags:
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Node.nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 The **`nodeValue`** property of the {{domxref("Node")}} interface returns or sets the value of the current node.
@@ -17,7 +17,7 @@ For the document itself, `nodeValue` returns `null`.
 For text, comment, and CDATA nodes, `nodeValue` returns the content of the node.
 For attribute nodes, the value of the attribute is returned.
 
-The following table shows the return values for different elements:
+The following table shows the return values for different types of nodes.
 
 | Node                                 | Value of nodeValue                  |
 | ------------------------------------ | ----------------------------------- |
@@ -44,11 +44,11 @@ The following table shows the return values for different elements:
 and the following script:
 
 ```js
-let node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.querySelector("body").firstChild;
 let result = "<br/>Node names are:<br/>";
 while (node) {
-  result += "Value of " + node.nodeName + ": " + node.nodeValue + "<br/>";
-  node = node.nextSibling
+  result += `Value of ${node.nodeName}: ${node.nodeValue}<br/>`;
+  node = node.nextSibling;
 }
 
 const output = document.getElementById("result");

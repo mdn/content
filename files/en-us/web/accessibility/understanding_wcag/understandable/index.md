@@ -1,23 +1,11 @@
 ---
 title: Understandable
-slug: Web/Accessibility/Understanding_WCAG/Understandable 
-tags:
-  - Accessibility
-  - HELP
-  - Language
-  - Navigation
-  - Principle 3
-  - Text
-  - Understandable
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - abbreviations
-  - consistency
-  - error messages
-  - form validation
-  - labels
-  - slang
+slug: Web/Accessibility/Understanding_WCAG/Understandable
+page-type: guide
 ---
+
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Understandable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Understandable states that information and the operation of user interface must be understandable.
 
 > **Note:** To read the W3C definitions for Understandable and its guidelines and success criteria, see [Principle 3: Understandable — Information and the operation of user interface must be understandable](https://www.w3.org/TR/WCAG21/#understandable).
@@ -41,7 +29,7 @@ This guideline focuses on making text content as understandable as possible.
         The default human language of each web page should be detectable via
         code. This is essential for purposes like making sure the reader has
         arrived at a page written in a language suitable for them. The simplest
-        way to achieve this is to set the {{htmlattrxref("lang")}}
+        way to achieve this is to set the <a href="/en-US/docs/Web/HTML/Global_attributes#lang">lang</a>
         attribute on the page's {{htmlelement("html")}} element, giving
         it a value equal to the language code that best represents the language
         the page is written in.
@@ -59,8 +47,8 @@ This guideline focuses on making text content as understandable as possible.
       <td>
         <p>
           In cases where the content of a page includes words or phrases that
-          are in a different language to the primary language, use the
-          {{htmlattrxref("lang")}} attribute on an element wrapped
+          are in a different language to the primary language, use the
+          <a href="/en-US/docs/Web/HTML/Global_attributes#lang">lang</a> attribute on an element wrapped
           around the term in question (e.g. a {{htmlelement("span")}}
           if no semantic element is available) to set an appropriate language
           for it.
@@ -99,10 +87,10 @@ This guideline focuses on making text content as understandable as possible.
         <p>
           The {{htmlelement("abbr")}} element is often thought of as
           the preferred way to provide an expansion for an abbreviation — it
-          takes a {{htmlattrxref("title")}} attribute that contains the
+          takes a <a href="/en-US/docs/Web/HTML/Global_attributes#title">title</a> attribute that contains the
           expansion, and this appears when the acronym is moused over. However,
           the title contents are not accessible via keyboard, nor are they
-          reliably read out by screenreaders. A better way to handle this is to
+          reliably read out by screen readers. A better way to handle this is to
           again provide links to glossary pages containing the acronym expansion
           and explanation, or at the very least include them in the surrounding
           text in context.
@@ -146,7 +134,7 @@ This guideline focuses on making text content as understandable as possible.
           of words where they are is needed to understand the content fully.
         </p>
         <p>
-          The HTML5 {{htmlelement("audio")}} element can be used to
+          The HTML {{htmlelement("audio")}} element can be used to
           create a control that allows the reader to play back an audio file
           containing the correct pronunciation, and it also makes sense to
           include a textual pronunciation guide after difficult words, in the
@@ -199,7 +187,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("GlobalEventHandlers.onfocus")}} contains some
+        {{domxref("Element.focus_event")}} contains some
         useful information. Also see
         <a
           href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
@@ -224,7 +212,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("GlobalEventHandlers.oninput")}} is useful here.
+        {{domxref("HTMLElement.oninput")}} is useful here.
       </td>
     </tr>
     <tr>
@@ -296,7 +284,14 @@ This guideline focuses on making user interfaces intuitive and understandable.
           functionality if possible.
         </p>
       </td>
-      <td></td>
+ </tr>
+      <tr>
+      <td> 3.2.6 Consistent help (A)</td>
+      <td> <p> Web pages that contain help mechanisms, including self-help options and human contact details, that are repeated on multiple web pages, need to place those mechanisms in the same order on all pages, unless a change is initiated by the user.</p>
+      <td> <p> Check out the <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help">consistent help documentation</a> for this standard to learn more. </p>
+      </td>
+      </td>
+      <tr>
     </tr>
   </tbody>
 </table>
@@ -326,10 +321,10 @@ This guideline centers around helping users enter correct information when requi
         </p>
         <p>
           It is advisable to implement client-side error detection and handling,
-          via HTML5 form validation features, and/or JavaScript, whatever is
+          via HTML form validation features, and/or JavaScript, whatever is
           best for your situation. When an error is detected, an intuitive error
           message should be shown next to the form input that is at fault to
-          help the user correct their inputs. For screenreader users, you can
+          help the user correct their inputs. For screen reader users, you can
           use aria live regions to alert the user to a change on the page.
         </p>
         <div class="note">
@@ -478,6 +473,28 @@ This guideline centers around helping users enter correct information when requi
         input situations, not just ones involving sensitive data.
       </td>
       <td>Again, see 3.3.4.</td>
+      </tr>
+      <tr>
+      <td> 3.3.7 Redundant entry (A) </td>
+      <td>
+      Information that is required that was previously entered or provided by the user in the same process or user flow is either auto-populated or made selectable to the user from a list of options, unless re-entering the information is essential or required for security reasons, or if the information is no longer valid.
+      </td>
+      <td>Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">Understanding redundant entry</a> to learn more.</td>
+      </tr>
+      <tr>
+      <td> 3.3.8 Accessible authentication (Minimum) (AA)
+      </td>
+      <td>
+Cognitive function tests, like remembering a password, are not required for any step in an authentication process unless an alternative is provided, such as an object or personal content (e.g., images, videos, and audio) recognition, or a mechanism to assist (e.g., copy and paste and autosave passwords).
+      </td>
+      <td> Check out the <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication"> accessible authentication documentation</a> for this standard to learn more. </td>
+    </tr>
+    <tr>
+ <td> 3.3.9 Accessible Authentication (Enhanced) (AAA) </td>
+    <td>
+A cognitive function test, like remembering a password, must not be required for any step in an authentication process without providing an alternative that does not rely on a cognitive function test or provides a mechanism to assist the user in completing the cognitive function test. Authentication tests that require the user to recognize objects or identify non-text content the user provided to the website are allowed.
+    </td>
+<td> Check out the <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced">enhanced accessible authentication documentation (AAA)</a> to learn more.</td>
     </tr>
   </tbody>
 </table>
@@ -486,9 +503,9 @@ This guideline centers around helping users enter correct information when requi
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  2.  [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  Understandable
-  4.  [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. Understandable
+  4. [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)

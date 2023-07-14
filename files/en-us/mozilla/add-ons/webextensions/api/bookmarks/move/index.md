@@ -1,18 +1,10 @@
 ---
 title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - move
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.move
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.move()`** method moves the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.
@@ -23,8 +15,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var movingBookmark = browser.bookmarks.move(
+```js-nolint
+let movingBookmark = browser.bookmarks.move(
   id,                    // string
   destination           // object
 )
@@ -45,9 +37,11 @@ var movingBookmark = browser.bookmarks.move(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a single [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders.") object, describing the moved node.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a single [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) object, describing the moved node.
 
 If the node corresponding to the `id` parameter can't be found, the promise is rejected with an error message.
+
+> **Note:** If you move multiple bookmarks, because this API is asynchronous, the move calls may get processed in any order. Consequently, the value of each bookmark's index returned in {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} may change or be unknown until all the move calls are completed. If the index associated with a bookmark matters to your extension, then – when moving multiple bookmarks – the extension should wait for each `bookmarks.move` call to complete before moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a move call executing concurrently while the original call is in progress.
 
 ## Examples
 
@@ -62,9 +56,9 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var bookmarkId = "abcdefghilkl";
+let bookmarkId = "abcdefghijkl";
 
-var movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
+let movingBookmark = browser.bookmarks.move(bookmarkId, { index: 0 });
 movingBookmark.then(onMoved, onRejected);
 ```
 
@@ -74,11 +68,10 @@ movingBookmark.then(onMoved, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-move) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-move) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,4 +98,4 @@ movingBookmark.then(onMoved, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

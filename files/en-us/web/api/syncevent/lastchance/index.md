@@ -1,34 +1,24 @@
 ---
-title: SyncEvent.lastChance
+title: "SyncEvent: lastChance property"
+short-title: lastChance
 slug: Web/API/SyncEvent/lastChance
-tags:
-  - API
-  - Background Sync
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - lastChance
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SyncEvent.lastChance
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
-The **`SyncEvent.lastChance`** read-only property of the
-{{domxref("SyncEvent")}} interface returns `true` if the user agent will not
+The **`SyncEvent.lastChance`** read-only property of the
+{{domxref("SyncEvent")}} interface returns `true` if the user agent will not
 make further synchronization attempts after the current attempt. This is the value
 passed in the `lastChance` parameter of the
 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} constructor.
 
-## Syntax
+## Value
 
-```js
-var lastChance = SyncEvent.lastChance
-```
-
-### Value
-
-A boolean value that indicates whether the user agent will not make further
+A boolean value that indicates whether the user agent will not make further
 synchronization attempts after the current attempt.
 
 ## Specifications

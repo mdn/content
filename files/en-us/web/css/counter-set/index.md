@@ -1,17 +1,15 @@
 ---
 title: counter-set
 slug: Web/CSS/counter-set
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Lists
-  - CSS Property
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.counter-set
 ---
+
 {{CSSRef}}
 
-The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets a [CSS counter](/en-US/docs/Web/Guide/CSS/Counters) to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
+The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
+
+{{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
 > **Note:** The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
 
@@ -34,6 +32,7 @@ counter-set: none;
 counter-set: inherit;
 counter-set: initial;
 counter-set: revert;
+counter-set: revert-layer;
 counter-set: unset;
 ```
 
@@ -81,9 +80,9 @@ h1 {
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/Counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}
-- {{cssxref("counter")}} and {{cssxref("counters")}} functions
+- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("content")}} property

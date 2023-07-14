@@ -1,25 +1,24 @@
 ---
-title: ImageTrackList.ready
+title: "ImageTrackList: ready property"
+short-title: ready
 slug: Web/API/ImageTrackList/ready
-tags:
-  - API
-  - Property
-  - Reference
-  - ready
-  - ImageTrackList
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ImageTrackList.ready
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`ready`** property of the {{domxref("ImageTrackList")}} interface returns a {{jsxref("Promise")}} that resolves when the `ImageTrackList` is populated with {{domxref("ImageTrack","tracks")}}.
 
-### Value
+## Value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}}.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Examples
 
-The following example prints the value of `ready` to the console, this will be `Undefined` once the promise resolves.
+The following example prints the value of `ready` to the console, this will be `undefined` once the promise resolves.
 
 ```js
 let tracks = imageDecoder.tracks;
@@ -34,5 +33,3 @@ console.log(ready);
 ## Browser compatibility
 
 {{Compat}}
-
-

@@ -1,32 +1,28 @@
 ---
-title: WheelEvent.deltaZ
+title: "WheelEvent: deltaZ property"
+short-title: deltaZ
 slug: Web/API/WheelEvent/deltaZ
-tags:
-  - API
-  - DOM
-  - Interface
-  - Property
-  - Read-only
-  - Reference
-  - WheelEvent
+page-type: web-api-instance-property
 browser-compat: api.WheelEvent.deltaZ
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaZ`** read-only property is a
 `double` representing the scroll amount along the z-axis, in the
 {{domxref("WheelEvent.deltaMode")}} unit.
 
-## Syntax
+## Value
+
+A number.
+
+## Examples
 
 ```js
-var dZ = event.deltaZ;
-```
-
-## Example
-
-```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaZ": 4, "deltaMode": 0});
+const syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaZ: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaZ);
 ```
@@ -41,5 +37,5 @@ console.log(syntheticEvent.deltaZ);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

@@ -1,25 +1,19 @@
 ---
-title: FileSystemWritableFileStream.seek()
+title: "FileSystemWritableFileStream: seek() method"
+short-title: seek()
 slug: Web/API/FileSystemWritableFileStream/seek
-tags:
-  - File
-  - File System Access API
-  - FileSystemWritableFileStream
-  - Method
-  - stream
-  - write
+page-type: web-api-instance-method
 browser-compat: api.FileSystemWritableFileStream.seek
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-The **`seek()`** method of the
-{{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor
-offset to the position (in bytes) specified when calling the method.
+{{securecontext_header}}{{APIRef("File System Access API")}}
+
+The **`seek()`** method of the {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor offset to the position (in bytes) specified when calling the method.
 
 ## Syntax
 
-```js
-FileSystemWritableStream.seek(position).then(...);
+```js-nolint
+seek(position)
 ```
 
 ### Parameters
@@ -33,9 +27,9 @@ FileSystemWritableStream.seek(position).then(...);
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : If the {{domxref('PermissionStatus.state')}} is not 'granted'.
-- TypeError
+- {{jsxref("TypeError")}}
   - : If `position` is not defined or of type unsigned long.
 
 ## Examples
@@ -53,5 +47,4 @@ Todo
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

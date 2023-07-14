@@ -1,30 +1,14 @@
 ---
-title: XRView.transform
+title: "XRView: transform property"
+short-title: transform
 slug: Web/API/XRView/transform
-tags:
-  - API
-  - AR
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - View
-  - Viewpoint
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - augmented
-  - camera
-  - transform
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRView.transform
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`transform`** property of the
 {{domxref("XRView")}} interface is an {{domxref("XRRigidTransform")}} object which
@@ -59,11 +43,11 @@ world during rendering.
 const modelViewMatrix = mat4.create();
 const normalMatrix = mat4.create();
 
-for (let view of pose.views) {
-  let viewport = glLayer.getViewport(view);
+for (const view of pose.views) {
+  const viewport = glLayer.getViewport(view);
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
-  for (let obj of world.objects) {
+  for (const obj of world.objects) {
     mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, obj.matrix);
     mat4.invert(normalMatrix, modelViewMatrix);
     mat4.transpose(normalMatrix, normalMatrix);
@@ -105,7 +89,7 @@ Finally, we call the object's `render()` routine, passing along the
 `modelViewMatrix` and `normalMatrix` so the renderer can place and
 light the object properly.
 
-> **Note:** This example is derived from a larger example...
+> **Note:** This example is derived from a larger example…
 > **<<<--- finish and add link --->>>**
 
 ## Specifications

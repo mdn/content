@@ -1,45 +1,34 @@
 ---
-title: HTMLAreaElement.relList
+title: "HTMLAreaElement: relList property"
+short-title: relList
 slug: Web/API/HTMLAreaElement/relList
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.relList
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLAreaElement.relList`** read-only property reflects
-the {{htmlattrxref("rel", "area")}} attribute. It is a live {{domxref("DOMTokenList")}}
-containing the set of [link types](/en-US/docs/Web/HTML/Link_types)
-indicating the relationship between the resource represented by the
-{{HTMLElement("area")}} element and the current document.
+The **`HTMLAreaElement.relList`** read-only property reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute. It is a live {{domxref("DOMTokenList")}} containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("area")}} element and the current document.
 
 The property itself is read-only, meaning you can't substitute the
 {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
 changed.
 
-## Syntax
+## Value
+
+A live {{domxref("DOMTokenList")}} of strings.
+
+## Examples
 
 ```js
-var relstr = areaElt.relList;
-```
+const areas = document.getElementsByTagName("area");
+const length = areas.length;
 
-## Example
-
-```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
-
-for (var i = 0; i < length; i++) {
-  var list = areas[i].relList;
-  var listLength = list.length;
+for (const area of areas) {
   console.log("New area found.");
-  for (var j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+  area.relList.forEach((relValue) => {
+    console.log(relValue);
+  });
 }
 ```
 
@@ -55,5 +44,5 @@ for (var i = 0; i < length; i++) {
 
 - The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("link")}},
   {{domxref("HTMLAnchorElement.relList")}} and {{domxref("HTMLLinkElement.relList")}}.
-- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+- The very same list but as a space-separated tokens in a string:
   {{domxref("HTMLAreaElement.rel")}}

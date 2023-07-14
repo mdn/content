@@ -1,30 +1,25 @@
 ---
-title: Headers.has()
+title: "Headers: has() method"
+short-title: has()
 slug: Web/API/Headers/has
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Method
-  - Reference
-  - has
+page-type: web-api-instance-method
 browser-compat: api.Headers.has
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The **`has()`** method of the {{domxref("Headers")}} interface
 returns a boolean stating whether a `Headers` object contains a certain
 header.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-	1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 
-```js
-myHeaders.has(name);
+```js-nolint
+has(name)
 ```
 
 ### Parameters
@@ -33,25 +28,25 @@ myHeaders.has(name);
   - : The name of the HTTP header you want to test for. If the given name is not a valid
     HTTP header name, this method throws a {{jsxref("TypeError")}}.
 
-### Returns
+### Return value
 
 A boolean value.
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}, then test for the
 existence of it using `has()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.has('Content-Type'); // Returns true
-myHeaders.has('Accept-Encoding'); // Returns false
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.has("Content-Type"); // Returns true
+myHeaders.has("Accept-Encoding"); // Returns false
 ```
 
 ## Specifications

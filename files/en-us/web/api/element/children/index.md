@@ -1,15 +1,11 @@
 ---
-title: Element.children
+title: "Element: children property"
+short-title: children
 slug: Web/API/Element/children
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - Property
-  - children
+page-type: web-api-instance-property
 browser-compat: api.Element.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}
@@ -17,16 +13,7 @@ which contains all of the child {{domxref("Element", "elements")}} of the elemen
 
 `Element.children` includes only element nodes. To get all child nodes, including non-element nodes like text and comment nodes, use {{domxref("Node.childNodes")}}.
 
-## Syntax
-
-```js
-// Getter
-collection = myElement.children;
-
-// No setter; read-only property
-```
-
-### Return value
+## Value
 
 An {{ domxref("HTMLCollection") }} which is a live, ordered collection of the DOM
 elements which are children of `node`. You can access the
@@ -37,12 +24,12 @@ JavaScript array-style notation.
 If the element has no element children, then `children` is an empty list with a
 `length` of `0`.
 
-## Example
+## Examples
 
 ```js
-const myElement = document.getElementById('foo');
-for (let i = 0; i < myElement.children.length; i++) {
-  console.log(myElement.children[i].tagName);
+const myElement = document.getElementById("foo");
+for (const child of myElement.children) {
+  console.log(child.tagName);
 }
 ```
 

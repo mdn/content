@@ -1,43 +1,28 @@
 ---
-title: SpeechSynthesisEvent.charIndex
+title: "SpeechSynthesisEvent: charIndex property"
+short-title: charIndex
 slug: Web/API/SpeechSynthesisEvent/charIndex
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - charIndex
-  - speech
-  - synthesis
+page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.charIndex
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-The **`charIndex`** read-only property of the
-{{domxref("SpeechSynthesisUtterance")}} interface returns the index position of the
-character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken
-when the event was triggered.
+{{APIRef("Web Speech API")}}
 
-## Syntax
+The **`charIndex`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the index position of the character in {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
 
-```js
-event.charIndex;
-```
-
-### Value
+## Value
 
 A number.
 
 ## Examples
 
 ```js
-utterThis.onpause = function(event) {
-  var char = event.utterance.text.charAt(event.charIndex);
-  console.log('Speech paused at character ' + event.charIndex + ' of "' +
-  event.utterance.text + '", which is "' + char + '".');
-}
+utterThis.onpause = (event) => {
+  const char = event.utterance.text.charAt(event.charIndex);
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+  );
+};
 ```
 
 ## Specifications

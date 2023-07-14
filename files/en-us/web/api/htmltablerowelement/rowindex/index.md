@@ -1,14 +1,11 @@
 ---
-title: HTMLTableRowElement.rowIndex
+title: "HTMLTableRowElement: rowIndex property"
+short-title: rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLTableRowElement.rowIndex
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableRowElement.rowIndex`** read-only property
@@ -20,17 +17,11 @@ table in the right order. Therefore the rows count from `<thead>` to
 `<tbody>`, from `<tbody>` to
 `<tfoot>`.
 
-## Syntax
-
-```js
-var index = HTMLTableRowElement.rowIndex
-```
-
-### Value
+## Value
 
 Returns the index of the row, or `-1` if the row is not part of a table.
 
-## Example
+## Examples
 
 This example uses JavaScript to label all the row numbers in a table.
 
@@ -38,24 +29,39 @@ This example uses JavaScript to label all the row numbers in a table.
 
 ```html
 <table>
-  <thead>
-    <tr><th>Item</th>        <th>Price</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Bananas</td>     <td>$2</td></tr>
-    <tr><td>Oranges</td>     <td>$8</td></tr>
-    <tr><td>Top Sirloin</td> <td>$20</td></tr>
-  </tbody>
-  <tfoot>
-    <tr><td>Total</td>       <td>$30</td></tr>
-  </tfoot>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bananas</td>
+      <td>$2</td>
+    </tr>
+    <tr>
+      <td>Oranges</td>
+      <td>$8</td>
+    </tr>
+    <tr>
+      <td>Top Sirloin</td>
+      <td>$20</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>$30</td>
+    </tr>
+  </tfoot>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let rows = document.querySelectorAll('tr');
+let rows = document.querySelectorAll("tr");
 
 rows.forEach((row) => {
   let z = document.createElement("td");
@@ -66,7 +72,7 @@ rows.forEach((row) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Browser compatibility
 

@@ -1,14 +1,10 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a
@@ -18,7 +14,7 @@ The **`valueOf()`** method returns the primitive value of a
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 
@@ -39,8 +35,8 @@ This method is usually called internally by JavaScript and not explicitly in cod
 ### Using `valueOf()`
 
 ```js
-var x = new String('Hello world');
-console.log(x.valueOf()); // Displays 'Hello world'
+const x = new String("Hello world");
+console.log(x.valueOf()); // 'Hello world'
 ```
 
 ## Specifications

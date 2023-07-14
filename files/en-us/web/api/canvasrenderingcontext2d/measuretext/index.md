@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.measureText()
+title: "CanvasRenderingContext2D: measureText() method"
+short-title: measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.measureText
 ---
+
 {{APIRef}}
 
 The
@@ -18,20 +15,20 @@ measured text (such as its width, for example).
 
 ## Syntax
 
-```js
-ctx.measureText(text);
+```js-nolint
+measureText(text)
 ```
 
 ### Parameters
 
 - `text`
-  - : The text {{jsxref("String")}} to measure.
+  - : The text string to measure.
 
 ### Return value
 
 A {{domxref("TextMetrics")}} object.
 
-## Example
+## Examples
 
 Given this {{HTMLElement("canvas")}} element:
 
@@ -39,14 +36,14 @@ Given this {{HTMLElement("canvas")}} element:
 <canvas id="canvas"></canvas>
 ```
 
-... you can get a {{domxref("TextMetrics")}} object using the following code:
+… you can get a {{domxref("TextMetrics")}} object using the following code:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-let text = ctx.measureText('Hello world');
-console.log(text.width);  // 56;
+let text = ctx.measureText("Hello world");
+console.log(text.width); // 56;
 ```
 
 ## Specifications

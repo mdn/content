@@ -1,15 +1,11 @@
 ---
-title: AudioNode.numberOfOutputs
+title: "AudioNode: numberOfOutputs property"
+short-title: numberOfOutputs
 slug: Web/API/AudioNode/numberOfOutputs
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - numberOfOutputs
+page-type: web-api-instance-property
 browser-compat: api.AudioNode.numberOfOutputs
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `numberOfOutputs` property of
@@ -17,17 +13,11 @@ the {{ domxref("AudioNode") }} interface returns the number of outputs coming ou
 the node. Destination nodes — like {{domxref("AudioDestinationNode") }} — have
 a value of 0 for this attribute.
 
-## Syntax
-
-```js
-var numOutputs = audioNode.numberOfOutputs;
-```
-
-### Value
+## Value
 
 An integer ≥ 0.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();
@@ -52,5 +42,4 @@ console.log(audioCtx.destination.numberOfOutputs); // 0
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

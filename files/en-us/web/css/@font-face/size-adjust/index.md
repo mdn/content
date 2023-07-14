@@ -1,18 +1,13 @@
 ---
 title: size-adjust
 slug: Web/CSS/@font-face/size-adjust
-tags:
-  - '@font-face'
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - size-adjust
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.size-adjust
 ---
+
 {{CSSRef}}
 
-The **`size-adjust`** CSS descriptor defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
+The **`size-adjust`** CSS descriptor for the {{cssxref("@font-face")}} at-rule defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 
 The `size-adjust` descriptor behaves in a similar fashion to the {{cssxref("font-size-adjust")}} property. It calculates an adjustment per font by matching ex heights.
 
@@ -66,13 +61,13 @@ The `size-adjust` property can help when overriding the metrics of a fallback fo
 
 ## See also
 
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
+- {{cssxref("@font-face/font-display", "font-display")}} descriptor
+- {{cssxref("@font-face/font-family", "font-family")}} descriptor
+- {{cssxref("@font-face/font-weight", "font-weight")}} descriptor
+- {{cssxref("@font-face/font-style", "font-style")}} descriptor
+- {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor
+- {{cssxref("@font-face/src", "src")}} descriptor
+- {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor
+- {{cssxref('font-size-adjust')}} property

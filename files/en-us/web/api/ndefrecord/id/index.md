@@ -1,14 +1,14 @@
 ---
-title: NDEFRecord.id
+title: "NDEFRecord: id property"
+short-title: id
 slug: Web/API/NDEFRecord/id
-tags:
-  - NDEF
-  - NDEFRecord
-  - Reference
-  - Web NFC
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.NDEFRecord.id
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`id`** property of the
 {{DOMxRef("NDEFRecord")}} interface returns the record identifier, which is an
@@ -21,13 +21,13 @@ identifier or any other part of the records.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.id
 ```
 
 ### Value
 
-A {{DOMxRef("USVString")}}.
+A string.
 
 ## Specifications
 

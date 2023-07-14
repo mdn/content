@@ -1,21 +1,12 @@
 ---
 title: Creating an item component
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Components
-  - Events
-  - Data
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
+page-type: learn-module-chapter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. the Angular event model is covered here.
+Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. The Angular event model is covered here.
 
 <table>
   <tbody>
@@ -78,8 +69,11 @@ Add markup for managing items by replacing the placeholder content in `item.comp
 
 ```html
 <div class="item">
-
-  <input [id]="item.description" type="checkbox" (change)="item.done = !item.done" [checked]="item.done" />
+  <input
+    [id]="item.description"
+    type="checkbox"
+    (change)="item.done = !item.done"
+    [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
   <div class="btn-wrapper" *ngIf="!editable">
@@ -89,19 +83,25 @@ Add markup for managing items by replacing the placeholder content in `item.comp
 
   <!-- This section shows only if user clicks Edit button -->
   <div *ngIf="editable">
-    <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+    <input
+      class="sm-text-input"
+      placeholder="edit item"
+      [value]="item.description"
+      #editedItem
+      (keyup.enter)="saveItem(editedItem.value)" />
 
     <div class="btn-wrapper">
       <button class="btn" (click)="editable = !editable">Cancel</button>
-      <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
+      <button class="btn btn-save" (click)="saveItem(editedItem.value)">
+        Save
+      </button>
     </div>
   </div>
-
 </div>
 ```
 
 The first input is a checkbox so users can check off items when an item is complete.
-The double curly braces, `\{{}}`, in the `<input>` and `<label>` for the checkbox signifies Angular's interpolation.
+The double curly braces, `\{{}}`, in the `<label>` for the checkbox signifies Angular's interpolation.
 Angular uses `\{{item.description}}` to retrieve the description of the current `item` from the `items` array.
 The next section explains how components share data in detail.
 
@@ -126,11 +126,18 @@ In this case, if `editable` is `true`, Angular puts the `<div>` and its child `<
 ```html
 <!-- This section shows only if user clicks Edit button -->
 <div *ngIf="editable">
-  <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+  <input
+    class="sm-text-input"
+    placeholder="edit item"
+    [value]="item.description"
+    #editedItem
+    (keyup.enter)="saveItem(editedItem.value)" />
 
   <div class="btn-wrapper">
     <button class="btn" (click)="editable = !editable">Cancel</button>
-    <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
+    <button class="btn btn-save" (click)="saveItem(editedItem.value)">
+      Save
+    </button>
   </div>
 </div>
 ```
@@ -147,20 +154,27 @@ When a user clicks the **Cancel** button, `editable` toggles to `false`, which r
 When `editable` is `false`, Angular puts `<div>` with the **Edit** and **Delete** buttons back in the DOM.
 
 Clicking the **Save** button calls the `saveItem()` method.
-The `saveItem()` method takes the value from the `#editedItem` `<input>` and changes the item's `description` to `editedItem.value` string.
+The `saveItem()` method takes the value from the `#editedItem` element and changes the item's `description` to `editedItem.value` string.
 
 ## Prepare the AppComponent
 
-In the next section, you will add code that relies on communication the `AppComponent` and the `ItemComponent`.
-Configure the AppComponent first by adding the following to `app.component.ts`:
+In the next section, you will add code that relies on communication between the `AppComponent` and the `ItemComponent`.
+
+Add the following line near the top of the `app.component.ts` file to import the `Item`:
+
+```ts
+import { Item } from "./item";
+```
+
+Then, configure the AppComponent by adding the following to the same file's class:
 
 ```js
-remove(item) {
+remove(item: Item) {
   this.allItems.splice(this.allItems.indexOf(item), 1);
 }
 ```
 
-The `remove()` method uses the JavaScript `Array.splice()` method to remove one item at at the `indexOf` the relevant item.
+The `remove()` method uses the JavaScript `Array.splice()` method to remove one item at the `indexOf` the relevant item.
 In plain English, this means that the `splice()` method removes the item from the array.
 For more information on the `splice()` method, see the MDN Web Docs article on [`Array.prototype.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 
@@ -171,7 +185,7 @@ To use the `ItemComponent` UI, you must add logic to the component such as funct
 In `item.component.ts`, edit the JavaScript imports as follows:
 
 ```js
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Item } from "../item";
 ```
 
@@ -185,11 +199,10 @@ export class ItemComponent {
 
   editable = false;
 
-  @Input() item: Item;
-  @Input() newItem: string;
+  @Input() item!: Item;
   @Output() remove = new EventEmitter<Item>();
 
-  saveItem(description) {
+  saveItem(description: string) {
     if (!description) return;
     this.editable = false;
     this.item.description = description;
@@ -205,10 +218,12 @@ When you use a property in the template, you must also declare it in the class.
 An `@Input()` serves as a doorway for data to come into the component, and an `@Output()` acts as a doorway for data to go out of the component.
 An `@Output()` has to be of type `EventEmitter`, so that a component can raise an event when there's data ready to share with another component.
 
+> **Note**: The `!` in the class's property declaration is called a [definite assignment assertion](https://www.typescriptlang.org/docs/handbook/2/classes.html#--strictpropertyinitialization). This operator tells Typescript that the `item` field is always initialized and not `undefined`, even when TypeScript cannot tell from the constructor's definition. If this operator is not included in your code and you have strict TypeScript compilation settings, the app will fail to compile.
+
 Use `@Input()` to specify that the value of a property can come from outside of the component.
 Use `@Output()` in conjunction with `EventEmitter` to specify that the value of a property can leave the component so that another component can receive that data.
 
-The `saveItem()` method takes as an argument a `description`.
+The `saveItem()` method takes as an argument a `description` of type `string`.
 The `description` is the text that the user enters into the HTML `<input>` when editing an item in the list.
 This `description` is the same string from the `<input>` with the `#editedItem` template variable.
 
@@ -241,12 +256,15 @@ To use the `ItemComponent` selector within the `AppComponent`, you add the eleme
 Replace the current unordered list in `app.component.html` with the following updated version:
 
 ```html
-<h2>\{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
-<ng-template #elseBlock>items</ng-template></h2>
+<h2>
+  \{{items.length}}
+  <span *ngIf="items.length === 1; else elseBlock">item</span>
+  <ng-template #elseBlock>items</ng-template>
+</h2>
 
 <ul>
-  <li *ngFor="let item of items">
-    <app-item (remove)="remove(item)" [item]="item"></app-item>
+  <li *ngFor="let i of items">
+    <app-item (remove)="remove(i)" [item]="i"></app-item>
   </li>
 </ul>
 ```
@@ -268,7 +286,7 @@ For any number of items in the array, Angular would create that many `<li>` elem
 You can use an `*ngFor` on other elements, too, such as `<div>`, `<span>`, or `<p>`, to name a few.
 
 The `AppComponent` has a `remove()` method for removing the item, which is bound to the `remove` property in the `ItemComponent`.
-The `item` property in the square brackets, `[]`, binds the value of `item` between the `AppComponent` and the `ItemComponent`.
+The `item` property in the square brackets, `[]`, binds the value of `i` between the `AppComponent` and the `ItemComponent`.
 
 Now you should be able to edit and delete items from the list.
 When you add or delete items, the count of the items should also change.
@@ -283,14 +301,14 @@ Paste the following styles into `item.component.css`.
 
 ```css
 .item {
-  padding: .5rem 0 .75rem 0;
+  padding: 0.5rem 0 0.75rem 0;
   text-align: left;
   font-size: 1.2rem;
 }
 
 .btn-wrapper {
   margin-top: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .btn {
@@ -302,7 +320,6 @@ Paste the following styles into `item.component.css`.
   background-color: #000;
   color: #fff;
   border-color: #000;
-
 }
 
 .btn-save:hover {
@@ -315,7 +332,7 @@ Paste the following styles into `item.component.css`.
 }
 
 .checkbox-wrapper {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .btn-warn {
@@ -335,7 +352,7 @@ Paste the following styles into `item.component.css`.
 
 .sm-text-input {
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   border: 2px solid #555;
   display: block;
   box-sizing: border-box;
@@ -362,10 +379,12 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 /* checkbox aspect */
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
-  content: '';
+  content: "";
   position: absolute;
-  left: 0; top: 0;
-  width: 1.25em; height: 1.25em;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
   border: 2px solid #ccc;
   background: #fff;
 }
@@ -373,14 +392,15 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  content: '\2713\0020';
+  content: "\2713\0020";
   position: absolute;
-  top: .15em; left: .22em;
+  top: 0.15em;
+  left: 0.22em;
   font-size: 1.3em;
   line-height: 0.8;
   color: #0d8dee;
-  transition: all .2s;
-  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+  transition: all 0.2s;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
 }
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
@@ -405,58 +425,3 @@ You should now have a styled Angular to-do list application that can add, edit, 
 The next step is to add filtering so that you can look at items that meet specific criteria.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

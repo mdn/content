@@ -1,32 +1,21 @@
 ---
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
-tags:
-  - API
-  - Capture
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - screen
+page-type: web-api-interface
 browser-compat: api.MediaTrackSupportedConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaTrackSupportedConstraints`** dictionary establishes the list of constrainable properties recognized by the {{Glossary("user agent")}} or browser in its implementation of the {{domxref("MediaStreamTrack")}} object. An object conforming to `MediaTrackSupportedConstraints` is returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.
 
-Because of the way interface definitions in WebIDL work, if a constraint is requested but not supported, no error will occur. Instead, the specified constraints will be applied, with any unrecognized constraints stripped from the request.That can lead to confusing and hard to debug errors, so be sure to use `getSupportedConstraints()` to retrieve this information before attempting to establish constraints if you need to know the difference between silently ignoring a constraint and a constraint being accepted.
+Because of the way interface definitions in WebIDL work, if a constraint is requested but not supported, no error will occur. Instead, the specified constraints will be applied, with any unrecognized constraints stripped from the request. That can lead to confusing and hard to debug errors, so be sure to use `getSupportedConstraints()` to retrieve this information before attempting to establish constraints if you need to know the difference between silently ignoring a constraint and a constraint being accepted.
 
 An actual constraint set is described using an object based on the {{domxref("MediaTrackConstraints")}} dictionary.
 
-To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
-## Properties
+## Instance properties
 
 Some combination—but not necessarily all—of the following properties will exist on the object.
 
@@ -44,7 +33,7 @@ Some combination—but not necessarily all—of the following properties will ex
   - : A Boolean value whose value is `true` if the [`facingMode`](/en-US/docs/Web/API/MediaTrackConstraints#facingmode) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.resizeMode", "resizeMode")}}
   - : A Boolean value whose value is `true` if the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint is supported in the current environment.
-- {{domxref("MediaTrackSupportedConstraints.volume", "volume")}}
+- {{domxref("MediaTrackSupportedConstraints.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A Boolean value whose value is `true` if the [`volume`](/en-US/docs/Web/API/MediaTrackConstraints#volume) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.sampleRate", "sampleRate")}}
   - : A Boolean value whose value is `true` if the [`sampleRate`](/en-US/docs/Web/API/MediaTrackConstraints#samplerate) constraint is supported in the current environment.
@@ -63,12 +52,10 @@ Some combination—but not necessarily all—of the following properties will ex
 - {{domxref("MediaTrackSupportedConstraints.groupId", "groupId")}}
   - : A Boolean value whose value is `true` if the [`groupId`](/en-US/docs/Web/API/MediaTrackConstraints#groupid) constraint is supported in the current environment.
 
-### Properties specific to shared screen tracks
+### Instance properties specific to shared screen tracks
 
 For tracks containing video sources from the user's screen contents, the following additional properties are may be included in addition to those available for video tracks.
 
-- {{domxref("MediaTrackSupportedConstraints.cursor", "cursor")}}
-  - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.cursor", "cursor")}} constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.displaySurface", "displaySurface")}}
   - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface", "logicalSurface")}}
@@ -80,8 +67,8 @@ For tracks containing video sources from the user's screen contents, the followi
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaTrackConstraints")}}

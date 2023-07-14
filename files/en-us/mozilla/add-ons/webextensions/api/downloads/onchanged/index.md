@@ -1,18 +1,10 @@
 ---
 title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onChanged
 ---
+
 {{AddonSidebar()}}
 
 The **`onChanged()`** event of the {{WebExtAPIRef("downloads")}} API is fired when any of a {{WebExtAPIRef('downloads.DownloadItem')}}'s properties changes (except for `bytesReceived`).
@@ -21,7 +13,7 @@ The listener is passed a `downloadDelta` as a parameter — an object containing
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.onChanged.addListener(listener)
 browser.downloads.onChanged.removeListener(listener)
 browser.downloads.onChanged.hasListener(listener)
@@ -29,7 +21,7 @@ browser.downloads.onChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -40,12 +32,12 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A callback function that will be called when this event occurs. This function will be passed the following arguments:
+  - : The function called when this event occurs. This function will be passed this argument:
 
     - `downloadDelta`
-      - : An [`object`](#downloaddelta) representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it.
+      - : An `object` representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it. See the [downloadDelta](#downloaddelta_2) section for more details.
 
 ## Additional objects
 
@@ -55,31 +47,31 @@ The `downloadDelta` object has the following properties available:
 
 - `id`
   - : An `integer` representing the `id` of the {{WebExtAPIRef('downloads.DownloadItem')}} that changed.
-- `url`{{optional_inline}}
+- `url` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `url`.
-- `filename`{{optional_inline}}
+- `filename` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `filename`.
-- `danger`{{optional_inline}}
+- `danger` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `danger`.
-- `mime`{{optional_inline}}
+- `mime` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `mime`.
-- `startTime`{{optional_inline}}
+- `startTime` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `startTime`.
-- `endTime`{{optional_inline}}
+- `endTime` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `endTime`.
-- `state`{{optional_inline}}
+- `state` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `state`.
-- `canResume`{{optional_inline}}
+- `canResume` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.BooleanDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `canResume` status.
-- `paused`{{optional_inline}}
+- `paused` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.BooleanDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `paused` status.
-- `error`{{optional_inline}}
+- `error` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.StringDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `error` status.
-- `totalBytes`{{optional_inline}}
+- `totalBytes` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.DoubleDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `totalBytes`.
-- `fileSize`{{optional_inline}}
+- `fileSize` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.DoubleDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `fileSize`.
-- `exists`{{optional_inline}}
+- `exists` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.BooleanDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `exists` status.
 
 ## Browser compatibility
@@ -102,11 +94,10 @@ browser.downloads.onChanged.addListener(handleChanged);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#event-onChanged) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onChanged) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -133,4 +124,4 @@ browser.downloads.onChanged.addListener(handleChanged);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

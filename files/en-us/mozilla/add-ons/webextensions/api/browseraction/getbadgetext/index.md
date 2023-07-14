@@ -1,18 +1,10 @@
 ---
 title: browserAction.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - getBadgeText
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getBadgeText
 ---
+
 {{AddonSidebar()}}
 
 Gets the browser action's badge text.
@@ -21,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingText = browser.browserAction.getBadgeText(
+```js-nolint
+let gettingText = browser.browserAction.getBadgeText(
   details               // object
 )
 ```
@@ -33,9 +25,9 @@ var gettingText = browser.browserAction.getBadgeText(
 
   - : An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab from which to get the badge text.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Specifies the window from which to get the badge text.
 
 <!---->
@@ -60,17 +52,16 @@ function gotBadgeText(text) {
   console.log(text);
 }
 
-var gettingBadgeText = browser.browserAction.getBadgeText({});
+let gettingBadgeText = browser.browserAction.getBadgeText({});
 gettingBadgeText.then(gotBadgeText);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-getBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-getBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +88,4 @@ gettingBadgeText.then(gotBadgeText);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

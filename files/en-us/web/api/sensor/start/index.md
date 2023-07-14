@@ -1,17 +1,11 @@
 ---
-title: Sensor.start()
+title: "Sensor: start() method"
+short-title: start()
 slug: Web/API/Sensor/start
-tags:
-  - API
-  - Generic Sensor API
-  - Method
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - start()
+page-type: web-api-instance-method
 browser-compat: api.Sensor.start
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`start`** method activates one
@@ -19,8 +13,8 @@ of the sensors based on `Sensor`.
 
 ## Syntax
 
-```js
-Sensor.start()
+```js-nolint
+start()
 ```
 
 ### Parameters
@@ -29,7 +23,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

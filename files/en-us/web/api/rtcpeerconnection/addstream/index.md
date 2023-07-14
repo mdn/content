@@ -1,16 +1,15 @@
 ---
-title: RTCPeerConnection.addStream()
+title: "RTCPeerConnection: addStream() method"
+short-title: addStream()
 slug: Web/API/RTCPeerConnection/addStream
-tags:
-  - Deprecated
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - addStream
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.addStream
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
+
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The _obsolete_ {{domxref("RTCPeerConnection")}} method
 **`addStream()`** adds a {{domxref("MediaStream")}} as a local
@@ -27,8 +26,8 @@ be repeated to consider the new stream.
 
 ## Syntax
 
-```js
-rtcPeerConnection.addStream(mediaStream);
+```js-nolint
+addStream(mediaStream)
 ```
 
 ### Parameters
@@ -47,21 +46,21 @@ This simple example adds the audio and video stream coming from the user's camer
 the connection.
 
 ```js
-navigator.mediaDevices.getUserMedia({video:true, audio:true}, function(stream) {
-  var pc = new RTCPeerConnection();
+navigator.mediaDevices.getUserMedia({ video: true, audio: true }, (stream) => {
+  const pc = new RTCPeerConnection();
   pc.addStream(stream);
 });
 ```
 
 ## Migrating to addTrack()
 
-{{anch("Browser compatibility", "Compatibility allowing")}}, you should update your
+[Compatibility allowing](#browser_compatibility), you should update your
 code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
 
 ```js
-navigator.getUserMedia({video:true, audio:true}, function(stream) {
-  var pc = new RTCPeerConnection();
-  stream.getTracks().forEach(function(track) {
+navigator.getUserMedia({ video: true, audio: true }, (stream) => {
+  const pc = new RTCPeerConnection();
+  stream.getTracks().forEach((track) => {
     pc.addTrack(track, stream);
   });
 });
@@ -85,17 +84,17 @@ if (pc.addTrack) {
   pc.addTrack(track, stream);
 } else {
   // If you have code listening for negotiationneeded events:
-  setTimeout(() => pc.dispatchEvent(new Event('negotiationneeded')));
+  setTimeout(() => pc.dispatchEvent(new Event("negotiationneeded")));
 }
 
 // Remove a track from a stream and the peer connection said stream was added to:
 
 stream.removeTrack(track);
 if (pc.removeTrack) {
-  pc.removeTrack(pc.getSenders().find(sender => sender.track == track));
+  pc.removeTrack(pc.getSenders().find((sender) => sender.track === track));
 } else {
   // If you have code listening for negotiationneeded events:
-  setTimeout(() => pc.dispatchEvent(new Event('negotiationneeded')));
+  setTimeout(() => pc.dispatchEvent(new Event("negotiationneeded")));
 }
 ```
 
@@ -109,4 +108,4 @@ if (pc.removeTrack) {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

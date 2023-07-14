@@ -1,17 +1,10 @@
 ---
 title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getPanel
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getPanel
 ---
+
 {{AddonSidebar()}}
 
 Gets a URL to the HTML document that defines the sidebar's contents.
@@ -20,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingPanel = browser.sidebarAction.getPanel(
+```js-nolint
+let gettingPanel = browser.sidebarAction.getPanel(
   details               // object
 )
 ```
@@ -32,7 +25,7 @@ var gettingPanel = browser.sidebarAction.getPanel(
 
   - : `object`. An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Get the panel for the sidebar specific to the given tab.
     - `windowId` {{optional_inline}}
       - : `integer`. Get the panel for the sidebar specific to the given window.
@@ -44,9 +37,11 @@ var gettingPanel = browser.sidebarAction.getPanel(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the URL for the panel's document. This will be a fully qualifed URL, such as:
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the URL for the panel's document. This will be a fully qualified URL, such as:
 
-    moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
+```
+moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
+```
 
 ## Browser compatibility
 
@@ -61,17 +56,16 @@ function onGot(sidebarUrl) {
   console.log(sidebarUrl);
 }
 
-var gettingPanel = browser.sidebarAction.getPanel({});
+let gettingPanel = browser.sidebarAction.getPanel({});
 gettingPanel.then(onGot);
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -98,4 +92,4 @@ gettingPanel.then(onGot);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

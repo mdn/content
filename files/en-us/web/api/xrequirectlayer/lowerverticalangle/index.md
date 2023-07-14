@@ -1,18 +1,14 @@
 ---
-title: XREquirectLayer.lowerVerticalAngle
+title: "XREquirectLayer: lowerVerticalAngle property"
+short-title: lowerVerticalAngle
 slug: Web/API/XREquirectLayer/lowerVerticalAngle
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.lowerVerticalAngle
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`lowerVerticalAngle`** property of the {{domxref("XREquirectLayer")}} interface represents the lower vertical angle in radians for the sphere.
 
@@ -34,7 +30,7 @@ const equirectLayer = xrGlBinding.createEquirectLayer({
   centralHorizontalAngle: 2 * Math.PI,
   upperVerticalAngle: Math.PI / 2.0,
   lowerVerticalAngle: -Math.PI / 2.0,
-  radius: 0
+  radius: 0,
 });
 
 equirectLayer.lowerVerticalAngle; // -1.5707963267948966

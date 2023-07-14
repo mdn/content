@@ -1,32 +1,23 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.last-child
 ---
+
 {{CSSRef}}
 
 The **`:last-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element among a group of sibling elements.
 
-```css
-/* Selects any <p> that is the last element
-   among its siblings */
-p:last-child {
-  color: lime;
-}
-```
-
-> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-last-child.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{csssyntax}}
+```css
+:last-child {
+  /* ... */
+}
+```
 
 ## Examples
 
@@ -68,7 +59,8 @@ p:last-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>
@@ -105,7 +97,7 @@ ul li:last-child {
 
 ## See also
 
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":nth-child")}}

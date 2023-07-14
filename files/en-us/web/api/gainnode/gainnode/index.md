@@ -1,16 +1,11 @@
 ---
-title: GainNode()
+title: "GainNode: GainNode() constructor"
+short-title: GainNode()
 slug: Web/API/GainNode/GainNode
-tags:
-  - API
-  - Audio
-  - Constructor
-  - GainNode
-  - Media
-  - Reference
-  - Web Audio API
+page-type: web-api-constructor
 browser-compat: api.GainNode.GainNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`GainNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
@@ -19,8 +14,8 @@ change in volume.
 
 ## Syntax
 
-```js
-var gainNode = new GainNode(context, options)
+```js-nolint
+new GainNode(context, options)
 ```
 
 ### Parameters
@@ -31,21 +26,23 @@ var gainNode = new GainNode(context, options)
 
   - : Options are as follows:
 
-    - `gain`: The amount of gain to apply. This parameter is a-rate
-      and it's nominal range is (-∞,+∞). The default is `1`.
-    - `channelCount`: Represents an integer used to determine how many channels are used when [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
-      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
-      definition depend on the value of `channelCountMode`.
-    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between
-      the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
-      information including default values.)
-    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels. This
-      interpretation will define how audio [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
-      The possible values are `"speakers"` or `"discrete"`. (See
-      {{domxref("AudioNode.channelCountMode")}} for more information including default
-      values.)
+    - `gain`
+      - : The amount of gain to apply. This parameter is a- `rate`
+        and it's nominal range is (-∞,+∞). The default is `1`.
+    - `channelCount`
+      - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
+        {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+        definition depend on the value of `channelCountMode`.
+    - `channelCountMode`
+      - : Represents an enumerated value describing the way channels must be matched between
+        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+        information including default values.)
+    - `channelInterpretation`
+      - : Represents an enumerated value describing the meaning of the channels. This
+        interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+        The possible values are `"speakers"` or `"discrete"`. (See
+        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        values.)
 
 ### Return value
 

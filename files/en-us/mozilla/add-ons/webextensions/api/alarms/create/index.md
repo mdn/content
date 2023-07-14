@@ -1,25 +1,17 @@
 ---
 title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
+page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new alarm for the current browser session. An alarm may fire once or multiple times. An alarm is cleared after it fires for the last time.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.alarms.create(
   name,              // optional string
   alarmInfo          // optional object
@@ -28,7 +20,7 @@ browser.alarms.create(
 
 ### Parameters
 
-- `name`{{optional_inline}}
+- `name` {{optional_inline}}
 
   - : `string`. A name for the alarm. Defaults to the empty string.
 
@@ -36,7 +28,7 @@ browser.alarms.create(
 
     Alarm names are unique within the scope of a single extension. If an alarm with an identical name exists, the existing alarm will be cleared and the alarm being created will replace it.
 
-- `alarmInfo`{{optional_inline}}
+- `alarmInfo` {{optional_inline}}
 
   - : `object`. You can use this to specify when the alarm will initially fire, either as an absolute value (`when`), or as a delay from the time the alarm is set (`delayInMinutes`). To make the alarm recur, specify `periodInMinutes`.
 
@@ -44,11 +36,11 @@ browser.alarms.create(
 
     The `alarmInfo` object may contain the following properties:
 
-    - `when`{{optional_inline}}
+    - `when` {{optional_inline}}
       - : `double`. The time the alarm will fire first, given as [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). To get the number of milliseconds between the epoch and the current time, use [`Date.now()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now). If you specify `when`, don't specify `delayInMinutes`.
-    - `delayInMinutes`{{optional_inline}}
-      - : `double`. The time the alarm will fire first, given as minutes from the time the alarm is set. If you specify `delayInMinutes`, don't specify `when`.
-    - `periodInMinutes`{{optional_inline}}
+    - `delayInMinutes` {{optional_inline}}
+      - : `double`. The time the alarm will fire first, given as minutes from the time the alarm is set. If you specify `delayInMinutes`, don't specify `when`.
+    - `periodInMinutes` {{optional_inline}}
       - : `double`. If this is specified, the alarm will fire again every `periodInMinutes` after its initial firing. If you specify this value you may omit both `when` and `delayInMinutes`, and the alarm will then fire initially after `periodInMinutes`. If `periodInMinutes` is not specified, the alarm will only fire once.
 
 ## Examples
@@ -59,7 +51,7 @@ Create a one-time delay-based alarm with "" for the name:
 const delayInMinutes = 5;
 
 browser.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
@@ -71,7 +63,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -83,7 +75,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -91,11 +83,10 @@ browser.alarms.create("my-periodic-alarm", {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,4 +113,4 @@ browser.alarms.create("my-periodic-alarm", {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

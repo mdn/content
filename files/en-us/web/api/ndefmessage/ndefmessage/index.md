@@ -1,21 +1,21 @@
 ---
-title: NDEFMessage.NDEFMessage()
+title: "NDEFMessage: NDEFMessage() constructor"
+short-title: NDEFMessage()
 slug: Web/API/NDEFMessage/NDEFMessage
-tags:
-  - API
-  - Constructor
-  - Reference
-  - NDEFMessage
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+
+{{SecureContext_Header}}{{APIRef("Web NFC API")}}{{SeeCompatTable}}
 
 The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.
 
 ## Syntax
 
-```js
-new NDEFMessage(records);
+```js-nolint
+new NDEFMessage(records)
 ```
 
 ### Parameters
@@ -25,7 +25,7 @@ new NDEFMessage(records);
   - : An array of objects with the following members:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+      - : Contains the data to be transmitted; one of a string, n {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}

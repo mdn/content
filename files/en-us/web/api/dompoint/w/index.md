@@ -1,32 +1,18 @@
 ---
-title: DOMPoint.w
+title: "DOMPoint: w property"
+short-title: w
 slug: Web/API/DOMPoint/w
-tags:
-  - API
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Reference
-  - W
-  - perspective
+page-type: web-api-instance-property
 browser-compat: api.DOMPoint.w
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's
 **`w`** property holds the point's perspective value, w, for a
 point in space.
 
-## Syntax
-
-```js
-var perspective = DOMPoint.w;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the _w_ perspective value for
 the point. This value is **unrestricted**, meaning that it is allowed to be

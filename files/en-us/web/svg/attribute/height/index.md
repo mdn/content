@@ -1,54 +1,63 @@
 ---
 title: height
 slug: Web/SVG/Attribute/height
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height
+  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height
+  - https://svgwg.org/svg2-draft/geometry.html#Sizing
+  - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
 ---
+
 {{SVGRef}}
 
 The **`height`** attribute defines the vertical length of an element in the user coordinate system.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('feBlend')}}
-*   {{SVGElement('feColorMatrix')}}
-*   {{SVGElement('feComponentTransfer')}}
-*   {{SVGElement('feComposite')}}
-*   {{SVGElement('feConvolveMatrix')}}
-*   {{SVGElement('feDiffuseLighting')}}
-*   {{SVGElement('feDisplacementMap')}}
-*   {{SVGElement('feDropShadow')}}
-*   {{SVGElement('feFlood')}}
-*   {{SVGElement('feGaussianBlur')}}
-*   {{SVGElement('feImage')}}
-*   {{SVGElement('feMerge')}}
-*   {{SVGElement('feMorphology')}}
-*   {{SVGElement('feOffset')}}
-*   {{SVGElement('feSpecularLighting')}}
-*   {{SVGElement('feTile')}}
-*   {{SVGElement('feTurbulence')}}
-*   {{SVGElement('filter')}}
-*   {{SVGElement('foreignObject')}}
-*   {{SVGElement('image')}}
-*   {{SVGElement('mask')}}
-*   {{SVGElement('pattern')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('svg')}}
-*   {{SVGElement('use')}}
+- {{SVGElement('feBlend')}}
+- {{SVGElement('feColorMatrix')}}
+- {{SVGElement('feComponentTransfer')}}
+- {{SVGElement('feComposite')}}
+- {{SVGElement('feConvolveMatrix')}}
+- {{SVGElement('feDiffuseLighting')}}
+- {{SVGElement('feDisplacementMap')}}
+- {{SVGElement('feDropShadow')}}
+- {{SVGElement('feFlood')}}
+- {{SVGElement('feGaussianBlur')}}
+- {{SVGElement('feImage')}}
+- {{SVGElement('feMerge')}}
+- {{SVGElement('feMorphology')}}
+- {{SVGElement('feOffset')}}
+- {{SVGElement('feSpecularLighting')}}
+- {{SVGElement('feTile')}}
+- {{SVGElement('feTurbulence')}}
+- {{SVGElement('filter')}}
+- {{SVGElement('foreignObject')}}
+- {{SVGElement('image')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('use')}}
 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
   <!-- With a height of 0 or less, nothing will be rendered -->
-  <rect y="0" x="0" width="90" height="0"/>
-  <rect y="0" x="100" width="90" height="60"/>
-  <rect y="0" x="200" width="90" height="100%"/>
+  <rect y="0" x="0" width="90" height="0" />
+  <rect y="0" x="100" width="90" height="60" />
+  <rect y="0" x="200" width="90" height="100%" />
 </svg>
 ```
 
@@ -644,7 +653,7 @@ For {{SVGElement('foreignObject')}}, `height` defines the vertical length for th
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
 ## image
 
@@ -678,7 +687,7 @@ For {{SVGElement('image')}}, `height` defines the vertical length for the image.
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for images.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
 
 ## mask
 
@@ -768,7 +777,7 @@ For {{SVGElement('rect')}}, `height` defines the vertical length for the rectang
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rectangles.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
 
 ## svg
 
@@ -804,7 +813,7 @@ For {{SVGElement('svg')}}, `height` defines the vertical length for the renderin
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<svg>`.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
 
 ## use
 
@@ -838,118 +847,10 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
   </tbody>
 </table>
 
-> **Note:**  `height`has no effect on `use` elements, unless the element referenced has a [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
+> **Note:** `height` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
-> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for used elements.
+> **Note:** Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{ SpecName('Filters 1.0', '#element-attrdef-filter-height', 'height') }}
-      </td>
-      <td>{{Spec2('Filters 1.0')}}</td>
-      <td>Definition for <code>&#x3C;filter></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Filters 1.0', '#element-attrdef-filter-primitive-height', 'height') }}
-      </td>
-      <td>{{Spec2('Filters 1.0')}}</td>
-      <td>Definition for filter primitives</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS Masks", "#element-attrdef-mask-height", 'height')}}
-      </td>
-      <td>{{Spec2("CSS Masks")}}</td>
-      <td>Definition for <code>&#x3C;mask></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "geometry.html#Sizing", "height")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition as a geometry property</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#PatternElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;pattern></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "extend.html#ForeignObjectElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;foreignObject></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#PatternElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;pattern></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#ImageElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;image></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#SVGElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;svg></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#UseElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;use></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#FilterElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;filter></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#FilterPrimitiveHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for filter primitives</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "masking.html#MaskElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;mask></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#RectElementHeightAttribute", "height")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;rect></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

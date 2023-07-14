@@ -1,32 +1,32 @@
 ---
-title: TreeWalker.root
+title: "TreeWalker: root property"
+short-title: root
 slug: Web/API/TreeWalker/root
-tags:
-  - API
-  - DOM
-  - Property
-  - TreeWalker
+page-type: web-api-instance-property
 browser-compat: api.TreeWalker.root
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.root`** read-only property returns the node
 that is the root of what the TreeWalker traverses.
 
-## Syntax
+## Value
+
+A {{domxref("Node")}} object.
+
+## Examples
 
 ```js
-root = TreeWalker.root;
-```
-
-## Example
-
-```js
-var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+const treeWalker = document.createTreeWalker(
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 root = treeWalker.root; // document.body in this case
 ```

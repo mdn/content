@@ -1,26 +1,18 @@
 ---
-title: TextDecoderStream.ignoreBOM
+title: "TextDecoderStream: ignoreBOM property"
+short-title: ignoreBOM
 slug: Web/API/TextDecoderStream/ignoreBOM
-tags:
-  - API
-  - Encoding API
-  - Property
-  - Reference
-  - ignoreBOM
-  - TextDecoderStream
+page-type: web-api-instance-property
 browser-compat: api.TextDecoderStream.ignoreBOM
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`ignoreBOM`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{jsxref("boolean")}} indicating if the byte order mark (BOM) is to be ignored.
 
-## Syntax
+## Value
 
-    var ignoreBOM = TextDecoderStream.ignoreBOM;
-
-### Value
-
-A {{jsxref("boolean")}}, initially `false`
+A {{jsxref("boolean")}}, initially `false`.
 
 ## Examples
 

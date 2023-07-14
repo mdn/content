@@ -1,28 +1,20 @@
 ---
-title: XRFrame.getJointPose()
+title: "XRFrame: getJointPose() method"
+short-title: getJointPose()
 slug: Web/API/XRFrame/getJointPose
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRFrame
-  - getJointPose
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRFrame.getJointPose
 ---
-{{APIRef("WebXR Device API")}}
 
-The **`getJointPose()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The **`getJointPose()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
 
 ## Syntax
 
-```js
+```js-nolint
 getJointPose(joint, baseSpace)
 ```
 
@@ -35,9 +27,8 @@ getJointPose(joint, baseSpace)
 
 ### Return value
 
-An {{domxref("XRJointPose")}} object specifying the position and orientation of the hand joint, relative to
-the {{domxref("XRSpace")}} indicated by `baseSpace`.
-
+An {{domxref("XRJointPose")}} object specifying the position and orientation of the hand joint, relative to
+the {{domxref("XRSpace")}} indicated by `baseSpace`.
 
 ## Examples
 
@@ -46,19 +37,19 @@ the {{domxref("XRSpace")}} indicated by `baseSpace`.
 Call `getJointPose()` with an {{domxref("XRJointSpace")}} and an {{domxref("XRReferenceSpace")}} to get an {{domxref("XRJointPose")}} object.
 
 ```js
-navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
-  // ...
-);
+navigator.xr
+  .requestSession({ optionalFeatures: ["hand-tracking"] })
+  .then(/* … */);
 
 function renderFrame(session, frame) {
-   // ...
+  // …
 
-   for (inputSource of session.inputSources) {
-      if (inputSource.hand) {
-        let indexFingerTipJoint = inputSource.hand.get("index-finger-tip");
-        frame.getJointPose(indexFingerTipJoint, referenceSpace); // XRJointPose
-      }
-   }
+  for (const inputSource of session.inputSources) {
+    if (inputSource.hand) {
+      const indexFingerTipJoint = inputSource.hand.get("index-finger-tip");
+      frame.getJointPose(indexFingerTipJoint, referenceSpace); // XRJointPose
+    }
+  }
 }
 ```
 

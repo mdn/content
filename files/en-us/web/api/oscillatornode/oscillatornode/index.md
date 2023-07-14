@@ -1,16 +1,11 @@
 ---
-title: OscillatorNode()
+title: "OscillatorNode: OscillatorNode() constructor"
+short-title: OscillatorNode()
 slug: Web/API/OscillatorNode/OscillatorNode
-tags:
-  - Audio
-  - Constructor
-  - Media
-  - OscillatorNode
-  - Reference
-  - Web Audio
-  - Web Audio API
+page-type: web-api-constructor
 browser-compat: api.OscillatorNode.OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`OscillatorNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
@@ -24,8 +19,8 @@ If the default values of the properties are acceptable, you can optionally use t
 
 ## Syntax
 
-```js
-var oscillatorNode = new OscillatorNode(context, options)
+```js-nolint
+new OscillatorNode(context, options)
 ```
 
 ### Parameters
@@ -45,16 +40,15 @@ var oscillatorNode = new OscillatorNode(context, options)
         '`sine`'.
     - `detune`
       - : A detuning value (in cents) which will offset
-        the `frequency` by the given amount. Its default is 0.
+        the `frequency` by the given amount. Its default is 0.
     - `frequency`
-      - : The frequency (in {{interwiki("wikipedia", "hertz")}}) of the periodic
+      - : The frequency (in [hertz](https://en.wikipedia.org/wiki/Hertz)) of the periodic
         waveform. Its default is 440.
     - `periodicWave`
       - : An arbitrary period waveform described by a {{domxref("PeriodicWave")}}
         object.
     - `channelCount`
-      - : Represents an integer used to determine how many channels are used when [up-mixing
-        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
+      - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
         {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
         definition depend on the value of `channelCountMode`.
     - `channelCountMode`
@@ -63,8 +57,7 @@ var oscillatorNode = new OscillatorNode(context, options)
         information including default values.)
     - `channelInterpretation`
       - : Represents an enumerated value describing the meaning of the channels. This
-        interpretation will define how audio [up-mixing
-        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+        interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
         The possible values are `"speakers"` or `"discrete"`. (See
         {{domxref("AudioNode.channelCountMode")}} for more information including default
         values.)

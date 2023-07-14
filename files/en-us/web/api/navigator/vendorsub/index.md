@@ -1,26 +1,19 @@
 ---
-title: Navigator.vendorSub
+title: "Navigator: vendorSub property"
+short-title: vendorSub
 slug: Web/API/Navigator/vendorSub
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Property
-  - Read-only
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Navigator.vendorSub
 ---
+
 {{ApiRef}} {{Deprecated_Header}}
 
 The value of the **`Navigator.vendorSub`** property is always
 the empty string, in any browser.
 
-## Syntax
-
-```js
-venSub = navigator.vendorSub
-```
-
-### Value
+## Value
 
 - The empty string
 

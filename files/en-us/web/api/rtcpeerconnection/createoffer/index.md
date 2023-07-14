@@ -1,17 +1,11 @@
 ---
-title: RTCPeerConnection.createOffer()
+title: "RTCPeerConnection: createOffer() method"
+short-title: createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
-tags:
-  - API
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - WebRTC
-  - createOffer
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.createOffer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createOffer()`** method
@@ -33,15 +27,18 @@ offer.
 
 ## Syntax
 
-```js
-aPromise = myPeerConnection.createOffer([options]);
+```js-nolint
+createOffer()
+createOffer(options)
 
-myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{deprecated_inline}}
+createOffer(successCallback, failureCallback) // deprecated
+createOffer(successCallback, failureCallback, options) // deprecated
 ```
 
 ### Parameters
 
 - `options` {{optional_inline}}
+
   - : An object providing the following options requested for the offer:
 
     - `iceRestart` {{optional_inline}}
@@ -50,13 +47,17 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
         you then apply the returned offer, ICE will restart. Specify `false` to
         keep the same credentials and therefore not restart ICE. **The default is
         `false`**.
+    - `offerToReceiveAudio` {{optional_inline}} {{deprecated_inline}}
+      - : Provides additional control over the directionality of audio. For example, it can be used to ensure that audio can be received, regardless if audio is sent or not.
+    - `offerToReceiveVideo` {{optional_inline}} {{deprecated_inline}}
+      - : Provides additional control over the directionality of video. For example, it can be used to ensure that video can be received, regardless if video is sent or not.
 
 ### Deprecated parameters
 
 In older code and documentation, you may see a callback-based version of this function.
 This has been deprecated and its use is **strongly** discouraged. You
 should update any existing code to use the {{jsxref("Promise")}}-based version of
-`createOffer()` instead. The parameters for this form of
+`createOffer()` instead. The parameters for the older form of
 `createOffer()` are described below, to aid in updating existing code.
 
 - `successCallback` {{deprecated_inline}}
@@ -72,7 +73,7 @@ should update any existing code to use the {{jsxref("Promise")}}-based version o
 ### Return value
 
 A {{jsxref("Promise")}} whose fulfillment handler will receive an object conforming to
-the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP
+the [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#rtcsessiondescriptioninit) dictionary which contains the SDP
 describing the generated offer. That received offer should be delivered through the
 signaling server to a remote peer.
 
@@ -91,39 +92,39 @@ should examine the received exception to determine which occurred.
   - : Returned if examining the state of the system to determine resource availability in order to
     generate the offer failed for some reason.
 
-## Example
+## Examples
 
 Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the
 offer and sends it to the remote system over a signaling channel.
 
 > **Note:** Keep in mind that this is part of the signaling process, the
 > transport layer for which is an implementation detail that's entirely up to you. In
-> this case, a [WebSocket](/en-US/docs/Web/API/WebSocket_API) connection is
+> this case, a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection is
 > used to send a {{Glossary("JSON")}} message with a `type` field with the
 > value "video-offer" to the other peer. The contents of the object being passed to the
 > `sendToServer()` function, along with everything else in the promise
 > fulfillment handler, depend entirely on your design.
 
 ```js
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
+myPeerConnection
+  .createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(offer))
+  .then(() => {
     sendToServer({
       name: myUsername,
       target: targetUsername,
       type: "video-offer",
-      sdp: myPeerConnection.localDescription
+      sdp: myPeerConnection.localDescription,
     });
   })
-  .catch(function(reason) {
+  .catch((reason) => {
     // An error occurred, so handle the failure to connect
   });
 ```
 
 In this code, the offer is created, and once successful, the local end of the
 {{domxref("RTCPeerConnection")}} is configured to match by passing the offer (which is
-represented using an object conforming to {{domxref("RTCSessionDescriptionInit")}}) into
+represented using an object conforming to [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#rtcsessiondescriptioninit)) into
 {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}. Once
 that's done, the offer is sent to the remote system over the signaling channel; in this
 case, by using a custom function called `sendToServer()`. The implementation
@@ -133,8 +134,7 @@ the same one.
 
 Use {{jsxref("Promise.catch()")}} to trap and handle errors.
 
-See [Signaling and
-video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
+See [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
 will help you to understand how the signaling code here works.
 
 ## Specifications

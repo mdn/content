@@ -1,14 +1,10 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.grid-template-areas
 ---
+
 {{CSSRef}}
 
 The **`grid-template-areas`** CSS property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
@@ -25,22 +21,24 @@ grid-template-areas: none;
 
 /* <string> values */
 grid-template-areas: "a b";
-grid-template-areas: "a b b"
-                     "a c d";
+grid-template-areas:
+  "a b b"
+  "a c d";
 
 /* Global values */
 grid-template-areas: inherit;
 grid-template-areas: initial;
 grid-template-areas: revert;
+grid-template-areas: revert-layer;
 grid-template-areas: unset;
 ```
 
 ### Values
 
 - `none`
-  - : The grid container doesn’t define any named grid areas.
+  - : The grid container doesn't define any named grid areas.
 - `{{cssxref("&lt;string&gt;")}}+`
-  - : A row is created for every separate string listed, and a column is created for each cell in the string. Multiple named cell tokens within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
+  - : A row is created for every separate string listed, and a column is created for each cell in the string. Multiple cell tokens with the same name within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
 
 ## Formal definition
 
@@ -72,9 +70,10 @@ grid-template-areas: unset;
   display: grid;
   width: 100%;
   height: 250px;
-  grid-template-areas: "head head"
-                       "nav  main"
-                       "nav  foot";
+  grid-template-areas:
+    "head head"
+    "nav  main"
+    "nav  foot";
   grid-template-rows: 50px 1fr 30px;
   grid-template-columns: 150px 1fr;
 }
@@ -102,7 +101,7 @@ grid-template-areas: unset;
 
 #### Result
 
-{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "250px")}}
+{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "285px")}}
 
 ## Specifications
 
@@ -116,4 +115,4 @@ grid-template-areas: unset;
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
 - Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
+- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

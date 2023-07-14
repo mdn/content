@@ -1,14 +1,11 @@
 ---
-title: Document.plugins
+title: "Document: plugins property"
+short-title: plugins
 slug: Web/API/Document/plugins
-tags:
-  - API
-  - Document
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Document.plugins
 ---
+
 {{APIRef("DOM")}}
 
 The **`plugins`** read-only property of the
@@ -19,16 +16,9 @@ containing one or more {{domxref("HTMLEmbedElement")}}s representing the
 > **Note:** For a list of installed plugins, use [Navigator.plugins](/en-US/docs/Web/API/Navigator/plugins)
 > instead.
 
-## Syntax
+## Value
 
-```js
-embedArrayObj = document.plugins
-```
-
-### Value
-
-An {{domxref("HTMLCollection")}}, or `null` if there are no embeds in the
-document.
+An {{domxref("HTMLCollection")}}.
 
 ## Specifications
 
@@ -40,5 +30,4 @@ document.
 
 ## See also
 
-- [MSDN
-  documentation](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)
+- [MSDN documentation](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)

@@ -1,17 +1,11 @@
 ---
-title: IDBKeyRange.lowerOpen
+title: "IDBKeyRange: lowerOpen property"
+short-title: lowerOpen
 slug: Web/API/IDBKeyRange/lowerOpen
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - lowerOpen
+page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.lowerOpen
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`lowerOpen`** read-only property of the
@@ -20,59 +14,51 @@ lower-bound value is included in the key range.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var lowerOpen = myKeyRange.lowerOpen
-```
-
-### Value
+## Value
 
 A boolean value:
 
 | Value   | Indication                                              |
 | ------- | ------------------------------------------------------- |
 | `true`  | The lower-bound value is not included in the key range. |
-| `false` | The lower-bound value is included in the key range.     |
+| `false` | The lower-bound value is included in the key range.     |
 
-## Example
+## Examples
 
 The following example illustrates how you'd use a key range. Here we
-declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a
+declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a
 range that includes everything between "F" and "W" but not including them — since both
 the upper and lower bounds have been declared as open (`true`). We open a
 transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a Cursor
-with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as
+with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as
 its optional key range value.
 
-After declaring the key range, we log its `lowerOpen` property value to the
+After declaring the key range, we log its `lowerOpen` property value to the
 console, which should appear as "true": the lower bound is open, so won't be included in
 the range.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) repo ([view the example live too](https://mdn.github.io/IDBKeyRange-example/).)
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/blob/main/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
+  const keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.lowerOpen);
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
-
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
-        list.appendChild(listItem);
-
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
-      }
-    };
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
+    const cursor = event.target.result;
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
+      list.appendChild(listItem);
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed.");
+    }
   };
+}
 ```
 
 ## Specifications
@@ -91,5 +77,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

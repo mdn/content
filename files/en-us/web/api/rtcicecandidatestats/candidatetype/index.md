@@ -1,21 +1,11 @@
 ---
-title: RTCIceCandidateStats.candidateType
+title: "RTCIceCandidateStats: candidateType property"
+short-title: candidateType
 slug: Web/API/RTCIceCandidateStats/candidateType
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Networking
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - candidateType
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.candidateType
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} interface's
@@ -24,13 +14,13 @@ type of {{Glossary("ICE")}} candidate the object represents.
 
 ## Syntax
 
-```js
-candidateType = rtcIceCandidateStats.candidateType;
+```js-nolint
+rtcIceCandidateStats.candidateType
 ```
 
 ### Value
 
-A {{domxref("DOMString")}} whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#Values).
+A string whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values).
 
 ## Specifications
 

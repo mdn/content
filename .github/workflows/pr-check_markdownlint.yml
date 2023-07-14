@@ -1,0 +1,55 @@
+name: Markdownlint (PR files)
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .nvmrc
+      - "**/*.md"
+
+jobs:
+  lint-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get changed files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Use the GitHub API to get the list of changed files
+          # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
+          # filter out files that are not markdown
+          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
+          echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint markdown files
+        run: |
+          echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
+          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+          yarn markdownlint-cli2 ${files_to_lint}
+          echo "Linting front-matter"
+          node scripts/front-matter_linter.js ${files_to_lint}
+
+      - name: Prettier markdown files
+        run: |
+          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+          yarn prettier -c ${files_to_lint}

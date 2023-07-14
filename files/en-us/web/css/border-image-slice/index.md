@@ -1,15 +1,10 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-image-slice
 ---
+
 {{CSSRef}}
 
 The **`border-image-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's [border image](/en-US/docs/Web/CSS/border-image).
@@ -34,10 +29,10 @@ The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, and {
 /* All sides */
 border-image-slice: 30%;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-slice: 10% 30%;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-image-slice: 30 30% 45;
 
 /* top | right | bottom | left */
@@ -50,6 +45,7 @@ border-image-slice: 10% fill 7 12;
 border-image-slice: inherit;
 border-image-slice: initial;
 border-image-slice: revert;
+border-image-slice: revert-layer;
 border-image-slice: unset;
 ```
 
@@ -110,12 +106,12 @@ These are the default values we have used in this example. However, we have also
 <ul>
   <li>
     <label for="width">slide to adjust <code>border-width</code></label>
-    <input type="range" min="10" max="45" id="width">
+    <input type="range" min="10" max="45" id="width" />
     <output id="width-output">30px</output>
   </li>
   <li>
     <label for="slice">slide to adjust <code>border-image-slice</code></label>
-    <input type="range" min="10" max="45" id="slice">
+    <input type="range" min="10" max="45" id="slice" />
     <output id="slice-output">30</output>
   </li>
 </ul>
@@ -148,23 +144,23 @@ li {
 #### JavaScript
 
 ```js
-const widthSlider = document.getElementById('width');
-const sliceSlider = document.getElementById('slice');
-const widthOutput = document.getElementById('width-output');
-const sliceOutput = document.getElementById('slice-output');
-const divElem = document.querySelector('div > div');
+const widthSlider = document.getElementById("width");
+const sliceSlider = document.getElementById("slice");
+const widthOutput = document.getElementById("width-output");
+const sliceOutput = document.getElementById("slice-output");
+const divElem = document.querySelector("div > div");
 
-widthSlider.addEventListener('input', () => {
-  const newValue = widthSlider.value + 'px';
+widthSlider.addEventListener("input", () => {
+  const newValue = `${widthSlider.value}px`;
   divElem.style.borderWidth = newValue;
   widthOutput.textContent = newValue;
-})
+});
 
-sliceSlider.addEventListener('input', () => {
+sliceSlider.addEventListener("input", () => {
   const newValue = sliceSlider.value;
   divElem.style.borderImageSlice = newValue;
   sliceOutput.textContent = newValue;
-})
+});
 ```
 
 #### Result

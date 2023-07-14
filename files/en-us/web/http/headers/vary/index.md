@@ -1,21 +1,15 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-tags:
-  - HTTP
-  - Reference
-  - Response
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Vary
 ---
+
 {{HTTPSidebar}}
 
-The **`Vary`** HyperText Transfer Protocol (HTTP) response header determines how to match
-future request headers. This information is required to decide whether or not a cached response can be served instead of requesting a fresh one from the origin server. This response header is used by the server to indicate the headers it used when selecting a representation of a resource in a [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) algorithm.
+The **`Vary`** HTTP response header describes the parts of the request message aside from the method and URL that influenced the content of the response it occurs in. Most often, this is used to create a cache key when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) is in use.
 
-The `Vary` header should be set on a {{HTTPStatus("304")}}
-`Not Modified` response exactly like it would have been set on an equivalent {{HTTPStatus("200")}} `OK` response.
+The same `Vary` header value should be used on all responses for a given URL, including {{HTTPStatus("304")}} `Not Modified` responses and the "default" response.
 
 <table class="properties">
   <tbody>
@@ -32,7 +26,7 @@ The `Vary` header should be set on a {{HTTPStatus("304")}}
 
 ## Syntax
 
-```
+```http
 Vary: *
 Vary: <header-name>, <header-name>, ...
 ```
@@ -40,26 +34,9 @@ Vary: <header-name>, <header-name>, ...
 ## Directives
 
 - \*
-  - : Each request for a URL is supposed to be treated as a unique and uncacheable
-    request. A better way to indicate this is to use {{HTTPHeader("Cache-Control")}}:
-    `no-store`, which is clearer to read and also signals that the object should never be stored.
+  - : Indicates that factors other than request headers influenced the generation of this response. Implies that the response is uncacheable.
 - \<header-name>
-  - : A comma-separated list of header names to consider when deciding whether or not a cached response can be used.
-
-## Examples
-
-### Dynamic serving
-
-When using the `Vary: User-Agent` header, caching servers should consider
-the user agent when deciding whether or not to serve the page from cache. For example, if you
-are serving different content to mobile users, using this header can help you to avoid a cache
-mistakenly serving a desktop version of your site to your mobile users. This header can help Google
-and other search engines to discover the mobile version of a page and might also tell
-them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended.
-
-```
-Vary: User-Agent
-```
+  - : A comma-separated list of request header names that could have influenced the generation of this response.
 
 ## Specifications
 
@@ -69,12 +46,12 @@ Vary: User-Agent
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [Vary with care – Vary header problems in IE6-9](https://docs.microsoft.com/archive/blogs/ieinternals/vary-with-care)
 
 ## See also
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-using-vary-header)
 - [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)

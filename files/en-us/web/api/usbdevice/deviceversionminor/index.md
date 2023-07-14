@@ -1,30 +1,20 @@
 ---
-title: USBDevice.deviceVersionMinor
+title: "USBDevice: deviceVersionMinor property"
+short-title: deviceVersionMinor
 slug: Web/API/USBDevice/deviceVersionMinor
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - deviceVersionMinor
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.USBDevice.deviceVersionMinor
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`deviceVersionMinor`** read only property of the
 {{domxref("USBDevice")}} interface the minor version number of the device in a semantic
 versioning scheme.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.deviceVersionMinor
-```
-
-### Value
+## Value
 
 A number.
 

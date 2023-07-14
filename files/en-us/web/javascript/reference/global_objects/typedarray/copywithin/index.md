@@ -1,15 +1,10 @@
 ---
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.copyWithin
 ---
+
 {{JSRef}}
 
 The **`copyWithin()`** method copies the sequence of array
@@ -18,14 +13,13 @@ The copy is taken from the index positions of the second and third arguments
 `start` and `end`. The
 `end` argument is optional and defaults to the length of the
 array. This method has the same algorithm as {{jsxref("Array.prototype.copyWithin")}}.
-_TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+_TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-copywithin.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 copyWithin(target, start)
 copyWithin(target, start, end)
 ```
@@ -52,11 +46,11 @@ See {{jsxref("Array.prototype.copyWithin")}} for more details.
 ### Using copyWithin
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+uint8.set([1, 2, 3]);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
-uint8.copyWithin(3,0,3);
+uint8.copyWithin(3, 0, 3);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 ```
 
@@ -70,5 +64,5 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.copyWithin` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray")}}

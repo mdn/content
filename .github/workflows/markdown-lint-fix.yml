@@ -1,0 +1,57 @@
+name: Create Markdownlint auto-fix PR
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  fix:
+    if: github.repository == 'mdn/content'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUSKY: 0
+
+      - name: Lint markdown files
+        run: |
+          yarn fix:md
+          yarn fix:fm
+
+      - name: Create PR with only fixable issues
+        if: success()
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "chore: auto-fix Markdownlint issues"
+          branch: markdownlint-auto-cleanup
+          title: "Markdownlint auto-cleanup"
+          author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          body: |
+            All issues auto-fixed
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
+
+      - name: Create PR with notice on unfixed issues
+        if: failure()
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "chore: auto-fix Markdownlint issues"
+          branch: markdownlint-auto-cleanup
+          title: "Markdownlint auto-cleanup"
+          author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          body: |
+            Auto-fix was run, but additional issues found.
+            Please review the run log: https://github.com/mdn/content/actions/runs/${{ github.run_id }}
+          token: ${{ secrets.AUTOMERGE_TOKEN }}

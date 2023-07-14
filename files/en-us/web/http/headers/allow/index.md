@@ -1,12 +1,10 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-tags:
-  - HTTP
-  - HTTP Header
-  - Response header
-  - Reference
+page-type: http-header
+spec-urls: https://httpwg.org/specs/rfc9110.html#field.allow
 ---
+
 {{HTTPSidebar}}
 
 The **`Allow`** header lists the set of methods supported by a resource.
@@ -28,7 +26,7 @@ This header must be sent if the server responds with a {{HTTPStatus("405")}} `Me
 
 ## Syntax
 
-```
+```http
 Allow: <http-methods>
 ```
 
@@ -39,15 +37,13 @@ Allow: <http-methods>
 
 ## Examples
 
-```
+```http
 Allow: GET, POST, HEAD
 ```
 
 ## Specifications
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

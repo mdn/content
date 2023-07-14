@@ -1,48 +1,47 @@
 ---
-title: MediaStreamEvent()
+title: "MediaStreamEvent: MediaStreamEvent() constructor"
+short-title: MediaStreamEvent()
 slug: Web/API/MediaStreamEvent/MediaStreamEvent
-tags:
-  - Constructor
-  - Experimental
-  - MediaStreamEvent
-  - Reference
-  - WebRTC
+page-type: web-api-constructor
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaStreamEvent.MediaStreamEvent
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
 
-The **`MediaStreamEvent()`** constructor creates a new
-{{domxref("MediaStreamEvent")}}.
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
+
+The **`MediaStreamEvent()`** constructor creates a new {{domxref("MediaStreamEvent")}} object.
 
 ## Syntax
 
-```js
- var event = new MediaStreamEvent(type, mediaStreamEventInit);
+```js-nolint
+ new MediaStreamEvent(type, options)
 ```
 
 ### Values
 
-- _type_
-  - : Is a {{domxref("DOMString")}} containing the name of the event, like
-    `addstream` or `removestream`.
-- _mediaStreamEventInit_
+- `type`
+  - : A string with the name of the event, like `addstream` or `removestream`.
+- `options`
+  - : An object that, in addition of the properties defined in {{domxref("Event/Event", "Event()")}}, can have the following properties:
+    - `stream`
+      - : A {{domxref("MediaStream")}} representing the stream being concerned by the event.
 
-  - : Is a `MediaStreamEventInit` dictionary, having the following fields:
+### Return value
 
-    - `"stream"` of type {{domxref("MediaStream")}} representing the stream
-      being concerned by the event.
-    - `"bubbles"`, optional and defaulting to `false`, inherited
-      from `EventInit`, and indicating if the event must bubble or not.
-    - `"cancelable"`, optional and defaulting to `false`,
-      inherited from `EventInit`, and indicating if the event can be canceled
-      or not.
+A new {{domxref("MediaStreamEvent")}} object.
 
 ## Example
 
 ```js
 // s is a MediaStream
-var event = new MediaStreamEvent("addstream", {"stream": s});
+const event = new MediaStreamEvent("addstream", { stream: s });
 ```
+
+## Specifications
+
+_This feature is no more part of any specification._
 
 ## Browser compatibility
 

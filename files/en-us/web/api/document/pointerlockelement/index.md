@@ -1,15 +1,11 @@
 ---
-title: Document.pointerLockElement
+title: "Document: pointerLockElement property"
+short-title: pointerLockElement
 slug: Web/API/Document/pointerLockElement
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - mouse lock
+page-type: web-api-instance-property
 browser-compat: api.Document.pointerLockElement
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`pointerLockElement`** property
@@ -18,13 +14,7 @@ element set as the target for mouse events while the pointer is locked. It is
 `null` if lock is pending, pointer is unlocked, or the target is in another
 document.
 
-## Syntax
-
-```js
-document.pointerLockElement;
-```
-
-### Value
+## Value
 
 An {{domxref("Element")}} or `null`.
 
@@ -34,10 +24,10 @@ Determine if a canvas element is currently pointer locked.
 
 ```js
 if (document.pointerLockElement === canvasElement) {
-  console.log('The pointer lock status is now locked');
+  console.log("The pointer lock status is now locked");
   // Do something useful in response
 } else {
-  console.log('The pointer lock status is now unlocked');
+  console.log("The pointer lock status is now unlocked");
   // Do something useful in response
 }
 ```

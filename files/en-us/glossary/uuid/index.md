@@ -1,10 +1,11 @@
 ---
 title: UUID
 slug: Glossary/UUID
-tags:
-  - Glossary
-  - Infrastructure
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 A **Universally Unique Identifier** (**UUID**) is a label used to uniquely identify a resource among all other resources of that type.
 
 Computer systems generate UUIDs locally using very large random numbers.
@@ -18,5 +19,5 @@ The formal definition can be found in: [RFC4122: A Universally Unique IDentifier
 
 ## See also
 
-- {{Interwiki("wikipedia", "UUID")}} on Wikipedia
+- [UUID](https://en.wikipedia.org/wiki/UUID) on Wikipedia
 - [`Crypto.randomUUID()`](/en-US/docs/Web/API/Crypto/randomUUID)

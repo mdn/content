@@ -1,25 +1,13 @@
 ---
-title: CSSStyleSheet.removeRule()
+title: "CSSStyleSheet: removeRule() method"
+short-title: removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Rule
-  - StyleSheet
-  - delete
-  - legacy
-  - remove
-  - removeRule
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.removeRule
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} method
@@ -33,8 +21,8 @@ object. It is functionally identical to the standard, preferred method
 
 ## Syntax
 
-```js
-cssStyleSheet.removeRule(index)
+```js-nolint
+removeRule(index)
 ```
 
 ### Parameters
@@ -45,14 +33,14 @@ cssStyleSheet.removeRule(index)
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example removes the first rule from the stylesheet `myStyles`.
 
 ```js
- myStyles.removeRule(0);
+myStyles.removeRule(0);
 ```
 
 You can rewrite this to use the standard `deleteRule()` method very easily:
@@ -72,6 +60,5 @@ myStyles.deleteRule(0);
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}

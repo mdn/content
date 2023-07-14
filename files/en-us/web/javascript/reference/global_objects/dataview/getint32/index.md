@@ -1,24 +1,19 @@
 ---
 title: DataView.prototype.getInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getInt32
 ---
+
 {{JSRef}}
 
-The **`getInt32()`** method gets a signed 32-bit integer (long)
-at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`getInt32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit signed integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getint32.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 getInt32(byteOffset)
 getInt32(byteOffset, littleEndian)
 ```
@@ -27,8 +22,8 @@ getInt32(byteOffset, littleEndian)
 
 - `byteOffset`
   - : The offset, in bytes, from the start of the view where to read the data.
-- `littleEndian`
-  - : {{optional_inline}} Indicates whether the 32-bit int is stored in
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 32-bit int is stored in
     {{Glossary("Endianness", "little- or big-endian")}} format. If `false` or
     `undefined`, a big-endian value is read.
 
@@ -51,8 +46,8 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 ### Using the getInt32 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getInt32(1); // 0
 ```
 

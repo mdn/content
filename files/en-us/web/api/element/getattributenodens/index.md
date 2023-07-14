@@ -1,24 +1,29 @@
 ---
-title: Element.getAttributeNodeNS()
+title: "Element: getAttributeNodeNS() method"
+short-title: getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Element.getAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 Returns the `Attr` node for the attribute with the given namespace and name.
 
 ## Syntax
 
-    attributeNode = element.getAttributeNodeNS(namespace, nodeName)
+```js-nolint
+getAttributeNodeNS(namespace, nodeName)
+```
 
-- `attributeNode` is the node for specified attribute.
+### Parameters
+
 - `namespace` is a string specifying the namespace of the attribute.
 - `nodeName` is a string specifying the name of the attribute.
+
+### Return value
+
+The node for specified attribute.
 
 ## Notes
 

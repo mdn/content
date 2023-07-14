@@ -1,16 +1,11 @@
 ---
-title: AudioWorkletNode.parameters
+title: "AudioWorkletNode: parameters property"
+short-title: parameters
 slug: Web/API/AudioWorkletNode/parameters
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - AudioWorkletNode
-  - Property
-  - Reference
-  - Web Audio API
+page-type: web-api-instance-property
 browser-compat: api.AudioWorkletNode.parameters
 ---
+
 {{APIRef("Web Audio API")}}
 
 The read-only **`parameters`** property of the
@@ -21,13 +16,7 @@ underlying {{domxref("AudioWorkletProcessor")}} according to its
 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static
 getter.
 
-## Syntax
-
-```js
-audioWorkletNodeInstance.parameters
-```
-
-### Value
+## Value
 
 The {{domxref("AudioParamMap")}} object containing {{domxref("AudioParam")}} instances.
 They can be automated in the same way as with default `AudioNode`s, and their
@@ -53,32 +42,37 @@ populate its `parameters` with instantiated `AudioParam` objects.
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  static get parameterDescriptors () {
-    return [{
-      name: 'customGain',
-      defaultValue: 1,
-      minValue: 0,
-      maxValue: 1,
-      automationRate: 'a-rate'
-    }]
+  static get parameterDescriptors() {
+    return [
+      {
+        name: "customGain",
+        defaultValue: 1,
+        minValue: 0,
+        maxValue: 1,
+        automationRate: "a-rate",
+      },
+    ];
   }
 
-  process (inputs, outputs, parameters) {
-    const output = outputs[0]
-    output.forEach(channel => {
+  process(inputs, outputs, parameters) {
+    const output = outputs[0];
+    output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
-        channel[i] = (Math.random() * 2 - 1) *
-          (parameters['customGain'].length > 1 ? parameters['customGain'][i] : parameters['customGain'][0])
+        channel[i] =
+          (Math.random() * 2 - 1) *
+          (parameters["customGain"].length > 1
+            ? parameters["customGain"][i]
+            : parameters["customGain"][0]);
         // note: a parameter contains an array of 128 values (one value for each of 128 samples),
         // however it may contain a single value which is to be used for all 128 samples
         // if no automation is scheduled for the moment.
       }
-    })
-    return true
+    });
+    return true;
   }
 }
 
-registerProcessor('white-noise-processor', WhiteNoiseProcessor)
+registerProcessor("white-noise-processor", WhiteNoiseProcessor);
 ```
 
 Next, in our main scripts file we'll load the processor, create an instance of
@@ -86,18 +80,21 @@ Next, in our main scripts file we'll load the processor, create an instance of
 to an audio graph.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('white-noise-processor.js')
-const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
-whiteNoiseNode.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("white-noise-processor.js");
+const whiteNoiseNode = new AudioWorkletNode(
+  audioContext,
+  "white-noise-processor",
+);
+whiteNoiseNode.connect(audioContext.destination);
 ```
 
 Now we can change the gain on the node like this:
 
 ```js
-const gainParam = whiteNoiseNode.parameters.get('customGain')
-gainParam.setValueAtTime(0, audioContext.currentTime)
-gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5)
+const gainParam = whiteNoiseNode.parameters.get("customGain");
+gainParam.setValueAtTime(0, audioContext.currentTime);
+gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5);
 ```
 
 ## Specifications
@@ -111,5 +108,4 @@ gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5)
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

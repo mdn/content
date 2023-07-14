@@ -1,14 +1,10 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-variant-caps
 ---
+
 {{CSSRef}}
 
 The **`font-variant-caps`** [CSS](/en-US/docs/Web/CSS) property controls the use of alternate glyphs for capital letters.
@@ -43,6 +39,7 @@ font-variant-caps: titling-caps;
 font-variant-caps: inherit;
 font-variant-caps: initial;
 font-variant-caps: revert;
+font-variant-caps: revert-layer;
 font-variant-caps: unset;
 ```
 
@@ -69,7 +66,7 @@ The `font-variant-caps` property is specified using a single keyword value from 
 
 Large sections of text set with a `font-variant` value of `all-small-caps` or `all-petite-caps` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Formal definition
@@ -116,10 +113,12 @@ Large sections of text set with a `font-variant` value of `all-small-caps` or `a
 
 {{Compat}}
 
-## See Also
+## See also
 
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
+- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
+- [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-alternates)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)

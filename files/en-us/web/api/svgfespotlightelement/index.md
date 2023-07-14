@@ -1,21 +1,17 @@
 ---
 title: SVGFESpotLightElement
 slug: Web/API/SVGFESpotLightElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGFESpotLightElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFESpotLightElement`** interface corresponds to the {{SVGElement("feSpotLight")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -36,7 +32,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFESpotLightElement.limitingConeAngle")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("limitingConeAngle")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

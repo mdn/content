@@ -1,61 +1,47 @@
 ---
-title: 'SpeechRecognition: soundstart event'
+title: "SpeechRecognition: soundstart event"
+short-title: soundstart
 slug: Web/API/SpeechRecognition/soundstart_event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
+page-type: web-api-event
 browser-compat: api.SpeechRecognition.soundstart_event
 ---
-{{SeeCompatTable}} {{APIRef("Web Speech API")}}
 
-The **`soundstart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when any sound — recognisable speech or not — has been detected.
+{{APIRef("Web Speech API")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SpeechRecognition/onsoundstart"
-            >onsoundstart</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+The **`soundstart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when any sound — recognizable speech or not — has been detected.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("soundstart", (event) => {});
+
+onsoundstart = (event) => {};
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 
 You can use the `soundstart` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('soundstart', function() {
-  console.log('Some sound is being received');
+recognition.addEventListener("soundstart", () => {
+  console.log("Some sound is being received");
 });
 ```
 
-Or use the [`onsoundstart`](/en-US/docs/Web/API/SpeechRecognition/onsoundstart) event handler property:
+Or use the `onsoundstart` event handler property:
 
 ```js
-recognition.onsoundstart = function() {
-  console.log('Some sound is being received');
-}
+recognition.onsoundstart = () => {
+  console.log("Some sound is being received");
+};
 ```
 
 ## Specifications

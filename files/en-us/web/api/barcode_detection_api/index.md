@@ -1,23 +1,30 @@
 ---
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
-tags:
-  - API
-  - Landing
-  - Overview
-  - barcode
-  - barcode detection
-  - shape detection
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.BarcodeDetector
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
+
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 
 ## Concepts and usage
 
-Support for barcode recognition within web apps unlocks a variety of use cases through supported barcode formats. QR codes can be used for online payments, web navigation or establishing social media connections, aztec codes can be used to scan boarding passes and shopping apps can use EAN or UPC barcodes to compare prices of physical items.
+Support for barcode recognition within web apps unlocks a variety of use cases through supported barcode formats. QR codes can be used for online payments, web navigation or establishing social media connections, Aztec codes can be used to scan boarding passes and shopping apps can use EAN or UPC barcodes to compare prices of physical items.
 
-Detection is achieved through the {{domxref('BarcodeDetector.detect()','detect()')}} method, which takes an image object; either an {{HTMLElement('img', ' element')}}, a {{domxref('Blob')}}, {{domxref('ImageData')}} or a {{domxref('CanvasImageSource')}}. Optional parameters can be passed to the {{domxref('BarcodeDetector')}} constructor to provide hints on which barcode formats to detect.
+Detection is achieved through the {{domxref('BarcodeDetector.detect()','detect()')}} method, which takes an image object; it can be one of these objects:
+an {{domxref("SVGImageElement")}},
+an {{domxref("HTMLVideoElement")}},
+an {{domxref("HTMLCanvasElement")}},
+an {{domxref("ImageBitmap")}},
+an {{domxref("OffscreenCanvas")}},
+a {{domxref("VideoFrame")}},
+a {{domxref('Blob')}},
+or an {{domxref('ImageData')}}.
+Optional parameters can be passed to the {{domxref('BarcodeDetector')}} constructor to provide hints on which barcode formats to detect.
 
 ### Supported barcode formats
 
@@ -36,12 +43,12 @@ The Barcode Detection API supports the following barcode formats:
       <td>aztec</td>
       <td>
         A square two-dimensional matrix following iso24778 and with a square
-        bullseye pattern at their centre, thus resembling an Aztec pyramid. Does
+        bullseye pattern at their center, thus resembling an Aztec pyramid. Does
         not require a surrounding blank zone.
       </td>
       <td>
         <img
-          alt="A sample image of an aztec barcode. A square with smaller black and white squares inside"
+          alt="A sample image of an Aztec barcode. A square with smaller black and white squares inside"
           src="aztec.gif"
         />
       </td>
@@ -183,7 +190,7 @@ The Barcode Detection API supports the following barcode formats:
         retail in the United States. Defined in iso15420, it represents digits
         by strips of bars and spaces, each digit being associated to a unique
         pattern of 2 bars and 2 spaces, both of variable width. UPC-A can encode
-        12 digits that are uniquely assigned to each trade item, and it’s
+        12 digits that are uniquely assigned to each trade item, and it's
         technically a subset of EAN-13 (UPC-A codes are represented in EAN-13
         with the first character set to 0).
       </td>
@@ -222,37 +229,38 @@ You can check for formats supported by the user agent via the {{domxref('Barcode
 
 ## Interfaces
 
-- {{domxref("BarcodeDetector")}}
+- {{domxref("BarcodeDetector")}} {{Experimental_Inline}}
   - : The **`BarcodeDetector`** interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
 
 ## Examples
 
 ### Creating A Detector
 
-This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.
+This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.
 
 ```js
 // check compatibility
-if (!('BarcodeDetector' in window)) {
-  console.log('Barcode Detector is not supported by this browser.');
+if (!("BarcodeDetector" in window)) {
+  console.log("Barcode Detector is not supported by this browser.");
 } else {
-  console.log('Barcode Detector supported!');
+  console.log("Barcode Detector supported!");
 
   // create new detector
-  var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+  const barcodeDetector = new BarcodeDetector({
+    formats: ["code_39", "codabar", "ean_13"],
+  });
 }
 ```
 
 ### Getting Supported Formats
 
-The following example calls the `getSupportFormat()` method and logs the results to the console.
+The following example calls the `getSupportedFormats()` method and logs the results to the console.
 
 ```js
 // check supported types
-BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
-  });
+BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
+  supportedFormats.forEach((format) => console.log(format));
+});
 ```
 
 ### Detect Barcodes
@@ -260,24 +268,23 @@ BarcodeDetector.getSupportedFormats()
 This example uses the `detect()` method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.
 
 ```js
-  barcodeDetector.detect(imageEl)
-    .then(barcodes => {
-      barcodes.forEach(barcode => console.log(barcode.rawData));
-    })
-    .catch(err => {
-      console.log(err);
-    })
+barcodeDetector
+  .detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawValue));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 ## Specifications
 
-| Specification                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------- |
-| [Accelerated Shape Detection in Images # barcode-detection-api](https://wicg.github.io/shape-detection-api/#barcode-detection-api) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.BarcodeDetector")}}
+{{Compat}}
 
 ## See also
 

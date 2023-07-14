@@ -1,33 +1,30 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
-tags:
-  - Landing
-  - Notifications
-  - Notifications API
-  - permission
-  - system
+page-type: web-api-overview
+browser-compat: api.Notification
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
 
 ## Concepts and usage
 
-On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This should be done in response to a user gesture, such as clicking a button, for example:
+On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initializes, using the {{domxref("Notification.requestPermission()")}} method. This should be done in response to a user gesture, such as clicking a button, for example:
 
 ```js
-btn.addEventListener('click', function() {
+btn.addEventListener("click", () => {
   let promise = Notification.requestPermission();
   // wait for permission
-})
+});
 ```
 
 This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.
 
 This will spawn a request dialog, along the following lines:
 
-![](screen_shot_2019-12-11_at_9.59.14_am.png)
+![A dialog box asking the user to allow notifications from that origin. There are options to never allow or allow notifications.](screen_shot_2019-12-11_at_9.59.14_am.png)
 
 From here the user can choose to allow notifications from this origin, or block them. Once a choice has been made, the setting will generally persist for the current session.
 
@@ -49,19 +46,17 @@ In addition, the Notifications API spec specifies a number of additions to the [
 - {{domxref("ServiceWorkerRegistration")}}
   - : Includes the {{domxref("ServiceWorkerRegistration.showNotification()")}} and {{domxref("ServiceWorkerRegistration.getNotifications()")}} method, for controlling the display of notifications.
 - {{domxref("ServiceWorkerGlobalScope")}}
-  - : Includes the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} handler, for firing custom functions when a notification is clicked.
+  - : Includes the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, for firing custom functions when a notification is clicked.
 - {{domxref("NotificationEvent")}}
   - : A specific type of event object, based on {{domxref("ExtendableEvent")}}, which represents a notification that has fired.
 
 ## Specifications
 
-| Specification                                                               |
-| --------------------------------------------------------------------------- |
-| [Notifications API Living Standard](https://notifications.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

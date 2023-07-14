@@ -1,22 +1,11 @@
 ---
-title: RTCIceTransport.getRemoteCandidates()
+title: "RTCIceTransport: getRemoteCandidates() method"
+short-title: getRemoteCandidates()
 slug: Web/API/RTCIceTransport/getRemoteCandidates
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - ICE
-  - Negotiation
-  - Property
-  - RTCIceTransport
-  - Reference
-  - Remote
-  - WebRTC
-  - WebRTC API
-  - getRemoteCandidates
-  - rtc
+page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getRemoteCandidates
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceTransport")}}** method
@@ -31,8 +20,8 @@ returned by this function.
 
 ## Syntax
 
-```js
-remoteCandidates = RTCIceTransport.getRemoteCandidates();
+```js-nolint
+getRemoteCandidates()
 ```
 
 ### Parameters
@@ -57,10 +46,12 @@ This simple example gets the remote candidate list from the
 the list.
 
 ```js
-var remoteCandidates = pc.getSenders()[0].transport.transport.getRemoteCandidates();
+const remoteCandidates = pc
+  .getSenders()[0]
+  .transport.transport.getRemoteCandidates();
 
-remoteCandidates.forEach(function(candidate, index)) {
-  console.log("Candidate " + index + ": " + candidate.candidate);
+remoteCandidates.forEach((candidate, index) => {
+  console.log(`Candidate ${index}: ${candidate.candidate}`);
 });
 ```
 

@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.createImageData()
+title: "CanvasRenderingContext2D: createImageData() method"
+short-title: createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createImageData
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.createImageData()`** method of
@@ -17,9 +14,10 @@ specified dimensions. All of the pixels in the new object are transparent black.
 
 ## Syntax
 
-```js
-ImageData ctx.createImageData(width, height);
-ImageData ctx.createImageData(imagedata);
+```js-nolint
+createImageData(width, height)
+createImageData(width, height, settings)
+createImageData(imagedata)
 ```
 
 ### Parameters
@@ -30,6 +28,9 @@ ImageData ctx.createImageData(imagedata);
 - `height`
   - : The height to give the new `ImageData` object. A negative value flips the
     rectangle around the horizontal axis.
+- `settings` {{optional_inline}}
+  - : An object with the following properties:
+    - `colorSpace`: Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
 - `imagedata`
   - : An existing `ImageData` object from which to copy the width and height.
     The image itself is **not** copied.
@@ -61,8 +62,8 @@ object's {{domxref("ImageData.data", "data")}} property has a length of 4 × 5,0
 20,000.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 const imageData = ctx.createImageData(100, 50);
 console.log(imageData);
@@ -82,17 +83,17 @@ multiples of four. The array values associated with each pixel are R (red), G (g
 (blue), and A (alpha), in that order.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 const imageData = ctx.createImageData(100, 100);
 
 // Iterate through every pixel
 for (let i = 0; i < imageData.data.length; i += 4) {
   // Modify pixel data
-  imageData.data[i + 0] = 190;  // R value
-  imageData.data[i + 1] = 0;    // G value
-  imageData.data[i + 2] = 210;  // B value
-  imageData.data[i + 3] = 255;  // A value
+  imageData.data[i + 0] = 190; // R value
+  imageData.data[i + 1] = 0; // G value
+  imageData.data[i + 2] = 210; // B value
+  imageData.data[i + 3] = 255; // A value
 }
 
 // Draw image data to the canvas
@@ -106,8 +107,7 @@ ctx.putImageData(imageData, 20, 20);
 ### More examples
 
 For more examples using `createImageData()` and the `ImageData`
-object, see [Pixel
-manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) and {{domxref("ImageData.data")}}.
+object, see [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) and {{domxref("ImageData.data")}}.
 
 ## Specifications
 
@@ -121,5 +121,4 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("ImageData")}}
-- [Pixel
-  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

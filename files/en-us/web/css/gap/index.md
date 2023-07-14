@@ -1,22 +1,17 @@
 ---
-title: gap (grid-gap)
+title: gap
 slug: Web/CSS/gap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - gap
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.gap
 ---
+
 {{CSSRef}}
 
 The **`gap`** [CSS](/en-US/docs/Web/CSS) property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
+
+Note that `grid-gap` is an alias for this property.
 
 ## Syntax
 
@@ -49,6 +44,7 @@ gap: calc(20px + 10%) calc(10% - 5px);
 gap: inherit;
 gap: initial;
 gap: revert;
+gap: revert-layer;
 gap: unset;
 ```
 
@@ -104,13 +100,12 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
+{{EmbedLiveSample("Flex_layout", "auto", 250)}}
 
 ### Grid layout
 
@@ -148,7 +143,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 #### Result
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("Grid_layout", "auto", 250)}}
 
 ### Multi-column layout
 
@@ -156,9 +151,8 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS <code>gap</code> property.
-  Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a 40px column gap created with the CSS
+  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
 </p>
 ```
 
@@ -177,7 +171,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ## Specifications
 
-{{Specifications("css.properties.gap.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

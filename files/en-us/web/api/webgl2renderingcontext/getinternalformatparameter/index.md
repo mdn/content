@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.getInternalformatParameter()
+title: "WebGL2RenderingContext: getInternalformatParameter() method"
+short-title: getInternalformatParameter()
 slug: Web/API/WebGL2RenderingContext/getInternalformatParameter
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getInternalformatParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getInternalformatParameter()`**
@@ -17,8 +14,8 @@ information about implementation-dependent support for internal formats.
 
 ## Syntax
 
-```js
-any gl.getInternalformatParameter(target, internalformat, pname);
+```js-nolint
+getInternalformatParameter(target, internalformat, pname)
 ```
 
 ### Parameters
@@ -27,8 +24,9 @@ any gl.getInternalformatParameter(target, internalformat, pname);
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
 
-    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
-      renderable internal format.
+    - `gl.RENDERBUFFER`
+      - : Buffer data storage for single images in a
+        renderable internal format.
 
 - `internalformat`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format about which to retrieve
@@ -39,8 +37,9 @@ any gl.getInternalformatParameter(target, internalformat, pname);
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of information to query. Possible
     values:
 
-    - `gl.SAMPLES`: Returns a {{jsxref("Int32Array")}} containing sample
-      counts supported for `internalformat` in descending order.
+    - `gl.SAMPLES`
+      - : Returns a {{jsxref("Int32Array")}} containing sample
+        counts supported for `internalformat` in descending order.
 
 ### Return value
 
@@ -50,8 +49,11 @@ Depends on the requested information (as specified with `pname`). It is an
 ## Examples
 
 ```js
-var samples = gl.getInternalformatParameter(gl.RENDERBUFFER,
-                                            gl.RGBA8, gl.SAMPLES);
+const samples = gl.getInternalformatParameter(
+  gl.RENDERBUFFER,
+  gl.RGBA8,
+  gl.SAMPLES,
+);
 ```
 
 ## Specifications

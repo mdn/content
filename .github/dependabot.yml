@@ -7,11 +7,6 @@ updates:
       interval: daily
     open-pull-requests-limit: 10
 
-  - package-ecosystem: npm
-    directory: "/pr-lint"
-    schedule:
-      interval: monthly
-
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

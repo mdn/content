@@ -1,14 +1,10 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-box
+page-type: css-type
+browser-compat: css.properties.display.contents
 ---
+
 {{CSSRef}}
 
 These keywords define whether an element generates display boxes at all.
@@ -19,7 +15,7 @@ Valid `<display-box>` values:
 
 - `contents`
 
-  - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren’t rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
+  - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
 
     _Due to a bug in browsers this will currently remove the element from the accessibility tree — screen readers will not look at what's inside. See the [Accessibility concerns](#accessibility_concerns) section below for more details._
 
@@ -31,8 +27,12 @@ Valid `<display-box>` values:
 
 Current implementations in most browsers will remove from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) any element with a `display` value of `contents`. This will cause the element — and in some browser versions, its descendant elements — to no longer be announced by screen reading technology. This is incorrect behavior according to the [CSSWG specification](https://drafts.csswg.org/css-display/#the-display-properties).
 
-- [More accessible markup with display: contents | Hidde de Vries](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
+- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -91,15 +91,11 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
 
 ## Specifications
 
-| Specification                                                                            | Status                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-box', 'display-box')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Support of contents
-
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## See also
 
@@ -111,5 +107,5 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
   - {{CSSxRef("&lt;display-internal&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
-- [More accessible markup with display: contents — hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
+- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [More accessible markup with display: contents — hiddedevries.nl](https://hidde.blog/more-accessible-markup-with-display-contents/)

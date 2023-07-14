@@ -1,33 +1,27 @@
 ---
 title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.storage.onChanged
 ---
+
 {{AddonSidebar()}}
 
-Fired when one or more items change.
+Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area.
+
+When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, it's possible to receive a callback when there is no change to the underlying data. Also, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against. The extension can determine the changes that occurred by examining the content of the `changes` argument received by the `onChanged` listeners.
 
 ## Syntax
 
-```js
-browser.storage.onChanged.addListener(callback)
+```js-nolint
+browser.storage.onChanged.addListener(listener)
 browser.storage.onChanged.removeListener(listener)
 browser.storage.onChanged.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -38,12 +32,12 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `changes`
-      - : `object`. Object describing the change. This contains one property for each key that changed. The name of the property is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
+      - : `object`. Object describing the change. This object contains properties for all the keys in the storage area included in the {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} call, even if key values are unchanged. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
     - `areaName`
       - : `string`. The name of the storage area (`"sync"`, `"local"`, or `"managed"`) to which the changes were made.
 
@@ -60,16 +54,14 @@ then for each item changed,
 log its old value and its new value.
 */
 function logStorageChange(changes, area) {
-  console.log("Change in storage area: " + area);
+  console.log(`Change in storage area: ${area}`);
 
-  let changedItems = Object.keys(changes);
+  const changedItems = Object.keys(changes);
 
-  for (let item of changedItems) {
-    console.log(item + " has changed:");
-    console.log("Old value: ");
-    console.log(changes[item].oldValue);
-    console.log("New value: ");
-    console.log(changes[item].newValue);
+  for (const item of changedItems) {
+    console.log(`${item} has changed:`);
+    console.log("Old value: ", changes[item].oldValue);
+    console.log("New value: ", changes[item].newValue);
   }
 }
 
@@ -78,11 +70,10 @@ browser.storage.onChanged.addListener(logStorageChange);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,4 +100,4 @@ browser.storage.onChanged.addListener(logStorageChange);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

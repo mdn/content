@@ -1,12 +1,10 @@
 ---
 title: HTTP request methods
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Methods
-  - Reference
+page-type: landing-page
 browser-compat: http.methods
 ---
+
 {{HTTPSidebar}}
 
 HTTP defines a set of **request methods** to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as _HTTP verbs_. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be {{glossary("Safe/HTTP", "safe")}}, {{glossary("idempotent")}}, or {{glossary("cacheable")}}.
@@ -32,10 +30,7 @@ HTTP defines a set of **request methods** to indicate the desired action to be p
 
 ## Specifications
 
-| Specification                                        | Title                                                         | Comment                                                          |
-| ---------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------- |
-| {{RFC("7231", "Request methods", "4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content | Specifies GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE. |
-| {{RFC("5789", "Patch method", "2")}}     | PATCH Method for HTTP                                         | Specifies PATCH.                                                 |
+{{Specifications}}
 
 ## Browser compatibility
 

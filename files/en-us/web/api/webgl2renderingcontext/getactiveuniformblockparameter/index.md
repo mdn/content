@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.getActiveUniformBlockParameter()
+title: "WebGL2RenderingContext: getActiveUniformBlockParameter() method"
+short-title: getActiveUniformBlockParameter()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockParameter
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getActiveUniformBlockParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -18,8 +15,8 @@ information about an active uniform block within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
-any gl.getActiveUniformBlockParameter(program, uniformBlockIndex, pname);
+```js-nolint
+getActiveUniformBlockParameter(program, uniformBlockIndex, pname)
 ```
 
 ### Parameters
@@ -33,32 +30,41 @@ any gl.getActiveUniformBlockParameter(program, uniformBlockIndex, pname);
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to query. Possible values:
 
-    - `gl.UNIFORM_BLOCK_BINDING`: Returns a {{domxref("WebGL_API/Types", "GLuint")}}
-      indicating the uniform buffer binding point.
-    - `gl.UNIFORM_BLOCK_DATA_SIZE`: Returns a {{domxref("WebGL_API/Types", "GLuint")}}
-      indicating the minimum total buffer object size.
-    - `gl.UNIFORM_BLOCK_ACTIVE_UNIFORMS`: Returns a {{domxref("WebGL_API/Types", "GLuint")}}
-      indicating the number of active uniforms in the uniform block.
-    - `gl.UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES`: Returns a
-      {{jsxref("Uint32Array")}} indicating the list of active uniforms in the uniform
-      block.
-    - `gl.UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER`: Returns a
-      {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the uniform block is referenced by the
-      vertex shader.
-    - `gl.UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER`: Returns a
-      {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the uniform block is referenced by the
-      fragment shader.
+    - `gl.UNIFORM_BLOCK_BINDING`
+      - : Returns a {{domxref("WebGL_API/Types", "GLuint")}}
+        indicating the uniform buffer binding point.
+    - `gl.UNIFORM_BLOCK_DATA_SIZE`
+      - : Returns a {{domxref("WebGL_API/Types", "GLuint")}}
+        indicating the minimum total buffer object size.
+    - `gl.UNIFORM_BLOCK_ACTIVE_UNIFORMS`
+      - : Returns a {{domxref("WebGL_API/Types", "GLuint")}}
+        indicating the number of active uniforms in the uniform block.
+    - `gl.UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES`
+      - : Returns a
+        {{jsxref("Uint32Array")}} indicating the list of active uniforms in the uniform
+        block.
+    - `gl.UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER`
+      - : Returns a
+        {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the uniform block is referenced by the
+        vertex shader.
+    - `gl.UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER`
+      - : Returns a
+        {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the uniform block is referenced by the
+        fragment shader.
 
 ### Return value
 
 Depends on which information is requested using the `pname` parameter. If an
-error occurs, {{jsxref("null")}} is returned.
+error occurs, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
 
 ## Examples
 
 ```js
-var blockSize = gl.getActiveUniformBlockParameter(program,
-                      blockIndex, gl.UNIFORM_BLOCK_DATA_SIZE);
+const blockSize = gl.getActiveUniformBlockParameter(
+  program,
+  blockIndex,
+  gl.UNIFORM_BLOCK_DATA_SIZE,
+);
 ```
 
 ## Specifications

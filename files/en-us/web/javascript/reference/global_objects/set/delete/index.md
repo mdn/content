@@ -1,15 +1,10 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes a specified value from a
@@ -19,19 +14,19 @@ The **`delete()`** method removes a specified value from a
 
 ## Syntax
 
-```js
+```js-nolint
 delete(value)
 ```
 
 ### Parameters
 
 - `value`
-  - : The value to remove from `mySet`.
+  - : The value to remove from `Set`.
 
 ### Return value
 
 Returns `true` if `value` was already in
-`mySet`; otherwise `false`.
+`Set`; otherwise `false`.
 
 ## Examples
 
@@ -39,29 +34,31 @@ Returns `true` if `value` was already in
 
 ```js
 const mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
-mySet.delete('foo'); // Returns true. Successfully removed.
+console.log(mySet.delete("bar")); // false; no "bar" element found to be deleted.
+console.log(mySet.delete("foo")); // true; successfully removed.
 
-mySet.has('foo');    // Returns false. The "foo" element is no longer present.
+console.log(mySet.has("foo")); // false; the "foo" element is no longer present.
 ```
 
-Let's checkout below how to delete an Object from a Set.
+### Deleting an object from a set
+
+Because objects are compared by reference, you have to delete them by checking individual properties if you don't have a reference to the original object.
 
 ```js
-const setObj = new Set();   // Create a new set.
+const setObj = new Set(); // Create a new set.
 
-setObj.add({x: 10, y: 20}); // Add object in the set.
+setObj.add({ x: 10, y: 20 }); // Add object in the set.
 
-setObj.add({x: 20, y: 30}); // Add object in the set.
+setObj.add({ x: 20, y: 30 }); // Add object in the set.
 
 // Delete any point with `x > 10`.
-setObj.forEach(function(point){
-  if (point.x > 10){
-    setObj.delete(point)
+setObj.forEach((point) => {
+  if (point.x > 10) {
+    setObj.delete(point);
   }
-})
+});
 ```
 
 ## Specifications

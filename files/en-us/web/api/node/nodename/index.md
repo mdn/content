@@ -1,19 +1,18 @@
 ---
-title: Node.nodeName
+title: "Node: nodeName property"
+short-title: nodeName
 slug: Web/API/Node/nodeName
-tags:
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Node.nodeName
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`nodeName`** property of {{domxref("Node")}} returns the name of the current node as a string.
 
 ## Value
 
-A {{jsxref("String")}}. Values for the different types of nodes are:
+A string. Values for the different types of nodes are:
 
 - {{domxref("Attr")}}
   - : The value of {{domxref("Attr.name")}}, that is the _qualified name_ of the attribute.
@@ -40,25 +39,25 @@ A {{jsxref("String")}}. Values for the different types of nodes are:
 This example displays the node names of several nodes
 
 ```html
-This is some html:
+This is some HTML:
 <div id="d1">Hello world</div>
 <!-- Example of comment -->
-Text <span>Text</span>
-Text<br/>
+Text <span>Text</span> Text<br />
 <svg height="20" width="20">
   <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
-<hr>
+</svg>
+<hr />
 <output id="result">Not calculated yet.</output>
 ```
 
 and the following script:
 
 ```js
-const node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.querySelector("body").firstChild;
 let result = "Node names are:<br/>";
 while (node) {
-  result += node.nodeName + "<br/>";
-  node = node.nextSibling
+  result += `${node.nodeName}<br/>`;
+  node = node.nextSibling;
 }
 
 const output = document.getElementById("result");

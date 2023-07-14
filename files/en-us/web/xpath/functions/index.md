@@ -1,14 +1,12 @@
 ---
 title: Functions
 slug: Web/XPath/Functions
-tags:
-  - Transforming_XML_with_XSLT
-  - XPath
-  - XPath_Reference
-  - XSLT
-  - XSLT_Reference
+page-type: guide
 ---
-{{ XsltRef() }} The following is an annotated list of core [XPath](/en-US/docs/Web/XPath) functions and [XSLT](/en-US/XSLT)-specific additions to XPath, including a description, syntax, a list of arguments, result-type, source in the appropriate W3C Recommendation. For further information on using XPath/XSLT functions, please see the [For Further Reading](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT) page.
+
+{{XsltSidebar}}
+
+The following is an annotated list of core [XPath](/en-US/docs/Web/XPath) functions and [XSLT](/en-US/docs/Web/XSLT)-specific additions to XPath, including a description, syntax, a list of arguments, result-type, source in the appropriate W3C Recommendation. For further information on using XPath/XSLT functions, please see the [For Further Reading](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT) page.
 
 - [boolean()](/en-US/docs/Web/XPath/Functions/boolean)
 - [ceiling()](/en-US/docs/Web/XPath/Functions/ceiling)
@@ -47,5 +45,3 @@ tags:
 - [translate()](/en-US/docs/Web/XPath/Functions/translate)
 - [true()](/en-US/docs/Web/XPath/Functions/true)
 - [unparsed-entity-url()](/en-US/docs/Web/XPath/Functions/unparsed-entity-url) _XSLT-specific_
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}

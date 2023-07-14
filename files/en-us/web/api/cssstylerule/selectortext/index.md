@@ -1,28 +1,20 @@
 ---
-title: CSSStyleRule.selectorText
+title: "CSSStyleRule: selectorText property"
+short-title: selectorText
 slug: Web/API/CSSStyleRule/selectorText
-tags:
-  - API
-  - CSSOM
-  - CSSStyleRule
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CSSStyleRule.selectorText
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`selectorText`** property of the {{domxref("CSSStyleRule")}} interface gets and sets the selectors associated with the `CSSStyleRule`.
 
-## Syntax
+## Value
 
-    var text = CSSStyleRule.selectorText;
-    CSSStyleRule.selectorText = text;
+A string.
 
-### Value
-
-A {{domxref('CSSOMString')}}.
-
-## Example
+## Examples
 
 The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`. `myRules[0].selectorText` therefore returns a literal string of the selector, in this case `"h1"`.
 
@@ -33,7 +25,7 @@ h1 {
 ```
 
 ```js
-let text = document.styleSheets[0].selectorText;
+let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].selectorText); // a string containing "h1".
 ```
 

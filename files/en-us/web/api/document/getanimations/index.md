@@ -1,22 +1,11 @@
 ---
-title: Document.getAnimations()
+title: "Document: getAnimations() method"
+short-title: getAnimations()
 slug: Web/API/Document/getAnimations
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - Document
-  - Method
-  - Reference
-  - Transitions
-  - Web Animations
-  - getAnimations
-  - waapi
-  - web animations api
+page-type: web-api-instance-method
 browser-compat: api.Document.getAnimations
 ---
+
 {{APIRef("Web Animations")}}
 
 The `getAnimations()` method of the {{domxref("Document")}} interface
@@ -25,8 +14,8 @@ target elements are descendants of the document. This array includes [CSS Animat
 
 ## Syntax
 
-```js
-getAnimations();
+```js-nolint
+getAnimations()
 ```
 
 ### Parameters
@@ -45,11 +34,9 @@ The following code snippet will slow down all animations on a page by halving th
 {{domxref("Animation.playbackRate")}}.
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+document.getAnimations().forEach((animation) => {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 ## Specifications

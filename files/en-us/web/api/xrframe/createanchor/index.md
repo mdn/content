@@ -1,25 +1,22 @@
 ---
-title: XRFrame.createAnchor()
+title: "XRFrame: createAnchor() method"
+short-title: createAnchor()
 slug: Web/API/XRFrame/createAnchor
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRFrame.createAnchor
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createAnchor()`** method of the {{domxref("XRFrame")}} interface creates a free-floating {{domxref("XRAnchor")}} which will be fixed relative to the real world.
 
-See {{domxref("XRHitTestResult.createAnchor()")}} for creating an anchor from a hit test result that is attached to a real world object.
+See {{domxref("XRHitTestResult.createAnchor()")}} for creating an anchor from a hit test result that is attached to a real-world object.
 
 ## Syntax
 
-```js
+```js-nolint
 createAnchor(pose, space)
 ```
 
@@ -39,13 +36,14 @@ A {{jsxref("Promise")}} resolving to an {{domxref("XRAnchor")}} object.
 ### Creating an anchor
 
 ```js
-frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
-
-  // Do stuff with the anchor (assign objects that will be relative to this anchor)
-
-}, (error) => {
-  console.error("Could not create anchor: "" + error);
-});
+frame.createAnchor(anchorPose, referenceSpace).then(
+  (anchor) => {
+    // Do stuff with the anchor (assign objects that will be relative to this anchor)
+  },
+  (error) => {
+    console.error(`Could not create anchor: ${error}`);
+  },
+);
 ```
 
 ## Specifications

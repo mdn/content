@@ -1,15 +1,11 @@
 ---
-title: PointerEvent.width
+title: "PointerEvent: width property"
+short-title: width
 slug: Web/API/PointerEvent/width
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.PointerEvent.width
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`width`** read-only property of the
@@ -21,28 +17,25 @@ different value.
 If the input hardware cannot report the contact geometry to the browser, the width
 defaults to `1`.
 
-## Syntax
+## Value
 
-```js
-var contactWidth = pointerEvent.width;
-```
+The width of the event's contact area (in CSS pixels).
 
-### Return value
-
-- `contactWidth`
-  - : The width of the event's contact area (in CSS pixels).
-
-## Example
+## Examples
 
 This example illustrates using the {{domxref("PointerEvent")}} interface's
 {{domxref("PointerEvent.width","width")}} and
 {{domxref("PointerEvent.height","height")}} properties to calculate the contact area.
 
 ```js
-target.addEventListener("pointerdown", function(ev) {
-   // Calculate the contact area
-   var area = ev.width * ev.height;
- }, false);
+target.addEventListener(
+  "pointerdown",
+  (ev) => {
+    // Calculate the contact area
+    const area = ev.width * ev.height;
+  },
+  false,
+);
 ```
 
 ## Specifications

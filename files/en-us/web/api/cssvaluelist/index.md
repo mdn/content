@@ -1,16 +1,13 @@
 ---
 title: CSSValueList
 slug: Web/API/CSSValueList
-tags:
-  - API
-  - CSSOM
-  - CSSValueList
-  - Interface
-  - Reference
-  - Deprecated
+page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.CSSValueList
 ---
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+
+{{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The **`CSSValueList`** interface derives from the {{DOMxRef("CSSValue")}} interface and provides the abstraction of an ordered collection of CSS values.
 
@@ -28,21 +25,21 @@ The items in the `CSSValueList` are accessible via an integral index, starting f
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
-- {{DOMxRef("CSSValueList.length")}}{{ReadOnlyInline}}
+- {{DOMxRef("CSSValueList.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : An `unsigned long` representing the number of `CSSValues` in the list.
 
-## Methods
+## Instance methods
 
-- {{DOMxRef("CSSValueList.item()")}}
+- {{DOMxRef("CSSValueList.item()")}} {{Deprecated_Inline}}
   - : This method is used to retrieve a {{DOMxRef("CSSValue")}} by ordinal index. The order in this collection represents the order of the values in the CSS style property. If index is greater than or equal to the number of values in the list, this returns `null`.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

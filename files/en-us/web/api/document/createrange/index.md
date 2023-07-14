@@ -1,16 +1,11 @@
 ---
-title: Document.createRange()
+title: "Document: createRange() method"
+short-title: createRange()
 slug: Web/API/Document/createRange
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Document
-  - DocumentRange.createRange
-  - Method
-  - Range
+page-type: web-api-instance-method
 browser-compat: api.Document.createRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.createRange()`** method returns a new
@@ -18,13 +13,19 @@ The **`Document.createRange()`** method returns a new
 
 ## Syntax
 
-```js
-range = document.createRange();
+```js-nolint
+createRange()
 ```
 
-_range_ is the created {{domxref("Range")}} object.
+### Parameters
 
-## Example
+None.
+
+### Return value
+
+The created {{domxref("Range")}} object.
+
+## Examples
 
 ```js
 let range = document.createRange();

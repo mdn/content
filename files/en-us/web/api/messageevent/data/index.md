@@ -1,37 +1,33 @@
 ---
-title: MessageEvent.data
+title: "MessageEvent: data property"
+short-title: data
 slug: Web/API/MessageEvent/data
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - Property
-  - Reference
-  - data
-  - messaging
+page-type: web-api-instance-property
 browser-compat: api.MessageEvent.data
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`data`** read-only property of the
 {{domxref("MessageEvent")}} interface represents the data sent by the message emitter.
 
-## Syntax
-
-```js
-var data = messageEvent.data;
-```
-
-### Value
+## Value
 
 The data sent by the message emitter; this can be any data type.
 
-## Example
+If the data is sent by a {{domxref("WebSocket")}} connector, the type of this property depends on the type of the WebSocket message and the value of {{domxref("WebSocket.binaryType")}}.
+
+- If the message type is "text", then this field is a string.
+- If the message type is "binary" type, then the type of this property can be inferred from the `binaryType` of this socket:
+  - {{jsxref("ArrayBuffer")}} if `binaryType` is `"arraybuffer"`,
+  - {{domxref("Blob")}} if `binaryType` is `"blob"`.
+
+## Examples
 
 ```js
-myWorker.onmessage = function(e) {
-  result.textContent = e.data;
-  console.log('Message received from worker');
+myWorker.onmessage = (e) => {
+  result.textContent = e.data;
+  console.log("Message received from worker");
 };
 ```
 

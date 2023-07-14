@@ -1,14 +1,11 @@
 ---
-title: RTCPeerConnection()
+title: "RTCPeerConnection: RTCPeerConnection() constructor"
+short-title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
-tags:
-  - API
-  - Constructor
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
+page-type: web-api-constructor
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection()`**
@@ -17,13 +14,15 @@ a connection between the local device and a remote peer.
 
 ## Syntax
 
-```js
-pc = new RTCPeerConnection([configuration]);
+```js-nolint
+new RTCPeerConnection()
+new RTCPeerConnection(configuration)
 ```
 
 ### Parameters
 
 - `configuration` {{optional_inline}}
+
   - : An object providing options to configure the new connection:
 
     - `bundlePolicy` {{optional_inline}}
@@ -103,10 +102,10 @@ pc = new RTCPeerConnection([configuration]);
         - `"public"` {{deprecated_inline}}
           - : Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._
         - `"relay"`
-          - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a STUN or TURN server, will be considered.
+          - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered.
 
     - `peerIdentity` {{optional_inline}}
-      - : A {{domxref("DOMString")}}
+      - : A string
         which specifies the target peer identity for the {{domxref("RTCPeerConnection")}}.
         If this value is set
         (it defaults to `null`),
@@ -156,8 +155,6 @@ benefit to providing your own is identity key continuity—if you use the same c
 for subsequent calls, the remote peer can tell you're the same caller. This also avoids
 the cost of generating new keys.
 
-**<<<--- add link to information about identity --->>>**
-
 ## Specifications
 
 {{Specifications}}
@@ -168,10 +165,7 @@ the cost of generating new keys.
 
 ## See also
 
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture
-  overview](/en-US/docs/Web/API/WebRTC_API/Protocols)
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture overview](/en-US/docs/Web/API/WebRTC_API/Protocols)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

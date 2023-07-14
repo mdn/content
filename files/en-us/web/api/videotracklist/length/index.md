@@ -1,20 +1,11 @@
 ---
-title: VideoTrackList.length
+title: "VideoTrackList: length property"
+short-title: length
 slug: Web/API/VideoTrackList/length
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrackList
-  - length
-  - list
-  - track
+page-type: web-api-instance-property
 browser-compat: api.VideoTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrackList")}}**
@@ -25,27 +16,21 @@ one video track in the media element.
 A value of 0 indicates that there are no
 video tracks in the media.
 
-## Syntax
-
-```js
-var trackCount = VideoTrackList.length;
-```
-
-### Value
+## Value
 
 A number indicating how many video tracks are included in the
 `VideoTrackList`. Each track can be accessed by treating the
 `VideoTrackList` as an array of objects of type {{domxref("VideoTrack")}}.
 
-## Example
+## Examples
 
 This snippet gets the number of video tracks in the first {{HTMLElement("video")}}
 element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
   "querySelector()")}}.
 
 ```js
-var videoElem = document.querySelector("video");
-var numVideoTracks = 0;
+const videoElem = document.querySelector("video");
+let numVideoTracks = 0;
 
 if (videoElem.videoTracks) {
   numVideoTracks = videoElem.videoTracks.length;

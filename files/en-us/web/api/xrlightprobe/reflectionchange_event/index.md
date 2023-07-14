@@ -1,19 +1,14 @@
 ---
-title: 'XRLightProbe: reflectionchange event'
+title: "XRLightProbe: reflectionchange event"
+short-title: reflectionchange
 slug: Web/API/XRLightProbe/reflectionchange_event
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Event
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.XRLightProbe.reflectionchange_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The WebXR **`reflectionchange`** event fires each time the estimated reflection cube map changes. This happens in response to use movements through different lighting conditions or to direct changes to lighting itself. This event is not cancelable.
 
@@ -22,9 +17,9 @@ The WebXR **`reflectionchange`** event fires each time the estimated reflection 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('reflectionchange', () => { });
+addEventListener("reflectionchange", (event) => {});
 
-onreflectionchange = event => { });
+onreflectionchange = (event) => {};
 ```
 
 ## Event type
@@ -42,7 +37,7 @@ const glBinding = new XRWebGLBinding(xrSession, gl);
 const lightProbe = await xrSession.requestLightProbe();
 let glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 
-lightProbe.addEventListener('reflectionchange', () => {
+lightProbe.addEventListener("reflectionchange", () => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 });
 ```
@@ -52,9 +47,9 @@ lightProbe.addEventListener('reflectionchange', () => {
 The `reflectionchange` event is also available using the `onreflectionchange` event handler property.
 
 ```js
-lightProbe.onreflectionchange = event => {
+lightProbe.onreflectionchange = (event) => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
-});
+};
 ```
 
 ## Specifications

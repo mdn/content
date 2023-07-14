@@ -1,18 +1,10 @@
 ---
 title: theme_experiment
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.theme_experiment
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -24,6 +16,10 @@ browser-compat: webextensions.manifest.theme_experiment
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -53,7 +49,7 @@ This key enables the definition of experimental [`theme`](/en-US/docs/Mozilla/Ad
 - creating a stylesheet that defines mappings between internal CSS selectors for Firefox UI elements and arbitrary CSS variables. The CSS variables are then mapped in the `colors`, `images`, and `properties` objects to new `theme` key properties.
 - (without a stylesheet) using `colors`, `images`, and `properties` to map internal Firefox CSS selectors, such as `--arrowpanel-dimmed` to new `theme` key properties. This option limits experimentation to UI components that are associated with an inbuilt CSS variable.
 
-To discover the CSS selectors for Firefox UI elements or internal Firefox CSS variables use the [browser toolbox](/en-US/docs/Tools/Browser_Toolbox).
+To discover the CSS selectors for Firefox UI elements or internal Firefox CSS variables use the [browser toolbox](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html).
 
 > **Note:** This key is only available for use in Firefox Developer Edition and Firefox Nightly channels and requires the `extensions.experiments.enabled` preference to be enabled. In Firefox 73 and earlier, the `extensions.legacy.enabled` had to be used instead.
 
@@ -149,28 +145,34 @@ This example uses a stylesheet named `style.css` to provide the ability to set a
 
 The stylesheet defines:
 
-    #reload-button {
-      fill: var(--reload-button-color);
-    }
+```css
+#reload-button {
+  fill: var(--reload-button-color);
+}
+```
 
 where `#reload-button` is the Firefox internal CSS selector for the reload button and `--reload-button-color` is an arbitrary name.
 
-In the `manifest.json` file, `--reload-button-color` is then mapped to the name to be used in the `theme` `colors` property:
+In the `manifest.json` file, `--reload-button-color` is then mapped to the name to be used in the `colors` property of `theme`:
 
-    "theme_experiment": {
-      "stylesheet": "style.css",
-      "colors": {
-        "reload_button": "--reload-button-color"
-      }
-    }
+```json
+"theme_experiment": {
+  "stylesheet": "style.css",
+  "colors": {
+    "reload_button": "--reload-button-color"
+  }
+}
+```
 
 The argument `reload_button` is used in the same way as any other `theme` property:
 
-    "theme": {
-      "colors": {
-        "reload_button": "orange"
-      }
-    }
+```json
+"theme": {
+  "colors": {
+    "reload_button": "orange"
+  }
+}
+```
 
 This has the effect of making the reload icon orange.
 

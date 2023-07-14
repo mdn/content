@@ -1,13 +1,13 @@
 ---
 title: WebUSB API
 slug: Web/API/WebUSB_API
-tags:
-  - API
-  - Web USB
-  - Overview
-  - Reference
+page-type: web-api-overview
+status:
+  - experimental
+spec-urls: https://wicg.github.io/webusb/
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Web USB API")}}
+
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}{{SeeCompatTable}}
 
 The **WebUSB API** provides a way to expose non-standard Universal Serial Bus (USB) compatible devices services to the web, to make USB safer and easier to use.
 
@@ -55,12 +55,15 @@ When connecting a new WebUSB-compatible device, the browser displays a notificat
 The following example demonstrates how to access a connected Arduino device using {{domxref("USB.requestDevice()")}}, which has a vendorId of `0x2341`.
 
 ```js
-navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
-  .then(device => {
-    console.log(device.productName);      // "Arduino Micro"
+navigator.usb
+  .requestDevice({ filters: [{ vendorId: 0x2341 }] })
+  .then((device) => {
+    console.log(device.productName); // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   })
-  .catch(error => { console.error(error); });
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 ### Finding all connected devices
@@ -68,21 +71,17 @@ navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
 You can find all connected devices with {{domxref("USB.getDevices()")}}. In the following example, with the Arduino device connected, product and manufacturer name are printed to the console.
 
 ```js
-navigator.usb.getDevices().then(devices => {
-  devices.forEach(device => {
-    console.log(device.productName);      // "Arduino Micro"
+navigator.usb.getDevices().then((devices) => {
+  devices.forEach((device) => {
+    console.log(device.productName); // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   });
-})
+});
 ```
 
 ## Specifications
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Web USB')}} | {{Spec2('Web USB')}} | Initial definition. |
-
-## Browser compatibility
+{{Specifications}}
 
 ## See also
 

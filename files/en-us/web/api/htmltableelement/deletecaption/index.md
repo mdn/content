@@ -1,15 +1,11 @@
 ---
-title: HTMLTableElement.deleteCaption()
+title: "HTMLTableElement: deleteCaption() method"
+short-title: deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.deleteCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteCaption()`** method removes the
@@ -19,11 +15,19 @@ nothing.
 
 ## Syntax
 
-```js
-HTMLTableElement.deleteCaption()
+```js-nolint
+deleteCaption()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example uses JavaScript to delete a table's caption.
 
@@ -31,22 +35,30 @@ This example uses JavaScript to delete a table's caption.
 
 ```html
 <table>
-  <caption>This caption will be deleted!</caption>
-  <tr><td>Cell 1.1</td><td>Cell 1.2</td></tr>
-  <tr><td>Cell 2.1</td><td>Cell 2.2</td></tr>
+  <caption>
+    This caption will be deleted!
+  </caption>
+  <tr>
+    <td>Cell 1.1</td>
+    <td>Cell 1.2</td>
+  </tr>
+  <tr>
+    <td>Cell 2.1</td>
+    <td>Cell 2.2</td>
+  </tr>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 table.deleteCaption();
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

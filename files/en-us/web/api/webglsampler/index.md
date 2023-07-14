@@ -1,17 +1,15 @@
 ---
 title: WebGLSampler
 slug: Web/API/WebGLSampler
-tags:
-  - API
-  - Experimental
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-interface
 browser-compat: api.WebGLSampler
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLSampler`** interface is part of the [WebGL 2](/en-US/docs/Web/API/WebGL_API) API and stores sampling parameters for {{domxref("WebGLTexture")}} access inside of a shader.
+
+{{InheritanceDiagram}}
 
 When working with `WebGLSampler` objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:
 
@@ -28,7 +26,7 @@ When working with `WebGLSampler` objects, the following methods of the {{domxref
 in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLSampler` objects are not available in WebGL 1.
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 ```
 
 ## Specifications

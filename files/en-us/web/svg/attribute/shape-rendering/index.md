@@ -1,11 +1,10 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.shape-rendering
 ---
+
 {{SVGRef}}
 
 The **`shape-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering shapes like paths, circles, or rectangles.
@@ -14,26 +13,28 @@ The **`shape-rendering`** attribute provides hints to the renderer about what tr
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("circle")}}
-*   {{SVGElement("ellipse")}}
-*   {{SVGElement("line")}}
-*   {{SVGElement("path")}}
-*   {{SVGElement("polygon")}}
-*   {{SVGElement("polyline")}}
-*   {{SVGElement("rect")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("line")}}
+- {{SVGElement("path")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" shape-rendering="geometricPrecision"/>
-  <circle cx="320" cy="100" r="100" shape-rendering="crispEdges"/>
+  <circle cx="100" cy="100" r="100" shape-rendering="geometricPrecision" />
+  <circle cx="320" cy="100" r="100" shape-rendering="crispEdges" />
 </svg>
 ```
 
@@ -61,42 +62,18 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `auto`
-    *   : This value indicates that the user agent shall make appropriate tradeoffs to balance speed, crisp edges and geometric precision, but with geometric precision given more importance than speed and crisp edges.
-*   `optimizeSpeed`
-    *   : This value indicates that the user agent shall emphasize rendering speed over geometric precision and crisp edges. This option will sometimes cause the user agent to turn off shape anti-aliasing.
-*   `crispEdges`
-    *   : This value indicates that the user agent shall attempt to emphasize the contrast between clean edges of artwork over rendering speed and geometric precision. To achieve crisp edges, the user agent might turn off anti-aliasing for all lines and curves or possibly just for straight lines which are close to vertical or horizontal. Also, the user agent might adjust line positions and line widths to align edges with device pixels.
-*   `geometricPrecision`
-    *   : Indicates that the user agent shall emphasize geometric precision over speed and crisp edges.
+- `auto`
+  - : This value indicates that the user agent shall make appropriate tradeoffs to balance speed, crisp edges and geometric precision, but with geometric precision given more importance than speed and crisp edges.
+- `optimizeSpeed`
+  - : This value indicates that the user agent shall emphasize rendering speed over geometric precision and crisp edges. This option will sometimes cause the user agent to turn off shape anti-aliasing.
+- `crispEdges`
+  - : This value indicates that the user agent shall attempt to emphasize the contrast between clean edges of artwork over rendering speed and geometric precision. To achieve crisp edges, the user agent might turn off anti-aliasing for all lines and curves or possibly just for straight lines which are close to vertical or horizontal. Also, the user agent might adjust line positions and line widths to align edges with device pixels.
+- `geometricPrecision`
+  - : Indicates that the user agent shall emphasize geometric precision over speed and crisp edges.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#ShapeRenderingProperty", "shape-rendering")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#ShapeRenderingProperty", "shape-rendering")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,21 +1,11 @@
 ---
-title: RTCIceCandidate.tcpType
+title: "RTCIceCandidate: tcpType property"
+short-title: tcpType
 slug: Web/API/RTCIceCandidate/tcpType
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - Property
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - tcpType
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.tcpType
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`tcpType`** property is included on TCP candidates to provide additional details about the candidate type.
@@ -23,13 +13,7 @@ The **{{domxref("RTCIceCandidate")}}** interface's read-only **`tcpType`** prope
 The `tcpType` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `tcpType` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-## Syntax
-
-```js
-var tcpType = RTCIceCandidate.tcpType;
-```
-
-### Value
+## Value
 
 If the {{domxref("RTCIceCandidate.protocol","protocol")}} is "tcp", `tcpType` has one of the following values:
 
@@ -42,14 +26,14 @@ If the {{domxref("RTCIceCandidate.protocol","protocol")}} is "tcp", `tcpType` ha
 
 `tcpType` is `null` for {{Glossary("UDP")}} candidates.
 
-## Example
+## Examples
 
 In this example, the candidate's {{domxref("RTCIceCandidate.protocol", "protocol")}}
 and `tcpType` are used to adjust the user interface for simultaneous-open TCP candidates.
 
 ```js
-if (candidate.protocol == "tcp" && candidate.tcpType == "so") {
-    adjustForSimultaneousOpen(candidate);
+if (candidate.protocol === "tcp" && candidate.tcpType === "so") {
+  adjustForSimultaneousOpen(candidate);
 }
 ```
 

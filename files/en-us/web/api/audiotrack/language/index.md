@@ -1,22 +1,11 @@
 ---
-title: AudioTrack.language
+title: "AudioTrack: language property"
+short-title: language
 slug: Web/API/AudioTrack/language
-tags:
-  - API
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Language
-  - Localization
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Translated
-  - Translation
-  - track
+page-type: web-api-instance-property
 browser-compat: api.AudioTrack.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**
@@ -27,15 +16,9 @@ For tracks that include multiple languages
 (such as a movie in English in which a few lines are spoken in other languages), this
 should be the video's primary language.
 
-## Syntax
+## Value
 
-```js
-var audioTrackLanguage = AudioTrack.language;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of
 the primary language used in the audio track, or an empty string (`""`) if
 the language is not specified or known, or if the track doesn't contain speech.
 
@@ -43,7 +26,7 @@ For example, if the primary language used in the track is United States English,
 value would be `"en-US"`. For Brazilian Portuguese, the value would be
 `"pt-BR"`.
 
-## Example
+## Examples
 
 This example locates all of a media element's primary language and translated audio
 tracks and returns a list of objects containing each of those tracks'
@@ -55,17 +38,15 @@ would like to listen to while watching a movie, for example.
 
 ```js
 function getAvailableLanguages(el) {
-  var trackList = [];
-  const wantedKinds = [
-    "main", "translation"
-  ];
+  const trackList = [];
+  const wantedKinds = ["main", "translation"];
 
-  el.audioTracks.forEach(function(track) {
+  el.audioTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        language: track.language
+        language: track.language,
       });
     }
   });
