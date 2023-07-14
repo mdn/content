@@ -139,9 +139,9 @@ section.with-revert {
 
 {{EmbedLiveSample('Revert_on_a_parent', '100%', '300px')}}
 
-Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node are steelblue. This is exactly the same as if `section { color: darkgreen }` would not exist for the second section.
+Notice how the paragraph is still red even though a `color` property for the section was reverted. Also, note that both the header and plain text node are `steelblue`. The result of reverting makes it as if `section { color: darkgreen; }` did not exist for the section with `color: revert` applied.
 
-Also, if user agent and user do not override `<h3>` and `<section>` element's color values, then the steelblue color is inherited from the `<main>` element.
+Also, if neither the user agent nor the user override the `<h3>` or `<section>` color values, then the `steelblue` color is inherited from `<main>`, as the {{cssxref("color")}} property is an inherited property.
 
 ## Specifications
 
