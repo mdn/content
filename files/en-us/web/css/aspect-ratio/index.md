@@ -7,7 +7,9 @@ browser-compat: css.properties.aspect-ratio
 
 {{CSSRef}}
 
-The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property sets a **preferred aspect ratio** for the box, which will be used in the calculation of auto sizes and some other layout functions.
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property allows you to define the desired width-to-height ratio of an element's box. This means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio. The specified aspect ratio is used in the calculation of auto sizes and some other layout functions.
+
+At least one of the box’s sizes needs to be automatic in order for aspect ratio to has any effect. If neither width nor height is an automatic size, it can have no effect on its preferred sizes.
 
 {{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
 
@@ -44,7 +46,7 @@ aspect-ratio: unset;
 
 ### Demo of aspect-ratio values
 
-n this example, the width of the `<div>` elements has been set to `100px` and height to `auto`. Since the width value is fixed here, the `aspect-ratio` property affects only the height of the `<div>` elements to maintain the specified width-to-height ratio.
+In this example, the width of the `<div>` elements has been set to `100px` and height to `auto`. Since the width value is fixed here, the `aspect-ratio` property affects only the height of the `<div>` elements to maintain the specified width-to-height ratio.
 
 ```html hidden
 <div>1/1</div>
