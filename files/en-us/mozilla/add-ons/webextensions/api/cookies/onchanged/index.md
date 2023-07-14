@@ -68,7 +68,7 @@ browser.cookies.onChanged.addListener((changeInfo) => {
     `Cookie changed: \n` +
       ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
       ` * Cause: ${changeInfo.cause}\n` +
-      ` * Removed: ${changeInfo.removed}`
+      ` * Removed: ${changeInfo.removed}`,
   );
 });
 ```

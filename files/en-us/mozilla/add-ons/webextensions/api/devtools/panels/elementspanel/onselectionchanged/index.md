@@ -49,7 +49,7 @@ function handleSelectedElement() {
 }
 
 browser.devtools.panels.elements.onSelectionChanged.addListener(
-  handleSelectedElement
+  handleSelectedElement,
 );
 ```
 
