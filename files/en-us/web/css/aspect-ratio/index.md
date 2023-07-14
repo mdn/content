@@ -42,7 +42,9 @@ aspect-ratio: unset;
 
 ## Examples
 
-In this example, on `<div>` elements, width has been set to fixed `100px` and height to `auto`, so the property `aspect-ratio` will affect only the hight of the `<div>` elements.
+### Demo of aspect-ratio values
+
+n this example, the width of the `<div>` elements has been set to `100px` and height to `auto`. Since the width value is fixed here, the `aspect-ratio` property affects only the height of the `<div>` elements to maintain the specified width-to-height ratio.
 
 ```html hidden
 <div>1/1</div>
