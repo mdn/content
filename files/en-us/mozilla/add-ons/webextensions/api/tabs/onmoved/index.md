@@ -59,7 +59,7 @@ Listen for and log move events:
 ```js
 function handleMoved(tabId, moveInfo) {
   console.log(
-    `Tab ${tabId} moved from ${moveInfo.fromIndex} to ${moveInfo.toIndex}`
+    `Tab ${tabId} moved from ${moveInfo.fromIndex} to ${moveInfo.toIndex}`,
   );
 }
 

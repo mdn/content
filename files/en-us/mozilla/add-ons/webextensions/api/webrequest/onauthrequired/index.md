@@ -254,7 +254,7 @@ function provideCredentialsSync(requestDetails) {
 browser.webRequest.onAuthRequired.addListener(
   provideCredentialsSync,
   { urls: [target] },
-  ["blocking"]
+  ["blocking"],
 );
 
 browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
@@ -299,7 +299,7 @@ function provideCredentialsAsync(requestDetails) {
 browser.webRequest.onAuthRequired.addListener(
   provideCredentialsAsync,
   { urls: [target] },
-  ["blocking"]
+  ["blocking"],
 );
 
 browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
