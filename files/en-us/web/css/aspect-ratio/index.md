@@ -44,7 +44,7 @@ aspect-ratio: unset;
 
 ## Examples
 
-### Demo of aspect-ratio values
+### Exploring aspect-ratio effects with fixed width
 
 In this example, the width of the `<div>` elements has been set to `100px` and height to `auto`. Since the width value is fixed here, the `aspect-ratio` property affects only the height of the `<div>` elements to maintain the specified width-to-height ratio.
 
