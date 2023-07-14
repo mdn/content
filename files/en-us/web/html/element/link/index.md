@@ -329,7 +329,7 @@ You can include links to several icons on the same page, and the browser will ch
 <!-- first- and second-generation iPad: -->
 <link rel="apple-touch-icon" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
+<link rel="apple-touch" href="favicon57.png" />
 <!-- basic favicon -->
 <link rel="icon" href="favicon32.png" />
 ```
