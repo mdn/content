@@ -51,15 +51,15 @@ Logical keywords can be used to define the container condition:
 - `not` negates the condition. Only one 'not' condition is allowed per container query and cannot be used with the `and` or `or` keywords.
 
 ```css
-@container not (width < 400px) {
-  /* <stylesheet> */
-}
-
 @container (width > 400px) and (height > 400px) {
   /* <stylesheet> */
 }
 
 @container (width > 400px) or (height > 400px) {
+  /* <stylesheet> */
+}
+
+@container not (width < 400px) {
   /* <stylesheet> */
 }
 ```
