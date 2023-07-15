@@ -217,7 +217,7 @@ h3 {
 }
 ```
 
-It can therefore be benefitical to use `rel="preload"` to load important fonts early, so they will be available more quickly when they are actually needed:
+It can therefore be beneficial to use `rel="preload"` to load important fonts early, so they will be available more quickly when they are actually needed:
 
 ```html
 <link
