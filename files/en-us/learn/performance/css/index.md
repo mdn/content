@@ -132,9 +132,9 @@ For essential DOM animations, you are advised to use [CSS animations](/en-US/doc
 
 Next, animation performance relies heavily on what properties you are animating. Certain properties, when animated, trigger a reflow (and therefore also a repaint) and should be avoided. These include properties that:
 
-- Alter an element's dimensions, such as [`width`](/en-US/docs/Web/CSS/width), [`height`](/en-US/docs/Web/CSS/height), [`border`](/en-US/docs/Web/CSS/border), [`padding`](/en-US/docs/Web/CSS/padding).
+- Alter an element's dimensions, such as [`width`](/en-US/docs/Web/CSS/width), [`height`](/en-US/docs/Web/CSS/height), [`border`](/en-US/docs/Web/CSS/border), and [`padding`](/en-US/docs/Web/CSS/padding).
 - Reposition an element, such as [`margin`](/en-US/docs/Web/CSS/margin), [`top`](/en-US/docs/Web/CSS/top), [`bottom`](/en-US/docs/Web/CSS/bottom), [`left`](/en-US/docs/Web/CSS/left), and [`right`](/en-US/docs/Web/CSS/right).
-- Change an element's layout, such as [`align-content`](/en-US/docs/Web/CSS/align-content), [`align-items`](/en-US/docs/Web/CSS/align-items), or [`flex`](/en-US/docs/Web/CSS/flex).
+- Change an element's layout, such as [`align-content`](/en-US/docs/Web/CSS/align-content), [`align-items`](/en-US/docs/Web/CSS/align-items), and [`flex`](/en-US/docs/Web/CSS/flex).
 - Add visual effects that change the element geometry, such as [`box-shadow`](/en-US/docs/Web/CSS/box-shadow).
 
 Modern browsers are smart enough to repaint only the changed area of the document, rather than the entire page. As a result, larger animations are more costly.
