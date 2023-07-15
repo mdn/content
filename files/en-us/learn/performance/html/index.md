@@ -1,5 +1,5 @@
 ---
-title: HTML performance features
+title: HTML performance optimization
 slug: Learn/Performance/HTML
 page-type: learn-module-chapter
 ---
@@ -26,8 +26,8 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To learn about the impact of HTML elements and attributes on web
-        performance optimization.
+        To learn about the impact of HTML on website performance
+        and how to optimize your HTML to improve performance.
       </td>
     </tr>
   </tbody>

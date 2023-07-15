@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
 
-When developing a website, it is important to consider how the browser is handling your CSS, and optimize it to mitigate any performance issues that it is causing. For example, you should optimize for render blocking, and minimize the number of required reflows. This article walks you through key CSS performance techniques and features.
+When developing a website, you need to consider how the browser is handling the CSS on your site. To mitigate any performance issues that CSS might be causing, you should optimize it. For example, you should optimize the CSS to mitigate [render-blocking](/en-US/docs/Glossary/Render_blocking) and minimize the number of required reflows. This article walks you through key CSS performance optimization techniques.
 
 <table>
   <tbody>
@@ -26,8 +26,8 @@ When developing a website, it is important to consider how the browser is handli
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To learn about the impact of CSS on web
-        performance optimization.
+        To learn about the impact of CSS on website performance
+        and how to optimize your CSS to improve performance.
       </td>
     </tr>
   </tbody>
@@ -41,14 +41,13 @@ To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/
 
 ## Optimizing rendering
 
-Browsers follow a specific rendering path:
-1. paint only occurs after layout, which occurs after the render tree is created, which in turn requires both the DOM and the CSSOM trees. 
+Browsers follow a specific rendering path — paint only occurs after layout, which occurs after the render tree is created, which in turn requires both the DOM and the CSSOM trees.
 
 Showing users an unstyled page and then repainting it after the CSS styles have been parsed would be a bad user experience. For this reason, CSS is render blocking until the browser determines that the CSS is required. The browser can paint the page after it has downloaded the CSS and built the [CSS object model (CSSOM)](/en-US/docs/Glossary/CSSOM).
 
 To optimize the CSSOM construction and improve page performance, you can do one or more of the following based on the current state of your CSS:
 
-- **Remove unnecessary styles**: This may sound obvious, but it is surprising how many developers forget to clean up rules and declarations that were added in their stylesheets during development and ended up not being used. All styles get parsed, whether they are being used during layout and painting or not, so it can speed up page rendering to get rid of these. As [How Do You Remove Unused CSS From a Site?](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) (csstricks.com, 2019) summarizes, this is a difficult problem to solve for a large codebase, and there isn't a magic bullet to reliably find and remove unused CSS. You need to do the hard work of keeping your CSS modular and being careful and deliberate about what is added and removed.
+- **Remove unnecessary styles**: This may sound obvious, but it is surprising how many developers forget to clean up unused CSS rules that were added to their stylesheets during development and ended up not being used. All styles get parsed, whether they are being used during layout and painting or not, so it can speed up page rendering to get rid of unused ones. As [How Do You Remove Unused CSS From a Site?](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) (csstricks.com, 2019) summarizes, this is a difficult problem to solve for a large codebase, and there isn't a magic bullet to reliably find and remove unused CSS. You need to do the hard work of keeping your CSS modular and being careful and deliberate about what is added and removed.
 - **Split CSS into separate modules**: Keeping CSS modular means that CSS not required at page load can be loaded later on, reducing initial CSS render-blocking and loading times. The simplest way to do this is by splitting up your CSS into separate files and loading only what is needed:
 
   ```html
@@ -65,9 +64,9 @@ To optimize the CSSOM construction and improve page performance, you can do one 
     media="screen and (max-width: 480px)" />
   ```
 
-  The above example provides default styles, styles that will only be loaded when the document is being printed, and styles that will be loaded only by devices with narrow screens. By default, the browser assumes that each specified style sheet is render-blocking. You can tell the browser when the style sheet should be applied by adding a `media` attribute containing a [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). When the browser sees a style sheet that it only needs to apply in a specific scenario, it still downloads the stylesheet, but doesn't render-block. By separating the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
+  The above example provides three sets of styles — default styles that will always load, styles that will only be loaded when the document is being printed, and styles that will be loaded only by devices with narrow screens. By default, the browser assumes that each specified style sheet is render-blocking. You can tell the browser when a style sheet should be applied by adding a `media` attribute containing a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). When the browser sees a style sheet that it only needs to apply in a specific scenario, it still downloads the stylesheet, but doesn't render-block. By separating the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time for which rendering is blocked.
 
-- **Minify and compress your CSS**: Loading times can be reduced by minifying your CSS (meaning removing all the whitespace in the file that is only there for human readability), and making sure that the server that your site is hosted on uses compression such as gzip on files before serving them. Minification is generally done as part of a build process (for example, most JavaScript frameworks will minify code when you build a project ready to be deployed to production).
+- **Minify and compress your CSS**: Minifying involves removing all the whitespace in the file that is only there for human readability, once the code is put into production. You can reduce loading times considerably by minifying your CSS. Minification is generally done as part of a build process (for example, most JavaScript frameworks will minify code when you build a project ready for deployment). In addition to minification, make sure that the server that your site is hosted on uses compression such as gzip on files before serving them.
 
 - **Simplify selectors**: People often write selectors that are more complex than needed for applying the required styles. This not only increases file sizes, but also the parsing time for those selectors. For example:
 
@@ -130,7 +129,9 @@ The simplest advice is to cut down on all unnecessary animations. You could also
 
 For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript).
 
-Next, animation performance relies heavily on what properties you are animating. Certain properties, when animated, trigger a reflow (and therefore also a repaint) and should be avoided. These include properties that:
+### Choosing which properties to animate
+
+Next, animation performance relies heavily on what properties you are animating. Certain properties, when animated, trigger a [reflow](/en-US/docs/Glossary/Reflow) (and therefore also a [repaint](/en-US/docs/Glossary/Repaint)) and should be avoided. These include properties that:
 
 - Alter an element's dimensions, such as [`width`](/en-US/docs/Web/CSS/width), [`height`](/en-US/docs/Web/CSS/height), [`border`](/en-US/docs/Web/CSS/border), and [`padding`](/en-US/docs/Web/CSS/padding).
 - Reposition an element, such as [`margin`](/en-US/docs/Web/CSS/margin), [`top`](/en-US/docs/Web/CSS/top), [`bottom`](/en-US/docs/Web/CSS/bottom), [`left`](/en-US/docs/Web/CSS/left), and [`right`](/en-US/docs/Web/CSS/right).
@@ -147,18 +148,18 @@ If at all possible, it is better to animate properties that do not cause reflow/
 
 ### Animating on the GPU
 
-To further improve performance, animation work can be moved off the main thread and onto the device's GPU (also referred to as compositing). Elements whose animation will be moved onto the GPU include:
+To further improve performance you should consider moving animation work off the main thread and onto the device's GPU (also referred to as compositing). This is done by choosing specific types of animations that the browser will automatically send to the GPU to handle; these include:
 
-- Those animated with 3D transforms such as [`transform: translateZ()`](/en-US/docs/Web/CSS/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
-- Those with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/position).
-- Those with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see the section below).
+- 3D transform animations (for example [`transform: translateZ()`](/en-US/docs/Web/CSS/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)).
+- Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/position).
+- Elements with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see the section below).
 - Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe).
 
 Animation on the GPU can result in improved performance, especially on mobile. However, moving animations to GPU is not always that simple. Read [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) for a very useful and detailed analysis.
 
 ## Optimizing element changes with `will-change`
 
-Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is required. The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property hints to browsers how an element is expected to change. 
+Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is required. The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property hints to browsers how an element is expected to change.
 
 > **Note:** `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
 
@@ -188,15 +189,11 @@ CSS can scope styles to particular conditions with media queries. Media queries 
 
 By default, the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
 
-## Animating on the GPU
-
-Browsers are optimized to handle CSS animations, and handle animating properties that do not trigger a reflow (and therefore also a repaint) very well. To improve performance, the node being animated can be moved off the main thread and onto the GPU. Properties that will lead to compositing include 3D transforms ([`transform: translateZ()`](/en-US/docs/Web/CSS/transform), [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d), etc.), animating transform and [`opacity`](/en-US/docs/Web/CSS/opacity), [`position: fixed`](/en-US/docs/Web/CSS/position), [`will-change`](/en-US/docs/Web/CSS/will-change), and [`filter`](/en-US/docs/Web/CSS/filter). Some elements, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), are also on their own layer. When an element is promoted as a layer, also known as composited, animating transform properties is done in the GPU, resulting in improved performance, especially on mobile.
-
 ## Improving font performance
 
 This section contains some useful tips for improving web font performance.
 
-In general, think carefully about the fonts you use on your site. Some font files can be very large (multiple megabytes). While it can be tempting to use lots of fonts for visual excitment, this can slow down loading significantly, and cause your site to look like a mess. You probably only need about 2 or 3, and you could get away with less if you chose to use [web safe fonts](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts).
+In general, think carefully about the fonts you use on your site. Some font files can be very large (multiple megabytes). While it can be tempting to use lots of fonts for visual excitement, this can slow down page load significantly, and cause your site to look like a mess. You probably only need about two or three fonts, and you can get away with less if you choose to use [web safe fonts](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts).
 
 ### Font loading
 
@@ -267,7 +264,7 @@ Applied to the `@font-face` at-rule, the [`font-display`](/en-US/docs/Web/CSS/@f
 
 ## Optimizing styling recalculation with CSS containment
 
-The [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module aims to provide performance improvements by allowing the browser to isolate parts of the page from one another and make optimizations when rendering those parts, independently from one another. As an example, the browser can choose to not render parts until they are visible in the viewport.
+By using the properties defined in the [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module, you can instruct the browser to isolate different parts of a page and optimize their rendering independently from one another. This allows for improved performance in rendering individual sections. As an example, you can specify to the browser to not render certain containers until they are visible in the viewport.
 
 The {{cssxref("contain")}} property allows an author to specify exactly what containment types they want applied to individual containers on the page. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited part of the DOM.
 
@@ -279,7 +276,7 @@ article {
 
 The {{cssxref("content-visibility")}} property is a useful shortcut, which allows authors to apply a strong set of containments on a set of containers and specify that the browser should not lay out and render those containers until needed.
 
-A second property, {{cssxref("contain-intrinsic-size")}}, is also available, which allows you to provide a placeholder size for the containers while they are under the effects of containment. This means that the containers will take up space even if their contents have not yet been renderered, allowing containment to do its performance magic without the risk of scroll bar shift and jank as elements render and come into view.
+A second property, {{cssxref("contain-intrinsic-size")}}, is also available, which allows you to provide a placeholder size for containers while they are under the effects of containment. This means that the containers will take up space even if their contents have not yet been renderered, allowing containment to do its performance magic without the risk of scroll bar shift and jank as elements render and come into view. This improves the quality of the user experience as the content is loaded.
 
 ```css
 article {
@@ -287,7 +284,6 @@ article {
   contain-intrinsic-size: 1000px;
 }
 ```
-
 
 {{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
 
