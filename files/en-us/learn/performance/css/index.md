@@ -39,7 +39,7 @@ The first question you should answer before starting to optimize your CSS is "wh
 
 To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/Measuring_performance) of your site. As the previous link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API/). The best way to get started however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn/Performance/Measuring_performance#performance_monitor_tools) tools, to see what parts of the page load are taking a long time and need optimizing.
 
-## CSS rendering optimization
+## Optimizing rendering
 
 Showing users an unstyled page and then repainting it once the CSS styles have been parsed would be a bad user experience. For this reason, CSS is render blocking, unless the browser knows the CSS is not currently needed. The browser can paint the page once it has downloaded the CSS and built the [CSS object model (CSSOM)](/en-US/docs/Glossary/CSSOM).
 
