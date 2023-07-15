@@ -235,11 +235,11 @@ You can also consider:
 - Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/font-best-practices/#preconnect-to-critical-third-party-origins) for details.
 - Using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) to customize the font loading behavior via JavaScript.
 
-### Load only the glyphs you need
+### Loading only the glyphs you need
 
-When choosing a font for body copy, it is harder to be sure of what glyphs will be used in it, especially if you are dealing with user generated content and/or content across multiple languages.
+When choosing a font for body copy, it is harder to be sure of the glyphs that will be used in it, especially if you are dealing with user-generated content and/or content across multiple languages.
 
-However, if you know you are going to use a specific set of glyphs (for example in headings, or spercific punctuation characters only), you could limit the number of glyphs the browser has to download. This could be done in a brute-force way, by creating a font file than only contains that subset.
+However, if you know you are going to use a specific set of glyphs (for example, glyphs for headings or specific punctuation characters only), you could limit the number of glyphs the browser has to download. This could be done in a brute-force way by creating a font file that only contains the required subset.
 
 However, there is a smarter way. The [`unicode-range`](/en-US/docs/Web/CSS/@font-face/unicode-range) `@font-face` descriptor can be used to specify the exact subset of glyphs, or glyph ranges, that you want to download:
 
