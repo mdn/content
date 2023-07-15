@@ -62,10 +62,6 @@ Logical keywords can be used to define the container condition:
 @container (width > 400px) or (height > 400px) {
   /* <stylesheet> */
 }
-
-@container (width > 400px) not (height > 400px) {
-  /* <stylesheet> */
-}
 ```
 
 ### Named containment contexts
@@ -233,6 +229,21 @@ The following query evaluates to true and applies the declared style if the cont
   }
 }
 ```
+
+### Style container queries
+
+{{CSSRef}}{{SeeCompatTable}}
+
+Container queries can also evaluate the computed style of the container element.
+The following container query checks if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`:
+
+```css
+@container style(--accent-color: blue) {
+  /* <stylesheet> */
+}
+```
+
+> **Note:** If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
 
 ## Specifications
 
