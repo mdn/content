@@ -288,7 +288,6 @@ article {
 }
 ```
 
-This causes the intial page load to be much faster.
 
 {{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
 
