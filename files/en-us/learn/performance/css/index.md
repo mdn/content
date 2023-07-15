@@ -228,12 +228,12 @@ It can therefore be beneficial to use `rel="preload"` to load important fonts ea
   crossorigin />
 ```
 
-This is more likely to be beneficial if your `font-family` declaration is hidden inside a large external stylesheet, and won't be reached until significantly later in the parsing process. It is a tradeoff however — fonts files are quite large, and if you preload too many of them, you may delay other resources.
+This is more likely to be beneficial if your `font-family` declaration is hidden inside a large external stylesheet, and won't be reached until significantly later in the parsing process. It is a tradeoff however — font files are quite large, and if you preload too many of them, you may delay other resources.
 
 You can also consider:
 
 - Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/font-best-practices/#preconnect-to-critical-third-party-origins) for details.
-- Using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) to customize your font loading behavior via JavaScript.
+- Using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) to customize the font loading behavior via JavaScript.
 
 ### Load only the glyphs you need
 
