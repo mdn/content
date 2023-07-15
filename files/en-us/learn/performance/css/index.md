@@ -77,7 +77,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
     font-size: 24px;
   }
 
-  /* You probably only really need this */
+  /* You probably only need this */
   .headline {
     font-size: 24px;
   }
