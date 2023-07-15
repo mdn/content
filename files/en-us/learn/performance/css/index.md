@@ -118,7 +118,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
     media="(min-width: 601px)" />
   ```
 
-  The browser will fetch the referenced resources as soon as possible and make them available in the browser cache so that they will be ready for use sooner when they are referenced in subsequent code. It is useful to preload high-priority resources that the user will encounter early on in a page so that the experience is as smooth as possible. Note how you can also use `media` attributes to create responsive preloaders.
+  With `preload`, the browser will fetch the referenced resources as soon as possible and make them available in the browser cache so that they will be ready for use sooner when they are referenced in subsequent code. It is useful to preload high-priority resources that the user will encounter early on in a page so that the experience is as smooth as possible. Note how you can also use `media` attributes to create responsive preloaders.
 
   See also [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/) on web.dev (2020)
 
