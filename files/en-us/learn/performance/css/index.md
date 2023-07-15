@@ -238,7 +238,7 @@ When choosing a font for body copy, it is harder to be sure of what glyphs will 
 
 However, if you know you are going to use a specific set of glyphs (for example in headings, or spercific punctuation characters only), you could limit the number of glyphs the browser has to download. This could be done in a brute-force way, by creating a font file than only contains that subset.
 
-However, there is a smarter way. The [`unicode-range`](/en-US/docs/Web/CSS/unicode-range) `@font-face` descriptor can be used to specify the exact subset of glyphs, or glyph ranges, that you want to download:
+However, there is a smarter way. The [`unicode-range`](/en-US/docs/Web/CSS/@font-face/unicode-range) `@font-face` descriptor can be used to specify the exact subset of glyphs, or glyph ranges, that you want to download:
 
 ```css
 @font-face {
