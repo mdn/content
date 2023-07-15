@@ -128,7 +128,7 @@ Animations can improve perceived performance, making interfaces feel snappier an
 
 The simplest advice is to cut down on all unnecessary animations. You could also provide users with a control/site preference to turn off animations if they are using a low-powered device or a mobile device with limited battery power. You could also use JavaScript to control whether or not animation is applied to the page in the first place. There is also a media query called [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) that can be used to selectively serve animation styles or not based on a user's OS-level preferences for animation.
 
-If you must animate, first of all, you are making the right choice by directly using [CSS for animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations), rather than using old-school JavaScript techniques to dynamically change CSS styles to create an animation. If you want to use JavaScript, The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript.
+For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript).
 
 Next, animation performance relies heavily on what properties you are animating. Certain properties, when animated, trigger a reflow (and therefore also a repaint) and should be avoided. These include properties that:
 
