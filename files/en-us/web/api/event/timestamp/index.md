@@ -56,16 +56,16 @@ default and defaults to 2ms.
 ```js
 // reduced time precision (2ms) in Firefox 60
 event.timeStamp;
-// 1519211809934
-// 1519211810362
-// 1519211811670
+// 9934
+// 10362
+// 11670
 // …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 event.timeStamp;
-// 1519129853500
-// 1519129858900
-// 1519129864400
+// 53500
+// 58900
+// 64400
 // …
 ```
 
