@@ -149,10 +149,10 @@ If at all possible, it is better to animate properties that do not cause reflow/
 
 To further improve performance, animation work can be moved off the main thread and onto the device's GPU (also referred to as compositing). Elements whose animation will be moved onto the GPU include:
 
-- Those animated with 3D transforms: [`transform: translateZ()`](/en-US/docs/Web/CSS/transform), [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d), etc.
+- Those animated with 3D transforms such as [`transform: translateZ()`](/en-US/docs/Web/CSS/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
 - Those with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/position).
-- Those with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see below).
-- Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe).
+- Those with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see the section below).
+- Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe).
 
 Animation on the GPU can result in improved performance, especially on mobile. However, as with many things in life, it is not always that simple. Read [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) for a very useful and detailed analysis.
 
