@@ -49,7 +49,7 @@ Showing users an unstyled page and then repainting it after the CSS styles have 
 To optimize the CSSOM construction and improve page performance, you can do one or more of the following based on the current state of your CSS:
 
 - **Remove unnecessary styles**: This may sound obvious, but it is surprising how many developers forget to clean up rules and declarations that were added in their stylesheets during development and ended up not being used. All styles get parsed, whether they are being used during layout and painting or not, so it can speed up page rendering to get rid of these. As [How Do You Remove Unused CSS From a Site?](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) (csstricks.com, 2019) summarizes, this is a difficult problem to solve for a large codebase, and there isn't a magic bullet to reliably find and remove unused CSS. You need to do the hard work of keeping your CSS modular and being careful and deliberate about what is added and removed.
-- **Split CSS into separate modules**: Keeping CSS modular means that CSS not required at page load can be loaded later on, reducing initial CSS render-blocking and loading times. The simplest way to do this is to split your CSS up into separate files, and loading only what is needed:
+- **Split CSS into separate modules**: Keeping CSS modular means that CSS not required at page load can be loaded later on, reducing initial CSS render-blocking and loading times. The simplest way to do this is by splitting up your CSS into separate files and loading only what is needed:
 
   ```html
   <!-- Loading and parsing styles.css is render-blocking -->
