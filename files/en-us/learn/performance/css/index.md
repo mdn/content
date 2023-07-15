@@ -69,7 +69,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
 - **Minify and compress your CSS**: Loading times can be reduced by minifying your CSS (meaning removing all the whitespace in the file that is only there for human readability), and making sure that the server that your site is hosted on uses compression such as gzip on files before serving them. Minification is generally done as part of a build process (for example, most JavaScript frameworks will minify code when you build a project ready to be deployed to production).
 
-- **Simplify selectors**: People often write selectors that are more complex than needed for applying their styles. This increases file sizes and parsing time for those selectors. For example:
+- **Simplify selectors**: People often write selectors that are more complex than needed for applying the required styles. This not only increases file sizes, but also the parsing time for those selectors. For example:
 
   ```css
   /* Very specific selector */
