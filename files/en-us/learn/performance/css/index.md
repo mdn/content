@@ -154,7 +154,7 @@ To further improve performance, animation work can be moved off the main thread 
 - Those with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see the section below).
 - Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe).
 
-Animation on the GPU can result in improved performance, especially on mobile. However, as with many things in life, it is not always that simple. Read [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) for a very useful and detailed analysis.
+Animation on the GPU can result in improved performance, especially on mobile. However, moving animations to GPU is not always that simple. Read [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) for a very useful and detailed analysis.
 
 ## Optimizing element changes with `will-change`
 
