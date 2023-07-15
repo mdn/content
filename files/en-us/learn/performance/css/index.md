@@ -124,7 +124,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
 ## Handling animations
 
-Animations can improve perceived performance, making interfaces feel snappier and making users feel like progress is being made when they are waiting for a page to load (loading spinners, for example). However, larger animations, and greater numbers of animations will naturally require more processing power to handle, which can degrade performance.
+Animations can improve perceived performance, making interfaces feel snappier and making users feel like progress is being made when they are waiting for a page to load (loading spinners, for example). However, larger animations and a higher number of animations will naturally require more processing power to handle, which can degrade performance.
 
 The simplest advice is to cut down on all unnecessary animations. You could also provide users with a control/site preference to turn off animations if they are on a low-powered device, perhaps using JavaScript to control whether animation is applied to the page in the first place. There is also a media query called [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) that can be used to selectively serve animation styles or not based on a user's OS-level preferences for animation.
 
