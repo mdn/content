@@ -131,7 +131,7 @@ Code blocks like this will get appropriate syntax highlighting and will be recog
 
 ### Additional classes (info strings)
 
-GFM supports [info strings](https://github.github.com/gfm/#info-string), which allows authors to supply additional information about a code block. On MDN, info strings are converted into class names.
+GFM supports [info strings](https://github.github.com/gfm/#info-string), which allow authors to supply additional information about a code block. On MDN, info strings are converted into class names.
 
 Writers will be able to supply any one of the following info strings:
 
