@@ -109,13 +109,18 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 ### The srcset attribute
 
-The [srcset](/en-US/docs/Web/HTML/Element/source#srcset) attribute is used to offer a list of possible images _based on size_.
+The [srcset](/en-US/docs/Web/HTML/Element/source#srcset) attribute is used to offer a list of possible images based on size or the display's pixel density.
 
 It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and _either_:
 
 - a _width descriptor_, followed by a `w` (such as `300w`);
   _OR_
 - a _pixel density descriptor_, followed by an `x` (such as `2x`) to serve a high-res image for high-DPI screens.
+
+Make sure to note that:
+- width and pixel density descriptors should not be used together
+- a missing pixel density descriptor implies 1x
+- duplicate descriptor values are not allowed (2x & 2x, 100w & 100w)
 
 The following example illustrates the usage of `srcset` attribute with the `<source>` element to specify a high-density and standard-resolution image:
 
@@ -126,7 +131,7 @@ The following example illustrates the usage of `srcset` attribute with the `<sou
 </picture>
 ```
 
-As mentioned earlier, the `srcset` attribute can also be used on the `<img>` element without needing the `<picture>` element. The following example demonstrates how to use the `srcset` attribute to specify a high-density and standard-resolution image:
+The `srcset` attribute can also be used on the `<img>` element without needing the `<picture>` element. The following example demonstrates how to use the `srcset` attribute to specify standard-resolution and high-density images, respectively:
 
 ```html
 <img
@@ -142,6 +147,7 @@ The `sizes` attribute is not mandatory when using srcset, but it is recommended 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
 
 Please note that sizes will have its effect only if width dimension descriptors are provided with srcset instead of pixel ratio values (200w instead of 2x for example).
+For more information on using `srcset`, see the [Responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) documentation.
 
 ### The type attribute
 
