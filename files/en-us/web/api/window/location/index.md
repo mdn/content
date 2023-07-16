@@ -41,8 +41,8 @@ URL.
 Note that [navigation-related sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
 
 ```js
-location.assign("http://www.mozilla.org"); // or
-location = "http://www.mozilla.org";
+location.assign("https://www.mozilla.org"); // or
+location = "https://www.mozilla.org";
 ```
 
 ### Example 2: Reloading the current page
@@ -58,7 +58,7 @@ insert the value of `location.pathname` into the hash:
 
 ```js
 function reloadPageWithHash() {
-  location.replace(`http://example.com/#${location.pathname}`);
+  location.replace(`https://example.com/#${location.pathname}`);
 }
 ```
 
