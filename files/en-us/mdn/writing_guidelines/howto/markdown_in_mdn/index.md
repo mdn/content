@@ -559,8 +559,8 @@ Properties tables are a specific type of table used for displaying structured pr
 These pages can't be represented in GFM because they have a header column, so writers should use HTML in this case.
 To get the special styling, writers should apply the `"properties"` class to the table:
 
-```html-nolint
-<table class="properties">
+```html
+<table class="properties"></table>
 ```
 
 ### Discussion reference
