@@ -416,7 +416,7 @@ In GFM table syntax, authors can omit leading and trailing pipes for rows. MDN a
 
 That is, MDN authors must use this style:
 
-```md
+```md example-good
 | Heading 1 | Heading 2 | Heading 3 |
 | --------- | --------- | --------- |
 | cell 1    | cell 2    | cell 3    |
@@ -425,11 +425,11 @@ That is, MDN authors must use this style:
 
 and not this style:
 
-```md
-| Heading 1 | Heading 2 | Heading 3 |
-| --------- | --------- | --------- |
-| cell 1    | cell 2    | cell 3    |
-| cell 4    | cell 5    | cell 6    |
+```md-nolint example-bad
+Heading 1 | Heading 2 | Heading 3
+ --- | --- | ---
+cell 1    | cell 2    | cell 3
+cell 4    | cell 5    | cell 6
 ```
 
 ### When to use HTML tables
