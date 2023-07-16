@@ -207,7 +207,7 @@ function cancel(requestDetails) {
 browser.webRequest.onBeforeRequest.addListener(
   cancel,
   { urls: [pattern], types: ["image"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -233,7 +233,7 @@ function redirect(requestDetails) {
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
   { urls: [pattern], types: ["image"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -263,7 +263,7 @@ function redirectAsync(requestDetails) {
 browser.webRequest.onBeforeRequest.addListener(
   redirectAsync,
   { urls: [pattern], types: ["image"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -287,7 +287,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: [pattern], types: ["image"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -314,7 +314,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: [pattern], types: ["image"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

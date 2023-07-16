@@ -199,7 +199,7 @@ Make it "blocking" so we can modify the headers.
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
   { urls: [targetPage] },
-  ["blocking", "requestHeaders"]
+  ["blocking", "requestHeaders"],
 );
 ```
 
@@ -246,7 +246,7 @@ Make it "blocking" so we can modify the headers.
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeaderAsync,
   { urls: [targetPage] },
-  ["blocking", "requestHeaders"]
+  ["blocking", "requestHeaders"],
 );
 ```
 

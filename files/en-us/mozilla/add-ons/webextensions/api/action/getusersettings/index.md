@@ -1,61 +1,63 @@
 ---
-title: runtime.onBrowserUpdateAvailable
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/onBrowserUpdateAvailable
-page-type: webextension-api-event
-status:
-  - deprecated
-browser-compat: webextensions.api.runtime.onBrowserUpdateAvailable
+title: action.getUserSettings()
+slug: Mozilla/Add-ons/WebExtensions/API/action/getUserSettings
+page-type: webextension-api-function
+browser-compat: webextensions.api.action.getUserSettings
 ---
 
-{{AddonSidebar}}{{Deprecated_header}}
+{{AddonSidebar()}}
 
-Fired when an update for the browser is available, but it isn't installed immediately because a browser restart is required.
+Gets the user-specified settings for the browser action.
+
+> **Note:** This API is available in Manifest V3 or higher.
+
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
 ```js-nolint
-browser.runtime.onBrowserUpdateAvailable.addListener(listener)
-browser.runtime.onBrowserUpdateAvailable.removeListener(listener)
-browser.runtime.onBrowserUpdateAvailable.hasListener(listener)
+let userSettings = await browser.action.getUserSettings();
 ```
-
-Events have three functions:
-
-- `addListener(listener)`
-  - : Adds a listener to this event.
-- `removeListener(listener)`
-  - : Stop listening to this event. The `listener` argument is the listener to remove.
-- `hasListener(listener)`
-  - : Checks whether a `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
-
-## addListener syntax
 
 ### Parameters
 
-- `function`
-  - : The function called when this event occurs.
+This function takes no parameters.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an object with these properties:
+
+- `userSettings`
+
+  - : An object containing the user-specified settings for the browser action with these properties:
+
+    - `isOnToolbar` {{optional_inline}}
+      - : `boolean`. Whether the user has pinned the action's icon to the browser UI. This setting does not indicate whether the action icon is visible. The icon's visibility depends on the size of the browser window and the layout of the browser UI.
+
+## Examples
+
+This code logs a message indicating whether the action is pinned or not:
+
+```js
+function gotSettings(userSettings) {
+  if (userSettings.isOnToolbar) {
+    console.log("Action is pinned to toolbar.");
+  } else {
+    console.log("Action is not pinned to toolbar.");
+  }
+}
+
+let gettingUserSettings = browser.action.getUserSettings();
+gettingUserSettings.then(gotSettings);
+```
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-## Examples
-
-Listen for this event:
-
-```js
-function handleBrowserUpdateAvailable() {
-  // handle event
-}
-
-browser.runtime.onBrowserUpdateAvailable.addListener(
-  handleBrowserUpdateAvailable,
-);
-```
-
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onBrowserUpdateAvailable) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getUserSettings) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

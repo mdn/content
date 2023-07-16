@@ -22,7 +22,7 @@ new GPUPipelineError(message, options)
 ### Parameters
 
 - `message`
-  - : A string providing a human-readable message that explains why the error ocurred.
+  - : A string providing a human-readable message that explains why the error occurred.
 - `options`
   - : An object, which can contain the following properties:
     - `reason`
