@@ -265,7 +265,7 @@ This HTML will be rendered as a highlighted box:
 
 Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
 
-The localizations are stored in [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) as JSON files in gettext format. Refer to these files to determine what string should be used in place of "Note:" or "Warning:" for that locale. If a locale file is not defined, English will be used as a fallback.
+The localizations are stored in [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) as JSON files in [gettext](https://www.gnu.org/software/gettext/) format. Refer to these files to determine what string should be used in place of "Note:" or "Warning:" for that locale. If a locale file is not defined, English will be used as a fallback.
 
 For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
