@@ -105,15 +105,11 @@ When interpolating `<color>` values, they are first converted to a given color s
 
 #### Simple case
 
-In the simple case, both colors to be interpolated are already in the interpolation color space, e.g.:
+When interpolating colors that are in the same color space, missing components from one color are replaced with existing component values from other colors.
+For example, the following two expressions are equivalent:
 
 ```css
 color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
-```
-
-Before the interpolation takes place, any missing component will be replaced with the same component from the other color. Thus the expression above is equivalent to:
-
-```css
 color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 ```
 
@@ -121,7 +117,7 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 
 #### General case
 
-In the general case, missing components are first transferred into the converted colors based the analogy of components. In the following table, components of the same category are **analogous components**.
+Missing components are transferred into the converted color based on **analogous components** of the same category as described in the following table:
 
 | Category     | Components |
 | ------------ | ---------- |
