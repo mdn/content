@@ -163,10 +163,7 @@ function logResponse(responseDetails) {
   console.log(responseDetails.statusCode);
 }
 
-browser.webRequest.onCompleted.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(logResponse, { urls: [target] });
 ```
 
 {{WebExtExamples}}

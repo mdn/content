@@ -22,7 +22,7 @@ new GPUOutOfMemoryError(message)
 ### Parameters
 
 - `message`
-  - : A string providing a human-readable message that explains why the error ocurred.
+  - : A string providing a human-readable message that explains why the error occurred.
 
 ## Examples
 

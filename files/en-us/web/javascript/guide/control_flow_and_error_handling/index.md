@@ -334,7 +334,7 @@ function. If the value does not correspond to a month number
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
-```js
+```js-nolint
 function getMonthName(mo) {
   mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
   const months = [

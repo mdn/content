@@ -199,10 +199,7 @@ function observe(requestDetails) {
   console.log(`observing: ${requestDetails.requestId}`);
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  observe,
-  {urls: [target]}
-);
+browser.webRequest.onAuthRequired.addListener(observe, { urls: [target] });
 ```
 
 This code cancels authentication requests for the target URL:
@@ -212,14 +209,12 @@ const target = "https://intranet.company.com/";
 
 function cancel(requestDetails) {
   console.log(`canceling: ${requestDetails.requestId}`);
-  return {cancel: true};
+  return { cancel: true };
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  cancel,
-  {urls: [target]},
-  ["blocking"]
-);
+browser.webRequest.onAuthRequired.addListener(cancel, { urls: [target] }, [
+  "blocking",
+]);
 ```
 
 This code supplies credentials synchronously. It has to keep track of outstanding requests, to ensure that it doesn't repeatedly try to submit bad credentials:
@@ -229,8 +224,8 @@ const target = "https://intranet.company.com/";
 
 const myCredentials = {
   username: "me@company.com",
-  password: "zDR$ERHGDFy"
-}
+  password: "zDR$ERHGDFy",
+};
 
 const pendingRequests = [];
 
@@ -249,28 +244,22 @@ function provideCredentialsSync(requestDetails) {
   // assume our credentials were bad, and give up.
   if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
-    return {cancel:true};
+    return { cancel: true };
   }
   pendingRequests.push(requestDetails.requestId);
   console.log(`providing credentials for: ${requestDetails.requestId}`);
-  return {authCredentials: myCredentials};
+  return { authCredentials: myCredentials };
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsSync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsSync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 This code supplies credentials asynchronously, fetching them from storage. It also has to keep track of outstanding requests, to ensure that it doesn't repeatedly try to submit bad credentials:
@@ -281,8 +270,8 @@ const target = "https://httpbin.org/basic-auth/*";
 const pendingRequests = [];
 
 /*
-* A request has completed. We can stop worrying about it.
-*/
+ * A request has completed. We can stop worrying about it.
+ */
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
   let index = pendingRequests.indexOf(requestDetails.requestId);
@@ -297,8 +286,7 @@ function provideCredentialsAsync(requestDetails) {
   // and give up.
   if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
-    return {cancel: true};
-
+    return { cancel: true };
   } else {
     pendingRequests.push(requestDetails.requestId);
     console.log(`providing credentials for: ${requestDetails.requestId}`);
@@ -309,20 +297,14 @@ function provideCredentialsAsync(requestDetails) {
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsAsync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsAsync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 {{WebExtExamples}}

@@ -1,6 +1,7 @@
 ---
 title: substring
 slug: Web/XPath/Functions/substring
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

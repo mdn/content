@@ -31,13 +31,13 @@ The rest of this page summarizes these and other incompatibilities.
 - **In Firefox:** The equivalent APIs are accessed using the `browser` namespace.
 
   ```js
-  browser.browserAction.setIcon({path: "path/to/icon.png"});
+  browser.browserAction.setIcon({ path: "path/to/icon.png" });
   ```
 
 - **In Chrome:** Extensions access privileged JavaScript APIs using the `chrome` namespace.
 
   ```js
-  chrome.browserAction.setIcon({path: "path/to/icon.png"});
+  chrome.browserAction.setIcon({ path: "path/to/icon.png" });
   ```
 
 ### Callbacks and promises
@@ -53,9 +53,9 @@ The rest of this page summarizes these and other incompatibilities.
     console.error(e);
   }
 
-  let setCookie = browser.cookies.set(
-    {url: "https://developer.mozilla.org/"}
-  );
+  let setCookie = browser.cookies.set({
+    url: "https://developer.mozilla.org/",
+  });
   setCookie.then(logCookie, logError);
   ```
 
@@ -70,10 +70,7 @@ The rest of this page summarizes these and other incompatibilities.
     }
   }
 
-  chrome.cookies.set(
-    {url: "https://developer.mozilla.org/"},
-    logCookie
-  );
+  chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
   ```
 
 ### Firefox supports both the chrome and browser namespaces
@@ -249,7 +246,7 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 
 - **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location) in the Chrome docs.
 
-### App persistance
+### App persistence
 
 - **In Firefox:** When a native messaging connection is closed, Firefox kills the subprocesses if they do not break away. On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>) and kills the job. Suppose the native application launches other processes and wants them to remain open after the native application is killed. In that case, the native application must use `CreateProcess`, instead of `ShellExecute`, to launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag.
 
