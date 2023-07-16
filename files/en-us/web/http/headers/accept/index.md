@@ -9,7 +9,7 @@ browser-compat: http.headers.Accept
 
 The **`Accept`** request HTTP header indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), the client is able to understand. The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header. Browsers set required values for this header based on the context of the request. For example, a browser uses different values in a request when fetching a CSS stylesheet, image, video, or a script.
 
-<table class="properties">
+<table classs="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
@@ -52,11 +52,11 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 - `*/*`
   - : Any MIME type
 - `;q=` (q-factor weighting)
-  - : A value used is placed in an order of preference expressed using a relative [quality value](/en-US/docs/Glossary/Quality_values) called the _weight_.
+  - : A value used is placed in an order of preference expressed using a relative [quality valkue](/en-US/docs/Glossary/Quality_values) called the _weight_.
 
 ## Examples
 
-```http
+```htp
 Accept: text/html
 
 Accept: image/*
