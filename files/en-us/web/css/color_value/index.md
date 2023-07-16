@@ -103,9 +103,9 @@ When interpolating `<color>` values, they are first converted to a given color s
 
 ### Interpolation with missing components
 
-#### Simple case
+#### Interpolating colors in the same space
 
-When interpolating colors that are in the same color space, missing components from one color are replaced with existing component values from other colors.
+When interpolating colors that are exactly in the interpolation color space, missing components from one color are replaced with existing values of the same components from the other color.
 For example, the following two expressions are equivalent:
 
 ```css
@@ -115,20 +115,20 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 
 > **Note:** If a component is missing from both colors, this component will be missing after the interpolation.
 
-#### General case
+#### Interpolating colors from different spaces: analogous components
 
-Missing components are transferred into the converted color based on **analogous components** of the same category as described in the following table:
+If any color to be interpolated is not in the interpolation color space, its missing components are transferred into the converted color based on **analogous components** of the same category as described in the following table:
 
-| Category     | Components |
-| ------------ | ---------- |
-| Reds         | `R`, `X`   |
-| Greens       | `G`, `Y`   |
-| Blues        | `B`, `Z`   |
-| Lightness    | `L`        |
-| Colorfulness | `C`, `S`   |
-| Hue          | `H`        |
-| a            | `a`        |
-| b            | `b`        |
+| Category     | Analogous components |
+| ------------ | -------------------- |
+| Reds         | `R`, `X`             |
+| Greens       | `G`, `Y`             |
+| Blues        | `B`, `Z`             |
+| Lightness    | `L`                  |
+| Colorfulness | `C`, `S`             |
+| Hue          | `H`                  |
+| a            | `a`                  |
+| b            | `b`                  |
 
 For example:
 
