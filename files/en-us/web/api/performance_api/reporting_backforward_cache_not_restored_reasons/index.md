@@ -215,4 +215,5 @@ There are many different reasons why blocking could occur, and these reasons are
 
 ## See also
 
+- [`notRestoredReasons` API Explainer](https://github.com/WICG/bfcache-not-restored-reason/blob/main/NotRestoredReason.md)
 - {{domxref("PerformanceNavigationTiming")}}
