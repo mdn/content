@@ -15,7 +15,7 @@ The {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property repor
 
 Modern browsers provide an optimization feature for history navigation called the [back/forward cache](https://web.dev/bfcache/) (bfcache). This enables an instant loading experience when users go back to a page they have already visited. Pages can be blocked from entering the bfcache or get evicted while in the bfcache for different reasons, some required by a specification and some specific to browser implementations.
 
-Previously, there was no way for developers to find out why their pages were blocked from using the bfcache in the wild, though there is a [test in Chrome dev tools](https://web.dev/bfcache/#test-to-ensure-your-pages-are-cacheable). To enable monitoring in the field, the [`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) class has been extended to include a `notRestoredReasons` property. This returns an object containing related information on all frames present in the document:
+Previously, there was no way for developers to find out why their pages were blocked from using the bfcache in the wild, though there is a [test in Chrome dev tools](https://web.dev/bfcache/#test-to-ensure-your-pages-are-cacheable). To enable monitoring in the field use the `notRestoredReasons` property of the [`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) class. This returns an object containing related information on all frames present in the document:
 
 - Details such as frame `id` and `name`, to help identify them in the HTML.
 - Whether they were blocked from using the bfcache.
