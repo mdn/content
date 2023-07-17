@@ -572,7 +572,7 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 - [JavaScript/Guide](/en-US/docs/Web/JavaScript/Guide) – Main table-of-contents page
 - [JavaScript/Guide/JavaScript Overview](/en-US/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/Guide/Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 Try to avoid putting your article at the top of the hierarchy, which slows the site down and makes search and site navigation less effective.
 

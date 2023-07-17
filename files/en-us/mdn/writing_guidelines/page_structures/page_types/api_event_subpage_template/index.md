@@ -32,7 +32,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > - **title**
 >   - : Title heading displayed at top of page.
 >     Format as "_NameOfTheParentInterface_**:** _NameOfTheEvent_ **event**".
->     For example, the [animationcancel](/en-US/docs/Web/API/Window/animationcancel_event) event of the [Window](/en-US/docs/Web/API/Window) interface has a _title_ of `Window: animationcancel event`.
+>     For example, the [animationcancel](/en-US/docs/Web/API/Element/animationcancel_event) event of the [Window](/en-US/docs/Web/API/Window) interface has a _title_ of `Window: animationcancel event`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event`.
