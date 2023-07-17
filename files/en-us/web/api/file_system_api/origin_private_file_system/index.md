@@ -7,11 +7,11 @@ browser-compat: api.StorageManager.getDirectory
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}
 
-The origin private file system (OPFS) is a storage endpoint provided as part of the [File System API](https://fs.spec.whatwg.org/), which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
+The origin private file system (OPFS) is a storage endpoint provided as part of the [File System API](/en-US/docs/Web/API/File_System_API), which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
 
 ## Working with files using the File System Access API
 
-The [File System Access API](https://wicg.github.io/file-system-access/), which extends the File System API, provides access to files using picker methods. As an example:
+The [File System Access API](https://wicg.github.io/file-system-access/), which extends the [File System API](/en-US/docs/Web/API/File_System_API), provides access to files using picker methods. For example:
 
 1. {{domxref("Window.showOpenFilePicker()")}} allows the user to choose a file to access, which results in a {{domxref("FileSystemFileHandle")}} object being returned.
 2. {{domxref("FileSystemFileHandle.getFile()")}} is called to get access to the file's contents, the content is modified using {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}}.
@@ -86,8 +86,6 @@ You can also call {{domxref("FileSystemHandle.remove()")}} on the {{domxref("Fil
 await fileHandle.remove();
 await directoryHandle.remove({ recursive: true });
 ```
-
-> **Note:** At the time of writing, `remove()` is only supported in Chromium-based browsers.
 
 The following provides a quick way to clear the entire OPFS:
 
