@@ -52,8 +52,8 @@ Suppose storage contains two items:
 // storage contains two items,
 // "kitten" and "monster"
 browser.storage.local.set({
-  kitten:  {name:"Mog", eats:"mice"},
-  monster: {name:"Kraken", eats:"people"}
+  kitten: { name: "Mog", eats: "mice" },
+  monster: { name: "Kraken", eats: "people" },
 });
 ```
 
@@ -147,7 +147,7 @@ Or using a Promise
 
 ```js
 let gettingItem = new Promise((resolve) =>
-  chrome.storage.local.get("kitten", resolve)
+  chrome.storage.local.get("kitten", resolve),
 );
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```

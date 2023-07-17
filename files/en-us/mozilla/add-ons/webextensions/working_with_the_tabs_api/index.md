@@ -71,9 +71,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
       "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs",
       "manifest_version": 2,
       "name": "Tabs, tabs, tabs",
-      "permissions": [
-        "tabs"
-      ],
+      "permissions": ["tabs"],
       "version": "1.0"
     }
     ```
@@ -88,7 +86,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
   - : `tabs.html` defines the content of the extension's popup:
 
     ```html
-    <!DOCTYPE html>
+    <!doctype html>
     <html lang="en">
       <head>
         <meta charset="utf-8" />

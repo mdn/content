@@ -87,6 +87,7 @@ Firefox provides three types of cookie store:
 
 - The default store, which stores cookies from normal browsing.
 - Private browsing mode stores, which stores cookies created during a private browsing session. These stores and any cookies they contain are removed when the related private browsing window closes.
+
   > **Note:**
   > Only visible if {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}} returns true. Safari doesn't support access to private cookies.
 
@@ -127,7 +128,7 @@ The extension's UI uses a toolbar button ({{WebExtAPIRef("browserAction")}}) imp
 To handle the icon buttons the script first gathers all the class names used for the buttons in the HTML file:
 
 ```js
-let bgBtns = document.querySelectorAll('.bg-container button');
+let bgBtns = document.querySelectorAll(".bg-container button");
 ```
 
 It then loops through all the buttons assigning them their image and creating an onclick listener for each button:
@@ -144,12 +145,12 @@ for (let i = 0; i < bgBtns.length; i++) {
 When a button is clicked, its corresponding listener function gets the button class name and then the icon path which it passes to the page's content script ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/content_scripts/updatebg.js)) using a message. The content script then applies the icon to the web page's background. Meanwhile, [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/popup/bgpicker.js) stores the details of the icon applied to the background in a cookie:
 
 ```js
-    cookieVal.image = fullURL;
-    browser.cookies.set({
-    url: tabs[0].url,
-    name: "bgpicker",
-    value: JSON.stringify(cookieVal)
-  })
+cookieVal.image = fullURL;
+browser.cookies.set({
+  url: tabs[0].url,
+  name: "bgpicker",
+  value: JSON.stringify(cookieVal),
+});
 ```
 
 The color setting is handled in a similar way, triggered by a listener on the color input field. When a color is entered the active tab is discovered and the color selection details sent, using a message, to the page's content script to be applied to the web page background. Then the color selection is added to the cookie:
@@ -165,7 +166,7 @@ The color setting is handled in a similar way, triggered by a listener on the co
 When the user clicks the reset button, which has been assigned to the variable reset:
 
 ```js
-let reset = document.querySelector('.color-reset button');
+let reset = document.querySelector(".color-reset button");
 ```
 
 `reset.onclick` first finds the active tab. Then, using the tab's ID it passes a message to the page's content script ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/content_scripts/updatebg.js)) to get it to remove the icon and color from the page. The function then clears the cookie values (so the old values aren't carried forward and written onto a cookie created for a new icon or color selection on the same page) before removing the cookie:
@@ -186,7 +187,7 @@ browser.cookies.onChanged.addListener((changeInfo) => {
     * Cookie: ${JSON.stringify(changeInfo.cookie)}\n
     * Cause: ${changeInfo.cause}\n
     * Removed: ${changeInfo.removed}`);
-  });
+});
 ```
 
 ### Scripts—background.js
@@ -194,22 +195,22 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 A background script ([background.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/background_scripts/background.js)) provides for the possibility that the user has chosen a background icon and color for the website in an earlier session. The script listens for changes in the active tab, either the user switching between tabs or changing the URL of the page displayed in the tab. When either of these events happen, `cookieUpdate()` is called. `cookieUpdate()` in turn uses `getActiveTab()` to get the active tab ID. The function can then check whether a cookie for the extension exists, using the tab's URL:
 
 ```js
-    let gettingCookies = browser.cookies.get({
-      url: tabs[0].url,
-      name: "bgpicker"
-    });
+let gettingCookies = browser.cookies.get({
+  url: tabs[0].url,
+  name: "bgpicker",
+});
 ```
 
 If the `"bgpicker"` cookie exists for the website, the details of the icon and color selected earlier are retrieved and passed to the content script [updatebg.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/content_scripts/updatebg.js) using messages:
 
 ```js
-    gettingCookies.then((cookie) => {
-      if (cookie) {
-        let cookieVal = JSON.parse(cookie.value);
-        browser.tabs.sendMessage(tabs[0].id, {image: cookieVal.image});
-        browser.tabs.sendMessage(tabs[0].id, {color: cookieVal.color});
-      }
-    });
+gettingCookies.then((cookie) => {
+  if (cookie) {
+    let cookieVal = JSON.parse(cookie.value);
+    browser.tabs.sendMessage(tabs[0].id, { image: cookieVal.image });
+    browser.tabs.sendMessage(tabs[0].id, { color: cookieVal.color });
+  }
+});
 ```
 
 ## Other features

@@ -27,7 +27,6 @@ First of all, create a new directory called "modify-page". In that directory, cr
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
@@ -38,7 +37,6 @@ First of all, create a new directory called "modify-page". In that directory, cr
       "js": ["page-eater.js"]
     }
   ]
-
 }
 ```
 
@@ -53,7 +51,7 @@ Next, create a file called "page-eater.js" inside the "modify-page" directory, a
 ```js
 document.body.textContent = "";
 
-let header = document.createElement('h1');
+let header = document.createElement("h1");
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
@@ -70,20 +68,15 @@ First, update "manifest.json" so it has the following contents:
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "contextMenus"
-  ],
+  "permissions": ["activeTab", "contextMenus"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -97,13 +90,13 @@ Let's create this file. Create a new file called `background.js` in the `modify-
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
   }
 });
@@ -185,27 +178,27 @@ First, edit `background.js` so that it has these contents:
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the extension!"
+    replacement: "Message from the extension!",
   });
 }
 
 function onExecuted(result) {
-    let querying = browser.tabs.query({
-        active: true,
-        currentWindow: true
-    });
-    querying.then(messageTab);
+  let querying = browser.tabs.query({
+    active: true,
+    currentWindow: true,
+  });
+  querying.then(messageTab);
 }
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "eat-page") {
     let executing = browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
     executing.then(onExecuted);
   }
@@ -219,7 +212,7 @@ Next, update `page-eater.js` like this:
 ```js
 function eatPageReceiver(request, sender, sendResponse) {
   document.body.textContent = "";
-  let header = document.createElement('h1');
+  let header = document.createElement("h1");
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }
@@ -238,7 +231,7 @@ If we want send messages back from the content script to the background page, we
 
 ```js
 browser.runtime.sendMessage({
-    title: "from page-eater.js"
+  title: "from page-eater.js",
 });
 ```
 
