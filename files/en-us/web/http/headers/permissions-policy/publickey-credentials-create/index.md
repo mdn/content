@@ -38,4 +38,4 @@ The default allowlist for `publickey-credentials-create` is `self`.
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
 - [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
-- {{DOMxRef("PublicKeyCredential")}} interface
+- {{DOMxRef("PublicKeyCredential")}} interface create new keys to work wiyh
