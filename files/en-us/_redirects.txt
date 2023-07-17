@@ -2084,7 +2084,6 @@
 /en-US/docs/DOM/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/DOM/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/DOM/window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/DOM/window.applicationCache	/en-US/docs/Web/API/Window/applicationCache
 /en-US/docs/DOM/window.atob	/en-US/docs/Web/API/atob
 /en-US/docs/DOM/window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/DOM/window.blur	/en-US/docs/Web/API/Window/blur
@@ -2549,7 +2548,6 @@
 /en-US/docs/DOM:treeWalker.whatToShow	/en-US/docs/Web/API/TreeWalker/whatToShow
 /en-US/docs/DOM:window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/DOM:window.applicationCache	/en-US/docs/Web/API/Window/applicationCache
 /en-US/docs/DOM:window.atob	/en-US/docs/Web/API/atob
 /en-US/docs/DOM:window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/DOM:window.blur	/en-US/docs/Web/API/Window/blur
@@ -3268,7 +3266,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.URL	/en-US/docs/Web/API/URL
 /en-US/docs/Document_Object_Model_(DOM)/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/Document_Object_Model_(DOM)/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
-/en-US/docs/Document_Object_Model_(DOM)/window.applicationCache	/en-US/docs/Web/API/Window/applicationCache
 /en-US/docs/Document_Object_Model_(DOM)/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/Document_Object_Model_(DOM)/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
 /en-US/docs/Document_Object_Model_(DOM)/window.clearInterval	/en-US/docs/Web/API/clearInterval
@@ -10693,7 +10690,6 @@
 /en-US/docs/Web/API/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/Web/API/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/Web/API/window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/Web/API/window.applicationCache	/en-US/docs/Web/API/Window/applicationCache
 /en-US/docs/Web/API/window.atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/Web/API/window.blur	/en-US/docs/Web/API/Window/blur

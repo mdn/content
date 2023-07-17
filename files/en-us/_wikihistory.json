@@ -66684,25 +66684,6 @@
       "teoli"
     ]
   },
-  "Web/API/Window/applicationCache": {
-    "modified": "2020-12-08T02:25:04.101Z",
-    "contributors": [
-      "sideshowbarker",
-      "schalkneethling",
-      "placecarleen44",
-      "bershanskiy",
-      "alattalatta",
-      "chrisdavidmills",
-      "Sheppy",
-      "fscholz",
-      "teoli",
-      "ethertank",
-      "Jeremie",
-      "ebidel",
-      "Mgjbot",
-      "Kohei"
-    ]
-  },
   "Web/API/Window/back": {
     "modified": "2020-02-23T02:06:28.448Z",
     "contributors": [
