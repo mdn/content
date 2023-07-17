@@ -86,7 +86,7 @@ Firefox support for Web standards continues to lead the industry with consistent
 - XML Path Language ([XPath](/en-US/docs/Web/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath/)
 - Resource Description Framework ([RDF](/en-US/docs/Glossary/RDF)): [RDF](https://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
-- [JavaScript](/en-US/docs/Web/JavaScript) 1.6, based on [ECMA-262](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview), revision 3: [ECMA-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- [JavaScript](/en-US/docs/Web/JavaScript) 1.6, based on [ECMA-262, revision 3](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 
 Firefox 1.5 supports the following data transport protocols (HTTP, FTP, SSL, TLS, and others), multilingual character data (Unicode), graphics (GIF, JPEG, PNG, SVG, and others) and the latest version of the world's most popular scripting language, [JavaScript 1.6](/en-US/docs/New_in_JavaScript_1.6).
 
