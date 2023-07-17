@@ -20,9 +20,9 @@ The **Audio Output Devices API** allows web applications to prompt users about w
 Operating systems commonly allow users to specify that audio should be played from speakers, a Bluetooth headset, or some other audio output device.
 This API allows applications to provide this same functionality from within a web page.
 
-Even if allowed by a permission policy, access to a particular audio output device still requires explicit user permission, as the user may be in a location where playing audio is not appropriate through some output devices.
+Even if allowed by a permission policy, access to a particular audio output device still requires explicit user permission, as the user may be in a location where playing audio through some output devices is not appropriate.
 
-The API provides the [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput) method that allows users to select their desired audio output from those that are allowed by the [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) for the document.
+The API provides the [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput) method that allows users to select their desired audio output from those that are allowed by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) directive of the [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) HTTP header for the document.
 The selected device then has user permission, allowing it to be enumerated with [`MediaDevices.enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices) and set as the audio output device using [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId).
 
 Audio devices may arbitrarily connect and disconnect.

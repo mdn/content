@@ -10,7 +10,7 @@ browser-compat: api.MediaDevices.selectAudioOutput
 
 {{APIRef("WebRTC")}} {{SeeCompatTable}}
 
-The {{domxref("MediaDevices.selectAudioOutput()")}} method of the [Web Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) prompts the user to select an audio output device, such as a speaker or headset, and grants user-permission to use the selected device as an audio output sink.
+The {{domxref("MediaDevices.selectAudioOutput()")}} method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
 
 Following selection, if the device is available it can be enumerated using [`MediaDevices.enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices) and set as the audio output sink using [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId).
 
@@ -34,7 +34,7 @@ selectAudioOutput(options)
 
     - `deviceId` {{Optional_Inline}}
 
-      - : A string representing the id of a single previously exposed/permitted device.
+      - : A string representing the ID of a single previously exposed/permitted device.
         If not set, a prompt with all available audio output devices will be displayed.
 
         The option is intended for applications that want to use persisted device ids.

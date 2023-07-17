@@ -44,7 +44,7 @@ Access to the API is subject to the following constraints:
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - User permission is required to access a non-default device.
-  This is granted by selecting the device associated with the ID in the prompt displayed by [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput).
+  The user grants permission by selecting the device associated with the ID in the prompt displayed by [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput).
 
 ## Examples
 

@@ -9,7 +9,7 @@ browser-compat: api.MediaDevices.enumerateDevices
 {{APIRef("WebRTC")}}
 
 The {{domxref("MediaDevices")}} method **`enumerateDevices()`** requests a list of the currently available media input and output devices, such as microphones, cameras, headsets, and so forth.
-The returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} array describing the devices.
+The returned {{jsxref("Promise")}} is resolved with an array of {{domxref("MediaDeviceInfo")}} objects describing the devices.
 
 The returned list will omit any devices that are blocked by the document [Permission Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy): [`microphone`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/microphone), [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera), [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) (for output devices), and so on.
 Access to particular non-default devices is also gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API), and the list will omit devices for which the user has not granted explicit permission.
@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled.
+A {{ jsxref("Promise") }} that is fulfilled with an array of {{domxref("MediaDeviceInfo")}} objects.
 Each object in the array describes one of the available media input and output devices.
 The order is significant — the default capture devices will be listed first.
 
