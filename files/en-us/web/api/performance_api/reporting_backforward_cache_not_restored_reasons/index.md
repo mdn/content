@@ -140,7 +140,7 @@ If multiple cross-origin frames have blocking reasons, we randomly select one cr
 
 As noted earlier, there are many different reasons why blocking could occur. Google has compiled a [spreadsheet](https://docs.google.com/spreadsheets/d/1li0po_ETJAIybpaSX5rW_lUN62upQhY0tH4pR5UPt60/edit#gid=0) showing all the reason strings and explaining what they mean.
 
-There are a few major categories of reasons that are worth calling out:
+As an example, Chrome's implementation has a few major categories of reasons:
 
 - `Circumstantial`: This refers to blocking reasons not directly related to the developer's page code. For example, a related component crashed, something went wrong with the loading process, the page is in a temporary state that can't be cached, bfcache is disabled due to insufficient memory, or a [service worker](/en-US/docs/Web/API/Service_Worker_API) did something to the page that disqualifies it from being cached.
 - `Extensions`: There are a few different reason messages related to extensions. There are several different reasons combined into the "Extensions" reason. The reasons concerning extension-related blocking are intentionally vague because it would be bad for privacy to give away too much information about what extensions the user has installed, which ones are active on the page, what they are doing, etc.
