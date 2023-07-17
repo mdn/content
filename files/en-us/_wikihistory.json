@@ -69521,17 +69521,6 @@
       "teoli"
     ]
   },
-  "Web/API/WorkerGlobalScope/console": {
-    "modified": "2020-10-15T21:32:18.184Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "valentin.gosu",
-      "teoli",
-      "chrisdavidmills",
-      "kscarfone"
-    ]
-  },
   "Web/API/WorkerGlobalScope/dump": {
     "modified": "2020-10-15T21:32:18.913Z",
     "contributors": [
