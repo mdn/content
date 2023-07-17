@@ -168,7 +168,7 @@ Add a class of `special` to the first paragraph of text, the one immediately fol
 .special {
   background-color: rgb(79, 185, 227);
   padding: 10px;
-  color: #fff;
+  color: purple;
 }
 ```
 
@@ -225,12 +225,6 @@ body {
   border-radius: 5px;
   background-color: rgb(207, 232, 220);
   padding: 1em;
-}
-
-.special {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
 }
 ```
 
@@ -306,7 +300,7 @@ body {
 .special {
   background-color: rgb(79, 185, 227);
   padding: 10px;
-  color: #fff;
+  color: purple;
 }
 
 .cleared {
@@ -349,8 +343,7 @@ In your CSS, add the following rule for the `.wrapper` class and then reload the
 .wrapper {
   background-color: rgb(79, 185, 227);
   padding: 10px;
-  color: #fff;
-  overflow: auto;
+  color: purple;
 }
 ```
 
@@ -396,13 +389,6 @@ body {
     sans-serif;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
-  overflow: auto;
-}
-
 .box {
   float: left;
   margin: 15px;
@@ -411,12 +397,13 @@ body {
   border-radius: 5px;
   background-color: rgb(207, 232, 220);
   padding: 1em;
+  color: black;
 }
 ```
 
 {{EmbedLiveSample('The_problem', '100%', 600)}}
 
-Once again, this is because the float has been taken out of normal flow. You might expect that by wrapping the floated box and the text of first paragraph that wraps around the float together, the subsequent content will be cleared of the box. But this is not the case, as shown above. To deal with this, the standards method is create a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) using the {{cssxref("display")}} property.
+Once again, this is because the float has been taken out of normal flow. You might expect that by wrapping the floated box and the text of first paragraph that wraps around the float together, the subsequent content will be cleared of the box. But this is not the case, as shown above. To deal with this, the standard method is to create a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) using the {{cssxref("display")}} property.
 
 ### display: flow-root
 
@@ -426,7 +413,7 @@ To solve this problem is to use the value `flow-root` of the `display` property.
 .wrapper {
   background-color: rgb(79, 185, 227);
   padding: 10px;
-  color: #fff;
+  color: purple;
   display: flow-root;
 }
 ```
@@ -474,13 +461,6 @@ body {
     sans-serif;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
-  display: flow-root;
-}
-
 .box {
   float: left;
   margin: 15px;
@@ -489,6 +469,7 @@ body {
   border-radius: 5px;
   background-color: rgb(207, 232, 220);
   padding: 1em;
+  color: black;
 }
 ```
 
