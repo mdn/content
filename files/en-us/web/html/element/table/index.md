@@ -146,29 +146,41 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Simple table
+### Basic data table
 
 ```html
 <table>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
-  </tr>
+  <caption>Alumni Directory</caption>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Maria</td>
+      <td>Sanchez</td>
+      <td>2014</td>
+    </tr>
+    <tr>
+      <td>Michael</td>
+      <td>Johnson</td>
+      <td>2014</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### Result
 
-{{EmbedLiveSample('Simple_table', '100%', '100')}}
+{{EmbedLiveSample('Basic_data_table', '100%', '100')}}
 
-### Further simple examples
+### Additional basic examples
 
 ```html
-<p>Simple table with header</p>
+<p>Basic table with headers</p>
 <table>
   <tr>
     <th>First name</th>
@@ -273,7 +285,7 @@ td {
 
 #### Result
 
-{{EmbedLiveSample('Further_simple_examples', '100%', '700')}}
+{{EmbedLiveSample('Additional_basic_examples', '100%', '700')}}
 
 ### Practical table example
 
