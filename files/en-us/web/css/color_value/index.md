@@ -79,11 +79,98 @@ If `currentcolor` is used as the value of the `color` property, it instead takes
 
 {{EmbedLiveSample("currentcolor_keyword", "100%", 80)}}
 
+### Missing color components
+
+Each component of any CSS color functions - except for those using the legacy comma-separated syntax - can be specified as the keyword `none` to be a missing component.
+
+Explicitly specifying missing components is useful in [color interpolation](#interpolation_with_missing_components) for cases where you would like to interpolate some color components but not others. For all other purposes, a missing component will effectively have a zero value in an appropriate unit: `0`, `0%`, or `0deg`. For example, the following colors are equivalent when used outside of interpolation:
+
+```css
+/* These are equivalent */
+color: oklab(50% none -0.25);
+color: oklab(50% 0 -0.25);
+
+/* These are equivalent */
+background-color: hsl(none 100% 50%);
+background-color: hsl(0deg 100% 50%);
+```
+
 ## Interpolation
 
 Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), and [animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
+
+### Interpolation with missing components
+
+#### Interpolating colors in the same space
+
+When interpolating colors that are exactly in the interpolation color space, missing components from one color are replaced with existing values of the same components from the other color.
+For example, the following two expressions are equivalent:
+
+```css
+color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
+color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
+```
+
+> **Note:** If a component is missing from both colors, this component will be missing after the interpolation.
+
+#### Interpolating colors from different spaces: analogous components
+
+If any color to be interpolated is not in the interpolation color space, its missing components are transferred into the converted color based on **analogous components** of the same category as described in the following table:
+
+| Category     | Analogous components |
+| ------------ | -------------------- |
+| Reds         | `R`, `X`             |
+| Greens       | `G`, `Y`             |
+| Blues        | `B`, `Z`             |
+| Lightness    | `L`                  |
+| Colorfulness | `C`, `S`             |
+| Hue          | `H`                  |
+| a            | `a`                  |
+| b            | `b`                  |
+
+For example:
+
+- `X` (`0.2`) in `color(xyz 0.2 0.1 0.6)` is analogous to `R` (`50%`) in `rgb(50% 70% 30%)`.
+- `H` (`0deg`) in `hsl(0deg 100% 80%)` is analogous to `H` (`140`) in `oklch(80% 0.1 140)`.
+
+Using Oklch as the interpolation color space and the two colors below as an example:
+
+```css
+lch(80% 30 none)
+color(display-p3 0.7 0.5 none)
+```
+
+the preprocessing procedure is:
+
+1. Replace the missing components in both colors with a zero value:
+
+   ```css
+   lch(80% 30 0)
+   color(display-p3 0.7 0.5 0)
+   ```
+
+2. Convert both colors into the interpolation color space:
+
+   ```css
+   oklch(83.915% 0.0902 0.28)
+   oklch(63.612% 0.1522 78.748)
+   ```
+
+3. If any component of the converted colors is analogous to a missing component in the corresponding original color, reset it as a missing component:
+
+   ```css
+   oklch(83.915% 0.0902 none)
+   oklch(63.612% 0.1522 78.748)
+   ```
+
+4. Replace any missing component with the same component from the other converted color:
+
+   ```css
+   oklch(83.915% 0.0902 78.748)
+   oklch(63.612% 0.1522 78.748)
+   ```
 
 ## Accessibility considerations
 
