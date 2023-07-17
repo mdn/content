@@ -8,16 +8,13 @@ browser-compat: api.Event.timeStamp
 
 {{APIRef("DOM")}}
 
-The **`timeStamp`** read-only property of the
-{{domxref("Event")}} interface returns the time (in milliseconds) at which the event was
-created.
+The **`timeStamp`** read-only property of the {{domxref("Event")}} interface returns the time (in milliseconds) at which the event was created.
 
 ## Value
 
 This value is the number of milliseconds elapsed from the beginning of the time origin until the event was created. If the global object is {{domxref("Window")}}, the time origin is the moment the user clicked on the link, or the script that initiated the loading of the document. In a worker, the time origin is the moment of creation of the worker.
 
-The value is a {{domxref("DOMHighResTimeStamp")}} accurate to
-5 microseconds (0.005 ms), but the [precision is reduced](#reduced_time_precision) to prevent [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
+The value is a {{domxref("DOMHighResTimeStamp")}} accurate to 5 microseconds (0.005 ms), but the [precision is reduced](#reduced_time_precision) to prevent [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 
 ## Example
 
@@ -60,19 +57,9 @@ event.timeStamp;
 // 10362
 // 11670
 // …
-
-// reduced time precision with `privacy.resistFingerprinting` enabled
-event.timeStamp;
-// 53500
-// 58900
-// 64400
-// …
 ```
 
-In Firefox, if you also enable `privacy.resistFingerprinting`, the precision
-will be 100ms or the value of
-`privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever
-is larger.
+In Firefox, if you also enable `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
 ## Specifications
 
