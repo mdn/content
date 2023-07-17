@@ -41,8 +41,6 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object ins
 
 If you make a duplicate call, i.e. call `requestDevice()` on a {{domxref("GPUAdapter")}} that `requestDevice()` was already called on, the promise fulfills with a device that is immediately lost. You can then get information on how the device was lost via {{domxref("GPUDevice.lost")}}.
 
-> **Note:** On older implementations, duplicate calls result in a promise that is rejected with `null`.
-
 ### Exceptions
 
 - `OperationError` {{domxref("DOMException")}}
