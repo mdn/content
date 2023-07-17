@@ -47,8 +47,7 @@ selectAudioOutput(options)
 
 ### Return value
 
-A {{ jsxref("Promise") }} that receives a {{domxref("MediaDeviceInfo")}} object when the promise is fulfilled.
-The object describes the user-selected audio output device.
+A {{ jsxref("Promise") }} that is fulfilled with a {{domxref("MediaDeviceInfo")}} object that describes the audio output device selected by the user.
 
 ### Exceptions
 
