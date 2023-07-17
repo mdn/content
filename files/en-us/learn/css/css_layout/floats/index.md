@@ -407,7 +407,7 @@ Once again, this is because the float has been taken out of normal flow. You mig
 
 ### display: flow-root
 
-To solve this problem is to use the value `flow-root` of the `display` property. This exists only to create a BFC without using hacks — there will be no unintended consequences when you use it. Remove `overflow: auto` from your `.wrapper` rule and add `display: flow-root` and the box will clear.
+To solve this problem is to use the value `flow-root` of the `display` property. This exists only to create a BFC without using hacks — there will be no unintended consequences when you use it.
 
 ```css
 .wrapper {
