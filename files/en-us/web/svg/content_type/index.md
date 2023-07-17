@@ -10,9 +10,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 ## Angle
 
-- `<angle>`
+- \<angle>
 
-  - : Angles are specified in one of two ways. When used in the value of a property in a stylesheet, an `<angle>` is defined as follows:
+  - : Angles are specified in one of two ways. When used in the value of a property in a stylesheet, an \<angle> is defined as follows:
 
     ```plain
     angle ::= number (~"deg" | ~"grad" | ~"rad")?
@@ -22,21 +22,21 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     For properties defined in CSS2, an angle unit identifier must be provided. For angle values in SVG-specific properties and their corresponding presentation attributes, the angle unit identifier is optional. If not provided, the angle value is assumed to be in degrees. In presentation attributes for all properties, whether defined in SVG1.1 or in CSS2, the angle identifier, if specified, must be in lower case.
 
-    When angles are used in an SVG attribute, `<angle>` is instead defined as follows:
+    When angles are used in an SVG attribute, \<angle> is instead defined as follows:
 
     ```plain
     angle ::= number ("deg" | "grad" | "rad")?
     ```
 
-    The unit identifiers in such `<angle>` values must be in lower case.
+    The unit identifiers in such \<angle> values must be in lower case.
 
-    In the SVG DOM, `<angle>` values are represented using {{domxref("SVGAngle")}} or {{domxref("SVGAnimatedAngle")}} objects.
+    In the SVG DOM, \<angle> values are represented using {{domxref("SVGAngle")}} or {{domxref("SVGAnimatedAngle")}} objects.
 
 ## Anything
 
-- `<anything>`
+- \<anything>
 
-  - : The basic type `<anything>` is a sequence of zero or more characters. Specifically:
+  - : The basic type \<anything> is a sequence of zero or more characters. Specifically:
 
     ```plain
     anything ::= Char*
@@ -46,7 +46,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 ## Clock-value
 
-- `<clock-value>`
+- \<clock-value>
 
   - : Clock values have the same syntax as in [SMIL Animation](https://www.w3.org/TR/2001/REC-smil-animation-20010904/) specification. The grammar for clock values is repeated here:
 
@@ -88,13 +88,13 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 ## Color
 
-- `<color>`
+- \<color>
 
-  - : The basic type `<color>` is a CSS2 compatible specification for a color in the sRGB color space. `<color>` applies to SVG's use of the {{SVGAttr("color")}} attribute and is a component of the definitions of attributes {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}}, which also offer optional ICC-based color specifications.
+  - : The basic type \<color> is a CSS2 compatible specification for a color in the sRGB color space. \<color> applies to SVG's use of the {{SVGAttr("color")}} attribute and is a component of the definitions of attributes {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}}, which also offer optional ICC-based color specifications.
 
-    SVG supports all of the syntax alternatives for `<color>` defined in [CSS2 syntax and basic data types](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color), and (depend on the implementation) in the future [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/).
+    SVG supports all of the syntax alternatives for \<color> defined in [CSS2 syntax and basic data types](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color), and (depend on the implementation) in the future [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/).
 
-    A `<color>` is either a keyword or a numerical RGB specification.
+    A \<color> is either a keyword or a numerical RGB specification.
 
     In addition to these color keywords, users may specify keywords that correspond to the colors used by objects in the user's environment. The normative definition of these keywords is found in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
 
@@ -110,21 +110,21 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/), or one of the system color keywords listed in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
 
-    The corresponding SVG DOM interface definitions for `<color>` are defined the one defined by CSS. SVG's extension to color, including the ability to specify ICC-based colors, are represented using DOM interface {{domxref("SVGColor")}}.
+    The corresponding SVG DOM interface definitions for \<color> are defined the one defined by CSS. SVG's extension to color, including the ability to specify ICC-based colors, are represented using DOM interface {{domxref("SVGColor")}}.
 
 ## Coordinate
 
-- `<coordinate>`
+- \<coordinate>
 
-  - : A `<coordinate>` is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](#length).
+  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](#length).
 
-    Within the SVG DOM, a `<coordinate>` is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.
+    Within the SVG DOM, a \<coordinate> is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.
 
 ## Frequency
 
-- `<frequency>`
+- \<frequency>
 
-  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [`<number>`](#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
+  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
 
     - `Hz`: Hertz
     - `kHz`: kilo Hertz
@@ -133,14 +133,14 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 ## FuncIRI
 
-- `<FuncIRI>`
+- \<FuncIRI>
   - : Functional notation for a reference. The syntax for this reference is the same as the {{cssxref("url", "CSS URI")}}.
 
 ## Integer
 
-- `<integer>`
+- \<integer>
 
-  - : An `<integer>` is specified as an optional sign character (`+` or `-`) followed by one or more digits `0` to `9`:
+  - : An \<integer> is specified as an optional sign character (`+` or `-`) followed by one or more digits `0` to `9`:
 
     ```plain
     integer ::= [+-]? [0-9]+
@@ -148,13 +148,13 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     If the sign character is not present, the number is non-negative.
 
-    Unless stated otherwise for a particular attribute or property, the range for an `<integer>` encompasses (at a minimum) `-2147483648` to `2147483647`.
+    Unless stated otherwise for a particular attribute or property, the range for an \<integer> encompasses (at a minimum) `-2147483648` to `2147483647`.
 
-    Within the SVG DOM, an `<integer>` is represented as a `number` or an {{domxref("SVGAnimatedInteger")}}.
+    Within the SVG DOM, an \<integer> is represented as a `number` or an {{domxref("SVGAnimatedInteger")}}.
 
 ## IRI
 
-- `<IRI>`
+- \<IRI>
 
   - : An **I**nternationalized **R**esource **I**dentifier.
 
@@ -170,7 +170,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     http://example.com/someDrawing.svg#Lamppost
     ```
 
-    _IRIs_ are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation `<FuncIRI>` is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
+    _IRIs_ are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
 
     SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
@@ -186,14 +186,14 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     SVG supports two types of _IRI_ references:
 
-    - **local _IRI_ references**, where the IRI reference does not contain an `<absoluteIRI>` or `<relativeIRI>` and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`).
-    - **non-local _IRI_ references**, where the _IRI_ reference does contain an `<absoluteIRI>` or `<relativeIRI>`.
+    - **local _IRI_ references**, where the IRI reference does not contain an \<absoluteIRI> or \<relativeIRI> and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`).
+    - **non-local _IRI_ references**, where the _IRI_ reference does contain an \<absoluteIRI> or \<relativeIRI>.
 
       For the full specification of IRI references in SVG, see [SVG 1.1 (2nd Edition): IRI references](https://www.w3.org/TR/SVG/linking.html#IRIReference).
 
 ## Length
 
-- `<length>`
+- \<length>
 
   - : A length is a distance measurement, given as a number along with a unit.
     SVG follows the [CSS Values and Units Module](https://www.w3.org/TR/css-values-3/) for the definitions of common units and their meanings.
@@ -203,7 +203,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     length ::= <number> (<absolute-length> | <relative-length>)?
     ```
 
-    For more details, see the CSS specification for [Relative length units](https://drafts.csswg.org/css-values/#relative-lengths) and [Absolute length units](https://drafts.csswg.org/css-values/#absolute-lengths) and the [`<length>`](/en-US/docs/Web/CSS/length) CSS data type.
+    For more details, see the CSS specification for [Relative length units](https://drafts.csswg.org/css-values/#relative-lengths) and [Absolute length units](https://drafts.csswg.org/css-values/#absolute-lengths) and the [\<length>](/en-US/docs/Web/CSS/length) CSS data type.
 
     For properties defined in CSS Values and Units, a length unit identifier must be provided.
 
@@ -211,34 +211,34 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     When used in an SVG attribute, the unit identifiers in length values must be in lower case.
 
-    Note that the non-property `<length>` definition also allows a percentage (`%`) unit identifier.
+    Note that the non-property \<length> definition also allows a percentage (`%`) unit identifier.
     The meaning of a percentage length value depends on the attribute for which the percentage length value has been specified. Two common cases are:
 
     - when a percentage length value represents a percentage of the viewport width or height
     - when a percentage length value represents a percentage of the bounding box width or height on a given object.
 
-    In the SVG DOM, `<length>` values are represented using {{domxref("SVGLength")}} or {{domxref("SVGAnimatedLength")}} objects.
+    In the SVG DOM, \<length> values are represented using {{domxref("SVGLength")}} or {{domxref("SVGAnimatedLength")}} objects.
 
 ## List-of-Ts
 
-- `<list-of-Ts>`
+- \<list-of-Ts>
 
   - : (Where _T_ is some type.) A list consists of a separated sequence of values. Unless explicitly described differently, lists within SVG's XML attributes can be either comma-separated (with optional white space before or after the comma), or white space-separated.
 
     White space in lists is defined as one or more of the following consecutive characters: "space" (`U+0020`), "tab" (`U+0009`), "line feed" (`U+000A`), "carriage return" (`U+000D`), and "form-feed" (`U+000C`).
 
-    The following is a template for an EBNF grammar describing the `<list-of-Ts>` syntax:
+    The following is a template for an EBNF grammar describing the \<list-of-Ts> syntax:
 
     ```plain
     list-of-Ts ::= T
                     | T, list-of-Ts
     ```
 
-    Within the SVG DOM, values of a `<list-of-Ts>` type are represented by an interface specific for the particular type _T_. For example, a `<list-of-lengths>` is represented in the SVG DOM using an {{domxref("SVGLengthList")}} or {{domxref("SVGAnimatedLengthList")}} object.
+    Within the SVG DOM, values of a \<list-of-Ts> type are represented by an interface specific for the particular type _T_. For example, a \<list-of-lengths> is represented in the SVG DOM using an {{domxref("SVGLengthList")}} or {{domxref("SVGAnimatedLengthList")}} object.
 
 ## Name
 
-- `<name>`
+- \<name>
 
   - : A name, which is a string where a few characters of syntactic significance are disallowed.
 
@@ -248,9 +248,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 ## Number
 
-- `<number>`
+- \<number>
 
-  - : Real numbers are specified in one of two ways. When used in a stylesheet, a `<number>` is defined as follows:
+  - : Real numbers are specified in one of two ways. When used in a stylesheet, a \<number> is defined as follows:
 
     ```plain
     number ::= integer
@@ -259,39 +259,39 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     This syntax is the same as the definition in CSS (CSS2, section 4.3.1).
 
-    When used in an SVG attribute, a `<number>` is defined differently, to allow numbers with large magnitudes to be specified more concisely:
+    When used in an SVG attribute, a \<number> is defined differently, to allow numbers with large magnitudes to be specified more concisely:
 
     ```plain
     number ::= integer ([Ee] integer)?
                 | [+-]? [0-9]* "." [0-9]+ ([Ee] integer)?
     ```
 
-    Within the SVG DOM, a `<number>` is represented as a float, {{domxref("SVGNumber")}} or a {{domxref("SVGAnimatedNumber")}}.
+    Within the SVG DOM, a \<number> is represented as a float, {{domxref("SVGNumber")}} or a {{domxref("SVGAnimatedNumber")}}.
 
 ## Number-optional-number
 
-- `<number-optional-number>`
+- \<number-optional-number>
 
-  - : A pair of `<number>`s, where the second `<number>` is optional.
+  - : A pair of \<number>s, where the second \<number> is optional.
 
     ```plain
     number-optional-number ::= number
                                 | number, number
     ```
 
-    In the SVG DOM, a `<number-optional-number>` is represented using a pair of {{domxref("SVGAnimatedInteger")}} or {{domxref("SVGAnimatedNumber")}} objects.
+    In the SVG DOM, a \<number-optional-number> is represented using a pair of {{domxref("SVGAnimatedInteger")}} or {{domxref("SVGAnimatedNumber")}} objects.
 
 ## Opacity value
 
-- `<opacity-value>`
-  - : The opacity of the color or the content the current object is filled with, as a [`<number>`](#number). Any values outside the range `0.0` (fully transparent) to `1.0` (fully opaque) will be clamped to this range.
+- \<opacity-value>
+  - : The opacity of the color or the content the current object is filled with, as a [\<number>](#number). Any values outside the range `0.0` (fully transparent) to `1.0` (fully opaque) will be clamped to this range.
 
 ## Paint
 
-- `<paint>`
+- \<paint>
 
   - : The values for properties {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} define the type of paint to use when filling or stroking a given graphics element.
-    The available options and syntax for `<paint>` are:
+    The available options and syntax for \<paint> are:
 
     ```plain
     paint ::= none | <color> | <url> [none | <color>]? | context-fill | context-stroke
@@ -299,40 +299,40 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Element/marker) and [use](/en-US/docs/Web/SVG/Element/use) elements.
 
-    Within the SVG DOM, `<paint>` values are represented using {{domxref("SVGPaint")}} objects.
+    Within the SVG DOM, \<paint> values are represented using {{domxref("SVGPaint")}} objects.
 
 ## Percentage
 
--`<percentage>`
+- \<percentage>
 
-- : Percentages are specified as a number followed by a "`%`" character:
+  - : Percentages are specified as a number followed by a "`%`" character:
 
-  ```plain
-  percentage ::= number "%"
-  ```
+    ```plain
+    percentage ::= number "%"
+    ```
 
-  Note that the definition of `<number>` depends on whether the percentage is specified in a stylesheet or in an attribute that is not also a presentation attribute.
+    Note that the definition of \<number> depends on whether the percentage is specified in a stylesheet or in an attribute that is not also a presentation attribute.
 
-  Percentage values are always relative to another value (for example, a length). Each attribute or property that allows percentages also defines the reference distance measurement to which the percentage refers.
+    Percentage values are always relative to another value (for example, a length). Each attribute or property that allows percentages also defines the reference distance measurement to which the percentage refers.
 
-  Within the SVG DOM, a `<percentage>` is represented using an {{domxref("SVGNumber")}} or {{domxref("SVGAnimatedNumber")}} object.
+    Within the SVG DOM, a \<percentage> is represented using an {{domxref("SVGNumber")}} or {{domxref("SVGAnimatedNumber")}} object.
 
 ## Time
 
-- `<time>`
+- \<time>
 
-  - : A time value is a `<number>` immediately followed by a time unit identifier. The time unit identifiers are:
+  - : A time value is a \<number> immediately followed by a time unit identifier. The time unit identifiers are:
 
     - `ms`: milliseconds
     - `s`: seconds
 
 ## Transform-list
 
-- `<transform-list>`
+- \<transform-list>
 
-  - : A `<transform-list>` is used to specify a list of coordinate system transformations. A detailed description of the possible values for a `<transform-list>` is given in the {{SVGAttr("transform")}} attribute definition.
+  - : A \<transform-list> is used to specify a list of coordinate system transformations. A detailed description of the possible values for a \<transform-list> is given in the {{SVGAttr("transform")}} attribute definition.
 
-    Within the SVG DOM, a `<transform-list>` value is represented using an {{domxref("SVGTransformList")}} or {{domxref("SVGAnimatedTransformList")}} object.
+    Within the SVG DOM, a \<transform-list> value is represented using an {{domxref("SVGTransformList")}} or {{domxref("SVGAnimatedTransformList")}} object.
 
 ## URL
 
