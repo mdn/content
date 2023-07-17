@@ -380,7 +380,7 @@
 /en-US/docs/CSS/:-moz-broken	/en-US/docs/Web/CSS/:-moz-broken
 /en-US/docs/CSS/:-moz-drag-over	/en-US/docs/Web/CSS/:-moz-drag-over
 /en-US/docs/CSS/:-moz-first-node	/en-US/docs/Web/CSS/:-moz-first-node
-/en-US/docs/CSS/:-moz-focusring	/en-US/docs/Web/CSS/:-moz-focusring
+/en-US/docs/CSS/:-moz-focusring	/en-US/docs/Web/CSS/:focus-visible
 /en-US/docs/CSS/:-moz-full-screen	/en-US/docs/Web/CSS/:fullscreen
 /en-US/docs/CSS/:-moz-handler-blocked	/en-US/docs/Web/CSS/:-moz-handler-blocked
 /en-US/docs/CSS/:-moz-handler-crashed	/en-US/docs/Web/CSS/:-moz-handler-crashed
@@ -11249,6 +11249,7 @@
 /en-US/docs/Web/CSS/-webkit-user-select	/en-US/docs/Web/CSS/user-select
 /en-US/docs/Web/CSS/:-moz-any	/en-US/docs/Web/CSS/:is
 /en-US/docs/Web/CSS/:-moz-any-link	/en-US/docs/Web/CSS/:any-link
+/en-US/docs/Web/CSS/:-moz-focusring	/en-US/docs/Web/CSS/:focus-visible
 /en-US/docs/Web/CSS/:-moz-full-screen	/en-US/docs/Web/CSS/:fullscreen
 /en-US/docs/Web/CSS/:-moz-list-bullet	/en-US/docs/Web/CSS/::-moz-list-bullet
 /en-US/docs/Web/CSS/:-moz-list-number	/en-US/docs/Web/CSS/::-moz-list-number
