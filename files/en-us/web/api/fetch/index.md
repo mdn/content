@@ -51,6 +51,7 @@ fetch(resource, options)
         Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically.
         If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
     - `headers`
+
       - : Any headers you want to add to your request, contained within a {{domxref("Headers")}} object or an object literal with {{jsxref("String")}} values.
         Note that [some names are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
 
@@ -104,7 +105,7 @@ fetch(resource, options)
         value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
     - `keepalive`
       - : The `keepalive` option can be used to allow the request to outlive the page.
-        Fetch with the `keepalive` flag is a replacement for the   {{domxref("Navigator.sendBeacon()")}} API.
+        Fetch with the `keepalive` flag is a replacement for the {{domxref("Navigator.sendBeacon()")}} API.
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance; allows you to communicate with a
         fetch request and abort it if desired via an {{domxref("AbortController")}}.
