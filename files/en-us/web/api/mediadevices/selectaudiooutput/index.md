@@ -14,9 +14,6 @@ The {{domxref("MediaDevices.selectAudioOutput()")}} method of the [Audio Output 
 
 Following selection, if the device is available it can be enumerated using [`MediaDevices.enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices) and set as the audio output sink using [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId).
 
-The method can only be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) with [transient user activation](/en-US/docs/Web/Security/User_activation), and will only offer audio output devices if allowed by the page [`Permission-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection).
-For more information see the [security requirements](#security_requirements).
-
 On success, the returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} describing the selected device.
 
 ## Syntax
