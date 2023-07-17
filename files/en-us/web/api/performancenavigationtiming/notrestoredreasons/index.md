@@ -51,15 +51,15 @@ function returnNRR() {
 The `PerformanceNavigationTiming.notRestoredReasons` property returns an object with the following structure, which represents the blocked state of the top-level frame:
 
 ```js
-{
+({
   blocked: true,
   children: [],
   id: "",
   name: "",
-  reasons: [ "Internal Error", "Unload handler" ],
+  reasons: ["Internal Error", "Unload handler"],
   src: "",
-  url: "a.com"
-}
+  url: "a.com",
+});
 ```
 
 ## Specifications

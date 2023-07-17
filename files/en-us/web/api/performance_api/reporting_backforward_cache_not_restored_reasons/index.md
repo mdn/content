@@ -43,15 +43,15 @@ function returnNRR() {
 The `PerformanceNavigationTiming.notRestoredReasons` property returns an object with the following structure, which represents the blocked state of the top-level frame:
 
 ```js
-{
+({
   blocked: true,
   children: [],
   id: "",
   name: "",
-  reasons: [ "Internal Error", "Unload handler" ],
+  reasons: ["Internal Error", "Unload handler"],
   src: "",
-  url: "a.com"
-}
+  url: "a.com",
+});
 ```
 
 The properties are as follows:
@@ -78,19 +78,43 @@ When a page has same-origin frames embedded, the returned `notRestoredReasons` v
 For example:
 
 ```js
-{
+({
   blocked: false,
   children: [
-    { url: "a.com", src: "b.a.com", id: "b", name: "b", blocked: false, reasons: [], children: [] },
-    { url: "a.com", src: "c.a.com", id: "c", name: "c", blocked: true, reasons: [ "BroadcastChannel" ], children: [] },
-    { url: "a.com", src: "d.a.com", id: "d", name: "d", blocked: false, reasons: [], children: [] }
+    {
+      url: "a.com",
+      src: "b.a.com",
+      id: "b",
+      name: "b",
+      blocked: false,
+      reasons: [],
+      children: [],
+    },
+    {
+      url: "a.com",
+      src: "c.a.com",
+      id: "c",
+      name: "c",
+      blocked: true,
+      reasons: ["BroadcastChannel"],
+      children: [],
+    },
+    {
+      url: "a.com",
+      src: "d.a.com",
+      id: "d",
+      name: "d",
+      blocked: false,
+      reasons: [],
+      children: [],
+    },
   ],
   id: "",
   name: "",
   reasons: [],
   src: "",
-  url:"a.com"
-}
+  url: "a.com",
+});
 ```
 
 ### Reporting bfcache blocking in cross-origin frames
@@ -100,47 +124,85 @@ When a page has cross-origin frames embedded, we limit the amount of information
 For example:
 
 ```js
-{
+({
   blocked: false,
   children: [
-    { url: "a.com", src: "c.a.com", id: "c", name: "c", blocked: true, reasons: [ "ScreenReader" ], children: [] },
+    {
+      url: "a.com",
+      src: "c.a.com",
+      id: "c",
+      name: "c",
+      blocked: true,
+      reasons: ["ScreenReader"],
+      children: [],
+    },
     /* cross-origin frame */
-    { url: "", src: "b.com", id: "d", name: "d", blocked: true, reasons: [], children: [] }
+    {
+      url: "",
+      src: "b.com",
+      id: "d",
+      name: "d",
+      blocked: true,
+      reasons: [],
+      children: [],
+    },
   ],
   id: "",
   name: "",
   reasons: [],
   src: "",
-  url:"a.com"
-}
+  url: "a.com",
+});
 ```
 
-If multiple cross-origin frames have blocking reasons, we randomly select one cross-origin frame and report whether it blocked bfcache or not. For the rest of the frames, we report `null` for the `blocked` value. This is to stop bad actors from inferring information about user state on sites they don't control by embedding multiple third-party frames into a page and then comparing the blocking information from each.
+If multiple cross-origin frames have blocking reasons, we randomly select one cross-origin frame and report whether it blocked bfcache or not. For the rest of the frames, we report `null` for the `blocked` value. This is to stop bad actors from inferring information about user state on sites they don't control by embedding multiple third-party frames into a page and then comparing the blocking information from each. For example, a page could embed 20 different social media sites and infer which sites the user is logged in on, by querying the not restored reasons data.
 
 ```js
-{
+({
   blocked: false,
   children: [
     /* cross-origin frames */
-    {url: "", src: "b.com", id: "b", name: "b", blocked: null, reasons: [], children: []},
-    {url: "", src: "c.com", id: "c", name: "c", blocked: true, reasons: [], children: []},
-    {url: "", src: "d.com", id: "d", name: "d", blocked: null, reasons: [], children: []}
-  ]
+    {
+      url: "",
+      src: "b.com",
+      id: "b",
+      name: "b",
+      blocked: null,
+      reasons: [],
+      children: [],
+    },
+    {
+      url: "",
+      src: "c.com",
+      id: "c",
+      name: "c",
+      blocked: true,
+      reasons: [],
+      children: [],
+    },
+    {
+      url: "",
+      src: "d.com",
+      id: "d",
+      name: "d",
+      blocked: null,
+      reasons: [],
+      children: [],
+    },
+  ],
   id: "",
   name: "",
   reasons: [],
   src: "",
-  url:"a.com"
-}
+  url: "a.com",
+});
 ```
 
-> **Note:** See the [Security and privacy](https://github.com/rubberyuzu/bfcache-not-retored-reason/blob/main/NotRestoredReason.md#security-and-privacy) section in the explainer for more details about security and privacy considerations.
+> **Note:** `notRestoredReasons` is not available inside embedded cross-origin frames. It is availale only in the top-level document in such cases.
 
 ## Blocking reasons
 
-As noted earlier, there are many different reasons why blocking could occur. Google has compiled a [spreadsheet](https://docs.google.com/spreadsheets/d/1li0po_ETJAIybpaSX5rW_lUN62upQhY0tH4pR5UPt60/edit#gid=0) showing all the reason strings and explaining what they mean.
-
-As an example, Chrome's implementation has a few major categories of reasons:
+There are many different reasons why blocking could occur, and these reasons are browser-specific. As an example, Chrome's implementation has a few major categories of reasons:
 
 - `Circumstantial`: This refers to blocking reasons not directly related to the developer's page code. For example, a related component crashed, something went wrong with the loading process, the page is in a temporary state that can't be cached, bfcache is disabled due to insufficient memory, or a [service worker](/en-US/docs/Web/API/Service_Worker_API) did something to the page that disqualifies it from being cached.
 - `Extensions`: There are a few different reason messages related to extensions. There are several different reasons combined into the "Extensions" reason. The reasons concerning extension-related blocking are intentionally vague because it would be bad for privacy to give away too much information about what extensions the user has installed, which ones are active on the page, what they are doing, etc.
