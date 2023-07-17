@@ -1,6 +1,6 @@
 ---
-title: Guidelines for styling HTML code examples
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+title: Guidelines for writing HTML code examples
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_examples/HTML
 page-type: mdn-writing-guide
 ---
 
@@ -81,13 +81,13 @@ Omitting quotes can also cause problems. In the above example, the `alt` attribu
 Don't write out boolean attributes in full; you can just write the attribute name to set it. For example, you can write:
 
 ```html example-good
-required
+<input required></input>
 ```
 
 This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:
 
-```html-nolint example-bad
-required="required"
+```html example-bad
+<input required="required"></input>
 ```
 
 ## Case
@@ -114,18 +114,6 @@ Use semantic class/ID names, and separate multiple words with hyphens. Don't use
 <p class="bigRedBox">Blah blah blah</p>
 ```
 
-## Double quotes
-
-Use double quotes for HTML, not single quotes, like so:
-
-```html example-good
-<p class="important">Yes</p>
-```
-
-```html-nolint example-bad
-<p class='important'>Nope</p>
-```
-
 ## Entity references
 
 Don't use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
@@ -141,8 +129,6 @@ Instead of:
 ```html example-bad
 <p>&copy; 2018 Me</p>
 ```
-
-This is fine as long as you declare a UTF-8 character set.
 
 ## HTML elements
 

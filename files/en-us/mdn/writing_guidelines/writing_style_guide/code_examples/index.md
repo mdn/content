@@ -1,6 +1,6 @@
 ---
-title: Guidelines for styling code examples
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+title: Guidelines for writing code examples
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_examples
 page-type: mdn-writing-guide
 ---
 
@@ -10,10 +10,10 @@ The guidelines described in this article apply to the styling and formatting of 
 
 For technology-specific guidelines, see the following articles:
 
-- [HTML guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [CSS guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [JavaScript guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [Shell prompt guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [HTML guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples/HTML)
+- [CSS guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples/CSS)
+- [JavaScript guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples/JavaScript)
+- [Shell prompt guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples/Shell)
 
 ## General best practices
 
@@ -42,38 +42,21 @@ Some more general best practices include:
 
 ## Guidelines for formatting
 
+Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
+
+On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep the code style consistent (and to avoid off-topic discussions). You can consult our [configuration file](https://github.com/mdn/content/blob/main/.prettierrc.json) to learn about the current rules, and read the [Prettier documentation](https://prettier.io/docs/en/index.html).
+
+Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
+
 These guidelines for formatting code examples for MDN Web Docs are also good practices when you are coding.
 
-### Indentation
+### Choosing a syntax language
 
-- Use two spaces per tab for indentation in all code examples.
-- Place the open-brace ("`{`") characters on the same line as the statement that opens the block.
+To ensure proper formatting and syntax highlighting of code blocks, writers must specify the language of the code block they are writing in. See [Example code blocks in MDN Markdown](/en-us/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#Example_code_blocks) for a list of languages supported by MDN, as well as details on how to request a new language.
 
-```html example-good
-<div>
-  <p>This is my paragraph.</p>
-</div>
-```
+If the code block is pseudo-code, the output of a command, or otherwise not a programming language, explicitly set the language to `plain`.
 
-```js example-good
-function myFunc() {
-  if (thingy) {
-    console.log("Yup, that worked.");
-  }
-}
-```
-
-### Spacing
-
-Add a space between a control statement or loop keyword and its opening parenthesis.
-
-```js example-good
-if (condition) {
-  /* handle the condition */
-} else {
-  /* handle the "else" case */
-}
-```
+> **Warning:** if the desired language is not yet supported by MDN, do **not** set the language of a code block to a similar language, as doing so may have unintended side effects with Prettier formatting and syntax highlighting.
 
 ### Code line length
 
@@ -124,15 +107,13 @@ const toolkitProfileService = Components.classes[
 
 ### Code block height
 
-Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short like 15-25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and link to the full example on a GitHub repo or codepen, say. <!--is this the current recommendation?-->
+Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short, like 15-25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and link to the full example on a GitHub repo or codepen, say.
 
 #### Inline code formatting
 
-Use the {{HTMLElement("code")}} tags to mark up function names, variable names, and method names.
-For example: "the `frenchText()` function".
+Use inline code syntax (\`) to mark up function names, variable names, and method names. For example: "the `frenchText()` function".
 
-**Method names should be followed by a pair of parentheses.** For example, `doSomethingUseful()`.
-The parentheses help differentiate methods from other code terms.
+**Method names should be followed by a pair of parentheses**: for example, `doSomethingUseful()`. The parentheses help differentiate methods from other code terms.
 
 ## Guidelines for proper rendering
 
@@ -160,18 +141,18 @@ These guidelines should be followed to ensure that the code examples you write d
   color: rgb(248, 242, 230);
   ```
 
-- If you have to use hex colors, then use lower-case:
+- For hex colors, use the short form where relevant:
 
   ```css example-good
   color: #058ed9;
   color: #a39a92;
-  ```
-
-- Use the short form where relevant:
-
-  ```css example-good
   color: #ff0;
   color: #fff;
+  ```
+
+  ```css-nolint example-bad
+  color: #ffff00;
+  color: #ffffff;
   ```
 
 ### Mark rendered examples as good or bad
