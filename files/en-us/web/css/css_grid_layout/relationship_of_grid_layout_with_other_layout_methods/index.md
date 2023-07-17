@@ -597,4 +597,4 @@ As you can see from this guide, CSS Grid Layout is just one part of your toolkit
 ## See also
 
 - [Flexbox guides](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Multiple-column layout guides](/en-US/docs/Web/CSS/CSS_Columns)
+- [Multiple-column layout guides](/en-US/docs/Web/CSS/CSS_multicol_layout)
