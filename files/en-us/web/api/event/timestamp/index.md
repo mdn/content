@@ -54,7 +54,7 @@ In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 2ms.
 
 ```js
-// reduced time precision (2ms) in Firefox 60
+// reduced time precision in Firefox (default: 2ms) 
 event.timeStamp;
 // 9934
 // 10362
