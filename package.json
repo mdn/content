@@ -1,8 +1,18 @@
 {
-  "name": "content",
+  "name": "@mdn/content",
   "version": "1.0.0",
+  "description": "Content of https://developer.mozilla.org",
   "private": true,
+  "homepage": "https://github.com/mdn/content#readme",
+  "bugs": {
+    "url": "https://github.com/mdn/content/issues"
+  },
   "license": "SEE LICENSE IN LICENSE.md",
+  "author": "MDN Web Docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdn/content.git"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
