@@ -109,7 +109,7 @@ As all CSS selector strings are valid, you can also negate selectors:
 
 ```js
 const el = document.querySelector(
-  "div.user-panel:not(.main) input[name='login']"
+  "div.user-panel:not(.main) input[name='login']",
 );
 ```
 

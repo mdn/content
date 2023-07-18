@@ -1,6 +1,7 @@
 ---
 title: Componentizing our React app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -246,7 +247,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App tasks={DATA} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 

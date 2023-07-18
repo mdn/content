@@ -183,7 +183,7 @@ Extract information from a `<form>` element and set some of its attributes:
 Submit a `<form>` into a new window:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

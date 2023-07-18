@@ -1,6 +1,7 @@
 ---
 title: string-length
 slug: Web/XPath/Functions/string-length
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

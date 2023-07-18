@@ -73,7 +73,7 @@ btn.addEventListener(
   (event) => {
     console.log("greet:", event);
   },
-  { signal: controller.signal }
+  { signal: controller.signal },
 ); // pass an AbortSignal to this handler
 ```
 

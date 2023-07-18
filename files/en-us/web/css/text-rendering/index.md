@@ -75,10 +75,20 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 
 ```css
 .small {
-  font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    19.9px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 .big {
-  font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    20px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 ```
 
@@ -101,7 +111,12 @@ This example shows the difference between the appearance of `optimizeSpeed` and 
 
 ```css
 p {
-  font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    1.5em "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 
 .speed {
@@ -127,7 +142,7 @@ p {
 ## See also
 
 - [Drawing text in a `<canvas>`](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module
+- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_text_decoration) CSS module
 - Related CSS properties
 
   - [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) (and its longhand properties, such as [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line), [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style), and [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness))

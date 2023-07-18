@@ -1,6 +1,7 @@
 ---
 title: Firefox 1.5 for developers
 slug: Mozilla/Firefox/Releases/1.5
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -28,7 +29,7 @@ Some of the new features in Firefox 1.5:
   - : SVG can be used in XHTML pages. JavaScript and CSS can be used to manipulate the picture in the same way you would script regular XHTML. See [SVG in Firefox](/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox) to learn about the status and known problems of SVG implementation in Firefox.
 - [Drawing Graphics with Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn about the new `<canvas>` tag and how to draw graphs and other objects in Firefox.
-- [CSS3 Columns](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [CSS3 Columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
   - : Learn about the new support for automatic multi-column text layout as proposed for [CSS3](/en-US/docs/Web/CSS).
 - [Using Firefox 1.5 caching](/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
   - : Learn about `bfcache` and how it speeds up back and forward navigation.
@@ -85,7 +86,7 @@ Firefox support for Web standards continues to lead the industry with consistent
 - XML Path Language ([XPath](/en-US/docs/Web/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath/)
 - Resource Description Framework ([RDF](/en-US/docs/Glossary/RDF)): [RDF](https://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
-- [JavaScript](/en-US/docs/Web/JavaScript) 1.6, based on [ECMA-262](/en-US/docs/Web/JavaScript/Language_Resources), revision 3: [ECMA-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- [JavaScript](/en-US/docs/Web/JavaScript) 1.6, based on [ECMA-262, revision 3](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 
 Firefox 1.5 supports the following data transport protocols (HTTP, FTP, SSL, TLS, and others), multilingual character data (Unicode), graphics (GIF, JPEG, PNG, SVG, and others) and the latest version of the world's most popular scripting language, [JavaScript 1.6](/en-US/docs/New_in_JavaScript_1.6).
 

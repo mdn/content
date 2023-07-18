@@ -1,6 +1,7 @@
 ---
 title: What's in the head? Metadata in HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
@@ -33,7 +34,7 @@ The {{glossary("Head", "head")}} of an HTML document is the part that is not dis
 Let's revisit the simple [HTML document we covered in the previous article](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -211,22 +212,22 @@ There are lots of other icon types to consider these days as well. For example, 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="144x144"
   href="https://developer.mozilla.org/static/img/favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="114x114"
   href="https://developer.mozilla.org/static/img/favicon114.png" />
 <!-- first- and second-generation iPad: -->
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="72x72"
   href="https://developer.mozilla.org/static/img/favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   href="https://developer.mozilla.org/static/img/favicon57.png" />
 <!-- basic favicon -->
 <link

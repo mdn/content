@@ -82,7 +82,7 @@ The following expressions might seem equivalent, but they are not, because the
 `&&` operator is executed before the `||` operator
 (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
-```js
+```js-nolint
 true || false && false; // returns true, because && is executed first
 (true || false) && false; // returns false, because grouping has the highest precedence
 ```

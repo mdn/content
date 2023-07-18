@@ -76,7 +76,7 @@ customElements.define(
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
     }
-  }
+  },
 );
 ```
 

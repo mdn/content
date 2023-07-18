@@ -32,7 +32,7 @@ history.pushState({ name: "Example" }, "pushState example", "page1.html");
 history.pushState(
   { name: "Another example" },
   "pushState example",
-  "page1.html"
+  "page1.html",
 );
 ```
 

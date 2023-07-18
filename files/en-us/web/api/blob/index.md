@@ -55,7 +55,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### Creating a URL representing the contents of a typed array
 
-The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
+The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
 
 #### HTML
 
@@ -91,7 +91,7 @@ function showViewLiveResultButton() {
 if (!showViewLiveResultButton()) {
   function typedArrayToURL(typedArray, mimeType) {
     return URL.createObjectURL(
-      new Blob([typedArray.buffer], { type: mimeType })
+      new Blob([typedArray.buffer], { type: mimeType }),
     );
   }
   const bytes = new Uint8Array(59);

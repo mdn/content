@@ -44,7 +44,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let setting = browser.tabs.setZoomSettings({mode:"disabled"});
+let setting = browser.tabs.setZoomSettings({ mode: "disabled" });
 setting.then(onSet, onError);
 ```
 

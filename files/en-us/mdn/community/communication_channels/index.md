@@ -19,7 +19,7 @@ MDN Web Docs community Discord server is open to the public. This server is a gr
 
 You can ask questions, seek clarifications, and find out how you can get involved. You can also join specific channels based on your areas of interest or expertise.
 
-Join the MDN Web Docs community on Discord [here](https://discord.gg/aZqEtMrbr7).
+Join the MDN Web Docs community on Discord [here](https://discord.gg/hkGN8VKvvD).
 
 ### Matrix chat rooms
 

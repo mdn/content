@@ -17,7 +17,7 @@ Pass a `ScrollTimeline` instance to the {{domxref("Animation.Animation", "Animat
 
 ## Constructor
 
-- {{domxref("ScrollTimeline.ScrollTimeline", "ScrollTimeline()")}}
+- {{domxref("ScrollTimeline.ScrollTimeline", "ScrollTimeline()")}} {{Experimental_Inline}}
   - : Creates a new `ScrollTimeline` object instance.
 
 ## Instance properties
@@ -96,7 +96,7 @@ box.animate(
   },
   {
     timeline,
-  }
+  },
 );
 
 output.textContent = `Timeline source element: ${timeline.source.nodeName}. Timeline scroll axis: ${timeline.axis}`;

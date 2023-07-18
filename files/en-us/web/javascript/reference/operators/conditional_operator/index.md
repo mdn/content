@@ -61,12 +61,12 @@ console.log(greeting(null)); // "Howdy, stranger"
 
 The ternary operator is right-associative, which means it can be "chained" in the following way, similar to an `if … else if … else if … else` chain:
 
-```js
+```js-nolint
 function example() {
   return condition1 ? value1
-        : condition2 ? value2
-        : condition3 ? value3
-        : value4;
+    : condition2 ? value2
+    : condition3 ? value3
+    : value4;
 }
 ```
 

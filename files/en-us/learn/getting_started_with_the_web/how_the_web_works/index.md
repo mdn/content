@@ -1,6 +1,7 @@
 ---
 title: How the web works
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

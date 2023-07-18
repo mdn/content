@@ -44,7 +44,7 @@ navigator.serviceWorker
         // also report information about errors back to the
         // application server.
         console.error(error);
-      }
+      },
     );
   });
 ```

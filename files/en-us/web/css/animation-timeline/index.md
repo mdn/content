@@ -2,10 +2,12 @@
 title: animation-timeline
 slug: Web/CSS/animation-timeline
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.animation-timeline
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that is used to control the progress of a CSS animation.
 
@@ -42,8 +44,8 @@ animation-timeline: view();
 animation-timeline: view(axis inset);
 
 /* Multiple animations */
-animation-timeline: test1, animation4;
-animation-timeline: none, -moz-specific, sliding;
+animation-timeline: --progressBarTimeline, --carouselTimeline;
+animation-timeline: none, --slidingTimeline;
 
 /* Global values */
 animation-timeline: inherit;
@@ -61,7 +63,7 @@ animation-timeline: unset;
 
   - : The animation's timeline is the document's default [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline).
 
-- `scroll()`
+- `scroll()` {{Experimental_Inline}}
 
   - : An anonymous scroll progress timeline is provided by some ancestor scroller of the current element. The function parameters allow you to select the scroller, and the scrolling axis the timeline will be measured along.
 
@@ -73,11 +75,13 @@ animation-timeline: unset;
 
     See {{cssxref("animation-timeline/view", "view()")}} for more information.
 
-- `<timeline-name>`
+- `<dashed-ident>`
 
-  - : A {{cssxref('custom-ident')}} or string identifying a named timeline previously declared with the {{cssxref('scroll-timeline-name')}} property (or {{cssxref('scroll-timeline')}} shorthand property). The name must begin with `--`.
+  - : A {{cssxref('dashed-ident')}} identifying a named timeline previously declared with the {{cssxref('scroll-timeline-name')}} or {{cssxref('view-timeline-name')}} property (or the {{cssxref('scroll-timeline')}} or {{cssxref('view-timeline')}} shorthand property).
 
     > **Note:** If two or more timelines share the same name, the last declared within the cascade will be used. Also, if no timeline is found that matches the given name, the animation is not associated with a timeline.
+
+    > **Note:** The [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 
@@ -330,7 +334,7 @@ Lastly, an animation is specified on the element that animates its opacity and s
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }
@@ -438,7 +442,7 @@ Last, an animation is specified on the element that animates its opacity and sca
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }

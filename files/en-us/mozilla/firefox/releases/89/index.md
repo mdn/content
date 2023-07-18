@@ -1,6 +1,7 @@
 ---
 title: Firefox 89 for developers
 slug: Mozilla/Firefox/Releases/89
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

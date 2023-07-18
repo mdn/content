@@ -1,6 +1,7 @@
 ---
 title: Supporting older browsers
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -202,7 +203,7 @@ The specification for feature queries also contains the ability to test if a bro
 
 The CSS Grid specification was initially prototyped In Internet Explorer 10; this means that while IE10 and IE11 do not have _modern_ grid support, they do have a version of Grid layout that is very usable, although different to the modern specification documented on this site. The IE10 and 11 implementations is `-ms-` prefixed, which means you can use it for these browsers and it will be ignored by non-Microsoft browsers. Edge does still understand the old syntax, however, so take care that everything is safely overwritten in your modern grid CSS.
 
-The guide to [Progressive Enhancement in Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) can help you understand the IE version of the grid, and we have included some additional useful links at the end of this lesson. However, unless you have a very high number of visitors in older IE versions, you may find it better to focus on creating a fallback that works for all non-supporting browsers.
+The guide to [Progressive Enhancement in Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement) can help you understand the IE version of the grid, and we have included some additional useful links at the end of this lesson. However, unless you have a very high number of visitors in older IE versions, you may find it better to focus on creating a fallback that works for all non-supporting browsers.
 
 ## Testing older browsers
 
@@ -219,8 +220,8 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 ## See also
 
 - [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
+- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Using CSS Grid: Supporting Browsers Without Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [A tutorial which uses the IE10 and 11 version of Grid](https://24ways.org/2012/css3-grid-layout/)
 - [Should I try to use the IE10 implementation of Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)

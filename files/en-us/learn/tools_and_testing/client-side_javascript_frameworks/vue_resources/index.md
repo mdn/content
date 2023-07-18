@@ -1,6 +1,7 @@
 ---
 title: Vue resources
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

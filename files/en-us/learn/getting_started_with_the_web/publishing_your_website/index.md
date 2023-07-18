@@ -1,6 +1,7 @@
 ---
 title: Publishing your website
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}

@@ -38,7 +38,7 @@ function setView() {
   const posState = gPositionSensor.getImmediateState();
   if (posState.hasPosition) {
     posPara.textContent = `Position: x${roundToTwo(
-      posState.position.x
+      posState.position.x,
     )} y${roundToTwo(posState.position.y)} z${roundToTwo(posState.position.z)}`;
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
@@ -47,9 +47,9 @@ function setView() {
 
   if (posState.hasOrientation) {
     orientPara.textContent = `Orientation: x${roundToTwo(
-      posState.orientation.x
+      posState.orientation.x,
     )} y${roundToTwo(posState.orientation.y)} z${roundToTwo(
-      posState.orientation.z
+      posState.orientation.z,
     )}`;
     xOrient = posState.orientation.x * WIDTH;
     yOrient = -posState.orientation.y * HEIGHT * 2;

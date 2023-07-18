@@ -95,8 +95,8 @@ section {
 
 ## See also
 
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes)
+- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-image-threshold")}}
 - {{cssxref("&lt;basic-shape&gt;")}}

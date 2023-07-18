@@ -1,6 +1,7 @@
 ---
 title: count
 slug: Web/XPath/Functions/count
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

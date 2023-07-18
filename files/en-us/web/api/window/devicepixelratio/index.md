@@ -83,7 +83,7 @@ const textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
-[![Side-by-side comparison of the effect of different devicePixelRatio values on an image shown in a retina display.](devicepixelration_diff.jpg)](devicepixelration_diff.jpg)
+[![Side-by-side comparison of the effect of different devicePixelRatio values on an image shown in a retina display.](devicepixelratio_diff.png)](devicepixelratio_diff.png)
 
 ### Monitoring screen resolution or zoom level changes
 
@@ -107,7 +107,9 @@ In this example, we'll set up a media query and watch it to see when the device 
 
 ```css
 body {
-  font: 22px arial, sans-serif;
+  font:
+    22px arial,
+    sans-serif;
 }
 
 #container {
