@@ -821,17 +821,17 @@ The CSS {{cssxref("offset-position")}} property defines the initial position of 
     <tr>
       <th>Nightly</th>
       <td>116</td>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
       <td>116</td>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
       <td>116</td>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
