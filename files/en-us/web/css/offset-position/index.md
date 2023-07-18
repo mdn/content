@@ -64,37 +64,92 @@ offset-position: unset;
 
 ## Examples
 
+### Setting initial offset-position for an offset-path
+
+In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("path")}} CSS function is a SVG path data that describes a curved path. The element moves along this curved path during the `move` animation.
+
+#### HTML
+
+```html
+<div id="wrap">
+  <div id="motion-demo"></div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+#wrap {
+  width: 260px;
+  height: 160px;
+  border: 1px dashed black;
+}
+```
+
+```css
+#motion-demo {
+  offset-path: path("M20,20 C20,100 200,0 200,100");
+  offset-position: left top;
+  animation: move 3000ms infinite alternate ease-in-out;
+  width: 40px;
+  height: 40px;
+  background: cyan;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Setting_initial_offset_position_for_an_offset-path', '100%', 200)}}
+
 ### Comparing various offset starting positions
 
 This example visually compares the initial offset starting position of an element when `ray()` is used to specify a value for the {{cssxref("offset-path")}} property. The `+` text inside the element box is used to depict the element's anchor point.
 
 ```html hidden
-<div id="wrap">
+<div class="wrap">
   <div class="box">+</div>
   <div class="box box0">+</div>
 </div>
 
-<div id="wrap">
+<div class="wrap">
   <div class="box">+</div>
   <div class="box box1">+</div>
   <p>offset-position: normal;</p>
 </div>
 
-<div id="wrap">
+<div class="wrap">
   <div class="box">+</div>
   <div class="box box2">+</div>
   <p>offset-position: auto;</p>
 </div>
 
-<div id="wrap">
+<div class="wrap">
   <div class="box">+</div>
   <div class="box box3">+</div>
   <p>offset-position: left top;</p>
 </div>
+
+<div class="wrap">
+  <div class="box">+</div>
+  <div class="box box4">+</div>
+  <p>offset-position: 30% 70%;</p>
+</div>
 ```
 
 ```css hidden
-#wrap {
+.wrap {
   position: relative;
   width: 500px;
   height: 100px;
@@ -151,62 +206,19 @@ p {
   offset-path: ray(0deg);
   opacity: 100%;
 }
+
+.box4 {
+  offset-position: 30% 70%;
+  offset-path: ray(180deg);
+  opacity: 100%;
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample('Comparing various offset starting positions', '100%', 600)}}
+{{EmbedLiveSample('Comparing various offset starting positions', '100%', 830)}}
 
 Notice the difference between offset starting positions `auto` and `left top`. The value `auto` places the element such that its anchor point is at the top-left corner of the element box itself, whereas the value `left top` places the element such that the anchor point is the top left corner of the containing block.
-
-### Setting initial offset position for an offset-path
-
-In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("path")}} CSS function is a SVG path data that describes a curved path. The element moves along this curved path during the `move` animation.
-
-#### HTML
-
-```html
-<div id="wrap">
-  <div id="motion-demo"></div>
-</div>
-```
-
-#### CSS
-
-```css hidden
-#wrap {
-  width: 260px;
-  height: 160px;
-  border: 1px dashed black;
-}
-```
-
-```css
-#motion-demo {
-  offset-path: path("M20,20 C20,100 200,0 200,100");
-  offset-position: left top;
-  animation: move 3000ms infinite alternate ease-in-out;
-  width: 40px;
-  height: 40px;
-  background: cyan;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-}
-
-@keyframes move {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Setting_initial_offset_position_for_an_offset-path', '100%', 200)}}
 
 ## Specifications
 
