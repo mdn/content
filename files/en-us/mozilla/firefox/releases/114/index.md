@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### Developer Tools
 
-- Fixed an issue where the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) did not correctly show ARIA roles on elements, which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role) were displayed.
+- Fixed an issue where the [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) did not correctly show ARIA roles on elements, which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role) were displayed.
   Roles that cannot be mapped to ARIA use a Gecko internal role name ([Firefox bug 1572512](https://bugzil.la/1572512)).
 
 ### HTML
@@ -23,7 +23,7 @@ No notable changes.
 
 - The [`:lang()`](/en-US/docs/Web/CSS/:lang) pseudo-class now uses string-matching semantics (including `*` wildcards) for matching language codes rather than prefix-matching semantics.
   Additionally, comma-separated lists of languages are now supported for matching multiple languages ([Firefox bug 1121792](https://bugzil.la/1121792)).
-- The [-webkit-text-security](/en-US/Web/CSS/-webkit-text-security) property that lets you replace characters with shapes is now supported. You can now control the rendering of text security using this property ([Firefox bug 1826629](https://bugzil.la/1826629)).
+- The [-webkit-text-security](/en-US/docs/Web/CSS/-webkit-text-security) property that lets you replace characters with shapes is now supported. You can now control the rendering of text security using this property ([Firefox bug 1826629](https://bugzil.la/1826629)).
 - The `infinity` and `NaN` constants are now supported inside the [`calc()`](/en-US/docs/Web/CSS/calc) function ([Firefox bug 1830759](https://bugzil.la/1830759)).
 
 ### JavaScript

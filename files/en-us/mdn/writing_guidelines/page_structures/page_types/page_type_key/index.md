@@ -63,7 +63,7 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Functions), like {{cssxref("max")}}.
 - `css-keyword`: a keyword, like {{cssxref("inherit")}}.
 - `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/@media/hover).
-- `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations).
+- `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations).
 - `css-property`: a property, like {{cssxref("background-color")}}.
 - `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
 - `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.
@@ -142,8 +142,8 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 - `web-api-constructor`: a constructor, like [`Request()`](/en-US/docs/Web/API/Request/Request).
 - `web-api-instance-method`: an instance method, like [`cache.add()`](/en-US/docs/Web/API/Cache/add).
 - `web-api-instance-property`: an instance property, like [`request.headers`](/en-US/docs/Web/API/Request/headers).
-- `web-api-static-method`: a static method, like [`Response.error()`](/en-US/docs/Web/API/Response/error).
-- `web-api-static-property`: a static property, like [`Notification.permission`](/en-US/docs/Web/API/Notification/permission).
+- `web-api-static-method`: a static method, like [`Response.error()`](/en-US/docs/Web/API/Response/error_static).
+- `web-api-static-property`: a static property, like [`Notification.permission`](/en-US/docs/Web/API/Notification/permission_static).
 - `web-api-event`: an event, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event). See [API reference subpage](#api_reference_subpage).
 - `webgl-extension`: a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`: a WebGL extension method, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).

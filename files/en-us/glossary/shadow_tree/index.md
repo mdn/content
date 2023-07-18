@@ -16,3 +16,4 @@ Nodes within the shadow tree are not affected by anything applied outside the sh
 - {{domxref("Element.shadowRoot")}} and {{domxref("Element.attachShadow()")}}
 - {{domxref("ShadowRoot")}}
 - {{HTMLElement("slot")}}
+- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
