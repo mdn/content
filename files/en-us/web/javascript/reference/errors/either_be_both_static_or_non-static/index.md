@@ -1,15 +1,12 @@
 ---
 title: "SyntaxError: getter and setter for private name #x should either be both static or non-static"
-slug: Web/JavaScript/Reference/Errors/Mismatched_placement
+slug: Web/JavaScript/Reference/Errors/Either_be_both_static_or_non-static
 page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "mismatched placement" occurs when a private
-[getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and
-[setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) are mismatched in
-whether or not they are {{jsxref("Classes/static", "static")}}.
+The JavaScript exception "mismatched placement" occurs when a private [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) are mismatched in whether or not they are {{jsxref("Classes/static", "static")}}.
 
 ## Message
 
@@ -25,10 +22,7 @@ SyntaxError: Cannot declare a private non-static getter if there is a static pri
 
 ## What went wrong?
 
-Private [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) and
-[setters](/en-US/docs/Web/JavaScript/Reference/Functions/set) for the same name
-must either be both {{jsxref("Classes/static", "static")}}, or both non-static.
-This limitation does not exist for public methods.
+Private [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set) for the same name must either be both {{jsxref("Classes/static", "static")}}, or both non-static. This limitation does not exist for public methods.
 
 ## Examples
 
@@ -43,9 +37,7 @@ class Test {
 // SyntaxError: getter and setter for private name #foo should either be both static or non-static
 ```
 
-Since `foo` is
-[private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields),
-the methods must be either both {{jsxref("Classes/static", "static")}}:
+Since `foo` is [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), the methods must be either both {{jsxref("Classes/static", "static")}}:
 
 ```js example-good
 class Test {
