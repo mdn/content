@@ -19,7 +19,7 @@ Browser autoplay policy now affects desktop _and_ mobile browsers. There is furt
 It is worth noting that autoplay with sound is allowed if:
 
 - the User has interacted with the domain.
-- on mobile the user has [added the site to their home screen](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
+- on mobile the user has [made the application installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
 
 Many browsers will ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.
 
