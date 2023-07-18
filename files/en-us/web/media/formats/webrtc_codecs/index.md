@@ -283,7 +283,7 @@ Due to its low sample rate and sample size, G.711 audio quality is generally con
 
 Because a given browser and platform may have different availability among the potential codecs—and may have multiple profiles or levels supported for a given codec—the first step when configuring codecs for an {{domxref("RTCPeerConnection")}} is to get the list of available codecs. To do this, you first have to establish a connection on which to get the list.
 
-There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:
+There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender/getCapabilities_static", "RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver/getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:
 
 ```js
 codecList = RTCRtpSender.getCapabilities("video").codecs;
