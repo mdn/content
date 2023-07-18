@@ -50,9 +50,9 @@ offset-position: unset;
 ### Values
 
 - `normal`
-  - : Indicates that the element does not have an offset starting position. This is the default value when the {{cssxref("path")}} CSS function is used to specify the value for the {{cssxref("offset-path")}} property. When the {{cssxref("ray")}} CSS function is used to specify the value for the `offset-path` property, the `normal` keyword defaults to `0px, 0px` of the containing block.
+  - : Indicates that the element does not have an offset starting position.
 - `auto`
-  - : Indicates that the offset starting position is the top-left corner of the element's box. This is the default value when `ray()` is used to specify the value for the {{cssxref("offset-path")}} property.
+  - : Indicates that the offset starting position is the top-left corner of the element's box. This is the default value.
 - `<position>`
   - : A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
 
@@ -220,7 +220,7 @@ p {
 
 {{EmbedLiveSample('Comparing various offset starting positions', '100%', 830)}}
 
-Notice the difference between offset starting positions `auto` and `left top`. The value `auto` places the element such that its anchor point is at the top-left corner of the element box itself, whereas the value `left top` places the element such that the anchor point is the top left corner of the containing block.
+Notice that when `offset-position` is `normal`, the starting position of the ray is `50%, 50%` of the containing block. Also notice the difference between offset starting positions `auto` and `left top`. The value `auto` places the element such that its anchor point is at the top-left corner of the element box itself, whereas the value `left top` places the element such that the anchor point is the top-left corner of the containing block.
 
 ## Specifications
 
