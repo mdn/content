@@ -86,4 +86,4 @@ p {
 ## See also
 
 - {{cssxref("hyphens")}}
-- [CSS Text module](/en-US/docs/Web/CSS/CSS_Text)
+- [CSS Text module](/en-US/docs/Web/CSS/CSS_text)

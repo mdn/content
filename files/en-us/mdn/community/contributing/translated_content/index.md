@@ -42,7 +42,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### Russian (ru)
 
 - Discussions: [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Current contributors: [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Current contributors: [captainspring](https://github.com/captainspring), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
 
 ### Spanish (es)
 
