@@ -353,7 +353,7 @@ This table builds on the previous example, adding a column for a membership end 
 
 ##### HTML
 
-The HTML for the data within the table is similar to the previous example, except for the addition of the new column in each data row. The main changes are in the header. The creation of the super-heading involves adding row and column spans to `<th>` elements to merge elements from multiple rows and columns.  The header spans two rows to create heading cells that are correctly lined up with the content in the body of the table.
+The HTML for the data within the table is similar to the previous example, except for the addition of the new column in each data row. The main changes are in the header. The creation of the super-heading involves adding row and column spans to `<th>` elements to merge elements from multiple rows and columns. The header spans two rows to create heading cells that are correctly lined up with the content in the body of the table.
 
 ```html
 <table>
