@@ -267,6 +267,17 @@ Note that there's only one actual `Intl.NumberFormat` instance here: the one hid
 
 This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.NumberFormat`. If you call it directly as `Intl.NumberFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.NumberFormat` instance is created normally.
 
+### Exceptions
+
+- {{jsxref("RangeError")}}
+
+  - : Thrown in the following cases:
+
+    - A property that takes enumerated values (such as `style`, `units`, `currency`, and so on) is set to an invalid value.
+    - Both `maximumFractionDigits` and `minimumFractionDigits` are set, and they are set to different values.
+      Note that depending various formatting options, these properties can have default values.
+      It is therefore possible to get this error even if you only set one of the properties.
+
 ## Examples
 
 ### Basic usage
