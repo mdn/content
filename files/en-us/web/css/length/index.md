@@ -116,14 +116,14 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 
 - `vb`
 
-  - : Represents percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
+  - : Represents percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svb`, `lvb`, and `dvb`, respectively.
     `vb` represents the viewport-percentage length unit based on the browser default viewport size.
 
 - `vi`
 
-  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
+  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
     `vi` represents the viewport-percentage length unit based on the browser default viewport size.
@@ -133,7 +133,7 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 When applying styles to a container using container queries, you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
-For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries).
+For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_container_queries).
 
 - `cqw`
 
@@ -186,7 +186,7 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
 
 ## Interpolation
 
-When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The interpolation happens on the calculated value. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The interpolation happens on the calculated value. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 
@@ -303,4 +303,4 @@ inputElem.addEventListener("change", () => {
 
 - [CSS values & units tutorial](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [CSS values & units reference](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Box Model](/en-US/docs/Web/CSS/CSS_Box_Model)
+- [Box Model](/en-US/docs/Web/CSS/CSS_box_model)
