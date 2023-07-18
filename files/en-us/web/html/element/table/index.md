@@ -291,13 +291,13 @@ td {
 
 #### Basic setup
 
-This more detailed yet simple example shows a table listing people's names along with various information about membership in a club or service.
+This more detailed example of a basic table shows a listing of people's names along with information about membership in a club or service.
 
 ##### HTML
 
-This HTML demonstrates the most basic structure of a table. There are no groups, no cells that span multiple rows or columns, no captions, and only the most basic styling to create lines around the components of the table for something resembling clarity.
+This HTML demonstrates the most basic structure of a table. There are no table headers or footers, no cells span multiple rows or columns, and no table caption is provided. Basic styling has been added to create lines around the components of the table to make the data structure more clear.
 
-There are just four rows (including one header row), each with four columns (including one header column). Not even the table section elements are used; instead, the browser is allowed to determine this automatically.
+There are four rows (including one header row), each with four columns (including one header column). As table sectioning elements were not used; the browser defines the structure automatically.
 
 ```html
 <table>
@@ -330,7 +330,7 @@ There are just four rows (including one header row), each with four columns (inc
 
 ##### CSS
 
-This simple CSS just adds a solid black border around the table and around each of its cells, including those specified using both {{HTMLElement("th")}} and {{HTMLElement("td")}}. That way, both header and data cells are easily demarcated.
+This CSS just adds a solid black border around the `<table>` and around each of the table's cells, including those specified using both {{HTMLElement("th")}} and {{HTMLElement("td")}}. That way, both header and data cells are demarcated.
 
 ```css
 table {
@@ -349,63 +349,53 @@ td {
 
 #### Row and column spanning
 
-Now, let's introduce another column that shows the date the user's membership ended, along with a super-heading above the "Joined" and "Canceled" dates called "Membership Dates". This involves adding both row and column spans to the table, so that the heading cells can wind up in the right places.
-
-##### Result
-
-Let's actually look at the output first this time:
-
-{{EmbedLiveSample("Row_and_column_spanning", 500, 150)}}
-
-Notice how the heading area here is actually two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are subheadings below "Membership Dates". This is accomplished by:
-
-- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the `rowspan` attribute, making them each two rows tall.
-- Having the first row's "Membership Dates" heading cell span two columns using the `colspan` attribute, which causes this heading actually to be two columns wide.
-- Having a second row of {{HTMLElement("th")}} elements that contains only the "Joined" and "Canceled" headings. Because the other columns are already occupied by first-row cells that span into the second row, these wind up correctly positioned under the "Membership Dates" heading.
+This table builds on the previous example, adding a column for a membership end date. An additional row is also added to include a "Membership Dates" header as a heading for the "Joined" and "Canceled" headers.
 
 ##### HTML
 
-The HTML is similar to the previous example's, except for the addition of the new column in each data row, and the changes to the header. Those changes make the HTML look like this:
+The HTML for the data within the table is similar to the previous example, except for the addition of the new column in each data row. The main changes are in the header. The creation of the super-heading involves adding row and column spans to `<th>` elements to merge elements from multiple rows and columns.  The header spans two rows to create heading cells that are correctly lined up with the content in the body of the table.
 
 ```html
 <table>
-  <tr>
-    <th rowspan="2">Name</th>
-    <th rowspan="2">ID</th>
-    <th colspan="2">Membership Dates</th>
-    <th rowspan="2">Balance</th>
-  </tr>
-  <tr>
-    <th>Joined</th>
-    <th>Canceled</th>
-  </tr>
-  <tr>
-    <th>Margaret Nguyen</th>
-    <td>427311</td>
-    <td><time datetime="2010-06-03">June 3, 2010</time></td>
-    <td>n/a</td>
-    <td>0.00</td>
-  </tr>
-  <tr>
-    <th>Edvard Galinski</th>
-    <td>533175</td>
-    <td><time datetime="2011-01-13">January 13, 2011</time></td>
-    <td><time datetime="2017-04-08">April 8, 2017</time></td>
-    <td>37.00</td>
-  </tr>
-  <tr>
-    <th>Hoshi Nakamura</th>
-    <td>601942</td>
-    <td><time datetime="2012-07-23">July 23, 2012</time></td>
-    <td>n/a</td>
-    <td>15.00</td>
-  </tr>
+  <thead>
+    <tr>
+      <th rowspan="2">Name</th>
+      <th rowspan="2">ID</th>
+      <th colspan="2">Membership Dates</th>
+      <th rowspan="2">Balance</th>
+    </tr>
+    <tr>
+      <th>Joined</th>
+      <th>Canceled</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Margaret Nguyen</th>
+      <td>427311</td>
+      <td><time datetime="2010-06-03">June 3, 2010</time></td>
+      <td>n/a</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Edvard Galinski</th>
+      <td>533175</td>
+      <td><time datetime="2011-01-13">January 13, 2011</time></td>
+      <td><time datetime="2017-04-08">April 8, 2017</time></td>
+      <td>37.00</td>
+    </tr>
+    <tr>
+      <th>Hoshi Nakamura</th>
+      <td>601942</td>
+      <td><time datetime="2012-07-23">July 23, 2012</time></td>
+      <td>n/a</td>
+      <td>15.00</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
-The differences that matter here—for the purposes of discussing row and column spans—are in the first few lines of the code above. Note the use of `rowspan` to make the "Name", "ID", and "Balance" headers occupy two rows instead of just one, and the use of `colspan` to make the "Membership Dates" header cell span across two columns.
-
-The CSS is unchanged from before.
+Because the dates area spans two rows, the other headers also need to span two rows. We include the `rowspan` attribute on the other  {{HTMLElement("th")}} elements  to make the "Name", "ID", and "Balance" headers occupy two rows. We use the `colspan` attribute to make the "Membership Dates" header cell span the two date columns.
 
 ```css hidden
 table {
@@ -418,6 +408,15 @@ td {
 }
 ```
 
+##### Result
+
+{{EmbedLiveSample("Row_and_column_spanning", 500, 150)}}
+
+The heading area here is two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are subheadings of the "Membership Dates" super heading. This is accomplished by:
+
+- The first row's "Name", "ID", and "Balance" heading cells span both table header rows by using the `rowspan` attribute, making them each two rows tall.
+- The first row's "Membership Dates" heading cell span two columns using the `colspan` attribute, which causes this heading to be two columns wide.
+- Including only two header cells in the table header's second row. The HTML for the row contains only the "Joined" and "Canceled" headings because the other three columns are merged with the cells in the first-row that span two rows. The two header cells are correctly positioned under the "Membership Dates" heading.
 #### Explicitly specifying table content groups
 
 Before really getting into styling this table, let's take a moment to add row and column groups. This will improve the [semantics](/en-US/docs/Glossary/Semantics#semantics_in_html) and make our CSS easier.
