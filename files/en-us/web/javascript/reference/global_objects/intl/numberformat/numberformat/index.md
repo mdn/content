@@ -278,6 +278,10 @@ This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberForm
       Note that depending various formatting options, these properties can have default values.
       It is therefore possible to get this error even if you only set one of the properties.
 
+- {{jsxref("TypeError")}}
+
+  - : Thrown if the `options.style` property is set to "unit" or "currency", and no value has been set for the corresponding property `options.unit` or `options.currency`.
+
 ## Examples
 
 ### Basic usage
