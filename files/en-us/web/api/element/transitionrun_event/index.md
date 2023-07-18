@@ -127,5 +127,3 @@ The `transitionrun` will occur even if the transition is canceled before the del
 - The {{domxref("TransitionEvent")}} interface
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
 - Related events: {{domxref("Element/transitionend_event", "transitionend")}}, {{domxref("Element/transitionstart_event", "transitionstart")}}, {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/transitionrun_event", "transitionrun")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/transitionrun_event", "transitionrun")}}

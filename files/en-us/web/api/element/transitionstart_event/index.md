@@ -121,5 +121,3 @@ The difference is that:
 - The {{domxref("TransitionEvent")}} interface
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
 - Related events: {{domxref("Element/transitionend_event", "transitionend")}}, {{domxref("Element/transitionrun_event", "transitionrun")}}, {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/transitionstart_event", "transitionstart")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/transitionstart_event", "transitionstart")}}
