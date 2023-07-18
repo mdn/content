@@ -142,4 +142,4 @@ console.log(pixels); // Uint8Array
 
 ## See also
 
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

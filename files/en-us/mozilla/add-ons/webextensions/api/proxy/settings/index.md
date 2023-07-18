@@ -48,7 +48,7 @@ let proxySettings = {
   passthrough: ".example.org",
 };
 
-browser.proxy.settings.set({value: proxySettings});
+browser.proxy.settings.set({ value: proxySettings });
 ```
 
 {{WebExtExamples}}

@@ -8,7 +8,7 @@ browser-compat: api.Element.transitioncancel_event
 
 {{APIRef}}
 
-The **`transitioncancel`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+The **`transitioncancel`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
 
 ## Syntax
 
@@ -84,7 +84,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 }
 ```
 
-To this, we'll add some JavaScript to indicate that the [`transitionstart`](/en-US/docs/Web/API/Element/transitionstart_event), [`transitionrun`](/en-US/docs/Web/API/Element/transitionrun_event), [`transitioncancel`](/en-US/docs/Web/API/Window/transitioncancel_event) and [`transitionend`](/en-US/docs/Web/API/Window/transitionend_event) events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.
+To this, we'll add some JavaScript to indicate that the [`transitionstart`](/en-US/docs/Web/API/Element/transitionstart_event), [`transitionrun`](/en-US/docs/Web/API/Element/transitionrun_event), [`transitioncancel`](/en-US/docs/Web/API/Element/transitioncancel_event) and [`transitionend`](/en-US/docs/Web/API/Element/transitionend_event) events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.
 
 ```js
 const message = document.querySelector(".message");

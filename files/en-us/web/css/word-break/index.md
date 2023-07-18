@@ -130,4 +130,4 @@ The `word-break` property is specified as a single keyword chosen from the list 
 - {{cssxref("overflow-wrap")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("line-break")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

@@ -52,7 +52,7 @@ browser.contextMenus.create({
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "get-popup") {
-    let gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
+    let gettingPopup = browser.pageAction.getPopup({ tabId: tab.id });
     gettingPopup.then(gotPopup);
   }
 });
