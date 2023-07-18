@@ -21,6 +21,12 @@ This selector is useful to provide a different focus indicator based on the user
 }
 ```
 
+## :focus vs :focus-visible
+
+The default behavior of user agents is to indicate focus on an element only when it is most useful to the user. For instance, when a button is clicked using a pointing device, the focus is not visually indicated. However, when interacting with an input box that requires keyboard input, the focus is indicated. When navigating using a keyboard, focus is always indicated, even on elements such as buttons.
+
+When the [`:focus`](/en-US/docs/Web/CSS/:focus) pseudo-class is used, it always targets the currently focused element. This means that when a user employs a pointing device, a visible focus ring appears around elements like buttons, which is obtrusive. On the other hand, the `:focus-visible` pseudo-class respects the selective focus indication behavior of user agents while still allowing customization of the focus indicator.
+
 ## Examples
 
 ### Basic example
