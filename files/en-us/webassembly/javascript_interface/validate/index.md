@@ -12,8 +12,8 @@ code, returning whether the bytes form a valid Wasm module (`true`) or not
 
 ## Syntax
 
-```js-nolint
-WebAssembly.validate(bufferSource)
+```js
+WebAssembly.validate(bufferSource);
 ```
 
 ### Parameters

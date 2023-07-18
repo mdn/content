@@ -14,8 +14,8 @@ This function is useful if it is necessary to compile a module before it can be 
 
 ## Syntax
 
-```js-nolint
-WebAssembly.compileStreaming(source)
+```js
+WebAssembly.compileStreaming(source);
 ```
 
 ### Parameters

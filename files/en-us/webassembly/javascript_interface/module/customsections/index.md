@@ -11,8 +11,8 @@ of the contents of all custom sections in the given module with the given string
 
 ## Syntax
 
-```js-nolint
-WebAssembly.Module.customSections(module, sectionName)
+```js
+WebAssembly.Module.customSections(module, sectionName);
 ```
 
 ### Parameters

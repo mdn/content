@@ -11,8 +11,8 @@ containing descriptions of all the declared imports of the given `Module`.
 
 ## Syntax
 
-```js-nolint
-WebAssembly.Module.imports(module)
+```js
+WebAssembly.Module.imports(module);
 ```
 
 ### Parameters

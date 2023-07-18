@@ -15,8 +15,8 @@ is the most efficient, optimized way to load Wasm code.
 
 ## Syntax
 
-```js-nolint
-WebAssembly.instantiateStreaming(source, importObject)
+```js
+WebAssembly.instantiateStreaming(source, importObject);
 ```
 
 ### Parameters
