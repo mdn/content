@@ -50,7 +50,6 @@ If your goal is to pass the `ImageBitmap` to other web APIs which do not consume
 
 If you call {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} and don't intend to pass it to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}, consider whether you need to call {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} at all. Many web APIs which accept `ImageBitmap` also accept `OffscreenCanvas` as an argument.
 
-
 ## Examples
 
 ### Synchronous display of frames produced by an `OffscreenCanvas`
