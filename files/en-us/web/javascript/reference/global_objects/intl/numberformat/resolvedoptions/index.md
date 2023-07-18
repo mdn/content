@@ -94,7 +94,7 @@ const de = new Intl.NumberFormat("de-DE", {
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
 console.log(usedOptions.numberingSystem); // "latn"
-console.log(usedOptions.compactDisplay); // "undefined"
+console.log(usedOptions.compactDisplay); // undefined ("notation" not set to "compact")
 console.log(usedOptions.currency); // "USD"
 console.log(usedOptions.currencyDisplay); // "symbol"
 console.log(usedOptions.currencySign); // "standard"
