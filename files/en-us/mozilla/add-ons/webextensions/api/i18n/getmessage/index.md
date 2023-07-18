@@ -15,7 +15,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ```js-nolint
 browser.i18n.getMessage(
-  messageName, // string
+  messageName,  // string
   substitutions // optional any
 )
 ```

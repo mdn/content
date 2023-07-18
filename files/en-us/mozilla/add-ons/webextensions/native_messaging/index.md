@@ -186,7 +186,7 @@ port.onMessage.addListener((response) => {
 On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending: ping");
+  console.log("Sending:  ping");
   port.postMessage("ping");
 });
 ```
@@ -221,7 +221,7 @@ function onError(error) {
 On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending: ping");
+  console.log("Sending:  ping");
   let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
