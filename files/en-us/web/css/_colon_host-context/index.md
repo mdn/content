@@ -89,4 +89,3 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { c
 - [Web components](/en-US/docs/Web/API/Web_components)
 - {{cssxref(":host")}}
 - {{cssxref(":host_function", ":host()")}}
-
