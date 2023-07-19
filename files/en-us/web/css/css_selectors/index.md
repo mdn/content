@@ -1,6 +1,6 @@
 ---
 title: CSS selectors
-slug: Web/CSS/CSS_Selectors
+slug: Web/CSS/CSS_selectors
 page-type: css-module
 spec-urls: https://drafts.csswg.org/selectors/
 ---
