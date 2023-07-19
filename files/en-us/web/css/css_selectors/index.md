@@ -53,6 +53,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{CSSXref(":lang()")}}
 - {{CSSXref(":last-child")}}
 - {{CSSXref(":last-of-type")}}
+- {{CSSXref(":link")}}
 - {{CSSXref(":local-link")}}
 - {{CSSXref(":matches()")}}
 - {{CSSXref(":modal")}}
@@ -83,14 +84,14 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{CSSXref(":stalled")}}
 - {{CSSXref(":target")}}
 - {{CSSXref(":target-within")}}
+- {{CSSXref(":user-invalid")}}
 - {{CSSXref(":user-valid")}}
 - {{CSSXref(":valid")}}
 - {{CSSXref(":visited")}}
 - {{CSSXref(":volume-locked")}}
 - {{CSSXref(":where", ":where()")}}
-- {{CSSXref(":user-invalid")}}
 - [`:-webkit-` pseudo-classes](/en-US/docs/Web/CSS/WebKit_Extensions#pseudo-classes)
-- {{CSSXref("Attribute selector")}}
+- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
 - [Class selector](/en-US/docs/Web/CSS/Class_selectors)
 - [ID selector](/en-US/docs/Web/CSS/ID_selectors)
 - [Type selector](/en-US/docs/Web/CSS/Type_selectors)
@@ -99,7 +100,8 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 ## Definitions
 
 - {{glossary("Pseudo-class")}} glossary term
-- [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
+- [Functional pseudo class](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
+- [Combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
 - [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#simple-selector)
 - [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#compound-selector)
 - [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#complex-selector)
@@ -117,7 +119,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 
   - : The structure of CSS selectors and the terminology introduced in the selectors module, from "simple selector" to "forgiving relative selector list".
 
-- [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
+- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
 
   - : Selects elements that have the given attribute, with optional substring values.
 
@@ -127,22 +129,30 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 
 - [Learn: CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
-  - Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors), [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements), [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), and [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers).
+  - : Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors), [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements), [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), and [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers).
 
-- [Learn: Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
+- [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
 
-  - :
+  - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
 
 - [Learn: UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
 
-  - : The different UI pseudo-classes available for styling forms in different states
+  - : Learn the different UI pseudo-classes available for styling forms in different states.
 
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-  - :
+
+  - : The selectors API enables using selectors in JavaScript to retrieve element nodes from the DOM.
 
 ## Related concepts
 
-- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) (representing entities not included in HTML)
+- CSS scoping module
+
+  - {{CSSXref(":host")}} pseudo-class
+  - {{CSSXref(":host_function", ":host()")}} pseudo-class
+  - {{cssxref(":host-context", ":host-context()")}} pseudo-class
+  - {{CSSXref("::slotted")}} pseudo-element
+
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo) (representing entities not included in HTML)
 
   - {{CSSXref("::after")}}
   - {{CSSXref("::before")}}
@@ -152,23 +162,28 @@ The **CSS selectors** module defines the patterns to select elements to which a 
   - {{CSSXref("::grammar-error")}}
   - {{CSSXref("::marker")}}
   - {{CSSXref("::placeholder")}}
-  - {{CSSXref("::postfix")}}
-  - {{CSSXref("::prefix")}}
   - {{CSSXref("::selection")}}
   - {{CSSXref("::spelling-error")}}
   - {{CSSXref("::target-text")}}
 
+- [CSS shadow parts module](/en-US/docs/Web/CSS/CSS_shadow_parts)
+
+  - {{CSSXref("::part")}} pseudo-element
+
+- [CSS positioned layout module](/en-US/docs/Web/CSS/CSS_positioned_layout)
+
+  - {{CSSxRef("::backdrop")}}
+
+- Other [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+
+  - {{CSSxRef("::cue")}}
+  - {{CSSxRef("::cue-region")}}
+
 - {{CSSXref("@namespace")}} at-rule
 
-- CSS scoping module
-  - {{CSSXref(":host")}}
-  - {{CSSXref(":host_function", ":host()")}}
-  - {{CSSXref(":host-context()")}}
-  - {{CSSXref("::part")}}
-  - {{CSSXref("::slotted")}}
-
-- [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)
+- {{cssxref("important", "!important")}}
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [The cascade](/en-US/docs/Web/CSS/Cascade)
 
 ## Specifications
 
@@ -176,6 +191,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 
 ## See also
 
-- {{cssxref("important", "!important")}}
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo)
+- [CSS cascade and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
 - [Cascade origin and importance](/en-US/docs/Web/CSS/Cascade)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
