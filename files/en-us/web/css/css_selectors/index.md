@@ -7,7 +7,11 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{CSSRef}}
 
-The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied. We are provided with five combinators and more than 60 selectors.
+The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied. The CSS selectors module provides us with more than 60 selectors and five combinators. Other modules provide additional pseudo-class selectors and pseudo-elements.
+
+Selectors enable targeting HTML elements based on their type, attributes, current states, and even position in the DOM. Combinators enable being more precise in the elements you select by enabling specifying elements based on their relationship to other elements in the DOM.
+
+In CSS, selectors are patterns used to match, or select, the elements you want to style. Selectors are also used in JavaScript to enable selecting which DOM nodes to return as a [`NodeList`](/en-US/docs/Web/API/NodeList).
 
 ## Reference
 
@@ -184,6 +188,10 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{cssxref("important", "!important")}}
 - {{cssxref("Specificity")}}
 - [The cascade](/en-US/docs/Web/CSS/Cascade)
+
+- {{domxref("Document.querySelector")}} method
+- {{domxref("Document.querySelectorAll")}} method
+- {{domxref("NodeList.forEach()")}} method
 
 ## Specifications
 
