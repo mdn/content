@@ -33,7 +33,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{CSSXref(":current", ":current()")}}
 - {{CSSXref(":default")}}
 - {{CSSXref(":defined")}}
-- {{CSSXref(":dir()")}}
+- {{CSSXref(":dir", ":dir()")}}
 - {{CSSXref(":disabled")}}
 - {{CSSXref(":empty")}}
 - {{CSSXref(":enabled")}}
@@ -50,12 +50,12 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{CSSXref(":in-range")}}
 - {{CSSXref(":invalid")}}
 - {{CSSXref(":is", ":is()")}}
-- {{CSSXref(":lang()")}}
+- {{CSSXref(":lang", ":lang()")}}
 - {{CSSXref(":last-child")}}
 - {{CSSXref(":last-of-type")}}
 - {{CSSXref(":link")}}
 - {{CSSXref(":local-link")}}
-- {{CSSXref(":matches()")}}
+- {{CSSXref(":matches()", ":is")}}
 - {{CSSXref(":modal")}}
 - {{CSSXref(":muted")}}
 - {{CSSXref(":not()")}}
@@ -182,7 +182,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{CSSXref("@namespace")}} at-rule
 
 - {{cssxref("important", "!important")}}
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- {{cssxref("Specificity")}}
 - [The cascade](/en-US/docs/Web/CSS/Cascade)
 
 ## Specifications
