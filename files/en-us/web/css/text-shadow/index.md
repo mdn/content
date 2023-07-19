@@ -38,7 +38,7 @@ text-shadow: revert-layer;
 text-shadow: unset;
 ```
 
-This property is specified as a comma-separated list of shadows.
+This property is specified as a space-separated list of shadows.
 
 Each shadow is specified as two or three `<length>` values, followed optionally by a `<color>` value. The first two `<length>` values are the `<offset-x>` and `<offset-y>` values. The third, optional, `<length>` value is the `<blur-radius>`. The `<color>` value is the shadow's color.
 
