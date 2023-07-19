@@ -60,7 +60,7 @@ This first element defines instructions on how to invoke the popup, which we nee
 ```
 
 We then define a `<div>` element which is the popup.
-The actual content doesn't matter, but note that we need the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute make the `<div>` into a popover so that it is hidden by default (or we could set this element in the JavaScript).
+The actual content doesn't matter, but note that we need the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute to make the `<div>` into a popover so that it is hidden by default (or we could set this element in the JavaScript).
 
 ```html
 <div id="mypopover" popover>
