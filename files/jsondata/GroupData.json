@@ -1259,6 +1259,22 @@
       "properties": ["Navigator.serviceWorker"],
       "events": []
     },
+    "Shared Storage API": {
+      "overview": ["Shared Storage API"],
+      "interfaces": [
+        "SharedStorage",
+        "SharedStorageOperation",
+        "SharedStorageRunOperation",
+        "SharedStorageSelectURLOperation",
+        "SharedStorageWorklet",
+        "SharedStorageWorkletGlobalScope",
+        "WindowSharedStorage",
+        "WorkletSharedStorage"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Storage": {
       "overview": ["Storage API"],
       "guides": [

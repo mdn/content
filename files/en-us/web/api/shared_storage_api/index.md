@@ -1,0 +1,243 @@
+---
+title: Shared Storage API
+slug: Web/API/Shared_storage_API
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.SharedStorage
+---
+
+{{SeeCompatTable}}{{DefaultAPISidebar("Shared Storage API")}}
+
+The **Shared Storage API** is a client-side storage mechanism that enables unpartitioned, cross-site data access in a privacy-preserving manner for specific use cases that require it.
+
+## Concepts and usage
+
+One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is third-party cookies set on content embedded in {{htmlelement("iframe")}} elements, which can be used to share information and track users across sites.
+
+To prevent cross-site tracking, browsers are working towards partitioning all forms of storage — this includes [Cookies](/en-US/docs/Web/HTTP/Cookies), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Cache API](/en-US/docs/Web/API/Cache), etc. However, a major barrier to achieving this is that there are several legitimate use cases that rely on sharing information across sites, for example advertisers wishing to measure the reach of their ads across sites and generate reports, or site owners wishing to customize user experiences based on what group they are in, or what content they've already seen on other properties.
+
+The Shared Storage API provides a flexible solution to fulfill such use cases — aiming to provide the required data storage, processing, and sharing — but without sharing user data with parties that shouldn't have access to it.
+
+Like other storage APIs, you can write to shared storage at any time. However, you can only read shared storage data from inside a {{domxref("SharedStorageWorklet", "worklet", "", "nocode")}}. Worklets provide a secure environment inside which you can process shared storage data and return useful results, but you can't directly share the data with the associated browsing context.
+
+To extract useful results from a shared storage worklet, you need to use an **output gate**. Output gates are mechanisms that fulfill a specific type of use case, for example selecting a URL from a provided list to display to the user based on shared storage data. Any results to be displayed to the user will be shown securely inside a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API) where they can't be accessed from the embedding page.
+
+### Use cases
+
+The Shared Storage API's currently available output gates are discussed in the sections below. In each section, we list typical use cases for each one, and link to guides that provide more information and code examples.
+
+> **Note:** More output gates will likely be added in the future, to support additional use cases.
+
+#### Select URL
+
+The **Select URL** output gate (via the {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} method) is used to select a URL from a provided list to display to the user, based on shared storage data. This can be used for the following purposes:
+
+- [**Creative rotation**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/creative-rotation/): Store data such as creative IDs, view counts, and user interaction, to determine which creative users' see across different sites. This allows you to balance views and avoid oversaturation of certain content, which can help you avoid a negative user experience.
+- [**A/B testing**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/): Assign a user to an experiment group, then store group details in shared storage to be accessed cross-site.
+- [**Custom user experiences**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/known-customer/): Share custom content and calls-to-action based on a user's registration status or other user states.
+
+#### Run
+
+The **Run** output gate is intended as a generic way to process some shared storage data.
+
+The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) can use the Run output gate to process shared storage data and generate aggregated reports. These can be used for the following use cases:
+
+- [**Unique reach reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/unique-reach/): Content producers and advertisers often want to know how many unique people saw their content. You can use shared storage to report on the first time a user saw your ad or embedded publication, and prevent duplicative counting of that same user on a different site, giving you an aggregated noisy report of your approximate unique reach.
+- [**User demographic reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/user-demographics/): Content producers often want to understand the demographics of their audience. You can use shared storage to record user demographic data on your main site, and use aggregated reporting to report on it across other sites, in embedded contexts.
+- [**K+ frequency measurement**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/k-freq-reach/): Sometimes described as "effective frequency", K frequency refers to the minimum number of views before a user will recognize or recall certain content (often used in the context of ad views). You can use shared storage to build reports of unique users that have seen a piece of content at least K times.
+
+## How does Shared Storage work?
+
+There are two parts to using the Shared Storage API — writing data to storage, and reading and processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. This example assigns a user to an experiment group, stores the group details in shared storage, and then allows other sites to use that data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
+
+### Writing to shared storage
+
+Writing the data is simple — you use methods defined on the {{domxref("SharedStorage")}} interface to {{domxref("SharedStorage.set", "set", "", "nocode")}}, {{domxref("SharedStorage.append", "append", "", "nocode")}}, or {{domxref("SharedStorage.delete", "delete", "", "nocode")}}/{{domxref("SharedStorage.clear", "clear", "", "nocode")}} data.
+
+This functionality is available in two difference contexts:
+
+- In the main browsing context that your site or app is running in, on {{domxref("WindowSharedStorage")}}, which is available via `window.sharedStorage`.
+- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}, which is available via `this.sharedStorage`.
+
+In our A/B testing example, we define a function in our app context that generates a random number — 0 or 1 — to represent an experiment group to assign the current user to, and then run the {{domxref("SharedStorage.set", "window.sharedStorage.set()")}} function to assign the user to a group and save the result in shared storage:
+
+```js
+// Randomly assigns a user to a group 0 or 1
+function getExperimentGroup() {
+  return Math.round(Math.random());
+}
+
+async function injectContent() {
+  // Assign user to a random group (0 or 1) and store it in Shared Storage
+  window.sharedStorage.set("ab-testing-group", getExperimentGroup(), {
+    ignoreIfPresent: true,
+  });
+}
+```
+
+> _Note:_ The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified name.
+
+### Reading and processing data from shared storage
+
+As mentioned above, to extract useful results from a shared storage worklet you need to use an **output gate**. In this example we'll use the Select URL output gate to read the user's experiment group and then load a URL in a fenced frame based on their group.
+
+To use the output gate, you need to:
+
+- Define an operation in a worklet script to handle choosing the URL, and register it.
+- Add the worklet module to your app context.
+- Choose the URL using the worklet operation and load it in a fenced frame.
+
+Let's look at these one by one.
+
+#### Define an operation in a worklet
+
+The URL will be chosen based on the experiment group stored in shared storage. To retrieve this value choose a URL based on it, we need to define an operation in a {{domxref("SharedStorageWorklet")}} context — it must be inside a worklet to keep the raw data hidden from other contexts and therefore preserve privacy.
+
+The Select URL operation takes the form of a JavaScript class. It can be written in any way you like, as long as it follows certain rules (some of the rules for each output gate differ, depending on what kind of use case they fulfill):
+
+- The actual functionality must be contained inside an asynchronous `run()` method, which must have an array of objects containing URLs as its first paramater, and a data object as its second parameter (when called, the data argument is optional).
+- The `run()` method must return a number, which will equate to the number of the URL chosen.
+
+> **Note**: Each output gate has a corresponding interface that defines the required signature of its `run()` method. For example, for Select URL, see {{domxref("SharedStorageSelectURLOperation.run()")}}.
+
+Once the operation is defined, it needs to be registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
+
+```js
+// ab-testing-worklet.js
+class SelectURLOperation {
+  async run(urls, data) {
+    // Read the user's experiment group from Shared Storage
+    const experimentGroup = await this.sharedStorage.get("ab-testing-group");
+
+    // Return the corresponding URL (first or second item in the array)
+    return urls.indexOf(experimentGroup);
+  }
+}
+
+register("ab-testing", SelectURLOperation);
+```
+
+Note how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}} — to reiterate, you can only read values back out of shared storage inside a worklet.
+
+#### Add the worklet
+
+To make use of the operation defined in the worklet, it needs to be added to the main app using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. This is done in our main app context, before we set the experiment group value, so that it is ready to use when needed:
+
+```js
+async function injectContent() {
+  // Register the shared storage worklet
+  await window.sharedStorage.worklet.addModule("ab-testing-worklet.js");
+
+  // Assign user to a random group (0 or 1) and store it in shared storage
+  window.sharedStorage.set("ab-testing-group", getExperimentGroup(), {
+    ignoreIfPresent: true,
+  });
+}
+```
+
+#### Choose a URL and load it in a fenced frame
+
+To run the operation defined in the worklet, we call {{domxref("WindowSharedStorage.selectURL()")}} — this acts as a proxy to our worklet operation, accessing it securely and returning the result without leaking any data. `selectURL()` is the correct method to call our user-defined worklet operation because it was defined with the appropriate `run()` method signature for a Select URL operation, as discussed above.
+
+`selectURL()` expects an array of objects containing URLs to choose from, an optional options object, and for the underlying operation to return an integer that it can use to choose a URL.
+
+```js
+// Run the URL selection operation
+const fencedFrameConfig = await window.sharedStorage.selectURL(
+  "ab-testing",
+  [
+    { url: `https://your-server.example/content/default-content.html` },
+    { url: `https://your-server.example/content/experiment-content-a.html` },
+  ],
+  {
+    resolveToConfig: true,
+  },
+);
+```
+
+Because the options object contains `resolveToConfig: true`, the returned {{jsxref("Promise")}} will resolve with a {{domxref("FencedFrameConfig")}} object, which can be set as the value of the {{domxref("HTMLFencedFrameElement.config")}} property, resulting in the chosen URL being displayed in the associated {{htmlelement("fencedframe")}} element:
+
+```js
+document.getElementById("content-slot").config = fencedFrameConfig;
+```
+
+The full app script looks like so:
+
+```js
+// Randomly assigns a user to a group 0 or 1
+function getExperimentGroup() {
+  return Math.round(Math.random());
+}
+
+async function injectContent() {
+  // Register the shared storage worklet
+  await window.sharedStorage.worklet.addModule("ab-testing-worklet.js");
+
+  // Assign user to a random group (0 or 1) and store it in shared storage
+  window.sharedStorage.set("ab-testing-group", getExperimentGroup(), {
+    ignoreIfPresent: true,
+  });
+
+  // Run the URL selection operation
+  const fencedFrameConfig = await window.sharedStorage.selectURL(
+    "ab-testing",
+    [
+      { url: `https://your-server.example/content/default-content.html` },
+      { url: `https://your-server.example/content/experiment-content-a.html` },
+    ],
+    {
+      resolveToConfig: true,
+    },
+  );
+
+  // Render the chosen URL into a fenced frame
+  document.getElementById("content-slot").config = fencedFrameConfig;
+}
+
+injectContent();
+```
+
+## Interfaces
+
+- {{domxref("SharedStorage")}}
+  - : Represents the shared storage for a particular origin. Defines methods to write data to the shared storage.
+- {{domxref("WindowSharedStorage")}}
+  - : Represents the shared storage for a particular origin, as it is exposed to a standard browsing context. Among others, defines methods to use the available output gates, which act as proxies for the operations defined in the worklet.
+- {{domxref("WorkletSharedStorage")}}
+  - : Represents the shared storage for a particular origin, as it is exposed to a worklet context. Among others, defines methods to read the shared storage data.
+- {{domxref("SharedStorageWorklet")}}
+  - : Contains the {{domxref("Worklet.addModule", "addModule()")}} method used to add a module to the shared storage worklet. Unlike a regular {{domxref("Worklet")}}, `SharedStorageWorklet` can only have a single module added to it, for privacy reasons.
+- {{domxref("SharedStorageWorkletGlobalScope")}}
+  - : Represents the global scope of a {{domxref("SharedStorageWorklet")}} module. contains functionality to {{domxref("SharedStorageWorkletGlobalScope.register", "register", "", "nocode")}} a defined operation, and {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "access the shared storage", "", "nocode")}}.
+
+### Output gate operation signature definitions
+
+- {{domxref("SharedStorageOperation")}}
+  - : Represents the base class for all different output gate operation types.
+- {{domxref("SharedStorageRunOperation")}}
+  - : Represents a Run output gate operation.
+- {{domxref("SharedStorageSelectURLOperation")}}
+  - : Represents a Select URL output gate operation.
+
+### Extensions to other interfaces
+
+- {{domxref("Window.sharedStorage")}}
+  - : Returns the {{domxref("WindowSharedStorage")}} object for the current origin.
+
+## Examples
+
+For extensive demos, see [Shared Storage API demos](https://shared-storage-demo.web.app/) (which also includes some Private Aggregation API examples).
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Shared Storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) on developer.chrome.com
+- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
