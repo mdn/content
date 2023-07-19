@@ -7,15 +7,15 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{CSSRef}}
 
-The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied. The CSS selectors module provides us with more than 60 selectors and five combinators. Other modules provide additional pseudo-class selectors and pseudo-elements.
-
-Selectors enable targeting HTML elements based on their type, attributes, current states, and even position in the DOM. Combinators enable being more precise in the elements you select by enabling specifying elements based on their relationship to other elements in the DOM.
+The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their {{cssxref("specificity")}}. The CSS selectors module provides us with more than 60 selectors and five combinators. Other modules provide additional pseudo-class selectors and pseudo-elements.
 
 In CSS, selectors are patterns used to match, or select, the elements you want to style. Selectors are also used in JavaScript to enable selecting which DOM nodes to return as a [`NodeList`](/en-US/docs/Web/API/NodeList).
 
+Selectors, whether used in CSS or JS, enable targeting HTML elements based on their type, attributes, current states, and even position in the DOM. Combinators enable being more precise in the elements you select by enabling specifying elements based on their relationship to other elements.
+
 ## Reference
 
-### Combinators
+### Combinators and seperators
 
 - {{CSSXref("Adjacent_sibling_combinator","+")}} ([next-, or adjacent-", sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator))
 - {{CSSXref("Child_combinator", "&gt;")}} ([child combinator](/en-US/docs/Web/CSS/Child_combinator))
