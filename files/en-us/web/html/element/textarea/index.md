@@ -49,7 +49,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `dirname`
 
   - : This attribute is used to set the text directionality of the element in a manner similar to the [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute of the `<input>` element. Possible values include `ltr` for left-to-right and `rtl` for right-to-left. The default value is `ltr`.
-    The value of the attribute is sent in the format `{elementName}.dir={value}`, where `{elementName}` is the name of the `<input>` element and `{value}` may be `ltr` or `rtl`.
+    The value of the attribute is sent in the format `{elementName}.dir={value}`, where `{elementName}` is the name of the `<textarea>` element and `{value}` may be `ltr` or `rtl`.
 
 - `disabled`
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{ HTMLElement("fieldset") }}; if there is no containing element when the `disabled` attribute is set, the control is enabled.
