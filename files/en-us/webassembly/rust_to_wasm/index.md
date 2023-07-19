@@ -206,7 +206,7 @@ Let's start by creating a file named `index.html` in the root of the project, so
 ```
 ├── Cargo.lock
 ├── Cargo.toml
-├── index.html
+├── index.html  <-- new index.html file
 ├── pkg
 │   ├── hello_wasm.d.ts
 │   ├── hello_wasm.js
@@ -264,7 +264,7 @@ wasm-pack build --target bundler
 We are building an npm package, so you need to have Node.js and npm installed.
 
 To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions.
-This tutorial targets node 16, if you need to switch between node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
+This tutorial targets node 20, if you need to switch between node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
 
 Next, let's use `npm link` to make this package available to other JavaScript packages installed
 
@@ -288,20 +288,22 @@ cd site
 npm link hello-wasm
 ```
 
+> **Note:** If you remove the `./node_modules` directory at any point, you'll need to run `npm link hello-wasm` again.
+
 Create a new file, `package.json`, and put the following code in it:
 
 ```json
 {
   "scripts": {
-    "serve": "webpack-dev-server"
+    "start": "webpack-dev-server --config webpack.config.js"
   },
   "dependencies": {
     "hello-wasm": "^0.1.0"
   },
   "devDependencies": {
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
 ```
@@ -312,6 +314,9 @@ Next, we need to configure Webpack. Create `webpack.config.js` and put the follo
 const path = require("path");
 module.exports = {
   entry: "./index.js",
+  experiments: {
+    asyncWebAssembly: true,
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
@@ -360,10 +365,10 @@ We're done making files. Let's give this a shot:
 
 ```bash
 npm install
-npm run serve
+npm serve
 ```
 
-This starts a web server. Load `http://localhost:8080` and an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm.
+This starts a web server. Load `http://localhost:8080/index` and an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm.
 
 ## Conclusion
 
