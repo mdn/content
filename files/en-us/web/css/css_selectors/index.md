@@ -58,13 +58,13 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 - {{CSSXref(":matches()", ":is")}}
 - {{CSSXref(":modal")}}
 - {{CSSXref(":muted")}}
-- {{CSSXref(":not()")}}
-- {{CSSXref(":nth-child()")}}
+- {{CSSXref(":not", ":not()")}}
+- {{CSSXref(":nth-child", ":nth-child()")}}
 - {{CSSXref(":nth-col", ":nth-col()")}}
-- {{CSSXref(":nth-last-child()")}}
+- {{CSSXref(":nth-last-child", ":nth-last-child()")}}
 - {{CSSXref(":nth-last-col", ":nth-last-col()")}}
-- {{CSSXref(":nth-last-of-type()")}}
-- {{CSSXref(":nth-of-type()")}}
+- {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
+- {{CSSXref(":nth-of-type", ":nth-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
 - {{CSSXref(":open")}}
@@ -131,7 +131,7 @@ The **CSS selectors** module defines the patterns to select elements to which a 
 
   - : Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors), [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements), [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), and [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers).
 
-- [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the__colon_target_pseudo-class_in_selectors)
 
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
 
