@@ -47,7 +47,7 @@ The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/
 - [**User demographic reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/user-demographics/): Content producers often want to understand the demographics of their audience. You can use shared storage to record user demographic data on your main site, and use aggregated reporting to report on it across other sites, in embedded contexts.
 - [**K+ frequency measurement**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/k-freq-reach/): Sometimes described as "effective frequency", K frequency refers to the minimum number of views before a user will recognize or recall certain content (often used in the context of ad views). You can use shared storage to build reports of unique users that have seen a piece of content at least K times.
 
-## How does Shared Storage work?
+## How does shared storage work?
 
 There are two parts to using the Shared Storage API — writing data to storage, and reading and processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. This example assigns a user to an experiment group, stores the group details in shared storage, and then allows other sites to use that data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
 
@@ -69,14 +69,14 @@ function getExperimentGroup() {
 }
 
 async function injectContent() {
-  // Assign user to a random group (0 or 1) and store it in Shared Storage
+  // Assign user to a random group (0 or 1) and store it in shared storage
   window.sharedStorage.set("ab-testing-group", getExperimentGroup(), {
     ignoreIfPresent: true,
   });
 }
 ```
 
-> _Note:_ The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified name.
+> _Note:_ The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
 
 ### Reading and processing data from shared storage
 
@@ -84,8 +84,8 @@ As mentioned above, to extract useful results from a shared storage worklet you 
 
 To use the output gate, you need to:
 
-- Define an operation in a worklet script to handle choosing the URL, and register it.
-- Add the worklet module to your app context.
+- Define an operation in a worklet module script to handle choosing the URL, and register it.
+- Add the module to your shared storage worklet.
 - Choose the URL using the worklet operation and load it in a fenced frame.
 
 Let's look at these one by one.
@@ -107,7 +107,7 @@ Once the operation is defined, it needs to be registered using {{domxref("Shared
 // ab-testing-worklet.js
 class SelectURLOperation {
   async run(urls, data) {
-    // Read the user's experiment group from Shared Storage
+    // Read the user's experiment group from shared storage
     const experimentGroup = await this.sharedStorage.get("ab-testing-group");
 
     // Return the corresponding URL (first or second item in the array)
@@ -122,11 +122,11 @@ Note how the value set in our main app context is retrieved using {{domxref("Wor
 
 #### Add the worklet
 
-To make use of the operation defined in the worklet, it needs to be added to the main app using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. This is done in our main app context, before we set the experiment group value, so that it is ready to use when needed:
+To make use of the operation defined in the worklet module, it needs to be added to the shared storage worklet using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. This is done in our main app context, before we set the experiment group value, so that it is ready to use when needed:
 
 ```js
 async function injectContent() {
-  // Register the shared storage worklet
+  // Add the module to the shared storage worklet
   await window.sharedStorage.worklet.addModule("ab-testing-worklet.js");
 
   // Assign user to a random group (0 or 1) and store it in shared storage
@@ -171,7 +171,7 @@ function getExperimentGroup() {
 }
 
 async function injectContent() {
-  // Register the shared storage worklet
+  // Add the module to the shared storage worklet
   await window.sharedStorage.worklet.addModule("ab-testing-worklet.js");
 
   // Assign user to a random group (0 or 1) and store it in shared storage

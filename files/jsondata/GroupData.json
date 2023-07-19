@@ -1272,7 +1272,7 @@
         "WorkletSharedStorage"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.sharedStorage"],
       "events": []
     },
     "Storage": {
