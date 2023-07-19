@@ -4,11 +4,12 @@ short-title: webkitConvertPointFromNodeToPage()
 slug: Web/API/Window/webkitConvertPointFromNodeToPage
 page-type: web-api-instance-method
 status:
+  - deprecated
   - non-standard
 browser-compat: api.Window.webkitConvertPointFromNodeToPage
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 Given a {{domxref("WebKitPoint")}} specified in a particular DOM {{domxref("Node")}}'s coordinate system, the {{domxref("Window")}} method **`webkitConvertPointFromNodeToPage()`** returns a `Point` which specifies the same position in the page's coordinate system. This method is non-standard and _should not be used_.
 
