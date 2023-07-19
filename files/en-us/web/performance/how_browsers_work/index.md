@@ -82,19 +82,19 @@ This response for this initial request contains the first byte of data received.
 
 In our example above, the request is definitely less than 14KB, but the linked resources aren't requested until the browser encounters the links during parsing, described below.
 
-### TCP slow start / 14KB rule
+### Congestion control / TCP slow start
 
-The first response packet will be 14KB. This is part of {{glossary('TCP slow start')}}, an algorithm that balances the speed of a network connection. Slow start gradually increases the amount of data transmitted until the network's maximum bandwidth can be determined.
+TCP packets are splitting into segments during transmission. Since TCP guarantees the sequence of packets, the server must receive the acknowledgment from the client in the form of an ACK packet after sending a certain number of segments.
 
-In {{glossary('TCP slow start')}}, after receipt of the initial packet, the server doubles the size of the next packet to around 28KB. Subsequent packets increase in size until a predetermined threshold is reached, or congestion is experienced.
+If server waits for an ACK after each segment, this will result in frequent ACKs from the client and may increase transmission time even in case of an low load network.
 
-![TCP slow start](congestioncontrol.jpg)
+On the other hand, sending too many segments at once can lead to the fact that in a busy network the client will not be able to receive them and respond with ACK for a long time, and the server will have to repeat sending several times.
 
-If you've ever heard of the 14KB rule for initial page load, TCP slow start is the reason why the initial response is 14KB, and why web performance optimization calls for focusing optimizations with this initial 14KB response in mind. TCP slow start gradually builds up transmission speeds appropriate for the network's capabilities to avoid congestion.
+In order to balance the number of transmitted segments, there is a {{glossary('TCP slow start')}}, an algorithm that gradually increases the amount of transmitted data until the maximum network bandwidth can be determined. And it reduces the amount of transmitted data in case of high network load.
 
-### Congestion control
+The number of segments to be transmitted is specified by the Congestion window (CWND) which can be initialized to 1, 2, 4, or 10 MSS (MSS is 1500 bytes over the Ethernet protocol). This is the number of bytes to send, upon receipt of which the client must send an ACK.
 
-As the server sends data in TCP packets, the user's client confirms delivery by returning acknowledgments, or ACKs. The connection has a limited capacity depending on hardware and network conditions. If the server sends too many packets too quickly, they will be dropped. Meaning, there will be no acknowledgment. The server registers this as missing ACKs. Congestion control algorithms use this flow of sent packets and ACKs to determine a send rate.
+If an ACK is received, then CWND will be increased by 2 times and the next time the server will be able to send more segments. If not received, then the CWND value will decrease by 2 times, thus achieving a balance between sending too many segments and too few.
 
 ## Parsing
 
