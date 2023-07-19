@@ -365,7 +365,7 @@ We're done making files. Let's give this a shot:
 
 ```bash
 npm install
-npm serve
+npm run start
 ```
 
 This starts a web server. Load `http://localhost:8080/index` and an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm.
