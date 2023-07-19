@@ -48,7 +48,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
         `type` property. This can be used by the developer to control the
         stream as more chunks are fetched. This function will not be called until `start()`
         successfully completes. Additionally, it will only be called repeatedly if it
-        enqueues at least one chunk or fulfills a BYOB request; a no-op pull()
+        enqueues at least one chunk or fulfills a BYOB request; a no-op `pull()`
         implementation will not be continually called.
     - `cancel` (reason) {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
