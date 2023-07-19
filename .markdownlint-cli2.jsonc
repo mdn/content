@@ -101,7 +101,7 @@
       ]
     },
     "MD034": false,
-    // Pending https://github.com/mdn/content/pull/20115
+    // Produces too many false positives
     "MD037": false,
     "MD040": false,
     // See https://github.com/mdn/content/pull/20026, as macros currently break this

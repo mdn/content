@@ -132,5 +132,3 @@ If the `transitioncancel` event is fired, the `transitionend` event will not fir
 - The {{domxref("TransitionEvent")}} interface
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
 - Related events: {{domxref("Element/transitionrun_event", "transitionrun")}}, {{domxref("Element/transitionstart_event", "transitionstart")}}, {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/transitionend_event", "transitionend")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/transitionend_event", "transitionend")}}
