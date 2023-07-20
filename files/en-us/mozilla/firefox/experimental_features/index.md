@@ -821,22 +821,22 @@ The CSS {{cssxref("offset-position")}} property defines the initial position of 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>115</td>
+      <td>116</td>
       <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>115</td>
+      <td>116</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>115</td>
+      <td>116</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>115</td>
+      <td>116</td>
       <td>No</td>
     </tr>
     <tr>
