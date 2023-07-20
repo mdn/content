@@ -121,7 +121,7 @@ The form field includes an [`autocomplete`](/en-US/docs/Web/HTML/Attributes/auto
 The JavaScript is as follows:
 
 ```js
-// Feature detect support via OTPCredential availability
+// Detect feature support via OTPCredential availability
 if ("OTPCredential" in window) {
   window.addEventListener("DOMContentLoaded", (e) => {
     const input = document.querySelector('input[autocomplete="one-time-code"]');
