@@ -155,7 +155,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-Include links to reference pages and guides related to the current constructor. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2
