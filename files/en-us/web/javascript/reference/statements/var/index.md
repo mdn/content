@@ -40,10 +40,10 @@ The scope of a variable declared with `var` is one of the following curly-brace-
 - Function body
 - [Static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
-Or if neither of these apply:
+Or if none of the above applies:
 
-- [Module scope](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) - the scope for code running in module mode. Or
-- [Global scope] - the default scope for all code running in script mode.
+- The current [module](/en-US/docs/Web/JavaScript/Guide/Modules), for code running in module mode
+- The global scope, for code running in script mode.
 
 ```js
 function foo() {
