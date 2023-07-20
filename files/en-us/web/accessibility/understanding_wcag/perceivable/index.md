@@ -140,7 +140,7 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     <tr>
        <td>1.2.1 Provide alternatives for pre-recorded audio-only and video-only content (A)</td>
        <td>A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e., silent video).</td>
-       <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
+       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
     </tr>
     <tr>
        <td>1.2.2 Provide captions for web-based video (A)</td>
@@ -150,7 +150,7 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     <tr>
        <td>1.2.3 Provide text transcript or audio description for web-based video (A)</td>
        <td>You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
-       <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
+       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
     </tr>
     <tr>
        <td>1.2.4 Provide captions for live audio (AA)</td>
@@ -175,12 +175,12 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     <tr>
        <td>1.2.8 Provide an alternative for prerecorded media (AAA)</td>
        <td>For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing-impaired viewers who cannot hear the content.</td>
-       <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
+       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
     </tr>
     <tr>
        <td>1.2.9 Provide a transcript for live audio (AAA)</td>
        <td>For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing-impaired viewers who cannot hear the content.</td>
-       <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
+       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
     </tr>
  </tbody>
 </table>

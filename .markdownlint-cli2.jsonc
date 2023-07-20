@@ -135,11 +135,18 @@
           "searchScope": "text"
         },
         {
-          "name": "nbsp",
+          "name": "nbsp-character",
           "message": "Don't use no-break spaces",
           "searchPattern": "/ /g",
           "replace": " ",
           "searchScope": "all"
+        },
+        {
+          "name": "nbsp-html-escape",
+          "message": "Don't use no-break spaces in content",
+          "searchPattern": "/&nbsp;/g",
+          "replace": " ",
+          "searchScope": "text"
         },
         {
           "name": "m-dash",

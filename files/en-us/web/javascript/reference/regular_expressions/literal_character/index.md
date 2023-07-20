@@ -60,7 +60,7 @@ Within character classes, more characters can appear literally. For more informa
   </thead>
   <tbody>
     <tr>
-      <td><code>123456789&nbsp;"'<br>ACEFGHIJKLMN<br>OPQRTUVXYZ_<br>aceghijklmop<br>quxyz</code></td>
+      <td><code>123456789 "'<br>ACEFGHIJKLMN<br>OPQRTUVXYZ_<br>aceghijklmop<br>quxyz</code></td>
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td>
     </tr>
     <tr>
