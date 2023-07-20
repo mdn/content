@@ -29,9 +29,9 @@ Note that an OTP is bound to the sending domain. This is a useful security const
 
 SMS OTPs are useful for verifying phone numbers, and using SMS for a second factor is certainly better than having no second factor. In some regions, other identifiers such as email addresses and authenticators are not widely-used, so SMS OTPs are very common.
 
-However, SMS isn't that secure. Attackers can spoof SMS and hijack a person's phone number, and carriers can recycle phone numbers to new users after an account is closed.
+However, SMSes aren't that secure. Attackers can spoof an SMS and hijack a person's phone number. Carriers can recycle phone numbers to new users after an account is closed.
 
-You are therefore recommended to use a stronger form of authentication if possible, such as a [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)-based solution involving a password and security key, or a passkey.
+You are, therefore, recommended to use a stronger form of authentication if possible, such as a [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)-based solution involving a password and security key or a passkey.
 
 ### How does it work?
 
