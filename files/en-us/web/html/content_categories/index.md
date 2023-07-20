@@ -52,6 +52,7 @@ The flow elements are:
 - {{HTMLElement("del")}}
 - {{HTMLElement("details")}}
 - {{HTMLElement("dfn")}}
+- {{HTMLElement("dialog")}}
 - {{HTMLElement("div")}}
 - {{HTMLElement("dl")}}
 - {{HTMLElement("em")}}
@@ -95,6 +96,7 @@ The flow elements are:
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("s")}}
 - {{HTMLElement("samp")}}
+- {{HTMLElement("search")}}
 - {{HTMLElement("script")}}
 - {{HTMLElement("section")}}
 - {{HTMLElement("select")}}
@@ -107,6 +109,7 @@ The flow elements are:
 - {{SVGElement("svg")}}
 - {{HTMLElement("table")}}
 - {{HTMLElement("template")}}
+- {{HTMLElement("text")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("time")}}
 - {{HTMLElement("u")}}
@@ -147,6 +150,7 @@ Elements belonging to this category are:
 - {{HTMLElement("abbr")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("b")}}
+- {{HTMLElement("bdi")}}
 - {{HTMLElement("bdo")}}
 - {{HTMLElement("br")}}
 - {{HTMLElement("button")}}
@@ -222,7 +226,7 @@ Embedded content is a subset of flow content that imports another resource or in
 
 Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction, and can be used everywhere flow content is expected. Elements that belong to this category include:
 
-- {{HTMLElement("a")}}
+- {{HTMLElement("a")}} is interactive only if {{domxref("Location/href","href")}} is present
 - {{HTMLElement("button")}}
 - {{HTMLElement("details")}}
 - {{HTMLElement("embed")}}
