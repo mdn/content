@@ -92,7 +92,7 @@ On the other hand, sending too many segments at once can lead to the problem tha
 
 In order to balance the number of transmitted segments, the {{glossary('TCP slow start')}} algorithm is used to gradually increase the amount of transmitted data until the maximum network bandwidth can be determined, and to reduce the amount of transmitted data in case of high network load.
 
-The number of segments to be transmitted is specified by the Congestion window (CWND) which can be initialized to 1, 2, 4, or 10 MSS (MSS is 1500 bytes over the Ethernet protocol). This is the number of bytes to send, upon receipt of which the client must send an ACK.
+The number of segments to be transmitted is controlled by the value of the congestion window (CWND), which can be initialized to 1, 2, 4, or 10 MSS (MSS is 1500 bytes over the Ethernet protocol). That value is the number of bytes to send, upon receipt of which the client must send an ACK.
 
 If an ACK is received, then CWND will be increased by 2 times and the next time the server will be able to send more segments. If not received, then the CWND value will decrease by 2 times, thus achieving a balance between sending too many segments and too few.
 
