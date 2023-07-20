@@ -121,10 +121,6 @@ function getAudio(name) {
       (buf) => {
         // executes when buffer has been decoded
         buffer = buf;
-        const max = Math.floor(buf.duration);
-        loopstartControl.max = max;
-        loopendControl.max = max;
-        play.disabled = false; // buffer loaded, enable play button
       },
       (err) => {
         console.error(
