@@ -62,7 +62,7 @@ When focus is in a `menubar` it is always on a menu item within the menu bar. Wh
   - : If arrow key wrapping is not supported, moves focus to the last item in the `menubar`.
 - <kbd>Tab</kbd>
   - : Moves focus to the next element in the tab sequence. If that makes it exit the menubar, all submenus in the menubar get closed.
-- <kbd>Tab</kbd>
+- <kbd>shift + Tab</kbd>
   - : Moves focus to the previous element in the tab sequence. If that makes it exit the menubar, all submenus in the menubar get closed.
 
 See [`menuitem` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role#keyboard_interactions), [`menuitemradio` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role#keyboard_interactions), and [`menuitemcheckbox` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role#keyboard_interactions) for more information on keyboard interactions when focus is on a menuitem in a menubar (which it always is).

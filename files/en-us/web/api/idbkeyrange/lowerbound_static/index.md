@@ -3,7 +3,7 @@ title: "IDBKeyRange: lowerBound() static method"
 short-title: lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound_static
 page-type: web-api-static-method
-browser-compat: api.IDBKeyRange.lowerBound
+browser-compat: api.IDBKeyRange.lowerBound_static
 ---
 
 {{ APIRef("IndexedDB") }}

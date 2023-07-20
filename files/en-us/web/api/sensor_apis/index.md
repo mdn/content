@@ -118,7 +118,7 @@ The following table describes for each sensor type, the name required for the Pe
 
 ### Readings
 
-Sensor readings are received through the {{domxref('Sensor.reading_event', 'reading')}} event callback which is inherited by all sensor types. Reading frequency is decided by you, accomplished with an option passed to a sensor's constructor. The option is a number that specifies the number of readings per second. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.
+Sensor readings are received through the {{domxref('Sensor.reading_event', 'reading')}} event callback which is inherited by all sensor types. Reading frequency is decided by you, accomplished with an option passed to a sensor's constructor. The option is a number that specifies the number of readings per second. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends on device hardware and consequently may be less than requested.
 
 The following example illustrates this using the {{domxref('Magnetometer')}} sensor.
 
@@ -157,7 +157,7 @@ magSensor.start();
 - {{domxref('RelativeOrientationSensor')}} {{securecontext_inline}}
   - : Describes the device's physical orientation without regard to the Earth's reference coordinate system.
 - {{domxref('Sensor')}} {{securecontext_inline}}
-  - : The base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
+  - : The base class for all the other sensor interfaces. This interface cannot be used directly. Instead, it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
 - {{domxref('SensorErrorEvent')}} {{securecontext_inline}}
   - : Provides information about errors thrown by a {{domxref('Sensor')}} or related interface.
 

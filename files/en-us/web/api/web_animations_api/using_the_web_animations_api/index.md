@@ -10,7 +10,7 @@ The Web Animations API lets us construct animations and control their playback w
 
 ## Meet the Web Animations API
 
-The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) opens the browser's animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) and [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.
+The [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) opens the browser's animation engine to developers and manipulation by JavaScript. This API was designed to underlie implementations of both [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) and [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and leaves the door open to future animation effects. It is one of the most performant ways to animate on the Web, letting the browser make its own internal optimizations without hacks, coercion, or {{domxref("Window.requestAnimationFrame()")}}.
 
 With the Web Animations API, we can move interactive animations from stylesheets to JavaScript, separating presentation from behavior. We no longer need to rely on DOM-heavy techniques such as writing CSS properties and scoping classes onto elements to control playback direction. And unlike pure, declarative CSS, JavaScript also lets us dynamically set values from properties to durations. For building custom animation libraries and creating interactive animations, the Web Animations API might be the perfect tool for the job. Let's see what it can do!
 
@@ -112,7 +112,7 @@ document.getElementById("alice").animate(
   {
     duration: 3000,
     iterations: Infinity,
-  }
+  },
 );
 ```
 
@@ -125,7 +125,7 @@ document.getElementById("alice").animate(
     { color: "#431236", offset: 0.3 },
     { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
   ],
-  3000
+  3000,
 );
 ```
 
@@ -150,7 +150,7 @@ const nommingCake = document
       fill: "forwards",
       easing: "steps(4, end)",
       duration: aliceChange.effect.getComputedTiming().duration / 2,
-    }
+    },
   );
 ```
 
@@ -296,7 +296,7 @@ const aliceChange = document
       duration: 8000,
       easing: "ease-in-out",
       fill: "both",
-    }
+    },
   );
 ```
 

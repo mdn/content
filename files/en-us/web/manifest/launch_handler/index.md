@@ -1,6 +1,7 @@
 ---
 title: launch_handler
 slug: Web/Manifest/launch_handler
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.launch_handler

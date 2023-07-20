@@ -1,6 +1,7 @@
 ---
 title: Firefox 94 for developers
 slug: Mozilla/Firefox/Releases/94
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

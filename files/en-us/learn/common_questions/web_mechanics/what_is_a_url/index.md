@@ -1,6 +1,7 @@
 ---
 title: What is a URL?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

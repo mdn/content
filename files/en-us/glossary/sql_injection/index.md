@@ -4,6 +4,8 @@ slug: Glossary/SQL_Injection
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 SQL injection takes advantage of Web apps that fail to validate user input. Hackers can maliciously pass SQL commands through the Web app for execution by a backend database.
 
 SQL injection can gain unauthorized access to a database or to retrieve information directly from the database. Many data breaches are due to SQL injection.

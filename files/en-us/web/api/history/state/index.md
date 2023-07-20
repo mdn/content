@@ -27,7 +27,7 @@ The next line logs the value to the console again, showing that
 
 ```js
 // Should be null because we haven't modified the history stack yet
-console.log(`History.state before pushState: ${history.state}`);
+console.log("History.state before pushState: ", history.state);
 
 // Now push something on the stack
 history.pushState({ name: "Example" }, "pushState example", "page3.html");

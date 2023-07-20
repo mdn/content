@@ -7,40 +7,57 @@ browser-compat: javascript.statements.class
 
 {{jsSidebar("Statements")}}
 
-The **`class`** declaration creates a new class
-with a given name using prototype-based inheritance.
+The **`class`** declaration creates a {{glossary("binding")}} of a new [class](/en-US/docs/Web/JavaScript/Reference/Classes) to a given name.
 
-You can also define a class using a {{jsxref("Operators/class", "class expression",
-    "", 1)}}, which allows redeclarations and omitting class names. Attempting to place **class declaration** in the same scope, under the same name, will throw a {{jsxref("SyntaxError")}}.
+You can also define classes using the [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 
 {{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
 ## Syntax
 
 ```js-nolint
-class name [extends otherName] {
+class name {
+  // class body
+}
+class name extends otherName {
   // class body
 }
 ```
 
 ## Description
 
-The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The
-`constructor` method is optional.
+The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The `class` declaration is very similar to {{jsxref("Statements/let", "let")}}:
 
-Class declarations behave like [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) and are not {{Glossary("Hoisting", "hoisted")}}
-(unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
+- `class` declarations are scoped to blocks as well as functions.
+- `class` declarations can only be accessed after the line of declaration is reached (see [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)). For this reason, `class` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting) (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
+- `class` declarations do not create properties on {{jsxref("globalThis")}} when declared at the top level of a script (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
+- `class` declarations cannot be [redeclared](/en-US/docs/Web/JavaScript/Reference/Statements/let#redeclarations) by any other declaration in the same scope.
+
+Outside the class body, `class` declarations can be re-assigned like `let`, but you should avoid doing so. Within the class body, the binding is constant like `const`.
+
+```js
+class Foo {
+  static {
+    Foo = 1; // TypeError: Assignment to constant variable.
+  }
+}
+
+class Foo2 {
+  bar = (Foo2 = 1); // TypeError: Assignment to constant variable.
+}
+
+class Foo3 {}
+Foo3 = 1;
+console.log(Foo3); // 1
+```
 
 ## Examples
 
 ### A simple class declaration
 
-In the following example, we first define a class named `Rectangle`, then
-extend it to create a class named `FilledRectangle`.
+In the following example, we first define a class named `Rectangle`, then extend it to create a class named `FilledRectangle`.
 
-Note that `super()`, used in the `constructor`, can only be used
-in constructors, and _must_ be called _before_ the `this`
-keyword can be used.
+Note that `super()`, used in the `constructor`, can only be used in constructors, and _must_ be called _before_ the `this` keyword can be used.
 
 ```js
 class Rectangle {
@@ -60,25 +77,6 @@ class FilledRectangle extends Rectangle {
 }
 ```
 
-### Attempting to declare a class twice
-
-Re-declaring a class using the class declaration throws a {{jsxref("SyntaxError")}}.
-
-```js example-bad
-class Foo {}
-class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
-```
-
-The same error is thrown when a class has been defined before using the class
-expression.
-
-```js example-bad
-let Foo = class {};
-class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
-```
-
-If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two class declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in [Firefox bug 1580891](https://bugzil.la/1580891). The Chrome console allows class re-declarations between different REPL inputs.
-
 ## Specifications
 
 {{Specifications}}
@@ -89,6 +87,6 @@ If you're experimenting in a REPL, such as the Firefox web console (**Tools** > 
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)

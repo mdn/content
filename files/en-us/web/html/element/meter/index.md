@@ -108,7 +108,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 On Google Chrome, the resulting meter looks like this:
 
-![current look of \<meter> in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
+![A screenshot of the meter element in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
 
 ### High and Low range example
 

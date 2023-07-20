@@ -126,7 +126,7 @@ function getAudio(name) {
         console.error(
           `Unable to get the audio file: ${name} Error: ${err.message}`
         );
-      }
+      },
     );
   };
   request.send();

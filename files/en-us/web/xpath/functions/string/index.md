@@ -1,9 +1,10 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `string` function converts the given argument to a string.
 

@@ -166,7 +166,7 @@ array.findLast((value, index) => {
 
 ### Calling findLast() on non-array objects
 
-The `findLast()` method reads the `length` property of `this` and then accesses each integer index.
+The `findLast()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -174,6 +174,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLast() since length is 3
 };
 console.log(
   Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),

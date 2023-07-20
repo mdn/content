@@ -4,6 +4,8 @@ slug: Glossary/Site
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 Informally, a _site_ is a website, which is a collection of web pages, served from the same domain, and maintained by a single organization.
 
 Browsers sometimes need to distinguish precisely between different sites. For example, the browser must only send [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookies to the same site that set them.

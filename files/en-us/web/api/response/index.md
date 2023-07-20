@@ -39,10 +39,12 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 
 ## Static methods
 
-- {{domxref("Response.error()")}}
+- {{domxref("Response.error_static","Response.error()")}}
   - : Returns a new `Response` object associated with a network error.
-- {{domxref("Response.redirect()")}}
-  - : Creates a new response with a different URL.
+- {{domxref("Response.redirect_static", "Response.redirect()")}}
+  - : Returns a new response with a different URL.
+- {{domxref("Response.json_static", "Response.json()")}}
+  - : Returns a new `Response` object for returning the provided JSON encoded data.
 
 ## Instance methods
 

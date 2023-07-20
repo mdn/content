@@ -3,7 +3,7 @@ title: "RTCRtpSender: getCapabilities() static method"
 short-title: getCapabilities()
 slug: Web/API/RTCRtpSender/getCapabilities_static
 page-type: web-api-static-method
-browser-compat: api.RTCRtpSender.getCapabilities
+browser-compat: api.RTCRtpSender.getCapabilities_static
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -120,7 +120,7 @@ const log = document.querySelector("#log");
 ```js
 log.textContent = `RTCRtpSender.getCapabilities() supported: ${Object.hasOwn(
   RTCRtpSender,
-  "getCapabilities"
+  "getCapabilities",
 )}`;
 ```
 

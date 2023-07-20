@@ -1,6 +1,7 @@
 ---
 title: "Partitioned: All third-party storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookiePartitionedForeign
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}

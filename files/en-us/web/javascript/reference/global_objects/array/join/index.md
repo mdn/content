@@ -41,6 +41,27 @@ The string conversions of all array elements are joined into one string. If an e
 
 The `join` method is accessed internally by [`Array.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) with no arguments. Overriding `join` of an array instance will override its `toString` behavior as well.
 
+`Array.prototype.join` recursively converts each element, including other arrays, to strings. Because the string returned by `Array.prototype.toString` (which is the same as calling `join()`) does not have delimiters, nested arrays look like they are flattened. You can only control the separator of the first level, while deeper levels always use the default comma.
+
+```js
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(matrix.join()); // 1,2,3,4,5,6,7,8,9
+console.log(matrix.join(";")); // 1,2,3;4,5,6;7,8,9
+```
+
+When an array is cyclic (it contains an element that is itself), browsers avoid infinite recursion by ignoring the cyclic reference.
+
+```js
+const arr = [];
+arr.push(1, [3, arr, 4], 2);
+console.log(arr.join(";")); // 1;3,,4;2
+```
+
 When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `join()` method iterates empty slots as if they have the value `undefined`.
 
 The `join()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
@@ -72,7 +93,7 @@ console.log([1, undefined, 3].join()); // '1,,3'
 
 ### Calling join() on non-array objects
 
-The `join()` method reads the `length` property of `this` and then accesses each integer index.
+The `join()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -80,6 +101,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by join() since length is 3
 };
 console.log(Array.prototype.join.call(arrayLike));
 // 2,3,4

@@ -74,7 +74,7 @@ _This interface doesn't inherit any method._
     ```js
     let walker = document.createTreeWalker(
       document.body,
-      NodeFilter.SHOW_ELEMENT
+      NodeFilter.SHOW_ELEMENT,
     );
     let node = walker.firstChild(); // nodeName: "DIV"
     ```

@@ -499,8 +499,8 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ### U – X
 
-- {{CSSxRef(":user-invalid", ":-moz-ui-invalid")}}
-- {{CSSxRef(":-moz-ui-valid")}}
+- {{CSSxRef(":user-invalid", ":-moz-ui-invalid")}} {{deprecated_inline}}
+- {{CSSxRef(":user-valid", ":-moz-ui-valid")}} {{deprecated_inline}}
 - {{CSSxRef(":-moz-user-disabled")}}
 - {{CSSxRef("::-moz-viewport")}}
 - {{CSSxRef("::-moz-viewport-scroll")}}

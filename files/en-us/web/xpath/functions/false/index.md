@@ -1,9 +1,10 @@
 ---
 title: "false"
 slug: Web/XPath/Functions/false
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `false` function returns boolean false.
 
