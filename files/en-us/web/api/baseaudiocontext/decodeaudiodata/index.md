@@ -19,6 +19,8 @@ This is the preferred method of creating an audio source for Web Audio API from 
 audio track. This method only works on complete file data, not fragments of audio file
 data.
 
+This function implements two alternative ways to asynchronously return the audio data or error messages: it returns a {{jsxref("Promise")}} that fulfills with the audio data, and also accepts callback arguments to handle success or failure. The primary method of interfacing with this function is via its Promise return value, and the callback parameters are provided for legacy reasons.
+
 ## Syntax
 
 ```js-nolint
@@ -47,8 +49,8 @@ decodeAudioData(arrayBuffer, successCallback, errorCallback)
 
 ### Return value
 
-If a callback is used, ({{jsxref("undefined")}}), else a {{jsxref("Promise") }} object that
-fulfills with the _decodedData_.
+A {{jsxref("Promise") }} object that fulfills with the _decodedData_. If you are using the
+XHR syntax you will ignore this return value and use a callback function instead.
 
 ## Examples
 
