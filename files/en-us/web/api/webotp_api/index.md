@@ -44,7 +44,7 @@ The process works like so:
 5. You can then use the OTP in any way you wish. Typical usage would be to set it as the value of the validation form on the app client and then submit the form, making the process as seamless as possible.
 6. The app server will then verify that the OTP sent back to it matches what it originally sent in the SMS and, if so, complete the process (for example, sign the user in).
 
-### The SMS message format
+### SMS message format
 
 A typical SMS message looks like so:
 
