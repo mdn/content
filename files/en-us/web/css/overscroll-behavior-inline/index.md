@@ -11,6 +11,8 @@ The **`overscroll-behavior-inline`** CSS property sets the browser's behavior wh
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
 
+## Syntax
+
 ```css
 /* Keyword values */
 overscroll-behavior-inline: auto; /* default */
@@ -24,8 +26,6 @@ overscroll-behavior-inline: revert;
 overscroll-behavior-inline: revert-layer;
 overscroll-behavior-inline: unset;
 ```
-
-## Syntax
 
 The `overscroll-behavior-inline` property is specified as a keyword chosen from the list of values below.
 

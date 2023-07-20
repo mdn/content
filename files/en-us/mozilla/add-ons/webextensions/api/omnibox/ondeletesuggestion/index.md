@@ -1,6 +1,7 @@
 ---
 title: omnibox.onDeleteSuggestion
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onDeleteSuggestion
+page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onDeleteSuggestion
 ---
 
