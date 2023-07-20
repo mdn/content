@@ -14,6 +14,8 @@ browser-compat: css.properties.box-flex
 
 The **`-moz-box-flex`** and **`-webkit-box-flex`** [CSS](/en-US/docs/Web/CSS) properties specify how a `-moz-box` or `-webkit-box` grows to fill the box that contains it, in the direction of the containing box's layout.
 
+## Syntax
+
 ```css
 /* <number> values */
 -moz-box-flex: 0;
@@ -35,8 +37,6 @@ The **`-moz-box-flex`** and **`-webkit-box-flex`** [CSS](/en-US/docs/Web/CSS) pr
 -webkit-box-flex: revert-layer;
 -webkit-box-flex: unset;
 ```
-
-## Syntax
 
 The `box-flex` property is specified as a {{CSSxRef("&lt;number&gt;")}}. If the value is 0, the box does not grow. If it is greater than 0, the box grows to fill a proportion of the available space.
 
@@ -72,7 +72,7 @@ box-flex =
 ### Setting box-flex
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

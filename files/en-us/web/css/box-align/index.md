@@ -16,6 +16,10 @@ The **`box-align`** [CSS](/en-US/docs/Web/CSS) property specifies how an element
 
 See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
 
+The direction of layout depends on the element's orientation: horizontal or vertical.
+
+## Syntax
+
 ```css
 /* Keyword values */
 box-align: start;
@@ -29,10 +33,6 @@ box-lines: inherit;
 box-lines: initial;
 box-lines: unset;
 ```
-
-The direction of layout depends on the element's orientation: horizontal or vertical.
-
-## Syntax
 
 The `box-align` property is specified as one of the keyword values listed below.
 
@@ -76,7 +76,7 @@ box-align =
 ### Setting box alignment
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
