@@ -44,9 +44,9 @@ offscreen.transferToImageBitmap();
 // ImageBitmap { width: 256, height: 256 }
 
 // Either:
-// Pass this ImageBitmap to ImageBitmapRenderingContext.transferFromImageBitmap
+// Pass this `ImageBitmap` to `ImageBitmapRenderingContext.transferFromImageBitmap`
 // or:
-// Use the ImageBitmap with other web APIs, and call ImageBitmap.close()!
+// Use the `ImageBitmap` with other web APIs, and call `ImageBitmap.close()`!
 ```
 
 ## Specifications
