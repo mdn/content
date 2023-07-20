@@ -7,19 +7,21 @@ spec-urls: https://wicg.github.io/web-otp/
 
 {{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
-The **WebOTP API** is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that provides a streamlined user experience for web apps to verify that a phone number belongs to a user, for example when using it as a sign-in factor. This is done via a two-step process:
+The **WebOTP API** provides a streamlined user experience for web apps to verify that a phone number belongs to a user when using it as a sign-in factor. WebOTP is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API).
+
+The verification is done via a two-step process:
 
 1. The app client requests a one-time password (OTP), which is obtained from a specially-formatted SMS message sent by the app server.
-2. This is then entered into a validation form on the app client and sent back to the server to verify that it matches what was originally sent in the SMS.
+2. JavaScript is used to enter the OTP into a validation form on the app client and it is submitted back to the server to verify that it matches what was originally sent in the SMS.
 
 ## WebOTP concepts and usage
 
 Phone numbers are often used as a way to identify the user of an app. An SMS is frequently deployed to verify that the number belongs to the user. The SMS typically contains an OTP that the user is required to copy and paste into a form in the app to verify that they own the number. This is a somewhat clunky user experience.
 
-Example use cases include:
+OTP use cases include:
 
-- Using a phone number as an extra factor (i.e. for two-factor authentication (2FA) or multifactor authentication (MFA)) to improve sign-in security.
-- Verification of sensitive actions, for example, verifying a payment.
+- Improving sign-in security by using a phone number as an extra factor (i.e. for two-factor authentication (2FA) or multifactor authentication (MFA)).
+- Verifying sensitive actions such as payments.
 
 The WebOTP API allows web apps to expedite this validation process by copying the OTP from the SMS and passing it to the app automatically after the user has provided consent (most native platforms have an equivalent API).
 
@@ -33,7 +35,7 @@ However, SMSes aren't that secure. Attackers can spoof an SMS and hijack a perso
 
 You are, therefore, recommended to use a stronger form of authentication if possible, such as a [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)-based solution involving a password and security key or a passkey.
 
-### How does it work?
+## How does the WebOTP API work?
 
 The process works like so:
 
@@ -54,7 +56,7 @@ Your verification code is 123456.
 @www.example.com #123456
 ```
 
-- The first and second lines are optional, and are for human-readability.
+- The first line and second blank line are optional and are for human readability.
 - The last line is mandatory. It must be the last line if there are others present, and must consist of:
   - The domain part of the URL of the website that invoked the API, preceded by a `@`.
   - Followed by a space.
@@ -80,9 +82,9 @@ In this case, the last line must consist of:
 
 ## Controlling access to the API
 
-The availability of WebOTP can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specifying a {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} directive. This directive has a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts.
+The availability of WebOTP can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specifying a {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} directive. This directive has a default allowlist value of `"self"`, meaning that by default, these methods can be used in top-level document contexts.
 
-You could specify a directive allowing use of it in a specific cross-origin domain (i.e.inside an {{htmlelement("iframe")}}) like this:
+You could specify a directive allowing the use of WebOTP in a specific cross-origin domain (i.e., inside an {{htmlelement("iframe")}}) like this:
 
 ```http
 Permissions-Policy: otp-credentials=(self "https://embedded.com")
@@ -94,7 +96,7 @@ Or you could specify it directly on the `<iframe>` like this:
 <iframe src="https://embedded.com/..." allow="otp-credentials"> ... </iframe>
 ```
 
-> **Note:** Where a policy forbids use WebOTP `get()`, the {{jsxref("Promise", "promises")}} returned by it will reject with a `SecurityError` {{domxref("DOMException")}}.
+> **Note:** Where a policy forbids use of WebOTP `get()`, {{jsxref("Promise", "promises")}} returned by it will reject with a `SecurityError` {{domxref("DOMException")}}.
 
 ## Interfaces
 

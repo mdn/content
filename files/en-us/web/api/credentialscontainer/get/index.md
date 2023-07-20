@@ -156,7 +156,7 @@ The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) lets a web client request an OT
 `otp` will contain the following properties:
 
 - `transport`
-  - : An array of strings representing transport hints for how the OTP should ideally be transmitted. Currently this should always contain a single hint — `"sms"` (more hints may be added in the future). Unknown values will be ignored.
+  - : An array of strings representing transport hints for how the OTP should ideally be transmitted. This will always contain a single hint — `"sms"`. Unknown values will be ignored.
 
 ### Return value
 
