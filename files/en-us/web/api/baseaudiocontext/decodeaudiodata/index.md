@@ -84,7 +84,7 @@ async function fetchAudio(name) {
     return context.decodeAudioData(await rsvp.arrayBuffer()); // returns a Promise, buffer is arg for .then((arg) => {})
   } catch (err) {
     console.log(
-      `Unable to fetch the audio file: ${name} Error: ${err.message}`
+      `Unable to fetch the audio file: ${name} Error: ${err.message}`,
     );
   }
 }
@@ -126,7 +126,7 @@ function getAudio(name) {
       },
       (err) => {
         console.error(
-          `Unable to get the audio file: ${name} Error: ${err.message}`
+          `Unable to get the audio file: ${name} Error: ${err.message}`,
         );
       },
     );
