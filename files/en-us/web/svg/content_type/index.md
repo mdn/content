@@ -203,7 +203,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     length ::= <number> (<absolute-length> | <relative-length>)?
     ```
 
-    For more details, see the CSS specification for [Relative length units](https://drafts.csswg.org/css-values/#relative-lengths) and [Absolute length units](https://drafts.csswg.org/css-values/#absolute-lengths) and the [\<length>](/en-US/docs/Web/CSS/length) CSS data type.
+    For more details, see the CSS [`<length>`](/en-US/docs/Web/CSS/length) data type.
 
     For properties defined in CSS Values and Units, a length unit identifier must be provided.
 
