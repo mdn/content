@@ -110,4 +110,4 @@ globalThis.customElements.define(
 
 - The [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute - Used to define parts which can be selected by the `::part()` selector
 - The [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
-- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)
+- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module

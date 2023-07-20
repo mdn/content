@@ -7,7 +7,7 @@ browser-compat: css.types.basic-shape.path
 
 {{CSSRef}}
 
-The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes) and CSS Motion Path to enable a shape to be drawn.
+The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes) and CSS Motion Path to enable a shape to be drawn.
 
 {{EmbedInteractiveExample("pages/css/function-path.html")}}
 
@@ -94,6 +94,6 @@ svg {
 ## See also
 
 - {{cssxref("&lt;shape-outside&gt;")}}
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes)
+- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - [SVG Path Syntax Illustrated Guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/)

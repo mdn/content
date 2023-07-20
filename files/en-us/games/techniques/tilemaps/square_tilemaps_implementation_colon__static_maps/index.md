@@ -1,6 +1,7 @@
 ---
 title: "Square tilemaps implementation: Static maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
+page-type: guide
 ---
 
 {{GamesSidebar}}

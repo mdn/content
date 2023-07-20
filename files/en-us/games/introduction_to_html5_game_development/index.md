@@ -102,7 +102,7 @@ page-type: guide
   - : Lock the mouse or other pointing device within your game's interface.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
   - : Build vector graphics that scale smoothly regardless of the size or resolution of the user's display.
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Access raw binary data from within JavaScript; Manipulate GL textures, game data, or anything else.
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
   - : Control the playback, synthesis, and manipulation of audio in real time.

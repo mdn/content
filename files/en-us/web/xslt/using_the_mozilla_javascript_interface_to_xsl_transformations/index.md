@@ -95,7 +95,7 @@ The following reflect the interface of the {{domxref("XSLTProcessor")}} object:
 ### See also
 
 - [The XSLT JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
-- [document.load()](/en-US/docs/Web/API/XMLDocument/load) regarding the loading of XML documents (as used above)
+- [document.load()](/en-US/docs/Web/API/XMLDocument) regarding the loading of XML documents (as used above)
 
 ### Original Document Information
 

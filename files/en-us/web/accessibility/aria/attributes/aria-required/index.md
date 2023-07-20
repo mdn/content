@@ -70,7 +70,7 @@ Used in roles:
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
