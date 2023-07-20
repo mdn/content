@@ -165,9 +165,9 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("OTPCredential")}} objec
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : The `get()` operation is associated with an {{domxref("AbortSignal")}} (i.e. set in the `signal` property) that has already been aborted.
+  - : The `get()` operation is associated with an {{domxref("AbortSignal")}} (i.e., set in the `signal` property) that has already been aborted.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), or the calling domain is not a valid domain.
+  - : Either the usage is blocked by a {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) or the calling domain is not a valid domain.
 
 ### Examples
 
