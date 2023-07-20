@@ -14,6 +14,8 @@ browser-compat: css.properties.box-direction
 
 The **`box-direction`** [CSS](/en-US/docs/Web/CSS) property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
 
+## Syntax
+
 ```css
 /* Keyword values */
 box-direction: normal;
@@ -26,8 +28,6 @@ box-direction: revert;
 box-direction: revert-layer;
 box-direction: unset;
 ```
-
-## Syntax
 
 The `box-direction` property is specified as one of the keyword values listed below.
 
