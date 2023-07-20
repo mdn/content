@@ -57,7 +57,7 @@ browser-compat: css.properties.NameOfTheProperty
 > - `\{{CSSRef}}`: This macro must be present on every CSS property page. It generates a suitable CSS sidebar, depending on the tags included on the page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you use this template.
 >
-> A sample of the **Experimental** and **Deprecated** banners is shown right after this note block.
+> Samples of the **Experimental** and **Deprecated** banners are shown right after this note block.
 >
 > ---
 >

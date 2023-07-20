@@ -72,7 +72,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> A sample of the **Experimental**, **Secure context**, and **Deprecated** banners is shown right after this note block.
+> Samples of the **Experimental**, **Secure context**, and **Deprecated** banners are shown right after this note block.
 >
 > _Remember to remove this whole explanatory note before publishing._
 

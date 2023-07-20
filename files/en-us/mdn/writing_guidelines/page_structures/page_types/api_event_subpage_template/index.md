@@ -68,7 +68,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> A sample of the **Experimental**, **Secure context**, and **Deprecated** banners is shown right after this note block.
+> Samples of the **Experimental**, **Secure context**, and **Deprecated** banners are shown right after this note block.
 >
 > ---
 >
@@ -184,7 +184,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+Include links to reference pages and guides related to the current event. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2
