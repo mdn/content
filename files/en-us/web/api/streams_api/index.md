@@ -25,7 +25,7 @@ With the Streams API, you can start processing raw data with JavaScript bit by b
 
 There are more advantages too — you can detect when streams start or end, chain streams together, handle errors and cancel streams as required, and react to the speed at which the stream is being read.
 
-The usage of Streams hinges on making responses available as streams. For example, the response body of a [fetch request](/en-US/docs/Web/API/fetch) can be a {{domxref("ReadableStream")}} that can be read by a reader created with {{domxref("ReadableStream.getReader()")}}, and canceled with {{domxref("ReadableStream.cancel()")}}, etc.
+The usage of Streams hinges on making responses available as streams. For example, the response body returned by a successful [fetch request](/en-US/docs/Web/API/fetch) is a {{domxref("ReadableStream")}} that can be read by a reader created with {{domxref("ReadableStream.getReader()")}}.
 
 More complicated uses involve creating your own stream using the {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor, for example to process data inside a [service worker](/en-US/docs/Web/API/Service_Worker_API).
 
