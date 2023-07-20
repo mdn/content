@@ -113,4 +113,4 @@ div {
 - {{cssxref("background-position-y")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

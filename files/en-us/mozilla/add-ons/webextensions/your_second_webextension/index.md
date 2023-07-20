@@ -12,7 +12,7 @@ The extension adds a new button to the Firefox toolbar. When the user clicks the
 
 To implement this, we will:
 
-- **define a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action), which is a button attached to the Firefox toolbar**.
+- **define a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), which is a button attached to the Firefox toolbar**.
   For the button we'll supply:
 
   - an icon, called "beasts-32.png"

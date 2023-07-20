@@ -45,7 +45,7 @@ This article introduces tools you can use to access web performance metrics, whi
 There are several different tools available to help you measure and improve performance. These can generally be classified into two categories:
 
 - Tools that indicate or measure performance, such as [PageSpeed Insights](https://pagespeed.web.dev/) or the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) and [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html). These tools show you how fast or slow your website is loading. They also indicate areas that can be improved to optimize your web app.
-- Tools that update code so that your web app or site will perform better. For example, bundling tools pack your code into single files to reduce the number of HTTP requests. while minifiers remove all whitespace from your code to make the files smaller.
+- Tools that update code so that your web app or site will perform better. For example, bundling tools pack your code into single files to reduce the number of HTTP requests, while minifiers remove all whitespace from your code to make the files smaller.
 
 ## General performance reporting tools
 
