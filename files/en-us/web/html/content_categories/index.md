@@ -109,7 +109,6 @@ The flow elements are:
 - {{SVGElement("svg")}}
 - {{HTMLElement("table")}}
 - {{HTMLElement("template")}}
-- {{HTMLElement("text")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("time")}}
 - {{HTMLElement("u")}}
@@ -117,6 +116,7 @@ The flow elements are:
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
+- Plain text
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -226,7 +226,6 @@ Embedded content is a subset of flow content that imports another resource or in
 
 Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction, and can be used everywhere flow content is expected. Elements that belong to this category include:
 
-- {{HTMLElement("a")}} is interactive only if {{domxref("Location/href","href")}} is present
 - {{HTMLElement("button")}}
 - {{HTMLElement("details")}}
 - {{HTMLElement("embed")}}
@@ -236,6 +235,7 @@ Interactive content is a subset of flow content that includes elements that are 
 
 Some elements belong to this category only under specific conditions:
 
+- {{HTMLElement("a")}}, if the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute is present
 - {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
 - {{HTMLElement("img")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute is present
 - {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
