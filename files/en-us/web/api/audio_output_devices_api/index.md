@@ -101,7 +101,7 @@ Note that if you log the output details, they might look something like this:
 
 ```js
 console.log(
-  `${audioDevice.kind}: ${audioDevice.label} id = ${audioDevice.deviceId}`
+  `${audioDevice.kind}: ${audioDevice.label} id = ${audioDevice.deviceId}`,
 );
 // audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2NbxqgowQJLWbwo+5ablCVVJwRM3k=
 ```
