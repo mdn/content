@@ -41,9 +41,9 @@ browser-compat: path.to.feature.NameOfTheInterface
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data). The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
->         Note that you may first need to create/update an entry for the API method in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry for the API will need to include specification information.
+> Note that you may first need to create/update an entry for the API method in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry for the API will need to include specification information.
 >
->     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+> See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
 > ---
 >
@@ -109,7 +109,7 @@ Include one term and definition for each method.
 
 ## Instance methods
 
-_Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+_Also inherits methods from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
 Include one term and definition for each method.
 
@@ -181,7 +181,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-Include links to related reference pages and guides. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2

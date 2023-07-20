@@ -87,8 +87,7 @@ page-type: mdn-writing-guide
 
 {{securecontext_header}}
 
-The summary paragraph — start by naming the API, and saying what it is used for.
-This should ideally be 1 or 2 short sentences.
+Begin the content on the page with an introductory paragraph — start by naming the API and saying what it does. This should ideally be one or two short sentences.
 
 ## Concepts and usage
 
@@ -180,7 +179,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2
