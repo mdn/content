@@ -88,7 +88,7 @@ You could specify a directive allowing use of it in a specific cross-origin doma
 Permissions-Policy: otp-credentials=(self "https://embedded.com")
 ```
 
-Or could you specify it directly on the `<iframe>` like this:
+Or you could specify it directly on the `<iframe>` like this:
 
 ```html
 <iframe src="https://embedded.com/..." allow="otp-credentials"> ... </iframe>
