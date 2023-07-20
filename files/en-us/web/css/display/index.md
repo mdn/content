@@ -15,8 +15,6 @@ Formally, the **`display`** property sets an element's inner and outer _display 
 
 ## Syntax
 
-The CSS `display` property is specified using keyword values.
-
 ```css
 /* precomposed values */
 display: block;
@@ -54,6 +52,8 @@ display: revert;
 display: revert-layer;
 display: unset;
 ```
+
+The CSS `display` property is specified using keyword values.
 
 ## Grouped values
 

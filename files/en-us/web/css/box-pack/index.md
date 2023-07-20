@@ -14,6 +14,10 @@ browser-compat: css.properties.box-pack
 
 The **`-moz-box-pack`** and **`-webkit-box-pack`** [CSS](/en-US/docs/Web/CSS) properties specify how a `-moz-box` or `-webkit-box` packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.
 
+The direction of layout depends on the element's orientation: horizontal or vertical.
+
+## Syntax
+
 ```css
 /* Keyword values */
 box-pack: start;
@@ -26,10 +30,6 @@ box-pack: inherit;
 box-pack: initial;
 box-pack: unset;
 ```
-
-The direction of layout depends on the element's orientation: horizontal or vertical.
-
-## Syntax
 
 The `box-pack` property is specified as one of the keyword values listed below.
 

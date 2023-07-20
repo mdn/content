@@ -279,7 +279,7 @@ Some mathematical concepts are sometimes written using fraction-like notations s
     <mo>)</mo>
   </mrow>
   <mo>=</mo>
-  <mn>6</mn>
+  <mn>3</mn>
   <mo>≠</mo>
   <mfrac>
     <mn>3</mn>

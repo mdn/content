@@ -38,11 +38,11 @@ This topic contains the following guides. The following is a suggested order for
   - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. In this article we discuss the impact images have on performance, and the methods to reduce the number of bytes sent per image.
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
   - : The lowest hanging fruit of web performance is often media optimization. In this article we discuss the impact video content has on performance, and cover tips like removing audio tracks from background videos can improve performance.
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
+- [JavaScript performance optimization](/en-US/docs/Learn/Performance/JavaScript)
   - : JavaScript, when used properly, can allow for interactive and immersive web experiences — or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
+- [HTML performance optimization](/en-US/docs/Learn/Performance/HTML)
   - : Some attributes and the source order of your markup can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
+- [CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
   - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
   - : A look at whether you need to include external fonts and, if you do, how to include the fonts your design requires with the least impact on your sites performance.
