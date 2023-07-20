@@ -129,7 +129,7 @@ The simplest advice is to cut down on all unnecessary animations. You could also
 
 For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript).
 
-### Choosing which properties to animate
+### Choosing properties to animate
 
 Next, animation performance relies heavily on what properties you are animating. Certain properties, when animated, trigger a [reflow](/en-US/docs/Glossary/Reflow) (and therefore also a [repaint](/en-US/docs/Glossary/Repaint)) and should be avoided. These include properties that:
 
@@ -150,7 +150,7 @@ If at all possible, it is better to animate properties that do not cause reflow/
 
 To further improve performance, you should consider moving animation work off the main thread and onto the device's GPU (also referred to as compositing). This is done by choosing specific types of animations that the browser will automatically send to the GPU to handle; these include:
 
-- 3D transform animations (for example [`transform: translateZ()`](/en-US/docs/Web/CSS/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)).
+- 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
 - Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/position).
 - Elements with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see the section below).
 - Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe).
