@@ -26,7 +26,7 @@ where:
 
 ### Basic usage example
 
-In JavaScript, we register the [paint worklet](/en-US/docs/Web/API/PaintWorklet):
+In JavaScript, we register the [paint worklet](/en-US/docs/Web/API/PaintWorkletGlobalScope):
 
 ```js
 CSS.paintWorklet.addModule("boxbg.js");
