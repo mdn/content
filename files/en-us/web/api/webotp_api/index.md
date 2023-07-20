@@ -23,7 +23,7 @@ Example use cases include:
 
 The WebOTP API allows web apps to expedite this validation process by copying the OTP from the SMS and passing it to the app automatically after the user has provided consent (most native platforms have an equivalent API).
 
-Note that the OTP is also bound to the sending domain. This is a useful security constraint for verifying that the OTP is coming from the right source, which can mitigate the risk of phishing attacks during day-to-day reauthentication.
+Note that an OTP is bound to the sending domain. This is a useful security constraint for verifying that the OTP is coming from the right source, which can mitigate the risk of phishing attacks during day-to-day reauthentication.
 
 ### Security concerns with SMS OTPs
 
