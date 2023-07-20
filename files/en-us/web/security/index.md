@@ -87,7 +87,7 @@ There are many aspects of web security that need to be thought about on the serv
 
 Handling data responsibly is largely concerned with cutting down on [cookie usage](/en-US/docs/Web/HTTP/Cookies) and being careful about the data you store in them. Traditionally, web developers have used cookies to store all kinds of data, for all kinds of purposes, and it has been easy for attackers to exploit this tendency. As a result, browsers have started to limit what you can do with cross-site cookies, with the aim of removing access to them altogether in the future.
 
-You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways.
+You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on and/or by implementing desired information persistence in other ways.
 
 For example:
 
