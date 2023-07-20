@@ -69,7 +69,7 @@ Before looking at the tips contained in this section, it is important to talk ab
 
 > **Note:** This is a very simplified account of what happens, but it does give you an idea.
 
-The key step here is Step 3. By default, JavaScript parsing and execution is render-blocking. This means that the browser blocks parsing of any HTML that appears after the JavaScript is encountered, until it has been handled. Styling and painting are therefore blocked too. As a result, you need to think carefully about not only what you are downloading, but when, and how that code is being executed.
+The key step here is Step 3. By default, JavaScript parsing and execution are render-blocking. This means that the browser blocks the parsing of any HTML that appears after the JavaScript is encountered, until the script has been handled. As a result, styling and painting are blocked too. This means that you need to think carefully not only about what you are downloading, but also about when and how that code is being executed.
 
 The next few sections provide useful techniques for optimizing the parsing and execution of your JavaScript.
 
