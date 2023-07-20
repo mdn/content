@@ -86,7 +86,7 @@ filter: contrast(200%);
 ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in the [CSS backgrounds and borders module](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As with all `filter` property values, any filters after the `drop-shadow()` are applied to the shadow.
+  - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in the [CSS backgrounds and borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As with all `filter` property values, any filters after the `drop-shadow()` are applied to the shadow.
 
 ```css
 filter: drop-shadow(16px 16px 10px black);
@@ -224,7 +224,7 @@ The filters are applied in order. This is why the drop shadows are not the same 
 ## See also
 
 - CSS {{cssxref("backdrop-filter")}} property
-- CSS [compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
+- CSS [compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
 - The CSS {{cssxref("mask")}} property
 - [SVG](/en-US/docs/Web/SVG), including the SVG {{SVGElement("filter")}} element and SVG {{SVGAttr("filter")}} attribute.
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
