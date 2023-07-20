@@ -11,4 +11,4 @@ page-type: glossary-definition
 ## See also
 
 - [Reflow](/en-US/docs/Glossary/Reflow)
-- [Understanding Reflow and Repaint in the browser](https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg) on dev.to, 2020
+- [Understanding Reflow and Repaint in the browser](https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg) on dev.to (2020)
