@@ -13,7 +13,7 @@ The **`box-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadow effects aro
 
 The `box-shadow` property enables you to cast a drop shadow from the frame of almost any element. If a {{cssxref("border-radius")}} is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of multiple box shadows is the same as multiple [text shadows](/en-US/docs/Web/CSS/text-shadow) (the first specified shadow is on top).
 
-[Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
+[Box-shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
 
 ## Syntax
 
@@ -138,7 +138,7 @@ blockquote {
 
 When the `x-offset`, `y-offset`, and `blur` are all zero, the box shadow will be a solid-colored outline of equal-size on all sides. The shadows are drawn back to front, so the first shadow sits on top of subsequent shadows. When the `border-radius` is set to 0, as is the default, the corners of the shadow will be, well, corners. Had we put in a `border-radius` of any other value, the corners would have been rounded.
 
-We added a margin the size of the widest box-shadow to ensure the shadow doesn't overlap adjacent elements or go beyond the border of the containing box. A box-shadow does not impact [box model](/en-US/docs/Web/CSS/CSS_Box_Model) dimensions.
+We added a margin the size of the widest box-shadow to ensure the shadow doesn't overlap adjacent elements or go beyond the border of the containing box. A box-shadow does not impact [box model](/en-US/docs/Web/CSS/CSS_box_model) dimensions.
 
 #### HTML
 
@@ -177,4 +177,4 @@ p {
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
 - {{cssxref("text-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

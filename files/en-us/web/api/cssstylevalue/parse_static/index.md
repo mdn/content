@@ -57,7 +57,7 @@ CSSTransformValue {0: CSSTranslate, 1: CSSScale, length: 2, is2D: false}
 
 ## See also
 
-- [`CSSStyleValue.parseAll()`](/en-us/docs/Web/API/CSSStyleValue/parseAll_static)
+- [`CSSStyleValue.parseAll()`](/en-US/docs/Web/API/CSSStyleValue/parseAll_static)
 
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

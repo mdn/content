@@ -281,5 +281,5 @@ The following example applies the CSS style if the browser supports the `woff2` 
 
 ## See also
 
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxRef("CSS.supports()")}} method that allows the same check to be performed via JavaScript.

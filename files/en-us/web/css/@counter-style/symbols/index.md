@@ -94,4 +94,4 @@ While a space between quoted symbols is not required, it makes the CSS more legi
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles
 - {{cssxref("url", "url()")}} function
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_Counter_Styles) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
