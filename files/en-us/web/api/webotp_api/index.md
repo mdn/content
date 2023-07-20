@@ -14,7 +14,7 @@ The **WebOTP API** is an extension of the [Credential Management API](/en-US/doc
 
 ## WebOTP concepts and usage
 
-Phone numbers are often used as a way to identify the user of an app. An SMS is frequently deployed to verify that the number belongs to the user. This typically contains an OTP that the user is required to copy and paste into a form on the app to verify that they own the number; a somewhat clunky user experience.
+Phone numbers are often used as a way to identify the user of an app. An SMS is frequently deployed to verify that the number belongs to the user. The SMS typically contains an OTP that the user is required to copy and paste into a form in the app to verify that they own the number. This is a somewhat clunky user experience.
 
 Example use cases include:
 
