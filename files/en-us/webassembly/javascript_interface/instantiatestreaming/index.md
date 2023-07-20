@@ -68,7 +68,7 @@ call, and it will pass the response into the function when it fulfills.
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 

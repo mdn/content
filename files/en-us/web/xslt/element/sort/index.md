@@ -1,6 +1,7 @@
 ---
 title: <xsl:sort>
 slug: Web/XSLT/Element/sort
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

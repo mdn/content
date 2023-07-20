@@ -47,7 +47,7 @@ navigator.clipboard.writeText("<empty clipboard>").then(
   },
   () => {
     /* clipboard write failed */
-  }
+  },
 );
 ```
 

@@ -56,7 +56,7 @@ Also, when you set this property on an element, you override any styles that hav
 To change a particular element's style, you can adapt the following example for the element(s) you want to style.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -105,7 +105,7 @@ The `style` object represents an individual style statement. The style object is
 More important than the two properties noted here is the use of the `style` object to set individual style properties on an element:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

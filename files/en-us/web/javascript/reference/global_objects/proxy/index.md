@@ -252,7 +252,7 @@ const proxy = new Proxy(aSecret, {
 console.log(proxy.x());
 ```
 
-Some native JavaScript objects have properties called _[internal slots](https://tc39.es/ecma262/#sec-object-internal-methods-and-internal-slots)_, which are not accessible from JavaScript code. For example, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects have an internal slot called `[[MapData]]`, which stores the key-value pairs of the map. As such, you cannot trivially create a forwarding proxy for a map:
+Some native JavaScript objects have properties called _[internal slots](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-object-internal-methods-and-internal-slots)_, which are not accessible from JavaScript code. For example, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects have an internal slot called `[[MapData]]`, which stores the key-value pairs of the map. As such, you cannot trivially create a forwarding proxy for a map:
 
 ```js
 const proxy = new Proxy(new Map(), {});

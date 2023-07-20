@@ -111,6 +111,8 @@ If you're interested in helping develop/improve the content, take a look at [how
   - : Basic coding theory and practice, primarily aimed at children/complete beginners.
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : Interactive site with tutorials and projects to learn web development.
+- [The Odin Project](https://www.theodinproject.com/)
+  - : Features a free and open-source full-stack curriculum, from beginner to advanced.
 - [Web literacy map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
   - : A framework for entry-level web literacy and 21st-century skills, which also provides access to teaching activities sorted by category.
 - [Edabit](https://edabit.com/challenges/javascript)

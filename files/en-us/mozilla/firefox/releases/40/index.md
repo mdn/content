@@ -1,6 +1,7 @@
 ---
 title: Firefox 40 for developers
 slug: Mozilla/Firefox/Releases/40
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

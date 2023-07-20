@@ -47,7 +47,7 @@ xrSession.requestAnimationFrame((time, xrFrame) => {
       xrViewport.x,
       xrViewport.y,
       xrViewport.width,
-      xrViewport.height
+      xrViewport.height,
     );
 
     // Now we can use WebGL to draw into a viewport matching

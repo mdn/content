@@ -44,15 +44,16 @@ They have no runtime differences, although they may have implications on perform
 
 Flags are special parameters that can change the way a regular expression is interpreted or the way it interacts with the input text. Each flag corresponds to one accessor property on the `RegExp` object.
 
-| Flag | Description                                                                                   | Corresponding property                        |
-| ---- | --------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}} |
-| `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}         |
-| `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}} |
-| `m`  | Allows `^` and `$` to match newline characters.                                               | {{jsxref("RegExp/multiline", "multiline")}}   |
-| `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}         |
-| `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}       |
-| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. | {{jsxref("RegExp/sticky", "sticky")}}         |
+| Flag | Description                                                                                   | Corresponding property                          |
+| ---- | --------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
+| `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}           |
+| `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
+| `m`  | Allows `^` and `$` to match newline characters.                                               | {{jsxref("RegExp/multiline", "multiline")}}     |
+| `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}           |
+| `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}         |
+| `v`  | An upgrade to the `u` mode with more Unicode features.                                        | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. | {{jsxref("RegExp/sticky", "sticky")}}           |
 
 The sections below list all available regex syntaxes, grouped by their syntactic nature.
 
@@ -78,7 +79,7 @@ Atoms are the most basic units of a regular expression. Each atom _consumes_ one
 - [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
   - : Matches a subpattern and remembers information about the match.
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
-  - : Matches any character in or not in a set of characters.
+  - : Matches any character in or not in a set of characters. When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
   - : Matches any character in or not in a predefined set of characters.
 - [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
@@ -92,7 +93,7 @@ Atoms are the most basic units of a regular expression. Each atom _consumes_ one
 - [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
   - : Matches a subpattern without remembering information about the match.
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-  - : Matches any character in or not in a set of Unicode characters identified by a Unicode property.
+  - : Matches a set of characters specified by a Unicode property. When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 - [Wildcard: `.`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
   - : Matches any character except line terminators, unless the `s` flag is set.
 
@@ -104,6 +105,52 @@ These features do not specify any pattern themselves, but are used to compose pa
   - : Matches any of a set of alternatives separated by the `|` character.
 - [Quantifier: `*`, `+`, `?`, `{n}`, `{n,}`, `{n,m}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
   - : Matches an atom a certain number of times.
+
+### Escape sequences
+
+_Escape sequences_ in regexes refer to any kind of syntax formed by `\` followed by one or more characters. They may serve very different purposes depending on what follow `\`. Below is a list of all valid "escape sequences":
+
+| Escape sequence | Followed by                                                       | Meaning                                                                                                                |
+| --------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `\B`            | None                                                              | [Non-word-boundary assertion][WBA]                                                                                     |
+| `\D`            | None                                                              | [Character class escape][CCE] representing non-digit characters                                                        |
+| `\P`            | `{`, a Unicode property and/or value, then `}`                    | [Unicode character class escape][UCCE] representing characters without the specified Unicode property                  |
+| `\S`            | None                                                              | [Character class escape][CCE] representing non-white-space characters                                                  |
+| `\W`            | None                                                              | [Character class escape][CCE] representing non-word characters                                                         |
+| `\b`            | None                                                              | [Word boundary assertion][WBA]; inside [character classes][CC], represents U+0008 (BACKSPACE)                          |
+| `\c`            | A letter from `A` to `Z` or `a` to `z`                            | A [character escape][CE] representing the control character with value equal to the letter's character value modulo 32 |
+| `\d`            | None                                                              | [Character class escape][CCE] representing digit characters (`0` to `9`)                                               |
+| `\f`            | None                                                              | [Character escape][CE] representing U+000C (FORM FEED)                                                                 |
+| `\k`            | `<`, an identifier, then `>`                                      | A [named backreference][NBR]                                                                                           |
+| `\n`            | None                                                              | [Character escape][CE] representing U+000A (LINE FEED)                                                                 |
+| `\p`            | `{`, a Unicode property and/or value, then `}`                    | [Unicode character class escape][UCCE] representing characters with the specified Unicode property                     |
+| `\q`            | `{`, a string, then a `}`                                         | Only valid inside [`v`-mode character classes][VCC]; represents the string to be matched literally                     |
+| `\r`            | None                                                              | [Character escape][CE] representing U+000D (CARRIAGE RETURN)                                                           |
+| `\s`            | None                                                              | [Character class escape][CCE] representing whitespace characters                                                       |
+| `\t`            | None                                                              | [Character escape][CE] representing U+0009 (CHARACTER TABULATION)                                                      |
+| `\u`            | 4 hexadecimal digits; or `{`, 1 to 6 hexadecimal digits, then `}` | [Character escape][CE] representing the character with the given code point                                            |
+| `\v`            | None                                                              | [Character escape][CE] representing U+000B (LINE TABULATION)                                                           |
+| `\w`            | None                                                              | [Character class escape][CCE] representing word characters (`A` to `Z`, `a` to `z`, `0` to `9`, `_`)                   |
+| `\x`            | 2 hexadecimal digits                                              | [Character escape][CE] representing the character with the given value                                                 |
+| `\0`            | None                                                              | [Character escape][CE] representing U+0000 (NULL)                                                                      |
+
+[CC]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class
+[CCE]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape
+[CE]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape
+[NBR]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference
+[UCCE]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
+[VCC]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class
+[WBA]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion
+
+`\` followed by any other digit character becomes a [legacy octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences), which is forbidden in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode).
+
+In addition, `\` can be followed by some non-letter-or-digit characters, in which case the escape sequence is always a [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) representing the escaped character itself:
+
+- `\$`, `\(`, `\)`, `\*`, `\+`, `\.`, `\/`, `\?`, `\[`, `\\`, `\]`, `\^`, `\{`, `\|`, `\}`: valid everywhere
+- `\-`: only valid inside [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+- `\!`, `\#`, `\%`, `\&`, `\,`, `\:`, `\;`, `\<`, `\=`, `\>`, `\@`, `` \` ``, `\~`: only valid inside [`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class)
+
+The other ASCII characters, namely space character, `"`, `'`, `_`, and any letter character not mentioned above, are not valid escape sequences. In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), escape sequences that are not one of the above become _identity escapes_: they represent the character that follows the backslash. For example, `\a` represents the character `a`. This behavior limits the ability to introduce new escape sequences without causing backward compatibility issues, and is therefore forbidden in Unicode-aware mode.
 
 ## Specifications
 

@@ -31,9 +31,9 @@ In this case, you need to configure the server receiving the HTTP requests (whic
 
 Example:
 
-1. A server receives a request for `http://www.example.org/whaddup` (when the canonical domain is example.org)
+1. A server receives a request for `http://www.example.org/whaddup` (when the canonical domain is example.org).
 2. The server answers with a code {{HTTPStatus(301)}} with the header `{{HTTPHeader("Location")}}: http://example.org/whaddup`.
-3. The client issues a request to the canonical domain: `http://example.org/whatddup`
+3. The client issues a request to the location under the canonical domain: `http://example.org/whaddup`.
 
 The [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) has an example on [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 

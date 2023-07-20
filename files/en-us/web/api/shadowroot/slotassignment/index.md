@@ -30,7 +30,7 @@ function UpdateDisplayTab(elem, tabIdx) {
   // This test is usually not needed, but can be useful when debugging
   if (shadow.slotAssignment === "named") {
     console.error(
-      "Trying to manually assign a slot on an automatically-assigned (named) slot"
+      "Trying to manually assign a slot on an automatically-assigned (named) slot",
     );
   }
   const slot = shadow.querySelector("slot");

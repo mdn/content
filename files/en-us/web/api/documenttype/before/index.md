@@ -49,7 +49,7 @@ let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
 docType.before(
-  document.createComment("<!--[if !IE]> conditional comment <![endif]-->")
+  document.createComment("<!--[if !IE]> conditional comment <![endif]-->"),
 );
 
 myDoc.childNodes;

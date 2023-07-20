@@ -51,7 +51,7 @@ A new {{jsxref("Promise")}} whose fulfillment value is a new {{jsxref("Array")}}
 
 `Array.fromAsync()` and {{jsxref("Promise.all()")}} can both turn an iterable of promises into a promise of an array. However, there are two key differences:
 
-- `Array.fromAsync()` awaits each value yielded from the object sequentially. `Promise.all()` awaits all values in parallel.
+- `Array.fromAsync()` awaits each value yielded from the object sequentially. `Promise.all()` awaits all values concurrently.
 - `Array.fromAsync()` iterates the iterable lazily, and doesn't retrieve the next value until the current one is settled. `Promise.all()` retrieves all values in advance and awaits them all.
 
 ## Examples
@@ -121,7 +121,7 @@ Array.fromAsync(
 
 ### Comparison with Promise.all()
 
-`Array.fromAsync()` awaits each value yielded from the object sequentially. `Promise.all()` awaits all values in parallel.
+`Array.fromAsync()` awaits each value yielded from the object sequentially. `Promise.all()` awaits all values concurrently.
 
 ```js
 function* makeAsyncIterable() {

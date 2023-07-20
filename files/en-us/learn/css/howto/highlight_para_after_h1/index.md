@@ -1,6 +1,7 @@
 ---
 title: How to highlight a paragraph that comes after a heading
 slug: Learn/CSS/Howto/Highlight_para_after_h1
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

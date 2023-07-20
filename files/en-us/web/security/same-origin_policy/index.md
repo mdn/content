@@ -1,6 +1,7 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

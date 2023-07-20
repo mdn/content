@@ -7,11 +7,9 @@ browser-compat: javascript.statements.function
 
 {{jsSidebar("Statements")}}
 
-The **`function`** declaration defines a function with
-the specified parameters.
+The **`function`** declaration creates a {{glossary("binding")}} of a new function to a given name.
 
-You can also define functions using the {{jsxref("Function")}} constructor and a
-{{jsxref("Operators/function", "function expression", "", 1)}}.
+You can also define functions using the [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
 {{EmbedInteractiveExample("pages/js/statement-function.html","shorter")}}
 
@@ -29,6 +27,8 @@ function name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
+### Parameters
+
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
@@ -39,16 +39,15 @@ function name(param0, param1, /* … ,*/ paramN) {
 
 ## Description
 
-A function created with a function declaration is a `Function` object and
-has all the properties, methods and behavior of `Function` objects. See
-{{jsxref("Function")}} for detailed information on functions.
+A `function` declaration creates a {{jsxref("Function")}} object. Each time when a function is called, it returns the value specified by the last executed {{jsxref("Statements/return", "return")}} statement, or `undefined` if the end of the function body is reached. See [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for detailed information on functions.
 
-A function can also be created using an expression (see {{jsxref("Operators/function",
-  "function expression", "", 1)}}).
+`function` declarations behave like a mix of {{jsxref("Statements/var", "var")}} and {{jsxref("Statements/let", "let")}}:
 
-By default, functions return `undefined`. To return any other value, the
-function must have a {{jsxref("Statements/return", "return")}} statement that specifies
-the value to return.
+- Like `let`, in strict mode, [function declarations are scoped to the most closely containing block](#block-level_function_declaration).
+- Like `let`, function declarations at the top level of a module or within blocks in strict mode cannot be [redeclared](#redeclarations) by any other declaration.
+- Like `var`, function declarations at the top level of a script (strict or non-strict) become properties on {{jsxref("globalThis")}}. Function declarations at the top level of a script or function body (strict or non-strict) can be redeclared by another `function` or `var`.
+- Like both, function declarations can be re-assigned, but you should avoid doing so.
+- Unlike either, function declarations are [hoisted](#hoisting) together with its value and can be called anywhere in its scope.
 
 ### Block-level function declaration
 
@@ -122,10 +121,9 @@ console.log(
 // 'foo' name is not global. typeof foo is undefined
 ```
 
-### Function declaration hoisting
+### Hoisting
 
-Function declarations in JavaScript are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of the enclosing function or
-global scope. You can use the function before you declared it:
+Function declarations in JavaScript are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of the enclosing function or global scope. You can use the function before you declared it:
 
 ```js
 hoisted(); // Logs "foo"
@@ -135,8 +133,7 @@ function hoisted() {
 }
 ```
 
-Note that {{jsxref("Operators/function", "function expressions", "", 1)}} are not
-hoisted:
+Note that [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) are not hoisted:
 
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
@@ -146,12 +143,68 @@ var notHoisted = function () {
 };
 ```
 
+### Redeclarations
+
+Whether `function` declarations can be redeclared in the same scope depends on what scope it's contained in.
+
+At the top level of a script, `function` declarations behave like `var` and can be redeclared by another `function` or `var` but not by {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, or {{jsxref("Statements/class", "class")}}.
+
+```js
+function a(b) {}
+function a(b, c) {}
+console.log(a.length); // 2
+let a = 2; // SyntaxError: Identifier 'a' has already been declared
+```
+
+When `function` declarations are redeclared by `var`, the `var` declaration's initializer always overrides the function's value, regardless of their relative position. This is because function declarations are hoisted before any initializer gets evaluated, so the initializer comes later and overrides the value.
+
+```js
+var a = 1;
+function a() {}
+console.log(a); // 1
+```
+
+At the top level of a function's body, `function` also behaves like `var` and can be redeclared or have the same name as a parameter.
+
+```js
+function foo(a) {
+  function a() {}
+  console.log(typeof a);
+}
+
+foo(2); // Logs "function"
+```
+
+At the top level of a module or a block in strict mode, `function` declarations behave like `let` and cannot be redeclared by any other declaration.
+
+```js
+// Assuming current source is a module
+function foo() {}
+function foo() {} // SyntaxError: Identifier 'foo' has already been declared
+```
+
+```js
+"use strict";
+{
+  function foo() {}
+  function foo() {} // SyntaxError: Identifier 'foo' has already been declared
+}
+```
+
+A `function` declaration within a `catch` block cannot have the same name as the `catch`-bound identifier, even in non-strict mode.
+
+```js
+try {
+} catch (e) {
+  function e() {} // SyntaxError: Identifier 'e' has already been declared
+}
+```
+
 ## Examples
 
 ### Using function
 
-The following code declares a function that returns the total amount of sales, when
-given the number of units sold of three products.
+The following code declares a function that returns the total amount of sales, when given the number of units sold of three products.
 
 ```js
 function calcSales(unitsA, unitsB, unitsC) {
@@ -169,11 +222,10 @@ function calcSales(unitsA, unitsB, unitsC) {
 
 ## See also
 
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
-- {{jsxref("Operators/function", "function expression", "", 1)}}
-- {{jsxref("Statements/function*", "function* statement", "", 1)}}
-- {{jsxref("Operators/function*", "function* expression", "", 1)}}
-- {{jsxref("Functions/Arrow_functions", "Arrow functions", "", 1)}}
-- {{jsxref("GeneratorFunction")}}
-- {{jsxref("Statements/async_function", "async function", "", 1)}}
-- {{jsxref("Operators/async_function", "async function expression", "", 1)}}
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}

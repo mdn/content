@@ -55,11 +55,11 @@ self.addEventListener(
           body: JSON.stringify({
             endpoint: subscription.endpoint,
           }),
-        })
+        }),
       );
     event.waitUntil(subscription);
   },
-  false
+  false,
 );
 ```
 
@@ -74,7 +74,7 @@ self.onpushsubscriptionchange = (event) => {
       .subscribe(event.oldSubscription.options)
       .then((subscription) => {
         /* ... */
-      })
+      }),
   );
 };
 ```

@@ -151,7 +151,7 @@ The term "`null`-prototype object" often also includes any object without `Objec
 
 ### Object coercion
 
-Many built-in operations that expect objects first coerce their arguments to objects. [The operation](https://tc39.es/ecma262/#sec-toobject) can be summarized as follows:
+Many built-in operations that expect objects first coerce their arguments to objects. [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toobject) can be summarized as follows:
 
 - Objects are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.

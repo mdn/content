@@ -8,332 +8,82 @@ page-type: glossary-definition
 
 **Base64** is a group of similar [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. The term _Base64_ originates from a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
-Base64 encoding schemes are commonly used when there is a need to encode binary data that needs to be stored and transferred over media that are designed to deal with ASCII. This is to ensure that the data remain intact without modification during transport. Base64 is commonly used in a number of applications including email via [MIME](https://en.wikipedia.org/wiki/MIME), and storing complex data in [XML](/en-US/docs/Web/XML).
+When the term "Base64" is used on its own to refer to a specific algorithm, it typically refers to the version of Base64 outlined in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), section 4, which uses the following alphabet to represent the radix-64 digits, alongside `=` as a padding character:
 
-One common application of Base64 encoding on the web is to encode binary data so it can be included in a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+```
 
-In JavaScript there are two functions respectively for decoding and encoding Base64 strings:
+A common variant is "Base64 URL safe", which omits the padding and replaces `+/` with `-_` to avoid characters that might cause problems in URL path segments or query parameters.
 
-- [`btoa()`](/en-US/docs/Web/API/btoa): creates a Base64-encoded ASCII string from a "string" of binary data ("btoa" should be read as "binary to ASCII").
-- [`atob()`](/en-US/docs/Web/API/atob): decodes a Base64-encoded string ("atob" should be read as "ASCII to binary").
+Base64 encoding schemes are commonly used to encode binary data for storage or transfer over media that can only deal with ASCII text (or some superset of ASCII that still falls short of accepting arbitrary binary data). This ensures that the data remains intact without modification during transport. Common applications of Base64 include:
 
-The algorithm used by `atob()` and `btoa()` is specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), section 4.
-
-> **Note:** `btoa()` expects to be passed binary data, and will throw an exception if the given string contains any characters whose UTF-16 representation occupies more than one byte.
+- Email via [MIME](https://en.wikipedia.org/wiki/MIME)
+- Storing complex data in [XML](/en-US/docs/Web/XML)
+- Encoding binary data so it can be included in a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 
 ## Encoded size increase
 
-Each Base64 digit represents exactly 6 bits of data. So, three 8-bits bytes of the input string/binary file (3×8 bits = 24 bits) can be represented by four 6-bit Base64 digits (4×6 = 24 bits).
+Each Base64 digit represents 6 bits of data. So, three 8-bit bytes of the input string/binary file (3×8 bits = 24 bits) can be represented by four 6-bit Base64 digits (4×6 = 24 bits).
 
-This means that the Base64 version of a string or file will be at least 133% the size of its source (a \~33% increase). The increase may be larger if the encoded data is small. For example, the string `"a"` with `length === 1` gets encoded to `"YQ=="` with `length === 4` — a 300% increase.
+This means that the Base64 version of a string or file is typically roughly a third larger than its source (the exact size increase depends on various factors, such as the absolute length of the string, its length modulo 3, and whether padding characters are used).
+
+## JavaScript support
+
+Browsers natively provide two JavaScript functions for decoding and encoding Base64 strings:
+
+- [`btoa`](/en-US/docs/Web/API/btoa): creates a Base64-encoded ASCII string from a string of binary data ("btoa" should be read as "binary to ASCII").
+- [`atob`](/en-US/docs/Web/API/atob): decodes a Base64-encoded string ("atob" should be read as "ASCII to binary").
+
+> **Note:** Base64 is a binary encoding rather than a text encoding, but `btoa` and `atob` were added to the web platform before it supported binary data types. As a result, the two functions use strings to represent binary data, with the code point of each character representing the value of each byte. This has led to a common misconception that `btoa` can be used to encode arbitrary text data — for example, creating a Base64 `data:` URL of a text or HTML document.
+>
+> However, the byte-to-code-point correspondence only reliably holds true for code points up to `0x7f`. Furthermore, code points over `0xff` will cause `btoa` to throw an error due to exceeding the maximum value for 1 byte. The next section details how to work around this limitation when encoding arbitrary Unicode text.
 
 ## The "Unicode Problem"
 
-Since JavaScript strings are 16-bit-encoded strings, in most browsers calling `window.btoa` on a Unicode string will cause a `Character Out Of Range` exception if a character exceeds the range of a 8-bit ASCII-encoded character. There are two possible methods to solve this problem:
+Since `btoa` interprets the code points of its input string as byte values, calling `btoa` on a string will cause a "Character Out Of Range" exception if a character's code point exceeds `0xff`. For use cases where you need to encode arbitrary Unicode text, it is necessary to first convert the string to its constituent bytes in UTF-8, and then encode the bytes.
 
-- the first one is to escape the whole string and then encode it;
-- the second one is to convert the UTF-16 string to an UTF-8 array of characters and then encode it.
-
-Here are the two possible methods.
-
-### Solution 1 – escaping the string before encoding it
+The simplest solution is to use `TextEncoder` and `TextDecoder` to convert between UTF-8 and single-byte representations of the string:
 
 ```js
-function utf8_to_b64(str) {
-  return window.btoa(unescape(encodeURIComponent(str)));
+function base64ToBytes(base64) {
+  const binString = atob(base64);
+  return Uint8Array.from(binString, (m) => m.codePointAt(0));
 }
 
-function b64_to_utf8(str) {
-  return decodeURIComponent(escape(window.atob(str)));
+function bytesToBase64(bytes) {
+  const binString = Array.from(bytes, (x) => String.fromCodePoint(x)).join("");
+  return btoa(binString);
 }
 
-// Usage:
-utf8_to_b64("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
-b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
+// Usage
+bytesToBase64(new TextEncoder().encode("a Ā 𐀀 文 🦄")); // "YSDEgCDwkICAIOaWhyDwn6aE"
+new TextDecoder().decode(base64ToBytes("YSDEgCDwkICAIOaWhyDwn6aE")); // "a Ā 𐀀 文 🦄"
 ```
 
-This solution has been proposed by [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
+## Converting arbitrary binary data
 
-Another possible solution without utilizing the now deprecated 'unescape' and 'escape' functions.
-This alternative, though, does not perform base64 encoding of the input string.
-Note the differences in the outputs of `utf8_to_b64` and `b64EncodeUnicode`.
-Adopting this alternative may lead to interoperability issues with other applications.
+The `bytesToBase64` and `base64ToBytes` functions in the previous section can be used directly to convert between Base64 strings and [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)s.
+
+Alternatively, asynchronous conversion between base64 data URLs is possible natively within the web platform via the [`FileReader`](/en-US/docs/Web/API/FileReader) and [`fetch`](/en-US/docs/Web/API/Fetch_API) APIs:
 
 ```js
-function b64EncodeUnicode(str) {
-  return btoa(encodeURIComponent(str));
+async function bytesToBase64DataUrl(bytes, type = "application/octet-stream") {
+  return await new Promise((resolve, reject) => {
+    const reader = Object.assign(new FileReader(), {
+      onload: () => resolve(reader.result),
+      onerror: () => reject(reader.error),
+    });
+    reader.readAsDataURL(new File([bytes], "", { type }));
+  });
 }
 
-function UnicodeDecodeB64(str) {
-  return decodeURIComponent(atob(str));
+async function dataUrlToBytes(dataUrl) {
+  const res = await fetch(dataUrl);
+  return new Uint8Array(await res.arrayBuffer());
 }
 
-b64EncodeUnicode("✓ à la mode"); // "JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"
-UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode"
+// Usage
+await bytesToBase64DataUrl(new Uint8Array([0, 1, 2])); // "data:application/octet-stream;base64,AAEC"
+await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array [0, 1, 2]
 ```
-
-### Solution 2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
-
-> **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
-
-```js
-"use strict";
-// Array of bytes to Base64 string decoding
-function b64ToUint6(nChr) {
-  return nChr > 64 && nChr < 91
-    ? nChr - 65
-    : nChr > 96 && nChr < 123
-    ? nChr - 71
-    : nChr > 47 && nChr < 58
-    ? nChr + 4
-    : nChr === 43
-    ? 62
-    : nChr === 47
-    ? 63
-    : 0;
-}
-
-function base64DecToArr(sBase64, nBlocksSize) {
-  const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, ""); // Remove any non-base64 characters, such as trailing "=", whitespace, and more.
-  const nInLen = sB64Enc.length;
-  const nOutLen = nBlocksSize
-    ? Math.ceil(((nInLen * 3 + 1) >> 2) / nBlocksSize) * nBlocksSize
-    : (nInLen * 3 + 1) >> 2;
-  const taBytes = new Uint8Array(nOutLen);
-
-  let nMod3;
-  let nMod4;
-  let nUint24 = 0;
-  let nOutIdx = 0;
-  for (let nInIdx = 0; nInIdx < nInLen; nInIdx++) {
-    nMod4 = nInIdx & 3;
-    nUint24 |= b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << (6 * (3 - nMod4));
-    if (nMod4 === 3 || nInLen - nInIdx === 1) {
-      nMod3 = 0;
-      while (nMod3 < 3 && nOutIdx < nOutLen) {
-        taBytes[nOutIdx] = (nUint24 >>> ((16 >>> nMod3) & 24)) & 255;
-        nMod3++;
-        nOutIdx++;
-      }
-      nUint24 = 0;
-    }
-  }
-
-  return taBytes;
-}
-
-/* Base64 string to array encoding */
-function uint6ToB64(nUint6) {
-  return nUint6 < 26
-    ? nUint6 + 65
-    : nUint6 < 52
-    ? nUint6 + 71
-    : nUint6 < 62
-    ? nUint6 - 4
-    : nUint6 === 62
-    ? 43
-    : nUint6 === 63
-    ? 47
-    : 65;
-}
-
-function base64EncArr(aBytes) {
-  let nMod3 = 2;
-  let sB64Enc = "";
-
-  const nLen = aBytes.length;
-  let nUint24 = 0;
-  for (let nIdx = 0; nIdx < nLen; nIdx++) {
-    nMod3 = nIdx % 3;
-    // To break your base64 into several 80-character lines, add:
-    //   if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {
-    //      sB64Enc += "\r\n";
-    //    }
-
-    nUint24 |= aBytes[nIdx] << ((16 >>> nMod3) & 24);
-    if (nMod3 === 2 || aBytes.length - nIdx === 1) {
-      sB64Enc += String.fromCodePoint(
-        uint6ToB64((nUint24 >>> 18) & 63),
-        uint6ToB64((nUint24 >>> 12) & 63),
-        uint6ToB64((nUint24 >>> 6) & 63),
-        uint6ToB64(nUint24 & 63)
-      );
-      nUint24 = 0;
-    }
-  }
-  return (
-    sB64Enc.substring(0, sB64Enc.length - 2 + nMod3) +
-    (nMod3 === 2 ? "" : nMod3 === 1 ? "=" : "==")
-  );
-}
-
-/* UTF-8 array to JS string and vice versa */
-
-function UTF8ArrToStr(aBytes) {
-  let sView = "";
-  let nPart;
-  const nLen = aBytes.length;
-  for (let nIdx = 0; nIdx < nLen; nIdx++) {
-    nPart = aBytes[nIdx];
-    sView += String.fromCodePoint(
-      nPart > 251 && nPart < 254 && nIdx + 5 < nLen /* six bytes */
-        ? /* (nPart - 252 << 30) may be not so safe in ECMAScript! So…: */
-          (nPart - 252) * 1073741824 +
-            ((aBytes[++nIdx] - 128) << 24) +
-            ((aBytes[++nIdx] - 128) << 18) +
-            ((aBytes[++nIdx] - 128) << 12) +
-            ((aBytes[++nIdx] - 128) << 6) +
-            aBytes[++nIdx] -
-            128
-        : nPart > 247 && nPart < 252 && nIdx + 4 < nLen /* five bytes */
-        ? ((nPart - 248) << 24) +
-          ((aBytes[++nIdx] - 128) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* four bytes */
-        ? ((nPart - 240) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* three bytes */
-        ? ((nPart - 224) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
-        ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
-        : /* nPart < 127 ? */ /* one byte */
-          nPart
-    );
-  }
-  return sView;
-}
-
-function strToUTF8Arr(sDOMStr) {
-  let aBytes;
-  let nChr;
-  const nStrLen = sDOMStr.length;
-  let nArrLen = 0;
-
-  /* mapping… */
-  for (let nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
-    nChr = sDOMStr.codePointAt(nMapIdx);
-
-    if (nChr >= 0x10000) {
-      nMapIdx++;
-    }
-
-    nArrLen +=
-      nChr < 0x80
-        ? 1
-        : nChr < 0x800
-        ? 2
-        : nChr < 0x10000
-        ? 3
-        : nChr < 0x200000
-        ? 4
-        : nChr < 0x4000000
-        ? 5
-        : 6;
-  }
-
-  aBytes = new Uint8Array(nArrLen);
-
-  /* transcription… */
-  let nIdx = 0;
-  let nChrIdx = 0;
-  while (nIdx < nArrLen) {
-    nChr = sDOMStr.codePointAt(nChrIdx);
-    if (nChr < 128) {
-      /* one byte */
-      aBytes[nIdx++] = nChr;
-    } else if (nChr < 0x800) {
-      /* two bytes */
-      aBytes[nIdx++] = 192 + (nChr >>> 6);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-    } else if (nChr < 0x10000) {
-      /* three bytes */
-      aBytes[nIdx++] = 224 + (nChr >>> 12);
-      aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-    } else if (nChr < 0x200000) {
-      /* four bytes */
-      aBytes[nIdx++] = 240 + (nChr >>> 18);
-      aBytes[nIdx++] = 128 + ((nChr >>> 12) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-      nChrIdx++;
-    } else if (nChr < 0x4000000) {
-      /* five bytes */
-      aBytes[nIdx++] = 248 + (nChr >>> 24);
-      aBytes[nIdx++] = 128 + ((nChr >>> 18) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 12) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-      nChrIdx++;
-    } /* if (nChr <= 0x7fffffff) */ else {
-      /* six bytes */
-      aBytes[nIdx++] = 252 + (nChr >>> 30);
-      aBytes[nIdx++] = 128 + ((nChr >>> 24) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 18) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 12) & 63);
-      aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-      nChrIdx++;
-    }
-    nChrIdx++;
-  }
-
-  return aBytes;
-}
-```
-
-### Tests
-
-```js
-/* Tests */
-
-const sMyInput = "Base 64 \u2014 Mozilla Developer Network";
-
-const aMyUTF8Input = strToUTF8Arr(sMyInput);
-
-const sMyBase64 = base64EncArr(aMyUTF8Input);
-
-alert(sMyBase64);
-
-const aMyUTF8Output = base64DecToArr(sMyBase64);
-
-const sMyOutput = UTF8ArrToStr(aMyUTF8Output);
-
-alert(sMyOutput);
-```
-
-### Appendix: Decode a Base64 string to Uint8Array or ArrayBuffer
-
-These function let us to create also [uint8Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) or [arrayBuffers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from Base64-encoded strings:
-
-```js
-// "Base 64 \u2014 Mozilla Developer Network"
-const myArray = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
-);
-
-// "Base 64 \u2014 Mozilla Developer Network"
-const myBuffer = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
-).buffer;
-
-alert(myBuffer.byteLength);
-```
-
-> **Note:** The function `base64DecToArr(sBase64[, nBlocksSize])` returns
-> an [`uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes.
-> If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data,
-> use the `nBlocksSize` argument,
-> which is the number of bytes of which the `uint8Array.buffer.bytesLength` property must result a multiple
-> (`1` or omitted for ASCII, binary strings
-> (i.e., a string in which each character in the string is treated as a byte of binary data)
-> or UTF-8-encoded strings, `2` for UTF-16 strings, `4` for UTF-32 strings).

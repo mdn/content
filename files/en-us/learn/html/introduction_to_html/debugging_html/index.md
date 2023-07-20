@@ -1,6 +1,7 @@
 ---
 title: Debugging HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}

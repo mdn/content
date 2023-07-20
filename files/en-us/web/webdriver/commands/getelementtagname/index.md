@@ -1,6 +1,7 @@
 ---
 title: Get Element Tag Name
 slug: Web/WebDriver/Commands/GetElementTagName
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetElementTagName
 ---
 

@@ -29,7 +29,7 @@ function listener(details) {
     let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    // Note that this will maybe not work as expected because the ending of the str can also 
+    // Note that this will maybe not work as expected because the ending of the str can also
     // be "<h1>Examp" (because it is not the full response). So, it is better
     // to get the full response first and then doing the replace.
     str = str.replaceAll("Example", "WebExtension Example");
@@ -48,7 +48,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -84,7 +84,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -117,7 +117,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -147,7 +147,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -175,7 +175,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -208,7 +208,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -246,7 +246,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -276,7 +276,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -308,7 +308,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

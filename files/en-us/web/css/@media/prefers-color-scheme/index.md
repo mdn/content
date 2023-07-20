@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.prefers-color-scheme
 
 {{CSSRef}}
 
-The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
+The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
 A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
 ## Embedded elements

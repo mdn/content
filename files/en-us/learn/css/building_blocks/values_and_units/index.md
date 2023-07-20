@@ -1,6 +1,7 @@
 ---
 title: CSS values and units
 slug: Learn/CSS/Building_blocks/Values_and_units
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}

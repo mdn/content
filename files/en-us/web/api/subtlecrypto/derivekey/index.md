@@ -148,7 +148,7 @@ function deriveSecretKey(privateKey, publicKey) {
       length: 256,
     },
     false,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 }
 
@@ -162,7 +162,7 @@ async function agreeSharedSecretKey() {
       namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   let bobsKeyPair = await window.crypto.subtle.generateKey(
@@ -171,19 +171,19 @@ async function agreeSharedSecretKey() {
       namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   // Alice then generates a secret key using her private key and Bob's public key.
   let alicesSecretKey = await deriveSecretKey(
     alicesKeyPair.privateKey,
-    bobsKeyPair.publicKey
+    bobsKeyPair.publicKey,
   );
 
   // Bob generates the same secret key using his private key and Alice's public key.
   let bobsSecretKey = await deriveSecretKey(
     bobsKeyPair.privateKey,
-    alicesKeyPair.publicKey
+    alicesKeyPair.publicKey,
   );
 
   // Alice can then use her copy of the secret key to encrypt a message to Bob.
@@ -219,7 +219,7 @@ function getKeyMaterial() {
     enc.encode(password),
     "PBKDF2",
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -235,7 +235,7 @@ async function encrypt(plaintext, salt, iv) {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 
   return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);

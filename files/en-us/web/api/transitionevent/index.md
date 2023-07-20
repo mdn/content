@@ -7,7 +7,7 @@ browser-compat: api.TransitionEvent
 
 {{APIRef("CSSOM")}}
 
-The **`TransitionEvent`** interface represents events providing information related to [transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
+The **`TransitionEvent`** interface represents events providing information related to [transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 {{InheritanceDiagram}}
 
@@ -30,13 +30,13 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 ## Types of `TransitionEvent`
 
 - {{domxref("HTMLElement.transitioncancel_event", "transitioncancel")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has been cancelled.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has been cancelled.
 - {{domxref("HTMLElement.transitionend_event", "transitionend")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has finished playing.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has finished playing.
 - {{domxref("HTMLElement.transitionrun_event", "transitionrun")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
 - {{domxref("HTMLElement.transitionstart_event", "transitionstart")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has started transitioning.
 
 ## Instance methods
 
@@ -52,5 +52,5 @@ _Also inherits methods from its parent {{domxref("Event")}}_.
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}

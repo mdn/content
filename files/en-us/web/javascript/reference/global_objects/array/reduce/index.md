@@ -238,7 +238,7 @@ console.log([1, 2, undefined, 4].reduce((a, b) => a + b)); // NaN
 
 ### Calling reduce() on non-array objects
 
-The `reduce()` method reads the `length` property of `this` and then accesses each integer index.
+The `reduce()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -246,6 +246,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 99, // ignored by reduce() since length is 3
 };
 console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 // 9

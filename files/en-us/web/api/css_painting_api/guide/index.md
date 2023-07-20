@@ -44,7 +44,7 @@ registerPaint(
       ctx.fillStyle = "hsl(55 90% 60% / 1.0)";
       ctx.fillRect(0, 15, 200, 20); /* order: x, y, w, h */
     }
-  }
+  },
 );
 ```
 
@@ -98,7 +98,7 @@ We can then add the fancy class to any element on the page to add a yellow box a
 <h1 class="fancy">My Cool Header</h1>
 ```
 
-The following example will look like the image above in [browsers supporting the CSS Painting API](/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility).
+The following example will look like the image above in [browsers supporting the CSS Painting API](/en-US/docs/Web/API/CSS/paintWorklet_static#browser_compatibility).
 
 {{EmbedGHLiveSample("dom-examples/css-painting/half-highlight-fixed-size/", 120, 120)}}
 
@@ -132,7 +132,7 @@ registerPaint(
       ctx.fillStyle = "hsl(55 90% 60% / 1.0)";
       ctx.fillRect(0, size.height / 3, size.width * 0.4, size.height * 0.6);
     }
-  }
+  },
 );
 ```
 
@@ -176,7 +176,7 @@ CSS.paintWorklet.addModule("header-highlight.js");
 
 #### Result
 
-In [browsers that support the CSS Paint API](/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility), the elements in the example below should get yellow backgrounds proportional to their font size.
+In [browsers that support the CSS Paint API](/en-US/docs/Web/API/CSS/paintWorklet_static#browser_compatibility), the elements in the example below should get yellow backgrounds proportional to their font size.
 
 {{EmbedGHLiveSample("dom-examples/css-painting/half-highlight-paintsize", 200, 200)}}
 
@@ -201,11 +201,11 @@ registerPaint(
     paint(drawingContext, elementSize, styleMap) {
       // Paint code goes here.
     }
-  }
+  },
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_Variables), and returns an {{jsxref("Array", "array")}} of property names. We'll take a look at `inputArguments` in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array")}} of property names. We'll take a look at `inputArguments` in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 
@@ -245,10 +245,10 @@ registerPaint(
         0,
         size.height / 3,
         size.width * 0.4 - props.get("--widthSubtractor"),
-        size.height * 0.6
+        size.height * 0.6,
       );
     }
-  }
+  },
 );
 ```
 
@@ -361,18 +361,18 @@ registerPaint(
         ctx.lineTo(blockWidth + start * 10 + 20, y);
         ctx.lineTo(
           blockWidth + start * 10 + 20 + highlightHeight,
-          highlightHeight
+          highlightHeight,
         );
         ctx.lineTo(
           blockWidth + start * 10 + 10 + highlightHeight,
-          highlightHeight
+          highlightHeight,
         );
         ctx.lineTo(blockWidth + start * 10 + 10, y);
         ctx.closePath();
         ctx.fill();
       }
     } // paint
-  }
+  },
 );
 ```
 
@@ -386,7 +386,7 @@ We can then create a little HTML that will accept this image as backgrounds:
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-We give each header a different value for the `--highColor` [custom property](/en-US/docs/Web/CSS/CSS_Variables)
+We give each header a different value for the `--highColor` [custom property](/en-US/docs/Web/CSS/CSS_cascading_variables)
 
 ```css
 .fancy {
@@ -572,7 +572,7 @@ registerPaint(
         ctx.stroke();
       }
     } // paint
-  }
+  },
 );
 ```
 

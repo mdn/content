@@ -1,6 +1,7 @@
 ---
 title: Firefox 46 for developers
 slug: Mozilla/Firefox/Releases/46
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -59,7 +60,7 @@ Highlights:
 
 - The deprecated {{domxref("Window.showModalDialog()")}} method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
 - Added support for {{domxref("Document.elementsFromPoint()")}} ([Firefox bug 1164427](https://bugzil.la/1164427)).
-- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedIndex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedOptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
+- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedindex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedoptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
 
 #### Canvas
 

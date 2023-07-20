@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.DataView.getUint16
 
 {{JSRef}}
 
-The **`getUint16()`** method gets an unsigned 16-bit integer
-(unsigned short) at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`getUint16()`** method of {{jsxref("DataView")}} instances reads 2 bytes starting at the specified byte offset of this `DataView` and interprets them as a 16-bit unsigned integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getuint16.html")}}
 

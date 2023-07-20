@@ -14,10 +14,13 @@ The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("Writabl
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
+<!-- sendOrder is pending https://bugzilla.mozilla.org/show_bug.cgi?id=1816925
+
 The relative order in which queued bytes are emptied from created streams can be specified using the send-order option.
 If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
 If the order number is not set then the order in which bytes are sent is implementation dependent.
 Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
+-->
 
 {{AvailableInWorkers}}
 
@@ -25,11 +28,15 @@ Note however that even though bytes from higher send-order streams are sent firs
 
 ```js-nolint
 createUnidirectionalStream()
-createUnidirectionalStream({sendOrder: "596996858"})
 ```
+
+<!-- createUnidirectionalStream({sendOrder: "596996858"}) -->
 
 ### Parameters
 
+None
+
+<!--
 - `options` {{optional_inline}}
 
   - : An object that may have the following properties:
@@ -38,6 +45,7 @@ createUnidirectionalStream({sendOrder: "596996858"})
       - : A integer value specifying the send priority of this stream relative to other streams for which the value has been set.
         Queued bytes are sent first for streams that have a higher value.
         If not set, the send order depends on the implementation.
+-->
 
 ### Return value
 

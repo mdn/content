@@ -1,6 +1,7 @@
 ---
 title: floor
 slug: Web/XPath/Functions/floor
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: Async scripts for asm.js
 slug: Games/Techniques/Async_scripts
+page-type: guide
 ---
 
 {{GamesSidebar}}

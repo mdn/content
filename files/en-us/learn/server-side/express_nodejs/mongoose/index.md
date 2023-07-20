@@ -1,6 +1,7 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
@@ -404,7 +405,7 @@ const Athlete = mongoose.model("Athlete", yourSchema);
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
 const tennisPlayers = await Athlete.find(
   { sport: "Tennis" },
-  "name age"
+  "name age",
 ).exec();
 ```
 
@@ -650,7 +651,8 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`). Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
+Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
+Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
@@ -665,6 +667,10 @@ async function main() {
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+
+Note that hard-coding database credentials in source code as shown above is not recommended.
+We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.
+We'll show you how to do this more safely when [deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#database_configuration)!
 
 ## Defining the LocalLibrary Schema
 
@@ -818,7 +824,7 @@ In order to test the models (and to create some example books and other items th
 
 1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/main/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
-   > **Note:** You don't need to know how `populatedb.js` works; it just adds sample data into the database.
+   > **Note:** The code in `populatedb.js` may be useful in learning JavaScript, but understanding it is not necessary for this tutorial.
 
 2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 

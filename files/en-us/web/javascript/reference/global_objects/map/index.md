@@ -108,15 +108,7 @@ cases:
         <p>
           The order was first defined for own properties only in ECMAScript
           2015; ECMAScript 2020 defines order for inherited properties as well.
-          See the
-          <a href="https://tc39.es/ecma262/#sec-ordinaryownpropertykeys"
-            >OrdinaryOwnPropertyKeys</a
-          >
-          and
-          <a href="https://tc39.es/ecma262/#sec-enumerate-object-properties"
-            >EnumerateObjectProperties</a
-          >
-          abstract specification operations. But note that no single mechanism
+          But note that no single mechanism
           iterates
           <strong>all</strong> of an object's properties; the various mechanisms
           each include different subsets of properties.

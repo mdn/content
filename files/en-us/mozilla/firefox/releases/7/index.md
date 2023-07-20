@@ -1,6 +1,7 @@
 ---
 title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -21,10 +22,10 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 - As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzil.la/651858) and will significantly improve the performance of the 2D canvas.
 - Specifying invalid values when calling `setTransform()`, `bezierCurveTo()`, or `arcTo()` no longer throws an exception; these calls are now correctly silently ignored.
-- The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/ispointinpath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
+- The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
 - Calling `strokeRect()` with a zero width and height now correctly does nothing.
-- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
-- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with non-finite coordinates no longer throws an exception.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) with non-finite coordinates no longer throws an exception.
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
 - [Shadows](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#shadows) are now only drawn for `source-over` compositing operations.
@@ -77,7 +78,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### Web timing
 
-- Initial implementation of the [Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API) specification which provides data that can be used to measure the performance of a website.
+- Initial implementation of the [Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) specification which provides data that can be used to measure the performance of a website.
 
 ### XML
 

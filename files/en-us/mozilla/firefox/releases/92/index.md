@@ -1,6 +1,7 @@
 ---
 title: Firefox 92 for developers
 slug: Mozilla/Firefox/Releases/92
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

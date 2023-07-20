@@ -1,6 +1,7 @@
 ---
 title: Making decisions in your code — conditionals
 slug: Learn/JavaScript/Building_blocks/conditionals
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
@@ -400,7 +401,9 @@ function update(bgColor, textColor) {
 }
 
 select.addEventListener("change", () =>
-  select.value === "black" ? update("black", "white") : update("white", "black")
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black"),
 );
 ```
 
@@ -618,7 +621,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;
@@ -805,7 +808,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;
