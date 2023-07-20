@@ -94,7 +94,7 @@ In order to balance the number of transmitted segments, the {{glossary('TCP slow
 
 The number of segments to be transmitted is controlled by the value of the congestion window (CWND), which can be initialized to 1, 2, 4, or 10 MSS (MSS is 1500 bytes over the Ethernet protocol). That value is the number of bytes to send, upon receipt of which the client must send an ACK.
 
-If an ACK is received, then CWND will be increased by 2 times and the next time the server will be able to send more segments. If not received, then the CWND value will decrease by 2 times, thus achieving a balance between sending too many segments and too few.
+If an ACK is received, then the CWND value will be doubled, and so the server will be able to send more segments the next time. If instead no ACK is received, then the CWND value will be halved. That mechanism thus achieves a balance between sending too many segments, and sending too few.
 
 ## Parsing
 
