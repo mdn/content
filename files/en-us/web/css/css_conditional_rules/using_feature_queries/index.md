@@ -83,7 +83,7 @@ However, there are browsers that don't support feature queries but also have no 
 
 Let's walk through a very simple example where feature queries come in handy, which uses them in the way described above.
 
-Let's say we want to create a layout of three boxes in a row, and ideally we would like to use [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout). However, we would like to have a layout for older browsers using floats. We can start by creating that floated layout with the following code, which gives us three columns.
+Let's say we want to create a layout of three boxes in a row, and ideally we would like to use [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout). However, we would like to have a layout for older browsers using floats. We can start by creating that floated layout with the following code, which gives us three columns.
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
@@ -113,5 +113,5 @@ Feature Queries can help you start to use newer features by enhancing a simpler 
 
 - The [@supports](/en-US/docs/Web/CSS/@supports) rule
 - Learn Layout: [Supporting Older Browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

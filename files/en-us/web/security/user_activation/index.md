@@ -39,7 +39,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
-- {{domxref("IdleDetector.requestPermission()")}}
+- {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
 - {{domxref("MediaDevices.selectAudioOutput()")}}
 - `MediaStreamTrack.sendCaptureAction()`
 - `MediaDevices.getViewportMedia()`

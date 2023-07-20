@@ -81,7 +81,7 @@ window.onerror = (a, b, c, d, e) => {
 
 > **Note:** These parameter names are observable with an [HTML event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), where the first parameter is called `event` instead of `message`.
 
-This special behavior only happens for the `onerror` event handler on `window`. The [`Element.onerror`](/en-US/docs/Web/API/Element/error_event) handler still receives a single {{domxref("ErrorEvent")}} object.
+This special behavior only happens for the `onerror` event handler on `window`. The [`Element.onerror`](/en-US/docs/Web/API/HTMLElement/error_event) handler still receives a single {{domxref("ErrorEvent")}} object.
 
 ## Examples
 

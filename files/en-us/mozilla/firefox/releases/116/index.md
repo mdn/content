@@ -14,6 +14,9 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### HTML
 
+- The [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Element/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Element/textarea#dirname) elements.
+  This attribute allows for passing text directionality information (`ltr` or `rtl`) to the server during form submission ([Firefox bug 675943](https://bugzil.la/675943)).
+
 #### Removals
 
 ### CSS
@@ -44,6 +47,9 @@ This article provides information about the changes in Firefox 116 that affect d
 #### Removals
 
 ### APIs
+
+- The {{domxref("TextMetrics.fontBoundingBoxAscent")}} and {{domxref("TextMetrics.fontBoundingBoxDescent")}} properties are now supported.
+  These metrics return, respectively, the distance above and below the {{domxref("CanvasRenderingContext2D.textBaseline")}} to the bounding rectangle of all the fonts used to render the text ([Firefox bug 1801198](https://bugzil.la/1801198)).
 
 #### DOM
 

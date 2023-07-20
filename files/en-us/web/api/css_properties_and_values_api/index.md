@@ -13,14 +13,14 @@ The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/
 
 ## Interfaces
 
-- {{domxref('CSS.registerProperty')}}
-  - : Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{domxref('CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript).
+- {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}
+  - : Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript).
 - {{cssxref('@property')}}
   - : Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule) in [CSS](/en-US/docs/Web/CSS).
 
 ## Examples
 
-The following uses {{domxref('CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript) to type a {{cssxref('--*', 'CSS custom properties')}}, `--my-color`, as a color, give it a default value, and not allow it to inherit its value:
+The following uses {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript) to type a {{cssxref('--*', 'CSS custom properties')}}, `--my-color`, as a color, give it a default value, and not allow it to inherit its value:
 
 ```js
 window.CSS.registerProperty({

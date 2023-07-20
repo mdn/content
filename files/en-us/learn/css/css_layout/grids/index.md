@@ -363,7 +363,7 @@ This works because grid is creating as many 200-pixel columns as will fit into t
 
 ## Line-based placement
 
-We now move on from creating a grid to placing things on the grid. Our grid always has lines — these are numbered beginning with 1 and relate to the [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes) of the document. For example, column line 1 in English (written left-to-right) would be on the left-hand side of the grid and row line 1 at the top, while in Arabic (written right-to-left), column line 1 would be on the right-hand side.
+We now move on from creating a grid to placing things on the grid. Our grid always has lines — these are numbered beginning with 1 and relate to the [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes) of the document. For example, column line 1 in English (written left-to-right) would be on the left-hand side of the grid and row line 1 at the top, while in Arabic (written right-to-left), column line 1 would be on the right-hand side.
 
 We can arrange things in accordance with these lines by specifying the start and end line. We do this using the following properties:
 
@@ -699,7 +699,7 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 
 ## See also
 
-- [CSS Grid guides](/en-US/docs/Web/CSS/CSS_Grid_Layout#guides)
+- [CSS Grid guides](/en-US/docs/Web/CSS/CSS_grid_layout#guides)
 - [CSS Grid Inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS-Tricks Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) — an article explaining everything about Grid in a visually appealing way
 - [Grid Garden](https://cssgridgarden.com/) — an educational game to learn and better understand the basics of Grid

@@ -11,6 +11,8 @@ The **`overscroll-behavior-y`** CSS property sets the browser's behavior when th
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
 
+## Syntax
+
 ```css
 /* Keyword values */
 overscroll-behavior-y: auto; /* default */
@@ -24,8 +26,6 @@ overscroll-behavior-y: revert;
 overscroll-behavior-y: revert-layer;
 overscroll-behavior-y: unset;
 ```
-
-## Syntax
 
 The `overscroll-behavior-y` property is specified as a keyword chosen from the list of values below.
 
