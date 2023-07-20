@@ -17,12 +17,12 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
 
 ### Combinators and seperators
 
-- {{CSSXref("Adjacent_sibling_combinator","+")}} ([next-, or adjacent-", sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator))
-- {{CSSXref("Child_combinator", "&gt;")}} ([child combinator](/en-US/docs/Web/CSS/Child_combinator))
-- {{CSSXref("||")}} ([column combinator](/en-US/docs/Web/CSS/Column_combinator)) {{Experimental_Inline}}
-- {{CSSXref("General_sibling_combinator", "~")}} ([general-, or subsequent-, sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator))
-- {{CSSXref("descendant_combinator", "&nbsp;")}} ([descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
-- [`|`](/en-US/docs/Web/CSS/Namespace_separator) ([namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
+- `+` ([Adjacent or next sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator))
+- `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
+- `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator)) {{Experimental_Inline}}
+- `~` ([General or subsequent sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator))
+- " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
+- `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
 
 ### Selectors
 
