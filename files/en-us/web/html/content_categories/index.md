@@ -98,6 +98,7 @@ The flow elements are:
 - {{HTMLElement("script")}}
 - {{HTMLElement("section")}}
 - {{HTMLElement("select")}}
+- {{HTMLElement("slot")}}
 - {{HTMLElement("small")}}
 - {{HTMLElement("span")}}
 - {{HTMLElement("strong")}}
