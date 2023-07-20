@@ -21,10 +21,6 @@ If a specified image cannot be drawn (for example, when the file denoted by the 
 
 ## Syntax
 
-Each background image is specified either as the keyword `none` or as an {{cssxref("&lt;image&gt;")}} value.
-
-To specify multiple background images, supply multiple values, separated by a comma:
-
 ```css
 background-image: linear-gradient(
     to bottom,
@@ -39,6 +35,10 @@ background-image: revert;
 background-image: revert-layer;
 background-image: unset;
 ```
+
+Each background image is specified either as the keyword `none` or as an {{cssxref("&lt;image&gt;")}} value.
+
+To specify multiple background images, supply multiple values, separated by a comma.
 
 ### Values
 

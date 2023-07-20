@@ -14,17 +14,6 @@ browser-compat: css.properties.box-lines
 
 The **`box-lines`** [CSS](/en-US/docs/Web/CSS) property determines whether the box may have a single or multiple lines (rows for horizontally oriented boxes, columns for vertically oriented boxes).
 
-```css
-/* Keyword values */
-box-lines: single;
-box-lines: multiple;
-
-/* Global values */
-box-lines: inherit;
-box-lines: initial;
-box-lines: unset;
-```
-
 By default a horizontal box will lay out its children in a single row, and a vertical box will lay out its children in a single column. This behavior can be changed using the `box-lines` property. The default value is `single`, which means that all elements will be placed in a single row or column, and any elements that don't fit will be considered overflow.
 
 If a value of `multiple` is specified, however, then the box is allowed to expand to multiple lines (that is, multiple rows or columns) in order to accommodate all of its children. The box must attempt to fit its children on as few lines as possible by shrinking all elements down to their minimum widths or heights if necessary.
@@ -36,6 +25,17 @@ A similar process occurs for children in a vertical box. Later lines in normal d
 Once the number of lines has been determined, elements with a computed value for {{CSSxRef("box-flex")}} other than `0` stretch as necessary in an attempt to fill the remaining space on the lines. Each line computes flexes independently, so only elements on that line are considered when evaluating {{CSSxRef("box-flex")}} and {{CSSxRef("box-flex-groups")}}. The packing of elements in a line, as specified by the {{CSSxRef("box-pack")}} property, is also computed independently for each line.
 
 ## Syntax
+
+```css
+/* Keyword values */
+box-lines: single;
+box-lines: multiple;
+
+/* Global values */
+box-lines: inherit;
+box-lines: initial;
+box-lines: unset;
+```
 
 The `box-lines` property is specified as one of the keyword values listed below.
 
