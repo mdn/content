@@ -95,7 +95,7 @@ It sets the `responseType` of the request to `arraybuffer` so that
 it returns an array buffer as its `response`. It caches the the array buffer
 in the local `audioData` variable in the XHR `onload` event handler, then
 passes it to `decodeAudioData()`. The success callback caches the decoded
-`audioBuffer` in the global `buffer` variable for later playback.
+{{domxref("AudioBuffer")}} in the global `buffer` variable for later playback.
 
 > **Note:** You can [run the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) and access the [source code](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
