@@ -45,11 +45,11 @@ This article introduces tools you can use to access web performance metrics, whi
 There are several different tools available to help you measure and improve performance. These can generally be classified into two categories:
 
 - Tools that indicate or measure performance, such as [PageSpeed Insights](https://pagespeed.web.dev/) or the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) and [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html). These tools show you how fast or slow your website is loading. They also indicate areas that can be improved to optimize your web app.
-- Tools that update code so that your web app or site will perform better. For example, bundling tools pack your code into single files to reduce the number of HTTP requests, while minifiers remove all whitespace from your code to make the files smaller.
+- [Performance APIs](/en-US/docs/Web/API/Performance_API/) that you can use to build custom performance tools.
 
 ## General performance reporting tools
 
-Tools like [PageSpeed Insights](https://pagespeed.web.dev/) can measure a website's performance. You can enter a URL and get a performance report in seconds. The report contains scores to indicate how your website is performing, both for mobile and desktop. This is a good start for getting an idea about what you are already doing well and what could be improved.
+Tools like [PageSpeed Insights](https://pagespeed.web.dev/) can provide quick performance measurements. You can enter a URL and get a performance report in seconds. The report contains scores to indicate how your website is performing, both for mobile and desktop. This is a good start for getting an idea about what you are already doing well and what could be improved.
 
 At the time of writing, MDN's performance report summary looks similar to the following:
 
@@ -95,6 +95,6 @@ While this article does not dive into using these APIs, it is useful to know the
 
 ## Conclusion
 
-This article provided a brief overview of the web performance metrics to help introduce you to what you can measure on a web app or site. Next up, you'll look at perceived performance and some techniques to make unavoidable performance hits appear less severe to the user, or disguise them completely.
+This article provided a brief overview of web performance tools that can help you measure performance on a web app or site. Next up, you'll look at perceived performance and some techniques to make unavoidable performance hits appear less severe to the user, or disguise them completely.
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}

@@ -1,5 +1,5 @@
 ---
-title: JavaScript performance
+title: JavaScript performance optimization
 slug: Learn/Performance/JavaScript
 page-type: learn-module-chapter
 ---
@@ -264,7 +264,7 @@ loop();
 
 You can find a nice introduction to canvas animations at [Drawing graphics > Animations](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#animations), and a more in-depth example at [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice). You can also find a full set of canvas tutorials at [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Events and performance
+## Optimizing event performance
 
 Events can be expensive for the browser to track and handle, especially when you are running an event continuously. For example, you might be tracking the position of the mouse using the [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) event to check whether it is still inside a certain area of the page:
 
@@ -284,7 +284,7 @@ It is, therefore, a good idea to remove event listeners that are no longer neede
 elem.removeEventListener("mousemove", handleMouseMove);
 ```
 
-Another tip is to use event delegation wherever possible. When you have some code to run in response to the user interacting with any one of a large number of child elements, you can set an event listener on their parent. Events fired on the child elements will bubble up to their parent, so you don't need to set the event listener on every child individually. Less event listeners to keep track of means better performance.
+Another tip is to use event delegation wherever possible. When you have some code to run in response to a user interacting with any one of a large number of child elements, you can set an event listener on their parent. Events fired on any child element will bubble up to their parent, so you don't need to set the event listener on each child individually. Less event listeners to keep track of means better performance.
 
 See [Event delegation](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation) for more details and a useful example.
 
