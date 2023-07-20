@@ -29,8 +29,13 @@ mask-repeat: round space;
 mask-repeat: no-repeat round;
 
 /* Multiple values */
-mask-repeat: space round, no-repeat;
-mask-repeat: round repeat, space, repeat-x;
+mask-repeat:
+  space round,
+  no-repeat;
+mask-repeat:
+  round repeat,
+  space,
+  repeat-x;
 
 /* Global values */
 mask-repeat: inherit;

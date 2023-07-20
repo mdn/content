@@ -75,10 +75,20 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 
 ```css
 .small {
-  font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    19.9px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 .big {
-  font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    20px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 ```
 
@@ -101,7 +111,12 @@ This example shows the difference between the appearance of `optimizeSpeed` and 
 
 ```css
 p {
-  font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    1.5em "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 
 .speed {

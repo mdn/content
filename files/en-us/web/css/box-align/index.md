@@ -76,7 +76,7 @@ box-align =
 ### Setting box alignment
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
