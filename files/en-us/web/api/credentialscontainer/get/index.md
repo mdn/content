@@ -149,7 +149,7 @@ Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedC
 
 ## WebOTP API
 
-The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) lets a web client request an OTP from an SMS sent by the web app's server. This capability is intended to streamline usage of OTPs in web apps, for example when using phone numbers as additional factors in sign-in flows. The OTP is retrieved from the SMS and can be set as a verification input value automatically after the user gives consent, rather than expecting the user to manually go into their SMS app and copy and paste it.
+The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) lets a web client request an OTP from an SMS sent by the web app's server. This capability is intended to streamline usage of OTPs in web apps, for example when using phone numbers as additional factors in sign-in flows. The OTP is retrieved from the SMS and can be set as a verification input value automatically after the user gives consent, avoiding the need for the user to manually go into their SMS app and copy and paste it.
 
 ### `otp` object structure
 
