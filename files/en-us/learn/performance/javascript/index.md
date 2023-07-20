@@ -26,7 +26,7 @@ It is very important to consider how you are using JavaScript on your websites a
     <tr>
       <th scope="row">Objectives:</th>
       <td>
-        To learn about the effects of JavaScript on web performance,
+        To learn about the effects of JavaScript on web performance
         and how to mitigate or fix related issues.
       </td>
     </tr>
