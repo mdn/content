@@ -94,7 +94,9 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 ### Return value
 
 Include a description of the constructor's return value, including data type and what it represents.
-This is normally just "An instance of the `NameOfTheParentInterface` object."
+This is normally just "An instance of the `\{{domxref("NameOfTheParentInterface")}}` object."
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ### Exceptions
 
