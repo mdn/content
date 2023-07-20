@@ -17,7 +17,7 @@ To create a landmark role, define the purpose of the content by using a semantic
 
 A visible label should be provided, referenced with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). If necessary, brief, descriptive, label can be provided with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
-For screen reader users, adding landmark roles effectively create 'skip links' for screen reader users, but don't replace in page navigation as the landmark roles are not otherwise surfaced.
+For screen reader users, adding landmark roles effectively creates 'skip links' for screen reader users, but don't replace in page navigation as the landmark roles are not otherwise surfaced.
 
 ## Best Practices
 

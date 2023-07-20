@@ -9,6 +9,8 @@ browser-compat: css.properties.transform-box
 
 The **`transform-box`** CSS property defines the layout box to which the {{cssxref("transform")}}, individual transform properties {{cssxref("translate")}},{{cssxref("scale")}}, and {{cssxref("rotate")}}, and {{cssxref("transform-origin")}} properties relate.
 
+## Syntax
+
 ```css
 /* Keyword values */
 transform-box: content-box;
@@ -24,8 +26,6 @@ transform-box: revert;
 transform-box: revert-layer;
 transform-box: unset;
 ```
-
-## Syntax
 
 The `transform-box` property is specified as one of the keyword values listed below.
 
