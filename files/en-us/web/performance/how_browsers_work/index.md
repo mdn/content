@@ -88,7 +88,7 @@ TCP packets are split into segments during transmission. Because TCP guarantees 
 
 If the server waits for an ACK after each segment, that will result in frequent ACKs from the client and may increase transmission time, even in the case of a low-load network.
 
-On the other hand, sending too many segments at once can lead to the fact that in a busy network the client will not be able to receive them and respond with ACK for a long time, and the server will have to repeat sending several times.
+On the other hand, sending too many segments at once can lead to the problem that in a busy network the client will not be able to receive the segments and will just keep responding with ACKs for a long time, and the server will have to keep re-sending the segments.
 
 In order to balance the number of transmitted segments, there is a {{glossary('TCP slow start')}}, an algorithm that gradually increases the amount of transmitted data until the maximum network bandwidth can be determined. And it reduces the amount of transmitted data in case of high network load.
 
