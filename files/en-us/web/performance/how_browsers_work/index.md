@@ -86,7 +86,7 @@ In our example above, the request is definitely less than 14KB, but the linked r
 
 TCP packets are split into segments during transmission. Because TCP guarantees the sequence of packets, the server must receive an acknowledgment from the client in the form of an ACK packet after sending a certain number of segments.
 
-If server waits for an ACK after each segment, this will result in frequent ACKs from the client and may increase transmission time even in case of an low load network.
+If the server waits for an ACK after each segment, that will result in frequent ACKs from the client and may increase transmission time, even in the case of a low-load network.
 
 On the other hand, sending too many segments at once can lead to the fact that in a busy network the client will not be able to receive them and respond with ACK for a long time, and the server will have to repeat sending several times.
 
