@@ -31,6 +31,14 @@ It relates to {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-sta
 
 This property is on the standard track as {{cssxref("border-block-start")}}.
 
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("-webkit-border-before-color")}}
+- {{cssxref("-webkit-border-before-style")}}
+- {{cssxref("-webkit-border-before-width")}}
+
 ## Syntax
 
 ### Values
