@@ -84,7 +84,7 @@ In our example above, the request is definitely less than 14KB, but the linked r
 
 ### Congestion control / TCP slow start
 
-TCP packets are splitting into segments during transmission. Since TCP guarantees the sequence of packets, the server must receive the acknowledgment from the client in the form of an ACK packet after sending a certain number of segments.
+TCP packets are split into segments during transmission. Because TCP guarantees the sequence of packets, the server must receive an acknowledgment from the client in the form of an ACK packet after sending a certain number of segments.
 
 If server waits for an ACK after each segment, this will result in frequent ACKs from the client and may increase transmission time even in case of an low load network.
 
