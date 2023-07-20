@@ -14,4 +14,4 @@ The most common causes of render-blocking are initially-loaded CSS or JavaScript
 
 - [CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
 - [JavaScript performance optimization](/en-US/docs/Learn/Performance/JavaScript)
-- [What Are Render-Blocking Resources & How to Fix Render Blocking Issues](https://speckyboy.com/render-blocking/), Speckyboy, 2018
+- [What Are Render-Blocking Resources & How to Fix Render Blocking Issues](https://speckyboy.com/render-blocking/) on Speckyboy (2018)
