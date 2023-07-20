@@ -62,7 +62,7 @@ Your verification code is 123456.
 
 > **Note:** The provided domain value must not include a URL schema, port, or other URL features not shown above.
 
-If the `get()` method is being invoked by a 3rd party site embedded in an {{htmlelement("iframe")}}, the SMS should be structured as followed:
+If the `get()` method is invoked by a third-party site embedded in an {{htmlelement("iframe")}}, the SMS structure should be:
 
 ```
 Your verification code is 123456.
