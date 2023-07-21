@@ -7,11 +7,11 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{CSSRef}}
 
-The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their {{cssxref("specificity")}}. The CSS selectors module provides us with more than 60 selectors and five combinators. Other modules provide additional pseudo-class selectors and pseudo-elements.
+The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their {{cssxref("specificity")}}. The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
 
-In CSS, selectors are patterns used to match, or select, the elements you want to style. Selectors are also used in JavaScript to enable selecting which DOM nodes to return as a [`NodeList`](/en-US/docs/Web/API/NodeList).
+In CSS, selectors are patterns used to match, or select, the elements you want to style. Selectors are also used in JavaScript to enable selecting the DOM nodes to return as a [`NodeList`](/en-US/docs/Web/API/NodeList).
 
-Selectors, whether used in CSS or JS, enable targeting HTML elements based on their type, attributes, current states, and even position in the DOM. Combinators enable being more precise in the elements you select by enabling specifying elements based on their relationship to other elements.
+Selectors, whether used in CSS or JavaScript, enable targeting HTML elements based on their type, attributes, current states, and even position in the DOM. Combinators allow you to be more precise when selecting elements by enabling selecting elements based on their relationship to other elements.
 
 ## Reference
 
@@ -70,7 +70,6 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
 - {{CSSXref(":nth-of-type", ":nth-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
-- {{CSSXref(":open")}}
 - {{CSSXref(":optional")}}
 - {{CSSXref(":out-of-range")}}
 - {{CSSXref(":past")}}
@@ -103,24 +102,24 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
 ## Terms
 
 - {{glossary("Pseudo-class")}} glossary term
-- [Functional pseudo class](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
-- [Combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
+- [Functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
+- [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
 - [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#simple-selector)
 - [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#compound-selector)
 - [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#complex-selector)
 - [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#relative-selector)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- {{CSSXref("Specificity")}}
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
 
 ## Guides
 
 - [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 
-  - : Overview of the different types of simple selectors and the various combinators defined in the CSS selectors and pseudo modules.
+  - : Overview of the different types of simple selectors and various combinators defined in the CSS selectors and the CSS pseudo modules.
 
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 
-  - : The structure of CSS selectors and the terminology introduced in the selectors module, from "simple selector" to "forgiving relative selector list".
+  - : Explanation of the structure of CSS selectors and the terminologies introduced in the CSS selectors module, ranging from "simple selector" to "forgiving relative selector list".
 
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
 
@@ -147,6 +146,8 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
   - : The selectors API enables using selectors in JavaScript to retrieve element nodes from the DOM.
 
 ## Related concepts
+
+- {{CSSXref(":popover-open")}} pseudo-class
 
 - CSS scoping module
 
