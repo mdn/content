@@ -185,8 +185,8 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
 - {{CSSXref("@namespace")}} at-rule
 
 - {{cssxref("important", "!important")}}
-- {{cssxref("Specificity")}}
-- [The cascade](/en-US/docs/Web/CSS/Cascade)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Cascade](/en-US/docs/Web/CSS/Cascade)
 
 - {{domxref("Document.querySelector")}} method
 - {{domxref("Document.querySelectorAll")}} method
