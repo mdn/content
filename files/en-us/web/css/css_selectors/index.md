@@ -59,7 +59,7 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
 - {{CSSXref(":last-of-type")}}
 - {{CSSXref(":link")}}
 - {{CSSXref(":local-link")}}
-- {{CSSXref( ":is", ":matches()")}}
+- `:matches()` (obsolete legacy selector alias for {{CSSXref( ":is", ":is()")}})
 - {{CSSXref(":modal")}}
 - {{CSSXref(":muted")}}
 - {{CSSXref(":not", ":not()")}}
