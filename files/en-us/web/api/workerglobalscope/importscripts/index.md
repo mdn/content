@@ -26,6 +26,8 @@ importScripts(path0, path1, /* … ,*/ pathN)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+if none is false : import true value
+import true value: import firefox and other web
 
 ### Exceptions
 
