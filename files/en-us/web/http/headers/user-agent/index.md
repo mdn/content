@@ -2,7 +2,7 @@
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
 page-type: http-header
-browser-compat: http.headers.User-Agent
+browser-compat: http.headers.User-A 
 ---
 
 {{HTTPSidebar}}
