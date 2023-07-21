@@ -12,7 +12,7 @@ In this article, we:
 
 - Define privacy and important related terms.
 - Examine browser features that automatically protect user privacy.
-- Look at what users can do to create privacy-respecting web content that minimizes the risk of users' personal information/data being obtained unexpectedly by third parties.
+- Look at what developers can do to create privacy-respecting web content that minimizes the risk of users' personal information/data being obtained unexpectedly by third parties.
 
 ## Defining privacy terms and concepts
 
