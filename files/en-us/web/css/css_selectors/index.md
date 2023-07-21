@@ -32,7 +32,6 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
 - {{CSSXref(":blank")}}
 - {{CSSXref(":buffering")}}
 - {{CSSXref(":checked")}}
-- {{CSSXref(":closed")}}
 - {{CSSXref(":current")}}
 - {{CSSXref(":current", ":current()")}}
 - {{CSSXref(":default")}}
