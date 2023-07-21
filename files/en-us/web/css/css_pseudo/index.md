@@ -26,32 +26,30 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 - {{CSSXref("::selection")}}
 - {{CSSXref("::spelling-error")}}
 - {{CSSXref("::target-text")}}
-- [`:has()`-allowed pseudo-elements]()
 
 ### Interfaces
 
 - {{DOMxRef("CSSPseudoElement")}} interface
   - {{DOMxRef("CSSPseudoElement.element")}} property
   - {{DOMxRef("CSSPseudoElement.type")}} property
-- {{DOMxRef("Element.pseudo()")}} method
 
 ### Definitions
 
-- {{CSSXref("pseudo-element")}}
+- {{Glossary("Pseudo-element")}}
 
 ## Guides
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
 
-  - Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT
+  - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT
 
 - [Building block: pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
 
-  - :
+  - : Part of CSS building blocks section on selectors, defines what a pseudo-element is, how it can be combined with pseudo-classes and generating content with `::before` and `::after`
 
-- [How to: using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
+- [How to: Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
 
-  - :
+  - : foo
 
 ## Related concepts
 
@@ -60,14 +58,14 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 - WebVTT: The Web Video Text Tracks Format
 
   - {{cssxref("::cue")}}
-  - {{cssxref("::cue( selector )")}}
+  - {{cssxref("::cue", "::cue( selector )")}}
   - {{cssxref("::cue-region")}}
 
 - CSS scoping module
 
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
-  - {{CSSXref(":host-context()")}}
+  - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted")}}
 
 - CSS shadow parts module
