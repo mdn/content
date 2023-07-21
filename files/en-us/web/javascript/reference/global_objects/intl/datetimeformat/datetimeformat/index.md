@@ -106,7 +106,7 @@ Intl.DateTimeFormat(locales, options)
 
         > **Note:**
         >
-        > - This option only has an effect if a 12-hour clock is used.
+        > - This option only has an effect if a 12-hour clock (`hourCycle: 'h12'` or `hourCycle: 'h11'`) is used.
         > - Many locales use the same string irrespective of the width specified.
 
     - `numberingSystem`
@@ -316,7 +316,7 @@ console.log(mediumTime.format(Date.now())); // "07/07/20, 1:31:55 PM"
 
 ### Using dayPeriod
 
-Use the `dayPeriod` option to output a string for the times of day ("in the morning", "at night", "noon", etc.). Note, that this only works when formatting for a 12 hour clock (`hourCycle: 'h12'`) and that for many locales the strings are the same irrespective of the value passed for the `dayPeriod`.
+Use the `dayPeriod` option to output a string for the times of day ("in the morning", "at night", "noon", etc.). Note, that this only works when formatting for a 12 hour clock (`hourCycle: 'h12'` or `hourCycle: 'h11'`) and that for many locales the strings are the same irrespective of the value passed for the `dayPeriod`.
 
 ```js
 const date = Date.UTC(2012, 11, 17, 4, 0, 42);
