@@ -20,9 +20,11 @@ A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("
 - {{DOMxRef("ScreenOrientation.angle")}} {{ReadOnlyInline}}
   - : Returns the document's current orientation angle.
 
-### Event handlers
+## Events
 
-- {{DOMxRef("ScreenOrientation.onchange")}}
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
+
+- {{DOMxRef("ScreenOrientation.onchange", "change")}}
   - : The [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever the screen changes orientation.
 
 ## Instance methods
