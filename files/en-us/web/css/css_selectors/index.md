@@ -96,9 +96,9 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
 - [`:-webkit-` pseudo-classes](/en-US/docs/Web/CSS/WebKit_Extensions#pseudo-classes)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
 - [Class selector](/en-US/docs/Web/CSS/Class_selectors)
-- [ID selector](/en-US/docs/Web/CSS/ID_selectors)
-- [Type selector](/en-US/docs/Web/CSS/Type_selectors)
-- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+- [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
+- [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
+- [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
 
 ## Terms
 
