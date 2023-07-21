@@ -121,13 +121,9 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Explanation of the structure of CSS selectors and the terminologies introduced in the CSS selectors module, ranging from "simple selector" to "forgiving relative selector list".
 
-- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
-
-  - : Selects elements that have the given attribute, with optional substring values.
-
 - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
-  - : Pseudo-classes allow the selection of elements based on state information that is not contained in the document tree.
+  - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
 - [Learn: CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
