@@ -101,7 +101,7 @@ Selectors, whether used in CSS or JS, enable targeting HTML elements based on th
 - [Type selector](/en-US/docs/Web/CSS/Type_selectors)
 - [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
 
-## Definitions
+## Terms
 
 - {{glossary("Pseudo-class")}} glossary term
 - [Functional pseudo class](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
