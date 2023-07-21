@@ -15,7 +15,7 @@ picture-in-picture feature to users, or request it automatically.
 
 ## Value
 
-A boolean value that is `true` if the user agent should
+A boolean value that is `true` if the user agent should not
 suggest that feature to users.
 
 ## Specifications
