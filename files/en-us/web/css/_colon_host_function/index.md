@@ -13,6 +13,8 @@ The most obvious use of this is to put a class name only on certain custom eleme
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host_function.html", "tabbed-shorter")}}
+
 ```css
 /* Selects a shadow root host, only if it is
    matched by the selector argument */
