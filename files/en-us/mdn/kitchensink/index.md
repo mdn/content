@@ -1,6 +1,7 @@
 ---
 title: The MDN Content Kitchensink
 slug: MDN/Kitchensink
+page-type: guide
 browser-compat: html.elements.video
 ---
 

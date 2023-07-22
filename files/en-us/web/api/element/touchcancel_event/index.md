@@ -63,4 +63,4 @@ Code samples for those events are available on the dedicated page: [Touch events
 
 ## See also
 
-- This event on [`Document`](/en-US/docs/Web/API/Document) targets: [`touchcancel`](/en-US/docs/Web/API/Document/touchcancel_event)
+- This event on [`Document`](/en-US/docs/Web/API/Document) targets: [`touchcancel`](/en-US/docs/Web/API/Element/touchcancel_event)

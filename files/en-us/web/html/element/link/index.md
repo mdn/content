@@ -30,7 +30,7 @@ There are a number of other icon `rel` values, mainly used to indicate special i
 
 ```html
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="114x114"
   href="apple-icon-114.png"
   type="image/png" />
@@ -323,19 +323,13 @@ You can include links to several icons on the same page, and the browser will ch
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="favicon144.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="114x114"
-  href="favicon114.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
+<link rel="apple-touch-icon" href="favicon57.png" />
 <!-- basic favicon -->
 <link rel="icon" href="favicon32.png" />
 ```

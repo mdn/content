@@ -72,4 +72,4 @@ svg|a {
 
 ## See also
 
-- [Namespaces crash course](/en-US/docs/Web/SVG/Namespaces_crash_course)
+- [Namespaces crash course](/en-US/docs/Web/SVG/Namespaces_Crash_Course)

@@ -8,12 +8,11 @@ browser-compat: javascript.builtins.Atomics.wait
 {{JSRef}}
 
 The **`Atomics.wait()`** static
-method verifies that a given position in an {{jsxref("Int32Array")}} still contains a
+method verifies that a shared memory location still contains a
 given value and if so sleeps, awaiting a wake-up notification or times out. It returns a string which
 is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
-> **Note:** This operation only works with a shared
-> {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} and may not be allowed on the main thread.
+> **Note:** This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}, and may not be allowed on the main thread.
 > For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
 
 ## Syntax
@@ -26,7 +25,7 @@ Atomics.wait(typedArray, index, value, timeout)
 ### Parameters
 
 - `typedArray`
-  - : A shared {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
+  - : An {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 - `index`
   - : The position in the `typedArray` to wait on.
 - `value`
@@ -41,7 +40,9 @@ A string which is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `typedArray` is not a shared {{jsxref("Int32Array")}}.
+  - : Thrown in one of the following cases:
+    - If `typedArray` is not an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+    - If the current thread cannot be blocked (for example, because it's the main thread).
 - {{jsxref("RangeError")}}
   - : Thrown if `index` is out of bounds in the `typedArray`.
 

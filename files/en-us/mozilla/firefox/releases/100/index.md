@@ -34,7 +34,7 @@ No notable changes.
 
 #### DOM
 
-- Code can now use the static method [`AbortSignal.timeout()`](/en-US/docs/Web/API/AbortSignal/timeout).
+- Code can now use the static method [`AbortSignal.timeout()`](/en-US/docs/Web/API/AbortSignal/timeout_static).
   This returns an {{domxref("AbortSignal")}} that can be used to automatically abort an operation with `TimeoutError` after a specified time ([Firefox bug 1753309](https://bugzil.la/1753309)).
 
 ### WebAssembly

@@ -120,7 +120,7 @@ The value of `view-transition-name` can be anything you want except for `none` â
 
 ### Customizing your animations
 
-The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) applied (which are detailed in their [reference pages](#css_additions)). You can modify the default cross-fade in any way you want using regular CSS.
+The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](#css_additions)). You can modify the default cross-fade in any way you want using regular CSS.
 
 For example, to change the speed of it:
 

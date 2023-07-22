@@ -17,7 +17,7 @@ There are two types of underlying source:
 - **Push sources** constantly push data at you when you've accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/[Web sockets](/en-US/docs/Web/API/WebSockets_API).
 - **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a [Fetch](/en-US/docs/Web/API/Fetch_API) or [XHR](/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest) call.
 
-The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
+The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
 
 ![Readable streams data flow](readable_streams.png)
 

@@ -1,6 +1,7 @@
 ---
 title: Firefox 3.5 for developers
 slug: Mozilla/Firefox/Releases/3.5
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -58,7 +59,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : These new CSS features were added to facilitate theming.
 - New values for `-moz-appearance`
   - : The `-moz-win-glass` and `-moz-mac-unified-toolbar` values have been added to `-moz-appearance`.
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Firefox 3.5 supports CSS transforms. See {{ cssxref("transform", "-moz-transform") }} and {{ cssxref("transform-origin", "-moz-transform-origin") }} for details.
 - {{ cssxref(":nth-child") }}
 
@@ -104,7 +105,7 @@ slug: Mozilla/Firefox/Releases/3.5
 - Using native JSON
   - : Firefox 3.5 has native support for [JSON](/en-US/docs/Glossary/JSON).
 - New trim methods on the String object
-  - : The [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) object now has [`trim()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim), [`trimLeft()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart), and [`trimRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd) methods.
+  - : The [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) object now has [`trim()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim), [`trimLeft()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart), and [`trimRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd) methods.
 
 #### Networking
 
