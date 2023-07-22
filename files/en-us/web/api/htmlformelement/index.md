@@ -73,7 +73,7 @@ Listen to these events using `addEventListener()`, or by assigning an event list
 
 ### Obtaining a form element object
 
-To obtain an `HTMLFormElement` object, you can use a [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors) with {{domxref("Document.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.
+To obtain an `HTMLFormElement` object, you can use a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors) with {{domxref("Document.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.
 
 {{domxref("Document.forms")}} returns an array of `HTMLFormElement` objects listing each of the forms on the page. You can then use any of the following syntaxes to get an individual form:
 
