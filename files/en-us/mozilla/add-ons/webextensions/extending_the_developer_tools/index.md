@@ -6,8 +6,6 @@ page-type: guide
 
 {{AddonSidebar}}
 
-> **Note:** This page describes devtools APIs as they exist in Firefox 55. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/mv3/devtools/), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](#limitations_of_the_devtools_apis).
-
 You can use WebExtensions APIs to extend the browser's built-in developer tools. To create a devtools extension, include the "[devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" key in [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json):
 
 ```json
@@ -120,18 +118,6 @@ If you need to exchange messages between the content scripts running in the targ
 ## Limitations of the devtools APIs
 
 These APIs are based on the Chrome devtools APIs, but many features are still missing, compared with Chrome. This section lists the features that are still not implemented, as of Firefox 54. Note that the devtools APIs are under active development and we expect to add support for most of them in future releases.
-
-### devtools.inspectedWindow
-
-The following are not supported:
-
-- `inspectedWindow.getResources()`
-- `inspectedWindow.onResourceAdded`
-- `inspectedWindow.onResourceContentCommitted`
-
-None of the options to `inspectedWindow.eval()` are supported.
-
-Scripts injected using `inspectedWindow.eval()` can't use all the Console's command-line helper functions, but `$0` and `inspect()` are both supported (starting from Firefox 55).
 
 ### devtools.panels
 
