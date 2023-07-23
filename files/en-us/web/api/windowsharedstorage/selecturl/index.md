@@ -1,0 +1,107 @@
+---
+title: "WindowSharedStorage: selectURL() method"
+short-title: selectURL()
+slug: Web/API/WindowSharedStorage/selectURL
+page-type: web-api-instance-method
+status:
+  - experimental
+browser-compat: api.WindowSharedStorage.selectURL
+---
+
+{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+
+The **`selectURL()`** method of the
+{{domxref("WindowSharedStorage")}} interface executes a select URL operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
+
+> **Note:** The **Select URL** output gate is used to select a URL from a provided list to display to the user, based on shared storage data.
+
+## Syntax
+
+```js-nolint
+selectURL(name, urls)
+selectURL(name, urls, options)
+```
+
+### Parameters
+
+- `name`
+  - : A string representing the name of the operation registered inside the shared storage worklet module that is to be run. This must match the name given to the operation when it is registered with {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
+- `urls`
+  - : An array of objects representing the URLs to be chosen between by the select URL operation. Each object contains two properties:
+    - `url`
+      - : A string representing the URL.
+    - `reportingMetadata` {{optional_inline}}
+      - : An object containing properties with names equal to event types, and values equal to URLs where reporting destinations are located, for example, `"click" : "my-reports/report1.html"`. These act as destinations for reports submitted with a destination type of `"shared-storage-select-url"`, for example via a {{domxref("Fence.reportEvent()")}} or {{domxref("Fence.setReportEventDataForAutomaticBeacons()")}} method call.
+- `options` {{optional_inline}}
+  - : An options object, which can contain the following properties:
+    - `data` {{optional_inline}}
+      - : An object representing any data required for executing the operation.
+    - `keepAlive` {{optional_inline}}
+      - : A boolean value. If set to `true`, the {{domxref("SharedStorageWorkletGlobalScope")}} of the associated worklet is kept alive, and the operation can be run multiple times. The default value, `false`, means that the {{domxref("SharedStorageWorkletGlobalScope")}} is terminated after the operation is run. In such cases, to use the worklet module again it would have to be re-added using {{domxref("Worklet.addModule", "addModule()")}}.
+    - `resolveToConfig` {{optional_inline}}
+      - : A boolean value. If set to `true`, the fulfillment value of the {{jsxref("Promise")}} returned by `run()` will be a {{domxref("FencedFrameConfig")}} object that can be used to load content into a {{htmlelement("fencedframe")}} via its `config` attribute. The default value, `false`, means that the fulfillment value will be a URL that can be used to embed content into an {{htmlelement("iframe")}}.
+
+### Return value
+
+A {{jsxref("Promise")}} that fulfills with a {{domxref("FencedFrameConfig")}} object or a string representing a URL, depending on the value of the `resolveToConfig` option.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if:
+    - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}
+    - `urls` is empty or exceeds the maximum allowed length (which is browser-specific).
+    - An object inside `urls` contains no `url` property.
+    - The operation failed for some other reason.
+
+## Examples
+
+### Basic A/B testing example
+
+```js
+// Randomly assigns a user to a group 0 or 1
+function getExperimentGroup() {
+  return Math.round(Math.random());
+}
+
+async function injectContent() {
+  // Add the module to the shared storage worklet
+  await window.sharedStorage.worklet.addModule("ab-testing-worklet.js");
+
+  // Assign user to a random group (0 or 1) and store it in shared storage
+  window.sharedStorage.set("ab-testing-group", getExperimentGroup(), {
+    ignoreIfPresent: true,
+  });
+
+  // Run the URL selection operation
+  const fencedFrameConfig = await window.sharedStorage.selectURL(
+    "ab-testing",
+    [
+      { url: `https://your-server.example/content/default-content.html` },
+      { url: `https://your-server.example/content/experiment-content-a.html` },
+    ],
+    {
+      resolveToConfig: true,
+    },
+  );
+
+  // Render the chosen URL into a fenced frame
+  document.getElementById("content-slot").config = fencedFrameConfig;
+}
+
+injectContent();
+```
+
+See the [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API) landing page for a walkthrough of this example, and links to other examples.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Shared Storage API](/en-US/docs/Web/API/Shared_storage_API)

@@ -62,6 +62,17 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
         >
       </td>
     </tr>
+    <tr>
+      <td>{{domxref("SharedStorageWorklet")}}</td>
+      <td>For running private operations on cross-site data, without risk of data leakage.</td>
+      <td>Main thread</td>
+      <td>
+        <a
+          href="https://wicg.github.io/shared-storage/"
+          >Shared Storage API</a
+        >
+      </td>
+    </tr>
   </tbody>
 </table>
 

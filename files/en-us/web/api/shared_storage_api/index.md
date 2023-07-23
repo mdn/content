@@ -39,13 +39,13 @@ The **Select URL** output gate (via the {{domxref("WindowSharedStorage.selectURL
 
 #### Run
 
-The **Run** output gate is intended as a generic way to process some shared storage data.
+The **Run** output gate (via the {{domxref("WindowSharedStorage.run", "run()")}} method) is intended as a generic way to process some shared storage data.
 
 The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) can use the Run output gate to process shared storage data and generate aggregated reports. These can be used for the following use cases:
 
 - [**Unique reach reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/unique-reach/): Content producers and advertisers often want to know how many unique people saw their content. You can use shared storage to report on the first time a user saw your ad or embedded publication, and prevent duplicative counting of that same user on a different site, giving you an aggregated noisy report of your approximate unique reach.
 - [**User demographic reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/user-demographics/): Content producers often want to understand the demographics of their audience. You can use shared storage to record user demographic data on your main site, and use aggregated reporting to report on it across other sites, in embedded contexts.
-- [**K+ frequency measurement**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/k-freq-reach/): Sometimes described as "effective frequency", K frequency refers to the minimum number of views before a user will recognize or recall certain content (often used in the context of ad views). You can use shared storage to build reports of unique users that have seen a piece of content at least K times.
+- [**K+ frequency measurement**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/k-freq-reach/): Sometimes described as "effective frequency", K+ frequency refers to the minimum number of views before a user will recognize or recall certain content (often used in the context of ad views). You can use shared storage to build reports of unique users that have seen a piece of content at least K times.
 
 ## How does shared storage work?
 
@@ -80,7 +80,7 @@ async function injectContent() {
 
 ### Reading and processing data from shared storage
 
-As mentioned above, to extract useful results from a shared storage worklet you need to use an **output gate**. In this example we'll use the Select URL output gate to read the user's experiment group and then load a URL in a fenced frame based on their group.
+As mentioned above, to extract useful results from a shared storage worklet you need to use an **output gate**. In this example, we'll use the Select URL output gate to read the user's experiment group and then load a URL in a fenced frame based on their group.
 
 To use the output gate, you need to:
 
@@ -88,7 +88,7 @@ To use the output gate, you need to:
 - Add the module to your shared storage worklet.
 - Choose the URL using the worklet operation and load it in a fenced frame.
 
-Let's look at these one by one.
+Below we'll look at these steps one by one.
 
 #### Define an operation in a worklet
 
@@ -201,15 +201,15 @@ injectContent();
 ## Interfaces
 
 - {{domxref("SharedStorage")}}
-  - : Represents the shared storage for a particular origin. Defines methods to write data to the shared storage.
+  - : Represents the shared storage for a particular origin. It defines methods to write data to the shared storage.
 - {{domxref("WindowSharedStorage")}}
-  - : Represents the shared storage for a particular origin, as it is exposed to a standard browsing context. Among others, defines methods to use the available output gates, which act as proxies for the operations defined in the worklet.
+  - : Represents the shared storage for a particular origin, as it is exposed to a standard browsing context. Among other things, it defines methods to use the available output gates, which act as proxies for the operations defined in the worklet.
 - {{domxref("WorkletSharedStorage")}}
-  - : Represents the shared storage for a particular origin, as it is exposed to a worklet context. Among others, defines methods to read the shared storage data.
+  - : Represents the shared storage for a particular origin, as it is exposed to a worklet context. Among other things, it defines methods to read the shared storage data.
 - {{domxref("SharedStorageWorklet")}}
-  - : Contains the {{domxref("Worklet.addModule", "addModule()")}} method used to add a module to the shared storage worklet. Unlike a regular {{domxref("Worklet")}}, `SharedStorageWorklet` can only have a single module added to it, for privacy reasons.
+  - : Represents the current origin's shared storage worklet. Contains the {{domxref("Worklet.addModule", "addModule()")}} method used to add a module to it. Unlike a regular {{domxref("Worklet")}}, `SharedStorageWorklet` can only have a single module added to it, for privacy reasons.
 - {{domxref("SharedStorageWorkletGlobalScope")}}
-  - : Represents the global scope of a {{domxref("SharedStorageWorklet")}} module. contains functionality to {{domxref("SharedStorageWorkletGlobalScope.register", "register", "", "nocode")}} a defined operation, and {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "access the shared storage", "", "nocode")}}.
+  - : Represents the global scope of a {{domxref("SharedStorageWorklet")}} module. Contains functionality to {{domxref("SharedStorageWorkletGlobalScope.register", "register", "", "nocode")}} a defined operation, and {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "access the shared storage", "", "nocode")}}.
 
 ### Output gate operation signature definitions
 
