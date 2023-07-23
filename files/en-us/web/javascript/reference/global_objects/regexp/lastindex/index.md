@@ -53,6 +53,45 @@ console.log(re.lastIndex);
 
 Returns `["", undefined]`, an empty array whose zeroth element is the match string. In this case, the empty string because `lastIndex` was 2 (and still is 2) and `hi` has length 2.
 
+### Setting lastIndex
+
+On a `RegExp` instance (initialized with the `g` flag) setting the `lastIndex` property allows you specify where to start the search.
+
+This can be useful when performing multiple searches through longer strings, without copying. (as opposed to e.g. `String.prototype.substring`)
+
+```js
+const re = /hey/g;
+
+re.lastIndex = 2;
+
+console.log(re.exec("yo hey"));
+```
+
+This will start the search at index 2 (the third character) and matches `"hey"`.
+
+Note that this will also update the `lastIndex` property, which would be `6` after performing this search.
+
+To avoid possible bugs from side-effects in your programs, wrapping `RegExp` in a pure function can be useful:
+
+```
+function createMatcher(pattern) {
+    const regex = new RegExp(pattern, 'g');
+
+    return function(input, offset) {
+        regex.lastIndex = offset;
+        return regex.exec(input);
+    };
+}
+```
+
+If we apply this function to our previous example, we get:
+
+```
+const matchHey = createMatcher(/hey/);
+
+console.log(matchHey("yo hey", 2));
+```
+
 ## Specifications
 
 {{Specifications}}
