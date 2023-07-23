@@ -46,7 +46,7 @@ const layerStatementRule = rules[0]; // A CSSLayerStatementRule
 const layerBlockRule = rules[1]; // A CSSLayerBlockRule; no nameList property.
 
 item.textContent = `@layer declares the following layers: ${layer.nameList.join(
-  ", "
+  ", ",
 )}.`;
 ```
 

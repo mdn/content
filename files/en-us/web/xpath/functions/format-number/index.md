@@ -1,6 +1,7 @@
 ---
 title: format-number
 slug: Web/XPath/Functions/format-number
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

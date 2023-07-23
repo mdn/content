@@ -39,7 +39,7 @@ In the below example a string containing the URL to an external resource is used
 
 ```js
 const escaped = escapeURLPolicy.createScriptURL(
-  "https://example.com/my-script.js"
+  "https://example.com/my-script.js",
 );
 ```
 

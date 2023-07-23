@@ -60,7 +60,7 @@ function previewFile() {
       // convert image file to base64 string
       preview.src = reader.result;
     },
-    false
+    false,
   );
 
   if (file) {
@@ -103,7 +103,7 @@ function previewFiles() {
           image.src = reader.result;
           preview.appendChild(image);
         },
-        false
+        false,
       );
 
       reader.readAsDataURL(file);

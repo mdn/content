@@ -193,6 +193,6 @@ This image shows what the output should look like, in case your browser's suppor
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS Logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
 - Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/writing-mode-vertical>

@@ -231,7 +231,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
        .pipe(
          autoprefixer({
            cascade: false,
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
    }
@@ -293,7 +293,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
        .pipe(
          babel({
            presets: ["@babel/env"],
-         })
+         }),
        )
        .pipe(gulp.dest("build"));
    }
@@ -601,7 +601,7 @@ function getSessionsInBuild(build) {
     { uri: `${baseUrl}builds/${buildId}/sessions.json` },
     (err, res, body) => {
       console.log(JSON.parse(body));
-    }
+    },
   );
   /* Response:
   [

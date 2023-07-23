@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The [Logical Properties and Values specification](https://drafts.csswg.org/css-logical/) contains logical mappings for the physical values of {{cssxref("float")}} and {{cssxref("clear")}}, and also for the positioning properties used with [positioned layout](/en-US/docs/Web/CSS/CSS_Positioning). This guide takes a look at how to use these.
+The [Logical Properties and Values specification](https://drafts.csswg.org/css-logical/) contains logical mappings for the physical values of {{cssxref("float")}} and {{cssxref("clear")}}, and also for the positioning properties used with [positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout). This guide takes a look at how to use these.
 
 ## Mapped properties and values
 

@@ -1,6 +1,7 @@
 ---
 title: "false"
 slug: Web/XPath/Functions/false
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

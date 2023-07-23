@@ -1,6 +1,7 @@
 ---
 title: "Square tilemaps implementation: Scrolling maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -64,7 +65,7 @@ for (let c = startCol; c <= endCol; c++) {
         Math.round(x), // target x
         Math.round(y), // target y
         map.tsize, // target width
-        map.tsize // target height
+        map.tsize, // target height
       );
     }
   }

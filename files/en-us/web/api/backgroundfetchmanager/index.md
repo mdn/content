@@ -43,7 +43,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
         },
       ],
       downloadTotal: 60 * 1024 * 1024,
-    }
+    },
   );
 });
 ```

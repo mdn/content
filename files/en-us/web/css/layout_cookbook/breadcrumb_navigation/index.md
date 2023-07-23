@@ -49,6 +49,6 @@ Beware that the arrows `→` added via `content` are also exposed to screen read
 
 ## See also
 
-- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
 - [Providing a Breadcrumb Trail](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Using the aria-current attribute](https://tink.uk/using-the-aria-current-attribute/)

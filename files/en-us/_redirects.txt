@@ -380,7 +380,7 @@
 /en-US/docs/CSS/:-moz-broken	/en-US/docs/Web/CSS/:-moz-broken
 /en-US/docs/CSS/:-moz-drag-over	/en-US/docs/Web/CSS/:-moz-drag-over
 /en-US/docs/CSS/:-moz-first-node	/en-US/docs/Web/CSS/:-moz-first-node
-/en-US/docs/CSS/:-moz-focusring	/en-US/docs/Web/CSS/:-moz-focusring
+/en-US/docs/CSS/:-moz-focusring	/en-US/docs/Web/CSS/:focus-visible
 /en-US/docs/CSS/:-moz-full-screen	/en-US/docs/Web/CSS/:fullscreen
 /en-US/docs/CSS/:-moz-handler-blocked	/en-US/docs/Web/CSS/:-moz-handler-blocked
 /en-US/docs/CSS/:-moz-handler-crashed	/en-US/docs/Web/CSS/:-moz-handler-crashed
@@ -2084,7 +2084,6 @@
 /en-US/docs/DOM/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/DOM/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/DOM/window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/DOM/window.applicationCache	/en-US/docs/Web/API/Window/applicationCache
 /en-US/docs/DOM/window.atob	/en-US/docs/Web/API/atob
 /en-US/docs/DOM/window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/DOM/window.blur	/en-US/docs/Web/API/Window/blur
@@ -2549,7 +2548,6 @@
 /en-US/docs/DOM:treeWalker.whatToShow	/en-US/docs/Web/API/TreeWalker/whatToShow
 /en-US/docs/DOM:window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/DOM:window.applicationCache	/en-US/docs/Web/API/Window/applicationCache
 /en-US/docs/DOM:window.atob	/en-US/docs/Web/API/atob
 /en-US/docs/DOM:window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/DOM:window.blur	/en-US/docs/Web/API/Window/blur
@@ -3268,7 +3266,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.URL	/en-US/docs/Web/API/URL
 /en-US/docs/Document_Object_Model_(DOM)/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/Document_Object_Model_(DOM)/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
-/en-US/docs/Document_Object_Model_(DOM)/window.applicationCache	/en-US/docs/Web/API/Window/applicationCache
 /en-US/docs/Document_Object_Model_(DOM)/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/Document_Object_Model_(DOM)/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
 /en-US/docs/Document_Object_Model_(DOM)/window.clearInterval	/en-US/docs/Web/API/clearInterval
@@ -5758,7 +5755,6 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Popups	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_the_Add-on_SDK	https://extensionworkshop.com/documentation/develop/comparison-with-the-add-on-sdk/
-/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisities	/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Promoting_your_extension_or_theme	https://extensionworkshop.com/documentation/publish/promoting-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Retiring_your_extension	https://extensionworkshop.com/documentation/manage/retiring-your-extension/
@@ -10244,7 +10240,7 @@
 /en-US/docs/Web/API/WorkerConsole.info()	/en-US/docs/Web/API/console/info
 /en-US/docs/Web/API/WorkerConsole.log	/en-US/docs/Web/API/console/log
 /en-US/docs/Web/API/WorkerGlobalScope.close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
-/en-US/docs/Web/API/WorkerGlobalScope.console	/en-US/docs/Web/API/WorkerGlobalScope/console
+/en-US/docs/Web/API/WorkerGlobalScope.console	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/WorkerGlobalScope.dump	/en-US/docs/Web/API/WorkerGlobalScope/dump
 /en-US/docs/Web/API/WorkerGlobalScope.importScripts	/en-US/docs/Web/API/WorkerGlobalScope/importScripts
 /en-US/docs/Web/API/WorkerGlobalScope.location	/en-US/docs/Web/API/WorkerGlobalScope/location
@@ -10263,6 +10259,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
+/en-US/docs/Web/API/WorkerGlobalScope/console	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/WorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/WorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/WorkerGlobalScope/onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
@@ -10694,7 +10691,6 @@
 /en-US/docs/Web/API/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/Web/API/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/Web/API/window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/Web/API/window.applicationCache	/en-US/docs/Web/API/Window/applicationCache
 /en-US/docs/Web/API/window.atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/Web/API/window.blur	/en-US/docs/Web/API/Window/blur
@@ -11254,6 +11250,7 @@
 /en-US/docs/Web/CSS/-webkit-user-select	/en-US/docs/Web/CSS/user-select
 /en-US/docs/Web/CSS/:-moz-any	/en-US/docs/Web/CSS/:is
 /en-US/docs/Web/CSS/:-moz-any-link	/en-US/docs/Web/CSS/:any-link
+/en-US/docs/Web/CSS/:-moz-focusring	/en-US/docs/Web/CSS/:focus-visible
 /en-US/docs/Web/CSS/:-moz-full-screen	/en-US/docs/Web/CSS/:fullscreen
 /en-US/docs/Web/CSS/:-moz-list-bullet	/en-US/docs/Web/CSS/::-moz-list-bullet
 /en-US/docs/Web/CSS/:-moz-list-number	/en-US/docs/Web/CSS/::-moz-list-number

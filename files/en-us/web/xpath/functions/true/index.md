@@ -1,6 +1,7 @@
 ---
 title: "true"
 slug: Web/XPath/Functions/true
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: HTML table advanced features and accessibility
 slug: Learn/HTML/Tables/Advanced
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
@@ -101,7 +102,7 @@ Let's put these new elements into action.
 Your finished table should look something like the following:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

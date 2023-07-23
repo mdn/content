@@ -1,6 +1,7 @@
 ---
 title: key
 slug: Web/XPath/Functions/key
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

@@ -273,7 +273,7 @@ video.addEventListener(
   () => {
     changeButtonState("playpause");
   },
-  false
+  false,
 );
 
 video.addEventListener(
@@ -281,7 +281,7 @@ video.addEventListener(
   () => {
     changeButtonState("playpause");
   },
-  false
+  false,
 );
 
 stop.addEventListener("click", (e) => {
@@ -346,7 +346,7 @@ video.addEventListener(
   () => {
     checkVolume();
   },
-  false
+  false,
 );
 ```
 

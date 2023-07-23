@@ -28,7 +28,7 @@ To start developing with PlayCanvas, you don't need much. You should start off b
 Here's the HTML structure we will use.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />

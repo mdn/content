@@ -319,7 +319,7 @@ class Server {
 ### client.html
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <style>
     textarea {

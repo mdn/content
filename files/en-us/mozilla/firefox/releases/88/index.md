@@ -51,7 +51,7 @@ _No changes._
 
 #### DOM
 
-- Code can now use the new static method [`AbortSignal.abort()`](/en-US/docs/Web/API/AbortSignal/abort) to return an {{domxref("AbortSignal")}} that is already set as [`aborted`](/en-US/docs/Web/API/AbortSignal/aborted) ([Firefox bug 1698468](https://bugzil.la/1698468)).
+- Code can now use the new static method [`AbortSignal.abort()`](/en-US/docs/Web/API/AbortSignal/abort_static) to return an {{domxref("AbortSignal")}} that is already set as [`aborted`](/en-US/docs/Web/API/AbortSignal/aborted) ([Firefox bug 1698468](https://bugzil.la/1698468)).
 
 ### WebDriver conformance (Marionette)
 
