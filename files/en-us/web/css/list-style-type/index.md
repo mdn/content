@@ -171,6 +171,8 @@ Note that:
 - `disclosure-closed`
   - : Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.
 
+Details of all the avilable counter styles can be found in [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) document.
+
 ### Non-standard extensions
 
 A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers support which extension.
@@ -706,3 +708,4 @@ container.addEventListener("change", (event) => {
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- [Counter styles converter](https://r12a.github.io/app-counters/)
