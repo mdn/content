@@ -22,6 +22,7 @@ The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web
   // …
 })();
 ```
+The IIFE syntax involves wrapping the function in parentheses and immediately invoking it with an additional set of parentheses. This structure ensures that the function is treated as an expression, and the final pair of parentheses triggers its immediate execution.
 
 It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:
 
@@ -151,6 +152,14 @@ console.log(i); // Uncaught ReferenceError: i is not defined.
 ```
 
 When clicked, these buttons alert 0 and 1.
+
+##Benefits of IIFE
+
+Encapsulation: Variables and functions defined within the IIFE are local to the function's scope, preventing unintentional global variable declarations.
+
+Minimization of Global Scope: By enclosing code within an IIFE, you limit its accessibility to the rest of the application, reducing the risk of naming collisions.
+
+Initialization: IIFEs are often used to initialize scripts and set up configurations before the main application starts running.
 
 ## See also
 
