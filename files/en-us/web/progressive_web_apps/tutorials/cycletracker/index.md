@@ -32,7 +32,7 @@ Using the languages of the web, we will create a fully functioning application t
 
 - Easy for the user to install
 
-  - : Historically, downloaded single-OS-only applications have to be intentionally installed by the user. Depending on the OS, install format, and download origin, this can be a multi-step installation process. PWAs are streamlined. PWAs are available to anyone with a supporting browser, [installable](/en-US/docs/Web/Progressive_web_apps/Guides/Installing) with a couple of clicks.
+  - : Historically, downloaded single-OS-only applications have to be intentionally installed by the user. Depending on the OS, install format, and download origin, this can be a multi-step installation process. PWAs are streamlined. PWAs are available to anyone with a supporting browser, and are [installable](/en-US/docs/Web/Progressive_web_apps/Guides/Installing) with a couple of clicks.
 
 ### Compared to OS-installed software applications
 
