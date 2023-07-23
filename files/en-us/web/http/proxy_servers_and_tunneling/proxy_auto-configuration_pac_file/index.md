@@ -246,8 +246,8 @@ function alertEval(str) {
   alert(`${str} is ${eval(str)}`);
 }
 function FindProxyForURL(url, host) {
-  alertEval('isInNet(host, "63.245.213.24", "255.255.255.255")');
-  // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
+  alertEval('isInNet(host, "192.0.2.172", "255.255.255.255")');
+  // "PAC-alert: isInNet(host, "192.0.2.172", "255.255.255.255") is true"
 }
 ```
 
@@ -288,7 +288,7 @@ Concatenates the four dot-separated bytes into one 4-byte word and converts it t
 #### Example
 
 ```js
-convert_addr("104.16.41.2"); // returns the decimal number 1745889538
+convert_addr("192.0.2.172"); // returns the decimal number 1745889538
 ```
 
 ### myIpAddress()
@@ -615,7 +615,7 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0")) {
+  if (isInNet(host, "192.0.2.172", "255.255.0.0")) {
     return "DIRECT";
   }
   return "PROXY proxy.mydomain.com:8080";
@@ -629,7 +629,7 @@ function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
-    isInNet(host, "198.95.0.0", "255.255.0.0")
+    isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
   } else {
