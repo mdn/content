@@ -66,7 +66,7 @@ The steps include:
 
 - [JavaScript and LocalStorage](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)
 
-  - : Full explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA, using `localStorage` to store period information.
+  - : Full explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA, using [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store period information.
 
 - [Manifest: identity, appearance, and iconography](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)
 
