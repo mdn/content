@@ -52,7 +52,7 @@ Once installed, PWAs can be made to appear and act similarly to other applicatio
 
 ## CycleTracker PWA lessons
 
-The base web application for this PWA tutorial is a period tracker, in which the user can track the beginning and end of each menstrual cycles. We'll create a static website shell and style it, then learn how to create a secure connection to view our progress. We'll add JavaScript functionality converting the HTML and CSS shell into a fully functioning application storing data in localStorage. Using this fully functional web application you built, we will progressively enhance this web app into an offline capable PWA by adding a manifest file, including iconography, and a service worker.
+The base web application for this PWA tutorial is a period tracker, in which the user can track the beginning and end of each menstrual cycle. We'll create a static website shell and style it, then learn how to create a secure connection to view our progress. We'll add JavaScript functionality converting the HTML and CSS shell into a fully functioning application storing data in localStorage. Using this fully functional web application you built, we will progressively enhance this web app into an offline capable PWA by adding a manifest file, including iconography, and a service worker.
 
 The steps include:
 
