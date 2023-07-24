@@ -120,7 +120,7 @@ The required styles are those necessary to handle the three states of our contro
 ```css
 .select {
   /* This will create a positioning context for the list of options;
-     adding this to .select{{cssxref(':focus-within')}} will be a better option when fully supported
+     adding this to ".select:focus-within" will be a better option when fully supported
   */
   position: relative;
 
@@ -136,7 +136,7 @@ We need an extra class `active` to define the look and feel of our control when 
 .select:focus {
   outline: none;
 
-  /* This {{cssxref('box-shadow')}} property is not exactly required, however it's imperative to ensure
+  /* This box-shadow property is not exactly required, however it's imperative to ensure
      active state is visible, especially to keyboard users, that we use it as a default value. */
   box-shadow: 0 0 3px 1px #227755;
 }
@@ -176,7 +176,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 ```css
 .select {
   /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
-     If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
+     If you are lost with px to em conversion, try https://nekocalc.com/px-to-em-converter */
   font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family: Verdana, Arial, sans-serif;
 
@@ -661,7 +661,7 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
 - The script is buggy: You should always consider this possibility.
 - The script conflicts with a third-party script: This can happen with tracking scripts or any bookmarklets the user uses.
-- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
+- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) extension).
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
@@ -704,7 +704,7 @@ Second, we need two new classes to let us hide the unneeded element: we visually
 .widget select,
 .no-widget .select {
   /* This CSS selector basically says:
-     - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
+     - either we have set the body class to "widget" and thus we hide the actual <select> element
      - or we have not changed the body class, therefore the body class is still "no-widget",
        so the elements whose class is "select" must be hidden */
   position: absolute;
