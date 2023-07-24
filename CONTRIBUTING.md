@@ -223,7 +223,7 @@ To ensure that all MDN documents follow the same formatting, we use both [Pretti
 
 If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
 
-> **Note:** Unfortunately, at this time, contributors using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes) will not be able to run linting tools from the web browser. We are working on a solution.
+> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels) for help.
 
 ### Adding a new document
 
