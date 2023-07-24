@@ -21,8 +21,6 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 - {{CSSXref("::grammar-error")}}
 - {{CSSXref("::marker")}}
 - {{CSSXref("::placeholder")}}
-- {{CSSXref("::postfix")}}
-- {{CSSXref("::prefix")}}
 - {{CSSXref("::selection")}}
 - {{CSSXref("::spelling-error")}}
 - {{CSSXref("::target-text")}}
@@ -45,11 +43,11 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 
 - [Building block: pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
 
-  - : Part of CSS building blocks section on selectors, defines what a pseudo-element is, how it can be combined with pseudo-classes and generating content with `::before` and `::after`
+  - : Part of CSS building blocks section on selectors, defines what a pseudo-element is, how it can be combined with pseudo-classes and gnerating content with `::before` and `::after`.
 
-- [How to: Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
+- [How to: Create fancy boxes](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes#pseudo-elements)
 
-  - : foo
+  - : Example of styling generated content on `::before` and `::after` pseudo-elements for visual effects.
 
 ## Related concepts
 
@@ -72,8 +70,6 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 
   - {{CSSXref("::part")}}
 
-- CSS {{cssxref("content")}} property
-
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
 
   - [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
@@ -86,6 +82,11 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 
 - [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute
 - [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) selector
+
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
+
+  - CSS {{cssxref("content")}} property
+  - CSS {{cssxref("quotes")}} property
 
 - [Text fragments](/en-US/docs/Web/Text_fragments)
 
