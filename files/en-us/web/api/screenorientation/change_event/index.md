@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ScreenOrientation.change_event
 ---
 
-{{securecontext_header}}{{APIRef("Screen Orientation API")}}{{SeeCompatTable}}
+{{APIRef("Screen Orientation API")}}
 
 The **`change`** event of the {{domxref("ScreenOrientation")}} fires when the orientation of the screen has changed, for example when a user rotates his mobile phone.
 
