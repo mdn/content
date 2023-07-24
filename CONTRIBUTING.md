@@ -147,9 +147,9 @@ To fork and clone the repository:
 The previous sections describe how to get started using the GitHub UI to make small changes to a single file and how to create a fork and clone the repository to prepare for making larger changes.
 This section describes how to build the project locally and how to prepare your changes for submission.
 
-### Installing and running the project
+### Preparing the project
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed.
+To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn 1 (Classic)](https://classic.yarnpkg.com/) installed.
 You can check if these are installed by running the following commands:
 
 ```bash
@@ -157,12 +157,19 @@ node -v
 yarn -v
 ```
 
-After you have installed Node.js and Yarn, you can install the dependencies using `yarn` and start the local preview:
+After you have installed Node.js and Yarn, you can install the dependencies using `yarn`:
 
 ```bash
 # Assuming your fork is in ~/repos/content
 cd ~/repos/content
 yarn
+```
+
+### Running the project
+
+After you have installed all dependencies, you can start the local preview using `yarn start`:
+
+```bash
 yarn start
 ```
 
@@ -184,9 +191,7 @@ To edit files and track your changes, you should use feature branches.
 Feature branches are created from the `main` branch and should be named after the feature you're working on.
 This will make it easier to submit a pull request for your changes.
 
-> **Note**
-> Open a discussion if your changes will contain large, complex or structural changes.
-> Ask for feedback before embarking on large tasks.
+> **Note:** Open a discussion if your changes will contain large, complex or structural changes. Ask for feedback before embarking on large tasks.
 
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
 
@@ -211,6 +216,14 @@ This will make it easier to submit a pull request for your changes.
    git push
    # or "git push --set-upstream origin fix-typo" if you haven't pushed this branch before
    ```
+
+#### Linting edited files
+
+To ensure that all MDN documents follow the same formatting, we use both [Prettier](https://www.prettier.io) and [Markdownlint](https://github.com/DavidAnson/markdownlint) to format and lint Markdown files. This helps us enforce uniform styling across all documents with minimal reviewer intervention.
+
+If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
+
+> **Note:** Unfortunately, at this time, contributors using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes) will not be able to run linting tools from the web browser. We are working on a solution.
 
 ### Adding a new document
 
