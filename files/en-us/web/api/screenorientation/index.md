@@ -24,7 +24,7 @@ A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{DOMxRef("ScreenOrientation.onchange", "change")}}
+- {{DOMxRef("ScreenOrientation.change_event", "change")}}
   - : The [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever the screen changes orientation.
 
 ## Instance methods
@@ -33,6 +33,18 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Locks the orientation of the containing document to its default orientation and returns a {{JSxRef("Promise")}}.
 - {{DOMxRef("ScreenOrientation.unlock()")}}
   - : Unlocks the orientation of the containing document from its default orientation.
+
+## Example
+
+In the following example, we listen for an {{DOMxRef("ScreenOrientation.change_event", "orientation change event")}} and log the new {{DOMxRef("ScreenOrientation.type", "screen orientation type")}} and {{DOMxRef("ScreenOrientation.angle")}}.
+
+```js
+screen.orientation.addEventListener("change", (event) => {
+  const type = event.target.type;
+  const angle = event.target.angle;
+  console.log(`ScreenOrientation change: ${type}, ${angle} degrees.`);
+});
+```
 
 ## Specifications
 
