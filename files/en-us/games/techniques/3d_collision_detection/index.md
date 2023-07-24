@@ -90,8 +90,8 @@ function isPointInsideSphere(point, sphere) {
   // we are using multiplications because is faster than calling Math.pow
   const distance = Math.sqrt(
     (point.x - sphere.x) * (point.x - sphere.x) +
-      (point.y - sphere.y) * (point.y - sphere.y) +
-      (point.z - sphere.z) * (point.z - sphere.z),
+    (point.y - sphere.y) * (point.y - sphere.y) +
+    (point.z - sphere.z) * (point.z - sphere.z)
   );
   return distance < sphere.radius;
 }
