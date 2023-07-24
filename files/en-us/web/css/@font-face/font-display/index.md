@@ -1,3 +1,4 @@
+![android-chrome-192x192](https://github.com/mdn/content/assets/136848019/81aa3a31-d1a8-42af-b34a-829d873a0010)
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
