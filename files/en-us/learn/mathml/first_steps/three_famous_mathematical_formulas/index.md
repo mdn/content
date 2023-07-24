@@ -35,7 +35,7 @@ The goal is to rewrite the following math article using HTML and MathML:
 
 Although you don't need to be familiar with [LaTeX](https://en.wikipedia.org/wiki/LaTeX), it might be useful to know the LaTeX source from which it was generated:
 
-```
+```latex
 \documentclass{article}
 
 \usepackage{amsmath}
