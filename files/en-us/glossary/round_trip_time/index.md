@@ -10,15 +10,15 @@ page-type: glossary-definition
 
 ```bash
 $ ping example.com
-PING example.com(2001:db8:220:1:248:1893:25c8:1946 (2001:db8:220:1:248:1893:25c8:1946)) 56 data bytes
-64 bytes from 2001:db8:220:1:248:1893:25c8:1946 (2001:db8:220:1:248:1893:25c8:1946): icmp_seq=1 ttl=52 time=85.4 ms
-64 bytes from 2001:db8:220:1:248:1893:25c8:1946 (2001:db8:220:1:248:1893:25c8:1946): icmp_seq=2 ttl=52 time=87.0 ms
-64 bytes from 2001:db8:220:1:248:1893:25c8:1946 (2001:db8:220:1:248:1893:25c8:1946): icmp_seq=3 ttl=52 time=86.7 ms
-64 bytes from 2001:db8:220:1:248:1893:25c8:1946 (2001:db8:220:1:248:1893:25c8:1946): icmp_seq=4 ttl=52 time=86.4 ms
-^C
---- example.com ping statistics ---
-4 packets transmitted, 4 received, 0% packet loss, time 3004ms
-rtt min/avg/max/mdev = 85.436/86.363/86.973/0.577 ms
+PING example.com (216.58.194.174): 56 data bytes
+64 bytes from 216.58.194.174: icmp_seq=0 ttl=55 time=25.050 ms
+64 bytes from 216.58.194.174: icmp_seq=1 ttl=55 time=23.781 ms
+64 bytes from 216.58.194.174: icmp_seq=2 ttl=55 time=24.287 ms
+64 bytes from 216.58.194.174: icmp_seq=3 ttl=55 time=34.904 ms
+64 bytes from 216.58.194.174: icmp_seq=4 ttl=55 time=26.119 ms
+--- google.com ping statistics ---
+5 packets transmitted, 5 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 23.781/26.828/34.904/4.114 ms
 ```
 
 In the above example, the average round trip time is shown on the final line as 26.8ms.
