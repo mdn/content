@@ -1,6 +1,6 @@
 ---
 title: Guidelines for writing CSS code examples
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_examples/CSS
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 page-type: mdn-writing-guide
 ---
 

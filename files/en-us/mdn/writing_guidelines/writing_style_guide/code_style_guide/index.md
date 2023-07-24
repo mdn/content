@@ -1,6 +1,6 @@
 ---
 title: Guidelines for writing code examples
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_examples
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 page-type: mdn-writing-guide
 ---
 
@@ -10,10 +10,10 @@ The guidelines described in this article apply to the styling and formatting of 
 
 For technology-specific guidelines, see the following articles:
 
-- [HTML guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples/HTML)
-- [CSS guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples/CSS)
-- [JavaScript guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples/JavaScript)
-- [Shell prompt guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples/Shell)
+- [HTML guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
+- [CSS guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
+- [JavaScript guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
+- [Shell prompt guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
 
 ## General best practices
 

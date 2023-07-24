@@ -18,7 +18,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
 - [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-  - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to [format code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_examples).
+  - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to [format code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 - [How to write for MDN Web Docs](/en-US/docs/MDN/Writing_guidelines/Howto)
 
