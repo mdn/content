@@ -47,11 +47,11 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
         For an a-line (attribute line) that looks like this:
 
         ```
-        a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
         ```
 
         the corresponding `candidate` string's value will be
-        `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
+        `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`.
 
         The {{Glossary("user agent")}} always prefers candidates with the highest {{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal.
         In the example above, the priority is `2043278322`. The attributes are all separated by a single space character, and are in a specific order.
@@ -61,7 +61,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
         - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
         - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
         - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
-        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.168.0.56"`
+        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
         - {{domxref("RTCIceCandidate.port", "port")}} = 44323
         - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
@@ -170,7 +170,7 @@ signalingChannel.onmessage = (receivedString) => {
   if (message.ice) {
     // A typical value of ice here might look something like this:
     //
-    // {candidate: "candidate:0 1 UDP 2122154243 192.168.1.9 53421 typ host", sdpMid: "0", …}
+    // {candidate: "candidate:0 1 UDP 2122154243 192.0.2.43 53421 typ host", sdpMid: "0", …}
     //
     // Pass the whole thing to addIceCandidate:
 

@@ -37,7 +37,7 @@ Here's an {{Glossary("SDP")}} attribute line (a-line) describing an ICE candidat
 discovered by the STUN server:
 
 ```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.168.2.77 rport 32768 generation 0
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 6502 typ srflx raddr 198.51.100.45 rport 32768 generation 0
 ```
 
 The remote port, `relatedPort`, is the number immediately following the `"rport"` label on the a-line, or 32768.
