@@ -31,7 +31,7 @@ Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
 candidate:
 
 ```plain
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 The port number is found in the sixth field, which is `"44323"`. In this case, the value of `port` will be 44323.

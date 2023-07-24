@@ -82,7 +82,7 @@ checkIAndJ: while (i < 4) {
 
 Output:
 
-```
+```plain
 i: 0
 
 // start checkj
