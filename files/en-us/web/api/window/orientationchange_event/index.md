@@ -14,7 +14,7 @@ The `orientationchange` event is fired when the orientation of the device has ch
 
 This event is not cancelable and does not bubble.
 
-This event is deprecated. Use {{domxref("ScreenOrientation.change_event", "screen.orientation.addEventListener('change', callback)")}} instead.
+This event is deprecated. Listen for the {{domxref("ScreenOrientation.change_event", "change")}} event of the {{domxref("ScreenOrientation")}} interface instead.
 
 ## Syntax
 
