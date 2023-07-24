@@ -24,14 +24,13 @@ select(number)
 
 ### Return value
 
-A string representing the pluralization category of the `number`, can be one
-of `zero`, `one`, `two`, `few`,
-`many` or `other`.
+A string representing the pluralization category of the `number`.
+This can be one of `zero`, `one`, `two`, `few`, `many` or `other`.
 
 ## Description
 
-This function selects a pluralization category according to the locale and formatting
-options of a {{jsxref("Intl.PluralRules")}} object.
+This function selects a pluralization category according to the locale and formatting options of a {{jsxref("Intl.PluralRules")}} object.
+These options are set in the [`PluralRules` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).
 
 ## Examples
 
