@@ -195,9 +195,9 @@ You will note that in the previous sections we use different commands to call Py
 If you only have Python 3 installed (and not Python 2), the bare commands `python` and `pip` can generally be used to run Python and pip on any operating system.
 If this is allowed on your system you will get a version "3" string when you run `-V` with the bare commands, as shown:
 
-```
+```bash
 > python -V
-  Python 3.10.2
+Python 3.10.2
 
 > pip -V
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)

@@ -170,7 +170,7 @@ For this site, we'll put our HTML pages in the **templates/registration/** direc
 
 > **Note:** Your folder structure should now look like the below:
 >
-> ```
+> ```plain
 > locallibrary/   # Django project folder
 >   catalog/
 >   locallibrary/

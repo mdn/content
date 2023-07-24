@@ -202,7 +202,7 @@ Your component's template section should now look like this:
 
 Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you'll see a warning along these lines in the console:
 
-```
+```plain
 [Vue warn]: Missing required prop: "label"
 
 found in
@@ -268,7 +268,7 @@ Vue does a little magic here — it binds all of your props directly to the comp
 
 So now we need to attach the `isDone` property to our component. In a similar fashion to how Vue uses `\{{}}` expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: **`v-bind`**. The `v-bind` expression looks like this:
 
-```
+```plain
 v-bind:attribute="expression"
 ```
 

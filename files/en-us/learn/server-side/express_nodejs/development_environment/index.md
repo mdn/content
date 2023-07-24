@@ -73,14 +73,14 @@ Here we use [nvm-windows](https://github.com/coreybutler/nvm-windows), which is 
 Install the latest version using your installer of choice from the [nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) page.
 After `nvm-windows` has installed, open a command prompt (or PowerShell) and enter the following command to download the most recent LTS version of nodejs and npm:
 
-```
+```bash
 nvm install lts
 ```
 
 At time of writing the LTS version of nodejs is 18.15.0.
 You can set this as the _current version_ to use with the command below:
 
-```
+```bash
 nvm use 18.15.0
 ```
 
@@ -96,7 +96,7 @@ See [nvm > Install & Update Script](https://github.com/nvm-sh/nvm#install--updat
 
 After `nvm` has installed, open a terminal enter the following command to download the most recent LTS version of nodejs and npm:
 
-```
+```bash
 nvm install --lts
 ```
 
@@ -104,7 +104,7 @@ At the time of writing, the LTS version of nodejs is 18.15.0.
 The command `nvm list` shows the downloaded set of version and the current version.
 You can set a particular version as the _current version_ with the command below (the same as for `npm-windows`)
 
-```
+```bash
 nvm use 18.15.0
 ```
 

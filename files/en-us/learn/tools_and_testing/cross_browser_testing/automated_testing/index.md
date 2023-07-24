@@ -423,7 +423,7 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `sauce-test` for example.
 2. Install the Node Sauce Labs wrapper using the following command:
 
-   ```
+   ```bash
    npm install saucelabs
    ```
 
@@ -729,7 +729,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `tb-test` for example.
 2. Install the Node TestingBot wrapper using the following command:
 
-   ```
+   ```bash
    npm install testingbot-api
    ```
 

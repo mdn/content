@@ -70,7 +70,7 @@ So far we've been running our app in development mode with `npm run dev`. As we 
 
 Your generated `bundle.js` and `bundle.css` files will be something like this (file size on the left):
 
-```
+```plain
   504 Jul 13 02:43 bundle.css
 95981 Jul 13 02:43 bundle.js
 ```
@@ -79,7 +79,7 @@ To compile our application for production we have to run `npm run build` instead
 
 So, after running `npm run build`, our generated `bundle.js` and `bundle.css` files will be more like this:
 
-```
+```plain
   504 Jul 13 02:43 bundle.css
 21782 Jul 13 02:43 bundle.js
 ```
@@ -231,7 +231,7 @@ Let's have a go at doing this now.
 
 1. Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
 
-   ```
+   ```yaml
    image: node:latest
    pages:
      stage: deploy
