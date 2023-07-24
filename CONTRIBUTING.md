@@ -149,7 +149,7 @@ This section describes how to build the project locally and how to prepare your 
 
 ### Preparing the project
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn 1 (Classic)](https://classic.yarnpkg.com/) installed.
+To serve the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn 1 (Classic)](https://classic.yarnpkg.com/) installed.
 You can check if these are installed by running the following commands:
 
 ```bash
