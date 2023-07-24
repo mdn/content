@@ -26,7 +26,7 @@ A generic {{domxref("Event")}}.
 
 ## Example
 
-In the following example, the `change` callback prints the new {{DOMxRef("ScreenOrientation.type", "screen orientation type", "", "nocode")}} and {{DOMxRef("ScreenOrientation.angle", "angle", "", "nocode")}}
+In the following example, the `change` callback prints the new {{DOMxRef("ScreenOrientation.type", "screen orientation type", "", "nocode")}} and {{DOMxRef("ScreenOrientation.angle", "angle", "", "nocode")}}.
 
 ```js
 screen.orientation.addEventListener("change", (event) => {
