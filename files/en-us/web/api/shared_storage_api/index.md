@@ -1,6 +1,6 @@
 ---
 title: Shared Storage API
-slug: Web/API/Shared_storage_API
+slug: Web/API/Shared_Storage_API
 page-type: web-api-overview
 status:
   - experimental
@@ -92,14 +92,14 @@ Below we'll look at these steps one by one.
 
 #### Define an operation in a worklet
 
-The URL will be chosen based on the experiment group stored in shared storage. To retrieve this value choose a URL based on it, we need to define an operation in a {{domxref("SharedStorageWorklet")}} context — it must be inside a worklet to keep the raw data hidden from other contexts and therefore preserve privacy.
+The URL will be chosen based on the experiment group stored in shared storage. To retrieve this value and choose a URL based on it, we need to define an operation in a {{domxref("SharedStorageWorklet")}} context — it must be inside a worklet to keep the raw data hidden from other contexts and therefore preserve privacy.
 
 The Select URL operation takes the form of a JavaScript class. It can be written in any way you like, as long as it follows certain rules (some of the rules for each output gate differ, depending on what kind of use case they fulfill):
 
 - The actual functionality must be contained inside an asynchronous `run()` method, which must have an array of objects containing URLs as its first paramater, and a data object as its second parameter (when called, the data argument is optional).
 - The `run()` method must return a number, which will equate to the number of the URL chosen.
 
-> **Note**: Each output gate has a corresponding interface that defines the required signature of its `run()` method. For example, for Select URL, see {{domxref("SharedStorageSelectURLOperation.run()")}}.
+> **Note:** Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For Select URL, see {{domxref("SharedStorageSelectURLOperation")}}.
 
 Once the operation is defined, it needs to be registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
 
@@ -118,11 +118,11 @@ class SelectURLOperation {
 register("ab-testing", SelectURLOperation);
 ```
 
-Note how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}} — to reiterate, you can only read values back out of shared storage inside a worklet.
+Note how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}}. To reiterate, to preserve privacy and mitigate data leakage you can only read values back out of shared storage inside a worklet.
 
 #### Add the worklet
 
-To make use of the operation defined in the worklet module, it needs to be added to the shared storage worklet using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. This is done in our main app context, before we set the experiment group value, so that it is ready to use when needed:
+To use the operation defined in the worklet module, it needs to be added to the shared storage worklet using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. This is done in our main app context, before we set the experiment group value, so that it is ready to use when needed:
 
 ```js
 async function injectContent() {
@@ -138,7 +138,7 @@ async function injectContent() {
 
 #### Choose a URL and load it in a fenced frame
 
-To run the operation defined in the worklet, we call {{domxref("WindowSharedStorage.selectURL()")}} — this acts as a proxy to our worklet operation, accessing it securely and returning the result without leaking any data. `selectURL()` is the correct method to call our user-defined worklet operation because it was defined with the appropriate `run()` method signature for a Select URL operation, as discussed above.
+To run the operation defined in the worklet, we call {{domxref("WindowSharedStorage.selectURL()")}} — this acts as a proxy to our worklet operation, accessing it securely and returning the result without leaking any data. `selectURL()` is the correct method to call our user-defined worklet operation because it was defined with the appropriate class structure for a Select URL operation, as discussed above.
 
 `selectURL()` expects an array of objects containing URLs to choose from, an optional options object, and for the underlying operation to return an integer that it can use to choose a URL.
 
@@ -197,6 +197,20 @@ async function injectContent() {
 
 injectContent();
 ```
+
+## How does shared storage differ from web storage?
+
+The key difference is that shared storage is intended for use with cross-origin data once storage has been partitioned.
+
+- If you are a publisher and you want to store first-party data that is accessible to you only, use the [`localStorage`](/en-US/docs/Web/API/Window/localStorage) version of [web storage](/en-US/docs/Web/API/Web_Storage_API).
+- If you want that data to persist only for that browser session, use [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage).
+- If you are operating as a third-party on another site, and you want to record data from that site for you to access later on another site, use shared storage.
+
+Another important difference between shared storage and web storage is that reading from shared storage is guarded (writing to storage behaves similarly). With `localStorage` and `sessionStorage`, you can read freely. With shared storage, reading can only happen inside a shared storage worklet, and the origin used for reading in the worklet is the same as the browsing context that created it.
+
+Also, you cannot extract shared storage data to the outside of a shared storage worklet (for tracking protection). You must use one of the output gates provided if you want to work with your data in shared storage.
+
+Last, data in `localStorage` persists until manually cleared (`sessionStorage` is cleared at the end of a browsing session). Shared storage data is cleared 30 days after the last write call.
 
 ## Interfaces
 

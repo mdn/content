@@ -32,6 +32,17 @@ These mechanisms are available via the {{domxref("Window.sessionStorage")}} and 
 
 > **Note:** Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection).
 
+## Determining storage access by a third-party
+
+Each origin has its own storage (this is the same for web storage and [shared storage](/en-US/docs/Web/API/Shared_Storage_API)), but what about third-party (i.e. embedded) code access to shared storage? The [browsing context](/en-US/docs/Glossary/Browsing_context) of where the third-party code from another origin is executed determines whose storage that third-party code can access.
+
+![A box diagram showing a top-level browsing context called publisher.com, with third-party content embedded in it](embedded-content.png)
+
+Third-party code can be added to another site by injecting it with a {{htmlelement("script")}} element, or navigating an {{htmlelement("iframe")}} to a site that contains it. If you are a third-party from another origin, how you are added to another site determines the browsing context of your code.
+
+- If your third-party code is added to another site with a `<script>` element, your code will be executed in the browsing context of the embedder. Therefore, when you call {{domxref("Storage.setItem()")}} or {{domxref("SharedStorage.set()")}}, the key/value pair will be written to the embedder's storage. From the browser's perspective, there is no difference between first-party code and third-party code when a `<script>` tag is used.
+- When your third-party code is added to another site within an `<iframe>`, the code inside the `<iframe>` will be executed with the origin of the `<iframe>`'s browsing context. When the code inside the `<iframe>` calls {{domxref("Storage.setItem()")}} or {{domxref("SharedStorage.set()")}}, the data will be written into the shared storage of the `<iframe>`'s origin.
+
 ## Web Storage interfaces
 
 - {{domxref("Storage")}}

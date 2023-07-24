@@ -20,7 +20,7 @@ The **`SharedStorageRunOperation`** interface of the {{domxref("Shared Storage A
 
 ## Examples
 
-In a worklet, a class called `ReachMeasurementOperation` is defined and registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}} with a name of `reach-measurement`. `SharedStorageRunOperation` defines the structure this class needs to conform to, which in real terms means the parameters the `run()` method is required to have.
+In a worklet, a class called `ReachMeasurementOperation` is defined and registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}} with a name of `reach-measurement`. `SharedStorageRunOperation` defines the structure this class needs to conform to, which in real terms means the parameters the `run()` method is required to have. Apart from that, the functionality of the class is flexible in terms of how it is defined.
 
 ```js
 // reach-measurement-worklet.js
