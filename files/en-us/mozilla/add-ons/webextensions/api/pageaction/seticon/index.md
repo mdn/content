@@ -39,8 +39,8 @@ let settingIcon = browser.pageAction.setIcon(
         let settingIcon = browser.action.setIcon({
           imageData: {
             16: image16,
-            32: image32
-          }
+            32: image32,
+          },
         });
         ```
 
@@ -56,8 +56,8 @@ let settingIcon = browser.pageAction.setIcon(
         let settingIcon = browser.action.setIcon({
           path: {
             16: "path/to/image16.jpg",
-            32: "path/to/image32.jpg"
-          }
+            32: "path/to/image32.jpg",
+          },
         });
         ```
 

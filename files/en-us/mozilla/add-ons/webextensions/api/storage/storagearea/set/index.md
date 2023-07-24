@@ -76,8 +76,7 @@ let kitten = {
 };
 
 // store the objects
-browser.storage.local.set({kitten, monster})
-  .then(setItem, onError);
+browser.storage.local.set({ kitten, monster }).then(setItem, onError);
 
 browser.storage.local.get("kitten").then(gotKitten, onError);
 browser.storage.local.get("monster").then(gotMonster, onError);

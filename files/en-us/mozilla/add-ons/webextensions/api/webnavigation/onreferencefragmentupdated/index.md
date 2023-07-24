@@ -83,7 +83,7 @@ function logOnReferenceFragmentUpdated(details) {
 
 browser.webNavigation.onReferenceFragmentUpdated.addListener(
   logOnReferenceFragmentUpdated,
-  filter
+  filter,
 );
 ```
 

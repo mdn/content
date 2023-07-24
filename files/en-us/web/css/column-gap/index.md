@@ -11,7 +11,7 @@ The **`column-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the ga
 
 {{EmbedInteractiveExample("pages/css/column-gap.html")}}
 
-Initially a part of [Multi-column Layout](/en-US/docs/Web/CSS/CSS_Columns), the definition of `column-gap` has been broadened to include multiple layout methods. Now specified in [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment), it may be used in Multi-column, Flexible Box, and Grid layouts.
+Initially a part of [Multi-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout), the definition of `column-gap` has been broadened to include multiple layout methods. Now specified in [Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment), it may be used in Multi-column, Flexible Box, and Grid layouts.
 
 Note that `grid-column-gap` is an alias for this property.
 
@@ -157,5 +157,5 @@ The `column-gap` property is specified as one of the values listed below.
 ## See also
 
 - Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
-- Multi-column Layout Guide: _[Styling Columns](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- Multi-column Layout Guide: _[Styling Columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_

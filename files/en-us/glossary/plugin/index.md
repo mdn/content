@@ -1,6 +1,7 @@
 ---
 title: Plugin
 slug: Glossary/Plugin
+page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}

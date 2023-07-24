@@ -38,6 +38,8 @@ exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
 ```
 
 The controller gets a list of all books (`allBooks`) and passes it via `book_list` to the view **`bookinstance_form.pug`** (along with a `title`).
+Note that no book has been selected when we first display this form, so we don't pass the `selected_book` variable to `render()`.
+Because of this, `selected_book` will have a value of `undefined` in the template.
 
 ## Controller—post route
 

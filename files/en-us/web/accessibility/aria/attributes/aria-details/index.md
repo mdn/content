@@ -46,7 +46,7 @@ When it comes to definition and term roles, the `aria-details` would be included
 </p>
 
 <a href="bezierExplanation.html" id="bezImg"
-  aria-label="Explanation of Bézier curve in CSS timing functions">
+  aria-label="Explanation of Bézier curve in CSS easing functions">
   <img alt="Animated Bézier curve showing 4 control points." src="bezier.gif">
 </a>
 ```
