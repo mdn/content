@@ -23,7 +23,7 @@ https://developer.mozilla.org/en-US/search?q=URL
 
 Any of those URLs can be typed into your browser's address bar to tell it to load the associated page (resource).
 
-A URL is composed of different parts, some mandatory and others are optional. A more complex example might look like this:
+A URL is composed of different parts, some mandatory and others optional. A more complex example might look like this:
 
 ```
 http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
