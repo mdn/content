@@ -12,7 +12,7 @@ for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_ac
 
 ## Message
 
-```
+```plain
 SyntaxError: missing name after . operator (Firefox)
 SyntaxError: Unexpected token '['. Expected a property name after '.'. (Safari)
 ```

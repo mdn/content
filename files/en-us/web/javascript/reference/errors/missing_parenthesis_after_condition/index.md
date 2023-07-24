@@ -13,7 +13,7 @@ condition is written. It must appear in parenthesis after the `if` keyword.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing ) after condition (Firefox)
 SyntaxError: Unexpected token '{'. Expected ')' to end an 'if' condition. (Safari)
 ```
