@@ -196,20 +196,15 @@ SVG makes use of a number of data types. This article lists these types along wi
 - \<length>
 
   - : A length is a distance measurement, given as a number along with a unit.
-    SVG follows the [CSS Values and Units Module](https://www.w3.org/TR/css-values-3/) for the definitions of common units and their meanings.
-    For example:
+    The SVG2 specification aligns with CSS [`<length>`](/en-US/docs/Web/CSS/length) data types and units for the attribute syntax and values.
+    A length unit identifier must be provided and the values of the length unit identifiers are case-insensitive.
+    The syntax follows the CSS `<length>` syntax:
 
     ```plain
     length ::= <number> (<absolute-length> | <relative-length>)?
     ```
 
-    For more details, see the CSS [`<length>`](/en-US/docs/Web/CSS/length) data type.
-
-    For properties defined in CSS Values and Units, a length unit identifier must be provided.
-
-    For properties that are SVG-specific and their corresponding presentation attributes, the length unit identifiers in length values are optional. If not provided, the length value represents a distance in the current user coordinate system. In presentation attributes for all properties, whether defined in SVG or in CSS, the length identifier, if specified, must be in lower case.
-
-    When used in an SVG attribute, the unit identifiers in length values must be in lower case.
+    For SVG-specific properties defined in SVG1.1 and their corresponding presentation attributes, the unit identifiers in values are optional. If not provided, the length value represents a distance in the current user coordinate system. Length identifiers must be in lower case when used in presentation attributes for all properties whether they are defined in SVG or in CSS. This case sensitivity is relaxed in SVG2 to align with CSS.
 
     Note that the non-property \<length> definition also allows a percentage (`%`) unit identifier.
     The meaning of a percentage length value depends on the attribute for which the percentage length value has been specified. Two common cases are:
