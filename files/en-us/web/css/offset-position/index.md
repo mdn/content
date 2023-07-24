@@ -68,7 +68,7 @@ offset-position: unset;
 
 ### Setting initial offset-position for an offset-path
 
-In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("path")}} CSS function is a SVG path data that describes a curved path. The element moves along this curved path during the `move` animation.
+In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("path")}} CSS function is an [SVG data path](/en-US/docs/Web/SVG/Attribute/d) that describes a curved path. The element moves along this curved path during the `move` animation.
 
 #### HTML
 
@@ -96,16 +96,13 @@ In this example, the {{cssxref("offset-path")}} property is used to define the p
   width: 40px;
   height: 40px;
   background: cyan;
-  position: absolute;
-  left: 20px;
-  top: 20px;
 }
 
 @keyframes move {
-  0% {
+  0%,20% {
     offset-distance: 0%;
   }
-  100% {
+  80%,100% {
     offset-distance: 100%;
   }
 }
@@ -121,51 +118,65 @@ This example visually compares the initial offset starting position of an elemen
 
 ```html hidden
 <div class="wrap">
-  <div class="box">+</div>
-  <div class="box box0">+</div>
+  <div class="box">0</div>
+  <div class="box box0">0</div>
+  <pre>
+    offset-position: normal;
+  </pre>
 </div>
 
 <div class="wrap">
-  <div class="box">+</div>
-  <div class="box box1">+</div>
-  <p>offset-position: normal;</p>
+  <div class="box">0</div>
+  <div class="box box1">1</div>
+  <pre>
+    offset-position: normal;
+    offset-path: ray(0deg);
+  </pre>
 </div>
 
 <div class="wrap">
-  <div class="box">+</div>
-  <div class="box box2">+</div>
-  <p>offset-position: auto;</p>
+  <div class="box">0</div>
+  <div class="box box2">2</div>
+  <pre>
+    offset-position: auto;
+    offset-path: ray(0deg);
+  </pre>
 </div>
 
 <div class="wrap">
-  <div class="box">+</div>
-  <div class="box box3">+</div>
-  <p>offset-position: left top;</p>
+  <div class="box">0</div>
+  <div class="box box3">3</div>
+  <pre>
+    offset-position: left top;
+    offset-path: ray(0deg);
+  </pre>
 </div>
 
 <div class="wrap">
-  <div class="box">+</div>
-  <div class="box box4">+</div>
-  <p>offset-position: 30% 70%;</p>
+  <div class="box">0</div>
+  <div class="box box4">4</div>
+  <pre>
+    offset-position: 30% 70%;
+    offset-path: ray(120deg);
+  </pre>
 </div>
 ```
 
 ```css hidden
 .wrap {
   position: relative;
-  width: 500px;
-  height: 100px;
+  width: 600px;
+  height: 120px;
   border: 1px solid black;
   margin: 0 2em 4em 5em;
   text-align: center;
-  line-height: 3em;
 }
 
-p {
-  font-family: "Courier New", monospace;
-  font-size: 0.8em;
+pre {
+  font-size: 1.0em;
   text-align: right;
   padding-right: 10px;
+  line-height: 1em;
 }
 
 .box {
@@ -175,50 +186,52 @@ p {
   width: 50px;
   height: 50px;
 }
+
+.box + .box {
+  opacity: 1;
+}
 ```
 
 ```css
 .box {
   background-color: green;
-  border-top: 5px solid red;
+  border-top: 6px dashed white;
+  background-clip: border-box;
   position: absolute;
   top: 20px;
   left: 20px;
   opacity: 20%;
+  color: white;
 }
 
 .box0 {
-  opacity: 100%;
+  offset-position: normal;
 }
 
 .box1 {
   offset-position: normal;
   offset-path: ray(0deg);
-  opacity: 100%;
 }
 
 .box2 {
   offset-position: auto;
   offset-path: ray(0deg);
-  opacity: 100%;
 }
 
 .box3 {
   offset-position: left top;
   offset-path: ray(0deg);
-  opacity: 100%;
 }
 
 .box4 {
   offset-position: 30% 70%;
-  offset-path: ray(180deg);
-  opacity: 100%;
+  offset-path: ray(120deg);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Comparing various offset starting positions', '100%', 830)}}
+{{EmbedLiveSample('Comparing various offset starting positions', '100%', 930)}}
 
 Notice that when `offset-position` is `normal`, the starting position of the ray is `50%, 50%` of the containing block. Also notice the difference between offset starting positions `auto` and `left top`. The value `auto` places the element such that its anchor point is at the top-left corner of the element box itself, whereas the value `left top` places the element such that the anchor point is the top-left corner of the containing block.
 
