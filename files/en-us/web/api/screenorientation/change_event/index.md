@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ScreenOrientation.change_event
 ---
 
-{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Screen Orientation API")}}{{SeeCompatTable}}
 
 The **`change`** event of the {{domxref("ScreenOrientation")}} fires when the orientation of the screen has changed, for example when a user rotates his mobile phone.
 
@@ -26,7 +26,7 @@ A generic {{domxref("Event")}}.
 
 ## Example
 
-In the following example, the `change` callback prints the status of `userState` and `screenState` to the console.
+In the following example, the `change` callback prints the new {{DOMxRef("ScreenOrientation.type", "screen orientation type")}} and {{DOMxRef("ScreenOrientation.angle")}}
 
 ```js
 screen.orientation.addEventListener("change", (event) => {
