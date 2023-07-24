@@ -38,7 +38,7 @@ new RTCIceCandidate(candidateInfo)
         The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}.
         For an a-line (attribute line) that looks like this:
 
-        ```
+        ```plain
         a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
         ```
 

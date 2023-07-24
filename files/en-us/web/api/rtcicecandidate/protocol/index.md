@@ -32,7 +32,7 @@ A string that indicates what network protocol the candidate uses:
 
 Here's an example candidate a-line from an ICE transaction:
 
-```
+```plain
 a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 ```
 

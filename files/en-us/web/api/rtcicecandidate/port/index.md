@@ -30,7 +30,7 @@ A 16-bit number indicating the port number on the device at the address indicate
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
 candidate:
 
-```
+```plain
 a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 ```
 

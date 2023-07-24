@@ -15,7 +15,7 @@ The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Web/HTTP/Clie
 
 Parsing the User-Agent string has historically been the way to get information about the user's browser or device. A typical user agent string looks like the following example, identifying Chrome 92 on Windows:
 
-```
+```plain
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36
 ```
 

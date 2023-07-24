@@ -29,7 +29,7 @@ A string which is one of the following:
 
 Consider this {{Glossary("SDP")}} attribute line (a-line):
 
-```
+```plain
 a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 ```
 
