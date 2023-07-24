@@ -37,13 +37,13 @@ new Intl.PluralRules(locales, options)
         - `"cardinal"` for cardinal numbers (referring to the quantity of things). This is the default value.
         - `"ordinal"` for ordinal number (referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English).
 
-    - `roundingMode`
+    - `roundingMode` {{experimental_inline}}
 
       - : Specifies how fractional values are rounded.
         The options are are: `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"` (default), `"halfTrunc"`, `"halfEven"`.
         The meanings of the values are documented in more detail in the corresponding [`Intl.NumberFormat` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode) option.
 
-    - `roundingPriority`
+    - `roundingPriority` {{experimental_inline}}
 
       - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are specified:
 
@@ -53,14 +53,14 @@ new Intl.PluralRules(locales, options)
 
         Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
 
-    - `roundingIncrement`
+    - `roundingIncrement` {{experimental_inline}}
 
       - : Specifies the rounding-increment precision.
         Must be one of the following integers:
         `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, `5000`.
         The behavior is described in more detail in the corresponding [`Intl.NumberFormat` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingincrement) option.
 
-    - `trailingZeroDisplay`
+    - `trailingZeroDisplay` {{experimental_inline}}
 
       - : A string expressing the strategy for displaying trailing zeros on whole numbers.
         The default is `"auto"`.
