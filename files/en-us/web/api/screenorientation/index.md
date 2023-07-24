@@ -36,7 +36,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ## Example
 
-In the following example, we listen for an {{DOMxRef("ScreenOrientation.change_event", "orientation change event")}} and log the new {{DOMxRef("ScreenOrientation.type", "screen orientation type")}} and {{DOMxRef("ScreenOrientation.angle")}}.
+In the following example, we listen for an {{DOMxRef("ScreenOrientation.change_event", "orientation change event")}} and log the new {{DOMxRef("ScreenOrientation.type", "screen orientation type")}} and {{DOMxRef("ScreenOrientation.angle", "angle")}}.
 
 ```js
 screen.orientation.addEventListener("change", (event) => {
