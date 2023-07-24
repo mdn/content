@@ -164,5 +164,3 @@ applyAnimation.addEventListener("click", () => {
 - [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - Related events: {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/animationstart_event", "animationstart")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/animationstart_event", "animationstart")}}

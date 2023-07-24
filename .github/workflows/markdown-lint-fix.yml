@@ -28,6 +28,7 @@ jobs:
 
       - name: Lint markdown files
         run: |
+          yarn content fix-flaws
           yarn fix:md
           yarn fix:fm
 

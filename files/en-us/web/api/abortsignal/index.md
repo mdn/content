@@ -22,9 +22,9 @@ _The AbortSignal interface may also inherit properties from its parent interface
 
 ## Static methods
 
-- {{domxref("AbortSignal.abort()")}}
+- {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}}
   - : Returns an **`AbortSignal`** instance that is already set as aborted.
-- {{domxref("AbortSignal.timeout()")}}
+- {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}
   - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
 
 ## Instance methods
@@ -85,7 +85,7 @@ You can find a [full working example on GitHub](https://github.com/mdn/dom-examp
 
 ### Aborting a fetch operation with a timeout
 
-If you need to abort the operation on timeout then you can use the static {{domxref("AbortSignal.timeout()")}} method.
+If you need to abort the operation on timeout then you can use the static {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}} method.
 This returns an `AbortSignal` that will automatically timeout after a certain number of milliseconds.
 
 The code snippet below shows how you would either succeed in downloading a file, or handle a timeout error after 5 seconds.
@@ -123,9 +123,10 @@ To trigger on multiple signals they must be daisy chained.
 The code snippet below shows how you might call {{domxref("AbortController.abort()")}} in the handler for a separate timer.
 
 ```js
+let timeoutId;
 try {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 5000);
+  timeoutId = setTimeout(() => controller.abort(), 5000);
   const res = await fetch(url, { signal: controller.signal });
   const body = await res.json();
 } catch (e) {
@@ -141,7 +142,7 @@ try {
 }
 ```
 
-> **Note:** Unlike when using {{domxref("AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
+> **Note:** Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
 ### Implementing an abortable API
 

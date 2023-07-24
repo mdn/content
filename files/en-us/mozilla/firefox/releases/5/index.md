@@ -91,7 +91,7 @@ For a guide to updating your add-on for Firefox 5, please see [Updating add-ons 
 
 #### NetUtil.jsm
 
-- The [`asyncFetch()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#asyncFetch()>) method now supports specifying the input source as an `nsIInputStream`.
+- The `asyncFetch()` method now supports specifying the input source as an `nsIInputStream`.
 
 ### Interface changes
 

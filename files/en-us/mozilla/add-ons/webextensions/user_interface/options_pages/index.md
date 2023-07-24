@@ -55,7 +55,7 @@ See the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/o
 
 ## Options content design
 
-For details on how to design your options content to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html).
+For details on how to design your options content to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/).
 
 ## Examples
 

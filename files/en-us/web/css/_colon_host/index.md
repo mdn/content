@@ -11,6 +11,8 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host.html", "tabbed-shorter")}}
+
 ```css
 /* Selects a shadow root host */
 :host {
