@@ -11,7 +11,7 @@ unexpected token that doesn't belong at this position in the code.
 
 ## Message
 
-```
+```plain
 SyntaxError: Invalid character (Edge)
 SyntaxError: illegal character (Firefox)
 SyntaxError: Invalid or unexpected token (Chrome)
@@ -85,7 +85,7 @@ const foo = "bar";​
 When inspecting this code in an editor like Vim, you can see that there is actually a
 [zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
 
-```
+```js-nolint
 const foo = "bar";<200b>
 ```
 

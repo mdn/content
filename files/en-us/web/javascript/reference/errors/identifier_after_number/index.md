@@ -12,7 +12,7 @@ underscore (\_), or dollar sign ($).
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected identifier after numeric literal (Edge)
 SyntaxError: identifier starts immediately after numeric literal (Firefox)
 SyntaxError: Unexpected number (Chrome)
