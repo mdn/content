@@ -142,8 +142,8 @@ For example, suppose we have some text after the image:
   src="dinosaur.jpg"
   alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
   title="A T-Rex on display in the Manchester University Museum" />
-<figure>
-  <blockquote>
+<blockquote>
+  <p>
     But down there it would be dark now, and not the lovely lighted aquarium she
     imagined it to be during the daylight hours, eddying with schools of tiny,
     delicate animals floating and dancing slowly to their own serene currents
@@ -152,26 +152,24 @@ For example, suppose we have some text after the image:
     The ocean was a world. And a world is not art. Dorothy thought about the
     living things that moved in that world: large, ruthless and hungry. Like us
     up here.
-  </blockquote>
-  <figcaption>- Rachel Ingalls, Mrs. Caliban</figcaption>
-</figure>
+  </p>
+  <footer>- Rachel Ingalls, <cite>Mrs. Caliban</cite></footer>
+</blockquote>
 ```
 
-As soon as the browser downloads the HTML, the browser will start to display the page:
-
-![Screenshot of the page while the browser is loading it, showing the text rendering before the image has loaded, when no space is allocated to the image](loading-no-size.png)
+As soon as the browser downloads the HTML, the browser will start to display the page.
 
 Once the image is loaded, the browser adds the image to the page. Because the image takes up space, the browser has to move the text down the page, to fit the image above it:
 
-![Screenshot of the page when the browser has finished loading it, showing the image and text](loaded.png)
+![Comparison of page layout while the browser is loading a page and when it has finished, when no size is specified for the image.](no-size.png)
 
 Moving the text like this is extremely distracting to users, especially if they have already started to read it.
 
-If you specify the actual size of the image in your HTML, using the `width` and `height` attributes, then the browser knows, before it has downloaded the image, how much space it has to allow for it:
-
-![Screenshot of the page while the browser is loading it, showing the text rendering before the image has loaded, when the browser can allocate space for the image](loading-size.png)
+If you specify the actual size of the image in your HTML, using the `width` and `height` attributes, then the browser knows, before it has downloaded the image, how much space it has to allow for it.
 
 This means that when the image has been downloaded, the browser doesn't have to move the surrounding content.
+
+![Comparison of page layout while the browser is loading a page and when it has finished, when the image size is specified.](size.png)
 
 For an excellent article on the history of this feature, see [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
 
