@@ -92,7 +92,7 @@ console.log("newCar[0].color =", newCar[0].color);
 
 This script writes:
 
-```
+```plain
 myCar = [
   { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } },
   2,

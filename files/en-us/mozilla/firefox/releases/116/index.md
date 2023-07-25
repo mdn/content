@@ -14,17 +14,27 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### HTML
 
+- The [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Element/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Element/textarea#dirname) elements.
+  This attribute allows for passing text directionality information (`ltr` or `rtl`) to the server during form submission ([Firefox bug 675943](https://bugzil.la/675943)).
+
 #### Removals
 
 ### CSS
 
 #### Removals
 
+### Accessibility (ARIA)
+
+- The [`image`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) role is now supported as a synonym for `img`.
+  This maintains consistency with most role names which are complete words or concatenations of complete words ([Firefox bug 1829269](https://bugzil.la/1829269)).
+
 ### JavaScript
 
 #### Removals
 
 ### SVG
+
+- The `q` [length unit](/en-US/docs/Web/SVG/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
 
 #### Removals
 
@@ -39,6 +49,9 @@ This article provides information about the changes in Firefox 116 that affect d
 #### Removals
 
 ### APIs
+
+- The {{domxref("TextMetrics.fontBoundingBoxAscent")}} and {{domxref("TextMetrics.fontBoundingBoxDescent")}} properties are now supported.
+  These metrics return, respectively, the distance above and below the {{domxref("CanvasRenderingContext2D.textBaseline")}} to the bounding rectangle of all the fonts used to render the text ([Firefox bug 1801198](https://bugzil.la/1801198)).
 
 #### DOM
 
@@ -63,6 +76,7 @@ This article provides information about the changes in Firefox 116 that affect d
 ## Changes for add-on developers
 
 - The URL of a page visited when an extension is uninstalled, provided in {{WebExtAPIRef("runtime.setUninstallURL")}}, can now be up to 1023 characters instead of 255 ([Firefox bug 1835723](https://bugzil.la/1835723)).
+- Adds {{WebExtAPIRef("action.getUserSettings")}} providing the user-specified settings for an extension's browser action ([Firefox bug 1814905](https://bugzil.la/1814905)).
 - `autoDiscardable` is now supported in {{WebExtAPIRef("tabs.Tab")}}, {{WebExtAPIRef("tabs.onUpdated")}}, {{WebExtAPIRef("tabs.update")}}, and {{WebExtAPIRef("tabs.query")}} ([Firefox bug 1809094](https://bugzil.la/1809094)).
 
 ### Removals

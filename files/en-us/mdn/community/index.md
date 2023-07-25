@@ -50,7 +50,7 @@ This is the list of guides and pages in this section.
 
   - : Issues are used to track all bugs and work that has a clear actionable outcome. This article contains guidelines on opening and working on issues. This article also covers the following topics:
 
-    - [Issue triage](/en-US/docs/MDN/Community/Issues/Issue_triage)
+    - [Issue triage](/en-US/docs/MDN/Community/Issues)
     - [Content and feature suggestions](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
 
 - [Pull requests](/en-US/docs/MDN/Community/Pull_requests)

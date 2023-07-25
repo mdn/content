@@ -77,7 +77,7 @@ const obj2 = {
 
 function findSetter(obj, prop) {
   while (obj) {
-    const desc = Object.getOwnPropertyDescriptor(obj, "foo");
+    const desc = Object.getOwnPropertyDescriptor(obj, prop);
     if (desc) {
       return desc.set;
     }

@@ -57,7 +57,7 @@ _No changes._
 - The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ([Firefox bug 1435813](https://bugzil.la/1435813)).
 - The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ([Firefox bug 1427610](https://bugzil.la/1427610)).
 - JavaScript [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see [Firefox bug 1435828](https://bugzil.la/1435828) and the TC39 proposal [json-superset](https://github.com/tc39/proposal-json-superset)).
-- For out-of-bounds [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return `false` instead of `true` ([Firefox bug 1308735](https://bugzil.la/1308735)).
+- For out-of-bounds [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return `false` instead of `true` ([Firefox bug 1308735](https://bugzil.la/1308735)).
 
 #### Removals
 

@@ -48,7 +48,7 @@ Your extension can include various user interface components whose content is de
 - [Sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
   - : A pane that is displayed at the left-hand side of the browser window, next to the web page.
 - [Popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-  - : A dialog that you can display when the user clicks on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
+  - : A dialog that you can display when the user clicks on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
 - [Options](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
   - : A page that's shown when the user accesses your add-on's preferences in the browser's native add-ons manager.
 

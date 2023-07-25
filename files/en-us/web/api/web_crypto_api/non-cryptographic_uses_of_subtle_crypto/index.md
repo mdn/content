@@ -212,7 +212,7 @@ Source: [How is git commit sha1 formed](https://gist.github.com/masak/2415865)
 
 Essentially it's the UTF8 string (null character written as `\0`):
 
-```
+```plain
 commit [size in bytes as decimal of this info]\0tree [tree hash]
 parent [parent commit hash]
 author [author info] [timestamp]

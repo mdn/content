@@ -116,8 +116,8 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-- [CSS unit and value types](/en-US/docs/Web/CSS/CSS_values_and_units)
-- [CSS functional notations](/en-US/docs/Web/CSS/CSS_functions)
+- [CSS unit and value types](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS functional notations](/en-US/docs/Web/CSS/CSS_Functions)
 
 ### Values
 
@@ -131,12 +131,12 @@ Combinators are selectors that establish a relationship between two or more simp
 ### Layout
 
 - [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
-- [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
-- [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

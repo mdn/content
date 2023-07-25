@@ -59,7 +59,7 @@ browser.menus.create(
     title: browser.i18n.getMessage("menuItemRemoveMe"),
     contexts: ["all"],
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -68,7 +68,7 @@ browser.menus.create(
     type: "separator",
     contexts: ["all"],
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -83,7 +83,7 @@ browser.menus.create(
       32: "icons/paint-green-32.png",
     },
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -98,7 +98,7 @@ browser.menus.create(
       32: "icons/paint-blue-32.png",
     },
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -107,7 +107,7 @@ browser.menus.create(
     type: "separator",
     contexts: ["all"],
   },
-  onCreated
+  onCreated,
 );
 
 let checkedState = true;
@@ -120,7 +120,7 @@ browser.menus.create(
     contexts: ["all"],
     checked: checkedState,
   },
-  onCreated
+  onCreated,
 );
 ```
 

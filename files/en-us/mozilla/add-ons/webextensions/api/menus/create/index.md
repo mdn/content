@@ -154,7 +154,7 @@ browser.menus.create(
     contexts: ["all"],
     checked: false,
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -165,7 +165,7 @@ browser.menus.create(
     contexts: ["all"],
     checked: false,
   },
-  onCreated
+  onCreated,
 );
 
 let makeItBlue = 'document.body.style.border = "5px solid blue"';
