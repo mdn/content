@@ -81,3 +81,5 @@ if (crossOriginIsolated) {
 ## See also
 
 - {{httpheader("Cross-Origin-Embedder-Policy")}}
+
+import: necessary security needed to avoid attacks and protect most platforms who wants to sponsor or invest with us
