@@ -42,7 +42,7 @@ parent {
 
 ### Selectors
 
-- nesting-selector
+- `&` nesting-selector
 
 ## Guides
 
