@@ -101,4 +101,4 @@ The {{cssxref("is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-clas
 - {{DOMXref("Document.querySelector()")}}
 - {{DOMXref("Document.querySelectorAll()")}}
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors) module
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/css_pseudo-elements) module
