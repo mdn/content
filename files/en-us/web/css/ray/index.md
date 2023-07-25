@@ -18,7 +18,7 @@ ray() = ray( <angle> && <ray-size>? && contain? )
 
 The `ray()` function is used in [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path). It is used as a value for the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property to define the path that an animated element can follow. The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the path's offset starting position.
 
-> **Note:** The default offset starting position of a ray is the `left top` corner (or `0 0`) of the element box (that is, `offset-position` is `auto`). With `offset-position: normal`, the starting position of the ray is `50%, 50%` of the containing block.
+> **Note:** The default offset starting position of a ray is `auto`. If `offset-position: auto` is explicitly specified or allowed to default, the offset starting position is the `left top` corner (or `0 0`) of the element box. With `offset-position: normal`, the starting position of the ray is `50%, 50%` of the containing block.
 
 ## Syntax
 

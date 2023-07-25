@@ -54,7 +54,7 @@ offset-position: unset;
 - `auto`
   - : Indicates that the offset starting position is the top-left corner of the element's box. This is the default value.
 - `<position>`
-  - : A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
+  - : A {{cssxref("&lt;position&gt;")}}. The position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the {{cssxref("length-percentage")}} values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
 
 ## Formal definition
 
@@ -99,10 +99,12 @@ In this example, the {{cssxref("offset-path")}} property is used to define the p
 }
 
 @keyframes move {
-  0%,20% {
+  0%,
+  20% {
     offset-distance: 0%;
   }
-  80%,100% {
+  80%,
+  100% {
     offset-distance: 100%;
   }
 }
@@ -114,7 +116,7 @@ In this example, the {{cssxref("offset-path")}} property is used to define the p
 
 ### Comparing various offset starting positions
 
-This example visually compares the initial offset starting position of an element when `ray()` is used to specify a value for the {{cssxref("offset-path")}} property. The `+` text inside the element box is used to depict the element's anchor point.
+This example visually compares various initial offset starting position of an element when `ray()` is used to specify a value for the {{cssxref("offset-path")}} property. The number inside the element box indicates the element to which CSS is applied as well as the element's anchor point.
 
 ```html hidden
 <div class="wrap">
@@ -173,7 +175,7 @@ This example visually compares the initial offset starting position of an elemen
 }
 
 pre {
-  font-size: 1.0em;
+  font-size: 1em;
   text-align: right;
   padding-right: 10px;
   line-height: 1em;
