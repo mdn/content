@@ -35,7 +35,7 @@ If the ID is changed or removed, the document fragment is ignored, and the link 
 
 In a similar manner to document fragments, text fragments are appended onto a URL after a hash symbol (`#`). The syntax however is a bit different:
 
-```
+```url
 https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ```
 

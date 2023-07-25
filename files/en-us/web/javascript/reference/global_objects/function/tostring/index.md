@@ -46,7 +46,7 @@ function created by {{jsxref("Function.prototype.bind()")}}, or
 other non-JavaScript functions, then `toString()` returns a
 _native function string_ which looks like
 
-```
+```plain
 function someName() { [native code] }
 ```
 
@@ -56,7 +56,7 @@ For intrinsic object methods and functions, `someName` is the initial name of th
 
 If the `toString()` method is called on a function created by the `Function` constructor, `toString()` returns the source code of a synthesized function declaration named "anonymous" using the provided parameters and function body. For example, `Function("a", "b", "return a + b").toString()` will return:
 
-```
+```plain
 function anonymous(a,b
 ) {
 return a + b

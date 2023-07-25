@@ -66,7 +66,7 @@ In these examples, the entire reporting API payload is shown. The top-level **`"
     "protocol": "http/1.1",
     "referrer": "https://example.com/previous-page",
     "sampling_fraction": 1,
-    "server_ip": "137.205.28.66",
+    "server_ip": "192.0.2.172",
     "status_code": 400,
     "type": "http.error",
     "url": "https://example.com/bad-request"
