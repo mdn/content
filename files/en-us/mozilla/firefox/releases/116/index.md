@@ -30,6 +30,12 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### JavaScript
 
+- [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) supports new [constructor options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) that control how numbers are rounded (`roundingIncrement`, `roundingMode`, `roundingPriority`), the strategy for displaying trailing zeros on whole numbers (`trailingZeroDisplay`), and whether to use grouping separators to indicate thousands, millions, and so on (`useGrouping`).
+  It also supports new methods [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange) amd [`formatRangeToParts()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts) for formatting ranges of numbers.
+  ([Firefox bug 1795756](https://bugzil.la/1795756)).
+- [`Intl.PluralRules`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) was updated (as part of the same set of changes as `Intl.NumberFormat`) to support [constructor options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) `roundingIncrement`, `roundingMode`, `roundingPriority` and `trailingZeroDisplay`, and the [`selectRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) method.
+  ([Firefox bug 1795756](https://bugzil.la/1795756)).
+
 #### Removals
 
 ### SVG
