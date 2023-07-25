@@ -1,6 +1,6 @@
 ---
 title: "& nesting selector"
-slug: Web/CSS/Nesting-selector
+slug: Web/CSS/Nesting_selector
 page-type: css-selector
 browser-compat: css.selectors.nesting
 ---
@@ -44,7 +44,8 @@ Both of the following examples produce the same output, the first uses normal CS
 .example > a {
   color: tomato;
 }
-.example > a:hover {
+.example > a:hover,
+.example > a:focus {
   color: ivory;
   background-color: tomato;
 }
@@ -72,7 +73,8 @@ Both of the following examples produce the same output, the first uses normal CS
   font-size: 1.2rem;
   & a {
     color: tomato;
-    &:hover {
+    &:hover,
+    &:focus {
       color: ivory;
       background-color: tomato;
     }
