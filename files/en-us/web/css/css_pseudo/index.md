@@ -31,32 +31,32 @@ The **CSS pseudo-element** module defines the patterns representing entities not
   - {{DOMxRef("CSSPseudoElement.element")}} property
   - {{DOMxRef("CSSPseudoElement.type")}} property
 
-### Definitions
+### Terms
 
-- {{Glossary("Pseudo-element")}}
+- {{Glossary("Pseudo-element")}} glossary term
 
 ## Guides
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
 
-  - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT
+  - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT.
 
-- [Building block: pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Building blocks: Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
 
-  - : Part of CSS building blocks section on selectors, defines what a pseudo-element is, how it can be combined with pseudo-classes and gnerating content with `::before` and `::after`.
+  - : Part of CSS building blocks section on selectors. This article defines what a pseudo-element is and how it can be combined with pseudo-classes and be used for generating content with `::before` and `::after` pseudo-elements.
 
-- [How to: Create fancy boxes](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes#pseudo-elements)
+- [How to create fancy boxes using pseudo-elements](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes#pseudo-elements)
 
-  - : Example of styling generated content on `::before` and `::after` pseudo-elements for visual effects.
+  - : Example of styling generated content using `::before` and `::after` pseudo-elements for visual effects.
 
 ## Related concepts
 
 - {{cssxref("::backdrop")}}
 
-- WebVTT: The Web Video Text Tracks Format
+- Web Video Text Tracks Format (WebVTT) cues:
 
   - {{cssxref("::cue")}}
-  - {{cssxref("::cue", "::cue( selector )")}}
+  - {{cssxref("::cue", "::cue(<selector>)")}}
   - {{cssxref("::cue-region")}}
 
 - CSS scoping module
@@ -66,27 +66,27 @@ The **CSS pseudo-element** module defines the patterns representing entities not
   - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted", "::slotted()")}}
 
-- CSS shadow parts module
+- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 
   - {{CSSXref("::part")}}
 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
 
-  - [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
+  - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
   - [Combinators](/en-US/docs/Web/CSS/CSS_Selectors/selectors_and_combinators#combinators)
-  - [Class selector](/en-US/docs/Web/CSS/Class_selectors)
-  - [ID selector](/en-US/docs/Web/CSS/ID_selectors)
-  - [Type selector](/en-US/docs/Web/CSS/Type_selectors)
+  - [Class selectors](/en-US/docs/Web/CSS/Class_selectors)
+  - [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
+  - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
   - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
-  - [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+  - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
 
-- [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute
+- [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute of the `<input>` element
 - [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) selector
 
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
 
-  - CSS {{cssxref("content")}} property
-  - CSS {{cssxref("quotes")}} property
+  - {{cssxref("content")}} property
+  - {{cssxref("quotes")}} property
 
 - [Text fragments](/en-US/docs/Web/Text_fragments)
 
@@ -100,8 +100,8 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 
 ## See also
 
-- [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
-- [CSS position](css-position) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
