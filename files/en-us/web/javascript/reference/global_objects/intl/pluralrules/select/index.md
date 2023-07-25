@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.select
 
 {{JSRef}}
 
-The **`select()`** method of {{jsxref("Intl.PluralRules")}} instances returns a string indicating which plural rule to use for locale-aware formatting.
+The **`select()`** method of {{jsxref("Intl.PluralRules")}} instances returns a string indicating which plural rule to use for locale-aware formatting of a number.
 
 {{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-select.html")}}
 
@@ -36,9 +36,18 @@ These options are set in the [`PluralRules` constructor](/en-US/docs/Web/JavaScr
 
 ### Using select()
 
+First define the `Intl.PluralRules` object using [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) locale and options parameters.
+Here we create a plural rules object for Arabic in the Egyptian dialect.
+Because the `type` is not specified the rules object will provide formatting for cardinal numbers (the default).
+
 ```js
 const pr = new Intl.PluralRules("ar-EG");
+```
 
+Then call `select()` on the rules object, specifying the number for which the plural form is required.
+Note that Arabic has 5 forms for cardinal numbers, as shown.
+
+```js
 pr.select(0); // 'zero'
 pr.select(1); // 'one'
 pr.select(2); // 'two'
