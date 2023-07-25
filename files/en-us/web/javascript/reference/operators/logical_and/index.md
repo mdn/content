@@ -53,7 +53,7 @@ As each operand is converted to a boolean, if the result of one conversion is fo
 
 Consider the pseudocode below.
 
-```
+```plain
 (some falsy expression) && expr
 ```
 

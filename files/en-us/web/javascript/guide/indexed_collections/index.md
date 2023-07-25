@@ -570,7 +570,7 @@ for (let i = 0; i < 4; i++) {
 
 This example creates an array with the following rows:
 
-```
+```plain
 Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
 Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
 Row 2: [2, 0] [2, 1] [2, 2] [2, 3]

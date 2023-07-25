@@ -164,7 +164,7 @@ The margin at-rules are used inside of the `@page` at-rule. They each target a d
 
 Other margin-at rules include:
 
-```
+```plain
 @top-left-corner {
   <page-margin-properties>
 }

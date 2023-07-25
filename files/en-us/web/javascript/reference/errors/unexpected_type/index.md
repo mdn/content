@@ -12,7 +12,7 @@ values.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
 TypeError: "x" is undefined (Firefox)
 TypeError: "undefined" is not an object (Firefox)
