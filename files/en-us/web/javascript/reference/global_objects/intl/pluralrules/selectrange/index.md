@@ -26,7 +26,7 @@ This function selects a pluralization category according to the locale and forma
 
 Conceptually the behavior is the same as getting plural rules for a single cardinal or ordinal number.
 Languages have one or more forms for describing ranges, and this method returns the appropriate form given the supplied locale and formatting options.
-In English there is only one plural form, such a "1-10 apples", and the method will return `other`
+In English there is only one plural form, such a "1-10 apples", and the method will return `other`.
 Other languages can have many forms.
 
 ## Examples
