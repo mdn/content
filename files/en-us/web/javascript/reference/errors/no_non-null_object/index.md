@@ -11,7 +11,7 @@ somewhere and wasn't provided. [`null`](/en-US/docs/Web/JavaScript/Reference/Ope
 
 ## Message
 
-```
+```plain
 TypeError: Property description must be an object: x (V8-based)
 TypeError: Property descriptor must be an object, got "x" (Firefox)
 TypeError: Property description must be an object. (Safari)

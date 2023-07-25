@@ -167,7 +167,7 @@ After a successful handshake, the client will send encoded messages to the serve
 
 If we send "MDN", we get these bytes:
 
-```
+```plain
 129 131 61 84 35 6 112 16 109
 ```
 

@@ -11,7 +11,7 @@ It is usually caused by omitting a variable name or a typographic error.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing variable name (Firefox)
 SyntaxError: Unexpected token '='. Expected a parameter pattern or a ')' in parameter list. (Safari)
 ```

@@ -104,7 +104,7 @@ splitString(monthString, comma);
 
 This example produces the following output:
 
-```
+```plain
 The original string is: "Oh brave new world that has such people in it."
 The separator is: " "
 The array has 10 elements: Oh / brave / new / world / that / has / such / people / in / it.
@@ -139,7 +139,7 @@ console.log(nameList);
 This logs two lines; the first line logs the original string, and the second line logs
 the resulting array.
 
-```
+```plain
 Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]
 ```

@@ -10,7 +10,7 @@ The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-o
 
 ## Message
 
-```
+```plain
 SyntaxError: Delete of an unqualified identifier in strict mode. (V8-based)
 SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
 SyntaxError: Cannot delete unqualified property 'a' in strict mode. (Safari)

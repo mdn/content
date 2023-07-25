@@ -10,7 +10,7 @@ The `floor` function evaluates a decimal number and returns the largest integer 
 
 ### Syntax
 
-```
+```plain
 floor( number )
 ```
 
