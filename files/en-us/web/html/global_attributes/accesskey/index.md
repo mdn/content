@@ -40,7 +40,9 @@ The way to activate the accesskey depends on the browser and its platform:
     </tr>
     <tr>
       <th>Edge</th>
-      <td>N/A</td>
+      <td>
+      <kbd> Alt</kbd> + <kbd><em> key</em></kbd>
+      </td>
       <td rowspan="3">
         <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd
         ><br /><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Shift</kbd> +
@@ -52,10 +54,14 @@ The way to activate the accesskey depends on the browser and its platform:
       <td>
         <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
       </td>
+      <td>
+      <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd>
+      </td>
     </tr>
     <tr>
       <th>Safari</th>
       <td colspan="2">N/A</td>
+      <td> <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd> </td>
     </tr>
     <tr>
       <th>Opera 15+</th>
