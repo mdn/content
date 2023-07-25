@@ -128,8 +128,10 @@ asyncHandler(async (req, res, next) => {
 });
 ```
 
-If the genre name data is valid then we check to see if a `Genre` with the same name already exists (as we don't want to create duplicates).
-If it does, we redirect to the existing genre's detail page.
+If the genre name data is valid then we perform a case-insensitive search to see if a `Genre` with the same name already exists (as we don't want to create duplicate or near duplicate records that vary only in letter case, such as: "Fantasy", "fantasy", "FaNtAsY", and so on).
+To ignore letter case and accents when searching we chain the [`collation()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()) method, specifying the locale of 'en' and strength of 2 (for more information see the MongoDb [Collation](https://www.mongodb.com/docs/manual/reference/collation/) topic).
+
+If a `Genre` with a matching name already exists we redirect to its detail page.
 If not, we save the new `Genre` and redirect to its detail page.
 Note that here we `await` on the result of the database query, following the same pattern as in other route handlers.
 
@@ -148,7 +150,7 @@ if (genreExists) {
 }
 ```
 
-This same pattern is used in all our post controllers: we run validators (with sanitizers), then check for errors and either re-render the form with error information or save the data. We use the collation method when executing the query to retrieve the genre. This is done to ensure that the query is case-insensitive. By setting the locale to 'en' and strength to 2, we adjust the comparison sensitivity such that it ignores differences in case and diacritics. In practice, this means that if someone attempts to add a genre 'fantasy' with a lowercase 'f', it will be considered the same as 'Fantasy' with an uppercase 'F', and won't be treated as a distinct genre.
+This same pattern is used in all our post controllers: we run validators (with sanitizers), then check for errors and either re-render the form with error information or save the data.
 
 ## View
 
