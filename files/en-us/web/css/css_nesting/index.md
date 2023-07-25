@@ -42,15 +42,19 @@ parent {
 
 ### Selectors
 
-- {{Cssxref("Nesting_selector", "`&` nesting selector")}}
+- [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 
 ## Guides
 
+- [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+  - : Explains how to use CSS nesting.
 - [Using `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Using_nesting_selector)
-  - : Explains how to set one or more backgrounds on an element.
+  - : Explains how to use the `&` nesting selector.
 
 ## Specifications
 
 {{Specifications}}
 
 ## See also
+
+- [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
