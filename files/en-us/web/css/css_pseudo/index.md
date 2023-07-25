@@ -101,7 +101,6 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 ## See also
 
 - [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
-- [CSS pseudo-classes](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS position](css-position) module
