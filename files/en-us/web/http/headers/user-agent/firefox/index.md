@@ -43,7 +43,7 @@ Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to
 
 The `platform` part of the UA string indicates if Firefox is running on a phone-sized or tablet device. When Firefox runs on a device that has the phone form factor, there is a `Mobile;` token in the `platform` part of the UA string. When Firefox runs on a tablet device, there is a `Tablet;` token in the `platform` part of the UA string instead. For example:
 
-```
+```plain
 Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
 Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 ```
@@ -104,7 +104,7 @@ Beginning in version 41, Firefox for Android will contain the Android version as
 
 From version 1, Focus is powered by Android WebView and uses the following user agent string format:
 
-```
+```plain
 Mozilla/5.0 (Linux; <Android Version> <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Version/4.0 Focus/<focusversion> Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>
 ```
 
@@ -132,7 +132,7 @@ Since version 4.1, Klar for Android uses the same UA string as [Focus for Androi
 
 Version 7 of Focus for iOS uses a user agent string with the following format:
 
-```
+```plain
 Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/7.0.4 Mobile/16B91 Safari/605.1.15
 ```
 
@@ -142,7 +142,7 @@ Note: this user agent was retrieved from an iPhone XR simulator and may be diffe
 
 Version 3 (and probably earlier) of Firefox for Fire TV use a user agent string with the following format:
 
-```
+```plain
 Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
 ```
 
@@ -154,7 +154,7 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 
 From version 1.1, Firefox for Echo Show uses a user agent string with the following format:
 
-```
+```plain
 Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
 ```
 

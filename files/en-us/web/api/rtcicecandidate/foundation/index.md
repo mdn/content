@@ -30,7 +30,7 @@ A string which uniquely identifies the candidate across all
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
 candidate:
 
-```
+```plain
 a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 

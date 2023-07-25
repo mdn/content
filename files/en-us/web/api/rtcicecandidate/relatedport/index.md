@@ -36,7 +36,7 @@ reasons, but if present can be a useful tool during debugging. See the [Example]
 Here's an {{Glossary("SDP")}} attribute line (a-line) describing an ICE candidate
 discovered by the STUN server:
 
-```
+```plain
 a=candidate:4234997325 1 udp 2043278322 192.0.2.172 6502 typ srflx raddr 198.51.100.45 rport 32768 generation 0
 ```
 
