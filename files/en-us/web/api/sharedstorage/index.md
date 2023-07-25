@@ -27,7 +27,7 @@ The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared
 - {{domxref("SharedStorage.delete", "delete()")}} {{Experimental_Inline}}
   - : Deletes an existing key/value pair from the current origin's shared storage.
 - {{domxref("SharedStorage.set", "set()")}} {{Experimental_Inline}}
-  - : Stores new key/value pair in the current origin's shared storage, or updates an existing one.
+  - : Stores a new key/value pair in the current origin's shared storage, or updates an existing one.
 
 ## Examples
 
