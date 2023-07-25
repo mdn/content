@@ -243,10 +243,10 @@ The `CSSStyleValue` interface of the [CSS Typed Object Model API](/en-US/docs/We
 
 It has two methods:
 
-- {{domxref("CSSStyleValue.parse()")}}
-- {{domxref("CSSStyleValue.parseAll()")}}
+- {{domxref("CSSStyleValue/parse_static", "CSSStyleValue.parse()")}}
+- {{domxref("CSSStyleValue/parseAll_static", "CSSStyleValue.parseAll()")}}
 
-As noted above, `StylePropertyMapReadOnly.get('--customProperty')` returns a {{domxref('CSSUnparsedValue')}}. We can parse `CSSUnparsedValue` object instances with the inherited {{domxref('CSSStyleValue.parse()')}} and {{domxref('CSSStyleValue.parseAll()')}} methods.
+As noted above, `StylePropertyMapReadOnly.get('--customProperty')` returns a {{domxref('CSSUnparsedValue')}}. We can parse `CSSUnparsedValue` object instances with the inherited {{domxref('CSSStyleValue/parse_static', 'CSSStyleValue.parse()')}} and {{domxref('CSSStyleValue/parseAll_static', 'CSSStyleValue.parseAll()')}} methods.
 
 Let's examine a CSS example with several custom properties, transforms, `calc()`s, and other features. We'll take a look at what their types are by employing short JavaScript snippets outputting to {{domxref('console.log()')}}:
 

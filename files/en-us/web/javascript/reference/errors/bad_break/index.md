@@ -10,7 +10,7 @@ The JavaScript exception "unlabeled break must be inside loop or switch" occurs 
 
 ## Message
 
-```
+```plain
 SyntaxError: Illegal break statement (V8-based)
 SyntaxError: unlabeled break must be inside loop or switch (Firefox)
 SyntaxError: 'break' is only valid inside a switch or loop statement. (Safari)

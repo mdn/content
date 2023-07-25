@@ -86,8 +86,8 @@ If your application, server, or proxy supports the standardized `Forwarded` head
 Note that IPv6 address is quoted and enclosed in square brackets in `Forwarded`.
 
 ```http
-X-Forwarded-For: 123.34.567.89
-Forwarded: for=123.34.567.89
+X-Forwarded-For: 192.0.2.172
+Forwarded: for=192.0.2.172
 
 X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"
 Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"

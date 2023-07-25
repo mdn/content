@@ -1,6 +1,7 @@
 ---
 title: How to write in Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
+page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
@@ -79,6 +80,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `xml` - XML
   - `mathml` - MathML
   - `md` - Markdown
+  - `latex` - LaTeX
 - Command Prompts
   - `sh` - Bash/Shell
   - `batch` - Batch (Windows Shell)

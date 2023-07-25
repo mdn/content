@@ -35,14 +35,35 @@ togglePopover(force)
 
 None ({{jsxref("undefined")}}).
 
+<!-- Spec requirement - from undefined to boolean. Waiting on implementation such as https://bugzilla.mozilla.org/show_bug.cgi?id=1842845
+`true` if the popup is open after the call, and `false` otherwise.
+
+{{jsxref("undefined")}} may be returned in older browsers (see [browser compatibility](#browser_compatibility)).
+-->
+
 ## Examples
 
-The following example provides functionality to toggle a popover on and off by pressing a particular key on the keyboard.
+See the [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.
 
-First, some HTML:
+### Simple auto-popup
+
+This is a slightly modified version of the [Toggle Help UI Popover Example](https://mdn.github.io/dom-examples/popover-api/toggle-help-ui/).
+The example toggles a popover on and off by pressing a particular key on the keyboard (when the example window has focus).
+
+The HTML for the example is shown below.
+This first element defines instructions on how to invoke the popup, which we need because popups are hidden by default.
 
 ```html
-<div id="mypopover">
+<p id="instructions">
+  Press "h" to toggle a help screen (select example window first).
+</p>
+```
+
+We then define a `<div>` element which is the popup.
+The actual content doesn't matter, but note that we need the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute to make the `<div>` into a popover so that it is hidden by default (or we could set this element in the JavaScript).
+
+```html
+<div id="mypopover" popover>
   <h2>Help!</h2>
 
   <p>You can use the following commands to control the app</p>
@@ -51,24 +72,48 @@ First, some HTML:
     <li>Press <ins>C</ins> to order cheese</li>
     <li>Press <ins>T</ins> to order tofu</li>
     <li>Press <ins>B</ins> to order bacon</li>
-    <hr />
-    <li>Say "Service" to summon the robot waiter to take your order</li>
-    <li>Say "Escape" to engage the ejector seat</li>
   </ul>
 </div>
 ```
 
-And now the JavaScript to wire up the functionality:
+The JavaScript for the example is shown below.
+First we check whether popovers are supported, and if they aren't we hide the popover `div` so that it isn't displayed inline.
 
 ```js
+const instructions = document.getElementById("instructions");
 const popover = document.getElementById("mypopover");
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "h") {
-    popover.togglePopover();
-  }
-});
+if (!HTMLElement.prototype.hasOwnProperty("popover")) {
+  popover.innerText = "";
+  instructions.innerText = "Popovers not supported";
+}
 ```
+
+If popovers are supported we add a listener for the `h` key to be pressed, and use that to trigger opening the popup.
+We also log whether the popup was open or closed after the call, but only if a `true` or `false` was returned.
+
+```js
+if (HTMLElement.prototype.hasOwnProperty("popover")) {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "h") {
+      popover.togglePopover();
+    }
+  });
+}
+```
+
+<!-- modifications to code once togglePopover() returns boolean
+      const popupOpened = popover.togglePopover();
+
+      // If not undefined, you can check if popover is opened or closed.
+      console.log(`popupOpened: ${popupOpened}`)
+      if (popupOpened === true) instructions.innerText += `\nOpened`;
+      if (popupOpened === false) instructions.innerText += `\nClosed`;
+-->
+
+You can test this out using the live example below.
+
+{{EmbedLiveSample('Examples', 700, 290)}}
 
 ## Specifications
 

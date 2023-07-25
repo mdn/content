@@ -1,8 +1,18 @@
 {
-  "name": "content",
+  "name": "@mdn/content",
   "version": "1.0.0",
+  "description": "Content of https://developer.mozilla.org",
   "private": true,
+  "homepage": "https://github.com/mdn/content#readme",
+  "bugs": {
+    "url": "https://github.com/mdn/content/issues"
+  },
   "license": "SEE LICENSE IN LICENSE.md",
+  "author": "MDN Web Docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdn/content.git"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
@@ -30,7 +40,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.2",
-    "@mdn/yari": "2.28.2",
+    "@mdn/yari": "2.28.4",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "async": "^3.2.4",
