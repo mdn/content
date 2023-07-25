@@ -64,7 +64,7 @@ The **CSS pseudo-element** module defines the patterns representing entities not
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
-  - {{CSSXref("::slotted")}}
+  - {{CSSXref("::slotted", "::slotted()")}}
 
 - CSS shadow parts module
 
