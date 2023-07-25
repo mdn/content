@@ -455,7 +455,9 @@
     },
     "Fenced Frame API": {
       "overview": ["Fenced Frame API"],
-      "guides": [],
+      "guides": [
+        "/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames"
+      ],
       "interfaces": ["Fence", "FencedFrameConfig", "HTMLFencedFrameElement"],
       "methods": [],
       "properties": ["Window.fence"],
