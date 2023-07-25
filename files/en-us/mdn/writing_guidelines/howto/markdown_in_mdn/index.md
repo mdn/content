@@ -80,6 +80,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `xml` - XML
   - `mathml` - MathML
   - `md` - Markdown
+  - `latex` - LaTeX
 - Command Prompts
   - `sh` - Bash/Shell
   - `batch` - Batch (Windows Shell)

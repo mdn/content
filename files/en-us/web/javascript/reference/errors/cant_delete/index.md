@@ -11,7 +11,7 @@ when it was attempted to delete a property, but that property is [non-configurab
 
 ## Message
 
-```
+```plain
 TypeError: Cannot delete property 'x' of #<Object> (V8-based)
 TypeError: property "x" is non-configurable and can't be deleted (Firefox)
 TypeError: Unable to delete property. (Safari)

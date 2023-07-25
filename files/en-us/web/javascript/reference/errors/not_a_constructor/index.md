@@ -12,7 +12,7 @@ constructor.
 
 ## Message
 
-```
+```plain
 TypeError: x is not a constructor (V8-based & Firefox & Safari)
 ```
 

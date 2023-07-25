@@ -120,7 +120,7 @@ The required styles are those necessary to handle the three states of our contro
 ```css
 .select {
   /* This will create a positioning context for the list of options;
-     adding this to .select{{cssxref(':focus-within')}} will be a better option when fully supported
+     adding this to `.select:focus-within` will be a better option when fully supported
   */
   position: relative;
 
@@ -136,7 +136,7 @@ We need an extra class `active` to define the look and feel of our control when 
 .select:focus {
   outline: none;
 
-  /* This {{cssxref('box-shadow')}} property is not exactly required, however it's imperative to ensure
+  /* This box-shadow property is not exactly required, however it's imperative to ensure
      active state is visible, especially to keyboard users, that we use it as a default value. */
   box-shadow: 0 0 3px 1px #227755;
 }
@@ -176,7 +176,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 ```css
 .select {
   /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
-     If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
+     If you are lost with px to em conversion, try https://nekocalc.com/px-to-em-converter */
   font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family: Verdana, Arial, sans-serif;
 
@@ -661,7 +661,7 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
 - The script is buggy: You should always consider this possibility.
 - The script conflicts with a third-party script: This can happen with tracking scripts or any bookmarklets the user uses.
-- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
+- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) extension).
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
@@ -704,7 +704,7 @@ Second, we need two new classes to let us hide the unneeded element: we visually
 .widget select,
 .no-widget .select {
   /* This CSS selector basically says:
-     - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
+     - either we have set the body class to "widget" and thus we hide the actual <select> element
      - or we have not changed the body class, therefore the body class is still "no-widget",
        so the elements whose class is "select" must be hidden */
   position: absolute;
@@ -1380,7 +1380,11 @@ window.addEventListener("load", () => {
 
 In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
 
-With that, we're done! Here's the result ([check out the source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)):
+With that, we're done!
+
+#### Live example
+
+Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4).
 
 ```html hidden
 <form class="no-widget">
@@ -1637,7 +1641,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-{{EmbedLiveSample("Handling_the_controls_value",120,130)}}
+{{EmbedLiveSample("live_example_2",120,130)}}
 
 But wait a second, are we really done?
 
@@ -1701,7 +1705,11 @@ function updateValue(select, index) {
 
 It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
 
-Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)). Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5).
+Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)).
+
+#### Live example
+
+Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5).
 
 ```html hidden
 <form class="no-widget">
@@ -1954,7 +1962,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-{{EmbedLiveSample("The_aria-selected_attribute",120,130)}}
+{{EmbedLiveSample("live_example_3",120,130)}}
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise.
 
@@ -2059,7 +2067,7 @@ If you do create alternative controls via radio buttons, your own JavaScript, or
 
 - [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+- [The native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Additional form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
@@ -2070,7 +2078,7 @@ If you do create alternative controls via radio buttons, your own JavaScript, or
 ### Advanced Topics
 
 - [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- **How to build custom form widgets**
+- **How to build custom form controls**
 - [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form controls](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
