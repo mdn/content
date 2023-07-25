@@ -153,7 +153,7 @@ console.log(i); // Uncaught ReferenceError: i is not defined.
 
 When clicked, these buttons alert 0 and 1.
 
-##Benefits of IIFE
+## Benefits of IIFE
 
 Encapsulation: Variables and functions defined within the IIFE are local to the function's scope, preventing unintentional global variable declarations.
 
