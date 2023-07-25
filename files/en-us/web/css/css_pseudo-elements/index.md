@@ -1,6 +1,6 @@
 ---
-title: CSS pseudo-element module
-slug: Web/CSS/CSS_pseudo
+title: CSS pseudo-elements module
+slug: Web/CSS/CSS_pseudo-elements
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-pseudo/
 ---
@@ -56,7 +56,7 @@ The **CSS pseudo-element** module defines the patterns representing entities not
 - Web Video Text Tracks Format (WebVTT) cues:
 
   - {{cssxref("::cue")}}
-  - {{cssxref("::cue", "::cue(<selector>)")}}
+  - {{cssxref("::cue", "::cue()")}}
   - {{cssxref("::cue-region")}}
 
 - CSS scoping module
