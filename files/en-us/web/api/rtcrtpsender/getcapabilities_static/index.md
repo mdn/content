@@ -120,7 +120,7 @@ const log = document.querySelector("#log");
 ```js
 log.textContent = `RTCRtpSender.getCapabilities() supported: ${Object.hasOwn(
   RTCRtpSender,
-  "getCapabilities"
+  "getCapabilities",
 )}`;
 ```
 

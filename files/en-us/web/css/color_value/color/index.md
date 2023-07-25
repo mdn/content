@@ -20,19 +20,21 @@ color(display-p3 1 0.5 0 / .5);
 
 ### Values
 
-Functional notation: `color(colorspace p1 p2 p3[ / A])`
+Functional notation: `color(colorspace c1 c2 c3[ / A])`
 
 - `colorspace`
 
   - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, and `xyz-d65`.
 
-- `p1`, `p2`, `p3`
+- `c1`, `c2`, `c3`
 
-  - : {{CSSXref("number")}} or {{CSSXref("percentage")}} values providing the parameter values that the color space takes.
+  - : {{CSSXref("number")}}, {{CSSXref("percentage")}} values or the keyword `none`, which provide the component values in the color space.
 
 - `A` {{optional_inline}}
 
-  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 

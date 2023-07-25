@@ -1,6 +1,7 @@
 ---
 title: boolean
 slug: Web/XPath/Functions/boolean
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}

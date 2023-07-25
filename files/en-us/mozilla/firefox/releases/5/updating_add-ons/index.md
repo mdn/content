@@ -64,7 +64,7 @@ window.addEventListener(
   function () {
     MyObject.init();
   },
-  false
+  false,
 );
 ```
 

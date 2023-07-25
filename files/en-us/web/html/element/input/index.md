@@ -345,7 +345,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`popovertarget`](#popovertarget)             | `button`                                                                | Designates an `<input type="button">` as a control for a popover element              |
 | [`popovertargetaction`](#popovertargetaction) | `button`                                                                | Specifies the action that a popover control should perform                            |
 | [`readonly`](#readonly)                       | all except `hidden`, `range`, `color`, `checkbox`, `radio`, and buttons | Boolean. The value is not editable                                                    |
-| [`required`](#required)                       | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be check for the form to be submittable          |
+| [`required`](#required)                       | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be checked for the form to be submittable        |
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                   |
 | [`src`](#src)                                 | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource         |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                     |
@@ -962,7 +962,10 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -978,7 +981,7 @@ In certain cases (typically involving non-textual inputs and specialized interfa
 
 For more information about adding color to elements in HTML, see:
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color).
 
 Also see:
 
@@ -1186,7 +1189,7 @@ nameInput.addEventListener("invalid", () => {
     nameInput.setCustomValidity("Enter your username!");
   } else {
     nameInput.setCustomValidity(
-      "Usernames can only contain upper and lowercase letters. Try again!"
+      "Usernames can only contain upper and lowercase letters. Try again!",
     );
   }
 });

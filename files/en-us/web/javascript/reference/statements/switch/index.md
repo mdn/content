@@ -77,7 +77,7 @@ switch (foo) {
 // Logs 0 and 1
 ```
 
-In the appropriate context, other control-flow statements also have the effect of breaking out of the `switch` statement. For example, if the `switch` statement is contained in a function, then a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement terminates the execution of the function body and therefore the `switch` statement. If the `switch` statement is contained in a loop, then a [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement stops the `switch` statement and jumps to the next iteration of the loop.
+In the appropriate context, other control-flow statements also have the effect of breaking out of the `switch` statement. For example, if the `switch` statement is contained in a function, then a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement terminates the execution of the function body and therefore the `switch` statement. If the `switch` statement is contained in a loop, then a [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement stops the `switch` statement and jumps to the next iteration of the loop.
 
 ### Lexical scoping
 

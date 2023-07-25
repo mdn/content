@@ -10,7 +10,7 @@ The JavaScript exception "label not found" occurs when a {{jsxref("Statements/br
 
 ## Message
 
-```
+```plain
 SyntaxError: Undefined label 'label' (V8-based)
 SyntaxError: label not found (Firefox)
 SyntaxError: Cannot use the undeclared label 'label'. (Safari)

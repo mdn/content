@@ -374,6 +374,8 @@ A server might use them to modify its caching behavior, or the information that 
   - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.7) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Alt-Svc")}}
   - : Used to list alternate ways to reach this service.
+- {{HTTPHeader("Alt-Used")}}
+  - : Used to identify the alternative service in use.
 - {{HTTPHeader("Date")}}
   - : Contains the date and time at which the message was originated.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}

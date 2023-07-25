@@ -81,7 +81,7 @@ This contains two attributes, but there is no closing `</img>` tag and no inner 
 That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our `index.html` example (which we first met in the [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) article):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

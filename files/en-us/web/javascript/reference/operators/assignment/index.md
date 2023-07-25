@@ -36,7 +36,7 @@ x = y = z; // x, y and z are all 25
 
 The assignment expression itself evaluates to the value of the right-hand side, so you can log the value and assign to a variable at the same time.
 
-```js
+```js-nolint
 let x;
 console.log(x); // undefined
 console.log(x = 2); // 2

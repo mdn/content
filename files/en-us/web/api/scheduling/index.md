@@ -2,6 +2,8 @@
 title: Scheduling
 slug: Web/API/Scheduling
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.Scheduling
 ---
 

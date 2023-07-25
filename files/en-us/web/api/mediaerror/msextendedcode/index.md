@@ -26,7 +26,7 @@ video1.addEventListener(
     const error = video1.error.msExtendedCode;
     //…
   },
-  false
+  false,
 );
 
 video.addEventListener(
@@ -34,6 +34,6 @@ video.addEventListener(
   () => {
     video1.play();
   },
-  false
+  false,
 );
 ```

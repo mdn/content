@@ -78,7 +78,7 @@ function renderImage(result) {
     .then((nextResult) =>
       setTimeout(() => {
         renderImage(nextResult);
-      }, result.image.duration / 1000.0)
+      }, result.image.duration / 1000.0),
     )
     .catch((e) => {
       // We can end up requesting an imageIndex past the end since

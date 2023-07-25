@@ -7,7 +7,7 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}
 
-The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_Container_Queries#naming_containment_contexts).
+The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the container changes size.
 
@@ -51,10 +51,6 @@ Logical keywords can be used to define the container condition:
 - `not` negates the condition. Only one 'not' condition is allowed per container query and cannot be used with the `and` or `or` keywords.
 
 ```css
-@container not (width < 400px) {
-  /* <stylesheet> */
-}
-
 @container (width > 400px) and (height > 400px) {
   /* <stylesheet> */
 }
@@ -63,7 +59,7 @@ Logical keywords can be used to define the container condition:
   /* <stylesheet> */
 }
 
-@container (width > 400px) not (height > 400px) {
+@container not (width < 400px) {
   /* <stylesheet> */
 }
 ```
@@ -234,6 +230,21 @@ The following query evaluates to true and applies the declared style if the cont
 }
 ```
 
+### Style container queries
+
+{{CSSRef}}{{SeeCompatTable}}
+
+Container queries can also evaluate the computed style of the container element.
+The following container query checks if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`:
+
+```css
+@container style(--accent-color: blue) {
+  /* <stylesheet> */
+}
+```
+
+> **Note:** If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
+
 ## Specifications
 
 {{Specifications}}
@@ -244,7 +255,7 @@ The following query evaluates to true and applies the declared style if the cont
 
 ## See also
 
-- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
+- [Container queries](/en-US/docs/Web/CSS/CSS_container_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}

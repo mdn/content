@@ -535,7 +535,7 @@ A regular expression literal cannot start with two forward slashes (`//`), becau
 
 ### Template literals
 
-One template literal consists of several tokens: `` `xxx${`` (template head), `}xxx${` (template middle), and `` }xxx`  `` (template tail) are individual tokens, while any expression may come between them.
+One template literal consists of several tokens: `` `xxx${`` (template head), `}xxx${` (template middle), and ``}xxx` `` (template tail) are individual tokens, while any expression may come between them.
 
 See also [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) for more information.
 

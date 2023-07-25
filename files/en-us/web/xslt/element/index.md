@@ -1,6 +1,7 @@
 ---
 title: XSLT elements reference
 slug: Web/XSLT/Element
+page-type: landing-page
 ---
 
 {{XsltSidebar}}

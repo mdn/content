@@ -246,21 +246,7 @@ There are a few other form features that are not as obvious as the ones we have 
 
 ### Meters and progress bars
 
-Meters and progress bars are visual representations of numeric values.
-
-#### Progress
-
-A progress bar represents a value that changes over time up to a maximum value specified by the [`max`](/en-US/docs/Web/HTML/Element/progress#max) attribute. Such a bar is created using a {{ HTMLElement("progress")}} element.
-
-```html
-<progress max="100" value="75">75/100</progress>
-```
-
-{{EmbedLiveSample("Progress", 120, 120)}}
-
-This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.
-
-The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support the element and for screen readers to vocalize it.
+Meters and progress bars are visual representations of numeric values. Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
 
 #### Meter
 
@@ -294,7 +280,19 @@ Such a bar is created by using the {{HTMLElement("meter")}} element. This is for
 
 The content inside the {{HTMLElement("meter")}} element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it.
 
-Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
+#### Progress
+
+A progress bar represents a value that changes over time up to a maximum value specified by the [`max`](/en-US/docs/Web/HTML/Element/progress#max) attribute. Such a bar is created using a {{ HTMLElement("progress")}} element.
+
+```html
+<progress max="100" value="75">75/100</progress>
+```
+
+{{EmbedLiveSample("Progress", 120, 120)}}
+
+This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.
+
+The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support the element and for screen readers to vocalize it.
 
 ## Test your skills!
 

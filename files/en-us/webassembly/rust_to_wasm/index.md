@@ -203,7 +203,7 @@ If you check out the generated WebAssembly code size, it may be a few hundred ki
 Now that we've got a compiled Wasm module, let's run it in the browser.
 Let's start by creating a file named `index.html` in the root of the project, so we end up with the following project structure:
 
-```
+```plain
 ├── Cargo.lock
 ├── Cargo.toml
 ├── index.html
@@ -224,7 +224,7 @@ Let's start by creating a file named `index.html` in the root of the project, so
 Put the following content in the `index.html` file:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -333,7 +333,7 @@ This imports the new module from the `node_modules` folder. This isn't considere
 Finally, we need to add a HTML file to load the JavaScript. Create an `index.html` file and add the following:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -347,7 +347,7 @@ Finally, we need to add a HTML file to load the JavaScript. Create an `index.htm
 
 The `hello-wasm/site` directory should look like this:
 
-```
+```plain
 ├── index.html
 ├── index.js
 ├── node_modules

@@ -96,7 +96,7 @@ box.animate(
   },
   {
     timeline,
-  }
+  },
 );
 
 output.textContent = `Timeline source element: ${timeline.source.nodeName}. Timeline scroll axis: ${timeline.axis}`;

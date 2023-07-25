@@ -57,11 +57,10 @@ You can choose a different port number. Entering `npx http-server /user/yourName
 
 This non-configurable static HTTP server suffices for our basic app. Apps served via `localhost` and `127.0.0.1` are exempt from https and always considered secure. Browser insecure warnings, if given, can be bypassed. While not necessary, to configurable your local web server to be served over HTTPs, you can [add a built-in SSL certificate](https://github.com/lwsjs/local-web-server/wiki/How-to-get-the-%22green-padlock%22-using-the-built-in-certificate). With the certificate, you will be able to install and run [local-web-server](<https://github.com/lwsjs/local-web-server/wiki/How-to-launch-a-secure-local-web-server-(HTTPS)>) from the command line to serve your project locally over `https`, preventing any security warning.
 
-```
-$ npm install -g local-web-server
-$ cd ~/user/yourName/CycleTracker/
-$ ws --https
-Listening on https://YourComputerName.local:8000, https://127.0.0.1:8000, https://192.168.1.7:8000
+```bash
+npm install -g local-web-server
+cd ~/user/yourName/CycleTracker/
+ws --https
 ```
 
 In the above, you may need to prefix the install with `sudo`.
@@ -86,7 +85,7 @@ As noted, all GitHub Pages are publicly available on the internet, even if you s
 
 If you don't want your PWA to be top level, you can make your app appear as if it is residing in a subdirectory. You can either create a subdirectory within the `<username>.github.io` repository, or publish from your PWA's separate repository. By [configuring a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) within your PWA repository, your app will be visible at `https://<username>.github.io/<repository>` where `<repository>` is the repository's name. You can set GitHub to auto-publish your site when changes are [published to a specific branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) within that repository, including `main`.
 
-In the case of the CycleTracker demo app in the various stages of development, the `<username>` is `mdn` and the repository is `pwa-examples`. Because this repository has mutiple example PWAs, each with progress at several steps in the development process, the files, and therefore the PWA, are nested a few levels deep.
+In the case of the CycleTracker demo app in the various stages of development, the `<username>` is `mdn` and the repository is `pwa-examples`. Because this repository has multiple example PWAs, each with progress at several steps in the development process, the files, and therefore the PWA, are nested a few levels deep.
 
 Note that you can [configure a custom domain for a GitHub pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 

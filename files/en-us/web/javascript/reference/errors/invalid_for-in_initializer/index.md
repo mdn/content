@@ -14,7 +14,7 @@ allowed in for-in loops in strict mode. In addition, lexical declarations with i
 
 ## Message
 
-```
+```plain
 SyntaxError: for-in loop variable declaration may not have an initializer. (V8-based)
 SyntaxError: for-in loop head declarations may not have initializers (Firefox)
 SyntaxError: a lexical declaration in the head of a for-in loop can't have an initializer (Firefox)

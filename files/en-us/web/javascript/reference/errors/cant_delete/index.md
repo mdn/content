@@ -1,5 +1,5 @@
 ---
-title: "TypeError: property \"x\" is non-configurable and can't be deleted"
+title: 'TypeError: property "x" is non-configurable and can''t be deleted'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
 page-type: javascript-error
 ---
@@ -11,7 +11,7 @@ when it was attempted to delete a property, but that property is [non-configurab
 
 ## Message
 
-```
+```plain
 TypeError: Cannot delete property 'x' of #<Object> (V8-based)
 TypeError: property "x" is non-configurable and can't be deleted (Firefox)
 TypeError: Unable to delete property. (Safari)

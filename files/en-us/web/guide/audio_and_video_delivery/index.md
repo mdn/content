@@ -142,7 +142,7 @@ try {
   request.open(
     "GET",
     "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
-    true
+    true,
   );
   request.responseType = "arraybuffer";
 
@@ -187,7 +187,7 @@ if (navigator.mediaDevices) {
     })
     .catch(function onError() {
       alert(
-        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?"
+        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?",
       );
     });
 } else {
@@ -302,7 +302,7 @@ window.onload = () => {
     () => {
       switchState();
     },
-    false
+    false,
   );
 
   window.addEventListener("keypress", checkKey, false);
@@ -349,7 +349,7 @@ When specifying the URI of media for an {{ HTMLElement("audio") }} or {{ HTMLEle
 
 A time range is specified using the syntax:
 
-```
+```plain
 #t=[starttime][,endtime]
 ```
 
@@ -410,7 +410,7 @@ If these work but the files you are supplying don't, there are two possible issu
 
 Although this is usually supported, you may need to add the following to your media server's `.htaccess` file.
 
-```
+```plain
 # AddType TYPE/SUBTYPE EXTENSION
 
 AddType audio/mpeg mp3
@@ -469,7 +469,7 @@ lastsource.addEventListener(
     d.innerHTML = v.innerHTML;
     v.parentNode.replaceChild(d, v);
   },
-  false
+  false,
 );
 ```
 

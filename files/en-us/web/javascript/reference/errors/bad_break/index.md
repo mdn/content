@@ -10,7 +10,7 @@ The JavaScript exception "unlabeled break must be inside loop or switch" occurs 
 
 ## Message
 
-```
+```plain
 SyntaxError: Illegal break statement (V8-based)
 SyntaxError: unlabeled break must be inside loop or switch (Firefox)
 SyntaxError: 'break' is only valid inside a switch or loop statement. (Safari)
@@ -61,7 +61,7 @@ function increment() {
 ```js example-bad
 let containingIndex = 0;
 const matrix = [
-  [1, 2, 3], 
+  [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
