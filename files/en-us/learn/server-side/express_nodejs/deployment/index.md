@@ -538,7 +538,7 @@ This will publish the site and put the domain in place of the button, as shown b
 Select the domain URL to open your library application.
 Note that because we haven't specified a production database, the local library will open using your development data.
 
-### Provision and connect a MongoDb database
+### Provision and connect a MongoDB database
 
 Instead of using our development data, next let's create a production MongoDB database to use instead.
 We will create the database as part of the Railway application project, although there is nothing to stop you creating in its own separate project, or indeed to use a _MongoDB Atlas_ database for production data, just as you have for the development database.
