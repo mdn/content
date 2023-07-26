@@ -171,7 +171,7 @@ This means that when the image has been downloaded, the browser doesn't have to 
 
 ![Comparison of page layout while the browser is loading a page and when it has finished, when the image size is specified.](size.png)
 
-For an excellent article on the history of this feature, see [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
+For an excellent article on the history of this feature, see [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
 
 > **Note:** Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
 >
