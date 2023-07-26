@@ -120,6 +120,8 @@ register("ab-testing", SelectURLOperation);
 
 Note how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}}. To reiterate, to preserve privacy and mitigate data leakage you can only read values back out of shared storage inside a worklet.
 
+> **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
+
 #### Add the worklet
 
 To use the operation defined in the worklet module, it needs to be added to the shared storage worklet using {{domxref("Worklet.addModule", "window.sharedStorage.worklet.addModule()")}}. This is done in our main app context, before we set the experiment group value, so that it is ready to use when needed:
