@@ -7,7 +7,11 @@ spec-urls: https://drafts.csswg.org/css-pseudo/
 
 {{CSSRef}}
 
-The **CSS pseudo-element** module defines the patterns representing entities not included in HTML.
+The **CSS pseudo-element** module defines pseudo-elements, abstract elements not directly present in the document tree that represent portions of the CSS render tree that can be selected and styled. Pseudo-elements are used to create abstractions about the document tree beyond those provided by the document tree.
+
+Pseudo-elements, prefixed with a double colon (`::`), can be added to selectors, including the implied [universal selector](/en-US/docs/Web/CSS/Universal_selectors), to target and style these faux elements.
+
+Pseudo-elements enable targeting entities not included in HTML and sections of content not otherwise targetable without having to add extra markup. The {{CSSXref("::selection")}} pseudo-element matches the content currently highlighted by the user, automatically updating what is matched as the user interacts with the content and changes the current selection. The {{CSSXref("::first-line")}} pseudo-element targets the first line of an element, updating automatically if the character count of the first line changes, without having to query the element's line length. The {{CSSXref("::placeholder")}} pseudo-element can be used to select the placeholder of an {{HTMLelement("input")}} element; an abstract element that exists, but is not a distinct node in the document tree.
 
 ## Reference
 
