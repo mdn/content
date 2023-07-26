@@ -202,9 +202,8 @@ function renderPastPeriods() {
   // Loop over all periods and render them.
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
-    periodEl.textContent = `From ${formatDate(
-      period.startDate,
-    )} to ${formatDate(period.endDate)}`;
+    periodEl.textContent = `From ${formatDate(period.startDate)}
+                            to ${formatDate(period.endDate)}`;
     pastPeriodList.appendChild(periodEl);
   });
 
