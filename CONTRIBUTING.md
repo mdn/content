@@ -201,13 +201,13 @@ This will make it easier to submit a pull request for your changes.
 3. Check for errors by clicking `Show flaws` on each previewed page.
    You may be able to fix flaws by running:
 
-   ```sh
+   ```bash
    yarn content flaws <page_slug>
    ```
 
 4. Commit your changes to the branch (our example is using the `fix-typo` branch) and push the changes to your fork's remote:
 
-   ```sh
+   ```bash
    # Adding all files to the commit
    git add .
    # Making a commit with a message describing the changes
@@ -241,7 +241,7 @@ There are a few things to keep in mind:
 Moving one or more documents (or an entire tree of documents) is made easier with the `yarn content move` command.
 This command moves the file and fixes up redirects automatically. You can use this command as shown below:
 
-```sh
+```bash
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
@@ -257,7 +257,7 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 1. Starting from a fresh branch:
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -270,13 +270,13 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 2. Move files with `yarn content move`.
    This will delete and modify existing files, as well as create new files.
 
-   ```sh
+   ```bash
    yarn content move Learn/Accessibility Learn/A11y
    ```
 
 3. Commit all of the changes and push your branch to the remote:
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Move Learn/Accessibility to Learn/A11y"
    git push
@@ -292,14 +292,14 @@ Similar to moving files, you can delete documents or a tree of documents easily 
 
 You can use this command as shown below:
 
-```sh
+```bash
 yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
 ```
 
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
 If the slug of the page you wish to delete contains special characters, include it in quotes. For example:
 
-```sh
+```bash
 yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
 ```
 
@@ -308,7 +308,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 1. Start from a fresh branch.
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -320,7 +320,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 2. Run the `yarn content delete` command and redirect all deleted documents.
 
-   ```sh
+   ```bash
    yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
 
@@ -330,7 +330,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 3. Commit all of the changes and push your branch to the remote.
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Delete Learn/Accessibility pages"
    git push
@@ -346,7 +346,7 @@ You may do this by using the `yarn content add-redirect` command.
 
 1. Start a fresh branch to work in:
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -358,13 +358,13 @@ You may do this by using the `yarn content add-redirect` command.
 
 2. Add a redirect with `yarn content add-redirect`. The target page can be a page on MDN or an external URL:
 
-   ```sh
+   ```bash
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
 3. Commit all of the changed files and pushing your branch to your fork:
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Adding redirect after deleting Learn/Accessibility pages"
    git push
