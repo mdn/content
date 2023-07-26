@@ -2,7 +2,7 @@
 title: CSS nesting
 slug: Web/CSS/CSS_nesting
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-nesting
+spec-urls: https://drafts.csswg.org/css-nesting-1/
 ---
 
 {{CSSRef}}
