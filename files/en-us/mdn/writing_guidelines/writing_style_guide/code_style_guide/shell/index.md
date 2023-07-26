@@ -16,8 +16,8 @@ Such a block looks like this:
 
 ```bash example-good
 # This may take a while...
-hg clone https://hg.mozilla.org/mozilla-central/ firefox
-cd firefox
+git clone https://github.com/mdn/content
+cd content
 ```
 
 ## General guidelines for shell prompt code examples

@@ -87,7 +87,7 @@ Don't include values for boolean attributes (but do include values for {{glossar
 This is perfectly understandable and works fine. If a boolean HTML attribute is present, the value is true. While including a value will work, it is not necessary and incorrect:
 
 ```html example-bad
-<input required="required"></input>
+<input required="required" />
 ```
 
 ## Case

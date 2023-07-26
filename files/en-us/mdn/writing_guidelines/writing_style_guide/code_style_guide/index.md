@@ -145,14 +145,14 @@ These guidelines should be followed to ensure that the code examples you write d
 
   ```css example-good
   color: #058ed9;
-  color: #a39a92;
+  color: #a39a92c1;
   color: #ff0;
-  color: #fff;
+  color: #fbfa;
   ```
 
   ```css-nolint example-bad
   color: #ffff00;
-  color: #ffffff;
+  color: #ffbbffaa;
   ```
 
 ### Mark rendered examples as good or bad
