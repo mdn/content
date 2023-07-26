@@ -74,7 +74,7 @@ Designing new interactions is generally only an option for very large industry p
 It is best not to invent new user interactions. For any interaction you do add, it is vital to spend time in the design stage; if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to [perform user tests](https://en.wikipedia.org/wiki/Usability_testing). This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:
 
 - [UXMatters.com](https://www.uxmatters.com/)
-- [UXDesign.com](http://uxdesign.com/)
+- [UXDesign.com](https://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
 > **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
@@ -210,7 +210,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 We don't need an extra element to design the down arrow; instead, we're using the {{cssxref("::after")}} pseudo-element. It could also be implemented using a simple background image on the `select` class.
 
 ```css
-.select:after {
+.select::after {
   content: "▼"; /* We use the unicode character U+25BC; make sure to set a charset meta tag */
   position: absolute;
   z-index: 1; /* This will be important to keep the arrow from overlapping the list of options */
@@ -347,7 +347,7 @@ So here's the result with our three states ([check out the source code here](/en
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -469,7 +469,7 @@ So here's the result with our three states ([check out the source code here](/en
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -591,7 +591,7 @@ So here's the result with our three states ([check out the source code here](/en
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -667,7 +667,7 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 
 Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital to make your script generic and reusable.
 
-In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully
+In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully.
 
 To achieve this, we need two things:
 
@@ -850,7 +850,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1147,7 +1147,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1270,7 +1270,7 @@ window.addEventListener("load", () => {
     });
 
     select.addEventListener("keyup", (event) => {
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
     });
@@ -1468,7 +1468,7 @@ Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_for
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1793,7 +1793,7 @@ Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custo
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1946,13 +1946,13 @@ window.addEventListener("load", () => {
     select.addEventListener("keyup", (event) => {
       let index = getIndex(select);
 
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
-      if (event.keyCode === 40 && index < optionList.length - 1) {
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
       }
-      if (event.keyCode === 38 && index > 0) {
+      if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
 
