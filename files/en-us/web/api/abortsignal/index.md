@@ -123,9 +123,10 @@ To trigger on multiple signals they must be daisy chained.
 The code snippet below shows how you might call {{domxref("AbortController.abort()")}} in the handler for a separate timer.
 
 ```js
+let timeoutId;
 try {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 5000);
+  timeoutId = setTimeout(() => controller.abort(), 5000);
   const res = await fetch(url, { signal: controller.signal });
   const body = await res.json();
 } catch (e) {
