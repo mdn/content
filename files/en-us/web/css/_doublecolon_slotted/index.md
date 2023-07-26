@@ -107,7 +107,7 @@ Our markup includes three custom elements, including a custom element with an in
 
 #### Result
 
-{{EmbedLiveSample('Highlighting_slotted_elements', 500)}}
+{{EmbedLiveSample('Highlighting_slotted_elements', 500, 500)}}
 
 ## Specifications
 
