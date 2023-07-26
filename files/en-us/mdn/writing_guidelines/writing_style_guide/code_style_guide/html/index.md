@@ -78,13 +78,13 @@ Omitting quotes can also cause problems. In the above example, the `alt` attribu
 
 ## Boolean attributes
 
-Don't write out boolean attributes in full; you can just write the attribute name to set it. For example, you can write:
+Don't include values for boolean attributes (but do include values for {{glossary("enumerated")}} attributes); you can just write the attribute name to set it. For example, you can write:
 
 ```html example-good
-<input required></input>
+<input required />
 ```
 
-This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:
+This is perfectly understandable and works fine. If a boolean HTML attribute is present, the value is true. While including a value will work, it is not necessary and incorrect:
 
 ```html example-bad
 <input required="required"></input>

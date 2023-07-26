@@ -48,7 +48,7 @@ On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to 
 
 Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
 
-These guidelines for formatting code examples for MDN Web Docs are also good practices when you are coding.
+These MDN Web Docs guidelines for formatting code examples are also good practices when you are coding.
 
 ### Choosing a syntax language
 
@@ -107,7 +107,7 @@ const toolkitProfileService = Components.classes[
 
 ### Code block height
 
-Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short, like 15-25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and link to the full example on a GitHub repo or codepen, say.
+Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short, like 15-25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and link to the complete example on a GitHub repo or CodePen, say.
 
 #### Inline code formatting
 
