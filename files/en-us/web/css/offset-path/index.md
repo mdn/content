@@ -24,7 +24,7 @@ offset-path: ray(45deg);
 /* URL */
 offset-path: url(#path);
 
-/* Shape */
+/* Basic shape */
 offset-path: circle(50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
@@ -48,17 +48,28 @@ offset-path: unset;
 
 ### Values
 
+- `none`
+
+  - : Specifies no motion path at all.
+
+- `<offset-path>`
+
+  - : This parameter is optional. If not specified, the default value is. One of the following three values can be specified for `<offset-path>`: `<ray()>`, `<url>`, or `<basic shape>`.
+
 - {{cssxref("ray","ray()")}}
-  - : Defines a path that is a line segment from the starting position of an element and proceeding in the direction defined by the specified angle. This value accepts up to three parameters – an {{CSSxRef("angle")}} similar to the CSS [linear-gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) angle, a size value similar to the CSS [radial-gradient](/en-US/docs/Web/CSS/gradient/radial-gradient) size values, and the keyword `contain`. The angle `0deg` starts on the y-axis, pointing up, with positive angles increasing in the clockwise direction. The possible values for the optional size parameter include `closest-side`, `closest-corner`, `farthest-side`, `farthest-corner`, and `sides`. If omitted, the value of the size parameter defaults to `closest-side`. The optional `contain` keyword reduces the length of the offset path so that the element stays within its containing block.
+
+  - : Defines a path that is a line segment from an element's starting position and extending at the specified angle. This value accepts up to three parameters – an {{CSSxRef("angle")}} similar to the CSS [linear-gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) angle, a size value similar to the CSS [radial-gradient](/en-US/docs/Web/CSS/gradient/radial-gradient) size values, and the keyword `contain`. The angle `0deg` starts on the y-axis, pointing up, with positive angles increasing in the clockwise direction. The possible values for the optional size parameter include `closest-side`, `closest-corner`, `farthest-side`, `farthest-corner`, and `sides`. If omitted, the value of the size parameter defaults to `closest-side`. The optional `contain` keyword reduces the length of the offset path so that the element stays within its containing block.
 
 > **Note:** While the size parameter is optional in the specification, some browsers implement `ray()` with a required size value. Including the default `closest-side` is the equivalent of omitting the size, but has better support.
+
+- `<coord-box>`
+
+  - : This parameter is optional. If not specified, the default value is `border-box`.
 
 - `url()`
   - : References the ID of an SVG shape — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 - `<basic-shape>`
   - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) by using one of the shape functions such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon), or {{cssxref("path","path()")}}.
-- `none`
-  - : Specifies no motion path at all.
 
 ## Description
 
