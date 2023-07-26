@@ -9,7 +9,7 @@ browser-compat: css.selectors.slotted
 
 The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element that has been placed into a slot inside an HTML template (see [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots) for more information).
 
-This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM). Note also that this selector won't select a text node placed into a slot; it only targets actual elements.
+This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM). Note that this selector won't select a text node placed into a slot; it only targets actual elements.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-slotted.html", "tabbed-shorter")}}
 
@@ -37,9 +37,7 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 
 ### Highlighting slotted elements
 
-The following snippets are taken from our [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/main/slotted-pseudo-element) demo ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
-
-In this demo we use a simple template with three slots:
+In this example, we use a template with three slots:
 
 ```html
 <template id="person-template">
@@ -54,7 +52,7 @@ In this demo we use a simple template with three slots:
 </template>
 ```
 
-A custom element — `<person-details>` — is defined like so:
+We define the `<person-details>` custom element:
 
 ```js
 customElements.define(
@@ -73,7 +71,8 @@ customElements.define(
         "h2 { margin: 0 0 10px; }" +
         "ul { margin: 0; }" +
         "p { margin: 10px 0; }" +
-        "::slotted(*) { color: gray; font-family: sans-serif; } ";
+        "::slotted(*) { color: gray; font-family: sans-serif; } " +
+        "::slotted(span) {text-decoration: underline;} ";
 
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
@@ -82,17 +81,33 @@ customElements.define(
 );
 ```
 
-You'll see that when filling the `style` element with content, we select all slotted elements (`::slotted(*)`) and give them a different font and color. This allows them to stand out better next to the slots that haven't been successfully filled.
+When filling the `style` element with content, you'll see that we select all slotted elements (`::slotted(*)`) and give them a different font and color. This differentiates them from the slots that haven't been filled.
 
-The element looks like this when inserted into the page:
+Our markup includes three custom elements, including a custom element with an invalid slot name in a source order that differs from the `<template>`
 
 ```html
 <person-details>
-  <p slot="person-name">Dr. Shazaam</p>
+  <p slot="person-name">Wonder Woman</p>
   <span slot="person-age">Immortal</span>
   <span slot="person-occupation">Superhero</span>
 </person-details>
+
+<person-details>
+  <p slot="person-name">Malala Yousafzai</p>
+  <span slot="person-age">17</span>
+  <span slot="person-occupation">Activist</span>
+</person-details>
+
+<person-details>
+  <span slot="person-age">44</span>
+  <span slot="not-a-slot-name">Time traveller</span>
+  <p slot="person-name">Dr. Who</p>
+</person-details>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Highlighting_slotted_elements', 500)}}
 
 ## Specifications
 
