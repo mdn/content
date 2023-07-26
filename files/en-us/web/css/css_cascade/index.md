@@ -94,7 +94,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 ## See also
 
 - [CSS selectors module](/en-US/docs/Web/CSS/CSS_selectors)
-- [CSS pseudo-elements module](/en-US/docs/Web/CSS/CSS_pseudo)
+- [CSS pseudo-elements module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
 - [CSS paged media module](/en-US/docs/Web/CSS/CSS_paged_media)
 - [CSS conditional rules module](/en-US/docs/Web/CSS/CSS_conditional_rules)
 - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
