@@ -80,8 +80,6 @@ if (navigator.mediaDevices) {
     .then((stream) => {
       const mediaRecorder = new MediaRecorder(stream);
 
-      visualize(stream);
-
       record.onclick = () => {
         mediaRecorder.start();
         console.log(mediaRecorder.state);
