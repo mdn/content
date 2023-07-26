@@ -181,7 +181,7 @@ One of the few cases in which a synchronous request does not usually block execu
 
 **`myFile.txt`** (the target of the synchronous {{domxref('XMLHttpRequest')}} invocation):
 
-```
+```plain
 Hello World!!
 ```
 

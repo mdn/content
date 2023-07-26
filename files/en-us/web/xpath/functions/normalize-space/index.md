@@ -10,7 +10,7 @@ The `normalize-space` function strips leading and trailing white-space from a st
 
 ### Syntax
 
-```
+```plain
 normalize-space( [string] )
 ```
 

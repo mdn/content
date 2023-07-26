@@ -10,7 +10,7 @@ The JavaScript exception "mismatched placement" occurs when a private [getter](/
 
 ## Message
 
-```
+```plain
 SyntaxError: Identifier '#x' has already been declared (V8-based)
 SyntaxError: getter and setter for private name #x should either be both static or non-static (Firefox)
 SyntaxError: Cannot declare a private non-static getter if there is a static private setter with used name. (Safari)
