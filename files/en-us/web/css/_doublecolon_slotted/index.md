@@ -81,7 +81,7 @@ customElements.define(
 );
 ```
 
-When filling the `style` element with content, you'll see that we select all slotted elements (`::slotted(*)`) and give them a different font and color. This differentiates them from the slots that haven't been filled. We styled all the slotted {{HTMLElement("span")}}s (`::slotted(span)`)to differentiate the `<span>`s from the {{HTMLElement("p")}}s. 
+When filling the `style` element with content, you'll see that we select all slotted elements (`::slotted(*)`) and give them a different font and color. This differentiates them from the slots that haven't been filled. We styled all the slotted {{HTMLElement("span")}}s (`::slotted(span)`)to differentiate the `<span>`s from the {{HTMLElement("p")}}s.
 
 Our markup includes three custom elements, including a custom element with an invalid slot name in a source order that differs from the `<template>`
 
