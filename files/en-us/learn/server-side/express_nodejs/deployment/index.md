@@ -555,7 +555,7 @@ Select **Database** when prompted about the type of service to add:
 
 Then select **Add MongoDB** to start adding the database
 
-![Railway popup showing different databases that can be selected: postgres, mysql, mongodb and so on](railway_database_select_type.png)
+![Railway popup showing different databases that can be selected: Postgres, MySQL, MongoDB and so on](railway_database_select_type.png)
 
 Railway will then provision a service containing an empty database in the same project.
 On completion you will now see both the application and database services in the project view.

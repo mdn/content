@@ -652,7 +652,7 @@ npm install mongoose
 ## Connect to MongoDB
 
 Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
-Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
+Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _MongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
@@ -829,7 +829,7 @@ In order to test the models (and to create some example books and other items th
 2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
    ```bash
-   node populatedb <your mongodb url>
+   node populatedb <your MongoDB url>
    ```
 
    > **Note:** On Windows you need to wrap the database URL inside double (").
@@ -837,7 +837,7 @@ In order to test the models (and to create some example books and other items th
 
 3. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab).
+> **Note:** Go to your database on MongoDB Atlas (in the _Collections_ tab).
 > You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## Summary
