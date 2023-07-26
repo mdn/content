@@ -131,7 +131,7 @@ You can find your image's width and height in a number of ways. For example, on 
   height="341" />
 ```
 
-There's a very good reason to do this. The HTML for your page and the image are separate resources, fetched by the browser as separate HTTP(S) requests. As soon as the browser has received the HTML, it will start to display it to the user. If the images haven't yet been received (and this will often be the case, as images are often much bigger than HTML), then the browser will display only the HTML, and will update the page with the image as soon as it is received.
+There's a very good reason to do this. The HTML for your page and the image are separate resources, fetched by the browser as separate HTTP(S) requests. As soon as the browser has received the HTML, it will start to display it to the user. If the images haven't yet been received (and this will often be the case, as image file sizes are often much larger than HTML files), then the browser will render only the HTML, and will update the page with the image as soon as it is received.
 
 For example, suppose we have some text after the image:
 
