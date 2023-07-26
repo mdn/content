@@ -36,7 +36,7 @@ It is hard to talk about privacy without also talking about security — they ar
 - Health information such as medical history, allergies, or ongoing conditions
 - Usernames and passwords
 - Hobbies, interests, or other personal preferences
-- Biometic data such as fingerprints or facial recognition data
+- Biometric data such as fingerprints or facial recognition data
 
 **Private information** is any information that users do not want shared publicly and must be kept private (i.e., information that is accessible only by a certain group of authorized users). Some private data is private by law (for example medical data), and some is private more by personal preference.
 
@@ -48,7 +48,7 @@ Following on from the above section, **personally identifiable information** (PI
 
 **Tracking** refers to the process of a third party recording a user's activity across many different websites. This can be done in various ways, for example:
 
-- Looking at cookies that the user has set (for example, to persist a log in or personalization details across different sites) if the third party is embedded on the same domain.
+- Looking at cookies that the user has set (for example, to persist a login or personalization details across different sites) if the third party is embedded on the same domain.
 - Looking at the {{httpheader("Referer")}} header to see where a user has navigated from.
 
 Tracking data can be used to profile a user and their interests and preferences, which is usually bad and can be annoying to various degrees. For example:
@@ -90,7 +90,7 @@ Related topics are as follows:
 
 ### Opt-in for "powerful features"
 
-So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which basically means HTTPS-only. Not only that, but these web features are gated behind a system of user permissions. Users have to explicitly opt-in to features like allowing notifications, accessing geolocation data, making the browser go into fullscreen mode, accessing media streams from web cams, using web payments, etc.
+So-called "powerful" web API features that provide access to potentially sensitive data and operations are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which basically means HTTPS-only. Not only that, but these web features are gated behind a system of user permissions. Users have to explicitly opt in to features like allowing notifications, accessing geolocation data, making the browser go into fullscreen mode, accessing media streams from webcams, using web payments, etc.
 
 ### Anti-tracking technology
 
@@ -126,7 +126,7 @@ Some of the most developed parts of the privacy sandbox project are as follows:
 - [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies)
   - : Also known as **partitioned cookies**, CHIPs allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 - [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/)
-  - : A machanism for a company to declare relationships between different origins. Supporting browsers will then allow limited third-party cookie access across those origins for specific purposes.
+  - : A mechanism for a company to declare relationships between different origins. Supporting browsers will then allow limited third-party cookie access across those origins for specific purposes.
 - Third-party cookie default
   - : Chrome does not yet block third-party cookies by default, but this can be set by users in Chrome settings.
 
@@ -203,7 +203,7 @@ Earlier on we discussed tracking, and some of the unethical purposes they are us
 Also recall from earlier that browsers are implementing a number of technologies to limit the usage of tracking cookies, especially cross-site cookies, with the eventual aim of removing them altogether. It is a good idea to prepare for this, by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways. For example:
 
 - Use an alternative client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) to persist data. This does have the downside that the data is stored per-origin, so it can't be shared.
-- Use a technology such as [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless), [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) and/or the [Storage access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe, controlled way, or block them altogether. These currently have limited browser support.
+- Use a technology such as [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless), [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) and/or the [Storage access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt in to using cross-site cookies in a safe, controlled way, or block them altogether. These currently have limited browser support.
 - Use a server-side solution for data persistence.
 
 > **Note:** To reiterate what we said earlier, make sure you clearly communicate to your users what you are doing via your privacy policy, and allow them to opt-in, and easily delete their data if they change their mind at a later date.
@@ -226,7 +226,7 @@ Once you have audited your third-party resources and understand what they are do
 
 The following list provides some tips on how to mitigate privacy risks inherent with using third party resources:
 
-- When embedding third party resources, consider if there is a way to achieve the same or a similar effect with less privacy impact. For example, it might be fun to have a social media post viewer embeded on your site, but is it really necessary? Wouldn't a link to your social media page be sufficient? also, some third-party services have privacy-enhancing options. See for example YouTube's [Embed videos & playlists > Turn on privacy-enhanced mode](https://support.google.com/youtube/answer/171780).
+- When embedding third party resources, consider if there is a way to achieve the same or a similar effect with less privacy impact. For example, it might be fun to have a social media post viewer embedded on your site, but is it really necessary? Wouldn't a link to your social media page be sufficient? also, some third-party services have privacy-enhancing options. See for example YouTube's [Embed videos & playlists > Turn on privacy-enhanced mode](https://support.google.com/youtube/answer/171780).
 - Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) on external links:
 
   ```html
@@ -237,7 +237,7 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 
   > **Note:** See also [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
 
-- Use the {{httpheader("Permissions-Policy")}} HTTP header to control access to "powerful features" (such as notifications, geolocation data, accessing media streams from web cams, etc.). This can be useful for privacy because it stops third party sites from doing unexpected things with these features, and users don't want to be unnecessarily bombarded by permissions prompts that they may not understand.
+- Use the {{httpheader("Permissions-Policy")}} HTTP header to control access to "powerful features" (such as notifications, geolocation data, accessing media streams from webcams, etc.). This can be useful for privacy because it stops third party sites from doing unexpected things with these features, and users don't want to be unnecessarily bombarded by permissions prompts that they may not understand.
 
   The following example disables [Picture-in-Picture](/en-US/docs/Web/API/Picture-in-Picture_API) everywhere, allows [Geolocation](/en-US/docs/Web/API/Geolocation_API) to be used only on one specific origin, and allows camera usage everywhere:
 
@@ -267,7 +267,7 @@ You need to make sure that, once you have collected data from your users, that i
 The below tips offer some guidance on protecting your user's data:
 
 - Security is hard to get right. When implementing a secure solution that involves data collection — particularly if it is sensitive data such as log-in credentials — it makes sense to use a reputable solution from a well-respected provider. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose — for example an identity provider solution, or a secure online survey provider.
-- If you want to roll your own solution for collecting user data, make sure you understand what you are doing. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested throroughly. Use multi-factor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
+- If you want to roll your own solution for collecting user data, make sure you understand what you are doing. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use multifactor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
 - When collecting user sign-up information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down.
 - Don't include sensitive data in URLs — if a third party intercepts the URL (for example via the {{httpheader("Referer")}} header), they could steal that information. Use `POST` requests rather than `GET` requests to avoid this.
 - Consider using tools like [Content Security Policy](/en-US/docs/Web/HTTP/CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) to enforce a set of feature usage on your site that makes it harder to introduce vulnerabilities. Be careful when doing this — if you block usage of a feature that a third party script relies on to work, you may end up breaking your site's functionality. This is something you can look into when auditing your third party resources (see [Carefully manage third-party resources](#carefully_manage_third-party_resources)).

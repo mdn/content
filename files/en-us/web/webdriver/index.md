@@ -41,7 +41,7 @@ with webdriver.Firefox() as driver:
 
 This might produce output akin to this:
 
-```
+```plain
 #1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
 ```
 

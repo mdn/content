@@ -12,7 +12,7 @@ isn't used with a constructor object, i.e. an object which has a `prototype` pro
 
 ## Message
 
-```
+```plain
 TypeError: Right-hand side of 'instanceof' is not an object (V8-based)
 TypeError: Right-hand side of 'instanceof' is not callable (V8-based)
 TypeError: invalid 'instanceof' operand "x" (Firefox)

@@ -99,7 +99,7 @@ while ((myArray = myRe.exec(str)) !== null) {
 
 This script displays the following text:
 
-```
+```plain
 Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```

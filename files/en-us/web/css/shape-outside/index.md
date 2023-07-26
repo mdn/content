@@ -66,7 +66,7 @@ The `shape-outside` property is specified using the values from the list below, 
 - {{cssxref("&lt;image&gt;")}}
   - : The float area is extracted and computed based on the alpha channel of the specified {{cssxref("&lt;image&gt;")}} as defined by {{cssxref("shape-image-threshold")}}.
 
-> **Note:** If the image is invalid, the effect is as if the keyword `none` had been specified.
+> **Note:** If the image is invalid, the effect is as if the keyword `none` had been specified. Additionally, the image must be served with {{Glossary("CORS")}} headers allowing its use.
 
 ## Formal definition
 

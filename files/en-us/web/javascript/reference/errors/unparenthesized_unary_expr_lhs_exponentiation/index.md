@@ -10,7 +10,7 @@ The JavaScript exception "unparenthesized unary expression can't appear on the l
 
 ## Message
 
-```
+```plain
 SyntaxError: Unary operator used immediately before exponentiation expression. Parenthesis must be used to disambiguate operator precedence (V8-based)
 SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**' (Firefox)
 SyntaxError: Unexpected token '**'. Ambiguous unary expression in the left hand side of the exponentiation expression; parentheses must be used to disambiguate the expression. (Safari)
