@@ -16,6 +16,14 @@ Only certain types of {{HTMLElement("input")}} support this behavior, and it can
 
 > **Note:** The `<option>` element can store a value as internal content and in the `value` and `label` attributes. Which one will be visible in the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
 
+## Accessibility concerns
+
+When deciding to use the `<datalist>` element, here are some accessibility issues to be mindful of:
+
+- The font size of the data list's options does not zoom, always remaining the same size. The contents of the autosuggest do not grow or shrink when the rest of the contents are zoomed in or out.
+- As targeting the list of options with CSS is very limited to non-existent, rendering can not be styled for high-contrast mode.
+- Some screen reader/browser combinations, including NVDA and Firefox, do not announce the contents of the autosuggest popup.
+
 ## Attributes
 
 This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes), common to all elements.
@@ -167,14 +175,6 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
     </tr>
   </tbody>
 </table>
-
-## Accessibility concerns
-
-When deciding to use the `<datalist>` element, here are some accessibility issues to be mindful of:
-
-- The font size of the data list's options does not zoom, always remaining the same size. The contents of the autosuggest do not grow or shrink when the rest of the contents are zoomed in or out.
-- As targeting the list of options with CSS is very limited to non-existent, rendering can not be styled for high-contrast mode.
-- Some screen reader/browser combinations, including NVDA and Firefox, do not announce the contents of the autosuggest popup.
 
 ## Specifications
 

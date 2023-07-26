@@ -9,6 +9,10 @@ browser-compat: html.elements.output
 
 The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.
 
+## Accessibility Concerns
+
+Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
+
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -41,10 +45,6 @@ In the following example, the form provides a slider whose value can range betwe
 ### Result
 
 {{ EmbedLiveSample('Examples')}}
-
-## Accessibility Concerns
-
-Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
 
 ## Technical summary
 

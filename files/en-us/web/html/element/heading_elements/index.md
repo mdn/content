@@ -68,6 +68,103 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
   </tbody>
 </table>
 
+## Accessibility concerns
+
+### Navigation
+
+A common navigation technique for users of screen reading software is jumping from heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
+
+**Don't do this:**
+
+```html example-bad
+<h1>Heading level 1</h1>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+```
+
+**Prefer this:**
+
+```html example-good
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+```
+
+#### Nesting
+
+Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the hierarchy of the content:
+
+1. `h1` Beetles
+
+  1. `h2` Etymology
+  2. `h2` Distribution and Diversity
+  3. `h2` Evolution
+
+    1. `h3` Late Paleozoic
+    2. `h3` Jurassic
+    3. `h3` Cretaceous
+    4. `h3` Cenozoic
+
+  4. `h2` External Morphology
+
+    1. `h3` Head
+
+      1. `h4` Mouthparts
+
+    2. `h3` Thorax
+
+      1. `h4` Prothorax
+      2. `h4` Pterothorax
+
+    3. `h3` Legs
+    4. `h3` Wings
+    5. `h3` Abdomen
+
+When headings are nested, heading levels may be "skipped" when closing a subsection.
+
+- [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
+- [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
+
+### Labeling section content
+
+Another common navigation technique for users of screen reading software is to generate a list of [sectioning content](/en-US/docs/Web/HTML/Element#content_sectioning) and use it to determine the page's layout.
+
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+
+#### Sectioning content examples
+
+```html
+<header>
+  <nav aria-labelledby="primary-navigation">
+    <h2 id="primary-navigation">Primary navigation</h2>
+    <!-- navigation items -->
+  </nav>
+</header>
+
+<!-- page content -->
+
+<footer>
+  <nav aria-labelledby="footer-navigation">
+    <h2 id="footer-navigation">Footer navigation</h2>
+    <!-- navigation items -->
+  </nav>
+</footer>
+```
+
+{{EmbedLiveSample('Sectioning_content_examples')}}
+
+In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
+
+- [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+
+
+
 ## Attributes
 
 These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -124,101 +221,6 @@ The following code shows a few headings with some content under them.
 ```
 
 {{EmbedLiveSample('Example_page', '280', '480')}}
-
-## Accessibility concerns
-
-### Navigation
-
-A common navigation technique for users of screen reading software is jumping from heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
-
-**Don't do this:**
-
-```html example-bad
-<h1>Heading level 1</h1>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
-```
-
-**Prefer this:**
-
-```html example-good
-<h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
-```
-
-#### Nesting
-
-Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the hierarchy of the content:
-
-1. `h1` Beetles
-
-   1. `h2` Etymology
-   2. `h2` Distribution and Diversity
-   3. `h2` Evolution
-
-      1. `h3` Late Paleozoic
-      2. `h3` Jurassic
-      3. `h3` Cretaceous
-      4. `h3` Cenozoic
-
-   4. `h2` External Morphology
-
-      1. `h3` Head
-
-         1. `h4` Mouthparts
-
-      2. `h3` Thorax
-
-         1. `h4` Prothorax
-         2. `h4` Pterothorax
-
-      3. `h3` Legs
-      4. `h3` Wings
-      5. `h3` Abdomen
-
-When headings are nested, heading levels may be "skipped" when closing a subsection.
-
-- [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
-- [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
-- [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
-
-### Labeling section content
-
-Another common navigation technique for users of screen reading software is to generate a list of [sectioning content](/en-US/docs/Web/HTML/Element#content_sectioning) and use it to determine the page's layout.
-
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
-
-#### Sectioning content examples
-
-```html
-<header>
-  <nav aria-labelledby="primary-navigation">
-    <h2 id="primary-navigation">Primary navigation</h2>
-    <!-- navigation items -->
-  </nav>
-</header>
-
-<!-- page content -->
-
-<footer>
-  <nav aria-labelledby="footer-navigation">
-    <h2 id="footer-navigation">Footer navigation</h2>
-    <!-- navigation items -->
-  </nav>
-</footer>
-```
-
-{{EmbedLiveSample('Sectioning_content_examples')}}
-
-In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
-
-- [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## Specifications
 

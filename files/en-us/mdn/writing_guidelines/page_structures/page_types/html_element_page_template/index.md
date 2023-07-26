@@ -78,6 +78,10 @@ The **`<insert_the_element_name>`** [HTML](/en-US/docs/Web/HTML) element does _(
 
 Further information — at this point, include a few more paragraphs explaining the most important things you need to know about using the element and its main features. It is good to explain briefly what is going on in the interactive example if it is not immediately obvious. You could also explain key points about how this element interacts with important related JavaScript or CSS features. Not too much detail — you don't want to repeat the documentation across pages — but a key point plus a link to that feature's page would be useful. Again, see the `<video>` page for an example.
 
+## Accessibility concerns
+
+Warn of any potential accessibility concerns that exist with using this element, and how to work around them. Remove this section if there are none to list.
+
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -134,10 +138,6 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > For examples of this API, see [the page on fetch()](https://example.org).
 > ```
-
-## Accessibility concerns
-
-Optionally, warn of any potential accessibility concerns that exist with using this element, and how to work around them. Remove this section if there are none to list.
 
 ## Technical summary
 

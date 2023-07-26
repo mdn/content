@@ -15,6 +15,12 @@ As you can see from the above example, a `<br>` element is included at each poin
 
 > **Note:** Do not use `<br>` to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the [CSS](/en-US/docs/Web/CSS) {{cssxref('margin')}} property to control their size.
 
+## Accessibility concerns
+
+Creating separate paragraphs of text using `<br>` is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `<br>`s. This can be a confusing and frustrating experience for the person using the screen reader.
+
+Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.
+
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -47,12 +53,6 @@ USA<br />
 #### Result
 
 {{ EmbedLiveSample('Simple_br', 640, 120) }}
-
-## Accessibility concerns
-
-Creating separate paragraphs of text using `<br>` is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `<br>`s. This can be a confusing and frustrating experience for the person using the screen reader.
-
-Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.
 
 ## Technical summary
 

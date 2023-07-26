@@ -15,6 +15,49 @@ The above example shows simple usage of the `<audio>` element. In a similar mann
 
 The content inside the opening and closing `<audio></audio>` tags is shown as a fallback in browsers that don't support the element.
 
+## Accessibility concerns
+
+Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
+
+If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source audio.
+
+The `<audio>` element doesn't directly support WebVTT. You will have to find a library or framework that provides the capability for you, or write the code to display captions yourself. One option is to play your audio using a {{HTMLElement("video")}} element, which does support WebVTT.
+
+In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone. For example, in the WebVTT below, note the use of square brackets to provide tone and emotional insight to the viewer; this can help establish the mood otherwise provided using music, nonverbal sounds and crucial sound effects, and so forth.
+
+```plain
+1
+00:00:00 --> 00:00:45
+[Energetic techno music]
+
+2
+00:00:46 --> 00:00:51
+Welcome to the Time Keeper's podcast! In this episode we're discussing which Swisswatch is a wrist switchwatch?
+
+16
+00:00:52 --> 00:01:02
+[Laughing] Sorry! I mean, which wristwatch is a Swiss wristwatch?
+```
+
+Also it's a good practice to provide some content (such as the direct download link) as a fallback for viewers who use a browser in which the `<audio>` element is not supported:
+
+```html
+<audio controls>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <p>
+    Download <a href="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg">OGG</a> audio.
+  </p>
+</audio>
+```
+
+- [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
+- [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
+- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -338,49 +381,6 @@ This example includes multiple `<source>` elements. The browser tries to load th
   <source src="foo.mp3" type="audio/mpeg" />
 </audio>
 ```
-
-## Accessibility concerns
-
-Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
-
-If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source audio.
-
-The `<audio>` element doesn't directly support WebVTT. You will have to find a library or framework that provides the capability for you, or write the code to display captions yourself. One option is to play your audio using a {{HTMLElement("video")}} element, which does support WebVTT.
-
-In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone. For example, in the WebVTT below, note the use of square brackets to provide tone and emotional insight to the viewer; this can help establish the mood otherwise provided using music, nonverbal sounds and crucial sound effects, and so forth.
-
-```plain
-1
-00:00:00 --> 00:00:45
-[Energetic techno music]
-
-2
-00:00:46 --> 00:00:51
-Welcome to the Time Keeper's podcast! In this episode we're discussing which Swisswatch is a wrist switchwatch?
-
-16
-00:00:52 --> 00:01:02
-[Laughing] Sorry! I mean, which wristwatch is a Swiss wristwatch?
-```
-
-Also it's a good practice to provide some content (such as the direct download link) as a fallback for viewers who use a browser in which the `<audio>` element is not supported:
-
-```html
-<audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg" />
-  <source src="myAudio.ogg" type="audio/ogg" />
-  <p>
-    Download <a href="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg">OGG</a> audio.
-  </p>
-</audio>
-```
-
-- [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
-- [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
-- [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
 ## Technical summary
 

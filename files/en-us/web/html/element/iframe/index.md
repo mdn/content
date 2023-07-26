@@ -15,6 +15,18 @@ Each embedded browsing context has its own [document](/en-US/docs/Web/API/Docume
 
 > **Warning:** Because each browsing context is a complete document environment, every `<iframe>` in a page requires increased memory and other computing resources. While theoretically you can use as many `<iframe>`s as you like, check for performance problems.
 
+## Accessibility concerns
+
+People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
+
+```html
+<iframe
+  title="Wikipedia page for Avocados"
+  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+```
+
+Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -157,18 +169,6 @@ This example embeds the page at <https://example.org> in an iframe.
 #### Result
 
 {{ EmbedLiveSample('A_simple_iframe', 640,400)}}
-
-## Accessibility concerns
-
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
-
-```html
-<iframe
-  title="Wikipedia page for Avocados"
-  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
-```
-
-Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
 
 ## Technical summary
 

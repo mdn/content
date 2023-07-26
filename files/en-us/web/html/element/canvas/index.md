@@ -76,6 +76,17 @@ Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-U
   </tbody>
 </table>
 
+## Accessibility concerns
+
+### Alternative content
+
+The `<canvas>` element on its own is just a bitmap and does not provide information about any drawn objects. Canvas content is not exposed to accessibility tools as semantic HTML is. In general, you should avoid using canvas in an accessible website or app. The following guides can help to make it more accessible.
+
+- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
+- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
+- [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
+- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
+
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -150,17 +161,6 @@ ctx.fillRect(10, 10, 100, 100);
 ### Result
 
 {{EmbedLiveSample('Examples', 600, 150)}}
-
-## Accessibility concerns
-
-### Alternative content
-
-The `<canvas>` element on its own is just a bitmap and does not provide information about any drawn objects. Canvas content is not exposed to accessibility tools as semantic HTML is. In general, you should avoid using canvas in an accessible website or app. The following guides can help to make it more accessible.
-
-- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
-- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
-- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## Specifications
 

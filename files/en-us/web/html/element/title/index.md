@@ -67,6 +67,31 @@ The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's ti
   </tbody>
 </table>
 
+## Accessibility concerns
+
+It is important to provide an accurate and concise title to describe the page's purpose.
+
+A common navigation technique for users of assistive technology is to read the page title and infer the content the page contains. This is because navigating into a page to determine its content can be a time-consuming and potentially confusing process. Titles should be unique to every page of a website, ideally surfacing the primary purpose of the page first, followed by the name of the website. Following this pattern will help ensure that the primary purpose of the page is announced by a screen reader first. This provides a far better experience than having to listen to the name of a website before the unique page title, for every page a user navigates to in the same website.
+
+### Examples
+
+```html
+<title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```
+
+If a form submission contains errors and the submission re-renders the current page, the title can be used to help make users aware of any errors with their submission. For instance, update the page `title` value to reflect significant page state changes (such as form validation problems).
+
+```html
+<title>
+  2 errors - Your order - Sea Food Store - Food: Online takeout today!
+</title>
+```
+
+> **Note:** Presently, dynamically updating a page's title will not be automatically announced by screen readers. If you are going to update the page title to reflect significant changes to a page's state, then the use of [ARIA Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) may be necessary, as well.
+
+- [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -93,31 +118,6 @@ A few guidelines and tips for composing good titles:
 ```
 
 This example establishes a page whose title (as displayed at the top of the window or in the window's tab) as "Awesome interesting stuff".
-
-## Accessibility concerns
-
-It is important to provide an accurate and concise title to describe the page's purpose.
-
-A common navigation technique for users of assistive technology is to read the page title and infer the content the page contains. This is because navigating into a page to determine its content can be a time-consuming and potentially confusing process. Titles should be unique to every page of a website, ideally surfacing the primary purpose of the page first, followed by the name of the website. Following this pattern will help ensure that the primary purpose of the page is announced by a screen reader first. This provides a far better experience than having to listen to the name of a website before the unique page title, for every page a user navigates to in the same website.
-
-### Examples
-
-```html
-<title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
-```
-
-If a form submission contains errors and the submission re-renders the current page, the title can be used to help make users aware of any errors with their submission. For instance, update the page `title` value to reflect significant page state changes (such as form validation problems).
-
-```html
-<title>
-  2 errors - Your order - Sea Food Store - Food: Online takeout today!
-</title>
-```
-
-> **Note:** Presently, dynamically updating a page's title will not be automatically announced by screen readers. If you are going to update the page title to reflect significant changes to a page's state, then the use of [ARIA Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) may be necessary, as well.
-
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
 ## Specifications
 

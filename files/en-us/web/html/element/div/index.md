@@ -13,6 +13,10 @@ The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container fo
 
 As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) or [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, marking a section of a document as being written in a different language (using the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute), and so on.
 
+## Accessibility concerns
+
+The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic), and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
+
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -22,10 +26,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Usage notes
 
 - The `<div>` element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.
-
-## Accessibility concerns
-
-The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic), and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
 
 ## Examples
 

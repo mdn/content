@@ -56,29 +56,6 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
   </tbody>
 </table>
 
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- `max`
-  - : This attribute describes how much work the task indicated by the `progress` element requires. The `max` attribute, if present, must have a value greater than `0` and be a valid floating point number. The default value is `1`.
-- `value`
-  - : This attribute specifies how much of the task that has been completed. It must be a valid floating point number between `0` and `max`, or between `0` and `1` if `max` is omitted. If there is no `value` attribute, the progress bar is indeterminate; this indicates that an activity is ongoing with no indication of how long it is expected to take.
-
-> **Note:** Unlike the {{htmlelement("meter")}} element, the minimum value is always 0, and the `min` attribute is not allowed for the `<progress>` element.
-
-> **Note:** The {{cssxref(":indeterminate")}} pseudo-class can be used to match against indeterminate progress bars. To change the progress bar to indeterminate after giving it a value you must remove the value attribute with {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}.
-
-## Examples
-
-```html
-<progress value="70" max="100">70 %</progress>
-```
-
-### Result
-
-{{ EmbedLiveSample("Examples", 200, 50) }}
-
 ## Accessibility Concerns
 
 ### Labelling
@@ -124,6 +101,29 @@ If the `<progress>` element is describing the loading progress of a section of a
 ##### Result
 
 {{EmbedLiveSample('Describing a particular region')}}
+
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `max`
+  - : This attribute describes how much work the task indicated by the `progress` element requires. The `max` attribute, if present, must have a value greater than `0` and be a valid floating point number. The default value is `1`.
+- `value`
+  - : This attribute specifies how much of the task that has been completed. It must be a valid floating point number between `0` and `max`, or between `0` and `1` if `max` is omitted. If there is no `value` attribute, the progress bar is indeterminate; this indicates that an activity is ongoing with no indication of how long it is expected to take.
+
+> **Note:** Unlike the {{htmlelement("meter")}} element, the minimum value is always 0, and the `min` attribute is not allowed for the `<progress>` element.
+
+> **Note:** The {{cssxref(":indeterminate")}} pseudo-class can be used to match against indeterminate progress bars. To change the progress bar to indeterminate after giving it a value you must remove the value attribute with {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}.
+
+## Examples
+
+```html
+<progress value="70" max="100">70 %</progress>
+```
+
+### Result
+
+{{ EmbedLiveSample("Examples", 200, 50) }}
 
 ## Specifications
 

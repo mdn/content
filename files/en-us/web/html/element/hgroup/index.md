@@ -11,6 +11,10 @@ The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
+## Accessibility concerns
+
+The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
+
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -44,10 +48,6 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
 ### Result
 
 {{EmbedLiveSample('Examples')}}
-
-## Accessibility concerns
-
-The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
 
 ## Technical summary
 
