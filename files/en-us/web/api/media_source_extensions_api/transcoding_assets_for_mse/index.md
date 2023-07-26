@@ -92,44 +92,12 @@ Having a properly fragmented MP4 file is all you need to get started. If you wis
 
 Given that you have ffmpeg and Bento4's utilities accessible through your $PATH, you can run Bento4's `mp4-dash-encode.py` Python script to generate multiple encodings of your content at various resolutions. Bento4's `mp4-dash.py` Python script can then be used to generate the corresponding MPD file needed by clients.
 
-Run the following commands (shown with sample output):
+Run the following commands:
 
 ```bash
-$ python mp4-dash-encode.py -b 5 -v bunny_fragmented.mp4
-Encoding 5 bitrates, min bitrate = 500.0 max bitrate = 2000.0
-Media Source: Video: resolution=640x360
-ENCODING bitrate: 500, resolution: 256x144
-ENCODING bitrate: 875, resolution: 384x216
-ENCODING bitrate: 1250, resolution: 480x270
-ENCODING bitrate: 1625, resolution: 560x316
-ENCODING bitrate: 2000, resolution: 640x360
-
-$ python mp4-dash.py video_0*
-Parsing media file 1: video_00500.mp4
-Parsing media file 2: video_00875.mp4
-Parsing media file 3: video_01250.mp4
-Parsing media file 4: video_01625.mp4
-Parsing media file 5: video_02000.mp4
-Splitting media file (audio) video_00500.mp4
-Splitting media file (video) video_00500.mp4
-Splitting media file (video) video_00875.mp4
-Splitting media file (video) video_01250.mp4
-Splitting media file (video) video_01625.mp4
-Splitting media file (video) video_02000.mp4
-
-$ tree -L 2 output
-output
-├── audio
-│   └── und
-├── stream.mpd
-└── video
-    ├── 1
-    ├── 2
-    ├── 3
-    ├── 4
-    └── 5
-
-8 directories, 1 file
+python mp4-dash-encode.py -b 5 -v bunny_fragmented.mp4
+python mp4-dash.py video_0*
+tree -L 2 output
 ```
 
 > **Note:** `mp4-dash-encode.py` does not display ffmpeg error messages. You can see it by specifying the `-d` option.
