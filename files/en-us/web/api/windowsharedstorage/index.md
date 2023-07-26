@@ -27,7 +27,7 @@ _`WindowSharedStorage` inherits properties from its parent interface, {{domxref(
 - {{domxref("WindowSharedStorage.run", "run()")}} {{Experimental_Inline}}
   - : Executes a run operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
 - {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} {{Experimental_Inline}}
-  - : Executes a select URL operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
+  - : Executes a Content Selection operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
 
 ## Examples
 

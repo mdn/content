@@ -11,9 +11,9 @@ browser-compat: api.WindowSharedStorage.selectURL
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
 The **`selectURL()`** method of the
-{{domxref("WindowSharedStorage")}} interface executes a select URL operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
+{{domxref("WindowSharedStorage")}} interface executes a Content Selection operation registered in a module added to the {{domxref("SharedStorageWorklet")}} associated with the current origin.
 
-> **Note:** The **Select URL** output gate is used to select a URL from a provided list to display to the user, based on shared storage data.
+> **Note:** The **Content Selection** output gate is used to select a URL from a provided list to display to the user, based on shared storage data.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ selectURL(name, urls, options)
 - `name`
   - : A string representing the name of the operation registered inside the shared storage worklet module that is to be run. This must match the name given to the operation when it is registered with {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
 - `urls`
-  - : An array of objects representing the URLs to be chosen between by the select URL operation. Each object contains two properties:
+  - : An array of objects representing the URLs to be chosen between by the Content Selection operation. Each object contains two properties:
     - `url`
       - : A string representing the URL.
     - `reportingMetadata` {{optional_inline}}

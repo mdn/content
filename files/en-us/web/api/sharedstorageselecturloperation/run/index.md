@@ -11,7 +11,7 @@ browser-compat: api.SharedStorageSelectURLOperation.run
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
 The **`run()`** method of the
-{{domxref("SharedStorageSelectURLOperation")}} interface defines the structure that the `run()` method defined inside a select URL output gate operation should conform to.
+{{domxref("SharedStorageSelectURLOperation")}} interface defines the structure that the `run()` method defined inside a Content Selection output gate operation should conform to.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ run(urls, data)
 ### Parameters
 
 - `urls`
-  - : An array of objects representing the URLs to be chosen between by the select URL operation. Each object contains two properties:
+  - : An array of objects representing the URLs to be chosen between by the Content Selection operation. Each object contains two properties:
     - `url`
       - : A string representing the URL.
     - `reportingMetadata` {{optional_inline}}

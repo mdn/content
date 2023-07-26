@@ -29,9 +29,9 @@ The Shared Storage API's currently available output gates are discussed in the s
 
 > **Note:** More output gates will likely be added in the future, to support additional use cases.
 
-#### Select URL
+#### Content Selection
 
-The **Select URL** output gate (via the {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} method) is used to select a URL from a provided list to display to the user, based on shared storage data. This can be used for the following purposes:
+The **Content Selection** output gate (via the {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} method) is used to select a URL from a provided list to display to the user, based on shared storage data. This can be used for the following purposes:
 
 - [**Creative rotation**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/creative-rotation/): Store data such as creative IDs, view counts, and user interaction, to determine which creative users see across different sites. This allows you to balance views and avoid oversaturation of certain content, which can help you avoid a negative user experience.
 - [**A/B testing**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/): Assign a user to an experiment group, then store group details in shared storage to be accessed cross-site.
@@ -80,7 +80,7 @@ async function injectContent() {
 
 ### Reading and processing data from shared storage
 
-As mentioned above, to extract useful results from a shared storage worklet you need to use an **output gate**. In this example, we'll use the Select URL output gate to read the user's experiment group and then load a URL in a fenced frame based on their group.
+As mentioned above, to extract useful results from a shared storage worklet you need to use an **output gate**. In this example, we'll use the content selection output gate to read the user's experiment group and then load a URL in a fenced frame based on their group.
 
 To use the output gate, you need to:
 
@@ -94,12 +94,12 @@ Below we'll look at these steps one by one.
 
 The URL will be chosen based on the experiment group stored in shared storage. To retrieve this value and choose a URL based on it, we need to define an operation in a {{domxref("SharedStorageWorklet")}} context — it must be inside a worklet to keep the raw data hidden from other contexts and therefore preserve privacy.
 
-The Select URL operation takes the form of a JavaScript class. It can be written in any way you like, as long as it follows certain rules (some of the rules for each output gate differ, depending on what kind of use case they fulfill):
+The Content Selection operation takes the form of a JavaScript class. It can be written in any way you like, as long as it follows certain rules (some of the rules for each output gate differ, depending on what kind of use case they fulfill):
 
 - The actual functionality must be contained inside an asynchronous `run()` method, which must have an array of objects containing URLs as its first paramater, and a data object as its second parameter (when called, the data argument is optional).
 - The `run()` method must return a number, which will equate to the number of the URL chosen.
 
-> **Note:** Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For Select URL, see {{domxref("SharedStorageSelectURLOperation")}}.
+> **Note:** Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For Content Selection, see {{domxref("SharedStorageSelectURLOperation")}}.
 
 Once the operation is defined, it needs to be registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
 
@@ -138,7 +138,7 @@ async function injectContent() {
 
 #### Choose a URL and load it in a fenced frame
 
-To run the operation defined in the worklet, we call {{domxref("WindowSharedStorage.selectURL()")}} — this acts as a proxy to our worklet operation, accessing it securely and returning the result without leaking any data. `selectURL()` is the correct method to call our user-defined worklet operation because it was defined with the appropriate class structure for a Select URL operation, as discussed above.
+To run the operation defined in the worklet, we call {{domxref("WindowSharedStorage.selectURL()")}} — this acts as a proxy to our worklet operation, accessing it securely and returning the result without leaking any data. `selectURL()` is the correct method to call our user-defined worklet operation because it was defined with the appropriate class structure for a Content Selection operation, as discussed above.
 
 `selectURL()` expects an array of objects containing URLs to choose from, an optional options object, and for the underlying operation to return an integer that it can use to choose a URL.
 
@@ -232,7 +232,7 @@ Last, data in `localStorage` persists until manually cleared (`sessionStorage` i
 - {{domxref("SharedStorageRunOperation")}}
   - : Represents a Run output gate operation.
 - {{domxref("SharedStorageSelectURLOperation")}}
-  - : Represents a Select URL output gate operation.
+  - : Represents a Content Selection output gate operation.
 
 ### Extensions to other interfaces
 
