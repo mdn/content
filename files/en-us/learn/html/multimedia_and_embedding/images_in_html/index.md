@@ -120,7 +120,7 @@ Essentially, the key is to deliver a usable experience, even when the images can
 
 You can use the [`width`](/en-US/docs/Web/HTML/Element/img#width) and [`height`](/en-US/docs/Web/HTML/Element/img#height) attributes to specify the width and height of your image. They are given as integers without a unit, and represent the image's width and height in pixels.
 
-You can find your image's width and height in a number of ways. For example on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the info display up for the image file. Returning to our example, we could do this:
+You can find your image's width and height in a number of ways. For example, on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the display information for the image file. Returning to our example, we could do this:
 
 ```html
 <img
