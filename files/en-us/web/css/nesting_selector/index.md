@@ -7,7 +7,7 @@ browser-compat: css.selectors.nesting
 
 {{CSSRef}}
 
-Description of nesting selector goes here.
+The CSS **`&` nesting selector** is used to explicitly state where the parent class should be placed.
 
 ## Syntax
 
