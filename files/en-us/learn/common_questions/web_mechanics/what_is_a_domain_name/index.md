@@ -1,6 +1,7 @@
 ---
 title: What is a Domain Name?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -33,7 +34,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 
 Domain names are a key part of the Internet infrastructure. They provide a human-readable address for any web server available on the Internet.
 
-Any Internet-connected computer can be reached through a public {{Glossary("IP Address")}}, either an IPv4 address (e.g. `173.194.121.32`) or an IPv6 address (e.g., `2027:0da8:8b73:0000:0000:8a2e:0370:1337`).
+Any Internet-connected computer can be reached through a public {{Glossary("IP Address")}}, either an IPv4 address (e.g. `192.0.2.172`) or an IPv6 address (e.g., `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
 
 Computers can handle such addresses easily, but people have a hard time finding out who is running the server or what service the website offers. IP addresses are hard to remember and might change over time.
 

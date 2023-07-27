@@ -41,7 +41,7 @@ In this example, the current mouse coordinates are drawn while you mouse around 
 clicking and holding down on an element.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

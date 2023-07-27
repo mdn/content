@@ -24,7 +24,7 @@ A {{domxref("VRDisplay")}} object.
 ```js
 window.addEventListener("vrdisplaypresentchange", (e) => {
   console.log(
-    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
   );
 });
 ```

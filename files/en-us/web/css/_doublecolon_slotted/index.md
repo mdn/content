@@ -11,6 +11,8 @@ The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/We
 
 This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM). Note also that this selector won't select a text node placed into a slot; it only targets actual elements.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-slotted.html", "tabbed-shorter")}}
+
 ```css
 /* Selects any element placed inside a slot */
 ::slotted(*) {
@@ -76,7 +78,7 @@ customElements.define(
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
     }
-  }
+  },
 );
 ```
 

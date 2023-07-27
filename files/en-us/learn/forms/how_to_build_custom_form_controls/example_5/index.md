@@ -1,6 +1,7 @@
 ---
 title: Example 5
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_5
+page-type: learn-module-chapter
 ---
 
 This is the last example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
@@ -101,7 +102,7 @@ This is the last example that explain [how to build custom form widgets](/en-US/
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -264,13 +265,13 @@ window.addEventListener("load", () => {
     select.addEventListener("keyup", (event) => {
       let index = getIndex(select);
 
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
-      if (event.keyCode === 40 && index < optionList.length - 1) {
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
       }
-      if (event.keyCode === 38 && index > 0) {
+      if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
 

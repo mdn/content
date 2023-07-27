@@ -118,7 +118,7 @@ test.addEventListener(
       event.target.style.color = "";
     }, 1000);
   },
-  false
+  false,
 );
 
 // Briefly make an <li> orange when the mouse moves off of it
@@ -133,7 +133,7 @@ test.addEventListener(
       event.target.style.color = "";
     }, 500);
   },
-  false
+  false,
 );
 ```
 

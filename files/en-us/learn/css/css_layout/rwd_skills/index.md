@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Responsive web design and media queries"
 slug: Learn/CSS/CSS_layout/rwd_skills
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

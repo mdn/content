@@ -67,7 +67,7 @@ console.log(`theTree.constructor is ${theTree.constructor}`);
 
 This example displays the following output:
 
-```
+```plain
 theTree.constructor is function Tree(name) {
   this.name = name;
 }

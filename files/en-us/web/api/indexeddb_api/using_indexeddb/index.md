@@ -473,7 +473,7 @@ index.openCursor().onsuccess = (event) => {
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
     console.log(
-      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`
+      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`,
     );
     cursor.continue();
   }
@@ -591,7 +591,7 @@ function useDatabase(db) {
   db.onversionchange = (event) => {
     db.close();
     console.log(
-      "A new version of this page is ready. Please reload or close this tab!"
+      "A new version of this page is ready. Please reload or close this tab!",
     );
   };
 
@@ -673,7 +673,7 @@ Further reading for you to find out more information if desired.
 - [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to Web SQL (deprecated) and then localStorage in browsers that don't support IndexedDB.
 - [Dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.
-- [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory mongodb backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
+- [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory MongoDB backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
 - [PouchDB](https://pouchdb.com): A client-side implementation of CouchDB in the browser using IndexedDB
 - [IDB](https://github.com/jakearchibald/idb): A tiny library that mostly mirrors the IndexedDB API but with small usability improvements.
 - [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB

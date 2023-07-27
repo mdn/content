@@ -23,7 +23,7 @@ If the alpha value is given as a percentage, 0% corresponds to fully transparent
 
 ## Interpolation
 
-When animated, values of the `<alpha-value>` CSS data type are {{Glossary("interpolation", "interpolated")}} as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<alpha-value>` CSS data type are {{Glossary("interpolation", "interpolated")}} as real, floating-point numbers. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 
@@ -55,5 +55,5 @@ shape-image-threshold: 0.7;
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
-- [CSS Color](/en-US/docs/Web/CSS/CSS_Colors)
+- [CSS Color](/en-US/docs/Web/CSS/CSS_colors)
 - [`<color>`](/en-US/docs/Web/CSS/color_value)

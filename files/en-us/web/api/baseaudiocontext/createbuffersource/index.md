@@ -60,7 +60,7 @@ const frameCount = audioCtx.sampleRate * 2.0;
 const myArrayBuffer = audioCtx.createBuffer(
   channels,
   frameCount,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 button.onclick = () => {

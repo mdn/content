@@ -1,6 +1,7 @@
 ---
 title: Storing the information you need â€” Variables
 slug: Learn/JavaScript/First_steps/Variables
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
@@ -84,7 +85,7 @@ One special thing about variables is that they can contain just about anything â
 
 > **Note:** We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.
 
-![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of javascript variables. Each box contains hypothetical values that represent various javascript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
+![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of JavaScript variables. Each box contains hypothetical values that represent various JavaScript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
 
 ## Declaring a variable
 

@@ -88,7 +88,7 @@ negotiation and thus fail `replaceTrack()`:
 ```js
 const localConnection = new RTCPeerConnection();
 const remoteConnection = new RTCPeerConnection();
-// Configuring these to use the the WebRTC API can be explored at
+// Configuring these to use the WebRTC API can be explored at
 // https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 const connections = [localConnection, remoteConnection];
 function setCamera(selectedCamera) {

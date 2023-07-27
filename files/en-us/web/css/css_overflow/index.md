@@ -57,8 +57,8 @@ A link is included in content box above to demonstrate the effects of keyboard f
 
 - {{CSSxRef("scrollbar-width")}} CSS property
 - {{CSSxRef("scrollbar-color")}} CSS property
-- {{CSSxRef("scroll-behavior")}} CSS property
 - {{CSSxRef("scrollbar-gutter")}} CSS property
+- {{CSSxRef("scroll-behavior")}} CSS property
 - {{cssxref("scroll-margin")}} CSS shorthand property
 - {{cssxref("scroll-padding")}} CSS shorthand property
 - {{cssxref("scroll-snap-align")}} CSS property
@@ -87,5 +87,5 @@ A link is included in content box above to demonstrate the effects of keyboard f
 
 - [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_View) module
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - How to [debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)

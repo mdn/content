@@ -1,6 +1,7 @@
 ---
 title: Firefox 38 for developers
 slug: Mozilla/Firefox/Releases/38
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -39,7 +40,7 @@ Highlights:
   - Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}} ([Firefox bug 649142](https://bugzil.la/649142)).
   - Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: {{cssxref("inset-block-start")}}, `offset-block-end`, `offset-inline-start` and `offset-inline-end` ([Firefox bug 1120283](https://bugzil.la/1120283)).
 
-- How [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ([Firefox bug 960465](https://bugzil.la/960465)).
+- How [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ([Firefox bug 960465](https://bugzil.la/960465)).
 
 ### HTML
 
@@ -52,7 +53,7 @@ Highlights:
 - {{jsxref("Generator/return", "Generator.prototype.return()")}} is implemented ([Firefox bug 1115868](https://bugzil.la/1115868)).
 - {{jsxref("Functions/set", "Setter")}} with a {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} is now a {{jsxref("SyntaxError")}} ([Firefox bug 1089632](https://bugzil.la/1089632)).
 - The {{jsxref("Function/name", "name")}} property of functions is configurable now ([Firefox bug 1084019](https://bugzil.la/1084019)).
-- Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) as well:
+- Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) as well:
 
   - The {{jsxref("TypedArray.of", "of()")}} and {{jsxref("TypedArray.from", "from()")}} methods ([Firefox bug 896608](https://bugzil.la/896608)).
   - The {{jsxref("TypedArray.forEach", "forEach()")}} method ([Firefox bug 1107645](https://bugzil.la/1107645)).

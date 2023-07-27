@@ -25,7 +25,7 @@ Since the new leftmost bit has the same value as the previous leftmost bit, the 
 
 The operator operates on the left operand's bit representation in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). Consider the 32-bit binary representations of the decimal (base 10) numbers `9` and `-9`:
 
-```
+```plain
      9 (base 10): 00000000000000000000000000001001 (base 2)
     -9 (base 10): 11111111111111111111111111110111 (base 2)
 ```
@@ -38,7 +38,7 @@ Given those binary representations of the decimal (base 10) numbers `9`, and `-9
 
 `9 >> 2` yields 2:
 
-```
+```plain
      9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 >> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
@@ -48,7 +48,7 @@ Notice how two rightmost bits, `01`, have been shifted off, and two copies of th
 
 `-9 >> 2` yields `-3`:
 
-```
+```plain
      -9 (base 10): 11111111111111111111111111110111 (base 2)
                    --------------------------------
 -9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)

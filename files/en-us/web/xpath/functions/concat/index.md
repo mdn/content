@@ -1,6 +1,7 @@
 ---
 title: concat
 slug: Web/XPath/Functions/concat
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `concat` function concatenates two or more strings and returns the resulting
 
 ### Syntax
 
-```
+```plain
 concat( string1, string2 [,stringn]* )
 ```
 

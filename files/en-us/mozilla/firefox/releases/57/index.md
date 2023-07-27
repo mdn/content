@@ -1,6 +1,7 @@
 ---
 title: Firefox 57 (Quantum) for developers
 slug: Mozilla/Firefox/Releases/57
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

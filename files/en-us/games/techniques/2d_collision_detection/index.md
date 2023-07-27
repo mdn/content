@@ -39,7 +39,7 @@ rect2.bind("EnterFrame", function () {
     rect1.x < rect2.x + rect2.w &&
     rect1.x + rect1.w > rect2.x &&
     rect1.y < rect2.y + rect2.h &&
-    rect1.h + rect1.y > rect2.y
+    rect1.y + rect1.h > rect2.y
   ) {
     // Collision detected!
     this.color("green");
@@ -100,7 +100,7 @@ Crafty.c("Circle", {
       this.y + this.radius,
       this.radius,
       0,
-      Math.PI * 2
+      Math.PI * 2,
     );
     ctx.closePath();
     ctx.fill();

@@ -125,7 +125,7 @@ It also sets the status to `307` and sets the appropriate status text ("Temporar
 ```js
 const jsonResponse = Response.json(
   { some: "data", more: "information" },
-  { status: 307, statusText: "Temporary Redirect" }
+  { status: 307, statusText: "Temporary Redirect" },
 );
 logResponse(jsonResponse);
 ```

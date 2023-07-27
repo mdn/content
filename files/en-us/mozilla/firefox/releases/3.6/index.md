@@ -1,6 +1,7 @@
 ---
 title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -11,13 +12,13 @@ slug: Mozilla/Firefox/Releases/3.6
 
 ### CSS
 
-- [Using gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Firefox 3.6 adds support for the proposed `-moz-linear-gradient` and `-moz-radial-gradient` properties for {{Cssxref("background")}}.
-- [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : The {{cssxref("background")}} property (as well as {{Cssxref("background-color")}}, {{Cssxref("background-image")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, and {{Cssxref("background-attachment")}}) now supports multiple backgrounds. This lets you specify multiple backgrounds that are rendered atop one another in layers.
-- [Mozilla-specific media features](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#mozilla-specific_media_features)
-  - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
-- [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
+- [Mozilla-specific media features](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#mozilla-specific_media_features)
+  - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
+- [Scaling background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.
 - [WOFF font support](/en-US/docs/Web/Guide/WOFF)
   - : {{cssxref("@font-face")}} now supports the WOFF downloadable font file format.

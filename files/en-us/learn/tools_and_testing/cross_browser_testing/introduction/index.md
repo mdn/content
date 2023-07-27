@@ -1,6 +1,7 @@
 ---
 title: Introduction to cross-browser testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}

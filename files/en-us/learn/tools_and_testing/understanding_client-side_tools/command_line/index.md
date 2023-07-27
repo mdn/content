@@ -1,6 +1,7 @@
 ---
 title: Command line crash course
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -367,7 +368,7 @@ Once you've installed node, open up the terminal and run the following command t
 npm install prettier
 ```
 
-You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner/) tool.
+You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx) tool.
 Running the command without any arguments, as with many other commands, will offer up usage and help information.
 Try this now:
 

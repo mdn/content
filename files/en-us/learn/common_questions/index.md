@@ -1,6 +1,7 @@
 ---
 title: Common questions
 slug: Learn/Common_questions
+page-type: landing-page
 ---
 
 {{LearnSidebar}}

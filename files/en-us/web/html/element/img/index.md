@@ -45,7 +45,7 @@ SVG remains the recommended format for images that must be drawn accurately at d
 
 ## Image loading errors
 
-If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
+If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
 
 - The `src` attribute is empty (`""`) or `null`.
 - The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
@@ -156,7 +156,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : One or more strings separated by commas, indicating a set of source sizes. Each source size consists of:
 
-    1. A [media condition](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
+    1. A [media condition](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
     2. A source size value.
 
     Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.

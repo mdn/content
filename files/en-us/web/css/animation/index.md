@@ -22,7 +22,7 @@ This property is a shorthand for the following CSS properties:
 - [`animation-iteration-count`](/en-US/docs/Web/CSS/animation-iteration-count)
 - [`animation-name`](/en-US/docs/Web/CSS/animation-name)
 - [`animation-play-state`](/en-US/docs/Web/CSS/animation-play-state)
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timing-function)
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
 - [`animation-timing-function`](/en-US/docs/Web/CSS/animation-timing-function)
 
 ## Syntax
@@ -36,7 +36,9 @@ animation: 3s ease-in 1s 2 reverse both paused slidein;
 animation: 3s linear 1s slidein;
 
 /* two animations */
-animation: 3s linear slidein, 3s ease-out 5s slideout;
+animation:
+  3s linear slidein,
+  3s ease-out 5s slideout;
 ```
 
 The `animation` property is specified as one or more single animations, separated by commas.
@@ -208,8 +210,9 @@ position and color are independent.
   height: 100vh;
   aspect-ratio: 1 / 1;
   /* multiple animations are separated by commas, each animation's parameters are set independently */
-  animation: 4s linear 0s infinite alternate rise, 24s linear 0s infinite
-      psychedelic;
+  animation:
+    4s linear 0s infinite alternate rise,
+    24s linear 0s infinite psychedelic;
 }
 
 @keyframes rise {
@@ -262,8 +265,9 @@ is 'overwritten' by the bounce animation.
     properties of previously declared animations
   */
   /* bounce 'overwrites' the transform set by rise, hence the sun only moves horizontally */
-  animation: 4s linear 0s infinite alternate rise, 4s linear 0s infinite
-      alternate bounce;
+  animation:
+    4s linear 0s infinite alternate rise,
+    4s linear 0s infinite alternate bounce;
 }
 
 @keyframes rise {

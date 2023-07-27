@@ -1,6 +1,7 @@
 ---
 title: Strategies for carrying out testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}

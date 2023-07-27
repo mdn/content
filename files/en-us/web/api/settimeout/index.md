@@ -358,7 +358,7 @@ console.log("After setTimeout");
 
 Will write to the console:
 
-```
+```plain
 After setTimeout
 foo has been called
 ```

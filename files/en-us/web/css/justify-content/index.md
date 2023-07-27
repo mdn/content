@@ -13,7 +13,7 @@ The interactive example below demonstrates some of the values using Grid Layout.
 
 {{EmbedInteractiveExample("pages/css/justify-content.html")}}
 
-The alignment is done after the lengths and auto margins are applied, meaning that, if in a [Flexbox layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) there is at least one flexible element, with {{cssxref("flex-grow")}} different from `0`, it will have no effect as there won't be any available space.
+The alignment is done after the lengths and auto margins are applied, meaning that, if in a [Flexbox layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) there is at least one flexible element, with {{cssxref("flex-grow")}} different from `0`, it will have no effect as there won't be any available space.
 
 ## Syntax
 
@@ -38,10 +38,10 @@ justify-content: space-between; /* Distribute items evenly
                                    The first item is flush with the start,
                                    the last is flush with the end */
 justify-content: space-around; /* Distribute items evenly
-                                   Items have a half-size space
-                                   on either end */
+                                   Start and end gaps are half the size of the space
+                                   between each item */
 justify-content: space-evenly; /* Distribute items evenly
-                                   Items have equal space around them */
+                                   Start, in-between, and end gaps have equal sizes */
 justify-content: stretch; /* Distribute items evenly
                                    Stretch 'auto'-sized items to fit
                                    the container */
@@ -164,7 +164,7 @@ justifyContent.addEventListener("change", (evt) => {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)

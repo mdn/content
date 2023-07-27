@@ -1,6 +1,7 @@
 ---
 title: Genre detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
+page-type: learn-module-chapter
 ---
 
 The genre _detail_ page needs to display the information for a particular genre instance, using its automatically generated `_id` field value as the identifier.

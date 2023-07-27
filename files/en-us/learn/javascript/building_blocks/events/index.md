@@ -1,6 +1,7 @@
 ---
 title: Introduction to events
 slug: Learn/JavaScript/Building_blocks/Events
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
