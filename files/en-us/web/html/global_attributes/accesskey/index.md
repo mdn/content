@@ -60,7 +60,7 @@ The way to activate the accesskey depends on the browser and its platform:
     <tr>
       <th>Opera 12</th>
       <td colspan="3">
-        <kbd>Shift</kbd> + <kbd>Esc</kbd> opens list of available accesskeys; choose an item by then pressing
+        <kbd>Shift</kbd> + <kbd>Esc</kbd> opens list of available accesskeys. Choose an item by then pressing
         <kbd><em>key</em></kbd>.
       </td>
     </tr>
