@@ -29,6 +29,21 @@ parent child {
 
 #### CSS nesting
 
+Selectors can be nested and the child selector will be prepended by the parent selector.
+
+```css
+parent {
+  /* parent styles */
+  child {
+    /* child styles */
+  }
+}
+```
+
+#### CSS nesting with the `&` nesting selector
+
+An [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can be used to specifically state how the selectors are combined.
+
 ```css
 parent {
   /* parent styles */
@@ -50,9 +65,9 @@ parent {
   - : Explains how to use CSS nesting.
 - [Using `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Using_nesting_selector)
   - : Explains how to use the `&` nesting selector.
-- [CSS nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/CSS_nesting_at-rules)
+- [CSS nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
   - : Explains how to nest at-rules.
-- [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/CSS_nesting_and_specificity)
+- [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
   - : Explains the differences in specificity when nesting CSS.
 
 ## Specifications
