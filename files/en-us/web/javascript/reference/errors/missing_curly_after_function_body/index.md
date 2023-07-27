@@ -12,7 +12,7 @@ parenthesis are in the correct order.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing } after function body (Firefox)
 ```
 

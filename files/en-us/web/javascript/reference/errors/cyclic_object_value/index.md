@@ -12,7 +12,7 @@ to solve them and fails accordingly.
 
 ## Message
 
-```
+```plain
 TypeError: Converting circular structure to JSON (V8-based)
 TypeError: cyclic object value (Firefox)
 TypeError: JSON.stringify cannot serialize cyclic structures. (Safari)

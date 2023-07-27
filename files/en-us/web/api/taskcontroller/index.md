@@ -111,7 +111,7 @@ controller.abort();
 
 The console output of this example would be:
 
-```
+```plain
 The priority changed from user-blocking to background.
 Task aborted
 Catch error: AbortError

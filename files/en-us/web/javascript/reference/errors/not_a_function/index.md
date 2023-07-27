@@ -11,7 +11,7 @@ value from a function, but the value is not actually a function.
 
 ## Message
 
-```
+```plain
 TypeError: "x" is not a function. (V8-based & Firefox & Safari)
 ```
 
