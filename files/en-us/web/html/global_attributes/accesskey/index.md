@@ -27,11 +27,15 @@ The way to activate the accesskey depends on the browser and its platform:
       <th>Firefox</th>
       <td colspan="2"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd></td>
       <td>
-        Firefox 57+: <kbd>Control</kbd> + <kbd>Option</kbd> +
+        <ul>
+          <li>Firefox 57+: <kbd>Control</kbd> + <kbd>Option</kbd> +
         <kbd><em>key</em></kbd> or <kbd>Control</kbd> + <kbd>Alt</kbd> +
-        <kbd><em>key</em></kbd><br>Firefox 14-56: <kbd>Control</kbd> + <kbd>Alt</kbd> +
-        <kbd><em>key</em></kbd><br>Firefox 13 or older: <kbd>Control</kbd> +
-        <kbd><em>key</em></kbd>
+        <kbd><em>key</em></kbd></li>
+          <li>Firefox 14-56: <kbd>Control</kbd> + <kbd>Alt</kbd> +
+        <kbd><em>key</em></kbd></li>
+          <li>Firefox 13 or older: <kbd>Control</kbd> +
+        <kbd><em>key</em></kbd></li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -60,8 +64,8 @@ The way to activate the accesskey depends on the browser and its platform:
     <tr>
       <th>Opera 12</th>
       <td colspan="3">
-        <kbd>Shift</kbd> + <kbd>Esc</kbd> opens list of available accesskeys. Choose an item by then pressing
-        <kbd><em>key</em></kbd>.
+        <kbd>Shift</kbd> + <kbd>Esc</kbd> opens a list of available accesskeys. Choose an item from the list by pressing
+        the <kbd><em>key</em></kbd>.
       </td>
     </tr>
   </tbody>
