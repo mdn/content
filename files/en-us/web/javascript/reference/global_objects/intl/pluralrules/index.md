@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.PluralRules
 
 The **`Intl.PluralRules`** object enables plural-sensitive formatting and plural-related language rules.
 
-## Concepts and usage
+## Description
 
 Languages use different patterns for expressing both plural numbers of items (cardinal numbers) and for expressing the order of items (ordinal numbers).
 English has two forms for expressing cardinal numbers: one for the singular "item" (1 hour, 1 dog, 1 fish) and the other for zero or any other number of "items" (0 hours, 2 lemmings, 100000.5 fish), while Chinese has only one form, and Arabic has six!
