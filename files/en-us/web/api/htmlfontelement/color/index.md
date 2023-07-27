@@ -27,6 +27,8 @@ The format of the string must follow one of the following HTML microsyntaxes:
 
 A string.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `elt.color = null` is equivalent to `elt.color = ""`.
+
 ## Examples
 
 ```js

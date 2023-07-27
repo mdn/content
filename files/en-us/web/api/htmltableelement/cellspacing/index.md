@@ -19,8 +19,9 @@ representing a table's cells. Any two cells are separated by the sum of the
 
 ## Value
 
-A string which is either a number of pixels (such as
-`"10"`) or a percentage value (like `"10%"`).
+A string which is either a number of pixels (such as `"10"`) or a percentage value (like `"10%"`).
+
+When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `elt.cellSpacing = null` is equivalent to `elt.cellSpacing = ""`.
 
 ## Examples
 
