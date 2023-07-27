@@ -13,20 +13,20 @@ The **`Intl.PluralRules`** object enables plural-sensitive formatting and plural
 
 Languages use different patterns for expressing both plural numbers of items (cardinal numbers) and for expressing the order of items (ordinal numbers).
 English has two forms for expressing cardinal numbers: one for the singular "item" (1 hour, 1 dog, 1 fish) and the other for zero or any other number of "items" (0 hours, 2 lemmings, 100000.5 fish), while Chinese has only one form, and Arabic has six!
-Similarly, English has four forms for ordinal numbers: "th", "st", "nd", "rd", giving the sequence: 0th, 1st, 2nd, 3rd, 4th, 5th, ..., 21st, 22nd, 23rd, 24th, 25th, and so on, while both Chinese and Arabic only have one form for ordinal numbers.
+Similarly, English has four forms for expressing ordinal numbers: "th", "st", "nd", "rd", giving the sequence: 0th, 1st, 2nd, 3rd, 4th, 5th, ..., 21st, 22nd, 23rd, 24th, 25th, and so on, while both Chinese and Arabic only have one form for ordinal numbers.
 
-The plural rules methods [`PluralRules.select()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select) and [`PluralRules.selectRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) return a _tag_ that represents the plural form of a particular cardinal or ordinal number, or range, for a particular language and set of formatting options.
-Code can use the returned tags to format strings appropriately for the given language and number/range.
+Given a particular language and set of formatting options, the methods [`Intl.PluralRules.prototype.select()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select) and [`Intl.PluralRules.prototype.selectRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) return a _tag_ that represents the plural form of a single or a range of numbers, cardinal or ordinal.
+Code can use the returned tags to represent numbers appropriately for the given language.
 
 The full set of tags that might be returned are: `zero`, `one`, `two`, `few`, `many`, `other` (the "general" plural form, used if the language only has one form).
-As English only has two forms for cardinal numbers, the `PluralRules.select()` method return only two tags: `"one"` for the singular case, and `"other"` for all other cardinal numbers.
+As English only has two forms for cardinal numbers, the `select()` method returns only two tags: `"one"` for the singular case, and `"other"` for all other cardinal numbers.
 This allows constructions of sentences that make sense in English: "1 dog _is_ happy" and "10 dogs _are_ happy", or "1 fish _is_ golden" and "10 fish _are_ golden".
 
-`PluralRules.select()` can return any of four tags for ordinal numbers in English, representing each of the allowed forms: `one` for "st" numbers (1, 21, 31, ...), `two` for "nd" numbers (2, 22, 32, ...), `few` for "rd" numbers (3, 33, 43, ...), and `other` for "th" numbers (0, 4-20, etc.).
+`select()` can return any of four tags for ordinal numbers in English, representing each of the allowed forms: `one` for "st" numbers (1, 21, 31, ...), `two` for "nd" numbers (2, 22, 32, ...), `few` for "rd" numbers (3, 33, 43, ...), and `other` for "th" numbers (0, 4-20, etc.).
 Again, the returned tags allow appropriate formatting of strings describing an ordinal number.
 
-For more information about the rules and how they are used see [Plural Rules](https://cldr.unicode.org/index/cldr-spec/plural-rules).
-For a list of the rules and how they apply for different languages see the [LDML Language Plural Rules](https://www.unicode.org/cldr/charts/43/supplemental/language_plural_rules.html).
+For more information about the rules and how they are used, see [Plural Rules](https://cldr.unicode.org/index/cldr-spec/plural-rules).
+For a list of the rules and how they apply for different languages, see the [LDML Language Plural Rules](https://www.unicode.org/cldr/charts/43/supplemental/language_plural_rules.html).
 
 ## Constructor
 
@@ -67,18 +67,18 @@ In order to get the format for the language used in the user interface of your a
 ```js
 // US English
 const enCardinalRules = new Intl.PluralRules("en-US");
-console.log(enCardinalRules.select(0)); // > "other"
-console.log(enCardinalRules.select(1)); // > "one"
-console.log(enCardinalRules.select(2)); // > "other"
-console.log(enCardinalRules.select(3)); // > "other"
+console.log(enCardinalRules.select(0)); // "other"
+console.log(enCardinalRules.select(1)); // "one"
+console.log(enCardinalRules.select(2)); // "other"
+console.log(enCardinalRules.select(3)); // "other"
 
 // Arabic
 const arCardinalRules = new Intl.PluralRules("ar-EG");
-console.log(arCardinalRules.select(0)); // > "zero"
-console.log(arCardinalRules.select(1)); // > "one"
-console.log(arCardinalRules.select(2)); // > "two"
-console.log(arCardinalRules.select(6)); // > "few"
-console.log(arCardinalRules.select(18)); // > "many"
+console.log(arCardinalRules.select(0)); // "zero"
+console.log(arCardinalRules.select(1)); // "one"
+console.log(arCardinalRules.select(2)); // "two"
+console.log(arCardinalRules.select(6)); // "few"
+console.log(arCardinalRules.select(18)); // "many"
 ```
 
 ### Using options
@@ -90,12 +90,12 @@ This example shows how you can set the type of rules to "ordinal", and how this 
 ```js
 // US English - ordinal
 const enOrdinalRules = new Intl.PluralRules("en-US", { type: "ordinal" });
-console.log(enOrdinalRules.select(0)); // > "other" (0th)
-console.log(enOrdinalRules.select(1)); // > "one"   (1st)
-console.log(enOrdinalRules.select(2)); // > "two"   (2nd)
-console.log(enOrdinalRules.select(3)); // > "few"   (3rd)
-console.log(enOrdinalRules.select(4)); // > "other" (4th)
-console.log(enOrdinalRules.select(21)); // > "one"  (21st)
+console.log(enOrdinalRules.select(0)); // "other" (0th)
+console.log(enOrdinalRules.select(1)); // "one"   (1st)
+console.log(enOrdinalRules.select(2)); // "two"   (2nd)
+console.log(enOrdinalRules.select(3)); // "few"   (3rd)
+console.log(enOrdinalRules.select(4)); // "other" (4th)
+console.log(enOrdinalRules.select(21)); // "one"  (21st)
 ```
 
 ### Formatting text using the returned tag

@@ -36,7 +36,7 @@ These options are set in the [`PluralRules` constructor](/en-US/docs/Web/JavaScr
 
 ### Using select()
 
-First define the `Intl.PluralRules` object using [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) locale and options parameters.
+First, create an `Intl.PluralRules` object, passing the appropriate `locales` and `options` parameters.
 Here we create a plural rules object for Arabic in the Egyptian dialect.
 Because the `type` is not specified the rules object will provide formatting for cardinal numbers (the default).
 
