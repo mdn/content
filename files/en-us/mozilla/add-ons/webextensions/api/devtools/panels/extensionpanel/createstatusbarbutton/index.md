@@ -24,7 +24,7 @@ let creating = browser.devtools.panels.ExtensionPanel.createStatusBarButton(
 - `disabled` {{optional_inline}}
   - : `boolean`. Whether the button is disabled.
 - `iconPath` {{optional_inline}}
-  - : `string`. Path to the new icon of the button.
+  - : `string`. Path to the new icon of the button. The file should contain a 64x24-pixel image composed of two 32x24 icons. The left icon is used when the button is inactive; the right icon is displayed when the button is pressed.
 - `tooltipText` {{optional_inline}}
   - : `string`. Text shown as a tooltip when user hovers the mouse over the button.
 
