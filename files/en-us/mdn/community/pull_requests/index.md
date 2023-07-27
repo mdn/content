@@ -132,7 +132,7 @@ When you are reviewing a pull request, you should:
   Tag the `@core-yari-content` team and ask if someone else can step in.
 - **Don't merge unless 'depends on'** pull requests are merged first.
 
-Don't merge pull requests that have failing tests.
+- **Don't merge pull requests that have failing tests.** 
 It is good [open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette) to keep the `main` branch stable to avoid disruption for contributors, maintainers, and for automated processes.
 An unstable `main` branch blocks all other pull requests and makes it difficult for others to review and merge contributions.
 In addition, contributors who watch repositories receive high volumes of notifications and unnecessary noise caused by failing tests can be frustrating.
