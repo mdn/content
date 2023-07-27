@@ -279,7 +279,7 @@ In the first lines of script, we get references to the form input itself, and th
 const input = document.querySelector("input");
 const preview = document.querySelector(".preview");
 
-input.style.opacity = 0;
+input.style.display = "none";
 ```
 
 > **Note:** {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.
