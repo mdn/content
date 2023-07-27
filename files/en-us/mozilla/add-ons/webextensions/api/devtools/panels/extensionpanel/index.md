@@ -9,16 +9,19 @@ browser-compat: webextensions.api.devtools.panels.ExtensionPanel
 
 An `ExtensionPanel` represents a panel added to the devtools. It's the resolution of the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [`browser.devtools.panels.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create).
 
-## Type
+## Functions
 
-Values of this type are objects. The define two events, `onShown` and `onHidden`.
+- [`devtools.panels.ExtensionPanel,createStatusBarButton()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel/createStatusBarButton)
+  - : Appends a button to the status bar of the panel.
 
-- `onShown` is emitted when the panel is shown in the devtools (for example, because the user clicked on the panel's tab in the devtools window).
-- `onHidden` is emitted when the panel is hidden (for example, because the user switched to a different tab in the devtools window).
+## Events
 
-## Browser compatibility
-
-{{Compat}}
+- `onSearch`
+  - : Fires when search action occurs in the panel (start of a new search, search result navigation, or search being canceled).
+- `onShown`
+  - : Fires when the panel is shown in the devtools (for example, because the user clicked on the panel's tab in the devtools window).
+- `onHidden`
+  - : Fires when the panel is hidden (for example, because the user switched to a different tab in the devtools window).
 
 ## Examples
 
@@ -39,7 +42,7 @@ browser.devtools.panels
   .create(
     "My Panel", // title
     "icons/star.png", // icon
-    "devtools/panel/panel.html", // content
+    "devtools/panel/panel.html" // content
   )
   .then((newPanel) => {
     newPanel.onShown.addListener(handleShown);
@@ -48,6 +51,10 @@ browser.devtools.panels
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
 
