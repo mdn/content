@@ -52,10 +52,8 @@ Currently, MP4 containers with H.264 video and AAC audio codecs have support acr
 
 To convert our sample media from a QuickTime MOV container to an MP4 container, we can use ffmpeg. Because the audio codec in the MOV container is already AAC and the video codec is h.264, we can instruct ffmpeg not to perform transcoding. Instead, it will just copy the audio and video tracks over without performing any transcoding, which is relatively faster than having to transcode.
 
-```
-$ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy bunny.mp4
-$ ls
-bunny.mp4         trailer_1080p.mov
+```bash
+ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy bunny.mp4
 ```
 
 ### Checking Fragmentation
@@ -97,7 +95,21 @@ Run the following commands:
 ```bash
 python mp4-dash-encode.py -b 5 -v bunny_fragmented.mp4
 python mp4-dash.py video_0*
-tree -L 2 output
+```
+
+This should output the following files:
+
+```plain
+output
+├── audio
+│   └── und
+├── stream.mpd
+└── video
+    ├── 1
+    ├── 2
+    ├── 3
+    ├── 4
+    └── 5
 ```
 
 > **Note:** `mp4-dash-encode.py` does not display ffmpeg error messages. You can see it by specifying the `-d` option.

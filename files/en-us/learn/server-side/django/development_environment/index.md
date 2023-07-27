@@ -110,6 +110,7 @@ You can confirm this by running the following command in the bash terminal:
 
 ```bash
 python3 -V
+# Output: Python 3.8.10
 ```
 
 However, the Python Package Index tool (_pip3_) you'll need to install packages for Python 3 (including Django) is **not** available by default.
