@@ -184,5 +184,5 @@ Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are 
 
 ## See also
 
-- Recommendations on [sniffing the UA string for cross-browser support](/en-US/docs/Browser_detection_using_the_user_agent)
+- Recommendations on [sniffing the UA string for cross-browser support](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - [window.navigator.userAgent](/en-US/docs/Web/API/Window/navigator)
