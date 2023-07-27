@@ -221,14 +221,13 @@ The property value is an object of type `MediaError`. The question mark (`'?'`) 
 
 The type of the property may be prefixed with an _extended attribute_, a string enclosed in square brackets (like `[LegacyNullToEmptyString]`). Such extended attributes indicate special behaviors that must be described in the prose. Here is a list of standard extended attributes of types, and the addition that must be made:
 
-- : `[LegacyNullToEmptyString]`
+- `[LegacyNullToEmptyString]`
 
-  - The `null` value is converted to a string in a non-standard way. The standard way is to convert it to the `"null"` string, but in this case, it is converted to `""`.
-  - Add the following sentence to the end of the _Value_ section of the article:
+  - : The `null` value is converted to a string in a non-standard way. The standard way is to convert it to the `"null"` string, but in this case, it is converted to `""`.
 
-    ```
-      When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`.
-    ```
+    Add the following sentence to the end of the _Value_ section of the article:
+
+    _When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`._
 
     The small inline example has to be adapted for each property.
 
@@ -363,8 +362,8 @@ The parameters of a method are listed in the Syntax section of the method sub-pa
 
 Parameter' types may have special behaviors described using extended attributes (like `[LegacyNullToEmptyString]`). Here is the list of such attributes, and the addition you have to do in the prose:
 
-- `[LegacyNullToEmptyString]``
-  - Add the following sentence at the end of the parameter description: _A ["null"](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`)._
+- `[LegacyNullToEmptyString]`
+  - : Add the following sentence at the end of the parameter description: _A ["null"](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`)._
 
 ### Type of the return value
 
