@@ -18,7 +18,7 @@ Similarly, English has four forms for expressing ordinal numbers: "th", "st", "n
 Given a particular language and set of formatting options, the methods [`Intl.PluralRules.prototype.select()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select) and [`Intl.PluralRules.prototype.selectRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) return a _tag_ that represents the plural form of a single or a range of numbers, cardinal or ordinal.
 Code can use the returned tags to represent numbers appropriately for the given language.
 
-The full set of tags that might be returned are: `zero`, `one`, `two`, `few`, `many`, `other` (the "general" plural form, used if the language only has one form).
+The full set of tags that might be returned are: `zero`, `one`, `two`, `few`, `many`, and `other` (the "general" plural form, also used if the language only has one form).
 As English only has two forms for cardinal numbers, the `select()` method returns only two tags: `"one"` for the singular case, and `"other"` for all other cardinal numbers.
 This allows constructions of sentences that make sense in English: "1 dog _is_ happy" and "10 dogs _are_ happy", or "1 fish _is_ golden" and "10 fish _are_ golden".
 
