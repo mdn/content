@@ -1,0 +1,24 @@
+name: reviewdog / Prettier
+
+on:
+  - pull_request
+
+jobs:
+  prettier:
+    name: runner / prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: EPMatt/reviewdog-action-prettier@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Change reviewdog reporter if you need
+          # [github-pr-check,github-check,github-pr-review].
+          # More about reviewdog reporters at
+          # https://github.com/reviewdog/reviewdog#reporters
+          reporter: github-pr-review
+          # Change reporter level if you need
+          # [info,warning,error].
+          # More about reviewdog reporter level at
+          # https://github.com/reviewdog/reviewdog#reporters
+          level: warning
