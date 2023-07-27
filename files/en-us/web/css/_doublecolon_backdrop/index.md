@@ -7,7 +7,11 @@ browser-compat: css.selectors.backdrop
 
 {{CSSRef}}
 
-The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a box the size of the {{Glossary("viewport")}}, which is rendered immediately beneath any element being presented in the {{glossary("top layer")}}. This includes:
+The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a box the size of the {{Glossary("viewport")}}, which is rendered immediately beneath any element being presented in the {{glossary("top layer")}}.
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-backdrop.html", "tabbed-shorter")}}
+
+Backdrops appear in the following instances:
 
 - Elements which have been placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) {{domxref("Element.requestFullscreen()")}} method.
 - {{HTMLElement("dialog")}} elements that have been shown in the top layer via a {{domxref("HTMLDialogElement.showModal()")}} call.
