@@ -115,23 +115,6 @@ If you need to exchange messages between the content scripts running in the targ
 
 ![The background page tab ID is connected to the content script on the content page by a runtime.sendmessage() object. The Port of the background page is connected to the port of the Devtools document by a port.postMessage() object.](devtools-content-scripts.png)
 
-## Limitations of the devtools APIs
-
-These APIs are based on the Chrome devtools APIs, but many features are still missing, compared with Chrome. This section lists the features that are still not implemented, as of Firefox 54. Note that the devtools APIs are under active development and we expect to add support for most of them in future releases.
-
-### devtools.panels
-
-The following are not supported:
-
-- `panels.elements`
-- `panels.sources`
-- `panels.setOpenResourceHandler()`
-- `panels.openResource()`
-- `panels.ExtensionPanel.createStatusBarButton()`
-- `panels.Button`
-- `panels.ElementsPanel`
-- `panels.SourcesPanel`
-
 ## Examples
 
 The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub, contains several examples of extensions that use devtools panels:
