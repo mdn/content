@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-nesting-1/
 
 The **CSS nesting** module introduces the ability to nest one style rule inside another, with the selector of the child rule relative to the selector of the parent rule.
 
-This helps with the readability, modularity and maintainability of CSS stylesheets.
+This helps with the readability, modularity and maintainability of CSS stylesheets. It also helps reduce the file size of CSS files reducing the data used by users.
 
 ### CSS nesting in action
 
@@ -50,6 +50,10 @@ parent {
   - : Explains how to use CSS nesting.
 - [Using `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Using_nesting_selector)
   - : Explains how to use the `&` nesting selector.
+- [CSS nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/CSS_nesting_at-rules)
+  - : Explains how to nest at-rules.
+- [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/CSS_nesting_and_specificity)
+  - : Explains the differences in specificity when nesting CSS.
 
 ## Specifications
 
