@@ -92,7 +92,7 @@ console.log(arCardinalRules.select(18)); // "many"
 
 ### Using options
 
-The plural form of the specified number may also depend on [constructor `options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#locales), such as how the number is rounded, and whether it is cardinal or ordinal.
+The plural form of the specified number may also depend on [constructor `options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options), such as how the number is rounded, and whether it is cardinal or ordinal.
 
 This example shows how you can set the type of rules to "ordinal", and how this affects the form for some numbers in US English.
 
