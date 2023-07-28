@@ -1,24 +1,32 @@
-name: reviewdog / Prettier
+name: reviewdog
 
 on:
     - pull_request
 
 jobs:
   prettier:
-    name: runner / prettier
+    name: prettier
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: EPMatt/reviewdog-action-prettier@v1
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Change reviewdog reporter if you need
-          # [github-pr-check,github-check,github-pr-review].
-          # More about reviewdog reporters at
-          # https://github.com/reviewdog/reviewdog#reporters
-          reporter: github-pr-review
-          # Change reporter level if you need
-          # [info,warning,error].
-          # More about reviewdog reporter level at
-          # https://github.com/reviewdog/reviewdog#reporters
-          level: warning
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Format changed content
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        run: |
+          yarn prettier --write ${{ env.GIT_DIFF_CONTENT }}
+      - name: Submit suggestion
+        uses: reviewdog/action-suggester@v1
+        with:
+          tool_name: prettier
