@@ -10,7 +10,7 @@ A modem ("**modulator-demodulator**") is a device that converts digital informat
 
 Different kinds are used for different networks: DSL modems for telephone wires, Wi-Fi modems for short-range wireless radio signals, 3G modems for cellular data towers, and so on.
 
-Modems are different from {{Glossary("Router","routers")}}, but many companies sell modems combined with routers.
+Modems are different from {{Glossary("Router","Routers")}}, but many companies sell modems combined with routers.
 
 ## See also
 
