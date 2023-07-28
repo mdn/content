@@ -71,12 +71,11 @@ jobs:
 
       - name: Suggest changes using diff
         env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         run: |
           TMPFILE=$(mktemp)
           git diff >"${TMPFILE}"
           git stash -u && git stash drop
-          echo "Running rd"
           reviewdog \
             -name="mdn-linter" \
             -f=diff \
@@ -86,7 +85,7 @@ jobs:
       - name: Add reviews for markdonwlint errors
         if: env.MD_LINT_STATUS == '1'
         env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         run: |
           echo "${{ env.MD_LINT_LOG }}" | \
             reviewdog \
