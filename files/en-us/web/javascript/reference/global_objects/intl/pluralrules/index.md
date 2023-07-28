@@ -17,10 +17,19 @@ Similarly, English has four forms for expressing ordinal numbers: "th", "st", "n
 
 Given a particular language and set of formatting options, the methods [`Intl.PluralRules.prototype.select()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select) and [`Intl.PluralRules.prototype.selectRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) return a _tag_ that represents the plural form of a single or a range of numbers, cardinal or ordinal.
 Code can use the returned tags to represent numbers appropriately for the given language.
-
 The full set of tags that might be returned are: `zero`, `one`, `two`, `few`, `many`, and `other` (the "general" plural form, also used if the language only has one form).
+
 As English only has two forms for cardinal numbers, the `select()` method returns only two tags: `"one"` for the singular case, and `"other"` for all other cardinal numbers.
-This allows constructions of sentences that make sense in English: "1 dog _is_ happy" and "10 dogs _are_ happy", or "1 fish _is_ golden" and "10 fish _are_ golden".
+This allows construction of sentences that make sense in English for each case, such as: "1 dog is happy; do you want to play with it?" and "10 dogs are happy; do you want to play with them?".
+
+Creating appropriate sentences for each form depends on the language, and even in English may not be as simple as just adding "s" to a noun to make the plural form.
+Using the example above, we see that the form may affect:
+
+- **Nouns**: 1 dogs/2 dogs (but not "fish" or "sheep", which have the same singular and plural form).
+- **Verbs**: 1 dog _is_ happy, 2 dogs _are_ happy
+- **Pronouns** (and other referents): Do you want to play with _it_ / _them_.
+
+Other languages have more forms, and choosing appropriate sentences can be even more complex.
 
 `select()` can return any of four tags for ordinal numbers in English, representing each of the allowed forms: `one` for "st" numbers (1, 21, 31, ...), `two` for "nd" numbers (2, 22, 32, ...), `few` for "rd" numbers (3, 33, 43, ...), and `other` for "th" numbers (0, 4-20, etc.).
 Again, the returned tags allow appropriate formatting of strings describing an ordinal number.
