@@ -22,7 +22,7 @@ The **`<mpath>`** sub-element for the {{SVGElement("animateMotion")}} element pr
 
 ### Specific attributes
 
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 
