@@ -21,7 +21,7 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 120 120">
-<rect x="-10" y="-10" width="120" height="120" fill="blue"/>
+  <rect x="-10" y="-10" width="120" height="120" fill="blue" />
   <mask id="myMask">
     <!-- Everything under a white pixel will be visible -->
     <rect x="0" y="0" width="100" height="100" fill="white" />
