@@ -1,7 +1,7 @@
 name: reviewdog
 
 on:
-    - pull_request
+  - pull_request
 
 jobs:
   prettier:
@@ -22,10 +22,6 @@ jobs:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Format changed content
-        if: ${{ env.GIT_DIFF_CONTENT }}
-        run: |
-          yarn prettier --write ${{ env.GIT_DIFF_CONTENT }}
       - name: Submit suggestion
         uses: reviewdog/action-suggester@v1
         with:
