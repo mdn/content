@@ -16,7 +16,7 @@ The **`SVGPatternElement`** interface corresponds to the {{SVGElement("pattern")
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}} and implements the ones from {{domxref("SVGFitToViewBox")}}._
 
 - {{domxref("SVGPatternElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("pattern")}} element.
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("pattern")}} element.
 - {{domxref("SVGPatternElement.patternUnits")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("patternUnits")}} attribute of the given {{SVGElement("pattern")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
 - {{domxref("SVGPatternElement.patternContentUnits")}} {{ReadOnlyInline}}
