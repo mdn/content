@@ -34,8 +34,10 @@ new URL("http://example.com:80/svn/Repos/").port; // '' (empty string)
 new URL("https://example.com/svn/Repos/").port; // '' (empty string)
 // http protocol with no explicit port number
 new URL("https://example.com/svn/Repos/").port; // '' (empty string)
-// sftp protocol with default port number
-new URL("sftp://example.com:21/svn/Repos/").port; // '' (empty string)
+// ftp protocol with non-default port number
+new URL("ftp://example.com:221/svn/Repos/").port; // '221'
+// ftp protocol with default port number
+new URL("ftp://example.com:21/svn/Repos/").port; // '' (empty string)
 ```
 
 ## Specifications
