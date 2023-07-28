@@ -63,5 +63,5 @@ If you want to embed another HTML page into the {{HTMLElement("body")}} of a doc
 
 ## See also
 
-- {{HTTPHeadersContent-Security-Policy("frame-ancestors")}}
+- {{HTTPHeaders("frame-ancestors")}}
 - {{HTMLElement("iframe")}}
