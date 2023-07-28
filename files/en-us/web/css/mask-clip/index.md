@@ -9,6 +9,8 @@ browser-compat: css.properties.mask-clip
 
 The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area which is affected by a mask. The painted content of an element must be restricted to this area.
 
+## Syntax
+
 ```css
 /* <geometry-box> values */
 mask-clip: content-box;
@@ -39,8 +41,6 @@ mask-clip: revert;
 mask-clip: revert-layer;
 mask-clip: unset;
 ```
-
-## Syntax
 
 One or more of the keyword values listed below, separated by commas.
 

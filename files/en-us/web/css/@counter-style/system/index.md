@@ -79,7 +79,7 @@ This may take one of three forms:
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
 ◉ One
 ◉ Two
 ◉ Three
@@ -115,7 +115,7 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
 ➀ One
 ➁ Two
 ➂ Three
@@ -155,7 +155,7 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
   a. One
   b. Two
   c. Three
@@ -201,7 +201,7 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
  a. One
  b. Two
  c. Three
@@ -247,7 +247,7 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
  b. One
  c. Two
 ba. Three

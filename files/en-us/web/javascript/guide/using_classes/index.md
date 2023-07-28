@@ -173,7 +173,7 @@ console.log(red);
 
 You should see some output like this:
 
-```
+```plain
 Object { values: (3) […] }
   values: Array(3) [ 255, 0, 0 ]
 ```

@@ -57,11 +57,10 @@ You can choose a different port number. Entering `npx http-server /user/yourName
 
 This non-configurable static HTTP server suffices for our basic app. Apps served via `localhost` and `127.0.0.1` are exempt from https and always considered secure. Browser insecure warnings, if given, can be bypassed. While not necessary, to configurable your local web server to be served over HTTPs, you can [add a built-in SSL certificate](https://github.com/lwsjs/local-web-server/wiki/How-to-get-the-%22green-padlock%22-using-the-built-in-certificate). With the certificate, you will be able to install and run [local-web-server](<https://github.com/lwsjs/local-web-server/wiki/How-to-launch-a-secure-local-web-server-(HTTPS)>) from the command line to serve your project locally over `https`, preventing any security warning.
 
-```
-$ npm install -g local-web-server
-$ cd ~/user/yourName/CycleTracker/
-$ ws --https
-Listening on https://YourComputerName.local:8000, https://127.0.0.1:8000, https://192.168.1.7:8000
+```bash
+npm install -g local-web-server
+cd ~/user/yourName/CycleTracker/
+ws --https
 ```
 
 In the above, you may need to prefix the install with `sudo`.

@@ -15,14 +15,12 @@ One typical use of this is with a descendant selector expression — for example
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
+
 ```css
 /* Selects a shadow root host, only if it is
    a descendant of the selector argument given */
 :host-context(h1) {
-  font-weight: bold;
-}
-
-:host-context(main article) {
   font-weight: bold;
 }
 
@@ -74,7 +72,6 @@ style.textContent =
   "span:hover { text-decoration: underline; }" +
   ":host-context(h1) { font-style: italic; }" +
   ':host-context(h1):after { content: " - no links in headers!" }' +
-  ":host-context(article, aside) { color: gray; }" +
   ":host(.footer) { color : red; }" +
   ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```

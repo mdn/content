@@ -40,6 +40,6 @@ Not part of any current specifications.
 - CSS properties that may be specially useful to style the `<dir>` element:
 
   - The {{cssxref('list-style')}} property, useful to choose the way the ordinal is displayed.
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), useful to handle complex nested lists.
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), useful to handle complex nested lists.
   - The {{Cssxref('line-height')}} property, useful to simulate the deprecated [`compact`](#compact) attribute.
   - The {{cssxref('margin')}} property, useful to control the indent of the list.

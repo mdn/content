@@ -1,6 +1,7 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
+page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}

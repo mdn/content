@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: publickey-credentials-create"
 slug: Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.publickey-credentials-create

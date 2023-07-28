@@ -19,7 +19,7 @@ There are over 80 selectors and combinators. CSS selectors can be grouped into t
 
 The [type selector](/en-US/docs/Web/CSS/Type_selectors) selects all elements that have the given node name. For example, `div` will select all {{HTMLElement("div")}} elements and `input` will match any {{HTMLElement("input")}} element. The [universal selector](/en-US/docs/Web/CSS/Universal_selectors), denoted with an asterisk (`*`), is a special type selector that selects all elements.
 
-The [class selector](/en-US/docs/Web/CSS/Class_selectors) selects all elements that have the given `class` attribute denoted by the class name prefixed with a period (`.`). For example, `.index` will match any element that has `class="index"`. The [ID selector](/en-US/docs/Web/CSS/ID_selectors) selects an element based on the value of its `id` attribute. The selector is the `id` prefixed with an octothorp (`#`). For example, `#toc` will match the element that has `id="toc"`. Both [`class`](/en-US/docs/Web/HTML/Global_attributes/class) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) are global attributes. There should be only one element with a given `id` in a document; but if there is more than one, the ID selector will match all the elements with that `id`.
+The [class selector](/en-US/docs/Web/CSS/Class_selectors) selects all elements that have the given `class` attribute denoted by the class name prefixed with a period (`.`). For example, `.index` will match any element that has `class="index"`. The [ID selector](/en-US/docs/Web/CSS/ID_selectors) selects an element based on the value of its `id` attribute. The selector is the `id` prefixed with a "number sign" (U+0023, `#`). For example, `#toc` will match the element that has `id="toc"`. Both [`class`](/en-US/docs/Web/HTML/Global_attributes/class) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) are global attributes. There should be only one element with a given `id` in a document; but if there is more than one, the ID selector will match all the elements with that `id`.
 
 When combining a type or universal selector with a class or id selector to create a [compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type or universal selector must precede the class or id.
 
@@ -146,7 +146,7 @@ Multiple pseudo-classes can be combined to create [compound selectors](#compound
 
 ## Pseudo-element selectors
 
-Not all CSS selectors are defined in the [CSS selectors module](/en-US/docs/Web/CSS/). CSS pseudo-element selectors are defined in the [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo) module.
+Not all CSS selectors are defined in the [CSS selectors module](/en-US/docs/Web/CSS). CSS pseudo-element selectors are defined in the [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module.
 
 CSS [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), prefixed with two colons (`::`), represent entities that are not included in HTML. For example, the simple {{cssxref("::marker")}} selector selects list item bullets, and the compound selector [`p::first-line`](/en-US/docs/Web/CSS/::first-line) matches the first line of all {{HTMLElement("p")}} elements.
 

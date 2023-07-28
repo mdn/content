@@ -39,7 +39,7 @@ The `decodeURI()` function decodes the URI by treating each escape sequence in t
 
 `decodeURI()` decodes all escape sequences, but if the escape sequence encodes one of the following characters, the escape sequence is preserved in the output string (because they are part of the URI syntax):
 
-```
+```plain
 ; / ? : @ & = + $ , #
 ```
 

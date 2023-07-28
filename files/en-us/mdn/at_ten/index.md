@@ -1,6 +1,7 @@
 ---
 title: MDN at 10
 slug: MDN/At_ten
+page-type: guide
 ---
 
 {{MDNSidebar}}

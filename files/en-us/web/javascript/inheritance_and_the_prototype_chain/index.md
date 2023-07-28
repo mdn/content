@@ -339,7 +339,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 
 As seen above, `doSomething()` has a default `prototype` property, as demonstrated by the console. After running this code, the console should have displayed an object that looks similar to this.
 
-```
+```plain
 {
   constructor: ƒ doSomething(),
   [[Prototype]]: {
@@ -366,7 +366,7 @@ console.log(doSomething.prototype);
 
 This results in:
 
-```
+```plain
 {
   foo: "bar",
   constructor: ƒ doSomething(),
@@ -396,7 +396,7 @@ console.log(doSomeInstancing);
 
 This results in an output similar to the following:
 
-```
+```plain
 {
   prop: "some value",
   [[Prototype]]: {
