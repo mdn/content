@@ -12,7 +12,7 @@ string.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing ) after argument list (V8-based & Firefox)
 SyntaxError: Unexpected identifier 'x'. Expected ')' to end an argument list. (Safari)
 ```

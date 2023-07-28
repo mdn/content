@@ -12,7 +12,7 @@ You can also use `exsl:node-set()` to turn strings into text nodes.
 
 ## Syntax
 
-```
+```plain
 exsl:node-set(object)
 ```
 

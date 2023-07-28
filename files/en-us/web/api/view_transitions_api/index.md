@@ -70,7 +70,7 @@ Let's walk through how this works:
 3. The API captures the new state of the page as a live representation.
 4. The API constructs a pseudo-element tree with the following structure:
 
-   ```
+   ```plain
    ::view-transition
    └─ ::view-transition-group(root)
       └─ ::view-transition-image-pair(root)
@@ -100,7 +100,7 @@ We've given the {{htmlelement("figcaption")}} element a `view-transition-name` o
 
 With this CSS applied, the pseudo-element tree will now look like this:
 
-```
+```plain
 ::view-transition
 ├─ ::view-transition-group(root)
 │ └─ ::view-transition-image-pair(root)

@@ -14,6 +14,10 @@ browser-compat: css.properties.box-ordinal-group
 
 The **`box-ordinal-group`** [CSS](/en-US/docs/Web/CSS) property assigns the flexbox's child elements to an ordinal group.
 
+Ordinal groups may be used in conjunction with the {{CSSxRef("box-direction")}} property to control the order in which the direct children of a box appear. When the computed `box-direction` is normal, a box will display its elements starting from the lowest numbered ordinal group and ensure that those elements appear to the left (for horizontal boxes) or at the top (for vertical boxes) of the container. Elements with the same ordinal group are flowed in the order they appear in the source document tree. In the reverse direction, the ordinal groups are examined in the same order, except the elements appear reversed.
+
+## Syntax
+
 ```css
 /* <integer> values */
 box-ordinal-group: 1;
@@ -24,10 +28,6 @@ box-ordinal-group: inherit;
 box-ordinal-group: initial;
 box-ordinal-group: unset;
 ```
-
-Ordinal groups may be used in conjunction with the {{CSSxRef("box-direction")}} property to control the order in which the direct children of a box appear. When the computed `box-direction` is normal, a box will display its elements starting from the lowest numbered ordinal group and ensure that those elements appear to the left (for horizontal boxes) or at the top (for vertical boxes) of the container. Elements with the same ordinal group are flowed in the order they appear in the source document tree. In the reverse direction, the ordinal groups are examined in the same order, except the elements appear reversed.
-
-## Syntax
 
 The `box-ordinal-group` property is specified as any positive {{CSSxRef("&lt;integer&gt;")}}.
 

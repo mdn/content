@@ -32,7 +32,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### Japanese (ja)
 
 - Discussions: [Slack (#translation channel)](https://mozillajp.slack.com/), [GitHub (mozilla-japan)](https://github.com/mozilla-japan/translation), [Google Group (Mozilla.translations.ja)](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
-- Current contributors: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
+- Current maintainers: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
 
 ### Korea (ko)
 

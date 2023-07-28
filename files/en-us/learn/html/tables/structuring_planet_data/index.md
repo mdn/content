@@ -1,6 +1,7 @@
 ---
 title: Structuring planet data
 slug: Learn/HTML/Tables/Structuring_planet_data
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

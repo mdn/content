@@ -232,5 +232,5 @@ Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz
 - [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- [CSS selector module](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)

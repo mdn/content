@@ -94,8 +94,6 @@ Third-party APIs come in a large variety; some of the more popular ones that you
 - The [Twilio API](https://www.twilio.com/), which provides a framework for building voice and video call functionality into your app, sending SMS/MMS from your apps, and more.
 - The [Mastodon API](https://docs.joinmastodon.org/api/), which enables you to manipulate features of the Mastodon social network programmatically.
 
-> **Note:** You can find information on a lot more 3rd party APIs in the [Programmable Web API directory](https://www.programmableweb.com/category/all/apis).
-
 ## How do APIs work?
 
 Different JavaScript APIs work in slightly different ways, but generally, they have common features and similar themes to how they work.

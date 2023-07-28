@@ -15,6 +15,8 @@ One typical use of this is with a descendant selector expression — for example
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
+
 ```css
 /* Selects a shadow root host, only if it is
    a descendant of the selector argument given */

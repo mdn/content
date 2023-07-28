@@ -22,13 +22,13 @@ The `<bdi>` element is used to wrap a span of text and instructs the bidirection
 
 For example, consider some text like:
 
-```
+```plain
 EMBEDDED-TEXT - 1st place
 ```
 
 If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then `- 1` will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
 
-```
+```plain
 1 - EMBEDDED-TEXTst place
 ```
 
