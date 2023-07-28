@@ -5,6 +5,8 @@ on:
 
 jobs:
   prettier:
+    # do not run on forks
+    if: github.repository == 'mdn/content'
     name: prettier
     runs-on: ubuntu-latest
     steps:
