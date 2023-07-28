@@ -15,9 +15,7 @@ property returns an {{DOMxRef("HTMLAllCollection")}} rooted at the document node
 other words, it returns all of the document's elements, accessible by order (like an
 array) and by ID (like a regular object).
 
-You can use {{DOMxRef("Document.querySelectorAll")}} as a replacement for
-`document.all`. The following example returns a {{DOMxRef("NodeList")}}
-containing every element in the document:
+Rather than using `document.all` to return an {{DOMxRef("HTMLAllCollection")}} of all the document's elements in document order, you can use {{DOMxRef("Document.querySelectorAll")}} to return a {{DOMxRef("NodeList")}} of all the document's elements in document order:
 
 ```js
 const all = document.querySelectorAll("*");
