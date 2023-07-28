@@ -18,7 +18,7 @@ array) and by ID (like a regular object).
 Rather than using `document.all` to return an {{DOMxRef("HTMLAllCollection")}} of all the document's elements in document order, you can use {{DOMxRef("Document.querySelectorAll")}} to return a {{DOMxRef("NodeList")}} of all the document's elements in document order:
 
 ```js
-const all = document.querySelectorAll("*");
+const allElements = document.querySelectorAll("*");
 ```
 
 ## Value
