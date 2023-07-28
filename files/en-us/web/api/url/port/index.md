@@ -26,6 +26,15 @@ const url = new URL("https://example.com:80/svn/Repos/");
 console.log(url.port); // Logs '80'
 ```
 
+Port 80 + 443 in combination with http + https show empty port
+```js
+new URL("https://example.com:443/svn/Repos/").port; // shows ''
+```
+
+```js
+new URL("http://example.com:80/svn/Repos/").port; // shows ''
+```
+
 ## Specifications
 
 {{Specifications}}
