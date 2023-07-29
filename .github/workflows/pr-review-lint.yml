@@ -8,9 +8,7 @@ on:
       - .nvmrc
       - "**/*.md"
 
-permissions:
-  contents: read
-  pull-requests: write
+permissions: write-all
 
 jobs:
   lint-docs:
