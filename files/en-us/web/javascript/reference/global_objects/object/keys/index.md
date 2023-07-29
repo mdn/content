@@ -28,7 +28,10 @@ An array of strings representing the given object's own enumerable string-keyed 
 
 ## Description
 
-`Object.keys()` returns an array whose elements are strings corresponding to the enumerable string-keyed property names found directly upon `object`. This is the same as iterating with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a `for...in` loop enumerates properties in the prototype chain as well. The order of the array returned by `Object.keys()` is the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop.
+`Object.keys()` returns an array whose elements are strings corresponding to the enumerable string-keyed property names found directly upon `object`. This is the same as iterating with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a `for...in` loop enumerates properties in the prototype chain as well. The order of the array returned by `Object.keys()` is the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. That is:
+
+- First, all non-negative integer keys (those that can be array indices) in ascending order by value,
+- Then, other string keys in ascending chronological order of property creation.
 
 If you need the property values, use {{jsxref("Object.values()")}} instead. If you need both the property keys and values, use {{jsxref("Object.entries()")}} instead.
 
