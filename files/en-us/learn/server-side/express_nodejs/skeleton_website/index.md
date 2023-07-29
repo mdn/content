@@ -189,13 +189,13 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
    - On the Windows CMD prompt, use this command:
 
-     ```bash
+     ```batch
      SET DEBUG=express-locallibrary-tutorial:* & npm start
      ```
 
    - On Windows Powershell, use this command:
 
-     ```bash
+     ```powershell
      ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
      ```
 
