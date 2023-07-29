@@ -7,7 +7,7 @@ browser-compat: api.HTMLAllCollection
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
-The **`HTMLAllCollection`** interface represents a collection of _all_ of the document's elements, accessible by order (like an array) and by ID (like a regular object). It is returned by the {{domxref("document.all")}} property.
+The **`HTMLAllCollection`** interface represents a collection of _all_ of the document's elements, accessible by index (like an array) and by the element's [`id`](/en-US/docs/Web/HTML/Global_attributes/id). It is returned by the {{domxref("document.all")}} property.
 
 ## Instance properties
 
@@ -17,15 +17,15 @@ The **`HTMLAllCollection`** interface represents a collection of _all_ of the do
 ## Instance methods
 
 - {{domxref("HTMLAllCollection.item()")}}
-  - : Returns the specific node at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
-- {{domxref("HTMLCollection.namedItem()")}}
-  - : Returns the specific node whose ID or, as a fallback, name matches the string specified by `name`. Matching by name is only done as a last resort, only in HTML, and only if the referenced element supports the `name` attribute. Returns `null` if no node exists by the given name.
+  - : Returns the node at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
+- {{domxref("HTMLAllCollection.namedItem()")}}
+  - : Returns the first [element](/en-US/docs/Web/API/Element) in the collection whose [`id`](/en-US/docs/Web/HTML/Global_attributes/id) or `name` attribute match the given string name, or `null` if no element matches.
 
 ## Usage in JavaScript
 
 ### Indexed access
 
-In addition to the methods above, an `HTMLAllCollection` can be accessed by integer indices and string property names. HTML IDs may contain `:` and `.` as valid characters, which would necessitate using bracket notation for property access. `collection[i]` is equivalent to `collection.item(i)`, where `i` can be an integer, a string containing an integer, or a string representing an ID.
+In addition to the methods above, elements in an `HTMLAllCollection` can be accessed by integer indices and string property names. The HTML `id` attribute may contain `:` and `.` as valid characters, which would necessitate using bracket notation for property access. `collection[i]` is equivalent to `collection.item(i)`, where `i` can be an integer, a string containing an integer, or a string representing an `id`.
 
 ### Calling as a function
 
@@ -33,7 +33,7 @@ An `HTMLAllCollection` object is callable. When it's called with no arguments or
 
 ### Special type conversion behavior
 
-For historical reasons, `document.all` is an object that in many ways behaves like `undefined`. Specifically:
+For historical reasons, `document.all` is an object that in the following ways behaves like `undefined`:
 
 - It is [loosely equal](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) to `undefined` and `null`.
 - It is [falsy](/en-US/docs/Glossary/Falsy) in boolean contexts.

@@ -8,7 +8,7 @@ browser-compat: api.HTMLAllCollection.namedItem
 
 {{APIRef("DOM")}}
 
-The **`namedItem()`** method of the {{domxref("HTMLAllCollection")}} interface returns the first {{domxref("Element")}} in the collection whose `id` or `name` attribute match the specified name, or `null` if no element matches.
+The **`namedItem()`** method of the {{domxref("HTMLAllCollection")}} interface returns the first {{domxref("Element")}} in the collection whose `id` or `name` attribute matches the specified name, or `null` if no element matches.
 
 ## Syntax
 
