@@ -32,7 +32,7 @@ math-depth: revert-layer;
 math-depth: unset;
 ```
 
-## Values
+### Values
 
 - `auto-add`
   - : Set to the inherited `math-depth` plus 1 when inherited [math-style](/en-US/docs/Web/CSS/math-style) is `compact`.

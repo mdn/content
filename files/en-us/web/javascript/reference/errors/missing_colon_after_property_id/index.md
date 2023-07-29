@@ -13,7 +13,7 @@ object's properties. Somehow, this colon is missing or misplaced.
 
 ## Message
 
-```
+```plain
 SyntaxError: Invalid shorthand property initializer (V8-based)
 SyntaxError: missing : after property id (Firefox)
 SyntaxError: Unexpected token '='. Expected a ':' following the property name 'x'. (Safari)

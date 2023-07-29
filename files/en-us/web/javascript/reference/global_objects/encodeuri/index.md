@@ -39,7 +39,7 @@ The `encodeURI()` function escapes characters by UTF-8 code units, with each oct
 
 `encodeURI()` escapes all characters **except**:
 
-```
+```plain
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 
 ; / ? : @ & = + $ , #
@@ -49,7 +49,7 @@ The characters on the second line are characters that may be part of the URI syn
 
 The `encodeURI()` function does not encode characters that have special meaning (reserved characters) for a URI. The following example shows all the parts that a URI can possibly contain. Note how certain characters are used to signify special meaning:
 
-```
+```url
 http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
 ```
 

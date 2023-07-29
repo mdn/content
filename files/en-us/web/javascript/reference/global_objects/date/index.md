@@ -132,7 +132,7 @@ When a segment overflows or underflows its expected range, it usually "carries o
 
 There are many ways to format a date as a string. The JavaScript specification only specifies one format to be universally supported: the [_date time string format_](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format), a simplification of the ISO 8601 calendar date extended format. The format is as follows:
 
-```
+```plain
 YYYY-MM-DDTHH:mm:ss.sssZ
 ```
 

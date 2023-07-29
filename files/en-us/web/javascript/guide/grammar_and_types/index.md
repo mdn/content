@@ -77,7 +77,7 @@ You use variables as symbolic names for values in your application. The names of
 
 A JavaScript identifier usually starts with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0` – `9`). Because JavaScript is case sensitive, letters include the characters `A` through `Z` (uppercase) as well as `a` through `z` (lowercase).
 
-You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6) or the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
+You can use most Unicode letters such as `å` and `ü` in identifiers. (For more details, see the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) to represent characters in identifiers.
 
 Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
@@ -418,7 +418,7 @@ Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), h
 
 Some examples of integer literals are:
 
-```
+```plain
 0, 117, 123456789123456789n             (decimal, base 10)
 015, 0001, 0o777777777777n              (octal, base 8)
 0x1123, 0x00111, 0x123456789ABCDEFn     (hexadecimal, "hex" or base 16)
@@ -440,7 +440,7 @@ The exponent part is an `e` or `E` followed by an integer, which can be signed (
 
 More succinctly, the syntax is:
 
-```
+```plain
 [digits].[digits][(E|e)[(+|-)]digits]
 ```
 
@@ -677,7 +677,7 @@ console.log(quote);
 
 The result of this would be:
 
-```
+```plain
 He read "The Cremation of Sam McGee" by R.W. Service.
 ```
 

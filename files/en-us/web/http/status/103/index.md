@@ -19,6 +19,12 @@ A server might send multiple `103` responses, for example, following a redirect.
 Browsers only process the first early hint response, and this response must be discarded if the request results in a cross-origin redirect.
 Preloaded resources from the early hint are effectively pre-pended to the `Document`'s head element, and then followed by the resources loaded in the final response.
 
+> **Note:** For compatibility reasons [it is recommended](https://www.rfc-editor.org/rfc/rfc8297#section-3) to only send HTTP `103 Early Hints` responses over HTTP/2 or later, unless the client is known to handle informational responses correctly.
+>
+> Most browsers limit support to HTTP/2 or later for this reason. See [browser compatibility](#browser-compatibility) below.
+>
+> Despite this, the examples below use HTTP/1.1-style notation as per usual convention.
+
 ## Syntax
 
 ```http

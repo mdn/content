@@ -10,7 +10,7 @@ The JavaScript exception "continue must be inside loop" occurs when a {{jsxref("
 
 ## Message
 
-```
+```plain
 SyntaxError: Illegal continue statement: no surrounding iteration statement (V8-based)
 SyntaxError: Illegal continue statement: 'label' does not denote an iteration statement (V8-based)
 SyntaxError: continue must be inside loop (Firefox)

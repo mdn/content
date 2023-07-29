@@ -13,7 +13,7 @@ declaration was not given a value in the same statement (like
 
 ## Message
 
-```
+```plain
 SyntaxError: Missing initializer in const declaration (V8-based)
 SyntaxError: missing = in const declaration (Firefox)
 SyntaxError: Unexpected token ';'. const declared variable 'x' must have an initializer. (Safari)

@@ -51,5 +51,5 @@ video:muted {
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
 - {{cssxref(":volume-locked")}}
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
 - [`muted`](/en-US/docs/Web/API/HTMLMediaElement/muted) property of {{domxref("HTMLMediaElement")}} objects

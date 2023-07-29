@@ -10,7 +10,7 @@ The `round` function returns a number that is the nearest integer to the given n
 
 ### Syntax
 
-```
+```plain
 round( decimal )
 ```
 

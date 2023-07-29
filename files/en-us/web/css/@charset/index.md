@@ -32,7 +32,7 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ### Formal syntax
 
-```
+```plain
 @charset "<charset>";
 ```
 

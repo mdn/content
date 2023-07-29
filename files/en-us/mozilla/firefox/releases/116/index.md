@@ -34,6 +34,8 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### SVG
 
+- The `q` [length unit](/en-US/docs/Web/SVG/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
+
 #### Removals
 
 ### HTTP

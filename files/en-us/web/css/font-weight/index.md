@@ -231,7 +231,7 @@ span {
 
 {{Compat}}
 
-## See Also
+## See also
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
