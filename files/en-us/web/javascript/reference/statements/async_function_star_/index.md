@@ -60,7 +60,7 @@ foo()
 
 `1` will be logged, because if the yielded promise rejects, the iterator result will reject as well. The `value` property of an async generator's resolved result will not be another promise.
 
-`async function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
+`async function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
 
 ## Examples
 

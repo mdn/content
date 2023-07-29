@@ -40,7 +40,7 @@ new Intl.PluralRules(locales, options)
     - `roundingMode` {{experimental_inline}}
 
       - : Specifies how fractional values are rounded.
-        The options are are: `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"` (default), `"halfTrunc"`, `"halfEven"`.
+        The options are: `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"` (default), `"halfTrunc"`, `"halfEven"`.
         The meanings of the values are documented in more detail in the corresponding [`Intl.NumberFormat` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode) option.
 
     - `roundingPriority` {{experimental_inline}}
