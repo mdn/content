@@ -14,9 +14,9 @@ jobs:
 
       - name: Get changed files
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BASE_SHA: ${{ github.event.pull_request.base.sha }}
-            HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           # Use the GitHub API to get the list of changed files
           # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
