@@ -186,7 +186,7 @@ Once you have decided what data you are going to collect, you should publish a p
 
 When providing you with data, your users should be given an opportunity to read your privacy policy, and consent to it. They should be able to control if they are happy with this and agree to your terms. And as indicated above, they should also get to see what data of theirs you have collected, and delete it if they want to.
 
-When you've published your privacy policy, you need to make sure that you comply with it — doing what you say you are going to do is very important in building user trust. You should only collect the data you say you'll collect, and only use it for the purpose you say you'll use it for. If someone from your company comes up with a clever new way to use existing data, that still isn't OK under the terms of your policy if it doesn't specify that you'll use it for that purpose. If users consented to the use of their data for a specific purpose and that purpose expands, you may have to consider obtaining new consent. 
+When you've published your privacy policy, you need to make sure that you comply with it — doing what you say you are going to do is very important in building user trust. You should only collect the data you say you'll collect, and only use it for the purpose you say you'll use it for. If someone from your company comes up with a clever new way to use existing data, that still isn't OK under the terms of your policy if it doesn't specify that you'll use it for that purpose. If users consented to the use of their data for a specific purpose and that purpose expands, you may have to consider obtaining new consent.
 
 ### Delete the data once you have finished with it
 
