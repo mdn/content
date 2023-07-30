@@ -113,7 +113,7 @@ We will revisit the `<link>` element and its `rel` attribute in a future section
 
 The {{HTMLelement("body")}} element contains all the content we want displayed when users visit the site on the Internet.
 
-Within the `<body>`, we include the name of the app as a level-1 heading using [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and a {{HTMLelement("form")}}.
+Within the `<body>`, we include the name of the app as a level-1 heading using an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and a {{HTMLelement("form")}}.
 
 ```html
 <body>
