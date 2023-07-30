@@ -105,7 +105,7 @@ For right now, the last component we include in the `<head>` is a {{HTMLelement(
 <link rel="stylesheet" href="style.css" />
 ```
 
-The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute – and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
+The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute—and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
 
 We will revisit the `<link>` element and its `rel` attribute in a future section when we include the [link to the manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app) file.
 
