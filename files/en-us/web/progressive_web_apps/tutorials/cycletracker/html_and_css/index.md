@@ -200,7 +200,7 @@ Before closing the `</body>`, we include a link to the yet-to-be-written `app.js
 
 The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycles within the content of the body.
 
-The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is now complete!
+The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is now complete! You can open the file in your browser at this point, but you'll notice that it's quite plain. We'll fix that in the next section.
 
 ## CSS content
 
