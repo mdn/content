@@ -49,7 +49,13 @@ Our static site HTML—with placeholder {{HTMLElement("link")}} and {{HTMLElemen
         <button type="submit">Add Period</button>
       </p>
     </form>
-    <section id="past-periods"></section>
+    <section id="past-periods">
+      <h2>Past periods</h2>
+      <ul>
+        <li>From 01/01/2024 to 01/06/2024</li>
+        <li>From 01/29/2024 to 02/04/2024</li>
+      </ul>
+    </section>
     <script src="app.js" defer></script>
   </body>
 </html>
