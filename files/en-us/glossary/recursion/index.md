@@ -44,7 +44,7 @@ The following code defines a function that returns the maximum size of the call 
 const getMaxCallStackSize = (i) => {
   try {
     return getMaxCallStackSize(++i);
-  } catch {
+  } catch(error) {
     return i;
   }
 };
