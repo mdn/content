@@ -11,8 +11,7 @@ page-type: tutorial-chapter
 
 To build a PWA, a progressive web application, we need to create a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
 
-Our project is to create CycleTracker, a menstrual cycle tracker.
-The first step in this introductory [PWA tutorial](/en-US/docs/Web/Progressive_web_apps/Tutorials) is to write the HTML and CSS. The top section of the page is a form for the user to enter the start and end dates of each period. The bottom is a list of previous menstrual cycles.
+Our project is to create CycleTracker, a menstrual cycle tracker. The first step in this introductory [PWA tutorial](/en-US/docs/Web/Progressive_web_apps/Tutorials) is to write the HTML and CSS. The top section of the page is a form for the user to enter the start and end dates of each period. The bottom is a list of previous menstrual cycles.
 
 We create an HTML file, with meta data in the head and a static web page containing a form and a placeholder to display user inputted data. We'll then add an external CSS stylesheet to improve the site's appearance.
 
