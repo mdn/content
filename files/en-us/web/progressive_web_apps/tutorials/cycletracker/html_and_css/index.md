@@ -78,7 +78,7 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 ### Document head
 
-The {{HTMLelement("head")}} contains machine-readable information about the web application that, with the exception of the `<title>`, which may be displayed as the heading of the browser tab, is not visible to the user.
+The {{HTMLelement("head")}} contains machine-readable information about the web application that—with the exception of the `<title>`, which may be displayed as the heading of the browser tab—is not visible to the user.
 
 The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
