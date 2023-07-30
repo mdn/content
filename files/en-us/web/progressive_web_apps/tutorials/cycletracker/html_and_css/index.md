@@ -143,7 +143,7 @@ To associate a {{HTMLelement("label")}} with a form control, each `<input>` has 
 <input type="date" id="start-date" required />
 ```
 
-Putting it altogether, within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}} elements), each with a date picker for the start and end dates of the menstrual cycle currently being entered, along with the date pickers' associated {{HTMLelement("label")}}s. We also include a {{HTMLelement("button")}} element which submits the form and label the button "Add period" by including that text between the opening and closing tags. The `type="submit"` is optional, as `submit` is the default type for `<button>`.
+Putting it altogether, within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}} elements), each with a date picker for the start and end dates of the menstrual cycle currently being entered, along with the date pickers' associated {{HTMLelement("label")}}s. We also include a {{HTMLelement("button")}} element which submits the form; we label it "Add period" by including that text between the opening and closing tags. The `type="submit"` is optional, as `submit` is the default type for `<button>`.
 
 ```html
 <form>
