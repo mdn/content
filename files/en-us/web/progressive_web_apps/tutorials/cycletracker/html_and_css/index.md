@@ -33,6 +33,7 @@ Our static site HTML—with placeholder {{HTMLElement("link")}} and {{HTMLElemen
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Period tracker</h1>
     <form>
       <fieldset>
         <legend>Enter your period start and end date</legend>
