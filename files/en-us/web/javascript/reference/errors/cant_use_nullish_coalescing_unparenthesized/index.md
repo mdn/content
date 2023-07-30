@@ -10,7 +10,7 @@ The JavaScript exception "cannot use `??` unparenthesized within `||` and `&&` e
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected token '??' (V8-based)
 SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions (Firefox)
 SyntaxError: Unexpected token '??'. Coalescing and logical operators used together in the same expression; parentheses must be used to disambiguate. (Safari)
@@ -24,7 +24,7 @@ SyntaxError: Unexpected token '??'. Coalescing and logical operators used togeth
 
 The [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) chain looks like this:
 
-```
+```plain
 |   >   &&   >   ||   >   =
 |   >   ??   >   =
 ```

@@ -55,7 +55,7 @@ typeof Object(1n) === "object"; // true
 
 The following operators may be used with BigInt values or object-wrapped BigInt values:
 
-```
+```plain
 + * - % **
 ```
 

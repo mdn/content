@@ -899,7 +899,7 @@ delete myObj.h; // returns true (can delete user-defined properties)
 #### Deleting array elements
 
 Since arrays are just objects, it's technically possible to `delete` elements from them.
-This is however regarded as a bad practice, try to avoid it.
+This is, however, regarded as a bad practice — try to avoid it.
 When you delete an array property, the array length is not affected and other elements are not re-indexed.
 To achieve that behavior, it is much better to just overwrite the element with the value `undefined`.
 To actually manipulate the array, use the various array methods such as [`splice`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).

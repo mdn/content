@@ -74,7 +74,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.seeking")}} {{ReadOnlyInline}}
   - : Returns a boolean that indicates whether the media is in the process of seeking to a new position.
 - {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}}
-  - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
+  - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if the user agent default audio device is being used.
 - {{domxref("HTMLMediaElement.src")}}
   - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}

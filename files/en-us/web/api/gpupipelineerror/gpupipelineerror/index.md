@@ -21,8 +21,8 @@ new GPUPipelineError(message, options)
 
 ### Parameters
 
-- `message`
-  - : A string providing a human-readable message that explains why the error occurred.
+- `message` {{optional_inline}}
+  - : A string providing a human-readable message that explains why the error occurred. If not specified, `message` defaults to an empty string (`""`).
 - `options`
   - : An object, which can contain the following properties:
     - `reason`

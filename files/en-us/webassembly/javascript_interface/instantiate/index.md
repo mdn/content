@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.WebAssembly.instantiate
 The **`WebAssembly.instantiate()`** function allows you to
 compile and instantiate WebAssembly code. This function has two overloads:
 
-- The primary overload takes the WebAssembly binary code, in the form of a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
+- The primary overload takes the WebAssembly binary code, in the form of a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
   {{jsxref("ArrayBuffer")}}, and performs both compilation and instantiation in one
   step. The returned `Promise` resolves to both a compiled
   [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) and its first [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance).
@@ -35,7 +35,7 @@ WebAssembly.instantiate(bufferSource, importObject);
 #### Parameters
 
 - `bufferSource`
-  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
+  - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the Wasm module you want to
     compile, or a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module).
 - `importObject` {{optional_inline}}

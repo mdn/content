@@ -87,20 +87,20 @@ The percentage offset of the given background image's position is relative to th
 
 Essentially what happens is the background image dimension is _subtracted_ from the corresponding container dimension, and then a percentage of the resulting value is used as the direct offset from the left (or top) edge.
 
-```
+```plain
 (container width - image width) * (position x%) = (x offset value)
 (container height - image height) * (position y%) = (y offset value)
 ```
 
 Using the X axis for an example, let's say we have an image that is 300px wide and we are using it in a container that is 100px wide, with background-size set to auto:
 
-```
+```plain
 100px - 300px = -200px (container & image difference)
 ```
 
 So that with position percentages of -25%, 0%, 50%, 100%, 125%, we get these image-to-container edge offset values:
 
-```
+```plain
 -200px * -25% = 50px
 -200px * 0% = 0px
 -200px * 50% = -100px
@@ -186,5 +186,5 @@ div {
 
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("transform-origin")}}

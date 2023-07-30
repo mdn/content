@@ -164,7 +164,7 @@ The margin at-rules are used inside of the `@page` at-rule. They each target a d
 
 Other margin-at rules include:
 
-```
+```plain
 @top-left-corner {
   <page-margin-properties>
 }
@@ -293,7 +293,7 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 
 ## Named pages
 
-Named pages enable performing per-page layout and adding [page-breaks](/en-US/docs/Web/CSS/CSS_Fragmentation) in a declarative manner when printing.
+Named pages enable performing per-page layout and adding [page-breaks](/en-US/docs/Web/CSS/CSS_fragmentation) in a declarative manner when printing.
 
 Named pages can be applied using the {{Cssxref("page")}} property. This allows the user to create different page configurations for use in print layouts.
 
