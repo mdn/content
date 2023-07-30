@@ -21,7 +21,7 @@ In the next sections, we'll set up a [local development environment](/en-US/docs
 
 ## Static web content
 
-Our static site HTML, with placeholder {{HTMLElement("link")}} and {{HTMLElement("script")}} elements for yet-to-be-created external CSS and JavaScript files, is:
+Our static site HTML—with placeholder {{HTMLElement("link")}} and {{HTMLElement("script")}} elements for the yet-to-be-created external CSS and JavaScript files—is:
 
 ```html
 <!doctype html>
