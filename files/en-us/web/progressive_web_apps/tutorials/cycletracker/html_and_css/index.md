@@ -198,7 +198,7 @@ Before closing the `</body>`, we include a link to the yet-to-be-written `app.js
 <script src="app.js" defer></script>
 ```
 
-The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycled within the content of the body.
+The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycles within the content of the body.
 
 The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is now complete!
 
