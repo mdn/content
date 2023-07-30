@@ -1,6 +1,7 @@
 ---
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -805,6 +806,90 @@ See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
   </tbody>
 </table>
 
+### Named view progress timelines property
+
+The CSS [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) property lets you give a name to particular element, identifying that its ancestor scroller element is the source of a view progress timeline.
+The name can then be assigned to the `animation-timeline`, which then animates the associated element as it moves through the visible area of its ancestor scroller.
+See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Anonymous view progress timelines function
+
+The CSS [`view()`](/en-US/docs/Web/CSS/animation-timeline/view) function lets you specify that the `animation-timeline` for an element is a view progress timeline, which will animate the element as it moves through the visible area of its ancestor scroller.
+The function defines the axis of the parent element that supplies the timeline, along with the inset within the visible area at which the animation starts and begins.
+See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>114</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### offset-position property
 
 The CSS {{cssxref("offset-position")}} property defines the initial position of an element on a path. A new keyword called `normal` has been added to the syntax of the property. When using this keyword, the initial starting position of an element on an {{cssxref("offset-path")}} depends on the CSS function used – {{cssxref("path")}} or {{cssxref("ray")}} – to specify the value of the `offset-path` property. For more information, see {{cssxref("offset-position")}}. See ([Firefox bug 1559232](https://bugzil.la/1559232)) for more details.
@@ -820,22 +905,22 @@ The CSS {{cssxref("offset-position")}} property defines the initial position of 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>115</td>
+      <td>116</td>
       <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>115</td>
+      <td>116</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>115</td>
+      <td>116</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>115</td>
+      <td>116</td>
       <td>No</td>
     </tr>
     <tr>
@@ -1235,6 +1320,48 @@ See [Firefox bug 1740530](https://bugzil.la/1740530) for more details.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>gfx.font_rendering.colr_v1.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### CSS Properties and Values API
+
+The [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) allows developers to register custom CSS properties through JavaScript via [`registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) or in CSS using the [`@property`](/en-US/docs/Web/CSS/@property) at-rule.
+Registering properties using these two methods allows for type checking, default values, and properties that do or do not inherit values from their parent elements.
+See [Firefox bug 1840480](https://bugzil.la/1840480) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>116</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>116</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.property-and-value-api.enabled</code></td>
     </tr>
   </tbody>
 </table>

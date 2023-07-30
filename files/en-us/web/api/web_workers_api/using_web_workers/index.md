@@ -647,8 +647,8 @@ There is not an "official" way to embed the code of a worker within a web page, 
         Array.prototype.map.call(
           document.querySelectorAll("script[type='text\/js-worker']"),
           (script) => script.textContent,
-          { type: "text/javascript" },
         ),
+        { type: "text/javascript" },
       );
 
       // Creating a new document.worker property containing all our "text/js-worker" scripts.

@@ -11,7 +11,7 @@ The HTTP **`421 Misdirected Request`** client error response code indicates that
 
 ## Status
 
-```
+```plain
 421 Misdirected Request
 ```
 

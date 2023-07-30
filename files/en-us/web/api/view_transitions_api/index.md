@@ -70,7 +70,7 @@ Let's walk through how this works:
 3. The API captures the new state of the page as a live representation.
 4. The API constructs a pseudo-element tree with the following structure:
 
-   ```
+   ```plain
    ::view-transition
    └─ ::view-transition-group(root)
       └─ ::view-transition-image-pair(root)
@@ -100,7 +100,7 @@ We've given the {{htmlelement("figcaption")}} element a `view-transition-name` o
 
 With this CSS applied, the pseudo-element tree will now look like this:
 
-```
+```plain
 ::view-transition
 ├─ ::view-transition-group(root)
 │ └─ ::view-transition-image-pair(root)
@@ -120,7 +120,7 @@ The value of `view-transition-name` can be anything you want except for `none` �
 
 ### Customizing your animations
 
-The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) applied (which are detailed in their [reference pages](#css_additions)). You can modify the default cross-fade in any way you want using regular CSS.
+The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](#css_additions)). You can modify the default cross-fade in any way you want using regular CSS.
 
 For example, to change the speed of it:
 

@@ -9,6 +9,10 @@ browser-compat: css.properties.mask-origin
 
 The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask.
 
+For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes on several lines or boxes on several pages, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.
+
+## Syntax
+
 ```css
 /* Keyword values */
 mask-origin: content-box;
@@ -35,10 +39,6 @@ mask-origin: revert;
 mask-origin: revert-layer;
 mask-origin: unset;
 ```
-
-For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes on several lines or boxes on several pages, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.
-
-## Syntax
 
 One or more of the keyword values listed below, separated by commas.
 

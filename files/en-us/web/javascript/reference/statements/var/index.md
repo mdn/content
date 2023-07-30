@@ -40,7 +40,10 @@ The scope of a variable declared with `var` is one of the following curly-brace-
 - Function body
 - [Static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
-Or the current module or script, if it's contained in neither of these.
+Or if none of the above applies:
+
+- The current [module](/en-US/docs/Web/JavaScript/Guide/Modules), for code running in module mode
+- The global scope, for code running in script mode.
 
 ```js
 function foo() {
@@ -81,7 +84,9 @@ The list that follows the `var` keyword is called a _{{glossary("binding")}} lis
 
 ### Hoisting
 
-`var` declarations, wherever they occur, are processed before any code is executed. Declaring a variable anywhere in the code is equivalent to declaring it at the top. This also means that a variable can appear to be used before it's declared. This behavior is called [_hoisting_](/en-US/docs/Glossary/Hoisting), as it appears that the variable declaration is moved to the top of the function or global code.
+`var` declarations, wherever they occur in a script, are processed before any code within the script is executed. Declaring a variable anywhere in the code is equivalent to declaring it at the top. This also means that a variable can appear to be used before it's declared. This behavior is called [_hoisting_](/en-US/docs/Glossary/Hoisting), as it appears that the variable declaration is moved to the top of the function, static initialization block, or script source in which it occurs.
+
+> **Note:** `var` declarations are only hoisted to the top of the current script. If you have two `<script>` elements within one HTML, the first script cannot access variables declared by the second before the second script has been processed and executed.
 
 ```js
 bla = 2;

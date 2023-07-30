@@ -44,7 +44,7 @@ let messageToProxy = {
   bar: 1234,
 };
 
-browser.runtime.sendMessage(messageToProxy, {toProxyScript: true});
+browser.runtime.sendMessage(messageToProxy, { toProxyScript: true });
 ```
 
 ```js

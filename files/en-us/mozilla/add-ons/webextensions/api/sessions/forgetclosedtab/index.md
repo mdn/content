@@ -51,7 +51,7 @@ function forgetMostRecent(sessionInfos) {
   if (sessionInfo.tab) {
     browser.sessions.forgetClosedTab(
       sessionInfo.tab.windowId,
-      sessionInfo.tab.sessionId
+      sessionInfo.tab.sessionId,
     );
   } else {
     browser.sessions.forgetClosedWindow(sessionInfo.window.sessionId);
@@ -62,8 +62,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.sessions.getRecentlyClosed({maxResults: 1})
-.then(forgetMostRecent, onError);
+browser.sessions
+  .getRecentlyClosed({ maxResults: 1 })
+  .then(forgetMostRecent, onError);
 ```
 
 {{WebExtExamples}}

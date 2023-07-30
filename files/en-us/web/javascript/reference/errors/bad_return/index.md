@@ -10,7 +10,7 @@ The JavaScript exception "return not in function" occurs when a [`return`](/en-U
 
 ## Message
 
-```
+```plain
 SyntaxError: Illegal return statement (V8-based)
 SyntaxError: return not in function (Firefox)
 SyntaxError: Return statements are only valid inside functions. (Safari)

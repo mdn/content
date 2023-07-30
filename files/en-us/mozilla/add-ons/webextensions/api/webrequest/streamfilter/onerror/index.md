@@ -34,8 +34,8 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["<all_urls>"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["<all_urls>"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
@@ -50,10 +50,10 @@ function listener(details) {
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  {urls: ["<all_urls>"], types: ["main_frame"]}
-);
+browser.webRequest.onBeforeRequest.addListener(listener, {
+  urls: ["<all_urls>"],
+  types: ["main_frame"],
+});
 ```
 
 {{WebExtExamples}}

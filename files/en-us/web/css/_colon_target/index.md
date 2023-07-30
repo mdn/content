@@ -18,7 +18,7 @@ The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 For example, the following URL has a fragment (denoted by the _#_ sign) that points to an element called `section2`:
 
-```
+```url
 http://www.example.com/index.html#section2
 ```
 
@@ -207,4 +207,4 @@ You can use the `:target` pseudo-class to create a lightbox without using any Ja
 
 ## See also
 
-- [Using the :target pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
+- [Using the :target pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)

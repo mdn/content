@@ -10,5 +10,5 @@ The WHATWG (_Web Hypertext Application Technology Working Group_) is a community
 
 ## See also
 
-- [WHATWG](https://en.wikipedia.org/wiki/WHATWG) on Wikipedia
 - [WHATWG website](https://whatwg.org/)
+- [WHATWG](https://en.wikipedia.org/wiki/WHATWG) on Wikipedia

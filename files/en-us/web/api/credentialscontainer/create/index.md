@@ -298,12 +298,12 @@ navigator.credentials.create({ publicKey }).then((publicKeyCredential) => {
   // Return public key algorithm identifier
   const pkAlgo = response.getPublicKeyAlgorithm();
 
-  // Return permissable transports array
+  // Return permissible transports array
   const transports = response.getTransports();
 });
 ```
 
-Some of this data will need to be stored on the server for future authentication operations against this credential — for example the public key, the algorithm used, and the permissable transports.
+Some of this data will need to be stored on the server for future authentication operations against this credential — for example the public key, the algorithm used, and the permissible transports.
 
 > **Note:** See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
 

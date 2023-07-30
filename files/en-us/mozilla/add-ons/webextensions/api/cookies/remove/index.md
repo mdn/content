@@ -72,7 +72,7 @@ function removeCookie(tabs) {
   removing.then(onRemoved, onError);
 }
 
-let getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({ active: true, currentWindow: true });
 getActive.then(removeCookie);
 ```
 
