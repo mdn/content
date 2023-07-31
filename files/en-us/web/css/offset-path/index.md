@@ -7,7 +7,7 @@ browser-compat: css.properties.offset-path
 
 {{CSSRef}}
 
-The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system.
+The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system. The path is defined by a geometrical shape.
 
 {{EmbedInteractiveExample("pages/css/offset-path.html")}}
 
