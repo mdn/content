@@ -159,7 +159,12 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 2. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
    ```bash
-   >node hellonode.js
+   node hellonode.js
+   ```
+
+   Once the server starts, you will see console output indicating the IP address the server is running on:
+
+   ```plain
    Server running at http://127.0.0.1:3000/
    ```
 
@@ -260,7 +265,12 @@ The following steps show how you can use npm to download a package, save it into
 5. You can start the server by calling node with the script in your command prompt:
 
    ```bash
-   >node index.js
+   node index.js
+   ```
+
+   You will see the following console output:
+
+   ```plain
    Example app listening on port 3000
    ```
 
