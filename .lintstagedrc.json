@@ -1,7 +1,8 @@
 {
-  "*": "prettier --ignore-unknown --write",
+  "!*.md": "prettier --ignore-unknown --write",
   "*.md": [
     "markdownlint-cli2-fix",
+    "prettier --write",
     "node scripts/front-matter_linter.js --fix true"
   ],
   "tests/**/*.*": "yarn test:front-matter-linter",
