@@ -48,8 +48,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is `20`.
 - `dirname`
 
-  - : This attribute is used to mark the text directionality of the element contents in a manner similar to the [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute of the `<input>` element.
-    Possible values include `ltr` for left-to-right and `rtl` for right-to-left.
+  - : This attribute is used to indicate the text directionality of the element contents similar to the [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute of the `<input>` element.
     For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
 
 - `disabled`
