@@ -37,7 +37,7 @@ In this example, the `dir="auto"` attribute on the textarea element allows the t
 ```html
 <form method="get" action="https://www.example.com/submit">
   <textarea name="comment" dir="auto" dirname="comment-direction">سيب</textarea>
-  <button>Send my greetings</button>
+  <button type="submit">Send my greetings</button>
 </form>
 ```
 
