@@ -71,15 +71,15 @@ This article provides information about the changes in Firefox 116 that affect d
 
 #### WebDriver BiDi
 
-- Added support for the `session.end` command that allows users to terminate the automation session ([Firefox bug 1829337](https://bugzil.la/1829337)). This was previously only possible for sessions using both WebDriver Classic and WebDriver BiDi. It is now possible also for WebDriver BiDi-only sessions.
-- Added support for [capability matching](/en-US/docs/Web/WebDriver/Capabilities) for the `session.new` command ([Firefox bug 1731730](https://bugzil.la/1731730)). It allows to define expectations about the target browser, such as browser name, platform name, … and can also used to configure the session (for example, specifiy if insecure certificates should be accepted).
+- Added support for the `session.end` command that allows users to terminate the automation session. This was previously only possible for sessions using both WebDriver Classic and WebDriver BiDi. It is now possible also for WebDriver BiDi-only sessions ([Firefox bug 1829337](https://bugzil.la/1829337)).
+- Added support for [capability matching](/en-US/docs/Web/WebDriver/Capabilities) for the `session.new` command. It allows to define expectations about the target browser, such as browser name, platform name, etc. It can also be used to configure the session, for example, to specify if insecure certificates should be accepted ([Firefox bug 1731730](https://bugzil.la/1731730)).
 - Shadow roots are now correctly serialized when they are the root of a returned value ([Firefox bug 1836514](https://bugzil.la/1836514)).
 - The `network` event time origin information was renamed from `originTime` to `timeOrigin` ([Firefox bug 1836926](https://bugzil.la/1836926)).
 - The `network` event `network.responseCompleted` is now correctly emitted for navigation requests involving a redirect ([Firefox bug 1838238](https://bugzil.la/1838238)).
 
 #### Marionette
 
-- Removed support for the `moz:useNonSpecCompliantPointerOrigin` capability ([Firefox bug 1490258](https://bugzil.la/1490258)). Users who still need this feature can still use the latest ESR release, Firefox ESR 115.
+- Removed support for the `moz:useNonSpecCompliantPointerOrigin` capability. Users who still need this feature can still use the latest ESR release, Firefox ESR 115 ([Firefox bug 1490258](https://bugzil.la/1490258)).
 - A regression was fixed that prevented us from differentiating stale elements (DOM elements that have been seen before on the page) from unknown elements for a given browsing context ([Firefox bug 1822466](https://bugzil.la/1822466))
 - Creating a new session should now properly wait for the initial context to be loaded ([Firefox bug 1838381](https://bugzil.la/1838381)).
 
