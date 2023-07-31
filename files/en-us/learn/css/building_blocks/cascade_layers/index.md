@@ -279,7 +279,7 @@ If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with
 
 Let's look at the following example:
 
-```
+```css
 @import url("components-lib.css") layer(components);
 @import url("narrowtheme.css") layer(components.narrow);
 ```
