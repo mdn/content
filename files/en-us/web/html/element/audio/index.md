@@ -157,7 +157,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       <td>
         {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
       </td>
-      <td>Load process has started</td>
+      <td>Fired when the browser has started to load the resource.</td>
     </tr>
     <tr>
       <td>

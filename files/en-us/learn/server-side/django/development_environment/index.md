@@ -110,7 +110,7 @@ You can confirm this by running the following command in the bash terminal:
 
 ```bash
 python3 -V
- Python 3.8.10
+# Output: Python 3.8.10
 ```
 
 However, the Python Package Index tool (_pip3_) you'll need to install packages for Python 3 (including Django) is **not** available by default.
@@ -127,12 +127,13 @@ sudo apt install python3-pip
 ### macOS
 
 macOS does not include Python 3 by default (Python 2 is included on older versions).
-You can confirm this by running the following commands in the zsh or bash terminal:
+You can confirm this by running the following command in the terminal:
 
 ```bash
-$ python3 -V
-  python3: command not found
+python3 -V
 ```
+
+This will either display the Python version number, which indicates that Python 3 is installed, or `python3: command not found`, which indicates Python 3 was not found.
 
 You can easily install Python 3 (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
@@ -144,12 +145,7 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
-You can now confirm successful installation by checking for the _Python 3_ version as shown below:
-
-```bash
-python3 -V
- Python 3.10.2
-```
+You can now confirm successful installation by running `python3 -V` again and checking for the Python version number.
 
 You can similarly check that _pip3_ is installed by listing the available packages:
 
@@ -174,7 +170,6 @@ You can then verify that Python 3 was installed by entering the following text i
 
 ```bash
 py -3 -V
- Python 3.10.2
 ```
 
 The Windows installer incorporates _pip3_ (the Python package manager) by default.
@@ -195,29 +190,21 @@ You will note that in the previous sections we use different commands to call Py
 If you only have Python 3 installed (and not Python 2), the bare commands `python` and `pip` can generally be used to run Python and pip on any operating system.
 If this is allowed on your system you will get a version "3" string when you run `-V` with the bare commands, as shown:
 
-```
-> python -V
-  Python 3.10.2
-
-> pip -V
-pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+```bash
+python -V
+pip -V
 ```
 
 If Python 2 is installed then to use version 3 you should prefix commands with `python3` and `pip3` on Linux/macOS, and `py -3` and `py -3 -m pip` on Windows:
 
 ```bash
+# Linux/macOS
+python3 -V
+pip3 -V
+
 # Windows
 py -3 -V
- Python 3.10.2
-
 py -3 -m pip list
-
-# Linux/macOS
-$ python3 -V
- Python 3.10.2
-
-$ pip3 -V
-  pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
 ```
 
 The instructions below show the platform specific commands as they work on more systems.
@@ -341,8 +328,12 @@ Once you've installed _virtualenvwrapper_ or _virtualenvwrapper-win_ then workin
 Now you can create a new virtual environment with the `mkvirtualenv` command. As this command runs you'll see the environment being set up (what you see is slightly platform-specific). When the command completes the new virtual environment will be active — you can see this because the start of the prompt will be the name of the environment in brackets (below we show this for Ubuntu, but the final line is similar for Windows/macOS).
 
 ```bash
-$ mkvirtualenv my_django_environment
+mkvirtualenv my_django_environment
+```
 
+You should see output similar to the following:
+
+```plain
 Running virtualenv with interpreter /usr/bin/python3
 # …
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
@@ -379,11 +370,9 @@ You can test that Django is installed by running the following command (this jus
 ```bash
 # Linux/macOS
 python3 -m django --version
- 4.0.10
 
 # Windows
 py -3 -m django --version
- 4.0.10
 ```
 
 > **Note:** If the above Windows command does not show a django module present, try:
@@ -424,22 +413,14 @@ cd mytestsite
 We can run the _development web server_ from within this folder using **manage.py** and the `runserver` command, as shown.
 
 ```bash
-$ python3 manage.py runserver
-Watching for file changes with StatReloader
-Performing system checks…
+# Linux/macOS
+python3 manage.py runserver
 
-System check identified no issues (0 silenced).
-
-You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
-Run 'python manage.py migrate' to apply them.
-March 01, 2022 - 01:19:16
-Django version 4.0.10, using settings 'mytestsite.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
+# Windows
+py -3 manage.py runserver
 ```
 
-> **Note:** The above command shows the Linux/macOS command.
-> You can ignore the warnings about "18 unapplied migration(s)" at this point!
+> **Note:** You can ignore the warnings about "18 unapplied migration(s)" at this point!
 
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 

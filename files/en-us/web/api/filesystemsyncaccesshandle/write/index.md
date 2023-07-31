@@ -30,7 +30,7 @@ write(buffer, FileSystemReadWriteOptions)
 
 ### Return value
 
-A {{jsxref('Promise')}} which resolves to a number representing the number of bytes written to the file.
+A number representing the number of bytes written to the file.
 
 ### Exceptions
 

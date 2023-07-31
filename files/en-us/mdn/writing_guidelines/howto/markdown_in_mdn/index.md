@@ -82,7 +82,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `md` - Markdown
   - `latex` - LaTeX
 - Command Prompts
-  - `sh` - Bash/Shell
+  - `bash` - Bash/Shell
   - `batch` - Batch (Windows Shell)
   - `powershell` - PowerShell
 - Configuration/Data Files
