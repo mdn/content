@@ -382,6 +382,11 @@ The value `conn_max_age=500` makes the connection persistent, which is far more 
 
 ##### psycopg2
 
+<!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/4.2/releases/4.2/#psycopg-3-support
+  But didn't work on Railway!
+  Try again to update in next release.
+-->
+
 Django needs _psycopg2_ to work with Postgres databases.
 Install it locally so that it becomes part of our [requirements](#requirements) for Railway to set up on the remote server:
 
