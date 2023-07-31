@@ -60,7 +60,7 @@ In this example, the `dir="auto"` attribute on the input element allows the text
     dir="auto"
     dirname="comment-direction"
     value="Hello" />
-  <button>Send my greetings</button>
+  <button type="submit">Send my greetings</button>
 </form>
 ```
 
