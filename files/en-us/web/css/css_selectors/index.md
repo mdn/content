@@ -15,7 +15,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 ## Reference
 
-### Combinators and seperators
+### Combinators and separators
 
 - `+` ([Adjacent or next sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator))
 - `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
