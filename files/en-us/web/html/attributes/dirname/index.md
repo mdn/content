@@ -67,7 +67,7 @@ In this example, the `dir="auto"` attribute on the input element allows the text
 When the user submits the form, the user agent includes two fields, one called `comment-input` with the value "Hello", and one called `comment-direction` with the value "ltr":
 
 ```url
-https://www.example.com/submit?comment-input=Hello&comment-input-direction=ltr
+https://www.example.com/submit?comment-input=Hello&comment-direction=ltr
 ```
 
 ### Inheriting directionality
