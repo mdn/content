@@ -104,6 +104,6 @@ https://www.example.com/submit?user=LTR+Username&user-direction=rtl&comment=LTR+
 
 ## See also
 
-- {{htmlattr("dir")}}
+- [`dir` attribute](/en-US/docs/Web/HTML/Global_attributes/dir)
 - {{htmlelement("input")}}
 - {{htmlelement("textarea")}}
