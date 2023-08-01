@@ -12,6 +12,12 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### Developer Tools
 
+- Added support for [Custom Formatters](https://firefox-source-docs.mozilla.org/devtools-user/custom_formatters/index.html) ([Firefox bug 1752760](https://bugzil.la/1752760)).
+- Added "container" badges in markup view on elements with a `container-type` property with `size` or `inline-size` values ([Firefox bug 1789193](https://bugzil.la/1789193)).
+- Fixed an issue in the Inspector where CSS custom properties set on the Custom Element Root were not displayed ([Firefox bug 1836755](https://bugzil.la/1836755)).
+- Show if request was resolved with DNS over HTTPS in Network Monitor ([Firefox bug 1810195](https://bugzil.la/1810195)).
+- Removed `Proxy-Authorization` header in Network Monitor ([Firefox bug 1816115](https://bugzil.la/1816115)).
+
 ### HTML
 
 - The [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Element/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Element/textarea#dirname) elements.
