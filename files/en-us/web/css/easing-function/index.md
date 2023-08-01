@@ -112,7 +112,7 @@ Consider another example of the function: `linear(0, 0.25 75%, 1)`. This produce
 
 The [`linear`](#linear) keyword is equivalent to the easing function `linear(0, 1)`.
 
-### Cubic-bezier easing function
+### Cubic Bézier easing function
 
 The `cubic-bezier()` functional notation defines a cubic [Bézier curve](/en-US/docs/Glossary/Bezier_curve). The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions because they can be used to smooth down the start and end of the {{Glossary("interpolation")}}. They correlate an input progress to an output progress, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
 
