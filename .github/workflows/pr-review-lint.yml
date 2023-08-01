@@ -69,6 +69,10 @@ jobs:
           echo "Running Prettier"
           yarn prettier -w ${files_to_lint}
 
+          if [[ -n $(git diff) || "${MD_LINT_STATUS}" == "1" || "${FM_LINT_STATUS}" == "1" ]]; then
+            echo "CHANGES_REQUIRED=true" >> $GITHUB_ENV
+          fi
+
       - name: Setup reviewdog
         uses: reviewdog/action-setup@v1
         with:
@@ -104,4 +108,10 @@ jobs:
         if: env.FM_LINT_STATUS == '1'
         run: |
           echo "${{ env.FM_LINT_LOG }}"
+          exit 1
+
+      - name: Fail till changes are pending
+        if: env.CHANGES_REQUIRED == 'true'
+        run: |
+          echo "Please fix all the linting issues suggested in the review comments."
           exit 1
