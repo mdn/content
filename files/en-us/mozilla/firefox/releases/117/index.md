@@ -41,6 +41,8 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### APIs
 
+- The {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} method can now be used to get the 2D context attributes being used by the browser ([Firefox bug 1517786](https://bugzil.la/1517786)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
