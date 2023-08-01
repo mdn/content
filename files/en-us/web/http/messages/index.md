@@ -55,7 +55,7 @@ HTTP requests are messages sent by the client to initiate an action on the serve
 Many different headers can appear in requests. They can be divided in several groups:
 
 - {{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the message as a whole.
-- {{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None")}}).
+- {{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None-Match")}}).
 - {{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).
 
 ![Example of headers in an HTTP request](http_request_headers3.png)
