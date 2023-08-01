@@ -79,7 +79,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 #### Marionette
 
-- Removed support for the `moz:useNonSpecCompliantPointerOrigin` capability. Users who still need this feature can still use the latest ESR release, Firefox ESR 115 ([Firefox bug 1490258](https://bugzil.la/1490258)).
+- Removed support for the `moz:useNonSpecCompliantPointerOrigin` capability. Users who still need this feature can still use the Firefox 115 ESR release as long as it is supported. Please file bugs under [Remote Protocol :: Marionette](https://bugzilla.mozilla.org/enter_bug.cgi?product=Remote%20Protocol&component=Marionette) if you're seeing any issue ([Firefox bug 1490258](https://bugzil.la/1490258)).
 - A regression was fixed that prevented us from differentiating stale elements (DOM elements that have been seen before on the page) from unknown elements for a given browsing context ([Firefox bug 1822466](https://bugzil.la/1822466))
 - Creating a new session should now properly wait for the initial context to be loaded ([Firefox bug 1838381](https://bugzil.la/1838381)).
 
