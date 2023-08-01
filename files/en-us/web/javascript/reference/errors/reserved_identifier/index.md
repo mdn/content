@@ -11,7 +11,7 @@ when [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#ke
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected reserved word (V8-based)
 SyntaxError: implements is a reserved identifier (Firefox)
 SyntaxError: Cannot use the reserved word 'implements' as a variable name. (Safari)

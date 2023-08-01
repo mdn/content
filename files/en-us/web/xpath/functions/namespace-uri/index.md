@@ -10,7 +10,7 @@ The `namespace-uri` function returns a string representing the namespace URI of 
 
 ### Syntax
 
-```
+```plain
 namespace-uri( [node-set] )
 ```
 

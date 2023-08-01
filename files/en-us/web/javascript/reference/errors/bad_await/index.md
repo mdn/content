@@ -10,7 +10,7 @@ The JavaScript exception "await is only valid in async functions, async generato
 
 ## Message
 
-```
+```plain
 SyntaxError: await is only valid in async functions and the top level bodies of modules (V8-based)
 SyntaxError: await is only valid in async functions, async generators and modules (Firefox)
 SyntaxError: Unexpected identifier (Safari)

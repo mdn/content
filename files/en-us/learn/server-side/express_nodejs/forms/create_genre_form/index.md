@@ -129,14 +129,18 @@ asyncHandler(async (req, res, next) => {
 });
 ```
 
-If the genre name data is valid then we check to see if a `Genre` with the same name already exists (as we don't want to create duplicates).
-If it does, we redirect to the existing genre's detail page.
+If the genre name data is valid then we perform a case-insensitive search to see if a `Genre` with the same name already exists (as we don't want to create duplicate or near duplicate records that vary only in letter case, such as: "Fantasy", "fantasy", "FaNtAsY", and so on).
+To ignore letter case and accents when searching we chain the [`collation()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.collation()>) method, specifying the locale of 'en' and strength of 2 (for more information see the MongoDB [Collation](https://www.mongodb.com/docs/manual/reference/collation/) topic).
+
+If a `Genre` with a matching name already exists we redirect to its detail page.
 If not, we save the new `Genre` and redirect to its detail page.
 Note that here we `await` on the result of the database query, following the same pattern as in other route handlers.
 
 ```js
 // Check if Genre with same name already exists.
-const genreExists = await Genre.findOne({ name: req.body.name }).exec();
+const genreExists = await Genre.findOne({ name: req.body.name })
+  .collation({ locale: "en", strength: 2 })
+  .exec();
 if (genreExists) {
   // Genre exists, redirect to its detail page.
   res.redirect(genreExists.url);
