@@ -1,4 +1,4 @@
----
+            ---
 title: "<script>: The Script element"
 slug: Web/HTML/Element/script
 page-type: html-element
