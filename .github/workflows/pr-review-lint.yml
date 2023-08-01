@@ -63,7 +63,7 @@ jobs:
           FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true ${files_to_lint} 2>&1) || FM_LINT_STATUS=1
           echo "FM_LINT_LOG<<${EOF}" >> $GITHUB_ENV
           echo "${FM_LINT_LOG}" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
           echo "FM_LINT_STATUS=${FM_LINT_STATUS}" >> $GITHUB_ENV
 
           echo "Running Prettier"
