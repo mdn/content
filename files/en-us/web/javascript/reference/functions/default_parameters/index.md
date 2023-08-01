@@ -210,7 +210,7 @@ withoutDefaults.call({ value: "=^_^=" });
 
 You can use default value assignment with the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax.
 
-A common way of doing that is to set an empty object/array as the default value the destructured parameter; for example: `[x = 1, y = 2] = []`. This makes it possible to pass nothing to the function and still have those values prefilled:
+A common way of doing that is to set an empty object/array as the default value for the destructured parameter; for example: `[x = 1, y = 2] = []`. This makes it possible to pass nothing to the function and still have those values prefilled:
 
 ```js
 function preFilledArray([x = 1, y = 2] = []) {
