@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
     There are three possible execution modes:
 
     1. If the `async` attribute is present, then the script will be executed asynchronously as soon as it downloads.
-    2. If the `async` attribute is absent but the `defer` attribute is present, then the script is executed when [the page has finished parsing](/en-US/docs/Web/API/Window/DOMContentLoaded_event).
+    2. If the `async` attribute is absent but the `defer` attribute is present, then the script is executed when [the page has finished parsing](/en-US/docs/Web/API/Document/DOMContentLoaded_event).
     3. If neither attribute is present, then the script is fetched and executed immediately, blocking further parsing of the page.
 
     The `defer` attribute may be specified with the `async` attribute, so legacy browsers that only support `defer` (and not `async`) fall back to the `defer` behavior instead of the default blocking behavior.
