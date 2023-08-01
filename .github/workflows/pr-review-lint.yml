@@ -55,7 +55,7 @@ jobs:
           MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_STATUS=1
           echo "MD_LINT_LOG<<${EOF}" >> $GITHUB_ENV
           echo "${MD_LINT_LOG}" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
           echo "MD_LINT_STATUS=${MD_LINT_STATUS}" >> $GITHUB_ENV
 
           echo "Linting front-matter"
