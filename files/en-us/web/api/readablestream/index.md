@@ -21,6 +21,11 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 - {{domxref("ReadableStream.locked")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether or not the readable stream is locked to a reader.
 
+## Static methods
+
+- {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} {{Experimental_Inline}}
+  - : Returns `ReadableStream` from a provided iterable or async iterable object, such as an array, a set, an async generator, and so on.
+
 ## Instance methods
 
 - {{domxref("ReadableStream.cancel()")}}
