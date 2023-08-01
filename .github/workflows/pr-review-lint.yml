@@ -83,6 +83,9 @@ jobs:
           cat <<EOF
             ${{ toJSON(inputs) }}
           EOF
+          cat <<EOF
+            ${{ toJSON(github) }}
+          EOF
 
       - name: Setup reviewdog
         uses: reviewdog/action-setup@v1
