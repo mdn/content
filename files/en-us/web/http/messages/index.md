@@ -109,7 +109,7 @@ HTTP/1.x messages have a few drawbacks for performance:
 
 - Headers, unlike bodies, are uncompressed.
 - Headers are often very similar from one message to the next one, yet still repeated across connections.
-- Although HTTP/1.1 has [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining), no multiplexing (i.e. sending requests concurrently) can be done. Several connections need opening on the same server to send requests concurrently: and warm TCP connections are more efficient than cold ones.
+- Although HTTP/1.1 has [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining), it's not activated by default in most browsers, and doesn't allow for multiplexing (i.e. sending requests concurrently). Several connections need opening on the same server to send requests concurrently; and warm TCP connections are more efficient than cold ones.
 
 HTTP/2 introduces an extra step: it divides HTTP/1.x messages into frames which are embedded in a stream. Data and header frames are separated, which allows header compression. Several streams can be combined together, a process called _multiplexing_, allowing more efficient use of underlying TCP connections.
 
