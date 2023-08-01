@@ -402,7 +402,10 @@ The final step is to copy your application source files into the repo folder, an
    It should look a bit like the listing below.
 
    ```bash
-   > git status
+   git status
+   ```
+
+   ```plain
    On branch main
    Your branch is up-to-date with 'origin/main'.
    Changes to be committed:
@@ -538,7 +541,7 @@ This will publish the site and put the domain in place of the button, as shown b
 Select the domain URL to open your library application.
 Note that because we haven't specified a production database, the local library will open using your development data.
 
-### Provision and connect a MongoDb database
+### Provision and connect a MongoDB database
 
 Instead of using our development data, next let's create a production MongoDB database to use instead.
 We will create the database as part of the Railway application project, although there is nothing to stop you creating in its own separate project, or indeed to use a _MongoDB Atlas_ database for production data, just as you have for the development database.
@@ -555,7 +558,7 @@ Select **Database** when prompted about the type of service to add:
 
 Then select **Add MongoDB** to start adding the database
 
-![Railway popup showing different databases that can be selected: postgres, mysql, mongodb and so on](railway_database_select_type.png)
+![Railway popup showing different databases that can be selected: Postgres, MySQL, MongoDB and so on](railway_database_select_type.png)
 
 Railway will then provision a service containing an empty database in the same project.
 On completion you will now see both the application and database services in the project view.
