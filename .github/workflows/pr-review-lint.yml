@@ -45,12 +45,15 @@ jobs:
 
       - name: Lint and format markdown files
         run: |
-          #echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
+          # Generate random delimiter
+          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+          EOF="$(openssl rand -hex 8)"
+
           echo "Running markdownlint --fix"
           files_to_lint="${{ env.DIFF_DOCUMENTS }}"
           MD_LINT_STATUS=0
           MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_STATUS=1
-          echo "MD_LINT_LOG<<EOF" >> $GITHUB_ENV
+          echo "MD_LINT_LOG<<${EOF}" >> $GITHUB_ENV
           echo "${MD_LINT_LOG}" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
           echo "MD_LINT_STATUS=${MD_LINT_STATUS}" >> $GITHUB_ENV
@@ -58,7 +61,7 @@ jobs:
           echo "Linting front-matter"
           FM_LINT_STATUS=0
           FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true ${files_to_lint} 2>&1) || FM_LINT_STATUS=1
-          echo "FM_LINT_LOG<<EOF" >> $GITHUB_ENV
+          echo "FM_LINT_LOG<<${EOF}" >> $GITHUB_ENV
           echo "${FM_LINT_LOG}" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
           echo "FM_LINT_STATUS=${FM_LINT_STATUS}" >> $GITHUB_ENV
