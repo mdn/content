@@ -57,7 +57,7 @@ The UI Events API defines a system for handling user interactions such as mouse 
   - : Fired just before a context menu is invoked.
 - {{domxref("Element.dblclick_event", "dblclick")}}
   - : Fired when the user double-clicks the primary pointer button.
-- {{domxref("Element.error_event", "error")}}
+- {{domxref("HTMLElement/error_event", "error")}}
   - : Fired when a resource fails to load or can't be processed (for example, if an image is invalid or a script has an error).
 - {{domxref("Element.focus_event", "focus")}}
   - : Fired when an element has received focus.
