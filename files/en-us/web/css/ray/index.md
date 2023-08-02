@@ -19,9 +19,10 @@ ray() = ray( <angle> && <size>? && contain? && [at <position>]? )
 ## Syntax
 
 ```css
-/* property: ray(expression) */
+/* offset-path: ray(parameters) */
+
 /* all parameters specified */
-offset-path: ray(50deg closest-corner contain);
+offset-path: ray(50deg closest-corner contain at 100px 20px);
 
 /* two parameters specified, order does not matter */
 offset-path: ray(contain 200deg);
@@ -59,13 +60,13 @@ The parameters can be specified in any order.
   - : Reduces the length of the line segment so that the element stays within the containing block even at `offset-distance: 100%`. Specifically, the segment's length is reduced by half the width or half the height of the element's border box, whichever is greater, but never going less than zero. It is an optional parameter.
 
 - `at <position>`
-  - : Specifies the point where the ray begins and where the element is placed in its containing block. This is an optional parameter. If omitted, the value used is the `offset-position` value of the element. If omitted and the element doesn't have an `offset-position` value, the value used for position is `offset-position: normal`, which places the element at `50%, 50%` of the containing block.
+  - : Specifies the point where the ray begins and where the element is placed in its containing block. This is an optional parameter. If omitted, the value used is the `offset-position` value of the element. If omitted and the element doesn't have an `offset-position` value, the value used for ray's starting position is `offset-position: auto`, which places the element at the `top left` corner of the element's box.
 
 ## Description
 
 The `ray()` function allows the positioning of an element along a path using polar coordinates, rather than using the standard rectangular coordinates used by the {{cssxref("translate","translate()")}} function or using animation to move an element along a defined path. The `ray()` function helps to create 2D spatial transitions.
 
-The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the element's offset starting position. The default offset starting position of a ray is the default `offset-position` value: `auto`. If `offset-position` is explicitly specified as `auto` or allowed to default, the offset starting position is the `top left` corner (or `0 0`) of the element's box. With `offset-position: normal`, the starting position of the ray is `50%, 50%` of the element's containing block.
+The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the element's offset starting position. The default offset starting position of a ray is the default `offset-position` value: `auto`. If `offset-position` is explicitly specified as `auto` or omitted and allowed to default, the offset starting position is the `top left` corner (or `0 0`) of the element's box. With `offset-position: normal`, the starting position of the ray is `50%, 50%` of the element's containing block.
 
 The `<coord-box>` value of the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property provides the reference box for the ray path.
 

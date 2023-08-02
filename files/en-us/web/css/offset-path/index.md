@@ -21,10 +21,11 @@ offset-path: none;
 
 /* Line segment */
 offset-path: ray(45deg closest-side contain);
+offset-path: ray(contain 150deg at center center);
 offset-path: ray(45deg);
 
 /* URL */
-offset-path: url(#path);
+offset-path: url(#myCircle);
 
 /* Basic shape */
 offset-path: circle(50% at 25% 25%);
@@ -33,7 +34,6 @@ offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
 offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
 
 /* Coordinate box */
-offset-path: border-box;
 offset-path: content-box;
 offset-path: padding-box;
 offset-path: border-box;
