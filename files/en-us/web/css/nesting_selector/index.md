@@ -158,5 +158,4 @@ This example uses nested CSS styling.
 
 ## See also
 
-- [Using `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Using_nesting_selector)
 - [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
