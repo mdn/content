@@ -7,7 +7,9 @@ browser-compat: css.properties.offset-path
 
 {{CSSRef}}
 
-The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system. The path is defined by a geometrical shape.
+The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for an element to follow and the element's positioning within the path's parent container or SVG coordinate system. The path is a geometrical shape along which the element gets positioned or moves.
+
+The `offset-path` property is used in combination with the {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}}, and {{cssxref("offset-anchor")}} properties to control the position and orientation of the element along a path.
 
 {{EmbedInteractiveExample("pages/css/offset-path.html")}}
 
@@ -30,7 +32,8 @@ offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
 offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
 
-/* Coord box */
+/* Coordinate box */
+offset-path: border-box;
 offset-path: content-box;
 offset-path: padding-box;
 offset-path: border-box;
@@ -48,32 +51,35 @@ offset-path: unset;
 
 ### Values
 
+You can either specify the `none` keyword or one or both of `<offset-path>` and `<coord-box>` values.
+
 - `none`
 
-  - : Specifies no motion path at all.
+  - : Specifies that the element does not follow any offset path. This is the default value. This value is equivalent of the element not having any [offset transform](/en-US/docs/Web/CSS/offset). The element's movement in this case is determined by its default position properties, such as {{cssxref("top")}} and {{cssxref("left")}}, instead of an offset path.
 
 - `<offset-path>`
 
-  - : This parameter is optional. If not specified, the default value is. One of the following three values can be specified for `<offset-path>`: `<ray()>`, `<url>`, or `<basic shape>`.
+  - : Specifies the geometrical offset path. This parameter is optional. If not specified, the default value of the path shape is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block). `<offset-path>` is specified as one of the following three values:
 
-- {{cssxref("ray","ray()")}}
+    - {{cssxref("ray","ray()")}}
 
-  - : Defines a path that is a line segment from an element's starting position and extending at the specified angle. This value accepts up to three parameters – an {{CSSxRef("angle")}} similar to the CSS [linear-gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) angle, a size value similar to the CSS [radial-gradient](/en-US/docs/Web/CSS/gradient/radial-gradient) size values, and the keyword `contain`. The angle `0deg` starts on the y-axis, pointing up, with positive angles increasing in the clockwise direction. The possible values for the optional size parameter include `closest-side`, `closest-corner`, `farthest-side`, `farthest-corner`, and `sides`. If omitted, the value of the size parameter defaults to `closest-side`. The optional `contain` keyword reduces the length of the offset path so that the element stays within its containing block.
+      - : Defines the path, which is a line segment, from an element's starting position and extending at the specified angle. This value accepts up to four parameters – an {{CSSxRef("angle")}}, an optional size value, the optional keyword `contain`, and an optional `at <position>`.
 
-> **Note:** While the size parameter is optional in the specification, some browsers implement `ray()` with a required size value. Including the default `closest-side` is the equivalent of omitting the size, but has better support.
+    - {{cssxref("url","url()")}}
 
-- `<coord-box>`
+      - : Specifies the URL reference of an SVG shape element — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect`. The referenced shape's geometry is the equivalent offset path. If the URL does not reference a shape element (because it references a different element or resolves to a non-SVG document or doesn't resolve at all), the derived offset path is `path("M0,0")` (that is, a `<basic-shape>`).
 
-  - : This parameter is optional. If not specified, the default value is `border-box`.
+    - [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape)
 
-- `url()`
-  - : References the ID of an SVG shape — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
-- `<basic-shape>`
-  - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) by using one of the shape functions such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon), or {{cssxref("path","path()")}}.
+      - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) as the equivalent offset path by using one of the shape functions such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), {{cssxref("path","path()")}}, or [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon). If a `<basic-shape>` type accepts the `at <position>` parameter but the parameter is omitted, and the element has an {{cssxref("offset-position")}}, the `offset-position` value is used for the `at <position>` parameter. Otherwise, the `at <position>` parameter defaults as specified for each shape function.
+
+- {{cssxref("box_value","&lt;coord-box&gt;")}}
+
+  - : Specifies the size information of the reference box containing the path. This parameter is optional. If not specified, the default value is `border-box`. In SVG, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `url()` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
 
 ## Description
 
-This property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element's exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of `0` for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.
+The `offset-path` property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element's exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of `0` for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.
 
 Early versions of the spec called this property `motion-path`. It was changed to `offset-path` because the property describes static positions, not motion.
 
@@ -89,11 +95,11 @@ Early versions of the spec called this property `motion-path`. It was changed to
 
 ### Animating an element with offset-path
 
-The `offset-path` properties in the CSS code sample defines a motion path that is identical to the `<path>` element in the SVG. The path, as can be seen in the rendering of the SVG code, is a line drawing of a house with a chimney.
+The `offset-path` properties in the CSS code sample defines a path that is identical to the `<path>` element in the SVG. The path, as can be seen in the rendering of the SVG code, is a line drawing of a house with a chimney.
 
 #### SVG
 
-The top and bottom halves of the scissors would appear in the top left of the canvas were they not positioned along the starting point of the motion path defined by `offset-path`.
+The top and bottom halves of the scissors would appear in the top left of the canvas were they not positioned along the starting point of the path defined by `offset-path`.
 
 ```html
 <svg
@@ -150,7 +156,6 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 
 @keyframes followpath {
   to {
-    motion-offset: 100%;
     offset-distance: 100%;
   }
 }
@@ -175,10 +180,8 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 - {{cssxref("offset-rotate")}}
 - [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
 - {{cssxref("path","path()")}}
-
-Other demos:
-
-- [Examples of the various values](https://codepen.io/team/css-tricks/pen/WZdKMq)
-- [Triangle](https://codepen.io/ericwilligers/pen/jMbJPp)
-- [Scissors](https://codepen.io/ericwilligers/pen/bwVZNa)
-- [Eyes](https://jsfiddle.net/ericwilligers/r1snqdan/)
+- Other demos:
+  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on Codepen by CSS-Tricks
+  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on Codepen by Eric Willigers
+  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on Codepen by Eric Willigers
+  - [Moving multiple pairs of eyes](https://jsfiddle.net/ericwilligers/r1snqdan/) on JSFiddle by Eric Willigers

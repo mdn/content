@@ -11,10 +11,11 @@ The **`<box>`** value type describes different aspects of an element's box model
 ## Syntax
 
 ```css
-<box> = <visual-box> = content-box | padding-box | border-box
-<layout-box> = <box> | margin-box
+<visual-box> = content-box | padding-box | border-box /* also referred to as <box> */
+<layout-box> = <box> | margin-box /* also referred to as <shape-box> */
 <paint-box> = <box> | fill-box | stroke-box
 <coord-box> = <box> | fill-box | stroke-box | view-box
+<geometry-box> = <layout-box> | fill-box | stroke-box | view-box
 ```
 
 ### Values
@@ -72,7 +73,8 @@ The different `<box>` value types can be specified as one of the keyword values 
 ## See also
 
 - Properties that use `<visual-box>` data type: {{cssxref("background-clip")}}
-- Properties that use `<layout-box>` data type: {{cssxref("clip-path")}}
+- Properties that use `<layout-box>` data type: {{cssxref("shape-outside")}},
 - Properties that use `<paint-box>` data type: {{cssxref("mask-origin")}}
-- Properties that use `<coord-box>` data type: {{cssxref("clip-path")}}, {{cssxref("mask-clip")}}, {{cssxref("offset-path")}}
+- Properties that use `<coord-box>` data type: {{cssxref("mask-clip")}}, {{cssxref("offset-path")}}
+- Properties that use `<geometry-box>` data type: {{cssxref("clip-path")}}
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
