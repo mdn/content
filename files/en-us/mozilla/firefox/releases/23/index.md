@@ -41,7 +41,7 @@ page-type: firefox-release-notes
 - The {{domxref("AnimationEvent.pseudoElement")}} property has been implemented ([Firefox bug 848293](https://bugzil.la/848293)).
 - The {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} constructor has been added ([Firefox bug 848291](https://bugzil.la/848291)).
 - The {{domxref("TransitionEvent.pseudoElement")}} property has been implemented ([Firefox bug 848291](https://bugzil.la/848291)).
-- The non-standard {{domxref("TransitionEvent.initTransitionEvent()")}} and `AnimationEvent.initAnimationEvent()` have been removed ([Firefox bug 868751](https://bugzil.la/868751)).
+- The non-standard `TransitionEvent.initTransitionEvent()` and `AnimationEvent.initAnimationEvent()` have been removed ([Firefox bug 868751](https://bugzil.la/868751)).
 
 ### WebRTC
 
