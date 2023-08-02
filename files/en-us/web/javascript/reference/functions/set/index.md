@@ -43,7 +43,7 @@ a property that holds an actual value.
 
 ### Defining a setter on new objects in object initializers
 
-The following example define a pseudo-property `current` of object
+The following example defines a pseudo-property `current` of object
 `language`. When `current` is assigned a value, it updates
 `log` with that value:
 
