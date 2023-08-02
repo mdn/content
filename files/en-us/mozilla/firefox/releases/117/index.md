@@ -30,7 +30,7 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### HTTP
 
-- Fixed a bug where the [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) `strict-dynamic` source expression was not being enforced in `default-src` directives.
+- Fixed a bug where the [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) `'strict-dynamic'` source expression was not being enforced in `default-src` directives.
   The behavior now matches the specification where `default-src` directive values are used as a fallback when `script-src` is not provided ([Firefox bug 1313937](https://bugzil.la/1313937)).
 
 #### Removals
