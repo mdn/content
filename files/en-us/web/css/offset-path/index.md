@@ -71,11 +71,11 @@ You can either specify the `none` keyword or one or both of `<offset-path>` and 
 
     - [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape)
 
-      - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) as the equivalent offset path by using one of the shape functions such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), {{cssxref("path","path()")}}, or [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon). If a `<basic-shape>` type accepts the `at <position>` parameter but the parameter is omitted, and the element has an {{cssxref("offset-position")}}, the `offset-position` value is used for the `at <position>` parameter. Otherwise, the `at <position>` parameter defaults as specified for each shape function.
+      - : Specifies the offset path as the equivalent path of a [basic shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) function such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), {{cssxref("path","path()")}}, or [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon). For example, if the `<basic_shape>` is an `ellipse()` function, then the path is the outline of the circle/ellipse – it starts at the rightmost point of the circle/ellipse, and then is composed of four circular arcs, each comprising a quarter of the circle/ellipse, proceeding clockwise, ending with a segment-completing close path operation. If a `<basic-shape>` type accepts the `at <position>` parameter but the parameter is omitted, and the element has an {{cssxref("offset-position")}}, the `offset-position` value is used for the `at <position>` parameter. Otherwise, the `at <position>` parameter defaults as specified for each shape function.
 
 - {{cssxref("box_value","&lt;coord-box&gt;")}}
 
-  - : Specifies the size information of the reference box containing the path. This parameter is optional. If not specified, the default value is `border-box`. In SVG, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `url()` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
+  - : Specifies the size information of the reference box containing the path. The reference box is derived from the element that establishes the containing block for this element. This parameter is optional. If not specified, the default value is `border-box`. In SVG, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `url()` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
 
 ## Description
 
@@ -92,6 +92,71 @@ Early versions of the spec called this property `motion-path`. It was changed to
 {{csssyntax}}
 
 ## Examples
+
+### Creating an offset-path using coord-box positioning
+
+This example shows the how `<coord-box>` parameter of `offset-path` works in with {{cssxref("border-radius")}}.
+
+```html hidden
+<div class="box blueBox"></div>
+<div class="box redBox"></div>
+<div class="box greenBox"></div>
+```
+
+```css
+body {
+  width: 300px;
+  height: 200px;
+  border-radius: 50px;
+  border: dashed aqua;
+  border-width: 25px;
+  padding: 25px;
+  margin: 50px;
+}
+
+.box {
+  width: 40px;
+  height: 20px;
+  animation: move 8000ms infinite ease-in-out;
+}
+
+.blueBox {
+  background-color: blue;
+  offset-path: border-box;
+  offset-distance: 5%;
+}
+
+.greenBox {
+  background-color: green;
+  offset-path: padding-box;
+  offset-distance: 8%;
+}
+
+.redBox {
+  background-color: red;
+  offset-path: content-box;
+  offset-distance: 12%;
+}
+
+@keyframes move {
+  0%,
+  20% {
+    offset-distance: 0%;
+  }
+  80%,
+  100% {
+    offset-distance: 100%;
+  }
+}
+```
+
+In this example, the margin, border, and padding have been purposely been given large values to demonstrate the placement of the blue, green, and red boxes on their respective `coord-box` edges: border-box, padding-box, and content-box.
+
+![Box model showing the placement of the blue, red, and green boxes on the border-box, padding-box, and context-box, respectively, by using the coord-box value in the offset-path property.](offset-path-coord-box.png)
+
+#### Result
+
+{{EmbedLiveSample('Creating an offset-path using coord-box positioning', '100%', 400)}}
 
 ### Animating an element with offset-path
 
