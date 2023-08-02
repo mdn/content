@@ -7,13 +7,11 @@ spec-urls: https://drafts.csswg.org/css-scoping/
 
 {{CSSRef}}
 
-The **CSS scoping** module defines the CSS scoping and encapsulation mechanisms, focusing on the Shadow DOM scoping mechanism.
+The **CSS scoping** module defines the CSS scoping and encapsulation mechanisms, focusing on the [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) [scoping](https://css.oddbird.net/scope/) mechanism.
 
-Custom elements have their own shadow tree. This means the custom element is the shadow host of the shadow tree it contains. The host is outside of the shadow tree it hosts. Normally, the host of a shadow tree is not targettable by selectors from within its tree. But sometimes it's useful to be able to style a host from inside the shadow tree context. The CSS scoping module makes this possible. The pseudo-classes defined in the CSS scoping module enable styling a host from within the shadow tree it hosts.
+CSS styles are scoped to their own DOM or {{Glossary("shadow tree")}}. Styles applied to an HTML document are considered global in scope as they apply to the entire document. While they apply to all the elements in the node tree, including any custom elements, they do not apply to the shadow trees of which each custom element is comprised. Selectors and their associated style definitions are scoped; they don't bleed between trees. Within the CSS of a shadow tree, selectors can't see elements outside the tree and selectors outside of a shadow tree don't apply within. But sometimes it's useful to be able to style a host from inside the shadow tree context. The CSS scoping module makes this possible. The pseudo-classes defined in the CSS scoping module enable styling a host from within the shadow tree it hosts.
 
-Within the CSS of a shadow tree, selectors can't see elements outside the tree; by default, CSS in the shadow tree can't be used to apply styles to its host.
-
-CSS selectors outside of a shadow tree can't see within a shadow tree, and Sometimes, however, it's useful for the CSS within a shadow to select an ancestor that lies somewhere outside the shadow tree, above it in the document.
+Custom elements have their own shadow trees. Each shadow tree contains all the components that make up the custom element, but not the custom element, or "host", itself. Because the host is in a different tree than its components, the styles within the shadow tree don't apply styles to its host. The CSS scoping module defines three pseudo-classes to enable a shadow tree to style its own host and provides one pseudo-element to enable external CSS to style elements within the shadow DOM if the custom element is set up to accept external styles.
 
 ## Reference
 
@@ -23,14 +21,6 @@ CSS selectors outside of a shadow tree can't see within a shadow tree, and Somet
 - {{CSSXref(":host_function", ":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted")}}
-
-### Definitions
-
-- {{glossary("scope")}}
-- {{Glossary("Shadow tree")}}
-- {{Glossary("Flat tree")}}
-- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
-- [Selector list](/en-US/docs/Web/CSS/Selector_list)
 
 ## Guides
 
@@ -52,37 +42,28 @@ CSS selectors outside of a shadow tree can't see within a shadow tree, and Somet
 
 ## Related concepts
 
-- {{cssxref("user-select")}} property
-- [CSS pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
-  - {{CSSXref(":defined")}}
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- CSS {{cssxref("user-select")}} property
+- CSS {{CSSXref(":defined")}} pseudo-class
+- CSS {{CSSXref("::part")}} pseudo-element
 
-  - {{CSSXref("::part")}}
+- HTML {{HTMLElement("template")}} element
+- HTML {{HTMLElement("slot")}} element
+- HTML [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
 
-- HTML elements and attributes:
+- {{Glossary("Shadow tree")}} glossary term
+- {{Glossary("DOM")}} glossary term
+- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) term
+- [Selector list](/en-US/docs/Web/CSS/Selector_list) term
 
-  - {{HTMLElement("template")}}
-  - {{HTMLElement("slot")}}
-  - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
-
-- [Web component](/en-US/docs/Web/API/Web_components) interfaces, properties, and methods
-
+- [Web components](/en-US/docs/Web/API/Web_components) interfaces, properties, and methods
   - {{DOMxRef("CustomElementRegistry")}} interface
+  - {{DOMxRef("Element")}} API
+    - {{DOMxRef("Element.slot")}} property
+    - {{DOMxRef("Element.assignedSlot")}} property
+    - {{DOMxRef("Element.attachShadow()")}} method
   - {{DOMxRef("HTMLSlotElement")}} interface
   - {{DOMxRef("HTMLTemplateElement")}} interface
   - {{DOMxRef("ShadowRoot")}} interface
-    - {{domxref("ShadowRoot.delegatesFocus")}} property
-    - {{domxref("ShadowRoot.adoptedStyleSheets")}}
-    - {{domxref("ShadowRoot.pictureInPictureElement")}} property
-  - {{DOMxRef("Element")}} API
-    - {{DOMxRef("Element.slot")}} property
-    - {{DOMxRef("Element.assigedSlot")}} property
-    - {{DOMxRef("Element.attachShadow()")}} method
-
-- {{DOMxRef("CSSStyleSheet")}}
-- {{DOMxRef("CSSPseudoElement")}} interface
-  - {{DOMxRef("CSSPseudoElement.element")}} property
-  - {{DOMxRef("CSSPseudoElement.type")}} property
 
 > **Note:** Despite the name, the {{CSSXref(":scope")}} pseudo-class, which represents elements that are a reference point, or scope, for selectors to match against, is defined in the [CSS pseudo-classes](/en-US/docs/Web/CSS/CSS_pseudo-classes) module. It is otherwise unrelated to the CSS scoping module, which is focused on scoping as it pertains to the Shadow DOM scoping mechanism.
 
