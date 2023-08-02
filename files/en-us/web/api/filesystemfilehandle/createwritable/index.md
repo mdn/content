@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.createWritable
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`createWritable()`** method of the
 {{domxref("FileSystemFileHandle")}} interface creates
@@ -74,5 +74,5 @@ async function writeFile(fileHandle, contents) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

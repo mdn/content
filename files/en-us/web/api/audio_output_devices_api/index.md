@@ -75,7 +75,7 @@ The permission status can be queried using the [Permissions API](/en-US/docs/Web
 Here's an example of using `selectAudioOutput()`, within a function that is triggered by a button click, and then setting the selected device as the audio output.
 
 The code first checks if `selectAudioOutput()` is supported, and if it is, uses it to select an output and return a [device ID](/en-US/docs/Web/API/MediaDeviceInfo/deviceId).
-We then play some some audio using the default output, and then call `setSinkId()` in order to switch to the selected output device.
+We then play some audio using the default output, and then call `setSinkId()` in order to switch to the selected output device.
 
 ```js
 document.querySelector("#myButton").addEventListener("click", async () => {

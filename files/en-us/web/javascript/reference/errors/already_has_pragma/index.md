@@ -10,7 +10,7 @@ The JavaScript warning "-file- is being assigned a //# sourceMappingURL, but alr
 
 ## Message
 
-```
+```plain
 Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
 ```
 

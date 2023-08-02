@@ -141,7 +141,7 @@ for (let i = 0; i < 5; i++) {
 
 The output looks like this:
 
-```
+```plain
 Hello, Bob. You've called me 1 times.
 Hello, Bob. You've called me 2 times.
 Hello, Bob. You've called me 3 times.

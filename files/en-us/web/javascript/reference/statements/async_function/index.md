@@ -175,7 +175,7 @@ async function foo() {
 foo().catch(() => {}); // Attempt to swallow all errors...
 ```
 
-`async function` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
+`async function` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
 
 ## Examples
 

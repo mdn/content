@@ -44,13 +44,13 @@ Compared to a website, extensions have access to additional privileged APIs, so 
 
 The default content security policy for extensions using Manifest V2 is:
 
-```
+```plain
 "script-src 'self'; object-src 'self';"
 ```
 
 While for extensions using Manifest V3, the default content security policy is:
 
-```
+```plain
 "script-src 'self'; upgrade-insecure-requests;"
 ```
 

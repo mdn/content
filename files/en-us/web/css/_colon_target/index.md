@@ -18,7 +18,7 @@ The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 For example, the following URL has a fragment (denoted by the _#_ sign) that points to an element called `section2`:
 
-```
+```url
 http://www.example.com/index.html#section2
 ```
 
