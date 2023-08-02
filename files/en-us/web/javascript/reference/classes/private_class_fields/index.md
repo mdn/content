@@ -93,7 +93,7 @@ But as the previous example illustrates, private variabled are available inside
 static functions too, on externally defined instances of the class. As in the
 previous example, the obj argument is supposed to be an instance of C. This example also illustrates how to use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check for potentially missing private fields (or private methods). This will return `true` if the private field or method exists, and `false` otherwise.
 
-```js example-ok
+```js example-good
 class C {
   #x;
   constructor(x) {
