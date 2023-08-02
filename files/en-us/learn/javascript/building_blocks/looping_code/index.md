@@ -947,7 +947,7 @@ Let's have a look at them all again.
 
 First `for...of`:
 
-```plain
+```js-nolint
 for (const item of array) {
   // code to run
 }
@@ -955,7 +955,7 @@ for (const item of array) {
 
 `for`:
 
-```plain
+```js-nolint
 for (initializer; condition; final-expression) {
   // code to run
 }
@@ -963,7 +963,7 @@ for (initializer; condition; final-expression) {
 
 `while`:
 
-```plain
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -974,7 +974,7 @@ while (condition) {
 
 and finally `do...while`:
 
-```plain
+```js-nolint
 initializer
 do {
   // code to run
