@@ -496,7 +496,7 @@ Here's the output:
 
 First, let's have a look at the [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop. This loop's syntax looks like so:
 
-```plain
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -538,7 +538,7 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
-```plain
+```js-nolint
 initializer
 do {
   // code to run
