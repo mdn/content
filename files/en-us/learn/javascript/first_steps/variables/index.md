@@ -199,7 +199,7 @@ For these reasons and more, we recommend that you use `let` in your code, rather
 
 > **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
 >
-> ```js-nolint
+> ```plain
 > > let myName = "Chris";
 >   let myName = "Bob";
 > // As one input: SyntaxError: Identifier 'myName' has already been declared
