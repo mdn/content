@@ -88,9 +88,11 @@ class C {
 console.log(C.getX(new C())); // undefined
 console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
 ```
+
 But as the previous example illustrates, private variabled are available inside
 static functions too, on externally defined instances of the class. As in the
 previous example, the obj argument is supposed to be an instance of C or undefined. This example also validates obj to prevent the error in TypeError in the previous example and supplant it with some friendlier text.
+
 ```js example-ok
 class C {
   #x;
@@ -98,17 +100,17 @@ class C {
     this.#x = x;
   }
   static getX(obj) {
-    if (obj instanceof C)
-      return obj.#x;
+    if (obj instanceof C) return obj.#x;
 
     return "obj must be an instance of C";
   }
 }
-console.log(C.getX(new C("foo")));    // "foo"
-console.log(C.getX(new C(0.196)));    // 0.196
-console.log(C.getX(new C(new Date))); // the current date and time
-console.log(C.getX({}));              // "obj must be an instance of C"
+console.log(C.getX(new C("foo"))); // "foo"
+console.log(C.getX(new C(0.196))); // 0.196
+console.log(C.getX(new C(new Date()))); // the current date and time
+console.log(C.getX({})); // "obj must be an instance of C"
 ```
+
 You can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check for potentially missing private fields (or private methods). This will return `true` if the private field or method exists, and `false` otherwise.
 
 Note a corollary of private names being always pre-declared and non-deletable: if you found that an object possesses one private property of the current class (either from a `try...catch` or an `in` check), it must possess all other private properties. An object possessing the private properties of a class generally means it was constructed by that class (although [not always](#returning_overriding_object)).
