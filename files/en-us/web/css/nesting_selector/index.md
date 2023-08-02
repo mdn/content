@@ -22,7 +22,7 @@ parent {
 
 ### `&` nesting selector and whitespace
 
-If nesting without the `&` nesting selector the browser will automatically add whitespace for you.
+In this example nesting is done without the **`&` nesting selector**. The browser automatically adds whitespace.
 
 ```css
 .parent-class {
@@ -40,9 +40,9 @@ If nesting without the `&` nesting selector the browser will automatically add w
 }
 ```
 
-If you need the nested selector to be attached to the parent selector, such as a pseudo selector then this can be added immediately after the `&` nesting selector.
+When the nested selector needs to be attached to the parent selector, such as when using a pseudo selector then this can be added immediately after the **`&` nesting selector**.
 
-Without the `&` nesting selector, whitespace is added and, any child of the parent that is hovered will be styled.
+Without the **`&` nesting selector**, whitespace is added and, any child of the parent selector that is hovered will be styled.
 
 ```css
 .parent-class {
@@ -60,7 +60,7 @@ Without the `&` nesting selector, whitespace is added and, any child of the pare
 }
 ```
 
-With the `&` nesting selector the parent will be styled when it is hovered.
+With the **`&` nesting selector** the parent will be styled when it is hovered.
 
 ```css
 .parent-class {
@@ -83,6 +83,8 @@ With the `&` nesting selector the parent will be styled when it is hovered.
 Both of the following examples produce the same output, the first uses normal CSS styles and the second uses the `&` nesting selector.
 
 ### Original CSS styles
+
+This example uses original CSS styling.
 
 #### HTML
 
@@ -114,6 +116,8 @@ Both of the following examples produce the same output, the first uses normal CS
 {{EmbedLiveSample('Original_CSS_styles','100%','50')}}
 
 ### Nested CSS styles
+
+This example uses nested CSS styling.
 
 #### HTML
 
