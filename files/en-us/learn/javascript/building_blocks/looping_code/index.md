@@ -185,7 +185,7 @@ console.log(upperCats);
 
 Here we pass a function into {{jsxref("Array.prototype.map()","cats.map()")}}, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array. In this case the function we provide converts the item to uppercase, so the resulting array contains all our cats in uppercase:
 
-```plain
+```js-nolint
 [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
 ```
 
@@ -207,7 +207,7 @@ console.log(filtered);
 This looks a lot like `map()`, except the function we pass in returns a [boolean](/en-US/docs/Learn/JavaScript/First_steps/Variables#booleans): if it returns `true`, then the item is included in the new array.
 Our function tests that the item starts with the letter "L", so the result is an array containing only cats whose names start with "L":
 
-```plain
+```js-nolint
 [ "Leopard", "Lion" ]
 ```
 
