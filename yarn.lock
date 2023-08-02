@@ -3139,10 +3139,10 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-fdir@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.0.1.tgz#1edca6c0295d072802e2c67a2f4fbf941cd32af5"
-  integrity sha512-bdrUUb0eYQrPRlaAtlSRoLs7sp6yKEwbMQuUgwvi/14TnaqhM/deSZUrC5ic+yjm5nEPPWE61oWpTTxQFQMmLA==
+fdir@^6.0.1, fdir@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.0.2.tgz#077480393c4b20583e389b1bd72b9e964a1e310c"
+  integrity sha512-XJVxBciDoEpRipMYyrTCqVQA4jMTfHNiYNy8OvIGTaQzEFPuMJEvmps+Rouo6rsnivkQax9s5m5gy1lHmY2Hmg==
 
 fecha@^4.2.0:
   version "4.2.0"
