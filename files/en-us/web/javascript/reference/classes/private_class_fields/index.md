@@ -89,9 +89,9 @@ console.log(C.getX(new C())); // undefined
 console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
 ```
 
-But as the previous example illustrates, private variabled are available inside
-static functions too, on externally defined instances of the class. As in the
-previous example, the obj argument is supposed to be an instance of C. This example also illustrates how to use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check for potentially missing private fields (or private methods). This will return `true` if the private field or method exists, and `false` otherwise.
+This example also illustrates that you can access private properties within static functions too, and on externally defined instances of the class.
+
+You can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check whether an externally defined object possesses a private property. This will return `true` if the private field or method exists, and `false` otherwise.
 
 ```js example-good
 class C {
