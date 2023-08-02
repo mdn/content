@@ -9,9 +9,9 @@ spec-urls: https://drafts.csswg.org/css-scoping/
 
 The **CSS scoping** module defines the CSS scoping and encapsulation mechanisms, focusing on the [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) [scoping](https://css.oddbird.net/scope/) mechanism.
 
-CSS styles are scoped to their own DOM or {{Glossary("shadow tree")}}. Styles applied to an HTML document are considered global in scope as they apply to the entire document. While they apply to all the elements in the node tree, including any custom elements, they do not apply to the shadow trees of which each custom element is comprised. Selectors and their associated style definitions are scoped; they don't bleed between trees. Within the CSS of a shadow tree, selectors can't see elements outside the tree and selectors outside of a shadow tree don't apply within. But sometimes it's useful to be able to style a host from inside the shadow tree context. The CSS scoping module makes this possible. The pseudo-classes defined in the CSS scoping module enable styling a host from within the shadow tree it hosts.
+CSS styles are either global in scope or scoped to a {{Glossary("shadow tree")}}. Globally scoped styles apply to all the elements in the node tree, including custom elements in that tree, but do not apply to the shadow trees of which each custom element is composed. Selectors and their associated style definitions don't bleed between scopes.
 
-Custom elements have their own shadow trees. Each shadow tree contains all the components that make up the custom element, but not the custom element, or "host", itself. Because the host is in a different tree than its components, the styles within the shadow tree don't apply styles to its host. The CSS scoping module defines three pseudo-classes to enable a shadow tree to style its own host and provides one pseudo-element to enable external CSS to style elements within the shadow DOM if the custom element is set up to accept external styles.
+Within the CSS of a shadow tree, selectors can't see elements outside the tree and selectors outside of a shadow tree don't apply within. Custom elements have their own shadow trees. Each shadow tree contains all the components that make up the custom element, but not the custom element, or "host", itself. Sometimes it's useful to be able to style a host from inside the shadow tree context. The CSS scoping module makes this possible by defining selectors that enable a shadow tree to style its host and a selector that enables external CSS to style elements within the shadow DOM if the custom element is set up to accept external styles.
 
 ## Reference
 
@@ -42,7 +42,6 @@ Custom elements have their own shadow trees. Each shadow tree contains all the c
 
 ## Related concepts
 
-- CSS {{cssxref("user-select")}} property
 - CSS {{CSSXref(":defined")}} pseudo-class
 - CSS {{CSSXref("::part")}} pseudo-element
 
