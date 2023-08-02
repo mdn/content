@@ -89,7 +89,7 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 
 The next phase is handling the action. The browser extracts the `href` from the activated link, combines it with the URL template supplied during handler registration and performs an HTTP GET on the URL. So, using the above examples, the browser would perform a GET on this URL:
 
-```
+```url
 http://www.google.co.uk/?uri=web+burger:cheeseburger
 ```
 

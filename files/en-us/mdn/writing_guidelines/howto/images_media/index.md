@@ -262,13 +262,13 @@ Ask a member of MDN Web Docs team to upload the video if you don't have somewher
 Once uploaded, you can embed the video in the page using the [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) macro.
 This is used by inserting the following in your page at the position you want the video to appear:
 
-```
+```plain
 \{{EmbedYouTube("you-tube-url-slug")}}
 ```
 
 The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL.
 For example, if the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, the required macro call will be:
 
-```
+```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```

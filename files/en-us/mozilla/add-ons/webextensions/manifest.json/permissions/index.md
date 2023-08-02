@@ -63,7 +63,7 @@ The extra privileges include:
 
 In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:
 
-```
+```url
 moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 
