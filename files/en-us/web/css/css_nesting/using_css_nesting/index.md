@@ -181,6 +181,90 @@ h2 {
 
 ## Compound selectors
 
+When using compound selectors in nested CSS you need to use the `&` nesting selector. The browser will automatically add whitespace between selectors that do not use the `&` nesting selector.
+
+In order to target an element with `class="a b"` the `&` nesting selector is needed otherwise the whitespace will break the compound selector.
+
+```css
+.a {
+  /* styles for element with class="a" */
+  .b {
+    /* styles for element with class="b" which is a descendants of class="a" */
+  }
+  &.b {
+    /* styles for element with class="a b" */
+  }
+}
+/* this becomes */
+.a {
+  /* styles for element with class="a" */
+}
+.a .b {
+  /* styles for element with class="b" which is a descendants of class="a" */
+}
+.a.b {
+  /* styles for element with class="a b" */
+}
+```
+
+### Example
+
+#### Nesting and compound selectors
+
+In this example the `&` nesting selector is used to create compound selectors to style elements with multiple classes.
+
+##### HTML
+
+```html
+<div class="wrapper">
+  <div class="a c"></div>
+  <div class="a">
+    <div class="b c"></div>
+    <div class="b"></div>
+  </div>
+</div>
+```
+
+##### CSS
+
+```css hidden
+.wrapper,
+.a {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+```
+
+```css
+.a {
+  /* styles for element with class="a" */
+  height: 50px;
+  width: 100px;
+  border-radius: 0.5rem;
+  border: red dotted 2px;
+  .b {
+    /* styles for element with class="a" and descendant with class="b" */
+    height: 40px;
+    width: 40px;
+    border: black solid 2px;
+    &.c {
+      /* styles for element with class="b c" */
+      border: blue solid;
+    }
+  }
+  &.c {
+    /* styles for element with class="a c" */
+    border: green solid;
+  }
+}
+```
+
+##### Result
+
+{{EmbedLiveSample('Nesting_and_compound_selectors','100%')}}
+
 ## Appended nesting selector
 
 ## Concatenation
