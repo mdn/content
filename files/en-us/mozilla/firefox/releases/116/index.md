@@ -6,11 +6,9 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 116 that affect developers. Firefox 116 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [August 01, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 116 that affect developers. Firefox 116 was released on August 01, 2023.
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
@@ -19,9 +17,13 @@ This article provides information about the changes in Firefox 116 that affect d
 
 #### Removals
 
+No notable changes.
+
 ### CSS
 
 #### Removals
+
+No notable changes
 
 ### Accessibility (ARIA)
 
@@ -30,42 +32,32 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### JavaScript
 
-#### Removals
+- [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) supports new [constructor options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) that control how numbers are rounded (`roundingIncrement`, `roundingMode`, `roundingPriority`), the strategy for displaying trailing zeros on whole numbers (`trailingZeroDisplay`), and whether to use grouping separators to indicate thousands, millions, and so on (`useGrouping`).
+  It also supports new methods [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange) amd [`formatRangeToParts()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts) for formatting ranges of numbers.
+  ([Firefox bug 1795756](https://bugzil.la/1795756)).
+- [`Intl.PluralRules`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) was updated (as part of the same set of changes as `Intl.NumberFormat`) to support [constructor options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) `roundingIncrement`, `roundingMode`, `roundingPriority` and `trailingZeroDisplay`, and the [`selectRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) method.
+  ([Firefox bug 1795756](https://bugzil.la/1795756)).
 
 ### SVG
 
 - The `q` [length unit](/en-US/docs/Web/SVG/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
 
-#### Removals
-
 ### HTTP
 
 - Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) now supports specifying [external JavaScript files to be whitelisted using hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#whitelisting_external_scripts_using_hashes), where previously only inline scripts could be whitelisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
 
-#### Removals
-
-### Security
-
-#### Removals
-
 ### APIs
+
+#### DOM
 
 - The {{domxref("TextMetrics.fontBoundingBoxAscent")}} and {{domxref("TextMetrics.fontBoundingBoxDescent")}} properties are now supported.
   These metrics return, respectively, the distance above and below the {{domxref("CanvasRenderingContext2D.textBaseline")}} to the bounding rectangle of all the fonts used to render the text ([Firefox bug 1801198](https://bugzil.la/1801198)).
-
-#### DOM
 
 #### Media, WebRTC, and Web Audio
 
 - The [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) is now supported on all platforms except for Android.
   This API allows web applications to redirect audio output to a permitted Bluetooth headset, speakerphone, or other device, instead of having to use the browser or underlying OS default.
   Affected APIs include {{domxref("MediaDevices.selectAudioOutput()")}}, {{domxref("MediaDevices.enumerateDevices()")}}, [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId), [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId), and the permission policy [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection "[Firefox bug 1498512](https://bugzil.la/1498512").
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -89,9 +81,13 @@ This article provides information about the changes in Firefox 116 that affect d
 - Adds {{WebExtAPIRef("action.getUserSettings")}} providing the user-specified settings for an extension's browser action ([Firefox bug 1814905](https://bugzil.la/1814905)).
 - `autoDiscardable` is now supported in {{WebExtAPIRef("tabs.Tab")}}, {{WebExtAPIRef("tabs.onUpdated")}}, {{WebExtAPIRef("tabs.update")}}, and {{WebExtAPIRef("tabs.query")}} ([Firefox bug 1809094](https://bugzil.la/1809094)).
 
-### Removals
+## Developer Tools
 
-### Other
+- Added support for [Custom Formatters](https://firefox-source-docs.mozilla.org/devtools-user/custom_formatters/index.html) ([Firefox bug 1752760](https://bugzil.la/1752760)).
+- Added "container" badges in markup view on elements with a `container-type` property with `size` or `inline-size` values ([Firefox bug 1789193](https://bugzil.la/1789193)).
+- Fixed an issue in the Inspector where CSS custom properties set on the Custom Element Root were not displayed ([Firefox bug 1836755](https://bugzil.la/1836755)).
+- Show if request was resolved with DNS over HTTPS in Network Monitor ([Firefox bug 1810195](https://bugzil.la/1810195)).
+- Removed `Proxy-Authorization` header in Network Monitor ([Firefox bug 1816115](https://bugzil.la/1816115)).
 
 ## Older versions
 
