@@ -14,7 +14,7 @@ Let's walk through an example:
 
 1. Start with a fresh working branch with the latest content from the `main` branch of the `mdn` remote.
 
-   ```sh
+   ```bash
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
@@ -27,7 +27,7 @@ Let's walk through an example:
 2. Add your image to the document folder. For this example, let's assume
    we're adding a new image to the `files/en-us/web/css` document.
 
-   ```sh
+   ```bash
    cd ~/path/to/mdn/content
    cp ../some/path/my-cool-image.png files/en-us/web/css/
    ```
@@ -35,7 +35,7 @@ Let's walk through an example:
 3. Run `filecheck` on each image, which might complain if something's wrong.
    For more details, see the [Compressing images](#compressing-images) section.
 
-   ```sh
+   ```bash
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
@@ -48,7 +48,7 @@ Let's walk through an example:
 5. Add and commit all of the deleted, created, and modified files, as well as
    push your branch to your fork:
 
-   ```sh
+   ```bash
    git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
    git commit
    git push -u origin my-images
@@ -101,7 +101,7 @@ You can compress an image appropriately by using the `filecheck` command with th
 This option compresses the image as much as possible and replaces the original with the compressed version.
 For example:
 
-```sh
+```bash
 yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 

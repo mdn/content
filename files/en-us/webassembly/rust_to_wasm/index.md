@@ -41,8 +41,7 @@ cargo install wasm-pack
 Enough setup; let's create a new package in Rust. Navigate to wherever you keep your personal projects, and type this:
 
 ```bash
-$ cargo new --lib hello-wasm
-     Created library `hello-wasm` project
+cargo new --lib hello-wasm
 ```
 
 This creates a new library in a subdirectory named `hello-wasm` with everything you need to get going:
