@@ -89,6 +89,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The lower numeric bound of the high end of the measured range. This must be less than the maximum value (`max` attribute), and it also must be greater than the low value and minimum value (`low` attribute and `min` attribute, respectively), if any are specified. If unspecified, or if greater than the maximum value, the `high` value is equal to the maximum value.
 - `optimum`
   - : This attribute indicates the optimal numeric value. It must be within the range (as defined by the `min` attribute and `max` attribute). When used with the `low` attribute and `high` attribute, it gives an indication where along the range is considered preferable. For example, if it is between the `min` attribute and the `low` attribute, then the lower range is considered preferred. The browser may color the meter's bar differently depending on whether the value is less than or equal to the optimum value.
+- `form`
+  - : This attribute is used to explicitly associate a `<meter>` element with a `<form>` element. It is an optional attribute, but if included, its value must be the `id` attribute of the `<form>` element that is associated with the `<meter>` element.
 
 ## Examples
 
