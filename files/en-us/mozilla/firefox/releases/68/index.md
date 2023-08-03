@@ -73,7 +73,7 @@ This article provides information about the changes in Firefox 68 that will affe
 - We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ([Firefox bug 288704](https://bugzil.la/288704)).
 - Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ([Firefox bug 1545430](https://bugzil.la/1545430)) and ([Firefox bug 1545425](https://bugzil.la/1545425)).
 - [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms) are now supported in indirectly rendered things e.g.) {{SVGElement("mask")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{SVGElement("clipPath")}} ([Firefox bug 1323962](https://bugzil.la/1323962)).
-- While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, and {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
+- While we're keeping the prefixed versions of the various gradient properties ({{cssxref("gradient/linear-gradient")}}, {{cssxref("gradient/radial-gradient")}}, and {{cssxref("gradient/repeating-radial-gradient")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
 
   In particular, the complicated syntax taking both an angle and a position will no longer work, and the `to` keyword in the `<side-or-corner>` parameter is not required for the prefixed gradient properties. You are encouraged to use the standard, non-prefixed gradient properties instead, as they're now widely supported ([Firefox bug 1547939](https://bugzil.la/1547939)).
 
@@ -127,8 +127,8 @@ _No changes._
 
 #### Removals
 
-- Removed the non-standard {{DOMxRef("XMLDocument.load()")}} method ([Firefox bug 332175](https://bugzil.la/332175)).
-- Removed the non-standard {{DOMxRef("XMLDocument.async")}} property ([Firefox bug 1328138](https://bugzil.la/1328138)).
+- Removed the non-standard `XMLDocument.load()` method ([Firefox bug 332175](https://bugzil.la/332175)).
+- Removed the non-standard `XMLDocument.async` property ([Firefox bug 1328138](https://bugzil.la/1328138)).
 - The {{domxref("RTCIceServer.credentialType")}} `token` value has been removed ([Firefox bug 1529595](https://bugzil.la/1529595)).
 
 ### HTTP

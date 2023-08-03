@@ -78,7 +78,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Media, WebRTC, and Web Audio
 
-- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStats.type")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ([Firefox bug 1615191](https://bugzil.la/1615191)).
+- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStatsReport", "RTCStats.type")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ([Firefox bug 1615191](https://bugzil.la/1615191)).
 
 #### Removals
 
