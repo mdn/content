@@ -1,11 +1,9 @@
-
-
 on:
   pull_request:
     branches:
       - main
     paths:
-      - .markdownlint-cli2.jsonc
+      - x -cli2.jsonc
       - .nvmrc
       - .prettier*
       - package.json
