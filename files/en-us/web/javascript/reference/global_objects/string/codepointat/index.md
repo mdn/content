@@ -57,7 +57,7 @@ Unicode code points range from `0` to `1114111` (`0x10FFFF`). In UTF-16, each st
 
 ### Looping with codePointAt()
 
-Because indexing to a `index` whose element is a UTF-16 low surrogate returns _only_ the low surrogate, it's better not to use string indices for looping.
+Because using string indices for looping causes the same code point to be visited twice (once for the high surrogate, once for the low surrogate), and the second time `codePointAt()` returns _only_ the low surrogate, it's better to avoid looping by index.
 
 ```js example-bad
 const str = "\ud83d\udc0e\ud83d\udc71\u2764";
