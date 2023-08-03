@@ -134,4 +134,4 @@ picker.addEventListener("change", previewFiles);
 ## See also
 
 - {{domxref("FileReader")}}
-- {{domxref("URL.createObjectURL_static")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}

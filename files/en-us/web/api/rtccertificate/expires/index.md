@@ -42,4 +42,4 @@ RTCPeerConnection.generateCertificate({
 
 ## See also
 
-- {{domxref("RTCPeerConnection.generateCertificate_static")}}
+- {{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}}

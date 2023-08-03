@@ -54,7 +54,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 - {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
   - : Returns a string containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
 - {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
-  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL_static")}}.
+  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 ## Instance methods
 

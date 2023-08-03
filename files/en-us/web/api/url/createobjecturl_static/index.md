@@ -50,7 +50,7 @@ See [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_fil
 
 Each time you call `createObjectURL()`, a new object URL is created, even if
 you've already created one for the same object. Each of these must be released by
-calling {{domxref("URL.revokeObjectURL_static")}} when you no longer need them.
+calling {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} when you no longer need them.
 
 Browsers will release object URLs automatically when the document is unloaded; however,
 for optimal performance and memory usage, if there are safe times when you can
@@ -79,6 +79,6 @@ support for doing this.
 
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
-- {{domxref("URL.revokeObjectURL_static")}}
+- {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}
