@@ -1,8 +1,5 @@
-on:
-  pull_request:
-    branches:
-      - main
-    paths:
+
+    paths: github and website
       - x -cli2.jsonc
       - .nvmrc
       - .prettier*
