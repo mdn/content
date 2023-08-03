@@ -347,6 +347,34 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
 
 ## Concatenation
 
+CSS pre-processors, such as [SASS](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes, this is common in CSS methodologies such as [BEM](http://getbem.com/naming/).
+
+```css
+.component {
+  &__child-element {
+  }
+}
+/* In SASS this becomes */
+.component__child-element {
+}
+```
+
+This is not possible in CSS nesting, as without an [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) the nested selector is treated as [type selector](/en-US/docs/Web/CSS/Type_selectors) and allowing concatenation would break this.
+
+For [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) using `&Element` would make the CSS invalid as the type selector must come first in a compound selector so must be written `Element&`.
+
+```css example-good
+.my-class {
+  element& {
+  }
+}
+/* This becomes the compound selector */
+.my-class {
+}
+element.my-class {
+}
+```
+
 ## Invalid nested style rules
 
 ## See Also
