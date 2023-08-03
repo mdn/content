@@ -267,7 +267,87 @@ In this example the `&` nesting selector is used to create compound selectors to
 
 ## Appended nesting selector
 
+Using the `&` nesting selector before a nested selector applies the styles to the child selector when it is within the parent selector.
+
+```css
+.parent {
+  /* .parent styles */
+  & .child {
+    /* .parent .child styles */
+  }
+}
+```
+
+The `&` nesting selector can also be appended to a nested selector which has the effect of reversing the context.
+
+```css
+.parent {
+  /* .parent styles */
+  .child & {
+    /* .child .parent styles */
+  }
+}
+```
+
+### Example
+
+#### Appending nesting selector
+
+In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the .featured .h2 can be nesting in the style for the `h2`.
+
+##### HTML
+
+```html
+<div class="wrapper">
+  <article class="card">
+    <h2>Card 1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+  </article>
+  <article class="card featured">
+    <h2>Card 2</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+  </article>
+  <article class="card">
+    <h2>Card 3</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+  </article>
+</div>
+```
+
+##### CSS
+
+```css
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  font-family: system-ui;
+}
+```
+
+In the following CSS we are creating the styles for `.card`, `.card h2` and then in the `h2` styles we nest the `.featured` class with the `&` nesting selector appended which creates a style for `.card .featured h2`.
+
+```css
+.card {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  & h2 {
+    color: slateblue;
+    .featured & {
+      color: tomato;
+    }
+  }
+}
+```
+
+##### Result
+
+{{EmbedLiveSample('Appending_nesting_selector','100%','250')}}
+
 ## Concatenation
+
+## Invalid nested style rules
 
 ## See Also
 
