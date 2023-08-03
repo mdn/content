@@ -1,0 +1,45 @@
+Read This!
+https://microsoft.github.io/PowerBI-JavaScript/globals.html
+
+These files are not meant to be edited by hand. If you need to make modifications, the respective files should be changed within the repository's top-level src directory. Running gulp LKG will then appropriately update the files in this directory.
+Legend
+
+Module
+Object literal
+Variable
+Function
+Function with type parameter
+Index signature
+Type alias
+Type alias with type parameter
+ 
+Enumeration
+Enumeration member
+Property
+Method
+Interface
+Interface with type parameter
+Constructor
+Property
+Method
+Index signature
+ 
+Class
+Class with type parameter
+Constructor
+Property
+Method
+Accessor
+Index signature
+Inherited constructor
+Inherited property
+Inherited method
+Inherited accessor
+ 
+Protected property
+Protected method
+Protected accessor
+Private property
+Private method
+Private accessor
+ 
