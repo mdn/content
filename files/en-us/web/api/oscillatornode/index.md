@@ -63,9 +63,9 @@ _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and 
 
 - {{domxref("OscillatorNode.setPeriodicWave()")}}
   - : Sets a {{domxref("PeriodicWave")}} which describes a periodic waveform to be used instead of one of the standard waveforms; calling this sets the `type` to `custom`.
-- {{domxref("AudioScheduledSourceNode.start")}}
+- {{domxref("AudioScheduledSourceNode.start()")}}
   - : Specifies the exact time to start playing the tone.
-- {{domxref("AudioScheduledSourceNode.stop")}}
+- {{domxref("AudioScheduledSourceNode.stop()")}}
   - : Specifies the time to stop playing the tone.
 
 ## Examples
