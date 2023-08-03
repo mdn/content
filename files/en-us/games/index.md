@@ -8,23 +8,29 @@ page-type: landing-page
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
 
-## Develop web games
+## Develop web games  
 
 Welcome to the MDN game development center! In this area of the site, we provide resources for web developers wanting to develop games. You will find many useful tutorials and technique articles in the main menu on the left, so feel free to explore.
+
+```css
+div { background-color: red;}
+```
 
 We've also included a reference section so you can easily find information about all the most common APIs used in game development.
 
 > **Note:** Creating games on the web draws on a number of core web technologies such as HTML, CSS, and JavaScript. The [Learning Area](/en-US/docs/Learn) is a good place to go to get started with the basics.
 
-## Port native games to the Web
+# Port native games to the Web
 
-If you are a native developer (for example writing games in C++), and you are interested in how you can port your games over to the Web, you should learn more about our [Emscripten](https://emscripten.org/index.html) tool — this is an LLVM to JavaScript compiler, which takes LLVM bytecode (e.g. generated from C/C++ using Clang, or from another language) and compiles that into [asm.js](/en-US/docs/Games/Tools/asm.js), which can be run on the Web.
+If you are a native developer (for example writing games in C++), and you are interested in how you can port your games over to the Web, you should learn more about our [Emscripten](https://emscripten.org/index.html) tool — this is an LLVM to JavaScript compiler, which takes LLVM *bytecode* (e.g. generated from C/C++ using Clang, or from another language) and compiles that into [asm.js](/en-US/docs/Games/Tools/asm.js), which can be run on the Web.
 
 To get started, see:
 
 - [About Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html) for an introduction including high-level details.
-- [Download and Install](https://emscripten.org/docs/getting_started/downloads.html) for installing the toolchain.
-- [Emscripten Tutorial](https://emscripten.org/docs/getting_started/Tutorial.html) for a tutorial to teach you how to get started.
+* [Download and Install](https://emscripten.org/docs/getting_started/downloads.html) for installing the toolchain.
++[Emscripten Tutorial](https://emscripten.org/docs/getting_started/Tutorial.html) for a tutorial to teach you how to get started.
+* abc
++ efg
 
 ## Examples
 
