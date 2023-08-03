@@ -29,8 +29,8 @@ class SelectURLOperation {
     // Read the user's experiment group from Shared Storage
     const experimentGroup = await this.sharedStorage.get("ab-testing-group");
 
-    // Return the corresponding URL (first or second item in the array)
-    return urls.indexOf(experimentGroup);
+    // Return the group number
+    return experimentGroup;
   }
 }
 

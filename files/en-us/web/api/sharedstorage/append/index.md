@@ -26,25 +26,19 @@ append(key, value)
 - `value`
   - : A string that you want to append to the existing value.
 
+> **Note:** If the specified `key` isn't found in shared storage, the `append()` operation is equivalent to {{domxref("SharedStorage.set", "set()")}}, i.e. a new key/value pair is added to storage with the specified `key`.
+
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with `undefined`.
 
 ### Exceptions
 
-In the case of {{domxref("WindowSharedStorage")}}:
-
-- If the key/value pair doesn't exist in the shared storage, the operation is aborted silently, without rejecting.
-
-In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}}:
-
-- If the key/value pair doesn't exist in the shared storage.
-- If the worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
-- If the appended entry was not successfully stored in the database for some other reason.
-
-In both cases:
-
-- The `Promise` rejects with a {{jsxref("TypeError")}} if `key` and/or `value` exceed the browser-defined maximum length.
+- In the case of {{domxref("WindowSharedStorage")}}, if the `append()` operation doesn't successfully write to the database for a reason other than shared storage not being available, then it fails silently without rejecting.
+- In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if the worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
+- In both cases, the `Promise` rejects with a {{jsxref("TypeError")}} if:
+  - The appended entry was not successfully stored in the database due to shared storage not being available (for example it is disabled using a browser setting).
+  - `key` and/or `value` exceed the browser-defined maximum length.
 
 ## Examples
 

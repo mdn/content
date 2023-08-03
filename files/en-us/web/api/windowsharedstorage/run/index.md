@@ -31,7 +31,7 @@ run(name, options)
     - `data` {{optional_inline}}
       - : An object representing any data required for executing the operation.
     - `keepAlive` {{optional_inline}}
-      - : A boolean value. If set to `true`, the {{domxref("SharedStorageWorkletGlobalScope")}} of the associated worklet is kept alive, and the operation can be run multiple times. The default value, `false`, means that the {{domxref("SharedStorageWorkletGlobalScope")}} is terminated after the operation is run. In such cases, to use the worklet module again it would have to be re-added using {{domxref("Worklet.addModule", "addModule()")}}.
+      - : A boolean value. If set to `true`, the {{domxref("SharedStorageWorkletGlobalScope")}} of the associated worklet is kept alive, and the operation can be run multiple times. The default value, `false`, means that the {{domxref("SharedStorageWorkletGlobalScope")}} is terminated after the operation is run; it therefore cannot be run again.
 
 ### Return value
 
@@ -41,8 +41,8 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 
 - {{jsxref("TypeError")}}
   - : Thrown if:
-    - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}
-    - The operation failed for some other reason.
+    - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}.
+    - Shared storage is disabled (for example via a browser setting).
 
 ## Examples
 

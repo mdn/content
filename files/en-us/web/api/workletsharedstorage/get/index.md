@@ -26,7 +26,7 @@ get(key)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with a string equal to the value of the retrieved key/value pair.
+A {{jsxref("Promise")}} that fulfills with a string equal to the value of the retrieved key/value pair, or `undefined` if the specified `key` is not found in the shared storage.
 
 ### Exceptions
 
@@ -34,7 +34,6 @@ A {{jsxref("Promise")}} that fulfills with a string equal to the value of the re
   - : Thrown if:
     - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}.
     - `key` exceeds the browser-defined maximum length.
-    - A key/value with the specified `key` is not found in the shared storage.
 
 ## Examples
 

@@ -49,13 +49,13 @@ The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/
 
 ## How does shared storage work?
 
-There are two parts to using the Shared Storage API — writing data to storage, and reading and processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. This example assigns a user to an experiment group, stores the group details in shared storage, and then allows other sites to use that data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
+There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. This example assigns a user to an experiment group, stores the group details in shared storage, and then allows other sites to use that data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
 
 ### Writing to shared storage
 
 Writing the data is simple — you use methods defined on the {{domxref("SharedStorage")}} interface to {{domxref("SharedStorage.set", "set", "", "nocode")}}, {{domxref("SharedStorage.append", "append", "", "nocode")}}, or {{domxref("SharedStorage.delete", "delete", "", "nocode")}}/{{domxref("SharedStorage.clear", "clear", "", "nocode")}} data.
 
-This functionality is available in two difference contexts:
+This functionality is available in two different contexts:
 
 - In the main browsing context that your site or app is running in, on {{domxref("WindowSharedStorage")}}, which is available via `window.sharedStorage`.
 - In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}, which is available via `this.sharedStorage`.
@@ -110,8 +110,8 @@ class SelectURLOperation {
     // Read the user's experiment group from shared storage
     const experimentGroup = await this.sharedStorage.get("ab-testing-group");
 
-    // Return the corresponding URL (first or second item in the array)
-    return urls.indexOf(experimentGroup);
+    // Return the group number
+    return experimentGroup;
   }
 }
 
@@ -243,7 +243,7 @@ Last, data in `localStorage` persists until manually cleared (`sessionStorage` i
 
 ## Examples
 
-For extensive demos, see [Shared Storage API demos](https://shared-storage-demo.web.app/) (which also includes some Private Aggregation API examples).
+For extensive demos, see [Shared Storage API demo site](https://shared-storage-demo.web.app/) (which also includes some Private Aggregation API examples).
 
 ## Specifications
 

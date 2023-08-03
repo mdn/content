@@ -15,7 +15,7 @@ The **`context`** read-only property of the
 
 ## Value
 
-`context` can contain any value type (string, number, array, object). The value will match the value passed into the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method.
+A string representing the data. The value will match the value passed into the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method.
 
 ## Examples
 

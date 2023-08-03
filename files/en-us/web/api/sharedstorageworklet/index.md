@@ -11,7 +11,7 @@ browser-compat: api.SharedStorageWorklet
 
 The **`SharedStorageWorklet`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the current origin's shared storage worklet.
 
-`SharedStorageWorklet` has no properties or methods directly defined on it; it inherits the {{domxref("Worklet.addModule", "addModule()")}} method from the {{domxref("Worklet")}} interface, which is used to add a module to it. Unlike a regular {{domxref("Worklet")}}, `SharedStorageWorklet` can only have a single module added to it, for privacy reasons.
+`SharedStorageWorklet` has no properties or methods directly defined on it; it inherits the {{domxref("Worklet.addModule", "addModule()")}} method from the {{domxref("Worklet")}} interface, which is used to add a module to it. Unlike a regular {{domxref("Worklet")}}, `SharedStorageWorklet` can only have a single module added to it, for privacy reasons. Subsequent calls to `addModule()` will reject.
 
 `SharedStorageWorklet` is accessed via {{domxref("WindowSharedStorage.worklet")}}.
 

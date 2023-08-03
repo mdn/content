@@ -126,7 +126,7 @@ async function injectAd() {
   // Load the worklet module
   await window.sharedStorage.worklet.addModule("ab-testing-worklet.js");
 
-  // Set the initial value in the storage to o a random experiment group
+  // Set the initial value in the storage to a random experiment group
   window.sharedStorage.set("ab-testing-group", getRandomExperiment(), {
     ignoreIfPresent: true,
   });
