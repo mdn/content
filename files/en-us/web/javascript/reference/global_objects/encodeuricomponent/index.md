@@ -37,7 +37,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 
 `encodeURIComponent()` uses the same encoding algorithm as described in {{jsxref("encodeURI()")}}. It escapes all characters **except**:
 
-```
+```plain
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 

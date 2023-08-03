@@ -12,7 +12,7 @@ It may also be raised if the expression contains more than one instance of a val
 
 ## Message
 
-```
+```plain
 SyntaxError: Invalid regular expression flags (V8-based)
 SyntaxError: invalid regular expression flag x (Firefox)
 SyntaxError: Invalid regular expression: invalid flags (Safari)

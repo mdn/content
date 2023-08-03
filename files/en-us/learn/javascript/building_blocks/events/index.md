@@ -449,7 +449,7 @@ container.addEventListener("click", handleClick);
 
 You'll see that the parent fires a click event when the user clicks the button:
 
-```
+```plain
 You clicked on a DIV element
 ```
 
@@ -488,7 +488,7 @@ button.addEventListener("click", handleClick);
 
 You'll see that all three elements fire a click event when the user clicks the button:
 
-```
+```plain
 You clicked on a BUTTON element
 You clicked on a DIV element
 You clicked on a BODY element
@@ -679,7 +679,7 @@ button.addEventListener("click", handleClick);
 
 In this case, the order of messages is reversed: the `<body>` event handler fires first, followed by the `<div>` event handler, followed by the `<button>` event handler:
 
-```
+```plain
 You clicked on a BODY element
 You clicked on a DIV element
 You clicked on a BUTTON element

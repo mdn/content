@@ -418,7 +418,7 @@ Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), h
 
 Some examples of integer literals are:
 
-```
+```plain
 0, 117, 123456789123456789n             (decimal, base 10)
 015, 0001, 0o777777777777n              (octal, base 8)
 0x1123, 0x00111, 0x123456789ABCDEFn     (hexadecimal, "hex" or base 16)
@@ -440,7 +440,7 @@ The exponent part is an `e` or `E` followed by an integer, which can be signed (
 
 More succinctly, the syntax is:
 
-```
+```plain
 [digits].[digits][(E|e)[(+|-)]digits]
 ```
 
@@ -677,7 +677,7 @@ console.log(quote);
 
 The result of this would be:
 
-```
+```plain
 He read "The Cremation of Sam McGee" by R.W. Service.
 ```
 
