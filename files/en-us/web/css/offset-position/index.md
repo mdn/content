@@ -50,7 +50,7 @@ offset-position: unset;
 ### Values
 
 - `normal`
-  - : Indicates that the element does not have an offset starting position.
+  - : Indicates that the element does not have an offset starting position and places the element at `(50%, 50%)` of the containing block
 - `auto`
   - : Indicates that the offset starting position is the top-left corner of the element's box. This is the default value.
 - {{cssxref("&lt;position&gt;")}}
@@ -124,6 +124,7 @@ This example visually compares various initial offset starting position of an el
   <div class="box box0">0</div>
   <pre>
     offset-position: normal;
+    /* No offset-path specified */
   </pre>
 </div>
 
@@ -235,7 +236,7 @@ pre {
 
 {{EmbedLiveSample('Comparing various offset starting positions', '100%', 930)}}
 
-Notice that when `offset-position` is `normal`, the starting position of the ray is `50%, 50%` of the containing block. Also notice the difference between offset starting positions `auto` and `left top`. The value `auto` places the element such that its anchor point is at the top-left corner of the element box itself, whereas the value `left top` places the element such that the anchor point is the top-left corner of the containing block.
+Notice that when `offset-position` is `normal`, the starting position of the ray is (`50%, 50%`) of the containing block. Also notice the difference between offset starting positions `auto` and `left top`. The value `auto` places the element such that its anchor point is at the top-left corner of the element box itself, whereas the value `left top` places the element such that the anchor point is the top-left corner of the containing block.
 
 ## Specifications
 
