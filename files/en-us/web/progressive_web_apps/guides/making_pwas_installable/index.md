@@ -66,11 +66,9 @@ Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsof
 
 For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
 
-### HTTPS
+### Secure context
 
-For a web app to be installable, it must be served over HTTPS.
-
-Note that to make development easier, browsers do not require HTTPS if the web app is accessed via the `localhost` domain.
+For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
 
 ### Service worker
 

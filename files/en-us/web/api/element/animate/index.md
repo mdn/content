@@ -40,7 +40,7 @@ animate(keyframes, options)
 
         - A string that can be `normal` (meaning no change to the animation's attachment range), a CSS {{cssxref("length-percentage")}} representing an offset, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. For example:
 
-          ```
+          ```plain
           "normal"
           "entry"
           "cover 100%"

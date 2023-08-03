@@ -1224,7 +1224,7 @@
 /en-US/docs/DOM/DOM_Reference/window/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/DOM/DOM_event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/DOM/DOM_event_reference	/en-US/docs/Web/Events
-/en-US/docs/DOM/DOM_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
+/en-US/docs/DOM/DOM_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/DOM/DOM_event_reference/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
 /en-US/docs/DOM/DOM_event_reference/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll_event
 /en-US/docs/DOM/DOM_event_reference/beforeunload	/en-US/docs/Web/API/Window/beforeunload_event
@@ -1394,8 +1394,8 @@
 /en-US/docs/DOM/MouseScrollEvent	/en-US/docs/Web/API/MouseScrollEvent
 /en-US/docs/DOM/MouseWheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/DOM/Mozilla_event_reference	/en-US/docs/Web/Events
-/en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
-/en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
+/en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Document/DOMContentLoaded_event
+/en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/DOM/Mozilla_event_reference/SVGError	/en-US/docs/Web/API/SVGElement/error_event
 /en-US/docs/DOM/Mozilla_event_reference/SVGLoad	/en-US/docs/Web/API/SVGElement/load_event
 /en-US/docs/DOM/Mozilla_event_reference/abort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
@@ -3458,7 +3458,7 @@
 /en-US/docs/Event.initEvent	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/Extension_Library/Extensions	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/Extension_Library/Extensions/Firefox	/en-US/docs/Mozilla/Add-ons
-/en-US/docs/File_System_Access_API	/en-US/docs/Web/API/File_System_Access_API
+/en-US/docs/File_System_Access_API	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Firefox 11 for developers	/en-US/docs/Mozilla/Firefox/Releases/11
 /en-US/docs/Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Firefox_1.5_Beta_for_Developers	/en-US/docs/Mozilla/Firefox/Releases/1.5
@@ -6200,9 +6200,9 @@
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
 /en-US/docs/Mozilla_MathML_Project/Authoring_MathML	/en-US/docs/Web/MathML/Authoring
 /en-US/docs/Mozilla_event_reference	/en-US/docs/Web/Events
-/en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
-/en-US/docs/Mozilla_event_reference/DOMContentLoading (event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
-/en-US/docs/Mozilla_event_reference/DOMContentLoading_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
+/en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Document/DOMContentLoaded_event
+/en-US/docs/Mozilla_event_reference/DOMContentLoading (event)	/en-US/docs/Web/API/Document/DOMContentLoaded_event
+/en-US/docs/Mozilla_event_reference/DOMContentLoading_(event)	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/SVGError	/en-US/docs/Web/API/SVGElement/error_event
 /en-US/docs/Mozilla_event_reference/SVGLoad	/en-US/docs/Web/API/SVGElement/load_event
 /en-US/docs/Mozilla_event_reference/abort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
@@ -8198,8 +8198,9 @@
 /en-US/docs/Web/API/FileSystemFlags/create	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
 /en-US/docs/Web/API/FileSystemFlags/exclusive	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
 /en-US/docs/Web/API/File_Handle_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
-/en-US/docs/Web/API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/API/File_System_Access_API	/en-US/docs/Web/API/File_System_API
+/en-US/docs/Web/API/File_System_Access_API/Origin_private_file_system	/en-US/docs/Web/API/File_System_API/Origin_private_file_system
 /en-US/docs/Web/API/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
 /en-US/docs/Web/API/Float64Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array
 /en-US/docs/Web/API/FocusEvent.FocusEvent	/en-US/docs/Web/API/FocusEvent/FocusEvent
@@ -10082,6 +10083,7 @@
 /en-US/docs/Web/API/Window.localStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/Window.onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
 /en-US/docs/Web/API/Window.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
+/en-US/docs/Web/API/Window/DOMContentLoaded_event	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/API/Window/StaticRange	/en-US/docs/Web/API/StaticRange
 /en-US/docs/Web/API/Window/URL	/en-US/docs/Web/API/URL
 /en-US/docs/Web/API/Window/URL/createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
@@ -11662,7 +11664,7 @@
 /en-US/docs/Web/CSS_Typed_Object_Model_API	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Web/Events/Activate	/en-US/docs/Web/API/Element/DOMActivate_event
-/en-US/docs/Web/Events/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
+/en-US/docs/Web/Events/DOMContentLoaded	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
 /en-US/docs/Web/Events/Detecting_device_orientation	/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 /en-US/docs/Web/Events/FontFaceSetLoadEvent	/en-US/docs/Web/API/FontFaceSetLoadEvent
@@ -12709,7 +12711,7 @@
 /en-US/docs/Web/Reference	/en-US/docs/Web
 /en-US/docs/Web/Reference/API	/en-US/docs/Web/API
 /en-US/docs/Web/Reference/Events	/en-US/docs/Web/Events
-/en-US/docs/Web/Reference/Events/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
+/en-US/docs/Web/Reference/Events/DOMContentLoaded	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/Reference/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
 /en-US/docs/Web/Reference/Events/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll_event
 /en-US/docs/Web/Reference/Events/SVGError	/en-US/docs/Web/API/SVGElement/error_event

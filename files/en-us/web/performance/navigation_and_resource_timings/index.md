@@ -230,7 +230,7 @@ The order is:
       <td>
         Right before the parser sent the
         <code
-          ><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event"
+          ><a href="/en-US/docs/Web/API/Document/DOMContentLoaded_event"
             >DOMContentLoaded</a
           ></code
         >
