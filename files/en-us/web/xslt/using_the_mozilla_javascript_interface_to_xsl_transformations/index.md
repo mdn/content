@@ -79,7 +79,23 @@ Transforming XHTML should work as expected though.
 
 ### Setting parameters
 
-You can control [parameters for the stylesheet](https://www.w3.org/TR/1999/REC-xslt-19991116/#variables) using the {{domxref("XSLTProcessor.setParameter()")}}, {{domxref("XSLTProcessor.getParameter()")}}, and {{domxref("XSLTProcessor.removeParameter()")}} methods. These all take a namespace URI and a local name as the first two parameters, with {{domxref("XSLTProcessor.setParameter()")}} taking a third - the value of the parameter to be set. See [The XSLT/JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters) for an example.
+While running transformations using precoded .xsl and .xml files is quite useful, configuring the .xsl file from JavaScript may be even more useful. For example, JavaScript and XSLT could be used to sort XML data and then display it. The sorting would have to alternate between ascending and descending sorting.
+
+XSLT provides the `xsl:param` element, which is a child of the `xsl:stylesheet` element. {{domxref('XSLTProcessor')}} provides three JavaScript methods to interact with these parameters: {{domxref('XSLTProcessor.setParameter()')}}, {{domxref('XSLTProcessor.getParameter()')}} and {{domxref('XSLTProcessor.removeParameter()')}}. They all take as the first argument the namespace URI of the `xsl:param` (Usually the param will fall in the default namespace, so passing in `null` will suffice.) The local name of the `xsl:param` is the second argument. setParameter requires a third argument - namely the value to which the parameter will be set.
+
+```xslt
+<xsl:param name="myOrder" />
+```
+
+```js
+const sortVal = xsltProcessor.getParameter(null, "myOrder");
+
+if (sortVal === "" || sortVal === "descending") {
+  xsltProcessor.setParameter(null, "myOrder", "ascending");
+} else {
+  xsltProcessor.setParameter(null, "myOrder", "descending");
+}
+```
 
 ### Resetting
 
@@ -94,7 +110,6 @@ The following reflect the interface of the {{domxref("XSLTProcessor")}} object:
 
 ### See also
 
-- [The XSLT JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
 - [document.load()](/en-US/docs/Web/API/XMLDocument) regarding the loading of XML documents (as used above)
 
 ### Original Document Information

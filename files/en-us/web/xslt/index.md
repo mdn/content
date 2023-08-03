@@ -43,7 +43,6 @@ XSLT is most often used to convert data between different XML schemas or to conv
         <ol>
           <li><a href="/en-US/docs/Web/XSLT/Common_errors">Common XSLT Errors</a></li>
           <li><a href="/en-US/docs/Web/XSLT/PI_Parameters">PI Parameters</a></li>
-          <li><a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT/JavaScript Interface in Gecko</a></li>
           <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT">Transforming XML with XSLT</a></li>
           <li><a href="/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Using the
               Mozilla JavaScript interface to XSL Transformations</a></li>
