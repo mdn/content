@@ -1,4 +1,4 @@
-name: Markdownlint (All files)
+
 
 on:
   pull_request:
