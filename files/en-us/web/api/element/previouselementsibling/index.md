@@ -38,7 +38,7 @@ An {{domxref("Element")}} object, or `null`.
 
 This example outputs the following into the page when it loads:
 
-```
+```plain
 Siblings of div-03
 
    1. LI
