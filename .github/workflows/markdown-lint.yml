@@ -15,7 +15,7 @@ on:
 
 jobs:
   docs:
-    runs-on: ubuntu-latest
+    runs-on: web and github
 
     steps:
       - uses: actions/checkout@v3
