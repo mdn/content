@@ -1,0 +1,131 @@
+name: Lint and review content files in PR
+
+on:
+  pull_request_target:
+    branches:
+      - main
+    paths:
+      - .nvmrc
+      - "*.md"
+      - "files/**/*.md"
+
+permissions: write-all
+
+jobs:
+  lint-and-review-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr_head
+
+      - run: |
+          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
+          git config --global user.name "mdn-bot"
+          rm -r files *.md
+          mv pr_head/files pr_head/*.md .
+          rm -r pr_head
+          git commit -am "Code from PR head"
+
+      - name: Get changed files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Use the GitHub API to get the list of changed files
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
+          # filter out files that are not markdown
+          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
+          echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint and format markdown files
+        run: |
+          # Generate random delimiter
+          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+          EOF="$(openssl rand -hex 8)"
+
+          echo "Running markdownlint --fix"
+          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+          MD_LINT_STATUS=0
+          MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_STATUS=1
+          echo "MD_LINT_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${MD_LINT_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "MD_LINT_STATUS=${MD_LINT_STATUS}" >> $GITHUB_ENV
+
+          echo "Linting front-matter"
+          FM_LINT_STATUS=0
+          FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true ${files_to_lint} 2>&1) || FM_LINT_STATUS=1
+          echo "FM_LINT_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${FM_LINT_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "FM_LINT_STATUS=${FM_LINT_STATUS}" >> $GITHUB_ENV
+
+          echo "Running Prettier"
+          yarn prettier -w ${files_to_lint}
+
+          if [[ -n $(git diff) || "${MD_LINT_STATUS}" == "1" || "${FM_LINT_STATUS}" == "1" ]]; then
+            echo "CHANGES_REQUIRED=true" >> $GITHUB_ENV
+          fi
+
+      - name: Setup reviewdog
+        uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: latest
+
+      - name: Suggest changes using diff
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.PR_REVIEW_PAT }}
+        run: |
+          TMPFILE=$(mktemp)
+          git diff >"${TMPFILE}"
+          git stash -u && git stash drop
+          reviewdog \
+            -name="mdn-linter" \
+            -f=diff \
+            -f.diff.strip=1 \
+            -reporter=github-pr-review < "${TMPFILE}"
+
+      - name: Add reviews for markdonwlint errors
+        if: env.MD_LINT_STATUS == '1'
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.PR_REVIEW_PAT }}
+        run: |
+          echo "${{ env.MD_LINT_LOG }}" | \
+            reviewdog \
+            -efm="%f:%l:%c %m" \
+            -efm="%f:%l %m" \
+            -name="markdownlint" \
+            -diff="git diff" \
+            -reporter="github-pr-review"
+
+      - name: Log and fail if front-matter linter fails
+        if: env.FM_LINT_STATUS == '1'
+        run: |
+          echo "${{ env.FM_LINT_LOG }}"
+          exit 1
+
+      - name: Fail till changes are pending
+        if: env.CHANGES_REQUIRED == 'true'
+        run: |
+          echo "Please fix all the linting issues suggested in the review comments."
+          exit 1
