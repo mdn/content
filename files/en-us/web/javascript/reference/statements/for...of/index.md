@@ -183,7 +183,7 @@ const iterable = {
           return { value: i++, done: false };
         }
         return { value: undefined, done: true };
-      },
+      }
     };
   },
 };
@@ -215,7 +215,8 @@ for (const value of iterable) {
 // 3
 ```
 
-_Iterable iterators_ (iterators with a `[@@iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
+### Iterable iterators
+_Iterable iterators_ (iterators with a `[@@iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`:
 
 ```js
 let i = 1;
@@ -229,7 +230,7 @@ const iterator = {
   },
   [Symbol.iterator]() {
     return this;
-  },
+  }
 };
 
 for (const value of iterator) {
@@ -239,6 +240,69 @@ for (const value of iterator) {
 // 2
 // 3
 ```
+
+Notice that if we didn't add the `[Symbol.iterator]()` method to the `iterator` object, we would get the following error:
+
+```js example-bad
+let i = 1;
+
+const iterator = {
+  next() {
+    if (i <= 3) {
+      return { value: i++, done: false };
+    }
+    return { value: undefined, done: true };
+  }
+};
+
+for (const value of iterator) { // Uncaught TypeError: iterator is not iterable
+  console.log(value);
+}
+```
+
+Another use case for *iterable iterators* is when the same object can be iterated in multiple ways. For example: the `Map.prototype` methods [`.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/keys), [`.values()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values) and [`.entries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries) return iterators. Since these iterators are also iterable (their `[@@iterator]()` methods return `this`), we can use them in a `for...of` loop.
+
+```js
+const fruits = new Map();
+
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+for(let key of fruits.keys()){
+  console.log(key);
+}
+// "apples"
+// "bananas"
+// "oranges"
+
+for(let key of fruits.values()){
+  console.log(key);
+}
+// 500
+// 300
+// 200
+
+for(let key of fruits.entries()){
+  console.log(key);
+}
+// ["apples", 500]
+// ["bananas", 300]
+// ["oranges", 200]
+```
+
+We can also use a `for...of` loop on the `fruits` object itself:
+
+```js
+for(let key of fruits){
+  console.log(key);
+}
+// ["apples", 500]
+// ["bananas", 300]
+// ["oranges", 200]
+```
+
+This will iterate through `fruits` using the `fruit`'s default iterator (that is, `fruits[Symbol.iterator]`). Since `fruits[Symbol.iterator] === fruits.entries`, we get the same output as when using `fruits.entries()`. To be more precise: `Map.prototype[Symbol.iterator] === Map.prototype.entries`.
 
 ### Iterating over a generator
 
