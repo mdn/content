@@ -5,7 +5,7 @@ page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.transfer
 ---
 
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
 The **`transfer()`** method of {{jsxref("ArrayBuffer")}} instances creates a new `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 

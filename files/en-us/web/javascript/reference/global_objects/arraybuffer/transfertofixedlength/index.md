@@ -5,7 +5,7 @@ page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.transferToFixedLength
 ---
 
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
 The **`transferToFixedLength()`** method of {{jsxref("ArrayBuffer")}} instances creates a new non-resizable `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 
