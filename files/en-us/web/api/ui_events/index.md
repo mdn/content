@@ -86,7 +86,7 @@ The UI Events API defines a system for handling user interactions such as mouse 
 - {{domxref("Element.mouseout_event", "mouseout")}}
   - : Fired when a mouse or other pointing device is moved outside the boundary of the element.
 - {{domxref("Element.mouseover_event", "mouseover")}}
-  - : Fired when a mouse or other pointing device is moved outside the element.
+  - : Fired when a mouse or other pointing device is moved over an element.
 - {{domxref("Element.mouseup_event", "mouseup")}}
   - : Fired when the user releases a button on a mouse or other pointing device, while the pointer is over the element.
 - {{domxref("Window.unload_event", "unload")}}
