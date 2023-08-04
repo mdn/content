@@ -15,15 +15,9 @@ This article provides information about the changes in Firefox 116 that affect d
 - The [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Element/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Element/textarea#dirname) elements.
   This attribute allows for passing text directionality information (`ltr` or `rtl`) to the server during form submission ([Firefox bug 675943](https://bugzil.la/675943)).
 
-#### Removals
-
-No notable changes.
-
 ### CSS
 
-#### Removals
-
-No notable changes
+- The syntax of the {{cssxref("offset-path")}} property, which is used to define the path for an element to follow, has been updated. The `<offset-path>` parameter in the syntax consolidates the parameters `<ray()>`, `<url>`, and `<basic-shape>`. Additionally, the [`<coord-box>`](/en-US/docs/Web/CSS/box-edge) parameter, which lets you specify the shape of the path based on the element's box model, has replaced the previous `<geometry-box>` parameter in the syntax. The `none` keyword is still the default value for the property. ([Firefox bug 1598156](https://bugzil.la/1598156)) and ([Firefox bug 1837305](https://bugzil.la/1837305)).
 
 ### Accessibility (ARIA)
 
