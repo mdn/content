@@ -12,7 +12,7 @@ The **Picture-in-Picture API** allow websites to create a floating video window 
 ## Interfaces
 
 - {{DOMxRef("PictureInPictureWindow")}}
-  - : Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/onresize", "onresize")}} event handler property.
+  - : Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/resize_event", "onresize")}} event handler property.
 
 ## Instance methods
 
