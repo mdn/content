@@ -34,6 +34,10 @@ jobs:
           rm -r files *.md
           mv pr_head/files pr_head/*.md .
           rm -r pr_head
+
+          # To avoid contents of PR getting into the diff that we are going to generate
+          # after running the linters, here we make a dummy commit.
+          # Note, this commit is not getting pushed.
           git commit -am "Code from PR head"
 
       - name: Get changed files
