@@ -15,7 +15,7 @@ _Hoisting_ is not a term normatively defined in the ECMAScript specification. Th
 3. The declaration of the variable causes behavior changes in its scope before the line in which it is declared.
 4. The side effects of a declaration are produced before evaluating the rest of the code that contains it.
 
-The four function declarations above are hoisted with type 1 behavior; `var` declaration is hoisted with type 2 behavior; [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class) declarations (also collectively called _lexical declarations_) are hoisted with type 3 behavior; `import` declarations are hoisted with type 1 and type 4 behavior.
+The four function declarations above are hoisted with type 1 behavior; `var` declaration is hoisted with type 2 behavior; [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class) declarations (also collectively called _lexical declarations_) are hoisted with type 3 behavior; [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations are hoisted with type 1 and type 4 behavior.
 
 Some prefer to see `let`, `const`, and `class` as non-hoisting, because the [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) strictly forbids any use of the variable before its declaration. This dissent is fine, since hoisting is not a universally-agreed term. However, the temporal dead zone can cause other observable changes in its scope, which suggests there's some form of hoisting:
 
