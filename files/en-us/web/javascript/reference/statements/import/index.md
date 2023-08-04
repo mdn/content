@@ -151,9 +151,9 @@ import "/modules/my-module.js";
 
 This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate the global variables.
 
-### Import declaration hoisting
+### Hoisting
 
-Import declarations are hoisted within the module, which means they are at least partially dealth with by the language before the rest of the module's code. In this case, it means that the imported values are available in the code even before the line that declares them, and that the imported module's side effects are produced before the rest of the code starts running.
+Import declarations are hoisted within the module, which in this case, means that the imported values are available in the code even before the line that declares them, and that the imported module's side effects are produced before the rest of the code starts running.
 
 ```js
 myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings is imported by the next line
