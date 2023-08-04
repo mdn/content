@@ -119,7 +119,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `frame` {{Deprecated_inline}}
 
-  - : This enumerated attribute defines which side of the frame surrounding the table must be displayed.
+  - : This enumerated attribute defines which side of the frame surrounding the table must be displayed. It can have the following values:
+
+    - `void`, which indicates that no sides will be displayed; it is the default value;
+    - `above`, which indicates that the top side only will be displayed;
+    - `below`, which indicates that the bottom side only will be displayed;
+    - `hsides`, which indicates that the top and bottom sides only will be displayed;
+    - `vsides`, which indicates that the right and left sides only will be displayed;
+    - `lhs`, which indicates that the left-hand side only will be displayed;
+    - `rhs`, which indicates that the right-hand side only will be displayed;
+    - `box`, which indicates that the all four sides will be displayed;
+    - `border`, which indicates that the all four sides will be displayed; it is same as `box`;
 
     To achieve a similar effect, use the {{cssxref("border-style")}} and {{cssxref("border-width")}} properties.
 

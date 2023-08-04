@@ -57,8 +57,8 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 <!---->
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
-- {{ domxref("BlobBuilder") }} is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
-- The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. [Webkit bug 585877](https://bugzil.la/585877)
+- `BlobBuilder` is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
+- The `Document.height` and `Document.width` have been removed. [Webkit bug 585877](https://bugzil.la/585877)
 - The {{ domxref("DocumentType") }} object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
 - The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
 - The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/Window/hashchange_event).

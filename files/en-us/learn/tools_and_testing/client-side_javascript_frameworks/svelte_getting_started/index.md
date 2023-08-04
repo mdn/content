@@ -121,7 +121,7 @@ After running `npm run dev`, Svelte will compile and build your application. It 
 
 The starter template comes with the following structure:
 
-```
+```plain
 moz-todo-svelte
 ├── README.md
 ├── package.json

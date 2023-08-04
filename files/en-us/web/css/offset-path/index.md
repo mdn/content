@@ -30,9 +30,13 @@ offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
 offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
 
-/* Geometry box */
-offset-path: margin-box;
+/* Coord box */
+offset-path: content-box;
+offset-path: padding-box;
+offset-path: border-box;
+offset-path: fill-box;
 offset-path: stroke-box;
+offset-path: view-box;
 
 /* Global values */
 offset-path: inherit;

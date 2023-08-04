@@ -152,7 +152,7 @@ The `publicKey` object can contain the following properties:
 
   - : An object whose properties are criteria used to filter out the potential authenticators for the credential creation operation. This object can contain the properties:
 
-    - `authenticatorAttachment` {{optional_inline}}: A string indicating which authenticator attachment type should be permitted for the chosen authenticator. Possible values are: Allowed values are:
+    - `authenticatorAttachment` {{optional_inline}}: A string indicating which authenticator attachment type should be permitted for the chosen authenticator. Possible values are:
 
       - `"platform"`: The authenticator is part of the device WebAuthn is running on (termed a **platform authenticator**), therefore WebAuthn will communicate with it using a transport available to that platform, such as a platform-specific API. A public key credential bound to a platform authenticator is called a **platform credential**.
       - `"cross-platform"`: The authenticator is not a part of the device WebAuthn is running on (termed a **roaming authenticator** as it can roam between different devices), therefore WebAuthn will communicate with it using a cross-platform transport protocol such as Bluetooth or NFC. A public key credential bound to a roaming authenticator is called a **roaming credential**.
