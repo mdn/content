@@ -48,6 +48,8 @@ All imported bindings cannot be in the same scope as any other declaration, incl
 
 `import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await).
 
+### Forms of import `import` declarations
+
 There are four forms of `import` declarations:
 
 - [Named import](#named_import): `import { export1, export2 } from "module-name";`
@@ -57,7 +59,7 @@ There are four forms of `import` declarations:
 
 Below are examples to clarify the syntax.
 
-### Named import
+#### Named import
 
 Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from "another.js"` or explicitly using the {{jsxref("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
 
@@ -91,7 +93,7 @@ import { "a-b" as a } from "/modules/my-module.js";
 
 > **Note:** `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
 
-### Default import
+#### Default import
 
 Default exports need to be imported with the corresponding default import syntax. The simplest version directly imports the default:
 
@@ -120,7 +122,7 @@ Importing a name called `default` has the same effect as a default import. It is
 import { default as myDefault } from "/modules/my-module.js";
 ```
 
-### Namespace import
+#### Namespace import
 
 The following code inserts `myModule` into the current scope, containing all the exports from the module located at `/modules/my-module.js`.
 
@@ -138,7 +140,7 @@ myModule.doAllTheAmazingThings();
 
 > **Note:** JavaScript does not have wildcard imports like `import * from "module-name"`, because of the high possibility of name conflicts.
 
-### Import a module for its side effects only
+#### Import a module for its side effects only
 
 Import an entire module for side effects only, without importing anything. This runs
 the module's global code, but doesn't actually import any values.
@@ -148,6 +150,16 @@ import "/modules/my-module.js";
 ```
 
 This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate the global variables.
+
+### Import declaration hoisting
+
+Import declarations are hoisted within the module, which means they are at least partially dealth with by the language before the rest of the module's code. In this case, it means that the imported values are available in the code even before the line that declares them, and that the imported module's side effects are produced before the rest of the code starts running.
+
+```js
+myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings is imported by the next line
+
+import * as myModule from "/modules/my-module.js";
+```
 
 ## Examples
 
