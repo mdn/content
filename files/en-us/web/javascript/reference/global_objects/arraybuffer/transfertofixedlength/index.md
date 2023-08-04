@@ -2,6 +2,8 @@
 title: ArrayBuffer.prototype.transferToFixedLength()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transferToFixedLength
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.ArrayBuffer.transferToFixedLength
 ---
 
