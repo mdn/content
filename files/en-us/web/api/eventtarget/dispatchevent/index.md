@@ -9,7 +9,7 @@ browser-compat: api.EventTarget.dispatchEvent
 {{APIRef("DOM")}}
 
 The **`dispatchEvent()`** method of the {{domxref("EventTarget")}} sends an {{domxref("Event")}} to the object, (synchronously) invoking the affected
-{{domxref("EventListener")}}s in the appropriate order. The normal event processing
+event listeners in the appropriate order. The normal event processing
 rules (including the capturing and optional bubbling phase) also apply to events
 dispatched manually with `dispatchEvent()`.
 
