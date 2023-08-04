@@ -377,6 +377,94 @@ element.my-class {
 
 ## Invalid nested style rules
 
+If a nested CSS rule is invalid then all of the enclosed styles will be ignored. This does not effect the parent or proceeding rules.
+
+In the following example there is an invalid selector (`%invalid` `%` is not a valid character for selectors), this will ignore the styles with the rule.
+
+```css example-bad
+.parent {
+  /* .parent styles these work fine */
+  & %invalid {
+    /* %invalid styles all of which are ignored */
+  }
+  & .valid {
+    /* .parent .valid styles these work fine */
+  }
+}
+```
+
+### Example
+
+#### Trying to concatenate a string in CSS
+
+In this example we are trying to replicate the way that pre-processors are used to concatenate the `__content` string onto the `.card` class. As we have [previously seen](#concatenation) this is not possible and makes the rule invalid.
+
+##### HTML
+
+```html
+<div class="wrapper invalid">
+  <article class="card">
+    <h2>Card 1</h2>
+    <p class="card__content">
+      Lorem ipsum dolor, <a href="#">sit amet</a> consectetur adipisicing elit.
+    </p>
+  </article>
+  <article class="card featured">
+    <h2>Card 2</h2>
+    <p class="card__content">
+      Lorem ipsum dolor, <a href="#">sit amet</a> consectetur adipisicing elit.
+    </p>
+  </article>
+  <article class="card">
+    <h2>Card 3</h2>
+    <p class="card__content">
+      Lorem ipsum dolor, <a href="#">sit amet</a> consectetur adipisicing elit.
+    </p>
+  </article>
+</div>
+```
+
+##### CSS
+
+```css
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  font-family: system-ui;
+}
+```
+
+In the `__content` rule all of the enclosed styles and rules are ignored. This means that the content will not be italic or the links will not be styled. The rest of the rules all work as expected. In order to fix this we can change the `&__content` to show the full class name `& card__content`.
+
+```css
+.card {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  &__content {
+    font-style: italic;
+    & a {
+      color: slateblue;
+      text-decoration-style: wavy;
+      .featured & {
+        color: tomato;
+      }
+    }
+  }
+  & h2 {
+    color: slateblue;
+    .featured & {
+      color: tomato;
+    }
+  }
+}
+```
+
+##### Result
+
+{{EmbedLiveSample('trying_to_concatenate_a_string_in_css','100%','200')}}
+
 ## See Also
 
 - [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting)
