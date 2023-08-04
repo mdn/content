@@ -113,7 +113,8 @@ console.log(C.getX({})); // "obj must be an instance of C"
 
 Note a corollary of private names being always pre-declared and non-deletable: if you found that an object possesses one private property of the current class (either from a `try...catch` or an `in` check), it must possess all other private properties. An object possessing the private properties of a class generally means it was constructed by that class (although [not always](#returning_overriding_object)).
 
-Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class.
+Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class.  For this reason, [`Object.freeze()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) and
+[`Object.seal()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) have no effect on private properties.
 
 For more information on how and when private fields are initialized, see [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
@@ -180,6 +181,7 @@ new Stamper(obj);
 console.log(obj); // In some dev tools, it shows {#stamp: 42}
 console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
+new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
 > **Warning:** This is a potentially very confusing thing to do. You are generally advised to avoid returning anything from the constructor — especially something unrelated to `this`.
