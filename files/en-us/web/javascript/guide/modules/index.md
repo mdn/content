@@ -839,7 +839,7 @@ myCanvas.createReportList();
 // …
 ```
 
-Still, It is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
+Still, it is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
 
 ## Cyclic imports
 
