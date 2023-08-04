@@ -1,12 +1,8 @@
 ---
-title: Range.startContainer
+title: "Range: startContainer property"
+short-title: startContainer
 slug: Web/API/Range/startContainer
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
 browser-compat: api.Range.startContainer
 ---
 
@@ -24,8 +20,8 @@ A {{domxref("Node")}} object.
 
 ```js
 range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 startRangeNode = range.startContainer;
 ```
 

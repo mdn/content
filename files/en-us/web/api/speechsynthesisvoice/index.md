@@ -2,14 +2,6 @@
 title: SpeechSynthesisVoice
 slug: Web/API/SpeechSynthesisVoice
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechSynthesisVoice
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisVoice
 ---
 
@@ -18,7 +10,7 @@ browser-compat: api.SpeechSynthesisVoice
 The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports.
 Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 
-## Properties
+## Instance properties
 
 - {{domxref("SpeechSynthesisVoice.default")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the voice is the default voice for the current app language (`true`), or not (`false`.)
@@ -40,16 +32,16 @@ const synth = window.speechSynthesis;
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for (let i = 0; i < voices.length ; i++) {
-    const option = document.createElement('option');
+  for (let i = 0; i < voices.length; i++) {
+    const option = document.createElement("option");
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
     if (voices[i].default) {
-      option.textContent += ' — DEFAULT';
+      option.textContent += " — DEFAULT";
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute("data-lang", voices[i].lang);
+    option.setAttribute("data-name", voices[i].name);
     voiceSelect.appendChild(option);
   }
 }
@@ -63,8 +55,9 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (let i = 0; i < voices.length ; i++) {
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
     if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -75,11 +68,13 @@ inputForm.onsubmit = (event) => {
 
   utterThis.onpause = (event) => {
     const char = event.utterance.text.charAt(event.charIndex);
-    console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
-  }
+    console.log(
+      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+    );
+  };
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

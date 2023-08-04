@@ -1,13 +1,7 @@
 ---
-title: 'ARIA: separator role'
+title: "ARIA: separator role"
 slug: Web/Accessibility/ARIA/Roles/separator_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#separator
   - https://w3c.github.io/aria-practices/#range_related_properties
@@ -27,10 +21,10 @@ A non-focusable separator is a static structural element that can be used to hel
 
 ```html
 <h2>My first blog post</h2>
-  …
-<img src="blueline.gif" role="separator" alt="">
+…
+<img src="blueline.gif" role="separator" alt="" />
 <h2>Two years later, my second post</h2>
-  …
+…
 ```
 
 In the example, an image creates a visual separator between two blog posts. The author could have used a semantic thematic break {{HTMLElement('hr')}} element and styled it with CSS to make it blue (and not have to change the image when they change the blog's theme), or the author could have encompassed each post in the semantic {{HTMLElement('article')}} element, or both.

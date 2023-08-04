@@ -1,21 +1,8 @@
 ---
-title: 'AudioTrackList: removetrack event'
+title: "AudioTrackList: removetrack event"
+short-title: removetrack
 slug: Web/API/AudioTrackList/removetrack_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - Event
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Removing Audio Tracks
-  - Removing Tracks
-  - remove
-  - removetrack
-  - track
 browser-compat: api.AudioTrackList.removetrack_event
 ---
 
@@ -27,8 +14,8 @@ The `removetrack` event is fired when a track is removed from an [`AudioTrackLis
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('removetrack', (event) => { })
+```js-nolint
+addEventListener("removetrack", (event) => { })
 
 onremovetrack = (event) => { }
 ```
@@ -94,5 +81,5 @@ videoElement.audioTracks.onremovetrack = (event) => {
 - Related events: [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event), [`change`](/en-US/docs/Web/API/AudioTrackList/change_event)
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
 - This event on [`MediaStream`](/en-US/docs/Web/API/MediaStream) targets: [`removetrack`](/en-US/docs/Web/API/MediaStream/removetrack_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

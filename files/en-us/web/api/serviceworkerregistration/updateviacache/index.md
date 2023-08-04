@@ -1,14 +1,8 @@
 ---
-title: ServiceWorkerRegistration.updateViaCache
+title: "ServiceWorkerRegistration: updateViaCache property"
+short-title: updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - updateViaCache
 browser-compat: api.ServiceWorkerRegistration.updateViaCache
 ---
 
@@ -17,7 +11,7 @@ browser-compat: api.ServiceWorkerRegistration.updateViaCache
 The **`updateViaCache`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface updates the cache using
 the mode specified in the call to {{domxref('ServiceWorkerContainer.register')}}.
-Requests for \`importScripts\` still go via the HTTP cache. \`updateViaCache\` offers
+Requests for `importScripts` still go via the HTTP cache. `updateViaCache` offers
 control over this behavior.
 
 ## Value

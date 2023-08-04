@@ -1,17 +1,7 @@
 ---
 title: Express web framework (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Express.js
-  - Intro
-  - JavaScript
-  - Learn
-  - Node
-  - Server-side programming
-  - node.js
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

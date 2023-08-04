@@ -1,15 +1,10 @@
 ---
-title: MouseEvent.initMouseEvent()
+title: "MouseEvent: initMouseEvent() method"
+short-title: initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - Method
-  - MouseEvent
-  - Reference
+status:
+  - deprecated
 browser-compat: api.MouseEvent.initMouseEvent
 ---
 
@@ -103,7 +98,7 @@ None ({{jsxref("undefined")}}).
 ```html
 <div style="background:red; width:180px; padding:10px;">
   <div id="out"></div>
-  <input type="text">
+  <input type="text" />
 </div>
 ```
 
@@ -117,9 +112,25 @@ document.body.onclick = (event) => {
 
 const simulateClick = () => {
   const event = document.createEvent("MouseEvents");
-  event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+  event.initMouseEvent(
+    "click",
+    true,
+    true,
+    window,
+    0,
+    0,
+    0,
+    80,
+    20,
+    false,
+    false,
+    false,
+    false,
+    0,
+    null,
+  );
   document.body.dispatchEvent(event);
-}
+};
 
 simulateClick();
 ```

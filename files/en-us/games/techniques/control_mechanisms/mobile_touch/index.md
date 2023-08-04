@@ -1,13 +1,7 @@
 ---
 title: Mobile touch controls
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
-tags:
-  - Controls
-  - Games
-  - JavaScript
-  - Mobile
-  - pointer
-  - touch
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -43,7 +37,7 @@ This way, touching the game's {{htmlelement("canvas")}} on the mobile screen wou
 
 Let's implement the mobile support in a [little demo](https://github.com/end3r/JavaScript-Game-Controls/) available on GitHub, so we can move the player's ship by touching the screen on a mobile device.
 
-We will use two events: `touchstart` and,`touchmove` both handled by one function. Why? The function `touchHandler` will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (`touchstart`), and when the finger is moved on the screen (`touchmove`):
+We will use two events: `touchstart` and `touchmove`, both handled by one function. Why? The function `touchHandler` will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (`touchstart`), and when the finger is moved on the screen (`touchmove`):
 
 ```js
 document.addEventListener("touchstart", touchHandler);
@@ -121,7 +115,7 @@ const buttonEnclave = this.add.button(
   10,
   "logo-enclave",
   this.clickEnclave,
-  this
+  this,
 );
 ```
 
@@ -135,7 +129,7 @@ this.buttonShoot = this.add.button(
   0,
   "button-alpha",
   null,
-  this
+  this,
 );
 this.buttonShoot.onInputDown.add(this.goShootPressed, this);
 this.buttonShoot.onInputUp.add(this.goShootReleased, this);

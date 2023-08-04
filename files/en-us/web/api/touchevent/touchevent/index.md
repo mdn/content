@@ -1,14 +1,8 @@
 ---
-title: TouchEvent()
+title: "TouchEvent: TouchEvent() constructor"
+short-title: TouchEvent()
 slug: Web/API/TouchEvent/TouchEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - Reference
-  - events
-  - touch
 browser-compat: api.TouchEvent.TouchEvent
 ---
 

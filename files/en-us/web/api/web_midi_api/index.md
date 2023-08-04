@@ -2,23 +2,19 @@
 title: Web MIDI API
 slug: Web/API/Web_MIDI_API
 page-type: web-api-overview
-tags:
-  - API
-  - MIDI
-  - Overview
-  - Reference
-  - Web MIDI API
+browser-compat:
+  - api.Navigator.requestMIDIAccess
+  - http.headers.Permissions-Policy.midi
+  - api.Permissions.permission_midi
 spec-urls: https://webaudio.github.io/web-midi-api/
-browser-compat: api.Navigator.requestMIDIAccess
 ---
 
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
 The Web MIDI API connects to and interacts with Musical Instrument Digital Interface (MIDI) Devices.
 
-The interfaces deal with the practical aspects of sending and receiving MIDI messages. Therefore, the API can be used for musical and non-musical uses, with any MIDI device connected to your computer.
-
-> **Note:** In Firefox the Web MIDI API is an _add-on-gated feature_. This means your website or app needs a site permission add-on for users to download, install and be able to access this API's functionality. [Instructions on how to set up a site permission add-on can be found here](https://extensionworkshop.com/documentation/publish/site-permission-add-on/).
+The interfaces deal with the practical aspects of sending and receiving MIDI messages.
+Therefore, the API can be used for musical and non-musical uses, with any MIDI device connected to your computer.
 
 ## Interfaces
 
@@ -39,6 +35,28 @@ The interfaces deal with the practical aspects of sending and receiving MIDI mes
 - {{domxref("MIDIConnectionEvent")}}
   - : The event passed to the {{domxref("MIDIAccess.statechange_event")}} and {{domxref("MIDIPort.statechange_event")}} events, when a port becomes available or unavailable.
 
+## Security requirements
+
+Access to the API is requested using the {{domxref("navigator.requestMIDIAccess()")}} method.
+
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- The user must explicitly grant permission to use the API through a user-agent specific mechanism, or have previously granted permission.
+  Note that if access is denied by a permission policy it cannot be granted by a user permission.
+
+The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query), passing a permission descriptor with the `midi` permission and (optional) `sysex` property:
+
+```js
+navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
+  if (result.state === "granted") {
+    // Access granted.
+  } else if (result.state === "prompt") {
+    // Using API will prompt for permission
+  }
+  // Permission was denied by user prompt or permission policy
+});
+```
+
 ## Examples
 
 ### Gaining access to the MIDI port
@@ -47,10 +65,10 @@ The {{domxref("navigator.requestMIDIAccess()")}} method returns a promise that r
 The method must be called in a secure context.
 
 ```js
-let midi = null;  // global MIDIAccess object
+let midi = null; // global MIDIAccess object
 function onMIDISuccess(midiAccess) {
   console.log("MIDI ready!");
-  midi = midiAccess;  // store in the global (in real usage, would probably keep in an object instance)
+  midi = midiAccess; // store in the global (in real usage, would probably keep in an object instance)
 }
 
 function onMIDIFailure(msg) {
@@ -68,16 +86,20 @@ In this example the list of input and output ports are retrieved and printed to 
 function listInputsAndOutputs(midiAccess) {
   for (const entry of midiAccess.inputs) {
     const input = entry[1];
-    console.log(`Input port [type:'${input.type}']` +
-      ` id:'${input.id}'` +
-      ` manufacturer:'${input.manufacturer}'` +
-      ` name:'${input.name}'` +
-      ` version:'${input.version}'`);
+    console.log(
+      `Input port [type:'${input.type}']` +
+        ` id:'${input.id}'` +
+        ` manufacturer:'${input.manufacturer}'` +
+        ` name:'${input.name}'` +
+        ` version:'${input.version}'`,
+    );
   }
 
   for (const entry of midiAccess.outputs) {
     const output = entry[1];
-    console.log(`Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'`);
+    console.log(
+      `Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'`,
+    );
   }
 }
 ```
@@ -96,7 +118,9 @@ function onMIDIMessage(event) {
 }
 
 function startLoggingMIDIInput(midiAccess, indexOfPort) {
-  midiAccess.inputs.forEach((entry) => {entry.onmidimessage = onMIDIMessage;});
+  midiAccess.inputs.forEach((entry) => {
+    entry.onmidimessage = onMIDIMessage;
+  });
 }
 ```
 

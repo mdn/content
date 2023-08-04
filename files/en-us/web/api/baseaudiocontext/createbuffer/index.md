@@ -1,19 +1,8 @@
 ---
-title: BaseAudioContext.createBuffer()
+title: "BaseAudioContext: createBuffer() method"
+short-title: createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Buffer
-  - Media
-  - Method
-  - Reference
-  - Web Audio
-  - Web Audio API
-  - createBuffer
 browser-compat: api.BaseAudioContext.createBuffer
 ---
 
@@ -112,7 +101,11 @@ on. You can also [run the code live](https://mdn.github.io/webaudio-examples/aud
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
-const myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate,
+);
 
 // Fill the buffer with white noise;
 // just random values between -1.0 and 1.0

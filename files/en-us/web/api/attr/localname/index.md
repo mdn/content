@@ -1,11 +1,8 @@
 ---
-title: Attr.localName
+title: "Attr: localName property"
+short-title: localName
 slug: Web/API/Attr/localName
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Attr.localName
 ---
 
@@ -27,7 +24,7 @@ A string representing the local part of the attribute's qualified name.
 
 The following example displays the local name of the first attribute of the two first elements, when we click on the appropriate button. The {{SVGElement("svg")}} element is XML and supports namespaces leading to the local name (`lang`) to be different from the qualified name `xml:lang`. The {{HTMLElement("label")}} element is HTML, that doesn't support namespaces, leading to a local name and the qualified name to be both `xml:lang`.
 
-### HTML Content
+### HTML
 
 ```html
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
@@ -44,7 +41,7 @@ The following example displays the local name of the first attribute of the two 
 </p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 const elements = document.querySelectorAll(".struct");

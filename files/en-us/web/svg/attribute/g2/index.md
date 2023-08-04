@@ -1,10 +1,9 @@
 ---
 title: g2
 slug: Web/SVG/Attribute/g2
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.g2
 ---
 

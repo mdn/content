@@ -2,12 +2,6 @@
 title: TextEncoderStream
 slug: Web/API/TextEncoderStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Encoding
-  - Reference
-  - TextEncoderStream
 browser-compat: api.TextEncoderStream
 ---
 
@@ -20,7 +14,7 @@ The **`TextEncoderStream`** interface of the {{domxref('Encoding API','','',' ')
 - {{domxref("TextEncoderStream.TextEncoderStream","TextEncoderStream()")}}
   - : Creates a new `TextEncoderStream` object.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("TextEncoderStream.encoding")}} {{ReadOnlyInline}}
   - : Always returns "`utf-8`".

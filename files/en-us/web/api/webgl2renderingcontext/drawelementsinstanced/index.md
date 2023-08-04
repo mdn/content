@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.drawElementsInstanced()
+title: "WebGL2RenderingContext: drawElementsInstanced() method"
+short-title: drawElementsInstanced()
 slug: Web/API/WebGL2RenderingContext/drawElementsInstanced
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawElementsInstanced
 ---
 

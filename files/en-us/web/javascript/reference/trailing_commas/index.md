@@ -1,14 +1,7 @@
 ---
 title: Trailing commas
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - Comma
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - Language feature
-  - Syntax
-  - Trailing comma
+page-type: javascript-language-feature
 browser-compat: javascript.grammar.trailing_commas
 ---
 
@@ -53,7 +46,7 @@ It is particular useful when adding, removing, or reordering items in a list tha
 
 JavaScript ignores trailing commas in arrays literals:
 
-```js
+```js-nolint
 const arr = [
   1,
   2,
@@ -91,7 +84,7 @@ Trailing commas are also allowed in function parameter lists.
 
 The following function definition pairs are legal and equivalent to each other. Trailing commas don't affect the [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property of function declarations or their [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
 
-```js
+```js-nolint
 function f(p) {}
 function f(p,) {}
 
@@ -101,7 +94,7 @@ function f(p,) {}
 
 The trailing comma also works with [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for classes or objects:
 
-```js
+```js-nolint
 class C {
   one(a,) {}
   two(a, b,) {}
@@ -117,7 +110,7 @@ const obj = {
 
 The following function invocation pairs are legal and equivalent to each other.
 
-```js
+```js-nolint
 f(p);
 f(p,);
 
@@ -142,7 +135,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 A trailing comma is also allowed on the left-hand side when using [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
-```js
+```js-nolint
 // array destructuring with trailing comma
 [a, b,] = [1, 2];
 
@@ -156,7 +149,7 @@ const { p, q, } = o;
 
 Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
 
-```js example-bad
+```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
@@ -187,7 +180,7 @@ Trailing commas are valid in [named imports](/en-US/docs/Web/JavaScript/Referenc
 
 #### Named imports
 
-```js
+```js-nolint
 import {
   A,
   B,
@@ -201,7 +194,7 @@ import { A as B, C as D, E as F, } from "Z";
 
 #### Named exports
 
-```js
+```js-nolint
 export {
   A,
   B,
@@ -215,7 +208,7 @@ export { A as B, C as D, E as F, };
 
 ### Quantifier prefix
 
-> **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
+> **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
 
 ```js
 /x{2}/; // Exactly 2 occurrences of "x"; equivalent to /xx/
@@ -233,4 +226,4 @@ export { A as B, C as D, E as F, };
 
 ## See also
 
-- Initial ECMAScript proposal: [trailing function commas](https://github.com/tc39/proposal-trailing-function-commas) by Jeff Morrison
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)

@@ -1,12 +1,7 @@
 ---
 title: Mastering margin collapsing
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
+page-type: guide
 ---
 
 {{CSSRef}}
@@ -29,6 +24,7 @@ Some things to note:
 - When negative margins are involved, the size of the collapsed margin is the sum of the largest positive margin and the smallest (most negative) negative margin.
 - When all margins are negative, the size of the collapsed margin is the smallest (most negative) margin. This applies to both adjacent elements and nested elements.
 - Collapsing margins is only relevant in the vertical direction.
+- Margins don't collapse in a container with `display` set to `flex` or `grid`.
 
 ## Examples
 
@@ -36,11 +32,21 @@ Some things to note:
 
 ```html
 <p>The bottom margin of this paragraph is collapsed …</p>
-<p>… with the top margin of this paragraph, yielding a margin of <code>1.2rem</code> in between.</p>
+<p>
+  … with the top margin of this paragraph, yielding a margin of
+  <code>1.2rem</code> in between.
+</p>
 
-<div>This parent element contains two paragraphs!
-  <p>This paragraph has a <code>.4rem</code> margin between it and the text above.</p>
-  <p>My bottom margin collapses with my parent, yielding a bottom margin of <code>2rem</code>.</p>
+<div>
+  This parent element contains two paragraphs!
+  <p>
+    This paragraph has a <code>.4rem</code> margin between it and the text
+    above.
+  </p>
+  <p>
+    My bottom margin collapses with my parent, yielding a bottom margin of
+    <code>2rem</code>.
+  </p>
 </div>
 
 <p>I am <code>2rem</code> below the element above.</p>
@@ -64,10 +70,6 @@ p {
 
 {{EmbedLiveSample('Examples', 'auto', 350)}}
 
-## Specifications
-
-{{Specifications}}
-
 ## See also
 
 - CSS key concepts:
@@ -75,8 +77,8 @@ p {
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
   - Values

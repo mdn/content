@@ -1,18 +1,16 @@
 ---
 title: document
 slug: Web/XPath/Functions/document
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `document` finds a node-set in an external document, or multiple external documents, and returns the resulting node-set.
 
 ### Syntax
 
-```
+```plain
 document( URI [,node-set] )
 ```
 

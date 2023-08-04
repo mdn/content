@@ -2,14 +2,6 @@
 title: PushMessageData
 slug: Web/API/PushMessageData
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Push
-  - Push API
-  - PushMessageData
-  - Reference
-  - Service Workers
 browser-compat: api.PushMessageData
 ---
 
@@ -21,11 +13,11 @@ Unlike the similar methods in the [Fetch API](/en-US/docs/Web/API/Fetch_API), wh
 
 Messages received through the Push API are sent encrypted by push services and then automatically decrypted by browsers before they are made accessible through the methods of the `PushMessageData` interface.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("PushMessageData.arrayBuffer()")}}
   - : Extracts the data as an {{jsxref("ArrayBuffer")}} object.
@@ -39,13 +31,13 @@ None.
 ## Examples
 
 ```js
-self.addEventListener('push', (event) => {
+self.addEventListener("push", (event) => {
   const obj = event.data.json();
 
-  if (obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     fireNotification(obj, event);
     port.postMessage(obj);
-  } else if (obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });

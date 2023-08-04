@@ -1,14 +1,7 @@
 ---
 title: Server-side website programming first steps
 slug: Learn/Server-side/First_steps
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Landing
-  - Learn
-  - Server-side programming
+page-type: learn-module
 ---
 
 {{LearnSidebar}}
@@ -21,9 +14,9 @@ Before starting this module, you don't need to have any knowledge of server-side
 
 However, you should understand something about the workings of websites and web servers. For that purpose, this is our recommended reading:
 
-- [What is a web server?](/en-US/docs/Learn/Common_questions/What_is_a_web_server)
-- [What software do I need to build a website?](/en-US/docs/Learn/Common_questions/What_software_do_I_need)
-- [How do you upload files to a web server?](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [What is a web server?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [What software do I need to build a website?](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [How do you upload files to a web server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 With the basic understanding that you gain from this preparation, you'll be ready to work your way through the modules in this section.
 

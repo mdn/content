@@ -1,16 +1,7 @@
 ---
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - local
+page-type: webextension-api-property
 browser-compat: webextensions.api.storage.local
 ---
 
@@ -21,7 +12,7 @@ Represents the `local` storage area. Items in `local` storage are local to the m
 The browser may restrict the amount of data that an extension can store in the local storage area. For example:
 
 - In Chrome, an extension is limited to storing 5MB of data using this API unless it has the [`"unlimitedStorage"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage).
-- In Firefox, the amount of data an extension can store is subjected to the same [storage limits](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#storage_limits) as applied to IndexedDB databases. Extensions that intend to store more data than this limit need the ["unlimitedStorage"](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage) permission. However, extensions with the "unlimitedStorage" permission may get a quota exceeded error when the disk space used by storage exceeds the global limit.
+- In Firefox, the amount of data an extension can store is subjected to the same [storage limits](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#storage_limits) as applied to IndexedDB databases. Extensions that intend to store more data than this limit need the ["unlimitedStorage"](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage) permission. However, extensions with the "unlimitedStorage" permission may get a quota exceeded error when the disk space used by storage exceeds the global limit.
 
 When the extension is uninstalled, its associated local storage is cleared.
 
@@ -58,8 +49,6 @@ The `local` object implements the events defined on the {{WebExtAPIRef("storage.
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-local) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

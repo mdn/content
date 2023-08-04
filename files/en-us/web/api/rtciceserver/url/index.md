@@ -1,14 +1,10 @@
 ---
-title: RTCIceServer.url
+title: "RTCIceServer: url property"
+short-title: url
 slug: Web/API/RTCIceServer/url
 page-type: web-api-instance-property
-tags:
-  - Deprecated
-  - Property
-  - RTCIceServer
-  - Reference
-  - URL
-  - WebRTC
+status:
+  - deprecated
 browser-compat: api.RTCIceServer.url
 ---
 
@@ -53,9 +49,9 @@ connections.
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      url: "stun:stunserver.example.org"
-    }
-  ]
+      url: "stun:stunserver.example.org",
+    },
+  ],
 });
 ```
 

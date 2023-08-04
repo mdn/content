@@ -1,9 +1,7 @@
 ---
 title: API reference sidebars
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-tags:
-  - meta
-  - writing-guide
+page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
@@ -84,21 +82,23 @@ These are all technically optional, but it is strongly encouraged that instead o
 3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}.
    If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list.
    "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
-   Do _not_ list methods that are members of interfaces that are members of interfaces that are owned by the same API.
+   Do _not_ list methods that are members of interfaces that are owned by the same API.
 4. `"properties"` — the value is an array that should contain all of the properties associated with the API.
    This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces.
    If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list.
    "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/en-US/docs/Web/API/Headers/append).
 5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere.
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
-   "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/HTMLElement/animationstart_event).
+   "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/Element/animationstart_event).
 6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API.
    Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link.
    As an example, the following object:
 
    ```json
-   { "url":   "/docs/Web/API/Detecting_device_orientation",
-   "title": "Detecting device orientation" }
+   {
+     "url": "/docs/Web/API/Detecting_device_orientation",
+     "title": "Detecting device orientation"
+   }
    ```
 
    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).

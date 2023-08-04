@@ -1,14 +1,11 @@
 ---
-title: 'Window: vrdisplaypresentchange event'
+title: "Window: vrdisplaypresentchange event"
+short-title: vrdisplaypresentchange
 slug: Web/API/Window/vrdisplaypresentchange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - WebVR
-  - Deprecated
-  - vrdisplaypresentchange
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.vrdisplaypresentchange_event
 ---
 
@@ -25,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplaypresentchange', (event) => { });
+addEventListener("vrdisplaypresentchange", (event) => {});
 
-onvrdisplaypresentchange = (event) => { };
+onvrdisplaypresentchange = (event) => {};
 ```
 
 ## Event type
@@ -50,8 +47,10 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplaypresentchange` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplaypresentchange', () => {
-  info.textContent = vrDisplay.isPresenting ? 'Display has started presenting.' : 'Display has stopped presenting.';
+window.addEventListener("vrdisplaypresentchange", () => {
+  info.textContent = vrDisplay.isPresenting
+    ? "Display has started presenting."
+    : "Display has stopped presenting.";
   reportDisplays();
 });
 ```
@@ -60,7 +59,9 @@ Or use the `onvrdisplaypresentchange` event handler property:
 
 ```js
 window.onvrdisplaypresentchange = () => {
-  info.textContent = vrDisplay.isPresenting ? 'Display has started presenting.' : 'Display has stopped presenting.';
+  info.textContent = vrDisplay.isPresenting
+    ? "Display has started presenting."
+    : "Display has stopped presenting.";
   reportDisplays();
 };
 ```

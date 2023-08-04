@@ -1,11 +1,7 @@
 ---
 title: Get Window Rect
 slug: Web/WebDriver/Commands/GetWindowRect
-tags:
-  - Command
-  - Get Window Rect
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetWindowRect
 ---
 
@@ -28,7 +24,7 @@ The command operates on the currently selected window, and returns size and posi
 
 ### Response
 
-The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow)[:](/en-US/docs/Web/WebDriver/WebWindow)
+The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
 
 - `x`
   - : Horizontal position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX).

@@ -2,19 +2,8 @@
 title: XRProjectionLayer
 slug: Web/API/XRProjectionLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRProjectionLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRProjectionLayer
 ---
 
@@ -31,14 +20,12 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
 - {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}}
   - : A boolean enabling the layer's texture alpha channel.
-- {{domxref("XRCompositionLayer.chromaticAberrationCorrection")}}
-  - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 - {{domxref("XRProjectionLayer.fixedFoveation")}} {{Experimental_Inline}}
   - : A number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
 - {{domxref("XRProjectionLayer.ignoreDepthValues")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -56,7 +43,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XRProjectionLayer.textureWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The width in pixels of the color textures of this layer.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 

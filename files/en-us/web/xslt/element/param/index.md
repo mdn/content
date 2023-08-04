@@ -1,14 +1,10 @@
 ---
 title: <xsl:param>
 slug: Web/XSLT/Element/param
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - param
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:param>` element establishes a parameter by name and, optionally, a default value for that parameter. When used as a top-level element, the parameter is global. When used inside an `<xsl:template>` element, the parameter is local to that template. In this case it must be the first child element of the template.
 

@@ -2,12 +2,6 @@
 title: AesGcmParams
 slug: Web/API/AesGcmParams
 page-type: web-api-interface
-tags:
-  - API
-  - AesGcmParams
-  - Dictionary
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-AesGcmParams
 ---
 
@@ -17,7 +11,7 @@ The **`AesGcmParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
 
 For details of how to supply appropriate values for this parameter, see the specification for AES-GCM: [NIST SP800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf), in particular section 5.2.1.1 on Input Data.
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `AES-GCM`.

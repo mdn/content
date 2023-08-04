@@ -1,18 +1,8 @@
 ---
-title: Document.querySelector()
+title: "Document: querySelector() method"
+short-title: querySelector()
 slug: Web/API/Document/querySelector
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selectors
-  - DOM
-  - DOM Elements
-  - Document
-  - Method
-  - Reference
-  - Selector API
-  - Selectors
-  - querySelector
 browser-compat: api.Document.querySelector
 ---
 
@@ -47,7 +37,7 @@ querySelector(selectors)
 ### Return value
 
 An {{domxref("Element")}} object representing the first element in the document
-that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), or `null` is returned if there are no matches.
 
 If you need a list of all elements matching the specified selectors, you should use
 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} instead.
@@ -78,15 +68,15 @@ JavaScript, if you are entering a literal string, you must escape it _twice_
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
-  document.querySelector('#foo\bar');    // Does not match anything
+  console.log("#foo\bar"); // "#fooar" (\b is the backspace control character)
+  document.querySelector("#foo\bar"); // Does not match anything
 
-  console.log('#foo\\bar');              // "#foo\bar"
-  console.log('#foo\\\\bar');            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar'); // Match the first div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // Match the first div
 
-  document.querySelector('#foo:bar');    // Does not match anything
-  document.querySelector('#foo\\:bar');  // Match the second div
+  document.querySelector("#foo:bar"); // Does not match anything
+  document.querySelector("#foo\\:bar"); // Match the second div
 </script>
 ```
 
@@ -118,7 +108,9 @@ const el = document.querySelector("div.user-panel.main input[name='login']");
 As all CSS selector strings are valid, you can also negate selectors:
 
 ```js
-const el = document.querySelector("div.user-panel:not(.main) input[name='login']");
+const el = document.querySelector(
+  "div.user-panel:not(.main) input[name='login']",
+);
 ```
 
 This will select an input with a parent div with the `user-panel` class but

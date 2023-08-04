@@ -1,16 +1,11 @@
 ---
-title: RTCPeerConnection.removeStream()
+title: "RTCPeerConnection: removeStream() method"
+short-title: removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
 page-type: web-api-instance-method
-tags:
-  - Deprecated
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - removeStream
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.removeStream
 ---
 
@@ -50,15 +45,19 @@ removeStream(mediaStream)
 ```js
 let pc;
 let videoStream;
-navigator.getUserMedia({video: true}, (stream) => {
+navigator.getUserMedia({ video: true }, (stream) => {
   pc = new RTCPeerConnection();
   videoStream = stream;
   pc.addStream(stream);
 });
-document.getElementById("closeButton").addEventListener("click", (event) => {
-  pc.removeStream(videoStream);
-  pc.close();
-}, false);
+document.getElementById("closeButton").addEventListener(
+  "click",
+  (event) => {
+    pc.removeStream(videoStream);
+    pc.close();
+  },
+  false,
+);
 ```
 
 ## Browser compatibility

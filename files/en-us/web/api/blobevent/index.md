@@ -2,22 +2,10 @@
 title: BlobEvent
 slug: Web/API/BlobEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Blob
-  - Interface
-  - Media
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording Media
-  - Reference
-  - Video
-  - events
 browser-compat: api.BlobEvent
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 The **`BlobEvent`** interface represents events associated with a {{domxref("Blob")}}. These blobs are typically, but not necessarily, associated with media content.
 
@@ -28,7 +16,7 @@ The **`BlobEvent`** interface represents events associated with a {{domxref("Blo
 - {{domxref("BlobEvent.BlobEvent", "BlobEvent()")}}
   - : Creates a `BlobEvent` event with the given parameters.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent {{domxref("Event")}}_.
 
@@ -37,7 +25,7 @@ _Inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("BlobEvent.timecode")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the difference between the timestamp of the first chunk in data and the timestamp of the first chunk in the first BlobEvent produced by this recorder. Note that the timecode in the first produced BlobEvent does not need to be zero.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent {{domxref("Event")}}._
 

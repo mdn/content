@@ -1,13 +1,7 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.last-child
 ---
 
@@ -19,8 +13,10 @@ The **`:last-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:last-child
+```css
+:last-child {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -63,7 +59,8 @@ p:last-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>

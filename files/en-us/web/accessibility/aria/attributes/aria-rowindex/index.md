@@ -1,13 +1,7 @@
 ---
 title: aria-rowindex
 slug: Web/Accessibility/ARIA/Attributes/aria-rowindex
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-rowindex
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindex
 ---
 
@@ -56,8 +50,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
     <div role="row" aria-rowindex="9">
       <span role="gridcell">Ashlyn</span>
       <span role="gridcell">Harris</span>
-      <span role="gridcell" aria-rowspan="2"
-            aria-rowindex="9">Goalkeeper</span>
+      <span role="gridcell" aria-rowspan="2" aria-rowindex="9">Goalkeeper</span>
     </div>
     <div role="row" aria-rowindex="10">
       <span role="gridcell">Alyssa</span>
@@ -104,7 +97,7 @@ Inherited into roles:
 - [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-- The [`rowspan`](/en-US/docs/Web/HTML/Element/td#attr-rowspan) attribute on {{HTMLElement('td')}}
+- The [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on {{HTMLElement('td')}}
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

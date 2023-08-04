@@ -1,18 +1,12 @@
 ---
-title: EncodedVideoChunk.type
+title: "EncodedVideoChunk: type property"
+short-title: type
 slug: Web/API/EncodedVideoChunk/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - type
-  - EncodedVideoChunk
-  - Experimental
 browser-compat: api.EncodedVideoChunk.type
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`type`** read-only property of the {{domxref("EncodedVideoChunk")}} interface returns a value indicating whether the video chunk is a key chunk, which does not rely on other frames for decoding.
 
@@ -31,10 +25,10 @@ In the following example the `type` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 

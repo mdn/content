@@ -1,19 +1,13 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.for_of
 ---
 
 {{jsSidebar("Statements")}}
 
-The **`for...of` statement** executes a loop that operates on a sequence of values sourced from an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Iterable objects include instances of built-ins such as {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (and other DOM collections), as well as the {{jsxref("Functions/arguments", "arguments")}} object, [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) produced by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*), and user-defined iterables.
+The **`for...of`** statement executes a loop that operates on a sequence of values sourced from an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Iterable objects include instances of built-ins such as {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (and other DOM collections), as well as the {{jsxref("Functions/arguments", "arguments")}} object, [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) produced by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*), and user-defined iterables.
 
 {{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
@@ -25,7 +19,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable or an object property).
+  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable or an object property). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...of` loop is in.
 - `iterable`
   - : An iterable object. The source of the sequence of values on which the loop operates.
 - `statement`
@@ -57,7 +51,7 @@ for (let value of iterable) {
 
 > **Note:** Each iteration creates a new variable. Reassigning the variable inside the loop body does not affect the original value in the iterable (an array, in this case).
 
-You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) or an object property like `for (x.y of iterable)` as well.
+You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple local variables, or use a property accessor like `for (x.y of iterable)` to assign the value to an object property.
 
 However, a special rule forbids using `async` as the variable name. This is invalid syntax:
 
@@ -343,18 +337,21 @@ const iterable = [3, 5, 7];
 iterable.foo = "hello";
 
 for (const i in iterable) {
-  console.log(i); // logs "0", "1", "2", "foo", "arrCustom", "objCustom"
+  console.log(i);
 }
+// "0", "1", "2", "foo", "arrCustom", "objCustom"
 
 for (const i in iterable) {
   if (Object.hasOwn(iterable, i)) {
-    console.log(i); // logs "0", "1", "2", "foo"
+    console.log(i);
   }
 }
+// "0" "1" "2" "foo"
 
 for (const i of iterable) {
-  console.log(i); // logs 3, 5, 7
+  console.log(i);
 }
+// 3 5 7
 ```
 
 The object `iterable` inherits the properties `objCustom` and `arrCustom` because it contains both `Object.prototype` and `Array.prototype` in its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).

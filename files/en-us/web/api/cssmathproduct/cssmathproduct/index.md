@@ -1,16 +1,10 @@
 ---
-title: CSSMathProduct()
+title: "CSSMathProduct: CSSMathProduct() constructor"
+short-title: CSSMathProduct()
 slug: Web/API/CSSMathProduct/CSSMathProduct
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathProduct
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSMathProduct.CSSMathProduct
 ---
 

@@ -1,16 +1,10 @@
 ---
-title: PerformanceTiming.requestStart
+title: "PerformanceTiming: requestStart property"
+short-title: requestStart
 slug: Web/API/PerformanceTiming/requestStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.requestStart
 ---
 

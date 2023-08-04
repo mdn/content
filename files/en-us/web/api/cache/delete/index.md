@@ -1,17 +1,8 @@
 ---
-title: Cache.delete()
+title: "Cache: delete() method"
+short-title: delete()
 slug: Web/API/Cache/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - delete
 browser-compat: api.Cache.delete
 ---
 
@@ -63,11 +54,11 @@ deleted, or `false` otherwise.
 ## Examples
 
 ```js
-caches.open('v1').then((cache) => {
-  cache.delete('/images/image.png').then((response) => {
+caches.open("v1").then((cache) => {
+  cache.delete("/images/image.png").then((response) => {
     someUIUpdateFunction();
   });
-})
+});
 ```
 
 ## Specifications

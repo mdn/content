@@ -1,12 +1,7 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.scale
 ---
 
@@ -143,7 +138,7 @@ migraine. If you need to include such animations on your website, you should pro
 off animations, preferably site-wide.
 
 Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature
-— use it to write a [media query](/en-US/docs/Web/CSS/Media_Queries) that will turn off animations if the
+— use it to write a [media query](/en-US/docs/Web/CSS/CSS_media_queries) that will turn off animations if the
 user has reduced animation specified in their system preferences.
 
 Find out more:
@@ -221,5 +216,7 @@ div {
 ## See also
 
 - {{cssxref("transform")}}
+- {{cssxref("scale")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-function/scale3d", "scale3d()")}}
+- Other individual transform properties {{cssxref("translate")}} and {{cssxref("rotate")}}

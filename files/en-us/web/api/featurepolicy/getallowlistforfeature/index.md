@@ -1,21 +1,17 @@
 ---
-title: FeaturePolicy.getAllowlistForFeature()
+title: "FeaturePolicy: getAllowlistForFeature() method"
+short-title: getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
 page-type: web-api-instance-method
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`getAllowlistForFeature()`**
-method of the {{DOMxRef("FeaturePolicy")}} allows query of the allow list for a
-specific feature for the current Feature Policy.
+method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the allowlist for a specific feature for the current Permissions Policy.
 
 ## Syntax
 
@@ -31,30 +27,28 @@ A specific feature name must be specified.
 
 ### Return value
 
-An [Allow list](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) for the
-specified feature.
+An array of strings containing the serialized list of allowed origins for the feature. If a wildcard (`*`) is used, the array will contain `*`.
 
 ## Errors
 
-The function will raise a warning if the specified Feature Policy directive name is not
+The function will raise a warning if the specified Permissions Policy directive name is not
 known. However, it will also return empty array, indicating that no origin is allowed to
 use the feature.
 
 ## Example
 
 The following example prints all the origins that are allowed to use Camera API by the
-Feature Policy. Please note that Camera API might be restricted by the Permissions API,
-if the user did not grant the corresponding permission yet.
+Permissions Policy. Please note that Camera API might also be restricted by the [Permissions API](/en-US/docs/Web/API/Permissions_API), if the user did not grant the corresponding permission.
 
 ```js
-// First, get the Feature Policy object
-const featurePolicy = document.featurePolicy
+// First, get the FeaturePolicy object
+const featurePolicy = document.featurePolicy;
 
-// Then query feature for specific
-const allowlist = featurePolicy.getAllowlistForFeature("camera")
+// Query for specific feature
+const allowlist = featurePolicy.getAllowlistForFeature("camera");
 
 for (const origin of allowlist) {
-  console.log(origin)
+  console.log(origin);
 }
 ```
 

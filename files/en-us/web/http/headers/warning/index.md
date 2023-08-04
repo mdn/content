@@ -1,13 +1,9 @@
 ---
 title: Warning
 slug: Web/HTTP/Headers/Warning
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Deprecated
-  - Reference
+page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.Warning
 ---
 
@@ -47,7 +43,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
   - : A three-digit warning number. The first digit indicates whether the `Warning` is required to be deleted from a stored response after validation.
 
-    - `1xx` warn-codes describe the freshness or validation status of the response and will be deleted by a cache after deletion.
+    - `1xx` warn-codes describe the freshness or validation status of the response and will be deleted by a cache after successful validation.
     - `2xx` warn-codes describe some aspect of the representation that is not rectified by a validation and will not be deleted by a cache after validation unless a full response is sent.
 
 - \<warn-agent>

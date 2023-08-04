@@ -1,18 +1,13 @@
 ---
-title: CSS Charsets
-slug: Web/CSS/CSS_Charsets
-tags:
-  - CSS
-  - CSS Charsets
-  - Guide
-  - Overview
-  - Reference
+title: CSS charsets
+slug: Web/CSS/CSS_charsets
+page-type: css-module
 browser-compat: css.at-rules.charset
 ---
 
 {{CSSRef}}
 
-**CSS Charsets** is a module of CSS that lets you specify the character set used in the style sheet.
+The **CSS charsets** module lets you specify the character set used in the style sheet.
 
 ## Reference
 

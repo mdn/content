@@ -2,17 +2,6 @@
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Interface
-  - Media
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDataChannel
 ---
 
@@ -22,11 +11,11 @@ The **`RTCDataChannel`** interface represents a network channel which can be use
 
 To create a data channel and ask a remote peer to join you, call the {{DOMxRef("RTCPeerConnection")}}'s {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method. The peer being invited to exchange data receives a {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event (which has type {{DOMxRef("RTCDataChannelEvent")}}) to let it know the data channel has been added to the connection.
 
-`RTCDataChannel` is a {{glossary("Transferable objects","transferable object")}}.
+`RTCDataChannel` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
@@ -85,7 +74,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indicates whether or not the data channel is _reliable_.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 

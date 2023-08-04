@@ -1,13 +1,10 @@
 ---
-title: CSSPrimitiveValue.getRectValue()
+title: "CSSPrimitiveValue: getRectValue() method"
+short-title: getRectValue()
 slug: Web/API/CSSPrimitiveValue/getRectValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getRectValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getRectValue
 ---
 

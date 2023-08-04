@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.isQuery()
+title: "WebGL2RenderingContext: isQuery() method"
+short-title: isQuery()
 slug: Web/API/WebGL2RenderingContext/isQuery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.isQuery
 ---
 

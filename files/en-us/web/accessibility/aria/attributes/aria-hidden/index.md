@@ -1,13 +1,7 @@
 ---
-title: 'aria-hidden'
+title: aria-hidden
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-hidden
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-hidden
 ---
 
@@ -57,9 +51,7 @@ Adding `aria-hidden="true"` to the icon hides the icon character from being incl
 ```html
 <button>
   <span class="fa fa-tweet" aria-hidden="true"></span>
-  <span class="label">
-    Tweet
-  </span>
+  <span class="label"> Tweet </span>
 </button>
 ```
 

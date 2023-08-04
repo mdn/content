@@ -1,14 +1,8 @@
 ---
-title: clearInterval()
+title: clearInterval() global function
+short-title: clearInterval()
 slug: Web/API/clearInterval
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - clearInterval
 browser-compat: api.clearInterval
 ---
 
@@ -21,7 +15,7 @@ this method does nothing.
 
 ## Syntax
 
- ```js-nolint
+```js-nolint
 clearInterval(intervalID)
 ```
 

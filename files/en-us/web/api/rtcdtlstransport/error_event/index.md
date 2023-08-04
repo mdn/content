@@ -1,21 +1,8 @@
 ---
-title: 'RTCDtlsTransport: error event'
+title: "RTCDtlsTransport: error event"
+short-title: error
 slug: Web/API/RTCDtlsTransport/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - DTLS
-  - Error
-  - Networking
-  - RTCDtlsTransport
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - events
-  - Event
 browser-compat: api.RTCDtlsTransport.error_event
 ---
 
@@ -30,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => {});
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -66,7 +53,7 @@ transport.onerror = (ev) => {
   const err = ev.error;
 
   // …
-}
+};
 ```
 
 > **Note:** Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "code")}} is always 0.

@@ -1,16 +1,12 @@
 ---
 title: Masonry layout
-slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
-tags:
-  - CSS
-  - CSS Grid
-  - Experimental
-  - masonry
+slug: Web/CSS/CSS_grid_layout/Masonry_layout
+page-type: guide
 ---
 
 {{CSSRef}}
 
-Level 3 of the [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is, and how to use it.
+Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is and how to use it.
 
 > **Warning:** This feature is only implemented in Firefox, and can be enabled by setting the flag `layout.css.grid-template-masonry-value.enabled` to `true` in `about:config`, in order to allow testing and providing of feedback.
 

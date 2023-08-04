@@ -1,20 +1,13 @@
 ---
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getUint8
 ---
 
 {{JSRef}}
 
-The **`getUint8()`** method gets an unsigned 8-bit integer
-(unsigned byte) at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`getUint8()`** method of {{jsxref("DataView")}} instances reads 1 byte at the specified byte offset of this `DataView` and interprets it as an 8-bit unsigned integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getuint8.html")}}
 

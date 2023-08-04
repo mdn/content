@@ -1,15 +1,7 @@
 ---
 title: Ember app structure and componentization
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization
-tags:
-  - Beginner
-  - Components
-  - Ember
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -56,7 +48,7 @@ In the last article we set up a new Ember project, then added and configured our
 
 The landing page HTML of our application is defined in `app/templates/application.hbs`. This already exists, and its contents currently look like so:
 
-```html
+```hbs
 \{{!-- The following component displays Ember's default welcome message. --}}
 <WelcomePage />
 \{{!-- Feel free to remove this! --}}
@@ -75,8 +67,7 @@ However, we don't want this. Instead, we want it to contain the TodoMVC app stru
     class="new-todo"
     aria-label="What needs to be done?"
     placeholder="What needs to be done?"
-    autofocus
-  >
+    autofocus />
 </section>
 ```
 
@@ -95,11 +86,10 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
     class="new-todo"
     aria-label="What needs to be done?"
     placeholder="What needs to be done?"
-    autofocus
-  >
+    autofocus />
 
   <section class="main">
-    <input id="mark-all-complete" class="toggle-all" type="checkbox">
+    <input id="mark-all-complete" class="toggle-all" type="checkbox" />
     <label for="mark-all-complete">Mark all as complete</label>
 
     <ul class="todo-list">
@@ -108,17 +98,15 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
           <input
             aria-label="Toggle the completion of this todo"
             class="toggle"
-            type="checkbox"
-          >
+            type="checkbox" />
           <label>Buy Movie Tickets</label>
           <button
             type="button"
             class="destroy"
-            title="Remove this todo"
-          ></button>
+            title="Remove this todo"></button>
         </div>
 
-        <input autofocus class="edit" value="Todo Text">
+        <input autofocus class="edit" value="Todo Text" />
       </li>
 
       <li>
@@ -126,25 +114,21 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
           <input
             aria-label="Toggle the completion of this todo"
             class="toggle"
-            type="checkbox"
-          >
+            type="checkbox" />
           <label>Go to Movie</label>
           <button
             type="button"
             class="destroy"
-            title="Remove this todo"
-           ></button>
+            title="Remove this todo"></button>
         </div>
 
-        <input autofocus class="edit" value="Todo Text">
+        <input autofocus class="edit" value="Todo Text" />
       </li>
     </ul>
   </section>
 
   <footer class="footer">
-    <span class="todo-count">
-      <strong>0</strong> todos left
-    </span>
+    <span class="todo-count"> <strong>0</strong> todos left </span>
 
     <ul class="filters">
       <li>
@@ -154,9 +138,7 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
       </li>
     </ul>
 
-    <button type="button" class="clear-completed">
-      Clear Completed
-    </button>
+    <button type="button" class="clear-completed">Clear Completed</button>
   </footer>
 </section>
 ```
@@ -205,7 +187,7 @@ To create a component, we use the `ember generate component` command, followed b
 
    These will generate some new files, as shown in the resulting terminal output:
 
-   ```
+   ```plain
    installing component
      create app/components/header.hbs
      skip app/components/header.js
@@ -241,15 +223,14 @@ Now that we have all of our component structure files, we can cut and paste the 
      class="new-todo"
      aria-label="What needs to be done?"
      placeholder="What needs to be done?"
-     autofocus
-   >
+     autofocus />
    ```
 
 2. `todo-list.hbs` should be updated to contain this chunk of code:
 
    ```html
    <section class="main">
-     <input id="mark-all-complete" class="toggle-all" type="checkbox">
+     <input id="mark-all-complete" class="toggle-all" type="checkbox" />
      <label for="mark-all-complete">Mark all as complete</label>
 
      <ul class="todo-list">
@@ -269,17 +250,12 @@ Now that we have all of our component structure files, we can cut and paste the 
        <input
          aria-label="Toggle the completion of this todo"
          class="toggle"
-         type="checkbox"
-       >
+         type="checkbox" />
        <label>Buy Movie Tickets</label>
-       <button
-         type="button"
-         class="destroy"
-         title="Remove this todo"
-       ></button>
+       <button type="button" class="destroy" title="Remove this todo"></button>
      </div>
 
-     <input autofocus class="edit" value="Todo Text">
+     <input autofocus class="edit" value="Todo Text" />
    </li>
    ```
 
@@ -287,9 +263,7 @@ Now that we have all of our component structure files, we can cut and paste the 
 
    ```html
    <footer class="footer">
-     <span class="todo-count">
-       <strong>0</strong> todos left
-     </span>
+     <span class="todo-count"> <strong>0</strong> todos left </span>
 
      <ul class="filters">
        <li>
@@ -299,22 +273,19 @@ Now that we have all of our component structure files, we can cut and paste the 
        </li>
      </ul>
 
-     <button type="button" class="clear-completed">
-       Clear Completed
-     </button>
+     <button type="button" class="clear-completed">Clear Completed</button>
    </footer>
    ```
 
 5. Finally, the contents of `application.hbs` should be updated so that they call the appropriate components, like so:
 
-   ```html
+   ```hbs
    <section class="todoapp">
      <h1>todos</h1>
 
      <Header />
      <TodoList />
      <Footer />
-
    </section>
    ```
 
@@ -329,58 +300,3 @@ Notice how the todo items both say "Buy Movie Tickets" — this is because the s
 Great! Everything looks as it should. We have successfully refactored our HTML into components! In the next article we'll start looking into adding interactivity to our Ember application.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

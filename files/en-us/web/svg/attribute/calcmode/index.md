@@ -1,11 +1,7 @@
 ---
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#CalcModeAttribute
 ---
 
@@ -18,7 +14,6 @@ The default mode is `linear`, however if the attribute does not support linear i
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 

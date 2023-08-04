@@ -1,11 +1,7 @@
 ---
 title: <line>
 slug: Web/SVG/Element/line
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.line
 ---
 
@@ -16,7 +12,11 @@ The **`<line>`** element is an SVG basic shape used to create a line connecting 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

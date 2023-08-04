@@ -1,12 +1,7 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-image-outset
 ---
 
@@ -27,10 +22,10 @@ border-image-outset: 1rem;
 /* <number> value */
 border-image-outset: 1.5;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-outset: 1 1.2;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-image-outset: 30px 2 45px;
 
 /* top | right | bottom | left */
@@ -103,5 +98,5 @@ The `border-image-outset` property may be specified as one, two, three, or four 
 
 ## See also
 
-- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

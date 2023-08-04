@@ -1,14 +1,7 @@
 ---
 title: row-gap
 slug: Web/CSS/row-gap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - row-gap
+page-type: css-property
 browser-compat: css.properties.row-gap
 ---
 
@@ -137,4 +130,4 @@ Note that `grid-row-gap` is an alias for this property.
 ## See also
 
 - Related CSS properties: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

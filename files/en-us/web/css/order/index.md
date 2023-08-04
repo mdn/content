@@ -1,12 +1,7 @@
 ---
 title: order
 slug: Web/CSS/order
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.order
 ---
 
@@ -76,10 +71,22 @@ This example uses CSS to create a classic two-sidebar layout surrounding a conte
 #### CSS
 
 ```css
-main { display: flex;  text-align:center; }
-main > article { flex:1;        order: 2; }
-main > nav     { width: 200px;  order: 1; }
-main > aside   { width: 200px;  order: 3; }
+main {
+  display: flex;
+  text-align: center;
+}
+main > article {
+  flex: 1;
+  order: 2;
+}
+main > nav {
+  width: 200px;
+  order: 1;
+}
+main > aside {
+  width: 200px;
+  order: 3;
+}
 ```
 
 #### Result
@@ -96,6 +103,6 @@ main > aside   { width: 200px;  order: 3; }
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS Grid Guide: _[CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- CSS Grid Guide: _[CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_

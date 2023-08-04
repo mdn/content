@@ -1,15 +1,10 @@
 ---
-title: AudioListener.setOrientation()
+title: "AudioListener: setOrientation() method"
+short-title: setOrientation()
 slug: Web/API/AudioListener/setOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioListener
-  - Method
-  - Reference
-  - Web Audio API
-  - setOrientation
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.AudioListener.setOrientation
 ---
 
@@ -19,8 +14,8 @@ The `setOrientation()` method of the {{ domxref("AudioListener") }} interface de
 
 It consists of two direction vectors:
 
-- The _front vector_, defined by the three unitless parameters `x`, `y` and `z`, describes the direction of the face of the listener, that is the direction the nose of the person is pointing towards. The front vector's default value is `(0,` `0,` `-1)`.
-- The _up vector_, defined by three unitless parameters `xUp`, `yUp` and `zUp`, describes the direction of the top of the listener's head. The up vector's default value is `(0,` `1,` `0)`.
+- The _front vector_, defined by the three unitless parameters `x`, `y` and `z`, describes the direction of the face of the listener, that is the direction the nose of the person is pointing towards. The front vector's default value is `(0, 0, -1)`.
+- The _up vector_, defined by three unitless parameters `xUp`, `yUp` and `zUp`, describes the direction of the top of the listener's head. The up vector's default value is `(0, 1, 0)`.
 
 The two vectors must be separated by an angle of 90° — in linear analysis terms, they must be perpendicular to each other.
 
@@ -51,7 +46,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

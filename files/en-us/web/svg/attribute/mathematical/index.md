@@ -1,10 +1,9 @@
 ---
 title: mathematical
 slug: Web/SVG/Attribute/mathematical
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.mathematical
 ---
 

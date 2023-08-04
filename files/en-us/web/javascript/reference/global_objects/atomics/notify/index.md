@@ -1,21 +1,16 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.notify
 ---
 
 {{JSRef}}
 
-The static **`Atomics.notify()`**
+The **`Atomics.notify()`** static
 method notifies up some agents that are sleeping in the wait queue.
 
-> **Note:** This operation works with a shared {{jsxref("Int32Array")}}
-> only.
+> **Note:** This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 > It will return `0` on non-shared `ArrayBuffer` objects.
 
 ## Syntax
@@ -27,7 +22,7 @@ Atomics.notify(typedArray, index, count)
 ### Parameters
 
 - `typedArray`
-  - : A shared {{jsxref("Int32Array")}}.
+  - : An {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 - `index`
   - : The position in the `typedArray` to wake up on.
 - `count` {{optional_inline}}
@@ -41,10 +36,10 @@ Atomics.notify(typedArray, index, count)
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not a
-  {{jsxref("Int32Array")}}.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds in the
-  `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Examples
 
@@ -87,3 +82,4 @@ Atomics.notify(int32, 0, 1);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.wait()")}}
+- {{jsxref("Atomics.waitAsync()")}}

@@ -1,20 +1,8 @@
 ---
-title: XMLHttpRequest.response
+title: "XMLHttpRequest: response property"
+short-title: response
 slug: Web/API/XMLHttpRequest/response
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - Fetching Content
-  - Fetching Data
-  - Loading Data
-  - Property
-  - Read-only
-  - Reading Data
-  - Reference
-  - Response
-  - Server
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.response
 ---
 
@@ -53,7 +41,7 @@ The content is handled as raw text data (since nothing here is overriding the de
 {{domxref("XMLHttpRequest.responseType", "responseType")}}).
 
 ```js
-const url = 'somePage.html'; //A local page
+const url = "somePage.html"; //A local page
 
 function load(url, callback) {
   const xhr = new XMLHttpRequest();
@@ -62,10 +50,10 @@ function load(url, callback) {
     if (xhr.readyState === 4) {
       callback(xhr.response);
     }
-  }
+  };
 
-  xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.open("GET", url, true);
+  xhr.send("");
 }
 ```
 

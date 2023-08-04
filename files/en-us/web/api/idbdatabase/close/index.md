@@ -1,15 +1,8 @@
 ---
-title: IDBDatabase.close()
+title: "IDBDatabase: close() method"
+short-title: close()
 slug: Web/API/IDBDatabase/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBDatabase.close
 ---
 
@@ -77,4 +70,4 @@ DBOpenRequest.onsuccess = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

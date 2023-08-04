@@ -1,15 +1,8 @@
 ---
-title: AudioContext.close()
+title: "AudioContext: close() method"
+short-title: close()
 slug: Web/API/AudioContext/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - close
 browser-compat: api.AudioContext.close
 ---
 
@@ -40,11 +33,11 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 ```js
 stopBtn.onclick = () => {
   audioCtx.close().then(() => {
-    startBtn.removeAttribute('disabled');
-    susresBtn.setAttribute('disabled', 'disabled');
-    stopBtn.setAttribute('disabled', 'disabled');
+    startBtn.removeAttribute("disabled");
+    susresBtn.setAttribute("disabled", "disabled");
+    stopBtn.setAttribute("disabled", "disabled");
   });
-}
+};
 ```
 
 ## Specifications

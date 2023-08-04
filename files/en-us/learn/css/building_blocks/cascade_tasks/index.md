@@ -1,12 +1,7 @@
 ---
-title: 'Test your skills: The Cascade'
+title: "Test your skills: The Cascade"
 slug: Learn/CSS/Building_blocks/Cascade_tasks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Cascade
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}
@@ -47,7 +42,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://raw.githubusercontent.com/mdn/css-examples/main/learn/tasks/cascade/cascadelayer-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascadelayer-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

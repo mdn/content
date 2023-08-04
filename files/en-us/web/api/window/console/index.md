@@ -1,14 +1,8 @@
 ---
-title: Window.console
+title: "Window: console property"
+short-title: console
 slug: Web/API/Window/console
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - console
 spec-urls: https://console.spec.whatwg.org/
 ---
 
@@ -32,7 +26,7 @@ The next example logs an object to the console, with the object's fields expanda
 console.dir(someObject);
 ```
 
-See {{SectionOnPage("/en-US/docs/Web/API/console", "Usage")}} for more thorough examples.
+For more examples, see the [Examples](/en-US/docs/Web/API/console#examples) section of the [`console`](/en-US/docs/Web/API/console) article.
 
 ## Specifications
 

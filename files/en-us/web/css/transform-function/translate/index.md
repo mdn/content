@@ -1,12 +1,7 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.translate
 ---
 
@@ -132,7 +127,7 @@ transform: translate(30%, 50%);
 ### Formal syntax
 
 ```css
-translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}?)
+translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
 ```
 
 ## Examples
@@ -157,7 +152,8 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Equal to: translateX(10px) or translate(10px, 0) */
+  /* Equal to: translateX(10px) or translate(10px, 0) */
+  transform: translate(10px);
   background-color: pink;
 }
 ```
@@ -207,3 +203,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

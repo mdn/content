@@ -1,17 +1,7 @@
 ---
 title: Demos of open web technologies
 slug: Web/Demos
-tags:
-  - 2D
-  - 3D
-  - Audio
-  - CSS
-  - Canvas
-  - Design
-  - HTML
-  - SVG
-  - VR
-  - Video
+page-type: landing-page
 ---
 
 Mozilla supports a wide variety of exciting open web technologies, and we encourage their use. This page offers links to interesting demonstrations of these technologies.
@@ -95,4 +85,4 @@ If you know of a good demonstration or application of open web technology, pleas
 - [Photo editor](https://ondras.github.io/photo/)
 - [Coral generator](https://ondras.github.io/coral/)
 - [Raytracer](https://nerget.com/rayjs-mt/rayjs.html)
-- [Fibonacci](https://mdn.github.io/fibonacci-worker/)
+- [Fibonacci](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/)

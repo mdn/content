@@ -1,14 +1,7 @@
 ---
-title: 'ARIA: listbox role'
+title: "ARIA: listbox role"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
-tags:
-  - ARIA
-  - ARIA role
-  - Accessibility
-  - Reference
-  - listbox role
-  - composite widget role
-  - NeedsContent
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#listbox
   - https://w3c.github.io/aria-practices/#Listbox
@@ -67,8 +60,6 @@ When the listbox role is added to an element, or such an element becomes visible
 
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
   - : A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".
-
-For further details and a full list of ARIA states and properties see the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role.
 
 ### Keyboard interactions
 
@@ -158,7 +149,7 @@ When the user selects an option, the following must occur:
 
 When the user clicks on an option, hits <kbd>Space</kbd> when focused on an option, or otherwise toggles the state of an option, the following must occur:
 
-1. Toggle the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) state of the currently focused option, changing the state of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to true if it was false or false if it was true.
+1. Toggle the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) state of the currently focused option, changing the state of the `aria-selected` to true if it was false or false if it was true.
 2. Change the appearance of the option to reflect its selected state
 3. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
 
@@ -166,23 +157,29 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 
 ## Examples
 
-### Example 1: A single select listbox that uses [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+### Example 1: A single select listbox that uses `aria-activedescendant`
 
-The snippet below shows how the listbox role is added directly into the HTML source code.
+The snippet below, using [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant), shows how the listbox role is added directly into the HTML source code.
 
 ```html
 <p id="listbox1label" role="label">Select a color:</p>
-<div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
   onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
-    <div role="option" id="listbox1-1" class="selected" aria-selected="true">Green</div>
-    <div role="option" id="listbox1-2">Orange</div>
-    <div role="option" id="listbox1-3">Red</div>
-    <div role="option" id="listbox1-4">Blue</div>
-    <div role="option" id="listbox1-5">Violet</div>
-    <div role="option" id="listbox1-6">Periwinkle</div>
+  <div role="option" id="listbox1-1" class="selected" aria-selected="true">
+    Green
+  </div>
+  <div role="option" id="listbox1-2">Orange</div>
+  <div role="option" id="listbox1-3">Red</div>
+  <div role="option" id="listbox1-4">Blue</div>
+  <div role="option" id="listbox1-5">Violet</div>
+  <div role="option" id="listbox1-6">Periwinkle</div>
 </div>
 ```
 
@@ -191,12 +188,12 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 ```html
 <label for="listbox1">Select a color:</label>
 <select id="listbox1">
-   <option selected>Green</option>
-   <option>Orange</option>
-   <option>Red</option>
-   <option>Blue</option>
-   <option>Violet</option>
-   <option>Periwinkle</option>
+  <option selected>Green</option>
+  <option>Orange</option>
+  <option>Red</option>
+  <option>Blue</option>
+  <option>Violet</option>
+  <option>Periwinkle</option>
 </select>
 ```
 
@@ -227,7 +224,7 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [ARIA Best Practices – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
+- [ARIA Best Practices – Listbox](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)
 - [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
 
 <section id="Quick_links">

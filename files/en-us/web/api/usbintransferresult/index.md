@@ -2,15 +2,8 @@
 title: USBInTransferResult
 slug: Web/API/USBInTransferResult
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBInTransferResult
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBInTransferResult
 ---
 
@@ -23,7 +16,7 @@ The `USBInTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebU
 - {{domxref("USBInTransferResult.USBInTransferResult", "USBInTransferResult()")}} {{Experimental_Inline}}
   - : Creates a new `USBInTransferResult` object with the provided `status` and `data` fields.
 
-## Properties
+## Instance properties
 
 - {{domxref("USBInTransferResult.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a `DataView` object containing the data received from the USB device, if any.

@@ -1,25 +1,8 @@
 ---
-title: HTMLVideoElement.videoHeight
+title: "HTMLVideoElement: videoHeight property"
+short-title: videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLVideoElement
-  - Intrinsic Height
-  - Intrinsic Width
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Dimensions
-  - dimension
-  - height
-  - size
-  - videoHeight
-  - videoWidth
 browser-compat: api.HTMLVideoElement.videoHeight
 ---
 
@@ -55,15 +38,19 @@ This example creates a handler for the {{domxref("HTMLVideoElement.resize", "res
 ```js
 let v = document.getElementById("myVideo");
 
-v.addEventListener("resize", (ev) => {
-  let w = v.videoWidth;
-  let h = v.videoHeight;
+v.addEventListener(
+  "resize",
+  (ev) => {
+    let w = v.videoWidth;
+    let h = v.videoHeight;
 
-  if (w && h) {
-    v.style.width = w;
-    v.style.height = h;
-  }
-}, false);
+    if (w && h) {
+      v.style.width = w;
+      v.style.height = h;
+    }
+  },
+  false,
+);
 ```
 
 Note that this only applies the change if both the `videoWidth` and the `videoHeight` are non-zero.

@@ -1,15 +1,8 @@
 ---
-title: Document.getElementsByClassName()
+title: "Document: getElementsByClassName() method"
+short-title: getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Gecko
-  - HTML
-  - Method
-  - Reference
 browser-compat: api.Document.getElementsByClassName
 ---
 
@@ -50,27 +43,27 @@ A live {{domxref("HTMLCollection")}} of found elements.
 Get all elements that have a class of 'test':
 
 ```js
-document.getElementsByClassName('test')
+document.getElementsByClassName("test");
 ```
 
 Get all elements that have both the 'red' and 'test' classes:
 
 ```js
-document.getElementsByClassName('red test')
+document.getElementsByClassName("red test");
 ```
 
 Get all elements that have a class of 'test', inside of an element that has the ID of
 'main':
 
 ```js
-document.getElementById('main').getElementsByClassName('test')
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 Get the first element with a class of 'test', or `undefined` if there is no
 matching element:
 
 ```js
-document.getElementsByClassName('test')[0]
+document.getElementsByClassName("test")[0];
 ```
 
 We can also use methods of Array.prototype on any {{domxref("HTMLCollection")}} by
@@ -78,10 +71,10 @@ passing the `HTMLCollection` as the method's _this_ value. Here
 we'll find all div elements that have a class of 'test':
 
 ```js
-const testElements = document.getElementsByClassName('test');
+const testElements = document.getElementsByClassName("test");
 const testDivs = Array.prototype.filter.call(
   testElements,
-  (testElement) => testElement.nodeName === 'DIV',
+  (testElement) => testElement.nodeName === "DIV",
 );
 ```
 
@@ -132,14 +125,14 @@ elements with ALL of the classNames specified are selected.
 
 ```js
 // getElementsByClassName only selects elements that have both given classes
-const allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
+const allOrangeJuiceByClass = document.getElementsByClassName("orange juice");
 let result = "document.getElementsByClassName('orange juice')";
 for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
   result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
 }
 
 // querySelector only selects full complete matches
-const allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
+const allOrangeJuiceQuery = document.querySelectorAll(".orange.juice");
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
 for (let i = 0; i < allOrangeJuiceQuery.length; i++) {
   result += `\n  ${allOrangeJuiceQuery[i].textContent}`;

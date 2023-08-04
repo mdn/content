@@ -1,10 +1,8 @@
 ---
-title: 'IDBTransaction: abort event'
+title: "IDBTransaction: abort event"
+short-title: abort
 slug: Web/API/IDBTransaction/abort_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.IDBTransaction.abort_event
 ---
 
@@ -27,8 +25,8 @@ This non-cancelable event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', (event) => { });
-onabort = (event) => { };
+addEventListener("abort", (event) => {});
+onabort = (event) => {};
 ```
 
 ## Event type
@@ -47,35 +45,37 @@ This example opens a database (creating the database if it does not exist), then
 
 ```js
 // Open the database
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('Error creating database');
+    console.log("Error creating database");
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
-  const transaction = db.transaction(['toDoList'], 'readwrite');
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // add a listener for `abort`
-  transaction.addEventListener('abort', () => {
-    console.log('Transaction was aborted');
+  transaction.addEventListener("abort", () => {
+    console.log("Transaction was aborted");
   });
 
   // abort the transaction
@@ -83,39 +83,41 @@ DBOpenRequest.onsuccess = (event) => {
 };
 ```
 
-The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.onabort", "onabort")}} property:
+The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.abort_event", "onabort")}} property:
 
 ```js
 // Open the database
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('Error creating database');
+    console.log("Error creating database");
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
-  const transaction = db.transaction(['toDoList'], 'readwrite');
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // add a listener for `abort`
   transaction.onabort = (event) => {
-    console.log('Transaction was aborted');
+    console.log("Transaction was aborted");
   };
 
   // abort the transaction

@@ -1,20 +1,13 @@
 ---
 title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.dotAll
 ---
 
 {{JSRef}}
 
-The **`dotAll`** accessor property indicates whether or not the `s` flag is used with the regular expression.
+The **`dotAll`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `s` flag is used with this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
 
@@ -36,22 +29,23 @@ The set accessor of `dotAll` is `undefined`. You cannot change this property dir
 ### Using dotAll
 
 ```js
-const str1 = 'bar\nexample foo example';
+const str1 = "bar\nexample foo example";
 
 const regex1 = /bar.example/s;
 
-console.log(regex1.dotAll); // Output: true
+console.log(regex1.dotAll); // true
 
-console.log(str1.replace(regex1, '')); // Output: foo example
+console.log(str1.replace(regex1, "")); // foo example
 
-const str2 = 'bar\nexample foo example';
+const str2 = "bar\nexample foo example";
 
 const regex2 = /bar.example/;
 
-console.log(regex2.dotAll); // Output: false
+console.log(regex2.dotAll); // false
 
-console.log(str2.replace(regex2,'')); // Output: bar
-                                      //         example foo example
+console.log(str2.replace(regex2, ""));
+// bar
+// example foo example
 ```
 
 ## Specifications
@@ -64,7 +58,7 @@ console.log(str2.replace(regex2,'')); // Output: bar
 
 ## See also
 
-- [Polyfill of `dotAll` `RegExp` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of the `dotAll` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{JSxRef("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}

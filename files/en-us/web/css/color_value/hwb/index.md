@@ -1,14 +1,7 @@
 ---
 title: hwb()
 slug: Web/CSS/color_value/hwb
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - hwb
+page-type: css-function
 browser-compat: css.types.color.hwb
 ---
 
@@ -27,17 +20,27 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 
 ### Values
 
-> **Note:** The HWB function does **not** use commas to separate its values as with previous color functions and the optional alpha value needs to be preceded with a forward slash (`/`) if specified.
+Functional notation: `hwb(H W B[ / A])`
 
-- Functional notation: `hwb(H W B[ / A])`
+- `H`
 
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#typedef-hue) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none`, which represents the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 
-    `W` (whiteness) specifies the amount of white to mix in, as a percentage from 0% (no whiteness) to 100% (full whiteness).
+- `W`, `B`
 
-    `B` (blackness) specifies the amount of black to mix in, also from 0% (no blackness) to 100% (full blackness).
+  - : Each as a {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`, which represent whiteness and blackness, respectively. They specify the amount of white and black to mix in, from `0%` (no whiteness or blackness) to `100%` (full whiteness or blackness).
 
-    `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+    If `W + B = 100%`, it defines some shade of gray. If `W + B > 100%`, `W` and `B` are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
+
+- `A` {{optional_inline}}
+
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Specifications
 
@@ -46,3 +49,7 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{CSSXref("&lt;color&gt;")}}: For a list of all color notations

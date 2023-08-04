@@ -1,13 +1,7 @@
 ---
-title: 'Test your skills: WAI-ARIA'
+title: "Test your skills: WAI-ARIA"
 slug: Learn/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA
-tags:
-  - Accessibility
-  - Assessment
-  - Beginner
-  - Learn
-  - WAI-ARIA
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

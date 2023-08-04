@@ -1,14 +1,8 @@
 ---
-title: AudioNode.numberOfOutputs
+title: "AudioNode: numberOfOutputs property"
+short-title: numberOfOutputs
 slug: Web/API/AudioNode/numberOfOutputs
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - numberOfOutputs
 browser-compat: api.AudioNode.numberOfOutputs
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.clear
 ---
 
@@ -16,19 +11,17 @@ The **`clear`** [CSS](/en-US/docs/Web/CSS) property sets whether an element must
 
 {{EmbedInteractiveExample("pages/css/clear.html")}}
 
-When applied to non-floating blocks, it moves the [border edge](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area) of the element down until it is below the [margin edge](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) of all relevant floats. The non-floated block's top margin collapses.
+When applied to non-floating blocks, it moves the [border edge](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area) of the element down until it is below the [margin edge](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) of all relevant floats. The non-floated block's top margin collapses.
 
 Vertical margins between two floated elements on the other hand will not collapse. When applied to floating elements, the margin edge of the bottom element is moved below the margin edge of all relevant floats. This affects the position of later floats, since later floats cannot be positioned higher than earlier ones.
 
 The floats that are relevant to be cleared are the earlier floats within the same [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
-> **Note:** If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called **clearfix**, and one way to do it is to add `clear` to a replaced {{cssxref("::after")}} [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) on it.
+> **Note:** If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, set the value of the element's [`display`](/en-US/docs/Web/CSS/display) property to [`flow-root`](/en-US/docs/Web/CSS/display#flow-root).
 >
 > ```css
-> #container::after {
->   content: "";
->   display: block;
->   clear: both;
+> #container {
+>   display: flow-root;
 > }
 > ```
 
@@ -82,7 +75,10 @@ clear: unset;
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="left">This paragraph clears left.</p>
 </div>
@@ -125,7 +121,10 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="right">This paragraph clears right.</p>
 </div>
@@ -168,8 +167,15 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
+    ac dui.
+  </p>
+  <p class="red">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="both">This paragraph clears both.</p>
 </div>
 ```
@@ -215,4 +221,4 @@ p {
 
 ## See also
 
-- [CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

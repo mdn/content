@@ -1,11 +1,7 @@
 ---
-title: 'SyntaxError: for-in loop head declarations may not have initializers'
+title: "SyntaxError: for-in loop head declarations may not have initializers"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
-tags:
-  - Error
-  - JavaScript
-  - Strict Mode
-  - SyntaxError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -18,7 +14,7 @@ allowed in for-in loops in strict mode. In addition, lexical declarations with i
 
 ## Message
 
-```
+```plain
 SyntaxError: for-in loop variable declaration may not have an initializer. (V8-based)
 SyntaxError: for-in loop head declarations may not have initializers (Firefox)
 SyntaxError: a lexical declaration in the head of a for-in loop can't have an initializer (Firefox)

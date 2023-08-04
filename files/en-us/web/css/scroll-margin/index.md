@@ -1,15 +1,7 @@
 ---
 title: scroll-margin
 slug: Web/CSS/scroll-margin
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - margin
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scrollbar
-  - scrolling
+page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin
 ---
 
@@ -33,7 +25,7 @@ This property is a shorthand for the following CSS properties:
 ```css
 /* <length> values */
 scroll-margin: 10px;
-scroll-margin: 1em .5em 1em 1em;
+scroll-margin: 1em 0.5em 1em 1em;
 
 /* Global values */
 scroll-margin: inherit;
@@ -157,5 +149,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

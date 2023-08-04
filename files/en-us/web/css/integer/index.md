@@ -1,12 +1,7 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.integer
 ---
 
@@ -22,7 +17,7 @@ The `<integer>` data type consists of one or several decimal digits, 0 through 9
 
 ## Interpolation
 
-When animated, values of the `<integer>` data type are {{Glossary("interpolation", "interpolated")}} using discrete, whole steps. The calculation is done as if they were real, floating-point numbers; the discrete value is obtained using the [floor function](https://en.wikipedia.org/wiki/Floor_function). The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<integer>` data type are {{Glossary("interpolation", "interpolated")}} using discrete, whole steps. The calculation is done as if they were real, floating-point numbers; the discrete value is obtained using the [floor function](https://en.wikipedia.org/wiki/Floor_function). The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 

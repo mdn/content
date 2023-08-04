@@ -1,21 +1,15 @@
 ---
-title: Document.characterSet
+title: "Document: characterSet property"
+short-title: characterSet
 slug: Web/API/Document/characterSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Document.characterSet
 ---
 
 {{ ApiRef("DOM") }}
 
 The **`Document.characterSet`**
-read-only property returns the [character encoding](/en-US/docs/Glossary/character_encoding) of the
+read-only property returns the [character encoding](/en-US/docs/Glossary/Character_encoding) of the
 document that it's currently rendered with.
 
 > **Note:** A "character set" and a "character encoding" are related, but different. Despite the

@@ -1,12 +1,7 @@
 ---
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - header
+page-type: http-header
 spec-urls: https://httpwg.org/specs/rfc9110.html#field.proxy-authorization
 ---
 

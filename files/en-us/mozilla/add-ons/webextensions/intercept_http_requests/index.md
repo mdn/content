@@ -1,11 +1,7 @@
 ---
 title: Intercept HTTP requests
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-tags:
-  - Add-ons
-  - Extensions
-  - How-to
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -36,10 +32,7 @@ In that directory, create a file called "manifest.json" and add:
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "<all_urls>"
-  ],
+  "permissions": ["webRequest", "<all_urls>"],
 
   "background": {
     "scripts": ["background.js"]
@@ -54,10 +47,9 @@ function logURL(requestDetails) {
   console.log(`Loading: ${requestDetails.url}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 You use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to call the `logURL()` function just before starting the request. The `logURL()` function grabs the URL of the request from the event object and logs it to the browser console.
@@ -69,14 +61,14 @@ To test it:
 - Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
 - Enable _Show Content Messages_ in the menu:
 
-  ![Browser console menu : Show Content Messages](browser_console_show_content_messages.png)
+  ![Browser console menu: Show Content Messages](browser_console_show_content_messages.png)
 
 - Open some web pages.
 
 In the Browser Console, you should see the URLs for any resources the browser requests.
 For example, this screenshot shows the URLs from loading a Wikipedia page:
 
-![Browser console menu : URLs from extension](browser_console_url_from_extension.png)
+![Browser console menu: URLs from extension](browser_console_url_from_extension.png)
 
 <!-- {{EmbedYouTube("X3rMgkRkB1Q")}} -->
 
@@ -86,7 +78,6 @@ Now use `webRequest` to redirect HTTP requests. First, replace "manifest.json" w
 
 ```json
 {
-
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -101,7 +92,6 @@ Now use `webRequest` to redirect HTTP requests. First, replace "manifest.json" w
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -115,7 +105,8 @@ Next, replace "background.js" with this:
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+const targetUrl =
+  "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
@@ -123,14 +114,14 @@ function redirect(requestDetails) {
     return;
   }
   return {
-    redirectUrl: targetUrl
+    redirectUrl: targetUrl,
   };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -179,7 +170,8 @@ Replace "background.js" with code like this:
 ```js
 let targetPage = "http://useragentstring.com/*";
 
-let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
   e.requestHeaders.forEach((header) => {
@@ -187,13 +179,13 @@ function rewriteUserAgentHeader(e) {
       header.value = ua;
     }
   });
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 

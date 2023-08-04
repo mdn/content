@@ -1,14 +1,12 @@
 ---
 title: Inline formatting context
 slug: Web/CSS/Inline_formatting_context
-tags:
-  - CSS
-  - Formatting context
-  - Guide
-  - Reference
+page-type: guide
 ---
 
-This article explains the inline formatting context
+{{CSSRef}}
+
+This article explains the inline formatting context.
 
 ## Core concepts
 
@@ -21,7 +19,7 @@ In the example below, the two ({{HTMLElement("div")}}) elements with the black b
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
 
-Boxes forming a line are contained by a rectangular area called a line box. This box will be large enough to contain all of the inline boxes in that line; when there is no more room in the inline direction another line will be created. Therefore a paragraph is a set of inline line boxes, stacked in the block direction.
+Boxes forming a line are contained by a rectangular area called a line box. This box will be large enough to contain all of the inline boxes in that line; when there is no more room in the inline direction another line will be created. Therefore, a paragraph is a set of inline line boxes, stacked in the block direction.
 
 When an inline box is split, margins, borders, and padding have no visual effect where the split occurs. In the next example there is a ({{HTMLElement("span")}}) element wrapping a set of words wrapping onto two lines. The border on the `<span>` breaks at the wrapping point.
 
@@ -31,7 +29,7 @@ Margins, borders, and padding in the inline direction are respected. In the exam
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
-> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
+> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ## Alignment in the block direction
 

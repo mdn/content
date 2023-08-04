@@ -1,13 +1,10 @@
 ---
 title: Performance fundamentals
 slug: Web/Performance/Fundamentals
-tags:
-  - Apps
-  - Firefox
-  - Gecko
-  - Guide
-  - Performance
+page-type: guide
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
 
 Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.
 
@@ -105,7 +102,7 @@ Another problem that can delay startup is idle time, caused by waiting for respo
 
 > **Note:** For much more information on improving startup performance, read [Optimizing startup performance](/en-US/docs/Web/Performance/Optimizing_startup_performance).
 
-On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) for a guide as to how.
+On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation) for a guide about using service workers for offline and background sync capabilities.
 
 ### Frame rate
 
@@ -113,7 +110,7 @@ The first important thing for high frame rate is to choose the right tool. Use H
 
 For content drawn using Canvas, it's up to the developer to hit frame rate targets: they have direct control over what's drawn.
 
-For HTML and CSS content, the path to high frame rate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling frame rate over a target. CSS [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
+For HTML and CSS content, the path to high frame rate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling frame rate over a target. CSS [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
 
 Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:
 
@@ -136,7 +133,7 @@ The following practical tips will help improve one or more of the Application pe
 
 #### Use CSS animations and transitions
 
-Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
+Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
 
 CSS animations give you very granular control over your effects using [keyframes](/en-US/docs/Web/CSS/@keyframes), and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.
 
@@ -144,11 +141,11 @@ If you want to create animations on the fly or modify them in [JavaScript](/en-U
 
 #### Use CSS transforms
 
-Instead of tweaking absolute positioning and fiddling with all that math yourself, use the {{cssxref("transform")}} CSS property to adjust the position, scale, and so forth of your content. The reason is, once again, hardware acceleration. The browser can do these tasks on your GPU, letting the CPU handle other things.
+Instead of tweaking absolute positioning and fiddling with all that math yourself, use the {{cssxref("transform")}} CSS property to adjust the position, scale, and so forth of your content. Alternatively, you can use the individual transformation properties of {{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}. The reason is, once again, hardware acceleration. The browser can do these tasks on your GPU, letting the CPU handle other things.
 
-In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](https://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
+In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](https://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) (2012) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
 
-> **Note:** You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance, but can also have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
+> **Note:** You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance. When overused, it can have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
 
 #### Use `requestAnimationFrame()` instead of `setInterval()`
 
@@ -164,7 +161,7 @@ As old-school, accessibility-aware Web developers we love click events since the
 
 One big performance issue we found in HTML apps was that moving lots of [DOM](/en-US/docs/Web/API/Document_Object_Model) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
 
-When, for example, you have a long list of elements (let's say tweets), don't move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn't mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren't visible. The same trick applies in games to sprites: if they aren't currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.
+When, for example, you have a long list of elements (let's say tweets), don't move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn't mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren't visible. The same trick applies in games to sprites: if they aren't currently on the screen, there is no need to poll them. Instead, re-use elements that scroll off-screen as new ones coming in.
 
 ## General application performance analysis
 

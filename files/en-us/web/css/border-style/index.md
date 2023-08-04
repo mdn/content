@@ -1,12 +1,7 @@
 ---
 title: border-style
 slug: Web/CSS/border-style
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-style
 ---
 
@@ -89,9 +84,9 @@ Each value is a keyword chosen from the list below.
     - `ridge`
       - : Displays a border with an extruded appearance. It is the opposite of `groove`.
     - `inset`
-      - : Displays a border that makes the element appear embedded. It is the opposite of `outset`. When applied to a table cell with {{cssxref("border-collapse")}} set to `collapsed`, this value behaves like `groove`.
+      - : Displays a border that makes the element appear embedded. It is the opposite of `outset`. When applied to a table cell with {{cssxref("border-collapse")}} set to `collapsed`, this value behaves like `ridge`.
     - `outset`
-      - : Displays a border that makes the element appear embossed. It is the opposite of `inset`. When applied to a table cell with {{cssxref("border-collapse")}} set to `collapsed`, this value behaves like `ridge`.
+      - : Displays a border that makes the element appear embossed. It is the opposite of `inset`. When applied to a table cell with {{cssxref("border-collapse")}} set to `collapsed`, this value behaves like `groove`.
 
 ## Formal definition
 

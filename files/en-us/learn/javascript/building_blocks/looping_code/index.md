@@ -1,20 +1,7 @@
 ---
 title: Looping code
 slug: Learn/JavaScript/Building_blocks/Looping_code
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - DO
-  - Guide
-  - JavaScript
-  - Learn
-  - Loop
-  - break
-  - continue
-  - for
-  - l10n:priority
-  - while
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
@@ -48,8 +35,7 @@ Loops are all about doing the same thing over and over again. Often, the code wi
 Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
 
 ```html hidden
-<button>Update</button>
-<canvas></canvas>
+<button>Update</button> <canvas></canvas>
 ```
 
 ```css hidden
@@ -79,30 +65,36 @@ button {
 Here's the JavaScript code that implements this example:
 
 ```js
-const btn = document.querySelector('button');
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const btn = document.querySelector("button");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   canvas.width = document.documentElement.clientWidth;
   canvas.height = document.documentElement.clientHeight;
-})
+});
 
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
-    ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.arc(
+      random(canvas.width),
+      random(canvas.height),
+      random(50),
+      0,
+      2 * Math.PI,
+    );
     ctx.fill();
   }
 }
 
-btn.addEventListener('click',draw);
+btn.addEventListener("click", draw);
 ```
 
 ### With and without a loop
@@ -112,8 +104,14 @@ You don't have to understand all the code for now, but let's look at the part of
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
-  ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
+  ctx.arc(
+    random(canvas.width),
+    random(canvas.height),
+    random(50),
+    0,
+    2 * Math.PI,
+  );
   ctx.fill();
 }
 ```
@@ -128,8 +126,14 @@ If we weren't using a loop here, we'd have to repeat the following code for ever
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255,0,0,0.5)';
-ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+ctx.fillStyle = "rgba(255,0,0,0.5)";
+ctx.arc(
+  random(canvas.width),
+  random(canvas.height),
+  random(50),
+  0,
+  2 * Math.PI,
+);
 ctx.fill();
 ```
 
@@ -147,7 +151,7 @@ But there are other collections in JavaScript as well, including {{jsxref("Set")
 The basic tool for looping through a collection is the {{jsxref("statements/for...of","for...of")}} loop:
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (const cat of cats) {
   console.log(cat);
@@ -171,7 +175,7 @@ function toUpper(string) {
   return string.toUpperCase();
 }
 
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 const upperCats = cats.map(toUpper);
 
@@ -181,7 +185,7 @@ console.log(upperCats);
 
 Here we pass a function into {{jsxref("Array.prototype.map()","cats.map()")}}, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array. In this case the function we provide converts the item to uppercase, so the resulting array contains all our cats in uppercase:
 
-```
+```js-nolint
 [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
 ```
 
@@ -189,10 +193,10 @@ You can use {{jsxref("Array.prototype.filter()","filter()")}} to test each item 
 
 ```js
 function lCat(cat) {
-  return cat.startsWith('L');
+  return cat.startsWith("L");
 }
 
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 const filtered = cats.filter(lCat);
 
@@ -203,7 +207,7 @@ console.log(filtered);
 This looks a lot like `map()`, except the function we pass in returns a [boolean](/en-US/docs/Learn/JavaScript/First_steps/Variables#booleans): if it returns `true`, then the item is included in the new array.
 Our function tests that the item starts with the letter "L", so the result is an array containing only cats whose names start with "L":
 
-```
+```js-nolint
 [ "Leopard", "Lion" ]
 ```
 
@@ -211,9 +215,9 @@ Note that `map()` and `filter()` are both often used with _function expressions_
 Using function expressions we could rewrite the example above to be much more compact:
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
-const filtered = cats.filter((cat) => cat.startsWith('L'));
+const filtered = cats.filter((cat) => cat.startsWith("L"));
 console.log(filtered);
 // [ "Leopard", "Lion" ]
 ```
@@ -221,10 +225,10 @@ console.log(filtered);
 ## The standard for loop
 
 In the "drawing circles" example above, you don't have a collection of items to loop through: you really just want to run the same code 100 times.
-In a case like that you should use the {{jsxref("statements/for","for")}} loop.
+In a case like that, you should use the {{jsxref("statements/for","for")}} loop.
 This has the following syntax:
 
-```js
+```js-nolint
 for (initializer; condition; final-expression) {
   // code to run
 }
@@ -233,7 +237,7 @@ for (initializer; condition; final-expression) {
 Here we have:
 
 1. The keyword `for`, followed by some parentheses.
-2. Inside the parentheses we have three items, separated by semi-colons:
+2. Inside the parentheses we have three items, separated by semicolons:
 
    1. An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run.
       It is also sometimes referred to as a **counter variable**.
@@ -255,21 +259,21 @@ Let's look at a real example so we can visualize what these do more clearly.
 ```
 
 ```js
-const results = document.querySelector('#results');
+const results = document.querySelector("#results");
 
 function calculate() {
   for (let i = 1; i < 10; i++) {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += '\nFinished!';
+  results.textContent += "\nFinished!";
 }
 
-const calculateBtn = document.querySelector('#calculate');
-const clearBtn = document.querySelector('#clear');
+const calculateBtn = document.querySelector("#calculate");
+const clearBtn = document.querySelector("#clear");
 
-calculateBtn.addEventListener('click', calculate);
-clearBtn.addEventListener('click', () => results.textContent = '');
+calculateBtn.addEventListener("click", calculate);
+clearBtn.addEventListener("click", () => (results.textContent = ""));
 ```
 
 This gives us the following output:
@@ -298,7 +302,7 @@ You can use a `for` loop to iterate through a collection, instead of a `for...of
 Let's look again at our `for...of` example above:
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (const cat of cats) {
   console.log(cat);
@@ -308,7 +312,7 @@ for (const cat of cats) {
 We could rewrite that code like this:
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (let i = 0; i < cats.length; i++) {
   console.log(cats[i]);
@@ -316,7 +320,7 @@ for (let i = 0; i < cats.length; i++) {
 ```
 
 In this loop we're starting `i` at `0`, and stopping when `i` reaches the length of the array.
-Then inside the loop we're using `i` to access each item in the array in turn.
+Then inside the loop, we're using `i` to access each item in the array in turn.
 
 This works just fine, and in early versions of JavaScript, `for...of` didn't exist, so this was the standard way to iterate through an array.
 However, it offers more chances to introduce bugs into your code. For example:
@@ -330,12 +334,12 @@ Sometimes you still need to use a `for` loop to iterate through an array.
 For example, in the code below we want to log a message listing our cats:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 for (const cat of cats) {
-  myFavoriteCats += `${cat}, `
+  myFavoriteCats += `${cat}, `;
 }
 
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
@@ -343,32 +347,33 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
 
 The final output sentence isn't very well-formed:
 
-```
+```plain
 My cats are called Pete, Biggles, Jasmine,
 ```
 
 We'd prefer it to handle the last cat differently, like this:
 
-```
+```plain
 My cats are called Pete, Biggles, and Jasmine.
 ```
 
 But to do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 for (let i = 0; i < cats.length; i++) {
-  if (i === cats.length - 1) {   // We are at the end of the array
-    myFavoriteCats += `and ${cats[i]}.`
+  if (i === cats.length - 1) {
+    // We are at the end of the array
+    myFavoriteCats += `and ${cats[i]}.`;
   } else {
-    myFavoriteCats += `${cats[i]}, `
+    myFavoriteCats += `${cats[i]}, `;
   }
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 ## Exiting loops with break
@@ -383,7 +388,7 @@ First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -392,26 +397,32 @@ First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter
 Now on to the JavaScript:
 
 ```js
-const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const searchName = input.value.toLowerCase();
-  input.value = '';
+  input.value = "";
   input.focus();
-  para.textContent = '';
+  para.textContent = "";
   for (const contact of contacts) {
-    const splitContact = contact.split(':');
+    const splitContact = contact.split(":");
     if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
       break;
     }
   }
-  if (para.textContent === '') {
-   para.textContent = 'Contact not found.';
- }
+  if (para.textContent === "") {
+    para.textContent = "Contact not found.";
+  }
 });
 ```
 
@@ -433,30 +444,30 @@ btn.addEventListener('click', () => {
 
 ## Skipping iterations with continue
 
-The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works in a similar manner to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
+The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works similarly to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
 Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
 
-The HTML is basically the same as the last example — a simple text input, and a paragraph for output.
+The HTML is basically the same as the last example — a simple numeric input, and a paragraph for output.
 
 ```html
 <label for="number">Enter number: </label>
-<input id="number" type="text">
+<input id="number" type="number" />
 <button>Generate integer squares</button>
 
-<p>Output: </p>
+<p>Output:</p>
 ```
 
 The JavaScript is mostly the same too, although the loop itself is a bit different:
 
 ```js
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
-  para.textContent = 'Output: ';
+btn.addEventListener("click", () => {
+  para.textContent = "Output: ";
   const num = input.value;
-  input.value = '';
+  input.value = "";
   input.focus();
   for (let i = 1; i <= num; i++) {
     let sqRoot = Math.sqrt(i);
@@ -475,7 +486,7 @@ Here's the output:
 1. In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
 2. Inside the loop, we find the square root of each number using [Math.sqrt(i)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
-4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
+4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space at the end of the paragraph content.
 
 > **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
@@ -485,7 +496,7 @@ Here's the output:
 
 First, let's have a look at the [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop. This loop's syntax looks like so:
 
-```
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -504,9 +515,9 @@ The final-expression is then run after the code inside the loop has run (an iter
 Let's have a look again at our cats list example, but rewritten to use a while loop:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 let i = 0;
 
@@ -520,14 +531,14 @@ while (i < cats.length) {
   i++;
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 > **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
-```
+```js-nolint
 initializer
 do {
   // code to run
@@ -543,9 +554,9 @@ The main difference between a `do...while` loop and a `while` loop is that _the 
 Let's rewrite our cat listing example again to use a `do...while` loop:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 let i = 0;
 
@@ -559,7 +570,7 @@ do {
   i++;
 } while (i < cats.length);
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 > **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
@@ -595,12 +606,12 @@ If you get really stuck, press "Show solution" to see a solution.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
 output.innerHTML = '';
@@ -613,8 +624,8 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -641,9 +652,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -651,21 +662,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -692,16 +703,16 @@ while (i >= 0) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -713,7 +724,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -728,7 +742,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -754,8 +768,8 @@ Specifically, we want you to:
 
 We've already provided you with:
 
-- `refused.textContent +=` — the beginnings of a line that will concatenate something on to the end of `refused.textContent`.
-- `admitted.textContent +=` — the beginnings of a line that will concatenate something on to the end of `admitted.textContent`.
+- `refused.textContent +=` — the beginnings of a line that will concatenate something at the end of `refused.textContent`.
+- `admitted.textContent +=` — the beginnings of a line that will concatenate something at the end of `admitted.textContent`.
 
 Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one.
 Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end?
@@ -767,12 +781,14 @@ If you get really stuck, press "Show solution" to see a solution.
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="admitted">Admit:</p>
+  <p class="refused">Refuse:</p>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
@@ -789,8 +805,8 @@ refused.textContent = 'Refuse: ';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -817,9 +833,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -827,21 +843,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -868,16 +884,16 @@ admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -889,7 +905,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -904,7 +923,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -928,7 +947,7 @@ Let's have a look at them all again.
 
 First `for...of`:
 
-```
+```js-nolint
 for (const item of array) {
   // code to run
 }
@@ -936,7 +955,7 @@ for (const item of array) {
 
 `for`:
 
-```
+```js-nolint
 for (initializer; condition; final-expression) {
   // code to run
 }
@@ -944,7 +963,7 @@ for (initializer; condition; final-expression) {
 
 `while`:
 
-```
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -955,7 +974,7 @@ while (condition) {
 
 and finally `do...while`:
 
-```
+```js-nolint
 initializer
 do {
   // code to run
@@ -986,13 +1005,3 @@ If there is anything you didn't understand, feel free to read through the articl
 - [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) references
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- **Looping code**
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)

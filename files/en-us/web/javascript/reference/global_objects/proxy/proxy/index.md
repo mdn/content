@@ -1,18 +1,13 @@
 ---
 title: Proxy() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-tags:
-  - Constructor
-  - JavaScript
-  - Proxy
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Proxy.Proxy
 ---
 
 {{JSRef}}
 
-The **`Proxy()`** constructor is used to create
-{{jsxref("Proxy")}} objects.
+The **`Proxy()`** constructor creates {{jsxref("Proxy")}} objects.
 
 ## Syntax
 
@@ -43,7 +38,7 @@ An empty handler will create a proxy that behaves, in almost all respects, exact
 the target. By defining any of a set group of functions on the `handler`
 object, you can customize specific aspects of the proxy's behavior. For example, by
 defining `get()` you can provide a customized version of the target's
-[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
 
 ### Handler functions
 
@@ -92,7 +87,7 @@ In this example the target has two properties, `notProxied` and
 ```js
 const target = {
   notProxied: "original value",
-  proxied: "original value"
+  proxied: "original value",
 };
 
 const handler = {
@@ -101,13 +96,13 @@ const handler = {
       return "replaced value";
     }
     return Reflect.get(...arguments);
-  }
+  },
 };
 
 const proxy = new Proxy(target, handler);
 
 console.log(proxy.notProxied); // "original value"
-console.log(proxy.proxied);    // "replaced value"
+console.log(proxy.proxied); // "replaced value"
 ```
 
 ## Specifications

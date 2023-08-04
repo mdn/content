@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.pauseTransformFeedback()
+title: "WebGL2RenderingContext: pauseTransformFeedback() method"
+short-title: pauseTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/pauseTransformFeedback
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.pauseTransformFeedback
 ---
 

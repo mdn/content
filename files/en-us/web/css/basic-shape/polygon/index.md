@@ -1,14 +1,7 @@
 ---
 title: polygon()
 slug: Web/CSS/basic-shape/polygon
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - polygon
-  - CSS Functions
-  - Data Type
-  - Reference
+page-type: css-function
 browser-compat: css.types.basic-shape.polygon
 ---
 
@@ -50,4 +43,4 @@ In this example a shape is created for text to follow using the `polygon()`, you
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
+- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)

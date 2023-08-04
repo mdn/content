@@ -1,13 +1,8 @@
 ---
 title: "SVGGraphicsElement: copy event"
+short-title: copy
 slug: Web/API/SVGGraphicsElement/copy_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SVG
-  - SVG OM
 browser-compat: api.Element.copy_event
 ---
 
@@ -75,7 +70,7 @@ input {
 document.querySelector("text").addEventListener("copy", (evt) => {
   evt.clipboardData.setData(
     "text/plain",
-    document.getSelection().toString().toUpperCase()
+    document.getSelection().toString().toUpperCase(),
   );
   evt.preventDefault();
 });
@@ -97,5 +92,5 @@ document.querySelector("text").addEventListener("copy", (evt) => {
 
 - Related events: [`cut`](/en-US/docs/Web/API/SVGGraphicsElement/cut_event), [`paste`](/en-US/docs/Web/API/SVGGraphicsElement/paste_event)
 - This event on HTML {{domxref("Element")}} targets: [`copy`](/en-US/docs/Web/API/Element/copy_event)
-- This event on {{domxref("Document")}} targets: [`copy`](/en-US/docs/Web/API/Document/v_event)
+- This event on {{domxref("Document")}} targets: [`copy`](/en-US/docs/Web/API/Document/copy_event)
 - This event on {{domxref("Window")}} targets: [`copy`](/en-US/docs/Web/API/Window/copy_event)

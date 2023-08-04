@@ -1,20 +1,12 @@
 ---
-title: CSSNumericValue.equals()
+title: "CSSNumericValue: equals() method"
+short-title: equals()
 slug: Web/API/CSSNumericValue/equals
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - equals()
 browser-compat: api.CSSNumericValue.equals
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`equals()`** method of the
 {{domxref("CSSNumericValue")}} interface returns a boolean indicating whether the passed

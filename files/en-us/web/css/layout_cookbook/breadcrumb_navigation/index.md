@@ -1,13 +1,7 @@
 ---
-title: Breadcrumb Navigation
+title: Breadcrumb navigation
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Navigation
-  - cookbook
-  - flexbox
+page-type: guide
 browser-compat: css.properties.flex
 ---
 
@@ -47,12 +41,14 @@ This pattern is laid out using a simple flex layout demonstrating how a line of 
 
 I have used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
+Beware that the arrows `→` added via `content` are also exposed to screen readers or braille displays.
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
 - [Providing a Breadcrumb Trail](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Using the aria-current attribute](https://tink.uk/using-the-aria-current-attribute/)

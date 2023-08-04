@@ -1,13 +1,8 @@
 ---
-title: ExtendableEvent.waitUntil()
+title: "ExtendableEvent: waitUntil() method"
+short-title: waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 page-type: web-api-instance-method
-tags:
-  - API
-  - ExtendableEvent
-  - Method
-  - Reference
-  - waitUntil
 browser-compat: api.ExtendableEvent.waitUntil
 ---
 
@@ -38,7 +33,7 @@ but after that it can be called multiple times, until all the promises passed to
 settle.
 
 > **Note:** The behavior described in the above paragraph was fixed in
-> Firefox 43 (see {{bug(1180274)}}).
+> Firefox 43 (see [Firefox bug 1180274](https://bugzil.la/1180274)).
 
 ## Syntax
 
@@ -59,14 +54,10 @@ None ({{jsxref("undefined")}}).
 Using `waitUntil()` within a service worker's `install` event:
 
 ```js
-addEventListener('install', (event) => {
+addEventListener("install", (event) => {
   const preCache = async () => {
-    const cache = await caches.open('static-v1');
-    return cache.addAll([
-      '/',
-      '/about/',
-      '/static/styles.css'
-    ]);
+    const cache = await caches.open("static-v1");
+    return cache.addAll(["/", "/about/", "/static/styles.css"]);
   };
   event.waitUntil(preCache());
 });

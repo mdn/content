@@ -1,14 +1,10 @@
 ---
-title: CookieStoreManager.unsubscribe()
+title: "CookieStoreManager: unsubscribe() method"
+short-title: unsubscribe()
 slug: Web/API/CookieStoreManager/unsubscribe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - unsubscribe
-  - CookieStoreManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStoreManager.unsubscribe
 ---
 
@@ -47,7 +43,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subs
 In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is unsubscribing from change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
-const subscriptions = [{ name: 'cookie1', url: `/path1` }];
+const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.unsubscribe(subscriptions);
 ```
 

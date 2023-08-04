@@ -1,12 +1,7 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.column-rule
 ---
 
@@ -16,9 +11,13 @@ The **`column-rule`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS
 
 {{EmbedInteractiveExample("pages/css/column-rule.html")}}
 
-It is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) that sets the individual `column-rule-*` properties in a single, convenient declaration: {{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, and {{Cssxref("column-rule-color")}}.
+## Constituent properties
 
-> **Note:** As with all shorthand properties, any individual value that is not specified is set to its corresponding initial value (possibly overriding values previously set using non-shorthand properties).
+This property is a shorthand for the following CSS properties:
+
+- {{Cssxref("column-rule-color")}}
+- {{Cssxref("column-rule-style")}}
+- {{Cssxref("column-rule-width")}}
 
 ## Syntax
 
@@ -36,9 +35,9 @@ column-rule: revert-layer;
 column-rule: unset;
 ```
 
-The `column-rule` property is specified as one, two, or three of the values listed below, in any order.
-
 ### Values
+
+The `column-rule` property is specified as one, two, or three of the values listed below, in any order.
 
 - `<'column-rule-width'>`
   - : Is a {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. See {{cssxref("border-width")}} for details.
@@ -86,10 +85,9 @@ p.abc {
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns.
-  Take note of how the `column-rule` property is used
-  to adjust the style, width, and color of the rule
-  that appears between the columns.
+  This is a bunch of text split into three columns. Take note of how the
+  `column-rule` property is used to adjust the style, width, and color of the
+  rule that appears between the columns.
 </p>
 ```
 

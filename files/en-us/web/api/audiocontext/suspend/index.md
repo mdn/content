@@ -1,15 +1,8 @@
 ---
-title: AudioContext.suspend()
+title: "AudioContext: suspend() method"
+short-title: suspend()
 slug: Web/API/AudioContext/suspend
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - suspend
 browser-compat: api.AudioContext.suspend
 ---
 
@@ -39,16 +32,16 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 
 ```js
 susresBtn.onclick = () => {
-  if (audioCtx.state === 'running') {
+  if (audioCtx.state === "running") {
     audioCtx.suspend().then(() => {
-      susresBtn.textContent = 'Resume context';
+      susresBtn.textContent = "Resume context";
     });
-  } else if (audioCtx.state === 'suspended') {
+  } else if (audioCtx.state === "suspended") {
     audioCtx.resume().then(() => {
-      susresBtn.textContent = 'Suspend context';
+      susresBtn.textContent = "Suspend context";
     });
   }
-}
+};
 ```
 
 ## Specifications

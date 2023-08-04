@@ -2,13 +2,6 @@
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
 browser-compat: api.OfflineAudioContext
 ---
 
@@ -23,14 +16,14 @@ The `OfflineAudioContext` interface is an {{domxref("AudioContext")}} interface 
 - {{domxref("OfflineAudioContext.OfflineAudioContext()", "OfflineAudioContext()")}}
   - : Creates a new `OfflineAudioContext` instance.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
 - {{domxref('OfflineAudioContext.length')}} {{ReadOnlyInline}}
   - : An integer representing the size of the buffer in sample-frames.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}._
 
@@ -67,7 +60,7 @@ At this point we create another audio context, create an {{domxref("AudioBufferS
 // define online and offline audio context
 
 const audioCtx = new AudioContext();
-const offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+const offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -77,9 +70,9 @@ source = offlineCtx.createBufferSource();
 function getData() {
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
   request.onload = () => {
     const audioData = request.response;
@@ -90,22 +83,25 @@ function getData() {
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then((renderedBuffer) => {
-        console.log('Rendering completed successfully');
-        const song = audioCtx.createBufferSource();
-        song.buffer = renderedBuffer;
+      offlineCtx
+        .startRendering()
+        .then((renderedBuffer) => {
+          console.log("Rendering completed successfully");
+          const song = audioCtx.createBufferSource();
+          song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+          song.connect(audioCtx.destination);
 
-        play.onclick = () => {
-          song.start();
-        }
-      }).catch((err) => {
+          play.onclick = () => {
+            song.start();
+          };
+        })
+        .catch((err) => {
           console.error(`Rendering failed: ${err}`);
           // Note: The promise should reject when startRendering is called a second time on an OfflineAudioContext
-      });
+        });
     });
-  }
+  };
 
   request.send();
 }

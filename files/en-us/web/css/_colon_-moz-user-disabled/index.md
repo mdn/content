@@ -1,14 +1,9 @@
 ---
-title: ':-moz-user-disabled'
+title: ":-moz-user-disabled"
 slug: Web/CSS/:-moz-user-disabled
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -20,7 +15,9 @@ The **`:-moz-user-disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/d
 ## Syntax
 
 ```css
-:-moz-user-disabled
+:-moz-user-disabled {
+  /* ... */
+}
 ```
 
 ## Examples

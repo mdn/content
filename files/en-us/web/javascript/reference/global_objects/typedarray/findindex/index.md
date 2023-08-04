@@ -1,15 +1,7 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findIndex
 ---
 
@@ -27,39 +19,22 @@ See also the {{jsxref("TypedArray.find", "find()")}} method, which returns the
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findIndex((element) => { /* ... */ } )
-findIndex((element, index) => { /* ... */ } )
-findIndex((element, index, array) => { /* ... */ } )
-
-// Callback function
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
-
-// Inline callback function
-findIndex(function(element) { /* ... */ })
-findIndex(function(element, index) { /* ... */ })
-findIndex(function(element, index, array){ /* ... */ })
-findIndex(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function to execute on each value in the typed array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the typed array.
     - `index`
       - : The index of the current element being processed in the typed array.
     - `array`
       - : The typed array `findIndex()` was called upon.
-
 - `thisArg` {{optional_inline}}
-  - : Object to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 

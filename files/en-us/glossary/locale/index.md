@@ -1,11 +1,10 @@
 ---
 title: Locale
 slug: Glossary/Locale
-tags:
-  - Composing
-  - Glossary
-  - Locale
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Locale** is a set of language- or country-based preferences for a user interface.
 

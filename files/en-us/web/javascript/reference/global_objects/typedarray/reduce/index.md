@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.reduce
 ---
 
@@ -25,44 +18,26 @@ single value. This method has the same algorithm as
 ## Syntax
 
 ```js-nolint
-// Arrow function
-reduce((accumulator, currentValue) => { /* ... */ } )
-reduce((accumulator, currentValue, index) => { /* ... */ } )
-reduce((accumulator, currentValue, index, array) => { /* ... */ } )
-reduce((accumulator, currentValue, index, array) => { /* ... */ }, initialValue)
-
-// Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
-
-// Inline callback function
-reduce(function(accumulator, currentValue) { /* ... */ })
-reduce(function(accumulator, currentValue, index) { /* ... */ })
-reduce(function(accumulator, currentValue, index, array){ /* ... */ })
-reduce(function(accumulator, currentValue, index, array) { /* ... */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function to execute on each value in the typed array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value previously returned in the last invocation of the callback, or
-        `initialValue`, if supplied (see below).
+      - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`
-      - : The current element being processed in the typed array.
-    - `index`
-      - : The index of the current element being processed in the typed array.
+      - : The value of the current element. On first call, the value of `array[0]` if an `initialValue` was specified, otherwise the value of `array[1]`.
+    - `currentIndex`
+      - : The index position of `currentValue` in the typed array. On first call, `0` if `initialValue` was specified, otherwise `1`.
     - `array`
       - : The typed array `reduce()` was called upon.
-
-- `initialValue`
-  - : Optional. Object to use as the first argument to the first call of the
-    `callbackFn`.
+- `initialValue` {{optional_inline}}
+  - : A value to which `accumulator` is initialized the first time the callback is called.
+    If `initialValue` is specified, `callbackFn` starts executing with the first value in the typed array as `currentValue`.
+    If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the typed array, and `callbackFn` starts executing with the second value in the typed array as `currentValue`. In this case, if the typed array is empty (so that there's no first value to return as `accumulator`), an error is thrown.
 
 ### Return value
 

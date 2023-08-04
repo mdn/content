@@ -1,15 +1,7 @@
 ---
 title: browserSettings.colorManagement
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/colorManagement
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - colorManagement
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.colorManagement
 ---
 
@@ -41,8 +33,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.colorManagement.mode.set({value: "full"}).
-  then(logResult);
+browser.browserSettings.colorManagement.mode
+  .set({ value: "full" })
+  .then(logResult);
 ```
 
 Get the native sRGB color management color mode:
@@ -52,8 +45,7 @@ function logResult(result) {
   console.log(`Current useNativeSRGB value: ${result.value}`);
 }
 
-browser.browserSettings.colorManagement.useNativeSRGB.get({}).
-  then(logResult);
+browser.browserSettings.colorManagement.useNativeSRGB.get({}).then(logResult);
 ```
 
 {{WebExtExamples}}

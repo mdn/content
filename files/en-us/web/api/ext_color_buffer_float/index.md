@@ -1,13 +1,8 @@
 ---
-title: EXT_color_buffer_float
+title: EXT_color_buffer_float extension
+short-title: EXT_color_buffer_float
 slug: Web/API/EXT_color_buffer_float
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
-  - WebGL2
 browser-compat: api.EXT_color_buffer_float
 ---
 
@@ -43,7 +38,7 @@ The following sized formats become **color-renderable**:
 `gl` must be a {{domxref("WebGL2RenderingContext")}}. This extension does not work in WebGL 1 contexts.
 
 ```js
-const ext = gl.getExtension('EXT_color_buffer_float');
+const ext = gl.getExtension("EXT_color_buffer_float");
 
 gl.renderbufferStorage(gl.RENDERBUFFER, gl.RGBA16F, 256, 256);
 ```

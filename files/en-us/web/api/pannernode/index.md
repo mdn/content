@@ -2,12 +2,6 @@
 title: PannerNode
 slug: Web/API/PannerNode
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PannerNode
-  - Reference
-  - Web Audio API
 browser-compat: api.PannerNode
 ---
 
@@ -51,7 +45,7 @@ A `PannerNode` always has exactly one input and one output: the input can be _mo
 - {{domxref("PannerNode.PannerNode", "PannerNode()")}}
   - : Creates a new `PannerNode` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -86,7 +80,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("PannerNode.rolloffFactor")}}
   - : A double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
@@ -94,12 +88,10 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
   - : Defines the position of the audio source relative to the listener (represented by an {{domxref("AudioListener")}} object stored in the {{domxref("BaseAudioContext.listener")}} attribute.)
 - {{domxref("PannerNode.setOrientation()")}} {{deprecated_inline}}
   - : Defines the direction the audio source is playing in.
-- {{domxref("PannerNode.setVelocity()")}} {{deprecated_inline}}
-  - : Defines the velocity vector of the audio source — how fast it is moving and in what direction. In a previous version of the specification, the {{domxref("PannerNode")}} had a velocity vector that could pitch up or down {{domxref("AudioBufferSourceNode")}} objects connected downstream. This feature was not clearly specified and had a number of issues, so it was removed from the specification.
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

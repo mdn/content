@@ -1,15 +1,7 @@
 ---
 title: browserSettings.overrideContentColorScheme
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideContentColorScheme
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - overrideContentColorScheme
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.overrideContentColorScheme
 ---
 
@@ -39,8 +31,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.overrideContentColorScheme.set({value: "dark"}).
-  then(logResult);
+browser.browserSettings.overrideContentColorScheme
+  .set({ value: "dark" })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

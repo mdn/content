@@ -1,16 +1,7 @@
 ---
 title: font-style
 slug: Web/SVG/Attribute/font-style
-tags:
-  - CSS
-  - Font Style
-  - Italic
-  - Oblique
-  - SVG
-  - SVG Attribute
-  - Text
-  - Type
-  - font
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-style
 ---
 
@@ -22,7 +13,6 @@ The **`font-style`** attribute specifies whether the text is to be rendered usin
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
@@ -31,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

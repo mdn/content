@@ -1,20 +1,12 @@
 ---
-title: KeyframeEffect.setKeyframes()
+title: "KeyframeEffect: setKeyframes() method"
+short-title: setKeyframes()
 slug: Web/API/KeyframeEffect/setKeyframes
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animations
-  - KeyframeEffect
-  - Method
-  - Reference
-  - setKeyframes
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.setKeyframes
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`setKeyframes()`** method of the {{domxref("KeyframeEffect")}} interface replaces the keyframes that make up the affected `KeyframeEffect` with a new set of keyframes.
 
@@ -65,27 +57,21 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // passing an array of keyframe objects
-existingKeyframeEffect.setKeyframes(
-[
-  { color: 'blue' },
-    { color: 'green', left: '10px' }
-  ]
-);
+existingKeyframeEffect.setKeyframes([
+  { color: "blue" },
+  { color: "green", left: "10px" },
+]);
 
 // passing an object with arrays for values
-existingKeyframeEffect.setKeyframes(
-  {
-    color: ['blue', 'green'],
-    left: [ '0', '10px']
-  }
-);
+existingKeyframeEffect.setKeyframes({
+  color: ["blue", "green"],
+  left: ["0", "10px"],
+});
 
 // passing a single-member object
-existingKeyframeEffect.setKeyframes(
-  {
-    color: 'blue'
-  }
-);
+existingKeyframeEffect.setKeyframes({
+  color: "blue",
+});
 ```
 
 ## Specifications

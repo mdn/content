@@ -1,15 +1,8 @@
 ---
-title: BaseAudioContext.createDynamicsCompressor()
+title: "BaseAudioContext: createDynamicsCompressor() method"
+short-title: createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createDynamicsCompressor
 browser-compat: api.BaseAudioContext.createDynamicsCompressor
 ---
 
@@ -66,23 +59,23 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 source.connect(audioCtx.destination);
 
 button.onclick = () => {
-  const active = button.getAttribute('data-active');
-  if (active === 'false') {
-    button.setAttribute('data-active', 'true');
-    button.textContent = 'Remove compression';
+  const active = button.getAttribute("data-active");
+  if (active === "false") {
+    button.setAttribute("data-active", "true");
+    button.textContent = "Remove compression";
 
     source.disconnect(audioCtx.destination);
     source.connect(compressor);
     compressor.connect(audioCtx.destination);
-  } else if (active === 'true') {
-    button.setAttribute('data-active', 'false');
-    button.textContent = 'Add compression';
+  } else if (active === "true") {
+    button.setAttribute("data-active", "false");
+    button.textContent = "Add compression";
 
     source.disconnect(compressor);
     compressor.disconnect(audioCtx.destination);
     source.connect(audioCtx.destination);
   }
-}
+};
 ```
 
 ## Specifications

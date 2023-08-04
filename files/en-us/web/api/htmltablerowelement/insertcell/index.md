@@ -1,13 +1,8 @@
 ---
-title: HTMLTableRowElement.insertCell()
+title: "HTMLTableRowElement: insertCell() method"
+short-title: insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableRowElement
-  - Method
-  - Reference
 browser-compat: api.HTMLTableRowElement.insertCell
 ---
 
@@ -65,9 +60,15 @@ element.) Finally, we add some text to the cell using
 
 ```html
 <table id="my-table">
-  <tr><td>Row 1</td></tr>
-  <tr><td>Row 2</td></tr>
-  <tr><td>Row 3</td></tr>
+  <tr>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+  </tr>
+  <tr>
+    <td>Row 3</td>
+  </tr>
 </table>
 ```
 
@@ -85,12 +86,12 @@ function addRow(tableID) {
   let newCell = newRow.insertCell(0);
 
   // Append a text node to the cell
-  let newText = document.createTextNode('New bottom row');
+  let newText = document.createTextNode("New bottom row");
   newCell.appendChild(newText);
 }
 
 // Call addRow() with the table's ID
-addRow('my-table');
+addRow("my-table");
 ```
 
 ### Result

@@ -1,19 +1,13 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.ratio
 ---
 
 {{CSSRef}}
 
-The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [aspect ratios](/en-US/docs/Web/CSS/@media/aspect-ratio) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the proportion between two unitless values.
+The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [aspect ratios](/en-US/docs/Web/CSS/@media/aspect-ratio) in [media queries](/en-US/docs/Web/CSS/CSS_media_queries), denotes the proportion between two unitless values.
 
 ## Syntax
 
@@ -30,7 +24,9 @@ In Media Queries Level 4, the `<ratio>` date type is updated to consist of a str
 ### Use in a media query
 
 ```css
-@media screen and (min-aspect-ratio: 16/9) { /* … */ }
+@media screen and (min-aspect-ratio: 16/9) {
+  /* … */
+}
 ```
 
 ### Common aspect ratios

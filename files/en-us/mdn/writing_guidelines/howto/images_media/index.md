@@ -1,18 +1,114 @@
 ---
 title: How to add images and media
 slug: MDN/Writing_guidelines/Howto/Images_media
-tags:
-  - meta
-  - writing-guide
 page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
 
+## Adding images
+
+To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using an `<img>` element or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
+
+Let's walk through an example:
+
+1. Start with a fresh working branch with the latest content from the `main` branch of the `mdn` remote.
+
+   ```bash
+   cd ~/path/to/mdn/content
+   git checkout main
+   git pull mdn main
+   # Run "yarn" again just to ensure you've
+   # installed the latest Yari dependency.
+   yarn
+   git checkout -b my-images
+   ```
+
+2. Add your image to the document folder. For this example, let's assume
+   we're adding a new image to the `files/en-us/web/css` document.
+
+   ```bash
+   cd ~/path/to/mdn/content
+   cp ../some/path/my-cool-image.png files/en-us/web/css/
+   ```
+
+3. Run `filecheck` on each image, which might complain if something's wrong.
+   For more details, see the [Compressing images](#compressing-images) section.
+
+   ```bash
+   yarn filecheck files/en-us/web/css/my-cool-image.png
+   ```
+
+4. Reference your image in the document with an `<img>` element and `alt` attribute inside `files/en-us/web/css/index.md`:
+
+   ```html
+   <img src="my-cool-image.png" alt="My cool image" />
+   ```
+
+5. Add and commit all of the deleted, created, and modified files, as well as
+   push your branch to your fork:
+
+   ```bash
+   git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
+   git commit
+   git push -u origin my-images
+   ```
+
+6. Now you're ready to create your
+   [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+
+## Adding alternative text to images
+
+Every image, `![]` and `<img>`, must include `alt` text.
+Alt attributes should be short, providing all the relevant information the image conveys.
+When writing the image description, think about the valuable information of the image and how you would relay that information to someone who can read the page's content but can't load images.
+
+Make sure the alternative text for the image is based on its context.
+If the photo of Fluffy the dog is an avatar next to a review for Yuckymeat dog food, `alt="Fluffy"` is appropriate.
+If the same photo is part of Fluffy's animal rescue adoption page, the information conveyed in the image is relevant for prospective dog parents, such as `alt="Fluffy, a tri-color terrier with very short hair, with a tennis ball in her mouth."`.
+The surrounding text likely has Fluffy's size and breed, so including it would be redundant.
+Refrain from describing the image in too much detail: the prospective parent does not need to know if the dog is in- or outdoors or has a red collar and a blue leash.
+
+With screenshots, write what you learn from the image, don't detail the screenshot's contents, and omit information readers don't need or already know.
+For example, if you're on a page about changing settings on Bing, if you have a screenshot of a Bing search result, don't include the search term or number of results, etc., as those are not the point of the image.
+Limit the alt to the topic at hand: how to change settings in Bing.
+The alt might be `alt="The settings icon is in the navigation bar below the search field."`.
+Don't include "screenshot" or "Bing" as the user doesn't need to know it's a screenshot and already knows it's Bing as they are on a page explaining changing Bing settings.
+
+The syntax in markdown and HTML:
+
+```html-nolint
+![<alt-text>](<url-of-image>)
+<img alt="<alt-text>" src="<url-of-image>">
+```
+
+Examples:
+
+```html
+![OpenWebDocs Logo: Carle the book worm](carle.png)
+<img alt="OpenWebDocs Logo: Carle the book worm" src="carle.png" />
+```
+
+While purely decorative images should have an empty `alt`, images added to MDN documentation should have a purpose, and therefore require a non-empty-string description.
+
+## Compressing images
+
+When you add images to a page on MDN Web Docs, you should make sure that they are compressed as much as possible (without degrading quality) to save on the download size for our readers.
+In fact, if you don't do this, our CI process will fail and the build results will warn you that some of your images are too big.
+
+The best way to compress the images is by using the built-in compression tool.
+You can compress an image appropriately by using the `filecheck` command with the `--save-compression` option.
+This option compresses the image as much as possible and replaces the original with the compressed version.
+For example:
+
+```bash
+yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+```
+
+## Adding videos
+
 MDN Web Docs is not a very video-heavy site, but there are certain places where video content makes sense to use as part of an article.
 This article discusses when including videos in articles is appropriate and provides tips on how to create simple but effective videos on a budget.
-
-## Using video content
 
 There are several arguments against using video content for technical documentation, particularly for reference material and advanced level guides. Some of these are listed below:
 
@@ -166,13 +262,13 @@ Ask a member of MDN Web Docs team to upload the video if you don't have somewher
 Once uploaded, you can embed the video in the page using the [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) macro.
 This is used by inserting the following in your page at the position you want the video to appear:
 
-```
+```plain
 \{{EmbedYouTube("you-tube-url-slug")}}
 ```
 
 The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL.
-For example, is the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, the required macro call will be:
+For example, if the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, the required macro call will be:
 
-```
+```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```

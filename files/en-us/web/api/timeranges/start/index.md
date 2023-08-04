@@ -1,14 +1,8 @@
 ---
-title: TimeRanges.start()
+title: "TimeRanges: start() method"
+short-title: start()
 slug: Web/API/TimeRanges/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - TimeRanges
 browser-compat: api.TimeRanges.start
 ---
 

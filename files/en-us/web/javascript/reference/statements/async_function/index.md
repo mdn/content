@@ -1,21 +1,15 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - Function
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.async_function
 ---
 
 {{jsSidebar("Statements")}}
 
-An async function is a function declared with the `async` keyword, and the `await` keyword is permitted within it. The `async` and `await` keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+The **`async function`** declaration creates a {{glossary("binding")}} of a new async function to a given name. The `await` keyword is permitted within the function body, enabling asynchronous, promise-based behavior to be written in a cleaner style and avoiding the need to explicitly configure promise chains.
 
-Async functions may also be defined {{jsxref("Operators/async_function", "as
-  expressions", "", 1)}}.
+You can also define async functions using the [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function).
 
 {{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
 
@@ -28,10 +22,12 @@ async function name(param0) {
 async function name(param0, param1) {
   statements
 }
-async function name(param0, param1, /* … ,*/ paramN) {
+async function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
+
+> **Note:** There cannot be a line terminator between `async` and `function`, otherwise a semicolon is [automatically inserted](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), causing `async` to become an identifier and the rest to become a `function` declaration.
 
 ### Parameters
 
@@ -43,13 +39,9 @@ async function name(param0, param1, /* … ,*/ paramN) {
   - : The statements comprising the body of the function. The `await`
     mechanism may be used.
 
-### Return value
-
-A {{jsxref("Promise")}} which will be resolved with the value returned by the async
-function, or rejected with an exception thrown from, or uncaught within, the async
-function.
-
 ## Description
+
+An `async function` declaration creates an {{jsxref("AsyncFunction")}} object. Each time when an async function is called, it returns a new {{jsxref("Promise")}} which will be resolved with the value returned by the async function, or rejected with an exception uncaught within the async function.
 
 Async functions can contain zero or more {{jsxref("Operators/await", "await")}} expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of `async` and `await` enables the use of ordinary `try` / `catch` blocks around asynchronous code.
 
@@ -59,7 +51,7 @@ Async functions can contain zero or more {{jsxref("Operators/await", "await")}} 
 
 > **Note:** The purpose of `async`/`await` is to simplify the syntax
 > necessary to consume promise-based APIs. The behavior
-> of `async`/`await` is similar to combining [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) and
+> of `async`/`await` is similar to combining [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) and
 > promises.
 
 Async functions always return a promise. If the return value of an async function is
@@ -155,10 +147,10 @@ function `foo` in three stages.
 ```js
 async function foo() {
   const result1 = await new Promise((resolve) =>
-    setTimeout(() => resolve("1"))
+    setTimeout(() => resolve("1")),
   );
   const result2 = await new Promise((resolve) =>
-    setTimeout(() => resolve("2"))
+    setTimeout(() => resolve("2")),
   );
 }
 foo();
@@ -182,6 +174,8 @@ async function foo() {
 }
 foo().catch(() => {}); // Attempt to swallow all errors...
 ```
+
+`async function` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
 
 ## Examples
 
@@ -235,7 +229,7 @@ function concurrentPromise() {
     (messages) => {
       console.log(messages[0]); // slow
       console.log(messages[1]); // fast
-    }
+    },
   );
 }
 
@@ -343,7 +337,14 @@ it's not already a promise itself (as in the examples).
 
 ## See also
 
-- {{jsxref("Operators/async_function", "async function expression", "", 1)}}
-- {{jsxref("AsyncFunction")}} object
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("AsyncFunction")}}
+- [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("Operators/await", "await")}}
-- [Decorating Async JavaScript Functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on _innolitics.com_
+- {{jsxref("Promise")}}
+- [Decorating async JavaScript functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on innolitics.com (April 04, 2016)

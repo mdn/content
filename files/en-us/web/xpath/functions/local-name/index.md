@@ -1,18 +1,16 @@
 ---
 title: local-name
 slug: Web/XPath/Functions/local-name
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `local-name` function returns a string representing the local name of the first node in a given node-set.
 
 ### Syntax
 
-```
+```plain
 local-name( [node-set] )
 ```
 

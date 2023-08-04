@@ -1,14 +1,10 @@
 ---
-title: Navigator.appName
+title: "Navigator: appName property"
+short-title: appName
 slug: Web/API/Navigator/appName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Navigator.appName
 ---
 

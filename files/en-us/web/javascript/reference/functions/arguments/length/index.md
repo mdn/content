@@ -1,17 +1,17 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-tags:
-  - Functions
-  - JavaScript
-  - Property
-  - arguments
+page-type: javascript-instance-data-property
 browser-compat: javascript.functions.arguments.length
 ---
 
 {{jsSidebar("Functions")}}
 
-The **`arguments.length`** property contains the number of arguments passed to the function.
+The **`arguments.length`** data property contains the number of arguments passed to the function.
+
+## Value
+
+A non-negative integer.
 
 {{js_property_attributes(1, 0, 1)}}
 
@@ -53,5 +53,7 @@ function adder(base /*, num1, …, numN */) {
 
 ## See also
 
-- {{jsxref("Function")}}
-- {{jsxref("Function.prototype.length")}}
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Functions/arguments", "arguments")}}
+- [`Function`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length)

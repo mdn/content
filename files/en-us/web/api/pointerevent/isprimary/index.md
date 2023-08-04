@@ -1,14 +1,8 @@
 ---
-title: PointerEvent.isPrimary
+title: "PointerEvent: isPrimary property"
+short-title: isPrimary
 slug: Web/API/PointerEvent/isPrimary
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
 browser-compat: api.PointerEvent.isPrimary
 ---
 
@@ -28,9 +22,9 @@ can achieve that by ignoring non-primary pointers.
 
 A pointer is considered primary if the pointer represents a mouse device. A pointer
 representing pen input is considered the primary pen input if its
-{{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers representing
+{{domxref("Element/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers representing
 pen input existed. A pointer representing touch input is considered the primary touch
-input if its {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers
+input if its {{domxref("Element/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers
 representing touch input existed.
 
 When two or more pointer device types are being used concurrently, multiple pointers
@@ -51,13 +45,17 @@ This example illustrates using the value of `isPrimary` to call the
 appropriate processing function.
 
 ```js
-target.addEventListener('pointerdown', (event) => {
-  if (event.isPrimary) {
-    process_primary_pointer(event);
-  } else {
-    process_secondary_pointer(event);
-  }
-}, false);
+target.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.isPrimary) {
+      process_primary_pointer(event);
+    } else {
+      process_secondary_pointer(event);
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

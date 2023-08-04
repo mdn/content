@@ -1,15 +1,7 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - Fullscreen
-  - Fullscreen API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - fullscreen
-  - screen
+page-type: css-pseudo-class
 browser-compat: css.selectors.fullscreen
 ---
 
@@ -19,8 +11,10 @@ The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:fullscreen
+```css
+:fullscreen {
+  /* ... */
+}
 ```
 
 ## Usage notes
@@ -38,9 +32,11 @@ The page's HTML looks like this:
 ```html
 <h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+<p>
+  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle fullscreen mode on and off,
-  entirely using CSS.</p>
+  entirely using CSS.
+</p>
 
 <button id="fs-toggle">Toggle Fullscreen</button>
 ```
@@ -80,4 +76,4 @@ When the document _is_ in fullscreen mode, the following CSS applies instead, se
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute

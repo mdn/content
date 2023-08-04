@@ -1,18 +1,7 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-tags:
-  - CSS
-  - CSS Backgrounds and Borders
-  - CSS Property
-  - CSS Styles
-  - HTML Colors
-  - Reference
-  - Shadows
-  - Styles
-  - Styling HTML
-  - box-shadow
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.box-shadow
 ---
 
@@ -24,7 +13,7 @@ The **`box-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadow effects aro
 
 The `box-shadow` property enables you to cast a drop shadow from the frame of almost any element. If a {{cssxref("border-radius")}} is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of multiple box shadows is the same as multiple [text shadows](/en-US/docs/Web/CSS/text-shadow) (the first specified shadow is on top).
 
-[Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
+[Box-shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) is an interactive tool allowing you to generate a `box-shadow`.
 
 ## Syntax
 
@@ -45,7 +34,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* Any number of shadows, separated by commas */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 
 /* Global values */
 box-shadow: inherit;
@@ -73,9 +64,14 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 - `inset`
   - : If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the content).
     The presence of the `inset` keyword changes the shadow to one inside the frame (as if the content was debossed inside the box). Inset shadows are drawn inside the border (even transparent ones), above the background, but below content.
-- `<offset-x>` `<offset-y>`
-  - : These are two {{cssxref("&lt;length&gt;")}} values to set the shadow offset. `<offset-x>` specifies the horizontal distance. Negative values place the shadow to the left of the element. `<offset-y>` specifies the vertical distance. Negative values place the shadow above the element. See {{cssxref("&lt;length&gt;")}} for possible units.
-    If both values are `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
+- `<offset-x>`
+  - : The {{cssxref("&lt;length&gt;")}} value specifies the horizontal distance. Negative values place the shadow to the left of the element.
+- `<offset-y>`
+
+  - : The {{cssxref("&lt;length&gt;")}} values specifies the vertical distance. Negative values place the shadow above the element.
+
+    If both `<offset-x>` and `<offset-y>` are set to `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
+
 - `<blur-radius>`
 
   - : This is a third {{cssxref("&lt;length&gt;")}} value. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, it will be `0` (the shadow's edge is sharp). The specification does not include an exact algorithm for how the blur radius should be calculated, however, it does elaborate as follows:
@@ -111,11 +107,14 @@ In this example, we include three shadows: an inset shadow, a regular drop shado
 #### HTML
 
 ```html
-<blockquote><q>You may shoot me with your words,<br/>
-You may cut me with your eyes,<br/>
-You may kill me with your hatefulness,<br/>
-But still, like air, I'll rise.</q>
-<p>&mdash; Maya Angelou</p>
+<blockquote>
+  <q>
+    You may shoot me with your words,<br />
+    You may cut me with your eyes,<br />
+    You may kill me with your hatefulness,<br />
+    But still, like air, I'll rise.
+  </q>
+  <p>&mdash; Maya Angelou</p>
 </blockquote>
 ```
 
@@ -125,9 +124,9 @@ But still, like air, I'll rise.</q>
 blockquote {
   padding: 20px;
   box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 ```
 
@@ -139,7 +138,7 @@ blockquote {
 
 When the `x-offset`, `y-offset`, and `blur` are all zero, the box shadow will be a solid-colored outline of equal-size on all sides. The shadows are drawn back to front, so the first shadow sits on top of subsequent shadows. When the `border-radius` is set to 0, as is the default, the corners of the shadow will be, well, corners. Had we put in a `border-radius` of any other value, the corners would have been rounded.
 
-We added a margin the size of the widest box-shadow to ensure the shadow doesn't overlap adjacent elements or go beyond the border of the containing box. A box-shadow does not impact [box model](/en-US/docs/Web/CSS/CSS_Box_Model) dimensions.
+We added a margin the size of the widest box-shadow to ensure the shadow doesn't overlap adjacent elements or go beyond the border of the containing box. A box-shadow does not impact [box model](/en-US/docs/Web/CSS/CSS_box_model) dimensions.
 
 #### HTML
 
@@ -151,12 +150,15 @@ We added a margin the size of the widest box-shadow to ensure the shadow doesn't
 
 ```css
 p {
-  box-shadow: 0 0 0 2em #F4AAB9,
-              0 0 0 4em #66CCFF;
+  box-shadow:
+    0 0 0 2em #f4aab9,
+    0 0 0 4em #66ccff;
   margin: 4em;
-  padding:1em;
+  padding: 1em;
 }
 ```
+
+<!-- these colors are intentionally pink and blue. WCAG requires color contrast between text and background, not between border colors. -->
 
 #### Result
 
@@ -172,7 +174,7 @@ p {
 
 ## See also
 
-- The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
 - {{cssxref("text-shadow")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

@@ -1,15 +1,9 @@
 ---
 title: element()
 slug: Web/CSS/element
-tags:
-  - CSS
-  - CSS Function
-  - CSS images
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - Experimental
+page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.image.element
 ---
 
@@ -41,13 +35,18 @@ These examples work in builds of Firefox that support `-moz-element()`.
 This example uses a hidden {{HTMLElement("div")}} as a background. The background element uses a gradient, but also includes text that is rendered as part of the background.
 
 ```html
-<div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
+<div
+  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
   <p>This box uses the element with the #myBackground1 ID as its background!</p>
 </div>
 
 <div style="overflow:hidden; height:0;">
-  <div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-  <p style="transform-origin:0 0; transform: rotate(45deg); color:white;">This text is part of the background. Cool, huh?</p>
+  <div
+    id="myBackground1"
+    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
+    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
+      This text is part of the background. Cool, huh?
+    </p>
   </div>
 </div>
 ```
@@ -66,21 +65,20 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 
 ```html
 <div id="css-source">
-    <h1>Page Preview</h1>
+  <h1>Page Preview</h1>
 </div>
-<div id="css-result">
-</div>
+<div id="css-result"></div>
 ```
 
 #### CSS
 
 ```css
 #css-result {
-    background: -moz-element(#css-source) no-repeat;
-    width: 256px;
-    height: 32px;
-    background-size: 80%;
-    border: dashed;
+  background: -moz-element(#css-source) no-repeat;
+  width: 256px;
+  height: 32px;
+  background-size: 80%;
+  border: dashed;
 }
 ```
 
@@ -102,6 +100,5 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element", "element()")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
 - {{domxref("document.mozSetImageElement()")}}

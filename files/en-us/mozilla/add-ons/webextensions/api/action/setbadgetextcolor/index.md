@@ -1,15 +1,7 @@
 ---
 title: action.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeTextColor
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - action
-  - setBadgeTextColor
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.setBadgeTextColor
 ---
 
@@ -56,24 +48,24 @@ browser.action.setBadgeTextColor(
 A badge text color that starts off as red, and turns green when the browser action is clicked:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeTextColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeTextColor({ color: "red" });
 
 browser.action.onClicked.addListener(() => {
-  browser.action.setBadgeTextColor({color: "green"});
+  browser.action.setBadgeTextColor({ color: "green" });
 });
 ```
 
 Set the badge text color only for the active tab:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeTextColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeTextColor({ color: "red" });
 
-browser.action.onClicked.addListener((tab)=> {
+browser.action.onClicked.addListener((tab) => {
   browser.action.setBadgeTextColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```

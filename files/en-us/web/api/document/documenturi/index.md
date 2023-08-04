@@ -1,14 +1,8 @@
 ---
-title: Document.documentURI
+title: "Document: documentURI property"
+short-title: documentURI
 slug: Web/API/Document/documentURI
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Document.documentURI
 ---
 
@@ -33,7 +27,7 @@ document.getElementById("url").textContent = document.documentURI;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">URL goes here</span>
 </p>
 ```

@@ -2,21 +2,11 @@
 title: How to create a DOM tree
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
 page-type: guide
-tags:
-  - AJAX
-  - Add-ons
-  - DOM
-  - Extensions
-  - JXON
-  - NeedsUpdate
-  - XML
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-This page describes how to use the [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core/) API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.
-
-### Dynamically creating a DOM tree
+This page describes how to use the DOM API in JavaScript to create XML documents.
 
 Consider the following XML document:
 
@@ -36,7 +26,7 @@ Consider the following XML document:
 </people>
 ```
 
-The W3C DOM API, supported by Mozilla, can be used to create an in-memory representation of this document like so:
+You can use the DOM API to create an in-memory representation of this document:
 
 ```js
 const doc = document.implementation.createDocument("", "", null);
@@ -91,62 +81,16 @@ peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
 ```
 
-See also the [DOM chapter of the XUL Tutorial](/en-US/docs/XUL_Tutorial/Document_Object_Model).
+DOM trees can be:
 
-You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en-US/docs/JXON#jxon_reverse_algorithms) in association with the following JSON representation:
-
-```json
-{
-  "people": {
-    "person": [{
-      "address": [{
-        "@street": "321 south st",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }, {
-        "@street": "123 main st",
-        "@city": "arlington",
-        "@state": "ma",
-        "@country": "usa"
-      }],
-      "@first-name": "eric",
-      "@middle-initial": "H",
-      "@last-name": "jung"
-    }, {
-      "address": [{
-        "@street": "321 north st",
-        "@city": "atlanta",
-        "@state": "ga",
-        "@country": "usa"
-      }, {
-        "@street": "123 west st",
-        "@city": "seattle",
-        "@state": "wa",
-        "@country": "usa"
-      }, {
-        "@street": "321 south avenue",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }],
-      "@first-name": "jed",
-      "@last-name": "brown"
-    }]
-  }
-}
-```
-
-### So what?
-
-DOM trees can be [queried using XPath expressions](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript), converted to strings or written to a local or remote files using [XMLSerializer](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) (without having to first convert to a string), [POSTed to a web server](/en-US/docs/Web/API/XMLHttpRequest) (via `XMLHttpRequest`), transformed using [XSLT](/en-US/docs/Web/XSLT), [XLink](/en-US/docs/Glossary/XLink), converted to a JavaScript object through a [JXON algorithm](/en-US/docs/JXON), etc.
-
-You can use DOM trees to model data which isn't well-suited for RDF (or perhaps you just don't like RDF). Another application is that, since XUL is XML, the UI of your application can be dynamically manipulated, downloaded, uploaded, saved, loaded, converted, or transformed quite easily.
+- [queried using XPath expressions](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- converted to strings using [XMLSerializer](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [posted to a web server](/en-US/docs/Web/API/XMLHttpRequest) using `XMLHttpRequest`
+- transformed using [XSLT](/en-US/docs/Web/XSLT) or [XLink](/en-US/docs/Glossary/XLink).
 
 ## See also
 
 - [XML](/en-US/docs/Web/XML)
-- [JXON](/en-US/docs/JXON)
 - [XPath](/en-US/docs/Web/XPath)
 - [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)

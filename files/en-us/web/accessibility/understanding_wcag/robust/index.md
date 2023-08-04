@@ -1,19 +1,10 @@
 ---
 title: Robust
 slug: Web/Accessibility/Understanding_WCAG/Robust
-tags:
-  - Accessibility
-  - HTML
-  - Parsing
-  - Principle 4
-  - Robust
-  - Role
-  - Validation
-  - WAI-ARIA
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - value
+page-type: guide
 ---
+
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Robust** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Robust states that content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. This can generally be achieved by following web standards and [testing rigorously](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing).
 

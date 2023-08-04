@@ -1,17 +1,11 @@
 ---
 title: Count trailing zeros
 slug: WebAssembly/Reference/Numeric/Count_trailing_zeros
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
 ---
 
 {{WebAssemblySidebar}}
 
-The **`ctz`** instructions, short for _count trailing zeros_, are used to count the amount of zeros at the start of the numbers binary representation.
+The **`ctz`** instructions, short for _count trailing zeros_, are used to count the amount of zeros at the end of the numbers binary representation.
 
 {{EmbedInteractiveExample("pages/wat/ctz.html", "tabbed-taller")}}
 

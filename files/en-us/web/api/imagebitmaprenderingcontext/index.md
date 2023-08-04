@@ -2,12 +2,6 @@
 title: ImageBitmapRenderingContext
 slug: Web/API/ImageBitmapRenderingContext
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - Interface
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.ImageBitmapRenderingContext
 ---
 
@@ -17,7 +11,7 @@ The **`ImageBitmapRenderingContext`** interface is a canvas rendering context th
 
 This interface is available in both the window and the [worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
-## Methods
+## Instance methods
 
 - {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}
   - : Displays the given `ImageBitmap` in the canvas associated with this rendering context. Ownership of the `ImageBitmap` is transferred to the canvas. This was previously named `transferImageBitmap()`, but was renamed in a spec change. The old name is being kept as an alias to avoid code breakage.

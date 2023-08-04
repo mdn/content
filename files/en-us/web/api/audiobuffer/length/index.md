@@ -1,14 +1,8 @@
 ---
-title: AudioBuffer.length
+title: "AudioBuffer: length property"
+short-title: length
 slug: Web/API/AudioBuffer/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioBuffer
-  - Property
-  - Reference
-  - Web Audio API
-  - length
 browser-compat: api.AudioBuffer.length
 ---
 
@@ -47,7 +41,7 @@ button.onclick = () => {
   }
 
   console.log(myArrayBuffer.length);
-}
+};
 ```
 
 ## Specifications

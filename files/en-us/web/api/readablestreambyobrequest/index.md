@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBRequest
 slug: Web/API/ReadableStreamBYOBRequest
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamBYOBRequest
-  - Reference
-  - Steams
 browser-compat: api.ReadableStreamBYOBRequest
 ---
 
@@ -35,13 +28,13 @@ Note that a {{domxref("ReadableByteStreamController")}} is only created for unde
 
 None. `ReadableStreamBYOBRequest` instance is created automatically by `ReadableByteStreamController` as needed.
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableStreamBYOBRequest.view")}} {{ReadOnlyInline}}
   - : Returns the current view.
     This is a view on a buffer that will be transferred to the consumer when `ReadableStreamBYOBRequest.respond()` is called.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStreamBYOBRequest.respond()")}}
   - : Signals the associated readable byte stream that the specified number of bytes were written into the current [`view`](#readablestreambyobrequest.view), which then causes the pending request from the consumer to be resolved.

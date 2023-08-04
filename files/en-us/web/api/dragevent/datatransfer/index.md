@@ -1,13 +1,8 @@
 ---
-title: DragEvent.dataTransfer
+title: "DragEvent: dataTransfer property"
+short-title: dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - drag and drop
 browser-compat: api.DragEvent.dataTransfer
 ---
 
@@ -29,13 +24,17 @@ This example illustrates accessing the drag and drop data within the
 
 ```js
 function processData(d) {
-   // Process the data …
+  // Process the data …
 }
 
-dragTarget.addEventListener("dragend", (ev) => {
-   // Call the drag and drop data processor
-   if (ev.dataTransfer !== null) processData(ev.dataTransfer);
- }, false);
+dragTarget.addEventListener(
+  "dragend",
+  (ev) => {
+    // Call the drag and drop data processor
+    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
+  },
+  false,
+);
 ```
 
 ## Specifications

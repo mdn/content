@@ -1,10 +1,9 @@
 ---
 title: cap-height
 slug: Web/SVG/Attribute/cap-height
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.cap-height
 ---
 

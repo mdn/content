@@ -1,16 +1,7 @@
 ---
 title: webRequest.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCompleted
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onCompleted
 ---
 
@@ -34,7 +25,7 @@ browser.webRequest.onCompleted.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -45,15 +36,15 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
+      - : `object`. Details about the request. See the [details](#details_2) section for more information.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that is sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass just one value:
@@ -172,17 +163,12 @@ function logResponse(responseDetails) {
   console.log(responseDetails.statusCode);
 }
 
-browser.webRequest.onCompleted.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(logResponse, { urls: [target] });
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onCompleted) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

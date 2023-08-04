@@ -1,23 +1,11 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - CSS Text Decoration
-  - HTML Colors
-  - HTML Styles
-  - Reference
-  - Styling HTML
-  - Styling text
-  - color
-  - colors
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-decoration-color
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 The **`text-decoration-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of decorations added to text by {{ cssxref("text-decoration-line") }}.
 
@@ -73,8 +61,10 @@ Color alone should not be used to convey meaning. For example, change of text an
 ### Basic example
 
 ```html
-<p>This paragraph has <s>some erroneous text</s>
-    inside it that I want to call attention to.</p>
+<p>
+  This paragraph has <s>some erroneous text</s> inside it that I want to call
+  attention to.
+</p>
 ```
 
 ```css
@@ -105,4 +95,4 @@ s {
 - When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

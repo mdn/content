@@ -1,13 +1,8 @@
 ---
-title: DOMImplementation.createDocument()
+title: "DOMImplementation: createDocument() method"
+short-title: createDocument()
 slug: Web/API/DOMImplementation/createDocument
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Method
-  - Reference
 browser-compat: api.DOMImplementation.createDocument
 ---
 
@@ -42,11 +37,15 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const doc = document.implementation.createDocument('http://www.w3.org/1999/xhtml', 'html', null);
-const body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
-body.setAttribute('id', 'abc');
+const doc = document.implementation.createDocument(
+  "http://www.w3.org/1999/xhtml",
+  "html",
+  null,
+);
+const body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
+body.setAttribute("id", "abc");
 doc.documentElement.appendChild(body);
-alert(doc.getElementById('abc')); // [object HTMLBodyElement]
+alert(doc.getElementById("abc")); // [object HTMLBodyElement]
 ```
 
 ## Specifications

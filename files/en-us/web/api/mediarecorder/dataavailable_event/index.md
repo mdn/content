@@ -1,18 +1,8 @@
 ---
 title: "MediaRecorder: dataavailable event"
+short-title: dataavailable
 slug: Web/API/MediaRecorder/dataavailable_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - MediaStream Recording API
-  - Event
-  - Reference
-  - Video
-  - dataavailable
 browser-compat: api.MediaRecorder.dataavailable_event
 ---
 
@@ -68,17 +58,17 @@ const chunks = [];
 mediaRecorder.onstop = (e) => {
   console.log("data available after MediaRecorder.stop() called.");
 
-  const audio = document.createElement('audio');
+  const audio = document.createElement("audio");
   audio.controls = true;
-  const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
   const audioURL = window.URL.createObjectURL(blob);
   audio.src = audioURL;
   console.log("recorder stopped");
-}
+};
 
 mediaRecorder.ondataavailable = (e) => {
   chunks.push(e.data);
-}
+};
 ```
 
 ## Specifications

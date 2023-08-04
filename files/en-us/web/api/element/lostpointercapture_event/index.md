@@ -1,15 +1,9 @@
 ---
-title: 'Element: lostpointercapture event'
+title: "Element: lostpointercapture event"
+short-title: lostpointercapture
 slug: Web/API/Element/lostpointercapture_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - NeedsSpecTable
-  - PointerEvent
-  - Reference
-browser-compat: api.Element.lostpointercapture_event
 page-type: web-api-event
+browser-compat: api.Element.lostpointercapture_event
 ---
 
 {{APIRef}}
@@ -21,9 +15,9 @@ The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/doc
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('lostpointercapture', (event) => {});
+addEventListener("lostpointercapture", (event) => {});
 
-onlostpointercapture = (event) => { };
+onlostpointercapture = (event) => {};
 ```
 
 ## Event type
@@ -53,7 +47,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
@@ -62,13 +56,13 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 This example listens for the `lostpointercapture` event for an element, and captures the pointer for the element on `pointerdown`. When the user subsequently releases the pointer, the `lostpointercapture` event will be fired.
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('lostpointercapture', () => {
-  console.log('I\'ve been released!')
+para.addEventListener("lostpointercapture", () => {
+  console.log("I've been released!");
 });
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
@@ -76,13 +70,13 @@ para.addEventListener('pointerdown', (event) => {
 The same example, but using the `onlostpointercapture` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onlostpointercapture = () => {
-  console.log('I\'ve been released!')
+  console.log("I've been released!");
 };
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
@@ -108,5 +102,3 @@ para.addEventListener('pointerdown', (event) => {
   - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
   - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-
-- This event on `Document` targets: [`lostpointercapture`](/en-US/docs/Web/API/Document/lostpointercapture_event) event

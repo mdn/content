@@ -1,15 +1,7 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-padding-inline
-  - scroll-padding-inline-end
-  - scroll-padding-inline-start
+page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-inline
 ---
 
@@ -36,7 +28,7 @@ scroll-padding-inline: auto;
 
 /* <length> values */
 scroll-padding-inline: 10px;
-scroll-padding-inline: 1em .5em;
+scroll-padding-inline: 1em 0.5em;
 scroll-padding-inline: 10%;
 
 /* Global values */
@@ -72,5 +64,5 @@ scroll-padding-inline: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

@@ -1,9 +1,7 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke
 ---
 
@@ -15,7 +13,6 @@ The **`stroke`** attribute is a presentation attribute defining the color (_or a
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('line')}}
@@ -31,25 +28,27 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
   <!-- Simple color stroke -->
-  <circle cx="5" cy="5" r="4" fill="none"
-          stroke="green" />
+  <circle cx="5" cy="5" r="4" fill="none" stroke="green" />
 
   <!-- Stroke a circle with a gradient -->
   <defs>
     <linearGradient id="myGradient">
-      <stop offset="0%"   stop-color="green" />
+      <stop offset="0%" stop-color="green" />
       <stop offset="100%" stop-color="white" />
     </linearGradient>
   </defs>
 
-  <circle cx="15" cy="5" r="4" fill="none"
-          stroke="url(#myGradient)" />
+  <circle cx="15" cy="5" r="4" fill="none" stroke="url(#myGradient)" />
 </svg>
 ```
 

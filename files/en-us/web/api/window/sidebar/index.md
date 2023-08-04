@@ -1,14 +1,11 @@
 ---
-title: Window.sidebar
+title: "Window: sidebar property"
+short-title: sidebar
 slug: Web/API/Window/sidebar
 page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef}} {{Deprecated_Header}}
@@ -17,7 +14,7 @@ tags:
 
 Returns a sidebar object which contains several methods for registering add-ons with the browser.
 
-## Methods
+## Instance methods
 
 The sidebar object returned has the following methods:
 

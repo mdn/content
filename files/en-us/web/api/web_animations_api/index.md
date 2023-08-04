@@ -2,12 +2,6 @@
 title: Web Animations API
 slug: Web/API/Web_Animations_API
 page-type: web-api-overview
-tags:
-  - API
-  - Animation
-  - Landing
-  - Reference
-  - Web Animations
 spec-urls: https://drafts.csswg.org/web-animations/
 ---
 

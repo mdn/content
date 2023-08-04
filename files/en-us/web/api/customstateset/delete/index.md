@@ -1,14 +1,10 @@
 ---
-title: CustomStateSet.delete()
+title: "CustomStateSet: delete() method"
+short-title: delete()
 slug: Web/API/CustomStateSet/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - delete
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.delete
 ---
 

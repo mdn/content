@@ -1,9 +1,9 @@
 ---
-title: Basic Example
+title: Basic example
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
-tags:
-  - XSLT
 ---
+
+{{XsltSidebar}}
 
 ## Basic Example
 
@@ -105,7 +105,6 @@ let myDOM;
 let xmlDoc;
 
 function Init() {
-
   // Load the xslt file, example1.xsl
   let myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xsl", false);

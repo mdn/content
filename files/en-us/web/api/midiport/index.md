@@ -2,11 +2,6 @@
 title: MIDIPort
 slug: Web/API/MIDIPort
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - MIDIPort
 browser-compat: api.MIDIPort
 ---
 
@@ -18,7 +13,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("MIDIPort.id")}} {{ReadOnlyInline}}
   - : Returns a string containing the unique ID of the port.
@@ -57,7 +52,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"pending"`
       - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
 
@@ -82,14 +77,14 @@ function listInputsAndOutputs(midiAccess) {
   for (const entry of midiAccess.inputs) {
     const input = entry[1];
     console.log(
-      `Input port [type:'${input.type}'] id:'${input.id}' manufacturer: '${input.manufacturer}' name: '${input.name}' version: '${input.version}'`
+      `Input port [type:'${input.type}'] id:'${input.id}' manufacturer: '${input.manufacturer}' name: '${input.name}' version: '${input.version}'`,
     );
   }
 
   for (const entry of midiAccess.outputs) {
     const output = entry[1];
     console.log(
-      `Output port [type:'${output.type}'] id: '${output.id}' manufacturer: '${output.manufacturer}' name: '${output.name}' version: '${output.version}'`
+      `Output port [type:'${output.type}'] id: '${output.id}' manufacturer: '${output.manufacturer}' name: '${output.name}' version: '${output.version}'`,
     );
   }
 }

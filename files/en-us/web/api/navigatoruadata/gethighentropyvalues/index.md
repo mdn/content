@@ -1,14 +1,10 @@
 ---
-title: NavigatorUAData.getHighEntropyValues()
+title: "NavigatorUAData: getHighEntropyValues() method"
+short-title: getHighEntropyValues()
 slug: Web/API/NavigatorUAData/getHighEntropyValues
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getHighEntropyValues
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData.getHighEntropyValues
 ---
 
@@ -85,11 +81,13 @@ In the following example a number of hints are requested using the `getHighEntro
 When the promise resolves, this information is printed to the console.
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platformVersion",
-  "fullVersionList"])
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platformVersion",
+    "fullVersionList",
+  ])
   .then((values) => console.log(values));
 ```
 

@@ -1,14 +1,8 @@
 ---
-title: DOMTokenList.remove()
+title: "DOMTokenList: remove() method"
+short-title: remove()
 slug: Web/API/DOMTokenList/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - Method
-  - Reference
-  - remove
 browser-compat: api.DOMTokenList.remove
 ---
 
@@ -22,7 +16,7 @@ removes the specified _tokens_ from the list.
 ```js-nolint
 remove(token1)
 remove(token1, token2)
-remove(token1, token2, /* … ,*/ tokenN)
+remove(token1, token2, /* …, */ tokenN)
 ```
 
 ### Parameters
@@ -62,7 +56,7 @@ To remove multiple classes at once, you can supply multiple tokens. The order yo
 supply the tokens doesn't have to match the order they appear in the list:
 
 ```js
-const span2 = document.getElementById("a")
+const span2 = document.getElementById("a");
 const classes2 = span2.classList;
 
 classes2.remove("c", "b");

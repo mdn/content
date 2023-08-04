@@ -1,11 +1,7 @@
 ---
 title: <textPath>
 slug: Web/SVG/Element/textPath
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
 browser-compat: svg.elements.textPath
 ---
 
@@ -16,24 +12,27 @@ To render text along the shape of a {{SVGElement("path")}}, enclose the text in 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
   <!-- to hide the path, it is usually wrapped in a <defs> element -->
   <!-- <defs> -->
-  <path id="MyPath" fill="none" stroke="red"
-        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
+  <path
+    id="MyPath"
+    fill="none"
+    stroke="red"
+    d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
   <!-- </defs> -->
 
   <text>
-    <textPath href="#MyPath">
-      Quick brown fox jumps over the lazy dog.
-    </textPath>
+    <textPath href="#MyPath">Quick brown fox jumps over the lazy dog.</textPath>
   </text>
-
 </svg>
 ```
 
@@ -52,7 +51,7 @@ html,body,svg { height:100% }
     _Value type_: `align`|`stretch` ; _Default value_: `align`; _Animatable_: **yes**
 - {{SVGAttr("path")}} {{Experimental_Inline}}
   - : The path on which the text should be rendered.
-    _Value type_: [**\<path_data>**](/en-US/docs/Web/SVG/Content_type#path_data) ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: [**\<path_data>**](/en-US/docs/Web/SVG/Attribute/path#path-data) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("side")}} {{Experimental_Inline}}
   - : Which side of the path the text should be rendered.
     _Value type_: `left`|`right` ; _Default value_: `left`; _Animatable_: **yes**

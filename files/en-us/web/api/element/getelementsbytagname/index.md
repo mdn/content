@@ -1,13 +1,8 @@
 ---
-title: Element.getElementsByTagName()
+title: "Element: getElementsByTagName() method"
+short-title: getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.getElementsByTagName
 ---
 
@@ -54,12 +49,12 @@ A _live_ {{domxref("HTMLCollection")}} of elements with a matching tag name, in 
 
 ```js
 // Check the status of each data cell in a table
-const table = document.getElementById('forecast-table');
-const cells = table.getElementsByTagName('td');
+const table = document.getElementById("forecast-table");
+const cells = table.getElementsByTagName("td");
 
 for (const cell of cells) {
-  const status = cell.getAttribute('data-status');
-  if (status === 'open') {
+  const status = cell.getAttribute("data-status");
+  if (status === "open") {
     // Grab the data
   }
 }

@@ -1,12 +1,7 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.inline-size
 ---
 

@@ -1,16 +1,10 @@
 ---
-title: PasswordCredential.name
+title: "PasswordCredential: name property"
+short-title: name
 slug: Web/API/PasswordCredential/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential Management API
-  - NeedsExample
-  - PasswordCredential
-  - Property
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PasswordCredential.name
 ---
 

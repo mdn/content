@@ -1,0 +1,33 @@
+name: JavaScript lint
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .nvmrc
+      - "**/*.js"
+      - "**/*.mjs"
+      - .github/workflows/pr-check_javascript.yml
+
+jobs:
+  lint-js:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint JavaScript files
+        run: yarn lint:js

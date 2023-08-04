@@ -1,13 +1,10 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Deprecated
-  - Global attributes
-  - HTML
-  - Reference
-  - contextmenu
-  - Non-standard
+page-type: html-attribute
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.global_attributes.contextmenu
 ---
 
@@ -48,7 +45,8 @@ A _context menu_ is a menu that appears upon user interaction, such as a right-c
       <img
         src="promobutton_mdn5.png"
         contextmenu="ChangeImage"
-        id="promoButton" />
+        id="promoButton"
+        alt="Better CSS Docs for a better web" />
       <menu type="context" id="ChangeImage">
         <menuitem label="Change Image" onclick="changeImage()"></menuitem>
       </menu>
@@ -63,14 +61,14 @@ A _context menu_ is a menu that appears upon user interaction, such as a right-c
 function shareViaTwitter() {
   window.open(
     "https://twitter.com/intent/tweet?text=" +
-      "Hurray! I am learning ContextMenu from MDN via Mozilla"
+      "Hurray! I am learning ContextMenu from MDN via Mozilla",
   );
 }
 
 function shareViaFacebook() {
   window.open(
     "https://facebook.com/sharer/sharer.php?u=" +
-      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus"
+      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus",
   );
 }
 
@@ -103,4 +101,3 @@ The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/o
 ## See also
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.contextMenu")}}

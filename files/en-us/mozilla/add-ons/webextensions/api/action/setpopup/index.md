@@ -1,16 +1,7 @@
 ---
 title: action.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - setPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.setPopup
 ---
 
@@ -70,27 +61,33 @@ function onCreated() {
   }
 }
 
-browser.contextMenus.create({
-  id: "popup-1",
-  type: "radio",
-  title: "Popup 1",
-  contexts: ["all"],
-  checked: true
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-1",
+    type: "radio",
+    title: "Popup 1",
+    contexts: ["all"],
+    checked: true,
+  },
+  onCreated,
+);
 
-browser.contextMenus.create({
-  id: "popup-2",
-  type: "radio",
-  title: "Popup 2",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-2",
+    type: "radio",
+    title: "Popup 2",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "popup-1") {
-    browser.action.setPopup({popup: "/popup/popup1.html"})
+    browser.action.setPopup({ popup: "/popup/popup1.html" });
   } else if (info.menuItemId === "popup-2") {
-    browser.action.setPopup({popup: "/popup/popup2.html"})
+    browser.action.setPopup({ popup: "/popup/popup2.html" });
   }
 });
 ```
@@ -102,8 +99,6 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

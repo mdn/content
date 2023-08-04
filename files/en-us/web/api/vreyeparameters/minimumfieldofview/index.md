@@ -1,20 +1,11 @@
 ---
-title: VREyeParameters.minimumFieldOfView
+title: "VREyeParameters: minimumFieldOfView property"
+short-title: minimumFieldOfView
 slug: Web/API/VREyeParameters/minimumFieldOfView
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Non-standard
-
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - minimumFieldOfView
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.minimumFieldOfView
 ---
 

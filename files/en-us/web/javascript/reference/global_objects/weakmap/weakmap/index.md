@@ -1,18 +1,13 @@
 ---
 title: WeakMap() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakMap
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakMap.WeakMap
 ---
 
 {{JSRef}}
 
-The **`WeakMap()` constructor** creates a [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) object, optionally based on a provided [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or other iterable object.
+The **`WeakMap()`** constructor creates {{jsxref("WeakMap")}} objects.
 
 ## Syntax
 
@@ -41,7 +36,7 @@ const o2 = function () {};
 const o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // a value can be anything, including an object or a function
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // keys and values can be any objects. Even WeakMaps!

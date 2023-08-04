@@ -1,12 +1,7 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.background-repeat
 ---
 
@@ -145,25 +140,32 @@ background-repeat: unset;
 
 ```html
 <ol>
-  <li>no-repeat
+  <li>
+    no-repeat
     <div class="one"></div>
   </li>
-  <li>repeat
+  <li>
+    repeat
     <div class="two"></div>
   </li>
-  <li>repeat-x
+  <li>
+    repeat-x
     <div class="three"></div>
   </li>
-  <li>repeat-y
+  <li>
+    repeat-y
     <div class="four"></div>
   </li>
-  <li>space
+  <li>
+    space
     <div class="five"></div>
   </li>
-  <li>round
+  <li>
+    round
     <div class="six"></div>
   </li>
-  <li>repeat-x, repeat-y (multiple images)
+  <li>
+    repeat-x, repeat-y (multiple images)
     <div class="seven"></div>
   </li>
 </ol>
@@ -209,8 +211,7 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image: url(starsolid.gif),
-    url(https://developer.mozilla.org/static/img/favicon32.png);
+  background-image: url(starsolid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
@@ -232,4 +233,4 @@ In this example, each list item is matched with a different value of `background
 
 ## See also
 
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -1,11 +1,10 @@
 ---
 title: Synchronous
 slug: Glossary/Synchronous
-tags:
-  - Glossary
-  - Web
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Synchronous** refers to real-time communication where each party receives (and if necessary, processes and replies to) messages instantly (or as near to instantly as possible).
 

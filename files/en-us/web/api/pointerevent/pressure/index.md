@@ -1,14 +1,8 @@
 ---
-title: PointerEvent.pressure
+title: "PointerEvent: pressure property"
+short-title: pressure
 slug: Web/API/PointerEvent/pressure
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
 browser-compat: api.PointerEvent.pressure
 ---
 
@@ -24,22 +18,26 @@ The normalized pressure of the pointer input in the range of `0` to `1`, inclusi
 
 ## Examples
 
-In this snippet, when a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired, different functions
+In this snippet, when a {{domxref("Element/pointerdown_event", "pointerdown")}} event is fired, different functions
 are called depending on the value of the event's `pressure` property.
 
 ```js
-someElement.addEventListener('pointerdown', (event) => {
-  if (event.pressure === 0) {
-    // No pressure
-    process_no_pressure(event);
-  } else if (event.pressure === 1) {
-    // Maximum pressure
-    process_max_pressure(event);
-  } else {
-    // Default
-    process_pressure(event);
-  }
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.pressure === 0) {
+      // No pressure
+      process_no_pressure(event);
+    } else if (event.pressure === 1) {
+      // Maximum pressure
+      process_max_pressure(event);
+    } else {
+      // Default
+      process_pressure(event);
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

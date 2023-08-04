@@ -1,21 +1,13 @@
 ---
 title: Intl.Locale.prototype.region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.region
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.region`** property is an accessor property that returns the region of the world (usually a country) associated with the locale.
+The **`region`** accessor property of {{jsxref("Intl.Locale")}} instances returns the region of the world (usually a country) associated with this locale.
 
 ## Description
 

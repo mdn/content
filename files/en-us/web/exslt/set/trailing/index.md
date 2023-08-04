@@ -1,10 +1,7 @@
 ---
 title: set:trailing()
 slug: Web/EXSLT/set/trailing
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -32,4 +29,4 @@ A node-set containing the nodes from `nodeSet1` whose values follow the first no
 
 ## Specifications
 
-[EXSLT - SET:TRAILING](http://exslt.org/set/functions/trailing/index.html)
+[EXSLT - SET:TRAILING](https://exslt.github.io/set/functions/trailing/index.html)

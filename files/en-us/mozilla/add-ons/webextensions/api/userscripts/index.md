@@ -1,15 +1,7 @@
 ---
 title: userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts
-tags:
-  - Add-ons
-  - Customization
-  - Extensions
-  - Firefox
-  - Mozilla
-  - Reference
-  - WebExtensions
-  - userScripts
+page-type: webextension-api
 browser-compat: webextensions.api.userScripts
 ---
 

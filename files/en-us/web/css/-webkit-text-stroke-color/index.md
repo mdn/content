@@ -1,18 +1,15 @@
 ---
-title: '-webkit-text-stroke-color'
+title: "-webkit-text-stroke-color"
 slug: Web/CSS/-webkit-text-stroke-color
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - WebKit
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.-webkit-text-stroke-color
 ---
 
 {{CSSRef}}
 
 The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
+
+## Syntax
 
 ```css
 /* <color> values */
@@ -23,10 +20,10 @@ The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/e
 /* Global values */
 -webkit-text-stroke-color: inherit;
 -webkit-text-stroke-color: initial;
+-webkit-text-stroke-color: revert;
+-webkit-text-stroke-color: revert-layer;
 -webkit-text-stroke-color: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -49,7 +46,7 @@ The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/e
 
 ```html
 <p>Text with stroke</p>
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 #### CSS

@@ -2,12 +2,6 @@
 title: SVGFEFuncBElement
 slug: Web/API/SVGFEFuncBElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEFuncBElement
 ---
 
@@ -17,11 +11,11 @@ The **`SVGFEFuncBElement`** interface corresponds to the {{SVGElement("feFuncB")
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface not provide any specific properties, but inherits properties from its parent interface, {{domxref("SVGComponentTransferFunctionElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGComponentTransferFunctionElement")}}._
 

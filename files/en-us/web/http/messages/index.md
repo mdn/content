@@ -1,10 +1,7 @@
 ---
 title: HTTP Messages
 slug: Web/HTTP/Messages
-tags:
-  - Guide
-  - HTTP
-  - WebMechanics
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -55,7 +52,7 @@ HTTP requests are messages sent by the client to initiate an action on the serve
 
 ### Headers
 
-[HTTP headers](/en-US/docs/Web/HTTP/Headers) from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (`':'`) and a value whose structure depends upon the header. The whole header, including the value, consist of one single line, which can be quite long.
+[HTTP headers](/en-US/docs/Web/HTTP/Headers) from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (`':'`) and a value whose structure depends upon the header. The whole header, including the value, consists of one single line, which can be quite long.
 
 Many different headers can appear in requests. They can be divided in several groups:
 

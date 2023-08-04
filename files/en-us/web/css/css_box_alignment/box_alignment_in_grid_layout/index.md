@@ -1,18 +1,14 @@
 ---
 title: Box alignment in grid layout
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
-tags:
-  - CSS
-  - Guide
-  - box alignment
-  - grid
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
+page-type: guide
 ---
 
 {{CSSRef}}
 
-The [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) specification details how alignment works in various layout methods. On this page we explore how box alignment works in the context of [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+The [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) specification details how alignment works in various layout methods. On this page we explore how box alignment works in the context of [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
-As this page aims to detail things which are specific to CSS Grid Layout and Box Alignment, it should be read in conjunction with the main [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) page which details the common features of box alignment across layout methods.
+As this page aims to detail things which are specific to CSS Grid Layout and Box Alignment, it should be read in conjunction with the main [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) page which details the common features of box alignment across layout methods.
 
 ## Basic example
 
@@ -91,10 +87,9 @@ The updated properties have not yet been implemented in all browsers. Therefore,
 
 ## Guides
 
-- [Alignment in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+- [Alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 
 ## External Resources
 
-- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
 - [CSS Grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
 - [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

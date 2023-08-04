@@ -1,12 +1,7 @@
 ---
 title: Add-ons
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Extension
-  - Extensions
-  - Landing
-  - Mozilla
+page-type: landing-page
 ---
 
 {{AddonSidebarMain}}

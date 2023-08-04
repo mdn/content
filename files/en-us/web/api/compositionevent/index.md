@@ -2,12 +2,6 @@
 title: CompositionEvent
 slug: Web/API/CompositionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - CompositionEvent
-  - DOM
-  - Event
-  - Reference
 browser-compat: api.CompositionEvent
 ---
 
@@ -22,7 +16,7 @@ The DOM **`CompositionEvent`** represents events that occur due to the user indi
 - {{domxref("CompositionEvent.CompositionEvent()", "CompositionEvent()")}}
   - : Creates a new `CompositionEvent` object instance.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parent, {{domxref("UIEvent")}}, and its ancestor — {{domxref("Event")}}._
 
@@ -31,7 +25,7 @@ _This interface also inherits properties of its parent, {{domxref("UIEvent")}}, 
 - {{domxref("CompositionEvent.locale")}} {{ReadOnlyInline}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Returns the locale of current input method (for example, the keyboard layout locale if the composition is associated with IME).
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parent, {{domxref("UIEvent")}}, and its ancestor — {{domxref("Event")}}._
 

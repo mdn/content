@@ -1,18 +1,12 @@
 ---
-title: VideoFrame.copyTo()
+title: "VideoFrame: copyTo() method"
+short-title: copyTo()
 slug: Web/API/VideoFrame/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - copyTo
-  - VideoFrame
-  - Experimental
 browser-compat: api.VideoFrame.copyTo
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}
 
 The **`copyTo()`** method of the {{domxref("VideoFrame")}} interface copies the contents of the `VideoFrame` to an `ArrayBuffer`.
 

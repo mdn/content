@@ -2,13 +2,6 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 page-type: web-api-interface
-tags:
-  - API
-  - CacheStorage
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.CacheStorage
 ---
 
@@ -35,7 +28,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 {{securecontext_header}}
 
-## Methods
+## Instance methods
 
 - {{domxref("CacheStorage.match()")}}
   - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
@@ -77,8 +70,8 @@ self.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 
@@ -104,7 +97,7 @@ self.addEventListener("fetch", (event) => {
           })
           .catch(() => caches.match("/gallery/myLittleVader.jpg"));
       }
-    })
+    }),
   );
 });
 ```

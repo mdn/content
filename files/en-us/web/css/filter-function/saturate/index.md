@@ -1,12 +1,7 @@
 ---
 title: saturate()
 slug: Web/CSS/filter-function/saturate
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.filter-function.saturate
 ---
 
@@ -48,7 +43,8 @@ saturate(200%)  /* Double saturation */
 
 ## See also
 
-- {{cssxref("&lt;filter-function&gt;")}}
+The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}

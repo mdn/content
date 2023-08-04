@@ -1,14 +1,10 @@
 ---
-title: CanvasRenderingContext2D.isContextLost()
+title: "CanvasRenderingContext2D: isContextLost() method"
+short-title: isContextLost()
 slug: Web/API/CanvasRenderingContext2D/isContextLost
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.isContextLost
 ---
 
@@ -38,10 +34,10 @@ None.
 ### Examples
 
 ```js
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
 if (ctx.isContextLost()) {
-  console.log("Context is lost")
+  console.log("Context is lost");
 }
 ```
 

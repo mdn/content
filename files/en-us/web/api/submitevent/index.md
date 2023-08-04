@@ -2,17 +2,6 @@
 title: SubmitEvent
 slug: Web/API/SubmitEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Form Submission
-  - Forms
-  - HTML DOM
-  - Interface
-  - Reference
-  - SubmitEvent
-  - Web
-  - events
-  - submit
 browser-compat: api.SubmitEvent
 ---
 
@@ -27,14 +16,14 @@ The **`SubmitEvent`** interface defines the object used to represent an {{Glossa
 - {{domxref("SubmitEvent.SubmitEvent", "SubmitEvent()")}}
   - : Creates and returns a new `SubmitEvent` object whose {{domxref("Event.type", "type")}} and other options are configured as specified. Note that currently the only valid `type` for a `SubmitEvent` is `submit`.
 
-## Properties
+## Instance properties
 
 _In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
 
 - {{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}
   - : An {{domxref("HTMLElement")}} object which identifies the button or other element which was invoked to trigger the form being submitted.
 
-## Methods
+## Instance methods
 
 _While `SubmitEvent` offers no methods of its own, it inherits any specified by its parent interface, {{domxref("Event")}}._
 
@@ -51,7 +40,10 @@ form.addEventListener("submit", (event) => {
   if (handler) {
     processOrder(form, handler);
   } else {
-    showAlertMessage("An unknown or unaccepted payment type was selected. Please try again.", "OK");
+    showAlertMessage(
+      "An unknown or unaccepted payment type was selected. Please try again.",
+      "OK",
+    );
   }
 });
 ```

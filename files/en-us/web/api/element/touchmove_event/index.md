@@ -1,16 +1,8 @@
 ---
-title: 'Element: touchmove event'
+title: "Element: touchmove event"
+short-title: touchmove
 slug: Web/API/Element/touchmove_event
 page-type: web-api-event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchmove
 browser-compat: api.Element.touchmove_event
 ---
 
@@ -23,9 +15,9 @@ The `touchmove` event is fired when one or more touch points are moved along the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('touchmove', (event) => {});
+addEventListener("touchmove", (event) => {});
 
-ontouchmove = (event) => { };
+ontouchmove = (event) => {};
 ```
 
 ## Event type
@@ -53,9 +45,9 @@ _This interface inherits properties from its parent, {{domxref("UIEvent")}} and 
 - {{domxref("TouchEvent.touches")}} {{ReadOnlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.
 - {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`
+  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`.
 - {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`
+  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`.
 
 ## Examples
 
@@ -73,4 +65,3 @@ Code samples for those events are available on the dedicated page: [Touch events
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("Element/mousemove_event", "mousemove")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/touchmove_event", "touchmove")}}

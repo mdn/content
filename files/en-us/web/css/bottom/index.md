@@ -1,12 +1,7 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.bottom
 ---
 
@@ -84,7 +79,9 @@ This example demonstrates the difference in behavior of the `bottom` property, w
 #### HTML
 
 ```html
-<p>This<br>is<br>some<br>tall,<br>tall,<br>tall,<br>tall,<br>tall<br>content.</p>
+<p>
+  This<br />is<br />some<br />tall,<br />tall,<br />tall,<br />tall,<br />tall<br />content.
+</p>
 <div class="fixed"><p>Fixed</p></div>
 <div class="absolute"><p>Absolute</p></div>
 ```

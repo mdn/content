@@ -2,11 +2,6 @@
 title: Gamepad API
 slug: Web/API/Gamepad_API
 page-type: web-api-overview
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Overview
 browser-compat: api.Gamepad
 ---
 

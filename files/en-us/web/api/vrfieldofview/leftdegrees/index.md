@@ -1,18 +1,11 @@
 ---
-title: VRFieldOfView.leftDegrees
+title: "VRFieldOfView: leftDegrees property"
+short-title: leftDegrees
 slug: Web/API/VRFieldOfView/leftDegrees
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - VRFieldOfView
-  - Virtual Reality
-  - WebVR
-  - leftDegrees
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFieldOfView.leftDegrees
 ---
 

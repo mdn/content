@@ -1,14 +1,9 @@
 ---
-title: 'Element: pointerout event'
+title: "Element: pointerout event"
+short-title: pointerout
 slug: Web/API/Element/pointerout_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - PointerEvent
-  - Reference
-browser-compat: api.Element.pointerout_event
 page-type: web-api-event
+browser-compat: api.Element.pointerout_event
 ---
 
 {{APIRef}}
@@ -20,9 +15,9 @@ The `pointerout` event is fired for several reasons including: pointing device i
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerout', (event) => {});
+addEventListener("pointerout", (event) => {});
 
-onpointerout = (event) => { };
+onpointerout = (event) => {};
 ```
 
 ## Event type
@@ -52,7 +47,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
@@ -61,20 +56,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerout', (event) => {
-  console.log('Pointer moved out');
+para.addEventListener("pointerout", (event) => {
+  console.log("Pointer moved out");
 });
 ```
 
 Using the `onpointerout` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerout = (event) => {
-  console.log('Pointer moved out');
+  console.log("Pointer moved out");
 };
 ```
 
@@ -88,13 +83,14 @@ para.onpointerout = (event) => {
 
 ## See also
 
-- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
-- [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
-- [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
-- [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
-- [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
-- [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
-- [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-- This event on `Document` targets: [`pointerout`](/en-US/docs/Web/API/Document/pointerout_event) event
+- Related events
+
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)

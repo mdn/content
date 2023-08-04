@@ -1,12 +1,7 @@
 ---
 title: max-content
 slug: Web/CSS/max-content
-tags:
-  - CSS
-  - CSS Grid
-  - Reference
-  - max-content
-  - sizing
+page-type: css-keyword
 browser-compat: css.properties.width.max-content
 ---
 
@@ -25,13 +20,6 @@ block-size: max-content;
 
 /* used in grid tracks */
 grid-template-columns: 200px 1fr max-content;
-
-/* Global values */
-max-content: inherit;
-max-content: initial;
-max-content: revert;
-max-content: revert-layer;
-max-content: unset;
 ```
 
 ## Examples
@@ -43,7 +31,9 @@ max-content: unset;
 ```html
 <div id="container">
   <div class="item">Item</div>
-  <div class="item">Item with more text in it which will overflow the fixed width box.</div>
+  <div class="item">
+    Item with more text in it which will overflow the fixed width box.
+  </div>
 </div>
 ```
 
@@ -75,9 +65,7 @@ max-content: unset;
 ```html
 <div id="container">
   <div>Item</div>
-  <div>
-    Item with more text in it.
-  </div>
+  <div>Item with more text in it.</div>
   <div>Flexible item</div>
 </div>
 ```

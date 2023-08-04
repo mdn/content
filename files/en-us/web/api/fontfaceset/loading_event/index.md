@@ -1,13 +1,8 @@
 ---
 title: "FontFaceSet: loading event"
+short-title: loading
 slug: Web/API/FontFaceSet/loading_event
 page-type: web-api-event
-tags:
-  - API
-  - Property
-  - Reference
-  - onloading
-  - FontFaceSet
 browser-compat: api.FontFaceSet.loading_event
 ---
 

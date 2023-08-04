@@ -1,9 +1,9 @@
 ---
-title: Advanced Example
+title: Advanced example
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-tags:
-  - XSLT
 ---
+
+{{XsltSidebar}}
 
 ## Advanced example
 
@@ -82,7 +82,7 @@ function sort() {
   myDOM = fragment;
 
   // Add the new content from the transformation
-  document.getElementById("example").appendChild(fragment)
+  document.getElementById("example").appendChild(fragment);
 }
 ```
 

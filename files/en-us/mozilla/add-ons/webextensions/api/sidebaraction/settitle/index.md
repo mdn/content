@@ -1,15 +1,7 @@
 ---
 title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setTitle
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setTitle
 ---
 
@@ -75,7 +67,7 @@ This code changes the title for the sidebar when the user clicks a browser actio
 let title = "A different title";
 
 function setTitleForTab(tab) {
-  browser.sidebarAction.setTitle({title, tabId: tab.id});
+  browser.sidebarAction.setTitle({ title, tabId: tab.id });
 }
 
 browser.browserAction.onClicked.addListener(setTitleForTab);

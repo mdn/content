@@ -1,23 +1,14 @@
 ---
 title: Creating our first Vue component
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
-tags:
-  - Beginner
-  - Components
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - props
-  - state
-  - Vue
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
+> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/>.
 
 <table>
   <tbody>
@@ -77,10 +68,10 @@ Let's create our first component, which will display a single todo item. We'll u
 
 Your file should now look like this:
 
-```html
-<template> </template>
+```vue
+<template></template>
 <script>
-  export default {};
+export default {};
 </script>
 ```
 
@@ -89,7 +80,7 @@ We can now begin to add actual content to our `ToDoItem`. Vue templates are curr
 1. Add an empty `<div>` inside your component template now.
 2. Inside that `<div>`, let's add a checkbox and a corresponding label. Add an `id` to the checkbox, and a `for` attribute mapping the checkbox to the label, as shown below.
 
-   ```html
+   ```vue
    <template>
      <div>
        <input type="checkbox" id="todo-item" />
@@ -106,7 +97,7 @@ This is all fine, but we haven't added the component to our app yet, so there's 
 2. At the top of your `<script>` tag, add the following to import your `ToDoItem` component:
 
    ```js
-   import ToDoItem from './components/ToDoItem.vue';
+   import ToDoItem from "./components/ToDoItem.vue";
    ```
 
 3. Inside your component object, add the `components` property, and inside it add your `ToDoItem` component to register it.
@@ -114,26 +105,27 @@ This is all fine, but we haven't added the component to our app yet, so there's 
 Your `<script>` contents should now look like this:
 
 ```js
-import ToDoItem from './components/ToDoItem.vue';
+import ToDoItem from "./components/ToDoItem.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
-  }
+    ToDoItem,
+  },
 };
 ```
 
 This is the same way that the `HelloWorld` component was registered by the Vue CLI earlier.
 
-To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is always in PascalCase (e.g. `ToDoList`), and the equivalent custom element is always in kebab-case (e.g. `<to-do-list>`).
+To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is in PascalCase (e.g. `ToDoList`), and the equivalent custom element is in kebab-case (e.g. `<to-do-list>`).
+It's necessary to use this casing style if you're writing Vue templates [in the DOM directly](https://vuejs.org/guide/essentials/component-basics.html#dom-template-parsing-caveats)
 
 1. Underneath the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), create an unordered list ([`<ul>`](/en-US/docs/Web/HTML/Element/ul)) containing a single list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)).
 2. Inside the list item add `<to-do-item></to-do-item>`.
 
-Your `App.vue` `<template>` contents should now look something like this:
+The `<template>` section of your `App.vue` file should now look something like this:
 
-```html
+```vue
 <div id="app">
   <h1>To-Do List</h1>
   <ul>
@@ -184,8 +176,8 @@ Your component object should now look like this:
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
-  }
+    done: { default: false, type: Boolean },
+  },
 };
 ```
 
@@ -199,18 +191,18 @@ In your `<template>`, replace the contents of the `<label>` element with `\{{lab
 
 Your component's template section should now look like this:
 
-```html
+```vue
 <template>
   <div>
     <input type="checkbox" id="todo-item" />
-    <label for="todo-item">\{{label}}</label>
+    <label for="todo-item">\{{ label }}</label>
   </div>
 </template>
 ```
 
 Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you'll see a warning along these lines in the console:
 
-```
+```plain
 [Vue warn]: Missing required prop: "label"
 
 found in
@@ -224,7 +216,7 @@ This is because we marked the `label` as a required prop, but we never gave the 
 
 Inside your `App.vue` file, add a `label` prop to the `<to-do-item></to-do-item>` component, just like a regular HTML attribute:
 
-```html
+```vue
 <to-do-item label="My ToDo Item"></to-do-item>
 ```
 
@@ -262,13 +254,13 @@ Update the component object like so:
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
-      isDone: this.done
+      isDone: this.done,
     };
-  }
+  },
 };
 ```
 
@@ -276,7 +268,7 @@ Vue does a little magic here — it binds all of your props directly to the comp
 
 So now we need to attach the `isDone` property to our component. In a similar fashion to how Vue uses `\{{}}` expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: **`v-bind`**. The `v-bind` expression looks like this:
 
-```
+```plain
 v-bind:attribute="expression"
 ```
 
@@ -284,7 +276,7 @@ In other words, you prefix whatever attribute/prop you want to bind to with `v-b
 
 So in the case of the checkbox in our `ToDoItem` component, we can use `v-bind` to map the `isDone` property to the `checked` attribute on the `<input>` element. Both of the following are equivalent:
 
-```html
+```vue
 <input type="checkbox" id="todo-item" v-bind:checked="isDone" />
 
 <input type="checkbox" id="todo-item" :checked="isDone" />
@@ -296,7 +288,7 @@ So let's do this. Update your `<input>` element now to include `:checked="isDone
 
 Test out your component by passing `:done="true"` to the `ToDoItem` call in `App.vue`. Note that you need to use the `v-bind` syntax, because otherwise `true` is passed as a string. The displayed checkbox should be checked.
 
-```html
+```vue
 <template>
   <div id="app">
     <h1>My To-Do List</h1>
@@ -328,35 +320,35 @@ npm install --save lodash.uniqueid
 We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`'s `<script>` element:
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 ```
 
 Next, add an `id` field to our data property, so the component object ends up looking like so (`uniqueId()` returns the specified prefix — `todo-` — with a unique string appended to it):
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
       isDone: this.done,
-      id: uniqueId('todo-')
+      id: uniqueId("todo-"),
     };
-  }
+  },
 };
 ```
 
 Next, bind the `id` to both our checkbox's `id` attribute and the label's `for` attribute, updating the existing `id` and `for` attributes as shown:
 
-```html
+```vue
 <template>
   <div>
     <input type="checkbox" :id="id" :checked="isDone" />
-    <label :for="id">\{{label}}</label>
+    <label :for="id">\{{ label }}</label>
   </div>
 </template>
 ```
@@ -368,58 +360,3 @@ And that will do for this article. At this point we have a nicely-working `ToDoI
 Now we're ready to add multiple `ToDoItem` components to our app. In our next article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

@@ -2,9 +2,6 @@
 title: CustomEvent
 slug: Web/API/CustomEvent
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.CustomEvent
 ---
 
@@ -21,19 +18,19 @@ The **`CustomEvent`** interface represents events initialized by an application 
 - {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
   - : Creates a new `CustomEvent`.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its parent, {{domxref("Event")}}._
 
 - {{domxref("CustomEvent.detail")}} {{ReadOnlyInline}}
   - : Returns any data passed when initializing the event.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from its parent, {{domxref("Event")}}._
 
 - {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : Initializes a `CustomEvent` object. If the event has already being dispatched, this method does nothing.
+  - : Initializes a `CustomEvent` object. If the event has already been dispatched, this method does nothing.
 
 ## Specifications
 

@@ -1,12 +1,6 @@
 ---
 title: Absolute
 slug: WebAssembly/Reference/Numeric/Absolute
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
 
 {{WebAssemblySidebar}}

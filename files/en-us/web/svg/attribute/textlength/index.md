@@ -1,17 +1,7 @@
 ---
 title: textLength
 slug: Web/SVG/Attribute/textLength
-tags:
-  - Attribute
-  - CSS
-  - HTML
-  - JavaScript
-  - SVG Attribute
-  - Text
-  - height
-  - length
-  - size
-  - width
+page-type: svg-attribute
 browser-compat: svg.attributes.textLength
 ---
 
@@ -31,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -80,7 +72,10 @@ Let's create a simple example that presents text you can resize using an {{HTMLE
 
 ```css
 .controls {
-  font: 16px "Open Sans", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -89,14 +84,27 @@ Let's create a simple example that presents text you can resize using an {{HTMLE
 Let's start with the SVG. It's pretty basic, with a 1000-by-300 pixel space mapped into a 10 centimeter by 3 centimeter box.
 
 ```html
-<svg width="10cm" height="3cm" viewBox="0 0 1000 300"
-    xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="10cm"
+  height="3cm"
+  viewBox="0 0 1000 300"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect
+    x="1"
+    y="1"
+    width="998"
+    height="298"
+    fill="none"
+    stroke="green"
+    stroke-width="2" />
 
-  <rect x="1" y="1" width="998" height="298"
-      fill="none" stroke="green" stroke-width="2"/>
-
-  <text id="hello" x="10" y="150"
-      font-family="sans-serif" font-size="60" fill="green">
+  <text
+    id="hello"
+    x="10"
+    y="150"
+    font-family="sans-serif"
+    font-size="60"
+    fill="green">
     Hello world!
   </text>
 </svg>
@@ -110,7 +118,7 @@ The HTML is also simple, with only two displayed elements contained inside a gro
 
 ```html
 <div class="controls">
-  <input type="range" id="widthSlider" min="80" max="978">
+  <input type="range" id="widthSlider" min="80" max="978" />
   <span id="widthDisplay"></span>
 </div>
 ```
@@ -129,16 +137,22 @@ const baseLength = Math.floor(textElement.textLength.baseVal.value);
 
 widthSlider.value = baseLength;
 
-widthSlider.addEventListener("input", (event) => {
-  textElement.textLength.baseVal.newValueSpecifiedUnits(
-      SVGLength.SVG_LENGTHTYPE_PX, widthSlider.valueAsNumber);
-  widthDisplay.innerText = widthSlider.value;
-}, false);
+widthSlider.addEventListener(
+  "input",
+  (event) => {
+    textElement.textLength.baseVal.newValueSpecifiedUnits(
+      SVGLength.SVG_LENGTHTYPE_PX,
+      widthSlider.valueAsNumber,
+    );
+    widthDisplay.innerText = widthSlider.value;
+  },
+  false,
+);
 
 widthSlider.dispatchEvent(new Event("input"));
 ```
 
-After fetching the element references, an {{domxref("EventListener")}} is established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the slider control, to receive any {{domxref("HTMLElement/input_event", "input")}} events which occur. These events will be sent any time the slider's value changes, even if the user hasn't stopped moving it, so we can responsively adjust the text width.
+After fetching the element references, an {{domxref("EventTarget.addEventListener", "event listener", "", 1)}} is established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the slider control, to receive any {{domxref("HTMLElement/input_event", "input")}} events which occur. These events will be sent any time the slider's value changes, even if the user hasn't stopped moving it, so we can responsively adjust the text width.
 
 When an `"input"` event occurs, we call `newValueSpecifiedUnits()` to set the value of `textLength` to the slider's new value, using the `SVGLength` interface's `SVG_LENGTHTYPE_PX` unit type to indicate that the value represents pixels. Note that we have to dive into `textLength` to get its `baseVal` property; `textLength` is stored as an {{domxref("SVGLength")}} object, so we can't treat it like a plain number.
 

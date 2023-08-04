@@ -1,10 +1,7 @@
 ---
 title: exsl:node-set()
 slug: Web/EXSLT/exsl/node-set
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -15,7 +12,7 @@ You can also use `exsl:node-set()` to turn strings into text nodes.
 
 ## Syntax
 
-```
+```plain
 exsl:node-set(object)
 ```
 
@@ -30,4 +27,4 @@ The node-set corresponding to the specified `object`.
 
 ## Specifications
 
-[EXSLT - EXSL:NODE-SET](http://exslt.org/exsl/functions/node-set/index.html)
+[EXSLT - EXSL:NODE-SET](https://exslt.github.io/exsl/functions/node-set/index.html)

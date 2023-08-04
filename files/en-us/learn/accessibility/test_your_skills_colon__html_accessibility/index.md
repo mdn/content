@@ -1,12 +1,7 @@
 ---
-title: 'Test your skills: HTML accessibility'
+title: "Test your skills: HTML accessibility"
 slug: Learn/Accessibility/Test_your_skills:_HTML_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - HTML
-  - Learn
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

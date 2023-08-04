@@ -1,14 +1,10 @@
 ---
 title: <xsl:attribute>
 slug: Web/XSLT/Element/attribute
-tags:
-  - Attribute
-  - Element
-  - Reference
-  - XSLT
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:attribute>` element creates an attribute in the output document, using any values that can be accessed from the stylesheet. The element must be defined before any other output document element inside the output document element for which it establishes attribute values. But it may be after or inside elements that won't be part of the output (like `<xsl:choose>` or `<xsl:apply-templates>` etc.).
 

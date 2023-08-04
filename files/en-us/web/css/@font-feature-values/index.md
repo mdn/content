@@ -1,11 +1,7 @@
 ---
-title: '@font-feature-values'
+title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
-tags:
-  - At-rule
-  - CSS
-  - CSS Fonts
-  - Reference
+page-type: css-at-rule
 browser-compat: css.at-rules.font-feature-values
 ---
 
@@ -34,9 +30,7 @@ The `@font-feature-values` at-rule may be used either at the top level of your C
 
 ## Formal syntax
 
-```
-@font-feature-values <family-name># { <declaration-list> }
-```
+{{csssyntax}}
 
 ## Examples
 

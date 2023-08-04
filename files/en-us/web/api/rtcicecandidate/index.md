@@ -2,20 +2,6 @@
 title: RTCIceCandidate
 slug: Web/API/RTCIceCandidate
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Interface
-  - Media
-  - RTCIceCandidate
-  - Reference
-  - SDP
-  - Web RTC
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidate
 ---
 
@@ -35,7 +21,7 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 
     > **Note:** For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCIceCandidate.address", "address")}} {{ReadOnlyInline}}
   - : A string containing the IP address of the candidate.
@@ -66,7 +52,7 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 - {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}
   - : A string containing a randomly-generated username fragment ("ice-ufrag") which ICE uses for message integrity along with a randomly-generated password ("ice-pwd"). You can use this string to verify generations of ICE generation; each generation of the same ICE process will use the same `usernameFragment`, even across ICE restarts.
 
-## Methods
+## Instance methods
 
 - {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
   - : Returns a {{Glossary("JSON")}} representation of the `RTCIceCandidate`'s current configuration.

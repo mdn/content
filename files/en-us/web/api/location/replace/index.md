@@ -1,13 +1,8 @@
 ---
-title: location.replace()
+title: "location: replace() method"
+short-title: replace()
 slug: Web/API/Location/replace
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - Method
-  - Reference
 browser-compat: api.Location.replace
 ---
 
@@ -48,7 +43,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Navigate to the Location.reload article by replacing this page
-window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+window.location.replace(
+  "https://developer.mozilla.org/en-US/docs/Web/API/Location.reload",
+);
 ```
 
 ## Specifications

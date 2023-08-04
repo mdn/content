@@ -1,13 +1,8 @@
 ---
-title: Range.selectNodeContents()
+title: "Range: selectNodeContents() method"
+short-title: selectNodeContents()
 slug: Web/API/Range/selectNodeContents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-  - Reference
 browser-compat: api.Range.selectNodeContents
 ---
 

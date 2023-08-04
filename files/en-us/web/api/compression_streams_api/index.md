@@ -2,13 +2,6 @@
 title: Compression Streams API
 slug: Web/API/Compression_Streams_API
 page-type: web-api-overview
-tags:
-  - API
-  - Compression_Streams_API
-  - Compression
-  - Decompression
-  - Reference
-  - Overview
 browser-compat: api.CompressionStream
 ---
 
@@ -30,14 +23,16 @@ Built in compression means that JavaScript applications will not need to include
 In this example a stream is compressed using gzip compression.
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));
+const compressedReadableStream = inputReadableStream.pipeThrough(
+  new CompressionStream("gzip"),
+);
 ```
 
 In the following example a function decompresses a blob using gzip.
 
 ```js
 async function DecompressBlob(blob) {
-  const ds = new DecompressionStream('gzip');
+  const ds = new DecompressionStream("gzip");
   const decompressedStream = blob.stream().pipeThrough(ds);
   return await new Response(decompressedStream).blob();
 }

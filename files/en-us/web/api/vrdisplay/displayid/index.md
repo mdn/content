@@ -1,18 +1,11 @@
 ---
-title: VRDisplay.displayId
+title: "VRDisplay: displayId property"
+short-title: displayId
 slug: Web/API/VRDisplay/displayId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - displayId
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.displayId
 ---
 

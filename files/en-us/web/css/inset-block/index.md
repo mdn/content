@@ -1,12 +1,7 @@
 ---
 title: inset-block
 slug: Web/CSS/inset-block
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.inset-block
 ---
 

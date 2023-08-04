@@ -1,16 +1,8 @@
 ---
-title: FontFace.weight
+title: "FontFace: weight property"
+short-title: weight
 slug: Web/API/FontFace/weight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - weight
 browser-compat: api.FontFace.weight
 ---
 

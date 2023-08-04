@@ -1,29 +1,25 @@
 ---
-title: 'USB: disconnect event'
+title: "USB: disconnect event"
+short-title: disconnect
 slug: Web/API/USB/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - USB
-  - WebUSB
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USB.disconnect_event
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is disconnected.
+The **`disconnect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is disconnected.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('disconnect', (event) => { })
+addEventListener("disconnect", (event) => {});
 
-ondisconnect = (event) => { }
+ondisconnect = (event) => {};
 ```
 
 ## Event type
@@ -44,7 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
 Once a USB device is disconnected, you might want to update the UI.
 
 ```js
-navigator.usb.addEventListener('disconnect', (event) => {
+navigator.usb.addEventListener("disconnect", (event) => {
   // Remove event.device from the UI.
 });
 ```

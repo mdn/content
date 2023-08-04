@@ -1,14 +1,7 @@
 ---
 title: Finishing up
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-tags:
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
-  - lives
-  - requestAnimationFrame
+page-type: guide
 ---
 
 {{GamesSidebar}}

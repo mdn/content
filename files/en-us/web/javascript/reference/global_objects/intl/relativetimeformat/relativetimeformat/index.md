@@ -1,21 +1,13 @@
 ---
 title: Intl.RelativeTimeFormat() constructor
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-  - RelativeTimeFormat
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
 
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} objects.
+The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl.RelativeTimeFormat")}} objects.
 
 ## Syntax
 
@@ -30,13 +22,13 @@ new Intl.RelativeTimeFormat(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
 
   - : An object with some or all of the following properties:
 
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `numeric`
 
       - : The format of output message. Possible values are:
@@ -68,12 +60,10 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 });
 
 // Format relative time using negative value (-1).
-rtf.format(-1, "day");
-// > "1 day ago"
+rtf.format(-1, "day"); // "1 day ago"
 
 // Format relative time using positive value (1).
-rtf.format(1, "day");
-// > "in 1 day"
+rtf.format(1, "day"); // "in 1 day"
 ```
 
 ### Using the auto option
@@ -86,12 +76,10 @@ If `numeric:auto` option is passed, it will produce the string `yesterday` or `t
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Format relative time using negative value (-1).
-rtf.format(-1, "day");
-// > "yesterday"
+rtf.format(-1, "day"); // "yesterday"
 
 // Format relative time using positive day unit (1).
-rtf.format(1, "day");
-// > "tomorrow"
+rtf.format(1, "day"); // "tomorrow"
 ```
 
 ## Specifications

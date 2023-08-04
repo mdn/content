@@ -1,12 +1,7 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.matrix3d
 ---
 
@@ -113,8 +108,26 @@ a `matrix3d()` transform to it.
   margin: 50px auto;
 }
 
-#example-element:hover, #example-element:focus {
-  transform: rotate3d(1, 1, 1, 30deg) matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,100,0,1.1);
+#example-element:hover,
+#example-element:focus {
+  transform: rotate3d(1, 1, 1, 30deg) matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      6,
+      0,
+      0,
+      0,
+      1,
+      0,
+      50,
+      100,
+      0,
+      1.1
+    );
 }
 
 .face {
@@ -130,32 +143,32 @@ a `matrix3d()` transform to it.
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgba(210, 0, 0, 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgba(0, 0, 210, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -172,15 +185,15 @@ Another `transform3d()` example, which implements an animated combined translate
 
 ```html
 <div class="foo">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
-necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat sit
+  soluta, quisquam exercitationem delectus qui unde in facere necessitatibus aut
+  quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
 </div>
 ```
 
 #### CSS
 
-```css
+```css-nolint
 html {
   width: 100%;
 }
@@ -191,7 +204,6 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-
 }
 .foo {
   width: 50%;
@@ -202,7 +214,7 @@ body {
   text-align: center;
   font-family: system-ui, sans-serif;
   font-size: 14px;
-   /* Setting up animation for better demonstration */
+  /* Setting up animation for better demonstration */
   animation: MotionScale 2s alternate linear infinite;
 }
 
@@ -218,27 +230,26 @@ body {
         Scales down by 10%
     */
     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      -50, -100, 0, 1.1
     );
-
   }
   50% {
     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, 0.9
     );
   }
   to {
      transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      50, 100, 0, 1.1
     )
   }
 }
@@ -259,5 +270,9 @@ body {
 ## See also
 
 - {{cssxref("transform")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/) (2012)

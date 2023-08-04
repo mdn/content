@@ -1,10 +1,7 @@
 ---
 title: Updating extensions for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_extensions
-tags:
-  - Extensions
-  - Firefox
-  - Firefox 3.6
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -13,7 +10,7 @@ This article provides helpful information to extension developers trying to upda
 
 ## User interface changes
 
-[Right-clicking on elements (including links and images) no longer offers a "Properties" menu item.](https://bugzilla.mozilla.org/show_bug.cgi?id=513147) The properties dialog box was not useful for most users and has been removed. If your extension interacts with that menu item in any way, you'll need to revise your code to add it yourself, or contribute your own context menu entry directly.
+[Right-clicking on elements (including links and images) no longer offers a "Properties" menu item.](https://bugzil.la/513147) The properties dialog box was not useful for most users and has been removed. If your extension interacts with that menu item in any way, you'll need to revise your code to add it yourself, or contribute your own context menu entry directly.
 
 ## Add-on package changes
 

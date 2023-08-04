@@ -2,12 +2,6 @@
 title: SVGAnimatedAngle
 slug: Web/API/SVGAnimatedAngle
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedAngle
 ---
 
@@ -54,7 +48,7 @@ The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>]
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -87,7 +81,7 @@ The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>]
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedAngle` interface do not provide any specific methods.
 

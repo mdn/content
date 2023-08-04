@@ -1,14 +1,10 @@
 ---
-title: HIDDevice.receiveFeatureReport()
+title: "HIDDevice: receiveFeatureReport() method"
+short-title: receiveFeatureReport()
 slug: Web/API/HIDDevice/receiveFeatureReport
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - receiveFeatureReport
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.receiveFeatureReport
 ---
 

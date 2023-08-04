@@ -1,14 +1,7 @@
 ---
 title: mask-border-source
 slug: Web/CSS/mask-border-source
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-border-source
 ---
 

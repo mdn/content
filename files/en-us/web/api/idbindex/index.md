@@ -2,14 +2,6 @@
 title: IDBIndex
 slug: Web/API/IDBIndex
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBIndex
 ---
 
@@ -25,12 +17,12 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
-  - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
+  - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).)
 - {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
-  - : Returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
+  - : Returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).)
 - {{domxref("IDBIndex.name")}}
   - : The name of this index.
 - {{domxref("IDBIndex.objectStore")}} {{ReadOnlyInline}}
@@ -42,7 +34,7 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 - {{domxref("IDBIndex.unique")}} {{ReadOnlyInline}}
   - : If `true`, this index does not allow duplicate values for a key.
 
-## Methods
+## Instance methods
 
 Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
@@ -69,31 +61,32 @@ Finally, we iterate through each record, and insert the data into an HTML table.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  const transaction = db.transaction(['contactsList'], 'readonly');
-  const objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  const transaction = db.transaction(["contactsList"], "readonly");
+  const objectStore = transaction.objectStore("contactsList");
 
-  const myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
   myIndex.openCursor().onsuccess = (event) => {
-   const cursor = event.target.result;
+    const cursor = event.target.result;
     if (cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
-                         + `<td>${cursor.value.lName}</td>`
-                         + `<td>${cursor.value.fName}</td>`
-                         + `<td>${cursor.value.jTitle}</td>`
-                         + `<td>${cursor.value.company}</td>`
-                         + `<td>${cursor.value.eMail}</td>`
-                         + `<td>${cursor.value.phone}</td>`
-                         + `<td>${cursor.value.age}</td>`;
+      const tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        `<td>${cursor.value.id}</td>` +
+        `<td>${cursor.value.lName}</td>` +
+        `<td>${cursor.value.fName}</td>` +
+        `<td>${cursor.value.jTitle}</td>` +
+        `<td>${cursor.value.company}</td>` +
+        `<td>${cursor.value.eMail}</td>` +
+        `<td>${cursor.value.phone}</td>` +
+        `<td>${cursor.value.age}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications
@@ -112,4 +105,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

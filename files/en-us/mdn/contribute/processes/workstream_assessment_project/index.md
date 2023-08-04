@@ -1,16 +1,7 @@
 ---
 title: MDN Workstream assessment and project setup process
 slug: MDN/Contribute/Processes/Workstream_assessment_project
-tags:
-  - MDN
-  - MDN Meta
-  - Meta
-  - Meta Docs
-  - Content bugs
-  - Process
-  - Workstream
-  - Assessment
-  - Project
+page-type: guide
 ---
 
 {{MDNSidebar}}

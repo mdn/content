@@ -1,15 +1,10 @@
 ---
-title: URLPattern.test()
+title: "URLPattern: test() method"
+short-title: test()
 slug: Web/API/URLPattern/test
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Polyfill
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.test
 ---
 
@@ -53,32 +48,38 @@ This example shows how to use the `test()` method to match a URL against a
 pattern. The example prints the result of the `test()` calls to the console.
 
 ```js
-const pattern = new URLPattern('http{s}?://*.example.com/books/:id');
+const pattern = new URLPattern("http{s}?://*.example.com/books/:id");
 
 // Absolute URL strings
-console.log(pattern.test('https://store.example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books/123')); // false
+console.log(pattern.test("https://store.example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books/123")); // false
 
 // Relative URL strings
-console.log(pattern.test('/books/123', 'http://store.example.com')); // true
-console.log(pattern.test('/books/123', 'data:text/plain,hello world!')); // false
-console.log(pattern.test('/books/123')); // false
+console.log(pattern.test("/books/123", "http://store.example.com")); // true
+console.log(pattern.test("/books/123", "data:text/plain,hello world!")); // false
+console.log(pattern.test("/books/123")); // false
 
 // Structured objects
-console.log(pattern.test({
-  pathname: '/books/123',
-  baseURL: 'http://store.example.com',
-})); // true
-console.log(pattern.test({
-  protocol: 'https',
-  hostname: 'store.example.com',
-  pathname: '/books/123',
-})); // true
-console.log(pattern.test({
-  protocol: 'file',
-  hostname: 'store.example.com',
-  pathname: '/books/123',
-})); // false
+console.log(
+  pattern.test({
+    pathname: "/books/123",
+    baseURL: "http://store.example.com",
+  }),
+); // true
+console.log(
+  pattern.test({
+    protocol: "https",
+    hostname: "store.example.com",
+    pathname: "/books/123",
+  }),
+); // true
+console.log(
+  pattern.test({
+    protocol: "file",
+    hostname: "store.example.com",
+    pathname: "/books/123",
+  }),
+); // false
 ```
 
 ## Specifications

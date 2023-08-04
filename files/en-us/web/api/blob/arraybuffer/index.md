@@ -1,13 +1,8 @@
 ---
-title: Blob.arrayBuffer()
+title: "Blob: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
 browser-compat: api.Blob.arrayBuffer
 ---
 

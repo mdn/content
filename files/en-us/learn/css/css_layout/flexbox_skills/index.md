@@ -1,13 +1,7 @@
 ---
-title: 'Test your skills: Flexbox'
+title: "Test your skills: Flexbox"
 slug: Learn/CSS/CSS_layout/Flexbox_skills
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Flexbox
-  - Layout
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

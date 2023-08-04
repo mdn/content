@@ -1,14 +1,8 @@
 ---
-title: HTMLTableElement.deleteTFoot()
+title: "HTMLTableElement: deleteTFoot() method"
+short-title: deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLTableElement.deleteTFoot
 ---
 
@@ -39,17 +33,29 @@ This example uses JavaScript to delete a table's footer.
 
 ```html
 <table>
-  <thead><th>Name</th><th>Score</th></thead>
-  <tr><td>Bob</td><td>541</td></tr>
-  <tr><td>Jim</td><td>225</td></tr>
-  <tfoot><th>Average</th><td>383</td></tfoot>
+  <thead>
+    <th>Name</th>
+    <th>Score</th>
+  </thead>
+  <tr>
+    <td>Bob</td>
+    <td>541</td>
+  </tr>
+  <tr>
+    <td>Jim</td>
+    <td>225</td>
+  </tr>
+  <tfoot>
+    <th>Average</th>
+    <td>383</td>
+  </tfoot>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 table.deleteTFoot();
 ```
 

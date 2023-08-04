@@ -1,12 +1,10 @@
 ---
 title: Redirect tracking protection
 slug: Web/Privacy/Redirect_tracking_protection
-tags:
-  - Firefox
-  - Mozilla
-  - Privacy
-  - redirect tracking protection
+page-type: guide
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy")}}
 
 Firefox 79 includes protection against redirect tracking. This document describes how the protections work.
 
@@ -20,7 +18,7 @@ Redirect trackers work by forcing you to make an imperceptible and momentary sto
 
 ## Redirect tracking protection explained
 
-To protect against redirect tracking Firefox periodically clears cookies and site data from trackers. We only clear this data from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`). Support for other cookie policies is tracked by [Bug 1643045](https://bugzilla.mozilla.org/show_bug.cgi?id=1643045).
+To protect against redirect tracking Firefox periodically clears cookies and site data from trackers. We only clear this data from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`). Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
 
 ### What origins are cleared?
 
@@ -28,10 +26,10 @@ An origin will be cleared if it fulfills the following conditions:
 
 1. It has stored cookies or accessed other site storage (e.g. [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or the [Cache API](/en-US/docs/Web/API/CacheStorage)) within the last 72 hours. Since cookies are per-host, we will clear both the `http` and `https` origin variants of a cookie host.
 2. The origin is [classified as a tracker](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained) in our Tracking Protection list.
-3. No origin with the same base domain (eTLD+1) has a user-interaction permission.
+3. No origin with the same base domain ({{Glossary("eTLD", "eTLD+1")}}) has a user-interaction permission.
 
-    - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
-    - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.
+   - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
+   - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.
 
 ### What data is cleared?
 
@@ -73,7 +71,9 @@ Different log levels can be set via the `privacy.purge_trackers.logging.level` p
 For debugging purposes, it's easiest to trigger storage clearing by triggering the service directly via the [Browser Console command line](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html#browser-console-command-line). Note that this is different from the normal [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) you might use to debug a website, and requires the `devtools.chrome.enabled` pref to be set to `true` to use it interactively. Once you've enabled the Browser Console you can trigger storage clearing by running the following command:
 
 ```js
-await Components.classes["@mozilla.org/purge-tracker-service;1"].getService(Components.interfaces.nsIPurgeTrackerService).purgeTrackingCookieJars()
+await Components.classes["@mozilla.org/purge-tracker-service;1"]
+  .getService(Components.interfaces.nsIPurgeTrackerService)
+  .purgeTrackingCookieJars();
 ```
 
 The time until user interaction permissions expire can be set to a lower amount using the `privacy.userInteraction.expiration` pref. Note that you will have to set this pref before visiting the sites you want to test — it will not apply retroactively.

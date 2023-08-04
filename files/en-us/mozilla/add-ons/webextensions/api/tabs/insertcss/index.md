@@ -1,16 +1,7 @@
 ---
 title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - insertCSS
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.insertCSS
 ---
 
@@ -79,12 +70,11 @@ This example inserts into the currently active tab CSS which is taken from a str
 let css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  let insertingCSS = browser.tabs.insertCSS({code: css});
+  let insertingCSS = browser.tabs.insertCSS({ code: css });
   insertingCSS.then(null, onError);
 });
 ```
@@ -93,12 +83,11 @@ This example inserts CSS which is loaded from a file packaged with the extension
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  let insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  let insertingCSS = browser.tabs.insertCSS(2, { file: "content-style.css" });
   insertingCSS.then(null, onError);
 });
 ```
@@ -110,8 +99,6 @@ browser.browserAction.onClicked.addListener(() => {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

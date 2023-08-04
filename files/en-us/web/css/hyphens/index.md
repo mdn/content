@@ -1,12 +1,7 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.hyphens
 ---
 
@@ -47,11 +42,13 @@ The `hyphens` property is specified as a single keyword value chosen from the li
 - `none`
   - : Words are not broken at line breaks, even if characters inside the words suggest line break points. Lines will only wrap at whitespace.
 - `manual`
-  - : Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See [Suggesting line break opportunities](#suggesting_line_break_opportunities) below for details.
+  - : Default value. Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See [Suggesting line break opportunities](#suggesting_line_break_opportunities) below for details.
 - `auto`
   - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. However, suggested line break opportunities (see [Suggesting line break opportunities](#suggesting_line_break_opportunities) below) will override automatic break point selection when present.
 
 > **Note:** The `auto` setting's behavior depends on the language being properly tagged to select the appropriate hyphenation rules. You must specify a language using the `lang` HTML attribute to guarantee that automatic hyphenation is applied in that language.
+
+> **Note:** If you apply [`word-break: break-all`](/en-US/docs/Web/CSS/word-break#break-all) then no hyphens are shown, even if the word breaks at a hyphenation point.
 
 ## Suggesting line break opportunities
 
@@ -84,7 +81,9 @@ This example uses three classes, one for each possible configuration of the `hyp
 <dl>
   <dt><code>none</code>: no hyphen; overflow if needed</dt>
   <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
-  <dt><code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)</dt>
+  <dt>
+    <code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
+  </dt>
   <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
   <dt><code>auto</code>: hyphens where the algorithm decides (if needed)</dt>
   <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
@@ -97,7 +96,7 @@ This example uses three classes, one for each possible configuration of the `hyp
 dd {
   width: 55px;
   border: 1px solid black;
- }
+}
 dd.none {
   hyphens: none;
 }
@@ -126,4 +125,4 @@ dd.auto {
 - {{cssxref("content")}}
 - {{cssxref("overflow-wrap")}} (formerly `word-wrap`)
 - {{cssxref("word-break")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

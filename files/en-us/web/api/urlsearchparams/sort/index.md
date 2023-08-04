@@ -1,13 +1,8 @@
 ---
-title: URLSearchParams.sort()
+title: "URLSearchParams: sort() method"
+short-title: sort()
 slug: Web/API/URLSearchParams/sort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLSearchParams
-  - sort
 browser-compat: api.URLSearchParams.sort
 ---
 
@@ -50,7 +45,7 @@ console.log(searchParams.toString());
 
 The result is:
 
-```
+```plain
 a=2&a=1&b=3&c=4
 ```
 

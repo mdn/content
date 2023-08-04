@@ -1,16 +1,7 @@
 ---
 title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.storage.onChanged
 ---
 
@@ -23,14 +14,14 @@ When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storag
 ## Syntax
 
 ```js-nolint
-browser.storage.onChanged.addListener(callback)
+browser.storage.onChanged.addListener(listener)
 browser.storage.onChanged.removeListener(listener)
 browser.storage.onChanged.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,7 +32,7 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
   - : The function called when this event occurs. The function is passed these arguments:
 
@@ -80,8 +71,6 @@ browser.storage.onChanged.addListener(logStorageChange);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

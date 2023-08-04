@@ -1,16 +1,8 @@
 ---
-title: FontFace.status
+title: "FontFace: status property"
+short-title: status
 slug: Web/API/FontFace/status
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - status
 browser-compat: api.FontFace.status
 ---
 

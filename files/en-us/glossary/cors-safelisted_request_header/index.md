@@ -1,10 +1,10 @@
 ---
 title: CORS-safelisted request header
 slug: Glossary/CORS-safelisted_request_header
-tags:
-  - CORS
-  - Fetch
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A [CORS-safelisted request header](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) is one of the following [HTTP headers](/en-US/docs/Web/HTTP/Headers):
 

@@ -1,10 +1,7 @@
 ---
 title: <mask>
 slug: Web/SVG/Element/mask
-tags:
-  - Element
-  - SVG
-  - SVG Container
+page-type: svg-element
 browser-compat: svg.elements.mask
 ---
 
@@ -15,23 +12,30 @@ The **`<mask>`** element defines an alpha mask for compositing the current objec
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 120 120">
+  <rect x="-10" y="-10" width="120" height="120" fill="blue" />
   <mask id="myMask">
     <!-- Everything under a white pixel will be visible -->
     <rect x="0" y="0" width="100" height="100" fill="white" />
 
     <!-- Everything under a black pixel will be invisible -->
-    <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+    <path
+      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
+      fill="black" />
   </mask>
 
   <polygon points="-10,110 110,110 110,-10" fill="orange" />
 
   <!-- with this mask applied, we "punch" a heart shape hole into the circle -->
-  <circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+  <circle cx="50" cy="50" r="50" fill="purple" mask="url(#myMask)" />
 </svg>
 ```
 

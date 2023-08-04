@@ -2,11 +2,6 @@
 title: CanvasPattern
 slug: Web/API/CanvasPattern
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - Interface
-  - Reference
 browser-compat: api.CanvasPattern
 ---
 
@@ -16,16 +11,16 @@ The **`CanvasPattern`** interface represents an [opaque object](https://en.wikip
 
 It can be used as a {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 
-## Properties
+## Instance properties
 
 _As an opaque object, this has no exposed property._
 
-## Methods
+## Instance methods
 
 _There are no inherited method._
 
 - {{domxref("CanvasPattern.setTransform()")}}
-  - : Applies an {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} representing a linear transform to the pattern.
+  - : Applies a {{domxref("DOMMatrix")}} representing a linear transform to the pattern.
 
 ## Specifications
 

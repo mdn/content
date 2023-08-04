@@ -1,16 +1,7 @@
 ---
 title: downloads.showDefaultFolder()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - showDefaultFolder
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.showDefaultFolder
 ---
 
@@ -37,18 +28,16 @@ None.
 The following snippet contains a show button, which when clicked invokes `showDefaultFolder()` to open the default downloads folder in the platform's file manager:
 
 ```js
-let showBtn = document.querySelector('.show');
+let showBtn = document.querySelector(".show");
 
 showBtn.onclick = () => {
   browser.downloads.showDefaultFolder();
-}
+};
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-showDefaultFolder) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

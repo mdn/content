@@ -1,12 +1,7 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-bottom
 ---
 
@@ -81,9 +76,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the bottom side.
-</div>
+<div>This box has a border on the bottom side.</div>
 ```
 
 #### CSS

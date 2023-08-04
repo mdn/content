@@ -1,15 +1,7 @@
 ---
 title: sessions.removeWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeWindowValue
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeWindowValue
 ---
 
@@ -61,13 +53,13 @@ async function removeFromActiveWindow() {
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-my-item",
   title: "remove item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info) => {

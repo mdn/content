@@ -2,18 +2,6 @@
 title: RTCRtpStreamStats
 slug: Web/API/RTCRtpStreamStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Interface
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCRtpStreamStats
 ---
 
@@ -23,13 +11,12 @@ The {{domxref("RTCRtpStreamStats")}} dictionary is returned by the {{domxref("RT
 
 While the dictionary has a base set of properties that are present in each of these cases, there are also additional properties added depending on which interface the method is called on.
 
-`RTCRtpStreamStats` is the base class for all RTP-related statistics reports. It's based on [RTCStats](#rtcstats) and adds the following additional fields.
+`RTCRtpStreamStats` is the base class for all RTP-related statistics reports.
 
-> **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017. Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
+> **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017.
+> Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
 
-## Properties
-
-_The `RTCRtpStreamStats` dictionary is based on {{domxref("RTCStats")}}, and inherits its properties. In addition, some or all of the following properties are available._
+## Instance properties
 
 ### Standard fields included for all media types
 
@@ -44,10 +31,18 @@ _The `RTCRtpStreamStats` dictionary is based on {{domxref("RTCStats")}}, and inh
 - {{domxref("RTCRtpStreamStats.transportId", "transportId")}}
   - : A string uniquely identifying the object which was inspected to produce the {{domxref("RTCTransportStats")}} object associated with this RTP stream.
 
-#### Obsolete fields
+### Common instance properties
 
-- {{domxref("RTCRtpStreamStats.kind", "mediaType")}} {{Deprecated_Inline}}
-  - : Renamed to {{domxref("RTCRtpStreamStats.kind", "kind")}} in the specification in February 2018. See {{SectionOnPage("/en-US/docs/Web/API/RTCRtpStreamStats/kind", "Browser Compatibility", "code")}} to determine when browsers made the transition.
+The following properties are common to all WebRTC statistics objects.
+
+<!-- RTCStats -->
+
+- `id
+  - : A string that uniquely identifies the object that is being monitored to produce this set of statistics.
+- `timestamp`
+  - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
+- `type`
+  - : A string that indicates the type of statistics that the object contains.
 
 ### Local-only measurements
 

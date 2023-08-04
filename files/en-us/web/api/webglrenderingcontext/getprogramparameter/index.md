@@ -1,14 +1,8 @@
 ---
-title: WebGLRenderingContext.getProgramParameter()
+title: "WebGLRenderingContext: getProgramParameter() method"
+short-title: getProgramParameter()
 slug: Web/API/WebGLRenderingContext/getProgramParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramParameter
 ---
 
@@ -57,16 +51,16 @@ getProgramParameter(program, pname)
 
     - `gl.TRANSFORM_FEEDBACK_BUFFER_MODE`
       - : Returns a
-          {{domxref("WebGL_API/Types", "GLenum")}} indicating the buffer mode when transform feedback is
-          active. May be `gl.SEPARATE_ATTRIBS` or
-          `gl.INTERLEAVED_ATTRIBS`.
+        {{domxref("WebGL_API/Types", "GLenum")}} indicating the buffer mode when transform feedback is
+        active. May be `gl.SEPARATE_ATTRIBS` or
+        `gl.INTERLEAVED_ATTRIBS`.
     - `gl.TRANSFORM_FEEDBACK_VARYINGS`
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
-          indicating the number of varying variables to capture in transform feedback
-          mode.
+        indicating the number of varying variables to capture in transform feedback
+        mode.
     - `gl.ACTIVE_UNIFORM_BLOCKS`
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
-          indicating the number of uniform blocks containing active uniforms.
+        indicating the number of uniform blocks containing active uniforms.
 
 ### Return value
 

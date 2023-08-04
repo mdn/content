@@ -1,12 +1,12 @@
 ---
 title: Developer guides
 slug: Web/Guide
-tags:
-  - API
-  - Guide
-  - Landing
-  - Web
+page-type: landing-page
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
 
 There are a number of guides within MDN docs. These articles aim to add additional usage examples, or teach you how to use an API or feature. This page links to some of the most popular material.
 
@@ -23,7 +23,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
   - : Our complete CSS tutorial, taking you from first steps through styling text, creating layouts, and more.
 - [CSS Layout Guides](/en-US/docs/Web/Guide/CSS/CSS_Layout)
   - : There are a large number of guides to CSS Layout across MDN, this page collects them all together.
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSS animations make it possible to animate transitions from one CSS style configuration to another. This guide will help you get started with the animation properties.
 
 ## JavaScript
@@ -36,7 +36,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 ## Media
 
 - [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
-  - : Modern web sites and applications often need to present graphics of varying sophistication.
+  - : Modern websites and applications often need to present graphics of varying sophistication.
 - [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery)
   - : We can deliver audio and video on the web in several ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
 - [Audio and video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation)
@@ -45,7 +45,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 ## APIs
 
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
-  - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using `XMLHttpRequest`. It's primarily intended for sending form data, but can be used independently from forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
+  - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using `XMLHttpRequest`. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
 - [Progressive web apps](/en-US/docs/Web/Progressive_web_apps#core_pwa_guides)
   - : Progressive web apps (PWAs) use modern web APIs along with traditional progressive enhancement strategy to create cross-platform web applications. These apps work everywhere and provide several features that give them the same user experience advantages as native apps. This set of guides tells you all you need to know about PWAs.
 - [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
@@ -59,11 +59,11 @@ There are a number of guides within MDN docs. These articles aim to add addition
 ## Mobile web development
 
 - [Mobile web development](/en-US/docs/Web/Guide/Mobile)
-  - : This article provides an overview of some of the main techniques needed to design web sites that work well on mobile devices.
+  - : This article provides an overview of some main techniques needed to design websites that work well on mobile devices.
 
 ## Fonts
 
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : Find out how to use variable fonts in your designs.
 - [The Web Open Font Format (WOFF)](/en-US/docs/Web/Guide/WOFF)
   - : WOFF (Web Open Font Format) is a font file format that is free for anyone to use on the web.

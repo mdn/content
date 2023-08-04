@@ -2,14 +2,6 @@
 title: NavigationPreloadManager
 slug: Web/API/NavigationPreloadManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Navigation
-  - NavigationPreloadManager
-  - Offline
-  - Reference
-  - Service Workers
 browser-compat: api.NavigationPreloadManager
 ---
 
@@ -20,7 +12,7 @@ The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/
 If supported, an object of this type is returned by {{domxref("ServiceWorkerRegistration.navigationPreload")}}.
 The result of a preload fetch request is waited on using the promise returned by {{domxref("FetchEvent.preloadResponse")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("NavigationPreloadManager.enable()")}}
   - : Enables navigation preloading, returning a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
@@ -65,7 +57,7 @@ addEventListener("activate", (event) => {
         // Enable navigation preloads!
         await self.registration.navigationPreload.enable();
       }
-    })()
+    })(),
   );
 });
 ```
@@ -95,7 +87,7 @@ addEventListener("fetch", (event) => {
 
       // Else try the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```
@@ -115,7 +107,9 @@ The code below shows how to set the value of the header directive to some variab
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => registration.navigationPreload.setHeaderValue(newValue))
+  .then((registration) =>
+    registration.navigationPreload.setHeaderValue(newValue),
+  )
   .then(() => {
     console.log("Done!");
   });

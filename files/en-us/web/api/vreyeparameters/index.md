@@ -2,16 +2,9 @@
 title: VREyeParameters
 slug: Web/API/VREyeParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Landing
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters
 ---
 
@@ -25,7 +18,7 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 
 > **Warning:** The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("VREyeParameters.offset")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
@@ -42,17 +35,17 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 navigator.getVRDisplays().then((displays) => {
   // If a display is available, use it to present the scene
   vrDisplay = displays[0];
-  console.log('Display found');
+  console.log("Display found");
   // Starting the presentation when the button is clicked:
   //   It can only be called in response to a user gesture
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     vrDisplay.requestPresent([{ source: canvas }]).then(() => {
-      console.log('Presenting to WebVR display');
+      console.log("Presenting to WebVR display");
 
       // Set the canvas size to the size of the vrDisplay viewport
 
-      const leftEye = vrDisplay.getEyeParameters('left');
-      const rightEye = vrDisplay.getEyeParameters('right');
+      const leftEye = vrDisplay.getEyeParameters("left");
+      const rightEye = vrDisplay.getEyeParameters("right");
 
       canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
       canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);

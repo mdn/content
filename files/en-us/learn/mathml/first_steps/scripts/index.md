@@ -1,10 +1,7 @@
 ---
 title: MathML scripted elements
 slug: Learn/MathML/First_steps/Scripts
-tags:
-  - Beginner
-  - MathML
-  - Landing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
@@ -154,15 +151,14 @@ document.getElementById("showSolution").addEventListener("click", () => {
 The following MathML formula contains a more complex expression, nesting fractions, roots and scripts. Try to guess the elements laid out with scripted elements `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>`. Each time you click such an element, it is highlighted and a confirmation message is displayed. Finally, read the MathML source to verify whether that corresponds to your expectation.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>My page with scripted elements</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">
@@ -269,15 +265,14 @@ We have previously seen some [properties of the `<mo>` element](/en-US/docs/Lear
 Let's first perform the substitutions <math> <mi>β</mi> <mo>≔</mo> <mrow> <msub> <mi>z</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>z</mi> <mn>2</mn> </msub> </mrow> </math> and <math> <mi>α</mi> <mo>≔</mo> <mrow> <msub> <mi>v</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>v</mi> <mn>2</mn> </msub> </mrow> </math>:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>My page with horizontal stretchy operators</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">
@@ -376,15 +371,14 @@ We now realize that the bottom bracket "⎵" and the rightward arrow "→" stret
 So far our example has actually been rendered with the [`display="block"`](/en-US/docs/Learn/MathML/First_steps/Getting_started#the_display_attribute) attribute. Let's look at the same example, as rendered without that attribute:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>My page with moved limits and small largeop</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math>

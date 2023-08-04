@@ -1,9 +1,6 @@
 ---
 title: How to research a technology
 slug: MDN/Writing_guidelines/Howto/Research_technology
-tags:
-  - meta
-  - writing-guide
 page-type: mdn-writing-guide
 ---
 
@@ -46,7 +43,7 @@ This can feel a little alien to start, but the more you do it the more you get u
 - [How to read web specs Part I – Or: WebVR, how do you work?](https://surma.dev/things/reading-specs/) talks through reading the WebVR spec specifically, but is a great introduction to reading Web API specs.
 - [How to read web specs Part IIa – Or: ECMAScript Symbols](https://surma.dev/things/reading-specs-2/) the second part to the link above contains information on understanding the ECMAScript specification which outlines the JavaScript language
 
-In addition, we have a guide on [Information contained in a WebIDL file](/en-us/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file), which can really help when reading Web API specs.
+In addition, we have a guide on [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file), which can really help when reading Web API specs.
 
 ## Explore the feature
 
@@ -61,13 +58,13 @@ The different pages that you need to write from scratch or update varies dependi
 
 ### Sidebars
 
-It's possible that the sidebar of the pages you write will also need to be defined or updated. To find out if this is needed and how to do it, [check out our sidebar guide](/en-us/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars).
+It's possible that the sidebar of the pages you write will also need to be defined or updated. To find out if this is needed and how to do it, [check out our sidebar guide](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars).
 
 ### Code examples
 
 Some of the code examples for MDN Web Docs are held in separate repositories. Most notably, these are the interactive examples that appear in the "Try it" section in the reference pages and the larger demo code needed for guides. If you do need to add to or amend one of these repositories, it's a good idea to make a note of it in your list.
 
-This [article](/en-us/docs/MDN/Writing_guidelines/Page_structures/Code_examples) describes the different types of code examples we use on MDN Web Docs.
+This [article](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) describes the different types of code examples we use on MDN Web Docs.
 
 ### Example
 

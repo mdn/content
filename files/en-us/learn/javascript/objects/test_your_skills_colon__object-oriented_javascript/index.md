@@ -1,13 +1,7 @@
 ---
-title: 'Test your skills: Object-oriented JavaScript'
+title: "Test your skills: Object-oriented JavaScript"
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - OOJS
-  - Objects
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}
@@ -28,9 +22,9 @@ We'd like you to:
 
 - Add a constructor to this class. The constructor takes arguments for the `name`, `sides`, and `sideLength` properties, and initializes them.
 - Add a new method `calcPerimeter()` method to the class, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console.
-- Create a new instance of the `Shape` class called `square`. Give it a `name` of `square` and a `sideLength` of `5`.
+- Create a new instance of the `Shape` class called `square`. Give it a `name` of `square`, `4` `sides`, and a `sideLength` of `5`.
 - Call your `calcPerimeter()` method on the instance, to see whether it logs the calculation result to the browser's console as expected.
-- Create a new instance of `Shape` called `triangle`, with a `name` of `triangle` and a `sideLength` of `3`.
+- Create a new instance of `Shape` called `triangle`, with a `name` of `triangle`, `3` `sides` and a `sideLength` of `3`.
 - Call `triangle.calcPerimeter()` to check that it works OK.
 
 Try updating the live code below to recreate the finished example:

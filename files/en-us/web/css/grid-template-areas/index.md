@@ -1,12 +1,7 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.grid-template-areas
 ---
 
@@ -26,8 +21,9 @@ grid-template-areas: none;
 
 /* <string> values */
 grid-template-areas: "a b";
-grid-template-areas: "a b b"
-                     "a c d";
+grid-template-areas:
+  "a b b"
+  "a c d";
 
 /* Global values */
 grid-template-areas: inherit;
@@ -74,9 +70,10 @@ grid-template-areas: unset;
   display: grid;
   width: 100%;
   height: 250px;
-  grid-template-areas: "head head"
-                       "nav  main"
-                       "nav  foot";
+  grid-template-areas:
+    "head head"
+    "nav  main"
+    "nav  foot";
   grid-template-rows: 50px 1fr 30px;
   grid-template-columns: 150px 1fr;
 }
@@ -117,5 +114,5 @@ grid-template-areas: unset;
 ## See also
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
 - Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

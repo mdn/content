@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.fillStyle
+title: "CanvasRenderingContext2D: fillStyle property"
+short-title: fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.fillStyle
 ---
 
@@ -44,10 +39,10 @@ This example applies a blue fill color to a rectangle.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -68,8 +63,8 @@ you can generate all kinds of palettes.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {

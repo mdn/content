@@ -2,12 +2,6 @@
 title: EcdhKeyDeriveParams
 slug: Web/API/EcdhKeyDeriveParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - EcdhKeyDeriveParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-EcdhKeyDeriveParams
 ---
 
@@ -19,7 +13,7 @@ ECDH enables two people who each have a key pair consisting of a public and a pr
 
 The parameters for ECDH `deriveKey()` therefore include the other entity's public key, which is combined with this entity's private key to derive the shared secret.
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `ECDH`.

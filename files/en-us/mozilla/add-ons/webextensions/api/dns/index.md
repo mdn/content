@@ -1,12 +1,7 @@
 ---
 title: dns
 slug: Mozilla/Add-ons/WebExtensions/API/dns
-tags:
-  - API
-  - Add-ons
-  - DNS
-  - Extensions
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.dns
 ---
 

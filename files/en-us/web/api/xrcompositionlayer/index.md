@@ -2,19 +2,8 @@
 title: XRCompositionLayer
 slug: Web/API/XRCompositionLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRCompositionLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCompositionLayer
 ---
 
@@ -34,12 +23,10 @@ Several layer types inherit from `XRCompositionLayer`:
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}} {{Experimental_Inline}}
   - : A boolean enabling the layer's texture alpha channel.
-- {{domxref("XRCompositionLayer.chromaticAberrationCorrection")}} {{Experimental_Inline}}
-  - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 - {{domxref("XRCompositionLayer.layout")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The layout type of the layer.
 - {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -47,7 +34,7 @@ Several layer types inherit from `XRCompositionLayer`:
 - {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean signaling that the layer should be re-rendered in the next frame.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 

@@ -1,10 +1,7 @@
 ---
 title: MathML Text Containers
 slug: Learn/MathML/First_steps/Text_containers
-tags:
-  - Beginner
-  - MathML
-  - Landing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
@@ -48,15 +45,14 @@ Mathematical formulas involve many special characters, for example greek letters
 Since most of these characters are not part of Basic Latin Unicode block, it is recommended to specify your [document's character encoding](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding) and to serve it with appropriate [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts). Here is a basic template to use UTF-8 encoding and the [Latin Modern Math](/en-US/docs/Web/MathML/Fonts#fonts_with_a_math_table) font:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>My page with math characters</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
@@ -66,7 +62,7 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 
 {{ EmbedLiveSample('Unicode_characters_for_mathematics', 700, 100, "", "") }}
 
-## A bit of semantics...
+## A bit of semantics
 
 We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started) article that the text in MathML formulas are wrapped in specific container elements such as the `<mn>` or `<mo>`. More generally, every text in MathML formulas must be included inside such container elements, called _token_ elements. In addition, MathML provides multiple token elements in order to distinguish different meanings of the text content:
 
@@ -80,15 +76,14 @@ We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_s
 Below is a more complex example, which says that the absolute value of a real number is equal to that number if and only if it is nonnegative. Spot the different token elements and what they are used for. Each time you click the corresponding text, it is highlighted and a confirmation message is displayed.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>My page with math characters</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">
@@ -247,15 +242,14 @@ Operators have many other properties that we will see in more details later. For
 Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let's rewrite the `<p>` element in the [example at the top of the page](#unicode_characters_for_mathematics) with some actual MathML. Compare the visual rendering in your browser and explain the differences with the text-only version.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>My page with math characters</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
@@ -324,15 +318,14 @@ document.getElementById("showSolution").addEventListener(
 The operator dictionary defines a default _stretchy_ property as well as corresponding _stretch axis_ for some operators. For example, an operator can stretch vertically by default to cover the maximum height of non-stretchy siblings within its `<mrow>` container. By tweaking a bit the [previous exercise](#active_learning_recognize_token_elements), one can make operators stretch vertically. Can you find them?
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>My page with stretchy operators</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">

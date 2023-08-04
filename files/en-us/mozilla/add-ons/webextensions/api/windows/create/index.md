@@ -1,16 +1,7 @@
 ---
 title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.create
 ---
 
@@ -93,8 +84,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   let creating = browser.windows.create({
-    url: ["https://developer.mozilla.org",
-          "https://addons.mozilla.org"]
+    url: ["https://developer.mozilla.org", "https://addons.mozilla.org"],
   });
   creating.then(onCreated, onError);
 });
@@ -113,7 +103,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
   let creating = browser.windows.create({
-    tabId: tab.id
+    tabId: tab.id,
   });
   creating.then(onCreated, onError);
 });
@@ -131,17 +121,15 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let popupURL = browser.extension.getURL("popup/popup.html");
 
   let creating = browser.windows.create({
     url: popupURL,
     type: "popup",
     height: 200,
-    width: 200
+    width: 200,
   });
   creating.then(onCreated, onError);
-
 });
 ```
 
@@ -152,8 +140,6 @@ browser.browserAction.onClicked.addListener((tab) => {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

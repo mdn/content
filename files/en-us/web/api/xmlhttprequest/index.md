@@ -2,16 +2,6 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 page-type: web-api-interface
-tags:
-  - AJAX
-  - API
-  - Communication
-  - HTTP
-  - Interface
-  - Reference
-  - Web
-  - XHR
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
 
@@ -34,7 +24,7 @@ If your communication needs to involve receiving event data or message data from
 - {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}
   - : The constructor initializes an `XMLHttpRequest`. It must be called before any other method calls.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget")}} and of {{domxref("EventTarget")}}._
 
@@ -76,7 +66,7 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : A boolean. It indicates whether or not the object represents a background service request.
 
-## Methods
+## Instance methods
 
 - {{domxref("XMLHttpRequest.abort()")}}
   - : Aborts the request if it has already been sent.
@@ -133,10 +123,9 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLSerializer")}}: Serializing a DOM tree into XML
 - MDN tutorials covering `XMLHttpRequest`:
 
-  - [Ajax — Getting Started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+  - [Ajax](/en-US/docs/Web/Guide/AJAX)
   - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 
 - [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)
-- Feature-Policy directive {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}

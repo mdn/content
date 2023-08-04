@@ -2,20 +2,12 @@
 title: Push API
 slug: Web/API/Push_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Notifications
-  - Push
-  - Reference
-  - Service Workers
 browser-compat:
   - api.PushEvent
   - api.PushMessageData
 ---
 
-{{ApiRef("Push API")}}
+{{DefaultAPISidebar("Push API")}}
 
 The **Push API** gives web applications the ability to receive messages pushed to them from a server, whether or not the web app is in the foreground, or even currently loaded, on a user agent. This lets developers deliver asynchronous notifications and updates to users that opt in, resulting in better engagement with timely new content.
 

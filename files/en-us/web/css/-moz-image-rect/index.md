@@ -1,15 +1,10 @@
 ---
-title: '-moz-image-rect'
+title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - CSS:Mozilla Extensions
-  - Function
-  - Non-standard
-  - Reference
-  - Experimental
+page-type: css-function
+status:
+  - experimental
+  - non-standard
 browser-compat: css.types.-moz-image-rect
 ---
 
@@ -129,14 +124,18 @@ This code handles the click event when the container receives a mouse click.
 
 ```js
 function rotate() {
-  let prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
+  let prevStyle = window
+    .getComputedStyle(document.getElementById("box4"), null)
+    .getPropertyValue("background-image");
 
   // Now that we've saved the last one, start rotating
-  for (let i=1; i<=4; i++) {
+  for (let i = 1; i <= 4; i++) {
     const curId = `box${i}`;
 
     // Shift the background images
-    const curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
+    const curStyle = window
+      .getComputedStyle(document.getElementById(curId), null)
+      .getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }
@@ -160,4 +159,4 @@ Not part of any standard.
 ## See also
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
-- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)

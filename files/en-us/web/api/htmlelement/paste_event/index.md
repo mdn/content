@@ -1,15 +1,8 @@
 ---
-title: 'HTMLElement: paste event'
+title: "HTMLElement: paste event"
+short-title: paste
 slug: Web/API/HTMLElement/paste_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - HTMLElement
-  - Event
-  - Reference
-  - Web
-  - paste
 browser-compat: api.Element.paste_event
 ---
 
@@ -22,9 +15,9 @@ The **`paste`** event fires when the user initiates a paste action through the b
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paste', (event) => { });
+addEventListener("paste", (event) => {});
 
-onpaste = (event) => { };
+onpaste = (event) => {};
 ```
 
 ## Event type
@@ -48,7 +41,9 @@ This example logs every copy and paste attempt to the {{htmlElement("textarea")}
 
 ```html
 <h3>Play with this text area:</h3>
-<textarea id="editor" rows="3">Try copying and pasting text into this field!</textarea>
+<textarea id="editor" rows="3">
+Try copying and pasting text into this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>
@@ -65,8 +60,8 @@ function logPaste(event) {
   log.innerText = `Pasted!\n${log.innerText}`;
 }
 
-const editor = document.getElementById('editor');
-const log = document.getElementById('log');
+const editor = document.getElementById("editor");
+const log = document.getElementById("log");
 
 editor.oncopy = logCopy;
 editor.onpaste = logPaste;

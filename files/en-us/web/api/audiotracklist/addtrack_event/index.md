@@ -1,20 +1,8 @@
 ---
-title: 'AudioTrackList: addtrack event'
+title: "AudioTrackList: addtrack event"
+short-title: addtrack
 slug: Web/API/AudioTrackList/addtrack_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - addtrack
-  - Adding Audio Tracks
-  - Adding Tracks
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - addtrack
-  - track
 browser-compat: api.AudioTrackList.addtrack_event
 ---
 
@@ -26,8 +14,8 @@ The `addtrack` event is fired when a track is added to an [`AudioTrackList`](/en
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('addtrack', (event) => { })
+```js-nolint
+addEventListener("addtrack", (event) => { })
 
 onaddtrack = (event) => { }
 ```
@@ -96,5 +84,5 @@ videoElement.audioTracks.onaddtrack = (event) => {
 - Related events: [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event), [`change`](/en-US/docs/Web/API/AudioTrackList/change_event)
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
 - This event on [`MediaStream`](/en-US/docs/Web/API/MediaStream) targets: [`addtrack`](/en-US/docs/Web/API/MediaStream/addtrack_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

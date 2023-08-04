@@ -1,14 +1,10 @@
 ---
-title: BackgroundFetchRegistration.uploaded
+title: "BackgroundFetchRegistration: uploaded property"
+short-title: uploaded
 slug: Web/API/BackgroundFetchRegistration/uploaded
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - uploaded
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.uploaded
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: baseline-shift
 slug: Web/SVG/Attribute/baseline-shift
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.baseline-shift
 ---
 
@@ -18,7 +15,6 @@ The **`baseline-shift`** attribute allows repositioning of the dominant-baseline
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
@@ -50,6 +46,7 @@ You can use this attribute with the following SVG elements:
 - `super`
   - : The dominant-baseline is shifted to the default position for superscripts.
 - `<length-percentage>`
+
   - : A length value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified length.
 
     A percentage value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified percentage of the {{SVGAttr("line-height")}}.

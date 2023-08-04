@@ -2,13 +2,6 @@
 title: Response
 slug: Web/API/Response
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Response
 browser-compat: api.Response
 ---
 
@@ -23,7 +16,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.Response","Response()")}}
   - : Creates a new `Response` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("Response.body")}} {{ReadOnlyInline}}
   - : A {{domxref("ReadableStream")}} of the body contents.
@@ -32,21 +25,28 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.headers")}} {{ReadOnlyInline}}
   - : The {{domxref("Headers")}} object associated with the response.
 - {{domxref("Response.ok")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the response was successful (status in the range `200`–`299`) or not.
+  - : A boolean indicating whether the response was successful (status in the range `200` – `299`) or not.
 - {{domxref("Response.redirected")}} {{ReadOnlyInline}}
   - : Indicates whether or not the response is the result of a redirect (that is, its URL list has more than one entry).
 - {{domxref("Response.status")}} {{ReadOnlyInline}}
   - : The status code of the response. (This will be `200` for a success).
 - {{domxref("Response.statusText")}} {{ReadOnlyInline}}
   - : The status message corresponding to the status code. (e.g., `OK` for `200`).
-- {{domxref("Response.trailers")}}
-  - : A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
 - {{domxref("Response.type")}} {{ReadOnlyInline}}
   - : The type of the response (e.g., `basic`, `cors`).
 - {{domxref("Response.url")}} {{ReadOnlyInline}}
   - : The URL of the response.
 
-## Methods
+## Static methods
+
+- {{domxref("Response.error_static","Response.error()")}}
+  - : Returns a new `Response` object associated with a network error.
+- {{domxref("Response.redirect_static", "Response.redirect()")}}
+  - : Returns a new response with a different URL.
+- {{domxref("Response.json_static", "Response.json()")}}
+  - : Returns a new `Response` object for returning the provided JSON encoded data.
+
+## Instance methods
 
 - {{domxref("Response.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.
@@ -54,14 +54,10 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the response body.
 - {{domxref("Response.clone()")}}
   - : Creates a clone of a `Response` object.
-- {{domxref("Response.error()")}}
-  - : Returns a new `Response` object associated with a network error.
 - {{domxref("Response.formData()")}}
   - : Returns a promise that resolves with a {{domxref("FormData")}} representation of the response body.
 - {{domxref("Response.json()")}}
   - : Returns a promise that resolves with the result of parsing the response body text as {{jsxref("JSON")}}.
-- {{domxref("Response.redirect()")}}
-  - : Creates a new response with a different URL.
 - {{domxref("Response.text()")}}
   - : Returns a promise that resolves with a text representation of the response body.
 
@@ -75,13 +71,13 @@ The `fetch()` call returns a promise, which resolves to the `Response` object as
 You'll notice that since we are requesting an image, we need to run {{domxref("Response.blob")}} to give the response its correct MIME type.
 
 ```js
-const image = document.querySelector('.my-image');
-fetch('flowers.jpg')
-.then((response) => response.blob())
-.then((blob) => {
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-});
+const image = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then((response) => response.blob())
+  .then((blob) => {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
 ```
 
 You can also use the {{domxref("Response.Response", "Response()")}} constructor to create your own custom `Response` object:
@@ -97,14 +93,12 @@ Here we call a PHP program file that generates a JSON string, displaying the res
 ```js
 // Function to do an Ajax call
 const doAjax = async () => {
-  const response = await fetch('Ajax.php'); // Generate the Response object
+  const response = await fetch("Ajax.php"); // Generate the Response object
   if (response.ok) {
-    const jsonValue = await response.json(); // Get JSON value from the response body
-    return Promise.resolve(jsonValue);
-  } else {
-    return Promise.reject('*** PHP file not found');
+    return response.json(); // Get JSON value from the response body
   }
-}
+  throw new Error("*** PHP file not found");
+};
 
 // Call the function and output value or error message to console
 doAjax().then(console.log).catch(console.log);

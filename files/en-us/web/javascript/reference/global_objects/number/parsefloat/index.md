@@ -1,18 +1,13 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.parseFloat
 ---
 
 {{JSRef}}
 
-The **`Number.parseFloat()`** method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns {{jsxref("NaN")}}.
+The **`Number.parseFloat()`** static method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns {{jsxref("NaN")}}.
 
 {{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
 
@@ -35,7 +30,7 @@ Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted
 
 ## Examples
 
-### Number.parseFloat vs parseFloat
+### Number.parseFloat vs. parseFloat
 
 This method has the same functionality as the global {{jsxref("parseFloat", "parseFloat()")}} function:
 

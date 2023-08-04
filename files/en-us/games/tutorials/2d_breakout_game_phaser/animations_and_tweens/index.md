@@ -1,16 +1,7 @@
 ---
 title: Animations and tweens
 slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
-tags:
-  - 2D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - tween
+page-type: guide
 ---
 
 {{GamesSidebar}}

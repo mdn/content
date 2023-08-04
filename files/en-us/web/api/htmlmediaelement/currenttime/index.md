@@ -1,21 +1,8 @@
 ---
-title: HTMLMediaElement.currentTime
+title: "HTMLMediaElement: currentTime property"
+short-title: currentTime
 slug: Web/API/HTMLMediaElement/currentTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Time
-  - Video
-  - Web
-  - currentTime
-  - offset
-  - seconds
-  - seek
 browser-compat: api.HTMLMediaElement.currentTime
 ---
 
@@ -51,7 +38,7 @@ The length of the media in seconds can be determined using the
 ## Examples
 
 ```js
-const video = document.createElement('video');
+const video = document.createElement("video");
 console.log(video.currentTime);
 ```
 
@@ -59,7 +46,7 @@ console.log(video.currentTime);
 
 ### Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, browsers may round or
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), browsers may round or
 otherwise adjust the value returned by `currentTime`.
 
 ## Specifications
@@ -72,6 +59,6 @@ otherwise adjust the value returned by `currentTime`.
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.currentTime` property
 - {{domxref("HTMLMediaElement.fastSeek()")}}: Another way to set the time
 - {{domxref("HTMLMediaElement.duration")}}: The duration of the media in seconds

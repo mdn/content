@@ -1,12 +1,7 @@
 ---
 title: <svg>
 slug: Web/SVG/Element/svg
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Container
-  - Web
+page-type: svg-element
 browser-compat: svg.elements.svg
 ---
 
@@ -14,16 +9,24 @@ browser-compat: svg.elements.svg
 
 The `svg` element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
 
-> **Note:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_. It is unnecessary for inner `svg` elements or inside HTML documents.
+> **Note:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_, or inside HTML documents with XML serialization. It is unnecessary for inner `svg` elements or inside HTML documents with HTML serialization.
 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+<svg
+  viewBox="0 0 300 100"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="red"
+  fill="grey">
   <circle cx="50" cy="50" r="40" />
   <circle cx="150" cy="50" r="4" />
 
@@ -33,7 +36,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample('Example', 300, 100)}}
 
 ## Attributes
 

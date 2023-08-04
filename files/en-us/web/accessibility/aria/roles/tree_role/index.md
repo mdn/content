@@ -1,15 +1,7 @@
 ---
-title: 'ARIA: tree role'
+title: "ARIA: tree role"
 slug: Web/Accessibility/ARIA/Roles/tree_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Tree role
-  - composite widget role
-  - needs example
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tree
   - https://w3c.github.io/aria-practices/#TreeView
@@ -88,7 +80,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <td>
 <ul>
 <li>When focus is on a closed node, opens the node; focus does not move.
-<li>When focus is on a open node, moves focus to the first child node.
+<li>When focus is on an open node, moves focus to the first child node.
 <li>When focus is on an end node (a tree item with no children), does nothing.
 </td>
 </tr>
@@ -148,7 +140,7 @@ For a vertically oriented `tree`, which is the default orientation:
 
 There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended.
 
-#### Recommended multi user select model:
+#### Recommended multi user select model
 
 <table>
 <tr>

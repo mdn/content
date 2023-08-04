@@ -1,13 +1,7 @@
 ---
 title: Structuring planet data
 slug: Learn/HTML/Tables/Structuring_planet_data
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Learn
-  - Tables
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
@@ -64,7 +58,7 @@ The following steps describe what you need to do to complete the table example. 
 
 The finished table should look like this:
 
-![](assessment-table.png)
+![Complex table has a caption above it. The top row cells are column headers. There are three columns of headers. The first two columns have merged cells, with the third column being individual headers for each row. All the text is centered. The headers and every other row have a slight background color.](assessment-table.png)
 
 You can also [see the example live here](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no looking at the source code — don't cheat!)
 
@@ -81,9 +75,3 @@ If you would like your work assessed or are stuck and want to ask for help:
    - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## In this module
-
-- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

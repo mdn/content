@@ -1,12 +1,7 @@
 ---
 title: Tips and Tricks
 slug: Mozilla/Add-ons/WebExtensions/Tips
-tags:
-  - ECMAScript
-  - Tips
-  - Tips and Tricks
-  - WebExtensions
-  - tricks
+page-type: guide
 ---
 
 {{AddonSidebar}}

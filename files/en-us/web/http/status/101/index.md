@@ -1,12 +1,7 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Informational
-  - Reference
-  - WebSockets
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.101
 ---
 
@@ -22,7 +17,7 @@ indicate the protocol it switched to. The process is described in the following 
 
 ## Status
 
-```
+```http
 101 Switching Protocols
 ```
 

@@ -1,15 +1,8 @@
 ---
-title: MediaKeys.setServerCertificate()
+title: "MediaKeys: setServerCertificate() method"
+short-title: setServerCertificate()
 slug: Web/API/MediaKeys/setServerCertificate
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Media
-  - MediaKeys
-  - Method
-  - Reference
-  - setServerCertificate
 browser-compat: api.MediaKeys.setServerCertificate
 ---
 
@@ -31,7 +24,7 @@ setServerCertificate(serverCertificate)
 
 ### Return value
 
-A {{jsxref('Promise')}} that resolves to a boolean. If the Key System implementation represented by this object's cdm implementation value does not support server certificates, return a promise resolved with false.
+A {{jsxref('Promise')}} that resolves to a boolean. If the Key System implementation represented by this object's content decryption module's implementation value does not support server certificates, return a promise resolved with false.
 
 ## Specifications
 

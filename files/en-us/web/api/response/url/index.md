@@ -1,18 +1,12 @@
 ---
-title: Response.url
+title: "Response: url property"
+short-title: url
 slug: Web/API/Response/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - URL
 browser-compat: api.Response.url
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`url`** read-only property of the {{domxref("Response")}} interface contains the URL of the response.
 The value of the `url` property will be the final URL obtained after any redirects.
@@ -29,9 +23,9 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `URL` to the console.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.url); // returns https://developer.mozilla.org/en-US/docs/Web/API/Response/flowers.jpg

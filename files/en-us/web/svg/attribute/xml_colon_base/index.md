@@ -1,10 +1,9 @@
 ---
 title: xml:base
 slug: Web/SVG/Attribute/xml:base
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.core.xml_base
 ---
 

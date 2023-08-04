@@ -1,16 +1,8 @@
 ---
-title: IDBCursor.delete()
+title: "IDBCursor: delete() method"
+short-title: delete()
 slug: Web/API/IDBCursor/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - delete
 browser-compat: api.IDBCursor.delete
 ---
 
@@ -41,7 +33,9 @@ None.
 ### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired. The result attribute is set to undefined.
+operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `undefined`.
 
 ### Exceptions
 
@@ -68,29 +62,31 @@ working example, see our [IDBCursor example](https://github.com/mdn/dom-examples
 
 ```js
 function deleteResult() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readwrite');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readwrite");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      if (cursor.value.albumTitle === 'Grace under pressure') {
+      if (cursor.value.albumTitle === "Grace under pressure") {
         const request = cursor.delete();
         request.onsuccess = () => {
-          console.log('Deleted that mediocre album from 1984. Even Power windows is better.');
+          console.log(
+            "Deleted that mediocre album from 1984. Even Power windows is better.",
+          );
         };
       } else {
-        const listItem = document.createElement('li');
+        const listItem = document.createElement("li");
         listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);
       }
       cursor.continue();
     } else {
-      console.log('Entries displayed.');
+      console.log("Entries displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications
@@ -109,4 +105,4 @@ function deleteResult() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

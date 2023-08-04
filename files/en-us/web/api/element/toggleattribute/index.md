@@ -1,12 +1,8 @@
 ---
-title: Element.toggleAttribute()
+title: "Element: toggleAttribute() method"
+short-title: toggleAttribute()
 slug: Web/API/Element/toggleAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.toggleAttribute
 ---
 
@@ -54,8 +50,7 @@ In the following example, `toggleAttribute()` is used to toggle the
 ### HTML
 
 ```html
-<input value="text">
-<button>toggleAttribute("disabled")</button>
+<input value="text" /> <button>toggleAttribute("disabled")</button>
 ```
 
 ### JavaScript

@@ -1,20 +1,8 @@
 ---
-title: RTCPeerConnectionIceErrorEvent.address
+title: "RTCPeerConnectionIceErrorEvent: address property"
+short-title: address
 slug: Web/API/RTCPeerConnectionIceErrorEvent/address
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - ICE
-  - IP
-  - Negotiation
-  - Networking
-  - Property
-  - RTCPeerConnectionIceErrorEvent
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
 browser-compat: api.RTCPeerConnectionIceErrorEvent.address
 ---
 
@@ -44,7 +32,7 @@ If the local IP address isn't exposed as part of a local candidate, the value of
 
 This example creates a handler for
 {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events
-which creates human readable messages describing the local network interface for the
+which creates human-readable messages describing the local network interface for the
 connection as well as the ICE server that was being used to try to open the connection,
 then calls a function to display those as well as the event's
 {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} property's

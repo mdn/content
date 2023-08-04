@@ -1,14 +1,8 @@
 ---
-title: Response.json()
+title: "Response: json() method"
+short-title: json()
 slug: Web/API/Response/json
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Response
 browser-compat: api.Response.json
 ---
 
@@ -44,24 +38,19 @@ values out of the resulting objects as you'd expect and insert them into list it
 display our product data.
 
 ```js
-const myList = document.querySelector('ul');
-const myRequest = new Request('products.json');
+const myList = document.querySelector("ul");
+const myRequest = new Request("products.json");
 
 fetch(myRequest)
   .then((response) => response.json())
   .then((data) => {
     for (const product of data.products) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
+      listItem.appendChild(document.createElement("strong")).textContent =
+        product.Name;
+      listItem.append(` can be found in ${product.Location}. Cost: `);
       listItem.appendChild(
-        document.createElement('strong')
-      ).textContent = product.Name;
-      listItem.append(
-        ` can be found in ${
-          product.Location
-        }. Cost: `
-      );
-      listItem.appendChild(
-        document.createElement('strong')
+        document.createElement("strong"),
       ).textContent = `£${product.Price}`;
       myList.appendChild(listItem);
     }

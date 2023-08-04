@@ -1,13 +1,10 @@
 ---
-title: 'SerialPort: connect event'
+title: "SerialPort: connect event"
+short-title: connect
 slug: Web/API/SerialPort/connect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.connect_event
 ---
 
@@ -22,9 +19,9 @@ This event bubbles to the instance of {{domxref("Serial")}} that returned this i
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connect', (event) => { });
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { };
+onconnect = (event) => {};
 ```
 
 ## Event type
@@ -35,7 +32,7 @@ A generic {{domxref("Event")}}.
 
 This event bubbles to {{domxref("Serial")}}. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
 
-For more information, see [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
+For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling).
 
 ## Examples
 
@@ -47,7 +44,7 @@ The {{domxref("Serial.requestPort()")}} method returns a {{jsxref("Promise")}} t
 // Prompt user to choose a serial port
 const port = await navigator.serial.requestPort();
 
-port.addEventListener('connect', (event) => {
+port.addEventListener("connect", (event) => {
   // notify that the chosen port is connected
 });
 ```
@@ -57,7 +54,7 @@ port.addEventListener('connect', (event) => {
 The `connect` event bubbles up to the {{domxref("Serial")}} object where you can listen for any newly-connected ports.
 
 ```js
-navigator.serial.addEventListener('connect', (event) => {
+navigator.serial.addEventListener("connect", (event) => {
   // notify that a new port is available
   // use `event.target` to refer to the newly-added port
 });

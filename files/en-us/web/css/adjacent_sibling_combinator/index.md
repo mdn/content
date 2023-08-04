@@ -1,12 +1,7 @@
 ---
 title: Adjacent sibling combinator
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-combinator
 browser-compat: css.selectors.adjacent_sibling
 ---
 

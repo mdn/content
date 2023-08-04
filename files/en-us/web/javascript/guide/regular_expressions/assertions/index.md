@@ -1,13 +1,7 @@
 ---
 title: Assertions
-slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
-tags:
-  - Assertions
-  - Guide
-  - JavaScript
-  - Reference
-  - Regular Expressions
-  - regex
+slug: Web/JavaScript/Guide/Regular_expressions/Assertions
+page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -42,7 +36,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
             <strong>Note:</strong> This character has a different meaning when
             it appears at the start of a
             <a
-              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
               >character class</a
             >.
           </p>
@@ -90,7 +84,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
         <p>
           To match a backspace character (<code>[\b]</code>), see
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
             >Character Classes</a
           >.
         </p>
@@ -131,7 +125,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td>
         <p>
           <strong>Lookahead assertion: </strong>Matches "x" only if "x" is
-          followed by "y". For example, /<code>Jack(?=Sprat)/</code> matches
+          followed by "y". For example, <code>/Jack(?=Sprat)/</code> matches
           "Jack" only if it is followed by "Sprat".<br /><code
             >/Jack(?=Sprat|Frost)/</code
           >
@@ -192,20 +186,20 @@ buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
 // 1) Use ^ to fix the matching at the beginning of the string, and right after newline.
-buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
-console.log(1, buggyMultiline); // fix 'tey', 'tangs' => 'hey', 'hangs'. Avoid 'traa'.
+buggyMultiline = buggyMultiline.replace(/^t/gim, "h");
+console.log(1, buggyMultiline); // fix 'tey' => 'hey' and 'tangs' => 'hangs' but do not touch 'traa'.
 
 // 2) Use $ to fix matching at the end of the text.
-buggyMultiline = buggyMultiline.replace(/aa$/gim,'ee.');
-console.log(2, buggyMultiline); // fix  'traa' => 'tree'.
+buggyMultiline = buggyMultiline.replace(/aa$/gim, "ee.");
+console.log(2, buggyMultiline); // fix 'traa' => 'tree.'.
 
 // 3) Use \b to match characters right on border between a word and a space.
-buggyMultiline = buggyMultiline.replace(/\bi/gim,'t');
-console.log(3, buggyMultiline); // fix  'ihe' but do not touch 'light'.
+buggyMultiline = buggyMultiline.replace(/\bi/gim, "t");
+console.log(3, buggyMultiline); // fix 'ihe' => 'the' but do not touch 'light'.
 
 // 4) Use \B to match characters inside borders of an entity.
-fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
-console.log(4, fixedMultiline); // fix  'greon' but do not touch 'on'.
+fixedMultiline = buggyMultiline.replace(/\Bo/gim, "e");
+console.log(4, fixedMultiline); // fix 'greon' => 'green' but do not touch 'on'.
 ```
 
 ### Matching the beginning of input using a ^ control character
@@ -222,7 +216,7 @@ const fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-In the second example `^` is used both for matching at the beginning of input and for creating negated or complemented character class when used within [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes).
+In the second example `^` is used both for matching at the beginning of input and for creating negated or complemented character class when used within [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes).
 
 ```js
 const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -244,7 +238,9 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
-const enEdSelection = fruitsWithDescription.filter((descr) => /(en|ed)\b/.test(descr));
+const enEdSelection = fruitsWithDescription.filter((descr) =>
+  /(en|ed)\b/.test(descr),
+);
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
@@ -256,10 +252,10 @@ console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 
 const regex = /First(?= test)/g;
 
-console.log('First test'.match(regex)); // [ 'First' ]
-console.log('First peach'.match(regex)); // null
-console.log('This is a First test in a year.'.match(regex)); // [ 'First' ]
-console.log('This is a First peach in a month.'.match(regex)); // null
+console.log("First test".match(regex)); // [ 'First' ]
+console.log("First peach".match(regex)); // null
+console.log("This is a First test in a year.".match(regex)); // [ 'First' ]
+console.log("This is a First peach in a month.".match(regex)); // null
 ```
 
 ### Basic negative lookahead assertion
@@ -267,41 +263,41 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 For example, `/\d+(?!\.)/` matches a number only if it is not followed by a decimal point. `/\d+(?!\.)/.exec('3.141')` matches "141" but not "3.
 
 ```js
-console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
+console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 ```
 
 ### Different meaning of '?!' combination usage in assertions and character classes
 
-The `?!` combination has different meanings in assertions like `/x(?!y)/` and [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) like `[^?!]`.
+The `?!` combination has different meanings in assertions like `/x(?!y)/` and [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) like `[^?!]`.
 
 ```js
-const orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
+const orangeNotLemon =
+  "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
 // Different meaning of '?!' combination usage in Assertions /x(?!y)/ and Ranges /[^?!]/
-const selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi
+const selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi;
 console.log(orangeNotLemon.match(selectNotLemonRegex)); // [ 'Do you want to have an orange?' ]
 
-const selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi
+const selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi;
 console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not want to have a lemon!' ]
 ```
 
 ### Lookbehind assertion
 
 ```js
-const oranges = ['ripe orange A ', 'green orange B', 'ripe orange C'];
+const oranges = ["ripe orange A", "green orange B", "ripe orange C"];
 
-const ripeOranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
-console.log(ripeOranges); // [ 'ripe orange A ', 'ripe orange C' ]
+const ripeOranges = oranges.filter((fruit) => /(?<=ripe )orange/.test(fruit));
+console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
 ```
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [Assertions in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-assertion)

@@ -1,17 +1,13 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.xor
 ---
 
 {{JSRef}}
 
-The static **`Atomics.xor()`**
+The **`Atomics.xor()`** static
 method computes a bitwise XOR with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.
@@ -42,10 +38,10 @@ The old value at the given position (`typedArray[index]`).
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one of the
-  allowed integer types.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds in the
-  `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not one of the allowed integer types.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Description
 
@@ -79,7 +75,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 4
+Atomics.load(ta, 0); // 4
 ```
 
 ## Specifications

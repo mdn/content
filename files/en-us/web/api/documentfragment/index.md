@@ -2,13 +2,6 @@
 title: DocumentFragment
 slug: Web/API/DocumentFragment
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Interface
-  - Reference
-  - Web Components
 browser-compat: api.DocumentFragment
 ---
 
@@ -25,7 +18,7 @@ It is used as a lightweight version of {{domxref("Document")}} that stores a seg
 - {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }}
   - : Creates and returns a new `DocumentFragment` object.
 
-## Properties
+## Instance properties
 
 _This interface has no specific properties, but inherits those of its parent, {{domxref("Node")}}._
 
@@ -38,7 +31,7 @@ _This interface has no specific properties, but inherits those of its parent, {{
 - {{ domxref("DocumentFragment.lastElementChild") }} {{ReadOnlyInline}}
   - : Returns the {{domxref("Element")}} that is the last child of the `DocumentFragment` object, or `null` if there is none.
 
-## Methods
+## Instance methods
 
 _This interface inherits the methods of its parent, {{domxref("Node")}}._
 
@@ -78,13 +71,13 @@ The performance benefit of `DocumentFragment` is often overstated. In fact, in s
 ### JavaScript
 
 ```js
-const ul = document.querySelector('ul');
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
+const ul = document.querySelector("ul");
+const fruits = ["Apple", "Orange", "Banana", "Melon"];
 
 const fragment = new DocumentFragment();
 
 for (const fruit of fruits) {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
   li.textContent = fruit;
   fragment.append(li);
 }

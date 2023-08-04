@@ -1,17 +1,13 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.sub
 ---
 
 {{JSRef}}
 
-The static **`Atomics.sub()`** method subtracts a given value
+The **`Atomics.sub()`** static method subtracts a given value
 at a given position in the array and returns the old value at that position. This atomic
 operation guarantees that no other write happens until the modified value is written
 back.
@@ -44,10 +40,10 @@ The old value at the given position
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one
-  of the allowed integer types.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds
-  in the `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not one of the allowed integer types.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Examples
 

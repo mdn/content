@@ -1,18 +1,8 @@
 ---
-title: 'MediaStreamTrack: ended event'
+title: "MediaStreamTrack: ended event"
+short-title: ended
 slug: Web/API/MediaStreamTrack/ended_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Media Streams API
-  - Reference
-  - Video
-  - Web Audio API
-  - ended
 browser-compat: api.MediaStreamTrack.ended_event
 ---
 
@@ -27,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('ended', (event) => { });
+addEventListener("ended", (event) => {});
 
-onended = (event) => { };
+onended = (event) => {};
 ```
 
 ## Event type
@@ -50,10 +40,10 @@ A generic {{domxref("Event")}}.
 This example sets up an event handler for the `ended` event, which changes an on-screen icon to indicate that the track is no longer active.
 
 ```js
-track.addEventListener('ended', () => {
+track.addEventListener("ended", () => {
   let statusElem = document.getElementById("status-icon");
   statusElem.src = "/images/stopped-icon.png";
-})
+});
 ```
 
 You can also set up the event handler using the `onended` property:
@@ -63,7 +53,7 @@ track.onended = () => {
   let statusElem = document.getElementById("status-icon");
 
   statusElem.src = "/images/stopped-icon.png";
-}
+};
 ```
 
 ## Specifications

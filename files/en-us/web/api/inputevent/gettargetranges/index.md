@@ -1,16 +1,8 @@
 ---
-title: InputEvent.getTargetRanges()
+title: "InputEvent: getTargetRanges() method"
+short-title: getTargetRanges()
 slug: Web/API/InputEvent/getTargetRanges
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM Events
-  - Input
-  - InputEvent
-  - Method
-  - Reference
-  - events
-  - getTargetRanges()
 browser-compat: api.InputEvent.getTargetRanges
 ---
 
@@ -43,7 +35,10 @@ The following function returns true if `beforeinput`, and thus
 
 ```js
 function isBeforeInputEventAvailable() {
-  return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
+  return (
+    window.InputEvent &&
+    typeof InputEvent.prototype.getTargetRanges === "function"
+  );
 }
 ```
 
@@ -56,10 +51,10 @@ event to log the result of `getTargetRanges()`.
 ```js
 const editableElem = document.querySelector('[contenteditable="true"]');
 
-editableElem.addEventListener('beforeinput', (e) => {
-    const targetRanges = e.getTargetRanges();
-    console.log(targetRanges);
-})
+editableElem.addEventListener("beforeinput", (e) => {
+  const targetRanges = e.getTargetRanges();
+  console.log(targetRanges);
+});
 ```
 
 ## Specifications

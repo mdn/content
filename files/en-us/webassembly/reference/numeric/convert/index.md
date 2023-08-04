@@ -1,12 +1,6 @@
 ---
 title: Convert
 slug: WebAssembly/Reference/Numeric/Convert
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Conversion
 ---
 
 {{WebAssemblySidebar}}

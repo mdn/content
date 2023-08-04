@@ -1,24 +1,8 @@
 ---
-title: MediaTrackSupportedConstraints.displaySurface
+title: "MediaTrackSupportedConstraints: displaySurface property"
+short-title: displaySurface
 slug: Web/API/MediaTrackSupportedConstraints/displaySurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Constraints
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - display
-  - displaySurface
-  - screen
 browser-compat: api.MediaTrackSupportedConstraints.displaySurface
 ---
 
@@ -46,7 +30,7 @@ async function capture() {
   let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   let displayMediaOptions = {
     video: {},
-    audio: false
+    audio: false,
   };
 
   if (supportedConstraints.displaySurface) {
@@ -54,7 +38,9 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions,
+    );
   } catch (err) {
     /* handle the error */
   }
@@ -73,7 +59,7 @@ async function capture() {
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}

@@ -2,12 +2,6 @@
 title: SVGFEFloodElement
 slug: Web/API/SVGFEFloodElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEFloodElement
 ---
 
@@ -17,7 +11,7 @@ The **`SVGFEFloodElement`** interface corresponds to the {{SVGElement("feFlood")
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -32,7 +26,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEFloodElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 

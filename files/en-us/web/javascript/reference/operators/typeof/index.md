@@ -1,12 +1,7 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - Unary
+page-type: javascript-operator
 browser-compat: javascript.operators.typeof
 ---
 
@@ -31,19 +26,19 @@ typeof operand
 
 The following table summarizes the possible return values of `typeof`. For more information about types and primitives, see also the [JavaScript data structure](/en-US/docs/Web/JavaScript/Data_structures) page.
 
-| Type                                                                                                                                                                      | Result                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| [Undefined](/en-US/docs/Glossary/undefined)                                                                                                                               | `"undefined"`                       |
-| [Null](/en-US/docs/Glossary/Null)                                                                                                                                         | `"object"` ([reason](#typeof_null)) |
-| [Boolean](/en-US/docs/Glossary/Boolean)                                                                                                                                   | `"boolean"`                         |
-| [Number](/en-US/docs/Glossary/Number)                                                                                                                                     | `"number"`                          |
-| [BigInt](/en-US/docs/Glossary/BigInt)                                                                                                                                     | `"bigint"`                          |
-| [String](/en-US/docs/Glossary/String)                                                                                                                                     | `"string"`                          |
-| [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)                                                                                                      | `"symbol"`                          |
-| [Function](/en-US/docs/Glossary/Function) (implements [[Call]] in ECMA-262 terms; [classes](/en-US/docs/Web/JavaScript/Reference/Statements/class) are functions as well) | `"function"`                        |
-| Any other object                                                                                                                                                          | `"object"`                          |
+| Type                                                                                                                                                                                                     | Result                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| [Undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)                                                                                                                               | `"undefined"`                       |
+| [Null](/en-US/docs/Web/JavaScript/Reference/Operators/null)                                                                                                                                              | `"object"` ([reason](#typeof_null)) |
+| [Boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)                                                                                                                                   | `"boolean"`                         |
+| [Number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)                                                                                                                                     | `"number"`                          |
+| [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)                                                                                                                                     | `"bigint"`                          |
+| [String](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)                                                                                                                                     | `"string"`                          |
+| [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)                                                                                                                                     | `"symbol"`                          |
+| [Function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) (implements [[Call]] in ECMA-262 terms; [classes](/en-US/docs/Web/JavaScript/Reference/Statements/class) are functions as well) | `"function"`                        |
+| Any other object                                                                                                                                                                                         | `"object"`                          |
 
-This list of values is exhaustive. No spec-compliant engines are reported to produce (or had historically produced) values other than those listed. The old Internet Explorer was the only browser known to [implement additional return values](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872), before the spec removed the behavior of `typeof` returning implementation-defined strings for non-callable non-standard exotic objects.
+This list of values is exhaustive. No spec-compliant engines are reported to produce (or had historically produced) values other than those listed.
 
 ## Examples
 
@@ -136,7 +131,7 @@ typeof func; // "function"
 
 ### Need for parentheses in syntax
 
-The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
+The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
 
 ```js
 // Parentheses can be used for determining the data type of expressions.

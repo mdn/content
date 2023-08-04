@@ -1,15 +1,8 @@
 ---
-title: IDBFactory.databases()
+title: "IDBFactory: databases() method"
+short-title: databases()
 slug: Web/API/IDBFactory/databases
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - Method
-  - Reference
-  - Storage
-  - databases
 browser-compat: api.IDBFactory.databases
 ---
 
@@ -48,10 +41,10 @@ A promise that resolves either to an error or a list of dictionaries, each with 
 ## Examples
 
 ```js
-const promise = indexedDB.databases()
+const promise = indexedDB.databases();
 promise.then((databases) => {
-  console.log(databases)
-})
+  console.log(databases);
+});
 ```
 
 ## Specifications
@@ -70,4 +63,4 @@ promise.then((databases) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

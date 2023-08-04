@@ -1,14 +1,8 @@
 ---
-title: WorkerGlobalScope.navigator
+title: "WorkerGlobalScope: navigator property"
+short-title: navigator
 slug: Web/API/WorkerGlobalScope/navigator
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.navigator
 ---
 
@@ -30,7 +24,7 @@ console.log(navigator);
 
 inside a worker (which would basically be the equivalent of `self.console.log(self.navigator);`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerNavigator")}} object written to the console — something like the following:
 
-```
+```plain
 Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) Ap…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36", product: "Gecko", platform: "MacIntel", appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKi…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"…}
     appCodeName: "Mozilla"
     appName: "Netscape"

@@ -1,17 +1,8 @@
 ---
-title: SensorErrorEvent.error
+title: "SensorErrorEvent: error property"
+short-title: error
 slug: Web/API/SensorErrorEvent/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - SensorErrorEvent
-  - Sensors
 browser-compat: api.SensorErrorEvent.error
 ---
 

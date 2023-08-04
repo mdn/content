@@ -1,18 +1,8 @@
 ---
-title: MediaTrackSupportedConstraints.noiseSuppression
+title: "MediaTrackSupportedConstraints: noiseSuppression property"
+short-title: noiseSuppression
 slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Constraints
-  - Media Streams API
-  - MediaStreamTrackSupportedConstraints
-  - Property
-  - noiseSuppression
 browser-compat: api.MediaTrackSupportedConstraints.noiseSuppression
 ---
 
@@ -48,19 +38,21 @@ This example displays whether or not your browser supports the
 `noiseSuppression` constraint.
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
 ```js
 const result = document.getElementById("result");
-const supported = navigator.mediaDevices.getSupportedConstraints().noiseSuppression;
+const supported =
+  navigator.mediaDevices.getSupportedConstraints().noiseSuppression;
 result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
@@ -78,7 +70,7 @@ result.textContent = supported ? "Supported!" : "Not supported!";
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

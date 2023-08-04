@@ -1,12 +1,7 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - CSS
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.list-style-image
 ---
 
@@ -27,7 +22,7 @@ It is often more convenient to use the shorthand {{ cssxref("list-style") }}.
 list-style-image: none;
 
 /* <url> values */
-list-style-image: url('starsolid.gif');
+list-style-image: url("starsolid.gif");
 
 /* valid image values */
 list-style-image: linear-gradient(to left bottom, red, blue);

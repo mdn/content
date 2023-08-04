@@ -1,11 +1,7 @@
 ---
 title: Statements and declarations
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Landing page
-  - Reference
-  - statements
+page-type: landing-page
 browser-compat: javascript.statements
 ---
 
@@ -65,18 +61,20 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/for-await...of", "for await...of")}}
-  - : Iterates over async iterable objects, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over async iterable objects, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/while", "while")}}
   - : Creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
 
 ### Others
 
-- {{jsxref("Statements/Empty", "Empty","",1)}}
+- {{jsxref("Statements/Empty", "Empty", "", 1)}}
   - : An empty statement is used to provide no statement, although the JavaScript syntax would expect one.
-- {{jsxref("Statements/block", "Block","",1)}}
+- {{jsxref("Statements/block", "Block", "", 1)}}
   - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
+- {{jsxref("Statements/Expression_statement", "Expression statement", "", 1)}}
+  - : An expression statement evaluates an expression and discards its result. It allows the expression to perform side effects, such as executing a function or updating a variable.
 - {{jsxref("Statements/debugger", "debugger")}}
   - : Invokes any available debugging functionality. If no debugging functionality is available, this statement has no effect.
 - {{jsxref("Statements/export", "export")}}
@@ -85,12 +83,12 @@ For an alphabetical listing see the sidebar on the left.
   - : Used to import functions exported from an external module, another script.
 - {{jsxref("Statements/label", "label", "", 1)}}
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
-- {{jsxref("Statements/with", "with")}}
+- {{jsxref("Statements/with", "with")}} {{Deprecated_Inline}}
   - : Extends the scope chain for a statement.
 
 ## Difference between statements and declarations
 
-In this section, we will be mixing two kinds of constructs: [_statements_](https://tc39.es/ecma262/#prod-Statement) and [_declarations_](https://tc39.es/ecma262/#prod-Declaration). They are two disjoint sets of grammars. The following are declarations:
+In this section, we will be mixing two kinds of constructs: [_statements_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement) and [_declarations_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration). They are two disjoint sets of grammars. The following are declarations:
 
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
@@ -106,7 +104,7 @@ Everything else in the [list above](#statements_and_declarations_by_category) is
 
 The terms "statement" and "declaration" have a precise meaning in the formal syntax of JavaScript that affects where they may be placed in code. For example, in most control-flow structures, the body only accepts statements — such as the two arms of an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
 
-```js
+```js-nolint
 if (condition)
   statement1;
 else
@@ -115,19 +113,19 @@ else
 
 If you use a declaration instead of a statement, it would be a {{jsxref("SyntaxError")}}. For example, a [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declaration is not a statement, so you can't use it in its bare form as the body of an `if` statement.
 
-```js example-bad
+```js-nolint example-bad
 if (condition)
   let i = 0; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
 On the other hand, [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) is a statement, so you can use it on its own as the `if` body.
 
-```js example-good
+```js-nolint example-good
 if (condition)
   var i = 0;
 ```
 
-You can see declarations as "binding identifiers to values", and statements as "carrying out actions". The fact that `var` is a statement instead of a declaration is a special case, because it doesn't follow normal lexical scoping rules and may create side effects — in the form of creating global variables, mutating existing `var`-defined variables, and defining variables that are visible outside of its block (because `var`-defined variables aren't block-scoped).
+You can see declarations as "{{glossary("binding")}} identifiers to values", and statements as "carrying out actions". The fact that `var` is a statement instead of a declaration is a special case, because it doesn't follow normal lexical scoping rules and may create side effects — in the form of creating global variables, mutating existing `var`-defined variables, and defining variables that are visible outside of its block (because `var`-defined variables aren't block-scoped).
 
 As another example, [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) can only be attached to statements.
 

@@ -1,14 +1,8 @@
 ---
-title: DataTransfer.setDragImage()
+title: "DataTransfer: setDragImage() method"
+short-title: setDragImage()
 slug: Web/API/DataTransfer/setDragImage
 page-type: web-api-instance-method
-tags:
-  - API
-  - H5 DnD
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.setDragImage
 ---
 
@@ -19,7 +13,7 @@ the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired at), 
 drag. This image is created automatically, so you do not need to create it yourself.
 However, if a custom image is desired, the
 **`DataTransfer.setDragImage()`** method can be used to set the
-custom image to be used. The image will typically be an {{HTMLElement("image")}} element
+custom image to be used. The image will typically be an {{HTMLElement("img")}} element
 but it can also be a {{HTMLElement("canvas")}} or any other visible element.
 
 The method's `x` and `y` coordinates define how the image should
@@ -67,7 +61,7 @@ default drag image.
 [demo](https://codepen.io/webgeeker/full/KBzrxE/)
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Example of DataTransfer.setDragImage()</title>
@@ -143,5 +137,4 @@ default drag image.
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

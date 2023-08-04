@@ -1,14 +1,9 @@
 ---
-title: 'Element: pointermove event'
+title: "Element: pointermove event"
+short-title: pointermove
 slug: Web/API/Element/pointermove_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - PointerEvent
-  - Reference
-browser-compat: api.Element.pointermove_event
 page-type: web-api-event
+browser-compat: api.Element.pointermove_event
 ---
 
 {{APIRef}}
@@ -20,9 +15,9 @@ The `pointermove` event is fired when a pointer changes coordinates, and the poi
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointermove', (event) => {});
+addEventListener("pointermove", (event) => {});
 
-onpointermove = (event) => { };
+onpointermove = (event) => {};
 ```
 
 ## Event type
@@ -52,7 +47,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
@@ -65,20 +60,20 @@ The event, which is of type {{domxref("PointerEvent")}}, provides all the inform
 To add a handler for `pointermove` events using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointermove', (event) => {
-  console.log('Pointer moved');
+para.addEventListener("pointermove", (event) => {
+  console.log("Pointer moved");
 });
 ```
 
 You can also use the `onpointermove` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointermove = (event) => {
-  console.log('Pointer moved');
+  console.log("Pointer moved");
 };
 ```
 
@@ -92,15 +87,14 @@ para.onpointermove = (event) => {
 
 ## See also
 
-- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
-- [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
-- [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
-- [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
-- [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
-- [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
-- [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-- This event on `Document` targets: [`pointermove`](/en-US/docs/Web/API/Document/pointermove_event) event
+- Related events
 
-Internet Explorer also used to support an event named `MSPointerHover`, which fired when a contact (normally a pen) moves over an element without touching the surface. This proprietary method is specific to Internet Explorer and, as of Internet Explorer 11, has been deprecated. Starting with IE11 the [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) event will fire for all pen movement (regardless if its hovering or not).
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)

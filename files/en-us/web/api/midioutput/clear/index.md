@@ -1,13 +1,8 @@
 ---
-title: MIDIOutput.clear()
+title: "MIDIOutput: clear() method"
+short-title: clear()
 slug: Web/API/MIDIOutput/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - clear
-  - MIDIOutput
 browser-compat: api.MIDIOutput.clear
 ---
 

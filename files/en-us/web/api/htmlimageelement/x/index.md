@@ -1,22 +1,8 @@
 ---
-title: HTMLImageElement.x
+title: "HTMLImageElement: x property"
+short-title: x
 slug: Web/API/HTMLImageElement/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - Coordinate
-  - Edge
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Position
-  - Reference
-  - border
-  - left
-  - x
-  - Property
 browser-compat: api.HTMLImageElement.x
 ---
 
@@ -62,7 +48,7 @@ The example below demonstrates the use of the `HTMLImageElement` properties
 
 ### HTML
 
-In this example, we see a table showing information about users of a web site,
+In this example, we see a table showing information about users of a website,
 including their user ID, their full name, and their avatar image.
 
 ```html
@@ -79,7 +65,7 @@ including their user ID, their full name, and their avatar image.
   <tr>
     <td>12345678</td>
     <td>Johnny Rocket</td>
-    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"</td>
+    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"></td>
   </th>
 </table>
 <pre id="log">
@@ -93,11 +79,11 @@ The JavaScript code that fetches the image from the table and looks up its
 
 ```js
 let logBox = document.querySelector("pre");
-let tbl = document.getElementById("userinfo")
+let tbl = document.getElementById("userinfo");
 
 let log = (msg) => {
   logBox.innerHTML += `${msg}<br>`;
-}
+};
 
 let cell = tbl.rows[1].cells[2];
 let image = cell.querySelector("img");

@@ -1,17 +1,8 @@
 ---
-title: setTimeout()
+title: setTimeout() global function
+short-title: setTimeout()
 slug: Web/API/setTimeout
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Intervals
-  - JavaScript timers
-  - Method
-  - Reference
-  - Timers
-  - setTimeout
-  - Polyfill
 browser-compat: api.setTimeout
 ---
 
@@ -30,7 +21,7 @@ setTimeout(functionRef)
 setTimeout(functionRef, delay)
 setTimeout(functionRef, delay, param1)
 setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -83,7 +74,7 @@ If `setTimeout()` is called with [_delay_](#delay) value that's not a number, im
 ```js example-bad
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, "1000")
+}, "1000");
 ```
 
 But in many cases, the implicit type coercion can lead to unexpected and surprising results. For example, when the following code runs, the string `"1 second"` ultimately gets coerced into the number `0` — and so, the code executes immediately, with zero delay.
@@ -91,7 +82,7 @@ But in many cases, the implicit type coercion can lead to unexpected and surpris
 ```js example-bad
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, "1 second")
+}, "1 second");
 ```
 
 Therefore, don't use strings for the _delay_ value but instead always use numbers:
@@ -99,7 +90,7 @@ Therefore, don't use strings for the _delay_ value but instead always use number
 ```js example-good
 setTimeout(() => {
   console.log("Delayed for 1 second.");
-}, 1000)
+}, 1000);
 ```
 
 ### Working with asynchronous functions
@@ -110,15 +101,21 @@ In other words, you cannot use `setTimeout()` to create a "pause" before the nex
 See the following example:
 
 ```js
-  setTimeout(() => {console.log("this is the first message")}, 5000);
-  setTimeout(() => {console.log("this is the second message")}, 3000);
-  setTimeout(() => {console.log("this is the third message")}, 1000);
+setTimeout(() => {
+  console.log("this is the first message");
+}, 5000);
+setTimeout(() => {
+  console.log("this is the second message");
+}, 3000);
+setTimeout(() => {
+  console.log("this is the third message");
+}, 1000);
 
-  // Output:
+// Output:
 
-  // this is the third message
-  // this is the second message
-  // this is the first message
+// this is the third message
+// this is the second message
+// this is the first message
 ```
 
 Notice that the first function does not create a 5-second "pause" before calling the second function. Instead, the first function is called, but waits 5 seconds to
@@ -131,7 +128,7 @@ To create a progression in which one function only fires after the completion of
 ### The "this" problem
 
 When you pass a method to `setTimeout()`, it will be invoked with a `this` value that may differ from your
-expectation. The general issue is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+expectation. The general issue is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#callbacks).
 
 Code executed by `setTimeout()` is called from an execution context separate
 from the function from which `setTimeout` was called. The usual rules for
@@ -143,7 +140,7 @@ the `window` (or `global`) object. It will not be the same as the
 See the following example:
 
 ```js
-const myArray = ['zero', 'one', 'two'];
+const myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 };
@@ -158,8 +155,8 @@ set to `myArray` by the call, so within the function,
 in the following:
 
 ```js
-setTimeout(myArray.myMethod, 1.0*1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 seconds
+setTimeout(myArray.myMethod, 1.0 * 1000); // prints "[object Window]" after 1 second
+setTimeout(myArray.myMethod, 1.5 * 1000, "1"); // prints "undefined" after 1.5 seconds
 ```
 
 The `myArray.myMethod` function is passed to `setTimeout`, then
@@ -171,8 +168,8 @@ There's also no option to pass a `thisArg` to
 using `call` to set `this` doesn't work either.
 
 ```js
-setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // error
-setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // same error
+setTimeout.call(myArray, myArray.myMethod, 2.0 * 1000); // error
+setTimeout.call(myArray, myArray.myMethod, 2.5 * 1000, 2); // same error
 ```
 
 #### Solutions
@@ -187,15 +184,19 @@ setTimeout(function () {
   myArray.myMethod();
 }, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
 setTimeout(function () {
-  myArray.myMethod('1');
+  myArray.myMethod("1");
 }, 2.5 * 1000); // prints "one" after 2.5 seconds
 ```
 
 The wrapper function can be an arrow function:
 
 ```js
-setTimeout(() => {myArray.myMethod()}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
-setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // prints "one" after 2.5 seconds
+setTimeout(() => {
+  myArray.myMethod();
+}, 2.0 * 1000); // prints "zero,one,two" after 2 seconds
+setTimeout(() => {
+  myArray.myMethod("1");
+}, 2.5 * 1000); // prints "one" after 2.5 seconds
 ```
 
 ##### Use bind()
@@ -203,15 +204,15 @@ setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // prints "one" after 2.5
 Alternatively, you can use {{jsxref("Function.bind()", "bind()")}} to set the value of `this` for all calls to a given function:
 
 ```js
-const myArray = ['zero', 'one', 'two'];
-const myBoundMethod = (function (sProperty) {
-    console.log(arguments.length > 0 ? this[sProperty] : this);
-}).bind(myArray);
+const myArray = ["zero", "one", "two"];
+const myBoundMethod = function (sProperty) {
+  console.log(arguments.length > 0 ? this[sProperty] : this);
+}.bind(myArray);
 
 myBoundMethod(); // prints "zero,one,two" because 'this' is bound to myArray in the function
 myBoundMethod(1); // prints "one"
-setTimeout(myBoundMethod, 1.0*1000); // still prints "zero,one,two" after 1 second because of the binding
-setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
+setTimeout(myBoundMethod, 1.0 * 1000); // still prints "zero,one,two" after 1 second because of the binding
+setTimeout(myBoundMethod, 1.5 * 1000, "1"); // prints "one" after 1.5 seconds
 ```
 
 ### Passing string literals
@@ -227,11 +228,11 @@ setTimeout("console.log('Hello World!');", 500);
 ```js example-good
 // Do this instead
 setTimeout(() => {
-  console.log('Hello World!');
+  console.log("Hello World!");
 }, 500);
 ```
 
-A string passed to {{domxref("setTimeout()")}} is evaluated in the global context, so local symbols in the context where {{domxref("setTimeout()")}} was called will not be available when the string is evaluated as code.
+A string passed to `setTimeout()` is evaluated in the global context, so local symbols in the context where `setTimeout()` was called will not be available when the string is evaluated as code.
 
 ### Reasons for delays longer than specified
 
@@ -249,8 +250,16 @@ approximately 4 milliseconds:
 
 ```html
 <button id="run">Run</button>
-<pre>previous    this    actual delay</pre>
-<div id="log"></div>
+<table>
+  <thead>
+    <tr>
+      <th>Previous</th>
+      <th>This</th>
+      <th>Actual delay</th>
+    </tr>
+  </thead>
+  <tbody id="log"></tbody>
+</table>
 ```
 
 ```js
@@ -260,7 +269,6 @@ let iterations = 10;
 function timeout() {
   // log the time of this call
   logline(new Date().getMilliseconds());
-
   // if we are not finished, schedule the next call
   if (iterations-- > 0) {
     setTimeout(timeout, 0);
@@ -277,24 +285,37 @@ function run() {
   // initialize iteration count and the starting timestamp
   iterations = 10;
   last = new Date().getMilliseconds();
-
   // start timer
   setTimeout(timeout, 0);
 }
 
-function pad(number) {
-  return number.toString().padStart(3, "0");
-}
-
 function logline(now) {
   // log the last timestamp, the new timestamp, and the difference
-  const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}         ${pad(now)}          ${now - last}`;
-  document.getElementById("log").appendChild(newLine);
+  const tableBody = document.getElementById("log");
+  const logRow = tableBody.insertRow();
+  logRow.insertCell().textContent = last;
+  logRow.insertCell().textContent = now;
+  logRow.insertCell().textContent = now - last;
   last = now;
 }
 
 document.querySelector("#run").addEventListener("click", run);
+```
+
+```css hidden
+* {
+  font-family: monospace;
+}
+th,
+td {
+  padding: 0 10px 0 10px;
+  text-align: center;
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
 ```
 
 {{EmbedLiveSample("Nested_timeouts", 100, 420)}}
@@ -329,15 +350,15 @@ the thread that called `setTimeout()` has terminated. For example:
 
 ```js
 function foo() {
-  console.log('foo has been called');
+  console.log("foo has been called");
 }
 setTimeout(foo, 0);
-console.log('After setTimeout');
+console.log("After setTimeout");
 ```
 
 Will write to the console:
 
-```
+```plain
 After setTimeout
 foo has been called
 ```
@@ -362,10 +383,9 @@ API instead.
 
 ### Maximum delay value
 
-Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a
-32-bit signed integer internally. This causes an integer overflow when using delays
-larger than 2,147,483,647 ms (about 24.8 days), resulting in the timeout being executed
-immediately.
+Browsers store the delay as a 32-bit signed integer internally. This causes an integer
+overflow when using delays larger than 2,147,483,647 ms (about 24.8 days), resulting in
+the timeout being executed immediately.
 
 ## Examples
 
@@ -392,12 +412,12 @@ timeout by pressing on the second button.
 let timeoutID;
 
 function setOutput(outputContent) {
-  document.querySelector('#output').textContent = outputContent;
+  document.querySelector("#output").textContent = outputContent;
 }
 
 function delayedMessage() {
-  setOutput('');
-  timeoutID = setTimeout(setOutput, 2*1000, 'That was really slow!');
+  setOutput("");
+  timeoutID = setTimeout(setOutput, 2 * 1000, "That was really slow!");
 }
 
 function clearMessage() {
@@ -415,7 +435,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example).
+See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#examples).
 
 ## Specifications
 

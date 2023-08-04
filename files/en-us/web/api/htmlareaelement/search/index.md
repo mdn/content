@@ -1,12 +1,8 @@
 ---
-title: HTMLAreaElement.search
+title: "HTMLAreaElement: search property"
+short-title: search
 slug: Web/API/HTMLAreaElement/search
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAreaElement.search
 ---
 

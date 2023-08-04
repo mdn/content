@@ -1,14 +1,8 @@
 ---
-title: MediaStreamTrack.id
+title: "MediaStreamTrack: id property"
+short-title: id
 slug: Web/API/MediaStreamTrack/id
 page-type: web-api-instance-property
-tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
 browser-compat: api.MediaStreamTrack.id
 ---
 

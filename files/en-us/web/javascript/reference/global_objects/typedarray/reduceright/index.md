@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.reduceRight
 ---
 
@@ -20,45 +13,29 @@ single value. This method has the same algorithm as
 {{jsxref("Array.prototype.reduceRight()")}}. _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
+{{EmbedInteractiveExample("pages/js/typedarray-reduceright.html")}}
+
 ## Syntax
 
 ```js-nolint
-// Arrow function
-reduceRight((accumulator, currentValue) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* ... */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* ... */ }, initialValue)
-
-// Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
-
-// Inline callback function
-reduceRight(function(accumulator, currentValue) { /* ... */ })
-reduceRight(function(accumulator, currentValue, index) { /* ... */ })
-reduceRight(function(accumulator, currentValue, index, array){ /* ... */ })
-reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function to execute on each value in the typed array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduceRight()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value previously returned in the last invocation of the callback, or `initialValue`, if supplied (see below).
+      - : The value previously returned in the last invocation of the callback, or `initialValue`, if supplied. (See below.)
     - `currentValue`
       - : The current element being processed in the typed array.
     - `index`
       - : The index of the current element being processed in the typed array.
     - `array`
       - : The typed array `reduceRight()` was called upon.
-
-- `initialValue`
-  - : Optional. Object to use as the first argument to the first call of the `callbackFn`.
+- `initialValue` {{optional_inline}}
+  - : Value to use as accumulator to the first call of the `callbackFn`. If no initial value is supplied, the last element in the array will be used and skipped. Calling `reduceRight()` on an empty array without an initial value creates a `TypeError`.
 
 ### Return value
 

@@ -1,14 +1,8 @@
 ---
-title: CSSStyleRule.styleMap
+title: "CSSStyleRule: styleMap property"
+short-title: styleMap
 slug: Web/API/CSSStyleRule/styleMap
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSStyleRule
-  - Reference
-  - Houdini
-  - Property
 browser-compat: api.CSSStyleRule.styleMap
 ---
 
@@ -31,10 +25,10 @@ the {{domxref('StylePropertyMap.set()')}} method.
 const stylesheet = document.styleSheets[0];
 
 Object.values(stylesheet.cssRules).forEach((block) => {
-  if (block.selectorText === 'button') {
-    block.styleMap.set('--mainColor', 'black');
+  if (block.selectorText === "button") {
+    block.styleMap.set("--mainColor", "black");
   }
-})
+});
 ```
 
 ## Specifications

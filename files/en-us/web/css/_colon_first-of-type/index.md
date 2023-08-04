@@ -1,13 +1,7 @@
 ---
-title: ':first-of-type'
+title: ":first-of-type"
 slug: Web/CSS/:first-of-type
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.first-of-type
 ---
 
@@ -19,8 +13,10 @@ The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/W
 
 ## Syntax
 
-```
-:first-of-type
+```css
+:first-of-type {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -58,7 +54,9 @@ This example shows how nested elements can also be targeted. Note that the [univ
 <article>
   <div>This `div` is first!</div>
   <div>This <span>nested `span` is first</span>!</div>
-  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+  <div>
+    This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!
+  </div>
   <div>This <span>nested `span` gets styled</span>!</div>
   <p>This `p` qualifies!</p>
   <div>This is the final `div`.</div>

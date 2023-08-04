@@ -1,16 +1,8 @@
 ---
-title: Animation.playbackRate
+title: "Animation: playbackRate property"
+short-title: playbackRate
 slug: Web/API/Animation/playbackRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Interface
-  - Property
-  - Reference
-  - Web Animations
-  - playbackRate
-  - web animations api
 browser-compat: api.Animation.playbackRate
 ---
 
@@ -34,7 +26,7 @@ In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ
 const shrinkAlice = () => {
   aliceChange.playbackRate = -1;
   aliceChange.play();
-}
+};
 
 // On tap or click, Alice will shrink.
 bottle.addEventListener("mousedown", shrinkAlice, false);
@@ -47,7 +39,7 @@ Contrariwise, clicking on the cake causes her to "grow," playing `aliceChange` f
 const growAlice = () => {
   aliceChange.playbackRate = 1;
   aliceChange.play();
-}
+};
 
 // On tap or click, Alice will grow.
 cake.addEventListener("mousedown", growAlice, false);
@@ -60,8 +52,8 @@ In another example, the [Red Queen's Race Game](https://codepen.io/rachelnabors/
 setInterval(() => {
   // Make sure the playback rate never falls below .4
 
-  if (redQueen_alice.playbackRate > .4) {
-    redQueen_alice.playbackRate *= .9;
+  if (redQueen_alice.playbackRate > 0.4) {
+    redQueen_alice.playbackRate *= 0.9;
   }
 }, 3000);
 ```
@@ -71,7 +63,7 @@ But clicking or tapping on them causes them to speed up by multiplying their `pl
 ```js
 const goFaster = () => {
   redQueen_alice.playbackRate *= 1.1;
-}
+};
 
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);

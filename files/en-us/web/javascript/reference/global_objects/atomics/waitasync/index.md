@@ -1,21 +1,17 @@
 ---
 title: Atomics.waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.waitAsync
 ---
 
 {{JSRef}}
 
-The static **`Atomics.waitAsync()`** method waits asynchronously on a shared memory location and returns a {{jsxref("Promise")}}.
+The **`Atomics.waitAsync()`** static method waits asynchronously on a shared memory location and returns a {{jsxref("Promise")}}.
 
 Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on the main thread.
 
-> **Note:** This operation only works with a shared {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
+> **Note:** This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 
 ## Syntax
 
@@ -27,7 +23,7 @@ Atomics.waitAsync(typedArray, index, value, timeout)
 ### Parameters
 
 - `typedArray`
-  - : A shared {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
+  - : An {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 - `index`
   - : The position in the `typedArray` to wait on.
 - `value`
@@ -43,6 +39,13 @@ An {{jsxref("Object")}} with the following properties:
   - : A boolean indicating whether the `value` property is a {{jsxref("Promise")}} or not.
 - `value`
   - : If `async` is `false`, it will be a string which is either `"not-equal"` or `"timed-out"` (only when the `timeout` parameter is `0`). If `async` is `true`, it will be a {{jsxref("Promise")}} which is fulfilled with a string value, either `"ok"` or `"timed-out"`. The promise is never rejected.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Examples
 

@@ -1,10 +1,7 @@
 ---
 title: HTTP conditional requests
 slug: Web/HTTP/Conditional_requests
-tags:
-  - Conditional Requests
-  - Guide
-  - HTTP
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -49,9 +46,9 @@ Weak validation differs from strong validation, as it considers two versions of 
 Several HTTP headers, called conditional headers, lead to conditional requests. These are:
 
 - {{HTTPHeader("If-Match")}}
-  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is equal to one listed in this header. By default, unless the etag is prefixed with `'W/'`, it performs a strong validation.
+  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is equal to one listed in this header. It performs a strong validation.
 - {{HTTPHeader("If-None-Match")}}
-  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is different to each listed in this header. By default, unless the etag is prefixed with `'W/'`, it performs a strong validation.
+  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is different to each listed in this header. It performs a weak validation.
 - {{HTTPHeader("If-Modified-Since")}}
   - : Succeeds if the {{HTTPHeader("Last-Modified")}} date of the distant resource is more recent than the one given in this header.
 - {{HTTPHeader("If-Unmodified-Since")}}
@@ -106,7 +103,7 @@ This solution is more efficient, but slightly less flexible, as only one etag ca
 
 ### Avoiding the lost update problem with optimistic locking
 
-A common operation in Web applications is to _update_ a remote document. This is very common in any file system or source control applications, but any application that allows to store remote resources needs such a mechanism. Common Web sites, like wikis and other CMS, have such a need.
+A common operation in Web applications is to _update_ a remote document. This is very common in any file system or source control applications, but any application that allows to store remote resources needs such a mechanism. Common websites, like wikis and other CMS, have such a need.
 
 With the {{HTTPMethod("PUT")}} method you are able to implement this. The client first reads the original files, modifies them, and finally pushes them to the server:
 

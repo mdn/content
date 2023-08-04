@@ -1,15 +1,8 @@
 ---
-title: Window.scrollX
+title: "Window: scrollX property"
+short-title: scrollX
 slug: Web/API/Window/scrollX
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsBrowserCompatibility
-  - NeedsMarkupWork
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
 browser-compat: api.Window.scrollX
 ---
 
@@ -44,7 +37,7 @@ greater than 400 pixels, the window is scrolled back to the beginning.
 
 ```js
 if (window.scrollX > 400) {
-  window.scroll(0,0);
+  window.scroll(0, 0);
 }
 ```
 

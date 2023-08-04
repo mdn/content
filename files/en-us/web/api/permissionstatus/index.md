@@ -2,13 +2,6 @@
 title: PermissionStatus
 slug: Web/API/PermissionStatus
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Reference
 browser-compat: api.PermissionStatus
 ---
 
@@ -18,7 +11,7 @@ The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/AP
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("PermissionStatus.name")}} {{ReadOnlyInline}}
   - : Returns the name of a requested permission, identical to the `name` passed to {{domxref("Permissions.query")}}.
@@ -30,17 +23,21 @@ The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/AP
 ### Events
 
 - {{domxref("PermissionStatus.change_event", "change")}}
-  - : An event called whenever `PermissionStatus.status` changes.
+  - : Invoked upon changes to `PermissionStatus.state`, or the deprecated `PermissionStatus.status` in the case of older browsers.
 
 ## Example
 
 ```js
-navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
-  console.log(`geolocation permission status is ${permissionStatus.state}`);
-  permissionStatus.onchange = () => {
-    console.log(`geolocation permission status has changed to ${permissionStatus.state}`);
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then((permissionStatus) => {
+    console.log(`geolocation permission status is ${permissionStatus.state}`);
+    permissionStatus.onchange = () => {
+      console.log(
+        `geolocation permission status has changed to ${permissionStatus.state}`,
+      );
+    };
+  });
 ```
 
 ## Specifications

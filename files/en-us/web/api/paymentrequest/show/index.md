@@ -1,18 +1,8 @@
 ---
-title: PaymentRequest.show()
+title: "PaymentRequest: show() method"
+short-title: show()
 slug: Web/API/PaymentRequest/show
 page-type: web-api-instance-method
-tags:
-  - API
-  - Commerce
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Payments
-  - Reference
-  - Secure context
-  - show
 browser-compat: api.PaymentRequest.show
 ---
 
@@ -22,10 +12,6 @@ The **{{domxref('PaymentRequest')}}** interface's
 **`show()`** method instructs the user agent to begin the
 process of showing and handling the user interface for the payment request to the
 user.
-
-For security reasons, the `PaymentRequest.show()` method can't just be
-initiated at any time. It may only be called while handling events that represent user
-interactions, such as {{domxref("Element/click_event", "click")}}, {{domxref("Element/keyup_event", "keyup")}}, or the like.
 
 Only one payment request can be in the process of being handled at once, across all
 documents. Once one `PaymentRequest`'s `show()` method has been
@@ -130,6 +116,10 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
     calls to `show()` being made in a short time or `show()` being
     called while payment requests are blocked by parental controls.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Usage notes
 
 The most common patterns for using `show()` involve either the
@@ -147,8 +137,10 @@ async function processPayment() {
   try {
     const payRequest = new PaymentRequest(methodData, details, options);
 
-    payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
-    payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
+    payRequest.onshippingaddresschange = (ev) =>
+      ev.updateWith(checkAddress(payRequest));
+    payRequest.onshippingoptionchange = (ev) =>
+      ev.updateWith(checkShipping(payRequest));
 
     const response = await payRequest.show();
     await validateResponse(response);
@@ -211,10 +203,13 @@ functions on the promise returned by `show()`:
 function processPayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
-  payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
-  payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
+  payRequest.onshippingaddresschange = (ev) =>
+    ev.updateWith(checkAddress(payRequest));
+  payRequest.onshippingoptionchange = (ev) =>
+    ev.updateWith(checkShipping(payRequest));
 
-  payRequest.show()
+  payRequest
+    .show()
     .then((response) => validateResponse(response))
     .catch((err) => handleError(err));
 }
@@ -274,7 +269,7 @@ button.onclick = async function handlePurchase() {
   } catch (err) {
     console.error("Uh oh, something bad happened", err.message);
   }
-}
+};
 ```
 
 The following example shows how to update the payment sheet as it's being presented to
@@ -291,7 +286,7 @@ async function requestPayment() {
   };
   const request = new PaymentRequest(methods, initialDetails, options);
   // Check if the user supports the `methods`
-  if (!await request.canMakePayment()) {
+  if (!(await request.canMakePayment())) {
     return; // no, so use a web form instead.
   }
   // Let's update the total as the sheet is shown

@@ -2,27 +2,21 @@
 title: Credential
 slug: Web/API/Credential
 page-type: web-api-interface
-tags:
-  - API
-  - Credential Management API
-  - Interface
-  - NeedsExample
-  - Reference
-  - credential management
 browser-compat: api.Credential
 ---
 
 {{APIRef("Credential Management API")}}{{securecontext_header}}
 
-The **`Credential`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about an entity (usually a user) as a prerequisite to a trust decision.
+The **`Credential`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about an entity (usually a user) normally as a prerequisite to a trust decision.
 
-`Credential` objects may be of 3 different types:
+`Credential` objects may be of four different types:
 
+- {{domxref("FederatedCredential")}}
+- {{domxref("IdentityCredential")}}
 - {{domxref("PasswordCredential")}}
 - {{domxref("PublicKeyCredential")}}
-- {{domxref("FederatedCredential")}}
 
-## Properties
+## Instance properties
 
 - {{domxref("Credential.id")}} {{ReadOnlyInline}}
   - : Returns a string containing the credential's identifier. This might be any one of a GUID, username, or email address.
@@ -33,7 +27,7 @@ The **`Credential`** interface of the [Credential Management API](/en-US/docs/We
 
 None.
 
-## Methods
+## Instance methods
 
 None.
 
@@ -42,8 +36,8 @@ None.
 ```js
 let pwdCredential = new PasswordCredential({
   id: "example-username", // Username/ID
-  name: "John Doe", // Display name
-  password: "correct horse battery staple" // Password
+  name: "Carina Anand", // Display name
+  password: "correct horse battery staple", // Password
 });
 
 console.assert(pwdCredential.type === "password");

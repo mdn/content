@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.drawElements()
+title: "WebGLRenderingContext: drawElements() method"
+short-title: drawElements()
 slug: Web/API/WebGLRenderingContext/drawElements
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawElements
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Layout
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-decoration-style
 ---
 
@@ -86,7 +80,7 @@ The following creates a red wavy underline:
 
 #### Results
 
-{{ EmbedLiveSample('Setting_a_wavy_underline', '', '', '') }}
+{{EmbedLiveSample('Setting_a_wavy_underline')}}
 
 ## Specifications
 

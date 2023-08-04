@@ -2,18 +2,12 @@
 title: Document
 slug: Web/API/Document
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Document
-  - Interface
-  - Reference
 browser-compat: api.Document
 ---
 
 {{APIRef("DOM")}}
 
-The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core).
+The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model#what_is_a_dom_tree).
 
 The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among [many others](/en-US/docs/Web/HTML/Element). It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.
 
@@ -26,7 +20,7 @@ The `Document` interface describes the common properties and methods for any kin
 - {{DOMxRef("Document.Document", "Document()")}}
   - : Creates a new `Document` object.
 
-## Properties
+## Instance properties
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
@@ -63,6 +57,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
 - {{DOMxRef("Document.forms")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements in the document.
+- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the {{domxref("FragmentDirective")}} for the current document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this document.
 - {{DOMxRef("Document.head")}} {{ReadOnlyInline}}
@@ -77,8 +73,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the last child element of the current document.
 - {{DOMxRef("Document.links")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the hyperlinks in the document.
-- {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
-  - : Returns `true` only if this document is synthetic, such as a standalone image, video, audio file, or the like.
 - {{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} currently being presented in picture-in-picture mode in this document.
 - {{DOMxRef("Document.pictureInPictureEnabled")}} {{ReadOnlyInline}}
@@ -138,7 +132,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 - {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns a list of all of the anchors in the document.
 - {{DOMxRef("Document.applets")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Returns an ordered list of the applets within a document.
+  - : Returns an empty {{domxref("HTMLCollection")}}. Legacy property that used to return the list of applets within a document.
 - {{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the background color of the current document.
 - {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -147,8 +141,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the foreground color, or text color, of the current document.
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
   - : `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
-- {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Gets/sets the height of the current document.
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
 - {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -165,8 +157,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Returns a list of the style sheet sets available on the document.
 - {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : Gets/sets the color of visited hyperlinks.
-- {{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Returns the width of the current document.
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : Returns the encoding as determined by the XML declaration.
 - {{DOMxRef("Document.xmlStandalone")}} {{Deprecated_Inline}}
@@ -174,7 +164,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 - {{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}
   - : Returns the version number as specified in the XML declaration or `"1.0"` if the declaration is absent.
 
-## Methods
+## Instance methods
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
@@ -202,8 +192,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Creates a new element with the given tag name.
 - {{DOMxRef("Document.createElementNS()")}}
   - : Creates a new element with the given tag name and namespace URI.
-- {{DOMxRef("Document.createEntityReference()")}} {{Deprecated_Inline}}
-  - : Creates a new entity reference object and returns it.
 - {{DOMxRef("Document.createEvent()")}}
   - : Creates an event object.
 - {{DOMxRef("Document.createNodeIterator()")}}
@@ -247,11 +235,9 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.getSelection()")}}
   - : Returns a {{DOMxRef('Selection')}} object representing the range of text selected by the user, or the current position of the caret.
 - {{DOMxRef("Document.hasStorageAccess()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to its first-party storage.
+  - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to unpartitioned cookies.
 - {{DOMxRef("Document.importNode()")}}
   - : Returns a clone of a node from an external document.
-- {{DOMxRef("Document.normalizeDocument()")}} {{Deprecated_Inline}}
-  - : Replaces entities, normalizes text nodes, etc.
 - {{DOMxRef("Document.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
@@ -265,7 +251,9 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.replaceChildren()")}}
   - : Replaces the existing children of a document with a specified new set of children.
 - {{DOMxRef("Document.requestStorageAccess()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
+  - : Allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
+- {{domxref("Document.startViewTransition()")}} {{Experimental_Inline}}
+  - : Starts a new {{domxref("View Transitions API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
 
@@ -283,7 +271,7 @@ The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} inte
 The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocument")}} interface or is extended for such documents:
 
 - {{DOMxRef("Document.clear()")}} {{Deprecated_Inline}}
-  - : In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.
+  - : This method does nothing.
 - {{DOMxRef("Document.close()")}}
   - : Closes a document stream for writing.
 - {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}}
@@ -432,13 +420,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Transition events
 
 - {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
 - {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
 - {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ## Specifications
 

@@ -1,16 +1,7 @@
 ---
 title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - show
+page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.show
 ---
 
@@ -52,21 +43,19 @@ This example shows the {{WebExtAPIRef("pageAction")}} for the active tab when th
 ```js
 browser.contextMenus.create({
   id: "show",
-  title: "Show page action"
-})
+  title: "Show page action",
+});
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "show") {
-    browser.pageAction.show(tab.id)
+    browser.pageAction.show(tab.id);
   }
-})
+});
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

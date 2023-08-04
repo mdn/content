@@ -1,10 +1,7 @@
 ---
 title: filter
 slug: Web/SVG/Attribute/filter
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG Filter
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.filter
 ---
 
@@ -19,7 +16,9 @@ As a presentation attribute, it can be applied to any element but it only has ef
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

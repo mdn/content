@@ -1,17 +1,11 @@
 ---
 title: math-depth
 slug: Web/CSS/math-depth
-tags:
-  - CSS
-  - MathML
-  - Property
-  - Reference
-  - math-depth
-  - Experimental
+page-type: css-property
 browser-compat: css.properties.math-depth
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`math-depth`** property describes a notion of _depth_ for each element of a mathematical formula, with respect to the top-level container of that formula. Concretely, this is used to determine the computed value of the [font-size](/en-US/docs/Web/CSS/font-size) property when its specified value is `math`.
 
@@ -36,7 +30,7 @@ math-depth: revert-layer;
 math-depth: unset;
 ```
 
-## Values
+### Values
 
 - `auto-add`
   - : Set to the inherited `math-depth` plus 1 when inherited [math-style](/en-US/docs/Web/CSS/math-style) is `compact`.

@@ -1,11 +1,7 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - User-agent
+page-type: http-header
 browser-compat: http.headers.User-Agent
 ---
 
@@ -53,7 +49,7 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 
 For more on Firefox- and Gecko-based user agent strings, see the [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox). The UA string of Firefox is broken down into 4 components:
 
-```
+```plain
 Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 ```
 
@@ -65,7 +61,7 @@ Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 
 ### Examples
 
-```
+```plain
 Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
 Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 ```
@@ -76,7 +72,7 @@ The Chrome (or Chromium/Blink-based engines) user agent string is similar to Fir
 
 ### Examples
 
-```
+```plain
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
 ```
 
@@ -86,13 +82,13 @@ The Opera browser is also based on the Blink engine, which is why it almost look
 
 ### Examples
 
-```
+```plain
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
 ```
 
 Older, Presto-based Opera releases used:
 
-```
+```plain
 Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
 Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
 ```
@@ -103,7 +99,7 @@ The Edge browser is also based on the Blink engine. It adds `"Edg/<version>"`.
 
 ### Examples
 
-```
+```plain
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
 ```
 
@@ -113,27 +109,19 @@ In this example, the user agent string is mobile Safari's version. It contains t
 
 ### Examples
 
-```
+```plain
 Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
-```
-
-## Internet Explorer UA string
-
-### Examples
-
-```
-Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
 ```
 
 ## Crawler and bot UA strings
 
 ### Examples
 
-```
+```plain
 Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
 ```
 
-```
+```plain
 Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
 ```
 
@@ -141,11 +129,11 @@ Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
 
 ### Examples
 
-```
+```plain
 curl/7.64.1
 ```
 
-```
+```plain
 PostmanRuntime/7.26.5
 ```
 

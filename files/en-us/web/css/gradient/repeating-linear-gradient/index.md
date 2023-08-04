@@ -1,16 +1,7 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Gradients
-  - Graphics
-  - Layout
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.types.image.gradient.repeating-linear-gradient
 ---
 
@@ -82,15 +73,19 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 20px,
-      black 20px,
-      black 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    black 20px,
+    black 40px
+  );
   /* with multiple color stop lengths */
-  background-image: repeating-linear-gradient(-45deg,
-      transparent 0 20px,
-      black 20px 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 20px,
+    black 20px 40px
+  );
 }
 ```
 
@@ -107,10 +102,12 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(to bottom,
-      rgb(26,198,204),
-      rgb(26,198,204) 7%,
-      rgb(100,100,100) 10%);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 ```
 
@@ -118,7 +115,7 @@ body {
 
 Because the last color stop is 10% and the gradient is vertical, each gradient in the repeated gradient is 10% of the height, fitting 10 horizontal bars.
 
-> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -130,7 +127,7 @@ Because the last color stop is 10% and the gradient is vertical, each gradient i
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

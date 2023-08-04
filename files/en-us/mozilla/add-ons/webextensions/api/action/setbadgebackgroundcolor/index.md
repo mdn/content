@@ -1,16 +1,7 @@
 ---
 title: action.setBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeBackgroundColor
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - setBadgeBackgroundColor
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.setBadgeBackgroundColor
 ---
 
@@ -61,24 +52,24 @@ browser.action.setBadgeBackgroundColor(
 A background color that starts off as red, and turns green when the browser action is clicked:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeBackgroundColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeBackgroundColor({ color: "red" });
 
 browser.action.onClicked.addListener(() => {
-  browser.action.setBadgeBackgroundColor({color: "green"});
+  browser.action.setBadgeBackgroundColor({ color: "green" });
 });
 ```
 
 Set the badge background color only for the active tab:
 
 ```js
-browser.action.setBadgeText({text: "1234"});
-browser.action.setBadgeBackgroundColor({color: "red"});
+browser.action.setBadgeText({ text: "1234" });
+browser.action.setBadgeBackgroundColor({ color: "red" });
 
-browser.action.onClicked.addListener((tab)=> {
+browser.action.onClicked.addListener((tab) => {
   browser.action.setBadgeBackgroundColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```
@@ -92,8 +83,6 @@ browser.action.onClicked.addListener((tab)=> {
 The default color in Firefox is: `[217, 0, 0, 255]`.
 
 > **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

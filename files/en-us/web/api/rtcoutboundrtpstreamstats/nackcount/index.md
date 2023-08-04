@@ -1,25 +1,8 @@
 ---
-title: RTCOutboundRtpStreamStats.nackCount
+title: "RTCOutboundRtpStreamStats: nackCount property"
+short-title: nackCount
 slug: Web/API/RTCOutboundRtpStreamStats/nackCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - NACK
-  - Packet Loss
-  - Packets
-  - Property
-  - RTCOutboundRtpStreamStats
-  - Reference
-  - Reliability
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - nackCount
-  - stream
 browser-compat: api.RTCOutboundRtpStreamStats.nackCount
 ---
 

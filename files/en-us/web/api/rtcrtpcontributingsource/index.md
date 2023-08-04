@@ -2,16 +2,6 @@
 title: RTCRtpContributingSource
 slug: Web/API/RTCRtpContributingSource
 page-type: web-api-interface
-tags:
-  - API
-  - Contributing Source
-  - Dictionary
-  - Interface
-  - Media
-  - RTCRtpContributingSource
-  - RTP
-  - Reference
-  - WebRTC
 browser-compat: api.RTCRtpContributingSource
 ---
 
@@ -21,7 +11,7 @@ The **`RTCRtpContributingSource`** dictionary of the [WebRTC API](/en-US/docs/We
 
 The information provided is based on the last ten seconds of media received.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtpContributingSource.audioLevel", "audioLevel")}} {{optional_inline}}
   - : A double-precision floating-point value between 0 and 1 specifying the audio level contained in the last RTP packet played from this source.

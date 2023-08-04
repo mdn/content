@@ -1,12 +1,7 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.background-position
 ---
 
@@ -35,7 +30,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* Multiple images */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* Edge offsets values */
 background-position: bottom 10px right 20px;
@@ -84,26 +81,26 @@ The `background-position` property is specified as one or more `<position>` valu
     - The first value and third values one of the keyword values `top`, `left`, `bottom`, `right`. If `left` or `right` are given here, then this defines X. If `top` or `bottom` are given, then this defines Y and the other keyword value defines X.
     - The second and fourth values are {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values. The second value is the offset for the first keyword. The fourth value is the offset for the second keyword.
 
-### Regarding Percentages:
+### Regarding Percentages
 
 The percentage offset of the given background image's position is relative to the container. A value of 0% means that the left (or top) edge of the background image is aligned with the corresponding left (or top) edge of the container, or the 0% mark of the image will be on the 0% mark of the container. A value of 100% means that the _right_ (or _bottom_) edge of the background image is aligned with the _right_ (or _bottom_) edge of the container, or the 100% mark of the image will be on the 100% mark of the container. Thus a value of 50% horizontally or vertically centers the background image as the 50% of the image will be at the 50% mark of the container. Similarly, `background-position: 25% 75%` means the spot on the image that is 25% from the left and 75% from the top will be placed at the spot of the container that is 25% from the container's left and 75% from the container's top.
 
 Essentially what happens is the background image dimension is _subtracted_ from the corresponding container dimension, and then a percentage of the resulting value is used as the direct offset from the left (or top) edge.
 
-```
+```plain
 (container width - image width) * (position x%) = (x offset value)
 (container height - image height) * (position y%) = (y offset value)
 ```
 
 Using the X axis for an example, let's say we have an image that is 300px wide and we are using it in a container that is 100px wide, with background-size set to auto:
 
-```
+```plain
 100px - 300px = -200px (container & image difference)
 ```
 
 So that with position percentages of -25%, 0%, 50%, 100%, 125%, we get these image-to-container edge offset values:
 
-```
+```plain
 -200px * -25% = 50px
 -200px * 0% = 0px
 -200px * 50% = -100px
@@ -167,7 +164,9 @@ div {
    corresponding position, from first specified to last. */
 .examplethree {
   background-image: url("startransparent.gif"), url("catfront.png");
-  background-position: 0px 0px, right 3em bottom 2em;
+  background-position:
+    0px 0px,
+    right 3em bottom 2em;
 }
 ```
 
@@ -187,5 +186,5 @@ div {
 
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("transform-origin")}}

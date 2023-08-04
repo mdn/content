@@ -1,19 +1,8 @@
 ---
-title: Navigator.clipboard
+title: "Navigator: clipboard property"
+short-title: clipboard
 slug: Web/API/Navigator/clipboard
 page-type: web-api-instance-property
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Cut
-  - Navigator
-  - Pasteboard
-  - Property
-  - Read-only
-  - Reference
-  - copy
-  - paste
 browser-compat: api.Navigator.clipboard
 ---
 
@@ -28,7 +17,7 @@ The Clipboard API can be used to implement cut, copy, and paste
 features within a web application.
 
 Use of the asynchronous clipboard read and write methods requires that the user grant
-the web site or app permission to access the clipboard. This permission must be obtained
+the website or app permission to access the clipboard. This permission must be obtained
 from the [Permissions API](/en-US/docs/Web/API/Permissions_API) using the
 `"clipboard-read"` and/or `"clipboard-write"` permissions.
 
@@ -42,8 +31,11 @@ The following code uses `navigator.clipboard` to access the system clipboard
 in order to read the contents of the clipboard.
 
 ```js
-navigator.clipboard.readText().then(
-  (clipText) => document.querySelector(".cliptext").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
+  );
 ```
 
 This snippet replaces the contents of the element whose class is

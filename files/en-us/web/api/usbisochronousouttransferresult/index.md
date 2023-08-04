@@ -2,15 +2,8 @@
 title: USBIsochronousOutTransferResult
 slug: Web/API/USBIsochronousOutTransferResult
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBIsochronousOutTransferResult
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBIsochronousOutTransferResult
 ---
 
@@ -23,7 +16,7 @@ The `USBIsochronousOutTransferResult` interface of the [WebUSB API](/en-US/docs/
 - {{domxref("USBIsochronousOutTransferResult.USBIsochronousOutTransferResult", "USBIsochronousOutTransferResult()")}} {{Experimental_Inline}}
   - : Creates a new `USBIsochronousOutTransferResult` object with the provided `packet` field.
 
-## Properties
+## Instance properties
 
 - {{domxref("USBIsochronousOutTransferResult.packets")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of `USBIsochronousOutTransferPacket` objects containing the result of each request to send a packet to the device.

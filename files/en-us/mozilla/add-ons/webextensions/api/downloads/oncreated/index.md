@@ -1,16 +1,7 @@
 ---
 title: downloads.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onCreated
+page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onCreated
 ---
 
@@ -30,7 +21,7 @@ browser.downloads.onCreated.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -43,7 +34,7 @@ Events have three functions:
 
 - `function`
 
-  - : A callback function that will be called when this event occurs. This function will be passed the following arguments:
+  - : The function called when this event occurs. This function is passed this argument:
 
     - `downloadItem`
       - : The {{WebExtAPIRef('downloads.DownloadItem')}} object in question.
@@ -67,8 +58,6 @@ browser.downloads.onCreated.addListener(handleCreated);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onCreated) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

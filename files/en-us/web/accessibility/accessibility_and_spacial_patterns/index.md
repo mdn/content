@@ -1,12 +1,12 @@
 ---
 title: Accessibility and Spacial Patterns
 slug: Web/Accessibility/Accessibility_and_Spacial_Patterns
-tags:
-  - Accessibility
-  - Braille
-  - patterns
-  - photosensitive seizure
+page-type: guide
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
 
 ### Spatial Localization
 
@@ -29,13 +29,9 @@ In 2005, Arnold Wilkins, John Emmett, and Graham Harding evaluated the guideline
 > Look at the screen:
 >
 > - Are there more than five stripes?
->
 > - If so, do they last longer than 0.5 s?
->
 > - If so, does the brightness exceed the stated limit?
->
 > - If so, categorize the motion of the pattern.
->
 > - Are the guidelines contravened?
 >
 > If so, reduce brightness.
@@ -60,7 +56,7 @@ The nature of space can change depending upon what MIME type is being used, and 
 
 ## See Also
 
-### **MDN**
+### MDN
 
 - [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
@@ -85,6 +81,6 @@ The nature of space can change depending upon what MIME type is being used, and 
 - [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub)
 - [Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x) Arnold Wilkins, John Emmett, and Graham Harding
 
-#### Contributors:
+#### Contributors
 
 Heartfelt thanks to Jim Allan of the [Diagram Center](http://diagramcenter.org/) for his discussions on the topic of alternative means of education.

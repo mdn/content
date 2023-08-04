@@ -1,12 +1,8 @@
 ---
-title: location.hash
+title: "location: hash property"
+short-title: hash
 slug: Web/API/Location/hash
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.hash
 ---
 
@@ -17,7 +13,7 @@ The **`hash`** property of the
 `'#'` followed by the fragment identifier of the URL — the ID on the page
 that the URL is trying to target.
 
-The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
+The fragment is not [URL decoded](https://en.wikipedia.org/wiki/URL_encoding). If the URL does not
 have a fragment identifier, this property contains an empty string, `""`.
 
 ## Value

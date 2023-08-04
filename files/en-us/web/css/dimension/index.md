@@ -1,14 +1,7 @@
 ---
 title: <dimension>
 slug: Web/CSS/dimension
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - dimension
-  - unit
-  - value
+page-type: css-type
 browser-compat: css.types.dimension
 ---
 

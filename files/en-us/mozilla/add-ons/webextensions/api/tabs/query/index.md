@@ -1,16 +1,7 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - query
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.query
 ---
 
@@ -39,7 +30,7 @@ let querying = browser.tabs.query(queryObj)
     - `audible` {{optional_inline}}
       - : `boolean`. Whether the tabs are audible.
     - `autoDiscardable` {{optional_inline}}
-      - : `boolean`. Whether the tabs can be discarded automatically by the browser when resources are low.
+      - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
     - `cookieStoreId` {{optional_inline}}
       - : `string` or `array` of `string`. Use this to return tabs whose `tab.cookieStoreId` matches any of the `cookieStoreId` strings. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
     - `currentWindow` {{optional_inline}}
@@ -152,8 +143,6 @@ browser.tabs.query({ url: "*://*.mozilla.org/*" }).then(logTabs, onError);
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

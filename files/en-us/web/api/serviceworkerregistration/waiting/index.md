@@ -1,14 +1,8 @@
 ---
-title: ServiceWorkerRegistration.waiting
+title: "ServiceWorkerRegistration: waiting property"
+short-title: waiting
 slug: Web/API/ServiceWorkerRegistration/waiting
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - waiting
 browser-compat: api.ServiceWorkerRegistration.waiting
 ---
 

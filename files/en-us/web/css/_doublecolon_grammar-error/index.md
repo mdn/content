@@ -1,12 +1,9 @@
 ---
-title: '::grammar-error'
+title: "::grammar-error"
 slug: Web/CSS/::grammar-error
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.grammar-error
 ---
 
@@ -30,7 +27,9 @@ Only a small subset of CSS properties can be used in a rule with `::grammar-erro
 ## Syntax
 
 ```css
-::grammar-error
+::grammar-error {
+  /* ... */
+}
 ```
 
 ## Examples

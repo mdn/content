@@ -1,13 +1,8 @@
 ---
-title: 'VisualViewport: resize event'
+title: "VisualViewport: resize event"
+short-title: resize
 slug: Web/API/VisualViewport/resize_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - VisualViewport
-  - events
-  - resize
 browser-compat: api.VisualViewport.resize_event
 ---
 
@@ -20,9 +15,9 @@ The **`resize`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resize', (event) => { })
+addEventListener("resize", (event) => {});
 
-onresize = (event) => { }
+onresize = (event) => {};
 ```
 
 ## Event type
@@ -34,7 +29,7 @@ A generic {{domxref("Event")}}.
 You can use the `resize` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-visualViewport.addEventListener('resize', () => {
+visualViewport.addEventListener("resize", () => {
   // …
 });
 ```

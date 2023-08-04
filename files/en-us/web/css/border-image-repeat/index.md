@@ -1,18 +1,13 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-image-repeat
 ---
 
 {{CSSRef}}
 
-The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) of a source image are adjusted to fit the dimensions of an element's [border image](/en-US/docs/Web/CSS/border-image).
+The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) and [middle region](/en-US/docs/Web/CSS/border-image-slice#middle-region) of a source image are adjusted to fit the dimensions of an element's [border image](/en-US/docs/Web/CSS/border-image). The middle region can be displayed by using the keyword "fill" in the border-image-slice property.
 
 {{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
 
@@ -25,7 +20,7 @@ border-image-repeat: repeat;
 border-image-repeat: round;
 border-image-repeat: space;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-repeat: round stretch;
 
 /* Global values */
@@ -39,7 +34,7 @@ border-image-repeat: unset;
 The `border-image-repeat` property may be specified using one or two values chosen from the list of values below.
 
 - When **one** value is specified, it applies the same behavior on **all four sides**.
-- When **two** values are specified, the first applies to the **top and bottom**, the second to the **left and right**.
+- When **two** values are specified, the first applies to the **top, middle, and bottom**, the second to the **left and right**.
 
 ### Values
 
@@ -93,7 +88,8 @@ The `border-image-repeat` property may be specified using one or two values chos
 ```js hidden
 const repetition = document.getElementById("repetition");
 repetition.addEventListener("change", (evt) => {
-  document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
+  document.getElementById("bordered").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 
@@ -111,5 +107,5 @@ repetition.addEventListener("change", (evt) => {
 
 ## See also
 
-- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

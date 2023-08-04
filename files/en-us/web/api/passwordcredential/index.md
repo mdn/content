@@ -2,14 +2,8 @@
 title: PasswordCredential
 slug: Web/API/PasswordCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Credential Management API
-  - Interface
-  - PasswordCredential
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PasswordCredential
 ---
 
@@ -26,7 +20,7 @@ The interface of the [Credential Management API](/en-US/docs/Web/API/Credential_
 - {{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}} {{securecontext_inline}} {{Experimental_Inline}}
   - : Creates a new `PasswordCredential` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
@@ -41,7 +35,7 @@ _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 None.
 
-## Methods
+## Instance methods
 
 None.
 
@@ -55,10 +49,9 @@ const cred = new PasswordCredential({
   iconURL,
 });
 
-navigator.credentials.store(cred)
-  .then(() => {
+navigator.credentials.store(cred).then(() => {
   // Do something else.
-  });
+});
 ```
 
 ## Specifications

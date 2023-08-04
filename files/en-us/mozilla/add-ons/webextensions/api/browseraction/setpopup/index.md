@@ -1,16 +1,7 @@
 ---
 title: browserAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setPopup
 ---
 
@@ -72,27 +63,33 @@ function onCreated() {
   }
 }
 
-browser.contextMenus.create({
-  id: "popup-1",
-  type: "radio",
-  title: "Popup 1",
-  contexts: ["all"],
-  checked: true
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-1",
+    type: "radio",
+    title: "Popup 1",
+    contexts: ["all"],
+    checked: true,
+  },
+  onCreated,
+);
 
-browser.contextMenus.create({
-  id: "popup-2",
-  type: "radio",
-  title: "Popup 2",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-2",
+    type: "radio",
+    title: "Popup 2",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "popup-1") {
-    browser.browserAction.setPopup({popup: "/popup/popup1.html"})
+    browser.browserAction.setPopup({ popup: "/popup/popup1.html" });
   } else if (info.menuItemId === "popup-2") {
-    browser.browserAction.setPopup({popup: "/popup/popup2.html"})
+    browser.browserAction.setPopup({ popup: "/popup/popup2.html" });
   }
 });
 ```
@@ -100,8 +97,6 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

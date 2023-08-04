@@ -1,11 +1,7 @@
 ---
 title: values
 slug: Web/SVG/Attribute/values
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecolormatrix-values
   - https://svgwg.org/specs/animations/#ValuesAttribute
@@ -18,14 +14,13 @@ The `values` attribute has different meanings, depending upon the context where 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("feColorMatrix")}}
 
-## animate, animateColor, animateMotion, animateTransform
+## animate, animateMotion, animateTransform
 
-For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, and {{SVGElement("animateTransform")}}, `values` is a list of values defining the sequence of values over the course of the animation. If this attribute is specified, any {{SVGAttr("from")}}, {{SVGAttr("to")}}, and {{SVGAttr("by")}} attribute values set on the element are ignored.
+For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, and {{SVGElement("animateTransform")}}, `values` is a list of values defining the sequence of values over the course of the animation. If this attribute is specified, any {{SVGAttr("from")}}, {{SVGAttr("to")}}, and {{SVGAttr("by")}} attribute values set on the element are ignored.
 
 <table class="properties">
   <tbody>
@@ -88,6 +83,7 @@ For the {{SVGElement("feColorMatrix")}} element, `values` is a list of numbers i
 </table>
 
 - `<list-of-numbers>`
+
   - : The value is a list of numbers, which is interpreted differently depending on the value of the `type` attribute:
 
     - For `type="matrix"`, `values` is a list of 20 matrix values (a00 a01 a02 a03 a04 a10 a11 … a34), separated by whitespace and/or a comma.

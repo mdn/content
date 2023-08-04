@@ -1,12 +1,7 @@
 ---
-title: 'Test your skills: Strings'
+title: "Test your skills: Strings"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Strings
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - strings
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

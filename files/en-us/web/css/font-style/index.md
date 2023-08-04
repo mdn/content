@@ -1,14 +1,7 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - Web
-  - font
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-style
 ---
 

@@ -1,19 +1,13 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
-tags:
-  - '@font-face'
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - font-stretch
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-stretch
 ---
 
 {{CSSRef}}
 
-The **`font-stretch`** CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} rule.
+The **`font-stretch`** CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
 For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-stretch` descriptor to explicitly specify the font face's stretch. The values for the CSS descriptor is same as that of its corresponding font property.
 
@@ -126,21 +120,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-```
-<font-stretch-absolute>{1,2}
-
-<font-stretch-absolute> =
-  normal          |
-  ultra-condensed |
-  extra-condensed |
-  condensed       |
-  semi-condensed  |
-  semi-expanded   |
-  expanded        |
-  extra-expanded  |
-  ultra-expanded  |
-  <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -151,8 +131,9 @@ The following find a local Open Sans font or import it, and allow using the font
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
-      format("woff");
+  src:
+    local("Open Sans") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-stretch: 87.5% 112.5%;
 }
 ```
@@ -171,7 +152,6 @@ The following find a local Open Sans font or import it, and allow using the font
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

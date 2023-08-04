@@ -1,16 +1,11 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
+page-type: css-at-rule
 browser-compat: css.at-rules.charset
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 The **`@charset`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) specifies the character encoding used in the style sheet. It must be the first element in the style sheet and not be preceded by any character; as it is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements), it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules). If several `@charset` at-rules are defined, only the first one is used, and it cannot be used inside a `style` attribute on an HTML element or inside the {{ HTMLElement("style") }} element where the character set of the HTML page is relevant.
 
@@ -30,14 +25,14 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ## Syntax
 
-```
+```css
 @charset "UTF-8";
 @charset "iso-8859-15";
 ```
 
 ### Formal syntax
 
-```
+```plain
 @charset "<charset>";
 ```
 
@@ -48,12 +43,12 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ### Valid and invalid charset declarations
 
-```css
-@charset "UTF-8";       /* Set the encoding of the style sheet to Unicode UTF-8 */
+```css-nolint
+@charset "UTF-8"; /* Set the encoding of the style sheet to Unicode UTF-8 */
 @charset 'iso-8859-15'; /* Invalid, wrong quoting style used */
-@charset  "UTF-8";      /* Invalid, more than one space */
- @charset "UTF-8";      /* Invalid, there is a character (a space) before the at-rule */
-@charset UTF-8;         /* Invalid, without ' or ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
+@charset  "UTF-8"; /* Invalid, more than one space */
+ @charset "UTF-8"; /* Invalid, there is a character (a space) before the at-rule */
+@charset UTF-8; /* Invalid, without ' or ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
 ```
 
 ## Specifications
@@ -66,5 +61,5 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ## See also
 
-- [Character set](/en-US/docs/Glossary/character_set) glossary entry
+- [Character set](/en-US/docs/Glossary/Character_set) glossary entry
 - [Unicode](/en-US/docs/Glossary/Unicode) glossary entry

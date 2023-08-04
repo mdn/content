@@ -1,14 +1,8 @@
 ---
-title: console.group()
+title: "console: group() method"
+short-title: group()
 slug: Web/API/console/group
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.group
 ---
 

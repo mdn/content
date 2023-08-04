@@ -1,15 +1,7 @@
 ---
 title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Method
-  - WebExtensions
-  - devtools.inspectedWindow
-  - reload
+page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.reload
 ---
 
@@ -51,8 +43,8 @@ const reloadButton = document.querySelector("#reload-button");
 
 reloadButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.reload({
-    injectedScript:"alert(navigator.userAgent);",
-    userAgent: "Not a real UA"
+    injectedScript: "alert(navigator.userAgent);",
+    userAgent: "Not a real UA",
   });
 });
 ```
@@ -60,8 +52,6 @@ reloadButton.addEventListener("click", () => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

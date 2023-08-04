@@ -1,10 +1,7 @@
 ---
 title: image-rendering
 slug: Web/SVG/Attribute/image-rendering
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.image-rendering
 ---
 

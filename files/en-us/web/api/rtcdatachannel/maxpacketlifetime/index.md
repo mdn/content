@@ -1,14 +1,8 @@
 ---
-title: RTCDataChannel.maxPacketLifeTime
+title: "RTCDataChannel: maxPacketLifeTime property"
+short-title: maxPacketLifeTime
 slug: Web/API/RTCDataChannel/maxPacketLifeTime
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - maxPacketLifeTime
 browser-compat: api.RTCDataChannel.maxPacketLifeTime
 ---
 

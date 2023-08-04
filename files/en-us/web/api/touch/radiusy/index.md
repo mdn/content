@@ -1,13 +1,8 @@
 ---
-title: Touch.radiusY
+title: "Touch: radiusY property"
+short-title: radiusY
 slug: Web/API/Touch/radiusY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.radiusY
 ---
 
@@ -23,7 +18,7 @@ A number.
 
 ## Examples
 
-The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#example) includes an example of this property's usage.
+The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#examples) includes an example of this property's usage.
 
 ## Specifications
 

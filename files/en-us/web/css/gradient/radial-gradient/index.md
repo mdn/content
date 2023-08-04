@@ -1,16 +1,7 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
+page-type: css-function
 browser-compat: css.types.image.gradient.radial-gradient
 ---
 
@@ -51,10 +42,12 @@ A radial gradient is specified by indicating the center of the gradient (where t
 
     If `<ending-shape>` is specified as `circle`, the size may be given explicitly as a [`<length>`](/en-US/docs/Web/CSS/length), which provides an explicit circle radius. Negative values are invalid.
 
-    If `<ending-shape>` is specified as `ellipse` or is omitted, the size may be given as a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) with two values to provide an explicit ellipse size. The first value represents the horizontal radius, the second the vertical radius. Percentages values are relative to the corresponding dimension of the gradient box. Negative values are invalid.
+    If `<ending-shape>` is specified as `ellipse`, the size may be given as a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) with two values to provide an explicit ellipse size. The first value represents the horizontal radius and the second is the vertical radius. Percentage values are relative to the corresponding dimension of the gradient box. Negative values are invalid.
+
+    When the `<ending-shape>` keyword is omitted, the gradient shape is determined by the size given. One `<length>` value provides a circle, while two values in `<length-percentage>`units provide an ellipse. A single `<percentage>` value is not valid.
 
 - `<linear-color-stop>`
-  - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.
+  - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.
 - `<color-hint>`
   - : The color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
@@ -118,8 +111,11 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 
 ```css
 .radial-gradient {
-  background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f35 0%, #43e 100%);
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #f35 0%,
+    #43e 100%
+  );
 }
 ```
 
@@ -127,7 +123,7 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 
 ### More radial-gradient examples
 
-Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -139,7 +135,7 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradie
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

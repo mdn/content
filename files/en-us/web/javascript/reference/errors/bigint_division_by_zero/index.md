@@ -1,11 +1,7 @@
 ---
-title: 'RangeError: BigInt division by zero'
+title: "RangeError: BigInt division by zero"
 slug: Web/JavaScript/Reference/Errors/BigInt_division_by_zero
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -14,7 +10,7 @@ The JavaScript exception "BigInt division by zero" occurs when a {{jsxref("BigIn
 
 ## Message
 
-```
+```plain
 RangeError: Division by zero (V8-based)
 RangeError: BigInt division by zero (Firefox)
 RangeError: 0 is an invalid divisor value. (Safari)

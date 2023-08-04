@@ -1,12 +1,6 @@
 ---
 title: block
 slug: WebAssembly/Reference/Control_flow/block
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
 ---
 
 {{WebAssemblySidebar}}

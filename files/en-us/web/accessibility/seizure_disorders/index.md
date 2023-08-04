@@ -1,22 +1,12 @@
 ---
 title: Web accessibility for seizures and physical reactions
 slug: Web/Accessibility/Seizure_disorders
-tags:
-  - Media Queries
-  - PEAT
-  - Photosensitive Epilepsy Analysis Tool
-  - The Harding Test
-  - color
-  - epilepsy
-  - musicogenic seizures
-  - photosensitivity
-  - prefers-reduced-motion
-  - reflex epilepsy
-  - saturation
-  - seizure disorders
-  - seizures
-  - web animation
+page-type: guide
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
 
 This article introduces concepts behind making web content accessible for those with vestibular disorders, and how to measure and prevent content leading to seizures and/or other physical reactions.
 
@@ -26,7 +16,7 @@ This article introduces concepts behind making web content accessible for those 
 
 Seizures caused by light are known as photosensitive epilepsy. Content that flickers, flashes, or blinks can trigger photosensitive epilepsy. Web technologies that use video, animated gifs, animated pngs, animated SVGs, Canvas, and CSS or JavaScript animations are all capable of content that can induce seizures or other incapacitating physical reactions. Certain visual patterns, especially stripes, can also cause physical reactions even though they are not animated. Photosensitive epilepsy is actually a kind of "reflex epilepsy"—seizures occurring in response to a trigger. In the case of photosensitive epilepsy, seizures are triggered specifically by flashing lights, but other types of reflex epilepsies may be triggered by the act of reading, or by noises. Patterns and images can also trigger epilepsy.
 
-The fact that static images may cause seizures and other disorders is documented in articles such as ["Gamma Oscillations and photosensitive epilepsy"](https://linkinghub.elsevier.com/retrieve/pii/S0960982217304062), where it is noted "_Certain visual images, even in the absence of motion or flicker, can trigger seizures in patients with photosensitive epilepsy_". The Epilepsy Foundation, in its article, ["Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions"](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) talks about static images and patterns: "_Static or moving patterns of discernable light and dark stripes have the same effect as flashing lights because of the alternation of dark and bright areas."_ The Epilepsy Foundation of America Working Group is able to "quantify" the problem a little: _"A pattern with the potential for provoking seizures contains clearly discernible stripes, numbering more than five light-dark pairs of stripes in any orientation_". In addition to stripes, checkered patterns have also been known to cause photosensitive seizures, according to [Cedars-Sinai](https://www.cedars-sinai.org/health-library/diseases-and-conditions/p/photosensitive-seizures.html).
+The fact that static images may cause seizures and other disorders is documented in articles such as ["Gamma Oscillations and photosensitive epilepsy"](https://linkinghub.elsevier.com/retrieve/pii/S0960982217304062), where it is noted "_Certain visual images, even in the absence of motion or flicker, can trigger seizures in patients with photosensitive epilepsy_". The Epilepsy Foundation, in its article, ["Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions"](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) talks about static images and patterns: "_Static or moving patterns of discernible light and dark stripes have the same effect as flashing lights because of the alternation of dark and bright areas."_ The Epilepsy Foundation of America Working Group is able to "quantify" the problem a little: _"A pattern with the potential for provoking seizures contains clearly discernible stripes, numbering more than five light-dark pairs of stripes in any orientation_". In addition to stripes, checkered patterns have also been known to cause photosensitive seizures, according to [Cedars-Sinai](https://www.cedars-sinai.org/health-library/diseases-and-conditions/p/photosensitive-seizures.html).
 
 Although static images are possible as triggers, they are less consistent. The trigger that is well established and strong is flashing/strobe lights. Dr. Selim Benbadis of USF's Comprehensive Epilepsy Program notes, _"The only thing that is really documented is flashing lights, which can trigger seizures in patients with photosensitive epilepsy. Only a few types of epilepsies are photosensitive though, and the vast majority of epilepsies are not."_ In addition to seizures brought about by photosensitivity, listening to certain pieces of music can also trigger what are called musicogenic seizures, although these types of seizures seem to be much more rare. For a great introduction on the topic of musicogenic seizures, visit Epilepsy Ontario's web page on [Musicogenic Seizures](https://epilepsyontario.org/musicogenic-seizures/).
 
@@ -79,7 +69,7 @@ Certain colors, and/or combinations of colors, also matter. ["Certain Colors Mor
 - A **general flash** is defined as a pair of opposing changes in [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of 10% or more of the maximum relative luminance where the relative luminance of the darker image is below 0.80, and where "a pair of opposing changes" is an increase followed by a decrease, or a decrease followed by an increase;
 - A **red flash** is defined as any pair of opposing transitions involving a saturated red.
 
-These standards are based on earlier research. In 2004, The Epilepsy Foundation of America convened a workshop developed a [consensus](https://pubmed.ncbi.nlm.nih.gov/16146438/) on photosensitive seizures, stating _"A flash is a potential hazard if it has luminance at least 20 cd/m<sup>2</sup> , occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances)."_ The transition to or from a saturated red is important and constitutes a risk on its own: "_Irrespective of luminance, a transition to or from a saturated red is also considered a risk._"
+These standards are based on earlier research. In 2004, The Epilepsy Foundation of America convened a workshop developed a [consensus](https://pubmed.ncbi.nlm.nih.gov/16146438/) on photosensitive seizures, stating _"A flash is a potential hazard if it has luminance at least 20 cd/m<sup>2</sup>, occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances)."_ The transition to or from a saturated red is important and constitutes a risk on its own: "_Irrespective of luminance, a transition to or from a saturated red is also considered a risk._"
 
 ### Size and distance
 
@@ -200,7 +190,7 @@ By not indexing the page, the likelihood that users will stumble upon it via sea
 <html lang="en">
   <head>
     <title>…</title>
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow" />
   </head>
 </html>
 ```
@@ -247,8 +237,8 @@ A {{HTMLElement('video')}} element with no attributes will not play automaticall
 
 ```html
 <video controls>
-  <source src="video.mp4" type="video/mp4">
-  <source src="video.ogg" type="video/ogg">
+  <source src="video.mp4" type="video/mp4" />
+  <source src="video.ogg" type="video/ogg" />
   Your browser does not support the video tag.
 </video>
 ```
@@ -265,8 +255,8 @@ To ensure that a video has controls that a user can access, ensure that you add 
 
 ```html
 <video controls>
-  <source src="myVideo.mp4" type="video/mp4">
-  <source src="myVideo.webm" type="video/webm">
+  <source src="myVideo.mp4" type="video/mp4" />
+  <source src="myVideo.webm" type="video/webm" />
   <p>
     Your browser doesn't support HTML video. Here is a
     <a href="myVideo.mp4">link to the video</a> instead.
@@ -282,9 +272,12 @@ Taking that same example and applying it to audio:
 
 ```html
 <audio controls>
-  <source src="myAudio.ogg" type="audio/ogg">
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <p>Your browser does not support the audio element. Here is a <a href="myAudio.mp3">link to the audio</a> instead.</p>
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <p>
+    Your browser does not support the audio element. Here is a
+    <a href="myAudio.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 ```
 
@@ -306,7 +299,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 
 - **Bitmap**: Animation
 - **Canvas**: MDN's tutorial on Canvas has a great section on [basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations). `setInterval()` is a mainstay in Canvas animation, but it is also interesting to see how it interacts with screen refresh. See the article, ["Controlling fps with requestAnimationFrame?"](https://stackoverflow.com/questions/19764018/controlling-fps-with-requestanimationframe) in which they discuss the nuts and bolts of implementing `requestAnimationFrame` against the backdrop of screen refresh.
-- **GIFs (Raster)**: Tough to crack because control for their animation resides within the gif files themselves. For information about controlling the speed of gifs see W3C's ["G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)"](https://www.w3.org/TR/WCAG20-TECHS/G152.html). A great Stack Overflow article on the subject is, ["Can you control GIF animation with Javascript?"](https://stackoverflow.com/questions/2385203/can-you-control-gif-animation-with-javascript)
+- **GIFs (Raster)**: Tough to crack because control for their animation resides within the gif files themselves. For information about controlling the speed of gifs see W3C's ["G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)"](https://www.w3.org/TR/WCAG20-TECHS/G152.html). A great Stack Overflow article on the subject is, ["Can you control GIF animation with JavaScript?"](https://stackoverflow.com/questions/2385203/can-you-control-gif-animation-with-javascript)
 - **GIFV (Raster)**: Considered a variant, video version of GIF. The format is not standardized, and must reference a "real" video file (e.g. a .webm file) which must exist elsewhere.
 - **JPG (Raster)**
 - **MNG (Raster)**: Multiple-image Network Graphics is a graphics file format for animated images. Also considered by some to be a video format.
@@ -332,7 +325,7 @@ The animation property is already powerful on its own, but combined with other p
 
 JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML video also applies to audio. `HTMLMediaElement.playbackRate` is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: `HTMLMediaElement.playbackRate = playbackspeed`.
 
-[document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
+[document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
 
 ```js
 document.getAnimations().forEach((animation) => {
@@ -344,7 +337,7 @@ document.getAnimations().forEach((animation) => {
 
 One of the easiest ways is to start with an image that is already in existence, using it as an image source, and then animating it. Remember, you can use GIFs, JPGs, PNGs, SVGs and other file types here as an image source, as long as they are allowed file types—and sizes—in your environment. SVGs are often not allowed, due to security concerns. The MDN document, [Basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations), provides outstanding examples of this, using multiple image sources for the sun, earth, and moon, and using several canvas methods to control the speed and animation of the earth as it orbits around the sun, and the moon as it orbits around the earth. Use the codepen available with this tutorial to adjust `ctx.rotate` in the code to see how the animation is affected when changes are made.
 
-#### If you absolutely, positively _must_ use a flashing animation…
+#### If you absolutely, positively must use a flashing animation…
 
 Make sure it has a control on it. Make sure it is turned off when the viewer first encounters it, and that a user must opt-in to see the animation.
 
@@ -381,7 +374,10 @@ JavaScript is also an option for reducing contrast dynamically. Here's a code ex
 
 ```html
 <body>
-  <input type="button" value="Set paragraph background color" onclick="set_background()">
+  <input
+    type="button"
+    value="Set paragraph background color"
+    onclick="set_background()" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -406,7 +402,7 @@ function set_background() {
 
 #### Avoid fully saturated reds for flashing content
 
-As mentioned earlier in this document, the Epilepsy Foundation of America convened a workshop in August 2004 to begin to develop an expert consensus on photosensitive seizures. Among their results was the understanding that _"A flash is a potential hazard if it has luminance at least 20 cd/m2 , occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances). A transition to or from saturated red also is considered a risk."_ They also note in that same consensus: _"Irrespective of luminance, a transition to or from a saturated red is also considered a risk."_
+As mentioned earlier in this document, the Epilepsy Foundation of America convened a workshop in August 2004 to begin to develop an expert consensus on photosensitive seizures. Among their results was the understanding that _"A flash is a potential hazard if it has luminance at least 20 cd/m2, occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances). A transition to or from saturated red also is considered a risk."_ They also note in that same consensus: _"Irrespective of luminance, a transition to or from a saturated red is also considered a risk."_
 
 ### Provide alternative CSS styles
 
@@ -427,9 +423,15 @@ Use the {{HTMLElement('link')}} element, alongside with and together with the at
 ```html
 <head>
   <title>Home Page</title>
-  <link href="main.css" rel="stylesheet" title="Default Style">
-  <link href="alternate1.css" rel="alternate stylesheet" title="Alternate One">
-  <link href="alternate2.css" rel="alternate stylesheet" title="Alternate Two">
+  <link href="main.css" rel="stylesheet" title="Default Style" />
+  <link
+    href="alternate1.css"
+    rel="alternate stylesheet"
+    title="Alternate One" />
+  <link
+    href="alternate2.css"
+    rel="alternate stylesheet"
+    title="Alternate Two" />
 </head>
 ```
 
@@ -530,7 +532,7 @@ The `update` media feature is used to query the ability of the output device to 
 
 ### MDN Navigator.doNotTrack
 
-[From the documentation](/en-US/docs/Web/API/Navigator/doNotTrack): _"Returns the user's do-not-track setting. This is "1" if the user has requested not to be tracked by web sites, content, or advertising"_.
+[From the documentation](/en-US/docs/Web/API/Navigator/doNotTrack): _"Returns the user's do-not-track setting. This is "1" if the user has requested not to be tracked by websites, content, or advertising"_.
 
 ### Media Queries Level 5
 
@@ -639,7 +641,7 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/#relativeluminancedef) definition of relative luminance
 - [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
 
-## Contributors:
+## Contributors
 
 Heartfelt thanks to Teal; Wayne Dick of the [Low Vision Task Force of the W3C](https://www.w3.org/WAI/GL/task-forces/low-vision-a11y-tf/); Tom Jewett and Eric Eggert from [Knowbility](https://knowbility.org/); Jim Allan of the [Diagram Center](https://diagramcenter.org/); and Dr. Selim R. Benbadis, Director, [Comprehensive Epilepsy Program and Clinical Neurophysiology Laboratory at USF and TGH in Tampa, Florida](https://health.usf.edu/medicine/neurology/epilepsy) for their great, great assistance and discussions on this topic.
 

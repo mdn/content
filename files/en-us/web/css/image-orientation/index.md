@@ -1,18 +1,17 @@
 ---
 title: image-orientation
 slug: Web/CSS/image-orientation
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - image-orientation
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.image-orientation
 ---
 
 {{CSSRef}}
 
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
+
+{{EmbedInteractiveExample("pages/css/image-orientation.html")}}
+
+## Syntax
 
 ```css
 /* keyword values */
@@ -27,14 +26,14 @@ image-orientation: revert-layer;
 image-orientation: unset;
 ```
 
-## Syntax
-
 ### Values
 
 - `none`
   - : Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.
 - `from-image`
   - : Default initial value. The [EXIF](https://en.wikipedia.org/wiki/EXIF) information contained in the image is used to rotate the image appropriately.
+
+> **Warning:** `image-orientation: none;` **does not** override the orientation of non-secure-origin images as encoded by their [EXIF](https://en.wikipedia.org/wiki/EXIF) information, due to security concerns. Find out more from [the CSS working group draft issue](https://github.com/w3c/csswg-drafts/issues/5165).
 
 ## Description
 
@@ -66,7 +65,7 @@ The following image has been rotated through 180 degrees, and the `image-orienta
 
 ```css hidden
 img {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 label {
@@ -75,23 +74,26 @@ label {
 ```
 
 ```html hidden
-<img id="image" src="oriole.jpg"
-    alt="Orientation taken from the image">
+<img id="image" src="oriole.jpg" alt="Orientation taken from the image" />
 
 <div>
-  <input type="radio" id="from-image" name="orientation" value="from-image"
-         checked>
+  <input
+    type="radio"
+    id="from-image"
+    name="orientation"
+    value="from-image"
+    checked />
   <label for="from-image">from-image</label>
 </div>
 
 <div>
-  <input type="radio" id="none" name="orientation" value="none">
+  <input type="radio" id="none" name="orientation" value="none" />
   <label for="none">none</label>
 </div>
 ```
 
 ```js hidden
-document.addEventListener('change', (evt) => {
+document.addEventListener("change", (evt) => {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
 ```

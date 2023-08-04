@@ -1,18 +1,12 @@
 ---
-title: 'Accessibility: What users can do to browse more safely'
+title: "Accessibility: What users can do to browse more safely"
 slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
-tags:
-  - color
-  - epilepsy
-  - photosensitivity
-  - prefers-reduced-motion
-  - reflex epilepsy
-  - saturation
-  - seizure disorders
-  - seizures
-  - user settings
-  - web animation
+page-type: guide
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
 
 This article discusses making web content accessible for those with vestibular disorders, and those who support them, by taking advantage of personalization and accessibility settings built into the operating systems. Taking advantage of personalization settings can help prevent exposure to content leading to seizures and / or other physical reactions.
 

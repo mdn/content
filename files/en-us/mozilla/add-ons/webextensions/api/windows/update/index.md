@@ -1,16 +1,7 @@
 ---
 title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - Windows
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.update
 ---
 
@@ -76,21 +67,17 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let updating = browser.windows.update(tab.windowId, {
     left: 0,
-    top: 0
+    top: 0,
   });
   updating.then(onUpdated, onError);
-
 });
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-update) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

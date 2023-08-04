@@ -1,18 +1,16 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `translate` function evaluates a string and a set of characters to translate and returns the translated string.
 
 ### Syntax
 
-```
+```plain
 translate(string, abc, XYZ)
 ```
 
@@ -43,7 +41,7 @@ Example
 
 Output
 
-```
+```plain
 THE QUICK BROWN FOX.
 ```
 
@@ -57,8 +55,8 @@ Example
 
 Output
 
-```
-The quick red fdx.
+```plain
+The quick red fox.
 ```
 
 - If `XYZ` contains more characters than `abc`, the extra characters are ignored.

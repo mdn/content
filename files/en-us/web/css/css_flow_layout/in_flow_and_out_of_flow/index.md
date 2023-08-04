@@ -1,19 +1,12 @@
 ---
 title: In flow and out of flow
-slug: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
-tags:
-  - CSS
-  - CSS Flow Layout
-  - Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - flow
+slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
+page-type: guide
 ---
 
 {{CSSRef}}
 
-The [previous guide](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.
+The [previous guide](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.
 
 The following example contains a heading, paragraph, a list and a final paragraph which contains a `strong` element. The heading and paragraphs are block level, the `strong` element inline. The list is displayed using flexbox to arrange the items into a row, however it too is participating in block and inline layout - the container has an outside `display` type of `block`.
 
@@ -43,7 +36,7 @@ You can see the background color of the following paragraph running underneath, 
 
 ### Absolute positioning
 
-Giving an item `position: absolute` or `position: fixed` removes it from flow, and any space that it would have taken up is removed. In the next example I have three paragraph elements, the second element has `position` `absolute`, with offset values of `top: 30px` and `right: 30px`. It has been removed from document flow.
+Giving an item `position: absolute` or `position: fixed` removes it from flow, and any space that it would have taken up is removed. In the next example I have three paragraph elements, the second element has `position: absolute`, with offset values of `top: 30px` and `right: 30px`. It has been removed from document flow.
 
 {{EmbedGHLiveSample("css-examples/flow/in-flow/abspos.html", '100%', 700)}}
 
@@ -61,7 +54,7 @@ When you do anything to remove or shift an item from where it would be placed in
 
 ## Summary
 
-In this guide, we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts).
+In this guide, we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
 
 ## See also
 

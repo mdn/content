@@ -1,15 +1,7 @@
 ---
 title: Physics
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - physics
+page-type: guide
 ---
 
 {{GamesSidebar}}

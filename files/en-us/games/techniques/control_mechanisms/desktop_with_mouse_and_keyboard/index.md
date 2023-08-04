@@ -1,13 +1,7 @@
 ---
 title: Desktop mouse and keyboard controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
-tags:
-  - Controls
-  - Desktop
-  - Games
-  - JavaScript
-  - keyboard
-  - mouse
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -111,7 +105,7 @@ const buttonEnclave = this.add.button(
   10,
   "logo-enclave",
   this.clickEnclave,
-  this
+  this,
 );
 ```
 
@@ -123,7 +117,7 @@ this.buttonShoot = this.add.button(
   0,
   "button-alpha",
   null,
-  this
+  this,
 );
 this.buttonShoot.onInputDown.add(this.shootingPressed, this);
 this.buttonShoot.onInputUp.add(this.shootingReleased, this);

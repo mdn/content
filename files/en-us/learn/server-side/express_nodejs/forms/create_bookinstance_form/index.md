@@ -1,15 +1,11 @@
 ---
 title: Create BookInstance form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
-tags:
-  - Express
-  - Forms
-  - Node
-  - part 6
-  - server-side
+page-type: learn-module-chapter
 ---
 
-This subarticle shows how to define a page/form to create `BookInstance` objects. This is very much like the form we used to create `Book` objects.
+This subarticle shows how to define a page/form to create `BookInstance` objects.
+This is very much like the form we used to [create `Book` objects](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form).
 
 ## Import validation and sanitization methods
 
@@ -31,21 +27,19 @@ Find the exported `bookinstance_create_get()` controller method and replace it w
 
 ```js
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = (req, res, next) => {
-  Book.find({}, "title").exec((err, books) => {
-    if (err) {
-      return next(err);
-    }
-    // Successful, so render.
-    res.render("bookinstance_form", {
-      title: "Create BookInstance",
-      book_list: books,
-    });
+exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
+  const allBooks = await Book.find({}, "title").exec();
+
+  res.render("bookinstance_form", {
+    title: "Create BookInstance",
+    book_list: allBooks,
   });
-};
+});
 ```
 
-The controller gets a list of all books (`book_list`) and passes it to the view **`bookinstance_form.pug`** (along with the `title`)
+The controller gets a list of all books (`allBooks`) and passes it via `book_list` to the view **`bookinstance_form.pug`** (along with a `title`).
+Note that no book has been selected when we first display this form, so we don't pass the `selected_book` variable to `render()`.
+Because of this, `selected_book` will have a value of `undefined` in the template.
 
 ## Controller—post route
 
@@ -62,17 +56,17 @@ exports.bookinstance_create_post = [
     .escape(),
   body("status").escape(),
   body("due_back", "Invalid date")
-    .optional({ checkFalsy: true })
+    .optional({ values: "falsy" })
     .isISO8601()
     .toDate(),
 
   // Process request after validation and sanitization.
-  (req, res, next) => {
+  asyncHandler(async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
     // Create a BookInstance object with escaped and trimmed data.
-    const bookinstance = new BookInstance({
+    const bookInstance = new BookInstance({
       book: req.body.book,
       imprint: req.body.imprint,
       status: req.body.status,
@@ -80,36 +74,30 @@ exports.bookinstance_create_post = [
     });
 
     if (!errors.isEmpty()) {
-      // There are errors. Render form again with sanitized values and error messages.
-      Book.find({}, "title").exec(function (err, books) {
-        if (err) {
-          return next(err);
-        }
-        // Successful, so render.
-        res.render("bookinstance_form", {
-          title: "Create BookInstance",
-          book_list: books,
-          selected_book: bookinstance.book._id,
-          errors: errors.array(),
-          bookinstance,
-        });
+      // There are errors.
+      // Render form again with sanitized values and error messages.
+      const allBooks = await Book.find({}, "title").exec();
+
+      res.render("bookinstance_form", {
+        title: "Create BookInstance",
+        book_list: allBooks,
+        selected_book: bookInstance.book._id,
+        errors: errors.array(),
+        bookinstance: bookInstance,
       });
       return;
+    } else {
+      // Data from form is valid
+      await bookInstance.save();
+      res.redirect(bookInstance.url);
     }
-
-    // Data from form is valid.
-    bookinstance.save((err) => {
-      if (err) {
-        return next(err);
-      }
-      // Successful: redirect to new record.
-      res.redirect(bookinstance.url);
-    });
-  },
+  }),
 ];
 ```
 
-The structure and behavior of this code is the same as for creating our other objects. First we validate and sanitize the data. If the data is invalid, we then re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we save the new `BookInstance` record and redirect the user to the detail page.
+The structure and behavior of this code is the same as for creating our other objects.
+First we validate and sanitize the data. If the data is invalid, we then re-display the form along with the data that was originally entered by the user and a list of error messages.
+If the data is valid, we save the new `BookInstance` record and redirect the user to the detail page.
 
 ## View
 
@@ -134,15 +122,15 @@ block content
       input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required='true' value=(undefined===bookinstance ? '' : bookinstance.imprint))
     div.form-group
       label(for='due_back') Date when book available:
-      input#due_back.form-control(type='date' name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back))
+      input#due_back.form-control(type='date' name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
 
     div.form-group
       label(for='status') Status:
-      select#status.form-control(type='select' placeholder='Select status' name='status' required='true')
-        option(value='Maintenance') Maintenance
-        option(value='Available') Available
-        option(value='Loaned') Loaned
-        option(value='Reserved') Reserved
+      select#status.form-control(type='select' placeholder='Select status' name='status' required='true' )
+        option(value='Maintenance' selected=(undefined===bookinstance || bookinstance.status!='Maintenance' ? false:'selected')) Maintenance
+        option(value='Available' selected=(undefined===bookinstance || bookinstance.status!='Available' ? false:'selected')) Available
+        option(value='Loaned' selected=(undefined===bookinstance || bookinstance.status!='Loaned' ? false:'selected')) Loaned
+        option(value='Reserved' selected=(undefined===bookinstance || bookinstance.status!='Reserved' ? false:'selected')) Reserved
 
     button.btn.btn-primary(type='submit') Submit
 
@@ -152,13 +140,34 @@ block content
         li!= error.msg
 ```
 
-The view structure and behavior is almost the same as for the **book_form.pug** template, so we won't go over it again.
+> **Note:** The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values.
+> Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
 
-> **Note:** The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
+The view structure and behavior is almost the same as for the **book_form.pug** template, so we won't go over it in detail.
+The one thing to note is the line where we set the "due back" date to `bookinstance.due_back_yyyy_mm_dd` if we are populating the date input for an existing instance.
+
+```pug
+input#due_back.form-control(type='date', name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
+```
+
+The date value has to be set in the format `YYYY-MM-DD` because this is expected by [`<input>` elements with `type="date"`](/en-US/docs/Web/HTML/Element/input/date), however the date is not stored in this format so we have to convert it before setting the value in the control.
+The `due_back_yyyy_mm_dd()` method is added to the `BookInstance` model in the next section.
+
+## Model—virtual `due_back_yyyy_mm_dd()` method
+
+Open the file where you defined the `BookInstanceSchema` model (**models/bookinstance.js**).
+Add the `due_back_yyyy_mm_dd()` virtual function shown below (after the `due_back_formatted()` virtual function):
+
+```pug
+BookInstanceSchema.virtual("due_back_yyyy_mm_dd").get(function () {
+  return DateTime.fromJSDate(this.due_back).toISODate(); // format 'YYYY-MM-DD'
+});
+```
 
 ## What does it look like?
 
-Run the application and open your browser to `http://localhost:3000/`. Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
+Run the application and open your browser to `http://localhost:3000/`.
+Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
 
 ![Create BookInstance of the Local library application screenshot from localhost:3000. The page is divided into two columns. The narrow left column has a vertical navigation bar with 10 links separated into two sections by a light-colored horizontal line. The top section link to already created data. The bottom links go to create new data forms. The wide right column has the create book instance form with a 'Create BookInstance' heading and four input fields labeled 'Book', 'Imprint', 'Date when book available' and 'Status'. The form is filled. There is a 'Submit' button at the bottom of the form.](locallibary_express_bookinstance_create_empty.png)
 

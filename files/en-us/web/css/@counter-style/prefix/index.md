@@ -1,13 +1,7 @@
 ---
 title: prefix
 slug: Web/CSS/@counter-style/prefix
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.prefix
 ---
 
@@ -35,14 +29,7 @@ prefix: url(bullet.png);
 
 ## Formal syntax
 
-```
-<symbol>
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

@@ -1,17 +1,10 @@
 ---
-title: VRLayerInit.source
+title: "VRLayerInit: source property"
+short-title: source
 slug: Web/API/VRLayerInit/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
-  - source
+status:
+  - deprecated
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

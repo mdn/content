@@ -1,17 +1,10 @@
 ---
-title: USBConfiguration.configurationValue
+title: "USBConfiguration: configurationValue property"
+short-title: configurationValue
 slug: Web/API/USBConfiguration/configurationValue
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBConfiguration
-  - WebUSB
-  - WebUSB API
-  - configurationValue
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConfiguration.configurationValue
 ---
 

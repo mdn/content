@@ -2,15 +2,6 @@
 title: VideoTrack
 slug: Web/API/VideoTrack
 page-type: web-api-interface
-tags:
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Video
-  - VideoTrack
-  - track
 browser-compat: api.VideoTrack
 ---
 
@@ -20,7 +11,7 @@ The {{domxref("VideoTrack")}} interface represents a single video track from a {
 
 The most common use for accessing a `VideoTrack` object is to toggle its {{domxref("VideoTrack.selected", "selected")}} property in order to make it the active video track for its {{HTMLElement("video")}} element.
 
-## Properties
+## Instance properties
 
 - {{domxref("VideoTrack.selected", "selected")}}
   - : A Boolean value which controls whether or not the video track is active. Only a single video track can be active at any given time, so setting this property to `true` for one track while another track is active will make that other track inactive.
@@ -60,7 +51,7 @@ for (const track of tracks) {
     track.selected = true;
     break;
   }
-};
+}
 ```
 
 The {{domxref("VideoTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be `"en-US"`, for example.

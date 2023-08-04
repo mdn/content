@@ -2,12 +2,6 @@
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG OM
 browser-compat: api.SVGGraphicsElement
 ---
 
@@ -17,7 +11,7 @@ The **`SVGGraphicsElement`** interface represents SVG elements whose primary pur
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
@@ -28,7 +22,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGElement")}}._
 

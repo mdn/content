@@ -1,17 +1,13 @@
 ---
-title: '-webkit-device-pixel-ratio'
+title: "-webkit-device-pixel-ratio"
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
-tags:
-  - '@media'
-  - CSS
-  - WebKit
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.-webkit-device-pixel-ratio
 ---
 
 {{CSSRef}}
 
-The **`-webkit-device-pixel-ratio`** is a non-standard Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) which is an alternative to the standard [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature.
+The **`-webkit-device-pixel-ratio`** is a non-standard Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) which is an alternative to the standard [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature.
 
 > **Note:** If possible, use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature query instead, which is a standard media feature. While this prefixed media feature is a WebKit feature, other browser engines may support it. See [browser compatibility](#browser-compatibility) below.
 
@@ -93,7 +89,7 @@ The `-webkit-device-pixel-ratio` feature is specified as a {{cssxref("&lt;number
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("resolution")}}
 - [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
 - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)

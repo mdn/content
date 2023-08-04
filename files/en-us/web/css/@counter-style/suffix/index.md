@@ -1,13 +1,7 @@
 ---
 title: suffix
 slug: Web/CSS/@counter-style/suffix
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.suffix
 ---
 
@@ -35,14 +29,7 @@ suffix: url(bullet.png);
 
 ## Formal syntax
 
-```
-<symbol>
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

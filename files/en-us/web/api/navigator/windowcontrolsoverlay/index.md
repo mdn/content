@@ -1,13 +1,8 @@
 ---
-title: Navigator.windowControlsOverlay
+title: "Navigator: windowControlsOverlay property"
+short-title: windowControlsOverlay
 slug: Web/API/Navigator/windowControlsOverlay
 page-type: web-api-instance-property
-tags:
-  - API
-  - Window Controls Overlay
-  - Property
-  - Reference
-  - Progressive Web Apps
 browser-compat: api.Navigator.windowControlsOverlay
 ---
 
@@ -31,12 +26,12 @@ The {{domxref("WindowControlsOverlay")}} interface.
 ## Examples
 
 ```js
-if ('windowControlsOverlay' in navigator) {
+if ("windowControlsOverlay" in navigator) {
   const rect = navigator.windowControlsOverlay.getTitlebarAreaRect();
   // Do something with the title bar area rectangle.
 } else {
   // The Window Controls Overlay feature is not available.
-};
+}
 ```
 
 ## Specifications

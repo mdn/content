@@ -1,11 +1,7 @@
 ---
-title: 'TypeError: can''t convert x to BigInt'
+title: "TypeError: can't convert x to BigInt"
 slug: Web/JavaScript/Reference/Errors/Cant_convert_x_to_BigInt
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -14,7 +10,7 @@ The JavaScript exception "x can't be converted to BigInt" occurs when attempting
 
 ## Message
 
-```
+```plain
 TypeError: Cannot convert null to a BigInt (V8-based)
 TypeError: can't convert null to BigInt (Firefox)
 TypeError: Invalid argument type in ToBigInt operation (Safari)

@@ -1,16 +1,7 @@
 ---
 title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onChanged
 ---
 
@@ -30,7 +21,7 @@ browser.downloads.onChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,12 +32,12 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A callback function that will be called when this event occurs. This function will be passed the following arguments:
+  - : The function called when this event occurs. This function will be passed this argument:
 
     - `downloadDelta`
-      - : An [`object`](#downloaddelta) representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it.
+      - : An `object` representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it. See the [downloadDelta](#downloaddelta_2) section for more details.
 
 ## Additional objects
 
@@ -104,8 +95,6 @@ browser.downloads.onChanged.addListener(handleChanged);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onChanged) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

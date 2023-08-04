@@ -1,12 +1,7 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toUpperCase
 ---
 
@@ -27,12 +22,6 @@ toUpperCase()
 
 A new string representing the calling string converted to upper case.
 
-### Exceptions
-
-- {{jsxref("TypeError")}}
-  - : When called on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, for example,
-    `String.prototype.toUpperCase.call(undefined)`.
-
 ## Description
 
 The `toUpperCase()` method returns the value of the string converted to
@@ -44,7 +33,7 @@ strings are immutable.
 ### Basic usage
 
 ```js
-console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+console.log("alphabet".toUpperCase()); // 'ALPHABET'
 ```
 
 ### Conversion of non-string `this` values to strings
@@ -55,8 +44,8 @@ This method will convert any non-string value to a string, when you set its
 ```js
 const a = String.prototype.toUpperCase.call({
   toString() {
-    return 'abcdef';
-  }
+    return "abcdef";
+  },
 });
 
 const b = String.prototype.toUpperCase.call(true);

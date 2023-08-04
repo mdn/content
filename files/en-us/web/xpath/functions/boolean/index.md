@@ -1,12 +1,10 @@
 ---
 title: boolean
 slug: Web/XPath/Functions/boolean
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{XsltRef()}}
+{{XsltSidebar}}
 
 The `boolean` function evaluates an expression and returns true or false.
 

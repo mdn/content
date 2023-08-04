@@ -1,13 +1,9 @@
 ---
 title: <vkern>
 slug: Web/SVG/Element/vkern
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.vkern
 ---
 

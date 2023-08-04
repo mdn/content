@@ -1,15 +1,7 @@
 ---
 title: proxy.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/unregister
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Proxy
-  - Reference
-  - WebExtensions
-  - unregister
+page-type: webextension-api-function
 browser-compat: webextensions.api.proxy.unregister
 ---
 
@@ -17,7 +9,7 @@ browser-compat: webextensions.api.proxy.unregister
 
 > **Warning:** This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:
 >
-> ![](proxy_unregister_warning.png)
+> ![Proxy unregister error message.](proxy_unregister_warning.png)
 
 Unregisters a [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file). that was registered by an earlier call to {{WebExtAPIRef("proxy.register()")}}.
 

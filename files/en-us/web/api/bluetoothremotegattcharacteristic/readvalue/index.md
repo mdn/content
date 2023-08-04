@@ -1,16 +1,10 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.readValue()
+title: "BluetoothRemoteGATTCharacteristic: readValue() method"
+short-title: readValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/readValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - readValue
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.readValue
 ---
 

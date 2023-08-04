@@ -1,25 +1,13 @@
 ---
 title: Understanding WebAssembly text format
 slug: WebAssembly/Understanding_the_text_format
-tags:
-  - Functions
-  - JavaScript
-  - S-expressions
-  - WebAssembly
-  - calls
-  - memory
-  - shared address
-  - table
-  - text format
-  - was
-  - wasm
 ---
 
 {{WebAssemblySidebar}}
 
-To enable WebAssembly to be read and edited by humans, there is a textual representation of the wasm binary format. This is an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains how that text format works, in terms of the raw syntax, and how it is related to the underlying bytecode it represents — and the wrapper objects representing wasm in JavaScript.
+To enable WebAssembly to be read and edited by humans, there is a textual representation of the Wasm binary format. This is an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains how that text format works, in terms of the raw syntax, and how it is related to the underlying bytecode it represents — and the wrapper objects representing Wasm in JavaScript.
 
-> **Note:** This is potentially overkill if you are a web developer who just wants to load a wasm module into a page and use it in your code (see [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)), but it is more useful if for example, you want to write wasm modules to optimize the performance of your JavaScript library, or build your own WebAssembly compiler.
+> **Note:** This is potentially overkill if you are a web developer who just wants to load a Wasm module into a page and use it in your code (see [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)), but it is more useful if for example, you want to write Wasm modules to optimize the performance of your JavaScript library, or build your own WebAssembly compiler.
 
 ## S-expressions
 
@@ -35,7 +23,7 @@ represents a tree with the root node "module" and two child nodes, a "memory" no
 
 ### The simplest module
 
-Let's start with the simplest, shortest possible wasm module.
+Let's start with the simplest, shortest possible Wasm module.
 
 ```wasm
 (module)
@@ -43,7 +31,7 @@ Let's start with the simplest, shortest possible wasm module.
 
 This module is totally empty, but is still a valid module.
 
-If we convert our module to binary now (see [Converting WebAssembly text format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.github.io/spec/core/binary/index.html#high-level-structure):
+If we convert our module to binary now (see [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Text_format_to_Wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.github.io/spec/core/binary/modules.html#binary-module):
 
 ```wasm
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
@@ -73,7 +61,7 @@ The signature is a sequence of parameter type declarations followed by a list of
 - The absence of a `(result)` means the function doesn't return anything.
 - In the current iteration, there can be at most 1 return type, but [later this will be relaxed](https://github.com/WebAssembly/spec/blob/master/proposals/multi-value/Overview.md) to any number.
 
-Each parameter has a type explicitly declared; wasm [Number types](#number_types), [Reference types](#reference_types), [Vector types](#vector_types).
+Each parameter has a type explicitly declared; Wasm [Number types](#number_types), [Reference types](#reference_types), [Vector types](#vector_types).
 The number types are:
 
 - `i32`: 32-bit integer
@@ -116,7 +104,7 @@ And then could write `local.get $p1` instead of `local.get 0`, etc. (Note that w
 
 ## Stack machines
 
-Before we can write a function body, we have to talk about one more thing: **stack machines**. Although the browser compiles it to something more efficient, wasm execution is defined in terms of a stack machine where the basic idea is that every type of instruction pushes and/or pops a certain number of `i32`/`i64`/`f32`/`f64` values to/from a stack.
+Before we can write a function body, we have to talk about one more thing: **stack machines**. Although the browser compiles it to something more efficient, Wasm execution is defined in terms of a stack machine where the basic idea is that every type of instruction pushes and/or pops a certain number of `i32`/`i64`/`f32`/`f64` values to/from a stack.
 
 For example, `local.get` is defined to push the value of the local it read onto the stack, and `i32.add` pops two `i32` values (it implicitly grabs the previous two values pushed onto the stack), computes their sum (modulo 2^32) and pushes the resulting i32 value.
 
@@ -152,7 +140,7 @@ There are a lot more things that can be put inside function bodies, but we will 
 
 ### Calling the function
 
-Our function won't do very much on its own — now we need to call it. How do we do that? Like in an ES module, wasm functions must be explicitly exported by an `export` statement inside the module.
+Our function won't do very much on its own — now we need to call it. How do we do that? Like in an ES module, Wasm functions must be explicitly exported by an `export` statement inside the module.
 
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 
@@ -180,9 +168,9 @@ So our final module (for now) looks like this:
 )
 ```
 
-If you want to follow along with the example, save the above our module into a file called `add.wat`, then convert it into a binary file called `add.wasm` using wabt (see [Converting WebAssembly text format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm) for details).
+If you want to follow along with the example, save the above our module into a file called `add.wat`, then convert it into a binary file called `add.wasm` using wabt (see [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Text_format_to_Wasm) for details).
 
-Next, we'll load our binary into a typed array called `addCode` (as described in [Fetching WebAssembly Bytecode](/en-US/docs/WebAssembly/Loading_and_running)), compile and instantiate it, and execute our `add` function in JavaScript (we can now find `add()` in the [`exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) property of the instance):
+Next, we'll asynchronously instantiate our binary (see [Loading and running WebAssembly code](/en-US/docs/WebAssembly/Loading_and_running)) and execute our `add` function in JavaScript (we can now find `add()` in the [`exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports) property of the instance):
 
 ```js
 WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
@@ -190,7 +178,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see {{JSxRef("WebAssembly.instantiateStreaming()")}} for more details about the instantiate function.
+> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) for more details about the instantiate function.
 
 ## Exploring fundamentals
 
@@ -230,7 +218,7 @@ WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
 
 ### Importing functions from JavaScript
 
-We have already seen JavaScript calling WebAssembly functions, but what about WebAssembly calling JavaScript functions? WebAssembly doesn't actually have any built-in knowledge of JavaScript, but it does have a general way to import functions that can accept either JavaScript or wasm functions. Let's look at an example:
+We have already seen JavaScript calling WebAssembly functions, but what about WebAssembly calling JavaScript functions? WebAssembly doesn't actually have any built-in knowledge of JavaScript, but it does have a general way to import functions that can accept either JavaScript or Wasm functions. Let's look at an example:
 
 ```wasm
 (module
@@ -244,7 +232,7 @@ WebAssembly has a two-level namespace so the import statement here is saying tha
 
 Imported functions are just like normal functions: they have a signature that WebAssembly validation checks statically, and they are given an index and can be named and called.
 
-JavaScript functions have no notion of signature, so any JavaScript function can be passed, regardless of the import's declared signature. Once a module declares an import, the caller of {{JSxRef("WebAssembly.instantiate()")}} must pass in an import object that has the corresponding properties.
+JavaScript functions have no notion of signature, so any JavaScript function can be passed, regardless of the import's declared signature. Once a module declares an import, the caller of [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) must pass in an import object that has the corresponding properties.
 
 For the above, we need an object (let's call it `importObject`) such that `importObject.console.log` is a JavaScript function.
 
@@ -262,7 +250,7 @@ const importObject = {
 WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
   (obj) => {
     obj.instance.exports.logIt();
-  }
+  },
 );
 ```
 
@@ -270,7 +258,7 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 
 ### Declaring globals in WebAssembly
 
-WebAssembly has the ability to create global variable instances, accessible from both JavaScript and importable/exportable across one or more {{JSxRef("WebAssembly.Module")}} instances. This is very useful, as it allows dynamic linking of multiple modules.
+WebAssembly has the ability to create global variable instances, accessible from both JavaScript and importable/exportable across one or more [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) instances. This is very useful, as it allows dynamic linking of multiple modules.
 
 In WebAssembly text format, it looks something like this (see [global.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.wat) in our GitHub repo; also see [global.html](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) for a live JavaScript example):
 
@@ -287,7 +275,7 @@ In WebAssembly text format, it looks something like this (see [global.wat](https
 
 This looks similar to what we've seen before, except that we specify a global value using the keyword `global`, and we also specify the keyword `mut` along with the value's datatype if we want it to be mutable.
 
-To create an equivalent value using JavaScript, you'd use the {{JSxRef("WebAssembly.Global()")}} constructor:
+To create an equivalent value using JavaScript, you'd use the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor:
 
 ```js
 const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
@@ -301,9 +289,9 @@ From JavaScript's point of view, it's as though memory is all inside one big (re
 
 So a string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we've written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
 
-The key is that JavaScript can create WebAssembly linear memory instances via the {{JSxRef("WebAssembly.Memory()")}} interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
+The key is that JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
 
-Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) method in JavaScript. When growth occurs, since `ArrayBuffer`s can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
+Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) method in JavaScript. When growth occurs, since `ArrayBuffer`s can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
 
 While there are many ways to encode a string's length in the string itself (for example, C strings); for simplicity here we just pass both offset and length as parameters:
 
@@ -321,7 +309,7 @@ function consoleLogString(offset, length) {
 }
 ```
 
-The last missing piece of the puzzle is where `consoleLogString` gets access to the WebAssembly `memory`. WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
+The last missing piece of the puzzle is where `consoleLogString` gets access to the WebAssembly `memory`. WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
 
 For simplicity, let's create it in JavaScript then import it into WebAssembly. Our `import` statement is written as follows:
 
@@ -333,7 +321,7 @@ The `1` indicates that the imported memory must have at least 1 page of memory (
 
 So let's see a complete module that prints the string "Hi". In a normal compiled C program, you'd call a function to allocate some memory for the string, but since we're just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a `data` section. Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
 
-Our final wasm module looks like this:
+Our final Wasm module looks like this:
 
 ```wasm
 (module
@@ -361,7 +349,7 @@ const importObject = {
 WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
   (obj) => {
     obj.instance.exports.writeHi();
-  }
+  },
 );
 ```
 
@@ -379,13 +367,13 @@ To see why tables are needed, we need to first observe that the `call` instructi
 
 WebAssembly needed a type of call instruction to achieve this, so we gave it `call_indirect`, which takes a dynamic function operand. The problem is that the only types we have to give operands in WebAssembly are (currently) `i32`/`i64`/`f32`/`f64`.
 
-WebAssembly could add an `anyfunc` type ("any" because the type could hold functions of any signature), but unfortunately this `anyfunc` type couldn't be stored in linear memory for security reasons. Linear memory exposes the raw contents of stored values as bytes and this would allow wasm content to arbitrarily observe and corrupt raw function addresses, which is something that cannot be allowed on the web.
+WebAssembly could add an `anyfunc` type ("any" because the type could hold functions of any signature), but unfortunately this `anyfunc` type couldn't be stored in linear memory for security reasons. Linear memory exposes the raw contents of stored values as bytes and this would allow Wasm content to arbitrarily observe and corrupt raw function addresses, which is something that cannot be allowed on the web.
 
 The solution was to store function references in a table and pass around table indices instead, which are just i32 values. `call_indirect`'s operand can therefore be an i32 index value.
 
-#### Defining a table in wasm
+#### Defining a table in Wasm
 
-So how do we place wasm functions in our table? Just like `data` sections can be used to initialize regions of linear memory with bytes, `elem` sections can be used to initialize regions of tables with functions:
+So how do we place Wasm functions in our table? Just like `data` sections can be used to initialize regions of linear memory with bytes, `elem` sections can be used to initialize regions of tables with functions:
 
 ```wasm
 (module
@@ -400,7 +388,7 @@ So how do we place wasm functions in our table? Just like `data` sections can be
 ```
 
 - In `(table 2 funcref)`, the 2 is the initial size of the table (meaning it will store two references) and `funcref` declares that the element type of these references are function reference.
-- The functions (`func`) sections are just like any other declared wasm functions. These are the functions we are going to refer to in our table (for example's sake, each one just returns a constant value). Note that the order the sections are declared in doesn't matter here — you can declare your functions anywhere and still refer to them in your `elem` section.
+- The functions (`func`) sections are just like any other declared Wasm functions. These are the functions we are going to refer to in our table (for example's sake, each one just returns a constant value). Note that the order the sections are declared in doesn't matter here — you can declare your functions anywhere and still refer to them in your `elem` section.
 - The `elem` section can list any subset of the functions in a module, in any order, allowing duplicates. This is a list of the functions that are to be referenced by the table, in the order they are to be referenced.
 - The `(i32.const 0)` value inside the `elem` section is an offset — this needs to be declared at the start of the section, and specifies at what index in the table function references start to be populated. Here we've specified 0, and a size of 2 (see above), so we can fill in two references at indexes 0 and 1. If we wanted to start writing our references at offset 1, we'd have to write `(i32.const 1)`, and the table size would have to be 3.
 
@@ -447,7 +435,7 @@ You could also declare the `call_indirect` parameter explicitly during the comma
 
 In a higher level, more expressive language like JavaScript, you could imagine doing the same thing with an array (or probably more likely, object) containing functions. The pseudocode would look something like `tbl[i]()`.
 
-So, back to the typechecking. Since WebAssembly is type checked, and the `funcref` can be potentially any function signature, we have to supply the presumed signature of the callee at the callsite, hence we include the `$return_i32` type, to tell the program a function returning an `i32` is expected. If the callee doesn't have a matching signature (say an `f32` is returned instead), a {{JSxRef("WebAssembly.RuntimeError")}} is thrown.
+So, back to the typechecking. Since WebAssembly is type checked, and the `funcref` can be potentially any function signature, we have to supply the presumed signature of the callee at the callsite, hence we include the `$return_i32` type, to tell the program a function returning an `i32` is expected. If the callee doesn't have a matching signature (say an `f32` is returned instead), a [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError) is thrown.
 
 So what links the `call_indirect` to the table we are calling? The answer is that there is only one table allowed right now per module instance, and that is what `call_indirect` is implicitly calling. In the future, when multiple tables are allowed, we would also need to specify a table identifier of some kind, along the lines of
 
@@ -484,15 +472,15 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 
 > **Note:** You can find this example on GitHub as [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
-> **Note:** Just like Memory, Tables can also be created from JavaScript (see [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)) as well as imported to/from another wasm module.
+> **Note:** Just like Memory, Tables can also be created from JavaScript (see [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table)) as well as imported to/from another Wasm module.
 
 ### Mutating tables and dynamic linking
 
-Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of [Reference types](#reference_types), such as `table.get` and `table.set`.
+Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the [`grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/grow), [`get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) and [`set()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/set) methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of [Reference types](#reference_types), such as `table.get` and `table.set`.
 
 Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
 
-To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) calls.
+To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) calls.
 
 Our `.wat` examples look like so:
 
@@ -582,7 +570,7 @@ The new operations are:
 
 ### Number types
 
-Web assembly currently has four available _number types_:
+WebAssembly currently has four available _number types_:
 
 - `i32`: 32-bit integer
 - `i64`: 64-bit integer
@@ -597,8 +585,8 @@ Web assembly currently has four available _number types_:
 
 The [reference types proposal](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) (supported in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79)) provides two main features:
 
-- A new type, `externref`, which can hold _any_ JavaScript value, for example strings, DOM references, objects, etc. `externref` is opaque from the point of view of WebAssembly — a wasm module can't access and manipulate these values and instead can only receive them and pass them back out. But this is very useful for allowing wasm modules to call JavaScript functions, DOM APIs, etc., and generally to pave the way for easier interoperability with the host environment. `externref` can be used for value types and table elements.
-- A number of new instructions that allow wasm modules to directly manipulate [WebAssembly tables](#webassembly_tables), rather than having to do it via the JavaScript API.
+- A new type, `externref`, which can hold _any_ JavaScript value, for example strings, DOM references, objects, etc. `externref` is opaque from the point of view of WebAssembly — a Wasm module can't access and manipulate these values and instead can only receive them and pass them back out. But this is very useful for allowing Wasm modules to call JavaScript functions, DOM APIs, etc., and generally to pave the way for easier interoperability with the host environment. `externref` can be used for value types and table elements.
+- A number of new instructions that allow Wasm modules to directly manipulate [WebAssembly tables](#webassembly_tables), rather than having to do it via the JavaScript API.
 
 > **Note:** The [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) documentation contains some useful information on how to take advantage of `externref` from Rust.
 
@@ -631,9 +619,9 @@ The threads proposal has two parts, shared memories and atomic memory accesses.
 
 ### Shared memories
 
-As described above, you can create shared WebAssembly [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) objects, which can be transferred between Window and Worker contexts using [`postMessage()`](/en-US/docs/Web/API/Window/postMessage), in the same fashion as a [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer).
+As described above, you can create shared WebAssembly [`Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects, which can be transferred between Window and Worker contexts using [`postMessage()`](/en-US/docs/Web/API/Window/postMessage), in the same fashion as a [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer).
 
-Over on the JavaScript API side, the [`WebAssembly.Memory()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory) constructor's initialization object now has a `shared` property, which when set to `true` will create a shared memory:
+Over on the JavaScript API side, the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/Memory) constructor's initialization object now has a `shared` property, which when set to `true` will create a shared memory:
 
 ```js
 const memory = new WebAssembly.Memory({
@@ -643,7 +631,7 @@ const memory = new WebAssembly.Memory({
 });
 ```
 
-the memory's [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) property will now return a `SharedArrayBuffer`, instead of the usual `ArrayBuffer`:
+the memory's [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) property will now return a `SharedArrayBuffer`, instead of the usual `ArrayBuffer`:
 
 ```js
 memory.buffer; // returns SharedArrayBuffer
@@ -655,13 +643,13 @@ Over in the text format, you can create a shared memory using the `shared` keywo
 (memory 1 2 shared)
 ```
 
-Unlike unshared memories, shared memories must specify a "maximum" size, in both the JavaScript API constructor and wasm text format.
+Unlike unshared memories, shared memories must specify a "maximum" size, in both the JavaScript API constructor and Wasm text format.
 
 > **Note:** You can find a lot more details in the [Threading proposal for WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md).
 
 ### Atomic memory accesses
 
-A number of new wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses). These instructions are allowed on non-shared memories as of Firefox 80.
+A number of new Wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses). These instructions are allowed on non-shared memories as of Firefox 80.
 
 > **Note:** The [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) shows how to take advantage of this new functionality from Emscripten.
 

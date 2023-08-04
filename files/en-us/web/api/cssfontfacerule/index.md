@@ -2,12 +2,6 @@
 title: CSSFontFaceRule
 slug: Web/API/CSSFontFaceRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSFontFaceRule
-  - Interface
-  - Reference
 browser-compat: api.CSSFontFaceRule
 ---
 
@@ -17,14 +11,14 @@ The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} [at-
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSFontFaceRule.style")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSStyleDeclaration")}}.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 

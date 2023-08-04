@@ -1,20 +1,17 @@
 ---
-title: '-webkit-box-reflect'
+title: "-webkit-box-reflect"
 slug: Web/CSS/-webkit-box-reflect
-tags:
-  - '-webkit-box-reflect'
-  - CSS
-  - CSS Property
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-box-reflect
 ---
 
 {{CSSRef}}{{Non-standard_Header}}
 
 The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you reflect the content of an element in one specific direction.
+
+## Syntax
 
 ```css
 /* Direction values */
@@ -32,12 +29,10 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 /* Global values */
 -webkit-box-reflect: inherit;
 -webkit-box-reflect: initial;
+-webkit-box-reflect: revert;
+-webkit-box-reflect: revert-layer;
 -webkit-box-reflect: unset;
 ```
-
-> **Warning:** This feature is **not intended to be used by Web sites**. To achieve reflection on the Web, the standard way is to use the CSS {{CSSxRef("element", "element()")}} function.
-
-## Syntax
 
 ### Values
 

@@ -1,22 +1,8 @@
 ---
-title: RTCRtpEncodingParameters.maxBitrate
+title: "RTCRtpEncodingParameters: maxBitrate property"
+short-title: maxBitrate
 slug: Web/API/RTCRtpEncodingParameters/maxBitrate
 page-type: web-api-instance-property
-tags:
-  - API
-  - BPS
-  - Bandwidth
-  - Bit Rate
-  - Codec
-  - Encoding
-  - Property
-  - RTCRtpEncodingParameters
-  - Reference
-  - Settings
-  - WebRTC
-  - WebRTC API
-  - maxBitrate
-  - parameters
 browser-compat: api.RTCRtpEncodingParameters.maxBitrate
 ---
 

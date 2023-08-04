@@ -2,14 +2,6 @@
 title: PushSubscription
 slug: Web/API/PushSubscription
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
 browser-compat: api.PushSubscription
 ---
 
@@ -19,7 +11,7 @@ The `PushSubscription` interface of the [Push API](/en-US/docs/Web/API/Push_API)
 
 An instance of this interface can be serialized.
 
-## Properties
+## Instance properties
 
 - {{domxref("PushSubscription.endpoint")}} {{ReadOnlyInline}}
   - : A string containing the endpoint associated with the push subscription.
@@ -30,7 +22,7 @@ An instance of this interface can be serialized.
 - {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : A string containing the subscription ID associated with the push subscription.
 
-## Methods
+## Instance methods
 
 - {{domxref("PushSubscription.getKey()")}}
   - : Returns an {{jsxref("ArrayBuffer")}} which contains the client's public key, which can then be sent to a server and used in encrypting push message data.
@@ -44,12 +36,15 @@ An instance of this interface can be serialized.
 ```js
 navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
-    subscription.unsubscribe().then((successful) => {
-      // You've successfully unsubscribed
-    }).catch((e) => {
-      // Unsubscribing failed
-    })
-  })
+    subscription
+      .unsubscribe()
+      .then((successful) => {
+        // You've successfully unsubscribed
+      })
+      .catch((e) => {
+        // Unsubscribing failed
+      });
+  });
 });
 ```
 

@@ -1,11 +1,8 @@
 ---
-title: Event.bubbles
+title: "Event: bubbles property"
+short-title: bubbles
 slug: Web/API/Event/bubbles
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.bubbles
 ---
 

@@ -1,18 +1,14 @@
 ---
-title: Window.showOpenFilePicker()
+title: "Window: showOpenFilePicker() method"
+short-title: showOpenFilePicker()
 slug: Web/API/Window/showOpenFilePicker
 page-type: web-api-instance-method
-tags:
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Window.showOpenFilePicker
 ---
 
-{{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showOpenFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to select a file
@@ -59,6 +55,10 @@ A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}
   - : An AbortError is thrown if a user dismisses the prompt without making a selection or
     if a file selected is deemed too sensitive or dangerous to be exposed to the website.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 Here we set the options object for passing into the method. We'll allow a selection of
@@ -69,14 +69,14 @@ selection.
 const pickerOpts = {
   types: [
     {
-      description: 'Images',
+      description: "Images",
       accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
+        "image/*": [".png", ".gif", ".jpeg", ".jpg"],
+      },
     },
   ],
   excludeAcceptAllOption: true,
-  multiple: false
+  multiple: false,
 };
 ```
 
@@ -105,5 +105,5 @@ async function getFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

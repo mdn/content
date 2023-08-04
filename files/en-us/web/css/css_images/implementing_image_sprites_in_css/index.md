@@ -1,15 +1,7 @@
 ---
 title: Implementing image sprites in CSS
-slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
-tags:
-  - Advanced
-  - CSS
-  - CSS Images
-  - Graphics
-  - Guide
-  - NeedsContent
-  - Sprites
-  - Web
+slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+page-type: guide
 ---
 
 {{CSSRef}}

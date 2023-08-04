@@ -1,15 +1,12 @@
 ---
 title: set:intersection()
 slug: Web/EXSLT/set/intersection
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-`set:intersection()` returns the intersection of two node-sets. In other words, it returns a node-set containing all the nodes that exits in both `nodeSet1` and `nodeSet2`.
+`set:intersection()` returns the intersection of two node-sets. In other words, it returns a node-set containing all the nodes that exist in both `nodeSet1` and `nodeSet2`.
 
 ## Syntax
 
@@ -30,4 +27,4 @@ A node-set containing the nodes that existed in both `nodeSet1` and in `nodeSet2
 
 ## Specifications
 
-[EXSLT - SET:INTERSECTION](http://exslt.org/set/functions/intersection/index.html)
+[EXSLT - SET:INTERSECTION](https://exslt.github.io/set/functions/intersection/index.html)

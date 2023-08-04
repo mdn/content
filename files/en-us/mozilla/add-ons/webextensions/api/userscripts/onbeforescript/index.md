@@ -1,22 +1,13 @@
 ---
 title: userScripts.onBeforeScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
-tags:
-  - Add-ons
-  - Addons
-  - Customization
-  - Event
-  - Extensions
-  - Firefox
-  - Mozilla
-  - Reference
-  - User Scripts API
-  - WebExtensions
-  - userScripts
+page-type: webextension-api-event
 browser-compat: webextensions.api.userScripts.onBeforeScript
 ---
 
-{{AddonSidebar}}The `onBeforeScript` event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
+{{AddonSidebar}}
+
+The `onBeforeScript` event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
 
 ## Syntax
 
@@ -41,7 +32,7 @@ Events have three functions:
 
 - `listener`
 
-  - : A function that is called when this event occurs. The function is passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `script`
 
@@ -62,13 +53,12 @@ An example of how the listener might be used:
 
 ```js
 browser.userScripts.onBeforeScript.addListener((script) => {
+  script; // This is an API object that represents the user script
+  // that is going to be executed.
 
-  script // This is an API object that represents the user script
-         // that is going to be executed.
-
-  script.metadata // Access the user script metadata (returns the
-                  // value of the scriptMetadata property from
-                  // the call to userScripts.register.
+  script.metadata; // Access the user script metadata (returns the
+  // value of the scriptMetadata property from
+  // the call to userScripts.register).
 
   // Export some global properties into the user script sandbox
   // (this method has to be called synchronously from the
@@ -93,12 +83,14 @@ browser.userScripts.onBeforeScript.addListener((script) => {
           nestedProp: "nestedValue",
         },
         // Explicitly exported objects can also provide methods.
-        objMethod() { /* … */ }
-      })
+        objMethod() {
+          /* … */
+        },
+      });
     },
 
     async myAsyncMethod(param1, param2, param3) {
-    // exported methods can also be declared as async
+      // exported methods can also be declared as async
     },
   });
 });

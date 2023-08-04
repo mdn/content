@@ -1,12 +1,10 @@
 ---
 title: HMAC
 slug: Glossary/HMAC
-tags:
-  - Cryptography
-  - Glossary
-  - Hash
-  - Security
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Hash-based message authentication code**(_HMAC_) is a protocol used for {{Glossary("cryptography", "cryptographically")}} authenticating messages.
 

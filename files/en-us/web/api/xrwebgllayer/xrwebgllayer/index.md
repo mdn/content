@@ -1,27 +1,10 @@
 ---
-title: XRWebGLLayer()
+title: "XRWebGLLayer: XRWebGLLayer() constructor"
+short-title: XRWebGLLayer()
 slug: Web/API/XRWebGLLayer/XRWebGLLayer
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Constructor
-  - Context
-  - Create
-  - Initialize
-  - Layer
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - new
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.XRWebGLLayer
 ---
 
@@ -35,7 +18,7 @@ WebXR device and the WebGL graphics layer used to render the 3D scene.
 
 ```js-nolint
 new XRWebGLLayer(session, context)
-new XRWebGLLayer(session, context, layerInit)
+new XRWebGLLayer(session, context, options)
 ```
 
 ### Parameters
@@ -47,7 +30,7 @@ new XRWebGLLayer(session, context, layerInit)
   - : A {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}}
     identifying the WebGL drawing context to use for rendering the scene for the specified
     WebXR session.
-- `layerInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object providing configuration options for the new `XRWebGLLayer`. The available options
     are:
@@ -94,13 +77,13 @@ In this example, a new {{domxref("XRWebGLLayer")}} is created for a WebXR sessio
 ```js
 xrSession.updateRenderState({
   baseLayer: new XRWebGLLayer(xrSession, gl, {
-     alpha: false,
-     antialias: false,
-     depth: false,
-     framebufferScaleFactor: 0.5,
-     ignoreDepthValues: true,
-     stencil: false
-  })
+    alpha: false,
+    antialias: false,
+    depth: false,
+    framebufferScaleFactor: 0.5,
+    ignoreDepthValues: true,
+    stencil: false,
+  }),
 });
 ```
 

@@ -1,9 +1,7 @@
 ---
 title: Firefox 2 for developers
 slug: Mozilla/Firefox/Releases/2
-tags:
-  - Firefox
-  - Firefox 2
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -12,7 +10,7 @@ tags:
 
 Firefox 2 introduces a vast array of new features and capabilities. This article provides links to articles covering the new features.
 
-### For web site and application developers
+### For website and application developers
 
 - [Microsummaries](https://wiki.mozilla.org/Microsummaries)
   - : Microsummaries are regularly-updated succinct compilations of the most important information on web pages. Site and third-party developers can both provide them, and users can choose to display microsummaries instead of static titles when they bookmark pages with microsummaries.
@@ -60,7 +58,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
 - [Theme changes in Firefox 2](/en-US/docs/Theme_changes_in_Firefox_2)
   - : Discusses the changes needed to update existing themes to work in Firefox 2.
 - Textbox Improvements (Firefox 2.0.0.1 and higher only)
-  - : The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox ({{Bug(312867)}}). Supports an `editor` property to get the internal `nsIEditor` for the text field ({{Bug(312867)}}).
+  - : The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox ([Webkit bug 312867](https://bugzil.la/312867)). Supports an `editor` property to get the internal `nsIEditor` for the text field ([Webkit bug 312867](https://bugzil.la/312867)).
 
 ## New features for end users
 
@@ -78,7 +76,7 @@ Firefox 2 provides an enhanced version of the same clean user interface offered 
 
 ### Security and privacy
 
-- **Phishing Protection** to warn users when the web site you're looking at appears to be a forgery.
+- **Phishing Protection** to warn users when the website you're looking at appears to be a forgery.
 
 ## See also
 

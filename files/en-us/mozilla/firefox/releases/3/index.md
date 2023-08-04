@@ -1,8 +1,7 @@
 ---
 title: Firefox 3 for developers
 slug: Mozilla/Firefox/Releases/3
-tags:
-  - Firefox 3
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -11,10 +10,10 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 ## New developer features in Firefox 3
 
-### For web site and application developers
+### For website and application developers
 
 - [Updating web applications for Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/Updating_web_applications)
-  - : Provides information about changes you may need to make to your web site or web application to take advantage of new features in Firefox 3.
+  - : Provides information about changes you may need to make to your website or web application to take advantage of new features in Firefox 3.
 - [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)
   - : Firefox 3 supports WHATWG online and offline events, which let applications and extensions detect whether or not there's an active Internet connection, as well as to detect when the connection goes up and down.
 - [Web-based protocol handlers](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
@@ -23,9 +22,9 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : You can now draw text in a canvas using a non-standardized API supported by Firefox 3.
 - [Transform support for canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations#transforms)
   - : Firefox now supports the `transform()` and `setTransform()` methods on canvases.
-- [Using microformats](/en-US/docs/Using_microformats)
+- [Using microformats](/en-US/docs/Web/HTML/microformats)
   - : Firefox now has APIs for working with microformats.
-- [Drag and drop events](/en-US/docs/Drag_and_drop_events)
+- [Drag and drop events](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
   - : Firefox 3 supports new events that are sent to the source node for a drag operation when the drag begins and ends.
 - [Focus management in HTML](/en-US/docs/Web/API/Document/hasFocus)
   - : The new HTML 5 `activeElement` and `hasFocus` attributes are supported.
@@ -41,7 +40,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/EXSLT) extensions to [XSLT](/en-US/docs/Web/XSLT).
 - [SVG improvements in Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : SVG support in Firefox 3 has been upgraded significantly, with support for over two dozen new filters, several new elements and attributes, and other improvements.
-- [Animated PNG graphics](/en-US/docs/Animated_PNG_graphics)
+- [Animated PNG graphics](/en-US/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)
   - : Firefox 3 supports the animated PNG (APNG) image format.
 
 ### For XUL and extension developers
@@ -87,7 +86,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : XPCOM code can now take advantage of the cycle collector, which helps ensure that unused memory gets released instead of leaking.
 - [The Thread Manager](/en-US/docs/The_Thread_Manager)
   - : Firefox 3 provides the new `nsIThreadManager` interface, along with new interfaces for threads and thread events, which provides a convenient way to create and manage threads in your code.
-- [JavaScript modules](/en-US/docs/JavaScript_code_modules)
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
   - : Firefox 3 now offers a new shared code module mechanism that lets you easily create modules in JavaScript that can be loaded by extensions and applications for use, much like shared libraries.
 - [The `nsIJSON` interface](/en-US/docs/nsIJSON)
   - : Firefox 3 offers the new `nsIJSON` interface, which offers high-performance encoding and decoding of [JSON](/en-US/docs/Glossary/JSON) strings.
@@ -128,14 +127,14 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Bookmarks and History Organizer.** The new unified bookmarks and history organizer lets you easily search your history and bookmarks with multiple views and smart folders for saving your frequent searches.
 - **Web-based protocol handlers.** Web applications, such as your favorite web mail provider, can now be used instead of desktop applications for handling `mailto:` links from other sites. Similar support is provided for other protocols as well. (Note that web applications do have to register themselves with Firefox before this will work.)
 - **Easy to use Download Actions.** A new Applications preferences pane provides an improved user interface for configuring handlers for various file types and protocol schemes.
-- **Improved look and feel.** Graphics and font handling have been improved to make web sites look better on your screen, including sharper text rendering and better support for fonts with ligatures and complex scripts. In addition, Mac and Linux (Gnome) users will find that Firefox feels more like a native application for their platform than ever, with a new, native, look and feel.
+- **Improved look and feel.** Graphics and font handling have been improved to make websites look better on your screen, including sharper text rendering and better support for fonts with ligatures and complex scripts. In addition, Mac and Linux (Gnome) users will find that Firefox feels more like a native application for their platform than ever, with a new, native, look and feel.
 - **Color management support.** By setting the `gfx.color_management.enabled` preference in `about:config`, you can ask Firefox to use the color profiles embedded in images to adjust the colors to match your computer's display.
 - **Offline support.** Web applications can take advantage of new features to support being used even when you don't have an Internet connection.
 
 ### Security and privacy
 
 - **One-click site information.** Want to know more about the site you're visiting? Click the site's icon in the location bar to see who owns it. Identify information is prominently displayed and easier than ever to understand.
-- **Malware protection.** Firefox 3 warns you if you arrive at a web site that is known to install viruses, spyware, trojans, or other dangerous software (known as malware).
+- **Malware protection.** Firefox 3 warns you if you arrive at a website that is known to install viruses, spyware, trojans, or other dangerous software (known as malware).
 - **Web forgery protection enhanced.** Now when you visit a page that's suspected of being a forgery, you're shown a special page instead of the contents of the page with a warning.
 - **Easier to understand SSL errors.** The errors presented when an invalid SSL certificate is encountered have been clarified to make it easier to understand what the problem is.
 - **Out-of-date add-on protection.** Firefox 3 now automatically checks add-on and plugin versions and disables older, insecure versions.

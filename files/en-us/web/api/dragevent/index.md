@@ -2,11 +2,6 @@
 title: DragEvent
 slug: Web/API/DragEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DragEvent
-  - Reference
-  - drag and drop
 browser-compat: api.DragEvent
 ---
 
@@ -18,7 +13,7 @@ This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref(
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : The data that is transferred during a drag and drop interaction.
@@ -64,5 +59,4 @@ An Example of each property, constructor, event type and global event handlers i
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

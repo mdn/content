@@ -1,18 +1,8 @@
 ---
-title: RTCRtpTransceiver.direction
+title: "RTCRtpTransceiver: direction property"
+short-title: direction
 slug: Web/API/RTCRtpTransceiver/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Transceiver
-  - Transceiver Direction
-  - WebRTC
-  - direction
 browser-compat: api.RTCRtpTransceiver.direction
 ---
 
@@ -102,7 +92,7 @@ by each of those methods. The SDP contains an a-line which specifies the directi
 For example, if the `direction` is specified as `"sendrecv"`, the
 corresponding SDP a-line is:
 
-```
+```plain
 a=sendrecv
 ```
 

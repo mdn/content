@@ -2,12 +2,8 @@
 title: SVGFontElement
 slug: Web/API/SVGFontElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGFontElement
 ---
 
@@ -19,11 +15,11 @@ Object-oriented access to the attributes of the {{SVGElement("font")}} element v
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

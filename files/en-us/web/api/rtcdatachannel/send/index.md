@@ -1,19 +1,8 @@
 ---
-title: RTCDataChannel.send()
+title: "RTCDataChannel: send() method"
+short-title: send()
 slug: Web/API/RTCDataChannel/send
 page-type: web-api-instance-method
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Method
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - datachannel
-  - send
 browser-compat: api.RTCDataChannel.send
 ---
 
@@ -31,7 +20,7 @@ the connection is closing or closed.
 > send. Specifications exist to define how to automatically fragment large messages, but
 > not all browsers implement them, and those that do have various additional
 > restrictions. This will get less complicated over time, but for now, if you have
-> questions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}}.
+> questions, see [Understanding message size limits](/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits).
 
 ## Syntax
 
@@ -66,14 +55,13 @@ None ({{jsxref("undefined")}}).
     using the `EOR` (End of Record) flag to indicate when a received message is
     the last piece of a multi-part object sent using `send()`. For more
     information about message size restrictions, see
-    {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding
-    message size limits")}}.
+    [Understanding message size limits](/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits).
 
 ## Examples
 
 In this example, a routine called `sendMessage()` is created; it accepts an
 object as input and sends to the remote peer, over the {{domxref("RTCDataChannel")}}, a
-JSON string with the specified object and a time stamp.
+JSON string with the specified object and a timestamp.
 
 ```js
 const pc = new RTCPeerConnection();
@@ -81,9 +69,9 @@ const dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
   const obj = {
-    "message": msg,
-    "timestamp": new Date()
-  }
+    message: msg,
+    timestamp: new Date(),
+  };
   dc.send(JSON.stringify(obj));
 }
 ```

@@ -1,12 +1,7 @@
 ---
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Clear-Site-Data
 ---
 
@@ -58,7 +53,7 @@ Clear-Site-Data: "*"
     - sessionStorage (executes `sessionStorage.clear`),
     - IndexedDB (for each database execute {{domxref("IDBFactory.deleteDatabase")}}),
     - Service worker registrations (for each service worker registration, execute {{domxref("ServiceWorkerRegistration.unregister")}}),
-    - WebSQL databases,
+    - Web SQL databases (deprecated),
     - [FileSystem API data](/en-US/docs/Web/API/File_and_Directory_Entries_API),
     - Plugin data (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
 
@@ -69,7 +64,7 @@ Clear-Site-Data: "*"
 
 ## Examples
 
-### Sign out of a web site
+### Sign out of a website
 
 If a user signs out of your website or service, you might want to remove locally stored data. To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
 

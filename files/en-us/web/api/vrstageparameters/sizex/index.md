@@ -1,20 +1,11 @@
 ---
-title: VRStageParameters.sizeX
+title: "VRStageParameters: sizeX property"
+short-title: sizeX
 slug: Web/API/VRStageParameters/sizeX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Non-standard
-
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRStageParameters
-  - Virtual Reality
-  - WebVR
-  - sizeX
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRStageParameters.sizeX
 ---
 

@@ -1,14 +1,7 @@
 ---
 title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - ellipse
-  - CSS Functions
-  - Data Type
-  - Reference
+page-type: css-function
 browser-compat: css.types.basic-shape.ellipse
 ---
 
@@ -66,4 +59,4 @@ The keyword values of `closest-side` and `farthest-side` are useful to create a 
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
+- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)

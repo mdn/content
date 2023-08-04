@@ -1,32 +1,16 @@
 ---
 title: Date and time formats used in HTML
 slug: Web/HTML/Date_and_time_formats
-tags:
-  - Date
-  - Element
-  - Format
-  - HTML
-  - ISO 8601
-  - Input
-  - Reference
-  - String
-  - Time
-  - Week
-  - datetime
-  - del
-  - ins
-  - month
-  - month-year
-  - week-year
+page-type: guide
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Certain HTML elements use date and/or time values. The formats of the strings that specify these values are described in this article.
 
-Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose {{htmlattrxref("datetime", "ins")}} attribute specifies the date or date and time at which the insertion or deletion of content occurred.
+Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose [`datetime`](/en-US/docs/Web/HTML/Element/ins#datetime) attribute specifies the date or date and time at which the insertion or deletion of content occurred.
 
-For `<input>`, the values of {{htmlattrxref("type", "input")}} that return a {{htmlattrxref("value")}} which contains a string representing a date and/or time are:
+For `<input>`, the values of [`type`](/en-US/docs/Web/HTML/Element/input#type) that return a [`value`](/en-US/docs/Web/HTML/Global_attributes#value) which contains a string representing a date and/or time are:
 
 - [`date`](/en-US/docs/Web/HTML/Element/input/date)
 - [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)
@@ -287,7 +271,7 @@ A time string can specify a time with precision to the minute, second, or to the
 
 There are some additional basic rules:
 
-- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00`–`23` are permitted.
+- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00` – `23` are permitted.
 - The minute must be a two-digit number between `00` and `59`. No values outside that range are allowed.
 - If the number of seconds is omitted (to specify a time accurate only to the minute), no colon should follow the number of minutes.
 - If specified, the integer portion of the number of seconds must be between `00` and `59`. You _cannot_ specify leap seconds by using values like `60` or `61`.
@@ -304,7 +288,7 @@ There are some additional basic rules:
 
 A valid [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local) string consists of a `date` string and a `time` string concatenated together with either the letter "`T`" or a space character separating them. No information about the time zone is included in the string; the date and time is presumed to be in the user's local time zone.
 
-When you set the {{htmlattrxref("value", "input")}} of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
+When you set the [`value`](/en-US/docs/Web/HTML/Element/input#value) of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
 
 <table class="standard-table">
   <caption>
@@ -408,6 +392,38 @@ While this format allows for time zones between -23:59 and +23:59, the current r
     </tr>
   </tbody>
 </table>
+
+## Date issues
+
+Because of data storage and precision issues, you may want to be aware of a few client-side and server-side issues.
+
+### The Y2K38 Problem (often server-side)
+
+JavaScript uses double precision floating points to store dates, as with all numbers, meaning that JavaScript code will not suffer from the Y2K38 problem unless integer coercion/bit-hacks are used because all JavaScript bit operators use 32-bit signed 2s-complement integers.
+
+The problem is with the server side of things: storage of dates greater than 2^31 - 1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may be as simple as upgrading to PHP 8 or 7, and upgrading your hardware to x86_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, since stability may suffer, and performance will definitely suffer greatly.
+
+### The Y10k Problem (often client-side)
+
+In many servers, dates are stored as numbers instead of as strings--numbers of a fixed size and agnostic of format (aside from endianness). After the year 10,000, those numbers will just be a bit bigger than before, so many servers will not see issues with forms submitted after the year 10,000.
+
+The problem is with the client side of things: parsing of dates with more than 4 digits in the year.
+
+```html
+<!--midnight of January 1st, 10000: the exact time of Y10K-->
+<input type="datetime-local" value="+010000-01-01T05:00" />
+```
+
+It's that simple. Just prepare your code for any number of digits. Do not only prepare for 5 digits. Here is JavaScript code for programmatically setting the value:
+
+```js
+function setValue(element, date) {
+  const isoString = date.toISOString();
+  element.value = isoString.substring(0, isoString.indexOf("T") + 6);
+}
+```
+
+Why worry about the Y10K problem if it is going to happen many centuries after your death? Exactly because you will already be dead, so the companies using your software will be stuck using your software without any other coder who knows the system well enough to come in and fix it.
 
 ## See also
 

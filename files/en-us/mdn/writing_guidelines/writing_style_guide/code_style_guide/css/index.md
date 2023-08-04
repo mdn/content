@@ -1,10 +1,7 @@
 ---
-title: Guidelines for styling CSS code examples
+title: Guidelines for writing CSS code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -13,13 +10,21 @@ The following guidelines cover how to write CSS example code for MDN Web Docs.
 
 ## General guidelines for CSS code examples
 
+### Choosing a format
+
+Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
+
+On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep the code style consistent (and to avoid off-topic discussions). You can consult our [configuration file](https://github.com/mdn/content/blob/main/.prettierrc.json) to learn about the current rules, and read the [Prettier documentation](https://prettier.io/docs/en/index.html).
+
+Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
+
 ### Plan your CSS
 
 Before diving in and writing huge chunks of CSS, plan your styles carefully. What general styles are going to be needed, what different layouts do you need to create, what specific overrides need to be created, and are they reusable? Above all, you need to try to **avoid too much overriding**. If you keep finding yourself writing styles and then cancelling them again a few rules down, you probably need to rethink your strategy.
 
 ### Use flexible/relative units
 
-For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [Responsive design building blocks](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids) article.
+For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [guide to CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units).
 
 ### Don't use preprocessors
 
@@ -29,7 +34,7 @@ Don't use preprocessor syntax, such as [Sass](https://sass-lang.com/), [Less](ht
 
 In the same spirit as the previous guideline, don't write example codes on MDN Web Docs using a specific CSS methodology such as [BEM](http://getbem.com/naming/) or [SMACSS](http://smacss.com/). Even though they are valid CSS syntax, the naming conventions can be confusing to people not familiar with those methodologies.
 
-### Don't use resets <!--is this valid in current times-->
+### Don't use resets
 
 For maximum control over CSS across platforms, a lot of people used to use CSS resets to remove every style, before then building things back up themselves. This certainly has its merits, but especially in the modern world, CSS resets can be an overkill, resulting in a lot of extra time spent reimplementing things that weren't completely broken in the first place, like default margins, list styles, etc.
 
@@ -77,7 +82,7 @@ Where quotes can or should be included, use them, and use double quotes. For exa
 
 ## Longhand vs. shorthand rules
 
-Usually when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless of course you're explaining shorthand through the example). Remember that the point of examples on MDN Web Docs is to teach people, not to be clever or efficient. We explain here why recommend writing longhand rules.
+Usually, when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless, of course, you're explaining shorthand through the example). Remember that the point of examples on MDN Web Docs is to teach people, not to be clever or efficient. We explain here why writing with longhand rules is recommended.
 
 - It is often harder to understand what the shorthand is doing. In the example below, it takes a while to pick apart exactly what the {{cssxref("font")}} syntax is doing.
 
@@ -120,7 +125,7 @@ Usually when teaching the specifics of CSS syntax, it is clearer and more obviou
 
 ## Mobile-first media queries
 
-In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in the [Mobile First](/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first) article.
+In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in the [Mobile First](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) article.
 
 ```css example-good
 /* Default CSS layout for narrow screens */
@@ -156,61 +161,6 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
     /* ... */
   }
   ```
-
-- When a rule has multiple selectors, put each selector on a new line. This makes the selector list easier to read and can help to make code lines shorter.
-
-  Do this:
-
-  ```css example-good
-  h1,
-  h2,
-  h3 {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  ```
-
-  Not this: <!--I thought this is the preferred style-->
-
-  ```css example-bad
-  h1, h2, h3 {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  ```
-
-## Space after function parameters
-
-Function parameters should have spaces after their separating commas, but not before:
-
-```css example-good
-color: rgb(255, 0, 0);
-background-image: linear-gradient(to bottom, red, black);
-```
-
-## Syntax style
-
-There are a variety of CSS writing styles you can use, but we prefer the expanded style, with the selector/opening brace, close brace, and each declaration on a separate line. This maximizes readability, and again, promotes consistency on MDN Web Docs.
-
-In addition, keep these specifics in mind:
-
-- Include a space between the selector(s) and the opening curly brace.
-- Always include a semi-colon at the end of the last declaration, even though it isn't strictly necessary.
-- Put the closing curly brace on a new line.
-- In each declaration, put a space after the separating colon, but not before.
-- Use two spaces for code indentation.
-
-```css example-good
-p {
-  color: white;
-  background-color: black;
-  padding: 1rem;
-}
-```
-
-```css example-bad
-p { color: white; background-color: black; padding: 1rem; }
-```
 
 ## Value to turn off properties
 

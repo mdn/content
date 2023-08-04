@@ -1,18 +1,17 @@
 ---
 title: mask-size
 slug: Web/CSS/mask-size
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-size
 ---
 
 {{CSSRef}}
 
 The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
+
+> **Note:** If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
+
+## Syntax
 
 ```css
 /* Keywords syntax */
@@ -46,10 +45,6 @@ mask-size: revert;
 mask-size: revert-layer;
 mask-size: unset;
 ```
-
-> **Note:** If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
-
-## Syntax
 
 One or more `<bg-size>` values, separated by commas.
 

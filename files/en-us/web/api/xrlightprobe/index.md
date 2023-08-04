@@ -2,15 +2,8 @@
 title: XRLightProbe
 slug: Web/API/XRLightProbe
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRLightProbe
 ---
 
@@ -22,14 +15,14 @@ This object doesn't itself contain lighting values, but it is used to collect li
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - `XRLightProbe.onreflectionchange`
   - : Event handler property for the {{domxref("XRLightProbe.reflectionchange_event", "reflectionchange")}} event.
 - {{domxref("XRLightProbe.probeSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{domxref("XRSpace")}} tracking the position and orientation the lighting estimations are relative to.
 
-## Methods
+## Instance methods
 
 None.
 
@@ -65,7 +58,7 @@ const glBinding = new XRWebGLBinding(xrSession, gl);
 const lightProbe = await xrSession.requestLightProbe();
 let glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 
-lightProbe.addEventListener('reflectionchange', () => {
+lightProbe.addEventListener("reflectionchange", () => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 });
 ```

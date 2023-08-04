@@ -1,15 +1,7 @@
 ---
 title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Property
-  - WebExtensions
-  - devtools.inspectedWindow
-  - tabId
+page-type: webextension-api-property
 browser-compat: webextensions.api.devtools.inspectedWindow.tabId
 ---
 
@@ -27,7 +19,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 attachContentScriptButton.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -37,7 +29,7 @@ attachContentScriptButton.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 
@@ -51,8 +43,6 @@ browser.runtime.onMessage.addListener(handleMessage);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

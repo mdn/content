@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.getExtension()
+title: "WebGLRenderingContext: getExtension() method"
+short-title: getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getExtension
 ---
 
@@ -39,10 +34,10 @@ Once a WebGL extension is enabled, you are able to use the methods, properties o
 constants that this extension object provides.
 
 ```js
-const canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+gl = canvas.getContext("webgl");
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 ```
 
 ## WebGL extensions

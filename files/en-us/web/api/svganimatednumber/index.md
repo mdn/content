@@ -2,12 +2,6 @@
 title: SVGAnimatedNumber
 slug: Web/API/SVGAnimatedNumber
 page-type: web-api-interface
-tags:
-  - API
-  - HTML
-  - NeedsExample
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedNumber
 ---
 
@@ -50,7 +44,7 @@ The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -81,7 +75,7 @@ The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedNumber` interface do not provide any specific methods.
 

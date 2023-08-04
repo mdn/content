@@ -1,14 +1,8 @@
 ---
-title: XPathExpression.evaluate()
+title: "XPathExpression: evaluate() method"
+short-title: evaluate()
 slug: Web/API/XPathExpression/evaluate
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathExpression
 browser-compat: api.XPathExpression.evaluate
 ---
 
@@ -91,7 +85,10 @@ The following example shows the use of the `evaluate()` method.
 const xpath = "//div";
 const evaluator = new XPathEvaluator();
 const expression = evaluator.createExpression("//div");
-const result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const result = expression.evaluate(
+  document,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

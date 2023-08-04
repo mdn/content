@@ -1,17 +1,7 @@
 ---
 title: Image gallery
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - Event Handler
-  - JavaScript
-  - Learn
-  - Loops
-  - events
-  - l10n:priority
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -53,14 +43,15 @@ You have been provided with some HTML, CSS and image assets and a few lines of J
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg" alt="Closeup of a blue human eye">
+  <img
+    class="displayed-img"
+    src="images/pic1.jpg"
+    alt="Closeup of a blue human eye" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 The example looks like this:
@@ -116,7 +107,7 @@ That just leaves our darken/lighten `<button>` — we've already provided a line
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -138,13 +129,3 @@ If you would like your work assessed, or are stuck and want to ask for help:
    - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- **Image gallery**

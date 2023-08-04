@@ -1,14 +1,8 @@
 ---
-title: AudioContext.createMediaStreamDestination()
+title: "AudioContext: createMediaStreamDestination() method"
+short-title: createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createMediaStreamDestination
 browser-compat: api.AudioContext.createMediaStreamDestination
 ---
 
@@ -16,7 +10,7 @@ browser-compat: api.AudioContext.createMediaStreamDestination
 
 The `createMediaStreamDestination()` method of the {{ domxref("AudioContext") }} Interface is used to create a new {{domxref("MediaStreamAudioDestinationNode")}} object associated with a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} representing an audio stream, which may be stored in a local file or sent to another computer.
 
-The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s `stream` attribute. This stream can be used in a similar way as a `MediaStream` obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the `RTCPeerConnection` `addStream()` method.
+The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s `stream` attribute. This stream can be used in a similar way as a `MediaStream` obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the `addStream()` method of `RTCPeerConnection`.
 
 For more details about media stream destination nodes, check out the {{domxref("MediaStreamAudioDestinationNode")}} reference page.
 
@@ -43,16 +37,16 @@ When the button is clicked, the oscillator starts, and the `MediaRecorder` is st
 From here, you can play and save the opus file.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>createMediaStreamDestination() demo</title>
   </head>
   <body>
     <h1>createMediaStreamDestination() demo</h1>
 
-    <p>Encoding a pure sine wave to an Opus file </p>
+    <p>Encoding a pure sine wave to an Opus file</p>
     <button>Make sine wave</button>
     <audio controls></audio>
     <script>
@@ -67,14 +61,14 @@ From here, you can play and save the opus file.
 
       b.addEventListener("click", (e) => {
         if (!clicked) {
-           mediaRecorder.start();
-           osc.start(0);
-           e.target.textContent = "Stop recording";
-           clicked = true;
+          mediaRecorder.start();
+          osc.start(0);
+          e.target.textContent = "Stop recording";
+          clicked = true;
         } else {
-           mediaRecorder.stop();
-           osc.stop(0);
-           e.target.disabled = true;
+          mediaRecorder.stop();
+          osc.stop(0);
+          e.target.disabled = true;
         }
       });
 
@@ -85,7 +79,7 @@ From here, you can play and save the opus file.
 
       mediaRecorder.onstop = (evt) => {
         // Make blob out of our blobs, and open it.
-        const blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' });
+        const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
         document.querySelector("audio").src = URL.createObjectURL(blob);
       };
     </script>

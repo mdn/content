@@ -1,27 +1,10 @@
 ---
-title: 'XRSession: selectend event'
+title: "XRSession: selectend event"
+short-title: selectend
 slug: Web/API/XRSession/selectend_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - augmented
-  - controllers
-  - selectend
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.selectend_event
 ---
 
@@ -36,9 +19,9 @@ The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired befor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectend', (event) => { })
+addEventListener("selectend", (event) => {});
 
-onselectend = (event) => { }
+onselectend = (event) => {};
 ```
 
 ## Event type

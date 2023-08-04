@@ -1,15 +1,7 @@
 ---
 title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setPanel
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setPanel
 ---
 
@@ -73,9 +65,9 @@ let thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
   if (panel === thisPanel) {
-    browser.sidebarAction.setPanel({panel: thatPanel});
+    browser.sidebarAction.setPanel({ panel: thatPanel });
   } else {
-    browser.sidebarAction.setPanel({panel: thisPanel});
+    browser.sidebarAction.setPanel({ panel: thisPanel });
   }
 }
 
@@ -91,8 +83,6 @@ browser.browserAction.onClicked.addListener(() => {
 {{Compat}}
 
 > **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

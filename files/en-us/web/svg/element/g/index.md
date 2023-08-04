@@ -1,11 +1,7 @@
 ---
 title: <g>
 slug: Web/SVG/Element/g
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Container
+page-type: svg-element
 browser-compat: svg.elements.g
 ---
 
@@ -18,7 +14,11 @@ Transformations applied to the `<g>` element are performed on its child elements
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

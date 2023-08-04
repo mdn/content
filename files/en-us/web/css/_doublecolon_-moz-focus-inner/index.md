@@ -1,15 +1,9 @@
 ---
-title: '::-moz-focus-inner'
+title: "::-moz-focus-inner"
 slug: Web/CSS/::-moz-focus-inner
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Firefox
-  - Mozilla
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-focus-inner
 ---
 
@@ -21,8 +15,10 @@ The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-```
-::-moz-focus-inner
+```css
+::-moz-focus-inner {
+  /* ... */
+}
 ```
 
 ## Example
@@ -30,8 +26,7 @@ The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ### HTML
 
 ```html
-<input type="submit" value="Input"/>
-<button type="submit">Button</button>
+<input type="submit" value="Input" /> <button type="submit">Button</button>
 ```
 
 ### CSS
@@ -71,7 +66,6 @@ Not part of any standard.
 
 - Related CSS selectors:
 
-  - [`:-moz-focusring`](/en-US/docs/Web/CSS/:-moz-focusring)
   - [`:focus`](/en-US/docs/Web/CSS/:focus)
   - [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible)
   - [`:focus-within`](/en-US/docs/Web/CSS/:focus-within)

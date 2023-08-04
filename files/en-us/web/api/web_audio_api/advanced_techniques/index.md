@@ -1,15 +1,7 @@
 ---
-title: 'Advanced techniques: Creating and sequencing audio'
+title: "Advanced techniques: Creating and sequencing audio"
 slug: Web/API/Web_Audio_API/Advanced_techniques
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Guide
-  - Reference
-  - Web Audio API
-  - sequencer
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -97,7 +89,7 @@ First of all, we'll create our periodic wave. To do so, We need to pass real and
 ```js
 const wave = new PeriodicWave(audioCtx, {
   real: wavetable.real,
-  imag: wavetable.imag
+  imag: wavetable.imag,
 });
 ```
 
@@ -112,7 +104,7 @@ function playSweep(time) {
   const osc = new OscillatorNode(audioCtx, {
     frequency: 380,
     type: "custom",
-    periodicWave: wave
+    periodicWave: wave,
   });
   osc.connect(audioCtx.destination);
   osc.start(time);
@@ -130,10 +122,24 @@ Let's say our envelope has attack and release. We can allow the user to control 
 
 ```html
 <label for="attack">Attack</label>
-<input name="attack" id="attack" type="range" min="0" max="1" value="0.2" step="0.1" />
+<input
+  name="attack"
+  id="attack"
+  type="range"
+  min="0"
+  max="1"
+  value="0.2"
+  step="0.1" />
 
 <label for="release">Release</label>
-<input name="release" id="release" type="range" min="0" max="1" value="0.5" step="0.1" />
+<input
+  name="release"
+  id="release"
+  type="range"
+  min="0"
+  max="1"
+  value="0.5"
+  step="0.1" />
 ```
 
 Now we can create some variables over in JavaScript and have them change when the input values are updated:
@@ -146,7 +152,7 @@ attackControl.addEventListener(
   (ev) => {
     attackTime = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 
 let releaseTime = 0.5;
@@ -156,7 +162,7 @@ releaseControl.addEventListener(
   (ev) => {
     releaseTime = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -174,17 +180,14 @@ function playSweep(time) {
   const osc = new OscillatorNode(audioCtx, {
     frequency: 380,
     type: "custom",
-    periodicWave: wave
+    periodicWave: wave,
   });
 
   const sweepEnv = new GainNode(audioCtx);
   sweepEnv.gain.cancelScheduledValues(time);
   sweepEnv.gain.setValueAtTime(0, time);
   sweepEnv.gain.linearRampToValueAtTime(1, time + attackTime);
-  sweepEnv.gain.linearRampToValueAtTime(
-    0,
-    time + sweepLength - releaseTime
-  );
+  sweepEnv.gain.linearRampToValueAtTime(0, time + sweepLength - releaseTime);
 
   osc.connect(sweepEnv).connect(audioCtx.destination);
   osc.start(time);
@@ -246,7 +249,14 @@ For the UI controls, let's expose both frequencies of our oscillators, allowing 
 
 ```html
 <label for="hz">Hz</label>
-<input name="hz" id="hz" type="range" min="660" max="1320" value="880" step="1" />
+<input
+  name="hz"
+  id="hz"
+  type="range"
+  min="660"
+  max="1320"
+  value="880"
+  step="1" />
 <label for="lfo">LFO</label>
 <input name="lfo" id="lfo" type="range" min="20" max="40" value="30" step="1" />
 ```
@@ -261,7 +271,7 @@ hzControl.addEventListener(
   (ev) => {
     pulseHz = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 
 let lfoHz = 30;
@@ -271,7 +281,7 @@ lfoControl.addEventListener(
   (ev) => {
     lfoHz = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -319,7 +329,7 @@ const bufferSize = audioCtx.sampleRate * noiseDuration;
 // Create an empty buffer
 const noiseBuffer = new AudioBuffer({
   length: bufferSize,
-  sampleRate: audioCtx.sampleRate
+  sampleRate: audioCtx.sampleRate,
 });
 ```
 
@@ -342,7 +352,7 @@ Now we have the audio buffer and have filled it with data; we need a node to add
 ```js
 // Create a buffer source for our created data
 const noise = new AudioBufferSourceNode(audioCtx, {
-  buffer: noiseBuffer
+  buffer: noiseBuffer,
 });
 ```
 
@@ -367,7 +377,7 @@ Wiring this up is the same as we've seen before. We create the {{domxref("Biquad
 // Filter the output
 const bandpass = new BiquadFilterNode(audioCtx, {
   type: "bandpass",
-  frequency: bandHz
+  frequency: bandHz,
 });
 
 // Connect our graph
@@ -380,10 +390,24 @@ On the UI, we'll expose the noise duration and the frequency we want to band, al
 
 ```html
 <label for="duration">Duration</label>
-<input name="duration" id="duration" type="range" min="0" max="2" value="1" step="0.1" />
+<input
+  name="duration"
+  id="duration"
+  type="range"
+  min="0"
+  max="2"
+  value="1"
+  step="0.1" />
 
 <label for="band">Band</label>
-<input name="band" id="band" type="range" min="400" max="1200" value="1000" step="5" />
+<input
+  name="band"
+  id="band"
+  type="range"
+  min="400"
+  max="1200"
+  value="1000"
+  step="5" />
 ```
 
 ```js
@@ -392,9 +416,9 @@ const durControl = document.querySelector("#duration");
 durControl.addEventListener(
   "input",
   (ev) => {
-    noiseDuration = parseInt(ev.target.value, 10);
+    noiseDuration = parseFloat(ev.target.value);
   },
-  false
+  false,
 );
 
 let bandHz = 1000;
@@ -404,7 +428,7 @@ bandControl.addEventListener(
   (ev) => {
     bandHz = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -419,7 +443,7 @@ function playNoise(time) {
   // Create an empty buffer
   const noiseBuffer = new AudioBuffer({
     length: bufferSize,
-    sampleRate: audioCtx.sampleRate
+    sampleRate: audioCtx.sampleRate,
   });
 
   // Fill the buffer with noise
@@ -430,13 +454,13 @@ function playNoise(time) {
 
   // Create a buffer source for our created data
   const noise = new AudioBufferSourceNode(audioCtx, {
-    buffer: noiseBuffer
+    buffer: noiseBuffer,
   });
 
   // Filter the output
   const bandpass = new BiquadFilterNode(audioCtx, {
     type: "bandpass",
-    frequency: bandHz
+    frequency: bandHz,
   });
 
   // Connect our graph
@@ -468,9 +492,9 @@ Let's create another `async` function to set up the sample — we can combine th
 
 ```js
 async function setupSample() {
-    const filePath = 'dtmf.mp3';
-    const sample = await getFile(audioCtx, filePath);
-    return sample;
+  const filePath = "dtmf.mp3";
+  const sample = await getFile(audioCtx, filePath);
+  return sample;
 }
 ```
 
@@ -493,7 +517,7 @@ Let's create a `playSample()` function similarly to how we did with the other so
 
 ```js
 function playSample(audioContext, audioBuffer, time) {
-  const sampleSource = new AudioBufferSourceNode(audioCtx, {
+  const sampleSource = new AudioBufferSourceNode(audioContext, {
     buffer: audioBuffer,
     playbackRate,
   });
@@ -511,7 +535,14 @@ The {{domxref("AudioBufferSourceNode")}} comes with a [`playbackRate`](/en-US/do
 
 ```html
 <label for="rate">Rate</label>
-<input name="rate" id="rate" type="range" min="0.1" max="2" value="1" step="0.1" />
+<input
+  name="rate"
+  id="rate"
+  type="range"
+  min="0.1"
+  max="2"
+  value="1"
+  step="0.1" />
 ```
 
 ```js
@@ -522,7 +553,7 @@ rateControl.addEventListener(
   (ev) => {
     playbackRate = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -563,7 +594,7 @@ bpmControl.addEventListener(
   (ev) => {
     tempo = parseInt(ev.target.value, 10);
   },
-  false
+  false,
 );
 ```
 
@@ -586,7 +617,7 @@ function nextNote() {
   nextNoteTime += secondsPerBeat; // Add beat length to last beat time
 
   // Advance the beat number, wrap to zero when reaching 4
-  currentNote = (currentNote+1) % 4;
+  currentNote = (currentNote + 1) % 4;
 }
 ```
 
@@ -647,8 +678,8 @@ function draw() {
   // We only need to draw if the note has moved.
   if (lastNoteDrawn !== drawNote) {
     pads.forEach((pad) => {
-      pad.children[lastNoteDrawn*2].style.borderColor = "var(--black)";
-      pad.children[drawNote*2].style.borderColor = "var(--yellow)";
+      pad.children[lastNoteDrawn * 2].style.borderColor = "var(--black)";
+      pad.children[drawNote * 2].style.borderColor = "var(--yellow)";
     });
 
     lastNoteDrawn = drawNote;

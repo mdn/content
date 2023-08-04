@@ -1,17 +1,8 @@
 ---
-title: PushSubscription.toJSON()
+title: "PushSubscription: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PushSubscription/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Serializer
-  - Service Workers
-  - toJSON
 browser-compat: api.PushSubscription.toJSON
 ---
 
@@ -43,7 +34,7 @@ navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const mySubscription = subscription.toJSON();
     // do something with subscription details
-  })
+  });
 });
 ```
 

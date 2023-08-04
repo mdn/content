@@ -2,16 +2,8 @@
 title: USBOutTransferResult
 slug: Web/API/USBOutTransferResult
 page-type: web-api-interface
-tags:
-  - API
-  - CSSUnparsedValue
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBOutTransferResult
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBOutTransferResult
 ---
 
@@ -24,7 +16,7 @@ The `USBOutTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/Web
 - {{domxref("USBOutTransferResult.USBOutTransferResult", "USBOutTransferResult()")}} {{Experimental_Inline}}
   - : Creates a new `USBOutTransferResult` object with the provided `status` and `bytesWritten` fields.
 
-## Properties
+## Instance properties
 
 - {{domxref("USBOutTransferResult.bytesWritten")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of bytes from the transfer request that were sent to the device.

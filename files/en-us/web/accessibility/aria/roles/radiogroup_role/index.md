@@ -1,13 +1,7 @@
 ---
-title: 'ARIA: radiogroup role'
-slug: web/accessibility/aria/roles/radiogroup_role
-tags:
-  - accessibility
-  - ARIA
-  - ARIA Role
-  - Reference
-  - roles
-  - radiogroup
+title: "ARIA: radiogroup role"
+slug: Web/Accessibility/ARIA/Roles/radiogroup_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#radiogroup
   - https://w3c.github.io/aria-practices/#radiobutton
@@ -75,27 +69,42 @@ The basic set up for a `radiogroup` using non-semantic ARIA roles instead of sem
 
 ```html
 <div role="radiogroup" aria-labelledby="question">
-  <div id="question">
-    Which is the best color?</div>
+  <div id="question">Which is the best color?</div>
   <div id="radioGroup">
     <p>
-      <span id="colorOption_0" tabindex="0"
-        role="radio" aria-checked="false" aria-labelledby="purple"></span>
+      <span
+        id="colorOption_0"
+        tabindex="0"
+        role="radio"
+        aria-checked="false"
+        aria-labelledby="purple"></span>
       <span id="purple">Purple</span>
     </p>
     <p>
-      <span id="colorOption_1" tabindex="-1"
-        role="radio" aria-checked="false"  aria-labelledby="aubergine"></span>
+      <span
+        id="colorOption_1"
+        tabindex="-1"
+        role="radio"
+        aria-checked="false"
+        aria-labelledby="aubergine"></span>
       <span id="aubergine">Aubergine</span>
     </p>
     <p>
-      <span id="colorOption_2" tabindex="-1"
-        role="radio" aria-checked="false" aria-labelledby="magenta"></span>
+      <span
+        id="colorOption_2"
+        tabindex="-1"
+        role="radio"
+        aria-checked="false"
+        aria-labelledby="magenta"></span>
       <span id="magenta">Magenta</span>
     </p>
     <p>
-      <span id="colorOption_3" tabindex="-1"
-        role="radio" aria-checked="false" aria-labelledby="all"></span>
+      <span
+        id="colorOption_3"
+        tabindex="-1"
+        role="radio"
+        aria-checked="false"
+        aria-labelledby="all"></span>
       <span id="all">All of the above</span>
     </p>
   </div>
@@ -108,19 +117,19 @@ This could have been written using semantic HTML, which requires no CSS or JavaS
 <fieldset>
   <legend>Which is the best color?</legend>
   <p>
-    <input name="colorOption" type="radio" id="purple">
+    <input name="colorOption" type="radio" id="purple" />
     <label for="purple">Purple</label>
   </p>
   <p>
-    <input name="colorOption" type="radio" id="aubergine">
+    <input name="colorOption" type="radio" id="aubergine" />
     <label for="aubergine">Aubergine</label>
   </p>
   <p>
-    <input name="colorOption" type="radio" id="magenta">
+    <input name="colorOption" type="radio" id="magenta" />
     <label for="magenta">Magenta</label>
   </p>
   <p>
-    <input name="colorOption" type="radio" id="all">
+    <input name="colorOption" type="radio" id="all" />
     <label for="all">All of the above</label>
   </p>
 </fieldset>

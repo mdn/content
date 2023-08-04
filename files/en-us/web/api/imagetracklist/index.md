@@ -2,12 +2,8 @@
 title: ImageTrackList
 slug: Web/API/ImageTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ImageTrackList
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageTrackList
 ---
 
@@ -15,7 +11,7 @@ browser-compat: api.ImageTrackList
 
 The **`ImageTrackList`** interface of the {{domxref('WebCodecs API','','','true')}} represents a list of image tracks.
 
-## Properties
+## Instance properties
 
 - {{domxref("ImageTrackList.ready")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{jsxref("promise")}} that resolves once the `ImageTrackList` has been populated with {{domxref("ImageTrack","tracks")}}.

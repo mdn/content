@@ -1,13 +1,7 @@
 ---
-title: 'ARIA: group role'
+title: "ARIA: group role"
 slug: Web/Accessibility/ARIA/Roles/group_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#group
 ---
 
@@ -25,7 +19,7 @@ When used in the context of a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Rol
 
 `Group` elements may be nested.
 
-The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles).
+The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles).
 
 When the role is added to an element, the browser will send out an accessible group event to assistive technology products, which can then notify the user about it.
 
@@ -35,7 +29,12 @@ The HTML code example below uses the `group` role with a `tree` view:
 
 ```html
 <div id="tree1" role="tree" tabindex="-1">
-  <div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true">
+  <div
+    id="animals"
+    class="groupHeader"
+    role="presentation"
+    aria-owns="animalGroup"
+    aria-expanded="true">
     <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
     <span role="treeitem" tabindex="0">Animals</span>
   </div>
@@ -43,7 +42,12 @@ The HTML code example below uses the `group` role with a `tree` view:
     <div id="birds" role="treeitem">
       <span tabindex="-1">Birds</span>
     </div>
-    <div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false">
+    <div
+      id="cats"
+      class="groupHeader"
+      role="presentation"
+      aria-owns="catGroup"
+      aria-expanded="false">
       <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
       <span role="treeitem" tabindex="0">Cats</span>
     </div>

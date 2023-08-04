@@ -1,12 +1,7 @@
 ---
 title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.rotateZ
 ---
 
@@ -175,5 +170,6 @@ div {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("rotate")}} property
 - {{cssxref("&lt;transform-function&gt;")}}

@@ -1,17 +1,14 @@
 ---
-title: NDEFMessage()
+title: "NDEFMessage: NDEFMessage() constructor"
+short-title: NDEFMessage()
 slug: Web/API/NDEFMessage/NDEFMessage
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - NDEFMessage
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
 
-{{SecureContext_Header}}{{APIRef}}{{SeeCompatTable}}
+{{SecureContext_Header}}{{APIRef("Web NFC API")}}{{SeeCompatTable}}
 
 The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.
 

@@ -1,11 +1,7 @@
 ---
 title: Close Window
 slug: Web/WebDriver/Commands/CloseWindow
-tags:
-  - Close Window
-  - Command
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.CloseWindow
 ---
 

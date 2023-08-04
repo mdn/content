@@ -1,10 +1,9 @@
 ---
 title: bbox
 slug: Web/SVG/Attribute/bbox
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.bbox
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-tags:
-  - Add-ons
-  - Extensions
-  - Overview
-  - WebExtensions
-  - manifest.json
+page-type: landing-page
 browser-compat: webextensions.manifest
 ---
 
@@ -22,47 +17,48 @@ It is a [JSON](/en-US/docs/Glossary/JSON)-formatted file, with one exception: it
 
 ## List of manifest.json keys
 
-These are the `manifest.json` keys and the manifest versions they are supported in:
+These are the `manifest.json` keys; these keys are available in Manifest V2 and above unless otherwise noted:
 
 - [action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) (Manifest V3 and above)
-- [author](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author) (Manifest V2 and above)
-- [background](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) (Manifest V2 and above)
-- [browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) (Manifest V2)
-- [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) (Manifest V2 and above)
-- [chrome_settings_overrides](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) (Manifest V2 and above)
-- [chrome_url_overrides](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides) (Manifest V2 and above)
-- [commands](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) (Manifest V2 and above)
-- [content_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) (Manifest V2 and above)
-- [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) (Manifest V2 and above)
-- [default_locale](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale) (Manifest V2 and above)
-- [description](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) (Manifest V2 and above)
-- [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) (Manifest V2 and above)
-- [devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) (Manifest V2 and above)
-- [dictionaries](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries) (Manifest V2 and above)
-- [externally_connectable](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) (Manifest V2 and above)
-- [homepage_url](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) (Manifest V2 and above)
+- [author](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author)
+- [background](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background)
+- [browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) (Manifest V2 only)
+- [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+- [chrome_settings_overrides](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)
+- [chrome_url_overrides](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides)
+- [commands](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)
+- [content_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)
+- [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy)
+- [declarative_net_request](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request)
+- [default_locale](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
+- [description](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
+- [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer)
+- [devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)
+- [dictionaries](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries)
+- [externally_connectable](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable)
+- [homepage_url](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url)
 - [host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) (Manifest V3 and above)
-- [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) (Manifest V2 and above)
-- [incognito](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito) (Manifest V2 and above)
-- [manifest_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version) (Manifest V2 and above)
-- [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) (Manifest V2 and above)
-- [offline_enabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled) (Manifest V2 and above)
-- [omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox) (Manifest V2 and above)
-- [optional_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) (Manifest V2 and above)
-- [options_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) (Manifest V2 and above)
-- [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) (Manifest V2 and above)
-- [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2)
-- [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (Manifest V2 and above)
-- [protocol_handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) (Manifest V2 and above)
-- [short_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name) (Manifest V2 and above)
-- [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) (Manifest V2 and above)
-- [storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) (Manifest V2 and above)
-- [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) (Manifest V2 and above)
-- [theme_experiment](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment) (Manifest V2 and above)
-- [user_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) (Manifest V2)
-- [version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) (Manifest V2 and above)
-- [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) (Manifest V2 and above)
-- [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) (Manifest V2 and above)
+- [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+- [incognito](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito)
+- [manifest_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
+- [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
+- [offline_enabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled)
+- [omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
+- [optional_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
+- [options_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)
+- [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
+- [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2 only in Chrome)
+- [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
+- [protocol_handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers)
+- [short_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name)
+- [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
+- [storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage)
+- [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
+- [theme_experiment](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment)
+- [user_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) (Manifest V2 only)
+- [version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
+- [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name)
+- [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
 ### Notes about manifest.json keys
 
@@ -96,7 +92,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
   },
 
   "background": {
-    "scripts": ["jquery.js", "my-background.js"],
+    "scripts": ["jquery.js", "my-background.js"]
   },
 
   "browser_action": {
@@ -155,7 +151,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
   "version": "0.1",
 
   "user_scripts": {
-    "api_script": "apiscript.js",
+    "api_script": "apiscript.js"
   },
 
   "web_accessible_resources": ["images/my-image.png"]

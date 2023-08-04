@@ -1,16 +1,7 @@
 ---
 title: action.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/action/ImageDataType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDataType
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - action
+page-type: webextension-api-type
 browser-compat: webextensions.api.action.ImageDataType
 ---
 
@@ -29,8 +20,6 @@ An [`ImageData`](/en-US/docs/Web/API/ImageData) object.
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#type-ImageDataType) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

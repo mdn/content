@@ -2,14 +2,9 @@
 title: Point
 slug: Web/API/WebKitPoint
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Transforms
-  - Interface
-  - Non-standard
-  - Point
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.WebKitPoint
 ---
 
@@ -19,7 +14,7 @@ browser-compat: api.WebKitPoint
 
 > **Note:** Although it is not directly related to this defunct interface, you are probably looking for {{domxref("DOMPoint")}}.
 
-## Properties
+## Instance properties
 
 - `x` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A floating-point value specifying the point's position with respect to the X (horizontal) axis.

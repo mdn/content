@@ -2,12 +2,8 @@
 title: AudioData
 slug: Web/API/AudioData
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData
 ---
 
@@ -15,7 +11,7 @@ browser-compat: api.AudioData
 
 The **`AudioData`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) represents an audio sample.
 
-`AudioData` is a {{glossary("Transferable objects","transferable object")}}.
+`AudioData` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Description
 
@@ -38,7 +34,7 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 - {{domxref("AudioData.AudioData", "AudioData()")}} {{Experimental_Inline}}
   - : Creates a new `AudioData` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioData.format")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the sample format of the audio.
@@ -53,7 +49,7 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 - {{domxref("AudioData.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the timestamp of the audio in microseconds.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioData.allocationSize()")}} {{Experimental_Inline}}
   - : Returns the number of bytes required to hold the sample as filtered by options passed into the method.

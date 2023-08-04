@@ -1,14 +1,8 @@
 ---
-title: Document.prepend()
+title: "Document: prepend() method"
+short-title: prepend()
 slug: Web/API/Document/prepend
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Document
-  - Reference
 browser-compat: api.Document.prepend
 ---
 
@@ -26,7 +20,7 @@ This method prepends a child to a `Document`. To prepend to an arbitrary element
 ```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* … ,*/ paramN)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

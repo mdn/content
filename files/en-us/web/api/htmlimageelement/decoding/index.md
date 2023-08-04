@@ -1,14 +1,8 @@
 ---
-title: HTMLImageElement.decoding
+title: "HTMLImageElement: decoding property"
+short-title: decoding
 slug: Web/API/HTMLImageElement/decoding
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLImageElement
-  - Property
-  - Reference
-  - decoding
 browser-compat: api.HTMLImageElement.decoding
 ---
 
@@ -42,8 +36,8 @@ offscreen image objects.
 
 ```js
 const img = new Image();
-img.decoding = 'sync';
-img.src = 'img/logo.png';
+img.decoding = "sync";
+img.src = "img/logo.png";
 ```
 
 ## Specifications

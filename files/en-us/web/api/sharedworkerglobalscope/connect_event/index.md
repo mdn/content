@@ -1,14 +1,8 @@
 ---
-title: 'SharedWorkerGlobalScope: connect event'
+title: "SharedWorkerGlobalScope: connect event"
+short-title: connect
 slug: Web/API/SharedWorkerGlobalScope/connect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SharedWorkerGlobalScope
-  - connect
-  - events
 browser-compat: api.SharedWorkerGlobalScope.connect_event
 ---
 
@@ -23,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connect', (event) => { });
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { };
+onconnect = (event) => {};
 ```
 
 ## Event type
@@ -45,7 +39,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+  - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
@@ -57,15 +51,15 @@ The connecting port can be referenced through the event object's `ports` paramet
 
 ```js
 self.onconnect = (e) => {
-    const port = e.ports[0];
+  const port = e.ports[0];
 
-    port.onmessage = (e) => {
-      const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-      port.postMessage(workerResult);
-    }
+  port.onmessage = (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
+    port.postMessage(workerResult);
+  };
 
-    port.start();
-}
+  port.start();
+};
 ```
 
 For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
@@ -75,14 +69,13 @@ For a complete running example, see our [Basic shared worker example](https://gi
 You could also set up an event handler using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 
 ```js
-self.addEventListener('connect', (e) => {
+self.addEventListener("connect", (e) => {
   const port = e.ports[0];
 
   port.onmessage = (e) => {
     const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
-  }
-
+  };
 });
 ```
 

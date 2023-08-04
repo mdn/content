@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamDefaultReader
 ---
 
@@ -27,12 +20,12 @@ For any other underlying source, the stream will always satisfy read requests wi
 - {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}}
   - : Creates and returns a `ReadableStreamDefaultReader` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableStreamDefaultReader.closed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released. This property enables you to write code that responds to an end to the streaming process.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStreamDefaultReader.cancel()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
@@ -67,10 +60,10 @@ fetch("https://www.example.org/").then((response) => {
           controller.enqueue(value);
           push();
         });
-      };
+      }
 
       push();
-    }
+    },
   });
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });
@@ -84,3 +77,11 @@ fetch("https://www.example.org/").then((response) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills

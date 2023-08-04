@@ -1,22 +1,15 @@
 ---
-title: MediaRecorder.pause()
+title: "MediaRecorder: pause() method"
+short-title: pause()
 slug: Web/API/MediaRecorder/pause
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - pause
 browser-compat: api.MediaRecorder.pause
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-The **`Media.pause()`** method (part
-of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used
+The **`MediaRecorder.pause()`** method (part
+of the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used
 to pause recording of media streams.
 
 When a `MediaRecorder` object's `pause()`method is called, the
@@ -55,9 +48,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 pause.onclick = () => {
-    mediaRecorder.pause();
-    console.log("recording paused");
-}
+  mediaRecorder.pause();
+  console.log("recording paused");
+};
 ```
 
 ## Specifications
@@ -70,7 +63,7 @@ pause.onclick = () => {
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).

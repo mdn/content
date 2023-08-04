@@ -1,10 +1,9 @@
 ---
 title: x-height
 slug: Web/SVG/Attribute/x-height
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.x-height
 ---
 

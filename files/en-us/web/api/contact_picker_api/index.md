@@ -2,15 +2,8 @@
 title: Contact Picker API
 slug: Web/API/Contact_Picker_API
 page-type: web-api-overview
-tags:
-  - API
-  - Contact Picker API
-  - Contacts
-  - Landing
-  - Overview
-  - PWA
-  - contact picker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactsManager
 ---
 
@@ -46,7 +39,7 @@ This API is only available from a secure top-level browsing context and very car
 The following code checks whether the Contact Picker API is supported.
 
 ```js
-const supported = 'contacts' in navigator;
+const supported = "contacts" in navigator;
 ```
 
 ### Checking for Supported Properties
@@ -56,19 +49,19 @@ The following asynchronous function uses the `getProperties()` method to check f
 ```js
 async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
-  if (supportedProperties.includes('name')) {
+  if (supportedProperties.includes("name")) {
     // run code for name support
   }
-  if (supportedProperties.includes('email')) {
+  if (supportedProperties.includes("email")) {
     // run code for email support
   }
-  if (supportedProperties.includes('tel')) {
+  if (supportedProperties.includes("tel")) {
     // run code for telephone number support
   }
-  if (supportedProperties.includes('address')) {
+  if (supportedProperties.includes("address")) {
     // run code for address support
   }
-  if (supportedProperties.includes('icon')) {
+  if (supportedProperties.includes("icon")) {
     // run code for avatar support
   }
 }
@@ -81,15 +74,15 @@ The following example sets an array of properties to be retrieved for each conta
 An asynchronous function is then defined which uses the `select()` method to present the user with a contact picker interface and handle the chosen results.
 
 ```js
-const props = ['name', 'email', 'tel', 'address', 'icon'];
-const opts = {multiple: true};
+const props = ["name", "email", "tel", "address", "icon"];
+const opts = { multiple: true };
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(props, opts);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(props, opts);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```

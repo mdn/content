@@ -2,11 +2,6 @@
 title: HTMLDataListElement
 slug: Web/API/HTMLDataListElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLDataListElement
 ---
 
@@ -16,14 +11,14 @@ The **`HTMLDataListElement`** interface provides special properties (beyond the 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
 - {{domxref("HTMLDataListElement.options")}} {{ReadOnlyInline}}
   - : A {{domxref("HTMLCollection")}} representing a collection of the contained option elements.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

@@ -1,21 +1,8 @@
 ---
-title: Clipboard.read()
+title: "Clipboard: read() method"
+short-title: read()
 slug: Web/API/Clipboard/read
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Editing
-  - Method
-  - Reference
-  - Scrap
-  - Text
-  - copy
-  - paste
-  - read
 browser-compat: api.Clipboard.read
 ---
 
@@ -27,9 +14,6 @@ delivering the data to the returned {{jsxref("Promise")}} when the promise is
 resolved. Unlike {{domxref("Clipboard.readText", "readText()")}}, the
 `read()` method can return arbitrary data, such as images. This method can
 also return text.
-
-To read from the clipboard, you must first have the `"clipboard-read"`
-permission.
 
 > **Note:** The asynchronous Clipboard and [Permissions APIs](/en-US/docs/Web/API/Permissions_API) are still in the
 > process of being integrated into most browsers, so they often deviate from the
@@ -51,6 +35,13 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem"
 containing the clipboard's contents. The promise is rejected if permission to access the
 clipboard is not granted.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
+To read from the clipboard, you must first have the `"clipboard-read"`
+permission.
+
 ## Examples
 
 ### Reading image data
@@ -69,8 +60,8 @@ The example will check or ask for permission to read the clipboard, then fetch t
 #### HTML
 
 ```html
-<img id="source" src="butterfly.jpg" alt="A butterfly">
-<img id="destination">
+<img id="source" src="butterfly.jpg" alt="A butterfly" />
+<img id="destination" />
 ```
 
 #### CSS
@@ -87,25 +78,26 @@ img {
 #### JavaScript
 
 ```js
-const destinationImage = document.querySelector('#destination')
-destinationImage.addEventListener('click', pasteImage);
+const destinationImage = document.querySelector("#destination");
+destinationImage.addEventListener("click", pasteImage);
 
 async function pasteImage() {
   try {
-    const permission = await navigator.permissions.query({ name: 'clipboard-read' });
-    if (permission.state === 'denied') {
-      throw new Error('Not allowed to read clipboard.');
+    const permission = await navigator.permissions.query({
+      name: "clipboard-read",
+    });
+    if (permission.state === "denied") {
+      throw new Error("Not allowed to read clipboard.");
     }
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {
-      if (!item.types.includes('image/png')) {
-        throw new Error('Clipboard contains non-image data.');
+      if (!item.types.includes("image/png")) {
+        throw new Error("Clipboard contains non-image data.");
       }
-      const blob = await item.getType('image/png');
+      const blob = await item.getType("image/png");
       destinationImage.src = URL.createObjectURL(blob);
     }
-  }
-  catch (error) {
+  } catch (error) {
     console.error(error.message);
   }
 }

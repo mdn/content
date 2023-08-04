@@ -1,16 +1,7 @@
 ---
 title: webRequest.StreamFilter.ondata
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.ondata
-  - TextDecoder
-  - TextEncoder
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.StreamFilter.ondata
 ---
 
@@ -22,11 +13,11 @@ To decode the data, use either {{domxref("TextDecoder")}} or {{domxref("Blob")}}
 
 Without an `ondata` listener, you don't receive the original response body, and the output stream is empty unless {{WebEXTAPIRef("webRequest.StreamFilter.write", "write")}} is called.
 
-## WebExtension Examples
+## Examples
 
-This example adds an `ondata` listener which replaces "WebExtension Example" in the response with "WebExtension WebExtension Example" using the {{jsxref("String.prototype.replace()", "replace()")}} method.
+This example adds an `ondata` listener which replaces "Example" in the response with "WebExtension Example" using the {{jsxref("String.prototype.replaceAll()", "replaceAll()")}} method.
 
-> **Note:** This example only works for occurrences of "WebExtension Example" that are entirely contained within a data chunk, and not ones that straddle two chunks (which might happen \~0.1% of the time for large documents). Additionally it only deals with UTF-8-coded documents. A real implementation of this would have to be more complex.
+> **Note:** This example only works for occurrences of "Example" that are entirely contained within a data chunk, and not ones that straddle two chunks (which might happen \~0.1% of the time for large documents). Additionally it only deals with UTF-8-coded documents. A real implementation of this would have to be more complex.
 
 ```js
 function listener(details) {
@@ -36,12 +27,12 @@ function listener(details) {
 
   filter.ondata = (event) => {
     let str = decoder.decode(event.data, { stream: true });
-    // Just change any instance of WebExtension Example in the HTTP response
-    // to WebExtension WebExtension Example.
-    str = str.replace(
-      /WebExtension Example/g,
-      "WebExtension WebExtension Example"
-    );
+    // Just change any instance of Example in the HTTP response
+    // to WebExtension Example.
+    // Note that this will maybe not work as expected because the ending of the str can also
+    // be "<h1>Examp" (because it is not the full response). So, it is better
+    // to get the full response first and then doing the replace.
+    str = str.replaceAll("Example", "WebExtension Example");
     filter.write(encoder.encode(str));
     // Doing filter.disconnect(); here would make us process only
     // the first chunk, and let the rest through unchanged. Note
@@ -52,14 +43,12 @@ function listener(details) {
   filter.onstop = (event) => {
     filter.close();
   };
-
-  //return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -86,9 +75,7 @@ function listener(details) {
         str += decoder.decode(data[i], { stream });
       }
     }
-    // Just change any instance of WebExtension Example in the HTTP response
-    // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -97,7 +84,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -121,9 +108,7 @@ function listener(details) {
     }
     str += decoder.decode(); // end-of-stream
 
-    // Just change any instance of WebExtension Example in the HTTP response
-    // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -132,7 +117,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -153,9 +138,7 @@ function listener(details) {
     data.push(decoder.decode());
 
     let str = data.join("");
-    // Just change any instance of WebExtension Example in the HTTP response
-    // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -164,7 +147,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -183,10 +166,7 @@ function listener(details) {
   filter.onstop = async (event) => {
     const blob = new Blob(data, { type: "text/html" });
     let str = await blob.text();
-
-    // Just change any instance of WebExtension Example in the HTTP response
-    // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -195,7 +175,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -218,10 +198,7 @@ function listener(details) {
     const doc = parser.parseFromString(str, blob.type);
     const nodes = doc.querySelectorAll("title, h1");
     for (const node of nodes) {
-      node.innerText = node.innerText.replace(
-        "WebExtension Example",
-        "WebExtension $&"
-      );
+      node.innerText = node.innerText.replaceAll("Example", "WebExtension $&");
     }
     filter.write(encoder.encode(doc.documentElement.outerHTML));
     filter.close();
@@ -231,7 +208,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -260,9 +237,7 @@ function listener(details) {
       writeOffset += buffer.length;
     }
     let str = decoder.decode(combinedArray);
-    // Just change any instance of WebExtension Example in the HTTP response
-    // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -271,7 +246,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -292,7 +267,7 @@ function listener(details) {
     const blob = new Blob(data, { type: "text/html" });
     const buffer = await blob.arrayBuffer();
     let str = decoder.decode(buffer);
-    str = str.replace(/WebExtension Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -301,7 +276,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -324,9 +299,7 @@ function listener(details) {
   };
 
   filter.onstop = (event) => {
-    // Just change any instance of WebExtension Example in the HTTP response
-    // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -335,7 +308,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

@@ -1,21 +1,13 @@
 ---
-title: ':user-valid (:-moz-ui-valid)'
-slug: web/css/:user-valid
-tags:
-  - CSS
-  - CSS Selectors
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Experimental
+title: ":user-valid"
+slug: Web/CSS/:user-valid
+page-type: css-pseudo-class
 browser-compat: css.selectors.user-valid
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Learn/Forms#constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
-
-> **Note:** The pseudo-class behaves in the same way as the non-standard `:-moz-ui-valid` pseudo-class.
 
 This pseudo-class is applied according to the following rules:
 
@@ -28,8 +20,10 @@ The result is that if the control was valid when the user started interacting wi
 
 ## Syntax
 
-```
-:user-valid
+```css
+:user-valid {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -42,7 +36,12 @@ Try changing the email address to another valid email to see it in action.
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" value="test@example.com" required>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    value="test@example.com"
+    required />
   <span></span>
 </form>
 ```

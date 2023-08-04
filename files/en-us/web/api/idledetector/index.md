@@ -2,12 +2,8 @@
 title: IdleDetector
 slug: Web/API/IdleDetector
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector
 ---
 
@@ -25,33 +21,26 @@ This interface requires a secure context.
 - {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}} {{Experimental_Inline}}
   - : Creates a new `IdleDetector` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
-  - : Returns a string indicating whether the users has interacted with either the screen or the device since the call to `start()`.
-
-  - : Returns either `"active"` to indicate that the user has interacted with the
-  device within the threshold provided to `start()` or `"idle"` if they have not.
-  This attribute returns `null` before `start()` is called.
-
+  - : Returns a string indicating whether the users has interacted with either the screen or the device within the threshold provided to `start()`, one of `"active"` or `"idle"`. This attribute returns `null` before `start()` is called.
 - {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a string indicating whether the screen is locked, one of
-    `"locked"` or `"unlocked"`. This attribute returns `null` before `start()`
-    is called.
+  - : Returns a string indicating whether the screen is locked, one of `"locked"` or `"unlocked"`. This attribute returns `null` before `start()` is called.
 
 ## Events
 
 - {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}}
   - : Called when the value of `userState` or `screenState` has changed.
 
-## Methods
+## Static methods
 
-- {{domxref("IdleDetector.requestPermission()")}} {{Experimental_Inline}}
-
+- [`IdleDetector.requestPermission()`](/en-US/docs/Web/API/IdleDetector/requestPermission_static) {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves when the user has chosen
     whether to grant the origin access to their idle state. Resolves with
     `"granted"` on acceptance and `"denied"` on refusal.
+
+## Instance methods
 
 - {{domxref("IdleDetector.start()")}} {{Experimental_Inline}}
   - : Returns a `Promise` that resolves when the detector starts listening for
@@ -70,15 +59,15 @@ requesting permission.
 const controller = new AbortController();
 const signal = controller.signal;
 
-startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() !== "granted") {
+startButton.addEventListener("click", async () => {
+  if ((await IdleDetector.requestPermission()) !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }
 
   try {
     const idleDetector = new IdleDetector();
-    idleDetector.addEventListener('change', () => {
+    idleDetector.addEventListener("change", () => {
       const userState = idleDetector.userState;
       const screenState = idleDetector.screenState;
       console.log(`Idle change: ${userState}, ${screenState}.`);
@@ -88,7 +77,7 @@ startButton.addEventListener('click', async () => {
       threshold: 60_000,
       signal,
     });
-    console.log('IdleDetector is active.');
+    console.log("IdleDetector is active.");
   } catch (err) {
     // Deal with initialization errors like permission denied,
     // running outside of top-level frame, etc.
@@ -96,9 +85,9 @@ startButton.addEventListener('click', async () => {
   }
 });
 
-stopButton.addEventListener('click', () => {
+stopButton.addEventListener("click", () => {
   controller.abort();
-  console.log('IdleDetector is stopped.');
+  console.log("IdleDetector is stopped.");
 });
 ```
 

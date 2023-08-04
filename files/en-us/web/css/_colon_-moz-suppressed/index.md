@@ -1,14 +1,9 @@
 ---
-title: ':-moz-suppressed'
+title: ":-moz-suppressed"
 slug: Web/CSS/:-moz-suppressed
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -20,7 +15,9 @@ The **`:-moz-suppressed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs
 ## Syntax
 
 ```css
-:-moz-suppressed
+:-moz-suppressed {
+  /* ... */
+}
 ```
 
 ## Examples

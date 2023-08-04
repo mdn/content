@@ -2,12 +2,6 @@
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Broadcast Channel API
-  - HTML API
-  - Interface
-  - Reference
 browser-compat: api.BroadcastChannel
 ---
 
@@ -24,14 +18,14 @@ The **`BroadcastChannel`** interface represents a named channel that any {{gloss
 - {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
   - : Creates an object linking to the named channel.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("EventTarget")}}._
 
 - {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
   - : Returns a string, the name of the channel.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("EventTarget")}}._
 

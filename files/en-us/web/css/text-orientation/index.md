@@ -1,12 +1,7 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
-tags:
-  - CSS
-  - CSS Property
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-orientation
 ---
 
@@ -89,6 +84,6 @@ p {
 ## See also
 
 - The other vertical-script related CSS properties: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, and {{cssxref("unicode-bidi")}}.
-- [CSS Logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
 - Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>

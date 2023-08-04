@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.contentDocument
+title: "HTMLIFrameElement: contentDocument property"
+short-title: contentDocument
 slug: Web/API/HTMLIFrameElement/contentDocument
 page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.contentDocument

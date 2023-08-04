@@ -1,23 +1,25 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MAX_VALUE
 ---
 
 {{JSRef}}
 
-The **`Number.MAX_VALUE`** property represents the maximum numeric value representable in JavaScript.
+The **`Number.MAX_VALUE`** static data property represents the maximum numeric value representable in JavaScript.
 
-{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
+{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}
+
+## Value
+
+2<sup>1024</sup> - 1, or approximately `1.7976931348623157E+308`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-The `MAX_VALUE` property has a value of approximately `1.7976931348623157E+308`, or 2<sup>1024</sup> - 1. Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}} and will lose their actual value.
+Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}} and will lose their actual value.
 
 Because `MAX_VALUE` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_VALUE`, rather than as a property of a number value.
 

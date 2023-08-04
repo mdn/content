@@ -1,14 +1,10 @@
 ---
-title: SerialPort.getSignals()
+title: "SerialPort: getSignals() method"
+short-title: getSignals()
 slug: Web/API/SerialPort/getSignals
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getSignals()
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.getSignals
 ---
 
@@ -44,7 +40,7 @@ Returns a {{jsxref("Promise")}} that resolves with an object containing the foll
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the port is not open. Call {{domxref("SerialPort.open()")}} to avoid this error.
 - `NetworkError` {{domxref("DOMException")}}
-  - : Returned if the signals on the device could not be set.
+  - : Returned if the signals on the device could not be read.
 
 ## Specifications
 

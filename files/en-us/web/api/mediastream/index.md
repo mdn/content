@@ -2,13 +2,6 @@
 title: MediaStream
 slug: Web/API/MediaStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media Streams API
-  - MediaStream
-  - Reference
-  - WebRTC
 browser-compat: api.MediaStream
 ---
 
@@ -25,9 +18,9 @@ Some user agents subclass this interface to provide more precise information or 
 ## Constructor
 
 - {{domxref("MediaStream.MediaStream", "MediaStream()")}}
-  - : Creates and returns a new MediaStream object. You can create an empty stream, a stream which is based upon an existing stream, or a stream that contains a specified list of tracks (specified as an array of {{domxref("MediaStreamTrack")}} objects).
+  - : Creates and returns a new `MediaStream` object. You can create an empty stream, a stream which is based upon an existing stream, or a stream that contains a specified list of tracks (specified as an array of {{domxref("MediaStreamTrack")}} objects).
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
@@ -36,7 +29,7 @@ _This interface inherits properties from its parent, {{domxref("EventTarget")}}.
 - {{domxref("MediaStream.id")}} {{ReadOnlyInline}}
   - : A string containing a 36-character universally unique identifier ({{Glossary("UUID")}}) for the object.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from its parent, {{domxref("EventTarget")}}._
 

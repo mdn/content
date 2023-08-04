@@ -1,16 +1,7 @@
 ---
 title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreatedNavigationTarget
-  - webNavigation
+page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCreatedNavigationTarget
 ---
 
@@ -38,7 +29,7 @@ browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -49,15 +40,15 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : [`object`](#details). Details about the navigation event. See [details](#details) below.
+      - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
 
 - `filter` {{optional_inline}}
-  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions. Note that `filter` is not supported in Firefox.
+  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event fires for all transitions. Note that `filter` is not supported in Firefox.
 
 ## Additional objects
 
@@ -88,12 +79,8 @@ Logs the target URL, source Tab ID, and source frame ID for `onCreatedNavigation
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCreatedNavigationTarget(details) {
   console.log(`onCreatedNavigationTarget: ${details.url}`);
@@ -101,14 +88,15 @@ function logOnCreatedNavigationTarget(details) {
   console.log(details.sourceFrameId);
 }
 
-browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigationTarget, filter);
+browser.webNavigation.onCreatedNavigationTarget.addListener(
+  logOnCreatedNavigationTarget,
+  filter,
+);
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

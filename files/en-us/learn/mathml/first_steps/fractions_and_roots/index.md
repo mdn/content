@@ -1,10 +1,7 @@
 ---
 title: MathML fractions and roots
 slug: Learn/MathML/First_steps/Fractions_and_roots
-tags:
-  - Beginner
-  - MathML
-  - Landing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
@@ -178,7 +175,9 @@ Here is a simple exercise to verify whether you understood the relation between 
 
 ```css hidden
 math {
-  font-family: Latin Modern Math, STIX Two Math;
+  font-family:
+    Latin Modern Math,
+    STIX Two Math;
   font-size: 200%;
 }
 math .highlight {
@@ -236,10 +235,9 @@ checkboxes.forEach((checkbox) => {
 As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretches horizontally to cover their content. But actually the root symbol √ also stretches to be as tall as their content.
 
 ```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 ```html
@@ -265,10 +263,9 @@ As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretche
 Some mathematical concepts are sometimes written using fraction-like notations such [binomial coefficients](https://en.wikipedia.org/wiki/Combination) or [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol). It is appropriate to use an `<mfrac>` element to markup such notations. For fraction-like notations that don't draw a horizontal bar, attach a `linethickness="0"` attribute to the `<mfrac>` element:
 
 ```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 ```html
@@ -282,7 +279,7 @@ Some mathematical concepts are sometimes written using fraction-like notations s
     <mo>)</mo>
   </mrow>
   <mo>=</mo>
-  <mn>6</mn>
+  <mn>3</mn>
   <mo>≠</mo>
   <mfrac>
     <mn>3</mn>

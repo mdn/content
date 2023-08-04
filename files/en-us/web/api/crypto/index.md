@@ -2,17 +2,6 @@
 title: Crypto
 slug: Web/API/Crypto
 page-type: web-api-interface
-tags:
-  - API
-  - Code
-  - Crypto
-  - Encoding
-  - Encryption
-  - Interface
-  - Privacy
-  - Reference
-  - Security
-  - Web Crypto API
 browser-compat: api.Crypto
 ---
 
@@ -25,14 +14,14 @@ It allows access to a cryptographically strong random number generator and to cr
 
 The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) is accessed through the global {{domxref("crypto_property", "crypto")}} property, which is a `Crypto` object.
 
-## Properties
+## Instance properties
 
 _This interface implements properties defined on {{domxref("Crypto/getRandomValues", "RandomSource")}}._
 
 - {{domxref("Crypto.subtle")}} {{ReadOnlyInline}} {{SecureContext_inline}}
   - : Returns a {{domxref("SubtleCrypto")}} object providing access to common cryptographic primitives, like hashing, signing, encryption, or decryption.
 
-## Methods
+## Instance methods
 
 _This interface implements methods defined on {{domxref("Crypto/getRandomValues", "RandomSource")}}._
 

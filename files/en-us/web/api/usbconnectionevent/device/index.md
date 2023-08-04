@@ -1,14 +1,10 @@
 ---
-title: USBConnectionEvent.device
+title: "USBConnectionEvent: device property"
+short-title: device
 slug: Web/API/USBConnectionEvent/device
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - device
-  - USBConnectionEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConnectionEvent.device
 ---
 
@@ -25,7 +21,7 @@ A {{domxref("USBDevice")}} object.
 Connecting a USB device fires the `connect` event. The current {{domxref("USBDevice")}} is returned by calling `event.device`.
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   console.log(event.device);
 });
 ```
