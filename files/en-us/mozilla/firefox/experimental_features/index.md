@@ -1018,6 +1018,51 @@ The `groupBy` method should be used when strings can be used to represent elemen
   </tbody>
 </table>
 
+### Array transfer
+
+The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
+The `transferToFixedLength()` method always creates a fixed length buffer, while `transfer()` may create a variable buffer, but only if the original buffer had a variable length.
+After transfer the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
+(See [Firefox bug 1841113](https://bugzil.la/1841113) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>NA</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>NA</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>NA</td>
+      <td>No</td>
+    </tr>
+    <tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.experimental.well_formed_unicode_strings</code></td>
+    </tr>
+    </tr>
+  </tbody>
+</table>
+
 ### String isWellFormed() and toWellFormed() methods
 
 Strings in JavaScript are represented by sequences of unsigned 16-bit integers, and it's possible to have valid string values that are not well-formed Unicode text.
