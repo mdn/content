@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### CSS
 
-- The syntax of the {{cssxref("offset-path")}} property, which is used to define the path for an element to follow, has been updated. The `<offset-path>` parameter in the syntax consolidates the parameters `<ray()>`, `<url>`, and `<basic-shape>`. Additionally, the [`<coord-box>`](/en-US/docs/Web/CSS/box-edge) parameter, which lets you specify the shape of the path based on the element's box model, has replaced the previous `<geometry-box>` parameter in the syntax. The `none` keyword is still the default value for the property. ([Firefox bug 1598156](https://bugzil.la/1598156)) and ([Firefox bug 1837305](https://bugzil.la/1837305)).
+- The syntax of the {{cssxref("offset-path")}} property, which is used to define the path for an element to follow, has been updated. The `<offset-path>` parameter in the syntax consolidates the parameters `<ray()>`, `<url>`, and `<basic-shape>`. Additionally, the [`<coord-box>`](/en-US/docs/Web/CSS/box-edge) parameter, which lets you specify the shape of the path based on the element's box model, has replaced the previous `<geometry-box>` parameter in the syntax. The `none` keyword is still the default value for the property. The `<basic-shape` and `<coord-box>` parameters require the `layout.css.motion-path-basic-shapes.enabled` and `layout.css.motion-path-coord-box.enabled` preferences, respectively, to be enabled. ([Firefox bug 1598156](https://bugzil.la/1598156)) and ([Firefox bug 1837305](https://bugzil.la/1837305)).
 
 ### Accessibility (ARIA)
 
