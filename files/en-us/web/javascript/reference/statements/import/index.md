@@ -153,7 +153,7 @@ This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate 
 
 ### Hoisting
 
-Import declarations are [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting). In this case, that means that the names they introduce are binded to their values, and their side effects are produced, before the rest of the module's code runs.
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, that means that the names they introduce are binded to their values, and their side effects are produced, before the rest of the module's code runs.
 
 ```js
 myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings is imported by the next line
