@@ -1022,7 +1022,7 @@ The `groupBy` method should be used when strings can be used to represent elemen
 
 The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
 The `transferToFixedLength()` method always creates a fixed length buffer, while `transfer()` may create a variable buffer, but only if the original buffer had a variable length.
-After transfer the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
+After transfer, the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
 (See [Firefox bug 1841113](https://bugzil.la/1841113) for more details.)
 
 <table>
@@ -1057,7 +1057,7 @@ After transfer the original buffer is detached from the original memory and henc
     <tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.well_formed_unicode_strings</code></td>
+      <td colspan="2"><code>javascript.options.experimental.arraybuffer_transfer</code></td>
     </tr>
     </tr>
   </tbody>
