@@ -377,7 +377,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A Boolean attribute which, if present, indicates that the input should automatically have focus when the page has finished loading (or when the {{HTMLElement("dialog")}} containing the element has been displayed).
 
-    > **Note:** An element with the `autofocus` attribute may gain focus before the {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} event is fired.
+    > **Note:** An element with the `autofocus` attribute may gain focus before the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is fired.
 
     No more than one element in the document may have the `autofocus` attribute. If put on more than one element, the first one with the attribute receives focus.
 
@@ -403,16 +403,17 @@ A few additional non-standard attributes are listed following the descriptions o
 
     ```html
     <form action="page.html" method="post">
-      <label
-        >Fruit:
-        <input type="text" name="fruit" dirname="fruit.dir" value="cherry" />
+      <label>
+        Fruit:
+        <input type="text" name="fruit" dirname="fruit-dir" value="cherry" />
       </label>
       <input type="submit" />
     </form>
-    <!-- page.html?fruit=cherry&fruit.dir=ltr -->
+    <!-- page.html?fruit=cherry&fruit-dir=ltr -->
     ```
 
-    When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+    When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit-dir=ltr` to be sent.
+    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
 
 - `disabled`
 
@@ -1136,8 +1137,8 @@ In addition to the errors described in the table above, the `validityState` inte
 - {{domxref('validityState.rangeOverflow')}}
 - {{domxref('validityState.stepMismatch')}}
 - {{domxref('validityState.badInput')}}
-- {{domxref('validityState.valid')}}
-- {{domxref('validityState.customError')}}
+- {{domxref('validityState', 'validityState.valid')}}
+- {{domxref('validityState', 'validityState.customError')}}
 
 For each of these Boolean properties, a value of `true` indicates that the specified reason validation may have failed is true, with the exception of the `valid` property, which is `true` if the element's value obeys all constraints.
 

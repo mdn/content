@@ -184,6 +184,12 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     </tr>
     <tr>
       <td>
+        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+      </td>
+      <td>Fired when the browser has started to load the resource.</td>
+    </tr>
+    <tr>
+      <td>
         {{domxref("HTMLMediaElement.pause_event", 'pause')}}
       </td>
       <td>Playback has been paused.</td>

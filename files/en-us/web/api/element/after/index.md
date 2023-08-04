@@ -18,7 +18,7 @@ String objects are inserted as equivalent {{domxref("Text")}} nodes.
 ```js-nolint
 after(node1)
 after(node1, node2)
-after(node1, node2, /* … ,*/ nodeN)
+after(node1, node2, /* …, */ nodeN)
 ```
 
 ### Parameters

@@ -115,7 +115,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action,10)`.
+An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action, 0)`.
 
 ```js
 const promiseA = new Promise((resolve, reject) => {

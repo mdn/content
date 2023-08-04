@@ -51,11 +51,11 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### Events
 
-- CSS Transitions: The {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, and {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} events have been implemented (see [Firefox bug 1264125](https://bugzil.la/1264125) and [Firefox bug 1287983](https://bugzil.la/1287983)).
+- CSS Transitions: The {{domxref("Element/transitionstart_event", "transitionstart")}}, {{domxref("Element/transitionrun_event", "transitionrun")}}, and {{domxref("Element/transitioncancel_event", "transitioncancel")}} events have been implemented (see [Firefox bug 1264125](https://bugzil.la/1264125) and [Firefox bug 1287983](https://bugzil.la/1287983)).
 - The {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} constructor has been implemented (see [Firefox bug 1002256](https://bugzil.la/1002256)).
 - The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see [Firefox bug 424390](https://bugzil.la/424390)).
 - The {{domxref("Element/auxclick_event", "auxclick")}} event and corresponding event handler have been implemented (see [Firefox bug 1304044](https://bugzil.la/1304044)).
-- The {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_transitions) is cancelled.
+- The {{domxref("Element/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_transitions) is cancelled.
 
 ### DOM
 

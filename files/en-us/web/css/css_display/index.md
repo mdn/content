@@ -43,7 +43,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
 - [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_flexible_box_layout/slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+- [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
 - [Backwards compatibility of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 

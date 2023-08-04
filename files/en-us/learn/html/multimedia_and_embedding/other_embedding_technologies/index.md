@@ -230,7 +230,7 @@ If you were to add the code below into one of your pages, you might be surprised
 
 If you have a look at your browser's console, you'll see an error message like the following:
 
-```
+```plain
 Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X-Frame-Options' to 'deny'.
 ```
 

@@ -554,13 +554,13 @@ textarea.onkeyup = function () {
 
 In this last exercise, the array contains a bunch of strings containing information about train stations in the North of England. The strings are data items that contain the three-letter station code, followed by some machine-readable data, followed by a semicolon, followed by the human-readable station name. For example:
 
-```
+```plain
 MAN675847583748sjt567654;Manchester Piccadilly
 ```
 
 We want to extract the station code and name, and put them together in a string with the following structure:
 
-```
+```plain
 MAN: Manchester Piccadilly
 ```
 
