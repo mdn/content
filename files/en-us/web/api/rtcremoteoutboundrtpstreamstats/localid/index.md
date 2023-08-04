@@ -76,7 +76,7 @@ The `networkTestStop()` function obtains a second report,
 
 Each statistics record of {{domxref("RTCRemoteOutboundRtpStreamStats.type", "type")}} `remote-outbound-rtp` (describing a remote peer's statistics about sending data to the local peer) has a corresponding record of type `inbound-rtp` which describes the local peer's perspective on the same data being moved between the two peers. Let's create a utility function to help us look up the value of a key in the paired statistics object.
 
-The `findReportEntry()` function shown below examines an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStats")}}-based statistics record which contains the specified `key` — _and_ for which the key has the specified `value`.
+The `findReportEntry()` function shown below examines an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStatsReport")}}-based statistics record which contains the specified `key` — _and_ for which the key has the specified `value`.
 If no match is found or the statistics report has no record corresponding to the statistics category indicated by `key`.
 
 ```js
@@ -171,7 +171,7 @@ the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStat
   "getStats()")}} to get the latest statistics report for the connection and storing it in
 `endReport`. This is an {{domxref("RTCStatsReport")}} object, which maps
 strings to objects of the
-corresponding {{domxref("RTCStats")}}-based type.
+corresponding {{domxref("RTCStatsReport")}}-based type.
 
 Now we can begin to process the results, starting with the ending statistics found in
 `endReport`. In this case, we're looking for statistics records whose

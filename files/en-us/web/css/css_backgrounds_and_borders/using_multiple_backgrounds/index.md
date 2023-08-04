@@ -15,7 +15,7 @@ Specifying multiple backgrounds is easy:
   background:
     background1,
     background2,
-    /* … ,*/ backgroundN;
+    /* …, */ backgroundN;
 }
 ```
 

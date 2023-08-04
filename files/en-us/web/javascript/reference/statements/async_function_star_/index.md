@@ -22,7 +22,7 @@ async function* name(param0) {
 async function* name(param0, param1) {
   statements
 }
-async function* name(param0, param1, /* … ,*/ paramN) {
+async function* name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```

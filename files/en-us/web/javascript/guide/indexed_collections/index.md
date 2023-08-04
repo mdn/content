@@ -21,9 +21,9 @@ We will be focusing on arrays in this article, but many of the same concepts app
 The following statements create equivalent arrays:
 
 ```js
-const arr1 = new Array(element0, element1, /* … ,*/ elementN);
-const arr2 = Array(element0, element1, /* … ,*/ elementN);
-const arr3 = [element0, element1, /* … ,*/ elementN];
+const arr1 = new Array(element0, element1, /* …, */ elementN);
+const arr2 = Array(element0, element1, /* …, */ elementN);
+const arr3 = [element0, element1, /* …, */ elementN];
 ```
 
 `element0, element1, …, elementN` is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's `length` property is set to the number of arguments.
@@ -51,10 +51,10 @@ In addition to a newly defined variable as shown above, arrays can also be assig
 ```js
 const obj = {};
 // …
-obj.prop = [element0, element1, /* … ,*/ elementN];
+obj.prop = [element0, element1, /* …, */ elementN];
 
 // OR
-const obj = { prop: [element0, element1, /* … ,*/ elementN] };
+const obj = { prop: [element0, element1, /* …, */ elementN] };
 ```
 
 If you wish to initialize an array with a single element, and the element happens to be a `Number`, you must use the bracket syntax. When a single `Number` value is passed to the `Array()` constructor or function, it is interpreted as an `arrayLength`, not as a single element.

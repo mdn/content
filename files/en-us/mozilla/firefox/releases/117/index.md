@@ -26,6 +26,9 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### SVG
 
+- Inline SVGs now support `<script>` elements with `type="module"`, `defer`, and `async` attributes.
+  This allows SVGs to use modern JavaScript features, including ES modules, and to load scripts asynchronously ([Firefox bug 1839954](https://bugzil.la/1839954)).
+
 #### Removals
 
 ### HTTP
