@@ -37,7 +37,7 @@ A new {{jsxref("ArrayBuffer")}} object. Its contents are initialized to the cont
 
 ## Description
 
-The `transfer()` method performs the same operation as the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). It copies the bytes of this `ArrayBuffer` into a new `ArrayBuffer` object, then detaches this `ArrayBuffer` object.
+The `transfer()` method performs the same operation as the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). It copies the bytes of this `ArrayBuffer` into a new `ArrayBuffer` object, then detaches this `ArrayBuffer` object. See [transferring ArrayBuffers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) for more information.
 
 `transfer()` preserves the resizability of this `ArrayBuffer`. If you want the new `ArrayBuffer` to be non-resizable, use {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} instead. There's no way to make a fixed-length buffer become resizable.
 

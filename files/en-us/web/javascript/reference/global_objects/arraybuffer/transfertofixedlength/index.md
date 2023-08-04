@@ -34,7 +34,7 @@ A new {{jsxref("ArrayBuffer")}} object. Its contents are initialized to the cont
 
 ## Description
 
-Unlike {{jsxref("ArrayBuffer/transfer", "transfer()")}}, `transferToFixedLength()` always creates a non-resizable `ArrayBuffer`. This means `newByteLength` can be larger than the `maxByteLength`, even if this `ArrayBuffer` is resizable.
+Unlike {{jsxref("ArrayBuffer/transfer", "transfer()")}}, `transferToFixedLength()` always creates a non-resizable `ArrayBuffer`. This means `newByteLength` can be larger than the `maxByteLength`, even if this `ArrayBuffer` is resizable. See [transferring ArrayBuffers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) for more information.
 
 ## Examples
 
