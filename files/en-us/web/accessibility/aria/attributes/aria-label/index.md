@@ -5,7 +5,7 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
-The `aria-label` attribute defines a string value that labels an interactive element.
+The `aria-label` attribute defines a string value that labels the current element.
 
 ## Description
 
@@ -28,8 +28,6 @@ In cases where an interactive element has no accessible name, or an accessible n
 </button>
 ```
 
-> **Note:** `aria-label` is intended for use on interactive elements, or elements made to be interactive via other ARIA declarations, when there is no appropriate text visible in the DOM that could be referenced as a label
-
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 
 By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of its [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute, and a form input's accessible name is the content of the associated {{HTMLElement('label')}} element.
@@ -46,7 +44,7 @@ The `aria-label` attribute can be used with regular, semantic HTML elements; it 
 
 Don't "overuse" `aria-label`. For example, use visible text with `aria-describedby` or `aria-description`, not `aria-label`, to provide additional instructions or clarify the UI. Always remember, you don't need to target instructions to screen readers only; if instructions are needed, provide them to everyone (or, preferably, make your UI more intuitive).
 
-Not all elements can be given an accessible name. Neither `aria-label` nor `aria-labelledby` should be used with non-interactive elements or inline structural role such as with `code`, `term`, or `emphasis` nor roles whose semantics will not be mapped to the accessibility API, including `presentation`, `none`, and `hidden`. The `aria-label` attribute is intended for interactive elements only. Use `aria-label` to ensure an accessible name is provided when none is visible in the DOM for all interactive elements, like links, videos, form controls, [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), and [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
+Not all elements can be given an accessible name. Neither `aria-label` nor `aria-labelledby` should be used with non-interactive elements or inline structural role such as with `code`, `term`, or `emphasis` nor roles whose semantics will not be mapped to the accessibility API, including `presentation`, `none`, and `hidden`. Use `aria-label` to ensure an accessible name is provided when none is visible in the DOM for all interactive elements, like links, videos, form controls, [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), and [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
 
 If you give your {{HTMLElement('iframe')}}s a `title`, your images an `alt` attributes, and your input's associated {{HTMLElement('label')}}s, `aria-label` is not necessary. But, if present, the `aria-label` will take precedence over the `title`, `alt` and `<label>` as your `iframe`, image, or input's accessible name, respectively.
 
