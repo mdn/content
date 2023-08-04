@@ -155,7 +155,7 @@ For methods that accept an arbitrary number of parameters, the syntax block is w
 unshift()
 unshift(element0)
 unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element0, element1, /* …, */ elementN)
 ```
 
 #### Parameters section

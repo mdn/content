@@ -61,7 +61,7 @@ console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length); // 6
 ```
 
-Increasing the {{jsxref("Array/length", "length")}}.
+Increasing the {{jsxref("Array/length", "length")}} extends the array by adding empty slots without creating any new elements — not even `undefined`.
 
 ```js
 fruits.length = 10;
