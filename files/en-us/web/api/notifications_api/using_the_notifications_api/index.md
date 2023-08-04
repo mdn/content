@@ -31,7 +31,7 @@ In addition, In Chrome and Firefox you cannot request notifications at all unles
 
 ### Checking current permission status
 
-You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission_static", "Notification.permission()")}} read only property. It can have one of three possible values:
+You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission_static", "Notification.permission")}} read only property. It can have one of three possible values:
 
 - `default`
   - : The user hasn't been asked for permission yet, so notifications won't be displayed.

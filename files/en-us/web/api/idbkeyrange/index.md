@@ -13,15 +13,15 @@ A key range can be a single value or a range with upper and lower bounds or endp
 
 | Range                       | Code                                                                                 |
 | --------------------------- | ------------------------------------------------------------------------------------ |
-| All keys ≥ **x**            | {{domxref("IDBKeyRange.lowerBound_static", "IDBKeyRange.lowerBound()")}} `(x)`       |
-| All keys > **x**            | {{domxref("IDBKeyRange.lowerBound_static", "IDBKeyRange.lowerBound()")}} `(x, true)` |
-| All keys ≤ **y**            | {{domxref("IDBKeyRange.upperBound_static", "IDBKeyRange.upperBound()")}} `(y)`       |
-| All keys < **y**            | {{domxref("IDBKeyRange.upperBound_static", "IDBKeyRange.upperBound()")}} `(y, true)` |
-| All keys ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound_static", "IDBKeyRange.bound()")}} `(x, y)`              |
-| All keys > **x** &&< **y**  | {{domxref("IDBKeyRange.bound_static", "IDBKeyRange.bound()")}} `(x, y, true, true)`  |
-| All keys > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound_static", "IDBKeyRange.bound()")}} `(x, y, true, false)` |
-| All keys ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound_static", "IDBKeyRange.bound()")}} `(x, y, false, true)` |
-| The key = **z**             | {{domxref("IDBKeyRange.only_static", "IDBKeyRange.only()")}} `(z)`                   |
+| All keys ≥ **x**            | `IDBKeyRange.lowerBound(x)`       |
+| All keys > **x**            | `IDBKeyRange.lowerBound(x, true)` |
+| All keys ≤ **y**            | `IDBKeyRange.upperBound(y)`       |
+| All keys < **y**            | `IDBKeyRange.upperBound(y, true)` |
+| All keys ≥ **x** && ≤ **y** | `IDBKeyRange.bound(x, y)`              |
+| All keys > **x** &&< **y**  | `IDBKeyRange.bound(x, y, true, true)`  |
+| All keys > **x** && ≤ **y** | `IDBKeyRange.bound(x, y, true, false)` |
+| All keys ≥ **x** &&< **y**  | `IDBKeyRange.bound(x, y, false, true)` |
+| The key = **z**             | `IDBKeyRange.only(z)`                   |
 
 A key is in a key range if the following conditions are true:
 

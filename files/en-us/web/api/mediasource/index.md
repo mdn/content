@@ -31,7 +31,7 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 
 ## Static properties
 
-- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
 
 ## Instance methods
