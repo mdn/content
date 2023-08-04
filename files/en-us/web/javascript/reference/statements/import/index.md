@@ -48,7 +48,7 @@ All imported bindings cannot be in the same scope as any other declaration, incl
 
 `import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await).
 
-### Forms of import `import` declarations
+### Forms of `import` declarations
 
 There are four forms of `import` declarations:
 
