@@ -837,6 +837,7 @@ myCanvas.create();
 import { Canvas } from './modules/canvas.js';
 myCanvas.createReportList();
 // …
+```
 
 ## Cyclic imports
 
