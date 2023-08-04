@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.values
 
 {{JSRef}}
 
-The **`values()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each index in the array.
+The **`values()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.values()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
 
@@ -20,6 +20,10 @@ values()
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+
+## Description
+
+See {{jsxref("Array.prototype.values()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
@@ -61,3 +65,5 @@ console.log(values.next().value); // 50
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
 - [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- {{jsxref("Array.prototype.values()")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
