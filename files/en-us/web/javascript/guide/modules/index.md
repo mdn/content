@@ -840,6 +840,7 @@ myCanvas.createReportList();
 ```
 
 Still, It is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
+
 ## Cyclic imports
 
 Modules can import other modules, and those modules can import other modules, and so on. This forms a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) called the "dependency graph". In an ideal world, this graph is [acyclic](https://en.wikipedia.org/wiki/Directed_acyclic_graph). In this case, the graph can be evaluated using a depth-first traversal.
