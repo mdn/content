@@ -28,6 +28,14 @@ No notable changes.
   The `stack` is not yet serialized when errors are sent using other APIs, such as [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
   (See [Firefox bug 1774866](https://bugzil.la/1774866) for more details.)
 
+### HTTP
+
+No notable changes.
+
+### Security
+
+No notable changes.
+
 ### APIs
 
 #### DOM
@@ -52,6 +60,10 @@ No notable changes.
   This option provided a non-standard, and Firefox-only way to make the indicated database persistent.
   The option was previously deprecated, and users that need this functionality should already have migrated to {{domxref("StorageManager.persist()")}}.
   (See [Firefox bug 1354500](https://bugzil.la/1354500) for more details.)
+
+### WebAssembly
+
+No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
