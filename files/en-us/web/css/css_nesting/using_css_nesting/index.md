@@ -379,5 +379,7 @@ element.my-class {
 
 ## See Also
 
+- [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting)
+- [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [Nesting @rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [Nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
