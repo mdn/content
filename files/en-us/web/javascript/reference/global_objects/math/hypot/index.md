@@ -19,7 +19,7 @@ The **`Math.hypot()`** static method returns the square root of the sum of squar
 Math.hypot()
 Math.hypot(value0)
 Math.hypot(value0, value1)
-Math.hypot(value0, value1, /* … ,*/ valueN)
+Math.hypot(value0, value1, /* …, */ valueN)
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ The square root of the sum of squares of the given arguments. Returns {{jsxref("
 
 Calculating the hypotenuse of a right triangle, or the magnitude of a complex number, uses the formula `Math.sqrt(v1*v1 + v2*v2)`, where v1 and v2 are the lengths of the triangle's legs, or the complex number's real and complex components. The corresponding distance in 2 or more dimensions can be calculated by adding more squares under the square root: `Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)`.
 
-This function makes this calculation easier and faster; you call `Math.hypot(v1, v2)`, or `Math.hypot(v1, /* … ,*/, vN)`.
+This function makes this calculation easier and faster; you call `Math.hypot(v1, v2)`, or `Math.hypot(v1, /* …, */, vN)`.
 
 `Math.hypot` also avoids overflow/underflow problems if the magnitude of your numbers is very large. The largest number you can represent in JS is [`Number.MAX_VALUE`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE), which is around 10<sup>308</sup>. If your numbers are larger than about 10<sup>154</sup>, taking the square of them will result in Infinity. For example, `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity`. If you use `hypot()` instead, you get a better answer: `Math.hypot(1e200, 1e200) = 1.4142...e+200` . This is also true with very small numbers. `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`, but `Math.hypot(1e-200, 1e-200) = 1.4142...e-200`.
 
