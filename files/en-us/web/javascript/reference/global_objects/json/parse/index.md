@@ -17,7 +17,7 @@ The **`JSON.parse()`** static method parses a JSON string, constructing the Java
 JSON.parse(text)
 JSON.parse(text, reviver)
 ```
-
+ 
 ### Parameters
 
 - `text`
