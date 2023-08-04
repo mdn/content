@@ -70,7 +70,7 @@ input.addEventListener("keypress", (e) => {
   {{domxref("Element/keyup_event", "keyup")}} events. In these cases, `keyCode` is set instead.
 - To get the code of the key regardless of whether it was stored in
   `keyCode` or `charCode`, query the {{
-    domxref("KeyboardEvent.which", "which") }} property.
+    domxref("UIEvent/which", "which") }} property.
 - Characters entered through an IME do not register through `keyCode` or
   `charCode`.
 - For a list of the `charCode` values associated with particular keys, run

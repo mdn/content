@@ -19,7 +19,7 @@ The **`constructor`** method is a special method of a [class](/en-US/docs/Web/Ja
 constructor() { /* … */ }
 constructor(argument0) { /* … */ }
 constructor(argument0, argument1) { /* … */ }
-constructor(argument0, argument1, /* … ,*/ argumentN) { /* … */ }
+constructor(argument0, argument1, /* …, */ argumentN) { /* … */ }
 ```
 
 There are some additional syntax restrictions:

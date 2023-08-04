@@ -19,7 +19,7 @@ The **`TypedArray.of()`** static method creates a new
 TypedArray.of()
 TypedArray.of(element0)
 TypedArray.of(element0, element1)
-TypedArray.of(element0, element1, /* … ,*/ elementN)
+TypedArray.of(element0, element1, /* …, */ elementN)
 ```
 
 Where `TypedArray` is one of:

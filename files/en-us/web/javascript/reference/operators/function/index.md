@@ -22,7 +22,7 @@ function (param0) {
 function (param0, param1) {
   statements
 }
-function (param0, param1, /* … ,*/ paramN) {
+function (param0, param1, /* …, */ paramN) {
   statements
 }
 
@@ -32,7 +32,7 @@ function name(param0) {
 function name(param0, param1) {
   statements
 }
-function name(param0, param1, /* … ,*/ paramN) {
+function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```

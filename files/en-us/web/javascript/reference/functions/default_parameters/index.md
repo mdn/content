@@ -14,7 +14,7 @@ browser-compat: javascript.functions.default_parameters
 ## Syntax
 
 ```js-nolint
-function fnName(param1 = defaultValue1, /* … ,*/ paramN = defaultValueN) {
+function fnName(param1 = defaultValue1, /* …, */ paramN = defaultValueN) {
   // …
 }
 ```

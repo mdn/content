@@ -17,12 +17,12 @@ The **`Function()`** constructor creates {{jsxref("Function")}} objects. Calling
 new Function(functionBody)
 new Function(arg0, functionBody)
 new Function(arg0, arg1, functionBody)
-new Function(arg0, arg1, /* … ,*/ argN, functionBody)
+new Function(arg0, arg1, /* …, */ argN, functionBody)
 
 Function(functionBody)
 Function(arg0, functionBody)
 Function(arg0, arg1, functionBody)
-Function(arg0, arg1, /* … ,*/ argN, functionBody)
+Function(arg0, arg1, /* …, */ argN, functionBody)
 ```
 
 > **Note:** `Function()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Function` instance.
