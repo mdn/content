@@ -824,6 +824,20 @@ const triangle1 = new Module.Triangle(
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
+### Import declarations are hoisted
+
+Import declarations are [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting), which means they are at least partially dealt with by the language before the rest of the current scopes's code. In this case, it means that the imported values are available in the module's code even before the line that declares them, and that the imported module's side effects are produced before the rest of the code starts running.
+
+So for example, in `main.js`, importing Canvas in the middle of the code would still work:
+
+```js
+// …
+let myCanvas = new Canvas('myCanvas', document.body, 480, 320);
+myCanvas.create();
+import { Canvas } from './modules/canvas.js';
+myCanvas.createReportList();
+// …
+
 ## Cyclic imports
 
 Modules can import other modules, and those modules can import other modules, and so on. This forms a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) called the "dependency graph". In an ideal world, this graph is [acyclic](https://en.wikipedia.org/wiki/Directed_acyclic_graph). In this case, the graph can be evaluated using a depth-first traversal.
