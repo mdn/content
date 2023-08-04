@@ -351,7 +351,7 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
 
 ### ray() CSS function
 
-The CSS {{cssxref("ray")}} function is a way to define an {{cssxref("offset-path")}}. The function defines the path as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle.
+The CSS {{cssxref("ray")}} function is a way to define an {{cssxref("offset-path")}}. The function defines the path as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle ([Firefox bug 1582554](https://bugzil.la/1582554)).
 
 In version 112, the `<ray_size>` optional parameter was added to the function. If no `<ray_size>` parameter is provided, it assumes the default value of `closest-side` ([Firefox bug 1820071](https://bugzil.la/1820071)).
 
