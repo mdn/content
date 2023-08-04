@@ -18,9 +18,6 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### CSS
 
-- The [`abs()`](/en-US/docs/Web/CSS/abs) and [`sign()`](/en-US/docs/Web/CSS/sign) functions are now supported.
-  These allow you to get the absolute value and the sign of an argument, respectively ([Firefox bug 1814588](https://bugzil.la/1814588)).
-
 #### Removals
 
 ### JavaScript
