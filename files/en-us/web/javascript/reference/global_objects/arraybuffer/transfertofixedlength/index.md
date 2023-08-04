@@ -20,8 +20,8 @@ transferToFixedLength(newByteLength)
 
 - `newByteLength`
   - : The {{jsxref("ArrayBuffer/byteLength", "byteLength")}} of the new `ArrayBuffer`. Defaults to the `byteLength` of this `ArrayBuffer`.
-    - If `newByteLength` is smaller than this `ArrayBuffer`'s `byteLength`, the rightmost bytes are dropped.
-    - If `newByteLength` is larger than this `ArrayBuffer`'s `byteLength`, the rightmost bytes are filled with zeros.
+    - If `newByteLength` is smaller than the `byteLength` of this `ArrayBuffer`, the "overflowing" bytes are dropped.
+    - If `newByteLength` is larger than the `byteLength` of this `ArrayBuffer`, the extra bytes are filled with zeros.
 
 ### Return value
 

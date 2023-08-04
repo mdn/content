@@ -73,7 +73,7 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
   - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 - {{jsxref("ArrayBuffer.prototype.transfer()")}}
-  - : Creates a new `ArrayBuffer` with the same byte content as this buffer, preserving its resizability, then detaches this buffer.
+  - : Creates a new `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 - {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}}
   - : Creates a new non-resizable `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 

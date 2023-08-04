@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer.transfer
 
 {{JSRef}}
 
-The **`transfer()`** method of {{jsxref("ArrayBuffer")}} instances creates a new `ArrayBuffer` with the same byte content as this buffer, preserving its resizability, then detaches this buffer.
+The **`transfer()`** method of {{jsxref("ArrayBuffer")}} instances creates a new `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 
 ## Syntax
 
@@ -20,8 +20,8 @@ transfer(newByteLength)
 
 - `newByteLength` {{optional_inline}}
   - : The {{jsxref("ArrayBuffer/byteLength", "byteLength")}} of the new `ArrayBuffer`. Defaults to the `byteLength` of this `ArrayBuffer`.
-    - If `newByteLength` is smaller than this `ArrayBuffer`'s `byteLength`, the rightmost bytes are dropped.
-    - If `newByteLength` is larger than this `ArrayBuffer`'s `byteLength`, the rightmost bytes are filled with zeros.
+    - If `newByteLength` is smaller than the `byteLength` of this `ArrayBuffer`, the "overflowing" bytes are dropped.
+    - If `newByteLength` is larger than the `byteLength` of this `ArrayBuffer`, the extra bytes are filled with zeros.
     - If this `ArrayBuffer` is resizable, `newByteLength` must not be greater than its {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}}.
 
 ### Return value
