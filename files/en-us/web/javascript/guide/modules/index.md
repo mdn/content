@@ -824,7 +824,7 @@ const triangle1 = new Module.Triangle(
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
-### Import declarations are hoisted
+## Import declarations are hoisted
 
 Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting), which means they are at least partially dealt with by the language before the rest of the current scopes's code. In this case, that means that the imported values are available in the module's code even before the line that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
 
