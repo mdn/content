@@ -8,7 +8,7 @@ browser-compat: api.HTMLAllCollection.item
 
 {{APIRef("HTML DOM")}}
 
-The **`item()`** method of the {{domxref("HTMLAllCollection")}} interface returns the element located at the specified offset into the collection, or the node with the specified value for its `id` or `name` attribute.
+The **`item()`** method of the {{domxref("HTMLAllCollection")}} interface returns the element located at the specified offset into the collection, or the element with the specified value for its `id` or `name` attribute.
 
 ## Syntax
 
