@@ -184,7 +184,6 @@ function withDefaults(
 function withoutDefaults(a, b, c, d, e, f, g) {
   switch (arguments.length) {
     case 0:
-      a = undefined;
     case 1:
       b = 5;
     case 2:
