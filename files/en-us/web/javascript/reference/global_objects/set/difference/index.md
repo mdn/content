@@ -63,6 +63,7 @@ console.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }
 
 ## See also
 
+- [Polyfill of `Set.prototype.difference` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
 - {{jsxref("Set.prototype.isSubsetOf()")}}

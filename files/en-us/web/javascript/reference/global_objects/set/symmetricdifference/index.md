@@ -60,6 +60,7 @@ console.log(evens.symmetricDifference(squares)); // Set(5) { 1, 2, 6, 8, 9 }
 
 ## See also
 
+- [Polyfill of `Set.prototype.symmetricDifference` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
