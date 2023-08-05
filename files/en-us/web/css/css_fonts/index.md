@@ -9,65 +9,39 @@ spec-urls: https://drafts.csswg.org/css-fonts/
 
 The **CSS fonts** module defines font-related properties and how font resources are loaded. It lets you define the style of a font, such as its family, size and weight, line height, and the glyph variants to use when multiple are available for a single character.
 
-## Basic example
-
-The following example shows a simple use of basic font properties to style a paragraph of text.
-
-```css
-p {
-  width: 600px;
-  margin: 0 auto;
-  font-family: "Helvetica Neue", "Arial", sans-serif;
-  font-style: italic;
-  font-weight: 100;
-  font-variant-ligatures: normal;
-  font-size: 2rem;
-  letter-spacing: 1px;
-}
-```
-
-```html
-<p>
-  Three hundred years ago<br />
-  I thought I might get some sleep<br />
-  I stretched myself out on an antique bed<br />
-  An' my spirit did a midnite creep
-</p>
-```
-
-The result is as follows:
-
-{{EmbedLiveSample('Basic_example', '100%', '200')}}
-
-## Variable fonts examples
-
-You can find a number of variable fonts examples at [v-fonts.com](https://v-fonts.com/) and [axis-praxis.org](https://www.axis-praxis.org/); see also our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) for more information and usage information.
-
 ## Reference
 
 ### Properties
 
-- {{cssxref("font")}}
+- {{cssxref("font")}} shorthand
 - {{cssxref("font-family")}}
 - {{cssxref("font-feature-settings")}}
 - {{cssxref("font-kerning")}}
 - {{cssxref("font-language-override")}}
 - {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-palette")}}
 - {{cssxref("font-size")}}
 - {{cssxref("font-size-adjust")}}
 - {{cssxref("font-stretch")}}
 - {{cssxref("font-style")}}
-- {{cssxref("font-synthesis")}}
-- {{cssxref("font-variant")}}
+- {{cssxref("font-synthesis")}} shorthand
+- {{cssxref("font-synthesis-small-caps")}}
+- {{cssxref("font-synthesis-style")}}
+- {{cssxref("font-synthesis-weight")}}
+- {{cssxref("font-variant")}} shorthand
 - {{cssxref("font-variant-alternates")}}
 - {{cssxref("font-variant-caps")}}
 - {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
 - {{cssxref("font-variant-ligatures")}}
 - {{cssxref("font-variant-numeric")}}
 - {{cssxref("font-variant-position")}}
 - {{cssxref("font-variation-settings")}}
 - {{cssxref("font-weight")}}
-- {{cssxref("line-height")}}
+
+## Data types
+
+- {{cssxref("generic-family")}}
 
 ### At-rules
 
@@ -83,6 +57,14 @@ You can find a number of variable fonts examples at [v-fonts.com](https://v-font
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will give you all you need to know to get you started using variable fonts.
 
+## Related concepts
+
+- CSS {{cssxref("line-height")}} property
+
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [CSS font loading](/en-US/docs/Web/CSS/CSS_font_loading) module
