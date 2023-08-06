@@ -103,6 +103,7 @@ jobs:
           git diff
 
       - name: Setup reviewdog
+        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
         uses: reviewdog/action-setup@v1
         with:
           reviewdog_version: latest
