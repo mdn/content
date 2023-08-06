@@ -226,10 +226,10 @@ async function sequentialInvokeBeforeCompletion() {
   // 2. invoke the next timer without waiting the previous one
   const fast = resolveAfter1Second();
 
-  console.log(await slow);
   // 3. wait for the slow timer to complete, and then print the result
-  console.log(await fast);
+  console.log(await slow);
   // 4. wait for the fast timer to complete, and then print the result
+  console.log(await fast);
 
   console.log("this function is done");
 }
@@ -242,7 +242,6 @@ async function concurrentSmallWorks() {
     resolveAfter2Seconds(),
     resolveAfter1Second(),
   ]);
-
   // 2. wait for the both timers to complete, and then print the results
   console.log(results[0]); // slow
   console.log(results[1]); // fast
