@@ -35,7 +35,7 @@ fetch(myRequest)
   .then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
-  })
+  });
 ```
 
 ## Specifications
