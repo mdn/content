@@ -202,67 +202,86 @@ function resolveAfter1Second() {
   });
 }
 
-async function sequentialStart() {
-  console.log("==SEQUENTIAL START==");
+async function sequentialInvokeAfterCompletion() {
+  console.log("==sequentialInvokeAfterCompletion starts==");
 
-  // 1. Execution gets here almost instantly
+  // 1. invoke a timer
   const slow = await resolveAfter2Seconds();
-  console.log(slow); // 2. this runs 2 seconds after 1.
+  // 2. wait for the timer to complete, and then print the result
+  console.log(slow);
 
+  // 3. invoke the next timer
   const fast = await resolveAfter1Second();
-  console.log(fast); // 3. this runs 3 seconds after 1.
+  // 4. wait for the timer to complete, and then print the result
+  console.log(fast);
+
+  console.log("this function is done");
 }
 
-async function concurrentStart() {
-  console.log("==CONCURRENT START with await==");
-  const slow = resolveAfter2Seconds(); // starts timer immediately
-  const fast = resolveAfter1Second(); // starts timer immediately
+async function sequentialInvokeBeforeCompletion() {
+  console.log("==sequentialInvokeBeforeCompletion starts==");
 
-  // 1. Execution gets here almost instantly
-  console.log(await slow); // 2. this runs 2 seconds after 1.
-  console.log(await fast); // 3. this runs 2 seconds after 1., immediately after 2., since fast is already resolved
+  // 1. invoke a timer
+  const slow = resolveAfter2Seconds();
+  // 2. invoke the next timer without waiting the previous one
+  const fast = resolveAfter1Second();
+
+  console.log(await slow);
+  // 3. wait for the slow timer to complete, and then print the result
+  console.log(await fast);
+  // 4. wait for the fast timer to complete, and then print the result
+
+  console.log("this function is done");
 }
 
-function concurrentPromise() {
-  console.log("==CONCURRENT START with Promise.all==");
-  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then(
-    (messages) => {
-      console.log(messages[0]); // slow
-      console.log(messages[1]); // fast
-    },
-  );
+async function concurrentSmallWorks() {
+  console.log("==concurrentSmallWorks starts==");
+
+  // 1. handle two small works (timer) concurrently
+  const results = await Promise.all([
+    resolveAfter2Seconds(),
+    resolveAfter1Second(),
+  ]);
+
+  // 2. wait for the both timers to complete, and then print the results
+  console.log(results[0]); // slow
+  console.log(results[1]); // fast
+
+  console.log("this function is done");
 }
 
-async function parallel() {
-  console.log("==PARALLEL with await Promise.all==");
+async function concurrentBigWorks() {
+  console.log("==concurrentBigWorks starts==");
 
-  // Start 2 "jobs" in parallel and wait for both of them to complete
-  await Promise.all([
+  // 1. handle two big works (timer and log) concurrently
+  await Promise.allSettled([
     (async () => console.log(await resolveAfter2Seconds()))(),
     (async () => console.log(await resolveAfter1Second()))(),
   ]);
+  // 2. wait for the both functions to complete
+  console.log("this function is done");
 }
 
-sequentialStart(); // after 2 seconds, logs "slow", then after 1 more second, "fast"
+sequentialInvokeAfterCompletion(); // after 2 seconds, logs "slow", then after 1 more second, "fast"
 
 // wait above to finish
-setTimeout(concurrentStart, 4000); // after 2 seconds, logs "slow" and then "fast"
+setTimeout(sequentialInvokeBeforeCompletion, 4000); // after 2 seconds, logs "slow" and then "fast"
 
 // wait again
-setTimeout(concurrentPromise, 7000); // same as concurrentStart
+setTimeout(concurrentSmallWorks, 7000); // same as sequentialInvokeBeforeCompletion
 
 // wait again
-setTimeout(parallel, 10000); // truly parallel: after 1 second, logs "fast", then after 1 more second, "slow"
+setTimeout(concurrentBigWorks, 10000); // after 1 second, logs "fast", then after 1 more second, "slow"
 ```
 
 #### await and parallelism
 
-In `sequentialStart`, execution suspends 2 seconds for the first
+In `sequentialInvokeAfterCompletion`, execution suspends 2 seconds for the first
 `await`, and then another second for the second `await`. The
 second timer is not created until the first has already fired, so the code finishes
 after 3 seconds.
 
-In `concurrentStart`, both timers are created and then `await`ed.
+In `sequentialInvokeBeforeCompletion`, both timers are created and then `await`ed.
 The timers run concurrently, which means the code finishes in 2 rather than 3 seconds,
 i.e. the slowest timer.
 However, the `await` calls still run in series, which means the second
@@ -274,14 +293,14 @@ to [`Promise.all`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/a
 or
 [`Promise.allSettled`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled).
 
-> **Warning:** The functions `concurrentStart` and `concurrentPromise`
+> **Warning:** The functions `sequentialInvokeBeforeCompletion` and `concurrentSmallWorks`
 > are not functionally equivalent.
 >
-> In `concurrentStart`, if promise `fast` rejects before promise
+> In `sequentialInvokeBeforeCompletion`, if promise `fast` rejects before promise
 > `slow` is fulfilled, then an unhandled promise rejection error will be
 > raised, regardless of whether the caller has configured a catch clause.
 >
-> In `concurrentPromise`, `Promise.all` wires up the promise
+> In `concurrentSmallWorks`, `Promise.all` wires up the promise
 > chain in one go, meaning that the operation will fail-fast regardless of the order of
 > rejection of the promises, and the error will always occur within the configured
 > promise chain, enabling it to be caught in the normal way.
