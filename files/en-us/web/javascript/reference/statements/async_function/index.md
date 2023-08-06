@@ -274,7 +274,7 @@ setTimeout(concurrentSmallWorks, 7000); // same as sequentialInvokeBeforeComplet
 setTimeout(concurrentBigWorks, 10000); // after 1 second, logs "fast", then after 1 more second, "slow"
 ```
 
-#### await and parallelism
+#### await and concurrency
 
 In `sequentialInvokeAfterCompletion`, execution suspends 2 seconds for the first
 `await`, and then another second for the second `await`. The
@@ -288,10 +288,10 @@ However, the `await` calls still run in series, which means the second
 `await` will wait for the first one to finish. In this case, the result of
 the fastest timer is processed after the slowest.
 
-If you wish to safely perform two or more jobs in parallel, you must await a call
+If you wish to safely perform other job after two or more jobs run concurrently and complete, you must await a call
 to [`Promise.all`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all),
 or
-[`Promise.allSettled`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled).
+[`Promise.allSettled`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled) before that job.
 
 > **Warning:** The functions `sequentialInvokeBeforeCompletion` and `concurrentSmallWorks`
 > are not functionally equivalent.
