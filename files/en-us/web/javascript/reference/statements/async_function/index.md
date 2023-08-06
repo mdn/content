@@ -254,7 +254,7 @@ async function concurrentBigWorks() {
   console.log("==concurrentBigWorks starts==");
 
   // 1. handle two big works (timer and log) concurrently
-  await Promise.allSettled([
+  await Promise.all([
     (async () => console.log(await resolveAfter2Seconds()))(),
     (async () => console.log(await resolveAfter1Second()))(),
   ]);
