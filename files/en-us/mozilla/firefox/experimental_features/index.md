@@ -932,8 +932,7 @@ The CSS {{cssxref("offset-position")}} property defines the initial position of 
 
 ### abs() and sign() math functions
 
-The CSS [`abs()`](/en-US/docs/Web/CSS/abs) and [`sign()`](/en-US/docs/Web/CSS/sign) math functions are supported.
-These allow you to get the absolute value and the sign of an argument, respectively.
+The CSS [`abs()`](/en-US/docs/Web/CSS/abs) and [`sign()`](/en-US/docs/Web/CSS/sign) math functions allow you to get the absolute value and the sign of an argument, respectively.
 See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](https://bugzil.la/1814589) for more details.
 
 <table>
