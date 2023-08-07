@@ -9,13 +9,11 @@ browser-compat: javascript.builtins.Map.groupBy
 
 {{JSRef}} {{SeeCompatTable}}
 
-> **Note:** In some versions of some browsers, this method was implemented as the method `Array.prototype.groupToMap`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
+> **Note:** In some versions of some browsers, this method was implemented as the method `Array.prototype.groupToMap()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
 
-The **`Map.groupBy()`** static method groups the elements of a given iterable using the values returned by a provided callback function.
-The final returned {{jsxref("Map")}} uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
+The **`Map.groupBy()`** static method groups the elements of a given iterable using the values returned by a provided callback function. The final returned {{jsxref("Map")}} uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
 
-The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time.
-If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Object.groupBy()")}}.
+The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time. If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Object.groupBy()")}}.
 
 <!-- {{EmbedInteractiveExample("pages/js/map-groupby.html")}} -->
 
@@ -56,8 +54,7 @@ This method is useful when you need to group information that is related to a pa
 
 ### Using Map.groupBy()
 
-First we define an array containing objects representing an inventory of different foodstuffs.
-Each food has a `type` and a `quantity`.
+First we define an array containing objects representing an inventory of different foodstuffs. Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
@@ -69,8 +66,7 @@ const inventory = [
 ];
 ```
 
-The code below uses `Map.groupBy()` with an arrow function that returns the object keys named `restock` or `sufficient`, depending on whether the element has `quantity < 6`.
-The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
+The code below uses `Map.groupBy()` with an arrow function that returns the object keys named `restock` or `sufficient`, depending on whether the element has `quantity < 6`. The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
 
 ```js
 const restock = { restock: true };
@@ -82,13 +78,9 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-Note that the function argument `{ quantity }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter).
-This unpacks the `quantity` property of an object passed as a parameter, and assigns it to a variable named `quantity` in the body of the function.
-This is a very succinct way to access the relevant values of elements within a function.
+Note that the function argument `{ quantity }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `quantity` property of an object passed as a parameter, and assigns it to a variable named `quantity` in the body of the function. This is a very succinct way to access the relevant values of elements within a function.
 
-The key to a `Map` can be modified and still used.
-However you can't recreate the key and still use it.
-For this reason it is important that anything that needs to use the map keeps a reference to its keys.
+The key to a `Map` can be modified and still used. However you can't recreate the key and still use it. For this reason it is important that anything that needs to use the map keeps a reference to its keys.
 
 ```js
 // The key can be modified and still used
@@ -112,6 +104,7 @@ console.log(result.get(restock2)); // undefined
 ## See also
 
 - [Polyfill of `Map.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Map/Map", "Map()")}}
 - {{jsxref("Object.groupBy()")}}
