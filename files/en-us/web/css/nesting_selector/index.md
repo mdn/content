@@ -78,6 +78,44 @@ With the **`&` nesting selector** the parent will be styled when it is hovered.
 }
 ```
 
+## Appending the `&` nesting selector
+
+The `&` nesting selector can also be appended to reverse the context of the selectors.
+
+```css
+.card {
+  /* .card styles */
+  .featured & {
+    /* .featured .card styles */
+  }
+}
+/* this becomes */
+.card {
+  /* .card styles */
+}
+.featured .card {
+  /* .featured .card styles */
+}
+```
+
+The `&` nesting selector can be placed multiple times:
+
+```css
+.card {
+  /* .card styles */
+  .featured & & & {
+    /* .featured .card .card .card styles */
+  }
+}
+/* this becomes */
+.card {
+  /* .card styles */
+}
+.featured .card .card .card {
+  /* .featured .card .card .card styles */
+}
+```
+
 ## Examples
 
 Both of the following examples produce the same output, the first uses normal CSS styles and the second uses the `&` nesting selector.
