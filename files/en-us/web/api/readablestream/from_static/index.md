@@ -72,7 +72,7 @@ const myReadableStream = ReadableStream.from(asyncIterator);
 ```
 
 [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) demonstrates several ways to consume a stream.
-The code below uses a `for ... await` loop, as this method is the simplest.
+The code below uses a `for ...await` loop, as this method is the simplest.
 Each iteration of the loop logs the current chunk from the stream.
 
 ```js
