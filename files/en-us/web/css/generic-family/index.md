@@ -92,6 +92,7 @@ This example demos several of the `<generic-family>` enumerated values for the {
 
 ```css
 ul {
+  font-size: 1.5rem;
   line-height: 2;
 }
 .serif {
