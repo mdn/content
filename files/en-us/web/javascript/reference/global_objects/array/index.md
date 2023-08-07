@@ -324,6 +324,7 @@ These properties are own properties of each `Array` instance.
   - : Returns a new array formed by applying a given callback function to each element of the calling array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the calling array.
+- {{jsxref("Array.prototype.includes()")}}
   - : Determines whether the calling array contains a value, returning `true` or `false` as appropriate.
 - {{jsxref("Array.prototype.indexOf()")}}
   - : Returns the first (least) index at which a given element can be found in the calling array.
