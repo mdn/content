@@ -149,7 +149,7 @@ Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Element
 </fieldset>
 ```
 
-The following screenshot shows default, focused and disabled checkboxes. Default and and disabled checkboxes are in checked state where as focused checkbox is in unchecked state with focus ring around it. :
+The following screenshot shows default, focused and disabled checkboxes. Default and disabled checkboxes are in checked state where as focused checkbox is in unchecked state with focus ring around it.
 
 ![Default, focused and disabled Checkboxes in chrome 115 on macOS](checkboxes.png)
 
