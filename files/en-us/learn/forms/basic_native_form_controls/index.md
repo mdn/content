@@ -66,9 +66,11 @@ Here is a basic single line text field example:
 
 Single line text fields have only one true constraint: if you type text with line breaks, the browser removes those line breaks before sending the data to the server.
 
-_The following screenshot shows default, focused and disabled text input types in Firefox 114 and Safari on macOS and in Chrome 114 and Edge 114 on Windows 11._
+_The screenshot below shows a text input in default, focused, and disabled states. Most browsers indicate focus with a focus ring around the control and the disabled state using grey text or a faded/semi-opaque control._
 
-![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
+![Screenshot of the default, focused and disabled states text input in Chrome on macOS](disabled.png)
+
+_Screenshots used in this document are taken in Chrome 115 on macOS. There could be little changes when these fields/buttons are displayed in different browser with different versions, but basic highlighting technique is similar._
 
 > **Note:** We discuss values for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
@@ -79,6 +81,10 @@ One of the original input types was the `password` text field type:
 ```html
 <input type="password" id="pwd" name="pwd" />
 ```
+
+The following screenshot shows Password input field in which each input character is shown as a dot.
+
+![Password field in chrome 115 on macOS](password.png)
 
 The `password` value doesn't add any special constraints to the entered text, but it does obscure the value entered into the field (e.g. with dots or asterisks) so it can't be easily read by others.
 
@@ -143,9 +149,9 @@ Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Element
 </fieldset>
 ```
 
-The following screenshots show default, focused and disabled checkboxes in Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10:
+The following screenshot shows default, focused and disabled checkboxes. Default and and disabled checkboxes are in checked state where as focused checkbox is in unchecked state with focus ring around it. :
 
-![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
+![Default, focused and disabled Checkboxes in chrome 115 on macOS](checkboxes.png)
 
 > **Note:** Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute on load match the {{cssxref(':default')}} pseudo-class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo-class.
 
@@ -181,9 +187,9 @@ Several radio buttons can be tied together. If they share the same value for the
 </fieldset>
 ```
 
-The following screenshots show unchecked and checked radio buttons, radio buttons that have focus, and disabled unchecked and checked radio buttons — on Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10.
+The following screenshot shows checked as well as unchecked radio buttons, radio buttons that have focus, and disabled radio buttons.
 
-![Radio buttons on Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](radios.png)
+![Radio buttons in chrome 115 on macOS](radios.png)
 
 ## Actual buttons
 
@@ -270,9 +276,9 @@ Below you can find examples of each button `<input>` type, along with the equiva
 
 Buttons always behave the same whether you use a {{HTMLElement("button")}} element or an {{HTMLElement("input")}} element. As you can see from the examples, however, {{HTMLElement("button")}} elements let you use HTML in their content, which is inserted between the opening and closing `<button>` tags. {{HTMLElement("input")}} elements on the other hand are {{glossary("void element", "void elements")}}; their displayed content is inserted inside the `value` attribute, and therefore only accepts plain text as content.
 
-The following examples show default, focused, and disabled button input types — in Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10.
+The following examples show default, focused, and disabled button input types.
 
-![Default, focused and disabled button input types in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](buttons.png)
+![Default, focused and disabled button input types in chrome 115 on macOS](buttons.png)
 
 ### Image button
 
@@ -318,6 +324,10 @@ On some mobile devices, the file picker can access photos, videos, and audio cap
 <input type="file" accept="video/*;capture=camcorder" />
 <input type="file" accept="audio/*;capture=microphone" />
 ```
+
+The following screenshot shows File picker widget in default, focused and disabled state when no file is selected.
+
+![File picker widget in chrome 115 on macOS](filepickers.png)
 
 ## Common attributes
 
