@@ -26,7 +26,7 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `sans-serif`
 
-  - : Glyphs have stroke endings that are plain. Example sans-serif fonts include Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, and Nimbus Sans L.
+  - : Glyphs have plain stroke endings, without ornamentation. Example sans-serif fonts include Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, and Nimbus Sans L.
 
 - `monospace`
 
