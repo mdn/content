@@ -55,7 +55,7 @@ The `filter()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_O
 
 ### Filtering out all small values
 
-The following example uses `filter()` to create a filtered array that has all elements with values less than `10` removed.
+The following example uses `filter()` to create a filtered array that has all elements with values less than 10 removed.
 
 ```js
 function isBigEnough(value) {

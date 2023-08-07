@@ -103,9 +103,9 @@ console.log(result);
 // { name: "fish", quantity: 1 }
 ```
 
-### Find last prime number in an array
+### Find the last prime number in an array
 
-The following example finds the last element in the array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number):
+The following example returns the last element in the array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element) {
