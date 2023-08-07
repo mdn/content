@@ -117,9 +117,15 @@ fetch("https://www.example.org")
   });
 ```
 
-### Convert async iterator to stream
+### Convert an iterator or async iterator to a stream
 
-Converting an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) to a readable stream:
+The {{domxref("ReadableStream/from_static", "from()")}} static method can convert an iterator, such as an {{jsxref("Array")}} or {{jsxref("Map")}}, or an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) to a readable stream:
+
+```js
+const myReadableStream = ReadableStream.from(iteratorOrAsyncIterator);
+```
+
+On browsers that don't support the `from()` method you can instead create your own [custom readable stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#creating_your_own_custom_readable_stream) to do the achieve the same result:
 
 ```js
 function iteratorToStream(iterator) {
@@ -136,8 +142,6 @@ function iteratorToStream(iterator) {
   });
 }
 ```
-
-This works with both async and non-async iterators.
 
 ### Async iteration of a stream using for await...of
 
