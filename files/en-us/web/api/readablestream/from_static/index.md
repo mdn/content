@@ -12,7 +12,7 @@ browser-compat: api.ReadableStream.from_static
 
 The **`ReadableStream.from()`** static method returns a {{domxref("ReadableStream")}} from a provided iterable or async iterable object.
 
-The method can be used to wrap iterable and async iterable objects as readable streams, including arrays, sets, async generators, `ReadableStreams`, Node.js `readable` streams, and so on.
+The method can be used to wrap iterable and async iterable objects as readable streams, including arrays, sets, arrays of promises, async generators, `ReadableStreams`, Node.js `readable` streams, and so on.
 
 ## Syntax
 

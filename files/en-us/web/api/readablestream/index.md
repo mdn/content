@@ -125,7 +125,7 @@ The {{domxref("ReadableStream/from_static", "from()")}} static method can conver
 const myReadableStream = ReadableStream.from(iteratorOrAsyncIterator);
 ```
 
-On browsers that don't support the `from()` method you can instead create your own [custom readable stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#creating_your_own_custom_readable_stream) to do the achieve the same result:
+On browsers that don't support the `from()` method you can instead create your own [custom readable stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#creating_your_own_custom_readable_stream) to achieve the same result:
 
 ```js
 function iteratorToStream(iterator) {
