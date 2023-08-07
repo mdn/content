@@ -35,7 +35,11 @@ A {{domxref("ReadableStream")}}.
   - : Thrown if the passed parameter is not an iterable or async iterable (does not define the `@@iterator` or `@@asyncIterator` method).
     Also thrown if, during iteration, the result of the next step is not an object or is a promise that does not resolve to an object.
 
-### Examples
+## Examples
+
+### Convert an async iterator to a ReadableStream
+
+This live example demonstrates how you can convert an async iterable to a `ReadableStream`, and then how this stream might be consumed.
 
 ```html hidden
 <pre id="log"></pre>
@@ -46,16 +50,32 @@ const logElement = document.getElementById("log");
 function log(text) {
   logElement.innerText += `${text}\n`;
 }
+
+if (!ReadableStream.from) {
+  log("ReadableStream.from() is not supported");
+}
 ```
 
+The async iterable is an anonymous generator function that yields the values of 1, 2 and 3 when it is called three times.
+This is passed to `ReadableStream.from()` to create the `ReadableStream`.
+
 ```js
+// Define an asynchronous iterator
 const asyncIterator = (async function* () {
   yield 1;
   yield 2;
   yield 3;
 })();
 
-let myReadableStream = ReadableStream.from(asyncIterator);
+// Create ReadableStream from iterator
+const myReadableStream = ReadableStream.from(asyncIterator);
+```
+
+[Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) demonstrates several ways to consume a stream.
+The code below uses a `for ... await` loop, as this method is the simplest.
+Each iteration of the loop logs the current chunk from the stream.
+
+```js
 consumeStream(myReadableStream);
 
 // Iterate a ReadableStream asynchronously
@@ -68,7 +88,55 @@ async function consumeStream(readableStream) {
 }
 ```
 
-{{EmbedLiveSample("Examples")}}
+The output of consuming the stream is shown below (if `ReadableStream.from()` is supported).
+
+{{EmbedLiveSample("Convert an async iterator to a ReadableStream","100%", "80")}}
+
+### Convert an Array to a ReadableStream
+
+This example demonstrates how you can convert an `Array`to a `ReadableStream`.
+The iterable is just an array of strings that is passed to `ReadableStream.from()` to create the `ReadableStream`.
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```js hidden
+const logElement = document.getElementById("log");
+function log(text) {
+  logElement.innerText += `${text}\n`;
+}
+
+if (!ReadableStream.from) {
+  log("ReadableStream.from() is not supported");
+}
+```
+
+```js
+// An Array of vegetable names
+const vegetables = ["Carrot", "Broccoli", "Tomato", "Spinach"];
+
+// Create ReadableStream from the Array
+const myReadableStream = ReadableStream.from(vegetables);
+```
+
+```js hidden
+consumeStream(myReadableStream);
+
+// Iterate a ReadableStream asynchronously
+async function consumeStream(readableStream) {
+  for await (const chunk of myReadableStream) {
+    // Do something with each chunk
+    // Here we just log the values
+    log(`chunk: ${chunk}`);
+  }
+}
+```
+
+We use the same approach as in the previous example to consume the stream (see previous section).
+The output is shown below.
+
+{{EmbedLiveSample("Convert an Array to a ReadableStream","100%", "100")}}
 
 ## Specifications
 
