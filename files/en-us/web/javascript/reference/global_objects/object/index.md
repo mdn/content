@@ -141,7 +141,7 @@ if (user.authenticated) {
 
 JavaScript also has built-in APIs that produce `null`-prototype objects, especially those that use objects as ad hoc key-value collections. For example:
 
-- The return value of {{jsxref("Array.prototype.group()")}}
+- The return value of {{jsxref("Object.groupBy()")}}
 - The `groups` and `indices.groups` properties of the result of {{jsxref("RegExp.prototype.exec()")}}
 - [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) (all `@@unscopables` objects should have `null`-prototype)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
