@@ -41,6 +41,8 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### APIs
 
+- The {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} static member is now supported, allowing developers to construct a readable stream from any iterable or async iterable object ([Firefox bug 1772772](https://bugzil.la/1772772)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
