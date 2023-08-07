@@ -42,11 +42,9 @@ A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 
 ## Description
 
-`Object.groupBy()` calls a provided `callbackFn` function once for each element in the iterable, returning a string or symbol (values that are neither type are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)) indicating the group of the element.
-A new property and array is created in the result object for each unique group name that is returned by the callback.
-Each element is added to the array in the property that corresponds to its group.
+`Object.groupBy()` calls a provided `callbackFn` function once for each element in an iterable. The callback function should return a string or symbol (values that are neither type are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)) indicating the group of the associated element. The values returned by `callbackFn` are used as keys for the object returned by `Map.groupBy()`. Each key has an associated array containing all the elements for which the callback returned the same value.
 
-The returned object references the _same_ elements as the original iterable (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of these elements will be reflected in both the original iterable and the returned object.
+The elements in the returned object and the original iterable are the same (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of the elements will be reflected in both the original iterable and the returned object.
 
 ## Examples
 
