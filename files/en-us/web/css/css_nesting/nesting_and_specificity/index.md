@@ -6,6 +6,43 @@ page-type: guide
 
 {{CSSRef}}
 
+The {{cssxref('specificity')}} of the `&` nesting selector uses the largest specificity of the selector list, this is identical to the behavior of {{cssxref(':is',':is()')}}.
+
+```html
+<b class="foo">
+  <c>Blue text</c>
+</b>
+```
+
+## `&` nesting syntax
+
+```css
+#a,
+b {
+  & c {
+    color: blue;
+  }
+}
+.foo c {
+  color: red;
+}
+```
+
+## `:is()` syntax
+
+```css
+:is(#a, b) {
+  & c {
+    color: blue;
+  }
+}
+.foo c {
+  color: red;
+}
+```
+
+In this example the id selector (`#a`) has a specificity of [1,0,0], the type selector (`b`) has a specificity of [0,0,1] the `&` nesting selector and `:is()` pseudo selector both take the highest specificity making it [1,0,0]. The `.foo` class selector has a specificity of [0,1,0]. This makes the specificity of `& c` a total of [1,0,1] and `.foo c` a total of [0,1,1] meaning that `color: blue;` wins out.
+
 ## See Also
 
 - [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting)
