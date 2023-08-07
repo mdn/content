@@ -42,7 +42,7 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `system-ui`
 
-  - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
+  - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic family is provided for typefaces that don't map cleanly into the others.
 
 - `ui-serif`
 
