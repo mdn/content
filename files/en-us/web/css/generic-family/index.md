@@ -46,15 +46,15 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `ui-serif`
 
-  - : The default user interface serif font. See the definition of serif above.
+  - : The default user interface serif font. See the definition of `serif` above.
 
 - `ui-sans-serif`
 
-  - : The default user interface sans-serif font. See the definition of sans-serif above.
+  - : The default user interface sans-serif font. See the definition of `sans-serif` above.
 
 - `ui-monospace`
 
-  - : The default user interface monospace font. See the definition of monospace above.
+  - : The default user interface monospace font. See the definition of` monospace` above.
 
 - `ui-rounded`
 
