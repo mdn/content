@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.Array.map
 
 {{JSRef}}
 
-The **`map()`** method **creates
-a new array** populated with the results of calling a provided function on
+The **`map()`** method creates
+a new array populated with the results of calling a provided function on
 every element in the calling array.
 
 {{EmbedInteractiveExample("pages/js/array-map.html")}}
