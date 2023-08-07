@@ -22,7 +22,7 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `serif`
 
-  - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.Example serif fonts include Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, and URW Palladio.
+  - : A serif is a small line or stroke attached to the end of a larger stroke in a letter. In serif fonts, glyphs have finishing strokes, flared or tapering ends. Examples include Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, and URW Palladio.
 
 - `sans-serif`
 
