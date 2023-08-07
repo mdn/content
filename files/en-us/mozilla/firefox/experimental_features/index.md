@@ -349,6 +349,50 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
+### ray() CSS function
+
+The CSS {{cssxref("ray")}} function is a way to define an {{cssxref("offset-path")}}. The function defines the path as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle ([Firefox bug 1582554](https://bugzil.la/1582554)).
+
+In version 112, the `<ray_size>` optional parameter was added to the function. If no `<ray_size>` parameter is provided, it assumes the default value of `closest-side` ([Firefox bug 1820071](https://bugzil.la/1820071)).
+
+In version 116, the `at <position>` optional parameter was added to the function. If omitted, the `offset-position` value of the element is used. If both `at <position>` and `offset-position` values are absent, `offset-position: auto` is used as ray's starting position, which places the element at the `top left` corner of the element's box. ([Firefox bug 1820070](https://bugzil.la/1820070)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>72</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.motion-path-ray.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Masonry grid layout
 
 Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See [Firefox bug 1607954](https://bugzil.la/1607954) for more details.
