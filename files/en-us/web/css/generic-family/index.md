@@ -54,7 +54,7 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `ui-monospace`
 
-  - : The default user interface monospace font. See the definition of` monospace` above.
+  - : The default user interface monospace font. See the definition of `monospace` above.
 
 - `ui-rounded`
 
