@@ -18,7 +18,7 @@ beginning of an array and returns the new length of the array.
 unshift()
 unshift(element0)
 unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element0, element1, /* …, */ elementN)
 ```
 
 ### Parameters

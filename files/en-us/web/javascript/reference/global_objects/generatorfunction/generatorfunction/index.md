@@ -23,12 +23,12 @@ The `GeneratorFunction()` constructor is not intended to be used directly, and a
 new GeneratorFunction(functionBody)
 new GeneratorFunction(arg0, functionBody)
 new GeneratorFunction(arg0, arg1, functionBody)
-new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+new GeneratorFunction(arg0, arg1, /* …, */ argN, functionBody)
 
 GeneratorFunction(functionBody)
 GeneratorFunction(arg0, functionBody)
 GeneratorFunction(arg0, arg1, functionBody)
-GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+GeneratorFunction(arg0, arg1, /* …, */ argN, functionBody)
 ```
 
 > **Note:** `GeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `GeneratorFunction` instance.
