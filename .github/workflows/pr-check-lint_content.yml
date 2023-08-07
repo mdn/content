@@ -5,9 +5,7 @@ on:
     branches:
       - main
     paths:
-      - .nvmrc
-      - "*.md"
-      - "files/**/*.md"
+      - "**/*.md"
 
 permissions:
   pull-requests: write
@@ -19,26 +17,14 @@ jobs:
     steps:
       - name: Checkout BASE
         uses: actions/checkout@v3
+        with:
+          path: pr_base
 
       - name: Checkout HEAD
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
-
-      - name: Get changed content from HEAD
-        run: |
-          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
-          git config --global user.name "mdn-bot"
-
-          rm -r files *.md
-          mv pr_head/files pr_head/*.md .
-          rm -r pr_head
-
-          # To avoid contents of PR getting into the diff that we are going to generate
-          # after running the linters, here we make a dummy commit.
-          # Note, this commit is not getting pushed.
-          git commit -am "Code from PR head"
 
       - name: Get changed files
         env:
@@ -51,22 +37,39 @@ jobs:
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
           # filter out files that are not markdown
-          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
+          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i ".*\.md$" | xargs)
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
+
+      - name: Get changed content from HEAD
+        run: |
+          cd pr_head
+          cp --parents -t ../pr_base/ ${{ env.DIFF_DOCUMENTS }}
+
+          cd ../pr_base
+          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
+          git config --global user.name "mdn-bot"
+
+          # To avoid contents of PR getting into the diff that we are going to generate
+          # after running the linters, here we make a dummy commit.
+          # Note, this commit is not getting pushed.
+          git commit -am "Code from PR head"
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: "./pr_base/.nvmrc"
           cache: yarn
+          cache-dependency-path: "./pr_base/yarn.lock"
 
       - name: Install all yarn packages
+        working-directory: ./pr_base
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint and format markdown files
+        working-directory: ./pr_base
         run: |
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
@@ -110,6 +113,7 @@ jobs:
 
       - name: Suggest changes using diff
         if: env.FILES_MODIFIED == 'true'
+        working-directory: ./pr_base
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -124,6 +128,7 @@ jobs:
 
       - name: Add reviews for markdownlint errors
         if: env.MD_LINT_FAILED == 'true'
+        working-directory: ./pr_base
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
