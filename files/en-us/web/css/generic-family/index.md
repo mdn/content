@@ -62,7 +62,7 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `math`
 
-  - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double-struck glyphs with distinct meanings.
+  - : Fonts for displaying mathematical expressions, for example superscript and subscript, brackets that cross several lines, nesting expressions, and double-struck glyphs with distinct meanings.
 
 - `emoji`
 
