@@ -1020,7 +1020,7 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Array grouping methods
+### Array (iterable) grouping methods
 
 The {{jsxref("Object.groupBy()")}} and {{jsxref("Map.groupBy()")}} static methods are used to group the elements of an iterable using a string or value returned by a test function (respectively).
 The first method should be used when strings can be used to represent element groups, while the method in `Map` might be used when elements are associated with a particular object.
