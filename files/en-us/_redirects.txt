@@ -5759,6 +5759,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Retiring_your_extension	https://extensionworkshop.com/documentation/manage/retiring-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Sidebars	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Tips	/en-US/docs/Mozilla/Add-ons/WebExtensions
 /en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/en-US/docs/Mozilla/Add-ons/WebExtensions/API
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs	/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
