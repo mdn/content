@@ -246,7 +246,9 @@ This example inserts an image before each link, and adds its `id` attribute afte
 <ul>
   <li><a id="moz" href="https://www.mozilla.org/">Mozilla Home Page</a></li>
   <li>
-    <a id="mdn" href="https://developer.mozilla.org/">Mozilla Developer Network</a>
+    <a id="mdn" href="https://developer.mozilla.org/"
+      >Mozilla Developer Network</a
+    >
   </li>
 </ul>
 ```
