@@ -5722,7 +5722,9 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/onChange	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onProxyError	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onError
-/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/registerProxyScript	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/registerProxyScript	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/RegisteredUserScript.unregister()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update
