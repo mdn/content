@@ -46,7 +46,7 @@ Version parts are also compared left to right; parts A and C are compared as num
 
 ## Examples
 
-```
+```plain
 1.-1
 < 1 == 1. == 1.0 == 1.0.0
 < 1.1a < 1.1aa < 1.1ab < 1.1b < 1.1c

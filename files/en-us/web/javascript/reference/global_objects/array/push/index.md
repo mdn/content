@@ -18,7 +18,7 @@ an array and returns the new length of the array.
 push()
 push(element0)
 push(element0, element1)
-push(element0, element1, /* … ,*/ elementN)
+push(element0, element1, /* …, */ elementN)
 ```
 
 ### Parameters

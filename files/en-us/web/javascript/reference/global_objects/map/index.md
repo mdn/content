@@ -305,6 +305,11 @@ The following are examples of read-only `Map`-like browser objects:
 - {{jsxref("Map/@@species", "Map[@@species]")}}
   - : The constructor function that is used to create derived objects.
 
+## Static methods
+
+- {{jsxref("Map.groupBy()")}} {{Experimental_Inline}}
+  - : Groups the elements of a given iterable using the values returned by a provided callback function. The final returned `Map` uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
+
 ## Instance properties
 
 These properties are defined on `Map.prototype` and shared by all `Map` instances.
