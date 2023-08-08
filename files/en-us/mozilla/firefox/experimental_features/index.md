@@ -1650,7 +1650,7 @@ The following HTML global attributes are supported:
 - [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
 - [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
 
-See [Firefox bug 934425](https://bugzil.la/934425) for more details.
+See [Firefox bug 1823757](https://bugzil.la/1823757) for more details.
 
 <table>
   <thead>
