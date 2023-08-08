@@ -54,7 +54,9 @@ The deprecated HTML `size` attribute, with a computed value between `1` and `7`,
 
 ## Formal syntax
 
-{{csssyntax}}
+```md
+<absolute-size> = xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large
+```
 
 ## Examples
 
