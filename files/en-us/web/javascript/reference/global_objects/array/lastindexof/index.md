@@ -32,7 +32,7 @@ lastIndexOf(searchElement, fromIndex)
 
 ### Return value
 
-The last index of the element in the array; **-1** if not found.
+The last index of the element in the array; `-1` if not found.
 
 ## Description
 

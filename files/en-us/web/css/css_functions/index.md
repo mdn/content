@@ -145,9 +145,9 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Sign-related functions
 
-- {{CSSxRef("abs", "abs()")}} {{Experimental_Inline}}
+- {{CSSxRef("abs", "abs()")}}
   - : Calculates the absolute value of a number.
-- {{CSSxRef("sign", "sign()")}} {{Experimental_Inline}}
+- {{CSSxRef("sign", "sign()")}}
   - : Calculates the sign (positive or negative) of the number.
 
 ## Filter functions
