@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### CSS
 
+- The [`math-style`](/en-US/docs/Web/CSS/math-style) and [`math-depth`](/en-US/docs/Web/CSS/math-depth) properties are now supported, as well as the `math` value for the [`font-size`](/en-US/docs/Web/CSS/font-size#values) property ([Firefox bug 1845516](https://bugzil.la/1845516)).
+
 #### Removals
 
 ### JavaScript
