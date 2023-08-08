@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-absolute-size
 
 {{CSSRef}}
 
-The **`<absolute-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes font-size keywords mapped to the deprecated HTML [`size`](#html-size-attribute) attribute. Used in the {{cssxref("font-size")}} property and the {{cssxref("font")}} shorthand.
+The **`<absolute-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes font-size keywords mapped to the deprecated HTML [`size`](#html-size-attribute) attribute. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
 
 ## Syntax
 
