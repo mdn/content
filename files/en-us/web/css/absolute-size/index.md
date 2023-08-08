@@ -17,36 +17,48 @@ The `<absolute-size>` data type is defined using a keyword value chosen from the
 
 - `xx-small`
 
-  - : Mapped to `size="1"`. An absolute size three sizes smaller than `medium`.
+  - : An absolute size 60% the size of `medium`. Mapped to `size="1"`.
 
 - `x-small`
 
-  - : Mapped to `size="2"`. An absolute size two sizes smaller than `medium`.
+  - : An absolute size 75% the size of `medium`.
 
 - `small`
 
-  - : Mapped to `size="3"`. An absolute size one size smaller than `medium`.
+  - : An absolute size 89% the size of `medium`. Mapped to `size="2"`.
 
 - `medium`
 
-  - : Mapped to `size="4"`. The user's preferred font size. This values is used as the reference middle value.
+  - : The user's preferred font size. This values is used as the reference middle value. Mapped to `size="3"`.
 
 - `large`
 
-  - : Mapped to `size="5"`. An absolute size one size larger than `medium`.
+  - : An absolute size 20% larger than `medium`. Mapped to `size="4"`.
 
 - `x-large`
 
-  - : Mapped to `size="6"`. An absolute size two sizes larger than `medium`.
+  - : An absolute size 50% larger than `medium`. Mapped to `size="5"`.
 
 - `xx-large`
-  - : Mapped to `size="7"`. An absolute size three sizes larger than `medium`.
+
+  - : An absolute size twice the size of `medium`. Mapped to `size="6"`.
+
+- `xxx-large`
+  - : An absolute size three times the size of `medium`. Mapped to `size="7"`.
 
 ## Description
 
 The values of each `<absolute-size>` keyword is sized relative to the `medium` font size and the individual device's characteristics, such as device resolution. Usser agents maintain a table of font sizes for each font, with the `<absolute-size>` keywords being the index.
 
-In CSS1, the scaling factor between adjacent indexes was 1.5, which was too large. In CSS2 (1998), the scaling factor between adjacent keyword value indexes was 1.2, which created issues for the small values. As fixed ratio between adjacent absolute-size keywords was found to be problematic, there is no longer a fixed ratio recommendation. The only recommendation is that, to preserve readability, the smallest font size should not be less than `9px`.
+In CSS1, the scaling factor between adjacent indexes was 1.5, which was too large. In CSS2 (1998), the scaling factor between adjacent keyword value indexes was 1.2, which created issues for the small values. As a single fixed ratio between adjacent absolute-size keywords was found to be problematic, there is no longer a fixed ratio recommendation. The only recommendation is that, to preserve readability, the smallest font size should not be less than `9px`.
+
+The following table lists the scaling factor, the deprecated [HTML `size` attribute](#html-size-attribute) mapping, and the mapping to [`<h1>` to `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) headings for each `<absolute-size>` keyword value.
+
+| `<absolute-size>`                                              | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
+| -------------------------------------------------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |
+| scaling factor                                                 | 3/5      | 3/4     | 8/9   | 1      | 6/5   | 3/2     | 2/1      | 3/1       |
+| HTML `<font>` size                                             | 1        |         | 2     | 3      | 4     | 5       | 6        | 7         |
+| [HTML headings](/en-US/docs/Web/HTML/Element/Heading_Elements) | h6       |         | h5    | h4     | h3    | h2      | h1       |           |
 
 ### HTML size attribute
 
@@ -54,7 +66,7 @@ The deprecated HTML `size` attribute, with a computed value between `1` and `7`,
 
 ## Formal syntax
 
-```md
+```plain
 <absolute-size> = xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large
 ```
 
@@ -113,5 +125,6 @@ li {
 
 ## See also
 
-- The {{cssxref("font")}} and {{cssxref("font-size")}} properties
-- The [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
+- CSS {{cssxref("relative-size")}} data type
+- CSS {{cssxref("font")}} and {{cssxref("font-size")}} properties
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
