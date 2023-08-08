@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.findIndex
 
 {{JSRef}}
 
-he **`findIndex()`** method of {{jsxref("TypedArray")}} instances returns the index of the first element in a typed array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. This method has the same algorithm as {{jsxref("Array.prototype.findIndex()")}}.
+The **`findIndex()`** method of {{jsxref("TypedArray")}} instances returns the index of the first element in a typed array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. This method has the same algorithm as {{jsxref("Array.prototype.findIndex()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-findindex.html")}}
 
@@ -75,7 +75,7 @@ console.log(uint16.findIndex(isPrime)); // 2
 ## See also
 
 - [Polyfill of `TypedArray.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.findLast()")}}
