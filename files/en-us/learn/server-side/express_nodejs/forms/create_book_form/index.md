@@ -95,7 +95,7 @@ exports.book_create_post = [
 
       // Mark our selected genres as checked.
       for (const genre of allGenres) {
-        if (book.genre.indexOf(genre._id) > -1) {
+        if (book.genre.includes(genre._id)) {
           genre.checked = "true";
         }
       }
@@ -151,7 +151,7 @@ In order to mark the genres that were checked by the user we iterate through all
 ```js
 // Mark our selected genres as checked.
 for (const genre of allGenres) {
-  if (book.genre.indexOf(genre._id) > -1) {
+  if (book.genre.includes(genre._id)) {
     genre.checked = "true";
   }
 }
