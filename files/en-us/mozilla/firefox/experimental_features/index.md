@@ -974,6 +974,49 @@ The CSS {{cssxref("offset-position")}} property defines the initial position of 
   </tbody>
 </table>
 
+### abs() and sign() math functions
+
+The CSS [`abs()`](/en-US/docs/Web/CSS/abs) and [`sign()`](/en-US/docs/Web/CSS/sign) math functions allow you to get the absolute value and the sign of an argument, respectively.
+See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](https://bugzil.la/1814589) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preferences name</th>
+      <td colspan="2">
+      <code>layout.css.abs-sign.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -1020,11 +1063,11 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Array grouping methods
+### Array (iterable) grouping methods
 
-The {{jsxref("Array.prototype.group()")}} and {{jsxref("Array.prototype.groupToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
-The `groupBy` method should be used when strings can be used to represent element groups, while `groupByToMap()` should be used in cases where it makes sense to use a value as the key.
-(See [Firefox bug 1739648](https://bugzil.la/1739648) for more details.)
+The {{jsxref("Object.groupBy()")}} and {{jsxref("Map.groupBy()")}} static methods are used to group the elements of an iterable using a string or value returned by a test function (respectively).
+The first method should be used when strings can be used to represent element groups, while the method in `Map` might be used when elements are associated with a particular object.
+(See [Firefox bug 1841518](https://bugzil.la/1841518) for more details.)
 
 <table>
   <thead>
@@ -1037,27 +1080,27 @@ The `groupBy` method should be used when strings can be used to represent elemen
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>98</td>
-      <td>Yes</td>
+      <td>117</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>98</td>
+      <td>NA</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>98</td>
+      <td>NA</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>98</td>
+      <td>NA</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2">None</td>
+      <td colspan="2"><code>javascript.options.experimental.array_grouping</code></td>
     </tr>
   </tbody>
 </table>
