@@ -72,10 +72,34 @@ The **CSS fonts** module defines font-related properties and how font resources 
 
 ### Data types
 
+- {{cssxref("absolute-size")}}
 - {{cssxref("generic-family")}}
-- all-petite-caps
-  all-small-caps
-  aspect value
+- {{cssxref("relative-size")}}
+
+```html
+- {{cssxref("")}}
+<color-font-tech>
+  <common-lig-values>
+    <contextual-alt-values>
+      <discretionary-lig-values>
+        <east-asian-variant-values>
+          <east-asian-width-values>
+            <family-name>
+              <feature-tag-value>
+                <feature-value-name>
+                  <font-features-tech>
+                    <font-format>
+                      <font-stretch-css3>
+                        <font-tech>
+                          <font-variant-css2>
+                            <font-weight-absolute>
+                              <historical-lig-values>
+                                <numeric-figure-values>
+                                  <numeric-fraction-values>
+                                    <numeric-spacing-values>
+                                      <palette-identifier></palette-identifier></numeric-spacing-values></numeric-fraction-values></numeric-figure-values></historical-lig-values></font-weight-absolute></font-variant-css2></font-tech></font-stretch-css3></font-format></font-features-tech></feature-value-name></feature-tag-value></family-name></east-asian-width-values></east-asian-variant-values></discretionary-lig-values></contextual-alt-values></common-lig-values
+></color-font-tech>
+```
 
 ### Interfaces
 
