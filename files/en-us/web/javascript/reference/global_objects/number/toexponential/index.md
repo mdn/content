@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.Number.toExponential
 
 {{JSRef}}
 
-The **`toExponential()`** method returns a string representing
-the {{jsxref("Number")}} object in exponential notation.
+The **`toExponential()`** method of {{jsxref("Number")}} values returns a string representing
+this number in exponential notation.
 
 {{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Boolean.toString
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the specified boolean value.
+The **`toString()`** method of {{jsxref("Boolean")}} values returns a string representing the specified boolean value.
 
 {{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
 
