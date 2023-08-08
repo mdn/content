@@ -117,7 +117,7 @@ ul {
 
 ### Result
 
-{{EmbedLiveSample("Examples", "500", "300")}}
+{{EmbedLiveSample("Examples", "500", "355")}}
 
 ## Specifications
 
