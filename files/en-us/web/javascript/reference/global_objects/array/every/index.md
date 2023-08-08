@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.every
 
 {{JSRef}}
 
-The **`every()`** method tests whether
+The **`every()`** method of {{jsxref("Array")}} instances tests whether
 all elements in the array pass the test implemented by the provided function. It
 returns a Boolean value.
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.replace
 
 {{JSRef}}
 
-The **`replace()`** method returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
+The **`replace()`** method of {{jsxref("String")}} values returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
 
 {{EmbedInteractiveExample("pages/js/string-replace.html")}}
 

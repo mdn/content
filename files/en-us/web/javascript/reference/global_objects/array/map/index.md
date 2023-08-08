@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.map
 
 {{JSRef}}
 
-The **`map()`** method creates
+The **`map()`** method of {{jsxref("Array")}} instances creates
 a new array populated with the results of calling a provided function on
 every element in the calling array.
 
