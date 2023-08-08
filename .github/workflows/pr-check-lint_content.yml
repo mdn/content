@@ -38,7 +38,8 @@ jobs:
           # To avoid contents of PR getting into the diff that we are going to generate
           # after running the linters, here we make a dummy commit.
           # Note, this commit is not getting pushed.
-          git commit -am "Code from PR head"
+          git add .
+          git commit -m "Code from PR head"
 
       - name: Get changed files
         env:
