@@ -7,7 +7,7 @@ browser-compat: css.properties.offset-path
 
 {{CSSRef}}
 
-The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for an element to follow and the element's positioning within the path's parent container or SVG coordinate system. The path is a geometrical shape along which the element gets positioned or moves.
+The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for an element to follow and the element's positioning within the path's parent container or SVG coordinate system. The path is a line, a curve, or geometrical shape along which the element gets positioned or moves.
 
 The `offset-path` property is used in combination with the {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}}, and {{cssxref("offset-anchor")}} properties to control the position and orientation of the element along a path.
 
@@ -51,29 +51,29 @@ offset-path: unset;
 
 ### Values
 
-You can either specify the `none` keyword or one or both of `<offset-path>` and `<coord-box>` values.
+The `offset-path` takes as it's value an `<offset-path>` value, a `<coord-box>` value, or both or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}}, a {{cssxref("url","url()")}}, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
 
 - `none`
 
-  - : Specifies that the element does not follow any offset path. This is the default value. This value is equivalent of the element not having any [offset transform](/en-US/docs/Web/CSS/offset). The element's movement in this case is determined by its default position properties, such as {{cssxref("top")}} and {{cssxref("left")}}, instead of an offset path.
+  - : Specifies that the element does not follow any offset path. The `none` value is equivalent to the element not having any [offset transform](/en-US/docs/Web/CSS/offset). The element's movement in this case is determined by its default position properties, such as {{cssxref("top")}} and {{cssxref("left")}}, instead of an offset path. This is the default value.
 
 - `<offset-path>`
 
-  - : Specifies the geometrical offset path. This parameter is optional. If not specified, the default value of the path shape is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block). `<offset-path>` is specified as one of the following three values:
+  - : A `ray()`, a `url()`, or a `<basic-shape>` specifying the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block).
 
     - {{cssxref("ray","ray()")}}
 
-      - : Defines the path, which is a line segment, from an element's starting position and extending at the specified angle. This value accepts up to four parameters – an {{CSSxRef("angle")}}, an optional size value, the optional keyword `contain`, and an optional `at <position>`.
+      - : Defines a line starting at a set position, of a set length, and extending at the specified angle. The `ray()` function accepts up to four parameters – an {{CSSxRef("angle")}}, an optional size value, the optional keyword `contain`, and an optional `at <position>`.
 
     - {{cssxref("url","url()")}}
 
-      - : Specifies the URL reference of an SVG shape element — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect`. The referenced shape's geometry is the equivalent offset path. If the URL does not reference a shape element (because it references a different element or resolves to a non-SVG document or doesn't resolve at all), the derived offset path is `path("M0,0")` (that is, a `<basic-shape>`).
+      - : Specifies the URL reference of a shape element with an SVG. The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, or {{SVGElement("rect")}} element referenced by the`id` in the `url()` parameter. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
 
     - [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape)
 
-      - : Specifies the offset path as the equivalent path of a [basic shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) function such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), {{cssxref("path","path()")}}, or [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon). For example, if the `<basic_shape>` is an `ellipse()` function, then the path is the outline of the circle/ellipse – it starts at the rightmost point of the circle/ellipse, and then is composed of four circular arcs, each comprising a quarter of the circle/ellipse, proceeding clockwise, ending with a segment-completing close path operation. If a `<basic-shape>` type accepts the `at <position>` parameter but the parameter is omitted, and the element has an {{cssxref("offset-position")}}, the `offset-position` value is used for the `at <position>` parameter. Otherwise, the `at <position>` parameter defaults as specified for each shape function.
+      - : Specifies the offset path as the equivalent path of a [CSS basic shape function](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes), such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), {{cssxref("path","path()")}}, or [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon). For example, if the `<basic_shape>` is an `ellipse()` function, then the path is the outline of the ellipse, starting at the rightmost point of the ellipse, proceeding clockwise through a full rotation. For `ellipse()` and `circle()`, which accept the `at <position>` parameter, if the `<position>` is omitted, the position defaults to `center` unless the element has an {{cssxref("offset-position")}} specified. In this case, the `offset-position` value is used for the `at <position>` parameter.
 
-- {{cssxref("box_value","&lt;coord-box&gt;")}}
+- [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)
 
   - : Specifies the size information of the reference box containing the path. The reference box is derived from the element that establishes the containing block for this element. This parameter is optional. If not specified, the default value is `border-box`. In SVG, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `url()` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
 
