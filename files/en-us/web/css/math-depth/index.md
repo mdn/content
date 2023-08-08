@@ -49,13 +49,56 @@ math-depth: unset;
 
 ## Examples
 
+### HTML
+
+```html
+<p>
+  Example formulas:
+  <math>
+    <munder displaystyle="true">
+      <mo>∑</mo>
+      <mi>A</mi>
+    </munder>
+  </math>
+  <math class="depth-1">
+    <munder displaystyle="true">
+      <mo>∑</mo>
+      <mi>A</mi>
+    </munder>
+  </math>
+  <math class="depth-3">
+    <munder displaystyle="true">
+      <mo>∑</mo>
+      <mi>A</mi>
+    </munder>
+  </math>
+</p>
+```
+
 ### CSS
 
 ```css
+p {
+  font-size: 2rem;
+}
+
 math {
+  font-size: math;
   math-depth: auto-add;
 }
+
+.depth-1 {
+  math-depth: add(1);
+}
+
+.depth-3 {
+  math-depth: add(3);
+}
 ```
+
+### Result
+
+{{embedlivesample('Examples')}}
 
 ## Specifications
 
