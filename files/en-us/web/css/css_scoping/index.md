@@ -11,7 +11,12 @@ The **CSS scoping** module defines the CSS scoping and encapsulation mechanisms,
 
 CSS styles are either global in scope or scoped to a {{Glossary("shadow tree")}}. Globally scoped styles apply to all the elements in the node tree, including custom elements in that tree, but do not apply to the shadow trees of which each custom element is composed. Selectors and their associated style definitions don't bleed between scopes.
 
-Within the CSS of a shadow tree, selectors can't see elements outside the tree and selectors outside of a shadow tree don't apply within. Custom elements have their own shadow trees. Each shadow tree contains all the components that make up the custom element, but not the custom element, or "host", itself. Sometimes it's useful to be able to style a host from inside the shadow tree context. The CSS scoping module makes this possible by defining selectors that enable a shadow tree to style its host and a selector that enables external CSS to style elements within the shadow DOM if the custom element is set up to accept external styles.
+Within the CSS of a shadow tree, selectors don't select elements outside the tree, either in the global scope or in other shadow trees. Each custom element has its own shadow tree, which contains all the components that make up the custom element (but not the custom element, or "host", itself).
+
+Sometimes it's useful to be able to style a host from inside the shadow tree context. The CSS scoping module makes this possible by defining selectors that:
+
+- Enable a shadow tree to style its host.
+- Enable external CSS to style elements within a shadow DOM (but only if the associated custom element is set up to accept external styles).
 
 ## Reference
 
@@ -26,7 +31,7 @@ Within the CSS of a shadow tree, selectors can't see elements outside the tree a
 
 - [Web components](/en-US/docs/Web/API/Web_components)
 
-  - : Web components concepts and usage, with an introduction to the different technologies used to create reusable custom elements whose functionality is encapsulated away from the rest of the code.
+  - : An introduction to the different technologies used to create reusable web components — custom elements whose functionality is encapsulated away from the rest of your code.
 
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 
@@ -64,7 +69,7 @@ Within the CSS of a shadow tree, selectors can't see elements outside the tree a
   - {{DOMxRef("HTMLTemplateElement")}} interface
   - {{DOMxRef("ShadowRoot")}} interface
 
-> **Note:** Despite the name, the {{CSSXref(":scope")}} pseudo-class, which represents elements that are a reference point, or scope, for selectors to match against, is defined in the [CSS pseudo-classes](/en-US/docs/Web/CSS/CSS_pseudo-classes) module. It is otherwise unrelated to the CSS scoping module, which is focused on scoping as it pertains to the Shadow DOM scoping mechanism.
+> **Note:** Despite the name, the {{CSSXref(":scope")}} pseudo-class, which represents elements that are a reference point (or scope) for selectors to match against, is defined in the [CSS pseudo-classes](/en-US/docs/Web/CSS/CSS_pseudo-classes) module. It is otherwise unrelated to the CSS scoping module, which is focused on scoping as it pertains to the Shadow DOM scoping mechanism.
 
 ## Specifications
 
