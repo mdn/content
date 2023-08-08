@@ -93,7 +93,7 @@ table td {
 
 ## Avoiding DocumentFragment Pitfalls
 
-When passed a {{domxref("DocumentFragment")}} value, [Node.appendChild](en-US/docs/Web/API/Node/appendChild) and related methods will move only the *child nodes* of that value into the target node. Thus, it is usually preferable to attach event handlers to a DocumentFragment's children, rather than to the DocumentFragment itself.
+When passed a {{domxref("DocumentFragment")}} value, {{domxref("Node.appendChild")}} and similar methods will move only the *child nodes* of that value into the target node. Thus, it is usually preferable to attach event handlers to a DocumentFragment's children, rather than to the DocumentFragment itself.
 
 Consider the following HTML and JavaScript:
 
