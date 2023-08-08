@@ -12,10 +12,10 @@ These examples work in Firefox Nightly: most work in earlier versions of Firefox
 
 > **Warning:** Some examples work only on specific domains or pages. Details of any restrictions are provided in each example's readme file. None of the examples work in private browsing windows by default, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing#w_enabling-or-disabling-extensions-in-private-windows) for details.
 
-To try these examples, clone the repository then:
+To try these examples, clone the repository, then install and run the extension using one of these options:
 
-1. load the extension from its source folder using the [Load Temporary Add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) feature.
-2. open the extension's source folder at the command-line and use [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) to run the extension.
+- use the [Load Temporary Add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) feature and open the extension from its source folder.
+- install [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/), open the extension's source folder at the command line, and use `web-ext run`.
 
 The extension stays loaded until you restart Firefox.
 
