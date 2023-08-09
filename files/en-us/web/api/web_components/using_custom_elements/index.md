@@ -76,6 +76,7 @@ The preceding code snippet contains the [`constructor()`](/en-US/docs/Web/JavaSc
 Inside the method connectedCallback, we define all the functionality the element will have when the element is connected to the DOM. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it. We don't use `constructor()` because an element's attributes are unavailable until connected to the DOM.
 
 ```js
+connectedCallback() {
 // Create a shadow root
 this.attachShadow({ mode: "open" }); // sets and returns 'this.shadowRoot'
 
@@ -106,6 +107,7 @@ style.textContent = `.wrapper {
 
 // attach the created elements to the shadow DOM
 this.shadowRoot.append(style, wrapper);
+}
 ```
 
 Finally, we register our custom element on the `CustomElementRegistry` using the `define()` method we mentioned earlier — in the parameters we specify the element name, and then the class name that defines its functionality:
