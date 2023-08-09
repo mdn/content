@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.filter
 
 {{JSRef}}
 
-The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+The **`filter()`** method of {{jsxref("Array")}} instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
 {{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.search
 
 {{JSRef}}
 
-The **`search()`** method executes a search for a match between a regular expression and this {{jsxref("String")}} object.
+The **`search()`** method of {{jsxref("String")}} values executes a search for a match between a regular expression and this string, returning the index of the first match in the string.
 
 {{EmbedInteractiveExample("pages/js/string-search.html")}}
 

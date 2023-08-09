@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.pop
 
 {{JSRef}}
 
-The **`pop()`** method removes the **last**
+The **`pop()`** method of {{jsxref("Array")}} instances removes the **last**
 element from an array and returns that element. This method changes the length of the
 array.
 
