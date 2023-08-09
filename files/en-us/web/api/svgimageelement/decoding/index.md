@@ -28,7 +28,7 @@ A string representing the decoding hint. Possible values are:
 
 The `decoding` property provides a hint to the browser as to whether it should perform image decoding along with other tasks in a single step (`"sync"`), or allow other content to be rendered before this completes (`"async"`). In reality, the differences between the two values are often difficult to perceive and, where there are differences, there is often a better way.
 
-For images that are inserted into the DOM inside the viewport, `"async"` can result in flashes of unstyled content, while `"sync"` can result in small amounts of jank. Using the {{domxref("SVGImageElement.decode()")}} method is usually a better way to achieve atomic presentation without holding up other content.
+For images that are inserted into the DOM inside the viewport, `"async"` can result in flashes of unstyled content, while `"sync"` can result in small amounts of [jank](/en-US/docs/Glossary/Jank). Using the {{domxref("SVGImageElement.decode()")}} method is usually a better way to achieve atomic presentation without holding up other content.
 
 For images inserted into the DOM outside of the viewport, modern browsers will usually decode them before they are scrolled into view and there will be no noticeable difference using either value.
 

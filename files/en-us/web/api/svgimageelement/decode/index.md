@@ -10,8 +10,8 @@ browser-compat: api.SVGImageElement.decode
 
 The **`decode()`** method of the
 {{domxref("SVGImageElement")}} interface initiates asynchronous decoding of an image,
-returning a {{jsxref('Promise')}} that resolves image is decoded and it is safe to append
-the image to the DOM.
+returning a {{jsxref('Promise')}} that resolves once the image is decoded and it is safe to append
+it to the DOM.
 
 ## Syntax
 
@@ -25,8 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref('Promise')}} which resolves once the image data is ready to be used, such as
-by appending it to the DOM, replacing an existing image, and so forth.
+A {{jsxref('Promise')}} that fulfills with `undefined` once the image data is ready to be used, for example by appending it to the DOM, replacing an existing image, and so forth.
 
 ### Exceptions
 

@@ -10,8 +10,8 @@ browser-compat: api.HTMLImageElement.decode
 
 The **`decode()`**
 method of the {{domxref("HTMLImageElement")}} interface returns a
-{{jsxref("Promise")}} that resolves when the image is decoded and it is safe to append
-the image to the DOM.
+{{jsxref("Promise")}} that resolves once the image is decoded and it is safe to append
+it to the DOM.
 
 This can be used to initiate loading of the image prior
 to attaching it to an element in the DOM (or adding it to the DOM as a new element), so
@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-A {{jsxref('Promise')}} which is resolved once the image data is ready to be used.
+A {{jsxref('Promise')}} that fulfills with `undefined` once the image data is ready to be used.
 
 ### Exceptions
 
