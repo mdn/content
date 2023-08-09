@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.ArrayBuffer.detached
 
 {{JSRef}} {{SeeCompatTable}}
 
-The **`detached`** accessor property of {{jsxref("ArrayBuffer")}} instances returns a boolean indicating whether or not the `ArrayBuffer` has been detached (transferred).
+The **`detached`** accessor property of {{jsxref("ArrayBuffer")}} instances returns a boolean indicating whether or not this buffer has been detached (transferred).
 
 ## Description
 
