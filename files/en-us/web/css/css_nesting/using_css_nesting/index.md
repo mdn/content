@@ -10,7 +10,7 @@ The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to wite you
 
 This guide show some of the different ways the nesting in CSS can be arranged.
 
-> **Note:** The early version of the specification did not allow the nesting of [Type selectors](/en-US/docs/Web/CSS/Type_selectors) without the `&` nesting selector. This has now been updated and can be used without the `&` nesting selector. At the time of writing Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector to work.
+> **Note:** The early version of the specification did not allow the nesting of [Type selectors](/en-US/docs/Web/CSS/Type_selectors) without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This has now been updated and can be used without the `&` nesting selector. At the time of writing Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector to work.
 
 ## Child selectors
 
@@ -147,7 +147,7 @@ label {
 
 ## Combinators
 
-CSS Combinators can also be used with or without the `&` nesting selector.
+[CSS Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) can also be used with or without the `&` nesting selector.
 
 ### Example
 
@@ -173,6 +173,16 @@ h2 {
     background-color: black;
   }
 }
+/* this code also be achieved with the & nesting selector */
+/* 
+h2 {
+  color: tomato;
+  & + p {
+    color: white;
+    background-color: black;
+  }
+}
+*/
 ```
 
 ##### Result
@@ -181,7 +191,7 @@ h2 {
 
 ## Compound selectors
 
-When using compound selectors in nested CSS you need to use the `&` nesting selector. The browser will automatically add whitespace between selectors that do not use the `&` nesting selector.
+When using [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) in nested CSS you **have** to use the `&` nesting selector. This is because the browser will automatically add whitespace between selectors that do not use the `&` nesting selector.
 
 In order to target an element with `class="a b"` the `&` nesting selector is needed otherwise the whitespace will break the compound selector.
 
@@ -227,7 +237,9 @@ In this example the `&` nesting selector is used to create compound selectors to
 
 ##### CSS
 
-```css hidden
+Styles for the `.wrapper` to create a {{cssxref('CSS_flexible_box_layout', 'flexbox layout')}}.
+
+```css
 .wrapper,
 .a {
   display: flex;
@@ -236,6 +248,8 @@ In this example the `&` nesting selector is used to create compound selectors to
   padding: 0.5rem;
 }
 ```
+
+Styles using nesting to create compound selectors.
 
 ```css
 .a {
@@ -361,7 +375,7 @@ CSS pre-processors, such as [SASS](https://sass-lang.com/), it is possible to us
 
 This is not possible in CSS nesting, as without an [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) the nested selector is treated as [type selector](/en-US/docs/Web/CSS/Type_selectors) and allowing concatenation would break this.
 
-For [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) using `&Element` would make the CSS invalid as the type selector must come first in a compound selector so must be written `Element&`.
+For [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) using `&Element` (a [Type selector](/en-US/docs/Web/CSS/Type_selectors)) would make the CSS invalid as the type selector must come first in a compound selector so must be written `Element&`.
 
 ```css example-good
 .my-class {
