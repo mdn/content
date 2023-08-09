@@ -26,6 +26,7 @@ Values of this type are strings. Possible values are:
 
   > **Warning:** Due to the lack of isolation, the web page can detect the executed code and interfere with it.
   > Do not use the `MAIN` world unless it is acceptable for web pages to read, access, or modify the logic or data that flows through the executed code.
+  > `MAIN` is not supported in Firefox. Instead Firefox uses "Xray Vision" to achieve similar goals. See [Share objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for details.
 
 ## Browser compatibility
 
