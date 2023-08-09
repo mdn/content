@@ -31,10 +31,10 @@ Strings in JavaScript are UTF-16 encoded. UTF-16 encoding has the concept of _su
 
 ```js
 const strings = [
-  // Lone high surrogate
+  // Lone leading surrogate
   "ab\uD800",
   "ab\uD800c",
-  // Lone low surrogate
+  // Lone trailing surrogate
   "\uDFFFab",
   "c\uDFFFab",
   // Well-formed
