@@ -5759,6 +5759,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Retiring_your_extension	https://extensionworkshop.com/documentation/manage/retiring-your-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Sidebars	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Tips	/en-US/docs/Mozilla/Add-ons/WebExtensions
 /en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/en-US/docs/Mozilla/Add-ons/WebExtensions/API
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs	/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
@@ -12393,6 +12394,8 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/group	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/groupToMap	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/futexWait	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait
