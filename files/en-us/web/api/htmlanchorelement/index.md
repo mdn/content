@@ -17,6 +17,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLElement.accessKey")}}
   - : A string representing a single character that switches input focus to the hyperlink.
+- {{domxref("HTMLAnchorElement.attributionSrc")}}
+  - : Gets and sets the `attributionsrc` attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the resource request once the link is clicked. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to complete the registration of a click-based attribution source.
 - {{domxref("HTMLAnchorElement.download")}}
   - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
 - {{domxref("HTMLAnchorElement.hash")}}

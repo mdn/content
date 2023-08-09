@@ -17,6 +17,8 @@ JavaScript files should be served with the `application/javascript` [MIME type](
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
+- {{domxref("HTMLScriptElement.attributionSrc")}}
+  - : Gets and sets the `attributionsrc` attribute on an {{htmlelement("script")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the resource request once the script is being loaded. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete the registration of a view-based attribution source or attribution trigger, respectively.
 - {{domxref("HTMLScriptElement.type")}}
   - : A string representing the MIME type of the script. It reflects the [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute.
 - {{domxref("HTMLScriptElement.src")}}

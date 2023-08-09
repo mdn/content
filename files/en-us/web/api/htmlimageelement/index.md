@@ -22,6 +22,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.alt")}}
   - : A string that reflects the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) HTML attribute, thus indicating the alternate fallback content to be displayed if the image has not been loaded.
+- {{domxref("HTMLImageElement.attributionSrc")}}
+  - : Gets and sets the `attributionsrc` attribute on an {{htmlelement("img")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the resource request once the image is being loaded. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete the registration of a view-based attribution source or attribution trigger, respectively.
 - {{domxref("HTMLImageElement.complete")}} {{ReadOnlyInline}}
   - : Returns a boolean value that is `true` if the browser has finished fetching the image, whether successful or not. That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
 - {{domxref("HTMLImageElement.crossOrigin")}}

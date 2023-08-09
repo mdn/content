@@ -43,6 +43,17 @@ fetch(resource, options)
   - : An object containing any custom settings that you want to apply to the request.
     The possible options are:
 
+    - `attributionReporting`
+
+      - : Indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} and/or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete an attribution source and/or trigger registration. `attributionReporting` is an object containing the following properties:
+
+        - `eventSourceEligible` {{optional_inline}}
+          - : A boolean. If set to `true`, the associated {{htmlelement("script")}} element is eligible to be registered as an attribution source. If not set, the default value, `false`, is used.
+        - `triggerEligible` {{optional_inline}}
+          - : A boolean. If set to `true`, the associated {{htmlelement("script")}} element is eligible to be registered as an attribution trigger. If not set, the default value, `false`, is used.
+
+        See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
     - `method`
       - : The request method, e.g., `"GET"`, `"POST"`.
         The default is `"GET"`.

@@ -80,6 +80,8 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - : Overrides the MIME type returned by the server.
 - {{domxref("XMLHttpRequest.send()")}}
   - : Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+- {{domxref("XMLHttpRequest.setAttributionReporting()")}}
+  - : Indicates that you want the browser to send a {{httpheader("Attribution-Reporting-Eligible")}} header along with the request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete attribution source or trigger registration.
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
   - : Sets the value of an HTTP request header. You must call `setRequestHeader()` after {{domxref("XMLHttpRequest.open", "open()")}}, but before {{domxref("XMLHttpRequest.send", "send()")}}.
 

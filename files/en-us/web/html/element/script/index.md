@@ -69,6 +69,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
+- `attributionsrc`
+
+  - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the request once the script is being loaded. On the server-side, this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete the registration of a view-based attribution source or attribution trigger, respectively. See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
+    There are two versions of this attribute that you can set:
+
+    - Boolean, i.e. just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `src` attribute points to. This is fine when you are handling the attribution source registration in the same place. When registering an attribution trigger this is optional — you can use the loaded script to send the header.
+    - Value containing one or more URLs, e.g. `attributionsrc="https://a.example/register-source https://b.example/register-source"`. This specifies that the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc`; this is required if the resource pointed to in `src` is not on a server you control, and you want to register the attribution source on a separate server that you _do_ control. `attributionsrc` instructs the browser to make the required extra request and specifies its destination.
+
 - `crossorigin`
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
 - `defer`
