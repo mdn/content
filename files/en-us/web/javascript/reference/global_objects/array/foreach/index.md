@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.forEach
 
 {{JSRef}}
 
-The **`forEach()`** method executes a provided function once
+The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.
 
 {{EmbedInteractiveExample("pages/js/array-foreach.html")}}

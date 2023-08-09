@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Set.clear
 
 {{JSRef}}
 
-The **`clear()`** method removes all elements from a
-`Set` object.
+The **`clear()`** method of {{jsxref("Set")}} instances removes all elements from this set.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.findLast
 
 {{JSRef}}
 
-The **`findLast()`** method iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
+The **`findLast()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 If you need to find:
