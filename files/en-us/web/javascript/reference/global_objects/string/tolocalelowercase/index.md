@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.String.toLocaleLowerCase
 
 {{JSRef}}
 
-The **`toLocaleLowerCase()`** method returns the calling string
-value converted to lower case, according to any locale-specific case mappings.
+The **`toLocaleLowerCase()`** method of {{jsxref("String")}} values returns this string converted to lower case, according to any locale-specific case mappings.
 
 {{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 

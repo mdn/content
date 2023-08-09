@@ -15857,19 +15857,6 @@
     "modified": "2020-06-22T16:29:25.903Z",
     "contributors": ["ExE-Boss", "freaktechnik", "hellosct1", "wbamberg"]
   },
-  "Mozilla/Add-ons/WebExtensions/Tips": {
-    "modified": "2020-06-22T16:28:48.203Z",
-    "contributors": [
-      "hellosct1",
-      "SphinxKnight",
-      "CharlesEduardoSCBR",
-      "andrewtruongmoz",
-      "kdex",
-      "wbamberg",
-      "meljag",
-      "kmaglione"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/User_actions": {
     "modified": "2020-06-22T16:29:32.941Z",
     "contributors": ["hellosct1", "wbamberg"]

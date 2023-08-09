@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.fontsize
 
 {{JSRef}} {{deprecated_header}}
 
-The **`fontsize()`** method creates a string that embeds a string in a {{HTMLElement("font")}} element (`<font size="...">str</font>`), which causes a string to be displayed in the specified font size.
+The **`fontsize()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("font")}} element (`<font size="...">str</font>`), which causes this string to be displayed in the specified font size.
 
 > **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `fontsize()`, the `<font>` element itself has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties instead.
 

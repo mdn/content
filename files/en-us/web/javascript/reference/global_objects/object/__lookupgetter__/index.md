@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Object.lookupGetter
 
 > **Note:** This feature is deprecated in favor of the {{jsxref("Object.getOwnPropertyDescriptor()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
 
-The **`__lookupGetter__()`** method returns the function bound as a getter to the specified property.
+The **`__lookupGetter__()`** method of {{jsxref("Object")}} instances returns the function bound as a getter to the specified property.
 
 ## Syntax
 

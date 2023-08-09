@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.includes
 
 {{JSRef}}
 
-The **`includes()`** method determines whether an array
+The **`includes()`** method of {{jsxref("Array")}} instances determines whether an array
 includes a certain value among its entries, returning `true` or
 `false` as appropriate.
 
