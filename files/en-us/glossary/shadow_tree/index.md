@@ -6,13 +6,14 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **shadow tree** is a tree of {{Glossary("DOM")}} nodes whose topmost [node](/en-US/docs/Glossary/Node/DOM) is a **shadow root**; that is, the root of the shadow tree is the topmost node within the **shadow DOM**, not the root element of the document.
+A **shadow tree** is a hidden set of {{Glossary("DOM")}} nodes whose topmost [node](/en-US/docs/Glossary/Node/DOM) is a **shadow root**. The shadow root is the topmost node of a **shadow DOM** and not part of the regular document's DOM tree.
 
-A shadow tree is a hidden set of standard DOM nodes. The shadow root is attached to another node tree through its host. This host may be part of another shadow tree or part of the regular DOM tree. The node tree of a shadow root's host is sometimes referred to as the **light tree**.
+The shadow root is attached to another node tree through a specific DOM node referred to as its **host**. This host may be part of another shadow tree or part of the regular DOM tree. The node tree of a shadow root's host is sometimes referred to as the **light tree**.
 
-The hidden nodes are not directly visible using regular DOM functionality. They require the use of a special [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) to be accessed.
+The hidden DOM nodes of a shadow tree are generally not affected by anything applied outside the shadow tree, and vice versa. The shadow boundary, where the shadow DOM ends and the regular DOM begins, can be traversed, but only very intentionally:
 
-By default, nodes within the shadow tree are not affected by anything applied outside the shadow tree, and vice versa. This provides a way to encapsulate implementation details, which is especially useful for custom elements and other advanced design paradigms. The shadow boundary, where the shadow DOM ends and the regular DOM begins, can be traversed, but only very intentionally, via [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) and [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts).
+- Scripting shadow tree nodes from outside requires the use of a special [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) to be accessed.
+- Styling a shadow tree from outside can be achieved via [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) and [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts).
 
 ## See also
 
