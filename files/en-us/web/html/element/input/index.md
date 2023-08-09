@@ -400,7 +400,6 @@ A few additional non-standard attributes are listed following the descriptions o
 - `dirname`
 
   - : Valid for `hidden`, `text`, `search`, `url`, `tel`, and `email` input types, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), and the second being the value of the `dirname` attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
-    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
 
     ```html
     <form action="page.html" method="post">
@@ -414,6 +413,8 @@ A few additional non-standard attributes are listed following the descriptions o
     ```
 
     When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+    
+    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
 
 - `disabled`
 
