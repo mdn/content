@@ -95,6 +95,52 @@ At-rules can be nested within themselves, in this example we see the nested at-r
 }
 ```
 
+### Nesting Cascade Layers (`@layer`)
+
+{{cssxref('@layer', 'Cascade Layers')}} can be {{cssxref('@layer', 'nested to create child-layers', '#nesting_layers')}}, these are joined with a `.`.
+
+#### Defining the parent & child layers
+
+Named cascade layers are defined prior to the named layers being used.
+
+```css
+@layer parent {
+  @layer child;
+}
+```
+
+#### Assigning rules to layers with nesting
+
+Here the selector `.foo` is assign the `@layer` **parent** with its rules. The `@layer` **child** is nested creating `parent.child` sub-layer, the the `&` nesting selector is used to create the rules for the selector `.foo .bar`.
+
+```css
+.foo {
+  @layer parent {
+    block-size: 100%;
+    @layer child {
+      & .bar {
+        min-block-size: 100%;
+      }
+    }
+  }
+}
+```
+
+#### Equivalent without nesting
+
+```css
+@layer base {
+  .foo {
+    block-size: 100%;
+  }
+}
+@layer base.support {
+  .foo .bar {
+    min-block-size: 100%;
+  }
+}
+```
+
 ## See Also
 
 - [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting)
