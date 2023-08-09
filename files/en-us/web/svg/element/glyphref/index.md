@@ -9,7 +9,7 @@ browser-compat: svg.elements.glyphRef
 
 {{SVGRef}}{{deprecated_header}}
 
-The `glyphRef` element provides a single possible glyph to the referencing {{ SVGElement("altGlyph") }} substitution.
+The `glyphRef` element provides a single possible glyph to the referencing `<altGlyph>` substitution.
 
 ## Usage context
 
@@ -46,7 +46,3 @@ This element implements the [`SVGGlyphRefElement`](/en-US/docs/DOM/SVGGlyphRefEl
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{SVGElement("altGlyph")}}

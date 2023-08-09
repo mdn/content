@@ -8,7 +8,7 @@ page-type: guide
 
 The term _screen orientation_ refers to whether a browser [viewport](/en-US/docs/Glossary/Viewport) is in landscape mode (that is, the width of the viewport is greater than its height), or else in portrait mode (the height of the viewport is greater than its width)
 
-CSS provides the [`orientation`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation) media feature to allow adjusting layout based on screen orientation.
+CSS provides the [`orientation`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature to allow adjusting layout based on screen orientation.
 
 The [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) provides a programmatic JavaScript API for working with screen orientation — including the ability to lock the viewport to a specific orientation.
 
@@ -172,4 +172,4 @@ It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promi
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
-- [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
+- [The orientation media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)

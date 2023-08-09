@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.AsyncGenerator.return
 
 {{JSRef}}
 
-The **`return()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
+The **`return()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) block.
 
 ## Syntax
 
@@ -27,9 +27,9 @@ A {{jsxref("Promise")}} which resolves with an {{jsxref("Global_Objects/Object",
 - `done`
   - : A boolean value:
     - `true` if the generator function's control flow has reached the end.
-    - `false` if the generator function's control flow hasn't reached the end and can produce more values. This can only happen if the `return` is captured in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) and there are more `yield` expressions in the `finally` block.
+    - `false` if the generator function's control flow hasn't reached the end and can produce more values. This can only happen if the `return` is captured in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) and there are more `yield` expressions in the `finally` block.
 - `value`
-  - : The value that is given as an argument, or, if the `yield` expression is wrapped in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block), the value yielded/returned from the `finally` block.
+  - : The value that is given as an argument, or, if the `yield` expression is wrapped in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block), the value yielded/returned from the `finally` block.
 
 ## Description
 

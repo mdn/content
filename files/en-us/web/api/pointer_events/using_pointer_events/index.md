@@ -104,7 +104,7 @@ function handleMove(evt) {
   if (idx >= 0) {
     ctx.beginPath();
     log(
-      `ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`
+      `ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`,
     );
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
     log(`ctx.lineTo(${evt.clientX}, ${evt.clientY});`);

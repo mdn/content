@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.Array.map
 
 {{JSRef}}
 
-The **`map()`** method **creates
-a new array** populated with the results of calling a provided function on
+The **`map()`** method creates
+a new array populated with the results of calling a provided function on
 every element in the calling array.
 
 {{EmbedInteractiveExample("pages/js/array-map.html")}}
@@ -111,7 +111,7 @@ console.log(numbers); // [1, 4, 9]
 
 ### Calling map() on non-array objects
 
-The `map()` method reads the `length` property of `this` and then accesses each integer index.
+The `map()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -119,6 +119,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by map() since length is 3
 };
 console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
 // [ 4, 9, 16 ]

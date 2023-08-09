@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.DataView.getUint32
 
 {{JSRef}}
 
-The **`getUint32()`** method gets an unsigned 32-bit integer
-(unsigned long) at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`getUint32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit unsigned integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getuint32.html")}}
 

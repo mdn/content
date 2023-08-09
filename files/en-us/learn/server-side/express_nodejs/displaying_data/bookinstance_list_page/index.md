@@ -1,6 +1,7 @@
 ---
 title: BookInstance list page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
+page-type: learn-module-chapter
 ---
 
 Next we'll implement our list of all book copies (`BookInstance`) in the library. This page needs to include the title of the `Book` associated with each `BookInstance` (linked to its detail page) along with other information in the `BookInstance` model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the `BookInstance` detail page.

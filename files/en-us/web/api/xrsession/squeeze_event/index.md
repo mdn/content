@@ -64,7 +64,7 @@ xrSession.addEventListener("squeeze", (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(
       event.inputSource.targetRaySpace,
-      myRefSpace
+      myRefSpace,
     );
     if (targetRayPose) {
       myHandleSqueezeWithRay(targetRayPose.transform);
@@ -80,7 +80,7 @@ xrSession.onsqueeze = (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
     let targetRayPose = event.frame.getPose(
       event.inputSource.targetRaySpace,
-      myRefSpace
+      myRefSpace,
     );
     if (targetRayPose) {
       myHandleSqueezeWithRay(targetRayPose.transform);

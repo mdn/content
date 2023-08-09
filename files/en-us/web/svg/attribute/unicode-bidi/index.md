@@ -13,7 +13,6 @@ The **`unicode-bidi`** attribute specifies how the accumulation of the backgroun
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}

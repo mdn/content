@@ -1,6 +1,6 @@
 ---
-title: CSS Basic User Interface
-slug: Web/CSS/CSS_Basic_User_Interface
+title: CSS basic user interface
+slug: Web/CSS/CSS_basic_user_interface
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ui/
 ---
@@ -21,7 +21,7 @@ The CSS {{CSSxRef("outline")}} and {{CSSxRef("outline-offset")}} properties were
 
 Some features harm usability. The {{CSSxRef("cursor")}} property was used to change cursors from the browser default which is confusing. The {{CSSxRef("resize")}} property prevents the second {{HTMLElement("textarea")}} from being resizable while the {{CSSxRef("pointer-events")}} property prevents the third `<textarea>` from receiving click events. It is still focusable using the keyboard.
 
-To see the code for this basic user interface sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/basicUI.html).
+To see the code for this basic user interface sample, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/basicUI.html).
 
 ## Reference
 
@@ -49,7 +49,8 @@ To see the code for this basic user interface sample, [view the source on Github
 
 ## Guides
 
-- [Using URL values for the `cursor` property](/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
+- [Using URL values for the `cursor` property](/en-US/docs/Web/CSS/CSS_basic_user_interface
+  Title: CSS basic user interface/Using_URL_values_for_the_cursor_property)
   - : Explains how a URL can be used with the {{CSSxRef("cursor")}} property to produce custom cursors.
 - [Learn forms: advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
   - : Explains how {{CSSxRef("appearance")}} can be used to style form controls.

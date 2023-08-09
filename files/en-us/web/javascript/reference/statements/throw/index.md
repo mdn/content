@@ -7,11 +7,7 @@ browser-compat: javascript.statements.throw
 
 {{jsSidebar("Statements")}}
 
-The **`throw`** statement throws a user-defined exception.
-Execution of the current function will stop (the statements after `throw`
-won't be executed), and control will be passed to the first [`catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
-block in the call stack. If no `catch` block exists among caller functions,
-the program will terminate.
+The **`throw`** statement throws a user-defined exception. Execution of the current function will stop (the statements after `throw` won't be executed), and control will be passed to the first [`catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block in the call stack. If no `catch` block exists among caller functions, the program will terminate.
 
 {{EmbedInteractiveExample("pages/js/statement-throw.html")}}
 
@@ -26,145 +22,101 @@ throw expression;
 
 ## Description
 
-Use the `throw` statement to throw an exception. When you throw an
-exception, `expression` specifies the value of the exception. Each
-of the following throws an exception:
+The `throw` statement is valid in all contexts where statements can be used. Its execution generates an exception that penetrates through the call stack. For more information on error bubbling and handling, see [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling).
+
+The `throw` keyword can be followed by any kind of expression, for example:
 
 ```js
-throw "Error2"; // generates an exception with a string value
-throw 42; // generates an exception with the value 42
-throw true; // generates an exception with the value true
-throw new Error("Required"); // generates an error object with the message of Required
+throw error; // Throws a previously defined value (e.g. within a catch block)
+throw new Error("Required"); // Throws a new Error object
 ```
 
-Also note that the `throw` statement is affected by
-[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
-as no line terminator between the `throw` keyword and the expression is allowed.
+In practice, the exception you throw should _always_ be an {{jsxref("Error")}} object or an instance of an `Error` subclass, such as {{jsxref("RangeError")}}. This is because code that catches the error may expect certain properties, such as {{jsxref("Error/message", "message")}}, to be present on the caught value. For example, web APIs typically throw {{domxref("DOMException")}} instances, which inherit from `Error.prototype`.
+
+### Automatic semicolon insertion
+
+The syntax forbids line terminators between the `throw` keyword and the expression to be thrown.
+
+```js-nolint example-bad
+throw
+new Error();
+```
+
+The code above is transformed by [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) into:
+
+```js
+throw;
+new Error();
+```
+
+This is invalid code, because unlike {{jsxref("Statements/return", "return")}}, `throw` must be followed by an expression.
+
+To avoid this problem (to prevent ASI), you could use parentheses:
+
+```js-nolint
+throw (
+  new Error()
+);
+```
 
 ## Examples
 
-### Throw an object
+### Throwing a user-defined error
 
-You can specify an object when you throw an exception. You can then reference the
-object's properties in the `catch` block. The following example creates an
-object of type `UserException` and uses it in a `throw` statement.
+This example defines a function that throws a {{jsxref("TypeError")}} if the input is not of the expected type.
 
 ```js
-function UserException(message) {
-  this.message = message;
-  this.name = "UserException";
+function isNumeric(x) {
+  return ["number", "bigint"].includes(typeof x);
 }
-function getMonthName(mo) {
-  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  const months = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-  ];
-  if (months[mo] !== undefined) {
-    return months[mo];
-  } else {
-    throw new UserException("InvalidMonthNo");
+
+function sum(...values) {
+  if (!values.every(isNumeric)) {
+    throw new TypeError("Can only add numbers");
   }
+  return values.reduce((a, b) => a + b);
 }
 
-let monthName;
-
+console.log(sum(1, 2, 3)); // 6
 try {
-  // statements to try
-  const myMonth = 15; // 15 is out of bound to raise the exception
-  monthName = getMonthName(myMonth);
+  sum("1", "2");
 } catch (e) {
-  monthName = "unknown";
-  console.error(e.message, e.name); // pass exception object to err handler
+  console.error(e); // TypeError: Can only add numbers
 }
 ```
 
-### Another example of throwing an object
+### Throwing an existing object
 
-The following example tests an input string for a U.S. zip code. If the zip code uses
-an invalid format, the throw statement throws an exception by creating an object of type
-`ZipCodeFormatException`.
+This example calls a callback-based async function, and throws an error if the callback receives an error.
 
 ```js
-/*
- * Creates a ZipCode object.
- *
- * Accepted formats for a zip code are:
- *    12345
- *    12345-6789
- *    123456789
- *    12345 6789
- *
- * If the argument passed to the ZipCode constructor does not
- * conform to one of these patterns, an exception is thrown.
- */
-class ZipCode {
-  static pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-  constructor(zip) {
-    zip = String(zip);
-    const match = zip.match(ZipCode.pattern);
-    if (!match) {
-      throw new ZipCodeFormatException(zip);
-    }
-    // zip code value will be the first match in the string
-    this.value = match[0];
+readFile("foo.txt", (err, data) => {
+  if (err) {
+    throw err;
   }
-  valueOf() {
-    return this.value;
-  }
-  toString() {
-    return this.value;
-  }
-}
-
-class ZipCodeFormatException extends Error {
-  constructor(zip) {
-    super(`${zip} does not conform to the expected format for a zip code`);
-  }
-}
-
-/*
- * This could be in a script that validates address data
- * for US addresses.
- */
-
-const ZIPCODE_INVALID = -1;
-const ZIPCODE_UNKNOWN_ERROR = -2;
-
-function verifyZipCode(z) {
-  try {
-    z = new ZipCode(z);
-  } catch (e) {
-    const isInvalidCode = e instanceof ZipCodeFormatException;
-    return isInvalidCode ? ZIPCODE_INVALID : ZIPCODE_UNKNOWN_ERROR;
-  }
-  return z;
-}
-
-a = verifyZipCode(95060); // 95060
-b = verifyZipCode(9560); // -1
-c = verifyZipCode("a"); // -1
-d = verifyZipCode("95060"); // 95060
-e = verifyZipCode("95060 1234"); // 95060 1234
+  console.log(data);
+});
 ```
 
-### Rethrow an exception
-
-You can use `throw` to rethrow an exception after you catch it. The
-following example catches an exception with a numeric value and rethrows it if the value
-is over 50. The rethrown exception propagates up to the enclosing function or to the top
-level so that the user sees it.
+Errors thrown this way are not catchable by the caller and will cause the program to crash unless (a) the `readFile` function itself catches the error, or (b) the program is running in a context that catches top-level errors. You can handle errors more naturally by using the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 
 ```js
+function readFilePromise(path) {
+  return new Promise((resolve, reject) => {
+    readFile(path, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+}
+
 try {
-  throw n; // throws an exception with a numeric value
-} catch (e) {
-  if (e <= 50) {
-    // statements to handle exceptions 1-50
-  } else {
-    // cannot handle this exception, so rethrow
-    throw e;
-  }
+  const data = await readFilePromise("foo.txt");
+  console.log(data);
+} catch (err) {
+  console.error(err);
 }
 ```
 
@@ -179,4 +131,4 @@ try {
 ## See also
 
 - {{jsxref("Statements/try...catch", "try...catch")}}
-- {{jsxref("Global_Objects/Error", "Error")}}
+- {{jsxref("Error")}}

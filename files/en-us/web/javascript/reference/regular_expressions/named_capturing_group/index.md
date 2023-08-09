@@ -36,6 +36,13 @@ All names must be unique within the same pattern. Multiple named capturing group
 /(?<name>)(?<name>)/; // SyntaxError: Invalid regular expression: Duplicate capture group name
 ```
 
+This restriction is relaxed if the duplicate named capturing groups are not in the same [disjunction alternative](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction), so for any string input, only one named capturing group can actually be matched. This is a much newer feature, so check [browser compatibility](#browser_compatibility) before using it.
+
+```js
+/(?<year>\d{4})-\d{2}|\d{2}-(?<year>\d{4})/;
+// Works; "year" can either come before or after the hyphen
+```
+
 Named capturing groups will all be present in the result. If a named capturing group is not matched (for example, it belongs to an unmatched alternative in a [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)), the corresponding property on the `groups` object has value `undefined`.
 
 ```js
@@ -58,8 +65,12 @@ The following example parses a timestamp and an author name from a Git log entry
 
 ```js
 function parseLog(entry) {
-  const { author, timestamp } = /^(?<timestamp>\d+),(?<author>.+)$/.exec(entry).groups;
-  return `${author} committed on ${new Date(parseInt(timestamp) * 1000).toLocaleString()}`;
+  const { author, timestamp } = /^(?<timestamp>\d+),(?<author>.+)$/.exec(
+    entry,
+  ).groups;
+  return `${author} committed on ${new Date(
+    parseInt(timestamp) * 1000,
+  ).toLocaleString()}`;
 }
 
 parseLog("1560979912,Caroline"); // "Caroline committed on 6/19/2019, 5:31:52 PM"

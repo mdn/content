@@ -92,7 +92,7 @@ console.log("newCar[0].color =", newCar[0].color);
 
 This script writes:
 
-```
+```plain
 myCar = [
   { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } },
   2,
@@ -117,6 +117,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 33, // ignored by slice() since length is 3
 };
 console.log(Array.prototype.slice.call(arrayLike, 1, 3));
 // [ 3, 4 ]

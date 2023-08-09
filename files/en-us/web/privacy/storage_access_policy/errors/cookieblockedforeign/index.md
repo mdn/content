@@ -1,6 +1,7 @@
 ---
 title: "Blocked: All third-party storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedForeign
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
@@ -9,7 +10,7 @@ slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedForeign
 
 Firefox:
 
-```
+```plain
 CookieBlockedForeign=Request to access cookies or storage on "X" was blocked because we are blocking all third-party storage access requests and content blocking is enabled.
 ```
 

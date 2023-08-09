@@ -1,6 +1,7 @@
 ---
 title: acceptInsecureCerts
 slug: Web/WebDriver/Capabilities/acceptInsecureCerts
+page-type: webdriver-capability
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
@@ -22,7 +23,7 @@ print(session.current_url)
 
 Output:
 
-```
+```url
 https://self-signed.badssl.com/
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Function return values
 slug: Learn/JavaScript/Building_blocks/Return_values
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

@@ -20,10 +20,10 @@ Which operation you choose depends on what sort of comparison you are looking to
 
 They correspond to three of four equality algorithms in JavaScript:
 
-- [IsLooselyEqual](https://tc39.es/ecma262/#sec-islooselyequal): `==`
-- [IsStrictlyEqual](https://tc39.es/ecma262/#sec-isstrictlyequal): `===`
-- [SameValue](https://tc39.es/ecma262/#sec-samevalue): `Object.is()`
-- [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero): used by many built-in operations
+- [IsLooselyEqual](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-islooselyequal): `==`
+- [IsStrictlyEqual](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-isstrictlyequal): `===`
+- [SameValue](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevalue): `Object.is()`
+- [SameValueZero](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevaluezero): used by many built-in operations
 
 Note that the distinction between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
 

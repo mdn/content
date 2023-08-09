@@ -74,7 +74,7 @@ If the item was implemented in any release version of any one or more browsers b
 
 - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the following `status:` front-matter entry:
 
-  ```
+  ```yaml
   status:
     - deprecated
   ```
@@ -92,7 +92,7 @@ If the item was implemented in one or more release builds of browsers without re
 
 - If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), add the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro to the top of the page and add the following `status:` front-matter entry:
 
-  ```
+  ```yaml
   status:
     - deprecated
   ```

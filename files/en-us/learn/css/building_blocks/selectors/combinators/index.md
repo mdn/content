@@ -1,6 +1,7 @@
 ---
 title: Combinators
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}

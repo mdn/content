@@ -45,7 +45,7 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 
 In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
 
-### HTML content
+### HTML
 
 ```html
 <label>
@@ -54,7 +54,7 @@ In this example, we obtain the usage estimates and present the percentage of sto
 </label>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
 navigator.storage.estimate().then((estimate) => {

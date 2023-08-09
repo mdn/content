@@ -4,6 +4,8 @@ slug: Glossary/Cipher
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 In {{glossary("cryptography")}}, a **cipher** is an algorithm that can {{glossary("encryption", "encode")}} {{glossary("Plaintext")}} to make it unreadable, and to {{glossary("decryption", "decode")}} it back.
 
 Ciphers were common long before the information age (e.g., [substitution ciphers](https://en.wikipedia.org/wiki/Substitution_cipher), [transposition ciphers](https://en.wikipedia.org/wiki/Transposition_cipher), and [permutation ciphers](https://en.wikipedia.org/wiki/Permutation_cipher)), but none of them were cryptographically secure except for the [one-time pad](https://en.wikipedia.org/wiki/One-time_pad).

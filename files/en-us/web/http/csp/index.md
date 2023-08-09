@@ -194,7 +194,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-t
 The HTML of `signup.html` looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

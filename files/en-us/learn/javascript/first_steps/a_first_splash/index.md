@@ -1,6 +1,7 @@
 ---
 title: A first splash into JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}

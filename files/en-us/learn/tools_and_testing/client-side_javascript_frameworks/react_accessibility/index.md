@@ -1,6 +1,7 @@
 ---
 title: Accessibility in React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -125,7 +126,7 @@ console.log("main render");
 
 Now, open the app in your browser. You should see both messages in your console, with each one repeating three times. Note how "main render" logged first, and "side effect" logged second, even though the "side effect" log appears first in the code.
 
-```
+```plain
 main render (3)                                     Todo.js:100
 side effect (3)                                     Todo.js:98
 ```

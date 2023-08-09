@@ -129,7 +129,7 @@ for (const element of [, "a"].values()) {
 
 ### Calling values() on non-array objects
 
-The `values()` method reads the `length` property of `this` and then accesses each integer index.
+The `values()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -137,6 +137,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "d", // ignored by values() since length is 3
 };
 for (const entry of Array.prototype.values.call(arrayLike)) {
   console.log(entry);

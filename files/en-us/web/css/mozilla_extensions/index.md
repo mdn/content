@@ -382,15 +382,6 @@ Property: {{CSSxRef("list-style-type")}}
 - `-moz-trad-chinese-informal`
 - `-moz-urdu`
 
-### overflow
-
-Property: {{CSSxRef("overflow")}}
-
-- {{CSSxRef("-moz-scrollbars-none")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-scrollbars-horizontal")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-scrollbars-vertical")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-hidden-unscrollable")}}
-
 ### text-align
 
 Property: {{CSSxRef("text-align")}}
@@ -440,7 +431,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef("::-moz-focus-inner")}}
 - {{CSSxRef("::-moz-focus-outer")}}
-- {{CSSxRef(":-moz-focusring")}}
 - {{CSSxRef(":fullscreen", ":-moz-full-screen")}}
 - {{CSSxRef(":-moz-full-screen-ancestor")}}
 - {{CSSxRef(":-moz-handler-blocked")}}
@@ -451,8 +441,8 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 ### L
 
 - {{CSSxRef(":-moz-last-node")}}
-- {{CSSxRef(":-moz-list-bullet")}}
-- {{CSSxRef(":-moz-list-number")}}
+- {{CSSxRef("::-moz-list-bullet")}}
+- {{CSSxRef("::-moz-list-number")}}
 - {{CSSxRef(":-moz-loading")}}
 - {{CSSxRef(":dir_ltr", ":-moz-locale-dir(ltr)")}}
 - {{CSSxRef(":dir_rtl", ":-moz-locale-dir(rtl)")}}
@@ -499,8 +489,8 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ### U – X
 
-- {{CSSxRef(":user-invalid", ":-moz-ui-invalid")}}
-- {{CSSxRef(":-moz-ui-valid")}}
+- {{CSSxRef(":user-invalid", ":-moz-ui-invalid")}} {{deprecated_inline}}
+- {{CSSxRef(":user-valid", ":-moz-ui-valid")}} {{deprecated_inline}}
 - {{CSSxRef(":-moz-user-disabled")}}
 - {{CSSxRef("::-moz-viewport")}}
 - {{CSSxRef("::-moz-viewport-scroll")}}

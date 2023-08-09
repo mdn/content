@@ -1,6 +1,7 @@
 ---
 title: Firefox 55 for developers
 slug: Mozilla/Firefox/Releases/55
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -18,19 +19,19 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
+- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
 - Enable `dom.forms.datetime` by default on Nightly ([Firefox bug 1366188](https://bugzil.la/1366188)).
 
 ### CSS
 
 - Exposed the {{cssxref("transform-box")}} property by default ([Firefox bug 1208550](https://bugzil.la/1208550)).
-- Implemented the [frames() timing function](</en-US/docs/Web/CSS/easing-function#the_frames()_class_of_timing-functions>) ([Firefox bug 1248340](https://bugzil.la/1248340)).
+- Implemented the `frames()` timing function ([Firefox bug 1248340](https://bugzil.la/1248340)).
 - Implemented the {{cssxref("text-justify")}} property ([Firefox bug 1343512](https://bugzil.la/1343512), [Firefox bug 276079](https://bugzil.la/276079)).
 - \[css-grid] {{cssxref("fit-content")}} unexpectedly reserves space for full clamp size in {{cssxref("repeat", "repeat()")}} ([Firefox bug 1359060](https://bugzil.la/1359060)).
 - The {{cssxref("float")}} / {{cssxref("clear")}} logical values — `inline-start` and `inline-end` — which were previously implemented but preffed off in release channels, are now available in all channels by default ([Firefox bug 1253919](https://bugzil.la/1253919)).
 - The `layout.css.variables.enabled` preference has been removed completely meaning that the [CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties) feature is enabled all the time and can no longer be disabled ([Firefox bug 1312328](https://bugzil.la/1312328)).
 - Implemented the proprietary `-moz-context-properties` property ([Firefox bug 1058040](https://bugzil.la/1058040)).
-- Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("linear-gradient", "linear-gradient()")}} ([Firefox bug 1363292](https://bugzil.la/1363292)).
+- Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("gradient/linear-gradient")}} ([Firefox bug 1363292](https://bugzil.la/1363292)).
 - The {{cssxref("::cue")}} pseudo-element is now supported; it matches on text cues presented within a media element ([Firefox bug 1318542](https://bugzil.la/1318542)).
 
 ### SVG

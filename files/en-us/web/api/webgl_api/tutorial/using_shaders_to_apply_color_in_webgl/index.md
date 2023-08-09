@@ -149,7 +149,7 @@ function setColorAttribute(gl, buffers, programInfo) {
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
 }

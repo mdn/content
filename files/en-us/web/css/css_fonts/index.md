@@ -1,13 +1,13 @@
 ---
-title: CSS Fonts
-slug: Web/CSS/CSS_Fonts
+title: CSS fonts
+slug: Web/CSS/CSS_fonts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-fonts/
 ---
 
 {{CSSRef}}
 
-**CSS Fonts** is a module of CSS that defines font-related properties and how font resources are loaded. It lets you define the style of a font, such as its family, size and weight, line height, and the glyph variants to use when multiple are available for a single character.
+The **CSS fonts** module defines font-related properties and how font resources are loaded. It lets you define the style of a font, such as its family, size and weight, line height, and the glyph variants to use when multiple are available for a single character.
 
 ## Basic example
 
@@ -41,7 +41,7 @@ The result is as follows:
 
 ## Variable fonts examples
 
-You can find a number of variable fonts examples at [v-fonts.com](https://v-fonts.com/) and [axis-praxis.org](https://www.axis-praxis.org/); see also our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) for more information and usage information.
+You can find a number of variable fonts examples at [v-fonts.com](https://v-fonts.com/) and [axis-praxis.org](https://www.axis-praxis.org/); see also our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) for more information and usage information.
 
 ## Reference
 
@@ -78,9 +78,9 @@ You can find a number of variable fonts examples at [v-fonts.com](https://v-font
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
   - : In this beginner's learning article we go through all the basic fundamentals of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.
-- [OpenType font features guide](/en-US/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide)
+- [OpenType font features guide](/en-US/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
   - : Font features or variants refer to different glyphs or character styles contained within an OpenType font. These include things like ligatures (special glyphs that combine characters like 'fi' or 'ffl'), kerning (adjustments to the spacing between specific letterform pairings), fractions, numeral styles, and a number of others. These are all referred to as OpenType Features, and are made available to use on the web via specific properties and a low-level control property — {{cssxref("font-feature-settings")}}. This article provides you with all you need to know about using OpenType font features in CSS.
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will give you all you need to know to get you started using variable fonts.
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: Web performance resources
 slug: Learn/Performance/Web_Performance_Basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Performance/business_case_for_performance", "Learn/Performance")}}

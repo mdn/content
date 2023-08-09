@@ -1,6 +1,7 @@
 ---
 title: Cascade layers
 slug: Learn/CSS/Building_blocks/Cascade_layers
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
@@ -43,7 +44,7 @@ The C in CSS stands for "Cascading". It is the method by which styles cascade to
 1. **Relevance:** Find all the declaration blocks with a selector match for each element.
 2. **Importance:** Sort rules based on if they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
 3. **Origin:** Within each of the two importance buckets, sort rules by author, user, or user-agent origin.
-4. **Layers:** Within each of the six origin importance bucket, sort by cascade layer. The layer order for normal declarations is from first layer created to last, followed by unlayered normal styles. This order is inverted for important styles, with unlayered important styles having the lowest precedence.
+4. **Layers:** Within each of the six origin importance buckets, sort by cascade layer. The layer order for normal declarations is from first layer created to last, followed by unlayered normal styles. This order is inverted for important styles, with unlayered important styles having the lowest precedence.
 5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity).
 6. **Order of appearance:** When two selectors in the origin layer with precedence have the same specificity, the property value from the last declared selector with the highest specificity wins.
 
@@ -127,7 +128,7 @@ The ability to create nested layers also removes the worry of having conflicting
 Layers can be created using any one of the following methods:
 
 - The `@layer` statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
-- The `@layer` block at-rule, in which all styles within a block are added to a name or unnamed layer.
+- The `@layer` block at-rule, in which all styles within a block are added to a named or unnamed layer.
 - The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
@@ -224,7 +225,7 @@ Try moving the last line, `@layer site, page;`, to make it the first line. What 
 
 #### Layer creation and media queries
 
-If you define a layer using [media](​​/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) or [feature](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries) queries, and the media is not a match or the feature is not supported, the layer is not created. The example below shows how changing the size of your device or browser may change the layer order. In this example, we create the `site` layer only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
+If you define a layer using [media](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) or [feature](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) queries, and the media is not a match or the feature is not supported, the layer is not created. The example below shows how changing the size of your device or browser may change the layer order. In this example, we create the `site` layer only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
 
@@ -251,7 +252,7 @@ You can import more than one CSS file into a single layer. The following declara
 @import url(sm-icons.css) layer(social);
 ```
 
-You can import styles and create layers based on specific conditions using [media queries](​​/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) and [feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
+You can import styles and create layers based on specific conditions using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) and [feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
 
 ```css
 @import url("ruby-narrow.css") layer(international) supports(display: ruby) and
@@ -278,7 +279,7 @@ If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with
 
 Let's look at the following example:
 
-```
+```css
 @import url("components-lib.css") layer(components);
 @import url("narrowtheme.css") layer(components.narrow);
 ```

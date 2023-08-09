@@ -75,7 +75,7 @@ However, if you need certain content in the background page, you can specify one
 - background-page.html
 
   ```html
-  <!DOCTYPE html>
+  <!doctype html>
   <html lang="en">
     <head>
       <meta charset="utf-8" />
@@ -93,9 +93,9 @@ Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on 
 ```js
 browser.runtime.onInstalled.addListener(() => {
   browser.contextMenus.create({
-    "id": "sampleContextMenu",
-    "title": "Sample Context Menu",
-    "contexts": ["selection"]
+    id: "sampleContextMenu",
+    title: "Sample Context Menu",
+    contexts: ["selection"],
   });
 });
 ```
@@ -109,9 +109,9 @@ Listeners must be registered synchronously from the start of the page.
 ```js
 browser.runtime.onInstalled.addListener(() => {
   browser.contextMenus.create({
-    "id": "sampleContextMenu",
-    "title": "Sample Context Menu",
-    "contexts": ["selection"]
+    id: "sampleContextMenu",
+    title: "Sample Context Menu",
+    contexts: ["selection"],
   });
 });
 
@@ -129,7 +129,7 @@ window.onload = () => {
   browser.bookmarks.onCreated.addListener(() => {
     // do something
   });
-}
+};
 ```
 
 Do this:
@@ -144,9 +144,11 @@ browser.tabs.onUpdated.addListener(() => {
 Extensions can remove listeners from their background scripts by calling `removeListener`, such as with {{WebExtAPIRef("runtime.onMessage")}} `removeListener`. If all listeners for an event are removed, the browser no longer loads the extension's background script for that event.
 
 ```js
-browser.runtime.onMessage.addListener(function messageListener(message, sender, reply) {
-  browser.runtime.onMessage.removeListener(messageListener);
-});
+browser.runtime.onMessage.addListener(
+  function messageListener(message, sender, reply) {
+    browser.runtime.onMessage.removeListener(messageListener);
+  },
+);
 ```
 
 ### Filter events
@@ -154,9 +156,12 @@ browser.runtime.onMessage.addListener(function messageListener(message, sender, 
 Use APIs that support event filters to restrict listeners to the cases the extension cares about. If an extension is listening for {{WebExtAPIRef("tabs.onUpdated")}}, use the {{WebExtAPIRef("webNavigation.onCompleted")}} event with filters instead, as the tabs API does not support filters.
 
 ```js
-browser.webNavigation.onCompleted.addListener(() => {
-  console.log("This is my favorite website!");
-}, { url: [{ urlMatches : 'https://www.mozilla.org/' }] });
+browser.webNavigation.onCompleted.addListener(
+  () => {
+    console.log("This is my favorite website!");
+  },
+  { url: [{ urlMatches: "https://www.mozilla.org/" }] },
+);
 ```
 
 ### React to listeners
@@ -166,13 +171,14 @@ Listeners exist to trigger functionality once an event has fired. To react to an
 ```js
 browser.runtime.onMessage.addListener((message, callback) => {
   if (message.data === "setAlarm") {
-    browser.alarms.create({delayInMinutes: 5})
+    browser.alarms.create({ delayInMinutes: 5 });
   } else if (message.data === "runLogic") {
-    browser.tabs.executeScript({file: 'logic.js'});
+    browser.tabs.executeScript({ file: "logic.js" });
   } else if (message.data === "changeColor") {
-    browser.tabs.executeScript(
-      {code: 'document.body.style.backgroundColor="orange"'});
-  };
+    browser.tabs.executeScript({
+      code: 'document.body.style.backgroundColor="orange"',
+    });
+  }
 });
 ```
 
@@ -181,16 +187,16 @@ browser.runtime.onMessage.addListener((message, callback) => {
 Data should be persisted periodically to not lose important information if an extension crashes without receiving {{WebExtAPIRef("runtime.onSuspend")}}. Use the storage API to assist with this.
 
 ```js
-browser.storage.local.set({variable: variableInformation});
+browser.storage.local.set({ variable: variableInformation });
 ```
 
 Message ports cannot prevent an event page from shutting down. If an extension uses message passing, the ports are closed when the event page idles. Listening to the {{WebExtAPIRef("runtime.Port")}} `onDisconnect` lets you discover when open ports are closing, however the listener will be under the same time constraints as {{WebExtAPIRef("runtime.onSuspend")}}.
 
 ```js
 browser.runtime.onMessage.addListener((message, callback) => {
-  if (message === 'hello') {
-    sendResponse({greeting: 'welcome!'})
-  } else if (message === 'goodbye') {
+  if (message === "hello") {
+    sendResponse({ greeting: "welcome!" });
+  } else if (message === "goodbye") {
     browser.runtime.Port.disconnect();
   }
 });
@@ -201,7 +207,7 @@ Background scripts unload after a few seconds of inactivity. However, if during 
 ```js
 browser.runtime.onSuspend.addListener(() => {
   console.log("Unloading.");
-  chrome.browserAction.setBadgeText({text: ""});
+  chrome.browserAction.setBadgeText({ text: "" });
 });
 ```
 
@@ -229,7 +235,7 @@ Listeners must be at the top-level to activate the background script if an event
 ```js
 browser.runtime.onStartup.addListener(() => {
   // run startup function
-})
+});
 ```
 
 ### Record state changes
@@ -243,7 +249,7 @@ browser.storage.local.set({ variable: variableInformation });
 Use {{WebExtAPIRef("storage.local")}} `get` to retrieve the value of that variable.
 
 ```js
-browser.storage.local.get(['variable'], (result) => {
+browser.storage.local.get(["variable"], (result) => {
   let someVariable = result.variable;
   // Do something with someVariable
 });
@@ -254,14 +260,14 @@ browser.storage.local.get(['variable'], (result) => {
 DOM-based timers do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
 
 ```js
-browser.alarms.create({delayInMinutes: 3.0})
+browser.alarms.create({ delayInMinutes: 3.0 });
 ```
 
 Then add a listener.
 
 ```js
 browser.alarms.onAlarm.addListener(() => {
-  alert("Hello, world!")
+  alert("Hello, world!");
 });
 ```
 
@@ -270,7 +276,7 @@ browser.alarms.onAlarm.addListener(() => {
 If a content script or action must call a function, use {{WebExtAPIRef("runtime.getBackgroundPage")}} to ensure the event page is running. If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("extension.getBackgroundPage")}}, which return `null` if the page is not running.
 
 ```js
-document.getElementById('target').addEventListener('click', async () => {
+document.getElementById("target").addEventListener("click", async () => {
   let backgroundPage = await window.runtime.getBackgroundPage();
   backgroundPage.backgroundFunction();
 });

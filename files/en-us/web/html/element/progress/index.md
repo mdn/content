@@ -15,28 +15,18 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, labelable content,
-        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
-          >palpable content</a
-        >.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, labelable content,
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >, but there must be no <code>&#x3C;progress></code> element among its
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>, but there must be no <code>&#x3C;progress></code> element among its
         descendants.
       </td>
     </tr>
@@ -48,9 +38,7 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -102,10 +90,12 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 #### Examples
 
 ```html
-<label>Uploading Document: <progress value="70" max="100">70 %</progress></label>
+<label>
+  Uploading Document: <progress value="70" max="100">70 %</progress>
+</label>
 
 <!-- OR -->
-<br/>
+<br />
 
 <label for="progress-bar">Uploading Document</label>
 <progress id="progress-bar" value="70" max="100">70 %</progress>

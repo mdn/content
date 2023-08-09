@@ -34,7 +34,7 @@ const nestedProp = obj.first && obj.first.second;
 ```
 
 The value of `obj.first` is confirmed to be non-`null` (and
-non-`undefined`) before then accessing the value of
+non-`undefined`) before accessing the value of
 `obj.first.second`. This prevents the error that would occur if you accessed
 `obj.first.second` directly without testing `obj.first`.
 

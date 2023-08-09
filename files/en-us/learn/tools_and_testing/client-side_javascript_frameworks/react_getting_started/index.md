@@ -1,6 +1,7 @@
 ---
 title: Getting started with React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -82,12 +83,10 @@ const header = (
 
 > **Note:** The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
 >
-> ```jsx
-> const header = (
->   <header>
->     <h1>Mozilla Developer Network</h1>
->   </header>
-> );
+> ```jsx-nolint
+> const header = <header>
+>   <h1>Mozilla Developer Network</h1>
+> </header>;
 > ```
 >
 > However, this looks kind of awkward, because the [`<header>`](/en-US/docs/Web/HTML/Element/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
@@ -98,7 +97,7 @@ Of course, your browser can't read JSX without help. When compiled (using a tool
 const header = React.createElement(
   "header",
   null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -106,7 +105,7 @@ It's _possible_ to skip the compilation step and use [`React.createElement()`](h
 
 Because JSX is a blend of HTML and JavaScript, some developers find it intuitive. Others say that its blended nature makes it confusing. Once you're comfortable with it, however, it will allow you to build user interfaces more quickly and intuitively, and allow others to better understand your codebase at a glance.
 
-To read more about JSX, check out the React team's [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html) article.
+To read more about JSX, check out the React team's [Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx) article.
 
 ## Setting up your first React app
 
@@ -161,7 +160,7 @@ When the process is complete, `cd` into the `moz-todo-react` directory and run t
 
 create-react-app gives us everything we need to develop a React application. Its initial file structure looks like this:
 
-```
+```plain
 moz-todo-react
 ├── README.md
 ├── node_modules
@@ -311,7 +310,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
@@ -326,13 +325,13 @@ The first two statements import the `React` and `ReactDOM` libraries because the
 
 `index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
 
-Line 7 calls React's `ReactDOM.createRoot()` function with the DOM element inside which we want the component to be rendered, in this case the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`. React will create a root for this node, and take over managing the DOM inside it (read more on the [official react doc](https://beta.reactjs.org/apis/react-dom/client/createRoot)). The function returns the `root` which we can use to `render` a React element into the DOM.
+Line 7 calls the `ReactDOM.createRoot()` function with the DOM element inside which we want the React element to be rendered, in this case the DOM element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`. React will create a root for this node, and take over managing the DOM inside it (read more on the [official react doc](https://beta.reactjs.org/apis/react-dom/client/createRoot)). The function returns the `root`.
 
-Line 8 calls `root.render()` with the component we want to render, `<App />` in this case.
+Line 8 calls the `root.render()` method with the React element we want to render into the DOM, `<App />` in this case. We use [strict mode](https://react.dev/reference/react/StrictMode) during development to find common bugs in our components.
 
-All of this tells React that we want to render our React application with the `App` component as the root, or first component.
+All of this tells React that we want to render our React application with `<App />` as the root, or first element.
 
-> **Note:** In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
+> **Note:** In JSX, React elements and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
 [`reportWebVitals`](https://create-react-app.dev/docs/measuring-performance/) are a set of useful metrics that aim to capture the user experience of a web page, but they're not in scope for this article. You can delete its import line, as well as the `reportWebVitals();` line.
 
@@ -345,7 +344,11 @@ import "./index.css";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
 ```
 
 ## Variables and props
@@ -436,7 +439,7 @@ function App(props) {
 With this change, {subject} becomes undefined, so comment out the line `Hello, {subject}!` for now.
 Save your file and check your browser's JavaScript console. You should see something like this logged:
 
-```
+```plain
 Object { subject: "Clarice" }
 ```
 

@@ -53,13 +53,13 @@ const options = {
 const paymentRequest = new PaymentRequest(
   paymentMethods,
   detailsForShipping("ground"),
-  options
+  options,
 );
 
 paymentRequest.addEventListener(
   "paymentmethodchange",
   handlePaymentChange,
-  false
+  false,
 );
 
 paymentRequest

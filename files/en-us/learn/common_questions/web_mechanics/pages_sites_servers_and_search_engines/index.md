@@ -1,6 +1,7 @@
 ---
 title: What is the difference between webpage, website, web server, and search engine?
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -86,7 +87,7 @@ To access a website, type its domain name in your browser address bar, and the b
 
 ![Example of a website domain name in the browser address bar](web-site.jpg)
 
-Note that it also possible to have a _single-page website_: a site that consists of a single web page which is dynamically updated with new content when needed.
+Note that it is also possible to have a _single-page website_: a site that consists of a single web page which is dynamically updated with new content when needed.
 
 ### Web server
 

@@ -1,6 +1,7 @@
 ---
 title: MathML first steps overview
 slug: Learn/MathML/First_steps
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

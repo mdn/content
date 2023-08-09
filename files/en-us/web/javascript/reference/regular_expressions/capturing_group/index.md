@@ -49,9 +49,9 @@ Capturing groups can be [quantified](/en-US/docs/Web/JavaScript/Reference/Regula
 Capturing groups can be used in [lookahead](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) and [lookbehind](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion) assertions. Because lookbehind assertions match their atoms backwards, the final match corresponding to this group is the one that appears to the _left_ end of the string. However, the indices of the match groups still correspond to their relative locations in the regex source.
 
 ```js
-/c(?=(ab))/.exec("cab"); // ['', 'ab']
-/(?<=(a)(b))c/.exec("abc"); // ['', 'a', 'b']
-/(?<=([ab])+)c/.exec("abc"); // ['', 'a']; because "a" is seen by the lookbehind after the lookbehind has seen "b"
+/c(?=(ab))/.exec("cab"); // ['c', 'ab']
+/(?<=(a)(b))c/.exec("abc"); // ['c', 'a', 'b']
+/(?<=([ab])+)c/.exec("abc"); // ['c', 'a']; because "a" is seen by the lookbehind after the lookbehind has seen "b"
 ```
 
 Capturing groups can be nested, in which case the outer group is numbered first, then the inner group, because they are ordered by their opening parentheses. If a nested group is repeated by a quantifier, then each time the group matches, the subgroups' results are all overwritten, sometimes with `undefined`.
@@ -86,7 +86,7 @@ function parseDate(input) {
   if (!parts) {
     return null;
   }
-  return parts.map((p) => parseInt(p, 10));
+  return parts.slice(1).map((p) => parseInt(p, 10));
 }
 
 parseDate("2019-01-01"); // [2019, 1, 1]

@@ -1,6 +1,7 @@
 ---
 title: Strings (str)
 slug: Web/EXSLT/str
+page-type: landing-page
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

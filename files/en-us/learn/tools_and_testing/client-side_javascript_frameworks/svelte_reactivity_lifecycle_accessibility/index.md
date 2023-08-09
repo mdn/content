@@ -1,6 +1,7 @@
 ---
 title: "Advanced Svelte: Reactivity, lifecycle, accessibility"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -454,7 +455,7 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
 3. Now remove the `if (autofocus) nameEl.focus()` line to avoid throwing the error we were seeing before.
 4. The app will now work again, and you'll see the following in your console:
 
-   ```
+   ```plain
    initializing: undefined
    mounted: <input id="todo-0" class="input input__lg" type="text" autocomplete="off">
    ```
