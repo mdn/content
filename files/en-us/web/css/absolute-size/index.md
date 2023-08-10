@@ -19,7 +19,7 @@ The `<absolute-size>` data type is defined using a keyword value chosen from the
 
 - `xx-small`
 
-  - : An absolute size 60% the size of `medium`. Mapped to `size="1"`.
+  - : An absolute size 60% the size of `medium`. Mapped to the deprecated `size="1"`.
 
 - `x-small`
 
@@ -27,7 +27,7 @@ The `<absolute-size>` data type is defined using a keyword value chosen from the
 
 - `small`
 
-  - : An absolute size 89% the size of `medium`. Mapped to `size="2"`.
+  - : An absolute size 89% the size of `medium`. Mapped to the deprecated `size="2"`.
 
 - `medium`
 
@@ -35,18 +35,18 @@ The `<absolute-size>` data type is defined using a keyword value chosen from the
 
 - `large`
 
-  - : An absolute size 20% larger than `medium`. Mapped to `size="4"`.
+  - : An absolute size 20% larger than `medium`. Mapped to the deprecated `size="4"`.
 
 - `x-large`
 
-  - : An absolute size 50% larger than `medium`. Mapped to `size="5"`.
+  - : An absolute size 50% larger than `medium`. Mapped to the deprecated `size="5"`.
 
 - `xx-large`
 
-  - : An absolute size twice the size of `medium`. Mapped to `size="6"`.
+  - : An absolute size twice the size of `medium`. Mapped to the deprecated `size="6"`.
 
 - `xxx-large`
-  - : An absolute size three times the size of `medium`. Mapped to `size="7"`.
+  - : An absolute size three times the size of `medium`. Mapped to the deprecated `size="7"`.
 
 ## Description
 
