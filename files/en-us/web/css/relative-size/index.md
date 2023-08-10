@@ -11,9 +11,13 @@ The **`<relative-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web
 
 ## Syntax
 
-The `<relative-size>` data type is defined using a keyword value chosen from the list below.
+```plain
+<relative-size> = smaller | larger
+```
 
 ### Values
+
+The `<relative-size>` data type is defined using a keyword value chosen from the list below.
 
 - `smaller`
 
@@ -26,12 +30,6 @@ The `<relative-size>` data type is defined using a keyword value chosen from the
 ## Description
 
 The `<relative-size>` keywords are relative to the current size of the element. If the inherited size is defined using an {{cssxref("absolute-size")}} keyword, the `<relative-size>` value equates to the adjacent size in the [`<absolute-size>` table](/en-US/docs/Web/CSS/absolute-size#description). Otherwise, the relative increase or decrease in size is between 120% and 150%.
-
-## Formal syntax
-
-```plain
-<relative-size> = smaller | larger
-```
 
 ## Examples
 

@@ -13,9 +13,13 @@ The font size keywords are mapped to the deprecated HTML `size` attribute. See t
 
 ## Syntax
 
-The `<absolute-size>` data type is defined using a keyword value chosen from the list below.
+```plain
+<absolute-size> = xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large
+```
 
 ### Values
+
+The `<absolute-size>` data type is defined using a keyword value chosen from the list below.
 
 - `xx-small`
 
@@ -65,12 +69,6 @@ For each `<absolute-size>` keyword value, the following table lists the scaling 
 ### HTML size attribute
 
 The `size` attribute to set a font's size in HTML is deprecated. The attribute value was either an integer between `1` and `7` or a relative value. Relative values were an integer preceded by `+` or `-` to increase or decrease the font size, respectively. A value of `+1` meant increasing the `size` by one and `-2` meant decreasing the size by two, with the computed value clamped at a minimum of `1` and a maximum computed value of `7`.
-
-## Formal syntax
-
-```plain
-<absolute-size> = xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large
-```
 
 ## Examples
 
