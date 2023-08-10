@@ -10,7 +10,7 @@ The `false` function returns boolean false.
 
 ### Syntax
 
-```
+```plain
 false()
 ```
 

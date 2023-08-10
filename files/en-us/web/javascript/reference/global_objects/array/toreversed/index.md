@@ -77,6 +77,7 @@ console.log(Array.prototype.toReversed.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.toReversed` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}

@@ -84,7 +84,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
   Making your selectors less complex and specific is also good for maintenance. It is easy to understand what simple selectors are doing, and it is easy to override styles when needed later on if the selectors are less [specific](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2).
 
-- **Don't apply styles to more elements than needed**: A common mistake is to apply styles to all elements using the [universal selector](/en-US/docs/Web/CSS/Universal_selectors), or at least, to more elements than needed. This kind of styling can impact performance neagtively, especially on larger sites.
+- **Don't apply styles to more elements than needed**: A common mistake is to apply styles to all elements using the [universal selector](/en-US/docs/Web/CSS/Universal_selectors), or at least, to more elements than needed. This kind of styling can impact performance negtively, especially on larger sites.
 
   ```css
   /* Selects every element inside the <body> */
@@ -171,7 +171,7 @@ Browsers may set up optimizations before an element is actually changed. These k
 
 ## Optimizing for render blocking
 
-CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Element/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
+CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such as the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Element/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
 
 ```html
 <!-- Loading and parsing styles.css is render-blocking -->

@@ -19,7 +19,7 @@ The {{domxref("RTCPeerConnection")}} method **`addTrack()`** adds a new media tr
 addTrack(track)
 addTrack(track, stream0)
 addTrack(track, stream0, stream1)
-addTrack(track, stream0, stream1, /* … ,*/ streamN)
+addTrack(track, stream0, stream1, /* …, */ streamN)
 ```
 
 ### Parameters

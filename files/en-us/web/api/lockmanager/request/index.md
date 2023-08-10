@@ -9,7 +9,7 @@ browser-compat: api.LockManager.request
 {{APIRef("Web Locks")}}
 
 The **`request()`** method of the {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
-The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves with {{jsxref('undefined')}}.
+The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
 
 The `mode` property of the `options` parameter may be either `"exclusive"` or `"shared"`.
 

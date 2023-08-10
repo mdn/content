@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.unshift
 
 {{JSRef}}
 
-The **`unshift()`** method adds the specified elements to the
+The **`unshift()`** method of {{jsxref("Array")}} instances adds the specified elements to the
 beginning of an array and returns the new length of the array.
 
 {{EmbedInteractiveExample("pages/js/array-unshift.html")}}
@@ -18,7 +18,7 @@ beginning of an array and returns the new length of the array.
 unshift()
 unshift(element0)
 unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element0, element1, /* …, */ elementN)
 ```
 
 ### Parameters

@@ -101,7 +101,7 @@ This works OK, but is render-blocking. A better strategy is to use [`rel="preloa
 The preload {{htmlelement("link")}} fetches the JavaScript as soon as possible, without blocking rendering. You can then use it wherever you want in your page:
 
 ```html
-<!-- Include this whever makes sense -->
+<!-- Include this wherever makes sense -->
 <script src="important-js.js"></script>
 ```
 
@@ -129,7 +129,7 @@ First of all, you can add the `async` attribute to your `<script>` elements:
 
 This causes the script to be fetched in parallel with the DOM parsing, so it will be ready at the same time and won't block rendering.
 
-> **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event) event. This has a similar effect to `async`.
+> **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event. This has a similar effect to `async`.
 
 You could also just not load the JavaScript at all until an event occurs when it is needed. This could be done via DOM scripting, for example:
 
@@ -294,10 +294,10 @@ There are several general best practices that will make your code run more effic
 
 - **Reduce DOM manipulation**: Accessing and updating the DOM is computationally expensive, so you should minimize the amount that your JavaScript does, especially when performing constant DOM animation (see [Handling JavaScript animations](#handling_javascript_animations) above).
 - **Batch DOM changes**: For essential DOM changes, you should batch them into groups that get done together, rather than just firing off each individual change as it occurs. This can reduce the amount of work the browser is doing in real terms, but also improve perceived performance. It can make the UI look smoother to get several updates out of the way in one go, rather than constantly making small updates. A useful tip here is — when you have a large chunk of HTML to add to the page, build the entire fragment first (typically inside a {{domxref("DocumentFragment")}}) and then append it all to the DOM in one go, rather than appending each item separately.
-- **Simplify your HTML**: The simpler your DOM tree is, the faster it can be accessed and manipulated with JavaScript. Think carefully about what your UI needs, and remove unneccessary cruft.
+- **Simplify your HTML**: The simpler your DOM tree is, the faster it can be accessed and manipulated with JavaScript. Think carefully about what your UI needs, and remove unnecessary cruft.
 - **Reduce the amount of looped code**: Loops are expensive, so reduce the amount of loop usage in your code wherever possible. In cases where loops are unavoidable:
 
-  - Avoid running the full loop when it is unneccessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found; there is no need to run further loop iterations:
+  - Avoid running the full loop when it is unnecessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found; there is no need to run further loop iterations:
 
     ```js
     function processGroup(array) {

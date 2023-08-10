@@ -146,7 +146,7 @@ switch (x) {
     let foo;
     break;
   case 1:
-    let foo; // SyntaxError: Identifier 'a' has already been declared
+    let foo; // SyntaxError: Identifier 'foo' has already been declared
     break;
 }
 ```

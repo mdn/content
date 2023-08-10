@@ -82,7 +82,7 @@ Another problem with allowing HTTP compression for media streaming: Apache serve
 
 You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](https://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
 
-```
+```plain
 $ oggz-info /g/media/bruce_vs_ironman.ogv
 Content-Duration: 00:01:00.046
 

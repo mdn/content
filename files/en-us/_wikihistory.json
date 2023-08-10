@@ -15857,19 +15857,6 @@
     "modified": "2020-06-22T16:29:25.903Z",
     "contributors": ["ExE-Boss", "freaktechnik", "hellosct1", "wbamberg"]
   },
-  "Mozilla/Add-ons/WebExtensions/Tips": {
-    "modified": "2020-06-22T16:28:48.203Z",
-    "contributors": [
-      "hellosct1",
-      "SphinxKnight",
-      "CharlesEduardoSCBR",
-      "andrewtruongmoz",
-      "kdex",
-      "wbamberg",
-      "meljag",
-      "kmaglione"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/User_actions": {
     "modified": "2020-06-22T16:29:32.941Z",
     "contributors": ["hellosct1", "wbamberg"]
@@ -36002,7 +35989,7 @@
       "sicking"
     ]
   },
-  "Web/API/File_System_Access_API": {
+  "Web/API/File_System_API": {
     "modified": "2020-12-12T15:46:27.214Z",
     "contributors": ["Rumyra"]
   },
@@ -66586,44 +66573,6 @@
       "Mossop",
       "JesseW",
       "GT"
-    ]
-  },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2020-10-15T21:19:16.649Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "mengjt713",
-      "mfluehr",
-      "SanderBol",
-      "luciopaiva",
-      "Jonathan_Watt",
-      "CodeFry",
-      "hcoronado",
-      "fscholz",
-      "Soupedenuit",
-      "erikadoyle",
-      "Volker-E",
-      "daniville",
-      "jwhitlock",
-      "psydexx1996",
-      "teoli",
-      "RandallFlagg",
-      "Sebastianz",
-      "gtrufitt",
-      "ibmua",
-      "ribeirobreno",
-      "Alhadis",
-      "rwaldron",
-      "davidmark",
-      "tregagnon",
-      "gentooboontoo",
-      "Sheppy",
-      "Daniel Hug",
-      "Jeremie",
-      "ethertank",
-      "enderandpeter",
-      "louisremi"
     ]
   },
   "Web/API/Window/afterprint_event": {

@@ -16,7 +16,6 @@ The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area whic
 mask-clip: content-box;
 mask-clip: padding-box;
 mask-clip: border-box;
-mask-clip: margin-box;
 mask-clip: fill-box;
 mask-clip: stroke-box;
 mask-clip: view-box;
@@ -52,8 +51,6 @@ One or more of the keyword values listed below, separated by commas.
   - : The painted content is clipped to the padding box.
 - `border-box`
   - : The painted content is clipped to the border box.
-- `margin-box`
-  - : The painted content is clipped to the margin box.
 - `fill-box`
   - : The painted content is clipped to the object bounding box.
 - `stroke-box`

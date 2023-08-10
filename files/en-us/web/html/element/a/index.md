@@ -113,7 +113,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com"> Mozilla </a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### Result
@@ -145,7 +145,7 @@ a {
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down"> Jump to the heading below </a></p>
+<p><a href="#Section_further_down">Jump to the heading below</a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
@@ -328,7 +328,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
+<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
 ```
 
 If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
