@@ -93,7 +93,7 @@ table td {
 
 ## Avoiding DocumentFragment Pitfalls
 
-When passed a {{domxref("DocumentFragment")}} value, {{domxref("Node.appendChild")}} and similar methods will move only the *child nodes* of that value into the target node. Thus, it is usually preferable to attach event handlers to a DocumentFragment's children, rather than to the DocumentFragment itself.
+When passed a {{domxref("DocumentFragment")}} value, {{domxref("Node.appendChild")}} and similar methods will move only the _child nodes_ of that value into the target node. Thus, it is usually preferable to attach event handlers to a DocumentFragment's children, rather than to the DocumentFragment itself.
 
 Consider the following HTML and JavaScript:
 
@@ -128,7 +128,7 @@ container.appendChild(secondClone);
 
 ### Result
 
-Since `firstClone` is a DocumentFragment, only its children are added to `container` when `appendChild` is called; `firstClone`'s event handlers are not copied. In contrast, because an event handler is added to `secondClone`'s first *child* node, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
+Since `firstClone` is a DocumentFragment, only its children are added to `container` when `appendChild` is called; `firstClone`'s event handlers are not copied. In contrast, because an event handler is added to `secondClone`'s first _child_ node, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
 {{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
