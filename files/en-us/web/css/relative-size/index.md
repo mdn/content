@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-relative-size
 
 {{CSSRef}}
 
-The **`<relative-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes relative size keywords. The `<relative-size>` values define a size relative to the computed size of the parent element. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
+The **`<relative-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes relative size keywords. The `<relative-size>` keywords define a size relative to the computed size of the parent element. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ The `<relative-size>` data type is defined using a keyword value chosen from the
 
 ## Description
 
-The values of the `<relative-size>` keywords are relative to the current size the element would otherwise be. If the inherited size was defined using an {{cssxref("absolute-size")}}, the `<relative-size>` equates to the adjacent size in the `<absolute-size>` table. Otherwise, the relative increase or decrease is between 120% and 150%.
+The `<relative-size>` keywords are relative to the current size of the element. If the inherited size is defined using an {{cssxref("absolute-size")}} keyword, the `<relative-size>` value equates to the adjacent size in the [`<absolute-size>` table](/en-US/docs/Web/CSS/absolute-size#description). Otherwise, the relative increase or decrease in size is between 120% and 150%.
 
 ## Formal syntax
 
@@ -35,6 +35,7 @@ The values of the `<relative-size>` keywords are relative to the current size th
 
 ## Examples
 
+### Comparing the <relative-size> keyword values
 ```html
 <ul>
   <li class="smaller">font-size: smaller;</li>
@@ -57,7 +58,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample('Examples', '100%', 100)}}
+{{EmbedLiveSample('Comparing the relative-size keyword values', '100%', 100)}}
 
 ## Specifications
 
