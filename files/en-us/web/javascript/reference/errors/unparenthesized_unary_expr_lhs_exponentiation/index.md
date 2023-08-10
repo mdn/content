@@ -24,7 +24,7 @@ SyntaxError: Unexpected token '**'. Ambiguous unary expression in the left hand 
 
 You likely wrote something like this:
 
-```js example-bad
+```js-nolint example-bad
 -a ** b
 ```
 
@@ -37,7 +37,7 @@ Whether it should be evaluated as `(-a) ** b` or `-(a ** b)` is ambiguous. In ma
 
 Other unary operators cannot be the left-hand side of exponentiation either.
 
-```js example-bad
+```js-nolint example-bad
 await a ** b
 !a ** b
 +a ** b
@@ -48,7 +48,7 @@ await a ** b
 
 When writing complex math expressions involving exponentiation, you may write something like this:
 
-```js example-bad
+```js-nolint example-bad
 function taylorSin(x) {
   return (n) => (-1 ** n * x ** (2 * n + 1)) / factorial(2 * n + 1);
   // SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'
