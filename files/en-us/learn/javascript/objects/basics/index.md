@@ -44,7 +44,7 @@ const person = {};
 
 Now open your browser's [JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console), enter `person` into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:
 
-```
+```plain
 [object Object]
 Object { }
 { }

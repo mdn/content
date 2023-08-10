@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.toString
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the specified string value.
+The **`toString()`** method of {{jsxref("String")}} values returns this string value.
 
 {{EmbedInteractiveExample("pages/js/string-tostring.html")}}
 

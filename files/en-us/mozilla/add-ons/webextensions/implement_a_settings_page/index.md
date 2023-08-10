@@ -173,7 +173,7 @@ getting.then(onGot, onError);
 
 At this point, the complete extension should look like this:
 
-```
+```plain
 settings/
     borderify.js
     manifest.json

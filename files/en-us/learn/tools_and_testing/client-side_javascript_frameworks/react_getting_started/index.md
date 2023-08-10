@@ -160,7 +160,7 @@ When the process is complete, `cd` into the `moz-todo-react` directory and run t
 
 create-react-app gives us everything we need to develop a React application. Its initial file structure looks like this:
 
-```
+```plain
 moz-todo-react
 ├── README.md
 ├── node_modules
@@ -439,7 +439,7 @@ function App(props) {
 With this change, {subject} becomes undefined, so comment out the line `Hello, {subject}!` for now.
 Save your file and check your browser's JavaScript console. You should see something like this logged:
 
-```
+```plain
 Object { subject: "Clarice" }
 ```
 

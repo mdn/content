@@ -17,7 +17,7 @@ The **`Math.max()`** static method returns the largest of the numbers given as i
 Math.max()
 Math.max(value0)
 Math.max(value0, value1)
-Math.max(value0, value1, /* … ,*/ valueN)
+Math.max(value0, value1, /* …, */ valueN)
 ```
 
 ### Parameters

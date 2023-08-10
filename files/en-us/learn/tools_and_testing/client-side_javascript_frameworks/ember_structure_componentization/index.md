@@ -187,7 +187,7 @@ To create a component, we use the `ember generate component` command, followed b
 
    These will generate some new files, as shown in the resulting terminal output:
 
-   ```
+   ```plain
    installing component
      create app/components/header.hbs
      skip app/components/header.js

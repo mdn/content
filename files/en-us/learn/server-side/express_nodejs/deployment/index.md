@@ -402,7 +402,10 @@ The final step is to copy your application source files into the repo folder, an
    It should look a bit like the listing below.
 
    ```bash
-   > git status
+   git status
+   ```
+
+   ```plain
    On branch main
    Your branch is up-to-date with 'origin/main'.
    Changes to be committed:

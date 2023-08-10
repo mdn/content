@@ -6,15 +6,15 @@ page-type: guide
 
 {{AddonSidebar}}
 
-You can use WebExtensions APIs to extend the browser's built-in developer tools. To create a devtools extension, include the "[devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" key in [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json):
+You can use WebExtensions APIs to extend the browser's built-in developer tools. To create a devtools extension, include the "[devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" key in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file:
 
 ```json
 "devtools_page": "devtools/devtools-page.html"
 ```
 
-The value of this key is a URL pointing to an HTML file that's been bundled with your extension. The URL should be relative to the manifest.json file itself.
+The value of this key is a URL pointing to an HTML file bundled with your extension, a special extension page called the devtools page. The URL must be relative to the manifest.json file.
 
-The HTML file defines a special page in the extension, called the devtools page.
+This manifest key implicitly sets the `"devtools"` permission, which triggers [an install-time permission warning about devtools](https://support.mozilla.org/en-US/kb/permission-request-messages-firefox-extensions#w_extend-developer-tools-to-access-your-data-in-open-tabs). To avoid this warning, mark the feature as optional by listing the `"devtools"` permission in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key. Setting the optional permission can be particularly helpful when introducing devtools features in an update, as it prevents the extension from being disabled (in Chrome) or blocked from updating (in Firefox).
 
 ## The devtools page
 

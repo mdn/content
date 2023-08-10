@@ -1978,11 +1978,35 @@ We can start with a completely semantic, accessible, unordered list of {{htmlele
 <fieldset>
   <legend>Pick a fruit</legend>
   <ul class="styledSelect">
-    <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
-    <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
-    <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
-    <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
-    <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
+    <li>
+      <input
+        type="radio"
+        name="fruit"
+        value="Cherry"
+        id="fruitCherry"
+        checked />
+      <label for="fruitCherry">Cherry</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Lemon" id="fruitLemon" />
+      <label for="fruitLemon">Lemon</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Banana" id="fruitBanana" />
+      <label for="fruitBanana">Banana</label>
+    </li>
+    <li>
+      <input
+        type="radio"
+        name="fruit"
+        value="Strawberry"
+        id="fruitStrawberry" />
+      <label for="fruitStrawberry">Strawberry</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Apple" id="fruitApple" />
+      <label for="fruitApple">Apple</label>
+    </li>
   </ul>
 </fieldset>
 ```
