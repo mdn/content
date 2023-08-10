@@ -66,14 +66,11 @@ In this example, we provide a [file `<input>` element](/en-US/docs/Web/HTML/Elem
 const fileInput = document.querySelector("input[type=file]");
 const output = document.querySelector(".output");
 
-fileInput.addEventListener("change", () => {
+fileInput.addEventListener("change", async () => {
   const [file] = fileInput.files;
+
   if (file) {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      output.innerText = reader.result;
-    });
-    reader.readAsText(file);
+    output.innerText = await file.text();
   }
 });
 ```
@@ -89,4 +86,5 @@ fileInput.addEventListener("change", () => {
 ## See also
 
 - [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file): the file input element
+- [`text() method`](/en-US/docs/Web/API/Blob/text): .text()
 - The {{domxref("DataTransfer")}} interface

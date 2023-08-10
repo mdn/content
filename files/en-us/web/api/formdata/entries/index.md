@@ -40,7 +40,7 @@ for (const pair of formData.entries()) {
 
 The result is:
 
-```
+```plain
 key1, value1
 key2, value2
 ```

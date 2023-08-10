@@ -1,6 +1,7 @@
 ---
 title: From object to iframe — other embedding technologies
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -168,7 +169,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -229,7 +230,7 @@ If you were to add the code below into one of your pages, you might be surprised
 
 If you have a look at your browser's console, you'll see an error message like the following:
 
-```
+```plain
 Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X-Frame-Options' to 'deny'.
 ```
 

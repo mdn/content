@@ -132,7 +132,7 @@ When you specify an invalid cubic Bézier curve, CSS ignores the whole property.
 
 Each of the keywords [`ease`](#ease), [`ease-in`](#ease-in), [`ease-out`](#ease-out), and [`ease-in-out`](#ease-in-out) is equivalent to a specific `cubic-bezier()` value.
 
-### Step easing function
+### Steps easing function
 
 The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) that divides the domain of output values in equidistant steps. This subclass of step functions are sometimes also called _staircase functions_.
 

@@ -29,7 +29,7 @@ A symbol can be a string, image, or identifier. It is used within the {{cssxref(
 
 ```css
 symbols: A B C D E;
-symbols: "\24B6""\24B7""\24B8"D E;
+symbols: "\24B6" "\24B7" "\24B8" D E;
 symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
 symbols: url("one.svg") url("two.svg") url("three.svg");
 symbols: indic-numbers;
@@ -68,7 +68,7 @@ While a space between quoted symbols is not required, it makes the CSS more legi
 ```css
 @counter-style symbols-example {
   system: fixed;
-  symbols: A "1" "\24B7"D E;
+  symbols: A "1" "\24B7" D E;
 }
 
 .list {
@@ -94,4 +94,4 @@ While a space between quoted symbols is not required, it makes the CSS more legi
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles
 - {{cssxref("url", "url()")}} function
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_Counter_Styles) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

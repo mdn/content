@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Arrays"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

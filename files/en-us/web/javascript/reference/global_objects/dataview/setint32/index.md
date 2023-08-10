@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.DataView.setInt32
 
 {{JSRef}}
 
-The **`setInt32()`** method stores a signed 32-bit integer
-(long) value at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`setInt32()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 32-bit signed integer in the 4 bytes at the specified byte offset of this `DataView`.
 
 {{EmbedInteractiveExample("pages/js/dataview-setint32.html")}}
 

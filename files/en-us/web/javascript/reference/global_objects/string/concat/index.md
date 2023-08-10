@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.String.concat
 
 {{JSRef}}
 
-The **`concat()`** method concatenates
-the string arguments to the calling string and returns a new string.
+The **`concat()`** method of {{jsxref("String")}} values concatenates
+the string arguments to this string and returns a new string.
 
 {{EmbedInteractiveExample("pages/js/string-concat.html")}}
 

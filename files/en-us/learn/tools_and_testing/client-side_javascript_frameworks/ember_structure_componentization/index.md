@@ -1,6 +1,7 @@
 ---
 title: Ember app structure and componentization
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -186,7 +187,7 @@ To create a component, we use the `ember generate component` command, followed b
 
    These will generate some new files, as shown in the resulting terminal output:
 
-   ```
+   ```plain
    installing component
      create app/components/header.hbs
      skip app/components/header.js

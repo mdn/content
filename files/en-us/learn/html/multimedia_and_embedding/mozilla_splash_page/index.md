@@ -1,6 +1,7 @@
 ---
 title: Mozilla splash page
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

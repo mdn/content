@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.reduceRight
 
 {{JSRef}}
 
-The **`reduceRight()`** method applies a function against an
+The **`reduceRight()`** method of {{jsxref("Array")}} instances applies a function against an
 accumulator and each value of the array (from right-to-left) to reduce it to a single
 value.
 
@@ -235,7 +235,7 @@ console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
 
 ### Calling reduceRight() on non-array objects
 
-The `reduceRight()` method reads the `length` property of `this` and then accesses each integer index.
+The `reduceRight()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -243,6 +243,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 99, // ignored by reduceRight() since length is 3
 };
 console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 // -1, which is 4 - 3 - 2
@@ -261,10 +262,10 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 - [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
-- {{jsxref("Array.prototype.group()")}}
-- {{jsxref("Array.prototype.groupToMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

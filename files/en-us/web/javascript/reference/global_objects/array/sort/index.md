@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.sort
 
 {{JSRef}}
 
-The **`sort()`** method sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+The **`sort()`** method of {{jsxref("Array")}} instances sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
 
 The time and space complexity of the sort cannot be guaranteed as it depends on the
 implementation.
@@ -357,6 +357,6 @@ console.log(Array.prototype.sort.call(arrayLike));
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - {{jsxref("TypedArray.prototype.sort()")}}
-- [Getting things sorted in V8](https://v8.dev/blog/array-sort) on v8.dev (September 28, 2018)
-- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort) on v8.dev (July 2, 2019)
+- [Getting things sorted in V8](https://v8.dev/blog/array-sort) on v8.dev (2018)
+- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort) on v8.dev (2019)
 - [`Array.prototype.sort` stability](https://mathiasbynens.be/demo/sort-stability) by Mathias Bynens

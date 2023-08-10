@@ -37,4 +37,4 @@ In this case the left auto margin takes up any available space and pushes the it
 
 ## See also
 
-- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)

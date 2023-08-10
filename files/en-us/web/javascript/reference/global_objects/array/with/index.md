@@ -12,7 +12,7 @@ The **`with()`** method of {{jsxref("Array")}} instances is the [copying](/en-US
 ## Syntax
 
 ```js-nolint
-array.with(index, value)
+arrayObject.with(index, value)
 ```
 
 ### Parameters
@@ -71,7 +71,7 @@ console.log(arr.with(0, 2)); // [2, undefined, 3, 4, undefined, 6]
 
 ### Calling with() on non-array objects
 
-The `with()` method reads the `length` property of `this`. It then reads each integer-keyed property of `this` and writes it to the new array, while `value` is written to the given `index`.
+The `with()` method creates and returns a new array. It reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`. As each property of `this` is accessed, the array element having an index equal to the key of the property is set to the value of the property. Finally, the array value at `index` is set to `value`.
 
 ```js
 const arrayLike = {
@@ -79,6 +79,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
+  3: 3, // ignored by with() since length is 3
 };
 console.log(Array.prototype.with.call(arrayLike, 0, 1));
 // [ 1, undefined, 4 ]
@@ -95,6 +96,7 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.with` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}

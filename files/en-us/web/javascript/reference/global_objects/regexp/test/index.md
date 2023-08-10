@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.test
 
 {{JSRef}}
 
-The **`test()`** method executes a search for a match between a regular expression and a specified string. Returns `true` if there is a match; `false` otherwise.
+The **`test()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match between a regular expression and a specified string. Returns `true` if there is a match; `false` otherwise.
 
 JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
 the {{jsxref("RegExp/global", "global")}} or {{jsxref("RegExp/sticky", "sticky")}} flags

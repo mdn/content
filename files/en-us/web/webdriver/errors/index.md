@@ -1,6 +1,7 @@
 ---
 title: WebDriver errors
 slug: Web/WebDriver/Errors
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages}}

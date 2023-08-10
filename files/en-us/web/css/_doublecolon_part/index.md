@@ -68,7 +68,9 @@ tabbed-custom-element::part(tab):hover:active {
 }
 
 tabbed-custom-element::part(tab):focus {
-  box-shadow: 0 0 0 1px #0a84ff inset, 0 0 0 1px #0a84ff,
+  box-shadow:
+    0 0 0 1px #0a84ff inset,
+    0 0 0 1px #0a84ff,
     0 0 0 4px rgba(10, 132, 255, 0.3);
 }
 
@@ -88,7 +90,7 @@ globalThis.customElements.define(
     constructor() {
       super().attachShadow({ mode: "open" }).append(template.content);
     }
-  }
+  },
 );
 ```
 
@@ -108,4 +110,4 @@ globalThis.customElements.define(
 
 - The [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute - Used to define parts which can be selected by the `::part()` selector
 - The [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
-- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)
+- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module

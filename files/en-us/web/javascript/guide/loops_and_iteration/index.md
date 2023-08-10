@@ -404,7 +404,7 @@ function dumpProps(obj, objName) {
 
 For an object `car` with properties `make` and `model`, `result` would be:
 
-```
+```plain
 car.make = Ford
 car.model = Mustang
 ```

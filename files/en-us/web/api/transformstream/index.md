@@ -51,7 +51,7 @@ const transformContent = {
           controller.terminate();
         } else if (ArrayBuffer.isView(chunk)) {
           controller.enqueue(
-            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength)
+            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength),
           );
         } else if (
           Array.isArray(chunk) &&
@@ -163,7 +163,7 @@ let { readable, writable } = new TransformStream();
 responses.reduce(
   (a, res, i, arr) =>
     a.then(() => res.pipeTo(writable, { preventClose: i + 1 !== arr.length })),
-  Promise.resolve()
+  Promise.resolve(),
 );
 ```
 

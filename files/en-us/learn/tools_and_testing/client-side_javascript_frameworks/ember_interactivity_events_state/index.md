@@ -1,6 +1,7 @@
 ---
 title: "Ember interactivity: Events, classes and state"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -128,7 +129,7 @@ ember generate service todo-data
 
 This should give you a terminal output like so:
 
-```
+```plain
 installing service
   create app/services/todo-data.js
 installing service-test

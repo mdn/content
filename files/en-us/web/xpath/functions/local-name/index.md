@@ -1,6 +1,7 @@
 ---
 title: local-name
 slug: Web/XPath/Functions/local-name
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `local-name` function returns a string representing the local name of the fi
 
 ### Syntax
 
-```
+```plain
 local-name( [node-set] )
 ```
 

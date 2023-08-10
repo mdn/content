@@ -26,13 +26,18 @@ offset-path: url(#path);
 
 /* Shape */
 offset-path: circle(50% at 25% 25%);
+offset-path: ellipse(50% 50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
 offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
 
-/* Geometry box */
-offset-path: margin-box;
+/* Coord box */
+offset-path: content-box;
+offset-path: padding-box;
+offset-path: border-box;
+offset-path: fill-box;
 offset-path: stroke-box;
+offset-path: view-box;
 
 /* Global values */
 offset-path: inherit;
@@ -52,7 +57,7 @@ offset-path: unset;
 - `url()`
   - : References the ID of an SVG shape — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 - `<basic-shape>`
-  - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) by using one of the shape functions such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon), or {{cssxref("path","path()")}}.
+  - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) by using one of the shape functions such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon), or {{cssxref("path","path()")}}.
 - `none`
   - : Specifies no motion path at all.
 

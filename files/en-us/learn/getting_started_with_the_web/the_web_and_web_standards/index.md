@@ -1,6 +1,7 @@
 ---
 title: The web and web standards
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
+page-type: guide
 ---
 
 {{learnsidebar}}
@@ -67,7 +68,7 @@ You are probably reading these words inside a web browser in this very moment (u
 
 Hypertext Transfer Protocol, or [HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where websites are stored). A typical conversation goes something like
 
-```
+```plain
 "Hello web server. Can you give me the files I need to render bbc.co.uk"?
 
 "Sure thing web browser — here you go"

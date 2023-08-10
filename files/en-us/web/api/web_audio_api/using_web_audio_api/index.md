@@ -122,7 +122,7 @@ playButton.addEventListener(
       playButton.dataset.playing = "false";
     }
   },
-  false
+  false,
 );
 ```
 
@@ -134,7 +134,7 @@ audioElement.addEventListener(
   () => {
     playButton.dataset.playing = "false";
   },
-  false
+  false,
 );
 ```
 
@@ -178,7 +178,7 @@ volumeControl.addEventListener(
   () => {
     gainNode.gain.value = volumeControl.value;
   },
-  false
+  false,
 );
 ```
 
@@ -225,7 +225,7 @@ pannerControl.addEventListener(
   () => {
     panner.pan.value = pannerControl.value;
   },
-  false
+  false,
 );
 ```
 

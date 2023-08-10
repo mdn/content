@@ -12,7 +12,7 @@ Might be in fact a missing curly bracket, but could also be a missing comma.
 
 ## Message
 
-```
+```plain
 SyntaxError: missing } after property list (Firefox)
 SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (Safari)
 ```

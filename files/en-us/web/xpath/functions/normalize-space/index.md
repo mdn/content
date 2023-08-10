@@ -1,6 +1,7 @@
 ---
 title: normalize-space
 slug: Web/XPath/Functions/normalize-space
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `normalize-space` function strips leading and trailing white-space from a st
 
 ### Syntax
 
-```
+```plain
 normalize-space( [string] )
 ```
 

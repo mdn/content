@@ -10,7 +10,7 @@ The JavaScript exception "a declaration in the head of a for-of loop can't have 
 
 ## Message
 
-```
+```plain
 SyntaxError: for-of loop variable declaration may not have an initializer. (V8-based)
 SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
 SyntaxError: Cannot assign to the loop variable inside a for-of loop header. (Safari)

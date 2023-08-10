@@ -72,7 +72,7 @@ window.addEventListener(
 
     // …
   },
-  false
+  false,
 );
 ```
 
@@ -161,7 +161,7 @@ const popup = window.open(/* popup details */);
 // This does nothing, assuming the window hasn't changed its location.
 popup.postMessage(
   "The user is 'bob' and the password is 'secret'",
-  "https://secure.example.net"
+  "https://secure.example.net",
 );
 
 // This will successfully queue a message to be sent to the popup, assuming
@@ -178,7 +178,7 @@ window.addEventListener(
     // event.source is popup
     // event.data is "hi there yourself!  the secret response is: rheeeeet!"
   },
-  false
+  false,
 );
 ```
 
@@ -201,7 +201,7 @@ window.addEventListener("message", (event) => {
   // event.origin as the targetOrigin.
   event.source.postMessage(
     "hi there yourself!  the secret response " + "is: rheeeeet!",
-    event.origin
+    event.origin,
   );
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: Script timeout
 slug: Web/WebDriver/Errors/ScriptTimeout
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
@@ -31,7 +32,7 @@ except exceptions.ScriptTimeoutException as e:
 
 Output:
 
-```
+```plain
 ScriptTimeoutException: Timed out after 35000 ms
 ```
 
@@ -51,7 +52,7 @@ print("finished successfully")
 
 Output:
 
-```
+```plain
 finished successfully
 ```
 

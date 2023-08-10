@@ -15,7 +15,7 @@ the quotation marks when trying to access a DOM identifier as well.
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected '#' used outside of class body.
 ```
 

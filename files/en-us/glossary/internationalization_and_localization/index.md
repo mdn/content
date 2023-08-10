@@ -14,4 +14,4 @@ Internationalization includes support for multiple character sets (usually via [
 
 - [Internationalization extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
 - [Internationalization API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) and [Grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) and [Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

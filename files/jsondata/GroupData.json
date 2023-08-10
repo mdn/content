@@ -204,6 +204,7 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
+        "OTPCredential",
         "PasswordCredential",
         "PublicKeyCredential"
       ],
@@ -484,9 +485,9 @@
       "properties": [],
       "events": []
     },
-    "File System Access API": {
-      "overview": ["File System Access API"],
-      "guides": [],
+    "File System API": {
+      "overview": ["File System API"],
+      "guides": ["/docs/Web/API/File_System_API/Origin_private_file_system"],
       "interfaces": [
         "FileSystemHandle",
         "FileSystemFileHandle",
@@ -1114,13 +1115,14 @@
       "guides": [],
       "interfaces": [
         "Scheduler",
+        "Scheduling",
         "TaskController",
         "TaskSignal",
         "AbortSignal",
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Window.scheduler"],
+      "properties": ["Navigator.scheduling", "Window.scheduler"],
       "events": []
     },
     "Push API": {
@@ -1580,7 +1582,9 @@
         "AnimationTimeline",
         "AnimationPlaybackEvent",
         "DocumentTimeline",
-        "KeyframeEffect"
+        "KeyframeEffect",
+        "ScrollTimeline",
+        "ViewTimeline"
       ],
       "methods": [
         "Document.getAnimations()",
@@ -2154,7 +2158,7 @@
     "WebOTP API": {
       "overview": ["WebOTP API"],
       "interfaces": ["OTPCredential"],
-      "methods": [],
+      "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
     },

@@ -1,6 +1,7 @@
 ---
 title: Image file type and format guide
 slug: Web/Media/Formats/Image_types
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

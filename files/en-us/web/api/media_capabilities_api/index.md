@@ -31,7 +31,7 @@ if ("mediaCapabilities" in navigator) {
     .decodingInfo(audioFileConfiguration)
     .then((result) => {
       console.log(
-        `This configuration is ${result.supported ? "" : "not "}supported,`
+        `This configuration is ${result.supported ? "" : "not "}supported,`,
       );
       console.log(`${result.smooth ? "" : "not "}smooth, and`);
       console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
@@ -74,6 +74,6 @@ Media capabilities information enables websites to enable adaptive streaming to 
 ## See also
 
 - [HTMLMediaElement](/en-US/docs/Web/API/HTMLMediaElement)'s method [canPlayType()](/en-US/docs/Web/API/HTMLMediaElement/canPlayType)
-- [MediaSource](/en-US/docs/Web/API/MediaSource)'s method [isTypeSupported()](/en-US/docs/Web/API/MediaSource/isTypeSupported)
+- [MediaSource](/en-US/docs/Web/API/MediaSource)'s method [isTypeSupported()](/en-US/docs/Web/API/MediaSource/isTypeSupported_static)
 - {{DOMxRef("Navigator")}} interface
 - [Using the Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)

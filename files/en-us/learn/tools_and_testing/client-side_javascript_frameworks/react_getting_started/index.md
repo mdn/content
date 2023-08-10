@@ -1,6 +1,7 @@
 ---
 title: Getting started with React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -96,7 +97,7 @@ Of course, your browser can't read JSX without help. When compiled (using a tool
 const header = React.createElement(
   "header",
   null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -104,7 +105,7 @@ It's _possible_ to skip the compilation step and use [`React.createElement()`](h
 
 Because JSX is a blend of HTML and JavaScript, some developers find it intuitive. Others say that its blended nature makes it confusing. Once you're comfortable with it, however, it will allow you to build user interfaces more quickly and intuitively, and allow others to better understand your codebase at a glance.
 
-To read more about JSX, check out the React team's [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html) article.
+To read more about JSX, check out the React team's [Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx) article.
 
 ## Setting up your first React app
 
@@ -159,7 +160,7 @@ When the process is complete, `cd` into the `moz-todo-react` directory and run t
 
 create-react-app gives us everything we need to develop a React application. Its initial file structure looks like this:
 
-```
+```plain
 moz-todo-react
 ├── README.md
 ├── node_modules
@@ -309,7 +310,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
@@ -346,7 +347,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 
@@ -438,7 +439,7 @@ function App(props) {
 With this change, {subject} becomes undefined, so comment out the line `Hello, {subject}!` for now.
 Save your file and check your browser's JavaScript console. You should see something like this logged:
 
-```
+```plain
 Object { subject: "Clarice" }
 ```
 

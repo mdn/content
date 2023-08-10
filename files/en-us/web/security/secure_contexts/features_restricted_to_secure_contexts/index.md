@@ -1,6 +1,7 @@
 ---
 title: Features restricted to secure contexts
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

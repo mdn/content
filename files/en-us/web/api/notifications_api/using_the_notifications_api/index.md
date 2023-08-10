@@ -53,10 +53,14 @@ Notification.requestPermission().then((result) => {
 This uses the promise-based version of the method. If you want to support older versions, you might have to use the older callback version, which looks like this:
 
 ```js
-Notification.requestPermission();
+Notification.requestPermission((result) => {
+  console.log(result);
+});
 ```
 
 The callback version optionally accepts a callback function that is called once the user has responded to the request to display permissions.
+
+> **Note:** There's no way to reliably feature-test whether `Notification.requestPermission` supports the promise-based version. If you need to support older browsers, just use the callback-based version—although this is deprecated, it still works in new browsers. Check the [browser compatibility table](/en-US/docs/Web/API/Notification/requestPermission_static#browser_compatibility) for more information.
 
 ### Example
 
@@ -80,12 +84,8 @@ function askNotificationPermission() {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     console.log("This browser does not support notifications.");
-  } else if (checkNotificationPromise()) {
-    Notification.requestPermission().then((permission) => {
-      handlePermission(permission);
-    });
   } else {
-    Notification.requestPermission((permission) => {
+    Notification.requestPermission().then((permission) => {
       handlePermission(permission);
     });
   }
@@ -97,24 +97,6 @@ Looking at the second main block first, you'll see that we first check to see if
 To avoid duplicating code, we have stored a few bits of housekeeping code inside the `handlePermission()` function, which is the first main block inside this snippet. Inside here we explicitly set the `Notification.permission` value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.
 
 > **Note:** Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the `load` event handler (see [issue 274284](https://crbug.com/274284)).
-
-### Feature-detecting the requestPermission() promise
-
-Above we said that we had to check whether the browser supports the promise version of `Notification.requestPermission()`. We did this using the following:
-
-```js
-function checkNotificationPromise() {
-  try {
-    Notification.requestPermission().then();
-  } catch (e) {
-    return false;
-  }
-
-  return true;
-}
-```
-
-We basically try to see if the `.then()` method is available on `requestPermission()`. If so, we move on and return `true`. If it fails, we return `false` in the `catch() {}` block.
 
 ## Creating a notification
 
@@ -208,7 +190,7 @@ window.addEventListener("load", () => {
       // If the user hasn't told if they want to be notified or not
       // Note: because of Chrome, we are not sure the permission property
       // is set, therefore it's unsafe to check for the "default" value.
-      Notification.requestPermission((status) => {
+      Notification.requestPermission().then((status) => {
         // If the user said okay
         if (status === "granted") {
           let i = 0;

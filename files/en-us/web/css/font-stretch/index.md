@@ -101,7 +101,9 @@ td {
 }
 
 #inconsolata td {
-  font: 90px Inconsolata, sans-serif;
+  font:
+    90px Inconsolata,
+    sans-serif;
 }
 #anek-malayalam td {
   font: 90px "Anek Malayalam";

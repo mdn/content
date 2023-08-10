@@ -43,7 +43,7 @@ for (const value of searchParams.values()) {
 
 The result is:
 
-```
+```plain
 value1
 value2
 ```
@@ -58,7 +58,7 @@ console.log(Array.from(searchParams.values()));
 
 The result is:
 
-```
+```plain
 ['value1', 'value2']
 ```
 
