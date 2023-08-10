@@ -62,7 +62,10 @@ The `column-gap` property is specified as one of the values listed below.
 #### HTML
 
 ```html
-<div id="flexbox">
+<div class="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
@@ -72,22 +75,26 @@ The `column-gap` property is specified as one of the values listed below.
 #### CSS
 
 ```css
-#flexbox {
+.flexbox {
   display: flex;
+  flex-flow: row wrap;
   height: 100px;
   column-gap: 20px;
 }
 
-#flexbox > div {
+.flexbox > div {
   border: 1px solid green;
   background-color: lime;
-  flex: auto;
+  flex: 200px;
+}
+div:nth-of-type(3n) {
+  flex: 300px;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
+{{EmbedLiveSample("Flex_layout", "auto", "220px")}}
 
 ### Grid layout
 
@@ -95,6 +102,9 @@ The `column-gap` property is specified as one of the values listed below.
 
 ```html
 <div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
@@ -120,7 +130,7 @@ The `column-gap` property is specified as one of the values listed below.
 
 #### Result
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("Grid_layout", "auto", "220px")}}
 
 ### Multi-column layout
 
