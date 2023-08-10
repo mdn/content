@@ -121,7 +121,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample('Comparing the absolute-size keyword values', '100%', 400)}}
+{{EmbedLiveSample('Comparing the keyword values', '100%', 400)}}
 
 ## Specifications
 

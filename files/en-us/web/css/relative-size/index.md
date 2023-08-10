@@ -35,11 +35,12 @@ The `<relative-size>` keywords are relative to the current size of the element. 
 
 ## Examples
 
-### Comparing the <relative-size> keyword values
+### Comparing the keyword values
+
 ```html
 <ul>
   <li class="smaller">font-size: smaller;</li>
-  <li>No font-size set</li>
+  <li>font-size is not specified</li>
   <li class="larger">font-size: larger;</li>
 </ul>
 ```
@@ -58,7 +59,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample('Comparing the relative-size keyword values', '100%', 100)}}
+{{EmbedLiveSample('Comparing the keyword values', '100%', 100)}}
 
 ## Specifications
 
