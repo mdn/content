@@ -41,7 +41,7 @@ The **CSS font loading** module describes events and interfaces used for dynamic
 - CSS {{cssxref("@font-face")}} at-rule
 - CSS {{cssxref("@font-feature-values")}} at-rule
 - {{domxref("CSSFontFaceRule")}} interface
-- Document {{domxref("document.fonts", "fonts")}} property (returns the {{domxref("fontFaceSet")}} interface)
+- Document {{domxref("document.fonts", "fonts")}} property (returns the {{domxref("FontFaceSet")}} object instance)
 - WorkerGlobalScope {{domxref("WorkerGlobalScope.fonts", "fonts")}} property (returns the {{domxref("fontFaceSet")}} interface)
 - JavaScript {{jsxref("Promise")}} object
 
