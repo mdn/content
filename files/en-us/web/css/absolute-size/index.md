@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-absolute-size
 
 The **`<absolute-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes the absolute size keywords. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
 
-The font size keywords are mapped to the deprecated HTML `size` attribute. See the [HTML size attribute](#html_size_attribute) section below). 
+The font size keywords are mapped to the deprecated HTML `size` attribute. See the [HTML size attribute](#html_size_attribute) section below).
 
 ## Syntax
 
@@ -56,11 +56,11 @@ In CSS1 (1996), the scaling factor between adjacent keyword value indexes was 1.
 
 For each `<absolute-size>` keyword value, the following table lists the scaling factor, mapping to [`<h1>` to `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) headings, and mapping to the deprecated [HTML `size` attribute](#html-size-attribute).
 
-| `<absolute-size>`                                              | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
-| -------------------------------------------------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |
-| scaling factor                                                 | 3/5      | 3/4     | 8/9   | 1      | 6/5   | 3/2     | 2/1      | 3/1       |
-| HTML headings                                             | h6       |         | h5    | h4     | h3    | h2      | h1       |           |
-| HTML `size` attribute                                             | 1        |         | 2     | 3      | 4     | 5       | 6        | 7         |
+| `<absolute-size>`     | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
+| --------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |
+| scaling factor        | 3/5      | 3/4     | 8/9   | 1      | 6/5   | 3/2     | 2/1      | 3/1       |
+| HTML headings         | h6       |         | h5    | h4     | h3    | h2      | h1       |           |
+| HTML `size` attribute | 1        |         | 2     | 3      | 4     | 5       | 6        | 7         |
 
 ### HTML size attribute
 
