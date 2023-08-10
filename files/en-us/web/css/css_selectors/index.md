@@ -145,7 +145,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - {{CSSXref(":popover-open")}} pseudo-class
 
-- CSS scoping module
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 
   - {{CSSXref(":host")}} pseudo-class
   - {{CSSXref(":host_function", ":host()")}} pseudo-class
