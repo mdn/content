@@ -74,7 +74,7 @@ The `size` attribute to set a font's size in HTML is deprecated. The attribute v
 
 ## Examples
 
-### Comparing the <absolute-size> keyword values
+### Comparing the keyword values
 
 ```html
 <ul>
