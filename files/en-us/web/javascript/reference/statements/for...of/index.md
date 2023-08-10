@@ -55,7 +55,7 @@ You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destr
 
 However, a special rule forbids using `async` as the variable name. This is invalid syntax:
 
-```js example-bad
+```js-nolint example-bad
 let async;
 for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop may not be 'async'.
 ```
