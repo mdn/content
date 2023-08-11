@@ -169,6 +169,12 @@ You can also combine multiple media queries into a single rule by separating the
 - `or`
   - : Equivalent to the `,` operator. Added in Media Queries Level 4.
 
+### User Agent Client Hints
+
+Some media queries have corresponding [User Agent client hints](/en-US/docs/Web/HTTP/Client_hints).
+These are HTTP headers that request content that is pre-optimized for the particular media requirement.
+They include: {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}, {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, and {{HTTPHeader("Save-Data")}}.
+
 ## Accessibility concerns
 
 To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
@@ -183,12 +189,6 @@ For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@med
 Because media queries provide insights into the capabilities—and by extension, the features and design—of the device the user is working with, there is the potential that they could be abused to construct a "fingerprint" which identifies the device, or at least categorizes it to some degree of detail that may be undesirable to users.
 
 Because of this potential, a browser may opt to fudge the returned values in some manner in order to prevent them from being used to precisely identify a computer. A browser might also offer additional measures in this area; for example, if Firefox's "Resist Fingerprinting" setting is enabled, many media queries report default values rather than values representing the actual device state.
-
-## User Agent Client Hints
-
-Some media queries have corresponding [User Agent client hints](/en-US/docs/Web/HTTP/Client_hints).
-These are HTTP headers that request content that is pre-optimized for the particular media requirement.
-They include: {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}, {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, and {{HTTPHeader("Save-Data")}}.
 
 ## Formal syntax
 
