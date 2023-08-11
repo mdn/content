@@ -58,7 +58,7 @@ function draw() {
   ctx.save(); // Save the current state
 
   ctx.fillStyle = "#FFF"; // Make changes to saved settings
-  ctx.globalAlpha = 0.5;  
+  ctx.globalAlpha = 0.5;
   ctx.fillRect(30, 30, 90, 90); // Draw a 50%-White rectangle with newest settings
 
   ctx.restore(); // Restore to previous state
