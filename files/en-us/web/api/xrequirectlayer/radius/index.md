@@ -1,17 +1,10 @@
 ---
-title: XREquirectLayer.radius
+title: "XREquirectLayer: radius property"
+short-title: radius
 slug: Web/API/XREquirectLayer/radius
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.radius
 ---
 
@@ -37,7 +30,7 @@ const equirectLayer = xrGlBinding.createEquirectLayer({
   centralHorizontalAngle: 2 * Math.PI,
   upperVerticalAngle: Math.PI / 2.0,
   lowerVerticalAngle: -Math.PI / 2.0,
-  radius: 0
+  radius: 0,
 });
 
 equirectLayer.radius; // 0

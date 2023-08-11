@@ -1,27 +1,11 @@
 ---
-title: PaymentAddress.postalCode
+title: "PaymentAddress: postalCode property"
+short-title: postalCode
 slug: Web/API/PaymentAddress/postalCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - PIN
-  - PIN Code
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Post Code
-  - Postal Code
-  - Property
-  - Read-only
-  - Reference
-  - ZIP
-  - ZIP Code
-  - payment
-  - paymentAddress
-  - postalCode
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.postalCode
 ---
 

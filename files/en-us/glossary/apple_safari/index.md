@@ -1,12 +1,12 @@
 ---
 title: Apple Safari
 slug: Glossary/Apple_Safari
-tags:
-  - Navigation
-  - WebMechanics
+page-type: glossary-definition
 ---
 
-[Safari](https://www.apple.com/safari/) is a {{Glossary("Browser","Web browser")}} developed by Apple and bundled with both macOS and iOS. It's based on the open source [WebKit](https://webkit.org/) engine.
+{{GlossarySidebar}}
+
+[Safari](https://www.apple.com/safari/) is a {{Glossary("Browser","Web browser")}} developed by Apple and bundled with macOS, iPadOS, and iOS. It's based on the open-source [WebKit](https://webkit.org/) engine.
 
 ## See also
 

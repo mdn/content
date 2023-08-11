@@ -1,14 +1,10 @@
 ---
-title: InterventionReportBody.id
+title: "InterventionReportBody: id property"
+short-title: id
 slug: Web/API/InterventionReportBody/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - id
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.id
 ---
 
@@ -26,9 +22,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

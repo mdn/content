@@ -1,19 +1,13 @@
 ---
-title: get RegExp[@@species]
+title: RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.RegExp.@@species
 ---
 
 {{JSRef}}
 
-The **`RegExp[@@species]`** accessor property returns the constructor used to construct copied regular expressions in certain `RegExp` methods.
+The **`RegExp[@@species]`** static accessor property returns the constructor used to construct copied regular expressions in certain `RegExp` methods.
 
 > **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
@@ -82,7 +76,7 @@ Or you can use this to observe the copying process:
 ```js
 class MyRegExp extends RegExp {
   constructor(...args) {
-    console.log("Creating a new MyRegExp instance with args: ", args);
+    console.log("Creating a new MyRegExp instance with args:", args);
     super(...args);
   }
   static get [Symbol.species]() {
@@ -90,20 +84,20 @@ class MyRegExp extends RegExp {
     return this;
   }
   exec(value) {
-    console.log("Executing with lastIndex: ", this.lastIndex);
+    console.log("Executing with lastIndex:", this.lastIndex);
     return super.exec(value);
   }
 }
 
 Array.from("aabbccdd".matchAll(new MyRegExp("[ac]", "g")));
-// Creating a new MyRegExp instance with args:  [ '[ac]', 'g' ]
+// Creating a new MyRegExp instance with args: [ '[ac]', 'g' ]
 // Copying MyRegExp
-// Creating a new MyRegExp instance with args:  [ MyRegExp /[ac]/g, 'g' ]
-// Executing with lastIndex:  0
-// Executing with lastIndex:  1
-// Executing with lastIndex:  2
-// Executing with lastIndex:  5
-// Executing with lastIndex:  6
+// Creating a new MyRegExp instance with args: [ MyRegExp /[ac]/g, 'g' ]
+// Executing with lastIndex: 0
+// Executing with lastIndex: 1
+// Executing with lastIndex: 2
+// Executing with lastIndex: 5
+// Executing with lastIndex: 6
 ```
 
 ## Specifications

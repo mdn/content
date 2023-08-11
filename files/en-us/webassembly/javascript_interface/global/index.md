@@ -1,11 +1,6 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Global
 ---
 
@@ -25,7 +20,7 @@ All `Global` instances inherit from the `Global()` constructor's prototype objec
 ### Instance properties
 
 - `Global.prototype.constructor`
-  - : Returns the function that created this object's instance. By default this is the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor.
+  - : Returns the function that created this object's instance. By default this is the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global/Global) constructor.
 - `Global.prototype[@@toStringTag]`
   - : The initial value of the [@@toStringTag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the String value "WebAssembly.Global".
 - `Global.prototype.value`
@@ -64,17 +59,17 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
     assertEq(
       "getting initial value from wasm",
       instance.exports.getGlobal(),
-      0
+      0,
     );
     global.value = 42;
     assertEq(
       "getting JS-updated value from wasm",
       instance.exports.getGlobal(),
-      42
+      42,
     );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-  }
+  },
 );
 ```
 

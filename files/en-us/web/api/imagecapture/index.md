@@ -2,16 +2,8 @@
 title: ImageCapture
 slug: Web/API/ImageCapture
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Interface
-  - Media
-  - MediaStream Image Capture API
-  - Reference
+status:
+  - experimental
 browser-compat: api.ImageCapture
 ---
 
@@ -36,7 +28,7 @@ The `ImageCapture` interface is based on {{domxref("EventTarget")}}, so it inclu
 - {{domxref("ImageCapture.takePhoto()")}} {{Experimental_Inline}}
   - : Takes a single exposure using the video capture device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} containing the data.
 - {{domxref("ImageCapture.getPhotoCapabilities()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of available configuration options.
+  - : Returns a {{jsxref("Promise")}} that resolves with a `PhotoCapabilities` object containing the ranges of available configuration options.
 - {{domxref("ImageCapture.getPhotoSettings()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object containing the current photo configuration settings.
 - {{domxref("ImageCapture.grabFrame()")}} {{Experimental_Inline}}
@@ -52,51 +44,65 @@ This example shows, roughly, a {{domxref("MediaStreamTrack")}} extracted from a 
 let imageCapture;
 
 function onGetUserMediaButtonClick() {
-  navigator.mediaDevices.getUserMedia({video: true})
-  .then((mediaStream) => {
-    document.querySelector('video').srcObject = mediaStream;
+  navigator.mediaDevices
+    .getUserMedia({ video: true })
+    .then((mediaStream) => {
+      document.querySelector("video").srcObject = mediaStream;
 
-    const track = mediaStream.getVideoTracks()[0];
-    imageCapture = new ImageCapture(track);
-  })
-  .catch((error) => console.error(error));
+      const track = mediaStream.getVideoTracks()[0];
+      imageCapture = new ImageCapture(track);
+    })
+    .catch((error) => console.error(error));
 }
 
 function onGrabFrameButtonClick() {
-  imageCapture.grabFrame()
-  .then((imageBitmap) => {
-    const canvas = document.querySelector('#grabFrameCanvas');
-    drawCanvas(canvas, imageBitmap);
-  })
-  .catch((error) => console.error(error));
+  imageCapture
+    .grabFrame()
+    .then((imageBitmap) => {
+      const canvas = document.querySelector("#grabFrameCanvas");
+      drawCanvas(canvas, imageBitmap);
+    })
+    .catch((error) => console.error(error));
 }
 
 function onTakePhotoButtonClick() {
-  imageCapture.takePhoto()
-  .then((blob) => createImageBitmap(blob))
-  .then((imageBitmap) => {
-    const canvas = document.querySelector('#takePhotoCanvas');
-    drawCanvas(canvas, imageBitmap);
-  })
-  .catch((error) => console.error(error));
+  imageCapture
+    .takePhoto()
+    .then((blob) => createImageBitmap(blob))
+    .then((imageBitmap) => {
+      const canvas = document.querySelector("#takePhotoCanvas");
+      drawCanvas(canvas, imageBitmap);
+    })
+    .catch((error) => console.error(error));
 }
 
 /* Utils */
 
 function drawCanvas(canvas, img) {
-  canvas.width = getComputedStyle(canvas).width.split('px')[0];
-  canvas.height = getComputedStyle(canvas).height.split('px')[0];
-  let ratio  = Math.min(canvas.width / img.width, canvas.height / img.height);
+  canvas.width = getComputedStyle(canvas).width.split("px")[0];
+  canvas.height = getComputedStyle(canvas).height.split("px")[0];
+  let ratio = Math.min(canvas.width / img.width, canvas.height / img.height);
   let x = (canvas.width - img.width * ratio) / 2;
   let y = (canvas.height - img.height * ratio) / 2;
-  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-  canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height,
-      x, y, img.width * ratio, img.height * ratio);
+  canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+  canvas
+    .getContext("2d")
+    .drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      x,
+      y,
+      img.width * ratio,
+      img.height * ratio,
+    );
 }
 
-document.querySelector('video').addEventListener('play', () => {
-  document.querySelector('#grabFrameButton').disabled = false;
-  document.querySelector('#takePhotoButton').disabled = false;
+document.querySelector("video").addEventListener("play", () => {
+  document.querySelector("#grabFrameButton").disabled = false;
+  document.querySelector("#takePhotoButton").disabled = false;
 });
 ```
 

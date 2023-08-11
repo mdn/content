@@ -1,17 +1,8 @@
 ---
-title: DataTransferItem.webkitGetAsEntry()
+title: "DataTransferItem: webkitGetAsEntry() method"
+short-title: webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransferItem
-  - File and Directory Entries API
-  - Files
-  - Method
-  - Offline
-  - Reference
-  - drag and drop
-  - getAsEntry
 browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
 
@@ -44,7 +35,7 @@ In this example, a drop zone is created, which responds to the {{domxref("HTMLEl
 by scanning through the dropped files and directories, outputting a hierarchical
 directory listing.
 
-### HTML content
+### HTML
 
 The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} element with the ID `"dropzone"`, and an unordered list element with the ID `"listing"`.
 
@@ -60,7 +51,7 @@ The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} ele
 <ul id="listing"></ul>
 ```
 
-### CSS content
+### CSS
 
 The styles used by the example are shown here.
 
@@ -80,17 +71,21 @@ The styles used by the example are shown here.
   vertical-align: middle;
   text-align: center;
   color: black;
-  font: bold 2em "Arial", sans-serif;
+  font:
+    bold 2em "Arial",
+    sans-serif;
   width: 300px;
   height: 100px;
 }
 
 body {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
-### JavaScript content
+### JavaScript
 
 First, let's look at the recursive `scanFiles()` function.
 This function takes as input a {{domxref("FileSystemEntry")}} representing an entry in the file system to be scanned and processed (the `item` parameter), and an element into which to insert the list of contents (the `container` parameter).
@@ -107,7 +102,7 @@ function scanFiles(item, container) {
   elem.textContent = item.name;
   container.appendChild(elem);
 
- if (item.isDirectory) {
+  if (item.isDirectory) {
     let directoryReader = item.createReader();
     let directoryContainer = document.createElement("ul");
     container.appendChild(directoryContainer);
@@ -136,28 +131,36 @@ Any of them which are files are inserted into the list; any which are directorie
 Then come the event handlers. First, we prevent the {{domxref("HTMLElement/dragover_event", "dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:
 
 ```js
-dropzone.addEventListener("dragover", (event) => {
-  event.preventDefault();
-}, false);
+dropzone.addEventListener(
+  "dragover",
+  (event) => {
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 The event handler that kicks everything off, of course, is the handler for the {{domxref("HTMLElement/drop_event", "drop")}} event:
 
 ```js
-dropzone.addEventListener("drop", (event) => {
-  let items = event.dataTransfer.items;
+dropzone.addEventListener(
+  "drop",
+  (event) => {
+    let items = event.dataTransfer.items;
 
-  event.preventDefault();
-  listing.textContent = "";
+    event.preventDefault();
+    listing.textContent = "";
 
-  for (let i=0; i<items.length; i++) {
-    let item = items[i].webkitGetAsEntry();
+    for (let i = 0; i < items.length; i++) {
+      let item = items[i].webkitGetAsEntry();
 
-    if (item) {
+      if (item) {
         scanFiles(item, listing);
+      }
     }
-  }
-}, false);
+  },
+  false,
+);
 ```
 
 This fetches the list of {{domxref("DataTransferItem")}} objects representing the items dropped from `event.dataTransfer.items`.

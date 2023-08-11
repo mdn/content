@@ -1,13 +1,7 @@
 ---
 title: aria-required
 slug: Web/Accessibility/ARIA/Attributes/aria-required
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-required
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-required
 ---
 
@@ -15,7 +9,7 @@ The `aria-required` attribute indicates that user input is required on the eleme
 
 ## Description
 
-When a semantic HTML {{htmlelement("input")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} must have a value, it should have the {{ htmlattrxref("required", "input") }} attribute applied to it. The HTML `required` attribute disables submitting the form unless the required form controls have valid values, while ensuring those navigating with the aid of assistive technologies understand which semantic form controls need valid content.
+When a semantic HTML {{htmlelement("input")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} must have a value, it should have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute applied to it. The HTML `required` attribute disables submitting the form unless the required form controls have valid values, while ensuring those navigating with the aid of assistive technologies understand which semantic form controls need valid content.
 
 When form controls are created using non-semantic elements, such as a {{HTMLElement('div')}} with a [role](/en-US/docs/Web/Accessibility/ARIA/Roles) of [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), the `aria-required` attribute should be included, with a value of `true`, to indicate to assistive technologies that user input is required on the element for the form to be submittable. The `aria-required` attribute can be used with HTML form elements; it is not limited to elements that have an ARIA role assigned.
 
@@ -76,7 +70,7 @@ Used in roles:
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
@@ -95,7 +89,7 @@ Inherits into roles:
 
 ## See Also
 
-- HTML {{ htmlattrxref("required", "input") }} attribute
+- HTML [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute
 - [`:optional` pseudoclass](/en-US/docs/Web/CSS/:optional)
 - [`:required` pseudoclass](/en-US/docs/Web/CSS/:required)
 - [`aria-invalid` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)

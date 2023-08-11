@@ -1,16 +1,8 @@
 ---
-title: CacheStorage.open()
+title: "CacheStorage: open() method"
+short-title: open()
 slug: Web/API/CacheStorage/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - open
 browser-compat: api.CacheStorage.open
 ---
 
@@ -66,8 +58,8 @@ self.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```

@@ -1,22 +1,15 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - Comparison
-  - Condition
-  - Conditional
-  - ECMAScript 2015
-  - Equality
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.is
 ---
 
 {{JSRef}}
 
-The **`Object.is()`** method determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is).
+The **`Object.is()`** static method determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is).
+
+{{EmbedInteractiveExample("pages/js/object-is.html")}}
 
 ## Syntax
 

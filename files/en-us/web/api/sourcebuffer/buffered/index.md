@@ -1,17 +1,8 @@
 ---
-title: SourceBuffer.buffered
+title: "SourceBuffer: buffered property"
+short-title: buffered
 slug: Web/API/SourceBuffer/buffered
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - buffered
 browser-compat: api.SourceBuffer.buffered
 ---
 

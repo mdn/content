@@ -2,12 +2,8 @@
 title: CookieStore
 slug: Web/API/CookieStore
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - CookieStore
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStore
 ---
 
@@ -54,7 +50,7 @@ cookieStore
     },
     (reason) => {
       console.error("It failed: ", reason);
-    }
+    },
   );
 ```
 

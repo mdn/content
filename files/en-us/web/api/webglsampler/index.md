@@ -2,11 +2,6 @@
 title: WebGLSampler
 slug: Web/API/WebGLSampler
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGLSampler
 ---
 

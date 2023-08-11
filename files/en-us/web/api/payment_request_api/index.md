@@ -2,19 +2,6 @@
 title: Payment Request API
 slug: Web/API/Payment_Request_API
 page-type: web-api-overview
-tags:
-  - API
-  - Commerce
-  - Credit Card
-  - Intermediate
-  - Landing
-  - NeedsContent
-  - Overview
-  - Payment Request
-  - Payment Request API
-  - Reference
-  - Secure context
-  - payment
 browser-compat: api.PaymentRequest
 ---
 
@@ -30,7 +17,7 @@ To request a payment, a web page creates a {{domxref("PaymentRequest")}} object 
 
 You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API).
 
-> **Note:** The API is available inside cross-origin {{htmlelement("iframe")}} elements only if they have had the {{htmlattrxref("allowpaymentrequest","iframe")}} attribute set on them.
+> **Note:** The API is available inside cross-origin {{htmlelement("iframe")}} elements only if they have had the [`allowpaymentrequest`](/en-US/docs/Web/HTML/Element/iframe#allowpaymentrequest) attribute set on them.
 
 ## Interfaces
 
@@ -72,4 +59,4 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
 - [Samsung Pay Web Payments Integration Guide](https://developer.samsung.com/internet/android/web-payments-integration-guide.html)
 - [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)
-- Feature Policy directive {{httpheader("Feature-Policy/payment", "payment")}}
+- Permissions Policy directive {{httpheader("Permissions-Policy/payment", "payment")}}

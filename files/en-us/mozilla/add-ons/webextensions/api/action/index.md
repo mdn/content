@@ -1,15 +1,7 @@
 ---
 title: action
 slug: Mozilla/Add-ons/WebExtensions/API/action
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
+page-type: webextension-api
 browser-compat: webextensions.api.action
 ---
 
@@ -19,7 +11,7 @@ Adds a button to the browser's toolbar.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
-A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) is a button in the browser's toolbar.
+A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) is a button in the browser's toolbar.
 
 You can associate a popup with the button. The popup is specified using HTML, CSS and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 
@@ -65,6 +57,8 @@ With the `action` API, you can:
   - : Sets the badge's text color.
 - {{WebExtAPIRef("action.getBadgeTextColor()")}}
   - : Gets the badge's text color.
+- {{WebExtAPIRef("action.getUserSettings()")}}
+  - : Gets the user-specified settings for the browser action.
 - {{WebExtAPIRef("action.enable()")}}
   - : Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
 - {{WebExtAPIRef("action.disable()")}}

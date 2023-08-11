@@ -1,9 +1,7 @@
 ---
 title: Architecture
 slug: Web/Accessibility/Architecture
-tags:
-  - Accessibility
-  - Developing Mozilla
+page-type: guide
 ---
 
 <section id="Quick_links">

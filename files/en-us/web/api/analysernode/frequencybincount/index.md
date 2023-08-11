@@ -1,20 +1,14 @@
 ---
-title: AnalyserNode.frequencyBinCount
+title: "AnalyserNode: frequencyBinCount property"
+short-title: frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequencyBinCount
 browser-compat: api.AnalyserNode.frequencyBinCount
 ---
 
 {{APIRef("Web Audio API")}}
 
-The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface is an unsigned integer half that of the {{domxref("AnalyserNode.fftSize")}}. This generally equates to the number of data values you will have to play with for the visualization.
+The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface contains the total number of data points available to {{domxref("AudioContext")}} {{domxref("BaseAudioContext.sampleRate", "sampleRate")}}. This is half of the `value` of the {{domxref("AnalyserNode.fftSize")}}. The two methods' indices have a linear relationship with the frequencies they represent, between 0 and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency).
 
 ## Value
 
@@ -24,7 +18,7 @@ For technical reasons related to how the [Fast Fourier transform](https://en.wik
 
 ## Examples
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input.
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bar graph style" output of the current audio input.
 For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo (see [app.js lines 108-193](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/blob/gh-pages/scripts/app.js#L108-L193) for relevant code).
 
 ```js

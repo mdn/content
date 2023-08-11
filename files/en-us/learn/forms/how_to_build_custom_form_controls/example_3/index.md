@@ -1,16 +1,14 @@
 ---
 title: Example 3
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_3
-tags:
-  - Forms
-  - HTML
+page-type: learn-module-chapter
 ---
 
 This is the third example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## Change states
 
-### HTML Content
+### HTML
 
 ```html
 <form class="no-widget">
@@ -35,7 +33,7 @@ This is the third example that explain [how to build custom form widgets](/en-US
 </form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 .widget select,
@@ -104,7 +102,7 @@ This is the third example that explain [how to build custom form widgets](/en-US
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -158,7 +156,7 @@ This is the third example that explain [how to build custom form widgets](/en-US
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 // -------------------- //
@@ -166,74 +164,78 @@ This is the third example that explain [how to build custom form widgets](/en-US
 // -------------------- //
 
 function deactivateSelect(select) {
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains("active")) return;
 
-  const optList = select.querySelector('.optList');
+  const optList = select.querySelector(".optList");
 
-  optList.classList.add('hidden');
-  select.classList.remove('active');
+  optList.classList.add("hidden");
+  select.classList.remove("active");
 }
 
 function activeSelect(select, selectList) {
-  if (select.classList.contains('active')) return;
+  if (select.classList.contains("active")) return;
 
   selectList.forEach(deactivateSelect);
-  select.classList.add('active');
-};
+  select.classList.add("active");
+}
 
 function toggleOptList(select, show) {
-  const optList = select.querySelector('.optList');
+  const optList = select.querySelector(".optList");
 
-  optList.classList.toggle('hidden');
+  optList.classList.toggle("hidden");
 }
 
 function highlightOption(select, option) {
-  const optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll(".option");
 
   optionList.forEach((other) => {
-    other.classList.remove('highlight');
+    other.classList.remove("highlight");
   });
 
-  option.classList.add('highlight');
-};
+  option.classList.add("highlight");
+}
 
 // ------------- //
 // Event binding //
 // ------------- //
 
 window.addEventListener("load", () => {
-  const form = document.querySelector('form');
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 
-window.addEventListener('load', () => {
-  const selectList = document.querySelectorAll('.select');
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
   selectList.forEach((select) => {
-    const optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll(".option");
 
     optionList.forEach((option) => {
-      option.addEventListener('mouseover', () => {
+      option.addEventListener("mouseover", () => {
         highlightOption(select, option);
       });
     });
 
-    select.addEventListener('click', (event) => {
-      toggleOptList(select);
-    }, false);
+    select.addEventListener(
+      "click",
+      (event) => {
+        toggleOptList(select);
+      },
+      false,
+    );
 
-    select.addEventListener('focus', (event) => {
+    select.addEventListener("focus", (event) => {
       activeSelect(select, selectList);
     });
 
-    select.addEventListener('blur', (event) => {
+    select.addEventListener("blur", (event) => {
       deactivateSelect(select);
     });
 
-    select.addEventListener('keyup', (event) => {
-      if (event.keyCode === 27) {
+    select.addEventListener("keyup", (event) => {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
     });

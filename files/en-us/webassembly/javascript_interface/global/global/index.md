@@ -1,11 +1,6 @@
 ---
 title: WebAssembly.Global() constructor
 slug: WebAssembly/JavaScript_interface/Global/Global
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Global.Global
 ---
 
@@ -71,17 +66,17 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
     assertEq(
       "getting initial value from wasm",
       instance.exports.getGlobal(),
-      0
+      0,
     );
     global.value = 42;
     assertEq(
       "getting JS-updated value from wasm",
       instance.exports.getGlobal(),
-      42
+      42,
     );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-  }
+  },
 );
 ```
 

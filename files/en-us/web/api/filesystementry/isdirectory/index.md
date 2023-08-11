@@ -1,16 +1,8 @@
 ---
-title: FileSystemEntry.isDirectory
+title: "FileSystemEntry: isDirectory property"
+short-title: isDirectory
 slug: Web/API/FileSystemEntry/isDirectory
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Offline
-  - Property
-  - Reference
-  - isDirectory
 browser-compat: api.FileSystemEntry.isDirectory
 ---
 

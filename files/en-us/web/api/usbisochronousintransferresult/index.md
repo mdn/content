@@ -2,15 +2,8 @@
 title: USBIsochronousInTransferResult
 slug: Web/API/USBIsochronousInTransferResult
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBIsochronousInTransferResult
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBIsochronousInTransferResult
 ---
 

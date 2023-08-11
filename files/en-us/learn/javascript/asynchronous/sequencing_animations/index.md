@@ -1,9 +1,7 @@
 ---
 title: Sequencing animations
 slug: Learn/JavaScript/Asynchronous/Sequencing_animations
-tags:
-  - JavaScript
-  - Learn
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
@@ -109,11 +107,3 @@ If you would like your work assessed, or are stuck and want to ask for help:
    - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- **Assessment: sequencing animations**

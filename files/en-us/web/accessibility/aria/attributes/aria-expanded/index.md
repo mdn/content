@@ -1,16 +1,11 @@
 ---
 title: aria-expanded
 slug: Web/Accessibility/ARIA/Attributes/aria-expanded
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-expanded
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
 
-The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not its child elements are displayed or hidden.
+The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not the controlled elements are displayed or hidden.
 
 ## Description
 
@@ -24,7 +19,7 @@ Use the `aria-owns` property on the elements that own expandable grouping contai
 
 ### Buttons
 
-A button that opens a widget should have `aria-controls` set to the {{htmlattrxref("id")}} of the expandable widget and `aria-expanded` set to the current state of the widget.
+A button that opens a widget should have `aria-controls` set to the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the expandable widget and `aria-expanded` set to the current state of the widget.
 
 ```html
 <button aria-expanded="false" aria-controls="widget1">Show widget</button>
@@ -123,7 +118,7 @@ Inherits into roles:
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- HTML {{htmlattrxref("hidden")}} attribute
+- HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

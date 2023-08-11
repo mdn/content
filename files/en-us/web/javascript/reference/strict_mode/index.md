@@ -1,11 +1,8 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - Guide
-  - JavaScript
-  - Strict Mode
+page-type: guide
+spec-urls: https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html
 ---
 
 {{JsSidebar("More")}}
@@ -52,9 +49,9 @@ function myNotStrictFunction() {
 }
 ```
 
-The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params).
+The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
-```js example-bad
+```js-nolint example-bad
 function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
   "use strict";
@@ -75,7 +72,7 @@ export default myStrictFunction;
 
 ### Strict mode for classes
 
-All parts of a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions).
+All parts of a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 
 ```js
 class C1 {
@@ -136,8 +133,8 @@ For example, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) is
 "use strict";
 
 // Assignment to a non-writable global
-var undefined = 5; // TypeError
-var Infinity = 5; // TypeError
+undefined = 5; // TypeError
+Infinity = 5; // TypeError
 
 // Assignment to a non-writable property
 const obj1 = {};
@@ -170,7 +167,7 @@ delete [].length; // TypeError
 
 Strict mode also forbids deleting plain names. `delete name` in strict mode is a syntax error:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 var x;
@@ -189,7 +186,7 @@ delete globalThis.x;
 
 Strict mode requires that function parameter names be unique. In sloppy mode, the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode, duplicate argument names are a syntax error:
 
-```js example-bad
+```js-nolint example-bad
 function sum(a, a, c) {
   // syntax error
   "use strict";
@@ -201,7 +198,7 @@ function sum(a, a, c) {
 
 Strict mode [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). In sloppy mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Novice developers sometimes believe a leading-zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading-zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const sum =
   015 + // syntax error
@@ -249,7 +246,7 @@ Strict mode simplifies how variable names map to particular variable definitions
 
 Strict mode prohibits [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with). The problem with `with` is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime; it's impossible to know which beforehand. Strict mode makes `with` a syntax error, so there's no chance for a name in a `with` to refer to an unknown location at runtime:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const x = 17;
 with (obj) {
@@ -289,7 +286,7 @@ Strict mode makes [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/a
 
 The names `eval` and `arguments` can't be bound or assigned in language syntax. All these attempts to do so are syntax errors:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 eval = 17;
 arguments++;
@@ -336,7 +333,7 @@ console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
 console.assert(fun.call(undefined) === undefined);
-console.assert(fun.bind(true)());
+console.assert(fun.bind(true)() === true);
 ```
 
 #### Removal of stack-walking properties
@@ -397,7 +394,7 @@ When adding `'use strict';`, the following cases will throw a {{jsxref("SyntaxEr
 - Using [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) or [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) as variable or function argument name
 - Using one of the newly [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (in prevision for future language features): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`
 - Declaring two function parameters with the same name `function f(a, b, b) {}`
-- Declaring the same property name twice in an object literal `{a: 1, b: 3, a: 7}`. This constraint was later removed ([bug 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).
+- Declaring the same property name twice in an object literal `{a: 1, b: 3, a: 7}`. This constraint was later removed ([bug 1041128](https://bugzil.la/1041128)).
 
 These errors are good, because they reveal plain errors or bad practices. They occur before the code is running, so they are easily discoverable as long as the code gets parsed by the runtime.
 
@@ -423,7 +420,11 @@ These differences are very subtle differences. It's possible that a test suite d
 - Block-scoped function declarations
   - : In sloppy mode, a function declaration inside a block may be visible outside the block and even callable. In strict mode, a function declaration inside a block is only visible inside the block.
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
-- [Strict Mode Code in the ECMAScript specification](https://tc39.es/ecma262/#sec-strict-mode-code)
-- [Strict mode compatibility table](https://kangax.github.io/compat-table/es5/#Strict_mode)
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

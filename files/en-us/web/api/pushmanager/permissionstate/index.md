@@ -1,14 +1,8 @@
 ---
-title: PushManager.permissionState()
+title: "PushManager: permissionState() method"
+short-title: permissionState()
 slug: Web/API/PushManager/permissionState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PushManager
-  - Reference
-  - Service Workers
-  - permissionState
 browser-compat: api.PushManager.permissionState
 ---
 

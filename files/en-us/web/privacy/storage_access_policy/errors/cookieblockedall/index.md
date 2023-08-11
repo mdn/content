@@ -1,12 +1,7 @@
 ---
-title: 'Blocked: All storage access requests'
+title: "Blocked: All storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedAll
-tags:
-  - Cookies
-  - Errors
-  - Storage
-  - storage access policy
-  - tracking
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}

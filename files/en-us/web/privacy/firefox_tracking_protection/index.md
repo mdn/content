@@ -1,11 +1,7 @@
 ---
 title: Firefox tracking protection
 slug: Web/Privacy/Firefox_tracking_protection
-tags:
-  - Privacy
-  - Private browsing
-  - blocking
-  - tracking
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}
@@ -18,7 +14,7 @@ If blocked content is part of the page layout, users may notice layout issues wh
 
 When Firefox blocks content, it logs a message to the Web Console like this:
 
-```
+```plain
 The resource at "http://some/url" was blocked because tracking protection is enabled.
 ```
 

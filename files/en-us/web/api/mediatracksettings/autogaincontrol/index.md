@@ -1,17 +1,8 @@
 ---
-title: MediaTrackSettings.autoGainControl
+title: "MediaTrackSettings: autoGainControl property"
+short-title: autoGainControl
 slug: Web/API/MediaTrackSettings/autoGainControl
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Web
-  - autoGainControl
 browser-compat: api.MediaTrackSettings.autoGainControl
 ---
 
@@ -43,8 +34,7 @@ enabled or `false` if AGC is disabled.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

@@ -2,13 +2,6 @@
 title: ":active"
 slug: Web/CSS/:active
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.active
 ---
 
@@ -26,8 +19,10 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 
 ## Syntax
 
-```
-:active
+```css
+:active {
+  /* ... */
+}
 ```
 
 ## Examples

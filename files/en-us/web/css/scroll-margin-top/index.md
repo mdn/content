@@ -2,14 +2,6 @@
 title: scroll-margin-top
 slug: Web/CSS/scroll-margin-top
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-top
 browser-compat: css.properties.scroll-margin-top
 ---
 
@@ -36,7 +28,7 @@ scroll-margin-top: unset;
 
 ### Values
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : An outset from the top edge of the scroll container.
 
 ## Formal definition
@@ -57,5 +49,5 @@ scroll-margin-top: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

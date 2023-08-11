@@ -2,11 +2,6 @@
 title: WebGLSync
 slug: Web/API/WebGLSync
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGLSync
 ---
 

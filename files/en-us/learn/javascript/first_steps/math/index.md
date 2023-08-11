@@ -1,20 +1,7 @@
 ---
 title: Basic math in JavaScript — numbers and operators
 slug: Learn/JavaScript/First_steps/Math
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Math
-  - Operators
-  - augmented
-  - increment
-  - "l10n:priority"
-  - maths
-  - modulo
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
@@ -65,7 +52,7 @@ The second bit of good news is that unlike some other programming languages, Jav
 
 ### It's all numbers to me
 
-Let's quickly play with some numbers to reacquaint ourselves with the basic syntax we need. Enter the commands listed below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+Let's quickly play with some numbers to reacquaint ourselves with the basic syntax we need. Enter the commands listed below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 1. First of all, let's declare a couple of variables and initialize them with an integer and a float, respectively, then type the variable names back in to check that everything is in order:
 
@@ -199,7 +186,7 @@ Arithmetic operators are the basic operators that we use to do sums in JavaScrip
 
 > **Note:** You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
 
-We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to familiarize yourself with the syntax.
+We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) to familiarize yourself with the syntax.
 
 1. First try entering some simple examples of your own, such as
 
@@ -251,7 +238,7 @@ If you want to override operator precedence, you can put parentheses around the 
 
 Try it and see.
 
-> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ## Increment and decrement operators
 
@@ -366,7 +353,7 @@ let y = 4; // y contains the value 4
 x *= y; // x now contains the value 12
 ```
 
-> **Note:** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators), but these are the basic ones you should learn now.
+> **Note:** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators), but these are the basic ones you should learn now.
 
 ## Active learning: sizing a canvas box
 
@@ -451,18 +438,6 @@ In this article, we have covered the fundamental information you need to know ab
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 
-> **Note:** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
+> **Note:** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) articles.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

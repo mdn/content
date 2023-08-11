@@ -1,16 +1,7 @@
 ---
 title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connect
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.connect
 ---
 
@@ -55,11 +46,10 @@ In this example a background script listens for a click on a [browser action](/e
 ```js
 function connectToTab(tabs) {
   if (tabs.length > 0) {
-    let examplePort = browser.tabs.connect(
-      tabs[0].id,
-      {name: "tabs-connect-example"}
-    );
-    examplePort.postMessage({greeting: "Hi from background script"});
+    let examplePort = browser.tabs.connect(tabs[0].id, {
+      name: "tabs-connect-example",
+    });
+    examplePort.postMessage({ greeting: "Hi from background script" });
   }
 }
 
@@ -69,7 +59,8 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let gettingActive = browser.tabs.query({
-    currentWindow: true, active: true
+    currentWindow: true,
+    active: true,
   });
   gettingActive.then(connectToTab, onError);
 });

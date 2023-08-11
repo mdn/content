@@ -1,14 +1,8 @@
 ---
-title: Navigator.locks
+title: "Navigator: locks property"
+short-title: locks
 slug: Web/API/Navigator/locks
 page-type: web-api-instance-property
-tags:
-  - API
-  - LockManager
-  - Property
-  - Reference
-  - Web Locks API
-  - locks
 browser-compat: api.Navigator.locks
 ---
 

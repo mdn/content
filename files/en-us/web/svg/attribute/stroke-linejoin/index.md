@@ -2,11 +2,6 @@
 title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
 page-type: svg-attribute
-tags:
-  - Reference
-  - SVG
-  - SVG Attribute
-  - stroke-linejoin
 browser-compat: svg.attributes.presentation.stroke-linejoin
 ---
 
@@ -18,7 +13,6 @@ The **`stroke-linejoin`** attribute is a presentation attribute defining the sha
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('path')}}
 - {{SVGElement('polygon')}}
 - {{SVGElement('polyline')}}

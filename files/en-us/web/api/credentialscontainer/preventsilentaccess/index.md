@@ -1,15 +1,8 @@
 ---
-title: CredentialsContainer.preventSilentAccess()
+title: "CredentialsContainer: preventSilentAccess() method"
+short-title: preventSilentAccess()
 slug: Web/API/CredentialsContainer/preventSilentAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Method
-  - NeedsExample
-  - Reference
-  - credential management
 browser-compat: api.CredentialsContainer.preventSilentAccess
 ---
 

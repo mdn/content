@@ -1,12 +1,7 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Content-Disposition
 ---
 
@@ -16,7 +11,7 @@ In a regular HTTP response, the **`Content-Disposition`** response header is a h
 
 In a `multipart/form-data` body, the HTTP **`Content-Disposition`** general header is a header that must be used on each subpart of a multipart body to give information about the field it applies to. The subpart is delimited by the _boundary_ defined in the {{HTTPHeader("Content-Type")}} header. Used on the body itself, `Content-Disposition` has no effect.
 
-The `Content-Disposition` header is defined in the larger context of MIME messages for e-mail, but only a subset of the possible parameters apply to HTTP forms and {{HTTPMethod("POST")}} requests. Only the value `form-data`, as well as the optional directive `name` and `filename`, can be used in the HTTP context.
+The `Content-Disposition` header is defined in the larger context of MIME messages for email, but only a subset of the possible parameters apply to HTTP forms and {{HTTPMethod("POST")}} requests. Only the value `form-data`, as well as the optional directive `name` and `filename`, can be used in the HTTP context.
 
 <table class="properties">
   <tbody>
@@ -66,7 +61,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
     containing the name of the HTML field in the form
     that the content of this subpart refers to.
     When dealing with multiple files in the same field
-    (for example, the {{htmlattrxref("multiple", "input")}} attribute of an `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` element),
+    (for example, the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute of an `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` element),
     there can be several subparts with the same name.
 
     A `name` with a value of `'_charset_'` indicates
@@ -123,7 +118,7 @@ value2
 
 ### Compatibility notes
 
-- Firefox 5 handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See {{bug(588781)}}.
+- Firefox 5 handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See [Firefox bug 588781](https://bugzil.la/588781).
 - Firefox 82 (and later) and Chrome prioritize the HTML [\<a> element's](/en-US/docs/Web/HTML/Element/a) `download` attribute over the `Content-Disposition: inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
 
 ## See also

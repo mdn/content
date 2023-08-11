@@ -1,13 +1,8 @@
 ---
-title: DataTransfer.setData()
+title: "DataTransfer: setData() method"
+short-title: setData()
 slug: Web/API/DataTransfer/setData
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.setData
 ---
 
@@ -102,7 +97,7 @@ source.addEventListener("dragstart", (ev) => {
   ev.dataTransfer.setData("text/plain", ev.target.id);
 });
 source.addEventListener("dragend", (ev) =>
-  ev.target.classList.remove("dragging")
+  ev.target.classList.remove("dragging"),
 );
 
 const target = document.querySelector("#target");

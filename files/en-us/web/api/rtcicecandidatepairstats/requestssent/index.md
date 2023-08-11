@@ -1,21 +1,8 @@
 ---
-title: RTCIceCandidatePairStats.requestsSent
+title: "RTCIceCandidatePairStats: requestsSent property"
+short-title: requestsSent
 slug: Web/API/RTCIceCandidatePairStats/requestsSent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Connectivity
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - STUN
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - requestsSent
 browser-compat: api.RTCIceCandidatePairStats.requestsSent
 ---
 

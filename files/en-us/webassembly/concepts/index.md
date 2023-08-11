@@ -1,17 +1,6 @@
 ---
 title: WebAssembly Concepts
 slug: WebAssembly/Concepts
-tags:
-  - C
-  - C++
-  - Emscripten
-  - JavaScript
-  - WebAssembly
-  - AssemblyScript
-  - concepts
-  - rust
-  - text format
-  - web platform
 ---
 
 {{WebAssemblySidebar}}
@@ -87,7 +76,7 @@ Let's talk about these options:
 
 ### Porting from C/C++
 
-Two of the many options for creating WASM code are an online wasm assembler or [Emscripten](https://emscripten.org/). There are a number of online WASM assembler choices, such as:
+Two of the many options for creating Wasm code are an online Wasm assembler or [Emscripten](https://emscripten.org/). There are a number of online Wasm assembler choices, such as:
 
 - [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
@@ -95,25 +84,25 @@ Two of the many options for creating WASM code are an online wasm assembler or [
 
 These are great resources for people who are trying to figure out where to start, but they lack some of the tooling and optimizations of Emscripten.
 
-The Emscripten tool is able to take just about any C/C++ source code and compile it into a .wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
+The Emscripten tool is able to take just about any C/C++ source code and compile it into a Wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
 
-![Diagram: Emscripten compiles C/C++ source code and into a WASM module, an HTML document along with the JavaScript glue code.](emscripten-diagram.png)
+![Diagram: Emscripten compiles C/C++ source code and into a Wasm module, an HTML document along with the JavaScript glue code.](emscripten-diagram.png)
 
 In a nutshell, the process works as follows:
 
 1. Emscripten first feeds the C/C++ into clang+LLVM — a mature open-source C/C++ compiler toolchain, shipped as part of XCode on OSX for example.
-2. Emscripten transforms the compiled result of clang+LLVM into a .wasm binary.
+2. Emscripten transforms the compiled result of clang+LLVM into a Wasm binary.
 3. By itself, WebAssembly cannot currently directly access the DOM; it can only call JavaScript, passing in integer and floating point primitive data types. Thus, to access any Web API, WebAssembly needs to call out to JavaScript, which then makes the Web API call. Emscripten therefore creates the HTML and JavaScript glue code needed to achieve this.
 
 > **Note:** There are future plans to [allow WebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer), [OpenGL](https://en.wikipedia.org/wiki/OpenGL), [OpenAL](https://en.wikipedia.org/wiki/OpenAL), and parts of [POSIX](https://en.wikipedia.org/wiki/POSIX). These libraries are implemented in terms of Web APIs and thus each one requires some JavaScript glue code to connect WebAssembly to the underlying Web API.
 
-So part of the glue code is implementing the functionality of each respective library used by the C/C++ code. The glue code also contains the logic for calling the above-mentioned WebAssembly JavaScript APIs to fetch, load and run the .wasm file.
+So part of the glue code is implementing the functionality of each respective library used by the C/C++ code. The glue code also contains the logic for calling the above-mentioned WebAssembly JavaScript APIs to fetch, load and run the Wasm file.
 
 The generated HTML document loads the JavaScript glue file and writes stdout to a {{htmlelement("textarea")}}. If the application uses OpenGL, the HTML also contains a {{htmlelement("canvas")}} element that is used as the rendering target. It's very easy to modify the Emscripten output and turn it into whatever web app you require.
 
-You can find full documentation on Emscripten at [emscripten.org](https://emscripten.org), and a guide to implementing the toolchain and compiling your own C/C++ app across to wasm at [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_wasm).
+You can find full documentation on Emscripten at [emscripten.org](https://emscripten.org), and a guide to implementing the toolchain and compiling your own C/C++ app across to Wasm at [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_Wasm).
 
 ### Writing WebAssembly directly
 
@@ -121,15 +110,15 @@ Do you want to build your own compiler, or your own tools, or make a JavaScript 
 
 In the same fashion as physical assembly languages, the WebAssembly binary format has a text representation — the two have a 1:1 correspondence. You can write or generate this format by hand and then convert it into the binary format with any of several [WebAssembly text-to-binary tools](https://webassembly.org/getting-started/advanced-tools/).
 
-For a simple guide on how to do this, see our [Converting WebAssembly text format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm) article.
+For a simple guide on how to do this, see our [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Text_format_to_Wasm) article.
 
 ### Writing Rust Targeting WebAssembly
 
-It is also possible to write Rust code and compile over to WebAssembly, thanks to the tireless work of the Rust WebAssembly Working Group. You can get started with installing the necessary toolchain, compiling a sample Rust program to a WebAssembly npm package, and using that in a sample web app, over at our [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Rust_to_wasm) article.
+It is also possible to write Rust code and compile over to WebAssembly, thanks to the tireless work of the Rust WebAssembly Working Group. You can get started with installing the necessary toolchain, compiling a sample Rust program to a WebAssembly npm package, and using that in a sample web app, over at our [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Rust_to_Wasm) article.
 
 ### Using AssemblyScript
 
-For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code intellisense, etc. You can check its documentation on <https://www.assemblyscript.org/>.
+For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code IntelliSense, etc. You can check its documentation on <https://www.assemblyscript.org/>.
 
 ## Summary
 

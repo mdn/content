@@ -1,19 +1,8 @@
 ---
-title: HTMLMediaElement.audioTracks
+title: "HTMLMediaElement: audioTracks property"
+short-title: audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Audio Tracks
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Web
-  - audiotracks
 browser-compat: api.HTMLMediaElement.audioTracks
 ---
 
@@ -30,8 +19,8 @@ either an {{HTMLElement("audio")}} element or a {{HTMLElement("video")}} element
 The returned list is _live_; that is, as tracks are added to and removed from
 the media element, the list's contents change dynamically. Once you have a reference to
 the list, you can monitor it for changes to detect when new audio tracks are added or
-existing ones removed. See {{SectionOnPage("/en-US/docs/Web/API/AudioTrackList", "Event
-  handlers")}} to learn more about watching for changes to a media element's track list.
+existing ones removed. See [AudioTrackList events](/en-US/docs/Web/API/AudioTrackList#events)
+to learn more about watching for changes to a media element's track list.
 
 ## Value
 
@@ -76,6 +65,6 @@ for (let i = 0; i < video.audioTracks.length; i += 1) {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- {{HTMLElement("audio")}} and {{HTMLElement("video")}}
-- {{domxref("AudioTrack")}} and {{domxref("AudioTrackList")}}
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.audioTracks` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
+- {{domxref("AudioTrack")}}, {{domxref("AudioTrackList")}}

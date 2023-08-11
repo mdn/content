@@ -1,16 +1,7 @@
 ---
 title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeSendHeaders
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeSendHeaders
 ---
 
@@ -56,7 +47,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -67,17 +58,17 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : `object`. Details of the request. This will include request headers if you have included `"requestHeaders"` in `extraInfoSpec`. See the [details](#details_2) section for more information.
+      - : `object`. Details of the request. This includes request headers if you have included `"requestHeaders"` in `extraInfoSpec`. See the [details](#details_2) section for more information.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set its `requestHeaders` property.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that is sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
@@ -184,7 +175,8 @@ const targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-const ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+const ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -207,7 +199,7 @@ Make it "blocking" so we can modify the headers.
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
   { urls: [targetPage] },
-  ["blocking", "requestHeaders"]
+  ["blocking", "requestHeaders"],
 );
 ```
 
@@ -224,7 +216,8 @@ const targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-const ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+const ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -253,7 +246,7 @@ Make it "blocking" so we can modify the headers.
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeaderAsync,
   { urls: [targetPage] },
-  ["blocking", "requestHeaders"]
+  ["blocking", "requestHeaders"],
 );
 ```
 

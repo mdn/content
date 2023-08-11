@@ -2,12 +2,6 @@
 title: z-index
 slug: Web/CSS/z-index
 page-type: css-property
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.z-index
 ---
 
@@ -19,7 +13,7 @@ The **`z-index`** CSS property sets the z-order of a [positioned](/en-US/docs/We
 
 For a positioned box (that is, one with any `position` other than `static`), the `z-index` property specifies:
 
-1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 2. Whether the box establishes a local stacking context.
 
 ## Syntax
@@ -110,7 +104,7 @@ The `z-index` property is specified as either the keyword `auto` or an `<integer
 
 #### Result
 
-{{ EmbedLiveSample('Visually_layering_elements', '550', '200', '') }}
+{{EmbedLiveSample('Visually_layering_elements', '550', '200')}}
 
 ## Specifications
 
@@ -123,4 +117,4 @@ The `z-index` property is specified as either the keyword `auto` or an `<integer
 ## See also
 
 - CSS {{Cssxref("position")}} property
-- [Understanding CSS z-indexes](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+- [Understanding CSS z-indexes](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)

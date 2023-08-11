@@ -1,18 +1,13 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.substring
 ---
 
 {{JSRef}}
 
-The **`substring()`** method returns the part of the `string` from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
+The **`substring()`** method of {{jsxref("String")}} values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
 {{EmbedInteractiveExample("pages/js/string-substring.html")}}
 

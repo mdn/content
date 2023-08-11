@@ -1,16 +1,10 @@
 ---
-title: BluetoothRemoteGATTService.isPrimary
+title: "BluetoothRemoteGATTService: isPrimary property"
+short-title: isPrimary
 slug: Web/API/BluetoothRemoteGATTService/isPrimary
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTService
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - isPrimary
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTService.isPrimary
 ---
 

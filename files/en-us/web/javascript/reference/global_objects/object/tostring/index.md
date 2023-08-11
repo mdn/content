@@ -1,18 +1,13 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the object. This method is meant to be overridden by derived objects for custom [type conversion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) logic.
+The **`toString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for custom [type conversion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) logic.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 

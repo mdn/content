@@ -1,15 +1,7 @@
 ---
 title: tabs.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - hide
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.hide
 ---
 

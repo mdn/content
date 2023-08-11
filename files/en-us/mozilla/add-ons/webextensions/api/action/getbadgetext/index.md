@@ -1,16 +1,7 @@
 ---
 title: action.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - getBadgeText
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.getBadgeText
 ---
 

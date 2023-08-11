@@ -2,11 +2,6 @@
 title: HTMLFieldSetElement
 slug: Web/API/HTMLFieldSetElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLFieldSetElement
 ---
 
@@ -21,14 +16,14 @@ The **`HTMLFieldSetElement`** interface provides special properties and methods 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFieldSetElement.disabled")}}
-  - : A boolean value reflecting the {{htmlattrxref("disabled", "fieldset")}} HTML attribute, indicating whether the user can interact with the control.
+  - : A boolean value reflecting the [`disabled`](/en-US/docs/Web/HTML/Element/fieldset#disabled) HTML attribute, indicating whether the user can interact with the control.
 - {{domxref("HTMLFieldSetElement.elements")}} {{ReadOnlyInline}}
   - : The elements belonging to this field set. The type of this property depends on the version of the spec that is implemented by the browser.
 - {{domxref("HTMLFieldSetElement.form")}} {{ReadOnlyInline}}
   - : An {{domxref("HTMLFormControlsCollection")}} or {{domxref("HTMLCollection")}} referencing the containing form element, if this element is in a form.
     If the field set is not a descendant of a form element, then the attribute can be the ID of any form element in the same document it is related to, or the `null` value if none matches.
 - {{domxref("HTMLFieldSetElement.name")}}
-  - : A string reflecting the {{htmlattrxref("name", "fieldset")}} HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
+  - : A string reflecting the [`name`](/en-US/docs/Web/HTML/Element/fieldset#name) HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
 - {{domxref("HTMLFieldSetElement.type")}} {{ReadOnlyInline}}
   - : The string "`fieldset`".
 - {{domxref("HTMLFieldSetElement.validationMessage")}}

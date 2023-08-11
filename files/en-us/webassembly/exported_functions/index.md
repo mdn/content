@@ -1,14 +1,6 @@
 ---
 title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
-tags:
-  - Guide
-  - JavaScript
-  - WebAssembly
-  - export
-  - exported functions
-  - exported wasm functions
-  - wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -17,18 +9,18 @@ Exported WebAssembly functions are how WebAssembly functions are represented in 
 
 ## Exported… What?
 
-Exported WebAssembly functions are basically just JavaScript wrappers that represent WebAssembly functions in JavaScript. When you call them, you get some activity in the background to convert the arguments into types that wasm can work with (for example converting JavaScript numbers to Int32), the arguments are passed to the function inside your wasm module, the function is invoked, and the result is converted and passed back to JavaScript.
+Exported WebAssembly functions are basically just JavaScript wrappers that represent WebAssembly functions in JavaScript. When you call them, you get some activity in the background to convert the arguments into types that Wasm can work with (for example converting JavaScript numbers to Int32), the arguments are passed to the function inside your Wasm module, the function is invoked, and the result is converted and passed back to JavaScript.
 
 You can retrieve exported WebAssembly functions in two ways:
 
 - By calling [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) on an existing table.
-- By accessing a function exported from a wasm module instance via [`Instance.exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports).
+- By accessing a function exported from a Wasm module instance via [`Instance.exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports).
 
-Either way, you get the same kind of wrapper for the underlying function. From a JavaScript point of view, it's as if every wasm function _is_ a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.
+Either way, you get the same kind of wrapper for the underlying function. From a JavaScript point of view, it's as if every Wasm function _is_ a JavaScript function too — but they are encapsulated by the exported Wasm function object instance and there are only limited ways to access them.
 
 ## An example
 
-Let's look at an example to clear things up (you can find this on GitHub as [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html); see it [running live also](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), and check out the wasm [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)):
+Let's look at an example to clear things up (you can find this on GitHub as [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html); see it [running live also](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), and check out the Wasm [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)):
 
 ```js
 const otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
@@ -73,6 +65,6 @@ This gives you more of an idea of its wrapper-type nature.
 
 Some other particulars to be aware of with exported WebAssembly functions:
 
-- Their [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property is the number of declared arguments in the wasm function signature.
-- Their [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property is the `toString()` result of the function's index in the wasm module.
-- If you try to call an exported wasm function that takes or returns an i64 type value, it currently throws an error because JavaScript currently has no precise way to represent an i64. This may well change in the future though — a new int64 type is being considered for future standards, which could then be used by wasm.
+- Their [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property is the number of declared arguments in the Wasm function signature.
+- Their [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property is the `toString()` result of the function's index in the Wasm module.
+- If you try to call an exported Wasm function that takes or returns an i64 type value, it currently throws an error because JavaScript currently has no precise way to represent an i64. This may well change in the future though — a new int64 type is being considered for future standards, which could then be used by Wasm.

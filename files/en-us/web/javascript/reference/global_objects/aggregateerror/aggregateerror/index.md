@@ -1,17 +1,13 @@
 ---
 title: AggregateError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
 
 {{JSRef}}
 
-The **`AggregateError()`** constructor creates an error for several errors that need to be wrapped in a single error.
+The **`AggregateError()`** constructor creates {{jsxref("AggregateError")}} objects.
 
 ## Syntax
 
@@ -45,14 +41,12 @@ AggregateError(errors, message, options)
 
 ```js
 try {
-  throw new AggregateError([
-    new Error("some error"),
-  ], 'Hello');
+  throw new AggregateError([new Error("some error")], "Hello");
 } catch (e) {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Hello"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "some error" ]
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "some error" ]
 }
 ```
 

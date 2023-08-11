@@ -2,10 +2,8 @@
 title: glyph-orientation-horizontal
 slug: Web/SVG/Attribute/glyph-orientation-horizontal
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.presentation.glyph-orientation-horizontal
 ---
 
@@ -21,7 +19,6 @@ This attribute is applied only to text written in a horizontal {{SVGAttr("writin
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}

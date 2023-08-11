@@ -2,12 +2,8 @@
 title: WebUSB API
 slug: Web/API/WebUSB_API
 page-type: web-api-overview
-tags:
-  - API
-  - Web USB
-  - Overview
-  - Reference
-  - Experimental
+status:
+  - experimental
 spec-urls: https://wicg.github.io/webusb/
 ---
 
@@ -30,7 +26,7 @@ When connecting a new WebUSB-compatible device, the browser displays a notificat
 - {{domxref("USB")}}
   - : Provides attributes and methods for finding and connecting USB devices from a web page.
 - {{domxref("USBConnectionEvent")}}
-  - : The event type passed to {{domxref("USB.onconnect")}} or {{domxref("USB.ondisconnect")}} when the user agent detects a new USB device has been connected to, or disconnected from the host.
+  - : The event type passed to `USB` {{domxref("USB.connect_event", "connect")}} or {{domxref("USB.disconnect_event", "disconnect")}} events when the user agent detects a new USB device has been connected to, or disconnected from the host.
 - {{domxref("USBDevice")}}
   - : Provides access to metadata about a paired USB device and methods for controlling it.
 - {{domxref("USBInTransferResult")}}
@@ -59,12 +55,15 @@ When connecting a new WebUSB-compatible device, the browser displays a notificat
 The following example demonstrates how to access a connected Arduino device using {{domxref("USB.requestDevice()")}}, which has a vendorId of `0x2341`.
 
 ```js
-navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
+navigator.usb
+  .requestDevice({ filters: [{ vendorId: 0x2341 }] })
   .then((device) => {
-    console.log(device.productName);      // "Arduino Micro"
+    console.log(device.productName); // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   })
-  .catch((error) => { console.error(error); });
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 ### Finding all connected devices
@@ -74,10 +73,10 @@ You can find all connected devices with {{domxref("USB.getDevices()")}}. In the 
 ```js
 navigator.usb.getDevices().then((devices) => {
   devices.forEach((device) => {
-    console.log(device.productName);      // "Arduino Micro"
+    console.log(device.productName); // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   });
-})
+});
 ```
 
 ## Specifications

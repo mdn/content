@@ -1,13 +1,8 @@
 ---
-title: 'FileReader: load event'
+title: "FileReader: load event"
+short-title: load
 slug: Web/API/FileReader/load_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FileReader
-  - Web
-  - load
 browser-compat: api.FileReader.load_event
 ---
 
@@ -22,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('load', (event) => { });
+addEventListener("load", (event) => {});
 
-onload = (event) => { };
+onload = (event) => {};
 ```
 
 ## Event type
@@ -112,37 +107,37 @@ img.preview {
 
 ```js
 const fileInput = document.querySelector('input[type="file"]');
-const preview = document.querySelector('img.preview');
-const eventLog = document.querySelector('.event-log-contents');
+const preview = document.querySelector("img.preview");
+const eventLog = document.querySelector(".event-log-contents");
 const reader = new FileReader();
 
 function handleEvent(event) {
-    eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
+  eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
 
-    if (event.type === "load") {
-        preview.src = reader.result;
-    }
+  if (event.type === "load") {
+    preview.src = reader.result;
+  }
 }
 
 function addListeners(reader) {
-    reader.addEventListener('loadstart', handleEvent);
-    reader.addEventListener('load', handleEvent);
-    reader.addEventListener('loadend', handleEvent);
-    reader.addEventListener('progress', handleEvent);
-    reader.addEventListener('error', handleEvent);
-    reader.addEventListener('abort', handleEvent);
+  reader.addEventListener("loadstart", handleEvent);
+  reader.addEventListener("load", handleEvent);
+  reader.addEventListener("loadend", handleEvent);
+  reader.addEventListener("progress", handleEvent);
+  reader.addEventListener("error", handleEvent);
+  reader.addEventListener("abort", handleEvent);
 }
 
 function handleSelected(e) {
-    eventLog.textContent = '';
-    const selectedFile = fileInput.files[0];
-    if (selectedFile) {
-        addListeners(reader);
-        reader.readAsDataURL(selectedFile);
-    }
+  eventLog.textContent = "";
+  const selectedFile = fileInput.files[0];
+  if (selectedFile) {
+    addListeners(reader);
+    reader.readAsDataURL(selectedFile);
+  }
 }
 
-fileInput.addEventListener('change', handleSelected);
+fileInput.addEventListener("change", handleSelected);
 ```
 
 #### Result

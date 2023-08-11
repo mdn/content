@@ -1,12 +1,7 @@
 ---
 title: Using the imscJS polyfill
 slug: Related/IMSC/Using_the_imscJS_polyfill
-tags:
-  - IMSC
-  - captions
-  - imscJS
-  - rendering
-  - subtitles
+page-type: guide
 ---
 
 You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article shows you how to make use of imscJS and how to integrate it on your own website.

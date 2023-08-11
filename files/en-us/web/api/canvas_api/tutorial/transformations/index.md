@@ -2,13 +2,6 @@
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Guide
-  - HTML
-  - Intermediate
-  - Web
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

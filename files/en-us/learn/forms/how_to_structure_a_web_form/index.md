@@ -1,16 +1,7 @@
 ---
 title: How to structure a web form
 slug: Learn/Forms/How_to_structure_a_web_form
-tags:
-  - Beginner
-  - CodingScripting
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Structure
-  - Web
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
@@ -22,17 +13,13 @@ With the basics out of the way, we'll now look in more detail at the elements us
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >understanding of HTML</a
-        >.
+        Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to structure HTML forms and give them semantics so
-        they are usable and accessible.
+        To understand how to structure HTML forms and give them semantics so they are usable and accessible.
       </td>
     </tr>
   </tbody>
@@ -143,7 +130,7 @@ Let's consider this example:
 <!-- So this: -->
 <!--div>
   <label for="username">Name:</label>
-  <input id="username" type="text" name="username">
+  <input id="username" type="text" name="username" required>
   <label for="username"><span aria-label="required">*</label>
 </div-->
 
@@ -151,7 +138,7 @@ Let's consider this example:
 <!--div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username">
+    <input id="username" type="text" name="username" required>
     <span aria-label="required">*</span>
   </label>
 </div-->
@@ -159,7 +146,7 @@ Let's consider this example:
 <!-- But this is probably best: -->
 <div>
   <label for="username">Name: <span aria-label="required">*</span></label>
-  <input id="username" type="text" name="username" />
+  <input id="username" type="text" name="username" required />
 </div>
 ```
 
@@ -183,7 +170,7 @@ Beyond the structures specific to web forms, it's good to remember that form mar
 
 As you can see in the examples, it's common practice to wrap a label and its widget with a {{HTMLElement("li")}} element within a {{HTMLElement("ul")}} or {{HTMLElement("ol")}} list. {{HTMLElement("p")}} and {{HTMLElement("div")}} elements are also commonly used. Lists are recommended for structuring multiple checkboxes or radio buttons.
 
-In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g. {{htmlelement("h1")}}, {{htmlelement("h2")}}) and sectioning (e.g. {{htmlelement("section")}}) to structure complex forms.
+In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g. {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) and sectioning (e.g. {{htmlelement("section")}}) to structure complex forms.
 
 Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.
 
@@ -198,17 +185,17 @@ Let's put these ideas into practice and build a slightly more involved form — 
    <link href="payment-form.css" rel="stylesheet" />
    ```
 
-3. Next, create your form by adding the outer {{htmlelement("form")}} element:
+3. Next, create your form by adding a {{htmlelement("form")}} element:
 
-   ```html
+   ```html-nolint
    <form>
-     …
+   ...
    </form>
    ```
 
-4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
+4. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:
 
-   ```html
+   ```html-nolint
    <h1>Payment form</h1>
    <p>
      Required fields are followed by
@@ -249,21 +236,21 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <span>Name: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="name" name="username" />
+       <input type="text" id="name" name="username" required />
      </p>
      <p>
        <label for="mail">
-         <span>E-mail: </span>
+         <span>Email: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="email" id="mail" name="usermail" />
+       <input type="email" id="mail" name="usermail" required />
      </p>
      <p>
        <label for="pwd">
          <span>Password: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="password" id="pwd" name="password" />
+       <input type="password" id="pwd" name="password" required />
      </p>
    </section>
    ```
@@ -295,7 +282,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <span>Card number:</span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="tel" id="number" name="cardnumber" />
+       <input type="tel" id="number" name="cardnumber" required />
      </p>
      <p>
        <label for="expiration">
@@ -322,6 +309,12 @@ Let's put these ideas into practice and build a slightly more involved form — 
    </section>
    ```
 
+8. Finally, complete your form by adding the outer {{htmlelement("form")}} closing tag:
+
+   ```html
+   </form>
+   ```
+
 You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
 {{EmbedLiveSample("A_payment_form","100%",620)}}
@@ -339,19 +332,6 @@ You now have all the knowledge you'll need to properly structure your web forms.
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- **How to structure a web form**
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

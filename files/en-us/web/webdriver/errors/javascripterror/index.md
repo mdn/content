@@ -1,11 +1,7 @@
 ---
 title: JavaScript error
 slug: Web/WebDriver/Errors/JavaScriptError
-tags:
-  - Error
-  - JavaScript error
-  - Reference
-  - WebDriver
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
@@ -31,7 +27,7 @@ except exceptions.JavascriptException as e:
 
 Output:
 
-```
+```plain
 JavascriptException: ReferenceError: foo is not defined
 ```
 

@@ -1,18 +1,10 @@
 ---
-title: PerformanceTiming.navigationStart
+title: "PerformanceTiming: navigationStart property"
+short-title: navigationStart
 slug: Web/API/PerformanceTiming/navigationStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - Performance
-  - PerformanceTiming.navigationStart
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.navigationStart
 ---
 

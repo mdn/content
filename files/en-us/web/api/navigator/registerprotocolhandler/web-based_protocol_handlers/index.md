@@ -2,10 +2,6 @@
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 page-type: guide
-tags:
-  - Advanced
-  - HTML
-  - Web-Based Protocol Handlers
 ---
 
 ## Background
@@ -25,9 +21,11 @@ Web-based protocol handlers allow web-based applications to participate in the p
 Setting up a web application as a protocol handler is not a difficult process. Basically, the web application uses [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler) to register itself with the browser as a potential handler for a given protocol. For example:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "http://www.google.co.uk/?uri=%s",
+  "Burger handler",
+);
 ```
 
 Where the parameters are:
@@ -36,18 +34,16 @@ Where the parameters are:
 - The URL template, used as the handler. The "%s" is replaced with the `href` of the link and a GET is executed on the resultant URL.
 - The user friendly name for the protocol handler.
 
-When a browser executes this code, it should display a prompt to the user, asking permission to allow the web application to register as a handler for the protocol. Firefox displays a prompt in the notification bar area:
+When a browser executes this code, it should let the user choose how to handle the protocol. The browser could prompt the user for registration immediately, or wait until the user clicks on a link that uses the protocol. Firefox displays a prompt in the notification bar area:
 
 ![Screenshot of a prompt that reads: Add Burger handler (google.co.uk) as an application for burger links. An Add Application button is next to the text.](protocolregister.png)
 
 > **Note:** The URL template supplied when registering **must** be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, `http://example.com/homepage.html` can register a protocol handler for `http://example.com/handle_mailto/%s`, but not for `http://example.org/handle_mailto/%s`.
 
-Registering the same protocol handler more than once will pop up a different notification, indicating that the protocol handler is already registered. Therefore, it is a good idea to guard your call to register the protocol handler with a check to see if it is already registered, such as in the example below.
-
 ### Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -57,7 +53,7 @@ Registering the same protocol handler more than once will pop up a different not
       navigator.registerProtocolHandler(
         "web+burger",
         "http://www.google.co.uk/?uri=%s",
-        "Burger handler"
+        "Burger handler",
       );
     </script>
   </head>
@@ -78,7 +74,7 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 ### Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Web Protocol Handler Sample - Test</title>
@@ -93,7 +89,7 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 
 The next phase is handling the action. The browser extracts the `href` from the activated link, combines it with the URL template supplied during handler registration and performs an HTTP GET on the URL. So, using the above examples, the browser would perform a GET on this URL:
 
-```
+```url
 http://www.google.co.uk/?uri=web+burger:cheeseburger
 ```
 

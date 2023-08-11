@@ -2,19 +2,10 @@
 title: abs()
 slug: Web/CSS/abs
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - abs
-  - Experimental
 browser-compat: css.types.abs
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns the absolute value of the argument, as the same type as the input.
 
@@ -72,7 +63,7 @@ In older browsers that lack the support for CSS `abs()` function, you can use th
 
 ```css
 p {
-  line-height: max(var(--lh), -1*var(--lh));
+  line-height: max(var(--lh), -1 * var(--lh));
 }
 ```
 

@@ -2,11 +2,6 @@
 title: HTMLObjectElement
 slug: Web/API/HTMLObjectElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLObjectElement
 ---
 
@@ -23,37 +18,37 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLObjectElement.align")}} {{deprecated_inline}}
   - : A string representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 - {{domxref("HTMLObjectElement.archive")}} {{deprecated_inline}}
-  - : A string that reflects the {{htmlattrxref("archive", "object")}} HTML attribute, containing a list of archives for resources for this object.
+  - : A string that reflects the [`archive`](/en-US/docs/Web/HTML/Element/object#archive) HTML attribute, containing a list of archives for resources for this object.
 - {{domxref("HTMLObjectElement.border")}} {{deprecated_inline}}
-  - : A string that reflects the {{htmlattrxref("border", "object")}} HTML attribute, specifying the width of a border around the object.
+  - : A string that reflects the [`border`](/en-US/docs/Web/HTML/Element/object#border) HTML attribute, specifying the width of a border around the object.
 - {{domxref("HTMLObjectElement.code")}} {{deprecated_inline}}
   - : A string representing the name of an applet class file, containing either the applet's subclass, or the path to get to the class, including the class file itself.
 - {{domxref("HTMLObjectElement.codeBase")}} {{deprecated_inline}}
-  - : A string that reflects the {{htmlattrxref("codebase", "object")}} HTML attribute, specifying the base path to use to resolve relative URIs.
+  - : A string that reflects the [`codebase`](/en-US/docs/Web/HTML/Element/object#codebase) HTML attribute, specifying the base path to use to resolve relative URIs.
 - {{domxref("HTMLObjectElement.codeType")}} {{deprecated_inline}}
-  - : A string that reflects the {{htmlattrxref("codetype", "object")}} HTML attribute, specifying the content type of the data.
+  - : A string that reflects the [`codetype`](/en-US/docs/Web/HTML/Element/object#codetype) HTML attribute, specifying the content type of the data.
 - {{domxref("HTMLObjectElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}} representing the active document of the object element's nested browsing context, if any; otherwise `null`.
 - {{domxref("HTMLObjectElement.contentWindow")}} {{ReadOnlyInline}}
   - : Returns a {{glossary("WindowProxy")}} representing the window proxy of the object element's nested browsing context, if any; otherwise `null`.
 - {{domxref("HTMLObjectElement.data")}}
-  - : Returns a string that reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address of a resource's data.
+  - : Returns a string that reflects the [`data`](/en-US/docs/Web/HTML/Element/object#data) HTML attribute, specifying the address of a resource's data.
 - {{domxref("HTMLObjectElement.declare")}} {{deprecated_inline}}
-  - : A boolean value that reflects the {{htmlattrxref("declare", "object")}} HTML attribute, indicating that this is a declaration, not an instantiation, of the object.
+  - : A boolean value that reflects the [`declare`](/en-US/docs/Web/HTML/Element/object#declare) HTML attribute, indicating that this is a declaration, not an instantiation, of the object.
 - {{domxref("HTMLObjectElement.form")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("HTMLFormElement")}} representing the object element's form owner, or null if there isn't one.
 - {{domxref("HTMLObjectElement.height")}}
-  - : Returns a string that reflects the {{htmlattrxref("height", "object")}} HTML attribute, specifying the displayed height of the resource in CSS pixels.
+  - : Returns a string that reflects the [`height`](/en-US/docs/Web/HTML/Element/object#height) HTML attribute, specifying the displayed height of the resource in CSS pixels.
 - {{domxref("HTMLObjectElement.hspace")}} {{deprecated_inline}}
   - : A `long` representing the horizontal space in pixels around the control.
 - {{domxref("HTMLObjectElement.name")}}
-  - : Returns a string that reflects the {{htmlattrxref("name", "object")}} HTML attribute, specifying the name of the browsing context.
+  - : Returns a string that reflects the [`name`](/en-US/docs/Web/HTML/Element/object#name) HTML attribute, specifying the name of the browsing context.
 - {{domxref("HTMLObjectElement.standby")}} {{deprecated_inline}}
-  - : A string that reflects the {{htmlattrxref("standby", "object")}} HTML attribute, specifying a message to display while the object loads.
+  - : A string that reflects the [`standby`](/en-US/docs/Web/HTML/Element/object#standby) HTML attribute, specifying a message to display while the object loads.
 - {{domxref("HTMLObjectElement.type")}}
-  - : A string that reflects the {{htmlattrxref("type", "object")}} HTML attribute, specifying the MIME type of the resource.
+  - : A string that reflects the [`type`](/en-US/docs/Web/HTML/Element/object#type) HTML attribute, specifying the MIME type of the resource.
 - {{domxref("HTMLObjectElement.useMap")}}
-  - : A string that reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a {{HTMLElement("map")}} element to use.
+  - : A string that reflects the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) HTML attribute, specifying a {{HTMLElement("map")}} element to use.
 - {{domxref("HTMLObjectElement.validationMessage")}} {{ReadOnlyInline}}
   - : Returns a string representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
 - {{domxref("HTMLObjectElement.validity")}} {{ReadOnlyInline}}
@@ -61,7 +56,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLObjectElement.vspace")}} {{deprecated_inline}}
   - : A `long` representing the horizontal space in pixels around the control.
 - {{domxref("HTMLObjectElement.width")}}
-  - : A string that reflects the {{htmlattrxref("width", "object")}} HTML attribute, specifying the displayed width of the resource in CSS pixels.
+  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/object#width) HTML attribute, specifying the displayed width of the resource in CSS pixels.
 - {{domxref("HTMLObjectElement.willValidate")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the element is a candidate for constraint validation. Always `false` for `HTMLObjectElement` objects.
 

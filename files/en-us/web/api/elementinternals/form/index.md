@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.form
+title: "ElementInternals: form property"
+short-title: form
 slug: Web/API/ElementInternals/form
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - form
-  - ElementInternals
 browser-compat: api.ElementInternals.form
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`form`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("HTMLFormElement")}} associated with this element.
 
@@ -42,7 +37,7 @@ class CustomCheckbox extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log(this.#internals.form.length)
+    console.log(this.#internals.form.length);
   }
 }
 

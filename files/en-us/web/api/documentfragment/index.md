@@ -2,13 +2,6 @@
 title: DocumentFragment
 slug: Web/API/DocumentFragment
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Interface
-  - Reference
-  - Web Components
 browser-compat: api.DocumentFragment
 ---
 
@@ -78,13 +71,13 @@ The performance benefit of `DocumentFragment` is often overstated. In fact, in s
 ### JavaScript
 
 ```js
-const ul = document.querySelector('ul');
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
+const ul = document.querySelector("ul");
+const fruits = ["Apple", "Orange", "Banana", "Melon"];
 
 const fragment = new DocumentFragment();
 
 for (const fruit of fruits) {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
   li.textContent = fruit;
   fragment.append(li);
 }

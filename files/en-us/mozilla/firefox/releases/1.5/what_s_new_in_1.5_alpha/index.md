@@ -1,15 +1,7 @@
 ---
 title: What's New in Deer Park Alpha
 slug: Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
-tags:
-  - API
-  - CSS
-  - DOM
-  - Extensions
-  - Graphics
-  - HTML
-  - JavaScript
-  - SVG
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -84,11 +76,11 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - Hidden referrer column for history
 
-  - : Extensions can now access the referer information for pages stored in the browser history. This feature can be used to provide alternate history views and other useful functionality. {{bug(128398) }}
+  - : Extensions can now access the referer information for pages stored in the browser history. This feature can be used to provide alternate history views and other useful functionality. [Firefox bug 128398](https://bugzil.la/128398)
 
 - API for prioritizing HTTP connections
 
-  - : The Mozilla networking library now supports the prioritization of connections to a specific server using `nsISupportsPriority`. {{bug(278531) }}
+  - : The Mozilla networking library now supports the prioritization of connections to a specific server using `nsISupportsPriority`. [Firefox bug 278531](https://bugzil.la/278531)
 
 - API for managing user and UA stylesheets
 
@@ -96,15 +88,15 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - API for configuring proxies
 
-  - : It is now possible for extensions to easily override the proxy configuration without affecting user-visible preferences. See `nsIProtocolProxyService`, `nsIProtocolProxyFilter`, and `nsIProtocolProxyCallback`. {{bug(282442) }}
+  - : It is now possible for extensions to easily override the proxy configuration without affecting user-visible preferences. See `nsIProtocolProxyService`, `nsIProtocolProxyFilter`, and `nsIProtocolProxyCallback`. [Firefox bug 282442](https://bugzil.la/282442)
 
 - Dynamic Overlays
 
-  - : Loading of XUL overlays after the document has been displayed is now supported. See `nsIDOMXULDocument`. {{bug(282103) }}
+  - : Loading of XUL overlays after the document has been displayed is now supported. See `nsIDOMXULDocument`. [Firefox bug 282103](https://bugzil.la/282103)
 
 - E4X
 
-  - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://www.ecma-international.org/publications/standards/Ecma-357.htm). {{bug(246441)}}
+  - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://www.ecma-international.org/publications/standards/Ecma-357.htm). [Firefox bug 246441](https://bugzil.la/246441)
 
 - Translucent Windows (Windows/Linux)
 
@@ -113,7 +105,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - Adding tokens to the User-Agent string
 
   - : It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other.
-    See [documentation](/en-US/docs/Web/HTTP/Headers/User-Agent). {{bug(274928)}}
+    See [documentation](/en-US/docs/Web/HTTP/Headers/User-Agent). [Firefox bug 274928](https://bugzil.la/274928)
 
 - Toolkit chrome registry
 

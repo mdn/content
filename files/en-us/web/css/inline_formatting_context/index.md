@@ -2,11 +2,6 @@
 title: Inline formatting context
 slug: Web/CSS/Inline_formatting_context
 page-type: guide
-tags:
-  - CSS
-  - Formatting context
-  - Guide
-  - Reference
 ---
 
 {{CSSRef}}
@@ -34,7 +29,7 @@ Margins, borders, and padding in the inline direction are respected. In the exam
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
-> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
+> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ## Alignment in the block direction
 

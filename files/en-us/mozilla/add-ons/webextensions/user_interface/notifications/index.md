@@ -1,8 +1,7 @@
 ---
 title: Notifications
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -21,7 +20,7 @@ You manage notifications programmatically, using the {{WebExtAPIRef("notificatio
 "permissions": ["notifications"]
 ```
 
-You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from [notify-link-clicks-i18n:](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
+You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from [notify-link-clicks-i18n:](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
 
 ```js
 const title = browser.i18n.getMessage("notificationTitle");
@@ -46,8 +45,8 @@ If you are issuing calls to action through notifications, you will also want to 
 
 ## Icons
 
-For details on how to create icons to use with your notification, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to create icons to use with your notification, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example which implements notifications.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) example which implements notifications.

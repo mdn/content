@@ -2,18 +2,6 @@
 title: PaymentRequest
 slug: Web/API/PaymentRequest
 page-type: web-api-interface
-tags:
-  - API
-  - Commerce
-  - Interface
-  - Merchants
-  - Money
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Payments
-  - Reference
-  - Secure context
 browser-compat: api.PaymentRequest
 ---
 
@@ -31,7 +19,7 @@ The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentR
 ## Instance properties
 
 - {{domxref('PaymentRequest.id')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
-  - : An unique identifier for a particular `PaymentRequest`, which can be set via `details.id`. When none is set, it defaults to a UUID.
+  - : A unique identifier for a particular `PaymentRequest`, which can be set via `details.id`. When none is set, it defaults to a UUID.
 - {{domxref('PaymentRequest.shippingAddress')}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : If requested via payment options, returns the shipping address chosen by the user for the purposes of calculating shipping. This property is only populated if the constructor is called with the `requestShipping` flag set to true. Additionally, in some browsers, the parts of the address will be redacted for privacy until the user indicates they are ready to complete the transaction (i.e., they hit "Pay").
 - {{domxref('PaymentRequest.shippingOption')}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}

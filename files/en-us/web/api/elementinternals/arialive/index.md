@@ -1,18 +1,12 @@
 ---
-title: ElementInternals.ariaLive
+title: "ElementInternals: ariaLive property"
+short-title: ariaLive
 slug: Web/API/ElementInternals/ariaLive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLive
-  - AriaAttributes
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaLive
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaLive`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 

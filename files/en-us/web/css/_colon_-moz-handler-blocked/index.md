@@ -1,14 +1,9 @@
 ---
-title: ':-moz-handler-blocked'
+title: ":-moz-handler-blocked"
 slug: Web/CSS/:-moz-handler-blocked
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}} {{Non-standard_header}}
@@ -20,7 +15,9 @@ The **`:-moz-handler-blocked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-handler-blocked
+:-moz-handler-blocked {
+  /* ... */
+}
 ```
 
 ## Specifications

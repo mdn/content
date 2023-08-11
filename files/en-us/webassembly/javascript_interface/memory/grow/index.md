@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Memory.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Memory/grow
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - grow
-  - memory
 browser-compat: javascript.builtins.WebAssembly.Memory.grow
 ---
 
@@ -85,6 +77,8 @@ const currentMemoryView = new Uint8Array(memory.buffer);
 console.log(currentMemoryView); // Uint8Array(131072) [ 0, 0, 0, ... ]
 // 131072 = 64KiB * 2
 ```
+
+For a shared `Memory` instance, the initial `buffer` (which would be a [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) in such case) will not become detached, but rather its length will not be updated. Accesses to the `buffer` property after growing will yield a larger `SharedArrayBuffer` which may access a larger span of memory than the buffer from before growing the `Memory`. Every `SharedArrayBuffer` from the `buffer` property will all refer to the start of the same memory address range, and thus manipulate the same data.
 
 ## Specifications
 

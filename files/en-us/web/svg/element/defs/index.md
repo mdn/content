@@ -2,9 +2,6 @@
 title: <defs>
 slug: Web/SVG/Element/defs
 page-type: svg-element
-tags:
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.defs
 ---
 

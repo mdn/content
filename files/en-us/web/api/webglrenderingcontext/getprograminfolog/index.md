@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.getProgramInfoLog()
+title: "WebGLRenderingContext: getProgramInfoLog() method"
+short-title: getProgramInfoLog()
 slug: Web/API/WebGLRenderingContext/getProgramInfoLog
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramInfoLog
 ---
 

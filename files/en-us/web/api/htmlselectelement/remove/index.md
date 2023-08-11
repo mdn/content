@@ -1,13 +1,8 @@
 ---
-title: HTMLSelectElement.remove()
+title: "HTMLSelectElement: remove() method"
+short-title: remove()
 slug: Web/API/HTMLSelectElement/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.remove
 ---
 

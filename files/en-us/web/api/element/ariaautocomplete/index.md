@@ -1,15 +1,8 @@
 ---
-title: Element.ariaAutoComplete
+title: "Element: ariaAutoComplete property"
+short-title: ariaAutoComplete
 slug: Web/API/Element/ariaAutoComplete
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaAutoComplete
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaAutoComplete
 ---
 
@@ -53,7 +46,7 @@ In this example, the `aria-autocomplete` attribute on the element with an ID of 
 ```
 
 ```js
-let el = document.getElementById('animal');
+let el = document.getElementById("animal");
 console.log(el.ariaAutoComplete); // inline
 el.ariaAutoComplete = "list";
 console.log(el.ariaAutoComplete); // list

@@ -2,11 +2,6 @@
 title: TransformStream
 slug: Web/API/TransformStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Streams API
 browser-compat: api.TransformStream
 ---
 
@@ -20,7 +15,7 @@ For example, it might be used to decode (or encode) video frames, decompress dat
 A transformation algorithm may be provided as an optional argument to the object constructor.
 If not supplied, data is not modified when piped through the stream.
 
-`TransformStream` is a {{glossary("Transferable objects","transferable object")}}.
+`TransformStream` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Constructor
 
@@ -50,43 +45,47 @@ const transformContent = {
   async transform(chunk, controller) {
     chunk = await chunk;
     switch (typeof chunk) {
-      case 'object':
+      case "object":
         // just say the stream is done I guess
         if (chunk === null) {
           controller.terminate();
         } else if (ArrayBuffer.isView(chunk)) {
-          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength));
+          controller.enqueue(
+            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength),
+          );
         } else if (
           Array.isArray(chunk) &&
-          chunk.every((value) => typeof value === 'number')
+          chunk.every((value) => typeof value === "number")
         ) {
           controller.enqueue(new Uint8Array(chunk));
         } else if (
-          typeof chunk.valueOf === 'function' &&
+          typeof chunk.valueOf === "function" &&
           chunk.valueOf() !== chunk
         ) {
           this.transform(chunk.valueOf(), controller); // hack
-        } else if ('toJSON' in chunk) {
+        } else if ("toJSON" in chunk) {
           this.transform(JSON.stringify(chunk), controller);
         }
         break;
-      case 'symbol':
-        controller.error("Cannot send a symbol as a chunk part")
-        break
-      case 'undefined':
-        controller.error("Cannot send undefined as a chunk part")
-        break
+      case "symbol":
+        controller.error("Cannot send a symbol as a chunk part");
+        break;
+      case "undefined":
+        controller.error("Cannot send undefined as a chunk part");
+        break;
       default:
-        controller.enqueue(this.textencoder.encode(String(chunk)))
-        break
+        controller.enqueue(this.textencoder.encode(String(chunk)));
+        break;
     }
   },
-  flush() { /* do any destructor work here */ }
-}
+  flush() {
+    /* do any destructor work here */
+  },
+};
 
 class AnyToU8Stream extends TransformStream {
   constructor() {
-    super({...transformContent, textencoder: new TextEncoder()})
+    super({ ...transformContent, textencoder: new TextEncoder() });
   }
 }
 ```
@@ -97,21 +96,25 @@ Note that this is deprecated by the native constructors. This is intended as a p
 
 ```js
 const tes = {
-  start(){this.encoder = new TextEncoder()},
+  start() {
+    this.encoder = new TextEncoder();
+  },
   transform(chunk, controller) {
-    controller.enqueue(this.encoder.encode(chunk))
-  }
-}
+    controller.enqueue(this.encoder.encode(chunk));
+  },
+};
 
 let _jstes_wm = new WeakMap(); /* info holder */
 class JSTextEncoderStream extends TransformStream {
   constructor() {
-    let t = {...tes}
+    let t = { ...tes };
 
-    super(t)
-    _jstes_wm.set(this, t)
+    super(t);
+    _jstes_wm.set(this, t);
   }
-  get encoding() {return _jstes_wm.get(this).encoder.encoding}
+  get encoding() {
+    return _jstes_wm.get(this).encoder.encoding;
+  }
 }
 ```
 
@@ -119,25 +122,31 @@ Similarly, `TextDecoderStream` can be written as such:
 
 ```js
 const tds = {
-  start(){
-    this.decoder = new TextDecoder(this.encoding, this.options)
+  start() {
+    this.decoder = new TextDecoder(this.encoding, this.options);
   },
   transform(chunk, controller) {
-    controller.enqueue(this.decoder.decode(chunk, { stream: true }))
-  }
-}
+    controller.enqueue(this.decoder.decode(chunk, { stream: true }));
+  },
+};
 
 let _jstds_wm = new WeakMap(); /* info holder */
 class JSTextDecoderStream extends TransformStream {
-  constructor(encoding = 'utf-8', {...options} = {}) {
-    let t = {...tds, encoding, options}
+  constructor(encoding = "utf-8", { ...options } = {}) {
+    let t = { ...tds, encoding, options };
 
-    super(t)
-    _jstds_wm.set(this, t)
+    super(t);
+    _jstds_wm.set(this, t);
   }
-  get encoding() {return _jstds_wm.get(this).decoder.encoding}
-  get fatal() {return _jstds_wm.get(this).decoder.fatal}
-  get ignoreBOM() {return _jstds_wm.get(this).decoder.ignoreBOM}
+  get encoding() {
+    return _jstds_wm.get(this).decoder.encoding;
+  }
+  get fatal() {
+    return _jstds_wm.get(this).decoder.fatal;
+  }
+  get ignoreBOM() {
+    return _jstds_wm.get(this).decoder.ignoreBOM;
+  }
 }
 ```
 
@@ -146,13 +155,16 @@ class JSTextDecoderStream extends TransformStream {
 This is a useful one, where multiple streams can be conjoined. Examples include building a PWA with progressive loading and progressive streaming.
 
 ```js
-let responses = [ /* conjoined response tree */ ]
-let {readable, writable} = new TransformStream
+let responses = [
+  /* conjoined response tree */
+];
+let { readable, writable } = new TransformStream();
 
 responses.reduce(
-  (a, res, i, arr) => a.then(() => res.pipeTo(writable, {preventClose: (i+1) !== arr.length})),
-  Promise.resolve()
-)
+  (a, res, i, arr) =>
+    a.then(() => res.pipeTo(writable, { preventClose: i + 1 !== arr.length })),
+  Promise.resolve(),
+);
 ```
 
 Note that this is not resilient to other influences.

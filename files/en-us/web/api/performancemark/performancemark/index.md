@@ -1,12 +1,8 @@
 ---
-title: PerformanceMark()
+title: "PerformanceMark: PerformanceMark() constructor"
+short-title: PerformanceMark()
 slug: Web/API/PerformanceMark/PerformanceMark
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceMark.PerformanceMark
 ---
 

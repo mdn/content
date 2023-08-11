@@ -1,10 +1,7 @@
 ---
 title: Example 1
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
-tags:
-  - Forms
-  - Guide
-  - HTML
+page-type: learn-module-chapter
 ---
 
 This is the first example of code that explains [how to build a custom form widget](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
@@ -87,7 +84,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -223,7 +220,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -359,7 +356,7 @@ This is the first example of code that explains [how to build a custom form widg
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;

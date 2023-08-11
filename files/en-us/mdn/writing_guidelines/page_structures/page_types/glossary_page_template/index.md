@@ -2,9 +2,6 @@
 title: Glossary page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -22,9 +19,7 @@ tags:
 > ---
 > title: Term being defined
 > slug: Glossary/Term_being_defined
-> tags:
->   - Glossary
->   - The term
+> page-type: glossary-definition OR glossary-disambiguation
 > ---
 > ```
 >
@@ -34,8 +29,8 @@ tags:
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted as snake case of the title: `Glossary/Term_being_defined`.
-> - **tags**
->   - : Always include the following tags: **Glossary**, _Term being defined_.
+> - **page-type**
+>   - : `glossary-definition` for a definition page or `glossary-disambiguation` for a disambiguation page.
 >
 > ---
 >
@@ -47,5 +42,7 @@ Include further supporting information as required, but not much — no more tha
 
 ## See also
 
-- Include list of links pointing to more detailed general and technical information.
-- For example Wikipedia articles, other encyclopedia entries, technical tutorials, specifications.
+Include a list of links pointing to more detailed general and technical information. For example, you can add links to Wikipedia articles, other encyclopedia entries, technical tutorials, and specifications. For guidelines on adding this list of links, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2

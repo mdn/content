@@ -1,12 +1,7 @@
 ---
-title: 'Test your skills: Events'
+title: "Test your skills: Events"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Events
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - events
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

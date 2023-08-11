@@ -2,14 +2,8 @@
 title: BluetoothRemoteGATTCharacteristic
 slug: Web/API/BluetoothRemoteGATTCharacteristic
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattCharacteristic
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic
 ---
 

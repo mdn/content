@@ -1,22 +1,13 @@
 ---
-title: CSS Shapes
-slug: Web/CSS/CSS_Shapes
+title: CSS shapes
+slug: Web/CSS/CSS_shapes
 page-type: css-module
-tags:
-  - Boundaries
-  - CSS
-  - CSS Shapes
-  - Guide
-  - Overview
-  - Reference
-  - Shape
-  - wrapping
 spec-urls: https://drafts.csswg.org/css-shapes/
 ---
 
 {{CSSRef}}
 
-**CSS Shapes** describe geometric shapes for use in CSS. For the [Level 1 specification](https://drafts.csswg.org/css-shapes/), CSS Shapes can be applied to floating elements. The specification defines a number of different ways to define a shape on a floated element, causing wrapping lines to wrap round the shape rather than following the rectangle of the element's box.
+The **CSS shapes** module describes geometric shapes that can be in CSS. For the [Level 1 specification](https://drafts.csswg.org/css-shapes/), CSS shapes can be applied to floating elements. The specification defines a number of different ways to define a shape on a floated element, causing wrapping lines to wrap round the shape rather than following the rectangle of the element's box.
 
 ## Basic example
 
@@ -38,10 +29,10 @@ The example below shows an image that has been floated left, and the `shape-outs
 
 ## Guides
 
-- [Overview of shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Shapes from box values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values)
-- [Basic shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
-- [Shapes from images](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Shapes from box values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values)
+- [Basic shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [Shapes from images](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 
 ## Specifications
 

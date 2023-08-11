@@ -1,12 +1,8 @@
 ---
-title: performance.getEntries()
+title: "Performance: getEntries() method"
+short-title: getEntries()
 slug: Web/API/Performance/getEntries
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.getEntries
 ---
 
@@ -18,6 +14,16 @@ If you are only interested in performance entries of certain types or that have 
 
 > **Note:** This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
 > To receive notifications about entries as they become available, use a {{domxref("PerformanceObserver")}}.
+
+The following entry types are not supported by this method at all and won't be returned even if entries for these types might exist:
+
+- `"element"` ({{domxref("PerformanceElementTiming")}})
+- `"event"` ({{domxref("PerformanceEventTiming")}})
+- `"largest-contentful-paint"` ({{domxref("LargestContentfulPaint")}})
+- `"layout-shift"` ({{domxref("LayoutShift")}})
+- `"longtask"` ({{domxref("PerformanceLongTaskTiming")}})
+
+To access entries of these types, you must use a {{domxref("PerformanceObserver")}} instead.
 
 ## Syntax
 
@@ -45,21 +51,17 @@ performance.mark("login-started");
 performance.mark("login-finished");
 performance.mark("form-sent");
 performance.mark("video-loaded");
-performance.measure(
-   "login-duration",
-   "login-started",
-   "login-finished"
- );
+performance.measure("login-duration", "login-started", "login-finished");
 
 const entries = performance.getEntries();
 
 entries.forEach((entry) => {
   if (entry.entryType === "mark") {
     console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-  };
+  }
   if (entry.entryType === "measure") {
     console.log(`${entry.name}'s duration: ${entry.duration}`);
-  };
+  }
 });
 ```
 

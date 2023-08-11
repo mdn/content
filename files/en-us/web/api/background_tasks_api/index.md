@@ -2,14 +2,6 @@
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background Tasks API
-  - Guide
-  - IdleDeadline
-  - Overview
-  - cancelIdleCallback
-  - requestIdleCallback
 browser-compat: api.Window.requestIdleCallback
 ---
 
@@ -50,7 +42,7 @@ In this example, we'll take a look at how you can use {{domxref("window.requestI
 
 Below you'll find only the HTML and JavaScript for this example. The CSS is not shown, since it's not particularly crucial to understanding this functionality.
 
-### HTML content
+### HTML
 
 In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (`id="container"`) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (`id="logBox"`), which is used to display textual output.
 
@@ -106,7 +98,9 @@ body {
 }
 
 #log {
-  font: 12px "Courier", monospace;
+  font:
+    12px "Courier",
+    monospace;
   padding: 6px;
   overflow: auto;
   overflow-y: scroll;
@@ -154,7 +148,7 @@ body {
 }
 ```
 
-### JavaScript content
+### JavaScript
 
 Now that the document structure is defined, construct the JavaScript code that will do the work. The goal: to be able to add requests to call functions to a queue, with an idle callback that runs those functions whenever the system is idle for long enough a time to make progress.
 

@@ -1,15 +1,8 @@
 ---
-title: MouseEvent.metaKey
+title: "MouseEvent: metaKey property"
+short-title: metaKey
 slug: Web/API/MouseEvent/metaKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.metaKey
 ---
 
@@ -41,8 +34,8 @@ This example logs the `metaKey` property when you trigger a {{domxref("Element/c
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `The meta key is pressed: ${e.metaKey}`;

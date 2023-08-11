@@ -1,20 +1,11 @@
 ---
-title: MediaTrackSupportedConstraints.volume
+title: "MediaTrackSupportedConstraints: volume property"
+short-title: volume
 slug: Web/API/MediaTrackSupportedConstraints/volume
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Volume
-  - WebRTC
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaTrackSupportedConstraints.volume
 ---
 
@@ -46,7 +37,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

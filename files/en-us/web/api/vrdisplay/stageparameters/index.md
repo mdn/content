@@ -1,18 +1,11 @@
 ---
-title: VRDisplay.stageParameters
+title: "VRDisplay: stageParameters property"
+short-title: stageParameters
 slug: Web/API/VRDisplay/stageParameters
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - stageParameters
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.stageParameters
 ---
 

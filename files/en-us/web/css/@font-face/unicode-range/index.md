@@ -2,37 +2,29 @@
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
 page-type: css-at-rule-descriptor
-tags:
-  - At-rule descriptor
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.at-rules.font-face.unicode-range
 ---
 
 {{CSSRef}}
 
-The **`unicode-range`** CSS descriptor sets the specific range of characters to be used from a font defined by {{cssxref("@font-face")}} and made available for use on the current page. If the page doesn't use any character in this range, the font is not downloaded; if it uses at least one, the whole font is downloaded.
+The **`unicode-range`** CSS descriptor sets the specific range of characters to be used from a font defined using the {{cssxref("@font-face")}} at-rule and made available for use on the current page. If the page doesn't use any character in this range, the font is not downloaded; if it uses at least one, the whole font is downloaded.
 
 ## Syntax
 
 ```css
 /* <unicode-range> values */
-unicode-range: U+26; /* single codepoint */
+unicode-range: U+26; /* single code point */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF; /* codepoint range */
+unicode-range: U+0025-00FF; /* code point range */
 unicode-range: U+4??; /* wildcard range */
 unicode-range: U+0025-00FF, U+4??; /* multiple values */
 ```
 
 ### Values
 
-- **_single codepoint_**
+- **_single code point_**
   - : A single Unicode character code point, for example `U+26`.
-- **_codepoint range_**
+- **_code point range_**
   - : A range of Unicode code points. So for example, `U+0025-00FF` means _include all characters in the range `U+0025` to `U+00FF`_.
 - **_wildcard range_**
   - : A range of Unicode code points containing wildcard characters, that is using the `'?'` character, so for example `U+4??` means _include all characters in the range `U+400` to `U+4FF`_.

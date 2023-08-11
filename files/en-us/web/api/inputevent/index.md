@@ -2,14 +2,6 @@
 title: InputEvent
 slug: Web/API/InputEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Input
-  - Interface
-  - Reference
-  - events
 browser-compat: api.InputEvent
 ---
 

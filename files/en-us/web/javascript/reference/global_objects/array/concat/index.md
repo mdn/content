@@ -1,21 +1,13 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - array.concat
-  - concat
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.concat
 ---
 
 {{JSRef}}
 
-The **`concat()`** method is used to merge two or more arrays.
+The **`concat()`** method of {{jsxref("Array")}} instances is used to merge two or more arrays.
 This method does not change the existing arrays, but instead returns a new array.
 
 {{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
@@ -26,7 +18,7 @@ This method does not change the existing arrays, but instead returns a new array
 concat()
 concat(value0)
 concat(value0, value1)
-concat(value0, value1, /* … ,*/ valueN)
+concat(value0, value1, /* …, */ valueN)
 ```
 
 ### Parameters
@@ -141,7 +133,13 @@ If the `this` value is not an array, it is converted to an object and then treat
 ```js
 console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
 console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
-const arrayLike = { [Symbol.isConcatSpreadable]: true, length: 2, 0: 1, 1: 2 };
+const arrayLike = {
+  [Symbol.isConcatSpreadable]: true,
+  length: 2,
+  0: 1,
+  1: 2,
+  2: 99, // ignored by concat() since length is 2
+};
 console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ```
 
@@ -156,8 +154,10 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ## See also
 
 - [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array/push", "push()")}} / {{jsxref("Array/pop", "pop()")}} — add/remove elements from the end of the array
-- {{jsxref("Array/unshift", "unshift()")}} / {{jsxref("Array/shift", "shift()")}} — add/remove elements from the beginning of the array
-- {{jsxref("Array/splice", "splice()")}} — add/remove elements from the specified location of the array
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("String.prototype.concat()")}}
-- {{jsxref("Symbol.isConcatSpreadable")}} — control flattening.
+- {{jsxref("Symbol.isConcatSpreadable")}}

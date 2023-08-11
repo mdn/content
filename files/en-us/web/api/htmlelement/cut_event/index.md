@@ -1,15 +1,8 @@
 ---
-title: 'HTMLElement: cut event'
+title: "HTMLElement: cut event"
+short-title: cut
 slug: Web/API/HTMLElement/cut_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - HTMLElement
-  - Event
-  - Reference
-  - Web
-  - cut
 browser-compat: api.Element.cut_event
 ---
 
@@ -22,9 +15,9 @@ The **`cut`** event fires when the user initiates a cut action through the brows
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', (event) => { });
+addEventListener("cut", (event) => {});
 
-oncut = (event) => { };
+oncut = (event) => {};
 ```
 
 ## Event type
@@ -39,11 +32,6 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
-
-### Value
-
-`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
-sole argument.
 
 ## Example
 
@@ -74,8 +62,8 @@ function preventCut(event) {
   log.innerText = `Cut blocked!\n${log.innerText}`;
 }
 
-const editor = document.getElementById('editor');
-const log = document.getElementById('log');
+const editor = document.getElementById("editor");
+const log = document.getElementById("log");
 
 editor.oncopy = logCopy;
 editor.oncut = preventCut;

@@ -2,17 +2,6 @@
 title: min-height
 slug: Web/CSS/min-height
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Minimum
-  - Reference
-  - dimensions
-  - height
-  - min-height
-  - recipe:css-property
-  - size
 browser-compat: css.properties.min-height
 ---
 
@@ -93,5 +82,5 @@ form {
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("height")}}, {{cssxref("max-height")}}

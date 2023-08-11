@@ -1,12 +1,7 @@
 ---
 title: "ARIA: suggestion role"
 slug: Web/Accessibility/ARIA/Roles/suggestion_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - annotations
-  - suggestion
+page-type: aria-role
 ---
 
 The `suggestion` role semantically denotes a single proposed change to an editable document. This should be used on an element that wraps an element with an `insertion` role, and one with a `deletion` role.
@@ -20,8 +15,8 @@ When you've got a content change that involves an insertion _and_ a deletion, th
   Freida's pet is a
   <span role="suggestion">
     <span role="deletion">black Cat called Luna</span>
-    <span role="insertion">purple T. Rex called Tiny</span>
-  </span>.
+    <span role="insertion">purple T. Rex called Tiny</span></span
+  >.
 </p>
 ```
 
@@ -32,8 +27,8 @@ We could even provide an information box saying who made the suggestion and when
   Freida's pet is a
   <span role="suggestion" aria-details="comment-source">
     <span role="deletion">black Cat called Luna</span>
-    <span role="insertion">purple T. Rex called Tiny</span>
-  </span>.
+    <span role="insertion">purple T. Rex called Tiny</span></span
+  >.
 </p>
 
 <div id="comment-source">

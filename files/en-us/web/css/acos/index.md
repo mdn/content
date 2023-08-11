@@ -2,14 +2,6 @@
 title: acos()
 slug: Web/CSS/acos
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - acos
 browser-compat: css.types.acos
 ---
 

@@ -1,18 +1,8 @@
 ---
-title: DOMPoint.x
+title: "DOMPoint: x property"
+short-title: x
 slug: Web/API/DOMPoint/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Reference
-  - x
 browser-compat: api.DOMPoint.x
 ---
 

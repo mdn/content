@@ -1,18 +1,9 @@
 ---
 title: What will your website look like?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Assets
-  - Beginner
-  - Composing
-  - Content
-  - Deprecated
-  - Design
-  - Fonts
-  - Learn
-  - Simple
-  - "l10n:priority"
-  - step by step
+page-type: learn-module-chapter
+status:
+  - deprecated
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
@@ -51,7 +42,7 @@ You should still have your paragraphs and title from earlier. Keep these close b
 
 ### Theme color
 
-To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool) and find a color you like. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
+To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) and find a color you like. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
 
 ![Color-Picker-Tool on MDN Docs website with RGB, HSL, and HEX colors ](color-picker.png)
 
@@ -70,21 +61,15 @@ Note that most images on the web, including in Google Images, are copyrighted. T
 
 ### Font
 
-To choose a font:
+As with images, many fonts are protected by licenses, meaning you cannot freely use them in your site. [Google Fonts](https://developers.google.com/fonts) is a web service owned by Google that provides access to many fonts.
 
-1. Go to [Google Fonts](https://fonts.google.com/) and find one you like.
-2. Copy the lines of code Google gives you into your text editor to save for later.
-3. For more details about using Google Fonts, see [this page](https://developers.google.com/fonts/docs/getting_started)
+Once you have found a font, there are two main ways of using it:
+
+1. Add a reference in your code to load the font from Google's servers.
+2. Download the font file to your own system, host the font yourself, and use your hosted copy in your website's code.
+
+> **Note:** Serving fonts hosted on Google Fonts may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/what-is-gdpr/) as the font service exposes the user's IP address. If this is a potential problem for you, choose the second option.
+
+Alternatively you can use [safe web fonts](https://web.mit.edu/jmorzins/www/fonts.html) such as Arial, Times New Roman, or Courier New.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

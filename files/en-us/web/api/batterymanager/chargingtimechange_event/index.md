@@ -1,11 +1,8 @@
 ---
 title: "BatteryManager: chargingtimechange event"
+short-title: chargingtimechange
 slug: Web/API/BatteryManager/chargingtimechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.BatteryManager.chargingtimechange_event
 ---
 
@@ -29,14 +26,14 @@ _A generic {{domxref("Event")}}._
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <div id="level">(battery level unknown)</div>
 <div id="chargingTime">(charging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {

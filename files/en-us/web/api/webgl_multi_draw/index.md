@@ -1,12 +1,8 @@
 ---
-title: WEBGL_multi_draw
+title: WEBGL_multi_draw extension
+short-title: WEBGL_multi_draw
 slug: Web/API/WEBGL_multi_draw
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw
 ---
 
@@ -77,7 +73,7 @@ For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/
 in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
 ```js
-let ext = gl.getExtension('WEBGL_multi_draw');
+let ext = gl.getExtension("WEBGL_multi_draw");
 ```
 
 ### Drawing multiple arrays
@@ -97,7 +93,16 @@ ext.multiDrawArraysWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, firsts.length);
 const firsts = new Int32Array(/* … */);
 const counts = new Int32Array(/* … */);
 const instanceCounts = new Int32Array(/* … */);
-ext.multiDrawArraysInstancedWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
+ext.multiDrawArraysInstancedWEBGL(
+  gl.TRIANGLES,
+  firsts,
+  0,
+  counts,
+  0,
+  instanceCounts,
+  0,
+  firsts.length,
+);
 ```
 
 ### Drawing multiple elements
@@ -112,7 +117,15 @@ Assumes that the indices which have been previously uploaded to the
 // multiDrawElements variant
 const counts = new Int32Array(/* … */);
 const offsets = new Int32Array(/* … */);
-ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
+ext.multiDrawElementsWEBGL(
+  gl.TRIANGLES,
+  counts,
+  0,
+  gl.UNSIGNED_SHORT,
+  offsets,
+  0,
+  counts.length,
+);
 ```
 
 ```js
@@ -120,7 +133,17 @@ ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 
 const counts = new Int32Array(/* … */);
 const offsets = new Int32Array(/* … */);
 const instanceCounts = new Int32Array(/* … */);
-ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
+ext.multiDrawElementsInstancedWEBGL(
+  gl.TRIANGLES,
+  counts,
+  0,
+  gl.UNSIGNED_SHORT,
+  offsets,
+  0,
+  instanceCounts,
+  0,
+  counts.length,
+);
 ```
 
 ## Specifications

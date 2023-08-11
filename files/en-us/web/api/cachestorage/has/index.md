@@ -1,15 +1,8 @@
 ---
-title: CacheStorage.has()
+title: "CacheStorage: has() method"
+short-title: has()
 slug: Web/API/CacheStorage/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - has
 browser-compat: api.CacheStorage.has
 ---
 

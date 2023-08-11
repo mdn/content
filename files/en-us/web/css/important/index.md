@@ -1,14 +1,7 @@
 ---
-title: '!important'
+title: "!important"
 slug: Web/CSS/important
 page-type: css-keyword
-tags:
-  - CSS
-  - Reference
-  - CSS rule
-  - important
-  - \!important
-# browser-compat: css.flag.important
 ---
 
 {{CSSRef}}
@@ -37,7 +30,7 @@ When a declaration is important, the order of precedence is reversed. Declaratio
 
 Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as important. It also guarantees malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security.
 
-Does anything have precedence over important declarations? Yes, [transitions](/en-US/docs/Web/CSS/CSS_Transitions). CSS transitions are a way to control the speed at which the property changes from one value to another. While transitioning from one value to another, a property will not match a specific important declaration.
+Does anything have precedence over important declarations? Yes, [transitions](/en-US/docs/Web/CSS/CSS_transitions). CSS transitions are a way to control the speed at which the property changes from one value to another. While transitioning from one value to another, a property will not match a specific important declaration.
 
 ```css
 a {
@@ -93,7 +86,7 @@ In this case, the selector specificity matters. Only if the selectors had the sa
 
 ## Impact on shorthand properties
 
-Declaring a shorthand property with `!important` sets all of sub-properties as important. To two following selector style blocks are equivalent:
+Declaring a shorthand property with `!important` sets all of sub-properties as important. The two following selector style blocks are equivalent:
 
 ```css
 p {
@@ -125,10 +118,10 @@ When the `!important` flag is added to a custom property value declaration, it m
 }
 p {
   color: var(--myColor);
-  }
+}
 blockquote {
-   color: var(--myColor);
-   color: purple;
+  color: var(--myColor);
+  color: purple;
 }
 ```
 

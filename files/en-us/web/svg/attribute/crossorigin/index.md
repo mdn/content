@@ -1,58 +1,35 @@
 ---
-title: 'SVG attribute: crossorigin'
+title: "SVG attribute: crossorigin"
 slug: Web/SVG/Attribute/crossorigin
 page-type: svg-attribute
-tags:
-  - Advanced
-  - Attribute
-  - CORS
-  - SVG
-  - NeedsContent
-  - Reference
-  - Security
-browser-compat: api.SVGImageElement.crossOrigin
+browser-compat: svg.elements.image.crossorigin
 ---
 
 {{SVGRef}}
 
-The crossorigin attribute, valid on the {{ SVGElement("image") }} element, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles crossorigin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. It is a CORS settings attribute.
+The crossorigin attribute, valid on the {{SVGElement("image")}} and {{SVGElement("feImage")}} elements, provides support for configuration of the Cross-Origin Resource Sharing ([CORS](/en-US/docs/Web/HTTP/CORS)) requests for the element's fetched data.
 
-This table shows all possible keywords and their meaning:
+This table shows possible keywords and their meaning:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th>Keyword</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>anonymous</code></td>
-      <td>
-        CORS requests for this element will have the credentials flag set to
-        'same-origin'.
-      </td>
-    </tr>
-    <tr>
-      <td><code>use-credentials</code></td>
-      <td>
-        CORS requests for this element will have the credentials flag set to
-        'include'.
-      </td>
-    </tr>
-    <tr>
-      <td><code>""</code></td>
-      <td>
-        Setting the attribute name to an empty value, like
-        <code>crossorigin</code> or <code>crossorigin=""</code>, is the same as
-        <code>anonymous</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Keyword           | Description                                                                                                       |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `anonymous`       | Client CORS requests for this element will have the credentials flag set to 'same-origin'.                        |
+| `use-credentials` | Client CORS requests for this element will have the credentials flag set to 'include'.                            |
+| `""`              | Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`. |
 
-It follows the same processing rules as the HTML attribute {{htmlattrxref("crossorigin")}}.
+It follows the same processing rules as the HTML attribute [`crossorigin`](/en-US/docs/Web/HTML/Global_attributes#crossorigin).
+
+## Example
+
+```html
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <image
+    href="https://example.com/mdn_logo_dark.png"
+    height="200"
+    width="200"
+    crossorigin="use-credentials" />
+</svg>
+```
 
 ## Specifications
 
@@ -61,12 +38,6 @@ It follows the same processing rules as the HTML attribute {{htmlattrxref("cross
 ## Browser compatibility
 
 {{Compat}}
-
-<!-- TODO: This should link to an attribute of the element instead
-https://github.com/mdn/browser-compat-data/blob/178137547bc29a79b712cec221af099329b1f4a0/svg/elements/image.json
--->
-
-> **Note:** The above compatibility table is broken and needs fixing.
 
 ## See also
 

@@ -1,11 +1,7 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - RangeError
+page-type: javascript-class
 browser-compat: javascript.builtins.RangeError
 ---
 
@@ -25,6 +21,8 @@ This can be encountered when:
 
 `RangeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
+`RangeError` is a subclass of {{jsxref("Error")}}.
+
 ## Constructor
 
 - {{jsxref("RangeError/RangeError", "RangeError()")}}
@@ -32,20 +30,18 @@ This can be encountered when:
 
 ## Instance properties
 
-- {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "RangeError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}} {{non-standard_inline}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}} {{non-standard_inline}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}} {{non-standard_inline}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}} {{non-standard_inline}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
+
+These properties are defined on `RangeError.prototype` and shared by all `RangeError` instances.
+
+- {{jsxref("Object/constructor", "RangeError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `RangeError` instances, the initial value is the {{jsxref("RangeError/RangeError", "RangeError")}} constructor.
+- {{jsxref("Error/name", "RangeError.prototype.name")}}
+  - : Represents the name for the type of error. For `RangeError.prototype.name`, the initial value is `"RangeError"`.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
@@ -73,7 +69,7 @@ try {
 function check(value) {
   if (!["apple", "banana", "carrot"].includes(value)) {
     throw new RangeError(
-      'The argument must be an "apple", "banana", or "carrot".'
+      'The argument must be an "apple", "banana", or "carrot".',
     );
   }
 }

@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.beginQuery()
+title: "WebGL2RenderingContext: beginQuery() method"
+short-title: beginQuery()
 slug: Web/API/WebGL2RenderingContext/beginQuery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.beginQuery
 ---
 

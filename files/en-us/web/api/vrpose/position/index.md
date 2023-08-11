@@ -1,24 +1,17 @@
 ---
-title: VRPose.position
+title: "VRPose: position property"
+short-title: position
 slug: Web/API/VRPose/position
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Position
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.position
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`position`** read-only property of the {{domxref("VRPose")}} interface returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector.
+The **`position`** read-only property of the {{domxref("VRPose")}} interface returns the position of the {{domxref("VRDisplay")}} at the current timestamp as a 3D vector.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 

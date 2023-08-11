@@ -2,12 +2,6 @@
 title: flex-direction
 slug: Web/CSS/flex-direction
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.flex-direction
 ---
 
@@ -17,7 +11,7 @@ The **`flex-direction`** [CSS](/en-US/docs/Web/CSS) property sets how flex items
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-Note that the values `row` and `row-reverse` are affected by the directionality of the flex container. If its {{HTMLAttrxRef("dir")}} attribute is `ltr`, `row` represents the horizontal axis oriented from the left to the right, and `row-reverse` from the right to the left; if the `dir` attribute is `rtl`, `row` represents the axis oriented from the right to the left, and `row-reverse` from the left to the right.
+Note that the values `row` and `row-reverse` are affected by the directionality of the flex container. If its [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) attribute is `ltr`, `row` represents the horizontal axis oriented from the left to the right, and `row-reverse` from the right to the left; if the `dir` attribute is `rtl`, `row` represents the axis oriented from the right to the left, and `row-reverse` from the left to the right.
 
 ## Syntax
 
@@ -143,5 +137,6 @@ Using the `flex-direction` property with values of `row-reverse` or `column-reve
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- CSS {{CSSXRef("flex-flow")}} shorthand property for the CSS `flex-direction` and {{CSSXRef("flex-wrap")}} properties.
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_

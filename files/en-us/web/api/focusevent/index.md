@@ -2,12 +2,6 @@
 title: FocusEvent
 slug: Web/API/FocusEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Event
-  - Reference
 browser-compat: api.FocusEvent
 ---
 

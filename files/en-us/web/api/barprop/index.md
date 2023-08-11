@@ -2,11 +2,6 @@
 title: BarProp
 slug: Web/API/BarProp
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BarProp
 browser-compat: api.BarProp
 ---
 

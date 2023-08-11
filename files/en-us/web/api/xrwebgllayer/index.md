@@ -2,19 +2,8 @@
 title: XRWebGLLayer
 slug: Web/API/XRWebGLLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer
 ---
 
@@ -60,7 +49,7 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 
 ### Binding the layer to a WebGL context
 
-This snippet, taken from {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion", "Drawing a frame")}}, shows how the `XRWebGLLayer` is obtained from the {{domxref("XRSession")}} object's rendering state and is then bound as the current rendering WebGL framebuffer by calling the WebGL {{domxref("WebGLRenderingContext.bindFrameBuffer", "bindFrameBuffer()")}} function.
+This snippet, taken from [Drawing a frame](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#drawing_a_frame) in our "Movement and motion" WebXR example, shows how the `XRWebGLLayer` is obtained from the {{domxref("XRSession")}} object's rendering state and is then bound as the current rendering WebGL framebuffer by calling the WebGL {{domxref("WebGLRenderingContext.bindFrameBuffer", "bindFrameBuffer()")}} function.
 
 ```js
 let glLayer = xrSession.renderState.baseLayer;
@@ -102,4 +91,4 @@ if (pose) {
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
 - {{domxref('WebGLRenderingContext')}} and {{domxref("WebGL2RenderingContext")}}
-- {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion", "Drawing a frame")}}
+- [Drawing a frame](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#drawing_a_frame) in our "Movement and motion" WebXR example

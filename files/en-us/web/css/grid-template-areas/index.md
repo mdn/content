@@ -2,12 +2,6 @@
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 page-type: css-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.grid-template-areas
 ---
 
@@ -120,5 +114,5 @@ grid-template-areas: unset;
 ## See also
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
 - Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

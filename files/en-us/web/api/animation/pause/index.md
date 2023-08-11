@@ -1,15 +1,8 @@
 ---
-title: Animation.pause()
+title: "Animation: pause() method"
+short-title: pause()
 slug: Web/API/Animation/pause
 page-type: web-api-instance-method
-tags:
-  - Animation
-  - Method
-  - Reference
-  - Web Animations
-  - pause
-  - waapi
-  - web animations api
 browser-compat: api.Animation.pause
 ---
 
@@ -50,14 +43,14 @@ const nommingCake = document
       fill: "forwards",
       easing: "steps(4, end)",
       duration: aliceChange.effect.timing.duration / 2,
-    }
+    },
   );
 
 // doesn't actually need to be eaten until a click event, so pause it initially:
 nommingCake.pause();
 ```
 
-Additionally, when resetting :
+Additionally, when resetting:
 
 ```js
 // An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."

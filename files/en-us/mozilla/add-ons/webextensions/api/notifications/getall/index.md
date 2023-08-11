@@ -1,16 +1,7 @@
 ---
 title: notifications.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - getAll
+page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.getAll
 ---
 

@@ -1,16 +1,8 @@
 ---
 title: "RTCDTMFSender: tonechange event"
+short-title: tonechange
 slug: Web/API/RTCDTMFSender/tonechange_event
 page-type: web-api-event
-tags:
-  - DTMF
-  - RTCDTMFSender
-  - Reference
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
-  - Event
-  - tonechange
 browser-compat: api.RTCDTMFSender.tonechange_event
 ---
 
@@ -47,7 +39,7 @@ _In addition to the properties of {{domxref("Event")}}, this interface offers th
 
 ## Examples
 
-This example establishes a handler for the [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event which updates an element to display the currently playing tone in its content, or, if all tones have played, the string "\<none>".
+This example establishes a handler for the `tonechange` event which updates an element to display the currently playing tone in its content, or, if all tones have played, the string "\<none>".
 
 This can be done using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
@@ -62,7 +54,7 @@ dtmfSender.addEventListener(
 
     document.getElementById("playingTone").innerText = tone;
   },
-  false
+  false,
 );
 ```
 

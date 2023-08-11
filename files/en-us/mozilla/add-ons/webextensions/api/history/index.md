@@ -1,15 +1,7 @@
 ---
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.history
 ---
 

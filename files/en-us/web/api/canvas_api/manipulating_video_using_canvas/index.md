@@ -2,15 +2,6 @@
 title: Manipulating video using canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 page-type: guide
-tags:
-  - API
-  - Canvas
-  - Chroma-Key
-  - Editing
-  - Guide
-  - Manipulating
-  - Video
-  - effects
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -24,7 +15,7 @@ By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/vide
 The HTML document used to render this content is shown below.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -98,7 +89,7 @@ processor.doLoad = function doLoad() {
       this.height = video.videoHeight / 2;
       this.timerCallback();
     },
-    false
+    false,
   );
 };
 ```

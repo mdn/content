@@ -1,15 +1,7 @@
 ---
 title: Styling web forms
 slug: Learn/Forms/Styling_web_forms
-tags:
-  - Beginner
-  - CSS
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Web
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
@@ -223,16 +215,18 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 ```css
 @font-face {
   font-family: "handwriting";
-  src: url("fonts/journal-webfont.woff2") format("woff2"), url("fonts/journal-webfont.woff")
-      format("woff");
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "typewriter";
-  src: url("fonts/momot___-webfont.woff2") format("woff2"), url("fonts/momot___-webfont.woff")
-      format("woff");
+  src:
+    url("fonts/momot___-webfont.woff2") format("woff2"),
+    url("fonts/momot___-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -261,11 +255,13 @@ form {
 }
 ```
 
-Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
+Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
 
 ```css
 h1 {
-  font: 1em "typewriter", monospace;
+  font:
+    1em "typewriter",
+    monospace;
   align-self: end;
 }
 
@@ -285,7 +281,9 @@ Now we can start working on the form elements themselves. First, let's ensure th
 
 ```css
 label {
-  font: 0.8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
@@ -294,7 +292,10 @@ The text fields require some common rules. In other words, we remove their {{css
 ```css
 input,
 textarea {
-  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
   border: none;
   padding: 0 10px;
   margin: 0;
@@ -379,19 +380,6 @@ You've reached the end of this article, but can you remember the most important 
 As you can see, as long as we want to build forms with just text fields and buttons, it's easy to style them using CSS. [In the next article](/en-US/docs/Learn/Forms/Advanced_form_styling), we will see how to handle form widgets which fall into the "bad" and "ugly" categories.
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- **Styling web forms**
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

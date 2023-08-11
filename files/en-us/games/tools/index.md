@@ -1,11 +1,7 @@
 ---
 title: Tools for game development
 slug: Games/Tools
-tags:
-  - Games
-  - Gecko
-  - Guide
-  - JavaScript
+page-type: landing-page
 ---
 
 {{GamesSidebar}}

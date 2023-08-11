@@ -1,26 +1,17 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 ---
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.supportedLocalesOf()`** method returns
+The **`Intl.NumberFormat.supportedLocalesOf()`** static method returns
 an array containing those of the provided locales that are supported in number
 formatting without having to fall back to the runtime's default locale.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-supportedlocalesof.html","shorter")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -32,7 +23,7 @@ Intl.NumberFormat.supportedLocalesOf(locales, options)
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
 
   - : An object that may have the following property:
@@ -69,9 +60,9 @@ adequate match for Balinese since most Balinese speakers also understand Indones
 and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

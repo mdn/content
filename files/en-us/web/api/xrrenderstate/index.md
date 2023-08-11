@@ -2,18 +2,8 @@
 title: XRRenderState
 slug: Web/API/XRRenderState
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRRenderState
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRRenderState
 ---
 

@@ -1,17 +1,8 @@
 ---
-title: TouchEvent.targetTouches
+title: "TouchEvent: targetTouches property"
+short-title: targetTouches
 slug: Web/API/TouchEvent/targetTouches
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Mobile
-  - Property
-  - Read-only
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.TouchEvent.targetTouches
 ---
 

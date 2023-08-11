@@ -2,15 +2,6 @@
 title: SourceBuffer
 slug: Web/API/SourceBuffer
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - SourceBuffer
-  - Video
 browser-compat: api.SourceBuffer
 ---
 
@@ -61,9 +52,9 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 ## Events
 
 - {{domxref("SourceBuffer.abort_event", "abort")}}
-  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}} is ended by a call to {{domxref("SourceBuffer.abort()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
+  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} is ended by a call to {{domxref("SourceBuffer.abort()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.error_event", "error")}}
-  - : Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
+  - : Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.update_event", "update")}}
   - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`. This event is fired before `updateend`.
 - {{domxref("SourceBuffer.updateend_event", "updateend")}}

@@ -1,14 +1,7 @@
 ---
 title: Desktop gamepad controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_gamepad
-tags:
-  - Controls
-  - Desktop
-  - Gamepad API
-  - Gamepads
-  - Games
-  - JavaScript
-  - controllers
+page-type: guide
 ---
 
 {{GamesSidebar}}

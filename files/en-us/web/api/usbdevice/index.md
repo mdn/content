@@ -2,14 +2,8 @@
 title: USBDevice
 slug: Web/API/USBDevice
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: Size
 slug: WebAssembly/Reference/Memory/Size
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Memory
 ---
 
 {{WebAssemblySidebar}}

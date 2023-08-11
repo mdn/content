@@ -2,12 +2,8 @@
 title: BackgroundFetchRegistration
 slug: Web/API/BackgroundFetchRegistration
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration
 ---
 
@@ -95,7 +91,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
         },
       ],
       downloadTotal: 60 * 1024 * 1024,
-    }
+    },
   );
 });
 ```

@@ -2,15 +2,8 @@
 title: LargestContentfulPaint
 slug: Web/API/LargestContentfulPaint
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Largest Contentful Paint API
-  - LargestContentfulPaint
-  - Performance
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: MDN at 10
 slug: MDN/At_ten
-tags:
-  - History
-  - Landing
-  - MDN Meta
+page-type: guide
 ---
 
 {{MDNSidebar}}

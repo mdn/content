@@ -1,11 +1,7 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
+page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Object.constructor
 ---
 
@@ -71,7 +67,7 @@ console.log(`theTree.constructor is ${theTree.constructor}`);
 
 This example displays the following output:
 
-```
+```plain
 theTree.constructor is function Tree(name) {
   this.name = name;
 }

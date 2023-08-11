@@ -1,11 +1,7 @@
 ---
 title: Developer guides
 slug: Web/Guide
-tags:
-  - API
-  - Guide
-  - Landing
-  - Web
+page-type: landing-page
 ---
 
 <section id="Quick_links">
@@ -27,7 +23,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
   - : Our complete CSS tutorial, taking you from first steps through styling text, creating layouts, and more.
 - [CSS Layout Guides](/en-US/docs/Web/Guide/CSS/CSS_Layout)
   - : There are a large number of guides to CSS Layout across MDN, this page collects them all together.
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSS animations make it possible to animate transitions from one CSS style configuration to another. This guide will help you get started with the animation properties.
 
 ## JavaScript
@@ -67,7 +63,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Fonts
 
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : Find out how to use variable fonts in your designs.
 - [The Web Open Font Format (WOFF)](/en-US/docs/Web/Guide/WOFF)
   - : WOFF (Web Open Font Format) is a font file format that is free for anyone to use on the web.

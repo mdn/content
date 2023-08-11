@@ -1,9 +1,7 @@
 ---
 title: Mobile Web Development
 slug: Web/Guide/Mobile
-tags:
-  - Intermediate
-  - NeedsExample
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -20,7 +18,7 @@ tags:
   </ol>
 </section>
 
-This page provides an overview of some of the main techniques needed to design websites that work well on mobile devices. If you're looking for information on Mozilla's Firefox OS project, see the [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) page. Or you might be interested in details about [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android).
+This page provides an overview of some of the main techniques needed to design websites that work well on mobile devices.
 
 We've organized it into two sections, [designing for mobile devices](#designing_for_mobile_devices) and [cross-browser compatibility](#cross-browser_development). Also see Jason Grlicky's guide to [mobile-friendliness](/en-US/docs/Web/Guide/Mobile/Mobile-friendliness) for web developers.
 
@@ -33,7 +31,7 @@ Mobile devices have quite different hardware characteristics compared with deskt
 [Responsive Web Design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is a term for a set of techniques that enables your website to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:
 
 - fluid CSS layouts, to make the page adapt smoothly as the browser window size changes
-- the use of [media queries](/en-US/docs/Web/CSS/Media_Queries) to conditionally include CSS rules appropriate for the device screen [width](/en-US/docs/Web/CSS/@media/width) and [height](/en-US/docs/Web/CSS/@media/height)
+- the use of [media queries](/en-US/docs/Web/CSS/CSS_media_queries) to conditionally include CSS rules appropriate for the device screen [width](/en-US/docs/Web/CSS/@media/width) and [height](/en-US/docs/Web/CSS/@media/height)
 
 The [viewport meta tag](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design#the_viewport_meta_tag) instructs the browser to display your site at the appropriate scale for the user's device.
 
@@ -47,7 +45,7 @@ You can use the [pointer](/en-US/docs/Web/CSS/@media/pointer) or [any-pointer](/
 
 To help users whose devices have low or expensive bandwidth, you can optimize images by loading images appropriate to the device screen size and resolution. You do this in CSS by querying for screen [height](/en-US/docs/Web/CSS/@media/height), [width](/en-US/docs/Web/CSS/@media/width), and [pixel ratio](/en-US/docs/Web/CSS/@media/resolution).
 
-You can also make use of CSS properties to implement visual effects like [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/box-shadow) without images.
+You can also make use of CSS properties to implement visual effects like [gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/box-shadow) without images.
 
 ### Mobile APIs
 

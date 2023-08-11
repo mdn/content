@@ -1,13 +1,8 @@
 ---
-title: Element.className
+title: "Element: className property"
+short-title: className
 slug: Web/API/Element/className
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
-  - Reference
 browser-compat: api.Element.className
 ---
 
@@ -24,8 +19,8 @@ A string variable representing the class or space-separated classes of the curre
 ## Examples
 
 ```js
-const el = document.getElementById('item');
-el.className = el.className === 'active' ? 'inactive' : 'active';
+const el = document.getElementById("item");
+el.className = el.className === "active" ? "inactive" : "active";
 ```
 
 ## Notes
@@ -43,7 +38,7 @@ into account that {{domxref("Element.getAttribute")}} returns
 instead of `""` if the `element` has an empty [`class` attribute](/en-US/docs/Web/HTML/Global_attributes/class).
 
 ```js
-elm.setAttribute('class', elm.getAttribute('class'))
+elm.setAttribute("class", elm.getAttribute("class"));
 ```
 
 > **Note:** The `class` is an **HTML Attribute**, while the

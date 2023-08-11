@@ -2,14 +2,6 @@
 title: CanvasCaptureMediaStreamTrack
 slug: Web/API/CanvasCaptureMediaStreamTrack
 page-type: web-api-interface
-tags:
-  - CanvasCaptureMediaStreamTrack
-  - Frame Capture
-  - Interface
-  - Media
-  - Media Capture
-  - Reference
-  - Web
 browser-compat: api.CanvasCaptureMediaStreamTrack
 ---
 

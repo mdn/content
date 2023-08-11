@@ -1,13 +1,9 @@
 ---
 title: Object.prototype.__defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.Object.defineSetter
 ---
 
@@ -15,7 +11,7 @@ browser-compat: javascript.builtins.Object.defineSetter
 
 > **Note:** This feature is deprecated in favor of defining [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set) using the [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) or the {{jsxref("Object.defineProperty()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
 
-The **`__defineSetter__()`** method binds an object's property to a function to be called when an attempt is made to set that property.
+The **`__defineSetter__()`** method of {{jsxref("Object")}} instances binds an object's property to a function to be called when an attempt is made to set that property.
 
 ## Syntax
 
@@ -108,6 +104,6 @@ console.log(o.anotherValue); // 5
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
-- {{bug(647423)}}
+- [Firefox bug 647423](https://bugzil.la/647423)

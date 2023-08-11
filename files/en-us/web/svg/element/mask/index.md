@@ -2,10 +2,6 @@
 title: <mask>
 slug: Web/SVG/Element/mask
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.mask
 ---
 
@@ -25,6 +21,7 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 120 120">
+  <rect x="-10" y="-10" width="120" height="120" fill="blue" />
   <mask id="myMask">
     <!-- Everything under a white pixel will be visible -->
     <rect x="0" y="0" width="100" height="100" fill="white" />
@@ -38,7 +35,7 @@ svg {
   <polygon points="-10,110 110,110 110,-10" fill="orange" />
 
   <!-- with this mask applied, we "punch" a heart shape hole into the circle -->
-  <circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+  <circle cx="50" cy="50" r="50" fill="purple" mask="url(#myMask)" />
 </svg>
 ```
 

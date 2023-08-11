@@ -2,14 +2,6 @@
 title: Web Storage API
 slug: Web/API/Web_Storage_API
 page-type: web-api-overview
-tags:
-  - API
-  - Reference
-  - Storage
-  - Web Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
 browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage
@@ -34,13 +26,11 @@ The two mechanisms within Web Storage are as follows:
   - Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data.
   - Storage limit is the maximum amongst the two.
 
-These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties (to be more precise, in supporting browsers the `Window` object implements the `WindowLocalStorage` and `WindowSessionStorage` objects, which the `localStorage` and `sessionStorage` properties hang off) — invoking one of these will create an instance of the {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different Storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
+These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties (to be more precise, the `Window` object implements the `WindowLocalStorage` and `WindowSessionStorage` objects, which the `localStorage` and `sessionStorage` properties hang off) — invoking one of these will create an instance of the {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different Storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 
-> **Note:** From Firefox 45 onwards, when the browser crashes/restarts, the amount of data saved per origin is limited to 10MB. This has been done to avoid memory issues caused by excessive usage of web storage.
+> **Note:** In Firefox, when the browser crashes/restarts, to avoid memory issues caused by excessive usage of web storage, the amount of data saved per origin is limited to 10MB. See [storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox) for more information.
 
-> **Note:** Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (Firefox implements this behavior from [version 43](/en-US/docs/Mozilla/Firefox/Releases/43) onwards).
-
-> **Note:** Web Storage is not the same as `mozStorage` (Mozilla's XPCOM interfaces to SQLite) or the `Session store API` (an XPCOM storage utility for use by extensions).
+> **Note:** Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection).
 
 ## Web Storage interfaces
 
@@ -67,13 +57,9 @@ In addition, we have provided an [event output page](https://mdn.github.io/dom-e
 
 ## Private Browsing / Incognito modes
 
-Most modern browsers support a privacy option called 'Incognito', 'Private Browsing' or something similar that doesn't store data like history and cookies. This is fundamentally incompatible with Web Storage for obvious reasons. As such, browser vendors are experimenting with different scenarios for how to deal with this incompatibility.
-
-Most browsers have opted for a strategy where storage APIs are still available and seemingly fully functional, with the one big difference that all stored data is wiped after the browser is closed. For these browsers there are still different interpretations of what should be done with existing stored data (from a regular browsing session). Should it be available to read when in Private mode? Then there are some browsers, most notably old versions of Safari, that have opted for a solution where storage is available, but is empty and has a quota of 0 bytes assigned, effectively making it impossible to write data to it.
-
-Developers should be aware of these different implementations and take them into account when developing websites depending on Web Storage APIs. For more information please have a look at [this WHATWG blog post](https://blog.whatwg.org/this-week-in-html-5-episode-30) that specifically deals with this topic.
+Private windows, incognito mode, and similarly named privacy browsing options, don't store data like history and cookies. In private mode, `localStorage` is treated like `sessionStorage`. The storage APIs are still available and fully functional, but all data stored in the private window is deleted when the browser or browser tab is closed.
 
 ## See also
 
 - [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)
+- [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)

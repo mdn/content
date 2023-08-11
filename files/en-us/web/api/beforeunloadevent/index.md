@@ -2,9 +2,6 @@
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
 browser-compat: api.BeforeUnloadEvent
 ---
 
@@ -83,4 +80,4 @@ window.addEventListener("beforeunload", (e) => {
 - {{domxref("Window/load_event", "load")}}
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
 - {{domxref("Window/unload_event", "unload")}}
-- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)
+- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/multipage/browsing-the-web.html#prompt-to-unload-a-document)

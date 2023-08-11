@@ -2,15 +2,6 @@
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Event
-  - Interface
-  - copy
-  - paste
 browser-compat: api.ClipboardEvent
 ---
 

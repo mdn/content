@@ -1,10 +1,7 @@
 ---
 title: MathML tables
 slug: Learn/MathML/First_steps/Tables
-tags:
-  - Beginner
-  - MathML
-  - Landing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}
@@ -134,7 +131,7 @@ Tables are typically used for matrix-like expressions (including vectors). Here 
 This is again similar to [HTML tables](/en-US/docs/Learn/HTML/Tables/Basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts the `columnspan` and `rowspan` attributes to indicate that the cell spans multiples rows and columns. Below the inner matrix spans two columns of the outer matrix:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -225,7 +222,7 @@ This is again similar to [HTML tables](/en-US/docs/Learn/HTML/Tables/Basics#allo
 Besides representing matrix-like objects, MathML tables are sometimes used for advanced layout inside mathematical formulas, for example in [Wikipedia's definition of Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol). Here, the different cases are written on three different rows while the values and conditions are placed on two different columns.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

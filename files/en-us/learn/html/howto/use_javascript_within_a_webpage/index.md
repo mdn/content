@@ -1,11 +1,7 @@
 ---
 title: Use JavaScript within a webpage
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-tags:
-  - Beginner
-  - HTML
-  - JavaScript
-  - OpenPractices
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
@@ -45,7 +41,7 @@ Within a browser, JavaScript doesn't do anything by itself. You run JavaScript f
 
 ### Linking an external script
 
-Usually, you'll be writing scripts in their own .js files. If you want to execute a .js script from your webpage, just use {{HTMLElement ('script')}} with an `src` attribute pointing to the script file, using its [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL):
+Usually, you'll be writing scripts in their own .js files. If you want to execute a .js script from your webpage, just use {{HTMLElement ('script')}} with an `src` attribute pointing to the script file, using its [URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL):
 
 ```html
 <script src="path/to/my/script.js"></script>

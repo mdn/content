@@ -1,21 +1,8 @@
 ---
-title: RTCIceCandidate.candidate
+title: "RTCIceCandidate: candidate property"
+short-title: candidate
 slug: Web/API/RTCIceCandidate/candidate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Candidates
-  - ICE
-  - Media
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - a-line
 browser-compat: api.RTCIceCandidate.candidate
 ---
 
@@ -34,11 +21,11 @@ If the `candidate` is an empty string (`""`), the end of the candidate list has 
 
 The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}. For an a-line (attribute line) that looks like this:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
-the corresponding `candidate` string's value will be: `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
+the corresponding `candidate` string's value will be: `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`.
 
 The {{Glossary("user agent")}} always prefers candidates with the highest
 {{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal. In the
@@ -50,7 +37,7 @@ attributes for this example candidate is:
 - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
 - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
 - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
-- {{domxref("RTCIceCandidate/address", "ip")}} = `"192.168.0.56"`
+- {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
 - {{domxref("RTCIceCandidate.port", "port")}} = 44323
 - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 

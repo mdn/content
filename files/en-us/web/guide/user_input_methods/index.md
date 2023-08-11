@@ -1,16 +1,7 @@
 ---
 title: User input and controls
 slug: Web/Guide/User_input_methods
-tags:
-  - Screen Orientation
-  - contenteditable
-  - drag and drop
-  - fullscreen
-  - keyboard
-  - mouse
-  - pointer lock
-  - touch
-  - user input
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -33,7 +24,7 @@ Available input mechanisms depend on the capabilities of the device running the 
 
 - Some devices provide touchscreen displays: the Web Platform offers [touch events](/en-US/docs/Web/API/Touch_events) to interpret finger activity on touch-based user interfaces.
 - For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) helps you in implementing a first-person 3D game or other applications requiring full control of the pointing device. And the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) helps you in displaying your app in fullscreen mode.
-- Using features such as [contentEditable](/en-US/docs/Web/Guide/HTML/Editable_content) elements you can implement fast rich-text editors and with [Drag\&Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) let users moving elements inside your app. When screen orientation matters for your application, through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
+- Using features such as [contentEditable](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements you can implement fast rich-text editors and with [Drag\&Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) let users moving elements inside your app. When screen orientation matters for your application, through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
 - You should always be mindful of keyboard accessibility where appropriate — many web users only use keyboard to navigate websites and apps, and locking them out of your functionality is a bad idea.
 
 The following is a set of recommendations and best practices for using such tools in Open Web Apps.
@@ -86,7 +77,7 @@ When dealing with devices that incorporate multiple forms of input, like mouse, 
 
 #### Pointer lock
 
-In some cases, typically game development, you might need to access mouse events even when the cursor goes past the boundary of the browser or screen: the {{domxref("Pointer_Lock_API")}} gives you full control of the pointing device.
+In some cases, typically game development, you might need to access mouse events even when the cursor goes past the boundary of the browser or screen: the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) gives you full control of the pointing device.
 
 This is the code to request pointer lock on an `element`:
 
@@ -94,13 +85,13 @@ This is the code to request pointer lock on an `element`:
 element.requestPointerLock();
 ```
 
-> **Note:** For a full tutorial and reference, read our {{domxref("Pointer_Lock_API")}} page.
+> **Note:** For a full tutorial and reference, read our [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API) page.
 
 #### Screen Orientation
 
 When screen orientation matters for your application, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the [`orientation`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
+Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the [`orientation`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
 
 > **Note:** More information about the Screen Orientation API can be found in [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
@@ -140,7 +131,7 @@ Here is an example that allows a section of content to be dragged.
 in which we:
 
 - Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute to true on the element that you wish to make draggable
-- Add a listener for the [`dragstart`](/en-US/docs/Web/API/Document/dragstart_event) event and set the drag data within this listener
+- Add a listener for the [`dragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event) event and set the drag data within this listener
 
 > **Note:** You can find more information in the [MDN Drag & Drop documentation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 
@@ -162,13 +153,13 @@ div {
 
 {{EmbedLiveSample("contentEditable")}}
 
-> **Note:** Compatibility information, examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/Guide/HTML/Editable_content).
+> **Note:** Compatibility information, examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
 
 ## Examples
 
 - **[Tracking multiple touch points at a time](/en-US/docs/Web/API/Touch_events#example)**
   - : This example tracks multiple touch points at a time, allowing the user to draw in a `{{htmlelement("canvas")}}` with more than one finger at a time. It will only work on a browser that supports touch events.
-- **[Simple pointer lock demo](/en-US/docs/Web/API/Pointer_Lock_API#example)**
+- **[Simple pointer lock demo](/en-US/docs/Web/API/Pointer_Lock_API#examples)**
   - : We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a `{{htmlelement("canvas")}}` element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.
 
 ## Tutorials
@@ -183,10 +174,10 @@ div {
 - {{domxref("MouseEvent")}}
 - {{domxref("KeyboardEvent")}}
 - [Touch events](/en-US/docs/Web/API/Touch_events)
-- {{domxref("Pointer_Lock_API")}}
+- [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
 - [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
 - [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Content Editable](/en-US/docs/Web/Guide/HTML/Editable_content)
+- [Content Editable](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
 - [Keyboard events in Firefox OS TV](/en-US/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV)
 - [Implementing TV remote control navigation](/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)

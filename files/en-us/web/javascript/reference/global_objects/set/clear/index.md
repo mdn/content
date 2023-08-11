@@ -1,20 +1,13 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.clear
 ---
 
 {{JSRef}}
 
-The **`clear()`** method removes all elements from a
-`Set` object.
+The **`clear()`** method of {{jsxref("Set")}} instances removes all elements from this set.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 

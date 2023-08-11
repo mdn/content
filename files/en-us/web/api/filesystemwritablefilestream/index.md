@@ -2,20 +2,12 @@
 title: FileSystemWritableFileStream
 slug: Web/API/FileSystemWritableFileStream
 page-type: web-api-interface
-tags:
-  - File
-  - File System Access API
-  - FileSystemWritableFileStream
-  - Interface
-  - stream
-  - write file
-  - Experimental
 browser-compat: api.FileSystemWritableFileStream
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
-The **`FileSystemWritableFileStream`** interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
+The **`FileSystemWritableFileStream`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
 {{InheritanceDiagram}}
 
@@ -27,22 +19,21 @@ _Inherits properties from its parent, {{DOMxRef("WritableStream")}}._
 
 _Inherits methods from its parent, {{DOMxRef("WritableStream")}}._
 
-- {{domxref('FileSystemWritableFileStream.write')}} {{Experimental_Inline}}
+- {{domxref('FileSystemWritableFileStream.write()')}}
   - : Writes content into the file the method is called on, at the current file cursor offset.
-- {{domxref('FileSystemWritableFileStream.seek')}} {{Experimental_Inline}}
+- {{domxref('FileSystemWritableFileStream.seek()')}}
   - : Updates the current file cursor offset to the position (in bytes) specified.
-- {{domxref('FileSystemWritableFileStream.truncate')}} {{Experimental_Inline}}
+- {{domxref('FileSystemWritableFileStream.truncate()')}}
   - : Resizes the file associated with the stream to be the specified size in bytes.
 
 ## Examples
 
-This asynchronous function opens the 'Save File' picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected. From which a writable stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.
+The following asynchronous function opens the 'Save File' picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected. From this, a writable stream is created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
-A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.
+A text string is then written to the stream, which is subsequently closed.
 
 ```js
 async function saveFile() {
-
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
 
@@ -50,14 +41,14 @@ async function saveFile() {
   const writableStream = await newHandle.createWritable();
 
   // write our file
-  await writableStream.write(imgBlob);
+  await writableStream.write("This is my file content");
 
   // close the file and write the contents to disk.
   await writableStream.close();
 }
 ```
 
-The following show different examples of options that can be passed into the `write()` method.
+The following examples show different options that can be passed into the `write()` method.
 
 ```js
 // just pass in the data (no options)
@@ -83,5 +74,5 @@ writableStream.write({ type: "truncate", size });
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

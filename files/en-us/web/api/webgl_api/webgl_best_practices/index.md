@@ -2,17 +2,6 @@
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
 page-type: guide
-tags:
-  - 2D
-  - 3D
-  - Advanced
-  - Best practices
-  - Drawing
-  - GL
-  - Graphics
-  - Guide
-  - OpenGL
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}}
@@ -49,7 +38,7 @@ Similarly to extensions, the limits of your system will be different than your c
 
 The minimum requirements for WebGL are quite low. In practice, effectively all systems support at least the following:
 
-```
+```plain
 MAX_CUBE_MAP_TEXTURE_SIZE: 4096
 MAX_RENDERBUFFER_SIZE: 4096
 MAX_TEXTURE_SIZE: 4096
@@ -101,7 +90,7 @@ WebGL doesn't have a SwapBuffers call by default, so a flush can help fill the g
 
 ### Use `webgl.flush()` when not using requestAnimationFrame
 
-When not using RAF, (such as when using RPAF; see below) use `webgl.flush()` to encourage eager execution of enqueued commands.
+When not using RAF, use `webgl.flush()` to encourage eager execution of enqueued commands.
 
 Because RAF is directly followed by the frame boundary, an explicit `webgl.flush()` isn't really needed with RAF.
 
@@ -299,7 +288,7 @@ If you have a float texture, iOS requires that you use `highp sampler2D foo;`, o
 
 The vertex language has the following predeclared globally scoped default precision statements:
 
-```
+```glsl
 precision highp float;
 precision highp int;
 precision lowp sampler2D;
@@ -308,7 +297,7 @@ precision lowp samplerCube;
 
 The fragment language has the following predeclared globally scoped default precision statements:
 
-```
+```glsl
 precision mediump int;
 precision lowp sampler2D;
 precision lowp samplerCube;
@@ -326,7 +315,7 @@ If `highp float` is available, `GL_FRAGMENT_PRECISION_HIGH` will be defined as `
 
 A good pattern for "always give me the highest precision":
 
-```
+```glsl
 #ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
@@ -406,7 +395,7 @@ A number of formats (particularly three-channel formats) are emulated. For examp
 
 ## Avoid alpha:false, which can be expensive
 
-Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://bugs.chromium.org/p/chromium/issues/detail?id=1045643) that all of these techniques have approximately equal performance impact on affected platforms.
+Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://crbug.com/1045643) that all of these techniques have approximately equal performance impact on affected platforms.
 
 Most applications, even those requiring alpha blending, can be structured to produce `1.0` for the alpha channel. The primary exception is any application requiring destination alpha in the blending function. If feasible, it is recommended to do this rather than using `alpha:false`.
 
@@ -443,7 +432,7 @@ Most texture uploads from DOM elements will incur a processing pass that will te
 
 In WebGL:
 
-```
+```glsl
     …
     useProgram(prog1)
 <pipeline flush>
@@ -457,7 +446,7 @@ In WebGL:
 
 Behind the scenes in the browser:
 
-```
+```glsl
     …
     useProgram(prog1)
 <pipeline flush>
@@ -465,7 +454,7 @@ Behind the scenes in the browser:
     drawArrays()
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -482,7 +471,7 @@ Prefer doing uploads before starting drawing, or at least between pipelines:
 
 In WebGL:
 
-```
+```glsl
     …
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
@@ -497,11 +486,11 @@ In WebGL:
 
 Behind the scenes in the browser:
 
-```
+```glsl
     …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -559,7 +548,7 @@ async function getBufferSubDataAsync(
   srcByteOffset,
   dstBuffer,
   /* optional */ dstOffset,
-  /* optional */ length
+  /* optional */ length,
 ) {
   const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
   gl.flush();

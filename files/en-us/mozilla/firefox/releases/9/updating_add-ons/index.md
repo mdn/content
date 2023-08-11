@@ -1,10 +1,7 @@
 ---
 title: Updating add-ons for Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
-tags:
-  - Extensions
-  - Firefox 9
-  - Guide
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -29,7 +26,7 @@ Starting in Firefox 9, you should call the new `nsIChromeFrameMessageManager.rem
 
 ```js
 browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js"
+  "chrome://myextension/content/somescript.js",
 );
 ```
 

@@ -1,11 +1,9 @@
 ---
-title: 'Element: pointerover event'
+title: "Element: pointerover event"
+short-title: pointerover
 slug: Web/API/Element/pointerover_event
-tags:
-  - Event
-  - PointerEvent
-browser-compat: api.Element.pointerover_event
 page-type: web-api-event
+browser-compat: api.Element.pointerover_event
 ---
 
 {{APIRef}}
@@ -17,9 +15,9 @@ The `pointerover` event is fired when a pointing device is moved into an element
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerover', (event) => {});
+addEventListener("pointerover", (event) => {});
 
-onpointerover = (event) => { };
+onpointerover = (event) => {};
 ```
 
 ## Event type
@@ -58,20 +56,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerover', (event) => {
-  console.log('Pointer moved in');
+para.addEventListener("pointerover", (event) => {
+  console.log("Pointer moved in");
 });
 ```
 
 Using the `onpointerover` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerover = (event) => {
-  console.log('Pointer moved in');
+  console.log("Pointer moved in");
 };
 ```
 

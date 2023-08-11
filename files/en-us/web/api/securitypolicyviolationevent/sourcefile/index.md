@@ -1,16 +1,8 @@
 ---
-title: SecurityPolicyViolationEvent.sourceFile
+title: "SecurityPolicyViolationEvent: sourceFile property"
+short-title: sourceFile
 slug: Web/API/SecurityPolicyViolationEvent/sourceFile
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - sourceFile
 browser-compat: api.SecurityPolicyViolationEvent.sourceFile
 ---
 

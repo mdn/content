@@ -2,15 +2,9 @@
 title: SVG element reference
 slug: Web/SVG/Element
 page-type: landing-page
-tags:
-  - Drawing
-  - Elements
-  - Responsive Design
-  - SVG
-  - SVG Reference
-  - Vector Graphics
-  - "l10n:priority"
 ---
+
+{{SVGRef}}
 
 SVG drawings and images are created using a wide array of elements which are dedicated to the construction, drawing, and layout of vector images and diagrams. Here you'll find reference documentation for each of the SVG elements.
 
@@ -32,7 +26,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
-- {{SVGElement("discard")}}
 
 ### E
 
@@ -136,7 +129,7 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Animation elements
 
-{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+{{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
 
 ### Basic shapes
 
@@ -198,11 +191,11 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Text content elements
 
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
 
 ### Text content child elements
 
-{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
 
 ### Uncategorized elements
 
@@ -211,10 +204,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 ## Obsolete and deprecated elements
 
 > **Warning:** These are old SVG elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for informational purposes only.
-
-### A
-
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("animateColor")}}
 
 ### C
 

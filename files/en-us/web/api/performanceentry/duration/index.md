@@ -1,12 +1,8 @@
 ---
-title: PerformanceEntry.duration
+title: "PerformanceEntry: duration property"
+short-title: duration
 slug: Web/API/PerformanceEntry/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.duration
 ---
 
@@ -37,9 +33,11 @@ For the following entry types, `duration` is not applicable, and in this case th
 
 - `element`
 - `largest-contentful-paint`
+- `layout-shift`
 - `mark`
 - `paint`
 - `taskattribution`
+- `visibility-state`
 
 ## Examples
 
@@ -49,10 +47,10 @@ The following example logs all observed performance entries with a `duration` la
 
 ```js
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.duration > 0) {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);

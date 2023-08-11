@@ -1,15 +1,7 @@
 ---
 title: contextualIdentities.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated
-tags:
-  - API
-  - APIReference
-  - Add-ons
-  - Event
-  - Extensions
-  - WebExtensions
-  - contextualIdentities
-  - onCreated
+page-type: webextension-api-event
 browser-compat: webextensions.api.contextualIdentities.onCreated
 ---
 
@@ -38,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `changeInfo`
       - : `object`. An object that contains a single property, `contextualIdentity`, which is a {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} object, representing the identity that was created.

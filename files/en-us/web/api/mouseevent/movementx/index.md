@@ -1,18 +1,8 @@
 ---
-title: MouseEvent.movementX
+title: "MouseEvent: movementX property"
+short-title: movementX
 slug: Web/API/MouseEvent/movementX
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - MovementX
-  - Property
-  - Read-only
-  - Reference
-  - mouse lock
-  - pointer lock
 browser-compat: api.MouseEvent.movementX
 ---
 
@@ -41,12 +31,15 @@ This example logs the amount of mouse movement using `movementX` and {{domxref("
 
 ```js
 function logMovement(event) {
-  log.insertAdjacentHTML('afterbegin', `movement: ${event.movementX}, ${event.movementY}<br>`);
-  while (log.childNodes.length > 128) log.lastChild.remove()
+  log.insertAdjacentHTML(
+    "afterbegin",
+    `movement: ${event.movementX}, ${event.movementY}<br>`,
+  );
+  while (log.childNodes.length > 128) log.lastChild.remove();
 }
 
-const log = document.getElementById('log');
-document.addEventListener('mousemove', logMovement);
+const log = document.getElementById("log");
+document.addEventListener("mousemove", logMovement);
 ```
 
 ### Result

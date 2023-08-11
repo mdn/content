@@ -1,19 +1,13 @@
 ---
 title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-tags:
-  - Chaining
-  - JavaScript
-  - Language feature
-  - Operator
-  - Optional chaining
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.optional_chaining
 ---
 
 {{JSSidebar("Operators")}}
 
-The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it returns {{jsxref("undefined")}} instead of throwing an error.
+The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
 {{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
 
@@ -40,7 +34,7 @@ const nestedProp = obj.first && obj.first.second;
 ```
 
 The value of `obj.first` is confirmed to be non-`null` (and
-non-`undefined`) before then accessing the value of
+non-`undefined`) before accessing the value of
 `obj.first.second`. This prevents the error that would occur if you accessed
 `obj.first.second` directly without testing `obj.first`.
 
@@ -103,7 +97,7 @@ However, if there is a property with such a name which is not a function, using 
 
 ### Optional chaining with expressions
 
-You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation), which allows passing an expression as the property name:
+You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation), which allows passing an expression as the property name:
 
 ```js
 const nestedProp = obj?.["prop" + "Name"];
@@ -124,7 +118,7 @@ printMagicIndex(); // undefined; if not using ?., this would throw
 
 It is invalid to try to assign to the result of an optional chaining expression:
 
-```js example-bad
+```js-nolint example-bad
 const object = {};
 object?.property = 1; // SyntaxError: Invalid left-hand side in assignment
 ```

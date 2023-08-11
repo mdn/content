@@ -2,11 +2,6 @@
 title: Writing a WebSocket server in C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 page-type: guide
-tags:
-  - HTML
-  - NeedsMarkupWork
-  - Tutorial
-  - WebSockets
 ---
 
 {{DefaultAPISidebar("Websockets API")}}
@@ -79,13 +74,13 @@ Methods:
 - Writes bytes from buffer, offset and size determine length of message.
 
   ```cs
-  Write(Byte[] buffer, int offset, int size)
+  Write(byte[] buffer, int offset, int size)
   ```
 
 - Reads bytes to `buffer`. `offset` and `size` determine the length of the message.
 
   ```cs
-  Read(Byte[] buffer, int offset, int size)
+  Read(byte[] buffer, int offset, int size)
   ```
 
 Let us extend our example.
@@ -101,7 +96,7 @@ NetworkStream stream = client.GetStream();
 while (true) {
     while (!stream.DataAvailable);
 
-    Byte[] bytes = new Byte[client.Available];
+    byte[] bytes = new byte[client.Available];
 
     stream.Read(bytes, 0, bytes.Length);
 }
@@ -122,7 +117,7 @@ while(client.Available < 3)
    // wait for enough bytes to be available
 }
 
-Byte[] bytes = new Byte[client.Available];
+byte[] bytes = new byte[client.Available];
 
 stream.Read(bytes, 0, bytes.Length);
 
@@ -150,7 +145,7 @@ if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
-    Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + eol
+    byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + eol
         + "Connection: Upgrade" + eol
         + "Upgrade: websocket" + eol
         + "Sec-WebSocket-Accept: " + Convert.ToBase64String(
@@ -172,7 +167,7 @@ After a successful handshake, the client will send encoded messages to the serve
 
 If we send "MDN", we get these bytes:
 
-```
+```plain
 129 131 61 84 35 6 112 16 109
 ```
 
@@ -212,12 +207,12 @@ where _D_ is the decoded message array, _E_ is the encoded message array, _M_ is
 Example in C#:
 
 ```cs
-Byte[] decoded = new Byte[3];
-Byte[] encoded = new Byte[3] {112, 16, 109};
-Byte[] mask = new Byte[4] {61, 84, 35, 6};
+byte[] decoded = new byte[3];
+byte[] encoded = new byte[3] {112, 16, 109};
+byte[] mask = new byte[4] {61, 84, 35, 6};
 
 for (int i = 0; i < encoded.Length; i++) {
-    decoded[i] = (Byte)(encoded[i] ^ mask[i % 4]);
+    decoded[i] = (byte)(encoded[i] ^ mask[i % 4]);
 }
 ```
 
@@ -256,7 +251,7 @@ class Server {
             while (client.Available < 3); // match against "get"
 
             byte[] bytes = new byte[client.Available];
-            stream.Read(bytes, 0, client.Available);
+            stream.Read(bytes, 0, bytes.Length);
             string s = Encoding.UTF8.GetString(bytes);
 
             if (Regex.IsMatch(s, "^GET", RegexOptions.IgnoreCase)) {
@@ -324,7 +319,7 @@ class Server {
 ### client.html
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <style>
     textarea {

@@ -1,18 +1,11 @@
 ---
-title: 'Element: mousewheel event'
+title: "Element: mousewheel event"
+short-title: mousewheel
 slug: Web/API/Element/mousewheel_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Deprecated
-  - Event
-  - Interface
-  - Non-standard
-  - UI
-  - mouse
-  - mousewheel
-  - scrolling
-  - wheel
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.mousewheel_event
 ---
 
@@ -27,9 +20,9 @@ The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mousewheel', (event) => {});
+addEventListener("mousewheel", (event) => {});
 
-onmousewheel = (event) => { };
+onmousewheel = (event) => {};
 ```
 
 ## Event type
@@ -64,8 +57,6 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
   - : Returns an integer representing the horizontal scroll amount.
 - {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an integer representing the vertical scroll amount.
-
-> **Note:** [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.
 
 ## The detail property
 
@@ -123,5 +114,4 @@ Not part of any specification.
 
 ## See also
 
-- Gecko's legacy mouse wheel events: `DOMMouseScroll`, `MozMousePixelScroll`
-- Standardized wheel event: `wheel`
+- The standard {{domxref("Element/wheel_event", "wheel")}} event to listen to instead.

@@ -2,11 +2,6 @@
 title: WebGLQuery
 slug: Web/API/WebGLQuery
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGLQuery
 ---
 

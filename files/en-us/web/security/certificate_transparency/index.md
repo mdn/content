@@ -1,9 +1,7 @@
 ---
 title: Certificate Transparency
 slug: Web/Security/Certificate_Transparency
-tags:
-  - Security
-  - Web
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -40,4 +38,4 @@ Google Chrome requires CT log inclusion for all certificates issues with a notBe
 
 Apple [requires](https://support.apple.com/en-gb/HT205280) a varying number of SCTs in order for Safari and other servers to trust server certificates.
 
-Firefox [does not](https://bugzilla.mozilla.org/show_bug.cgi?id=1281469) currently check or require the use of CT logs for sites that users visit.
+Firefox [does not](https://bugzil.la/1281469) currently check or require the use of CT logs for sites that users visit.

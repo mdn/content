@@ -1,12 +1,7 @@
 ---
-title: CSS Miscellaneous
-slug: Web/CSS/CSS_Miscellaneous
+title: CSS miscellaneous
+slug: Web/CSS/CSS_miscellaneous
 page-type: css-module
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
 ---
 
 {{CSSRef}}

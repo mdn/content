@@ -1,12 +1,9 @@
 ---
-title: '<big>: The Bigger Text element'
+title: "<big>: The Bigger Text element"
 slug: Web/HTML/Element/big
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.big
 ---
 

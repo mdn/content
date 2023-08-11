@@ -1,9 +1,7 @@
 ---
 title: Introducing asynchronous JavaScript
 slug: Learn/JavaScript/Asynchronous/Introducing
-tags:
-  - JavaScript
-  - Learn
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
@@ -45,7 +43,7 @@ In this article, we'll start by looking at the problem with long-running synchro
 Consider the following code:
 
 ```js
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = `Hello, my name is ${name}!`;
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -66,7 +64,7 @@ function makeGreeting(name) {
   return `Hello, my name is ${name}!`;
 }
 
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -115,15 +113,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `Finished generating ${quota.value} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -184,15 +182,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `Finished generating ${quota.value} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -232,23 +230,27 @@ pre {
 ```
 
 ```js
-const log = document.querySelector('.event-log');
+const log = document.querySelector(".event-log");
 
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
 
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loadend", () => {
     log.textContent = `${log.textContent}Finished with status: ${xhr.status}`;
   });
 
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
   xhr.send();
-  log.textContent = `${log.textContent}Started XHR request\n`;});
+  log.textContent = `${log.textContent}Started XHR request\n`;
+});
 
-document.querySelector('#reload').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
   document.location.reload();
 });
 ```
@@ -325,11 +327,3 @@ When we nest callbacks like this, it can also get very hard to handle errors: of
 For these reasons, most modern asynchronous APIs don't use callbacks. Instead, the foundation of asynchronous programming in JavaScript is the {{jsxref("Promise")}}, and that's the subject of the next article.
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- **Introducing asynchronous JavaScript**
-- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

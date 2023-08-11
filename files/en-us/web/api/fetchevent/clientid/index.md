@@ -1,14 +1,8 @@
 ---
-title: FetchEvent.clientId
+title: "FetchEvent: clientId property"
+short-title: clientId
 slug: Web/API/FetchEvent/clientId
 page-type: web-api-instance-property
-tags:
-  - API
-  - FetchEvent
-  - Property
-  - Reference
-  - Service Workers
-  - clientId
 browser-compat: api.FetchEvent.clientId
 ---
 
@@ -28,7 +22,7 @@ A string that represents the client ID.
 ## Examples
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   console.log(event.clientId);
 });
 ```

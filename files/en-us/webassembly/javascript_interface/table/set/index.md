@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/JavaScript_interface/Table/set
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - set
-  - table
 browser-compat: javascript.builtins.WebAssembly.Table.set
 ---
 
@@ -30,7 +22,7 @@ set(index, value)
   - : The index of the function reference you want to mutate.
 - `value`
   - : The value you want to mutate the reference to. This must be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions),
-    a JavaScript wrapper for an underlying wasm function.
+    a JavaScript wrapper for an underlying Wasm function.
 
 ### Return value
 
@@ -72,7 +64,7 @@ const importObj = {
 };
 ```
 
-Finally, we load and instantiate a wasm module (table2.wasm) using the
+Finally, we load and instantiate a Wasm module (table2.wasm) using the
 [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming), log the table length, and invoke the
 two referenced functions that are now stored in the table (the table2.wasm module (see
 [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
@@ -85,7 +77,7 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
     console.log(tbl.length);
     console.log(tbl.get(0)());
     console.log(tbl.get(1)());
-  }
+  },
 );
 ```
 
@@ -94,7 +86,7 @@ accessor to actually invoke the referenced function and log the value stored ins
 (e.g. `get(0)()` rather than `get(0)`) .
 
 This example shows that we're creating and accessing the table from JavaScript, but the
-same table is visible and callable inside the wasm instance too.
+same table is visible and callable inside the Wasm instance too.
 
 ## Specifications
 

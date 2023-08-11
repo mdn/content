@@ -2,15 +2,8 @@
 title: <shape>
 slug: Web/CSS/shape
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Function
-  - Data Type
-  - Deprecated
-  - Layout
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: css.types.shape
 ---
 
@@ -45,7 +38,7 @@ rect(top, right, bottom, left)
 
 ## Interpolation
 
-When animated, values of the `<shape>` data type are interpolated over their `top`, `right`, `bottom`, and `left` components, each treated as a real, floating-point number. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<shape>` data type are interpolated over their `top`, `right`, `bottom`, and `left` components, each treated as a real, floating-point number. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Example
 

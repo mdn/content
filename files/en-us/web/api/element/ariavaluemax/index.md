@@ -1,15 +1,8 @@
 ---
-title: Element.ariaValueMax
+title: "Element: ariaValueMax property"
+short-title: ariaValueMax
 slug: Web/API/Element/ariaValueMax
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaValueMax
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaValueMax
 ---
 
@@ -35,7 +28,7 @@ In this example the [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attribu
 ```
 
 ```js
-let el = document.getElementById('slider');
+let el = document.getElementById("slider");
 console.log(el.ariaValueMax); // 7
 el.ariaValueMax = "6";
 console.log(el.ariaValueMax); // 6

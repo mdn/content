@@ -2,12 +2,6 @@
 title: GamepadEvent
 slug: Web/API/GamepadEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Interface
-  - Reference
 browser-compat: api.GamepadEvent
 ---
 
@@ -33,9 +27,13 @@ The gamepad property being called on a fired {{domxref("Window.gamepadconnected_
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  e.gamepad.index, e.gamepad.id,
-  e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 
@@ -43,8 +41,11 @@ And on a {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} 
 
 ```js
 window.addEventListener("gamepaddisconnected", (e) => {
-  console.log("Gamepad disconnected from index %d: %s",
-  e.gamepad.index, e.gamepad.id);
+  console.log(
+    "Gamepad disconnected from index %d: %s",
+    e.gamepad.index,
+    e.gamepad.id,
+  );
 });
 ```
 

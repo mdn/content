@@ -2,12 +2,6 @@
 title: transition-duration
 slug: Web/CSS/transition-duration
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.transition-duration
 ---
 
@@ -17,7 +11,7 @@ The **`transition-duration`** [CSS](/en-US/docs/Web/CSS) property sets the lengt
 
 {{EmbedInteractiveExample("pages/css/transition-duration.html")}}
 
-You may specify multiple durations; each duration will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer durations specified than in the master list, the user agent repeat the list of durations. If there are more durations, the list is truncated to the right size. In both case the CSS declaration stays valid.
+You may specify multiple durations; each duration will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If the number of specified durations is less than in the master list, the user agent repeats the list of durations. If the number of specified durations is more than in the master list, the list is truncated to the right size. In both the cases, the CSS declaration stays valid.
 
 ## Syntax
 
@@ -130,7 +124,7 @@ changeButton.addEventListener("click", change);
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-timing-function')}}

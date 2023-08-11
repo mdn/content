@@ -1,15 +1,7 @@
 ---
 title: CSS property compatibility table for form controls
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Advanced
-  - CSS
-  - Forms
-  - Guide
-  - HTML
-  - Junk
-  - NeedsUpdate
-  - Web
+page-type: learn-module-chapter
 ---
 
 {{learnsidebar}}
@@ -44,28 +36,12 @@ For each property there are two possible renderings:
 * {
   /* Turn off the native look and feel */
   appearance: none;
-
-  /* for Internet Explorer */
-  background: none;
 }
 ```
 
 ## Compatibility tables
 
-### Global behaviors
-
-Some behaviors are common to many browsers at a global level:
-
-- {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, {{cssxref("height")}}
-  - : Using one of these properties can partially or fully turn off the native look & feel of widgets on some browsers. Be careful when you use them.
-- {{cssxref("line-height")}}
-  - : This property is supported inconsistently across browsers and you should avoid it.
-- {{cssxref("text-decoration")}}
-  - : This property is not supported by Opera on form widgets.
-- {{cssxref("text-overflow")}}
-  - : Opera, Safari, and IE9 do not support this property on form widgets.
-- {{cssxref("text-shadow")}}
-  - : Opera does not support {{cssxref("text-shadow")}} on form widgets and IE9 does not support it at all.
+Altering the appearance of form controls with CSS, such as with {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, and {{cssxref("height")}} can partially or fully turn off the native look & feel of widgets on some browsers. Be careful when you use them.
 
 ### Text fields
 
@@ -102,7 +78,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("height")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -123,7 +99,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("border")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -156,7 +132,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("padding")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -333,7 +309,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("border-radius")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -1280,10 +1256,10 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
         {{cssxref("text-indent")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1311,10 +1287,10 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
         {{cssxref("text-shadow")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1680,7 +1656,7 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
 
 ### Datalist
 
-See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements and the [`list` attribute](/en-US/docs/Web/HTML/Attributes/list).
+See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements and the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute.
 
 <table>
   <thead>

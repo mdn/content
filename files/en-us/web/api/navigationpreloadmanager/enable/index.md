@@ -1,14 +1,8 @@
 ---
-title: NavigationPreloadManager.enable()
+title: "NavigationPreloadManager: enable() method"
+short-title: enable()
 slug: Web/API/NavigationPreloadManager/enable
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Offline
-  - Service Workers
-  - NavigationPreloadManager
 browser-compat: api.NavigationPreloadManager.enable
 ---
 
@@ -43,13 +37,15 @@ A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 The code below shows how to enable preloading, after first using {{domxref("ServiceWorkerRegistration.navigationPreload")}} to test that it is supported.
 
 ```js
-addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    if (self.registration.navigationPreload) {
-      // Enable navigation preloads!
-      await self.registration.navigationPreload.enable();
-    }
-  })());
+addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      if (self.registration.navigationPreload) {
+        // Enable navigation preloads!
+        await self.registration.navigationPreload.enable();
+      }
+    })(),
+  );
 });
 ```
 

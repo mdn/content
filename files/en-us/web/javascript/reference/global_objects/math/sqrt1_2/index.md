@@ -1,17 +1,13 @@
 ---
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.SQRT1_2
 ---
 
 {{JSRef}}
 
-The **`Math.SQRT1_2`** property represents the square root of 1/2, which is approximately 0.707.
+The **`Math.SQRT1_2`** static data property represents the square root of 1/2, which is approximately 0.707.
 
 {{EmbedInteractiveExample("pages/js/math-sqrt1_2.html", "shorter")}}
 

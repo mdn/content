@@ -1,13 +1,7 @@
 ---
 title: Audio for Web games
 slug: Games/Techniques/Audio_for_Web_Games
-tags:
-  - Audio
-  - Games
-  - Web Audio API
-  - audio sprites
-  - spatialization
-  - syncing tracks
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -25,7 +19,7 @@ Browser autoplay policy now affects desktop _and_ mobile browsers. There is furt
 It is worth noting that autoplay with sound is allowed if:
 
 - the User has interacted with the domain.
-- on mobile the user has [added the site to their home screen](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen).
+- on mobile the user has [made the application installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
 
 Many browsers will ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.
 
@@ -45,7 +39,7 @@ Programmatic volume control may be disabled in mobile browsers. The reason often
 
 Likely as an attempt to mitigate runaway mobile network data use, we also often find that buffering is disabled before playback has been initiated. Buffering is the process of the browser downloading the media in advance, which we often need to do to ensure smooth playback.
 
-The {{domxref("HTMLMediaElement")}} interface comes with [lots of properties](/en-US/docs/Web/API/HTMLMediaElement#properties) to help determine whether a track is in a state to be playable.
+The {{domxref("HTMLMediaElement")}} interface comes with [lots of properties](/en-US/docs/Web/API/HTMLMediaElement#instance_properties) to help determine whether a track is in a state to be playable.
 
 > **Note:** In many ways the concept of buffering is an outdated one. As long as byte-range requests are accepted (which is the default behavior), we should be able to jump to a specific point in the audio without having to download the preceding content. However, preloading is still useful — without it, there would always need to be some client-server communication required before playing can commence.
 
@@ -137,7 +131,7 @@ Although mobile browsers can present problems, there are ways to work around the
 
 ### Audio sprites
 
-Audio sprites borrow their name from [CSS sprites](/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS), which is a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than having a bunch of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play a specific sound from the file, we just use the known start and stop times for each audio sprite.
+Audio sprites borrow their name from [CSS sprites](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS), which is a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than having a bunch of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play a specific sound from the file, we just use the known start and stop times for each audio sprite.
 
 The advantage is that we can prime one piece of audio and have our sprites ready to go. To do this we can just play and instantly pause the larger piece of audio. You'll also reduce the number of server requests and save bandwidth.
 
@@ -183,7 +177,7 @@ for (const button of buttons) {
       stopTime = button.getAttribute("data-stop");
       myAudio.play();
     },
-    false
+    false,
   );
 }
 
@@ -194,7 +188,7 @@ myAudio.addEventListener(
       myAudio.pause();
     }
   },
-  false
+  false,
 );
 ```
 

@@ -2,14 +2,9 @@
 title: underline-position
 slug: Web/SVG/Attribute/underline-position
 page-type: svg-attribute
-tags:
-  - Attribute
-  - Reference
-  - SVG
-  - font
 ---
 
-« [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
+{{SVGRef}}
 
 The `underline-position` attribute represents the ideal vertical position of the underline. The underline position is expressed in the font's coordinate system.
 

@@ -2,18 +2,6 @@
 title: min-width
 slug: Web/CSS/min-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Horizontal
-  - Layout
-  - Minimum
-  - Reference
-  - dimensions
-  - min-width
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.min-width
 ---
 
@@ -95,4 +83,4 @@ form {
 ## See also
 
 - {{Cssxref("width")}}, {{Cssxref("max-width")}}
-- The [box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}
+- The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}

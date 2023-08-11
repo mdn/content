@@ -1,18 +1,8 @@
 ---
-title: 'HTMLMediaElement: ended event'
+title: "HTMLMediaElement: ended event"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Media Streams API
-  - Reference
-  - Video
-  - Web Audio API
-  - ended
 browser-compat: api.HTMLMediaElement.ended_event
 ---
 
@@ -29,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('ended', (event) => {});
+addEventListener("ended", (event) => {});
 
-onended = (event) => { };
+onended = (event) => {};
 ```
 
 ## Event type
@@ -45,22 +35,24 @@ These examples add an event listener for the HTMLMediaElement's `ended` event, t
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ended', (event) => {
-  console.log('Video stopped either because 1) it was over, ' +
-      'or 2) no further data is available.');
+video.addEventListener("ended", (event) => {
+  console.log(
+    "Video stopped either because it has finished playing or no further data is available.",
+  );
 });
 ```
 
 Using the `onended` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onended = (event) => {
-  console.log('Video stopped either because 1) it was over, ' +
-      'or 2) no further data is available.');
+  console.log(
+    "Video stopped either because it has finished playing or no further data is available.",
+  );
 };
 ```
 

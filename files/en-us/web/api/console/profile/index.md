@@ -1,17 +1,10 @@
 ---
-title: console.profile()
+title: "console: profile() method"
+short-title: profile()
 slug: Web/API/console/profile
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Non-standard
-  - Reference
-  - Web Development
-  - profile
-  - web console
+status:
+  - non-standard
 browser-compat: api.console.profile
 ---
 

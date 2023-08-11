@@ -1,16 +1,8 @@
 ---
 title: "MediaRecorder: start event"
+short-title: start
 slug: Web/API/MediaRecorder/start_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - MediaRecorder
-  - Event
-  - Reference
-  - Video
-  - start
 browser-compat: api.MediaRecorder.start_event
 ---
 

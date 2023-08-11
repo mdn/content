@@ -1,12 +1,7 @@
 ---
 title: "Test your skills: Math"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - Math
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}
@@ -49,9 +44,8 @@ Try updating the live code below to recreate the finished example by following t
 1. Multiply `result` and `result2` and assign the result back to `result` (use assignment shorthand).
 2. Format `result` so that it has two decimal places and store it in a variable called `finalResult`.
 3. Check the data type of `finalResult` using `typeof`. If it's a `string`, convert it to a `number` type and store the result in a variable called `finalNumber`.
-4. Update the original calculation so that they give you a value of `10.42`. Don't change the numbers or the operators.
 
-To pass this test, `finalNumber` should have a result of `10.42`.
+To pass this test, `finalNumber` should have a result of `4633.33`.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 

@@ -1,16 +1,13 @@
 ---
 title: AsyncFunction() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.AsyncFunction.AsyncFunction
 ---
 
 {{JSRef}}
 
-The **`AsyncFunction()`** constructor creates a new {{jsxref("AsyncFunction")}} object. In JavaScript, every [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) is actually an `AsyncFunction` object.
+The **`AsyncFunction()`** constructor creates {{jsxref("AsyncFunction")}} objects.
 
 Note that `AsyncFunction` is _not_ a global object. It can be obtained with the following code:
 
@@ -26,12 +23,12 @@ The `AsyncFunction()` constructor is not intended to be used directly, and all c
 new AsyncFunction(functionBody)
 new AsyncFunction(arg0, functionBody)
 new AsyncFunction(arg0, arg1, functionBody)
-new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+new AsyncFunction(arg0, arg1, /* …, */ argN, functionBody)
 
 AsyncFunction(functionBody)
 AsyncFunction(arg0, functionBody)
 AsyncFunction(arg0, arg1, functionBody)
-AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+AsyncFunction(arg0, arg1, /* …, */ argN, functionBody)
 ```
 
 > **Note:** `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.

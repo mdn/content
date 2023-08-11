@@ -2,13 +2,6 @@
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
 page-type: guide
-tags:
-  - CSS
-  - CSS Cookbook
-  - Guide
-  - CSS layout
-  - flexbox
-  - pagination
 browser-compat:
   - css.properties.justify-content
   - css.properties.column-gap.flex_context
@@ -36,7 +29,7 @@ Typically, the pagination component will be centered horizontally underneath the
 
 ## Choices made
 
-This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
+This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
 
 The list itself also becomes a flex container to lay the items out as a row. To space the items out we will use a {{cssxref("margin")}} on the flex items.
 

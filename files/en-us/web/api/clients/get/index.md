@@ -1,14 +1,8 @@
 ---
-title: Clients.get()
+title: "Clients: get() method"
+short-title: get()
 slug: Web/API/Clients/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - get
 browser-compat: api.Clients.get
 ---
 

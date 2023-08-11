@@ -2,10 +2,6 @@
 title: divisor
 slug: Web/SVG/Attribute/divisor
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.divisor
 ---
 

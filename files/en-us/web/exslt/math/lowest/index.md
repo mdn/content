@@ -1,10 +1,7 @@
 ---
 title: math:lowest()
 slug: Web/EXSLT/math/lowest
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -30,4 +27,4 @@ A result tree fragment consisting of copies of the nodes returned by [`math:min(
 
 ## Specifications
 
-[EXSLT - MATH:LOWEST](http://exslt.org/math/functions/lowest/index.html)
+[EXSLT - MATH:LOWEST](https://exslt.github.io/math/functions/lowest/index.html)

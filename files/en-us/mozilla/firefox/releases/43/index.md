@@ -1,8 +1,7 @@
 ---
 title: Firefox 43 for developers
 slug: Mozilla/Firefox/Releases/43
-tags:
-  - Firefox
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -27,31 +26,31 @@ Highlights:
 
 ### CSS
 
-- Support for the standard, unprefixed version of {{Cssxref("hyphens")}} has been landed ({{bug(953408)}}).
-- The shorthand property {{cssxref("font")}} has been updated to accept {{cssxref("font-stretch")}} values ({{bug(1057680)}}).
-- To match a latest evolution of the specification, the {{cssxref(":fullscreen")}} pseudo-class now selects the whole stack of elements in full screen, and not only the top-level one ({{bug(1199522)}}).
-- The deprecated SVG values for the {{cssxref("writing-mode")}}, `lr`, `lr-tb`, `rl`, `tb`, and `tb-rl`, have been added in CSS as aliases to standard properties ({{bug(1205787)}}).
+- Support for the standard, unprefixed version of {{Cssxref("hyphens")}} has been landed ([Firefox bug 953408](https://bugzil.la/953408)).
+- The shorthand property {{cssxref("font")}} has been updated to accept {{cssxref("font-stretch")}} values ([Firefox bug 1057680](https://bugzil.la/1057680)).
+- To match a latest evolution of the specification, the {{cssxref(":fullscreen")}} pseudo-class now selects the whole stack of elements in full screen, and not only the top-level one ([Firefox bug 1199522](https://bugzil.la/1199522)).
+- The deprecated SVG values for the {{cssxref("writing-mode")}}, `lr`, `lr-tb`, `rl`, `tb`, and `tb-rl`, have been added in CSS as aliases to standard properties ([Firefox bug 1205787](https://bugzil.la/1205787)).
 
 ### HTML
 
-- For {{htmlelement("img")}} with ICO image containing multiple frames, the intrinsic dimension of the image is set to the one of the largest frame, and no more of the smallest frame {{bug(1201796)}}.
-- The value of the document's viewport (defined with `<meta name="viewport>`)can now dynamically be changed via JavaScript ({{bug(976616)}}).
+- For {{htmlelement("img")}} with ICO image containing multiple frames, the intrinsic dimension of the image is set to the one of the largest frame, and no more of the smallest frame [Firefox bug 1201796](https://bugzil.la/1201796).
+- The value of the document's viewport (defined with `<meta name="viewport>`)can now dynamically be changed via JavaScript ([Firefox bug 976616](https://bugzil.la/976616)).
 
 ### JavaScript
 
 #### New APIs
 
-- The new ES2016 methods {{jsxref("Array.prototype.includes()")}} and {{jsxref("TypedArray.prototype.includes()")}} are now enabled by default ({{bug(1070767)}}).
+- The new ES2016 methods {{jsxref("Array.prototype.includes()")}} and {{jsxref("TypedArray.prototype.includes()")}} are now enabled by default ([Firefox bug 1070767](https://bugzil.la/1070767)).
 
 #### Changes regarding the `arguments` object
 
-- To match the ES2015 specification, [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) no longer have their own [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object. The `arguments` object is now lexically bound (inherited from the outer function). In most cases, [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are a good alternative `(...args) => args[i]`, see {{bug(889158)}}.
-- The [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is now allowed in conjunction with [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) ({{bug(1133298)}}).
-- From now on, a mapped [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object in non-strict functions is only provided if the function does **not** contain any [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), any [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) or any [destructured parameters](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(1175394)}}).
+- To match the ES2015 specification, [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) no longer have their own [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object. The `arguments` object is now lexically bound (inherited from the outer function). In most cases, [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are a good alternative `(...args) => args[i]`, see [Firefox bug 889158](https://bugzil.la/889158).
+- The [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is now allowed in conjunction with [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) ([Firefox bug 1133298](https://bugzil.la/1133298)).
+- From now on, a mapped [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object in non-strict functions is only provided if the function does **not** contain any [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), any [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) or any [destructured parameters](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1175394](https://bugzil.la/1175394)).
 
 #### Other changes
 
-- [Generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) are no longer constructable as per ES2016 ({{bug(1191486)}}).
+- [Generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) are no longer constructable as per ES2016 ([Firefox bug 1191486](https://bugzil.la/1191486)).
 
 ### Interfaces/APIs/DOM
 
@@ -61,31 +60,31 @@ _No change._
 
 #### IndexedDB
 
-- A new feature called [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ({{bug(871846)}}). This is a non-standard Firefox-specific feature.
+- A new feature called [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ([Firefox bug 871846](https://bugzil.la/871846)). This is a non-standard Firefox-specific feature.
 
 #### Service Workers
 
-- As per the specification, if {{domxref("ExtendableEvent.waitUntil()")}} is called outside of the {{domxref("ExtendableEvent")}} handler, Firefox will now throw an `InvalidStateError`; in addition, multiple calls to {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} will now stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ({{bug(1180274)}}).
-- {{domxref("PushMessageData")}} methods have been implemented ({{bug(1149195)}}).
+- As per the specification, if {{domxref("ExtendableEvent.waitUntil()")}} is called outside of the {{domxref("ExtendableEvent")}} handler, Firefox will now throw an `InvalidStateError`; in addition, multiple calls to {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} will now stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ([Firefox bug 1180274](https://bugzil.la/1180274)).
+- {{domxref("PushMessageData")}} methods have been implemented ([Firefox bug 1149195](https://bugzil.la/1149195)).
 
 #### WebRTC
 
-- The {{domxref("HTMLCanvasElement.captureStream()")}} method has been activated by default ({{bug(1177276)}}).
+- The {{domxref("HTMLCanvasElement.captureStream()")}} method has been activated by default ([Firefox bug 1177276](https://bugzil.la/1177276)).
 - The non-standard constraint style option list for `RTCOfferOptions` has been deprecated and will be removed entirely in Firefox 44.
 
 #### Miscellaneous
 
-- The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ({{bug(1050749)}}).
-- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names")}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
-- The {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ({{bug("1161276")}}).
-- The {{domxref("PerformanceObserver")}} interface, belonging to the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline_API) has been implemented ({{bug(1165796)}}).
-- The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ({{bug(1191178)}}).
-- The modern [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) has been implemented: unprefixed {{domxref("Screen.orientation")}} and the {{domxref("ScreenOrientation")}} interface are now available ({{bug("1131470")}}). The non-standard {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, and {{domxref("Screen.mozUnlockOrientation()")}} will be removed in the future.
-- Under Linux, like under Windows, {{domxref("Event.timeStamp")}} now returns a {{domxref("DOMHighResTimeStamp")}} ({{bug(1026803)}}).
-- Experimental support for {{domxref("Selection")}} events {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Document/selectstart_event", "selectstart")}}, as well as the {{domxref("Document.selectionchange_event", "Document.onselectionchange")}} and {{domxref("HTMLInputElement.onselectstart")}} event handlers property has been added ({{bug(571294)}}). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
-- Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ({{bug(1204841)}}).
-- The {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} method has been removed ({{bug(1206030)}}).
-- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{jsxref("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).
+- The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ([Firefox bug 1050749](https://bugzil.la/1050749)).
+- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names")}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ([Firefox bug 1188932](https://bugzil.la/1188932)).
+- The {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ([Firefox bug 1161276](https://bugzil.la/1161276)).
+- The {{domxref("PerformanceObserver")}} interface, belonging to the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline_API) has been implemented ([Firefox bug 1165796](https://bugzil.la/1165796)).
+- The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ([Firefox bug 1191178](https://bugzil.la/1191178)).
+- The modern [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) has been implemented: unprefixed {{domxref("Screen.orientation")}} and the {{domxref("ScreenOrientation")}} interface are now available ([Firefox bug 1131470](https://bugzil.la/1131470)). The non-standard {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, and {{domxref("Screen.mozUnlockOrientation()")}} will be removed in the future.
+- Under Linux, like under Windows, {{domxref("Event.timeStamp")}} now returns a {{domxref("DOMHighResTimeStamp")}} ([Firefox bug 1026803](https://bugzil.la/1026803)).
+- Experimental support for {{domxref("Selection")}} events {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Node/selectstart_event", "selectstart")}}, as well as the {{domxref("Document.selectionchange_event", "Document.onselectionchange")}} and {{domxref("HTMLInputElement.onselectstart")}} event handlers property has been added ([Firefox bug 571294](https://bugzil.la/571294)). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ([Firefox bug 1196479](https://bugzil.la/1196479)). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
+- Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ([Firefox bug 1204841](https://bugzil.la/1204841)).
+- The {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} method has been removed ([Firefox bug 1206030](https://bugzil.la/1206030)).
+- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{jsxref("TypeError")}} exception when used with a URL containing a username and password ([Firefox bug 1195820](https://bugzil.la/1195820)).
 
 ### MathML
 
@@ -109,9 +108,9 @@ _No change._
 
 ## Security
 
-- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ({{bug("536509")}}).
-- This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ({{bug(1201023)}}). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).
-- Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ({{bug("992096")}}).
+- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ([Firefox bug 536509](https://bugzil.la/536509)).
+- This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ([Firefox bug 1201023](https://bugzil.la/1201023)). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).
+- Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ([Firefox bug 992096](https://bugzil.la/992096)).
 
 ## Changes for add-on and Mozilla developers
 

@@ -2,17 +2,6 @@
 title: XRSpace
 slug: Web/API/XRSpace
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Realty
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSpace
 browser-compat: api.XRSpace
 ---
 

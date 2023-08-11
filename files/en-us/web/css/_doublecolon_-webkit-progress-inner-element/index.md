@@ -1,13 +1,9 @@
 ---
-title: '::-webkit-progress-inner-element'
+title: "::-webkit-progress-inner-element"
 slug: Web/CSS/::-webkit-progress-inner-element
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-progress-inner-element
 ---
 
@@ -20,7 +16,9 @@ The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-el
 ## Syntax
 
 ```css
-::-webkit-progress-inner-element
+::-webkit-progress-inner-element {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -75,4 +73,3 @@ Not part of any standard.
   - {{cssxref("::-webkit-progress-value")}}
 
 - {{cssxref("::-moz-progress-bar")}}
-- {{cssxref("::-ms-fill")}}

@@ -1,10 +1,8 @@
 ---
-title: NamedNodeMap.setNamedItemNS()
+title: "NamedNodeMap: setNamedItemNS() method"
+short-title: setNamedItemNS()
 slug: Web/API/NamedNodeMap/setNamedItemNS
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.setNamedItemNS
 ---
 
@@ -62,7 +60,7 @@ let result = `The '<span>' element initially contains ${attrMap.length} attribut
 result += "We remove `one` from '<span>' and adds it to '<pre>'.\n";
 const one = warning.attributes.removeNamedItemNS(
   "http://www.example.com/ob",
-  "one"
+  "one",
 );
 attrMap.setNamedItemNS(one);
 result += `The '<span>' element now contains ${span.attributes.length} attributes:\n\n`;

@@ -1,16 +1,7 @@
 ---
 title: tabs.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - WindowType
-  - tabs
+page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.WindowType
 ---
 

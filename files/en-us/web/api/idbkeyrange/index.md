@@ -2,14 +2,6 @@
 title: IDBKeyRange
 slug: Web/API/IDBKeyRange
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBKeyRange
 ---
 
@@ -85,19 +77,19 @@ If we used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not 
 function displayData() {
   const keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
 }

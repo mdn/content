@@ -1,17 +1,9 @@
 ---
 title: tabs.onHighlightChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHighlightChanged
-  - tabs
+page-type: webextension-api-event
+status:
+  - deprecated
 browser-compat: webextensions.api.tabs.onHighlightChanged
 ---
 
@@ -31,7 +23,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,9 +34,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `selectInfo`
       - : `object`. See the [selectInfo](#selectinfo_2) section for more details.

@@ -1,19 +1,13 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - isNaN
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isNaN
 ---
 
 {{JSRef}}
 
-The **`Number.isNaN()`** method determines whether the passed value is the number value {{jsxref("NaN")}}, and returns `false` if the input is not of the Number type. It is a more robust version of the original, global {{jsxref("isNaN()")}} function.
+The **`Number.isNaN()`** static method determines whether the passed value is the number value {{jsxref("NaN")}}, and returns `false` if the input is not of the Number type. It is a more robust version of the original, global {{jsxref("isNaN()")}} function.
 
 {{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
 

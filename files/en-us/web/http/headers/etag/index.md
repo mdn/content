@@ -1,11 +1,7 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - Reference
-  - Response
-  - header
+page-type: http-header
 browser-compat: http.headers.ETag
 ---
 

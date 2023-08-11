@@ -2,14 +2,8 @@
 title: WindowControlsOverlay
 slug: Web/API/WindowControlsOverlay
 page-type: web-api-interface
-tags:
-  - API
-  - Window Controls Overlay
-  - WindowControlsOverlay
-  - Interface
-  - Reference
-  - Progressive Web Apps
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlay
 ---
 
@@ -40,13 +34,16 @@ Listen to these events using {{domxref('EventTarget.addEventListener()')}} or by
 ## Examples
 
 ```js
-if ('windowControlsOverlay' in navigator) {
-  navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
-    if (event.visible) {
-      const rect = event.titlebarAreaRect;
-      // Do something with the coordinates of the title bar area.
-    }
-  });
+if ("windowControlsOverlay" in navigator) {
+  navigator.windowControlsOverlay.addEventListener(
+    "geometrychange",
+    (event) => {
+      if (event.visible) {
+        const rect = event.titlebarAreaRect;
+        // Do something with the coordinates of the title bar area.
+      }
+    },
+  );
 }
 ```
 

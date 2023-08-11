@@ -1,20 +1,8 @@
 ---
-title: RTCIceCandidate.foundation
+title: "RTCIceCandidate: foundation property"
+short-title: foundation
 slug: Web/API/RTCIceCandidate/foundation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - foundation
 browser-compat: api.RTCIceCandidate.foundation
 ---
 
@@ -42,8 +30,8 @@ A string which uniquely identifies the candidate across all
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
 candidate:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 The field `"4234997325"` is the foundation.

@@ -2,16 +2,8 @@
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Landing
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - Video
-  - streaming
+status:
+  - experimental
 spec-urls: https://w3c.github.io/media-source/
 ---
 

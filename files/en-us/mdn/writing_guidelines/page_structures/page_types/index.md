@@ -2,9 +2,6 @@
 title: Page types
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -46,7 +43,7 @@ If the work is more significant, then you should consider a few factors when pri
 - How low quality is the information?
 - How popular is the feature? How sought after is the information?
 
-If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Communication_channels).
 
 ## The page-type front matter key
 
@@ -132,6 +129,27 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 - [SVG element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
+## CSS module landing page
+
+Every **[CSS](/en-US/docs/Web/CSS) module** represents a CSS specification that provides support for certain features and implementations in CSS. For example, the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module represents the [specification](/en-US/docs/Web/CSS/CSS_box_model#specifications) that describes the margin and padding properties that let you create spacing in and around a CSS box.
+
+A **CSS module landing page** provides an overview of the features that the module provides and lists all the properties, data types, CSS functions, and so on offered by the module. When possible, the CSS module landing page provides a quick demonstration of what can be achieved using the properties of the module through an interactive example.
+The module landing page serves primarily as a _navigation_ page, but also functions as an at-a-glance _reference_ page for the module.
+
+Some related properties and features that belong in other modules, but that are closely related to the functionality offered by the module you are documenting, can also be covered in a _Related concepts_ section.
+For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/CSS_animations#related_concepts) section of the CSS animations module landing page.
+
+### Examples
+
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface)
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+
+### Templates
+
+- [CSS module landing page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template)
+
 ## CSS feature reference page
 
 A **CSS reference page** lists all the available syntax for a CSS feature such as a selector or property, and explains the feature's purpose and usage. It also provides examples, browser compatibility information, and other important data.
@@ -176,7 +194,7 @@ An extended discussion of a topic might be spread across multiple conceptual pag
 
 A **glossary page** contains a brief explanation of a term, topic, or concept.
 The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences.
-This can be followed by links to further information in the **Learn more** section.
+This can be followed by links to further information in the **See also** section.
 If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) for more details.
 
 ### Examples

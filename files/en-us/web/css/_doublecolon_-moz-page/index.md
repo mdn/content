@@ -1,16 +1,9 @@
 ---
-title: '::-moz-page'
+title: "::-moz-page"
 slug: Web/CSS/::-moz-page
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsContent
-  - NeedsExample
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-page
 ---
 
@@ -20,8 +13,10 @@ The **`::-moz-page`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/We
 
 ## Syntax
 
-```
-::-moz-page
+```css
+::-moz-page {
+  /* ... */
+}
 ```
 
 ## Specifications

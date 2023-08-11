@@ -2,10 +2,6 @@
 title: Community discussions
 slug: MDN/Community/Discussions
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}
@@ -31,7 +27,7 @@ Check out the definition of each discussion category below so that you can start
       <td>
         📣
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/announcements"
+          href="https://github.com/orgs/mdn/discussions/categories/announcements"
           >Announcements</a
         >
       </td>
@@ -45,7 +41,7 @@ Check out the definition of each discussion category below so that you can start
       <td>
         🔮
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/browser-compatibility-data"
+          href="https://github.com/orgs/mdn/discussions/categories/browser-compatibility-data"
           >Browser compatibility data</a
         >
       </td>
@@ -61,7 +57,7 @@ Check out the definition of each discussion category below so that you can start
       <td>
         ✏️
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/content"
+          href="https://github.com/orgs/mdn/discussions/categories/content"
           >Content</a
         >
       </td>
@@ -77,25 +73,9 @@ Check out the definition of each discussion category below so that you can start
     </tr>
     <tr>
       <td>
-        🙋
-        <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/content-suggestions"
-          >Content suggestions</a
-        >
-      </td>
-      <td>
-        Discussions related to ideas for new content or improvements to existing
-        content on MDN Web Docs. You can propose your ideas here along with a
-        description of how the change will be useful to our readers and/or links
-        to relevant resources. We commonly label these as opportunity
-        assessments.
-      </td>
-    </tr>
-    <tr>
-      <td>
         🎨
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/design-system"
+          href="https://github.com/orgs/mdn/discussions/categories/design-system"
           >Design system</a
         >
       </td>
@@ -112,7 +92,7 @@ Check out the definition of each discussion category below so that you can start
       <td>
         👩‍💻
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/interactive-examples"
+          href="https://github.com/orgs/mdn/discussions/categories/code-examples"
           >Code examples</a
         >
       </td>
@@ -129,7 +109,7 @@ Check out the definition of each discussion category below so that you can start
       <td>
         🌐
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/localisation"
+          href="https://github.com/orgs/mdn/discussions/categories/localization"
           >Translated content</a
         >
       </td>
@@ -142,7 +122,7 @@ Check out the definition of each discussion category below so that you can start
         <a href="https://github.com/mdn/translated-content/#locales"
           >supported locales</a
         >. This is also typically where
-        <a href="https://github.com/mdn/mdn-community/discussions/67"
+        <a href="https://github.com/orgs/mdn/discussions/67"
           >announcements of macro deprecation</a
         >
         will happen.
@@ -152,7 +132,7 @@ Check out the definition of each discussion category below so that you can start
       <td>
         👾
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/mdn-plus"
+          href="https://github.com/orgs/mdn/discussions/categories/mdn-plus"
           >MDN Plus</a
         >
       </td>
@@ -172,7 +152,7 @@ Check out the definition of each discussion category below so that you can start
       <td>
         🛠️
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/platform"
+          href="https://github.com/orgs/mdn/discussions/categories/platform"
           >Platform</a
         >
       </td>
@@ -199,7 +179,7 @@ Check out the definition of each discussion category below so that you can start
       <td>
         🤖
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/polls"
+          href="https://github.com/orgs/mdn/discussions/categories/polls"
           >Polls</a
         >
       </td>

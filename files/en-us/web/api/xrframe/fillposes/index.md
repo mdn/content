@@ -1,15 +1,10 @@
 ---
-title: XRFrame.fillPoses()
+title: "XRFrame: fillPoses() method"
+short-title: fillPoses()
 slug: Web/API/XRFrame/fillPoses
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.fillPoses
 ---
 

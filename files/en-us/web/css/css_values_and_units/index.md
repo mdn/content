@@ -2,11 +2,6 @@
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - values and units
 spec-urls:
   - https://drafts.csswg.org/css-values/
   - https://drafts.csswg.org/css-color/
@@ -77,13 +72,18 @@ Such values are used without quotes:
 
 ### CSS-wide values
 
-In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, and {{cssxref("unset")}}, which explicitly specify defaulting behaviors.
+In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, and {{cssxref("revert-layer")}}, which explicitly specify defaulting behaviors.
 
-The `initial` keyword represents the value specified as the property's initial value. The `inherit` keyword represents the computed value of the property on the element's parent, provided it is inherited.
-
-The `unset` keyword acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
-
-A fourth value of {{cssxref("revert")}} was added in the Cascade Level 4 specification, but it does not currently have good browser support.
+- {{cssxref("initial")}}
+  - : Represents the value specified as the property's initial value.
+- {{cssxref("inherit")}}
+  - : Represents the computed value of the property on the element's parent, provided it is inherited.
+- {{cssxref("unset")}}
+  - : Acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
+- {{cssxref("revert")}}
+  - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist).
+- {{cssxref("revert-layer")}}
+  - : Rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
 ### URLs
 
@@ -118,7 +118,7 @@ A {{cssxref("&lt;number&gt;")}} represents a real number, which may or may not h
 
 ### Dimensions
 
-A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, for example `45deg`, `100ms`, or `10px`. The attached unit identifier is case insensitive. There is never a space or any other characters between a the number and the unit identifier: i.e. `1 cm` is not valid.
+A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, for example `45deg`, `100ms`, or `10px`. The attached unit identifier is case insensitive. There is never a space or any other characters between the number and the unit identifier: i.e. `1 cm` is not valid.
 
 CSS uses dimensions to specify:
 
@@ -155,7 +155,7 @@ For example, `em` is relative to the font size on the element and `vh` is relati
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                    |
 | `vmax` | 1% of viewport's larger dimension.                                                                                                     |
 
-Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_Container_Queries).
+Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
 
 | Unit    | Relative to                           |
@@ -294,3 +294,4 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Trigonometric functions in CSS](https://web.dev/css-trig-functions/)

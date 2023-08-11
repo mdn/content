@@ -2,10 +2,6 @@
 title: WebGLShader
 slug: Web/API/WebGLShader
 page-type: web-api-interface
-tags:
-  - Reference
-  - WebGL
-  - WebGLShader
 browser-compat: api.WebGLShader
 ---
 
@@ -44,25 +40,27 @@ Note that there are many other strategies for writing and accessing shader sourc
 
 ```js
 const vertexShaderSource =
-  'attribute vec4 position;\n' +
-  'void main() {\n' +
-  '  gl_Position = position;\n' +
-  '}\n';
+  "attribute vec4 position;\n" +
+  "void main() {\n" +
+  "  gl_Position = position;\n" +
+  "}\n";
 
 //Use the createShader function from the example above
-const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER)
+const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
 ```
 
 ### Creating a fragment shader
 
 ```js
 const fragmentShaderSource =
-  'void main() {\n' +
-  '  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n' +
-  '}\n';
+  "void main() {\n" + "  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n" + "}\n";
 
 //Use the createShader function from the example above
-const fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
+const fragmentShader = createShader(
+  gl,
+  fragmentShaderSource,
+  gl.FRAGMENT_SHADER,
+);
 ```
 
 ## Specifications

@@ -1,17 +1,13 @@
 ---
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Property
-  - Prototype
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.byteLength
 ---
 
 {{JSRef}}
 
-The **`byteLength`** accessor property represents the length of an {{jsxref("ArrayBuffer")}} in bytes.
+The **`byteLength`** accessor property of {{jsxref("ArrayBuffer")}} instances returns the length (in bytes) of this array buffer.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
 

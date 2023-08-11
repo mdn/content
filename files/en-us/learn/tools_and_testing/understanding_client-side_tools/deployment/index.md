@@ -1,16 +1,7 @@
 ---
 title: Deploying our app
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Deployment
-tags:
-  - Beginner
-  - Deployment
-  - GitHub
-  - Learn
-  - Netlify
-  - Testing
-  - Toolchain
-  - Tools
-  - case study
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -113,7 +104,7 @@ For you to create your own instance of this project you will need to host this p
 
 ## Committing changes to GitHub
 
-This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There's many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page is a good place to start.
+This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There are many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page is a good place to start.
 
 We initialized our working directory as a git working directory earlier on. A quick way to verify this is to run the following command:
 
@@ -145,7 +136,7 @@ Now we have three tasks ahead of us:
 
    > **Note:** Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.
 
-3. Finally the code needs to be pushed to your GitHub hosted repository. Let's do that now.
+3. Finally, the code needs to be pushed to your GitHub-hosted repository. Let's do that now.
 
    Over at GitHub, visit <https://github.com/new> and create your own repository to host this code.
 
@@ -175,7 +166,7 @@ Now we have three tasks ahead of us:
    git push github main
    ```
 
-   At this point you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+   At this point, you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this, you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 > **Note:** If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
@@ -223,18 +214,18 @@ Let's get this done:
 
 That's it for Netlify. We can optionally change the name of the Netlify project or specify to use our own domain name, which Netlify offers some [excellent documentation](https://docs.netlify.com/) on.
 
-Now for one final link in our tool chain: a test to ensure our code works.
+Now for one final link in our toolchain: a test to ensure our code works.
 
 ## Testing
 
-Testing itself is a vast subject, even within the realm of front end development. I'll show you how to add an initial test to your project and how to use the test to prevent or to allow the project deployment to happen.
+Testing itself is a vast subject, even within the realm of front-end development. I'll show you how to add an initial test to your project and how to use the test to prevent or to allow the project deployment to happen.
 
-When approaching tests there's a good deal of ways to approach the problem:
+When approaching tests there are a good deal of ways to approach the problem:
 
 - End-to-end testing, which involves your visitor clicking a thing and some other thing happening.
 - Integration testing, which basically says "does one block of code still work when connected to another block?"
 - Unit testing, where small and specific bits of functionality are tested to see if they do what they are supposed to do.
-- [And many more types](https://en.wikipedia.org/wiki/Functional_testing). Also see our [cross browser testing module](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) for a bunch of useful testing information
+- [And many more types](https://en.wikipedia.org/wiki/Functional_testing). Also, see our [cross browser testing module](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) for a bunch of useful testing information
 
 Remember also that tests are not limited to JavaScript; tests can be run against the rendered DOM, user interactions, CSS, and even how a page looks.
 
@@ -287,7 +278,7 @@ Let's get started.
    npm run test
    ```
 
-   The result, if successful, is … nothing. This is considered a success. In general we only want tests to be noisy if there's something wrong. The test also exited with a special signal that tells the command line that it was successful — an exit signal of 0. If there's a failure the test fails with an exit code of 1 — this is a system-level value that says "something failed".
+   The result, if successful, is … nothing. This is considered a success. In general, we only want tests to be noisy if there's something wrong. The test also exited with a special signal that tells the command line that it was successful — an exit signal of 0. If there's a failure the test fails with an exit code of 1 — this is a system-level value that says "something failed".
 
    The `npm run test` command will use node to run all the files that are in the tests directory that end with `.js`.
 
@@ -325,11 +316,3 @@ For those of you wanting a challenge, consider whether you can optimize some par
 - Could you set up a notification to let you know when a new deploy succeeded or failed?
 
 {{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
-## In this module
-
-- [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-- [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

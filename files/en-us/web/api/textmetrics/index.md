@@ -2,11 +2,6 @@
 title: TextMetrics
 slug: Web/API/TextMetrics
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - Reference
-  - TextMetrics
 browser-compat: api.TextMetrics
 ---
 
@@ -17,29 +12,29 @@ The **`TextMetrics`** interface represents the dimensions of a piece of text in 
 ## Instance properties
 
 - {{domxref("TextMetrics.width")}} {{ReadOnlyInline}}
-  - : A `double` giving the calculated width of a segment of inline text in CSS pixels. It takes into account the current font of the context.
+  - : Returns the width of a segment of inline text in CSS pixels. It takes into account the current font of the context.
 - {{domxref("TextMetrics.actualBoundingBoxLeft")}} {{ReadOnlyInline}}
-  - : A `double` giving the distance parallel to the baseline from the alignment point given by the {{domxref("CanvasRenderingContext2D.textAlign")}} property to the left side of the bounding rectangle of the given text, in CSS pixels; positive numbers indicating a distance going left from the given alignment point.
+  - : Distance parallel to the baseline from the alignment point given by the {{domxref("CanvasRenderingContext2D.textAlign")}} property to the left side of the bounding rectangle of the given text, in CSS pixels; positive numbers indicating a distance going left from the given alignment point.
 - {{domxref("TextMetrics.actualBoundingBoxRight")}} {{ReadOnlyInline}}
-  - : A `double` giving the distance from the alignment point given by the {{domxref("CanvasRenderingContext2D.textAlign")}} property to the right side of the bounding rectangle of the given text, in CSS pixels. The distance is measured parallel to the baseline.
+  - : Returns the distance from the alignment point given by the {{domxref("CanvasRenderingContext2D.textAlign")}} property to the right side of the bounding rectangle of the given text, in CSS pixels. The distance is measured parallel to the baseline.
 - {{domxref("TextMetrics.fontBoundingBoxAscent")}} {{ReadOnlyInline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the top of the highest bounding rectangle of all the fonts used to render the text, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the top of the highest bounding rectangle of all the fonts used to render the text, in CSS pixels.
 - {{domxref("TextMetrics.fontBoundingBoxDescent")}} {{ReadOnlyInline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the bottom of the bounding rectangle of all the fonts used to render the text, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the bottom of the bounding rectangle of all the fonts used to render the text, in CSS pixels.
 - {{domxref("TextMetrics.actualBoundingBoxAscent")}} {{ReadOnlyInline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the top of the bounding rectangle used to render the text, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the top of the bounding rectangle used to render the text, in CSS pixels.
 - {{domxref("TextMetrics.actualBoundingBoxDescent")}} {{ReadOnlyInline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the bottom of the bounding rectangle used to render the text, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the bottom of the bounding rectangle used to render the text, in CSS pixels.
 - {{domxref("TextMetrics.emHeightAscent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the top of the _em_ square in the line box, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the top of the _em_ square in the line box, in CSS pixels.
 - {{domxref("TextMetrics.emHeightDescent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the bottom of the _em_ square in the line box, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the bottom of the _em_ square in the line box, in CSS pixels.
 - {{domxref("TextMetrics.hangingBaseline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the hanging baseline of the line box, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the hanging baseline of the line box, in CSS pixels.
 - {{domxref("TextMetrics.alphabeticBaseline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the alphabetic baseline of the line box, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the alphabetic baseline of the line box, in CSS pixels.
 - {{domxref("TextMetrics.ideographicBaseline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the ideographic baseline of the line box, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the ideographic baseline of the line box, in CSS pixels.
 
 ## Examples
 
@@ -56,16 +51,24 @@ This example demonstrates the baselines the `TextMetrics` object holds. The defa
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const baselinesAboveAlphabetic = ['fontBoundingBoxAscent', 'actualBoundingBoxAscent',
-                   'emHeightAscent', 'hangingBaseline'];
-const baselinesBelowAlphabetic = ['ideographicBaseline', 'emHeightDescent',
-                   'actualBoundingBoxDescent', 'fontBoundingBoxDescent'];
+const baselinesAboveAlphabetic = [
+  "fontBoundingBoxAscent",
+  "actualBoundingBoxAscent",
+  "emHeightAscent",
+  "hangingBaseline",
+];
+const baselinesBelowAlphabetic = [
+  "ideographicBaseline",
+  "emHeightDescent",
+  "actualBoundingBoxDescent",
+  "fontBoundingBoxDescent",
+];
 const baselines = [...baselinesAboveAlphabetic, ...baselinesBelowAlphabetic];
-ctx.font = '25px serif';
-ctx.strokeStyle = 'red';
+ctx.font = "25px serif";
+ctx.strokeStyle = "red";
 
 baselines.forEach((baseline, index) => {
   const text = `Abcdefghijklmnop (${baseline})`;
@@ -80,7 +83,6 @@ baselines.forEach((baseline, index) => {
   ctx.moveTo(0, lineY);
   ctx.lineTo(550, lineY);
   ctx.stroke();
-
 });
 ```
 
@@ -95,16 +97,18 @@ When measuring the x-direction of a piece of text, the sum of `actualBoundingBox
 It can therefore be useful to use the sum of `actualBoundingBoxLeft` and `actualBoundingBoxRight` as a more accurate way to get the absolute text width:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const text = 'Abcdefghijklmnop';
-ctx.font = 'italic 50px serif';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const text = "Abcdefghijklmnop";
+ctx.font = "italic 50px serif";
 const textMetrics = ctx.measureText(text);
 
 console.log(textMetrics.width);
 // 459.8833312988281
 
-console.log(textMetrics.actualBoundingBoxRight + textMetrics.actualBoundingBoxLeft);
+console.log(
+  textMetrics.actualBoundingBoxRight + textMetrics.actualBoundingBoxLeft,
+);
 // 462.8833333333333
 ```
 

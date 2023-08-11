@@ -1,19 +1,13 @@
 ---
 title: WeakSet() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakSet
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
 
 {{JSRef}}
 
-The **`WeakSet`** constructor lets you create
-`WeakSet` objects that store weakly held _objects_ in a collection.
+The **`WeakSet()`** constructor creates {{jsxref("WeakSet")}} objects.
 
 ## Syntax
 

@@ -1,12 +1,7 @@
 ---
 title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
-tags:
-  - HTML
-  - HTTP
-  - Intro
-  - Networking
-  - Security
+page-type: guide
 browser-compat:
   - html.elements.link.integrity
   - html.elements.script.integrity
@@ -34,7 +29,7 @@ An `integrity` value begins with at least one string, with each string including
 
 Example `integrity` string with base64-encoded sha384 hash:
 
-```
+```plain
 sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 ```
 
@@ -44,24 +39,17 @@ So `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is the "ha
 
 ### Tools for generating SRI hashes
 
+#### SRI Hash Generator
+
 The [SRI Hash Generator](https://www.srihash.org/) is an online tool you can use to generate SRI hashes.
 
-You can generate SRI hashes from the command-line with **openssl** using a command invocation such as:
+#### Using OpenSSL
+
+You can generate SRI hashes from the command-line using **OpenSSL** with a command invocation such as:
 
 ```bash
 cat FILENAME.js | openssl dgst -sha384 -binary | openssl base64 -A
 ```
-
-…or with **shasum** using a command invocation such as:
-
-```bash
-shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
-```
-
-> **Note:**
->
-> - The pipe-through `xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
-> - The pipe-through `awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
 In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 
@@ -81,6 +69,19 @@ To use that code:
 2. Right-click a file in the File Explorer, select **Send to…**, and then select `sri-hash`. You will see the integrity value in a command box.
 3. Select the integrity value and right-click to copy it to the Clipboard.
 4. Press any key to dismiss the command box.
+
+> **Note:** If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://wiki.openssl.org/index.php/Binaries.
+
+#### Using shasum
+
+You can generate SRI hashes using [**shasum**](https://linux.die.net/man/1/shasum) with a command invocation such as:
+
+```bash
+shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
+```
+
+- The pipe-through `xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
+- The pipe-through `awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
 ### Cross-Origin Resource Sharing and Subresource Integrity
 
@@ -127,8 +128,8 @@ Browsers handle SRI by doing the following:
 
 ## See also
 
-- Content Security Policy
-- {{httpheader("Content-Security-Policy")}}
+- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- The {{httpheader("Content-Security-Policy")}} HTTP header.
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederik-braun.com/using-subresource-integrity.html)
 - [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)

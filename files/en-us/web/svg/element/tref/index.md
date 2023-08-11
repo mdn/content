@@ -2,12 +2,8 @@
 title: <tref>
 slug: Web/SVG/Element/tref
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
-  - Deprecated
+status:
+  - deprecated
 browser-compat: svg.elements.tref
 ---
 

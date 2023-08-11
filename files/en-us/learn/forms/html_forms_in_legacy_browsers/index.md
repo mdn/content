@@ -1,18 +1,12 @@
 ---
 title: HTML forms in legacy browsers
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-tags:
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Intermediate
-  - Web
+page-type: guide
 ---
 
 {{LearnSidebar}}
 
-All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari and Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
+All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind "Internet Explorer", but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
 
 Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. If a browser doesn't support an HTML {{htmlelement('input')}} type, it doesn't fail: it just uses the default value of `type=text`.
 
@@ -30,7 +24,7 @@ Let's see some examples related to HTML forms.
 
 #### HTML input types
 
-All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the {{htmlattrxref("type","input")}} attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
+All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
 
 ```html
 <label for="myColor">
@@ -68,7 +62,7 @@ All HTML input types are useable in all browsers, even ancient ones, because the
 
 There are two ways to define buttons within HTML forms:
 
-- The {{HTMLElement("input")}} element with its attribute {{htmlattrxref("type","input")}} set to the values `button`, `submit`, `reset` or `image`
+- The {{HTMLElement("input")}} element with its attribute [`type`](/en-US/docs/Web/HTML/Element/input#type) set to the values `button`, `submit`, `reset` or `image`
 - The {{HTMLElement("button")}} element
 
 ##### {{HTMLElement("input")}}
@@ -108,8 +102,8 @@ See the global CSS {{cssxref('revert')}} value for more information.
 
 The {{HTMLElement("button")}} element suffered from two issues that are now resolved:
 
-- A bug in old versions of Internet Explorer sent the HTML content available between the starting and ending tag of the {{HTMLElement("button")}} element instead of the content of the {{htmlattrxref("value","button")}} attribute when clicked. This was only an issue if that value needed to be sent, such as when data processing depends on which button a user clicked.
-- Some very old browsers did not use `submit` as the default value for the {{htmlattrxref("type","button")}} attribute. While resolved in all modern browsers, it is still recommended to always set the {{htmlattrxref("type","button")}} attribute on {{HTMLElement("button")}} elements.
+- A bug in old versions of Internet Explorer sent the HTML content available between the starting and ending tag of the {{HTMLElement("button")}} element instead of the content of the [`value`](/en-US/docs/Web/HTML/Element/button#value) attribute when clicked. This was only an issue if that value needed to be sent, such as when data processing depends on which button a user clicked.
+- Some very old browsers did not use `submit` as the default value for the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute. While resolved in all modern browsers, it is still recommended to always set the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute on {{HTMLElement("button")}} elements.
 
 ```html
 <!-- Clicking this button sent "<em>Do A</em>" instead of "A" in some cases -->
@@ -156,39 +150,9 @@ One of the biggest problems is the availability of APIs. For that reason, it's c
 
 [The principles of unobtrusive JavaScript](https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) (originally written by Peter-Paul Koch for Dev.Opera.com) describes these ideas very well.
 
-### The Modernizr library
-
-There are many cases where a good "polyfill" can help a lot by providing a missing API. A [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill/) is a bit of JavaScript that "fills in the holes" in the functionality of legacy browsers. While they can be used to improve support for any functionality, using them for JavaScript is less risky than for CSS or HTML; there many cases where JavaScript can break (network issues, script conflicts, etc.). But for JavaScript, if you work with unobstructive JavaScript in mind, if polyfills are missing, it's no big deal.
-
-The best way to polyfill missing API is by using the [Modernizr](https://modernizr.com) library and its spin-off project: [YepNope](https://yepnopejs.com). Modernizr is a library that allows you to test the availability of functionality in order to act accordingly. YepNope is a conditional loading library.
-
-Here is an example:
-
-```js
-Modernizr.load({
-  // This tests if your browser supports the Form validation API
-  test: Modernizr.formvalidation,
-
-  // If the browser does not support it, the following polyfill is loaded
-  nope: "form-validation-API-polyfill.js",
-
-  // In any case, your core App file that depends on that API is loaded
-  both: "app.js",
-
-  // Once both files are loaded, this function is called in order to initialize the App.
-  complete() {
-    app.init();
-  },
-});
-```
-
-The Modernizr team conveniently maintains [a list of great polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Just pick what you need.
-
-> **Note:** Modernizr has other awesome features to help you in dealing with unobstructive JavaScript and graceful degradation techniques. Please [read the Modernizr documentation](https://modernizr.com/docs/).
-
 ### Pay attention to performance
 
-Even though scripts like Modernizr are very aware of performance, loading a 200 kilobyte polyfill can affect the performance of your application. This is especially critical with legacy browsers; many of them have a very slow JavaScript engine that can make the execution of all your polyfills painful for the user. Performance is a subject on its own, but legacy browsers are very sensitive to it: basically, they are slow and the more polyfills they need, the more JavaScript they have to process. So they are doubly burdened compared to modern browsers. Test your code with legacy browsers to see how they actually perform. Sometimes, dropping some functionality leads to a better user experience than having exactly the same functionality in all browsers. As a last reminder, just always think about the end users.
+Even though some polyfills are very aware of performance, loading additional scripts can affect the performance of your application. This is especially critical with legacy browsers; many of them have a very slow JavaScript engine that can make the execution of all your polyfills painful for the user. Performance is a subject on its own, but legacy browsers are very sensitive to it: basically, they are slow and the more polyfills they need, the more JavaScript they have to process. So they are doubly burdened compared to modern browsers. Test your code with legacy browsers to see how they actually perform. Sometimes, dropping some functionality leads to a better user experience than having exactly the same functionality in all browsers. As a last reminder, just always think about the end users.
 
 ## Conclusion
 

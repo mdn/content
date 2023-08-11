@@ -1,21 +1,13 @@
 ---
 title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.getPrototypeOf
 ---
 
 {{JSRef}}
 
-The static **`Reflect.getPrototypeOf()`** method is almost the
-same method as {{jsxref("Object.getPrototypeOf()")}}. It returns the prototype (i.e. the
-value of the internal `[[Prototype]]` property) of the specified object.
+The **`Reflect.getPrototypeOf()`** static method is like {{jsxref("Object.getPrototypeOf()")}}. It returns the prototype of the specified object.
 
 {{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
 
@@ -32,18 +24,18 @@ Reflect.getPrototypeOf(target)
 
 ### Return value
 
-The prototype of the given object. If there are no inherited properties,
-[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
+The prototype of the given object, which may be an object or `null`.
 
 ### Exceptions
 
-A {{jsxref("TypeError")}}, if `target` is not an
-{{jsxref("Object")}}.
+- {{jsxref("TypeError")}}
+  - : Thrown if `target` is not an object.
 
 ## Description
 
-The `Reflect.getPrototypeOf` method returns the prototype (i.e. the value of
-the internal `[[Prototype]]` property) of the specified object.
+`Reflect.getPrototypeOf()` provides the reflective semantic of retrieving the prototype of an object. The only difference with {{jsxref("Object.getPrototypeOf()")}} is how non-object targets are handled. `Reflect.getPrototypeOf()` throws a {{jsxref("TypeError")}} if the target is not an object, while `Object.getPrototypeOf()` coerces it to an object.
+
+`Reflect.getPrototypeOf()` invokes the `[[GetPrototypeOf]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) of `target`.
 
 ## Examples
 
@@ -55,7 +47,7 @@ Reflect.getPrototypeOf(Object.prototype); // null
 Reflect.getPrototypeOf(Object.create(null)); // null
 ```
 
-### Compared to Object.getPrototypeOf()
+### Difference with Object.getPrototypeOf()
 
 ```js
 // Same result for Objects
@@ -87,3 +79,4 @@ Reflect.getPrototypeOf(Object("foo")); // String.prototype
 - [Polyfill of `Reflect.getPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getPrototypeOf()")}}
+- [`Proxy`'s `getPrototypeOf` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf)

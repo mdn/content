@@ -2,13 +2,6 @@
 title: Introduction to the File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API/Introduction
 page-type: guide
-tags:
-  - API
-  - Beginner
-  - File
-  - File and Directory Entries API
-  - Guide
-  - Introduction
 browser-compat: api.FileSystem
 ---
 
@@ -20,7 +13,7 @@ The File and Directory Entries API interacts with other related APIs. It was bui
 
 ## About this document
 
-This introduction discusses essential concepts and terminology in the File and Directory Entries API. It gives you the big picture and orients you to [key concepts](#concepts). It also describes [restrictions](#restrictions) that raise security errors if you ignore them. To learn more about terminology used in this API, see the [Definitions](#definitions) section.
+This introduction discusses essential concepts and terminology in the File and Directory Entries API. It gives you the big picture and orients you to [key concepts](#big_concepts). It also describes [restrictions](#restrictions) that raise security errors if you ignore them. To learn more about terminology used in this API, see the [Definitions](#definitions) section.
 
 For the reference documentation on the File and Directory Entries API, see the [reference](/en-US/docs/Web/API/FileSystem) landing page and its subpages.
 
@@ -28,7 +21,7 @@ The specification is still being defined and is subject to change.
 
 ## Overview
 
-The File and Directory Entries API includes both [asynchronous](#asynchronous_apis) and [synchronous](#synchronous_apis) versions of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with [WebWorkers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
+The File and Directory Entries API includes both [asynchronous and synchronous versions](#asynchronous_and_synchronous_versions) of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with [WebWorkers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 
 ### Usefulness of the API
 
@@ -79,49 +72,44 @@ The following are just a few examples of how you can use the File and Directory 
 
 ## Big concepts
 
-Before you start using the File and Directory Entries API, you need to understand a few concepts:
+Before using the File and Directory Entries API, you must understand a few concepts.
 
-- [The File and Directory Entries API is a virtual representation of a file system](#virtual)
-- [The File and Directory Entries API can use different storage types](#storage)
-- [Browsers impose storage quota](#quota)
-- [The File and Directory Entries API has asynchronous and synchronous versions](#versions)
-- [When using the asynchronous API, always use the error callbacks](#errorcallbacks)
-- [The File and Directory Entries API interacts with other APIs](#interfaces)
-- [The File and Directory Entries API is case-sensitive](#case)
-
-### The File and Directory Entries API is a virtual representation of a file system
+### Virtualized file system
 
 The API doesn't give you access to the local file system, nor is the sandbox really a section of the file system. Instead, it is a virtualized file system that looks like a full-fledged file system to the web app. It does not necessarily have a relationship to the local file system outside the browser.
 
 What this means is that a web app and a desktop app cannot share the same file at the same time. The API does not let your web app reach outside the browser to files that desktop apps can also work on. You can, however, export a file from a web app to a desktop app. For example, you can use the File API, create a blob, redirect an iframe to the blob, and invoke the download manager.
 
-### The File and Directory Entries API can use different storage types
+### Different storage types
 
 An application can request temporary or persistent storage. Temporary storage is easier to get, because the browser just gives it to you, but it is limited and can be deleted by the browser when it runs out of space. Persistent storage, on the other hand, might offer you larger space that can only be deleted by the user, but it requires the user to grant you permission.
 
 Use temporary storage for caching and persistent storage for data that you want your app to keep—such as user-generated or unique data.
 
-### Browsers impose storage quotas
+### Storage quotas
 
 To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
 
 How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/).
 
-### The File and Directory Entries API has asynchronous and synchronous versions
+### Asynchronous and synchronous versions
 
 The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.
 
-- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
-- **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
-- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
+- WebWorkers
+  - : The asynchronous API can be used in either the document or [WebWorkers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
+- Callbacks
+  - : The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
+- Global methods of the asynchronous and synchronous APIs
+  - : The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
 
 The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.
 
-### When using the asynchronous API, always use the error callbacks
+### Using the error callbacks for asynchronous API
 
 When using the asynchronous API, always use the error callbacks. Although the error callbacks for the methods are optional parameters, they are not optional for your sanity. You want to know why your calls failed. At minimum, handle the errors to provide error messages, so you'll have an idea of what's going on.
 
-### The File and Directory Entries API interacts with other APIs
+### Interacting with other APIs
 
 The File and Directory Entries API is designed to be used with other APIs and elements on the web platform. For example, you are likely to use one of the following:
 
@@ -130,7 +118,7 @@ The File and Directory Entries API is designed to be used with other APIs and el
 - Web Workers (for the synchronous version of the File and Directory Entries API)
 - The `input` element (to programmatically obtain a list of files from the element)
 
-### The File and Directory Entries API is case sensitive
+### Case-sensitive
 
 The filesystem API is case-sensitive, and case-preserving.
 
@@ -138,22 +126,17 @@ The filesystem API is case-sensitive, and case-preserving.
 
 For security reasons, browsers impose restrictions on file access. If you ignore them, you will get security errors.
 
-- [The File and Directory Entries API adheres to the same-origin policy](#origin)
-- [The File and Directory Entries API does not let you create and rename executable files](#execute)
-- [The file system is sandboxed](#sandbox)
-- [You cannot run your app from file://](#file)
-
-### The File and Directory Entries API adheres to the same-origin policy
+### Adhering to the same-origin policy
 
 An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.
 
 The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in `http://www.example.com/app/` can access files from `http://www.example.com/dir/`, because they have the same origin, it cannot retrieve files from `http://www.example.com:8080/dir/` (different port) or `https://www.example.com/dir/` (different protocol).
 
-### The File and Directory Entries API does not let you create and rename executable files
+### Unable to create and rename executable files
 
 To prevent malicious apps from running hostile executables, you cannot create executable files within the sandbox of the File and Directory Entries API.
 
-### The file system is sandboxed
+### Sandboxed file system
 
 Because the file system is sandboxed, a web app cannot access another app's files. You also cannot read or write files to an arbitrary folder (for example, My Pictures and My Documents) on the user's hard drive.
 

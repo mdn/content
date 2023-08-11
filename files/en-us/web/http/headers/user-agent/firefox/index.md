@@ -1,13 +1,7 @@
 ---
 title: Firefox user agent string reference
 slug: Web/HTTP/Headers/User-Agent/Firefox
-tags:
-  - Compatibility
-  - Firefox
-  - Firefox 4
-  - Gecko
-  - Gecko 2.0
-  - Guide
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -22,8 +16,6 @@ The UA string of Firefox itself is broken down into four components:
 
 - `Mozilla/5.0` is the general token that says the browser is Mozilla compatible, and is common to almost every browser today.
 - `platform` describes the native platform the browser is running on (e.g. Windows, Mac, Linux or Android), and whether or not it's a mobile phone. Firefox OS phones say "`Mobile`"; the web is the platform. Note that `platform` can consist of multiple "; "-separated tokens. See below for further details and examples.
-
-  > **Note:** Though fixed in Firefox 69, previous 32-bit versions of Firefox running on 64-bit processors would report that the system is using a 32-bit CPU.
 
 - `rv:geckoversion` indicates the release version of Gecko (such as "`17.0`"). In recent browsers, `geckoversion` is the same as `firefoxversion`.
 - `Gecko/geckotrail` indicates that the browser is based on Gecko.
@@ -41,15 +33,13 @@ For other products based on Gecko, the string can take one of two forms, where t
 - `appname/appversion` indicates the application name and version. For instance, this could be "`Camino/2.1.1`", or "`SeaMonkey/2.7.1`".
 - `Firefox/firefoxversion` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefoxversion` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
 
-Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to add user agent parts, but that has not been possible since {{ Bug(581008) }}.
+Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to add user agent parts, but that has not been possible since [Webkit bug 581008](https://bugzil.la/581008).
 
 ## Mobile and Tablet indicators
 
-> **Note:** Only from Firefox 11 to 68.
-
 The `platform` part of the UA string indicates if Firefox is running on a phone-sized or tablet device. When Firefox runs on a device that has the phone form factor, there is a `Mobile;` token in the `platform` part of the UA string. When Firefox runs on a tablet device, there is a `Tablet;` token in the `platform` part of the UA string instead. For example:
 
-```
+```plain
 Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
 Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 ```
@@ -64,31 +54,14 @@ The preferred way to target content to a device form factor is to use CSS Media 
 
 Windows user agents have the following variations, where _x.y_ is the Windows NT version (for instance, Windows NT 6.1).
 
-| Windows version                  | Gecko user agent string                                                           |
-| -------------------------------- | --------------------------------------------------------------------------------- |
-| Windows NT on x86 or aarch64 CPU | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
-| Windows NT on x64 CPU            | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
-
-## Macintosh
-
-Here, _x.y_ is the version of Mac OS X (for instance, Mac OS X 10.15). Starting in Firefox 87, Firefox caps the reported Mac OS X version number to 10.15, so macOS 11.0 Big Sur and later will be reported as "10.15" in the User-Agent string.
-
-Note that [Firefox no longer officially supports Mac OS X on PowerPC](https://support.mozilla.org/kb/firefox-no-longer-works-mac-os-10-4-or-powerpc).
-
-| Mac OS X version                    | Gecko user agent string                                                            |
-| ----------------------------------- | ---------------------------------------------------------------------------------- |
-| Mac OS X on x86, x86_64, or aarch64 | Mozilla/5.0 (Macintosh; Intel Mac OS X _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0 |
-| Mac OS X on PowerPC                 | Mozilla/5.0 (Macintosh; PPC Mac OS X _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0   |
-
 ## Linux
 
 Linux is a more diverse platform. Your distribution of Linux might include an extension that changes your user-agent. A few common examples are given below.
 
-| Linux version                                  | Gecko user agent string                                                            |
-| ---------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Linux desktop on i686 CPU                      | Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0                 |
-| Linux desktop on x86_64 CPU                    | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0               |
-| Nokia N900 Linux mobile, on the Fennec browser | Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0) Gecko/20100101 Firefox/10.0 Fennec/10.0 |
+| Linux version               | Gecko user agent string                                              |
+| --------------------------- | -------------------------------------------------------------------- |
+| Linux desktop on i686 CPU   | Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0   |
+| Linux desktop on x86_64 CPU | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
 
 ## Android (version 40 and below)
 
@@ -110,7 +83,7 @@ Beginning in version 41, Firefox for Android will contain the Android version as
 
 From version 1, Focus is powered by Android WebView and uses the following user agent string format:
 
-```
+```plain
 Mozilla/5.0 (Linux; <Android Version> <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Version/4.0 Focus/<focusversion> Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>
 ```
 
@@ -138,7 +111,7 @@ Since version 4.1, Klar for Android uses the same UA string as [Focus for Androi
 
 Version 7 of Focus for iOS uses a user agent string with the following format:
 
-```
+```plain
 Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/7.0.4 Mobile/16B91 Safari/605.1.15
 ```
 
@@ -148,7 +121,7 @@ Note: this user agent was retrieved from an iPhone XR simulator and may be diffe
 
 Version 3 (and probably earlier) of Firefox for Fire TV use a user agent string with the following format:
 
-```
+```plain
 Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
 ```
 
@@ -160,7 +133,7 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 
 From version 1.1, Firefox for Echo Show uses a user agent string with the following format:
 
-```
+```plain
 Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
 ```
 
@@ -184,7 +157,7 @@ Although it is **strongly discouraged** by Mozilla, some handset manufacturers u
 Here is a JavaScript regular expression that will detect all mobile devices, including devices with a device id in their UA string:
 
 ```js
-/mobi/i
+/mobi/i;
 ```
 
 The `i` makes it case-insensitive, and `mobi` matches all mobile browsers.
@@ -209,34 +182,7 @@ While the version number for Firefox OS is not included in the UA string, it is 
 
 Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc.). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
 
-## Firefox for iOS
-
-Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://developer.chrome.com/docs/multidevice/user-agent/#chrome_for_ios_user_agent).
-
-| Form factor | Firefox for iOS user agent string                                                                                                           |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| iPod        | Mozilla/5.0 (iPod touch; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) **FxiOS/1.0** Mobile/12F69 Safari/600.1.4 |
-| iPhone      | Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) **FxiOS/1.0** Mobile/12F69 Safari/600.1.4     |
-| iPad        | Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15                       |
-
-Regarding the deviation on iPad form factor, see this [issue](https://github.com/mozilla-mobile/firefox-ios/issues/6620).
-
-## Other Gecko-based browsers
-
-These are some sample UA strings from other Gecko-based browsers on various platforms. Note that many of these have not yet been released on Gecko 2.0!
-
-| Browser                        | Gecko user agent string                                                                               |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| Firefox for Maemo (Nokia N900) | Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1              |
-| Camino on Mac                  | Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Camino/2.2.1      |
-| SeaMonkey on Windows           | Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1                 |
-| SeaMonkey on Mac               | Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1 |
-| SeaMonkey on Linux             | Mozilla/5.0 (X11; Linux i686; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1                |
-
 ## See also
 
-- [Firefox OS User Agent String](https://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/) (blog post w/[bug 777710](https://bugzilla.mozilla.org/show_bug.cgi?id=777710) reference)
-- [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/) (blog post)
-- Recommendations on [sniffing the UA string for cross-browser support](/en-US/docs/Browser_Detection_and_Cross_Browser_Support)
+- Recommendations on [sniffing the UA string for cross-browser support](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - [window.navigator.userAgent](/en-US/docs/Web/API/Window/navigator)
-- [Add Android version to Fennec UA String (bug 1169772)](https://bugzilla.mozilla.org/show_bug.cgi?id=1169772)

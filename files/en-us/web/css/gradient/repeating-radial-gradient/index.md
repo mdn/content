@@ -2,16 +2,6 @@
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Gradients
-  - Graphics
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.image.gradient.repeating-radial-gradient
 ---
 
@@ -130,7 +120,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 The elliptical gradient will be centered 20% from the top left, and will repeat 10 times between the center and the farthest corner (the bottom right corner). Browsers supporting multi position color stops will display a red and green striped ellipse. Browsers not supporting the syntax yet will see a gradient that goes from red to black and then from blue to green.
 
-> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -142,7 +132,7 @@ The elliptical gradient will be centered 20% from the top left, and will repeat 
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

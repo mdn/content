@@ -2,14 +2,9 @@
 title: "-webkit-animation"
 slug: Web/CSS/@media/-webkit-animation
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Reference
-  - WebKit
-  - media feature
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.at-rules.media.-webkit-animation
 ---
 
@@ -17,7 +12,7 @@ browser-compat: css.at-rules.media.-webkit-animation
 
 > **Note:** All browsers support the [`animation`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.
 
-The **`-webkit-animation`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if vendor-prefixed CSS {{cssxref("animation")}}s are supported.
+The **`-webkit-animation`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if vendor-prefixed CSS {{cssxref("animation")}}s are supported.
 
 Apple has [a description in Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 
@@ -58,6 +53,6 @@ Not part of any standard.
 - [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
 - [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
 - [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
-- {{cssxref("animation")}} and [using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- {{cssxref("@media")}} and [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- {{cssxref("@supports")}} and [using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- {{cssxref("animation")}} and [using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- {{cssxref("@media")}} and [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@supports")}} and [using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)

@@ -2,24 +2,9 @@
 title: MediaRecorderErrorEvent
 slug: Web/API/MediaRecorderErrorEvent
 page-type: web-api-interface
-tags:
-  - AV
-  - Audio
-  - Error
-  - Event
-  - Interface
-  - Media
-  - MediaRecorderErrorEvent
-  - MediaStream
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording Audio
-  - Recording Media
-  - Recording Video
-  - Video
-  - WebRTC
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaRecorderErrorEvent
 ---
 

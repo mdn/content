@@ -1,21 +1,10 @@
 ---
-title: NavigateEvent.canIntercept
+title: "NavigateEvent: canIntercept property"
+short-title: canIntercept
 slug: Web/API/NavigateEvent/canIntercept
 page-type: web-api-instance-property
-tags:
-  - API
-  - canIntercept
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.canIntercept
 ---
 
@@ -40,7 +29,7 @@ A boolean value—`true` if the navigation can be intercepted, `false` if not.
 ## Examples
 
 ```js
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   // Some navigations, e.g. cross-origin navigations, we
   // cannot intercept. Let the browser handle those normally.
   if (!event.canIntercept) {
@@ -59,7 +48,7 @@ navigation.addEventListener("navigate", event => {
       } else {
         doSinglePageAppNav(event.destination, event.signal);
       }
-    }
+    },
   });
 });
 ```

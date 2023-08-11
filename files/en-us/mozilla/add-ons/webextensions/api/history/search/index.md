@@ -1,16 +1,7 @@
 ---
 title: history.search()
 slug: Mozilla/Add-ons/WebExtensions/API/history/search
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - Search
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.history.search
 ---
 
@@ -44,7 +35,7 @@ let searching = browser.history.search(
 
         Title: `"Example Domain"`
 
-        ```
+        ```plain
         "http"              -> matches
         "domain"            -> matches
         "MAIN ample"        -> matches

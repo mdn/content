@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.naturalHeight
+title: "PerformanceElementTiming: naturalHeight property"
+short-title: naturalHeight
 slug: Web/API/PerformanceElementTiming/naturalHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - naturalHeight
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.naturalHeight
 ---
 
@@ -18,11 +14,13 @@ The **`naturalHeight`** read-only property of the {{domxref("PerformanceElementT
 
 ## Value
 
-An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the image if this is applied to an image, 0 for text.
+An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the image if this is applied to an image, `0` for text.
 
 ## Examples
 
-In this example the image file has a width of 1000px and a height of 750px. Calling `entry.naturalHeight` returns `750`, that being the intrinsic height in pixels.
+### Logging `naturalHeight`
+
+In this example an {{HTMLElement("image")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. The image file has a width of 1000px and a height of 750px. Calling `entry.naturalHeight` returns `750`, that being the intrinsic height in pixels.
 
 ```html
 <img
@@ -40,10 +38,8 @@ const observer = new PerformanceObserver((list) => {
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+observer.observe({ type: "element", buffered: true });
 ```
-
-> **Note:** This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface.
 
 ## Specifications
 

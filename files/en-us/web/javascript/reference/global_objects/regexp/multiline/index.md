@@ -1,19 +1,13 @@
 ---
 title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.multiline
 ---
 
 {{JSRef}}
 
-The **`multiline`** accessor property indicates whether or not the `m` flag is used with the regular expression.
+The **`multiline`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `m` flag is used with this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}
 

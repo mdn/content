@@ -2,22 +2,12 @@
 title: env()
 slug: Web/CSS/env
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Variables
-  - Draft
-  - Function
-  - Reference
-  - Variables
-  - env
-  - env()
 browser-compat: css.properties.custom-property.env
 ---
 
 {{CSSRef}}
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to insert the value of a user-agent defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to insert the value of a user-agent defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than author-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
 
 In addition, unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (e.g. in [Media query rules](/en-US/docs/Web/CSS/@media)). As the spec evolves, it may also be usable in other places such as selectors.
 
@@ -49,6 +39,8 @@ env(safe-area-inset-left, 1.4rem);
   - : The `safe-area-inset-*` variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.
 - `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
   - : The `titlebar-area-*` variables are useful for PWA installed on Desktop devices. When a desktop PWA uses the `window-controls-overlay` [display_override](/en-US/docs/Web/Manifest/display_override) value, then it can use the `titlebar-area-*` variables to make sure content doesn't overlap with the window control buttons (i.e. minimize, maximize, and close).
+- `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
+  - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's appearance. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
 
 > **Note:** Unlike other CSS properties, user agent-defined property names are case-sensitive.
 
@@ -163,7 +155,7 @@ p {
 padding: env(safe-area-inset-bottom, 50px);
 
 /* 50px because UA properties are case sensitive */
-padding: env(safe-area-inset-bottom, 50px);
+padding: env(Safe-area-inset-bottom, 50px);
 
 /* as if padding: '50px 20px' were set because x is not a valid environment variable */
 padding: env(x, 50px 20px);
@@ -220,7 +212,7 @@ main {
 ## See also
 
 - {{CSSxRef("var", "var(…)")}}
-- [CSS Custom Properties for Cascading Variables](/en-US/docs/Web/CSS/CSS_Variables)
+- [CSS Custom Properties for Cascading Variables](/en-US/docs/Web/CSS/CSS_cascading_variables)
 - [Custom Properties (--\*)](/en-US/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)

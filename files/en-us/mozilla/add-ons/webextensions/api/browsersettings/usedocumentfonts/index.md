@@ -1,15 +1,7 @@
 ---
 title: browserSettings.useDocumentFonts
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - useDocumentFonts
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.useDocumentFonts
 ---
 

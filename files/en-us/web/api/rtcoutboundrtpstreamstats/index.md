@@ -2,29 +2,18 @@
 title: RTCOutboundRtpStreamStats
 slug: Web/API/RTCOutboundRtpStreamStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Outbound
-  - RTCOutboundRtpStreamStats
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - stream
-browser-compat: api.RTCOutboundRtpStreamStats
+browser-compat: api.RTCStatsReport.type_outbound-rtp
 ---
 
 {{APIRef("WebRTC")}}
 
-The **`RTCOutboundRtpStreamStats`** dictionary is the {{domxref("RTCStats")}}-based object which provides metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an {{domxref("RTCRtpSender")}}.
+The **`RTCOutboundRtpStreamStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an {{domxref("RTCRtpSender")}}.
+
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpSender.getStats()")}} until you find a report with the [`type`](#type) of `outbound-rtp`.
 
 ## Instance properties
 
-_The `RTCOutboundRtpStreamStats` dictionary includes the following properties in addition to those it inherits from {{domxref("RTCSentRtpStreamStats")}}, {{domxref("RTCRtpStreamStats")}}, and {{domxref("RTCStats")}}._
+<!-- he `RTCOutboundRtpStreamStats` dictionary includes the following properties in addition to those it inherits from {{domxref("RTCSentRtpStreamStats")}}, {{domxref("RTCRtpStreamStats")}}._ -->
 
 - {{domxref("RTCOutboundRtpStreamStats.averageRtcpInterval", "averageRtcpInterval")}}
   - : A floating-point value indicating the average {{Glossary("RTCP")}} interval between two consecutive compound RTCP packets.
@@ -33,7 +22,8 @@ _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in
 - {{domxref("RTCOutboundRtpStreamStats.framesEncoded", "framesEncoded")}}
   - : The number of frames that have been successfully encoded so far for sending on this RTP stream. _Only valid for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.lastPacketSentTimestamp", "lastPacketSentTimestamp")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was sent for this SSRC. The {{domxref("RTCStats.timestamp", "timestamp")}} property, on the other hand, indicates the time at which the `RTCOutboundRtpStreamStats` object was generated.
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was sent for this SSRC.
+    The {{domxref("RTCOutboundRtpStreamStats.timestamp", "timestamp")}} property, on the other hand, indicates the time at which the `RTCOutboundRtpStreamStats` object was generated.
 - {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
   - : An integer value indicating the total number of Negative ACKnolwedgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
 - {{domxref("RTCOutboundRtpStreamStats.perDscpPacketsSent", "perDscpPacketsSent")}}
@@ -53,7 +43,7 @@ _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in
 - {{domxref("RTCOutboundRtpStreamStats.retransmittedPacketsSent", "retransmittedPacketsSent")}}
   - : The total number of packets that have needed to be retransmitted for this source as of the time the statistics were sampled. These retransmitted packets are included in the value returned by {{domxref("RTCInboundRtpStreamStats.packetsSent", "packetsSent")}}.
 - {{domxref("RTCOutboundRtpStreamStats.senderId", "senderId")}}
-  - : The {{domxref("RTCStats.id", "id")}} of the {{domxref("RTCAudioSenderStats")}} or {{domxref("RTCVideoSenderStats")}} object containing statistics about this stream's {{domxref("RTCRtpSender")}}.
+  - : The {{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCAudioSenderStats")}} or {{domxref("RTCVideoSenderStats")}} object containing statistics about this stream's {{domxref("RTCRtpSender")}}.
 - {{domxref("RTCOutboundRtpStreamStats.sliCount", "sliCount")}}
   - : An integer indicating the number of times this sender received a Slice Loss Indication (SLI) frame from the remote peer, indicating that one or more consecutive video macroblocks have been lost or corrupted. Available only for video streams.
 - {{domxref("RTCOutboundRtpStreamStats.targetBitrate", "targetBitrate")}}
@@ -63,7 +53,20 @@ _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in
 - {{domxref("RTCOutboundRtpStreamStats.totalEncodeTime", "totalEncodeTime")}}
   - : A floating-point value indicating the total number of seconds that have been spent encoding the frames encoded so far by this {{domxref("RTCRtpSender")}}.
 - {{domxref("RTCOutboundRtpStreamStats.trackId", "trackId")}}
-  - : The {{domxref("RTCStats.id", "id")}} of the {{domxref("RTCSenderAudioTrackAttachmentStats")}} or {{domxref("RTCSenderVideoTrackAttachmentStats")}} object containing the current track attachment to the {{domxref("RTCRtpSender")}} responsible for this stream.
+  - : The {{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCSenderAudioTrackAttachmentStats")}} or {{domxref("RTCSenderVideoTrackAttachmentStats")}} object containing the current track attachment to the {{domxref("RTCRtpSender")}} responsible for this stream.
+
+### Common instance properties
+
+The following properties are common to all WebRTC statistics objects.
+
+<!-- RTCStats -->
+
+- {{domxref("RTCOutboundRtpStreamStats.id", "id")}}
+  - : A string that uniquely identifies the object that is being monitored to produce this set of statistics.
+- {{domxref("RTCOutboundRtpStreamStats.timestamp", "timestamp")}}
+  - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
+- {{domxref("RTCOutboundRtpStreamStats.type", "type")}}
+  - : A string with the value `"outbound-rtp"`, indicating the type of statistics that the object contains.
 
 ## Examples
 
@@ -77,5 +80,4 @@ _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in
 
 ## See also
 
-- {{domxref("RTCStats")}}
 - {{domxref("RTCStatsReport")}}

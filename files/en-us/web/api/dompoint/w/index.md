@@ -1,18 +1,8 @@
 ---
-title: DOMPoint.w
+title: "DOMPoint: w property"
+short-title: w
 slug: Web/API/DOMPoint/w
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Reference
-  - W
-  - perspective
 browser-compat: api.DOMPoint.w
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.logical_or_assignment
 ---
 
@@ -19,12 +14,12 @@ The **logical OR assignment (`x ||= y`)** operator only assigns if `x` is {{Glos
 ## Syntax
 
 ```js-nolint
-expr1 ||= expr2
+x ||= y
 ```
 
 ## Description
 
-Logical OR assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#short-circuiting), meaning that `x ||= y` is equivalent to:
+Logical OR assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x ||= y` is equivalent to:
 
 ```js
 x || (x = y);

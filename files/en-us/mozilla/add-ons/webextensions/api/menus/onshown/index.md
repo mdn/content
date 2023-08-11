@@ -1,15 +1,7 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - menus
-  - onShown
+page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onShown
 ---
 
@@ -21,7 +13,7 @@ An extension can use this event to update its menu items using information that'
 
 The handler can add, remove, or update menu items.
 
-For example, the [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open) example extension adds a menu item that's shown when the user clicks a link, and that, when clicked, just opens the link. It uses `onShown` and `refresh()` to annotate the menu item with the hostname for the link, so the user can easily see where they will go before they click.
+For example, the [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/main/menu-labelled-open) example extension adds a menu item that's shown when the user clicks a link, and that, when clicked, just opens the link. It uses `onShown` and `refresh()` to annotate the menu item with the hostname for the link, so the user can easily see where they will go before they click.
 
 Note that an extension should not take too much time before calling `refresh()`, or the update will be noticeable to the user.
 
@@ -101,9 +93,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `info`
 

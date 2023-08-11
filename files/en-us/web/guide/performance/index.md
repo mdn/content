@@ -1,11 +1,7 @@
 ---
 title: Optimization and performance
 slug: Web/Guide/Performance
-tags:
-  - Landing
-  - Optimization
-  - Performance
-  - Web
+page-type: landing-page
 ---
 
 <section id="Quick_links">
@@ -24,5 +20,4 @@ The above resources also include web performance best practices. Making web perf
 ## See also
 
 - [Fast load times](https://web.dev/fast/) on _web.dev_
-
-{{LandingPageListSubpages}}
+- [Web performance](/en-US/docs/Web/Performance)

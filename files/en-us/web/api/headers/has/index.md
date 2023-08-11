@@ -1,17 +1,12 @@
 ---
-title: Headers.has()
+title: "Headers: has() method"
+short-title: has()
 slug: Web/API/Headers/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - has
 browser-compat: api.Headers.has
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`has()`** method of the {{domxref("Headers")}} interface
 returns a boolean stating whether a `Headers` object contains a certain
@@ -49,9 +44,9 @@ You could add a header to this using {{domxref("Headers.append")}}, then test fo
 existence of it using `has()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.has('Content-Type'); // Returns true
-myHeaders.has('Accept-Encoding'); // Returns false
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.has("Content-Type"); // Returns true
+myHeaders.has("Accept-Encoding"); // Returns false
 ```
 
 ## Specifications

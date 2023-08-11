@@ -1,13 +1,9 @@
 ---
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
-tags:
-  - JavaScript
-  - Deprecated
-  - Property
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.input
 ---
 
@@ -25,7 +21,7 @@ The value of `input` updates whenever a `RegExp` (but not a `RegExp` subclass) i
 
 ## Examples
 
-### Using input and $_
+### Using input and $\_
 
 ```js
 const re = /hi/g;
@@ -51,4 +47,4 @@ RegExp.$_; // "hi world!"
 - {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
 - {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1, …, RegExp.$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

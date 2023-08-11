@@ -1,21 +1,8 @@
 ---
 title: "RTCDataChannel: closing event"
+short-title: closing
 slug: Web/API/RTCDataChannel/closing_event
 page-type: web-api-event
-tags:
-  - API
-  - Communications
-  - Connection
-  - Disconnecting
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - closing
-  - events
-  - Event
 browser-compat: api.RTCDataChannel.closing_event
 ---
 

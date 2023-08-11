@@ -1,13 +1,10 @@
 ---
-title: NDEFReader.write()
+title: "NDEFReader: write() method"
+short-title: write()
 slug: Web/API/NDEFReader/write
 page-type: web-api-instance-method
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Method
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.write
 ---
 
@@ -145,7 +142,7 @@ function write(data, { timeout } = {}) {
       (event) => {
         ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
       },
-      { once: true }
+      { once: true },
     );
   });
 }

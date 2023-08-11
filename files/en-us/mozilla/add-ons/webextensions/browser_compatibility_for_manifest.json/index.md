@@ -1,18 +1,11 @@
 ---
 title: Browser compatibility for manifest.json
 slug: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
+page-type: guide
 browser-compat: webextensions.manifest
 ---
 
-{{AddonSidebar}}
-
-{{Compat}}
-
-> **Note:**
+{{AddonSidebar}}{{Compat}}
 
 ## See also
 

@@ -1,14 +1,7 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-  - itemid
+page-type: html-attribute
 browser-compat: html.global_attributes.itemid
 ---
 

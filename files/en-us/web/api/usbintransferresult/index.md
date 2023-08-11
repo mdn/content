@@ -2,15 +2,8 @@
 title: USBInTransferResult
 slug: Web/API/USBInTransferResult
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBInTransferResult
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBInTransferResult
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - instantiate
 browser-compat: javascript.builtins.WebAssembly.instantiate
 ---
 
@@ -17,7 +9,7 @@ browser-compat: javascript.builtins.WebAssembly.instantiate
 The **`WebAssembly.instantiate()`** function allows you to
 compile and instantiate WebAssembly code. This function has two overloads:
 
-- The primary overload takes the WebAssembly binary code, in the form of a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
+- The primary overload takes the WebAssembly binary code, in the form of a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
   {{jsxref("ArrayBuffer")}}, and performs both compilation and instantiation in one
   step. The returned `Promise` resolves to both a compiled
   [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) and its first [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance).
@@ -27,14 +19,14 @@ compile and instantiate WebAssembly code. This function has two overloads:
   been compiled.
 
 > **Warning:** This method is not the most efficient way of fetching and
-> instantiating wasm modules. If at all possible, you should use the newer
+> instantiating Wasm modules. If at all possible, you should use the newer
 > [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method instead, which fetches,
 > compiles, and instantiates a module all in one step, directly from the raw bytecode,
 > so doesn't require conversion to an {{jsxref("ArrayBuffer")}}.
 
 ## Syntax
 
-### Primary overload — taking wasm binary code
+### Primary overload — taking Wasm binary code
 
 ```js
 WebAssembly.instantiate(bufferSource, importObject);
@@ -43,8 +35,8 @@ WebAssembly.instantiate(bufferSource, importObject);
 #### Parameters
 
 - `bufferSource`
-  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
-    {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to
+  - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
+    {{jsxref("ArrayBuffer")}} containing the binary code of the Wasm module you want to
     compile, or a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module).
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
@@ -103,7 +95,7 @@ A `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly
 ### First overload example
 
 After fetching some WebAssembly bytecode using fetch, we compile and instantiate the
-module using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) function, importing a
+module using the `WebAssembly.instantiate()` function, importing a
 JavaScript function into the WebAssembly Module in the process. We then call an [Exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions)
 that is exported by the `Instance`.
 
@@ -137,7 +129,7 @@ compiles the loaded simple.wasm byte code using the
 const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
-  worker.postMessage(mod)
+  worker.postMessage(mod),
 );
 ```
 
@@ -145,7 +137,7 @@ In the worker (see
 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
 receive the module from the main thread. When the module is received, we create an
-instance from it using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) method and invoke an
+instance from it using the `WebAssembly.instantiate()` method and invoke an
 exported function from inside it.
 
 ```js

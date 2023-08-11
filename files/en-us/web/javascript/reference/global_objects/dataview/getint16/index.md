@@ -1,19 +1,13 @@
 ---
 title: DataView.prototype.getInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getInt16
 ---
 
 {{JSRef}}
 
-The **`getInt16()`** method gets a signed 16-bit integer
-(short) at the specified byte offset from the start of the {{jsxref("DataView")}}.
+The **`getInt16()`** method of {{jsxref("DataView")}} instances reads 2 bytes starting at the specified byte offset of this `DataView` and interprets them as a 16-bit signed integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}
 
@@ -28,8 +22,8 @@ getInt16(byteOffset, littleEndian)
 
 - `byteOffset`
   - : The offset, in byte, from the start of the view where to read the data.
-- `littleEndian`
-  - : {{optional_inline}} Indicates whether the 16-bit int is stored in
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 16-bit int is stored in
     {{Glossary("Endianness", "little- or big-endian")}} format. If `false` or
     `undefined`, a big-endian value is read.
 

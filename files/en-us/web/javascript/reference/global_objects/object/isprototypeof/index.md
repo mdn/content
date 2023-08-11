@@ -1,19 +1,13 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-  - isPrototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.isPrototypeOf
 ---
 
 {{JSRef}}
 
-The **`isPrototypeOf()`** method checks if an object exists in another object's prototype chain.
+The **`isPrototypeOf()`** method of {{jsxref("Object")}} instances checks if this object exists in another object's prototype chain.
 
 > **Note:** `isPrototypeOf()` differs from the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator. In the expression `object instanceof AFunction`, `object`'s prototype chain is checked against `AFunction.prototype`, not against `AFunction` itself.
 
@@ -62,13 +56,13 @@ const baz = new Baz();
 // foo: Foo --> Object
 // bar: Bar --> Foo --> Object
 // baz: Baz --> Bar --> Foo --> Object
-console.log(Baz.prototype.isPrototypeOf(baz));    // true
-console.log(Baz.prototype.isPrototypeOf(bar));    // false
-console.log(Baz.prototype.isPrototypeOf(foo));    // false
-console.log(Bar.prototype.isPrototypeOf(baz));    // true
-console.log(Bar.prototype.isPrototypeOf(foo));    // false
-console.log(Foo.prototype.isPrototypeOf(baz));    // true
-console.log(Foo.prototype.isPrototypeOf(bar));    // true
+console.log(Baz.prototype.isPrototypeOf(baz)); // true
+console.log(Baz.prototype.isPrototypeOf(bar)); // false
+console.log(Baz.prototype.isPrototypeOf(foo)); // false
+console.log(Bar.prototype.isPrototypeOf(baz)); // true
+console.log(Bar.prototype.isPrototypeOf(foo)); // false
+console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 

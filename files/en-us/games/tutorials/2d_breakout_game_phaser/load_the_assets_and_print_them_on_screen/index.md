@@ -1,16 +1,7 @@
 ---
 title: Load the assets and print them on screen
-slug: >-
-  Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Sprites
-  - Tutorial
+slug: Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
+page-type: guide
 ---
 
 {{GamesSidebar}}

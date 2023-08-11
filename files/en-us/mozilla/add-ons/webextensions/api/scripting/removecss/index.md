@@ -1,15 +1,7 @@
 ---
 title: scripting.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/removeCSS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeCSS
-  - scripting
+page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.removeCSS
 ---
 

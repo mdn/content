@@ -1,13 +1,8 @@
 ---
-title: "aria-dropeffect"
+title: aria-dropeffect
 slug: Web/Accessibility/ARIA/Attributes/aria-dropeffect
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-dropeffect
-  - drag and drop
+page-type: aria-attribute
+status:
   - deprecated
 spec-urls: https://w3c.github.io/aria/#aria-dropeffect
 ---
@@ -18,7 +13,7 @@ The global `aria-dropeffect` attribute indicates what functions may be performed
 
 Deprecated in ARIA 1.1, the `aria-dropeffect` property indicates what functions may be performed when a dragged object is released on the drop target. The global `aria-dropeffect` attribute provides assistive technology users the same information provided via the [`DataTransfer.dropEffect`](/en-US/docs/Web/API/DataTransfer/dropEffect) to sited users via the dropeffect icon.
 
-Text selections, images, and links can be dragged by default. Setting the global [`draggable="true"`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute, part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/Document/dragstart_event), means any DOM node can be made draggable as well.
+Text selections, images, and links can be dragged by default. Setting the global [`draggable="true"`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute, part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/HTMLElement/dragstart_event), means any DOM node can be made draggable as well.
 
 When a drag event occurs, a translucent image is generated of the dragged element which follows the user's pointer during the drag. The default image can be changed to any image with [`setDragImage`](/en-US/docs/Web/API/DataTransfer/setDragImage). Along with the default image identifying the element being dragged, there is a [`dataTransfer.dropEffect`](/en-US/docs/Web/API/DataTransfer/dropEffect) property that can be used to control the visual feedback the user is given during a drag-and-drop operation. The `aria-dropeffect` property should be used to provide assistive technology users the same feedback provided to sited users via `dataTransfer.dropEffect` property.
 

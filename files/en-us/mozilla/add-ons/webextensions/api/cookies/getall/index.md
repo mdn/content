@@ -1,16 +1,7 @@
 ---
 title: cookies.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAll
+page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.getAll
 ---
 

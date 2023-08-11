@@ -1,13 +1,8 @@
 ---
-title: AbortSignal.reason
+title: "AbortSignal: reason property"
+short-title: reason
 slug: Web/API/AbortSignal/reason
 page-type: web-api-instance-property
-tags:
-  - API
-  - AbortSignal
-  - Property
-  - Reference
-  - reason
 browser-compat: api.AbortSignal.reason
 ---
 
@@ -16,7 +11,7 @@ browser-compat: api.AbortSignal.reason
 The **`reason`** read-only property returns a JavaScript value that indicates the abort reason.
 
 The property is `undefined` when the signal has not been aborted.
-It can be set to a specific value when the signal is aborted, using {{domxref("AbortController.abort()")}} or {{domxref("AbortSignal.abort()")}}.
+It can be set to a specific value when the signal is aborted, using {{domxref("AbortController.abort()")}} or {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}}.
 If not explicitly set in those methods, it defaults to "AbortError" {{domxref("DOMException")}}.
 
 ## Value

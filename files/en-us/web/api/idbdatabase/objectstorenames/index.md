@@ -1,16 +1,8 @@
 ---
-title: IDBDatabase.objectStoreNames
+title: "IDBDatabase: objectStoreNames property"
+short-title: objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - objectStoreNames
 browser-compat: api.IDBDatabase.objectStoreNames
 ---
 
@@ -36,11 +28,11 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;

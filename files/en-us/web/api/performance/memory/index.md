@@ -1,13 +1,12 @@
 ---
-title: Performance.memory
+title: "Performance: memory property"
+short-title: memory
 slug: Web/API/Performance/memory
 page-type: web-api-instance-property
-browser-compat: api.Performance.memory
-tags:
-  - non-standard
+status:
   - deprecated
-  - Deprecated
-  - Non-standard
+  - non-standard
+browser-compat: api.Performance.memory
 ---
 
 {{APIRef("Performance API")}} {{Deprecated_Header}}{{Non-standard_header}}

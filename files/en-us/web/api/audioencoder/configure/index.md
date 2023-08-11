@@ -1,14 +1,10 @@
 ---
-title: AudioEncoder.configure()
+title: "AudioEncoder: configure() method"
+short-title: configure()
 slug: Web/API/AudioEncoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.configure
 ---
 
@@ -27,7 +23,7 @@ configure(config)
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `sampleRate`
       - : An integer representing the number of frame samples per second.
     - `numberOfChannels`

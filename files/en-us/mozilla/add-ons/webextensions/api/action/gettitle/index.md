@@ -1,16 +1,7 @@
 ---
 title: action.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - getTitle
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.getTitle
 ---
 

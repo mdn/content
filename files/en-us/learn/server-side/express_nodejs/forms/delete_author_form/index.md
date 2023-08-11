@@ -1,11 +1,7 @@
 ---
 title: Delete Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
-tags:
-  - Express
-  - Forms
-  - Node
-  - server-side
+page-type: learn-module-chapter
 ---
 
 This subarticle shows how to define a page to delete `Author` objects.
@@ -20,50 +16,38 @@ Open **/controllers/authorController.js**. Find the exported `author_delete_get(
 
 ```js
 // Display Author delete form on GET.
-exports.author_delete_get = (req, res, next) => {
-  async.parallel(
-    {
-      author(callback) {
-        Author.findById(req.params.id).exec(callback);
-      },
-      authors_books(callback) {
-        Book.find({ author: req.params.id }).exec(callback);
-      },
-    },
-    (err, results) => {
-      if (err) {
-        return next(err);
-      }
-      if (results.author == null) {
-        // No results.
-        res.redirect("/catalog/authors");
-      }
-      // Successful, so render.
-      res.render("author_delete", {
-        title: "Delete Author",
-        author: results.author,
-        author_books: results.authors_books,
-      });
-    }
-  );
-};
+exports.author_delete_get = asyncHandler(async (req, res, next) => {
+  // Get details of author and all their books (in parallel)
+  const [author, allBooksByAuthor] = await Promise.all([
+    Author.findById(req.params.id).exec(),
+    Book.find({ author: req.params.id }, "title summary").exec(),
+  ]);
+
+  if (author === null) {
+    // No results.
+    res.redirect("/catalog/authors");
+  }
+
+  res.render("author_delete", {
+    title: "Delete Author",
+    author: author,
+    author_books: allBooksByAuthor,
+  });
+});
 ```
 
 The controller gets the id of the `Author` instance to be deleted from the URL parameter (`req.params.id`).
-It uses the `async.parallel()` method to get the author record and all associated books in parallel.
+It uses `await` on the promise returned by `Promise.all()` to asynchronously wait on the specified author record and all associated books (in parallel).
 When both operations have completed it renders the **author_delete.pug** view, passing variables for the `title`, `author`, and `author_books`.
 
 > **Note:** If `findById()` returns no results the author is not in the database.
-> In this case there is nothing to delete, so we immediately render the list of all authors.
+> In this case there is nothing to delete, so we immediately redirect to the list of all authors.
 >
 > ```js
->   (err, results) => {
->     if (err) {
->       return next(err);
->     }
->     if (results.author == null) { // No results.
->        res.redirect('/catalog/authors');
->     }
+> if (author === null) {
+>   // No results.
+>   res.redirect("/catalog/authors");
+> }
 > ```
 
 ## Controller—post route
@@ -72,41 +56,27 @@ Find the exported `author_delete_post()` controller method, and replace it with 
 
 ```js
 // Handle Author delete on POST.
-exports.author_delete_post = (req, res, next) => {
-  async.parallel(
-    {
-      author(callback) {
-        Author.findById(req.body.authorid).exec(callback);
-      },
-      authors_books(callback) {
-        Book.find({ author: req.body.authorid }).exec(callback);
-      },
-    },
-    (err, results) => {
-      if (err) {
-        return next(err);
-      }
-      // Success
-      if (results.authors_books.length > 0) {
-        // Author has books. Render in same way as for GET route.
-        res.render("author_delete", {
-          title: "Delete Author",
-          author: results.author,
-          author_books: results.authors_books,
-        });
-        return;
-      }
-      // Author has no books. Delete object and redirect to the list of authors.
-      Author.findByIdAndRemove(req.body.authorid, (err) => {
-        if (err) {
-          return next(err);
-        }
-        // Success - go to author list
-        res.redirect("/catalog/authors");
-      });
-    }
-  );
-};
+exports.author_delete_post = asyncHandler(async (req, res, next) => {
+  // Get details of author and all their books (in parallel)
+  const [author, allBooksByAuthor] = await Promise.all([
+    Author.findById(req.params.id).exec(),
+    Book.find({ author: req.params.id }, "title summary").exec(),
+  ]);
+
+  if (allBooksByAuthor.length > 0) {
+    // Author has books. Render in same way as for GET route.
+    res.render("author_delete", {
+      title: "Delete Author",
+      author: author,
+      author_books: allBooksByAuthor,
+    });
+    return;
+  } else {
+    // Author has no books. Delete object and redirect to the list of authors.
+    await Author.findByIdAndRemove(req.body.authorid);
+    res.redirect("/catalog/authors");
+  }
+});
 ```
 
 First we validate that an id has been provided (this is sent via the form body parameters, rather than using the version in the URL).

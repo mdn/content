@@ -1,18 +1,8 @@
 ---
-title: StorageManager.estimate()
+title: "StorageManager: estimate() method"
+short-title: estimate()
 slug: Web/API/StorageManager/estimate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - estimate
 browser-compat: api.StorageManager.estimate
 ---
 
@@ -55,7 +45,7 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 
 In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
 
-### HTML content
+### HTML
 
 ```html
 <label>
@@ -64,12 +54,14 @@ In this example, we obtain the usage estimates and present the percentage of sto
 </label>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
 navigator.storage.estimate().then((estimate) => {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 

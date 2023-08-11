@@ -1,9 +1,7 @@
 ---
 title: Using dns-prefetch
 slug: Web/Performance/dns-prefetch
-tags:
-  - Web Performance
-  - dns-prefetch
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -52,7 +50,7 @@ There are 3 main things to keep in mind:
 Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 ```
 
-**Third**, consider pairing `dns-prefetch` with the `preconnect` hint. While `dns-prefetch` only performs a DNS lookup, `preconnect` establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Combining the two provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can safely use them together like so:
+**Third**, consider pairing `dns-prefetch` with the [`preconnect` hint](/en-US/docs/Web/HTML/Attributes/rel/preconnect). While `dns-prefetch` only performs a DNS lookup, `preconnect` establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Combining the two provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can safely use them together like so:
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />

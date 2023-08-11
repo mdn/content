@@ -1,10 +1,10 @@
 ---
 title: DTLS (Datagram Transport Layer Security)
 slug: Glossary/DTLS
-tags:
-  - DTLS
-  - Intro
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Datagram Transport Layer Security** (**DTLS**) is a protocol used to secure datagram-based communications. It's based on the stream-focused Transport Layer Security ({{Glossary("TLS")}}), providing a similar level of security. As a datagram protocol, DTLS doesn't guarantee the order of message delivery, or even that messages will be delivered at all. However, DTLS gains the benefits of datagram protocols, too; in particular, the lower overhead and reduced latency.
 

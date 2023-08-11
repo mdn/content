@@ -1,16 +1,7 @@
 ---
 title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - contextMenus
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.update
 ---
 
@@ -69,19 +60,23 @@ let updating = browser.menus.update(
 
       - : `object`. One or more custom icons to display next to the item. Custom icons can only be set for items appearing in submenus. This property is an object with one property for each supplied icon: the property's name should include the icon's size in pixels, and path is relative to the icon from the extension's root directory. The browser tries to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display. To avoid any scaling, you can specify icons like this:
 
-        ```json
-        "icons": {
-              "16": "path/to/geo-16.png",
-              "32": "path/to/geo-32.png"
-            }
+        ```js
+        browser.menus.create({
+          icons: {
+            16: "path/to/geo-16.png",
+            32: "path/to/geo-32.png",
+          },
+        });
         ```
 
         Alternatively, you can specify a single SVG icon, and it will be scaled appropriately:
 
-        ```json
-        "icons": {
-              "16": "path/to/geo.svg"
-            }
+        ```js
+        browser.menus.create({
+          icons: {
+            16: "path/to/geo.svg",
+          },
+        });
         ```
 
         > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
@@ -89,7 +84,7 @@ let updating = browser.menus.update(
     - `id` {{optional_inline}}
       - : `string`. The unique ID to assign to this item. Mandatory for event pages. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
-      - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
+      - : `function`. The function called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
     - `parentId` {{optional_inline}}
       - : `integer` or `string`. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.
     - `targetUrlPatterns` {{optional_inline}}
@@ -135,13 +130,13 @@ function onError() {
 browser.menus.create({
   id: "do-not-click-me",
   title: "Do not click this button",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "do-not-click-me") {
     let updating = browser.menus.update(info.menuItemId, {
-      title: "Do not click this button again"
+      title: "Do not click this button again",
     });
     updating.then(onUpdated, onError);
   }

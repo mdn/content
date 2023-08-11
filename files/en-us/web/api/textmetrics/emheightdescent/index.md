@@ -1,13 +1,10 @@
 ---
-title: TextMetrics.emHeightDescent
+title: "TextMetrics: emHeightDescent property"
+short-title: emHeightDescent
 slug: Web/API/TextMetrics/emHeightDescent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - TextMetrics
+status:
+  - experimental
 browser-compat: api.TextMetrics.emHeightDescent
 ---
 
@@ -18,9 +15,9 @@ The read-only `emHeightDescent` property of the {{domxref("TextMetrics")}} inter
 ## Examples
 
 ```js
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const text = ctx.measureText('foo'); // returns TextMetrics object
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const text = ctx.measureText("foo"); // returns TextMetrics object
 
 text.emHeightDescent; // -2.40234375;
 ```

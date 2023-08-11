@@ -1,13 +1,7 @@
 ---
 title: captivePortal.canonicalURL
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - canonicalURL
-  - captivePortal
+page-type: webextension-api-property
 browser-compat: webextensions.api.captivePortal.canonicalURL
 ---
 

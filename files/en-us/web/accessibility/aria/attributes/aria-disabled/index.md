@@ -1,13 +1,7 @@
 ---
 title: aria-disabled
 slug: Web/Accessibility/ARIA/Attributes/aria-disabled
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-disabled
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-disabled
 ---
 
@@ -17,7 +11,7 @@ The `aria-disabled` state indicates that the element is perceivable but disabled
 
 The `aria-disabled` attribute, when set to `true`, indicates that the element upon which it is set and all of its focusable descendants are meant to be in the disabled state. This declaration will inform people using assistive technologies, such as screen readers, that such elements are not meant to be editable or otherwise operable.
 
-Unlike HTML's {{htmlattrxref('disabled')}} Boolean attribute which will communicate a form control as semantically being disabled, change its styling to reflect its state, and suppress all functionality along with disallowing the element's value from participating in form submission, the `aria-disabled="true"` <strong>only</strong> semantically exposes these elements as being disabled. Web developers must manually ensure such elements have their functionality suppressed when they are exposed in the disabled state.
+Unlike HTML's [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) Boolean attribute, which will communicate a form control as semantically being disabled, change its styling to reflect its state and suppress all functionality along with disallowing the element's value from participating in form submission, the `aria-disabled="true"` <strong>only</strong> semantically exposes these elements as being disabled. Web developers must manually ensure such elements have their functionality suppressed when exposed to the disabled state.
 
 When needing to disable native HTML form controls, developers will need to specify the `disabled` attribute, as it provides all of the generally expected features of disabling a control by default. However, there can be instances where elements need to be exposed as disabled, but are still available for users to find when navigating via the <kbd>Tab</kbd> key. Doing so can improve their discoverability as they will not be removed from the focus order of the web page, as `aria-disabled` does not change the focusability of such elements, nor will the elements be dimmed by default browser styling, making them easier to read. Some examples of where this may be useful include:
 
@@ -29,7 +23,7 @@ In each of these cases, one may want users to find these elements through standa
 
 > **Note:** The state of being disabled applies to the element with `aria-disabled="true"` and all of its focusable descendants. Take care when using this attribute on container elements. Particularly in the case where a container may have both form controls and links - where the intent may be to expose the form controls as being in the disabled state, but <strong>not</strong> to communicate the links as being "disabled".
 
-Another reason to need use the `aria-disabled` attribute over the HTML `disabled` attribute is if you have created custom controls which need to be marked as disabled, but are not using an element that allows for the `disabled` attribute. For instance, in the following snippet a `<div>` was used to create a custom button which needs to be marked as disabled. However, the `<div>` element does not expect, nor respect the `disabled` attribute - even if it were to be given a `role="button"` to change its exposed ARIA role. The `aria-disabled` attribute is required to disable such custom controls.
+Another reason to use the `aria-disabled` attribute over the HTML `disabled` attribute is if you have created custom controls which need to be marked as disabled, but are not using an element that allows for the `disabled` attribute. For instance, in the following snippet a `<div>` was used to create a custom button which needs to be marked as disabled. However, the `<div>` element does not expect, nor respect the `disabled` attribute - even if it were to be given a `role="button"` to change its exposed ARIA role. The `aria-disabled` attribute is required to disable such custom controls.
 
 ```html
 <div role="button" aria-disabled="true" tabindex="-1">Edit</div>
@@ -54,7 +48,7 @@ If you are purposefully using the `aria-disabled` attribute to allow for a form 
 }
 ```
 
-The [`forced-colors` media query](/en-US/docs/Web/CSS/@media/forced-colors) detects if the [user agent](/en-US/docs/Glossary/User_agent) has enabled a forced colors mode; if so, the text and border colors are both set to the [system color `greyText`](/en-US/docs/Web/CSS/color_value#system_colors).
+The [`forced-colors` media query](/en-US/docs/Web/CSS/@media/forced-colors) detects if the [user agent](/en-US/docs/Glossary/User_agent) has enabled a forced colors mode; if so, the text and border colors are both set to the [system color `greyText`](/en-US/docs/Web/CSS/system-color#syntax).
 
 Another thing to keep in mind, when using `aria-disabled` over the native HTML attribute, is that the ARIA attribute will require the manual styling necessary to visually communicate the element as disabled in Windows High Contrast Mode.
 
@@ -133,7 +127,7 @@ Inherits into roles:
 - [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 - [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
 - [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
@@ -156,7 +150,7 @@ Inherits into roles:
 
 - [Making disabled buttons more inclusive](https://css-tricks.com/making-disabled-buttons-more-inclusive/) by Sandrina Pereira
 - [Styling for Windows high contrast with new standards for forced colors](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
-- {{htmlattrxref('disabled')}}
+- [disabled](/en-US/docs/Web/HTML/Attributes/disabled)
 - {{domxref("Element.ariaDisabled")}}
 - {{domxref("ElementInternals.ariaDisabled")}}
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)

@@ -1,13 +1,8 @@
 ---
-title: URLSearchParams.set()
+title: "URLSearchParams: set() method"
+short-title: set()
 slug: Web/API/URLSearchParams/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - set
 browser-compat: api.URLSearchParams.set
 ---
 
@@ -40,11 +35,11 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search);
 
 // Add a third parameter.
-params.set('baz', 3);
+params.set("baz", 3);
 params.toString(); // "foo=1&bar=2&baz=3"
 ```
 

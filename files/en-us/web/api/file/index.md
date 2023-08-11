@@ -2,12 +2,6 @@
 title: File
 slug: Web/API/File
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - Interface
-  - Reference
-  - Web
 browser-compat: api.File
 ---
 
@@ -41,7 +35,7 @@ See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files
 
 `File` implements {{DOMxRef("Blob")}}, so it also has the following properties available to it:
 
-- {{DOMxRef("File.prototype.size")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
   - : Returns the size of the file in bytes.
 - {{DOMxRef("File.prototype.type")}} {{ReadOnlyInline}}
   - : Returns the [MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) type of the file.
@@ -71,4 +65,3 @@ _The `File` interface doesn't define any methods, but inherits methods from the 
 
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{DOMxRef("FileReader")}}
-- [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (for privileged code running in Gecko, such as Firefox add-ons)

@@ -1,22 +1,17 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Namespace
-  - Object
-  - Reference
+page-type: javascript-namespace
 browser-compat: javascript.builtins.JSON
 ---
 
 {{JSRef}}
 
-The **`JSON`** object contains methods for parsing [JavaScript Object Notation](https://json.org/) ({{glossary("JSON")}}) and converting values to JSON. It can't be called or constructed.
+The **`JSON`** namespace object contains static methods for parsing values from and converting values to [JavaScript Object Notation](https://json.org/) ({{glossary("JSON")}}).
 
 ## Description
 
-Unlike most global objects, `JSON` is not a constructor. You cannot use it with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `JSON` object as a function. All properties and methods of `JSON` are static (just like the {{jsxref("Math")}} object).
+Unlike most global objects, `JSON` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `JSON` object as a function. All properties and methods of `JSON` are static (just like the {{jsxref("Math")}} object).
 
 ### JavaScript and JSON differences
 
@@ -37,7 +32,7 @@ The same text may represent different values in JavaScript object literals vs. J
 
 Valid JSON syntax is formally defined by the following grammar, expressed in [ABNF](https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form), and copied from [IETF JSON standard (RFC)](https://datatracker.ietf.org/doc/html/rfc8259):
 
-```
+```plain
 JSON-text = object / array
 begin-array     = ws %x5B ws  ; [ left square bracket
 begin-object    = ws %x7B ws  ; { left curly bracket

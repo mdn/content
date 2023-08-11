@@ -1,9 +1,7 @@
 ---
 title: HTTP resources and specifications
 slug: Web/HTTP/Resources_and_specifications
-tags:
-  - Guide
-  - HTTP
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -16,7 +14,7 @@ HTTP was first specified in the early 1990s. Designed with extensibility in mind
 | {{rfc(9111)}}                                                                              | HTTP Caching                                                                                                                                                                                                                                          | Internet Standard        |
 | {{rfc(9112)}}                                                                              | HTTP/1.1                                                                                                                                                                                                                                              | Internet Standard        |
 | {{rfc(9113)}}                                                                              | HTTP/2                                                                                                                                                                                                                                                | Proposed Standard        |
-| {{rfc(9114)}}                                                                              | HTTP/3                                                                                                                                                                                                                                                | Proposed Standard       |
+| {{rfc(9114)}}                                                                              | HTTP/3                                                                                                                                                                                                                                                | Proposed Standard        |
 | {{rfc(5861)}}                                                                              | HTTP Cache-Control Extensions for Stale Content                                                                                                                                                                                                       | Informational            |
 | {{rfc(8246)}}                                                                              | HTTP Immutable Responses                                                                                                                                                                                                                              | Proposed Standard        |
 | {{rfc(6265)}}                                                                              | HTTP State Management Mechanism _Defines Cookies_                                                                                                                                                                                                     | Proposed Standard        |
@@ -55,3 +53,4 @@ HTTP was first specified in the early 1990s. Designed with extensibility in mind
 | [HTML Living Standard](https://html.spec.whatwg.org/multipage/)                            | HTML _Defines extensions of HTTP for Server-Sent Events_                                                                                                                                                                                              | Living Standard          |
 | [Reporting API](https://wicg.github.io/reporting/)                                         | `Report-To` header                                                                                                                                                                                                                                    | Draft                    |
 | [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-01)        | Expect-CT Extension for HTTP                                                                                                                                                                                                                          | IETF Draft               |
+| {{rfc(7486)}}                                                                              | HTTP Origin-Bound Auth (HOBA)                                                                                                                                                                                                                         | Experimental             |

@@ -1,13 +1,8 @@
 ---
-title: Document.body
+title: "Document: body property"
+short-title: body
 slug: Web/API/Document/body
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.body
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
-tags:
-  - Firefox
-  - Firefox 7
-  - Gecko 7
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -18,17 +15,17 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since Gecko 2.0.
 - The {{ domxref("HTMLImageElement") }} `x` and `y` properties have been removed.
 - The {{ domxref("HTMLSelectElement") }} `add()` method `before` parameter is now optional.
-- The {{ HTMLElement("body") }} element's {{ htmlattrxref("background", "body") }} attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
-- The {{ HTMLElement("option") }} element's {{ htmlattrxref("label", "option") }} attribute now reflects the value of the element's text content if the attribute isn't specified.
+- The {{ HTMLElement("body") }} element's [`background`](/en-US/docs/Web/HTML/Element/body#background) attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
+- The {{ HTMLElement("option") }} element's [`label`](/en-US/docs/Web/HTML/Element/option#label) attribute now reflects the value of the element's text content if the attribute isn't specified.
 
 #### Canvas
 
-- As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
+- As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzil.la/651858) and will significantly improve the performance of the 2D canvas.
 - Specifying invalid values when calling `setTransform()`, `bezierCurveTo()`, or `arcTo()` no longer throws an exception; these calls are now correctly silently ignored.
-- The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/ispointinpath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
+- The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
 - Calling `strokeRect()` with a zero width and height now correctly does nothing.
-- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
-- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with non-finite coordinates no longer throws an exception.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) with non-finite coordinates no longer throws an exception.
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
 - [Shadows](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#shadows) are now only drawn for `source-over` compositing operations.
@@ -48,15 +45,15 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 - Support for [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) fonts has been added.
 - The `medium` line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.
-- [Names for negative spaces](</en-US/docs/Web/MathML/Attribute/Values#constants_(namedspaces)>) are now supported.
+- [Names for negative spaces](</en-US/docs/Web/MathML/Values#constants_(namedspaces)>) are now supported.
 
 ### DOM
 
-- The {{ domxref("File") }} interface's non-standard methods `getAsBinary()`, `getAsDataURL()`, and `getAsText()` have been removed as well as the non-standard properties `fileName` and `fileSize` ({{bug("661876")}}).
+- The {{ domxref("File") }} interface's non-standard methods `getAsBinary()`, `getAsDataURL()`, and `getAsText()` have been removed as well as the non-standard properties `fileName` and `fileSize` ([Firefox bug 661876](https://bugzil.la/661876)).
 - The {{ domxref("FormData", "FormData") }} interface no longer reports the filename as an empty string when sending the `Content-Disposition` HTTP header if the data was set using a {{ domxref("Blob") }}. This fixes errors that were happening with some servers.
 - The {{ domxref("element.dir") }} attribute now always returns its result as all lower-case, as required by the HTML specification.
 - The {{ domxref("FileReader") }} `readAsArrayBuffer()` method is now implemented.
-- {{ domxref("document.createEntityReference") }} has been removed. It was never properly implemented and is not implemented in most other browsers.
+- `Document.createEntityReference` has been removed. It was never properly implemented and is not implemented in most other browsers.
 - `document.normalizeDocument` has been removed. Use {{ domxref("Node.normalize") }} instead.
 - {{ domxref("DOMTokenList.item") }} now returns `undefined` if the `index` is out of bounds, previously it returned `null`.
 - `Node.getFeature` has been removed.
@@ -81,7 +78,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### Web timing
 
-- Initial implementation of the [Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API) specification which provides data that can be used to measure the performance of a website.
+- Initial implementation of the [Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) specification which provides data that can be used to measure the performance of a website.
 
 ### XML
 
@@ -136,7 +133,7 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 - The `nsIDOMWindow_2_0_BRANCH` interface has been merged into the `nsIDOMWindowInternal` interface.
 - `nsINavHistoryObserver` methods with URI parameters now require a GUID as well.
 - The `nsISHistory_2_0_BRANCH` interface has been merged into the `nsISHistory` interface.
-- `nsITelemetry` has a new method, `nsITelemetry.getHistogramById()` which returns a histogram by its ID, and a new attribute, `canRecord` which when set to `false` disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }}) Telemetry histograms defined with `nsITelemetry.newHistogram()` will not be reported in the telemetry ping.
+- `nsITelemetry` has a new method, `nsITelemetry.getHistogramById()` which returns a histogram by its ID, and a new attribute, `canRecord` which when set to `false` disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see [Firefox bug 661574](https://bugzil.la/661574) and [Firefox bug 661573](https://bugzil.la/661573)) Telemetry histograms defined with `nsITelemetry.newHistogram()` will not be reported in the telemetry ping.
 - The `nsIMemoryReporter` interface has been substantially changed; if you use it, you will need to make some adjustments to your code.
 - `nsIXMLHttpRequest`, headers set by `nsIXMLHttpRequest.setRequestHeader()` are sent with the request when following a redirect. Previously these headers would not be sent.
 - `nsIDocShell` has a new `allowWindowControl` attribute. If `true`, the docshell's content is allowed to control the window (that is, to move or resize the window).
@@ -188,8 +185,8 @@ The following interfaces were removed as part of the removal of the ActiveX embe
 
 ### Other Changes
 
-- The structure of the library window (`places.xul`) [has been cleaned up](https://bugzilla.mozilla.org/show_bug.cgi?id=588027). This [may break extensions](https://bugzilla.mozilla.org/show_bug.cgi?id=677417) and themes.
-- The look of the print preview window [has been modernized](https://bugzilla.mozilla.org/show_bug.cgi?id=663028) and theme authors are encouraged to style it using the CSS pseudo-elements {{ cssxref("::-moz-page") }}, {{ cssxref("::-moz-page-sequence") }} and {{ cssxref("::-moz-scrolled-page-sequence") }}.
+- The structure of the library window (`places.xul`) [has been cleaned up](https://bugzil.la/588027). This [may break extensions](https://bugzil.la/677417) and themes.
+- The look of the print preview window [has been modernized](https://bugzil.la/663028) and theme authors are encouraged to style it using the CSS pseudo-elements {{ cssxref("::-moz-page") }}, {{ cssxref("::-moz-page-sequence") }} and {{ cssxref("::-moz-scrolled-page-sequence") }}.
 
 ## See also
 

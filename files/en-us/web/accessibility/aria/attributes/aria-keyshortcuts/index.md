@@ -1,12 +1,7 @@
 ---
-title: "aria-keyshortcuts"
+title: aria-keyshortcuts
 slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-keyshortcuts
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
   - https://w3c.github.io/aria-practices/#kbd_shortcuts
@@ -83,12 +78,13 @@ Take into account the diversity of available keyboards and the various keyboard 
 
 #### Don't use HTML instead
 
-The `aria-keyshortcuts` attribute is very similar to the [problematic](https://webaim.org/techniques/keyboard/accesskey#spec) HTML {{htmlattrxref('accesskey')}}, which generates a keyboard shortcut for the current element. When an `accesskey` is defined for an element, the browser defines the modifiers and does all the work of handling the shortcut with no scripting required. Every browser and operating system combination has their own modifier keys for the non-modifier set in the `accesskey` attribute. What may work for one combination of operating system, assistive technology, and browser may not work with other combinations. With `aria-keyshortcuts`, the modifier keys are included in the attribute value list of key combinations and the functionality has to be scripted in.
+The `aria-keyshortcuts` attribute is very similar to the [problematic](https://webaim.org/techniques/keyboard/accesskey#spec) HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey), which generates a keyboard shortcut for the current element. When an `accesskey` is defined for an element, the browser defines the modifiers and does all the work of handling the shortcut with no scripting required. Every browser and operating system combination has their own modifier keys for the non-modifier set in the `accesskey` attribute. What may work for one combination of operating system, assistive technology, and browser may not work with other combinations. With `aria-keyshortcuts`, the modifier keys are included in the attribute value list of key combinations and the functionality has to be scripted in.
 
 ```html
 <p>
   Press the
-  <strong><u>S</u></strong>tress reliever to relax!
+  <strong><u>S</u></strong
+  >tress reliever to relax!
 </p>
 <button accesskey="s">Stress reliever</button>
 ```
@@ -135,7 +131,7 @@ Used in **ALL** roles.
 ## See Also
 
 - [`aria-keyshortcuts` best practices](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_shortcuts)
-- HTML {{htmlattrxref('accesskey')}} attribute
+- HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey) attribute
 - [Issues with `accesskey`](https://webaim.org/techniques/keyboard/accesskey#spec)
 
 <section id="Quick_links">

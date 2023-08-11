@@ -1,25 +1,8 @@
 ---
-title: RTCError.errorDetail
+title: "RTCError: errorDetail property"
+short-title: errorDetail
 slug: Web/API/RTCError/errorDetail
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Error
-  - Error code
-  - Media
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - Type
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - details
-  - errorDetail
-  - rtc
 browser-compat: api.RTCError.errorDetail
 ---
 

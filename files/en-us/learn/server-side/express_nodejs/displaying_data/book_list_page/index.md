@@ -1,12 +1,7 @@
 ---
 title: Book list page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
+page-type: learn-module-chapter
 ---
 
 Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
@@ -18,24 +13,25 @@ The book list controller function needs to get a list of all `Book` objects in t
 Open **/controllers/bookController.js**. Find the exported `book_list()` controller method and replace it with the following code.
 
 ```js
-// Display list of all Books.
-exports.book_list = function (req, res, next) {
-  Book.find({}, "title author")
+// Display list of all books.
+exports.book_list = asyncHandler(async (req, res, next) => {
+  const allBooks = await Book.find({}, "title author")
     .sort({ title: 1 })
     .populate("author")
-    .exec(function (err, list_books) {
-      if (err) {
-        return next(err);
-      }
-      //Successful, so render
-      res.render("book_list", { title: "Book List", book_list: list_books });
-    });
-};
+    .exec();
+
+  res.render("book_list", { title: "Book List", book_list: allBooks });
+});
 ```
 
-The method uses the model's `find()` function to return all `Book` objects, selecting to return only the `title` and `author` as we don't need the other fields (it will also return the `_id` and virtual fields), and then sorts the results by the title alphabetically using the `sort()` method. Here we also call `populate()` on `Book`, specifying the `author` field—this will replace the stored book author id with the full author details.
+The route handler calls the `find()` function on the `Book` model, selecting to return only the `title` and `author` as we don't need the other fields (it will also return the `_id` and virtual fields), and sorting the results by the title alphabetically using the `sort()` method.
+We also call `populate()` on `Book`, specifying the `author` field—this will replace the stored book author id with the full author details.
+`exec()` is then daisy-chained on the end in order to execute the query and return a promise.
 
-On success, the callback passed to the query renders the **book_list**(.pug) template, passing the `title` and `book_list` (list of books with authors) as variables.
+The route handler uses `await` to wait on the promise, pausing execution until it is settled.
+If the promise is fulfilled, the results of the query are saved to the `allBooks` variable and the handler continues execution.
+
+The final part of the route handler calls `render()`, specifying the **book_list** (.pug) template and passing values for the `title` and `book_list` into the template.
 
 ## View
 
@@ -57,7 +53,8 @@ block content
       li There are no books.
 ```
 
-The view extends the **layout.pug** base template and overrides the `block` named '**content**'. It displays the `title` we passed in from the controller (via the `render()` method) and iterates through the `book_list` variable using the `each`-`in`-`else` syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name. If there are no books in the `book_list` then the `else` clause is executed, and displays the text 'There are no books'.
+The view extends the **layout.pug** base template and overrides the `block` named '**content**'. It displays the `title` we passed in from the controller (via the `render()` method) and iterates through the `book_list` variable using the `each`-`in`-`else` syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name.
+If there are no books in the `book_list` then the `else` clause is executed, and displays the text 'There are no books'.
 
 > **Note:** We use `book.url` to provide the link to the detail record for each book (we've implemented this route, but not the page yet). This is a virtual property of the `Book` model which uses the model instance's `_id` field to produce a unique URL path.
 

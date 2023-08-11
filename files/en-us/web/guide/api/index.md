@@ -1,11 +1,7 @@
 ---
 title: Guide to Web APIs
 slug: Web/Guide/API
-tags:
-  - API
-  - Guide
-  - Landing
-  - Web
+page-type: landing-page
 ---
 
 <section id="Quick_links">

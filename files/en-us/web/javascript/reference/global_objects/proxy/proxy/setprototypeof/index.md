@@ -1,19 +1,13 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 ---
 
 {{JSRef}}
 
-The **`handler.setPrototypeOf()`** method is a trap for
-{{jsxref("Object.setPrototypeOf()")}}.
+The **`handler.setPrototypeOf()`** method is a trap for the `[[SetPrototypeOf]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.setPrototypeOf()")}}.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
 
@@ -42,9 +36,6 @@ The `setPrototypeOf()` method returns `true` if the
 `[[Prototype]]` was successfully changed, otherwise `false`.
 
 ## Description
-
-The **`handler.setPrototypeOf()`** method is a trap for
-{{jsxref("Object.setPrototypeOf()")}}.
 
 ### Interceptions
 

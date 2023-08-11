@@ -2,16 +2,13 @@
 title: AudioEncoder
 slug: Web/API/AudioEncoder
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder
 ---
 
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+
 The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) encodes {{domxref("AudioData")}} objects.
 
 {{InheritanceDiagram}}

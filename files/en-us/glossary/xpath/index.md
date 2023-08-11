@@ -1,11 +1,10 @@
 ---
 title: XPath
 slug: Glossary/XPath
-tags:
-  - CodingScripting
-  - XML
-  - XPath
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **XPath** is a query language that can access sections and content in an {{glossary("XML")}} document.
 

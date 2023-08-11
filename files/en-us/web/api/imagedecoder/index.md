@@ -2,12 +2,8 @@
 title: ImageDecoder
 slug: Web/API/ImageDecoder
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder
 ---
 
@@ -82,7 +78,7 @@ function renderImage(result) {
     .then((nextResult) =>
       setTimeout(() => {
         renderImage(nextResult);
-      }, result.image.duration / 1000.0)
+      }, result.image.duration / 1000.0),
     )
     .catch((e) => {
       // We can end up requesting an imageIndex past the end since

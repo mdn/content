@@ -1,21 +1,16 @@
 ---
 title: Create Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
-tags:
-  - Express
-  - Forms
-  - Node
-  - part 6
-  - server-side
+page-type: learn-module-chapter
 ---
 
 This subarticle shows how to define a page for creating `Author` objects.
 
 ## Import validation and sanitization methods
 
-As with the genre form, to use _express-validator_ we have to _require_ the functions we want to use.
+As with the [genre form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form), to use _express-validator_ we have to _require_ the functions we want to use.
 
-Open **/controllers/authorController.js**, and add the following lines at the top of the file:
+Open **/controllers/authorController.js**, and add the following line at the top of the file (above the route functions):
 
 ```js
 const { body, validationResult } = require("express-validator");
@@ -55,44 +50,44 @@ exports.author_create_post = [
     .isAlphanumeric()
     .withMessage("Family name has non-alphanumeric characters."),
   body("date_of_birth", "Invalid date of birth")
-    .optional({ checkFalsy: true })
+    .optional({ values: "falsy" })
     .isISO8601()
     .toDate(),
   body("date_of_death", "Invalid date of death")
-    .optional({ checkFalsy: true })
+    .optional({ values: "falsy" })
     .isISO8601()
     .toDate(),
+
   // Process request after validation and sanitization.
-  (req, res, next) => {
+  asyncHandler(async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
-    if (!errors.isEmpty()) {
-      // There are errors. Render form again with sanitized values/errors messages.
-      res.render("author_form", {
-        title: "Create Author",
-        author: req.body,
-        errors: errors.array(),
-      });
-      return;
-    }
-    // Data from form is valid.
-
-    // Create an Author object with escaped and trimmed data.
+    // Create Author object with escaped and trimmed data
     const author = new Author({
       first_name: req.body.first_name,
       family_name: req.body.family_name,
       date_of_birth: req.body.date_of_birth,
       date_of_death: req.body.date_of_death,
     });
-    author.save((err) => {
-      if (err) {
-        return next(err);
-      }
-      // Successful - redirect to new author record.
+
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      res.render("author_form", {
+        title: "Create Author",
+        author: author,
+        errors: errors.array(),
+      });
+      return;
+    } else {
+      // Data from form is valid.
+
+      // Save author.
+      await author.save();
+      // Redirect to new author record.
       res.redirect(author.url);
-    });
-  },
+    }
+  }),
 ];
 ```
 
@@ -105,11 +100,12 @@ Unlike with the `Genre` post handler, we don't check whether the `Author` object
 
 The validation code demonstrates several new features:
 
-- We can daisy chain validators, using `withMessage()` to specify the error message to display if the previous validation method fails. This makes it very easy to provide specific error messages without lots of code duplication.
+- We can daisy chain validators, using `withMessage()` to specify the error message to display if the previous validation method fails.
+  This makes it very easy to provide specific error messages without lots of code duplication.
 
   ```js
   [
-    // Validate fields.
+    // Validate and sanitize fields.
     body("first_name")
       .trim()
       .isLength({ min: 1 })
@@ -121,12 +117,13 @@ The validation code demonstrates several new features:
   ];
   ```
 
-- We can use the `optional()` function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields). For example, below we check that the optional date of birth is an ISO8601-compliant date (the `checkFalsy` flag means that we'll accept either an empty string or `null` as an empty value).
+- We can use the `optional()` function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields).
+  For example, below we check that the optional date of birth is an ISO8601-compliant date (the `{ values: "falsy" }` object passed means that we'll accept either an empty string or `null` as an empty value).
 
   ```js
   [
     body("date_of_birth", "Invalid date of birth")
-      .optional({ checkFalsy: true })
+      .optional({ values: "falsy" })
       .isISO8601()
       .toDate(),
   ];

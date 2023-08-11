@@ -2,13 +2,6 @@
 title: Card
 slug: Web/CSS/Layout_cookbook/Card
 page-type: guide
-tags:
-  - CSS
-  - CSS Cookbook
-  - CSS Grid
-  - Guide
-  - card
-  - CSS layout
 browser-compat:
   - css.properties.grid-template-columns
   - css.properties.grid-template-rows
@@ -38,7 +31,7 @@ When added to a collection of cards, the cards should line up in two dimensions.
 
 ## Choices made
 
-The card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. When setting up the single column grid I use the following:
+The card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. When setting up the single column grid I use the following:
 
 ```css
 .card {
@@ -55,9 +48,9 @@ If the track does have a footer it will be auto-sized, as rows created in the im
 
 ## Useful fallbacks or alternative methods
 
-[Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) could be used to lay out the card, in which case you should make the content area grow, and other items not grow. This would be a reasonable way to lay out the card, although I have a slight preference for being able to control the tracks from the container rather than needing to add rules to the items.
+[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) could be used to lay out the card, in which case you should make the content area grow, and other items not grow. This would be a reasonable way to lay out the card, although I have a slight preference for being able to control the tracks from the container rather than needing to add rules to the items.
 
-For the overall layout you could use flexbox, however this will result in cards stretching over the final flex row where there are fewer than can fit in the rows above. Alternatively you could use [CSS multi-col](/en-US/docs/Web/CSS/CSS_Columns) — this would cause the cards to lay out down the columns, which may or may not be a problem.
+For the overall layout you could use flexbox, however this will result in cards stretching over the final flex row where there are fewer than can fit in the rows above. Alternatively you could use [CSS multi-col](/en-US/docs/Web/CSS/CSS_multicol_layout) — this would cause the cards to lay out down the columns, which may or may not be a problem.
 
 See the [columns recipe](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) for demonstrations of each of these layout methods.
 

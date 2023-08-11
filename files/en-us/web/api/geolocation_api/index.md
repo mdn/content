@@ -2,11 +2,6 @@
 title: Geolocation API
 slug: Web/API/Geolocation_API
 page-type: web-api-overview
-tags:
-  - Geolocation API
-  - Guide
-  - Intermediate
-  - Overview
 browser-compat: api.Geolocation
 ---
 

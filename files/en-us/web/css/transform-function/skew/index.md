@@ -2,12 +2,6 @@
 title: skew()
 slug: Web/CSS/transform-function/skew
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.skew
 ---
 

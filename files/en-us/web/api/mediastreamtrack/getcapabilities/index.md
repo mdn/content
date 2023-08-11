@@ -1,15 +1,8 @@
 ---
-title: MediaStreamTrack.getCapabilities()
+title: "MediaStreamTrack: getCapabilities() method"
+short-title: getCapabilities()
 slug: Web/API/MediaStreamTrack/getCapabilities
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - getCapabilities
 browser-compat: api.MediaStreamTrack.getCapabilities
 ---
 

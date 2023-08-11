@@ -1,16 +1,8 @@
 ---
-title: FileSystemDirectoryReader.readEntries()
+title: "FileSystemDirectoryReader: readEntries() method"
+short-title: readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryReader
-  - Files
-  - Interface
-  - Method
-  - Reference
-  - readEntries
 browser-compat: api.FileSystemDirectoryReader.readEntries
 ---
 
@@ -50,7 +42,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#example) for example code that uses this method.
+See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#examples) for example code that uses this method.
 
 ## Specifications
 

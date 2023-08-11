@@ -2,14 +2,6 @@
 title: IDBTransaction
 slug: Web/API/IDBTransaction
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBTransaction
 ---
 
@@ -26,8 +18,8 @@ Transactions are started when the transaction is created, not when the first req
 ```js
 const trans1 = db.transaction("foo", "readwrite");
 const trans2 = db.transaction("foo", "readwrite");
-const objectStore2 = trans2.objectStore("foo")
-const objectStore1 = trans1.objectStore("foo")
+const objectStore2 = trans2.objectStore("foo");
+const objectStore1 = trans1.objectStore("foo");
 objectStore2.put("2", "key");
 objectStore1.put("1", "key");
 ```
@@ -47,7 +39,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 ## Firefox durability guarantees
 
-Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction, a {{domxref("IDBTransaction.complete_event","complete")}} event was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
+Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Webkit bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction, a {{domxref("IDBTransaction.complete_event","complete")}} event was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
 
 If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
@@ -93,7 +85,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 {{Deprecated_Header}}
 
-> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})
+> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 888598](https://bugzil.la/888598))
 
 Transactions can have one of three modes:
 
@@ -141,7 +133,8 @@ Transactions can have one of three modes:
 Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome [the change was made in version 21](https://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)). You should code defensively in case the object is not available anymore:
 
 ```js
-const myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
+const myIDBTransaction = window.IDBTransaction ||
+  window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
 ```
 
 ## Examples
@@ -149,7 +142,7 @@ const myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction ||
 In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
-const note = document.getElementById('notifications');
+const note = document.getElementById("notifications");
 
 // an instance of a db object for us to store the IDB data in
 let db;
@@ -158,7 +151,7 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db
   // variable. This is used a lot below
@@ -170,18 +163,30 @@ DBOpenRequest.onsuccess = (event) => {
 
 function addData() {
   // Create a new object to insert into the IDB
-  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // open a read/write db transaction, ready to add data
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
   transaction.oncomplete = (event) => {
-    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+    note.innerHTML +=
+      "<li>Transaction completed: database modification finished.</li>";
   };
 
   transaction.onerror = (event) => {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+    note.innerHTML +=
+      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
   };
 
   // create an object store on the transaction
@@ -193,9 +198,9 @@ function addData() {
   objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.oncomplete)
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
   };
-};
+}
 ```
 
 ## Specifications

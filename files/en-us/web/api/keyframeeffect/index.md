@@ -2,15 +2,6 @@
 title: KeyframeEffect
 slug: Web/API/KeyframeEffect
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - Animations
-  - Interface
-  - KeyframeEffect
-  - Reference
-  - Web Animations
-  - web animations api
 browser-compat: api.KeyframeEffect
 ---
 
@@ -31,7 +22,7 @@ The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/A
   - : Gets and sets the element, or originating element of the pseudo-element, being animated by this object. This may be `null` for animations that do not target a specific element or pseudo-element.
 - {{domxref("KeyframeEffect.pseudoElement")}}
   - : Gets and sets the selector of the pseudo-element being animated by this object. This may be `null` for animations that do not target a pseudo-element.
-- {{domxref("KeyframeEffect.iterationComposite")}} {{Experimental_Inline}}
+- {{domxref("KeyframeEffect.iterationComposite")}}
   - : Gets and sets the iteration composite operation for resolving the property value changes of this keyframe effect.
 - {{domxref("KeyframeEffect.composite")}}
   - : Gets and sets the composite operation property for resolving the property value changes between this and other keyframe effects.
@@ -56,18 +47,21 @@ _This interface inherits some of its methods from its parent, {{domxref("Animati
 In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
 
 ```js
-const whiteRabbit = document.getElementById('rabbit');
+const whiteRabbit = document.getElementById("rabbit");
 
 const rabbitDownKeyframes = new KeyframeEffect(
-    whiteRabbit, // element to animate
-    [
-      { transform: 'translateY(0%)' }, // keyframe
-      { transform: 'translateY(100%)' } // keyframe
-    ],
-    { duration: 3000, fill: 'forwards' } // keyframe options
-  );
+  whiteRabbit, // element to animate
+  [
+    { transform: "translateY(0%)" }, // keyframe
+    { transform: "translateY(100%)" }, // keyframe
+  ],
+  { duration: 3000, fill: "forwards" }, // keyframe options
+);
 
-const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+const rabbitDownAnimation = new Animation(
+  rabbitDownKeyframes,
+  document.timeline,
+);
 
 // Play rabbit animation
 rabbitDownAnimation.play();

@@ -2,16 +2,6 @@
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerContainer
-  - Workers
 browser-compat: api.ServiceWorkerContainer
 ---
 
@@ -80,7 +70,7 @@ if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
     console.log(
       "This page is currently controlled by:",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   }
 
@@ -89,7 +79,7 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.oncontrollerchange = () => {
     console.log(
       "This page is now controlled by",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   };
 } else {

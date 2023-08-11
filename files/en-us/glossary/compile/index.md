@@ -1,9 +1,10 @@
 ---
 title: Compile
 slug: Glossary/Compile
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Compiling** is the process of transforming a computer program written in a given {{Glossary("computer programming", "language")}} into a set of instructions in another format or language. A **compiler** is a computer program to execute that task.
 
@@ -19,6 +20,6 @@ Compilers may also translate among higher-level languages — for example, from 
 
 ## See also
 
-- [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_wasm)
-- [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Rust_to_wasm)
+- [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_Wasm)
+- [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Rust_to_Wasm)
 - Wikipedia: [Compiler](https://en.wikipedia.org/wiki/Compiler)

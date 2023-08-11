@@ -1,16 +1,7 @@
 ---
 title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - removeTree
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.removeTree
 ---
 

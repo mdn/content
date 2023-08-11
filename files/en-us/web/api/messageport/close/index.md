@@ -1,14 +1,8 @@
 ---
-title: MessagePort.close()
+title: "MessagePort: close() method"
+short-title: close()
 slug: Web/API/MessagePort/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-  - close
 browser-compat: api.MessagePort.close
 ---
 
@@ -41,10 +35,10 @@ run when a message is sent back to this document using
 {{domxref("EventTarget.addEventListener")}}.
 
 ```js
-channel.port1.addEventListener('message', handleMessage, false);
+channel.port1.addEventListener("message", handleMessage, false);
 function handleMessage(e) {
   para.innerHTML = e.data;
-  textInput.value = '';
+  textInput.value = "";
 }
 
 channel.port1.start();

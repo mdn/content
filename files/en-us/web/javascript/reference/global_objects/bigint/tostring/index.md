@@ -1,18 +1,13 @@
 ---
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-tags:
-  - BigInt
-  - JavaScript
-  - Method
-  - Prototype
-  - toString()
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.BigInt.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the specified {{jsxref("BigInt")}} value. The trailing "n" is not part of the string.
+The **`toString()`** method of {{jsxref("BigInt")}} values returns a string representing the specified {{jsxref("BigInt")}} value. The trailing "n" is not part of the string.
 
 {{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}
 

@@ -1,13 +1,8 @@
 ---
-title: MediaRecorder.stream
+title: "MediaRecorder: stream property"
+short-title: stream
 slug: Web/API/MediaRecorder/stream
 page-type: web-api-instance-property
-tags:
-  - API
-  - MediaRecorder
-  - Property
-  - Reference
-  - stream
 browser-compat: api.MediaRecorder.stream
 ---
 
@@ -39,7 +34,7 @@ if (navigator.getUserMedia) {
 
       const myStream = mediaRecorder.stream;
       console.log(myStream);
-    }
+    },
   );
 }
 ```

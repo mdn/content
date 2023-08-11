@@ -2,10 +2,6 @@
 title: k2
 slug: Web/SVG/Attribute/k2
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feComposite.k2
 ---
 

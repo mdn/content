@@ -1,17 +1,10 @@
 ---
-title: KeyboardLayoutMap.entries
+title: "KeyboardLayoutMap: entries property"
+short-title: entries
 slug: Web/API/KeyboardLayoutMap/entries
 page-type: web-api-instance-property
-tags:
-  - API
-  - Entries
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Property
-  - Reference
-  - keyboard
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.entries
 ---
 

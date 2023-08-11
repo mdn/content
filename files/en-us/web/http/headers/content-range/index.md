@@ -1,13 +1,7 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - Header
-  - Payload header
+page-type: http-header
 browser-compat: http.headers.Content-Range
 ---
 

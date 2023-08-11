@@ -2,14 +2,6 @@
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - padding-inline
-  - padding-inline-start
-  - recipe:css-property
 browser-compat: css.properties.padding-inline-start
 ---
 
@@ -23,11 +15,11 @@ The **`padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the l
 
 ```css
 /* <length> values */
-padding-inline-start: 10px;   /* An absolute length */
-padding-inline-start: 1em;    /* A length relative to the text size */
+padding-inline-start: 10px; /* An absolute length */
+padding-inline-start: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-inline-start: 5%;     /* A padding relative to the block container's width */
+padding-inline-start: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-inline-start: inherit;
@@ -46,7 +38,7 @@ padding-inline-start: unset;
 
 ## Description
 
-The `padding-inline-start` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the physical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}
+The `padding-inline-start` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the physical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}.
 
 It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
 
@@ -100,6 +92,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -1,11 +1,7 @@
 ---
 title: Invalid argument
 slug: Web/WebDriver/Errors/InvalidArgument
-tags:
-  - Error
-  - Reference
-  - WebDriver
-  - invalid argument
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

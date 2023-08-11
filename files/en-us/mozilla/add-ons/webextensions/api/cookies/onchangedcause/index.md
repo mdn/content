@@ -1,16 +1,7 @@
 ---
 title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Non-standard
-  - OnChangedCause
-  - Reference
-  - Type
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.cookies.OnChangedCause
 ---
 
@@ -43,10 +34,12 @@ You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified
 
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
-  console.log(`Cookie changed: \n`
-    + ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n`
-    + ` * Cause: ${changeInfo.cause}\n`
-    + ` * Removed: ${changeInfo.removed}`);
+  console.log(
+    `Cookie changed: \n` +
+      ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
+      ` * Cause: ${changeInfo.cause}\n` +
+      ` * Removed: ${changeInfo.removed}`,
+  );
 });
 ```
 

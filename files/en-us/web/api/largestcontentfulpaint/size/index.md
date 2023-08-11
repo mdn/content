@@ -1,14 +1,10 @@
 ---
-title: LargestContentfulPaint.size
+title: "LargestContentfulPaint: size property"
+short-title: size
 slug: Web/API/LargestContentfulPaint/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - size
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.size
 ---
 

@@ -1,16 +1,8 @@
 ---
-title: IDBIndex.openCursor()
+title: "IDBIndex: openCursor() method"
+short-title: openCursor()
 slug: Web/API/IDBIndex/openCursor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - openCursor
 browser-compat: api.IDBIndex.openCursor
 ---
 
@@ -48,8 +40,12 @@ openCursor(range, direction)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is:
+
+- an {{domxref("IDBCursorWithValue")}} object pointing at the first record matching the given query
+- `null` if no matching records were found.
 
 ### Exceptions
 
@@ -77,32 +73,33 @@ complete working example, see our [IndexedDB-examples demo repo](https://github.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  const transaction = db.transaction(['contactsList'], 'readonly');
-  const objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  const transaction = db.transaction(["contactsList"], "readonly");
+  const objectStore = transaction.objectStore("contactsList");
 
-  const myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
 
   myIndex.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
-                         + `<td>${cursor.value.lName}</td>`
-                         + `<td>${cursor.value.fName}</td>`
-                         + `<td>${cursor.value.jTitle}</td>`
-                         + `<td>${cursor.value.company}</td>`
-                         + `<td>${cursor.value.eMail}</td>`
-                         + `<td>${cursor.value.phone}</td>`
-                         + `<td>${cursor.value.age}</td>`;
+      const tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        `<td>${cursor.value.id}</td>` +
+        `<td>${cursor.value.lName}</td>` +
+        `<td>${cursor.value.fName}</td>` +
+        `<td>${cursor.value.jTitle}</td>` +
+        `<td>${cursor.value.company}</td>` +
+        `<td>${cursor.value.eMail}</td>` +
+        `<td>${cursor.value.phone}</td>` +
+        `<td>${cursor.value.age}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

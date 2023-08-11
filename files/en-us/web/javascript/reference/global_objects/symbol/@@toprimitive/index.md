@@ -1,19 +1,13 @@
 ---
-title: Symbol.prototype[@@toPrimitive]
+title: Symbol.prototype[@@toPrimitive]()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Symbol
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Symbol.@@toPrimitive
 ---
 
 {{JSRef}}
 
-The **`[@@toPrimitive]()`** method converts a Symbol object to
-a primitive value.
+The **`[@@toPrimitive]()`** method of {{jsxref("Symbol")}} values returns this symbol value.
 
 ## Syntax
 

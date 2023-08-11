@@ -1,16 +1,7 @@
 ---
 title: Componentizing our Svelte app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
-tags:
-  - Beginner
-  - Components
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Svelte
-  - client-side
-  - conditional rendering
-  - passing data
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -118,7 +109,7 @@ We'll begin by creating our `FilterButton.svelte`.
 1. First of all, create a new file, `components/FilterButton.svelte`.
 2. Inside this file we will declare a `filter` prop, and then copy the relevant markup over to it from `Todos.svelte`. Add the following content into the file:
 
-   ```html
+   ```svelte
    <script>
      export let filter = 'all'
    </script>
@@ -145,12 +136,12 @@ We'll begin by creating our `FilterButton.svelte`.
 3. Back in our `Todos.svelte` component, we want to make use of our `FilterButton` component. First of all, we need to import it. Add the following line at the top of the `Todos.svelte <script>` section:
 
    ```js
-   import FilterButton from './FilterButton.svelte'
+   import FilterButton from "./FilterButton.svelte";
    ```
 
 4. Now replace the `<div class="filters...` element with a call to the `FilterButton` component, which takes the current filter as a prop. The below line is all you need:
 
-   ```html
+   ```svelte
    <FilterButton {filter} />
    ```
 
@@ -167,7 +158,7 @@ In our case, the `FilterButton` component will receive an `onclick` handler from
 We will just declare the `onclick` prop assigning a dummy handler to prevent errors, like this:
 
 ```js
-export let onclick = (clicked) => {}
+export let onclick = (clicked) => {};
 ```
 
 And we'll declare the reactive statement `$: onclick(filter)` to call the `onclick` handler whenever the `filter` variable is updated.
@@ -175,14 +166,14 @@ And we'll declare the reactive statement `$: onclick(filter)` to call the `oncli
 1. The `<script>` section of our `FilterButton` component should end up looking like this. Update it now:
 
    ```js
-   export let filter = 'all'
-   export let onclick = (clicked) => {}
-   $: onclick(filter)
+   export let filter = "all";
+   export let onclick = (clicked) => {};
+   $: onclick(filter);
    ```
 
 2. Now when we call `FilterButton` inside `Todos.svelte`, we'll need to specify the handler. Update it like this:
 
-   ```html
+   ```svelte
    <FilterButton {filter} onclick={ (clicked) => filter = clicked }/>
    ```
 
@@ -198,7 +189,7 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 
 1. In `Todos.svelte`, update the call to the `FilterButton` component as follows:
 
-   ```html
+   ```svelte
    <FilterButton bind:filter={filter} />
    ```
 
@@ -206,7 +197,7 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 
 2. The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify the `<script>` element of your `FilterButton` like this:
 
-   ```html
+   ```svelte
    <script>
      export let filter = "all";
    </script>
@@ -223,7 +214,7 @@ Our `Todo` component will receive a single `todo` object as a prop. Let's declar
 1. Create a new component file, `components/Todo.svelte`.
 2. Put the following contents inside this file:
 
-   ```html
+   ```svelte
    <script>
      export let todo
    </script>
@@ -250,14 +241,14 @@ Our `Todo` component will receive a single `todo` object as a prop. Let's declar
 3. Now we need to import our `Todo` component into `Todos.svelte`. Go to this file now, and add the following `import` statement below your previous one:
 
    ```js
-   import Todo from './Todo.svelte'
+   import Todo from "./Todo.svelte";
    ```
 
 4. Next we need to update our `{#each}` block to include a `<Todo>` component for each to-do, rather than the code that has been moved out to `Todo.svelte`. We are also passing the current `todo` object into the component as a prop.
 
    Update the `{#each}` block inside `Todos.svelte` like so:
 
-   ```html
+   ```svelte
    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each filterTodos(filter, todos) as todo (todo.id)}
      <li class="todo">
@@ -288,13 +279,13 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 1. First of all, add the following lines to the top of the `Todo` component's `<script>` section:
 
    ```js
-   import { createEventDispatcher } from 'svelte'
-   const dispatch = createEventDispatcher()
+   import { createEventDispatcher } from "svelte";
+   const dispatch = createEventDispatcher();
    ```
 
 2. Now update the _Delete_ button in the markup section of the same file to look like so:
 
-   ```html
+   ```svelte
    <button type="button" class="btn btn__danger" on:click={() => dispatch('remove', todo)}>
      Delete <span class="visually-hidden">{todo.name}</span>
    </button>
@@ -304,7 +295,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 
 3. Now we have to listen to that event from inside `Todos.svelte` and act accordingly. Go back to this file and update your `<Todo>` component call like so:
 
-   ```html
+   ```svelte
    <Todo {todo} on:remove={(e) => removeTodo(e.detail)} />
    ```
 
@@ -323,8 +314,8 @@ We still have to implement functionality to allow us to edit existing to-dos. We
 1. We'll need one variable to track whether we are in editing mode and another to store the name of the task being updated. Add the following variable definitions at the bottom of the `<script>` section of the `Todo` component:
 
    ```js
-   let editing = false                     // track editing mode
-   let name = todo.name                    // hold the name of the to-do being edited
+   let editing = false; // track editing mode
+   let name = todo.name; // hold the name of the to-do being edited
    ```
 
 2. We have to decide what events our `Todo` component will emit:
@@ -338,8 +329,8 @@ We still have to implement functionality to allow us to edit existing to-dos. We
 
    ```js
    function update(updatedTodo) {
-     todo = { ...todo, ...updatedTodo }    // applies modifications to todo
-     dispatch('update', todo)              // emit update event
+     todo = { ...todo, ...updatedTodo }; // applies modifications to todo
+     dispatch("update", todo); // emit update event
    }
    ```
 
@@ -351,25 +342,25 @@ We still have to implement functionality to allow us to edit existing to-dos. We
 
    ```js
    function onCancel() {
-     name = todo.name                      // restores name to its initial value and
-     editing = false                       // and exit editing mode
+     name = todo.name; // restores name to its initial value and
+     editing = false; // and exit editing mode
    }
 
    function onSave() {
-     update({ name })                      // updates todo name
-     editing = false                       // and exit editing mode
+     update({ name }); // updates todo name
+     editing = false; // and exit editing mode
    }
 
    function onRemove() {
-     dispatch('remove', todo)              // emit remove event
+     dispatch("remove", todo); // emit remove event
    }
 
    function onEdit() {
-     editing = true                        // enter editing mode
+     editing = true; // enter editing mode
    }
 
    function onToggle() {
-     update({ completed: !todo.completed}) // updates todo status
+     update({ completed: !todo.completed }); // updates todo status
    }
    ```
 
@@ -385,7 +376,7 @@ When `editing` is `true`, for example, Svelte will show the update form; when it
 
 The following gives you an idea of what the basic `if` block structure looks like:
 
-```html
+```svelte
 <div class="stack-small">
   {#if editing}
   <!-- markup for editing to-do: label, input text, Cancel and Save Button -->
@@ -397,7 +388,7 @@ The following gives you an idea of what the basic `if` block structure looks lik
 
 The non-editing section — that is, the `{:else}` part (lower half) of the `if` block — will be very similar to the one we had in our `Todos` component. The only difference is that we are calling `onToggle()`, `onEdit()`, and `onRemove()`, depending on the user action.
 
-```html
+```svelte
 {:else}
   <div class="c-cb">
     <input type="checkbox" id="todo-{todo.id}"
@@ -426,7 +417,7 @@ It is worth noting that:
 
 The editing UI (the upper half) will contain an `<input>` field and two buttons to cancel or save the changes:
 
-```html
+```svelte
 <div class="stack-small">
 {#if editing}
   <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={(e) => e.key === 'Escape' && onCancel()}>
@@ -456,7 +447,7 @@ The `<input>`'s `value` property will be bound to the `name` variable, and the b
 
 We also disable the _Save_ button when the `<input>` is empty, using the `disabled={!name}` attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:
 
-```
+```plain
 on:keydown={(e) => e.key === 'Escape' && onCancel()}
 ```
 
@@ -464,7 +455,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 1. The complete updated markup of our `Todo` component looks like the following. Update yours now:
 
-   ```html
+   ```svelte
    <div class="stack-small">
    {#if editing}
      <!-- markup for editing todo: label, input text, Cancel and Save Button -->
@@ -508,8 +499,8 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
    ```js
    function updateTodo(todo) {
-     const i = todos.findIndex((t) => t.id === todo.id)
-     todos[i] = { ...todos[i], ...todo }
+     const i = todos.findIndex((t) => t.id === todo.id);
+     todos[i] = { ...todos[i], ...todo };
    }
    ```
 
@@ -517,7 +508,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 3. Next we have to listen for the `update` event on our `<Todo>` component call, and run our `updateTodo()` function when this occurs to change the `name` and `completed` status. Update your \<Todo> call like this:
 
-   ```html
+   ```svelte
    {#each filterTodos(filter, todos) as todo (todo.id)}
    <li class="todo">
      <Todo {todo} on:update={(e) => updateTodo(e.detail)} on:remove={(e) =>
@@ -571,58 +562,3 @@ In this article, we covered the following topics:
 In the next article we will continue componentizing our app and look at some advanced techniques for working with the DOM.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

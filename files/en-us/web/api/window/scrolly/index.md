@@ -1,15 +1,8 @@
 ---
-title: Window.scrollY
+title: "Window: scrollY property"
+short-title: scrollY
 slug: Web/API/Window/scrollY
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
-  - scrollY
 browser-compat: api.Window.scrollY
 ---
 
@@ -44,7 +37,7 @@ of the current {{Glossary("viewport")}}. If there is no viewport, the returned v
 ```js
 // make sure and go down to the second page
 if (window.scrollY) {
-  window.scroll(0, 0);  // reset the scroll position to the top left of the document.
+  window.scroll(0, 0); // reset the scroll position to the top left of the document.
 }
 
 window.scrollByPages(1);

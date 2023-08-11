@@ -1,13 +1,8 @@
 ---
-title: CSSStyleRule.style
+title: "CSSStyleRule: style property"
+short-title: style
 slug: Web/API/CSSStyleRule/style
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSStyleRule
-  - Property
-  - Reference
 browser-compat: api.CSSStyleRule.style
 ---
 

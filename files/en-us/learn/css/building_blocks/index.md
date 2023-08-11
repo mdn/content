@@ -1,11 +1,7 @@
 ---
 title: CSS building blocks
 slug: Learn/CSS/Building_blocks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - building blocks
+page-type: learn-module
 ---
 
 {{LearnSidebar}}
@@ -48,7 +44,12 @@ This module contains the following articles, which cover the most essential part
     - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 - [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
   - : The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
+
+- [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+
+  - : This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Everything in CSS has a box around it, and understanding these boxes is key to being able to create layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the CSS _Box Model_, in order that you can move onto more complex layout tasks with an understanding of how it works and the terminology that relates to it.

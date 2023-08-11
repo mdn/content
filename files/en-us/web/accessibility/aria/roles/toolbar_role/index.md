@@ -1,14 +1,7 @@
 ---
 title: "ARIA: toolbar role"
 slug: Web/Accessibility/ARIA/Roles/toolbar_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
-  - toolbar role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#toolbar
   - https://w3c.github.io/aria-practices/#toolbar

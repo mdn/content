@@ -1,10 +1,7 @@
 ---
-title: Function.prototype.prototype
+title: "Function: prototype"
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
-tags:
-  - Function
-  - JavaScript
-  - Property
+page-type: javascript-instance-data-property
 spec-urls: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-prototype
 ---
 

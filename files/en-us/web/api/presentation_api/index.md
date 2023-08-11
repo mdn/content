@@ -2,12 +2,8 @@
 title: Presentation API
 slug: Web/API/Presentation_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - NeedsContent
-  - Presentation API
-  - Reference
+status:
+  - experimental
 browser-compat: api.Presentation
 ---
 
@@ -152,7 +148,7 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
 
 ### Monitor connection's state and exchange data
 
-In `presentation.html`:
+In `controller.html`:
 
 ```html
 <button id="disconnectBtn" style="display: none;">Disconnect</button>
@@ -181,7 +177,7 @@ In `presentation.html`:
       connection !== newConnection &&
       connection.state !== "closed"
     ) {
-      connection.onclosed = undefined;
+      connection.onclose = undefined;
       connection.close();
     }
 
@@ -236,8 +232,8 @@ In `presentation.html`:
 
 ```js
 const addConnection = (connection) => {
-  window.onmessage = (message) => {
-    if (message.data === "say hello") window.send("hello");
+  connection.onmessage = (message) => {
+    if (message.data === "Say hello") connection.send("hello");
   };
 };
 
@@ -257,10 +253,10 @@ In the `controller.html` file:
 
 ```html
 <script>
-  connection.send("{string: '你好，世界!', lang: 'zh-CN'}");
-  connection.send("{string: 'こんにちは、世界!', lang: 'ja'}");
-  connection.send("{string: '안녕하세요, 세계!', lang: 'ko'}");
-  connection.send("{string: 'Hello, world!', lang: 'en-US'}");
+  connection.send('{"string": "你好，世界!", "lang": "zh-CN"}');
+  connection.send('{"string": "こんにちは、世界!", "lang": "ja"}');
+  connection.send('{"string": "안녕하세요, 세계!", "lang": "ko"}');
+  connection.send('{"string": "Hello, world!", "lang": "en-US"}');
 </script>
 ```
 
@@ -273,7 +269,7 @@ In the `presentation.html` file:
     const spanElt = document.createElement("SPAN");
     spanElt.lang = messageObj.lang;
     spanElt.textContent = messageObj.string;
-    document.appendChild(spanElt);
+    document.body.appendChild(spanElt);
   };
 </script>
 ```

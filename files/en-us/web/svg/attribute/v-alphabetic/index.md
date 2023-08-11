@@ -2,10 +2,8 @@
 title: v-alphabetic
 slug: Web/SVG/Attribute/v-alphabetic
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.v-alphabetic
 ---
 

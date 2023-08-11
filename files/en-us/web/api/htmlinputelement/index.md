@@ -2,16 +2,6 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - HTMLInputElement
-  - Input
-  - Interface
-  - NeedsContent
-  - NeedsMarkupWork
-  - Reference
 browser-compat: api.HTMLInputElement
 ---
 
@@ -61,6 +51,14 @@ Some properties only apply to input element types that support the corresponding
 
   - : `string`: **Returns / Sets** the element's [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, containing a name that identifies the element when submitting the form.
 
+- {{domxref("HTMLInputElement.popoverTargetAction", "popoverTargetAction")}}
+
+  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by an {{htmlelement("input")}} element of `type="button"`. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/input#popovertargetaction) HTML attribute.
+
+- {{domxref("HTMLInputElement.popoverTargetElement", "popoverTargetElement")}}
+
+  - : Gets and sets the popover element to control via an {{htmlelement("input")}} element of `type="button"`. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/input#popovertarget) HTML attribute.
+
 - {{domxref("HTMLInputElement.step", "step")}}
 
   - : `string`: **Returns / Sets** the element's [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute, which works with [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
@@ -92,22 +90,22 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
 
-  - : `string`: **Returns / Sets** the element's [`formaction`](/en-US/docs/Web/HTML/Element/input#formaction) attribute, containing the URL of a program that processes information submitted by the element. This overrides the {{ htmlattrxref("action", "form") }} attribute of the parent form.
+  - : `string`: **Returns / Sets** the element's [`formaction`](/en-US/docs/Web/HTML/Element/input#formaction) attribute, containing the URL of a program that processes information submitted by the element. This overrides the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
 
-  - : `string`: **Returns / Sets** the element's [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute, containing the type of content that is used to submit the form to the server. This overrides the {{ htmlattrxref("enctype", "form") }} attribute of the parent form.
+  - : `string`: **Returns / Sets** the element's [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute, containing the type of content that is used to submit the form to the server. This overrides the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formMethod", "formMethod")}}
 
-  - : `string`: **Returns / Sets** the element's [`formmethod`](/en-US/docs/Web/HTML/Element/input#formmethod) attribute, containing the HTTP method that the browser uses to submit the form. This overrides the {{ htmlattrxref("method", "form") }} attribute of the parent form.
+  - : `string`: **Returns / Sets** the element's [`formmethod`](/en-US/docs/Web/HTML/Element/input#formmethod) attribute, containing the HTTP method that the browser uses to submit the form. This overrides the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}
 
-  - : `boolean`: **Returns / Sets** the element's [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute, indicating that the form is not to be validated when it is submitted. This overrides the {{ htmlattrxref("novalidate", "form") }} attribute of the parent form.
+  - : `boolean`: **Returns / Sets** the element's [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute, indicating that the form is not to be validated when it is submitted. This overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formTarget", "formTarget")}}
-  - : `string`: **Returns / Sets** the element's [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute, containing a name or keyword indicating where to display the response that is received after submitting the form. This overrides the {{ htmlattrxref("target", "form") }} attribute of the parent form.
+  - : `string`: **Returns / Sets** the element's [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute, containing a name or keyword indicating where to display the response that is received after submitting the form. This overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the parent form.
 
 ### Instance properties that apply to any type of input element that is not hidden
 

@@ -1,27 +1,8 @@
 ---
-title: queueMicrotask()
+title: queueMicrotask() global function
+short-title: queueMicrotask()
 slug: Web/API/queueMicrotask
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Intervals
-  - JavaScript
-  - Method
-  - Microtask
-  - Performance
-  - Reference
-  - Scheduling
-  - ServiceWorker
-  - SharedWorker
-  - Tasks
-  - Timers
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
-  - setTimeout
-  - Polyfill
 browser-compat: api.queueMicrotask
 ---
 
@@ -69,7 +50,7 @@ None ({{jsxref("undefined")}}).
 ```js
 queueMicrotask(() => {
   // function contents here
-})
+});
 ```
 
 Taken from the [queueMicrotask spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
@@ -82,11 +63,13 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then((res) => res.arrayBuffer()).then((data) => {
-      this._cache[url] = data;
-      this._setData(data);
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        this._cache[url] = data;
+        this._setData(data);
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```

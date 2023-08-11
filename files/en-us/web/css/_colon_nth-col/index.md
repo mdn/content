@@ -1,5 +1,5 @@
 ---
-title: ":nth-col"
+title: ":nth-col()"
 slug: Web/CSS/:nth-col
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-col
@@ -18,12 +18,14 @@ The **`:nth-col()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/C
 
 ## Syntax
 
-The `nth-col` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
+The `nth-col()` pseudo-class is specified with a single argument, which represents the pattern for matching elements. It uses `:nth-col(An+B)` syntax.
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-col
+```css
+:nth-col(An + B) {
+  /* ... */
+}
 ```
 
 ## Examples

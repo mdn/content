@@ -1,12 +1,9 @@
 ---
-title: Error.prototype.lineNumber
+title: "Error: lineNumber"
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-  - Reference
+page-type: javascript-instance-data-property
+status:
+  - non-standard
 browser-compat: javascript.builtins.Error.lineNumber
 ---
 

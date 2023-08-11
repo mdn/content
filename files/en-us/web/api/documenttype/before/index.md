@@ -1,13 +1,8 @@
 ---
-title: DocumentType.before()
+title: "DocumentType: before() method"
+short-title: before()
 slug: Web/API/DocumentType/before
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
 browser-compat: api.DocumentType.before
 ---
 
@@ -18,16 +13,12 @@ The **`DocumentType.before()`** method inserts a set of
 `DocumentType`'s parent, just before the `DocumentType`.
 Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
-> **Note:** Putting nodes before the document's doctype will set the rendering mode to
-> [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
-> in some browsers (Internet Explorer). It is not advisable to do this.
-
 ## Syntax
 
 ```js-nolint
 before(param1)
 before(param1, param2)
-before(param1, param2, /* … ,*/ paramN)
+before(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -57,7 +48,9 @@ works for IE as well, though:
 let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
-docType.before(document.createComment('<!--[if !IE]> conditional comment <![endif]-->'));
+docType.before(
+  document.createComment("<!--[if !IE]> conditional comment <![endif]-->"),
+);
 
 myDoc.childNodes;
 // NodeList [<!--[if !IE]> conditional comment <![endif]-->, <!DOCTYPE html>]

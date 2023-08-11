@@ -2,13 +2,6 @@
 title: inset
 slug: Web/CSS/inset
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.inset
 ---
 
@@ -19,6 +12,15 @@ The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that correspo
 {{EmbedInteractiveExample("pages/css/inset.html")}}
 
 While part of the _CSS Logical Properties_ specification, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{Cssxref("top")}}
+- {{Cssxref("right")}}
+- {{Cssxref("bottom")}}
+- {{Cssxref("left")}}
 
 ## Syntax
 

@@ -1,14 +1,7 @@
 ---
 title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
-tags:
-  - API
-  - Extensions
-  - Non-standard
-  - Reference
-  - Sidebar
-  - WebExtensions
-  - sidebarAction
+page-type: webextension-api
 browser-compat: webextensions.api.sidebarAction
 ---
 
@@ -54,7 +47,7 @@ The sidebarAction API is based on Opera's [sidebarAction API](https://dev.opera.
 
 ## Example add-ons
 
-- [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)
+- [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page)
 
 > **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
 

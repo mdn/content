@@ -1,15 +1,7 @@
 ---
 title: "ARIA: row role"
 slug: Web/Accessibility/ARIA/Roles/row_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA Row
-  - ARIA Row Role
-  - Accessibility
-  - Reference
-  - Row Role
-  - document structure role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#row
   - https://w3c.github.io/aria-practices/#row

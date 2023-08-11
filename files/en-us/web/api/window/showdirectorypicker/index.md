@@ -1,19 +1,14 @@
 ---
-title: Window.showDirectoryPicker()
+title: "Window: showDirectoryPicker() method"
+short-title: showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Window.showDirectoryPicker
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the
 {{domxref("Window")}} interface displays a directory picker which allows the user to
@@ -44,7 +39,7 @@ showDirectoryPicker()
 
 ### Return value
 
-A {{domxref('FileSystemDirectoryHandle')}}.
+A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSystemDirectoryHandle')}} object.
 
 ### Exceptions
 
@@ -79,5 +74,5 @@ async function getDir() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -1,13 +1,10 @@
 ---
-title: NDEFRecord.id
+title: "NDEFRecord: id property"
+short-title: id
 slug: Web/API/NDEFRecord/id
 page-type: web-api-instance-property
-tags:
-  - NDEF
-  - NDEFRecord
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.id
 ---
 

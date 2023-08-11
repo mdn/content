@@ -1,11 +1,7 @@
 ---
 title: Securing your site
 slug: Web/Security/Securing_your_site
-tags:
-  - HTTP
-  - Security
-  - Web Development
-  - Website Security
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

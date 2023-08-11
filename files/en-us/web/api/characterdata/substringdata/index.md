@@ -1,10 +1,8 @@
 ---
-title: CharacterData.substringData()
+title: "CharacterData: substringData() method"
+short-title: substringData()
 slug: Web/API/CharacterData/substringData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.substringData
 ---
 

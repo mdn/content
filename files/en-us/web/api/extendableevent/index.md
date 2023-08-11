@@ -2,15 +2,6 @@
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
 page-type: web-api-interface
-tags:
-  - API
-  - ExtendableEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
 browser-compat: api.ExtendableEvent
 ---
 
@@ -20,7 +11,7 @@ The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/en-
 
 If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the `ExtendableEvent` handler, the browser should throw an `InvalidStateError`; note also that multiple calls will stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises).
 
-> **Note:** The behavior described in the above paragraph was fixed in Firefox 43 (see {{bug(1180274)}}.)
+> **Note:** The behavior described in the above paragraph was fixed in Firefox 43 (see [Firefox bug 1180274](https://bugzil.la/1180274).)
 
 This interface inherits from the {{domxref("Event")}} interface.
 
@@ -55,28 +46,38 @@ The code snippet also shows a best practice for versioning caches used by the se
 ```js
 const CACHE_VERSION = 1;
 const CURRENT_CACHES = {
-  prefetch: `prefetch-cache-v${CACHE_VERSION}`
+  prefetch: `prefetch-cache-v${CACHE_VERSION}`,
 };
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   const urlsToPrefetch = [
-    './static/pre_fetched.txt',
-    './static/pre_fetched.html',
-    'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
+    "./static/pre_fetched.txt",
+    "./static/pre_fetched.html",
+    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
   ];
 
-  console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
+  console.log(
+    "Handling install event. Resources to pre-fetch:",
+    urlsToPrefetch,
+  );
 
   event.waitUntil(
-    caches.open(CURRENT_CACHES['prefetch']).then((cache) => {
-      return cache.addAll(urlsToPrefetch.map((urlToPrefetch) => {
-        return new Request(urlToPrefetch, {mode: 'no-cors'});
-      })).then(() => {
-        console.log('All resources have been fetched and cached.');
-      });
-    }).catch((error) => {
-      console.error('Pre-fetching failed:', error);
-    })
+    caches
+      .open(CURRENT_CACHES["prefetch"])
+      .then((cache) => {
+        return cache
+          .addAll(
+            urlsToPrefetch.map((urlToPrefetch) => {
+              return new Request(urlToPrefetch, { mode: "no-cors" });
+            }),
+          )
+          .then(() => {
+            console.log("All resources have been fetched and cached.");
+          });
+      })
+      .catch((error) => {
+        console.error("Pre-fetching failed:", error);
+      }),
   );
 });
 ```

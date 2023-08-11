@@ -2,16 +2,6 @@
 title: ClipboardItem
 slug: Web/API/ClipboardItem
 page-type: web-api-interface
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Interface
-  - Reference
-  - copy
-  - paste
 browser-compat: api.ClipboardItem
 ---
 

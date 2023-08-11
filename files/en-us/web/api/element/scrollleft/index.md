@@ -1,12 +1,8 @@
 ---
-title: Element.scrollLeft
+title: "Element: scrollLeft property"
+short-title: scrollLeft
 slug: Web/API/Element/scrollLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
 browser-compat: api.Element.scrollLeft
 ---
 
@@ -67,10 +63,10 @@ A number.
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = () => {
-  document.getElementById('container').scrollLeft += 20;
+  document.getElementById("container").scrollLeft += 20;
 };
 ```
 

@@ -2,9 +2,6 @@
 title: Quicklinks
 slug: MDN/Writing_guidelines/Page_structures/Quicklinks
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -32,16 +29,24 @@ For example, your quicklinks HTML might look like this:
         <summary>Style guides</summary>
         <ol>
           <li>
-            <a href="http://www.economist.com/research/StyleGuide/">The Economist style guide</a>
+            <a href="http://www.economist.com/research/StyleGuide/"
+              >The Economist style guide</a
+            >
           </li>
           <li>
-            <a href="https://www.amazon.com/gp/product/0226104036/">The Chicago manual of style</a>
+            <a href="https://www.amazon.com/gp/product/0226104036/"
+              >The Chicago manual of style</a
+            >
           </li>
           <li>
-            <a href="http://www.answers.com/library/Dictionary">Answers.com dictionary</a>
+            <a href="http://www.answers.com/library/Dictionary"
+              >Answers.com dictionary</a
+            >
           </li>
           <li>
-            <a href="http://www.wsu.edu/~brians/errors/">Common Errors in English</a>
+            <a href="http://www.wsu.edu/~brians/errors/"
+              >Common Errors in English</a
+            >
           </li>
         </ol>
       </details>

@@ -1,16 +1,7 @@
 ---
 title: events.Event
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - events
+page-type: webextension-api-type
 browser-compat: webextensions.api.events.Event
 ---
 
@@ -25,9 +16,9 @@ Values of this type are objects.
 ## Methods
 
 - {{WebExtAPIRef("events.Event.addListener","events.Event.addListener()")}}
-  - : Registers an event listener callback to an event.
+  - : Registers an event listener to an event.
 - {{WebExtAPIRef("events.Event.removeListener","events.Event.removeListener()")}}
-  - : Deregisters an event listener callback from an event.
+  - : Deregisters an event listener from an event.
 - {{WebExtAPIRef("events.Event.hasListener","events.Event.hasListener()")}}
   - : Tests registration status of a listener.
 - {{WebExtAPIRef("events.Event.hasListeners","events.Event.hasListeners()")}}

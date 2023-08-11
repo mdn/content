@@ -1,14 +1,10 @@
 ---
-title: WebGLRenderingContext.unpackColorSpace
+title: "WebGLRenderingContext: unpackColorSpace property"
+short-title: unpackColorSpace
 slug: Web/API/WebGLRenderingContext/unpackColorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WebGLRenderingContext.unpackColorSpace
 ---
 
@@ -56,7 +52,17 @@ const imageData = new ImageData(data, 32, 32);
 
 const tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, imageData);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  gl.RGBA,
+  width,
+  height,
+  0,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  imageData,
+);
 ```
 
 ## Specifications

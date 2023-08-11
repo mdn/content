@@ -1,17 +1,13 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sin
 ---
 
 {{JSRef}}
 
-The **`Math.sin()`** function returns the sine of a number in radians.
+The **`Math.sin()`** static method returns the sine of a number in radians.
 
 {{EmbedInteractiveExample("pages/js/math-sin.html")}}
 

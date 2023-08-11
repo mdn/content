@@ -1,10 +1,7 @@
 ---
 title: Weak signature algorithms
 slug: Web/Security/Weak_Signature_Algorithm
-tags:
-  - Cryptography
-  - Guide
-  - Security
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

@@ -1,13 +1,9 @@
 ---
-title: '::-webkit-progress-bar'
+title: "::-webkit-progress-bar"
 slug: Web/CSS/::-webkit-progress-bar
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-progress-bar
 ---
 
@@ -20,12 +16,14 @@ The **`::-webkit-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en
 ## Syntax
 
 ```css
-::-webkit-progress-bar
+::-webkit-progress-bar {
+  /* ... */
+}
 ```
 
 ## Examples
 
-### CSS content
+### CSS
 
 ```css
 progress {
@@ -37,7 +35,7 @@ progress {
 }
 ```
 
-### HTML content
+### HTML
 
 ```html
 <progress value="10" max="50"></progress>
@@ -69,4 +67,3 @@ Not part of any standard.
   - {{ cssxref("::-webkit-progress-inner-element") }}
 
 - {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}

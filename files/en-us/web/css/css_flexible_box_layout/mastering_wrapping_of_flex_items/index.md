@@ -1,20 +1,12 @@
 ---
 title: Mastering wrapping of flex items
-slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
 page-type: guide
-tags:
-  - CSS
-  - Flex
-  - Guide
-  - collapsed items
-  - flexbox
-  - grid
-  - wrapping
 ---
 
 {{CSSRef}}
 
-Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. In this guide I will explain how this works, what it is designed for and what situations really require [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) rather than flexbox.
+Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. In this guide I will explain how this works, what it is designed for and what situations really require [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) rather than flexbox.
 
 ## Making things wrap
 
@@ -60,9 +52,13 @@ If you need flex items to line up in the cross axis, controlling the width in th
 
 ## Creating gutters between items
 
-When wrapping flex items, the need to space them out is likely to arise. You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.
+To create gaps or gutters between flex items, use the {{CSSXref('gap')}} property.
 
-It is this requirement that the gap properties, once implemented, will solve for us. Proper gaps only happen on the inside edges of items.
+The gap property in CSS is a shorthand for `row-gap` and `column-gap`, specifying the size of gutters, which is the space between rows and columns within grid, flex, and multi-column layouts.
+
+In Flexbox, the `gap` property is applied to the flex container. It creates a fixed space between adjacent flex items. However, the `gap` property is not the only thing that can put space between items. Margins, paddings, `justify-content`, and `align-content` can also increase the size of the gutter, affecting the actual size of the gap.
+
+To see how the `gap` property differs from `margin` in both axes, try changing the `gap` value in the container `.box` and adding a `margin` value to the `.box > *` rule in the stylesheet below. Click the Reset button to revert to the previous values.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
 

@@ -2,17 +2,6 @@
 title: Introduction to the Real-time Transport Protocol (RTP)
 slug: Web/API/WebRTC_API/Intro_to_RTP
 page-type: guide
-tags:
-  - API
-  - Connectivity
-  - Guide
-  - Intermediate
-  - Protocols
-  - RTCRtpReceiver
-  - RTCRtpSender
-  - RTCRtpTransceiver
-  - RTP
-  - WebRTC
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -36,7 +25,7 @@ The very fact that RTCP is defined in the same RFC as RTP is a clue as to just h
 RTP's primary benefits in terms of WebRTC include:
 
 - Generally low latency.
-- Packets are sequence-numbered and time-stamped for reassembly if they arrive out of order. This lets data sent using RTP be delivered on transports that don't guarantee ordering or even guarantee delivery at all.
+- Packets are sequence-numbered and timestamped for reassembly if they arrive out of order. This lets data sent using RTP be delivered on transports that don't guarantee ordering or even guarantee delivery at all.
 - This means RTP can be — but is not required to be — used atop {{Glossary("UDP")}} for its performance as well as its multiplexing and checksum features.
 - RTP supports multicast; while this isn't yet important for WebRTC, it's likely to matter in the future, when WebRTC is (hopefully) enhanced to support multi-user conversations.
 - RTP isn't limited to use in audiovisual communication. It can be used for any form of continuous or active data transfer, including data streaming, active badges or status display updates, or control and measurement information transport.

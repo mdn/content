@@ -1,19 +1,12 @@
 ---
-title: ElementInternals.ariaSelected
+title: "ElementInternals: ariaSelected property"
+short-title: ariaSelected
 slug: Web/API/ElementInternals/ariaSelected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSelected
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaSelected
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaSelected`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
 

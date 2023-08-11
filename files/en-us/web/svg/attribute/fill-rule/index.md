@@ -2,9 +2,6 @@
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.fill-rule
 ---
 
@@ -16,7 +13,6 @@ The **`fill-rule`** attribute is a presentation attribute defining the algorithm
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('path')}}
 - {{SVGElement('polygon')}}
 - {{SVGElement('polyline')}}

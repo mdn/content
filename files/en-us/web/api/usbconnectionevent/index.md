@@ -2,18 +2,14 @@
 title: USBConnectionEvent
 slug: Web/API/USBConnectionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USBConnectionEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConnectionEvent
 ---
 
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}} is the event type passed to {{domxref("USB.onconnect")}} and {{domxref("USB.ondisconnect")}} when the user agent detects that a new USB device has been connected or disconnected.
+The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}} is the event type passed to `USB` {{domxref("USB.connect_event", "connect")}} and {{domxref("USB.disconnect_event", "disconnect")}} events when the user agent detects that a new USB device has been connected or disconnected.
 
 {{InheritanceDiagram}}
 
@@ -32,11 +28,11 @@ The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}
 In the following example listening for connect and disconnect events is used to add and remove the devices from the user interface of an application.
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   // Add event.device to the UI.
 });
 
-navigator.usb.addEventListener('disconnect', (event) => {
+navigator.usb.addEventListener("disconnect", (event) => {
   // Remove event.device from the UI.
 });
 ```

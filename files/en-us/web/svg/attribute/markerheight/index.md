@@ -2,10 +2,6 @@
 title: markerHeight
 slug: Web/SVG/Attribute/markerHeight
 page-type: svg-attribute
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.marker.markerHeight
 ---
 

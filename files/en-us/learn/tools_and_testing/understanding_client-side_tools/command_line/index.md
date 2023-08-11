@@ -1,20 +1,12 @@
 ---
 title: Command line crash course
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-tags:
-  - Beginner
-  - CLI
-  - Command Line
-  - Learn
-  - Terminal
-  - Tools
-  - client-side
-  - npm
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In your development process you'll undoubtedly be required to run some command in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
+In your development process, you'll undoubtedly be required to run some commands in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
 
 <table>
   <tbody>
@@ -45,16 +37,16 @@ We'll see how to install some tools later on in this chapter, and we'll learn mo
 One of the biggest criticisms of the command line is that it lacks hugely in user experience.
 Viewing the command line for the first time can be a daunting experience: a blank screen and a blinking cursor, with very little obvious help available on what to do.
 
-On the surface they're far from welcoming but there's a lot you can do with them, and we promise that, with a bit of guidance and practice, using them will get easier!
+On the surface, they're far from welcoming but there's a lot you can do with them, and we promise that, with a bit of guidance and practice, using them will get easier!
 This is why we are providing this chapter — to help you get started in this seemingly unfriendly environment.
 
 ### Where did the terminal come from?
 
 The terminal originates from around the 1950s-60s and its original form really doesn't resemble what we use today (for that we should be thankful). You can read a bit of the history on Wikipedia's entry for [Computer Terminal](https://en.wikipedia.org/wiki/Computer_terminal).
 
-Since then, the terminal has remained a constant feature of all operating systems — from desktop machines, to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer's underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.
+Since then, the terminal has remained a constant feature of all operating systems — from desktop machines to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer's underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.
 
-It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from "ch01-xxxx.png" to "ch02-xxxx.png". If you updated the file names using your finder or explorer GUI app, it would take you a long time.
+It is also useful for automation — for example, to write a command to update the titles of hundreds of files instantly, say from "ch01-xxxx.png" to "ch02-xxxx.png". If you updated the file names using your finder or explorer GUI app, it would take you a long time.
 
 Anyway, the terminal is not going away anytime soon.
 
@@ -80,7 +72,7 @@ As hinted at above, Linux/Unix systems have a terminal available by default, lis
 
 #### macOS
 
-macOS has a system called Darwin that sits underneath the graphical user interface. Darwin is the Unix-like system, which provides the terminal, and access to the low-level tools. macOS Darwin mostly has parity with Unix, certainly good enough to not cause us any worries as we work through this article.
+macOS has a system called Darwin that sits underneath the graphical user interface. Darwin is a Unix-like system, which provides the terminal, and access to the low-level tools. macOS Darwin mostly has parity with Unix, certainly good enough to not cause us any worries as we work through this article.
 
 The terminal is available on macOS at Applications/Utilities/Terminal.
 
@@ -90,7 +82,7 @@ As with some other programming tools, using the terminal (or command line) on Wi
 
 Windows has traditionally had its own terminal-like program called cmd ("the command prompt") for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
-Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset)
+Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset).
 
 However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
@@ -102,23 +94,23 @@ In terms of what option to choose on Windows, we'd strongly recommend trying to 
 
 #### Side note: what's the difference between a command line and a terminal?
 
-Generally you'll find these two terms used interchangeably. Technically, a terminal is software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customized). The command line is the literal line where you enter commands and the cursor blinks.
+Generally, you'll find these two terms used interchangeably. Technically, a terminal is a software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customized). The command line is the literal line where you enter commands and the cursor blinks.
 
 ### Do you have to use the terminal?
 
-Although there's a great wealth of tools available from the command line, if you're using tools like [Visual Studio Code](https://code.visualstudio.com/) there's also a mass of extensions that can be used as a proxy to using terminal commands without needing to use the terminal directly. However, you won't find a code editor extension for everything you want to do — you'll have to get some experience with the terminal eventually.
+Although there's a great wealth of tools available from the command line, if you're using tools like [Visual Studio Code](https://code.visualstudio.com/) there's also a mass of extensions that can be used as a proxy to use terminal commands without needing to use the terminal directly. However, you won't find a code editor extension for everything you want to do — you'll have to get some experience with the terminal eventually.
 
 ## Basic built-in terminal commands
 
-Enough talk — let's start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with names of relevant tools in each case:
+Enough talk — let's start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with the names of relevant tools in each case:
 
-- Navigate your computer's file system along with base level tasks such as create, copy, rename and delete:
+- Navigate your computer's file system along with base-level tasks such as create, copy, rename, and delete:
 
   - Move around your directory structure: `cd`
   - Create directories: `mkdir`
   - Create files (and modify their metadata): `touch`
-  - Copy files: `cp`
-  - Move files: `mv`
+  - Copy files or directories: `cp`
+  - Move files or directories: `mv`
   - Delete files or directories: `rm`
 
 - Download files found at specific URLs: `curl`
@@ -126,7 +118,7 @@ Enough talk — let's start looking at some terminal commands! Out of the box, h
 - View a file's contents page by page: `less`, `cat`
 - Manipulate and transform streams of text (for example changing all the instances of `<div>`s in an HTML file to `<article>`): `awk`, `tr`, `sed`
 
-> **Note:** There are a number of good tutorials on the web that go much deeper into the command line on the web — this is only a brief introduction!
+> **Note:** There are a number of good tutorials on the web that go much deeper into the command line — this is only a brief introduction!
 
 Let's move forward and look at using a few of these tools on the command line. Before you go any further, open your terminal program!
 
@@ -134,9 +126,9 @@ Let's move forward and look at using a few of these tools on the command line. B
 
 When you visit the command line you will inevitably need to navigate to a particular directory to "do something". All the operating systems (assuming a default setup) will launch their terminal program in your "home" directory, and from there you're likely to want to move to a different place.
 
-The `cd` command lets you Change Directory. Technically, cd isn't a program but a built-in. This means your operating system provides it out of the box, and also that you can't accidentally delete it — thank goodness! You don't need to worry too much about whether a command is a built-in or not, but bear in mind that built-ins appear on all unix-based systems.
+The `cd` command lets you Change Directory. Technically, cd isn't a program but a built-in. This means your operating system provides it out of the box, and also that you can't accidentally delete it — thank goodness! You don't need to worry too much about whether a command is built-in or not, but bear in mind that built-ins appear on all unix-based systems.
 
-To change directory, you type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
+To change the directory, you type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
 
 ![results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop](win-terminals-cd.png)
 
@@ -170,9 +162,9 @@ But this a waste of time — instead, you can type one command, with the differe
 cd Desktop/project/src
 ```
 
-Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash like we've done above makes the path relative to your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the web site", whereas omitting the slash means "the URL is relative to my current page".
+Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash as we've done above makes the path relative to your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the website", whereas omitting the slash means "the URL is relative to my current page".
 
-> **Note:** On windows you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
+> **Note:** On windows, you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
 
 ### Listing directory contents
 
@@ -215,7 +207,7 @@ There are a number of other basic utility commands that you'll probably end up u
 Have a play with them in a test directory you've created somewhere so that you don't accidentally delete anything important, using the example commands below for guidance:
 
 - `mkdir` — this creates a new directory inside the current directory you are in, with the name you provide after the command name. For example, `mkdir my-awesome-website` will make a new directory called `my-awesome-website`.
-- `rmdir` — removes the named directory, but only if it's empty. For example `rmdir my-awesome-website` will remove the directory we created above. If you want to remove a directory that is not empty (and also remove everything it contains), then you can use the `-r` option (recursive), but this is dangerous. Make sure there is nothing you might need inside the directory later on, as it will be gone forever.
+- `rmdir` — removes the named directory, but only if it's empty. For example, `rmdir my-awesome-website` will remove the directory we created above. If you want to remove a directory that is not empty (and also remove everything it contains), then you can use the `-r` option (recursive), but this is dangerous. Make sure there is nothing you might need inside the directory later on, as it will be gone forever.
 - `touch` — creates a new empty file, inside the current directory. For example, `touch mdn-example.md` creates a new empty file called `mdn-example.md`.
 - `mv` — moves a file from the first specified file location to the second specified file location, for example `mv mdn-example.md mdn-example.txt` (the locations are written as file paths). This command moves a file called `mdn-example.md` in the current directory to a file called `mdn-example.txt` in the current directory. Technically the file is being moved, but from a practical perspective, this command is actually renaming the file.
 - `cp` — similar in usage to `mv`, `cp` creates a copy of the file in the first location specified, in the second location specified. For example, `cp mdn-example.txt mdn-example.txt.bak` creates a copy of `mdn-example.txt` called `mdn-example.txt.bak` (you can of course call it something else if you wish).
@@ -318,7 +310,7 @@ Getting to know your system will prove useful in years to come — learn how the
 
 Now we've had a look at some of the built-in commands your system comes equipped with, let's look at how we can install a third-party CLI tool and make use of it.
 
-The vast ecosystem of installable tools for front end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js.
+The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js.
 This is slowly expanding — you can expect to see more package providers as time goes on.
 
 [Installing Node.js](https://nodejs.org/en/) also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.
@@ -334,11 +326,11 @@ Given how tooling can sometimes get out of hand in terms of complexity, "few opt
 
 ### Where to install our CLI tools?
 
-Before we dive into installing Prettier, there's a question to answer — "where should we install to?"
+Before we dive into installing Prettier, there's a question to answer — "where should we install it?"
 
 With `npm` we have the choice of installing tools globally — so we can access them anywhere — or locally to the current project directory.
 
-There are pros and cons each way — and the following lists of pros and cons for globally installing are far from exhaustive.
+There are pros and cons each way — and the following lists of pros and cons for installing globally are far from exhaustive.
 
 **Pros of installing globally:**
 
@@ -359,7 +351,7 @@ Here we'll install locally, but feel free to install globally once you understan
 
 ### Installing Prettier
 
-Prettier is an opinionated code formatting tool for front end developers, focusing around JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON and more.
+Prettier is an opinionated code formatting tool for front-end developers, focusing on JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON, and more.
 
 Prettier can:
 
@@ -368,7 +360,7 @@ Prettier can:
 - Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
 - Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
 
-For this article we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html)
+For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html)
 
 Once you've installed node, open up the terminal and run the following command to install Prettier:
 
@@ -376,7 +368,7 @@ Once you've installed node, open up the terminal and run the following command t
 npm install prettier
 ```
 
-You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner/) tool.
+You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx) tool.
 Running the command without any arguments, as with many other commands, will offer up usage and help information.
 Try this now:
 
@@ -400,7 +392,7 @@ It'll help you to understand better how the tool is intended to be used.
 
 > **Note:** If you have not first installed Prettier locally, then running `npx prettier` will download and run the latest version of Prettier all in one go _just for that command_.
 > While that might sound great, new versions of Prettier may slightly modify the output.
-> You want to install locally so that you are fixing the version of Prettier that you are using for formatting until you are ready to change it.
+> You want to install it locally so that you are fixing the version of Prettier that you are using for formatting until you are ready to change it.
 
 ### Playing with Prettier
 
@@ -486,11 +478,3 @@ Note that some of the above suggestions may need installing using npm, like we d
 That brings us to the end of our brief tour of the terminal/command line. Next up we'll be looking in more detail at package managers, and what we can do with them.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
-## In this module
-
-- [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- **Command line crash course**
-- [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

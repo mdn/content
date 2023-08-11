@@ -1,14 +1,7 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
+page-type: webextension-api
 browser-compat: webextensions.api.commands
 ---
 
@@ -32,6 +25,8 @@ Listen for the user executing commands that you have registered using the [`comm
 
 ## Events
 
+- {{WebExtAPIRef("commands.onChanged")}}
+  - : Fired when the keyboard shortcut for a command is changed.
 - {{WebExtAPIRef("commands.onCommand")}}
   - : Fired when a command is executed using its associated keyboard shortcut.
 

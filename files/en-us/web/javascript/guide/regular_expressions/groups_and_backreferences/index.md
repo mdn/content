@@ -1,15 +1,7 @@
 ---
 title: Groups and backreferences
-slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - Polyfill
-  - Regular Expressions
-  - groups
-  - backreferences
-  - regex
+slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -142,7 +134,7 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
 const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-const regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
 for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match[1]} ${match[2]}`);
 }
@@ -154,7 +146,8 @@ for (const match of personList.matchAll(regexpNames)) {
 const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-const regexpNames =  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/mg;
+const regexpNames =
+  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/gm;
 for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
 }
@@ -186,7 +179,7 @@ lines.splice(
   1,
   0,
   " ".repeat(match.indices[1][1] - match.indices[1][0]) +
-    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0])
+    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0]),
 );
 console.log(lines.join("\n"));
 // function add(x, y) {
@@ -198,12 +191,11 @@ console.log(lines.join("\n"));
 ## See also
 
 - A polyfill of [`RegExp` named capture groups](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [ClassRanges in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-classranges)

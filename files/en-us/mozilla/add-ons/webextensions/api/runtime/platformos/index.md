@@ -1,16 +1,7 @@
 ---
 title: runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformOs
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
+page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformOs
 ---
 

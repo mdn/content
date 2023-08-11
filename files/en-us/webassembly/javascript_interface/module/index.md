@@ -1,12 +1,6 @@
 ---
 title: WebAssembly.Module
 slug: WebAssembly/JavaScript_interface/Module
-tags:
-  - Class
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module
 ---
 
@@ -40,7 +34,7 @@ See the `index-compile.html` [source code](https://github.com/mdn/webassembly-ex
 const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
-  worker.postMessage(mod)
+  worker.postMessage(mod),
 );
 ```
 

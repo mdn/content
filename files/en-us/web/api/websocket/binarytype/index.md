@@ -1,13 +1,8 @@
 ---
-title: WebSocket.binaryType
+title: "WebSocket: binaryType property"
+short-title: binaryType
 slug: Web/API/WebSocket/binaryType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
 browser-compat: api.WebSocket.binaryType
 ---
 

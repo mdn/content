@@ -1,12 +1,8 @@
 ---
-title: PerformanceResourceTiming.renderBlockingStatus
+title: "PerformanceResourceTiming: renderBlockingStatus property"
+short-title: renderBlockingStatus
 slug: Web/API/PerformanceResourceTiming/renderBlockingStatus
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.renderBlockingStatus
 ---
 

@@ -1,23 +1,11 @@
 ---
-title: PaymentAddress.city
+title: "PaymentAddress: city property"
+short-title: city
 slug: Web/API/PaymentAddress/city
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Read-only
-  - Reference
-  - city
-  - payment
-  - paymentAddress
-  - town
-  - village
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.city
 ---
 

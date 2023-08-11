@@ -2,12 +2,6 @@
 title: border-spacing
 slug: Web/CSS/border-spacing
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Tables
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-spacing
 ---
 

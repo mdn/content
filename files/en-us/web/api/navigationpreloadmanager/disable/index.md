@@ -1,14 +1,8 @@
 ---
-title: NavigationPreloadManager.disable()
+title: "NavigationPreloadManager: disable() method"
+short-title: disable()
 slug: Web/API/NavigationPreloadManager/disable
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Offline
-  - Service Workers
-  - NavigationPreloadManager
 browser-compat: api.NavigationPreloadManager.disable
 ---
 
@@ -43,13 +37,15 @@ A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 The code below shows how to disable preloading, after first using {{domxref("ServiceWorkerRegistration.navigationPreload")}} to test that it is supported.
 
 ```js
-addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    if (self.registration.navigationPreload) {
-      // Disable navigation preloads!
-      await self.registration.navigationPreload.disable();
-    }
-  })());
+addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      if (self.registration.navigationPreload) {
+        // Disable navigation preloads!
+        await self.registration.navigationPreload.disable();
+      }
+    })(),
+  );
 });
 ```
 

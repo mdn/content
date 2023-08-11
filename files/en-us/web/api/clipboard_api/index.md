@@ -2,19 +2,6 @@
 title: Clipboard API
 slug: Web/API/Clipboard_API
 page-type: web-api-overview
-tags:
-  - API
-  - Async Clipboard API
-  - Clipboard
-  - Clipboard API
-  - Clipboard Event API
-  - ClipboardEvent
-  - ClipboardItem
-  - Cut
-  - Landing
-  - Reference
-  - copy
-  - paste
 browser-compat:
   - api.Clipboard
   - api.ClipboardEvent
@@ -42,7 +29,7 @@ Instead of creating a `Clipboard` object through instantiation, you access the s
 navigator.clipboard
   .readText()
   .then(
-    (clipText) => (document.querySelector(".editor").innerText += clipText)
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
   );
 ```
 

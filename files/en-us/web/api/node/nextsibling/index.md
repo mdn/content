@@ -1,11 +1,8 @@
 ---
-title: Node.nextSibling
+title: "Node: nextSibling property"
+short-title: nextSibling
 slug: Web/API/Node/nextSibling
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.nextSibling
 ---
 

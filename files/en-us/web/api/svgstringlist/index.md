@@ -2,11 +2,6 @@
 title: SVGStringList
 slug: Web/API/SVGStringList
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStringList
 ---
 

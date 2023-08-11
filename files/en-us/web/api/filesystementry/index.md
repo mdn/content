@@ -2,14 +2,6 @@
 title: FileSystemEntry
 slug: Web/API/FileSystemEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Entry
-  - File and Directory Entries API
-  - Files
-  - Interface
-  - Offline
-  - Reference
 browser-compat: api.FileSystemEntry
 ---
 
@@ -31,20 +23,29 @@ To see an example of how `toURL()` works, see the [method description](#tourl). 
 
 ```js
 // Taking care of the browser-specific prefixes.
-window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
+window.requestFileSystem =
+  window.requestFileSystem || window.webkitRequestFileSystem;
 
 // …
 
 // Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, (fs) => {
-  fs.root.getFile('log.txt', {}, (fileEntry) => {
-
-    fileEntry.remove(() => {
-      console.log('File removed.');
-    }, onError);
-
-  }, onError);
-}, onError);
+window.requestFileSystem(
+  TEMPORARY,
+  1024 * 1024 /*1MB*/,
+  (fs) => {
+    fs.root.getFile(
+      "log.txt",
+      {},
+      (fileEntry) => {
+        fileEntry.remove(() => {
+          console.log("File removed.");
+        }, onError);
+      },
+      onError,
+    );
+  },
+  onError,
+);
 ```
 
 ## Instance properties

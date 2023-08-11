@@ -2,12 +2,6 @@
 title: Lock
 slug: Web/API/Lock
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web Locks API
-  - lock
 browser-compat: api.Lock
 ---
 
@@ -31,7 +25,11 @@ The following examples show how the mode and name properties are passed in the c
 
 ```js
 navigator.locks.request("net_db_sync", show_lock_properties);
-navigator.locks.request("another_lock", {mode: "shared"}, show_lock_properties);
+navigator.locks.request(
+  "another_lock",
+  { mode: "shared" },
+  show_lock_properties,
+);
 
 function show_lock_properties(lock) {
   console.log(`The lock name is: ${lock.name}`);

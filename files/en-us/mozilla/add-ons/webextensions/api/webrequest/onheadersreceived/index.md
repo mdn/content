@@ -1,16 +1,7 @@
 ---
 title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHeadersReceived
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onHeadersReceived
 ---
 
@@ -42,7 +33,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -53,9 +44,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : The function called when this event occurs. The function is passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : [`object`](#details_2). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
@@ -177,14 +168,15 @@ Events have three functions:
 This code sets an extra cookie when requesting a resource from the target URL:
 
 ```js
-let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+let targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
 function setCookie(e) {
   const setMyCookie = {
     name: "Set-Cookie",
-    value: "my-cookie1=my-cookie-value1"
+    value: "my-cookie1=my-cookie-value1",
   };
   e.responseHeaders.push(setMyCookie);
   return { responseHeaders: e.responseHeaders };
@@ -195,14 +187,15 @@ function setCookie(e) {
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
   { urls: [targetPage] },
-  ["blocking", "responseHeaders"]
+  ["blocking", "responseHeaders"],
 );
 ```
 
 This code does the same thing the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
 ```js
-const targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+const targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
@@ -212,7 +205,7 @@ function setCookieAsync(e) {
     setTimeout(() => {
       const setMyCookie = {
         name: "Set-Cookie",
-        value: "my-cookie1=my-cookie-value1"
+        value: "my-cookie1=my-cookie-value1",
       };
       e.responseHeaders.push(setMyCookie);
       resolve({ responseHeaders: e.responseHeaders });
@@ -227,7 +220,7 @@ function setCookieAsync(e) {
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
   { urls: [targetPage] },
-  ["blocking", "responseHeaders"]
+  ["blocking", "responseHeaders"],
 );
 ```
 

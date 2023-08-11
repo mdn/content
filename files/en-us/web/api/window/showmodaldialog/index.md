@@ -1,20 +1,17 @@
 ---
-title: Window.showModalDialog()
+title: "Window: showModalDialog() method"
+short-title: showModalDialog()
 slug: Web/API/Window/showModalDialog
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Method
-  - Window
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.showModalDialog
 ---
 
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-> **Warning:** This feature has been removed. Please fix your Web sites and applications.
+> **Warning:** This feature has been removed. Please fix your websites and applications.
 >
 > This method was removed in Chrome 43 and Firefox 56.
 

@@ -1,17 +1,7 @@
 ---
 title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - Beginner
-  - CodingScripting
-  - Development environment
-  - Express
-  - Intro
-  - Learn
-  - Node
-  - nodejs
-  - npm
-  - server-side
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
@@ -47,7 +37,7 @@ _npm_ can also be used to (globally) install the _Express Application Generator_
 
 > **Note:** Unlike some other web frameworks, the development environment does not include a separate development web server. In _Node_/_Express_ a web application creates and runs its own web server!
 
-There are other peripheral tools that are part of a typical development environment, including [text editors](/en-US/docs/Learn/Common_questions/Available_text_editors) or IDEs for editing code, and source control management tools like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got these sorts of tools installed (in particular a text editor).
+There are other peripheral tools that are part of a typical development environment, including [text editors](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) or IDEs for editing code, and source control management tools like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got these sorts of tools installed (in particular a text editor).
 
 ### What operating systems are supported?
 
@@ -69,46 +59,73 @@ Other dependencies, such as database drivers, template engines, authentication e
 
 ## Installing Node
 
-In order to use _Express_ you will first have to install _Nodejs_ and the [Node Package Manager (npm)](https://docs.npmjs.com/) on your operating system. The following sections explain the easiest way to install the Long Term Supported (LTS) version of Nodejs on Ubuntu Linux 20.04, macOS, and Windows 10.
+In order to use _Express_ you will have to install _Nodejs_ and the [Node Package Manager (npm)](https://docs.npmjs.com/) on your operating system.
+To make this easier we'll first install a node version manager, and then we'll use it to install the latest Long Term Supported (LTS) versions of node and npm.
 
-> **Note:** The sections below show the easiest way to install _Node_ and _npm_ on our target OS platforms. If you're using another OS or just want to see some of the other approaches for the current platforms then see [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> **Note:** You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> We highly recommend using a node version manager as these make it easier to install, upgrade, and switch between any particular version of node and npm.
 
-### macOS and Windows
+### Windows
 
-Installing _Node_ and _npm_ on Windows and macOS is straightforward because you can just use the provided installer:
+There are a number of node version managers for Windows.
+Here we use [nvm-windows](https://github.com/coreybutler/nvm-windows), which is highly respected among node developers.
 
-1. Download the required installer:
-
-   1. Go to <https://nodejs.org/en/>
-   2. Select the button to download the LTS build that is "Recommended for most users".
-
-2. Install Node by double-clicking on the downloaded file and following the installation prompts.
-
-### Ubuntu 20.04
-
-The easiest way to install the most recent LTS version of Node is to use the [package manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) to get it from the Ubuntu _binary distributions_ repository. This can be done by running the following two commands on your terminal:
+Install the latest version using your installer of choice from the [nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) page.
+After `nvm-windows` has installed, open a command prompt (or PowerShell) and enter the following command to download the most recent LTS version of nodejs and npm:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
+nvm install lts
 ```
 
-> **Warning:** Don't install directly from the normal Ubuntu repositories because they contain very old versions of node.
+At time of writing the LTS version of nodejs is 18.15.0.
+You can set this as the _current version_ to use with the command below:
+
+```bash
+nvm use 18.15.0
+```
+
+> **Note:** If you get "Access Denied" warnings, you will need to run this command in a prompt with administration permissions.
+
+Use the command `nvm --help` to find out other command line options, such as listing all available node versions, and all downloaded NVM versions.
+
+### Ubuntu and macOS
+
+There are a number of node version managers for Ubuntu and macOS.
+[nvm](https://github.com/nvm-sh/nvm) is one of the more popular, and is the original version on which `nvm-windows` is based.
+See [nvm > Install & Update Script](https://github.com/nvm-sh/nvm#install--update-script) for the terminal instructions to install the latest version of nvm.
+
+After `nvm` has installed, open a terminal enter the following command to download the most recent LTS version of nodejs and npm:
+
+```bash
+nvm install --lts
+```
+
+At the time of writing, the LTS version of nodejs is 18.15.0.
+The command `nvm list` shows the downloaded set of version and the current version.
+You can set a particular version as the _current version_ with the command below (the same as for `npm-windows`)
+
+```bash
+nvm use 18.15.0
+```
+
+Use the command `nvm --help` to find out other command line options.
+These are often similar to, or the same as, those offered by `npm-windows`.
 
 ### Testing your Nodejs and npm installation
 
-The easiest way to test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:
+Once you have set `nvm` to use a particular node version, you can test the installation.
+A good way to do this is to use the "version" command in your terminal/command prompt and check that the expected version string is returned:
 
 ```bash
 > node -v
-v16.17.1
+v18.15.0
 ```
 
 The _Nodejs_ package manager _npm_ should also have been installed, and can be tested in the same way:
 
 ```bash
 > npm -v
-8.19.2
+9.3.1
 ```
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
@@ -142,7 +159,12 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 2. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
    ```bash
-   >node hellonode.js
+   node hellonode.js
+   ```
+
+   Once the server starts, you will see console output indicating the IP address the server is running on:
+
+   ```plain
    Server running at http://127.0.0.1:3000/
    ```
 
@@ -150,7 +172,8 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 
 ## Using npm
 
-Next to _Node_ itself, [npm](https://docs.npmjs.com/) is the most important tool for working with _Node_ applications. npm is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
+Next to _Node_ itself, [npm](https://docs.npmjs.com/) is the most important tool for working with _Node_ applications.
+`npm` is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
 
 > **Note:** From Node's perspective, _Express_ is just another package that you need to install using npm and then require in your own code.
 
@@ -242,7 +265,12 @@ The following steps show how you can use npm to download a package, save it into
 5. You can start the server by calling node with the script in your command prompt:
 
    ```bash
-   >node index.js
+   node index.js
+   ```
+
+   You will see the following console output:
+
+   ```plain
    Example app listening on port 3000
    ```
 
@@ -311,42 +339,44 @@ To create an _Express_ app named "helloworld" with the default settings, navigat
 express helloworld
 ```
 
-> **Note:** You can also specify the template library to use and a number of other settings. Use the `help` command to see all the options:
->
-> ```bash
-> express --help
-> ```
->
-> **Note:** If you're using NodeJS **version > 8.2.0 or latest**, you can skip the installation and run express-generator with `npx`:
+> **Note:** Unless you're using an old nodejs version (< 8.2.0), you could alternatively skip the installation and run express-generator with [npx](https://github.com/npm/npx#readme).
+> This has the same effect as installing and then running `express-generator` but does not install the package on your system:
 >
 > ```bash
 > npx express-generator helloworld
 > ```
->
-> This has the same effect as installing and then running `express` but does not install the package on your system. However, this means you cannot call `express` from anywhere.
 
-npm will create the new Express app in a sub folder of your current location, displaying build progress on the console. On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.
+You can also specify the template library to use and a number of other settings.
+Use the `help` command to see all the options:
 
-> **Note:** The new app will have a **package.json** file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:
->
-> ```json
-> {
->   "name": "helloworld",
->   "version": "0.0.0",
->   "private": true,
->   "scripts": {
->     "start": "node ./bin/www"
->   },
->   "dependencies": {
->     "cookie-parser": "~1.4.3",
->     "debug": "~2.6.9",
->     "express": "~4.16.0",
->     "http-errors": "~1.6.2",
->     "jade": "~1.11.0",
->     "morgan": "~1.9.0"
->   }
-> }
-> ```
+```bash
+express --help
+```
+
+The generator will create the new Express app in a sub folder of your current location, displaying build progress on the console.
+On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.
+
+The new app will have a **package.json** file in its root directory.
+You can open this to see what dependencies are installed, including Express and the template library Jade:
+
+```json
+{
+  "name": "helloworld",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  }
+}
+```
 
 Install all the dependencies for the helloworld app using npm as shown:
 
@@ -368,7 +398,7 @@ SET DEBUG=helloworld:* | npm start
 DEBUG=helloworld:* npm start
 ```
 
-The DEBUG command creates useful logging, resulting in an output like that shown below.
+The DEBUG command creates useful logging, resulting in an output like the following:
 
 ```bash
 >SET DEBUG=helloworld:* & npm start
@@ -400,15 +430,3 @@ In the next article we start working through a tutorial to build a complete web 
 - [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/windows/dev-environment/javascript/) (docs.microsoft.com)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

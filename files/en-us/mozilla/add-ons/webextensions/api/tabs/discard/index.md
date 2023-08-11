@@ -1,14 +1,7 @@
 ---
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - WebExtensions
-  - discard
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.discard
 ---
 
@@ -16,11 +9,11 @@ browser-compat: webextensions.api.tabs.discard
 
 Discards one or more tabs.
 
-Some browsers automatically "discard" tabs that they don't think are likely to be needed by the user soon. The tab stays visible in the tabstrip and the browser remembers its state, so if the user selects a tab that has been discarded, it is immediately restored.
+Some browsers automatically "discard" unused tabs to free memory. Discarded tabs stay visible in the tabstrip. The browser remembers the tab's state and restores it when the user selects the tab. The details of when tabs are and what is discarded are browser-specific.
 
-The details of exactly what is discarded are browser-specific, but in general, discarding a tab enables the browser to free some of the memory occupied by that tab.
+You can control whether the browser or this API discards a tab by setting its `autoDiscardable` property to `false` in {{WebExtAPIRef("tabs.update")}}. This setting prevents the browser from discarding the tab. The tab can then only be discarded with this API.
 
-The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) listener that would display a prompt.
+It's not possible to discard the active tab or a tab whose document contains a [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) listener that would display a prompt.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

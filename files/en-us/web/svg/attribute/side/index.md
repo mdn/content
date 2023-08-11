@@ -2,10 +2,8 @@
 title: side
 slug: Web/SVG/Attribute/side
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - Experimental
+status:
+  - experimental
 browser-compat: svg.elements.textPath.side
 ---
 
@@ -27,7 +25,10 @@ svg {
 }
 
 text {
-  font: 25px Arial, Helvetica, sans-serif;
+  font:
+    25px Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 

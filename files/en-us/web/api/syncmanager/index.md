@@ -2,13 +2,8 @@
 title: SyncManager
 slug: Web/API/SyncManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ServiceWorker
-  - SyncManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SyncManager
 ---
 

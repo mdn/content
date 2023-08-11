@@ -1,27 +1,16 @@
 ---
-title: Accelerometer.y
+title: "Accelerometer: y property"
+short-title: "y"
 slug: Web/API/Accelerometer/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
-  - "y"
+status:
+  - experimental
 browser-compat: api.Accelerometer.y
 ---
 
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along its y axis.
-
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a number specifying the acceleration of the device along its y-axis.
 
 ## Value
 

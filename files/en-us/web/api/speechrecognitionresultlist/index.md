@@ -2,20 +2,12 @@
 title: SpeechRecognitionResultList
 slug: Web/API/SpeechRecognitionResultList
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechRecognitionResultList
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResultList
 ---
 
 {{APIRef("Web Speech API")}}
 
-The **`SpeechRecognitionResultList`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.
+The **`SpeechRecognitionResultList`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","non-continuous")}} mode.
 
 ## Instance properties
 
@@ -45,7 +37,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

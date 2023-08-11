@@ -1,24 +1,8 @@
 ---
-title: RTCRemoteOutboundRtpStreamStats.localId
+title: "RTCRemoteOutboundRtpStreamStats: localId property"
+short-title: localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Outbound
-  - Property
-  - RTCRemoteOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - id
-  - localId
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 ---
 
@@ -90,18 +74,10 @@ The `networkTestStop()` function obtains a second report,
 
 #### Finding paired statistics
 
-Each statistics record of {{domxref("RTCStats.type", "type")}}
-`remote-outbound-rtp` (describing a remote peer's statistics about sending
-data to the local peer) has a corresponding record of type `inbound-rtp`
-which describes the local peer's perspective on the same data being moved between the
-two peers. Let's create a utility function to help us look up the value of a key in the
-paired statistics object.
+Each statistics record of {{domxref("RTCRemoteOutboundRtpStreamStats.type", "type")}} `remote-outbound-rtp` (describing a remote peer's statistics about sending data to the local peer) has a corresponding record of type `inbound-rtp` which describes the local peer's perspective on the same data being moved between the two peers. Let's create a utility function to help us look up the value of a key in the paired statistics object.
 
-The `findReportEntry()` function shown below examines
-an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStats")}}-based statistics
-record which contains the specified `key` — _and_ for which the key
-has the specified `value`. If no match is found (or the statistics report has
-no record corresponding to the statistics category indicated by `key`.
+The `findReportEntry()` function shown below examines an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStatsReport")}}-based statistics record which contains the specified `key` — _and_ for which the key has the specified `value`.
+If no match is found or the statistics report has no record corresponding to the statistics category indicated by `key`.
 
 ```js
 function findReportEntry(report, key, value) {
@@ -114,13 +90,8 @@ function findReportEntry(report, key, value) {
 }
 ```
 
-Since the `RTCStatsReport` is a JavaScript
-[`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map),
-we can iterate over the map's
-[`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values)
-to examine each of the `RTCStats`-based statistics records in the report
-until we find one that has the `key` property with the specified
-`value`. When a match is found, the statistics object is returned.
+Since the `RTCStatsReport` is a JavaScript [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map), we can iterate over the map's [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values) to examine each of the `RTCStats`-based statistics records in the report until we find one that has the `key` property with the specified `value`.
+When a match is found, the statistics object is returned.
 
 If no match is found, the function returns `null`.
 
@@ -144,13 +115,26 @@ async function networkTestStop(pc) {
         const startRemoteOutbound = startReport.get(endRemoteOutbound.id);
 
         if (startRemoteOutbound) {
-          const startInboundStats = findReportEntry(startReport, "remoteId", startRemoteOutbound.id);
-          const endInboundStats = findReportEntry(endReport, "remoteId", endRemoteOutbound.id);
-
-          const elapsedTime = (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) / 1000;    /* in seconds */
-          const packetsSent = endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
-          const bytesSent = endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
-          const framesDecoded = endInboundStats.framesDecoded - startInboundStats.framesDecoded;
+          const startInboundStats = findReportEntry(
+            startReport,
+            "remoteId",
+            startRemoteOutbound.id,
+          );
+          const endInboundStats = findReportEntry(
+            endReport,
+            "remoteId",
+            endRemoteOutbound.id,
+          );
+          // Elapsed time in seconds
+          const elapsedTime =
+            (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) /
+            1000;
+          const packetsSent =
+            endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
+          const bytesSent =
+            endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
+          const framesDecoded =
+            endInboundStats.framesDecoded - startInboundStats.framesDecoded;
           const frameRate = framesDecoded / elapsedTime;
 
           let timeString = "";
@@ -160,13 +144,16 @@ async function networkTestStop(pc) {
 
           let frameString = "";
           if (!isNaN(framesDecoded)) {
-            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(2)} FPS.<br>`;
+            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(
+              2,
+            )} FPS.<br>`;
           }
 
-          const logEntry = `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
-                         `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
-                         `${frameString}` +
-                         `Data size: ${bytesSent} bytes.</div>`;
+          const logEntry =
+            `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
+            `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
+            `${frameString}` +
+            `Data size: ${bytesSent} bytes.</div>`;
           statsBox.innerHTML += logEntry;
         } else {
           statsBox.innerHTML += `<div class="stats-error">Unable to find initial statistics for ID ${endRemoteOutbound.id}.</div>`;
@@ -184,7 +171,7 @@ the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStat
   "getStats()")}} to get the latest statistics report for the connection and storing it in
 `endReport`. This is an {{domxref("RTCStatsReport")}} object, which maps
 strings to objects of the
-corresponding {{domxref("RTCStats")}}-based type.
+corresponding {{domxref("RTCStatsReport")}}-based type.
 
 Now we can begin to process the results, starting with the ending statistics found in
 `endReport`. In this case, we're looking for statistics records whose
@@ -194,10 +181,8 @@ of type {{domxref("RTCRemoteOutboundRtpStreamStats")}}, and it provides statisti
 giving details about the state of things _from the perspective of the remote
 peer_. This statistics record is stored in `endRemoteOutbound`.
 
-Once the ending `remote-outbound-rtp` record is found, we use
-its {{domxref("RTCStats.id", "id")}} property to get its ID. WIth that in hand, we can
-look up the `remote-outbound-rtp` record in the starting statistics record
-(`startReport`), which we store into `startRemoteOutbound`.
+Once the ending `remote-outbound-rtp` record is found, we use its {{domxref("RTCRemoteOutboundRtpStreamStats.id", "id")}} property to get its ID.
+With that in hand, we can look up the `remote-outbound-rtp` record in the starting statistics record (`startReport`), which we store into `startRemoteOutbound`.
 
 Now we obtain the `inbound-rtp` statistics that correspond to these two
 `remote-outbound-rtp` records by finding the `remoteId` property
@@ -209,28 +194,17 @@ and `endInboundStats`.
 Now we have all the raw statistics needed to calculate the information we want to
 display, so we do so:
 
-- We calculate the amount of time—`elapsedTime`—that elapsed between the
-  two reports being sent by subtracting the {{domxref("RTCStats.timestamp",
-    "timestamp")}} `startReport` from that of `endReport`. We then
-  divide by 1000 to convert the result from milliseconds to seconds.
-- We compute the number of packets sent during this
-  interval—`packetsSent`—by subtracting the two reports' values for the
+- We calculate the amount of time—`elapsedTime`—that elapsed between the two reports being sent by subtracting the {{domxref("RTCRemoteOutboundRtpStreamStats.timestamp", "timestamp")}} `startReport` from that of `endReport`.
+  We then divide by 1000 to convert the result from milliseconds to seconds.
+- We compute the number of packets sent during this interval—`packetsSent`—by subtracting the two reports' values for the
   {{domxref("RTCSentRtpStreamStats.packetsSent", "packetsSent")}} property.
-- Similarly, the number of bytes sent during this interval—`bytesSent`—is
-  calculated by subtracting the starting statistics object's
-  {{domxref("RTCSentRtpStreamStats.bytesSent", "bytesSent")}} property from that of the
-  ending statistics.
-- The number of frames decoded during this interval—`framesDecoded`—is
-  determined by subtracting `startRecord`'s
-  {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}} from
-  `endRecord.framesDecoded`.
+- Similarly, the number of bytes sent during this interval—`bytesSent`—is calculated by subtracting the starting statistics object's
+  {{domxref("RTCSentRtpStreamStats.bytesSent", "bytesSent")}} property from that of the ending statistics.
+- The number of frames decoded during this interval—`framesDecoded`—is determined by subtracting `startRecord`'s {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}} from `endRecord.framesDecoded`.
 - Finally, the frame rate over the elapsed time span is calculated by dividing
   `framesDecoded` by `elapsedTime`.
 
-The remainder of the `networkTestStop()` function constructs the HTML used
-to display the output of the collected and computed results to the user, then append it
-to the element `statsBox`, which we're using to show the status updates to
-the user.
+The remainder of the `networkTestStop()` function constructs the HTML used to display the output of the collected and computed results to the user, then append it to the element `statsBox`, which we're using to show the status updates to the user.
 
 The output log, given the styles used by the example, looks like this:
 

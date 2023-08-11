@@ -1,14 +1,7 @@
 ---
-title: 'Test your skills: Multicol'
+title: "Test your skills: Multicol"
 slug: Learn/CSS/CSS_layout/Multicol_skills
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Multicol
-  - Multiple-column
-  - Layout
-  - test your skills
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

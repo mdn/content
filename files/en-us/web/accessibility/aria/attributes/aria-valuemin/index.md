@@ -1,13 +1,7 @@
 ---
-title: "aria-valuemin"
+title: aria-valuemin
 slug: Web/Accessibility/ARIA/Attributes/aria-valuemin
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-valuemin
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemin
 ---
 

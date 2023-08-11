@@ -1,15 +1,8 @@
 ---
-title: 'Element: wheel event'
+title: "Element: wheel event"
+short-title: wheel
 slug: Web/API/Element/wheel_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - WheelEvent
-  - wheel
 browser-compat: api.Element.wheel_event
 ---
 
@@ -26,9 +19,9 @@ This event replaces the non-standard deprecated {{domxref("Element/mousewheel_ev
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('wheel', (event) => {});
+addEventListener("wheel", (event) => {});
 
-onwheel = (event) => { };
+onwheel = (event) => {};
 ```
 
 ## Event type
@@ -98,14 +91,14 @@ function zoom(event) {
   scale += event.deltaY * -0.01;
 
   // Restrict scale
-  scale = Math.min(Math.max(.125, scale), 4);
+  scale = Math.min(Math.max(0.125, scale), 4);
 
   // Apply scale transform
   el.style.transform = `scale(${scale})`;
 }
 
 let scale = 1;
-const el = document.querySelector('div');
+const el = document.querySelector("div");
 el.onwheel = zoom;
 ```
 
@@ -116,7 +109,7 @@ el.onwheel = zoom;
 The event handler can also be set up using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 
 ```js
-el.addEventListener('wheel', zoom, { passive: false });
+el.addEventListener("wheel", zoom, { passive: false });
 ```
 
 ## Specifications
@@ -130,4 +123,4 @@ el.addEventListener('wheel', zoom, { passive: false });
 ## See also
 
 - {{domxref("WheelEvent")}}
-- [Document: `wheel` event](/en-US/docs/Web/API/Document/wheel_event)
+- [Document: `wheel` event](/en-US/docs/Web/API/Element/wheel_event)

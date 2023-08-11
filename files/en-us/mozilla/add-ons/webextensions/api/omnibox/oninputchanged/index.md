@@ -1,15 +1,7 @@
 ---
 title: omnibox.onInputChanged
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onInputChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputChanged
 ---
 
@@ -20,7 +12,7 @@ Fired whenever the user changes their input, after they have started interacting
 This is the event you'll use to populate the address bar's drop-down list with suggestions. The event listener is passed:
 
 - the current user input (not including the keyword itself or the space after it)
-- a callback function which the listener can call with an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.
+- a function which the listener can call with an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.
 
 ## Syntax
 
@@ -41,14 +33,14 @@ Events have three functions:
 
 ## addListener syntax
 
-The listener function will be passed two parameters: a string `text`, and a callback function `suggest`.
+The listener function is passed two parameters: a string `text`, and the function `suggest`.
 
 ### Parameters
 
 - `text`
   - : `String`. The current user input in the address bar, not including the extension's keyword itself or the space after the keyword. Use this to decide which suggestions to display in the drop-down list.
 - `suggest`
-  - : `Function`. A callback function that the event listener can call to supply suggestions for the address bar's drop-down list. The callback function expects to receive an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.
+  - : `Function`. A function that the event listener can call to supply suggestions for the address bar's drop-down list. The function expects to receive an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.
 
 ## Browser compatibility
 
@@ -62,7 +54,7 @@ The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and open
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 
 /*
@@ -86,7 +78,7 @@ const props = [
   "padding",
   "position",
   "transform",
-  "transition"
+  "transition",
 ];
 
 const baseURL = "https://developer.mozilla.org/en-US/docs/Web/CSS/";
@@ -102,8 +94,8 @@ function getMatchingProperties(input) {
       console.log(prop);
       const suggestion = {
         content: `${baseURL}${prop}`,
-        description: prop
-      }
+        description: prop,
+      };
       result.push(suggestion);
     } else if (result.length !== 0) {
       return result;
@@ -119,13 +111,13 @@ browser.omnibox.onInputChanged.addListener((input, suggest) => {
 browser.omnibox.onInputEntered.addListener((url, disposition) => {
   switch (disposition) {
     case "currentTab":
-      browser.tabs.update({url});
+      browser.tabs.update({ url });
       break;
     case "newForegroundTab":
-      browser.tabs.create({url});
+      browser.tabs.create({ url });
       break;
     case "newBackgroundTab":
-      browser.tabs.create({url, active: false});
+      browser.tabs.create({ url, active: false });
       break;
   }
 });

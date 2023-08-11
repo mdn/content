@@ -1,16 +1,7 @@
 ---
 title: history.deleteUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - deleteUrl
+page-type: webextension-api-function
 browser-compat: webextensions.api.history.deleteUrl
 ---
 
@@ -63,13 +54,13 @@ function onGot(results) {
 function onRemoved() {
   let searching = browser.history.search({
     text: urlToRemove,
-    startTime: 0
+    startTime: 0,
   });
 
   searching.then(onGot);
 }
 
-let deletingUrl = browser.history.deleteUrl({url: urlToRemove});
+let deletingUrl = browser.history.deleteUrl({ url: urlToRemove });
 
 deletingUrl.then(onRemoved);
 ```
@@ -88,14 +79,14 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 function onGot(results) {
   if (results.length) {
     console.log(`Removing: ${results[0].url}`);
-    browser.history.deleteUrl({url: results[0].url});
+    browser.history.deleteUrl({ url: results[0].url });
   }
 }
 
 let searching = browser.history.search({
   text: "",
   startTime: 0,
-  maxResults: 1
+  maxResults: 1,
 });
 
 searching.then(onGot);

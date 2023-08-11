@@ -2,12 +2,6 @@
 title: RsaHashedImportParams
 slug: Web/API/RsaHashedImportParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Reference
-  - RsaHashedImportParams
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaHashedImportParams
 ---
 

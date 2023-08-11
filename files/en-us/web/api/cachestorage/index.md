@@ -2,13 +2,6 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 page-type: web-api-interface
-tags:
-  - API
-  - CacheStorage
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.CacheStorage
 ---
 
@@ -77,8 +70,8 @@ self.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 
@@ -104,7 +97,7 @@ self.addEventListener("fetch", (event) => {
           })
           .catch(() => caches.match("/gallery/myLittleVader.jpg"));
       }
-    })
+    }),
   );
 });
 ```

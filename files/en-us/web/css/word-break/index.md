@@ -2,13 +2,6 @@
 title: word-break
 slug: Web/CSS/word-break
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - break-word
-  - recipe:css-property
-  - word-break
 browser-compat: css.properties.word-break
 ---
 
@@ -46,11 +39,9 @@ The `word-break` property is specified as a single keyword chosen from the list 
 - `keep-all`
   - : Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for `normal`.
 - `break-word` {{Deprecated_Inline}}
-  - : Has the same effect as `word-break: normal` and `overflow-wrap: anywhere`, regardless of the actual value of the {{cssxref("overflow-wrap")}} property.
+  - : Has the same effect as `overflow-wrap: anywhere` combined with `word-break: normal`, regardless of the actual value of the {{cssxref("overflow-wrap")}} property.
 
 > **Note:** In contrast to `word-break: break-word` and `overflow-wrap: break-word` (see {{cssxref("overflow-wrap")}}), `word-break: break-all` will create a break at the exact place where text would otherwise overflow its container (even if putting an entire word on its own line would negate the need for a break).
-
-> **Note:** While `word-break: break-word` is deprecated, it has the same effect, when specified, as `word-break: normal` and `overflow-wrap: anywhere` — regardless of the actual value of the {{CSSXref('overflow-wrap')}} property.
 
 ## Formal definition
 
@@ -139,4 +130,4 @@ The `word-break` property is specified as a single keyword chosen from the list 
 - {{cssxref("overflow-wrap")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("line-break")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

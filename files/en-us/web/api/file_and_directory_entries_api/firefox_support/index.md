@@ -2,18 +2,6 @@
 title: File and Directory Entries API support in Firefox
 slug: Web/API/File_and_Directory_Entries_API/Firefox_support
 page-type: guide
-tags:
-  - API
-  - Chrome
-  - Compatibility
-  - File and Directory Entries API
-  - Files
-  - Firefox
-  - Guide
-  - Offline
-  - Web Compatibility
-  - google
-  - google chrome
 ---
 
 {{DefaultAPISidebar("File and Directory Entries API")}}
@@ -76,7 +64,8 @@ Be sure to account for this in your code by allowing for both names. Hopefully C
 To ensure your code will work in both Chrome and other browsers, you can include code similar to the following:
 
 ```js
-const FileSystemDirectoryEntry = window.FileSystemDirectoryEntry || window.DirectoryEntry;
+const FileSystemDirectoryEntry =
+  window.FileSystemDirectoryEntry || window.DirectoryEntry;
 const FileSystemEntry = window.FileSystemEntry || window.Entry;
 ```
 

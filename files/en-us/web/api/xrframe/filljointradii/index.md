@@ -1,15 +1,10 @@
 ---
-title: XRFrame.fillJointRadii()
+title: "XRFrame: fillJointRadii() method"
+short-title: fillJointRadii()
 slug: Web/API/XRFrame/fillJointRadii
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.fillJointRadii
 ---
 

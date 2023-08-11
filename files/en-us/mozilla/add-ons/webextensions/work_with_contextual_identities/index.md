@@ -1,13 +1,7 @@
 ---
 title: Work with contextual identities
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-tags:
-  - Add-ons
-  - Beginner
-  - Contextual identities
-  - Extensions
-  - How-to
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -35,7 +29,7 @@ To use the {{WebExtAPIRef("contextualIdentities")}} API you need to include the 
 
 ## Example walkthrough
 
-The example extension [contextual-identities](https://github.com/mdn/webextensions-examples/tree/master/contextual-identities) provides a toolbar button with a popup that lists the identities in the browser. For each identity, the extension provides options to create a new tab using it's cookies container or remove all of the identity's tabs.
+The example extension [contextual-identities](https://github.com/mdn/webextensions-examples/tree/main/contextual-identities) provides a toolbar button with a popup that lists the identities in the browser. For each identity, the extension provides options to create a new tab using it's cookies container or remove all of the identity's tabs.
 
 Here is a short video of the extension in action:
 
@@ -43,7 +37,7 @@ Here is a short video of the extension in action:
 
 ### manifest.json
 
-The main features of the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/manifest.json) file are:
+The main features of the [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/contextual-identities/manifest.json) file are:
 
 - the permissions request:
 
@@ -58,7 +52,6 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
 
   ```json
     "browser_action": {
-      "browser_style": true,
       "default_title": "Contextual Identities",
       "default_popup": "context.html",
       "default_icon": {
@@ -68,7 +61,7 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
 
 ## context.html
 
-A popup on the toolbar button provides the extension's user interface. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implements this popup, but it's just a shell into which the context.js script writes the list of contextual identities and their related options.
+A popup on the toolbar button provides the extension's user interface. [context.html](https://github.com/mdn/webextensions-examples/blob/main/contextual-identities/context.html) implements this popup, but it's just a shell into which the context.js script writes the list of contextual identities and their related options.
 
 ```html
 <body>
@@ -81,7 +74,7 @@ A popup on the toolbar button provides the extension's user interface. [context.
 
 ## context.js
 
-All the features of the extension are implemented through [context.js](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.js), which is invoked whenever the toolbar popup is displayed.
+All the features of the extension are implemented through [context.js](https://github.com/mdn/webextensions-examples/blob/main/contextual-identities/context.js), which is invoked whenever the toolbar popup is displayed.
 
 The script first gets the 'identity-list' div from context.html.
 

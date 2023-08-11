@@ -2,13 +2,6 @@
 title: "@supports"
 slug: Web/CSS/@supports
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - supports
 browser-compat: css.at-rules.supports
 ---
 
@@ -261,7 +254,8 @@ If a browser doesn't support the font technology, a fallback font (`Bungee-fallb
 ```css
 @font-face {
   font-family: "Bungee Spice";
-  src: url("https://fonts.googleapis.com/css2?family=Bungee+Spice") tech(color-COLRv1),
+  src:
+    url("https://fonts.googleapis.com/css2?family=Bungee+Spice") tech(color-COLRv1),
     url("Bungee-fallback.otf") format("opentype");
 }
 ```
@@ -287,5 +281,5 @@ The following example applies the CSS style if the browser supports the `woff2` 
 
 ## See also
 
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxRef("CSS.supports()")}} method that allows the same check to be performed via JavaScript.

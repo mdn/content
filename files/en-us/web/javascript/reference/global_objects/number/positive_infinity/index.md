@@ -1,17 +1,13 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.POSITIVE_INFINITY
 ---
 
 {{JSRef}}
 
-The **`Number.POSITIVE_INFINITY`** property represents the positive Infinity value.
+The **`Number.POSITIVE_INFINITY`** static data property represents the positive Infinity value.
 
 {{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}
 

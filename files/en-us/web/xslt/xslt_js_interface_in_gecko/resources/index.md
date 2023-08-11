@@ -1,9 +1,9 @@
 ---
 title: Resources
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
-tags:
-  - XSLT
 ---
+
+{{XsltSidebar}}
 
 ## Resources
 

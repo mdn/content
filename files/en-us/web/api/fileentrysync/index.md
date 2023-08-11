@@ -2,14 +2,9 @@
 title: FileEntrySync
 slug: Web/API/FileEntrySync
 page-type: web-api-interface
-tags:
-  - API
-  - File
-  - File and Directory Entries API
-  - Interface
-  - Non-standard
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileEntrySync
 ---
 
@@ -49,8 +44,8 @@ To write content to file, create a FileWriter object by calling [`createWriter()
 
 Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
 
-```
-void createWriter ();
+```webidl
+void createWriter();
 ```
 
 #### Parameter
@@ -74,8 +69,8 @@ This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with th
 
 Returns a File that represents the current state of the file that this `FileEntry` represents.
 
-```
-void file ();
+```webidl
+void file();
 ```
 
 #### Parameter

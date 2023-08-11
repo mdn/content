@@ -1,16 +1,7 @@
 ---
 title: Website security
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Security
-  - Server-side programming
-  - Web security
-  - Website Security
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -139,7 +130,7 @@ Almost all of the security exploits in the previous sections are successful when
 A number of other concrete steps you can take are:
 
 - Use more effective password management. Encourage strong passwords. Consider two-factor authentication for your site, so that in addition to a password the user must enter another authentication code (usually one that is delivered via some physical hardware that only the user will have, such as a code in an SMS sent to their phone).
-- Configure your web server to use [HTTPS](/en-US/docs/Glossary/https) and [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS). HTTPS encrypts data sent between your client and server. This ensures that login credentials, cookies, `POST` requests data and header information are not easily available to attackers.
+- Configure your web server to use [HTTPS](/en-US/docs/Glossary/HTTPS) and [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS). HTTPS encrypts data sent between your client and server. This ensures that login credentials, cookies, `POST` requests data and header information are not easily available to attackers.
 - Keep track of the most popular threats (the [current OWASP list is here](https://owasp.org/www-project-top-ten/)) and address the most common vulnerabilities first.
 - Use [vulnerability scanning tools](https://owasp.org/www-community/Vulnerability_Scanning_Tools) to perform automated security testing on your site. Later on, your very successful website may also find bugs by offering a bug bounty [like Mozilla does here](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/).
 - Only store and display data that you need. For example, if your users must store sensitive information like credit card details, only display enough of the card number that it can be identified by the user, and not enough that it can be copied by an attacker and used on another site. The most common pattern at this time is to only display the last 4 digits of a credit card number.
@@ -153,9 +144,3 @@ This article has explained the concept of web security and some of the more comm
 With this article, you've come to the end of [this module](/en-US/docs/Learn/Server-side/First_steps), covering your first steps in server-side website programming. We hope you've enjoyed learning these fundamental concepts, and you're now ready to select a Web Framework and start programming.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)

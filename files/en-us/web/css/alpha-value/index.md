@@ -2,16 +2,6 @@
 title: <alpha-value>
 slug: Web/CSS/alpha-value
 page-type: css-type
-tags:
-  - Alpha
-  - Alpha-value
-  - CSS
-  - CSS Data Type
-  - CSS Reference
-  - Data Type
-  - Example
-  - Reference
-  - color
 spec-urls: https://drafts.csswg.org/css-color/#type-def-alpha-value
 ---
 
@@ -33,18 +23,18 @@ If the alpha value is given as a percentage, 0% corresponds to fully transparent
 
 ## Interpolation
 
-When animated, values of the `<alpha-value>` CSS data type are {{Glossary("interpolation", "interpolated")}} as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<alpha-value>` CSS data type are {{Glossary("interpolation", "interpolated")}} as real, floating-point numbers. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 
 ### Setting text color opacity
 
-Here an alpha value is used to set partially transparent text:
+The [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function accepts a fourth optional value to specify an alpha value.
+The following example shows how to apply a color with 60% opacity using the alpha value:
 
 ```css
-/* <rgba()> */
-color: rgba(34, 12, 64, 0.6);
-color: rgba(34 12 64 / 60%);
+/* <rgb()> */
+color: rgb(34 12 64 / 60%);
 ```
 
 ### Setting shape image threshold
@@ -65,5 +55,5 @@ shape-image-threshold: 0.7;
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
-- [CSS Color](/en-US/docs/Web/CSS/CSS_Colors)
+- [CSS Color](/en-US/docs/Web/CSS/CSS_colors)
 - [`<color>`](/en-US/docs/Web/CSS/color_value)

@@ -1,15 +1,8 @@
 ---
-title: Element.matches()
+title: "Element: matches() method"
+short-title: matches()
 slug: Web/API/Element/matches
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selector
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - Selector
 browser-compat: api.Element.matches
 ---
 
@@ -52,10 +45,10 @@ matches(selectors)
 ### JavaScript
 
 ```js
-const birds = document.querySelectorAll('li');
+const birds = document.querySelectorAll("li");
 
 for (const bird of birds) {
-  if (bird.matches('.endangered')) {
+  if (bird.matches(".endangered")) {
     console.log(`The ${bird.textContent} is endangered!`);
   }
 }
@@ -74,5 +67,5 @@ has indeed a `class` attribute with value `endangered`.
 
 ## See also
 
-- [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - Other {{domxref("Element")}} methods that take selectors: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, and {{domxref("element.closest()")}}.

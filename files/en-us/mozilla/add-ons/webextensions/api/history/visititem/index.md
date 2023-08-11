@@ -1,16 +1,7 @@
 ---
 title: history.VisitItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - Type
-  - VisitItem
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.history.VisitItem
 ---
 

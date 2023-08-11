@@ -1,14 +1,7 @@
 ---
 title: privacy.services
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/services
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Privacy
-  - Property
-  - Reference
-  - Services
+page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.services
 ---
 
@@ -38,19 +31,21 @@ function onSet(result) {
   }
 }
 
-  let getting = browser.privacy.services.passwordSavingEnabled.get({});
-  getting.then((got) => {
-    console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
-      let setting = browser.privacy.services.passwordSavingEnabled.set({
-        value: false
-      });
-      setting.then(onSet);
-    } else {
-      console.log("Not able to set passwordSavingEnabled");
-    }
-  });
+let getting = browser.privacy.services.passwordSavingEnabled.get({});
+getting.then((got) => {
+  console.log(got.value);
+  if (
+    got.levelOfControl === "controlled_by_this_extension" ||
+    got.levelOfControl === "controllable_by_this_extension"
+  ) {
+    let setting = browser.privacy.services.passwordSavingEnabled.set({
+      value: false,
+    });
+    setting.then(onSet);
+  } else {
+    console.log("Not able to set passwordSavingEnabled");
+  }
+});
 ```
 
 {{WebExtExamples}}

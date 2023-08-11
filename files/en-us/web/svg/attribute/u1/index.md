@@ -2,10 +2,8 @@
 title: u1
 slug: Web/SVG/Attribute/u1
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.u1
 ---
 

@@ -2,18 +2,6 @@
 title: max-width
 slug: Web/CSS/max-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Limits
-  - Maximum
-  - Reference
-  - dimensions
-  - max-width
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.max-width
 ---
 
@@ -123,6 +111,6 @@ In this example, the "child" will be either 150 pixels wide or the width of the 
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("width")}}, {{cssxref("min-width")}}
 - The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}

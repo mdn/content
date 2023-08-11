@@ -1,12 +1,7 @@
 ---
 title: theme.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
-tags:
-  - Add-ons
-  - Event
-  - Extensions
-  - Theme
-  - WebExtensions
+page-type: webextension-api-event
 browser-compat: webextensions.api.theme.onUpdated
 ---
 
@@ -41,9 +36,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `updateInfo`
 

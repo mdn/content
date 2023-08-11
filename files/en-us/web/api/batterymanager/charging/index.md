@@ -1,11 +1,8 @@
 ---
-title: BatteryManager.charging
+title: "BatteryManager: charging property"
+short-title: charging
 slug: Web/API/BatteryManager/charging
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
 browser-compat: api.BatteryManager.charging
 ---
 
@@ -21,13 +18,13 @@ A boolean.
 
 ## Examples
 
-### HTML Content
+### HTML
 
 ```html
 <div id="charging">(charging state unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {

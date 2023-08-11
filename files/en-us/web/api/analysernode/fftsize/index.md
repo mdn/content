@@ -1,14 +1,8 @@
 ---
-title: AnalyserNode.fftSize
+title: "AnalyserNode: fftSize property"
+short-title: fftSize
 slug: Web/API/AnalyserNode/fftSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - fftSize
 browser-compat: api.AnalyserNode.fftSize
 ---
 
@@ -18,7 +12,7 @@ The **`fftSize`** property of the {{domxref("AnalyserNode")}} interface is an un
 
 ## Value
 
-An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the time domain.
+An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the amplitude domain.
 
 Must be a power of 2 between 2^5 and 2^15, so one of: `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, `16384`, and `32768`. Defaults to `2048`.
 

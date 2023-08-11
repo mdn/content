@@ -1,13 +1,8 @@
 ---
-title: RemotePlayback.state
+title: "RemotePlayback: state property"
+short-title: state
 slug: Web/API/RemotePlayback/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - RemotePlayback
 browser-compat: api.RemotePlayback.state
 ---
 
@@ -33,7 +28,7 @@ In the following example the value of {{domxref("RemotePlayback.state")}} is pri
 ```js
 RemotePlayback.onconnect = () => {
   console.log(RemotePlayback.state);
-}
+};
 ```
 
 ## Specifications

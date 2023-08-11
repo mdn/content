@@ -1,16 +1,7 @@
 ---
 title: Video and Audio APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
-tags:
-  - API
-  - Article
-  - Audio
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Video
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -62,7 +53,7 @@ This creates a video player inside the browser like so:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is {{htmlattrxref("controls", "video")}}, which enables the default set of playback controls. If you don't specify this, you get no playback controls:
+You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is [`controls`](/en-US/docs/Web/HTML/Element/video#controls), which enables the default set of playback controls. If you don't specify this, you get no playback controls:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -152,7 +143,8 @@ Next, let's look at our button icons:
 @font-face {
   font-family: "HeydingsControlsRegular";
   src: url("fonts/heydings_controls-webfont.eot");
-  src: url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+  src:
+    url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
     url("fonts/heydings_controls-webfont.woff") format("woff"),
     url("fonts/heydings_controls-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -222,17 +214,17 @@ We've got a fairly complete HTML and CSS interface already; now we just need to 
 2. At the top of this file, insert the following code:
 
    ```js
-   const media = document.querySelector('video');
-   const controls = document.querySelector('.controls');
+   const media = document.querySelector("video");
+   const controls = document.querySelector(".controls");
 
-   const play = document.querySelector('.play');
-   const stop = document.querySelector('.stop');
-   const rwd = document.querySelector('.rwd');
-   const fwd = document.querySelector('.fwd');
+   const play = document.querySelector(".play");
+   const stop = document.querySelector(".stop");
+   const rwd = document.querySelector(".rwd");
+   const fwd = document.querySelector(".fwd");
 
-   const timerWrapper = document.querySelector('.timer');
-   const timer = document.querySelector('.timer span');
-   const timerBar = document.querySelector('.timer div');
+   const timerWrapper = document.querySelector(".timer");
+   const timer = document.querySelector(".timer span");
+   const timerBar = document.querySelector(".timer div");
    ```
 
    Here we are creating constants to hold references to all the objects we want to manipulate. We have three groups:
@@ -244,8 +236,8 @@ We've got a fairly complete HTML and CSS interface already; now we just need to 
 3. Next, insert the following at the bottom of your code:
 
    ```js
-   media.removeAttribute('controls');
-   controls.style.visibility = 'visible';
+   media.removeAttribute("controls");
+   controls.style.visibility = "visible";
    ```
 
    These two lines remove the default browser controls from the video, and make the custom controls visible.
@@ -257,7 +249,7 @@ Let's implement probably the most important control — the play/pause button.
 1. First of all, add the following to the bottom of your code, so that the `playPauseMedia()` function is invoked when the play button is clicked:
 
    ```js
-   play.addEventListener('click', playPauseMedia);
+   play.addEventListener("click", playPauseMedia);
    ```
 
 2. Now to define `playPauseMedia()` — add the following, again at the bottom of your code:
@@ -265,10 +257,10 @@ Let's implement probably the most important control — the play/pause button.
    ```js
    function playPauseMedia() {
      if (media.paused) {
-       play.setAttribute('data-icon','u');
+       play.setAttribute("data-icon", "u");
        media.play();
      } else {
-       play.setAttribute('data-icon','P');
+       play.setAttribute("data-icon", "P");
        media.pause();
      }
    }
@@ -283,8 +275,8 @@ Let's implement probably the most important control — the play/pause button.
 1. Next, let's add functionality to handle stopping the video. Add the following [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous one you added:
 
    ```js
-   stop.addEventListener('click', stopMedia);
-   media.addEventListener('ended', stopMedia);
+   stop.addEventListener("click", stopMedia);
+   media.addEventListener("ended", stopMedia);
    ```
 
    The {{domxref("Element/click_event", "click")}} event is obvious — we want to stop the video by running our `stopMedia()` function when the stop button is clicked. We do however also want to stop the video when it finishes playing — this is marked by the {{domxref("HTMLMediaElement/ended_event", "ended")}} event firing, so we also set up a listener to run the function on that event firing too.
@@ -295,7 +287,7 @@ Let's implement probably the most important control — the play/pause button.
    function stopMedia() {
      media.pause();
      media.currentTime = 0;
-     play.setAttribute('data-icon','P');
+     play.setAttribute("data-icon", "P");
    }
    ```
 
@@ -310,8 +302,8 @@ There are many ways that you can implement rewind and fast-forward functionality
 1. First of all, add the following two [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous ones:
 
    ```js
-   rwd.addEventListener('click', mediaBackward);
-   fwd.addEventListener('click', mediaForward);
+   rwd.addEventListener("click", mediaBackward);
+   fwd.addEventListener("click", mediaForward);
    ```
 
 2. Now on to the event handler functions — add the following code below your previous functions to define `mediaBackward()` and `mediaForward()`:
@@ -322,14 +314,14 @@ There are many ways that you can implement rewind and fast-forward functionality
 
    function mediaBackward() {
      clearInterval(intervalFwd);
-     fwd.classList.remove('active');
+     fwd.classList.remove("active");
 
-     if (rwd.classList.contains('active')) {
-       rwd.classList.remove('active');
+     if (rwd.classList.contains("active")) {
+       rwd.classList.remove("active");
        clearInterval(intervalRwd);
        media.play();
      } else {
-       rwd.classList.add('active');
+       rwd.classList.add("active");
        media.pause();
        intervalRwd = setInterval(windBackward, 200);
      }
@@ -337,14 +329,14 @@ There are many ways that you can implement rewind and fast-forward functionality
 
    function mediaForward() {
      clearInterval(intervalRwd);
-     rwd.classList.remove('active');
+     rwd.classList.remove("active");
 
-     if (fwd.classList.contains('active')) {
-       fwd.classList.remove('active');
+     if (fwd.classList.contains("active")) {
+       fwd.classList.remove("active");
        clearInterval(intervalFwd);
        media.play();
      } else {
-       fwd.classList.add('active');
+       fwd.classList.add("active");
        media.pause();
        intervalFwd = setInterval(windForward, 200);
      }
@@ -365,7 +357,7 @@ There are many ways that you can implement rewind and fast-forward functionality
    ```js
    function windBackward() {
      if (media.currentTime <= 3) {
-       rwd.classList.remove('active');
+       rwd.classList.remove("active");
        clearInterval(intervalRwd);
        stopMedia();
      } else {
@@ -375,7 +367,7 @@ There are many ways that you can implement rewind and fast-forward functionality
 
    function windForward() {
      if (media.currentTime >= media.duration - 3) {
-       fwd.classList.remove('active');
+       fwd.classList.remove("active");
        clearInterval(intervalFwd);
        stopMedia();
      } else {
@@ -396,7 +388,7 @@ The very last piece of our media player to implement is the time-elapsed display
 Add the following `addEventListener()` line just below the others:
 
 ```js
-media.addEventListener('timeupdate', setTime);
+media.addEventListener("timeupdate", setTime);
 ```
 
 Now to define the `setTime()` function. Add the following at the bottom of your file:
@@ -406,13 +398,14 @@ function setTime() {
   const minutes = Math.floor(media.currentTime / 60);
   const seconds = Math.floor(media.currentTime - minutes * 60);
 
-  const minuteValue = minutes.toString().padStart(2, '0');
-  const secondValue = seconds.toString().padStart(2, '0');
+  const minuteValue = minutes.toString().padStart(2, "0");
+  const secondValue = seconds.toString().padStart(2, "0");
 
   const mediaTime = `${minuteValue}:${secondValue}`;
   timer.textContent = mediaTime;
 
-  const barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
+  const barLength =
+    timerWrapper.clientWidth * (media.currentTime / media.duration);
   timerBar.style.width = `${barLength}px`;
 }
 ```
@@ -433,8 +426,8 @@ There is one problem left to fix. If the play/pause or stop buttons are pressed 
 First of all, add the following lines inside the `stopMedia()` function — anywhere will do:
 
 ```js
-rwd.classList.remove('active');
-fwd.classList.remove('active');
+rwd.classList.remove("active");
+fwd.classList.remove("active");
 clearInterval(intervalRwd);
 clearInterval(intervalFwd);
 ```
@@ -456,9 +449,9 @@ Here are some suggestions for ways you could enhance the existing example we've 
 3. Can you work out a way to turn the timer inner `<div>` element into a true seek bar/scroller — i.e., when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the [`getBoundingClientRect()`](/en-US/docs/Web/API/Element/getBoundingClientRect) method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:
 
    ```js
-   document.onclick = function(e) {
+   document.onclick = function (e) {
      console.log(e.x, e.y);
-   }
+   };
    ```
 
 ## See also
@@ -471,13 +464,3 @@ Here are some suggestions for ways you could enhance the existing example we've 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

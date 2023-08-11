@@ -2,15 +2,8 @@
 title: XRMediaBinding
 slug: Web/API/XRMediaBinding
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRMediaBinding
 ---
 

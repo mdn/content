@@ -1,10 +1,7 @@
 ---
 title: set:has-same-node()
 slug: Web/EXSLT/set/has-same-node
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -30,4 +27,4 @@ set:has-same-node(nodeSet1, nodeSet2)
 
 ## Specifications
 
-[EXSLT - SET:HAS-SAME-NODE](http://exslt.org/set/functions/has-same-node/index.html)
+[EXSLT - SET:HAS-SAME-NODE](https://exslt.github.io/set/functions/has-same-node/index.html)

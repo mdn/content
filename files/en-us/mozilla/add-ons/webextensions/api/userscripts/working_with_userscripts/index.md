@@ -1,12 +1,7 @@
 ---
 title: Working with userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
-tags:
-  - API
-  - Extensions
-  - How-to
-  - Tutorial
-  - userScripts
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -62,7 +57,7 @@ async function registerScript() {
     runAt: runAtInput.value,
     matchAboutBlank: stringToBool(matchAboutBlankInput.value),
     allFrames: stringToBool(allFramesInput.value),
-    scriptMetadata: {name: scriptNameInput.value || null},
+    scriptMetadata: { name: scriptNameInput.value || null },
   };
 
   // Store the last submitted values to the extension storage
@@ -93,7 +88,7 @@ async function registerScript() {
     lastErrorEl.textContent = lastError;
 
     // Store the last error.
-    await browser.storage.local.set({lastError});
+    await browser.storage.local.set({ lastError });
   }
 }
 ```

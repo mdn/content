@@ -2,11 +2,6 @@
 title: ID selectors
 slug: Web/CSS/ID_selectors
 page-type: css-selector
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.id
 ---
 
@@ -64,5 +59,5 @@ Note that syntactically (but not specificity-wise), this is equivalent to the fo
 
 ## See also
 
-- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
 - [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)

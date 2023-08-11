@@ -2,13 +2,6 @@
 title: outline
 slug: Web/CSS/outline
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.outline
 ---
 

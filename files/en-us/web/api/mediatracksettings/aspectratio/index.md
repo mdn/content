@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSettings.aspectRatio
+title: "MediaTrackSettings: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/MediaTrackSettings/aspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - aspectRatio
 browser-compat: api.MediaTrackSettings.aspectRatio
 ---
 
@@ -36,7 +25,7 @@ by its height, and rounding the result to ten decimal places. For example, the s
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

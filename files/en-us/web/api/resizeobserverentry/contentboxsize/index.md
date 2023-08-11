@@ -1,14 +1,8 @@
 ---
-title: ResizeObserverEntry.contentBoxSize
+title: "ResizeObserverEntry: contentBoxSize property"
+short-title: contentBoxSize
 slug: Web/API/ResizeObserverEntry/contentBoxSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - contentBoxSize
 browser-compat: api.ResizeObserverEntry.contentBoxSize
 ---
 
@@ -54,12 +48,12 @@ const resizeObserver = new ResizeObserver((entries) => {
     if (entry.borderBoxSize?.length > 0) {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.borderBoxSize[0].inlineSize,
-        entry.borderBoxSize[0].blockSize
+        entry.borderBoxSize[0].blockSize,
       );
     } else {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.contentRect.width,
-        entry.contentRect.height
+        entry.contentRect.height,
       );
     }
   }

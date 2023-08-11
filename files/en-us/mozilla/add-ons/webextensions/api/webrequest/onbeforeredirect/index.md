@@ -1,16 +1,7 @@
 ---
 title: webRequest.onBeforeRedirect
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeRedirect
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeRedirect
 ---
 
@@ -34,7 +25,7 @@ browser.webRequest.onBeforeRedirect.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -45,15 +36,15 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that is sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass just one value:
@@ -169,10 +160,9 @@ function logResponse(responseDetails) {
   console.log(responseDetails.redirectUrl);
 }
 
-browser.webRequest.onBeforeRedirect.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onBeforeRedirect.addListener(logResponse, {
+  urls: [target],
+});
 ```
 
 {{WebExtExamples}}

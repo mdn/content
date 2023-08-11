@@ -1,9 +1,7 @@
 ---
 title: The business case for web performance
 slug: Learn/Performance/business_case_for_performance
-tags:
-  - Web Development
-  - Web Performance
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/CSS", "Learn/Performance/Web_Performance_Basics", "Learn/Performance")}}
@@ -55,20 +53,4 @@ Setting key performance indicators (KPI) as objectives can highlight performance
 
 Setting conversion rate, time on site, and/or net promotion scores as KPIs give financial and other business goal value to the web performance efforts, and get help boost buy-in, with metrics to prove the efforts worth.
 
-{{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)
+{{PreviousMenu("Learn/Performance/CSS", "Learn/Performance")}}

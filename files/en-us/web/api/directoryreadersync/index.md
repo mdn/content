@@ -2,11 +2,9 @@
 title: DirectoryReaderSync
 slug: Web/API/DirectoryReaderSync
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DirectoryReaderSync
 ---
 
@@ -42,7 +40,7 @@ worker.onmessage = (e) => {
   });
 };
 
-worker.postMessage({cmd: "list"});
+worker.postMessage({ cmd: "list" });
 ```
 
 The following is `worker.js` code that gets the contents of the directory.
@@ -89,7 +87,7 @@ self.onmessage = (e) => {
 
     getAllEntries(fs.root.createReader());
 
-    self.postMessage({entries: paths});
+    self.postMessage({ entries: paths });
   } catch (e) {
     onError(e);
   }
@@ -104,7 +102,7 @@ Returns a list of entries from a specific directory. Call this method until an e
 
 #### Syntax
 
-```
+```js-nolint
 readEntries()
 ```
 

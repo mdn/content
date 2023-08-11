@@ -1,13 +1,7 @@
 ---
 title: How to add a shadow to text
 slug: Learn/CSS/Howto/Add_a_text_shadow
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

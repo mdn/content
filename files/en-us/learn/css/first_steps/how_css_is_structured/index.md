@@ -1,18 +1,7 @@
 ---
 title: How CSS is structured
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Learn
-  - Selectors
-  - Structure
-  - comments
-  - properties
-  - shorthand
-  - values
-  - whitespace
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -59,7 +48,7 @@ An external stylesheet contains CSS in a separate file with a `.css` extension. 
 You reference an external CSS stylesheet from an HTML `<link>` element:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -107,7 +96,7 @@ An internal stylesheet resides within an HTML document. To create an internal st
 The HTML for an internal stylesheet might look like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -140,7 +129,7 @@ But for sites with more than one page, an internal stylesheet becomes a less eff
 Inline styles are CSS declarations that affect a single HTML element, contained within a `style` attribute. The implementation of an inline style in an HTML document might look like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -166,10 +155,11 @@ For the exercise that follows, create a folder on your computer. You can name th
 **index.html:**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My CSS experiments</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -350,7 +340,7 @@ The output from the above code looks like this:
 
 - **{{cssxref("transform")}}**
 - **{{cssxref("background-image")}}, in particular gradient values**
-- **{{cssxref("color")}}, in particular rgb/rgba/hsl/hsla values**
+- **{{cssxref("color")}}, in particular rgb and hsl values**
 
 ## @rules
 
@@ -360,7 +350,7 @@ CSS [@rules](/en-US/docs/Web/CSS/At-rule) (pronounced "at-rules") provide instru
 @import "styles2.css";
 ```
 
-One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/Media_Queries). Media queries use conditional logic for applying CSS styling.
+One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Media queries use conditional logic for applying CSS styling.
 
 In the example below, the stylesheet defines a default pink background for the `<body>` element. However, a media query follows that defines a blue background if the browser viewport is wider than 30em.
 
@@ -435,7 +425,10 @@ CSS comments begin with `/*` and end with `*/`. In the example below, comments m
 /* Handle basic element styling */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -492,7 +485,10 @@ In the example below, each declaration (and rule start/end) has its own line. Th
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -566,11 +562,3 @@ You should always make sure to separate distinct values from one another by at l
 At this point, you should have a better idea about how CSS is structured. It's also useful to understand how the browser uses HTML and CSS to display a webpage. The next article, [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works), explains the process.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

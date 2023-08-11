@@ -1,14 +1,7 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - RelativeTimeFormat
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat
 ---
 
@@ -17,8 +10,6 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat
 The **`Intl.RelativeTimeFormat`** object enables language-sensitive relative time formatting.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Constructor
 
@@ -30,10 +21,19 @@ The **`Intl.RelativeTimeFormat`** object enables language-sensitive relative tim
 - {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
+## Instance properties
+
+These properties are defined on `Intl.RelativeTimeFormat.prototype` and shared by all `Intl.RelativeTimeFormat` instances.
+
+- {{jsxref("Object/constructor", "Intl.RelativeTimeFormat.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.RelativeTimeFormat` instances, the initial value is the {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} constructor.
+- `Intl.RelativeTimeFormat.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.RelativeTimeFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
-  - : Formats a `value` and a `unit` according to the locale and formatting options of the given {{jsxref("Intl.RelativeTimeFormat")}} object.
+  - : Formats a `value` and a `unit` according to the locale and formatting options of the given `Intl.RelativeTimeFormat` object.
 - {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.
 - {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
@@ -63,7 +63,7 @@ rtf.format(1, "day"); // "in 1 day"
 
 ### Using formatToParts
 
-The following example shows how to create a relative time formatter returning formatted parts
+The following example shows how to create a relative time formatter returning formatted parts.
 
 ```js
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });

@@ -1,17 +1,8 @@
 ---
-title: RelativeOrientationSensor()
+title: "RelativeOrientationSensor: RelativeOrientationSensor() constructor"
+short-title: RelativeOrientationSensor()
 slug: Web/API/RelativeOrientationSensor/RelativeOrientationSensor
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Generic Sensor API
-  - Orientation Sensor API
-  - OrientationSensor
-  - RelativeOrientationSensor
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.RelativeOrientationSensor.RelativeOrientationSensor
 ---
 
@@ -20,11 +11,6 @@ browser-compat: api.RelativeOrientationSensor.RelativeOrientationSensor
 The **`RelativeOrientationSensor()`**
 constructor creates a new {{domxref("RelativeOrientationSensor")}} object which
 describes the device's physical orientation.
-
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown
-to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-instructions.
 
 ## Syntax
 
@@ -49,6 +35,11 @@ new RelativeOrientationSensor(options)
     - `referenceFrame`
       - : Either `'device'` or
         `'screen'`. The default is `'device'`.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Specifications
 

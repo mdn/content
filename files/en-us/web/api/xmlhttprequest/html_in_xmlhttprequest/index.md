@@ -2,15 +2,6 @@
 title: HTML in XMLHttpRequest
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 page-type: guide
-tags:
-  - API
-  - Guide
-  - HTML
-  - HTML with XMLHttpRequest
-  - Loading HTML
-  - Parsing HTML
-  - Web
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
 
@@ -32,7 +23,7 @@ Retrieving an HTML resource as a DOM using {{domxref("XMLHttpRequest")}} works j
 const xhr = new XMLHttpRequest();
 xhr.onload = () => {
   console.log(xhr.responseXML.title);
-}
+};
 xhr.open("GET", "file.html");
 xhr.responseType = "document";
 xhr.send();
@@ -50,9 +41,9 @@ function HTMLinXHR() {
     return false;
   }
   const req = new window.XMLHttpRequest();
-  req.open('GET', window.location.href, false);
+  req.open("GET", window.location.href, false);
   try {
-    req.responseType = 'document';
+    req.responseType = "document";
   } catch (e) {
     return true;
   }
@@ -79,7 +70,9 @@ If the file is named `detect.html`, the following function can be used for detec
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    setTimeout(function() { callback(false); }, 0);
+    setTimeout(function () {
+      callback(false);
+    }, 0);
 
     return;
   }
@@ -88,21 +81,27 @@ function detectHtmlInXhr(callback) {
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && !done) {
       done = true;
-      callback(!!(xhr.responseXML && xhr.responseXML.title && xhr.responseXML.title === "&&<"));
+      callback(
+        !!(
+          xhr.responseXML &&
+          xhr.responseXML.title &&
+          xhr.responseXML.title === "&&<"
+        ),
+      );
     }
-  }
+  };
   xhr.onabort = xhr.onerror = () => {
     if (!done) {
       done = true;
       callback(false);
     }
-  }
+  };
   try {
     xhr.open("GET", "detect.html");
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    setTimeout(function() {
+    setTimeout(function () {
       if (!done) {
         done = true;
         callback(false);

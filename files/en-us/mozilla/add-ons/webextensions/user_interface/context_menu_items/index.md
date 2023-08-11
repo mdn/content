@@ -1,8 +1,7 @@
 ---
 title: Context menu items
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -34,7 +33,7 @@ browser.contextMenus.create(
     title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
     contexts: ["selection"],
   },
-  onCreated
+  onCreated,
 );
 ```
 
@@ -53,11 +52,11 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 
 ## Icons
 
-For details on how to create icons to use with your context menu, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to create icons to use with your context menu, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
 
 ## Examples
 
 The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub contains two examples of extensions that implement context menu items:
 
-- [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) adds several items to the browser's context menu.
-- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) adds a context menu item to links that copies the link URL to the clipboard, as plain text and rich HTML.
+- [menu-demo](https://github.com/mdn/webextensions-examples/tree/main/menu-demo) adds several items to the browser's context menu.
+- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types) adds a context menu item to links that copies the link URL to the clipboard, as plain text and rich HTML.

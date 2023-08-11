@@ -1,14 +1,7 @@
 ---
 title: "ARIA: combobox role"
 slug: Web/Accessibility/ARIA/Roles/combobox_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - composite widget role
-  - combobox
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#combobox,
   - https://w3c.github.io/aria-practices/#combobox
@@ -18,7 +11,7 @@ The `combobox` role identifies an element as an `input` that controls another el
 
 ## Description
 
-A `combobox` is a composite widget that combines a named input field with a popup providing possible values for that input field. The purpose of a this widget is to improve user experience by helping the user select a value without having to type in the complete value and, optionally depending whether supported values are limited, preventing the user from entering invalid or otherwise unsupported values.
+A `combobox` is a composite widget that combines a named input field with a popup providing possible values for that input field. The purpose of this widget is to improve user experience by helping the user select a value without having to type in the complete value and, optionally depending whether supported values are limited, preventing the user from entering invalid or otherwise unsupported values.
 
 The `combobox` role is set on input that controls another element, such as a listbox or grid, that can dynamically pop up to help the user set the value of the input.
 
@@ -34,9 +27,9 @@ The popup element associated with a `combobox` can be either a [`listbox`](/en-U
 
 Comboboxes have an implicit [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) value of `listbox`, so including this attribute is optional if the popup is a `listbox`. If the combobox popup element is a `tree`, `grid`, or `dialog` (anything other than a `listbox`), the `aria-haspopup` attribute is required. The value of `aria-haspopup` must be either the `tree`, `grid`, `dialog`, or `listbox` role. Note that for this property, `true` means `menu`, so make sure that the value corresponds to the role of the popup, not a Boolean value.
 
-When a combobox's popup is displayed, ensure the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute on the combobox element is set to the {{HTMLattrXRef('id')}} of the popup `listbox`, `tree`, `grid`, or `dialog` element. This is how the relationship between the element with the `combobox` role and the popup it controls is indicated. (Note: In older ARIA specs, this was `aria-owns` rather than `aria-controls`, so you may see `aria-owns` in older combobox implementations. The `aria-owns` in the code should be updated to `aria-controls`!)
+When a combobox's popup is displayed, ensure the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute on the combobox element is set to the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the popup `listbox`, `tree`, `grid`, or `dialog` element. This is how the relationship between the element with the `combobox` role and the popup it controls is indicated. (Note: In older ARIA specs, this was `aria-owns` rather than `aria-controls`, so you may see `aria-owns` in older combobox implementations. The `aria-owns` in the code should be updated to `aria-controls`!)
 
-If the combobox UI includes a visible control, such as an icon, that allows the visibility of the popup to be controlled via pointer and touch events, that control should be a {{HTMLElement('button')}}, {{HTMLElement('input')}} of type `button`, or a [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) role element with a {{HTMLattrXRef('tabindex')}} of `-1`. Doing so will allow the button to be focusable but not included in keyboard tab sequence. It must not be a descendant of the element with role `combobox`.
+If the combobox UI includes a visible control, such as an icon, that allows the visibility of the popup to be controlled via pointer and touch events, that control should be a {{HTMLElement('button')}}, {{HTMLElement('input')}} of type `button`, or a [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) role element with a [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) of `-1`. Doing so will allow the button to be focusable but not included in keyboard tab sequence. It must not be a descendant of the element with role `combobox`.
 
 To be keyboard accessible, keyboard support for moving focus between the `combobox` input field element and elements contained in the popup `listbox`, `tree`, `grid`, or `dialog`, must be programmed in. One common convention is that <kbd>Down Arrow</kbd> moves focus from the input to the first focusable descendant of the popup element.
 
@@ -115,8 +108,8 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [ARIA Best Practices – Combobox](https://www.w3.org/TR/wai-aria-practices/#Combobox)
-- [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.1/#combobox)
+- [ARIA Best Practices – Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
+- [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.2/#combobox)
 - [Accessible combobox module](https://dequelabs.github.io/combobo/demo/) examples by Deque
 
 <section id="Quick_links">

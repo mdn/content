@@ -1,18 +1,13 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Property
-  - Polyfill
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.EPSILON
 ---
 
 {{JSRef}}
 
-The **`Number.EPSILON`** property represents the difference between 1 and the smallest floating point number greater than 1.
+The **`Number.EPSILON`** static data property represents the difference between 1 and the smallest floating point number greater than 1.
 
 {{EmbedInteractiveExample("pages/js/number-epsilon.html")}}
 

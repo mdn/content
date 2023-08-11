@@ -1,15 +1,10 @@
 ---
-title: BarcodeDetector()
+title: "BarcodeDetector: BarcodeDetector() constructor"
+short-title: BarcodeDetector()
 slug: Web/API/BarcodeDetector/BarcodeDetector
 page-type: web-api-constructor
-tags:
-  - Barcode Detection API
-  - BarcodeDetector
-  - Constructor
-  - barcode
-  - barcode detection
-  - shape detection
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector.BarcodeDetector
 ---
 

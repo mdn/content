@@ -2,12 +2,6 @@
 title: Optimizing canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 page-type: guide
-tags:
-  - Advanced
-  - Canvas
-  - Graphics
-  - HTML
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
@@ -86,7 +80,7 @@ If you have a static background image, you can draw it onto a plain {{HTMLElemen
 
 ### Scaling canvas using CSS transforms
 
-[CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
+[CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
 
 ```js
 const scaleX = window.innerWidth / canvas.width;

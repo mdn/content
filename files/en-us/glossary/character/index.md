@@ -1,10 +1,10 @@
 ---
 title: Character
 slug: Glossary/Character
-tags:
-  - CodingScripting
-  - strings
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A _character_ is either a symbol (letters, numbers, punctuation) or non-printing "control" (e.g., carriage return or soft hyphen). {{glossary("UTF-8")}} is the most common character set and includes the graphemes of the most popular human languages.
 

@@ -1,15 +1,7 @@
 ---
 title: Transport Layer Security
 slug: Web/Security/Transport_Layer_Security
-tags:
-  - Authentication
-  - Cryptography
-  - Data Integrity
-  - Encryption
-  - Guide
-  - SSL
-  - Security
-  - TLS
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -93,7 +85,7 @@ The removal of renegotiation in TLS 1.3 might affect some web servers that rely 
 
 To help with working towards a more modern, more secure web, all major browsers began removing support for TLS 1.0 and 1.1 in early 2020. You'll need to make sure your web server supports TLS 1.2 or 1.3 going forward.
 
-From version 74 onwards, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ({{bug(1606734)}}).
+From version 74 onwards, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ([Firefox bug 1606734](https://bugzil.la/1606734)).
 
 ## TLS handshake timeout values
 

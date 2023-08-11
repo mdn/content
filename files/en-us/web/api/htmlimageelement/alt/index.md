@@ -1,20 +1,8 @@
 ---
-title: HTMLImageElement.alt
+title: "HTMLImageElement: alt property"
+short-title: alt
 slug: Web/API/HTMLImageElement/alt
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - Text
-  - alt
-  - alternate
-  - fallback
 browser-compat: api.HTMLImageElement.alt
 ---
 
@@ -96,7 +84,10 @@ p {
 .container {
   width: 100vh;
   height: 95vh;
-  font: 16px Arial, Helvetica, sans-serif;
+  font:
+    16px Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .left-margin {
@@ -139,15 +130,16 @@ For example, in the snippet of HTML below, a toolbar which uses icon images as l
 ```html
 <li class="toolbar" aria-role="toolbar">
   <a href="songs.html" aria-role="button">
-    <img src="songicon.svg" alt="Songs">
+    <img src="songicon.svg" alt="Songs" />
   </a>
   <a href="albums.html" aria-role="button">
-    <img src="albumicon.svg" alt="Albums"></a>
+    <img src="albumicon.svg" alt="Albums"
+  /></a>
   <a href="artists.html" aria-role="button">
-    <img src="artisticon.svg" alt="Artists">
+    <img src="artisticon.svg" alt="Artists" />
   </a>
   <a href="playlists.html" aria-role="button">
-    <img src="playlisticon.svg" alt="Playlists">
+    <img src="playlisticon.svg" alt="Playlists" />
   </a>
 </li>
 ```
@@ -235,7 +227,11 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
 
 .contents {
   margin-top: 1em;
-  font: 16px Arial, Helvetica, Verdana, sans-serif;
+  font:
+    16px Arial,
+    Helvetica,
+    Verdana,
+    sans-serif;
 }
 ```
 

@@ -1,11 +1,7 @@
 ---
 title: "ARIA: banner role"
 slug: Web/Accessibility/ARIA/Roles/banner_role
-tags:
-  - ARIA
-  - ARIA role
-  - Accessibility
-  - Reference
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#banner
   - https://w3c.github.io/aria-practices/#aria_lh_banner
@@ -21,7 +17,7 @@ A `banner` landmark role overwrites the implicit ARIA role of the container elem
 
 The banner typically includes things such as a logo or corporate identity, or possibly a site-specific search tool, and is generally what your marketing team would call the "header" or "top banner" of the site. If the [`header` element](/en-US/docs/Web/HTML/Element/header) technique is not being used for that banner, a declaration of `role="banner"` should be used to define a banner landmark to assistive technologies.
 
-Assistive technologies can identify the `header` element of a page as the `banner` if is a descendant of the [`body` element](/en-US/docs/Web/HTML/Element/body), and not nested within an `article`, `aside`, `main`, `nav` or `section` subsection.
+Assistive technologies can identify the `header` element of a page as the `banner` if it is a descendant of the [`body` element](/en-US/docs/Web/HTML/Element/body), and not nested within an `article`, `aside`, `main`, `nav` or `section` subsection.
 
 Each page may have a `banner` landmark, but each page should generally be limited to a single element with the role of banner. In the case of a page containing nested `document` and/or `application` roles, each nested `document` or `application` role may also have one `banner` landmark. If a page includes more than one `banner` landmark, each should have a unique accessible name.
 

@@ -1,17 +1,7 @@
 ---
 title: windows.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - close
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.remove
 ---
 
@@ -56,10 +46,8 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let removing = browser.windows.remove(tab.windowId);
   removing.then(onRemoved, onError);
-
 });
 ```
 
@@ -67,12 +55,16 @@ Close the current, e.g. popup, window when the user clicks a button on the page:
 
 ```js
 // in a script loaded by the page in the window
-document.querySelector('#close').addEventListener(async ({ button, }) => { try {
-  if (button) return; // not a left click
-  const windowId = (await browser.windows.getCurrent()).id;
-  await browser.windows.remove(windowId);
-  // this point will never be reached, since the window is gone
-} catch (error) { console.error('Closing failed:', error); } });
+document.querySelector("#close").addEventListener(async ({ button }) => {
+  try {
+    if (button) return; // not a left click
+    const windowId = (await browser.windows.getCurrent()).id;
+    await browser.windows.remove(windowId);
+    // this point will never be reached, since the window is gone
+  } catch (error) {
+    console.error("Closing failed:", error);
+  }
+});
 ```
 
 In Firefox, the same could be achieved with the `.allowScriptsToClose` window creation property and `window.close()`.

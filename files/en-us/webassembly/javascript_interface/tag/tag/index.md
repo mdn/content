@@ -1,12 +1,6 @@
 ---
 title: WebAssembly.Tag() constructor
 slug: WebAssembly/JavaScript_interface/Tag/Tag
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
-  - Tag
 browser-compat: javascript.builtins.WebAssembly.Tag.Tag
 ---
 

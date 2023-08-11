@@ -1,15 +1,8 @@
 ---
-title: FileSystemDirectoryEntry.getFile()
+title: "FileSystemDirectoryEntry: getFile() method"
+short-title: getFile()
 slug: Web/API/FileSystemDirectoryEntry/getFile
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Method
-  - Reference
-  - getFile
 browser-compat: api.FileSystemDirectoryEntry.getFile
 ---
 

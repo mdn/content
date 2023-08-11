@@ -2,13 +2,6 @@
 title: RTCIceServer
 slug: Web/API/RTCIceServer
 page-type: web-api-interface
-tags:
-  - Authentication
-  - Configuration
-  - Dictionary
-  - ICE
-  - RTCIceServer
-  - WebRTC
 browser-compat: api.RTCIceServer
 ---
 
@@ -43,16 +36,17 @@ _The following properties have been removed from the specification and should no
 The configuration below establishes two ICE servers. The first one, `stun:stun.services.mozilla.com`, requires authentication, so the username and password are provided. The second server has two URLs: `stun:stun.example.com` and `stun:stun-1.example.com`.
 
 ```js
-const configuration = { iceServers: [{
-                          urls: "stun:stun.services.mozilla.com",
-                          username: "louis@mozilla.com",
-                          credential: "webrtcdemo"
-                      }, {
-                          urls: [
-                                  "stun:stun.example.com",
-                                  "stun:stun-1.example.com"
-                          ]
-                      }]
+const configuration = {
+  iceServers: [
+    {
+      urls: "stun:stun.services.mozilla.com",
+      username: "louis@mozilla.com",
+      credential: "webrtcdemo",
+    },
+    {
+      urls: ["stun:stun.example.com", "stun:stun-1.example.com"],
+    },
+  ],
 };
 
 const pc = new RTCPeerConnection(configuration);

@@ -1,18 +1,8 @@
 ---
-title: Animation.updatePlaybackRate()
+title: "Animation: updatePlaybackRate() method"
+short-title: updatePlaybackRate()
 slug: Web/API/Animation/updatePlaybackRate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Interface
-  - Method
-  - Reference
-  - Web Animations
-  - playbackRate
-  - updatePlaybackRate
-  - waapi
-  - web animations api
 browser-compat: api.Animation.updatePlaybackRate
 ---
 

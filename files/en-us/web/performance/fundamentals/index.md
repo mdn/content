@@ -1,12 +1,7 @@
 ---
 title: Performance fundamentals
 slug: Web/Performance/Fundamentals
-tags:
-  - Apps
-  - Firefox
-  - Gecko
-  - Guide
-  - Performance
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -107,7 +102,7 @@ Another problem that can delay startup is idle time, caused by waiting for respo
 
 > **Note:** For much more information on improving startup performance, read [Optimizing startup performance](/en-US/docs/Web/Performance/Optimizing_startup_performance).
 
-On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) for a guide as to how.
+On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation) for a guide about using service workers for offline and background sync capabilities.
 
 ### Frame rate
 
@@ -115,7 +110,7 @@ The first important thing for high frame rate is to choose the right tool. Use H
 
 For content drawn using Canvas, it's up to the developer to hit frame rate targets: they have direct control over what's drawn.
 
-For HTML and CSS content, the path to high frame rate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling frame rate over a target. CSS [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
+For HTML and CSS content, the path to high frame rate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling frame rate over a target. CSS [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
 
 Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:
 
@@ -138,7 +133,7 @@ The following practical tips will help improve one or more of the Application pe
 
 #### Use CSS animations and transitions
 
-Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
+Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
 
 CSS animations give you very granular control over your effects using [keyframes](/en-US/docs/Web/CSS/@keyframes), and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.
 

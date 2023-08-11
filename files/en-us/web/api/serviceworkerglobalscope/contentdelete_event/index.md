@@ -1,15 +1,10 @@
 ---
-title: 'ServiceWorkerGlobalScope: contentdelete event'
+title: "ServiceWorkerGlobalScope: contentdelete event"
+short-title: contentdelete
 slug: Web/API/ServiceWorkerGlobalScope/contentdelete_event
 page-type: web-api-event
-tags:
-  - Content Index API
-  - ServiceWorkerGlobalScope
-  - content indexing
-  - contentdelete
-  - delete
-  - event
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.contentdelete_event
 ---
 
@@ -24,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('contentdelete', (event) => { });
+addEventListener("contentdelete", (event) => {});
 
-oncontentdelete = (event) => { };
+oncontentdelete = (event) => {};
 ```
 
 ## Event type
@@ -47,12 +42,15 @@ _In addition to the properties listed below, this interface inherits the propert
 The following example uses a `contentdelete` event handler to remove cached content related to the deleted index item.
 
 ```js
-self.addEventListener('contentdelete', (event) => {
-  const deletion = caches.open('cache-name')
-    .then((cache) => Promise.all([
-      cache.delete(`/icon/${event.id}`),
-      cache.delete(`/content/${event.id}`),
-    ]));
+self.addEventListener("contentdelete", (event) => {
+  const deletion = caches
+    .open("cache-name")
+    .then((cache) =>
+      Promise.all([
+        cache.delete(`/icon/${event.id}`),
+        cache.delete(`/content/${event.id}`),
+      ]),
+    );
   event.waitUntil(deletion);
 });
 ```

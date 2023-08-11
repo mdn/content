@@ -1,12 +1,6 @@
 ---
 title: WebAssembly.Module() constructor
 slug: WebAssembly/JavaScript_interface/Module/Module
-tags:
-  - Constructor
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
 
@@ -38,8 +32,8 @@ new WebAssembly.Module(bufferSource)
 ### Parameters
 
 - `bufferSource`
-  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-    containing the binary code of the .wasm module you want to compile.
+  - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+    containing the binary code of the Wasm module you want to compile.
 
 #### Exceptions
 
@@ -71,7 +65,7 @@ fetch("simple.wasm")
   .then((bytes) => {
     const mod = createWasmModule(bytes);
     WebAssembly.instantiate(mod, importObject).then((result) =>
-      result.exports.exported_func()
+      result.exports.exported_func(),
     );
   });
 ```

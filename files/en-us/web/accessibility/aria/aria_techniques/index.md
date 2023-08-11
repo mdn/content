@@ -1,11 +1,7 @@
 ---
 title: "Using ARIA: Roles, states, and properties"
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibility
-  - Overview
-  - Reference
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -15,7 +11,7 @@ tags:
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
     <li class="toggle">
       <details><summary>ARIA states and properties</summary>
@@ -66,7 +62,7 @@ The techniques below describe each composite role as well as their required and 
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) (including [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) role)
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) (see [`radio role`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role))
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) (see [`radio role`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role))
 - [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) (including [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) roles)
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
@@ -187,4 +183,4 @@ The techniques below describe each composite role as well as their required and 
 
 ### MicrosoftEdge-specific properties
 
-- [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom) {{Non-standard_Inline}}
+- [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}

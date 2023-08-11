@@ -2,12 +2,6 @@
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PerformanceEntry
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry
 ---
 
@@ -22,6 +16,7 @@ A performance entry can also be created by calling the {{domxref("Performance.ma
 The `PerformanceEntry` instances will always be one of the following subclasses:
 
 - {{domxref("LargestContentfulPaint")}}
+- {{domxref("LayoutShift")}}
 - {{domxref("PerformanceEventTiming")}}
 - {{domxref("PerformanceLongTaskTiming")}}
 - {{domxref("PerformanceMark")}}
@@ -31,6 +26,7 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 - {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformanceServerTiming")}}
 - {{domxref("TaskAttributionTiming")}}
+- {{domxref("VisibilityStateEntry")}}
 
 ## Instance properties
 
@@ -56,27 +52,23 @@ The following example creates `PerformanceEntry` objects that are of the types {
 The `PerformanceMark` and `PerformanceMeasure` subclasses inherit the `duration`, `entryType`, `name`, and `startTime` properties from `PerformanceEntry` and set them to their appropriate values.
 
 ```js
-// Place at a location in the code that starts login 
+// Place at a location in the code that starts login
 performance.mark("login-started");
 
-// Place at a location in the code that finishes login 
+// Place at a location in the code that finishes login
 performance.mark("login-finished");
 
 // Measure login duration
-performance.measure(
-  "login-duration",
-  "login-started",
-  "login-finished"
-);
+performance.measure("login-duration", "login-started", "login-finished");
 
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.entryType === "mark") {
       console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-    };
+    }
     if (entry.entryType === "measure") {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);

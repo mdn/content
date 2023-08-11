@@ -2,17 +2,6 @@
 title: Using the Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Guide
-  - Playback
-  - Using
-  - Web
-  - Web Audio
-  - Web Audio API
-  - basics
-  - sound
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -86,7 +75,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 When playing sound on the web, it's important to allow the user to control it. Depending on the use case, there's a myriad of options, but we'll provide functionality to play/pause the sound, alter the track's volume, and pan it from left to right.
 
-Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or a allowlist). Autoplay policies typically require either explicit permission or a user engagement with the page before scripts can trigger audio to play.
+Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or an allowlist). Autoplay policies typically require either explicit permission or a user engagement with the page before scripts can trigger audio to play.
 
 These special requirements are in place essentially because unexpected sounds can be annoying and intrusive, and can cause accessibility problems. You can learn more about this in our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
@@ -133,7 +122,7 @@ playButton.addEventListener(
       playButton.dataset.playing = "false";
     }
   },
-  false
+  false,
 );
 ```
 
@@ -145,7 +134,7 @@ audioElement.addEventListener(
   () => {
     playButton.dataset.playing = "false";
   },
-  false
+  false,
 );
 ```
 
@@ -189,7 +178,7 @@ volumeControl.addEventListener(
   () => {
     gainNode.gain.value = volumeControl.value;
   },
-  false
+  false,
 );
 ```
 
@@ -236,7 +225,7 @@ pannerControl.addEventListener(
   () => {
     panner.pan.value = pannerControl.value;
   },
-  false
+  false,
 );
 ```
 

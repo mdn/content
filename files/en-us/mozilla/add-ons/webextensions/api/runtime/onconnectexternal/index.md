@@ -1,16 +1,7 @@
 ---
 title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onConnectExternal
-  - runtime
+page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnectExternal
 ---
 
@@ -32,7 +23,7 @@ browser.runtime.onConnectExternal.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -45,7 +36,7 @@ Events have three functions:
 
 - `function`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other extension it is connecting to.
@@ -60,16 +51,14 @@ In this example the extension Hansel connects to the extension Gretel:
 
 ```js
 console.log("connecting to Gretel");
-let myPort = browser.runtime.connect(
-  "gretel@mozilla.org"
-);
+let myPort = browser.runtime.connect("gretel@mozilla.org");
 
 myPort.onMessage.addListener((message) => {
   console.log(`From Gretel: ${message.content}`);
 });
 
 browser.browserAction.onClicked.addListener(() => {
-  myPort.postMessage({content: "Hello from Hansel"});
+  myPort.postMessage({ content: "Hello from Hansel" });
 });
 ```
 
@@ -90,7 +79,7 @@ browser.runtime.onConnectExternal.addListener((port) => {
 });
 
 browser.browserAction.onClicked.addListener(() => {
-   portFromHansel.postMessage({content: "Message from Gretel"});
+  portFromHansel.postMessage({ content: "Message from Gretel" });
 });
 ```
 

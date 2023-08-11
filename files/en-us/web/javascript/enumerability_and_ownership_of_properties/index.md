@@ -1,9 +1,7 @@
 ---
 title: Enumerability and ownership of properties
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-tags:
-  - Guide
-  - JavaScript
+page-type: guide
 ---
 
 {{JsSidebar("More")}}
@@ -18,7 +16,7 @@ _Enumerable properties_ are those properties whose internal enumerable flag is s
 
 Ownership of properties is determined by whether the property belongs to the object directly and not to its prototype chain.
 
-All properties, enumerable or not, string or symbol, own or inherited, can be accessed with [dot notation or bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). In this section, we will focus on JavaScript means that visit a group of object properties one-by-one.
+All properties, enumerable or not, string or symbol, own or inherited, can be accessed with [dot notation or bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). In this section, we will focus on JavaScript means that visit a group of object properties one-by-one.
 
 ## Querying object properties
 
@@ -59,13 +57,18 @@ Note that this is not the most efficient algorithm for all cases, but useful for
 const SimplePropertyRetriever = {
   getOwnEnumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
-      // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);
+    // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);
   },
   getOwnNonenumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
   },
   getOwnEnumerablesAndNonenumerables(obj) {
-    return this._getPropertyNames(obj, true, false, this._enumerableAndNotEnumerable);
+    return this._getPropertyNames(
+      obj,
+      true,
+      false,
+      this._enumerableAndNotEnumerable,
+    );
     // Or just use: return Object.getOwnPropertyNames(obj);
   },
   getPrototypeEnumerables(obj) {
@@ -75,7 +78,12 @@ const SimplePropertyRetriever = {
     return this._getPropertyNames(obj, false, true, this._notEnumerable);
   },
   getPrototypeEnumerablesAndNonenumerables(obj) {
-    return this._getPropertyNames(obj, false, true, this._enumerableAndNotEnumerable);
+    return this._getPropertyNames(
+      obj,
+      false,
+      true,
+      this._enumerableAndNotEnumerable,
+    );
   },
   getOwnAndPrototypeEnumerables(obj) {
     return this._getPropertyNames(obj, true, true, this._enumerable);
@@ -85,7 +93,12 @@ const SimplePropertyRetriever = {
     return this._getPropertyNames(obj, true, true, this._notEnumerable);
   },
   getOwnAndPrototypeEnumerablesAndNonenumerables(obj) {
-    return this._getPropertyNames(obj, true, true, this._enumerableAndNotEnumerable);
+    return this._getPropertyNames(
+      obj,
+      true,
+      true,
+      this._enumerableAndNotEnumerable,
+    );
   },
   // Private static property checker callbacks
   _enumerable(obj, prop) {
@@ -115,7 +128,7 @@ const SimplePropertyRetriever = {
       obj = Object.getPrototypeOf(obj);
     } while (obj);
     return props;
-  }
+  },
 };
 ```
 

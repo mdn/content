@@ -1,15 +1,8 @@
 ---
-title: NodeList.values()
+title: "NodeList: values() method"
+short-title: values()
 slug: Web/API/NodeList/values
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iterator
-  - Method
-  - NodeList
-  - Reference
-  - Web
-  - Polyfill
 browser-compat: api.NodeList.values
 ---
 

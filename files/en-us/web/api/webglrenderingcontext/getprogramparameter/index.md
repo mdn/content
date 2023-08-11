@@ -1,14 +1,8 @@
 ---
-title: WebGLRenderingContext.getProgramParameter()
+title: "WebGLRenderingContext: getProgramParameter() method"
+short-title: getProgramParameter()
 slug: Web/API/WebGLRenderingContext/getProgramParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramParameter
 ---
 

@@ -1,19 +1,8 @@
 ---
-title: AudioContext()
+title: "AudioContext: AudioContext() constructor"
+short-title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
 page-type: web-api-constructor
-tags:
-  - Audio
-  - Audio Context
-  - Audio Graph
-  - AudioContext
-  - Constructor
-  - Context
-  - Media
-  - Media Graph
-  - Reference
-  - Web Audio
-  - Web Audio API
 browser-compat: api.AudioContext.AudioContext
 ---
 
@@ -53,6 +42,10 @@ new AudioContext(options)
         The value will typically be between 8,000 Hz and 96,000 Hz; the default will vary depending on the output device, but the sample rate 44,100 Hz is the most common.
         If the `sampleRate` property is not included in the options, or the options are not specified when creating the audio context,
         the new context's output device's preferred sample rate is used by default.
+    - `sinkId` {{optional_inline}} {{Experimental_Inline}}
+      - : Specifies the sink ID of the audio output device to use for the `AudioContext`. This can take one of the following value types:
+        - A string representing the sink ID, retrieved for example via the `deviceId` property of the {{domxref("MediaDeviceInfo")}} objects returned by {{domxref("MediaDevices.enumerateDevices()")}}.
+        - An object representing different options for a sink ID. Currently, this takes a single property, `type`, with a value of `none`. Setting this parameter causes the audio to be processed without being played through any audio output device.
 
 ### Return value
 
@@ -91,12 +84,13 @@ AudioContextLatencyCategory".
 ## Example
 
 This example creates a new {{domxref("AudioContext")}} for interactive audio
-(optimizing for latency) and a sample rate of 44.1kHz.
+(optimizing for latency), with a sample rate of 44.1kHz and a specific audio output.
 
 ```js
 const audioCtx = new AudioContext({
   latencyHint: "interactive",
   sampleRate: 44100,
+  sinkId: "bb04fea9a8318c96de0bd...", // truncated for brevity
 });
 ```
 

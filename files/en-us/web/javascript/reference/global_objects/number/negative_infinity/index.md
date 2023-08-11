@@ -1,17 +1,13 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.NEGATIVE_INFINITY
 ---
 
 {{JSRef}}
 
-The **`Number.NEGATIVE_INFINITY`** property represents the negative Infinity value.
+The **`Number.NEGATIVE_INFINITY`** static data property represents the negative Infinity value.
 
 {{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}
 

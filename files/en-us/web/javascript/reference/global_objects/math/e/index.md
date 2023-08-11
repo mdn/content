@@ -1,17 +1,13 @@
 ---
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.E
 ---
 
 {{JSRef}}
 
-The **`Math.E`** property represents Euler's number, the base of natural logarithms, e, which is approximately 2.718.
+The **`Math.E`** static data property represents Euler's number, the base of natural logarithms, e, which is approximately 2.718.
 
 {{EmbedInteractiveExample("pages/js/math-e.html")}}
 

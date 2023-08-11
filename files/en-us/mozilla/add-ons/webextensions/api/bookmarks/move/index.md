@@ -1,16 +1,7 @@
 ---
 title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - move
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.move
 ---
 

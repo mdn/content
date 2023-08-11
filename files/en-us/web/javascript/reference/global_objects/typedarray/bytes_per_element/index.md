@@ -1,17 +1,13 @@
 ---
 title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.TypedArray.BYTES_PER_ELEMENT
 ---
 
 {{JSRef}}
 
-The **`TypedArray.BYTES_PER_ELEMENT`** property represents the size in bytes of each element in a typed array.
+The **`TypedArray.BYTES_PER_ELEMENT`** static data property represents the size in bytes of each element in a typed array.
 
 {{EmbedInteractiveExample("pages/js/typedarray-bytes-per-element.html","shorter")}}
 
@@ -79,5 +75,5 @@ new BigUint64Array([]).BYTES_PER_ELEMENT; // 8
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

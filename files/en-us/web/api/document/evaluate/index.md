@@ -1,13 +1,8 @@
 ---
-title: Document.evaluate()
+title: "Document: evaluate() method"
+short-title: evaluate()
 slug: Web/API/Document/evaluate
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - XPath
 browser-compat: api.Document.evaluate
 ---
 
@@ -101,7 +96,13 @@ if not, it is the same object as the one passed as the `result` parameter.
 ## Examples
 
 ```js
-const headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+const headings = document.evaluate(
+  "/html/body//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 /* Search the document for all h2 elements.
  * The result will likely be an unordered node iterator. */
 let thisHeading = headings.iterateNext();

@@ -1,16 +1,10 @@
 ---
-title: Keyboard.lock()
+title: "Keyboard: lock() method"
+short-title: lock()
 slug: Web/API/Keyboard/lock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Keyboard API
-  - Keyboard Lock
-  - Method
-  - Reference
-  - keyboard
-  - lock()
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Keyboard.lock
 ---
 

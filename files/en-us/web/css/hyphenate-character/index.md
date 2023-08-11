@@ -2,10 +2,6 @@
 title: hyphenate-character
 slug: Web/CSS/hyphenate-character
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
 browser-compat: css.properties.hyphenate-character
 ---
 
@@ -19,12 +15,12 @@ Both automatic and soft hyphens are displayed according to the specified hyphena
 
 ## Syntax
 
-The value either sets the string to use instead of a hyphen, or indicates that the user agent should select an appropriate string based on the current typographic conventions (default).
-
 ```css
 hyphenate-character: <string>;
 hyphenate-character: auto;
 ```
+
+The value either sets the string to use instead of a hyphen, or indicates that the user agent should select an appropriate string based on the current typographic conventions (default).
 
 ### Values
 

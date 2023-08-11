@@ -2,9 +2,6 @@
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.alignment-baseline
 ---
 
@@ -18,7 +15,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("tspan")}}
 - {{SVGElement("tref")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 
 ## Usage notes
@@ -51,7 +47,7 @@ You can use this attribute with the following SVG elements:
 - `auto` {{deprecated_inline}}
   - : The value is the dominant-baseline of the script to which the character belongs - i.e., use the dominant-baseline of the parent.
 - `baseline`
-  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box's corresponding {{Glossary("baseline")}} to that of its parent.
+  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box's corresponding {{Glossary("baseline/typography", "baseline")}} to that of its parent.
 - `before-edge` {{deprecated_inline}}
   - : The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.
 - `text-bottom`

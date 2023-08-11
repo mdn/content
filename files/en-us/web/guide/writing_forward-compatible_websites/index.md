@@ -1,13 +1,7 @@
 ---
 title: Writing forward-compatible websites
 slug: Web/Guide/Writing_forward-compatible_websites
-tags:
-  - CSS
-  - Compatibility
-  - DOM
-  - HTML
-  - JavaScript
-  - Web Development
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -58,7 +52,7 @@ Suggest to the developers of your favorite libraries that they follow these guid
 
 ### Sniff for specific features
 
-If you plan to use some feature, use object-detection to sniff for that exact feature, if possible. As a simple example, don't assume that any browser in which `"filter" in body.style` tests true must be Microsoft Internet Explorer and therefore e.g. will have a `window.event` object available in event handlers. Don't assume that browsers with support for a given DOM feature must also have some other, especially nonstandard, DOM feature. Or, conversely, that they _don't_ have support for some other feature (e.g., don't assume that a browser that supports `onload` on script elements will never support `onreadystatechange` on them). As browsers converge behavior, they both add features and remove them. They also fix bugs. All three of these have happened in the past and will happen again.
+If you plan to use some feature, use object-detection to sniff for that exact feature, if possible. As a simple example, don't assume that any browser in which `"filter" in body.style` tests true must be Opera and therefore e.g. will have a `window.event` object available in event handlers. Don't assume that browsers with support for a given DOM feature must also have some other, especially nonstandard, DOM feature. Or, conversely, that they _don't_ have support for some other feature (e.g., don't assume that a browser that supports `onload` on script elements will never support `onreadystatechange` on them). As browsers converge behavior, they both add features and remove them. They also fix bugs. All three of these have happened in the past and will happen again.
 
 So don't sniff for one feature or object and then assume that, because it exists or doesn't exist, some other feature or object must also exist or not exist.
 
@@ -80,7 +74,7 @@ Don't go out of your way to run different code based on either object detection 
 
 ### Test with all major engines
 
-Test your code at least in Firefox, Chrome, Safari, Opera, and Internet Explorer. If you are following the advice given above so that you have a single code path for all current and unknown browsers, testing that this single code path works in all the major engines makes it extremely probable that your code won't break in the future.
+Test your code at least in Firefox, Chrome and Safari. If you are following the advice given above so that you have a single code path for all current and unknown browsers, testing that this single code path works in all the major engines makes it extremely probable that your code won't break in the future.
 
 Sometimes browsers implement a given feature slightly differently. If you have a single code path that works in all the top engines, it means that you are either using features where browser behavior has already converged or, if the behavior hasn't quite converged yet, your code works regardless of which engine's behavior standards turn out to uphold.
 
@@ -100,22 +94,7 @@ Prefixed, non-standard features are provided by browser developers for you to ex
 
 ### When using cutting-edge features (even standard ones) that are not universally implemented, make sure to test fallback paths
 
-Make sure to test what happens in a browser that doesn't implement the feature you're using, especially if you don't use such a browser day-to-day while working on the site.
-
-### Don't use vendor-prefixed features except to target old buggy versions
-
-Vendor-prefixed features can change behavior in future releases. Once a browser has shipped a feature unprefixed, however, you can use the prefixed version to target old releases by making sure to always use the unprefixed version of the feature when available. A good example, for a browser vendor using the `-vnd` CSS prefix that has shipped an unprefixed implementation of the `make-it-pretty` property, with a behavior for the value `"sometimes"` that differs from the prefixed version:
-
-```html
-<style>
-  .pretty-element {
-    -vnd-make-it-pretty: sometimes;
-    make-it-pretty: sometimes;
-  }
-</style>
-```
-
-The order of the declarations in the rule above is important: the unprefixed one needs to come last.
+Make sure to test what happens in a browser that doesn't implement the feature you're using, especially if you don't use such a browser day-to-day while working on the site. Also, use JavaScript [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) and CSS [@supports](/en-US/docs/Web/CSS/@supports).
 
 ### Don't use unprefixed versions of CSS properties or APIs until at least one browser supports them
 
@@ -123,9 +102,9 @@ Until there's decently widespread support of the unprefixed version of something
 
 ## Code hygiene
 
-### Avoid missing `>`
+### Use best practices when coding
 
-Passing a validator is one way to ensure this, but even if your website doesn't validate entirely you should make sure all your `>` characters are present. Missing those can lead to unexpected situations due to a following tag name being treated as an attribute on a previous tag. This can work for a bit, then break if a specification attaches a meaning to that attribute. Here's an example that works in browsers without HTML5 support but breaks in a browser supporting HTML5:
+Passing a validator is one way to ensure your code is valid. But even if your website doesn't validate entirely you should make sure there are no errors, such as ensuring all your `>` characters are present. Missing those can lead to unexpected situations due to a following tag name being treated as an attribute on a previous tag. This can work for a bit, then break if a specification attaches a meaning to that attribute. Here's an example that worked in older browsers but breaks in all modern browsers:
 
 ```html
 <form action="http://www.example.com">

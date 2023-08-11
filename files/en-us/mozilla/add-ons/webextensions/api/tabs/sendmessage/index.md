@@ -1,16 +1,7 @@
 ---
 title: tabs.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sendMessage
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.sendMessage
 ---
 

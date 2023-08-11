@@ -1,13 +1,8 @@
 ---
-title: ImageBitmap.close()
+title: "ImageBitmap: close() method"
+short-title: close()
 slug: Web/API/ImageBitmap/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - ImageBitmap
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.ImageBitmap.close
 ---
 
@@ -34,7 +29,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const offscreen = new OffscreenCanvas(256, 256);
-const gl = offscreen.getContext('webgl');
+const gl = offscreen.getContext("webgl");
 
 // Perform some drawing using the gl context
 

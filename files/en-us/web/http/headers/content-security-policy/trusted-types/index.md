@@ -1,12 +1,9 @@
 ---
-title: 'CSP: trusted-types'
+title: "CSP: trusted-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Security
-  - Experimental
+page-type: http-csp-directive
+status:
+  - experimental
 browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
 
@@ -14,7 +11,7 @@ browser-compat: http.headers.Content-Security-Policy.trusted-types
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.
 
-Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)** directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allow-list of trusted type policy names created with `trustedTypes.createPolicy` from Trusted Types API.
+Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)** directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allowlist of trusted type policy names created with `trustedTypes.createPolicy` from Trusted Types API.
 
 ## Syntax
 
@@ -37,10 +34,10 @@ Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicat
 ```js
 // Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
 
-if (typeof trustedTypes !== 'undefined') {
-  const policyFoo = trustedTypes.createPolicy('foo', {});
-  const policyFoo2 = trustedTypes.createPolicy('foo', {});
-  const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.
+if (typeof trustedTypes !== "undefined") {
+  const policyFoo = trustedTypes.createPolicy("foo", {});
+  const policyFoo2 = trustedTypes.createPolicy("foo", {});
+  const policyBaz = trustedTypes.createPolicy("baz", {}); // Throws and dispatches a SecurityPolicyViolationEvent.
 }
 ```
 

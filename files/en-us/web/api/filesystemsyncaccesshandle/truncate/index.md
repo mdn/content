@@ -1,20 +1,12 @@
 ---
-title: FileSystemSyncAccessHandle.truncate()
+title: "FileSystemSyncAccessHandle: truncate() method"
+short-title: truncate()
 slug: Web/API/FileSystemSyncAccessHandle/truncate
 page-type: web-api-instance-method
-tags:
-  - truncate
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.truncate
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`truncate()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface resizes the file associated with the handle to a specified number of bytes.
@@ -39,7 +31,7 @@ A {{jsxref('Promise')}} which resolves to undefined.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the associated access handle is already closed, or if the modification of the file's binary data otherwise fails.
 - `QuotaExceededError` {{domxref("DOMException")}}
-  - : Thrown if the `newSize` is larger than the original size of the file, and exceeds the browser's [storage quota](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
+  - : Thrown if the `newSize` is larger than the original size of the file, and exceeds the browser's [storage quota](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 
 ## Examples
 
@@ -47,7 +39,7 @@ A {{jsxref('Promise')}} which resolves to undefined.
 async function truncateFile() {
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
+  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
@@ -74,5 +66,5 @@ async function truncateFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

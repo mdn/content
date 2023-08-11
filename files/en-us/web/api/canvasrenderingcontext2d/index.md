@@ -2,13 +2,6 @@
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Games
-  - Graphics
-  - Reference
 browser-compat: api.CanvasRenderingContext2D
 ---
 
@@ -271,8 +264,8 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 - {{domxref("CanvasRenderingContext2D.canvas")}}
   - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
-  - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
-- {{domxref("CanvasRenderingContext2D.reset()")}} {{Experimental_Inline}}
+  - : Returns an object containing the context attributes used by the browser. Context attributes can be requested when using {{domxref("HTMLCanvasElement.getContext()")}} to create the 2D context.
+- {{domxref("CanvasRenderingContext2D.reset()")}}
   - : Resets the rendering context, including the backing buffer, the drawing state stack, path, and styles.
 - {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
   - : Returns `true` if the rendering context was lost.

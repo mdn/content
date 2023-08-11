@@ -1,14 +1,7 @@
 ---
-title: "CSP source values"
+title: CSP source values
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - source
+page-type: http-csp-directive
 ---
 
 {{HTTPSidebar}}
@@ -20,7 +13,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
 
 - `<host-source>`
 
-  - : Internet host by name or IP address. The [URL scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), port number, and path are optional.
+  - : Internet host by name or IP address. The [URL scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), port number, and path are optional.
     Wildcards (`'*'`) can be used for subdomains, host address, and port number, indicating that all legal values of each are valid.
     When matching schemes, secure upgrades are allowed (e.g. specifying `http://example.com` will match `https://example.com`).
     Examples:
@@ -70,7 +63,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     The single quotes are required.
 - `'nonce-<base64-value>'`
 
-  - : An allow-list for specific inline scripts using a cryptographic nonce (number used once).
+  - : An allowlist for specific inline scripts using a cryptographic nonce (number used once).
     The server must generate a unique nonce value each time it transmits a policy.
     It is critical to provide an unguessable nonce, as bypassing a resource's policy is otherwise trivial.
     See [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) for an example.
@@ -86,7 +79,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     See the [script-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) and [style-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src#unsafe_inline_styles) pages for more information and examples.
 - `'strict-dynamic'`
   - : The `strict-dynamic` source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script.
-    At the same time, any allow-list or source expressions such as `'self'` or `'unsafe-inline'` are ignored.
+    At the same time, any allowlist or source expressions such as `'self'` or `'unsafe-inline'` are ignored.
     See [script-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) for an example.
 - `'report-sample'`
   - : Requires a sample of the violating code to be included in the violation report.

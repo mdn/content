@@ -2,12 +2,9 @@
 title: "@document"
 slug: Web/CSS/@document
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.at-rules.document
 ---
 
@@ -37,7 +34,7 @@ An `@document` rule can specify one or more matching functions. If any of the fu
 - `media-document()`
   - : Matches the media according to the string in parameter, one of `video`, `image`, `plugin` or `all`.
 - `regexp()` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) provided. The expression must match the entire URL.
+  - : Matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) provided. The expression must match the entire URL.
 
 The values provided to the `url()`, `url-prefix()`, `domain()`, and `media-document()` functions can be optionally enclosed by single or double quotes. The values provided to the `regexp()` function _must_ be enclosed in quotes.
 
@@ -45,11 +42,11 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 `@document` is currently only supported in Firefox; if you wanted to replicate using such functionality in your own non-Firefox browser, you could try using [this polyfill](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) by @An-Error94, which uses a combination of a user script, [data-\* attributes](/en-US/docs/Web/HTML/Global_attributes/data-*), and [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors).
 
-> **Note:** There is a -moz-prefixed version of this property — `@-moz-document`. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See {{bug(1035091)}}).
+> **Note:** There is a -moz-prefixed version of this property — `@-moz-document`. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See [Firefox bug 1035091](https://bugzil.la/1035091)).
 
 ## Formal syntax
 
-```
+```plain
 @document [ <url>                    |
             url-prefix(<string>)     |
             domain(<string>)         |

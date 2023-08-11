@@ -1,15 +1,8 @@
 ---
-title: IDBDatabase.createObjectStore()
+title: "IDBDatabase: createObjectStore() method"
+short-title: createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBDatabase.createObjectStore
 ---
 
@@ -48,7 +41,7 @@ createObjectStore(name, options)
       - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path)
         to be used by the new object store. If empty or not specified, the
         object store is created without a key path and uses
-        [out-of-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key").
+        [out-of-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key).
         You can also pass in an array as a `keyPath`.
     - `autoIncrement` {{optional_inline}}
       - : If `true`, the object store has a [key generator](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator).
@@ -70,7 +63,7 @@ one of the following types:
   - : Thrown if a request is made on a source database that does not exist
     (for example, when the database has been deleted or removed). In Firefox previous to version 41,
     an `InvalidStateError` was raised in this case as well, which
-    was misleading; this has now been fixed (see {{Bug("1176165")}}).
+    was misleading; this has now been fixed (see [Webkit bug 1176165](https://bugzil.la/1176165)).
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store with the given name (based on a case-sensitive comparison)
     already exists in the connected database.
@@ -98,7 +91,9 @@ request.onupgradeneeded = (event) => {
 
   // Create an objectStore for this database
 
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 

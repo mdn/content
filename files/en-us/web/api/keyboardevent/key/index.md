@@ -1,15 +1,8 @@
 ---
-title: KeyboardEvent.key
+title: "KeyboardEvent: key property"
+short-title: key
 slug: Web/API/KeyboardEvent/key
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
 browser-compat: api.KeyboardEvent.key
 ---
 
@@ -129,15 +122,15 @@ Try experimenting using the following two test cases:
 ### JavaScript
 
 ```js
-let textarea = document.getElementById('test-target'),
-consoleLog = document.getElementById('console-log'),
-btnReset = document.getElementById('btn-reset');
+let textarea = document.getElementById("test-target"),
+  consoleLog = document.getElementById("console-log"),
+  btnReset = document.getElementById("btn-reset");
 
 function logMessage(message) {
   consoleLog.innerHTML += `${message}<br>`;
 }
 
-textarea.addEventListener('keydown', (e) => {
+textarea.addEventListener("keydown", (e) => {
   if (!e.repeat) {
     logMessage(`Key "${e.key}" pressed [event: keydown]`);
   } else {
@@ -145,25 +138,25 @@ textarea.addEventListener('keydown', (e) => {
   }
 });
 
-textarea.addEventListener('beforeinput', (e) => {
+textarea.addEventListener("beforeinput", (e) => {
   logMessage(`Key "${e.data}" about to be input [event: beforeinput]`);
 });
 
-textarea.addEventListener('input', (e) => {
+textarea.addEventListener("input", (e) => {
   logMessage(`Key "${e.data}" input [event: input]`);
 });
 
-textarea.addEventListener('keyup', (e) => {
+textarea.addEventListener("keyup", (e) => {
   logMessage(`Key "${e.key}" released [event: keyup]`);
 });
 
-btnReset.addEventListener('click', (e) => {
+btnReset.addEventListener("click", (e) => {
   let child = consoleLog.firstChild;
   while (child) {
-   consoleLog.removeChild(child);
-   child = consoleLog.firstChild;
+    consoleLog.removeChild(child);
+    child = consoleLog.firstChild;
   }
-  textarea.value = ''
+  textarea.value = "";
 });
 ```
 
@@ -198,42 +191,41 @@ As we finally release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}}
 This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).
 
 ```js
-window.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented) {
-    return; // Do nothing if the event was already processed
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
 
-  switch (event.key) {
-    case "Down": // IE/Edge specific value
-    case "ArrowDown":
-      // Do something for "down arrow" key press.
-      break;
-    case "Up": // IE/Edge specific value
-    case "ArrowUp":
-      // Do something for "up arrow" key press.
-      break;
-    case "Left": // IE/Edge specific value
-    case "ArrowLeft":
-      // Do something for "left arrow" key press.
-      break;
-    case "Right": // IE/Edge specific value
-    case "ArrowRight":
-      // Do something for "right arrow" key press.
-      break;
-    case "Enter":
-      // Do something for "enter" or "return" key press.
-      break;
-    case "Esc": // IE/Edge specific value
-    case "Escape":
-      // Do something for "esc" key press.
-      break;
-    default:
-      return; // Quit when this doesn't handle the key event.
-  }
+    switch (event.key) {
+      case "ArrowDown":
+        // Do something for "down arrow" key press.
+        break;
+      case "ArrowUp":
+        // Do something for "up arrow" key press.
+        break;
+      case "ArrowLeft":
+        // Do something for "left arrow" key press.
+        break;
+      case "ArrowRight":
+        // Do something for "right arrow" key press.
+        break;
+      case "Enter":
+        // Do something for "enter" or "return" key press.
+        break;
+      case "Escape":
+        // Do something for "esc" key press.
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
 
-  // Cancel the default action to avoid it being handled twice
-  event.preventDefault();
-}, true);
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+  },
+  true,
+);
 ```
 
 ## Specifications

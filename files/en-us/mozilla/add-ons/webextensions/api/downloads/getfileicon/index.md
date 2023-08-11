@@ -1,16 +1,7 @@
 ---
 title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - getFileIcon
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.getFileIcon
 ---
 
@@ -66,16 +57,16 @@ function onError(error) {
 }
 
 function getIcon(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
-      gettingIcon.then(gotIcon, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
+    gettingIcon.then(gotIcon, onError);
   }
+}
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(getIcon, onError);

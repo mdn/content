@@ -1,13 +1,8 @@
 ---
-title: Element.scrollHeight
+title: "Element: scrollHeight property"
+short-title: scrollHeight
 slug: Web/API/Element/scrollHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsDHTMLRemovalInExample
-  - Property
-  - Reference
 browser-compat: api.Element.scrollHeight
 ---
 
@@ -42,13 +37,13 @@ An integer corresponding to the scrollHeight pixel value of the element.
 `scrollTop` is a non-rounded number, while `scrollHeight` and `clientHeight` are rounded — so the only way to determine if the scroll area is scrolled to the bottom is by seeing if the scroll amount is close enough to some threshold (in this example `1`):
 
 ```js
-Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1;
 ```
 
 The following will _not_ work all the time because `scrollTop` can contain decimals:
 
 ```js
-element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
+element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
 ```
 
 ### Determine if an element is scrollable
@@ -57,8 +52,8 @@ When the container does not scroll, but has overflowing children, these checks
 determine if the container can scroll:
 
 ```js
-window.getComputedStyle(element).overflowY === 'visible'
-window.getComputedStyle(element).overflowY !== 'hidden'
+window.getComputedStyle(element).overflowY === "visible";
+window.getComputedStyle(element).overflowY !== "hidden";
 ```
 
 ## Examples
@@ -135,13 +130,18 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 #### JavaScript
 
 ```js
-function checkReading () {
+function checkReading() {
   if (checkReading.read) {
     return;
   }
-  checkReading.read = this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  checkReading.read =
+    this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
+  document.registration.accept.disabled = document.getElementById(
+    "nextstep",
+  ).disabled = !checkReading.read;
+  checkReading.noticeBox.textContent = checkReading.read
+    ? "Thank you."
+    : "Please, scroll and read the following text.";
 }
 
 onload = () => {
@@ -153,7 +153,7 @@ onload = () => {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}
+};
 ```
 
 {{EmbedLiveSample('Checking_that_the_user_has_read_a_text', '640', '400')}}
@@ -168,7 +168,6 @@ onload = () => {
 
 ## See also
 
-- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
 - [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

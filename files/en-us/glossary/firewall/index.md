@@ -1,12 +1,10 @@
 ---
-title: firewall
-slug: Glossary/firewall
-tags:
-  - DDoS
-  - Firewall
-  - Security
-  - computer network
+title: Firewall
+slug: Glossary/Firewall
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A **firewall** is a system that filters network traffic. It can either let it pass or block it, according to some specified rules. For example, it can block incoming connections aimed at a certain port or outgoing connections to a certain IP address.
 

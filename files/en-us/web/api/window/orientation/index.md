@@ -1,10 +1,10 @@
 ---
-title: Window.orientation
+title: "Window: orientation property"
+short-title: orientation
 slug: Web/API/Window/orientation
 page-type: web-api-instance-property
-tags:
-  - NeedsContent
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.orientation
 ---
 

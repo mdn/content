@@ -1,21 +1,10 @@
 ---
 title: "Navigation: currententrychange event"
+short-title: currententrychange
 slug: Web/API/Navigation/currententrychange_event
 page-type: web-api-event
-tags:
-  - API
-  - currententrychange
-  - Event
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Reference
-  - Scroll
-  - Traversal
-  - updateCurrentEntry
+status:
+  - experimental
 browser-compat: api.Navigation.currententrychange_event
 ---
 

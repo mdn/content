@@ -1,17 +1,13 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Symbol
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Symbol.for
 ---
 
 {{JSRef}}
 
-The **`Symbol.for(key)`** method searches for existing symbols
+The **`Symbol.for()`** static method searches for existing symbols
 in a runtime-wide symbol registry with the given key and returns it if found. Otherwise
 a new symbol gets created in the global symbol registry with this key.
 

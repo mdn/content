@@ -1,16 +1,8 @@
 ---
-title: Document.forms
+title: "Document: forms property"
+short-title: forms
 slug: Web/API/Document/forms
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Forms
-  - HTML DOM
-  - HTML forms
-  - Property
-  - Reference
 browser-compat: api.Document.forms
 ---
 
@@ -36,7 +28,7 @@ If the document has no forms, the returned collection is empty, with a length of
 ### Getting form information
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>document.forms example</title>
@@ -77,7 +69,7 @@ const selectFormElement = document.forms[index].elements[index];
 ### Named form access
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>document.forms example</title>

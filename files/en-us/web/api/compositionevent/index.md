@@ -2,12 +2,6 @@
 title: CompositionEvent
 slug: Web/API/CompositionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - CompositionEvent
-  - DOM
-  - Event
-  - Reference
 browser-compat: api.CompositionEvent
 ---
 

@@ -1,20 +1,12 @@
 ---
 title: In flow and out of flow
-slug: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
+slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 page-type: guide
-tags:
-  - CSS
-  - CSS Flow Layout
-  - Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - flow
 ---
 
 {{CSSRef}}
 
-The [previous guide](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.
+The [previous guide](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow) explained block and inline layout in normal flow. All elements that are in flow will be laid out using this method.
 
 The following example contains a heading, paragraph, a list and a final paragraph which contains a `strong` element. The heading and paragraphs are block level, the `strong` element inline. The list is displayed using flexbox to arrange the items into a row, however it too is participating in block and inline layout - the container has an outside `display` type of `block`.
 
@@ -62,7 +54,7 @@ When you do anything to remove or shift an item from where it would be placed in
 
 ## Summary
 
-In this guide, we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts).
+In this guide, we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
 
 ## See also
 

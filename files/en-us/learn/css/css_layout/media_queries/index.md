@@ -1,12 +1,7 @@
 ---
 title: Beginner's guide to media queries
 slug: Learn/CSS/CSS_layout/Media_queries
-tags:
-  - Beginner
-  - CSS
-  - Layout
-  - Learn
-  - media query
+page-type: learn-module-chapter
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
@@ -111,7 +106,7 @@ The `width` (and `height`) media features can be used as ranges, and therefore b
 
 In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see `width` or `height` used alone.
 
-There are a number of other media features that you can test for, although some of the newer features introduced in Level 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a full list at [Using Media Queries: Media Features](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features).
+There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
 #### Orientation
 
@@ -225,7 +220,10 @@ Our starting point is an HTML document with some CSS applied to add background c
 body {
   width: 90%;
   margin: 2em auto;
-  font: 1em/1.3 Arial, Helvetica, sans-serif;
+  font:
+    1em/1.3 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 a:link,
@@ -448,18 +446,3 @@ You could use the starting point that we have created to test out more media que
 You could also experiment with adding different components and seeing whether the addition of a media query, or using a layout method like flexbox or grid is the most appropriate way to make the components responsive. Very often there is no right or wrong way — you should experiment and see which works best for your design and content.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -1,15 +1,12 @@
 ---
 title: Redirections in HTTP
 slug: Web/HTTP/Redirections
-tags:
-  - Guide
-  - HTTP
-  - redirects
+page-type: guide
 ---
 
 {{HTTPSidebar}}
 
-**URL redirection**, also known as _URL forwarding_, is a technique to give more than one URL address to a page, a form, or a whole Web site/application. HTTP has a special kind of response, called a **_HTTP redirect_**, for this operation.
+**URL redirection**, also known as _URL forwarding_, is a technique to give more than one URL address to a page, a form, a whole website, or a web application. HTTP has a special kind of response, called a **_HTTP redirect_**, for this operation.
 
 Redirects accomplish numerous goals:
 
@@ -34,10 +31,10 @@ There are several types of redirects, sorted into three categories:
 
 These redirections are meant to last forever. They imply that the original URL should no longer be used, and replaced with the new one. Search engine robots, RSS readers, and other crawlers will update the original URL for the resource.
 
-| Code  | Text                 | Method handling                                                                                         | Typical use case                                             |
-| ----- | -------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `301` | `Moved Permanently`  | {{HTTPMethod("GET")}} methods unchanged. Others may or may not be changed to {{HTTPMethod("GET")}}. [1] | Reorganization of a Web site.                                |
-| `308` | `Permanent Redirect` | Method and body not changed.                                                                            | Reorganization of a Web site, with non-GET links/operations. |
+| Code  | Text                 | Method handling                                                                                         | Typical use case                                            |
+| ----- | -------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `301` | `Moved Permanently`  | {{HTTPMethod("GET")}} methods unchanged. Others may or may not be changed to {{HTTPMethod("GET")}}. [1] | Reorganization of a website.                                |
+| `308` | `Permanent Redirect` | Method and body not changed.                                                                            | Reorganization of a website, with non-GET links/operations. |
 
 \[1] The specification did not intend to allow method changes, but there are existing user agents that do change their method. {{HTTPStatus("308")}} was created to remove the ambiguity of the behavior when using non-`GET` methods.
 
@@ -73,7 +70,7 @@ HTTP redirects aren't the only way to define redirections. There are two others:
 
 ### HTML redirections
 
-HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its {{htmlattrxref("http-equiv", "meta")}} attribute set to `Refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.
+HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute set to `Refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.
 
 ```html
 <head>
@@ -81,7 +78,7 @@ HTTP redirects are the best way to create redirections, but sometimes you don't 
 </head>
 ```
 
-The {{htmlattrxref("content")}} attribute should start with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0` for accessibility compliance.
+The [`content`](/en-US/docs/Web/HTML/Element/meta#content) attribute should start with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0` for accessibility compliance.
 
 Obviously, this method only works with HTML, and cannot be used for images or other types of content.
 
@@ -117,12 +114,12 @@ Ideally, there is one location, and therefore one URL, for each resource. But th
   - : A common case is when a site resides at `www.example.com`, but accessing it from `example.com` should also work. Redirections for `example.com` to `www.example.com` are thus set up. You might also redirect from common synonyms or frequent typos of your domains.
 - Moving to a new domain
   - : For example, your company was renamed, but you want existing links or bookmarks to still find you under the new name.
-- Forcing [HTTPS](/en-US/docs/Glossary/https)
+- Forcing [HTTPS](/en-US/docs/Glossary/HTTPS)
   - : Requests to the `http://` version of your site will redirect to the `https://` version of your site.
 
 ### Keeping links alive
 
-When you restructure Web sites, URLs change. Even if you update your site's links to match the new URLs, you have no control over the URLs used by external resources.
+When you restructure websites, URLs change. Even if you update your site's links to match the new URLs, you have no control over the URLs used by external resources.
 
 You don't want to break these links, as they bring valuable users and help your SEO, so you set up redirects from the old URLs to the new ones.
 

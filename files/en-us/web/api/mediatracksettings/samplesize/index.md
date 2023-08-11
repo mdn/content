@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSettings.sampleSize
+title: "MediaTrackSettings: sampleSize property"
+short-title: sampleSize
 slug: Web/API/MediaTrackSettings/sampleSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - sampleSize
 browser-compat: api.MediaTrackSettings.sampleSize
 ---
 
@@ -46,7 +35,7 @@ For example, 16-bit stereo audio requires (16/8)\*2 or 4 bytes per sample.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

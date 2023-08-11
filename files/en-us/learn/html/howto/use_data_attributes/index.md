@@ -1,12 +1,7 @@
 ---
 title: Using data attributes
 slug: Learn/HTML/Howto/Use_data_attributes
-tags:
-  - Custom Data Attributes
-  - Example
-  - Guide
-  - HTML
-  - Web
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}

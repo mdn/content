@@ -1,25 +1,13 @@
 ---
 title: Symbol() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Symbol
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Symbol.Symbol
 ---
 
 {{JSRef}}
 
-The `Symbol()` constructor returns a value of type **symbol**,
-but is incomplete as a constructor because it does not support the syntax
-"`new Symbol()`" and it is not intended to be subclassed. It may be used as
-the value of an
-[`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends)
-clause of a `class` definition but a
-[`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-call to it will cause an exception.
+The **`Symbol()`** function returns primitive values of type Symbol.
 
 {{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
 
@@ -63,7 +51,7 @@ Symbol("foo") === Symbol("foo"); // false
 The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
 {{jsxref("TypeError")}}:
 
-```js
+```js example-bad
 const sym = new Symbol(); // TypeError
 ```
 

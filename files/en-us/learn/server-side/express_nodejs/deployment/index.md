@@ -1,14 +1,7 @@
 ---
 title: "Express Tutorial Part 7: Deploying to production"
 slug: Learn/Server-side/Express_Nodejs/deployment
-tags:
-  - Beginner
-  - CodingScripting
-  - Deployment
-  - Express
-  - Learn
-  - Node
-  - server-side
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
@@ -78,7 +71,7 @@ Some of the things to consider when choosing a host:
 - Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.
 - The locations that the supplier has data centers, and hence where access is likely to be fastest.
 - The host's historical uptime and downtime performance.
-- Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs FTP).
+- Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
 - Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
 - Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
@@ -96,11 +89,42 @@ Most providers also offer a "basic" tier that is intended for small production s
 
 ## Getting your website ready to publish
 
-The main things to think about when publishing your website are web security and performance. At the bare minimum, you will want to remove the stack traces that are included on error pages during development, tidy up your logging, and set the appropriate headers to avoid many common security threats.
+The main things to think about when publishing your website are web security and performance.
+At the bare minimum, you will want to modify the database configuration so that you can use a different database for production and secure its credentials, remove the stack traces that are included on error pages during development, tidy up your logging, and set the appropriate headers to avoid many common security threats.
 
 In the following subsections, we outline the most important changes that you should make to your app.
 
 > **Note:** There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
+
+#### Database configuration
+
+So far in this tutorial, we've used a single development database, for which the address and credentials are hard-coded into **app.js**.
+Since the development database doesn't contain any information that we mind being exposed or corrupted, there is no particular risk in leaking these details.
+However if you're working with real data, in particular personal user information, then protecting your database credentials is very important.
+
+For this reason we want to use a different database for production than we use for development, and also keep the production database credentials separate from the source code so that they can be properly protected.
+
+If your hosting provider supports setting environment variables through a web interface (as many do), one way to do this is to have the server get the database URL from an environment variable.
+Below we modify the LocalLibrary website to get the database URI from an OS environment variable, if it has been defined, and otherwise use the development database URL.
+
+Open **app.js** and find the line that sets the MongoDB connection variable.
+It will look something like this:
+
+```js
+const mongoDB =
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
+```
+
+Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below).
+
+```js
+// Set up mongoose connection
+const dev_db_url =
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
+```
+
+> **Note:** Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the npm [dotenv](https://www.npmjs.com/package/dotenv) module).
 
 ### Set NODE_ENV to 'production'
 
@@ -121,21 +145,23 @@ The debug variable is declared with the name 'author', and the prefix "author" w
 ```js
 const debug = require("debug")("author");
 
-// Display Author update form on GET
-exports.author_update_get = (req, res, next) => {
-  req.sanitize("id").escape().trim();
-  Author.findById(req.params.id, (err, author) => {
-    if (err) {
-      debug(`update error: ${err}`);
-      return next(err);
-    }
-    // On success
-    res.render("author_form", { title: "Update Author", author });
-  });
-};
+// Display Author update form on GET.
+exports.author_update_get = asyncHandler(async (req, res, next) => {
+  const author = await Author.findById(req.params.id).exec();
+  if (author === null) {
+    // No results.
+    debug(`id not found on update: ${req.params.id}`);
+    const err = new Error("Author not found");
+    err.status = 404;
+    return next(err);
+  }
+
+  res.render("author_form", { title: "Update Author", author: author });
+});
 ```
 
-You can then enable a particular set of logs by specifying them as a comma-separated list in the `DEBUG` environment variable. You can set the variables for displaying author and book logs as shown (wildcards are also supported).
+You can then enable a particular set of logs by specifying them as a comma-separated list in the `DEBUG` environment variable.
+You can set the variables for displaying author and book logs as shown (wildcards are also supported).
 
 ```bash
 #Windows
@@ -185,7 +211,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 ### Use Helmet to protect against well known vulnerabilities
 
-[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmetjs.github.io/docs/) for more information on what headers it sets and vulnerabilities it protects against).
+[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmetjs.github.io/) for more information on what headers it sets and vulnerabilities it protects against).
 
 Install this at the root of your project by running the following command:
 
@@ -203,11 +229,63 @@ const helmet = require("helmet");
 // Create the Express application object
 const app = express();
 
-app.use(helmet());
+// Add helmet to the middleware chain.
+// Set CSP headers to allow our Bootstrap and Jquery to be served
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      "script-src": ["'self'", "code.jquery.com", "cdn.jsdelivr.net"],
+    },
+  }),
+);
+
 // …
 ```
 
-> **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
+We normally might have just inserted `app.use(helmet());` to add the _subset_ of the security-related headers that make sense for most sites.
+However in the [LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap and jQuery scripts.
+These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP), which does not allow loading of cross-site scripts.
+To allow these scripts to be loaded we modify the helmet configuration so that it sets CSP directives to allow script loading from the indicated domains.
+For your own server you can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
+
+### Add rate limiting to the API routes
+
+[Express-rate-limit](https://www.npmjs.com/package/express-rate-limit) is a middleware package that can be used to limit repeated requests to APIs and endpoints.
+There are many reasons why excessive requests might be made to your site, such as denial of service attacks, brute force attacks, or even just a client or script that is not behaving as expected.
+Aside from performance issues that can arise from too many requests causing your server to slow down, you may also be charged for the additional traffic.
+This package can be used to limit the number of requests that can be made to a particular route or set of routes.
+
+Install this at the root of your project by running the following command:
+
+```bash
+npm install express-rate-limit
+```
+
+Open **./app.js** and require the _express-rate-limit_ library as shown.
+Then add the module to the middleware chain with the `use()` method.
+
+```js
+const compression = require("compression");
+const helmet = require("helmet");
+
+const app = express();
+
+// Set up rate limiter: maximum of twenty requests per minute
+const RateLimit = require("express-rate-limit");
+const limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 20,
+});
+// Apply rate limiter to all requests
+app.use(limiter);
+
+// …
+```
+
+> **Note:**
+>
+> - The command above limits all requests to 20 per minute. You can change this as needed.
+> - Third-party services like [Cloudflare](https://www.cloudflare.com/) can also be used if you need more advanced protection against denial of service or other types of attacks.
 
 ## Example: Installing LocalLibrary on Railway
 
@@ -251,14 +329,14 @@ For example, if the application includes the file **package-lock.json** Railway 
 Having installed all the dependencies, Railway will look for scripts named "build" and "start" in the package file, and use these to build and run the code.
 
 > **Note:** Railway uses [Nixpacks](https://nixpacks.com/docs/) to recognize various web application frameworks written in different programming languages.
-> You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks > Node](https://nixpacks.com/docs/providers/node).
+> You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docs/providers/node).
 
 Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
 For example, an application that uses a database must get the address using a variable.
 The database service itself may be hosted by Railway or some other provider.
 
 Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
-The CLI allows you to associate a local Github repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
+The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
 In order to get our application to work on Railway, we'll need to put our Express web application into a git repository and make a few minor modifications.
@@ -268,11 +346,11 @@ That's all the overview you need in order to get started.
 
 ### Creating an application repository in GitHub
 
-Railway is closely integrated with Github and the **git** source code version control system, and you can configure it to automatically deploy updates when changes are made to a particular repository or branch on Github.
+Railway is closely integrated with GitHub and the **git** source code version control system, and you can configure it to automatically deploy updates when changes are made to a particular repository or branch on GitHub.
 Alternatively you can push your current local code branch direct to the railway deployment using the CLI.
 
-> **Note:** Using a source code management system like Github is good software development practice.
-> Skip this step if you're already using Github to manage your source.
+> **Note:** Using a source code management system like GitHub is good software development practice.
+> Skip this step if you're already using GitHub to manage your source.
 
 There are a lot of ways to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
 
@@ -324,7 +402,10 @@ The final step is to copy your application source files into the repo folder, an
    It should look a bit like the listing below.
 
    ```bash
-   > git status
+   git status
+   ```
+
+   ```plain
    On branch main
    Your branch is up-to-date with 'origin/main'.
    Changes to be committed:
@@ -379,7 +460,7 @@ Open **package.json**, and add this information as an **engines > node** section
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
   "engines": {
-    "node": "16.17.1"
+    "node": ">=16.17.1"
   },
   "private": true,
   // …
@@ -388,26 +469,6 @@ Open **package.json**, and add this information as an **engines > node** section
 Note that there are other ways to provision the node version on Railway, but we're using **package.json** because this approach is widely supported by many services.
 Note also that Railway will not necessarily use the precise version of node that you specify.
 Where possible it will use a version that has the same major version number.
-
-#### Database configuration
-
-So far in this tutorial, we've used a single database that is hard-coded into **app.js**. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment (if it has been defined), and otherwise use our development database.
-
-Open **app.js** and find the line that sets the MongoDB connection variable. It will look something like this:
-
-```js
-const mongoDB =
-  "mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
-```
-
-Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
-
-```js
-// Set up mongoose connection
-const dev_db_url =
-  "mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
-```
 
 #### Get dependencies and re-test
 
@@ -439,26 +500,26 @@ We should now be ready to start deploying _LocalLibrary_ on Railway.
 To start using Railway you will first need to create an account:
 
 - Go to [railway.app](https://railway.app/) and click the **Login** link in the top toolbar.
-- Select Github in the popup to login using your Github credentials
+- Select GitHub in the popup to login using your GitHub credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.app dashboard: <https://railway.app/dashboard>.
 
-### Deploy on Railway from Github
+### Deploy on Railway from GitHub
 
-Next we'll setup Railway to deploy our library from Github.
+Next we'll setup Railway to deploy our library from GitHub.
 First choose the **Dashboard** option from the site top menu, then select the **New Project** button:
 
 ![Railway website dashboard showing new project button](railway_new_project_button.png)
 
-Railway will display a list of options for the new project, including the option to deploy a project from a template that is first created in your Github account, and a number of databases.
+Railway will display a list of options for the new project, including the option to deploy a project from a template that is first created in your GitHub account, and a number of databases.
 Select **Deploy from GitHub repo**.
 
-![Railway popup showing deployment options with Deploy from Github repo option highlighted](railway_new_project_button_deploy_github_repo.png)
+![Railway popup showing deployment options with Deploy from GitHub repo option highlighted](railway_new_project_button_deploy_github_repo.png)
 
-All projects in the Github repos you shared with Railway during setup are displayed.
-Select your Github repository for the local library: `<user-name>/django-locallibrary-tutorial`.
+All projects in the GitHub repos you shared with Railway during setup are displayed.
+Select your GitHub repository for the local library: `<user-name>/express-locallibrary-tutorial`.
 
-![Railway popup showing github repos that can be deployed](railway_new_project_button_deploy_github_selectrepo.png)
+![Railway popup showing GitHub repos that can be deployed](railway_new_project_button_deploy_github_selectrepo.png)
 
 Confirm your deployment by selecting **Deploy Now**.
 
@@ -480,7 +541,7 @@ This will publish the site and put the domain in place of the button, as shown b
 Select the domain URL to open your library application.
 Note that because we haven't specified a production database, the local library will open using your development data.
 
-### Provision and connect a MongoDb database
+### Provision and connect a MongoDB database
 
 Instead of using our development data, next let's create a production MongoDB database to use instead.
 We will create the database as part of the Railway application project, although there is nothing to stop you creating in its own separate project, or indeed to use a _MongoDB Atlas_ database for production data, just as you have for the development database.
@@ -493,11 +554,11 @@ Select the **New** button, which is used to add services to the current project.
 
 Select **Database** when prompted about the type of service to add:
 
-![Railway popup showing options for a new service, such as database, github repo, empty service etc](railway_database_add.png)
+![Railway popup showing options for a new service, such as database, GitHub repo, empty service etc](railway_database_add.png)
 
 Then select **Add MongoDB** to start adding the database
 
-![Railway popup showing different databases that can be selected: postgres, mysql, mongodb and so on](railway_database_select_type.png)
+![Railway popup showing different databases that can be selected: Postgres, MySQL, MongoDB and so on](railway_database_select_type.png)
 
 Railway will then provision a service containing an empty database in the same project.
 On completion you will now see both the application and database services in the project view.
@@ -539,14 +600,14 @@ Then press the **Add** button.
 The local library application is now setup and configured for production use.
 You can add data through the website interface and it should work in the same way that it did during development (though with less debug information exposed for invalid pages).
 
-> **Note:** If you just want to add some data for testing you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) > Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
+> **Note:** If you just want to add some data for testing you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
 
 ### Install the client
 
 Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/develop/cli).
 
 After the client is installed you will be able run commands.
-Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to github), and running your project locally using the same settings as you have on the production server.
+Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your project locally using the same settings as you have on the production server.
 
 You can get a list of all the possible commands by entering the following in a terminal.
 
@@ -591,15 +652,3 @@ That's the end of this tutorial on setting up Express apps in production, and al
   - [Limits](https://devcenter.heroku.com/articles/limits) (Heroku docs)
 
 {{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- **Express Tutorial Part 7: Deploying to production**

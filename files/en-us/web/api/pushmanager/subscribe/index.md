@@ -1,14 +1,8 @@
 ---
-title: PushManager.subscribe()
+title: "PushManager: subscribe() method"
+short-title: subscribe()
 slug: Web/API/PushManager/subscribe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PushManager
-  - Reference
-  - WebAPI
-  - subscribe
 browser-compat: api.PushManager.subscribe
 ---
 
@@ -61,32 +55,32 @@ this.onpush = (event) => {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js');
+navigator.serviceWorker.register("serviceworker.js");
 
 // Use serviceWorker.ready to ensure that you can subscribe for push
-navigator.serviceWorker.ready.then(
-  (serviceWorkerRegistration) => {
-    const options = {
-      userVisibleOnly: true,
-      applicationServerKey,
-    };
-    serviceWorkerRegistration.pushManager.subscribe(options).then(
-      (pushSubscription) => {
-        console.log(pushSubscription.endpoint);
-        // The push subscription details needed by the application
-        // server are now available, and can be sent to it using,
-        // for example, an XMLHttpRequest.
-      }, (error) => {
-        // During development it often helps to log errors to the
-        // console. In a production environment it might make sense to
-        // also report information about errors back to the
-        // application server.
-        console.error(error);
-      }
-    );
-  });
+navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
+  const options = {
+    userVisibleOnly: true,
+    applicationServerKey,
+  };
+  serviceWorkerRegistration.pushManager.subscribe(options).then(
+    (pushSubscription) => {
+      console.log(pushSubscription.endpoint);
+      // The push subscription details needed by the application
+      // server are now available, and can be sent to it using,
+      // for example, an XMLHttpRequest.
+    },
+    (error) => {
+      // During development it often helps to log errors to the
+      // console. In a production environment it might make sense to
+      // also report information about errors back to the
+      // application server.
+      console.error(error);
+    },
+  );
+});
 ```
 
 ### Responding to user gestures
@@ -95,12 +89,13 @@ navigator.serviceWorker.ready.then(
 clicking a button, for example:
 
 ```js
-btn.addEventListener('click', () => {
-  serviceWorkerRegistration.pushManager.subscribe(options)
-  .then((pushSubscription) => {
-    // handle subscription
-  });
-})
+btn.addEventListener("click", () => {
+  serviceWorkerRegistration.pushManager
+    .subscribe(options)
+    .then((pushSubscription) => {
+      // handle subscription
+    });
+});
 ```
 
 This is not only best practice — you should not be spamming users with notifications

@@ -1,12 +1,8 @@
 ---
-title: 'Element: securitypolicyviolation event'
+title: "Element: securitypolicyviolation event"
+short-title: securitypolicyviolation
 slug: Web/API/Element/securitypolicyviolation_event
 page-type: web-api-event
-tags:
-  - CSP
-  - API
-  - Event
-  - Reference
 browser-compat: api.Element.securitypolicyviolation_event
 ---
 
@@ -27,9 +23,9 @@ The handler can be assigned using the `onsecuritypolicyviolation` property or us
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('securitypolicyviolation', (event) => {});
+addEventListener("securitypolicyviolation", (event) => {});
 
-onsecuritypolicyviolation = (event) => { };
+onsecuritypolicyviolation = (event) => {};
 ```
 
 ## Event type
@@ -44,8 +40,8 @@ The code below shows how you might add an event handler function using the `onse
 
 ```js
 window.onsecuritypolicyviolation = (e) => {
-   // Handle SecurityPolicyViolationEvent e here
- };
+  // Handle SecurityPolicyViolationEvent e here
+};
 
 window.addEventListener("securitypolicyviolation", (e) => {
   // Handle SecurityPolicyViolationEvent e here

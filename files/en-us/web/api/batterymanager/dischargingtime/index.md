@@ -1,11 +1,8 @@
 ---
-title: BatteryManager.dischargingTime
+title: "BatteryManager: dischargingTime property"
+short-title: dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
 browser-compat: api.BatteryManager.dischargingTime
 ---
 
@@ -27,20 +24,20 @@ A number.
 
 ## Examples
 
-### HTML Content
+### HTML
 
 ```html
 <div id="dischargingTime">(discharging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {
   const time = battery.dischargingTime;
 
   document.querySelector(
-    "#dischargingTime"
+    "#dischargingTime",
   ).textContent = `Remaining time to fully discharge the battery: ${time}`;
 });
 ```

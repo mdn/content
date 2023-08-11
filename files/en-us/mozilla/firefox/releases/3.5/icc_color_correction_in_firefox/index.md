@@ -1,10 +1,7 @@
 ---
 title: ICC color correction in Firefox
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
-tags:
-  - Firefox
-  - Firefox 3
-  - Firefox 3.5
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -116,7 +113,7 @@ The following table lists the possible values.
 
 ### Caveats
 
-The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See [bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) and the [ICC version 4 profile test](https://www.color.org/version4html.xalter).
+The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See [bug 488800](https://bugzil.la/488800) and the [ICC version 4 profile test](https://www.color.org/version4html.xalter).
 
 ## See also
 

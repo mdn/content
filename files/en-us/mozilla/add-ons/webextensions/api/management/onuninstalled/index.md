@@ -1,14 +1,7 @@
 ---
 title: management.onUninstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onUninstalled
+page-type: webextension-api-event
 browser-compat: webextensions.api.management.onUninstalled
 ---
 
@@ -28,7 +21,7 @@ browser.management.onUninstalled.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -39,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `function`
+- `listener`
 
-  - : Callback function that will be called when this event occurs. The function will be passed the following argument:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `info`
       - : [`ExtensionInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): info about the add-on that was uninstalled.

@@ -1,14 +1,7 @@
 ---
 title: permissions.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/remove
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.remove
 ---
 
@@ -47,8 +40,8 @@ This code adds a click handler that removes a given permission.
 
 ```js
 const permissionToRemove = {
-  permissions: ["history"]
-}
+  permissions: ["history"],
+};
 
 async function remove() {
   console.log("removing");

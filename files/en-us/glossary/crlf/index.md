@@ -1,14 +1,10 @@
 ---
 title: CRLF
 slug: Glossary/CRLF
-tags:
-  - CR
-  - CRLF
-  - Infrastructure
-  - LF
-  - carriage return
-  - line feed
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 CR and LF are [control characters](https://en.wikipedia.org/wiki/Control_character) or [bytecode](https://en.wikipedia.org/wiki/Bytecode) that can be used to mark a line break in a text file.
 

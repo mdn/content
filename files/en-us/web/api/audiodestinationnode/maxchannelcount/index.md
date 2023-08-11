@@ -1,14 +1,8 @@
 ---
-title: AudioDestinationNode.maxChannelCount
+title: "AudioDestinationNode: maxChannelCount property"
+short-title: maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioDestinationNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxChannelCount
 browser-compat: api.AudioDestinationNode.maxChannelCount
 ---
 

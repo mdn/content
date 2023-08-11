@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
-tags:
-  - API
-  - JavaScript
-  - Property
-  - Reference
-  - WebAssembly
-  - exports
-  - instance
 browser-compat: javascript.builtins.WebAssembly.Instance.exports
 ---
 
@@ -38,7 +30,7 @@ const importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 

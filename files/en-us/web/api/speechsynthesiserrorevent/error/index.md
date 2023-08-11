@@ -1,16 +1,8 @@
 ---
-title: SpeechSynthesisErrorEvent.error
+title: "SpeechSynthesisErrorEvent: error property"
+short-title: error
 slug: Web/API/SpeechSynthesisErrorEvent/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Property
-  - Reference
-  - SpeechSynthesisErrorEvent
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisErrorEvent.error
 ---
 
@@ -21,7 +13,7 @@ The **`error`** property of the
 
 ## Value
 
-A string containing an error code. Possible codes are:
+A string containing the error reason. Possible values are:
 
 - `canceled`
   - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the
@@ -59,15 +51,17 @@ A string containing an error code. Possible codes are:
   - : The content of the {{domxref("SpeechSynthesisUtterance.rate")}},
     {{domxref("SpeechSynthesisUtterance.pitch")}} or
     {{domxref("SpeechSynthesisUtterance.volume")}} property was not valid.
+- `not-allowed`
+  - : The operation's start was not allowed.
 
 ## Examples
 
 ```js
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('input');
-const voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
 const voices = synth.getVoices();
 
@@ -77,8 +71,9 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (let i = 0; i < voices.length ; i++) {
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
     if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -87,11 +82,13 @@ inputForm.onsubmit = (event) => {
   synth.speak(utterThis);
 
   utterThis.onerror = (event) => {
-    console.error(`An error has occurred with the speech synthesis: ${event.error}`);
-  }
+    console.error(
+      `An error has occurred with the speech synthesis: ${event.error}`,
+    );
+  };
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

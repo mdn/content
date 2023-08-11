@@ -1,16 +1,7 @@
 ---
 title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getTree
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getTree
 ---
 
@@ -53,7 +44,7 @@ function logItems(bookmarkItem, indent) {
     indent++;
   }
   if (bookmarkItem.children) {
-    for (child of bookmarkItem.children) {
+    for (const child of bookmarkItem.children) {
       logItems(child, indent);
     }
   }

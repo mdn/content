@@ -1,10 +1,7 @@
 ---
 title: Site compatibility for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Site_compatibility
-tags:
-  - Compatibility
-  - Gecko
-  - Web Development
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -17,7 +14,7 @@ See also [Firefox 3 for developers](/en-US/Firefox_3_for_developers).
 
 ### Capturing load event listeners
 
-In Gecko 1.8, it was not possible to set capturing load event listeners on images. In Gecko 1.9, this has been fixed by {{ Bug(234455) }}. But this can cause problems on websites that incorrectly have their event listeners set to capture the load event. See the discussion in {{ Bug(335251) }}. To fix this problem, the problematic page in question should not set a capturing load event listener.
+In Gecko 1.8, it was not possible to set capturing load event listeners on images. In Gecko 1.9, this has been fixed by [Webkit bug 234455](https://bugzil.la/234455). But this can cause problems on websites that incorrectly have their event listeners set to capture the load event. See the discussion in [Webkit bug 335251](https://bugzil.la/335251). To fix this problem, the problematic page in question should not set a capturing load event listener.
 
 For example, this:
 
@@ -35,7 +32,7 @@ For an explanation of how event capture works, see [DOM Level 2 Event capture](h
 
 ### `preventBubble` has been removed
 
-In Gecko 1.8, the `preventBubble` method existed on events to prevent events from bubbling upwards. In Gecko 1.9 this method has been removed. Instead, you should use the standard [stopPropagation()](/en-US/docs/Web/API/Event/stopPropagation), which also works fine in Gecko 1.8. The patch in {{ Bug(330494) }} made this happen. See also {{ Bug(105280) }}.
+In Gecko 1.8, the `preventBubble` method existed on events to prevent events from bubbling upwards. In Gecko 1.9 this method has been removed. Instead, you should use the standard [stopPropagation()](/en-US/docs/Web/API/Event/stopPropagation), which also works fine in Gecko 1.8. The patch in [Webkit bug 330494](https://bugzil.la/330494) made this happen. See also [Webkit bug 105280](https://bugzil.la/105280).
 
 ### A few other old event APIs are no longer supported
 
@@ -53,13 +50,13 @@ Firefox doesn't currently enforce this rule (it did for a while during the devel
 
 ### `intersectsNode` has been removed
 
-In Gecko 1.8 the function `intersectsNode` code be used to test if a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function [compareBoundaryPoints](/en-US/docs/Web/API/Range/compareBoundaryPoints). The patch in {{ Bug(358073) }} removed this function.
+In Gecko 1.8 the function `intersectsNode` code be used to test if a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function [compareBoundaryPoints](/en-US/docs/Web/API/Range/compareBoundaryPoints). The patch in [Webkit bug 358073](https://bugzil.la/358073) removed this function.
 
 See the documentation for [intersectsNode](/en-US/docs/Web/API/Range/intersectsNode) for how to use `compareBoundaryPoints` instead.
 
 ### `compareNode` has been removed
 
-In Gecko 1.8 the function `compareNode` code be used to test how a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function [compareBoundaryPoints](/en-US/docs/Web/API/Range/compareBoundaryPoints). The patch in {{ Bug(358073) }} removed this function.
+In Gecko 1.8 the function `compareNode` code be used to test how a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function [compareBoundaryPoints](/en-US/docs/Web/API/Range/compareBoundaryPoints). The patch in [Webkit bug 358073](https://bugzil.la/358073) removed this function.
 
 See the documentation for [compareNode](/en-US/docs/Web/API/Range/compareNode) for how to use `compareBoundaryPoints` instead.
 

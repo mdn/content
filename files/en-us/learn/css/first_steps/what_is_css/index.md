@@ -1,14 +1,7 @@
 ---
 title: What is CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Beginner
-  - CSS
-  - Introduction to CSS
-  - Learn
-  - Modules
-  - Specifications
-  - Syntax
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
@@ -61,7 +54,7 @@ A **document** is usually a text file structured using a markup language — {{G
 
 > **Note:** A browser is sometimes called a {{Glossary("User agent","user agent")}}, which basically means a computer program that represents a person inside a computer system. Browsers are the main type of user agents we think of when talking about CSS, however, they are not the only ones. There are other user agents available, such as those that convert HTML and CSS documents into PDFs to be printed.
 
-CSS can be used for very basic document text styling — for example, for changing the [color](/en-US/docs/Web/CSS/color_value) and [size](/en-US/docs/Web/CSS/font-size) of headings and links. It can be used to create a layout — for example, [turning a single column of text into a layout](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) with a main content area and a sidebar for related information. It can even be used for effects such as [animation](/en-US/docs/Web/CSS/CSS_Animations). Have a look at the links in this paragraph for specific examples.
+CSS can be used for very basic document text styling — for example, for changing the [color](/en-US/docs/Web/CSS/color_value) and [size](/en-US/docs/Web/CSS/font-size) of headings and links. It can be used to create a layout — for example, [turning a single column of text into a layout](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) with a main content area and a sidebar for related information. It can even be used for effects such as [animation](/en-US/docs/Web/CSS/CSS_animations). Have a look at the links in this paragraph for specific examples.
 
 ## CSS syntax
 
@@ -76,10 +69,10 @@ h1 {
 }
 ```
 
-- In the above example, the CSS rule opens with a {{Glossary("CSS Selector", "selector")}}. This _selects_ the HTML element that we are going to style. In this case, we are styling level one headings ({{htmlelement("h1")}}).
+- In the above example, the CSS rule opens with a {{Glossary("CSS Selector", "selector")}}. This _selects_ the HTML element that we are going to style. In this case, we are styling level one headings ({{htmlelement("Heading_Elements", "h1")}}).
 - We then have a set of curly braces `{ }`.
 - Inside the braces will be one or more **declarations**, which take the form of **property** and **value** pairs. We specify the property (`color` in the above example) before the colon, and we specify the value of the property after the colon (`red` in this example).
-- This example contains two declarations, one for `color` and the other for `font-size`. Each pair specifies a property of the element(s) we are selecting ({{htmlelement("h1")}} in this case), then a value that we'd like to give the property.
+- This example contains two declarations, one for `color` and the other for `font-size`. Each pair specifies a property of the element(s) we are selecting ({{htmlelement("Heading_Elements", "h1")}} in this case), then a value that we'd like to give the property.
 
 CSS {{Glossary("property/CSS","properties")}} have different allowable values, depending on which property is being specified. In our example, we have the `color` property, which can take various [color values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#color). We also have the `font-size` property. This property can take various [size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages) as a value.
 
@@ -102,7 +95,7 @@ You will find that you quickly learn some values, whereas others you will need t
 
 ## CSS modules
 
-As there are so many things that you could style using CSS, the language is broken down into _modules_. You'll see reference to these modules as you explore MDN. Many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the [Backgrounds and Borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders) module to find out what its purpose is and the properties and features it contains. In that module, you will also find a link to _Specifications_ that defines the technology (also see the section below).
+As there are so many things that you could style using CSS, the language is broken down into _modules_. You'll see reference to these modules as you explore MDN. Many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the [Backgrounds and Borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module to find out what its purpose is and the properties and features it contains. In that module, you will also find a link to _Specifications_ that defines the technology (also see the section below).
 
 At this stage, you don't need to worry too much about how CSS is structured; however, it can make it easier to find information if, for example, you are aware that a certain property is likely to be found among other similar things, and is therefore, probably in the same specification.
 
@@ -131,11 +124,3 @@ Based on your requirements, you can use the browser compatibility table to check
 You made it to the end of the article! Now that you have some understanding of what CSS is, let's move on to [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started), where you can start to write some CSS yourself.
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

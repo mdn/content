@@ -2,13 +2,6 @@
 title: pointer-events
 slug: Web/CSS/pointer-events
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - SVG
-  - pointer-events
-  - recipe:css-property
 browser-compat: css.properties.pointer-events
 ---
 
@@ -25,13 +18,13 @@ The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what cir
 pointer-events: auto;
 pointer-events: none;
 pointer-events: visiblePainted; /* SVG only */
-pointer-events: visibleFill;    /* SVG only */
-pointer-events: visibleStroke;  /* SVG only */
-pointer-events: visible;        /* SVG only */
-pointer-events: painted;        /* SVG only */
-pointer-events: fill;           /* SVG only */
-pointer-events: stroke;         /* SVG only */
-pointer-events: all;            /* SVG only */
+pointer-events: visibleFill; /* SVG only */
+pointer-events: visibleStroke; /* SVG only */
+pointer-events: visible; /* SVG only */
+pointer-events: painted; /* SVG only */
+pointer-events: fill; /* SVG only */
+pointer-events: stroke; /* SVG only */
+pointer-events: all; /* SVG only */
 
 /* Global values */
 pointer-events: inherit;
@@ -78,8 +71,6 @@ In addition to indicating that the element is not the target of pointer events, 
 Note that preventing an element from being the target of pointer events by using `pointer-events` does _not_ necessarily mean that pointer event listeners on that element _cannot_ or _will not_ be triggered. If one of the element's children has `pointer-events` explicitly set to _allow_ that child to be the target of pointer events, then any events targeting that child will pass through the parent as the event travels along the parent chain, and trigger event listeners on the parent as appropriate. Of course any pointer activity at a point on the screen that is covered by the parent but not by the child will not be caught by either the child or the parent (it will go "through" the parent and target whatever is underneath).
 
 Elements with `pointer-events: none` will still receive focus through sequential keyboard navigation using the <kbd>Tab</kbd> key.
-
-We would like to provide finer grained control (than just `auto` and `none`) in HTML for which parts of an element will cause it to "catch" pointer events, and when. To help us in deciding how `pointer-events` should be further extended for HTML, if you have any particular things that you would like to be able to do with this property, then please add them to the Use Cases section of [this wiki page](https://wiki.mozilla.org/SVG:Pointer-events) (don't worry about keeping it tidy).
 
 ## Formal definition
 
@@ -130,8 +121,6 @@ a[href="http://example.com"]
 ## Specifications
 
 {{Specifications}}
-
-Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its [level 4](https://wiki.csswg.org/spec/css4-ui#pointer-events).
 
 ## Browser compatibility
 

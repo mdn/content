@@ -2,14 +2,6 @@
 title: transform-origin
 slug: Web/CSS/transform-origin
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - 'default value: center'
-  - recipe:css-property
-  - transform-origin
 browser-compat: css.properties.transform-origin
 ---
 
@@ -148,7 +140,7 @@ This example shows the effect of choosing different `transform-origin` values fo
 
   <pre>
 transform: none;
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box2">&nbsp;</div>
@@ -157,7 +149,7 @@ transform: none;
 
   <pre>
 transform: rotate(30deg);
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box3">&nbsp;</div>
@@ -167,7 +159,7 @@ transform: rotate(30deg);
   <pre>
 transform: rotate(30deg);
 transform-origin: 0 0;
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box4">&nbsp;</div>
@@ -177,7 +169,7 @@ transform-origin: 0 0;
   <pre>
 transform: rotate(30deg);
 transform-origin: 100% 100%;
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box5">&nbsp;</div>
@@ -187,7 +179,7 @@ transform-origin: 100% 100%;
   <pre>
 transform: rotate(30deg);
 transform-origin: -1em -3em;
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box6">&nbsp;</div>
@@ -196,7 +188,7 @@ transform-origin: -1em -3em;
 
   <pre>
 transform: scale(1.7);
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box7">&nbsp;</div>
@@ -206,7 +198,7 @@ transform: scale(1.7);
   <pre>
 transform: scale(1.7);
 transform-origin: 0 0;
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box8">&nbsp;</div>
@@ -216,7 +208,7 @@ transform-origin: 0 0;
   <pre>
 transform: scale(1.7);
 transform-origin: 100% -30%;
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box9">&nbsp;</div>
@@ -226,7 +218,7 @@ transform-origin: 100% -30%;
   <pre>
 transform: skewX(50deg);
 transform-origin: 100% -30%;
-</pre>
+  </pre>
 
   <div class="example">
     <div class="box box10">&nbsp;</div>
@@ -236,7 +228,7 @@ transform-origin: 100% -30%;
   <pre>
 transform: skewY(50deg);
 transform-origin: 100% -30%;
-</pre>
+  </pre>
 </div>
 ```
 
@@ -326,5 +318,5 @@ transform-origin: 100% -30%;
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

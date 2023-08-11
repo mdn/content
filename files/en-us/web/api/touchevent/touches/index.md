@@ -1,17 +1,8 @@
 ---
-title: TouchEvent.touches
+title: "TouchEvent: touches property"
+short-title: touches
 slug: Web/API/TouchEvent/touches
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Mobile
-  - Property
-  - Read-only
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.TouchEvent.touches
 ---
 
@@ -24,6 +15,9 @@ target element was at {{domxref("Element/touchstart_event", "touchstart")}} time
 
 You can think of it as how many separate fingers are able to be identified as touching
 the screen.
+
+> **Note:** Touches inside the array are not necessarily ordered by order of occurrences (the
+> i-th element in the array being the i-th touch that happened). You cannot assume a specific order. To determine the order of occurrences of the touches, use the `touch` object IDs.
 
 ## Value
 
@@ -43,16 +37,28 @@ that were activated and then invokes different handlers depending on the number 
 points.
 
 ```js
-someElement.addEventListener('touchstart', (e) => {
-   // Invoke the appropriate handler depending on the
-   // number of touch points.
-   switch (e.touches.length) {
-     case 1: handle_one_touch(e); break;
-     case 2: handle_two_touches(e); break;
-     case 3: handle_three_touches(e); break;
-     default: console.log("Not supported"); break;
-   }
- }, false);
+someElement.addEventListener(
+  "touchstart",
+  (e) => {
+    // Invoke the appropriate handler depending on the
+    // number of touch points.
+    switch (e.touches.length) {
+      case 1:
+        handle_one_touch(e);
+        break;
+      case 2:
+        handle_two_touches(e);
+        break;
+      case 3:
+        handle_three_touches(e);
+        break;
+      default:
+        console.log("Not supported");
+        break;
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

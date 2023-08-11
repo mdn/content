@@ -1,23 +1,8 @@
 ---
-title: XRRigidTransform()
+title: "XRRigidTransform: XRRigidTransform() constructor"
+short-title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Constructor
-  - Mixed Reality
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - XR
-  - XRRigidTransform
-  - augmented
-  - transform
 browser-compat: api.XRRigidTransform.XRRigidTransform
 ---
 
@@ -74,10 +59,10 @@ on a transform before requesting the first animation frame.
 ```js
 let animationFrameRequestID = 0;
 
-xrSession.requestReferenceSpace("local-floor")
-.then((refSpace) => {
+xrSession.requestReferenceSpace("local-floor").then((refSpace) => {
   xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerPosition, viewerOrientation));
+    new XRRigidTransform(viewerPosition, viewerOrientation),
+  );
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 });
 ```

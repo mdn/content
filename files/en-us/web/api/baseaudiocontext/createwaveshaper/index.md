@@ -1,15 +1,8 @@
 ---
-title: BaseAudioContext.createWaveShaper()
+title: "BaseAudioContext: createWaveShaper() method"
+short-title: createWaveShaper()
 slug: Web/API/BaseAudioContext/createWaveShaper
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createWaveShaper
 browser-compat: api.BaseAudioContext.createWaveShaper
 ---
 

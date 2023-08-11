@@ -1,13 +1,7 @@
 ---
 title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript 2015
-  - Functions
-  - Intermediate
-  - JavaScript
-  - Language feature
-  - Reference
+page-type: javascript-language-feature
 browser-compat: javascript.functions.arrow_functions
 ---
 
@@ -15,7 +9,7 @@ browser-compat: javascript.functions.arrow_functions
 
 An **arrow function expression** is a compact alternative to a traditional [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), with some semantic differences and deliberate limitations in usage:
 
-- Arrow functions don't have their own bindings to [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](/en-US/docs/Glossary/Method).
+- Arrow functions don't have their own {{glossary("binding", "bindings")}} to [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](/en-US/docs/Glossary/Method).
 - Arrow functions cannot be used as [constructors](/en-US/docs/Glossary/Constructor). Calling them with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) throws a {{jsxref("TypeError")}}. They also don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions cannot use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) within their body and cannot be created as generator functions.
 
@@ -24,11 +18,17 @@ An **arrow function expression** is a compact alternative to a traditional [func
 ## Syntax
 
 ```js-nolint
+() => expression
+
 param => expression
 
 (param) => expression
 
 (param1, paramN) => expression
+
+() => {
+  statements
+}
 
 param => {
   statements
@@ -63,7 +63,7 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
 
 > **Note:** Traditional function expressions and arrow functions have more differences than their syntax. We will introduce their behavior differences in more detail in the next few subsections.
 
-```js
+```js-nolint
 // Traditional anonymous function
 (function (a) {
   return a + 100;
@@ -98,11 +98,11 @@ const a = 4;
 const b = 2;
 
 // Traditional anonymous function (no parameters)
-(function() {
+(function () {
   return a + b + 100;
 });
 
-// Arrow function (no arguments)
+// Arrow function (no parameters)
 () => a + b + 100;
 ```
 
@@ -152,7 +152,7 @@ const func2 = (x, y) => {
 
 Returning object literals using the concise body syntax `(params) => { object: literal }` does not work as expected.
 
-```js example-bad
+```js-nolint example-bad
 const func = () => { foo: 1 };
 // Calling func() returns undefined!
 
@@ -193,13 +193,13 @@ obj.c(); // logs 10, Object { /* … */ }
 Another example involving {{jsxref("Object.defineProperty()")}}:
 
 ```js
-'use strict';
+"use strict";
 
 const obj = {
   a: 10,
 };
 
-Object.defineProperty(obj, 'b', {
+Object.defineProperty(obj, "b", {
   get: () => {
     console.log(this.a, typeof this.a, this); // undefined 'undefined' Window { /* … */ } (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
@@ -214,7 +214,7 @@ class C {
   a = 1;
   autoBoundMethod = () => {
     console.log(this.a);
-  }
+  };
 }
 
 const c = new C();
@@ -247,11 +247,6 @@ For similar reasons, the [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_
 Arrow functions do not have their own [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object. Thus, in this example, `arguments` is a reference to the arguments of the enclosing scope:
 
 ```js
-const arguments = [1, 2, 3];
-const arr = () => arguments[0];
-
-arr(); // 1
-
 function foo(n) {
   const f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
   return f();
@@ -292,7 +287,7 @@ The [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) keyword cann
 
 An arrow function cannot contain a line break between its parameters and its arrow.
 
-```js example-bad
+```js-nolint example-bad
 const func = (a, b, c)
   => 1;
 // SyntaxError: Unexpected token '=>'
@@ -300,7 +295,7 @@ const func = (a, b, c)
 
 For the purpose of formatting, you may put the line break after the arrow or use parentheses/braces around the function body, as shown below. You can also put line breaks between parameters.
 
-```js
+```js-nolint
 const func = (a, b, c) =>
   1;
 
@@ -321,9 +316,9 @@ const func4 = (
 
 ### Precedence of arrow
 
-Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) compared to regular functions.
+Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) compared to regular functions.
 
-```js example-bad
+```js-nolint example-bad
 let callback;
 
 callback = callback || () => {};
@@ -344,15 +339,15 @@ callback = callback || (() => {});
 // An empty arrow function returns undefined
 const empty = () => {};
 
-(() => 'foobar')();
+(() => "foobar")();
 // Returns "foobar"
 // (this is an Immediately Invoked Function Expression)
 
-const simple = (a) => a > 15 ? 15 : a;
+const simple = (a) => (a > 15 ? 15 : a);
 simple(16); // 15
 simple(10); // 10
 
-const max = (a, b) => a > b ? a : b;
+const max = (a, b) => (a > b ? a : b);
 
 // Easy array filtering, mapping, etc.
 const arr = [5, 6, 13, 0, 1, 18, 23];
@@ -369,7 +364,7 @@ const double = arr.map((v) => v * 2);
 // More concise promise chains
 promise
   .then((a) => {
-  // …
+    // …
   })
   .then((b) => {
     // …
@@ -435,7 +430,8 @@ With traditional function expressions, code like this does not work as expected:
 const obj = {
   count: 10,
   doSomethingLater() {
-    setTimeout(function () { // the function executes on the window scope
+    setTimeout(function () {
+      // the function executes on the window scope
       this.count++;
       console.log(this.count);
     }, 300);
@@ -475,4 +471,8 @@ obj.doSomethingLater(); // logs 11
 
 ## See also
 
-- ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Statements/function", "function")}}
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/) on hacks.mozilla.org (2015)

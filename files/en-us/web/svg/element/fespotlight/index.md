@@ -2,13 +2,6 @@
 title: <feSpotLight>
 slug: Web/SVG/Element/feSpotLight
 page-type: svg-element
-tags:
-  - Element
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feSpotLight
 ---
 
@@ -44,7 +37,7 @@ This element implements the {{domxref("SVGFESpotLightElement")}} interface.
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <svg

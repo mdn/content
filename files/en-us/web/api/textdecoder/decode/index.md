@@ -1,12 +1,8 @@
 ---
-title: TextDecoder.decode()
+title: "TextDecoder: decode() method"
+short-title: decode()
 slug: Web/API/TextDecoder/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Encoding
-  - Method
-  - TextDecoder
 browser-compat: api.TextDecoder.decode
 ---
 
@@ -28,13 +24,13 @@ decode(buffer, options)
 ### Parameters
 
 - `buffer` {{Optional_Inline}}
-  - : Is an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object containing the encoded text to decode.
+  - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} object containing the encoded text to decode.
 - `options` {{Optional_Inline}}
 
   - : An object with the property:
 
     - `stream`
-      - : A boolean flag indicating that additional data will follow in subsequent calls to `decode()`.
+      - : A boolean flag indicating whether additional data will follow in subsequent calls to `decode()`.
         Set to `true` if processing the data in chunks, and `false` for the final chunk or if the data is not chunked.
         It defaults to `false`.
 

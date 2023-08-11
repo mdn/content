@@ -2,15 +2,6 @@
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - GLSL
-  - Graphics
-  - Learn
-  - Shaders
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
@@ -82,18 +73,18 @@ window.addEventListener("load", setupWebGL, false);
 let gl;
 let program;
 
-function setupWebGL (evt) {
+function setupWebGL(evt) {
   window.removeEventListener(evt.type, setupWebGL, false);
   if (!(gl = getRenderingContext())) return;
 
   let source = document.querySelector("#vertex-shader").innerHTML;
   const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader,source);
+  gl.shaderSource(vertexShader, source);
   gl.compileShader(vertexShader);
 
   source = document.querySelector("#fragment-shader").innerHTML;
   const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader,source);
+  gl.shaderSource(fragmentShader, source);
   gl.compileShader(fragmentShader);
   program = gl.createProgram();
   gl.attachShader(program, vertexShader);
@@ -106,7 +97,9 @@ function setupWebGL (evt) {
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
-    document.querySelector("p").textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
+    document.querySelector(
+      "p",
+    ).textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
     return;
   }
 
@@ -142,10 +135,12 @@ function getRenderingContext() {
   const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+  const gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     const paragraph = document.querySelector("p");
-    paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
+    paragraph.textContent =
+      "Failed. Your browser or device may not support WebGL.";
     return null;
   }
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);

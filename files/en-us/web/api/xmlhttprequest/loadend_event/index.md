@@ -1,17 +1,8 @@
 ---
 title: "XMLHttpRequest: loadend event"
+short-title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - NeedsCompatTable
-  - NeedsSpecTable
-  - ProgressEvent
-  - Reference
-  - Web
-  - events
-  - loadend
 browser-compat: api.XMLHttpRequest.loadend_event
 ---
 
@@ -24,9 +15,9 @@ The **`loadend`** event is fired when a request has completed, whether successfu
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadend', (event) => { })
+addEventListener("loadend", (event) => {});
 
-onloadend = (event) => { }
+onloadend = (event) => {};
 ```
 
 ## Event type
@@ -92,44 +83,48 @@ input {
 #### JavaScript
 
 ```js
-const xhrButtonSuccess = document.querySelector('.xhr.success');
-const xhrButtonError = document.querySelector('.xhr.error');
-const xhrButtonAbort = document.querySelector('.xhr.abort');
-const log = document.querySelector('.event-log');
+const xhrButtonSuccess = document.querySelector(".xhr.success");
+const xhrButtonError = document.querySelector(".xhr.error");
+const xhrButtonAbort = document.querySelector(".xhr.abort");
+const log = document.querySelector(".event-log");
 
 function handleEvent(e) {
-    log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
+  log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
 }
 
 function addListeners(xhr) {
-    xhr.addEventListener('loadstart', handleEvent);
-    xhr.addEventListener('load', handleEvent);
-    xhr.addEventListener('loadend', handleEvent);
-    xhr.addEventListener('progress', handleEvent);
-    xhr.addEventListener('error', handleEvent);
-    xhr.addEventListener('abort', handleEvent);
+  xhr.addEventListener("loadstart", handleEvent);
+  xhr.addEventListener("load", handleEvent);
+  xhr.addEventListener("loadend", handleEvent);
+  xhr.addEventListener("progress", handleEvent);
+  xhr.addEventListener("error", handleEvent);
+  xhr.addEventListener("abort", handleEvent);
 }
 
 function runXHR(url) {
-    log.textContent = '';
+  log.textContent = "";
 
-    const xhr = new XMLHttpRequest();
-    addListeners(xhr);
-    xhr.open("GET", url);
-    xhr.send();
-    return xhr;
+  const xhr = new XMLHttpRequest();
+  addListeners(xhr);
+  xhr.open("GET", url);
+  xhr.send();
+  return xhr;
 }
 
-xhrButtonSuccess.addEventListener('click', () => {
-    runXHR('https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+xhrButtonSuccess.addEventListener("click", () => {
+  runXHR(
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
 });
 
-xhrButtonError.addEventListener('click', () => {
-    runXHR('http://i-dont-exist');
+xhrButtonError.addEventListener("click", () => {
+  runXHR("http://i-dont-exist");
 });
 
-xhrButtonAbort.addEventListener('click', () => {
-    runXHR('https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json').abort();
+xhrButtonAbort.addEventListener("click", () => {
+  runXHR(
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  ).abort();
 });
 ```
 

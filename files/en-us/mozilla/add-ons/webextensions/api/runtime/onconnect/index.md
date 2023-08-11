@@ -1,16 +1,7 @@
 ---
 title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onconnect
-  - runtime
+page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnect
 ---
 
@@ -28,7 +19,7 @@ browser.runtime.onConnect.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,7 +32,7 @@ Events have three functions:
 
 - `function`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.
@@ -61,8 +52,8 @@ This content script:
 ```js
 // content-script.js
 
-let myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+let myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
 myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
@@ -70,7 +61,7 @@ myPort.onMessage.addListener((m) => {
 });
 
 document.body.addEventListener("click", () => {
-  myPort.postMessage({greeting: "they clicked the page!"});
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -92,9 +83,9 @@ let portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
+  portFromCS.postMessage({ greeting: "hi there content script!" });
   portFromCS.onMessage.addListener((m) => {
-    console.log("In background script, received message from content script")
+    console.log("In background script, received message from content script");
     console.log(m.greeting);
   });
 }
@@ -102,7 +93,7 @@ function connected(p) {
 browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 

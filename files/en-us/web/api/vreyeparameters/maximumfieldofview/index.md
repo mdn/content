@@ -1,18 +1,11 @@
 ---
-title: VREyeParameters.maximumFieldOfView
+title: "VREyeParameters: maximumFieldOfView property"
+short-title: maximumFieldOfView
 slug: Web/API/VREyeParameters/maximumFieldOfView
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - maximumFieldOfView
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.maximumFieldOfView
 ---
 

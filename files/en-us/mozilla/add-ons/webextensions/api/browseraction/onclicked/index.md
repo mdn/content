@@ -1,16 +1,7 @@
 ---
 title: browserAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - onClicked
+page-type: webextension-api-event
 browser-compat: webextensions.api.browserAction.onClicked
 ---
 
@@ -41,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the icon was clicked.

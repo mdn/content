@@ -1,12 +1,7 @@
 ---
 title: Configuring servers for Ogg media
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
-tags:
-  - Audio
-  - HTTP
-  - Media
-  - Ogg
-  - Video
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -45,7 +40,7 @@ Your server must also return `206: Partial Content` for the request `Range: byte
 
 When the browser seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.
 
-By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
+By default, [`ffmpeg2theora`](https://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
 
 > **Note:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
 
@@ -59,7 +54,7 @@ The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide 
 
 ### Serve X-Content-Duration headers
 
-> **Note:** As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See {{Bug(1160695)}} for more details.
+> **Note:** As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Webkit bug 1160695](https://bugzil.la/1160695) for more details.
 
 The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
 
@@ -87,7 +82,7 @@ Another problem with allowing HTTP compression for media streaming: Apache serve
 
 You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](https://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
 
-```
+```plain
 $ oggz-info /g/media/bruce_vs_ironman.ogv
 Content-Duration: 00:01:00.046
 
@@ -116,4 +111,4 @@ It's important to note that it appears that `oggz-info` makes a read pass of the
 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)

@@ -1,24 +1,19 @@
 ---
-title: get TypedArray[@@species]
+title: TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
+page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.TypedArray.@@species
 ---
 
 {{JSRef}}
 
-The **`TypedArray[@@species]`** accessor property returns the constructor used to construct return values from typed array methods.
+The **`TypedArray[@@species]`** static accessor property returns the constructor used to construct return values from typed array methods.
 
 > **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
 ## Syntax
 
-```js
+```js-nolint
 TypedArray[Symbol.species]
 ```
 
@@ -66,7 +61,7 @@ class BadArray2 extends Int8Array {
 new BadArray2(1).map(() => 0n); // TypeError: TypedArray.prototype.map constructed typed array of different content type from |this|
 ```
 
-> **Note:** Due to a bug in both [SpiderMonkey](https://bugzilla.mozilla.org/show_bug.cgi?id=1640194) and V8, the content type match is not checked. Only Safari will throw a {{jsxref("TypeError")}} in the second example.
+> **Note:** Due to a bug in both [SpiderMonkey](https://bugzil.la/1640194) and V8, the content type match is not checked. Only Safari will throw a {{jsxref("TypeError")}} in the second example.
 
 ## Examples
 

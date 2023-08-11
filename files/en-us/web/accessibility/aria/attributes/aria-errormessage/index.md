@@ -1,13 +1,7 @@
 ---
 title: aria-errormessage
 slug: Web/Accessibility/ARIA/Attributes/aria-errormessage
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-errormessage
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-errormessage
 ---
 
@@ -17,7 +11,7 @@ The `aria-errormessage` attribute on an object identifies the element that provi
 
 When there is a user-created error, you want to let them know it exists and tell them how to fix it. There are two attributes you need to use: set [`aria-invalid="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) to define the object as being in an error state, then add the `aria-errormessage` attribute with the value being the `id` of the element containing the error message text for that object.
 
-The `aria-errormessage` should only be used when the value of an object is not valid; when[`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) is set to `true`. If the object is not invalid and you include the `aria-errormessage` attribute, make sure the element referenced is hidden, as the message it contains is not relevant.
+The `aria-errormessage` should only be used when the value of an object is not valid; when[`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) is set to `true`. If the object is valid and you include the `aria-errormessage` attribute, make sure the element referenced is hidden, as the message it contains is not relevant.
 
 When `aria-errormessage` is relevant, the element it references must be visible so users can see or hear the error message.
 
@@ -80,7 +74,7 @@ Used in roles:
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
@@ -100,7 +94,7 @@ Inherits from roles:
 
 ## See Also
 
-- HTML {{htmlattrxref('invalid')}} attribute
+- HTML [`invalid`](/en-US/docs/Web/HTML/Global_attributes#invalid) attribute
 - CSS {{CSSxref(':invalid')}} pseudoclass
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)

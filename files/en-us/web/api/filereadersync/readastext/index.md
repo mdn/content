@@ -1,5 +1,6 @@
 ---
-title: FileReaderSync.readAsText()
+title: "FileReaderSync: readAsText() method"
+short-title: readAsText()
 slug: Web/API/FileReaderSync/readAsText
 page-type: web-api-instance-method
 browser-compat: api.FileReaderSync.readAsText

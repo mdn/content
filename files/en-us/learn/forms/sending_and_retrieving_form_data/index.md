@@ -1,17 +1,7 @@
 ---
 title: Sending form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Forms
-  - Guide
-  - HTML
-  - HTTP
-  - Headers
-  - Security
-  - Web
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
@@ -57,11 +47,11 @@ An HTML form on a web page is nothing more than a convenient user-friendly way t
 
 ## On the client side: defining how to send the data
 
-The {{HTMLElement("form")}} element defines how the data will be sent. All of its attributes are designed to let you configure the request to be sent when a user hits a submit button. The two most important attributes are {{htmlattrxref("action","form")}} and {{htmlattrxref("method","form")}}.
+The {{HTMLElement("form")}} element defines how the data will be sent. All of its attributes are designed to let you configure the request to be sent when a user hits a {{Glossary("submit button")}}. The two most important attributes are [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#method).
 
 ### The action attribute
 
-The {{htmlattrxref("action","form")}} attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
+The [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
 
 In this example, the data is sent to an absolute URL — `https://example.com`:
 
@@ -81,7 +71,7 @@ When specified with no attributes, as below, the {{HTMLElement("form")}} data is
 <form>…</form>
 ```
 
-> **Note:** It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the {{htmlattrxref("action","form")}} attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.
+> **Note:** It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.
 
 The names and values of the non-file form controls are sent to the server as `name=value` pairs joined with ampersands. The `action` value should be a file on the server that can handle the incoming data, including ensuring server-side validation. The server then responds, generally handling the data and loading the URL defined by the `action` attribute, causing a new page load (or a refresh of the existing page, if the `action` points to the same page).
 
@@ -89,7 +79,7 @@ How the data is sent depends on the `method` attribute.
 
 ### The method attribute
 
-The {{htmlattrxref("method","form")}} attribute defines how data is sent. The [HTTP protocol](/en-US/docs/Web/HTTP) provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the `GET` method and the `POST` method
+The [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute defines how data is sent. The [HTTP protocol](/en-US/docs/Web/HTTP) provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the `GET` method and the `POST` method
 
 To understand the difference between those two methods, let's step back and examine [how HTTP works](/en-US/docs/Web/HTTP/Overview). Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a [header](/en-US/docs/Web/HTTP/Headers) that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.
 
@@ -137,7 +127,7 @@ Host: foo.com
 
 The [`POST` method](/en-US/docs/Web/HTTP/Methods/POST) is a little different. It's the method the browser uses to talk to the server when asking for a response that takes into account the data provided in the body of the HTTP request: "Hey server, take a look at this data and send me back an appropriate result." If a form is sent using this method, the data is appended to the body of the HTTP request.
 
-Let's look at an example — this is the same form we looked at in the `GET` section above, but with the {{htmlattrxref("method","form")}} attribute set to `POST`.
+Let's look at an example — this is the same form we looked at in the `GET` section above, but with the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute set to `POST`.
 
 ```html
 <form action="http://www.foo.com" method="POST">
@@ -248,11 +238,24 @@ The two templates referenced in the above code are as follows (these need to be 
 
 There are many other server-side technologies you can use for form handling, including Perl, Java, .Net, Ruby, etc. Just pick the one you like best. That said, it's worth noting that it's very uncommon to use these technologies directly because this can be tricky. It's more common to use one of the many high quality frameworks that make handling forms easier, such as:
 
-- [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](https://flask.palletsprojects.com/), but with more tools and options).
-- [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) for Node.js.
-- [Laravel](https://laravel.com/) for PHP.
-- [Ruby On Rails](https://rubyonrails.org/) for Ruby.
-- [Spring Boot](https://spring.io/guides/gs/handling-form-submission/) for Java.
+- Python
+  - [Django](/en-US/docs/Learn/Server-side/Django)
+  - [Flask](https://flask.palletsprojects.com/)
+  - [web2py](https://github.com/web2py/web2py) (easiest to get started with)
+  - [py4web](https://py4web.com/) (written by the same develops as web2py, has a more Django-like setup)
+- Node.js
+  - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
+  - [Next.js](https://nextjs.org/) (for React apps)
+  - [Nuxt](https://nuxtjs.org/) (for Vue apps)
+  - [Remix](https://remix.run/)
+- PHP
+  - [Laravel](https://laravel.com/)
+  - [Laminas](https://getlaminas.org/) (formerly Zend Framework)
+  - [Symfony](https://symfony.com/)
+- Ruby
+  - [Ruby On Rails](https://rubyonrails.org/)
+- Java
+  - [Spring Boot](https://spring.io/guides/gs/handling-form-submission/)
 
 It's worth noting that even using these frameworks, working with forms isn't necessarily _easy_. But it's much easier than trying to write all the functionality yourself from scratch, and will save you a lot of time.
 
@@ -268,8 +271,8 @@ This attribute lets you specify the value of the `Content-Type` HTTP header incl
 
 If you want to send files, you need to take three extra steps:
 
-- Set the {{htmlattrxref("method","form")}} attribute to `POST` because file content can't be put inside URL parameters.
-- Set the value of {{htmlattrxref("enctype","form")}} to `multipart/form-data` because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if the text is also entered into the form).
+- Set the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute to `POST` because file content can't be put inside URL parameters.
+- Set the value of [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) to `multipart/form-data` because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if the text is also entered into the form).
 - Include one or more [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) controls to allow your users to select the file(s) that will be uploaded.
 
 For example:
@@ -321,19 +324,6 @@ If you want to learn more about securing a web application, you can dig into the
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
 {{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- **Sending form data**
 
 ### Advanced Topics
 

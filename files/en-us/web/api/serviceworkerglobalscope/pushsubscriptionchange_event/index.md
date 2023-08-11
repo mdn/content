@@ -1,17 +1,8 @@
 ---
-title: 'ServiceWorkerGlobalScope: pushsubscriptionchange event'
+title: "ServiceWorkerGlobalScope: pushsubscriptionchange event"
+short-title: pushsubscriptionchange
 slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Push
-  - Push API
-  - PushSubscriptionChangeEvent
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - Subscription
 browser-compat: api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
 ---
 
@@ -28,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pushsubscriptionchange', (event) => { });
+addEventListener("pushsubscriptionchange", (event) => {});
 
-onpushsubscriptionchange = (event) => { };
+onpushsubscriptionchange = (event) => {};
 ```
 
 ## Event type
@@ -50,22 +41,26 @@ Consider using another method to synchronize subscription information between yo
 This example, run in the context of a service worker, listens for a `pushsubscriptionchange` event and re-subscribes to the lapsed subscription.
 
 ```js
-self.addEventListener("pushsubscriptionchange", (event) => {
-  const subscription = swRegistration.pushManager
-    .subscribe(event.oldSubscription.options)
-    .then((subscription) =>
-      fetch("register", {
-        method: "post",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          endpoint: subscription.endpoint,
+self.addEventListener(
+  "pushsubscriptionchange",
+  (event) => {
+    const subscription = swRegistration.pushManager
+      .subscribe(event.oldSubscription.options)
+      .then((subscription) =>
+        fetch("register", {
+          method: "post",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({
+            endpoint: subscription.endpoint,
+          }),
         }),
-      }),
-    );
-  event.waitUntil(subscription);
-}, false);
+      );
+    event.waitUntil(subscription);
+  },
+  false,
+);
 ```
 
 When a `pushsubscriptionchange` event arrives, indicating that the subscription has expired, we resubscribe by calling the push manager's {{domxref("PushManager.subscribe", "subscribe()")}} method. When the returned promise is resolved, we receive the new subscription. This is delivered to the app server using a {{domxref("fetch()")}} call to post a {{Glossary("JSON")}} formatted rendition of the subscription's {{domxref("PushSubscription.endpoint", "endpoint")}} to the app server.
@@ -74,11 +69,13 @@ You can also use the `onpushsubscriptionchange` event handler property to set up
 
 ```js
 self.onpushsubscriptionchange = (event) => {
-  event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then((subscription) => {
-      /* ... */
-    })
-  )
+  event.waitUntil(
+    swRegistration.pushManager
+      .subscribe(event.oldSubscription.options)
+      .then((subscription) => {
+        /* ... */
+      }),
+  );
 };
 ```
 

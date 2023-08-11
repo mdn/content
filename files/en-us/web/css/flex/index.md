@@ -2,12 +2,6 @@
 title: flex
 slug: Web/CSS/flex
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.flex
 ---
 
@@ -182,7 +176,7 @@ For most purposes, authors should set `flex` to one of the following values: `au
 }
 ```
 
-{{EmbedLiveSample("Description", 1200, 400, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Description", 1200, 400)}}
 
 By default flex items don't shrink below their minimum content size. To change this, set the item's {{cssxref("min-width")}} or {{cssxref("min-height")}}.
 
@@ -198,12 +192,14 @@ By default flex items don't shrink below their minimum content size. To change t
 
 ### Setting flex: auto
 
+This example shows how a flex item with `flex: auto` grows to absorb any free space in the container.
+
 #### HTML
 
 ```html
 <div id="flex-container">
-  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
-  <div class="raw-item" id="raw">Raw box</div>
+  <div id="flex-auto">flex: auto (click to toggle raw box)</div>
+  <div id="flex-initial">flex: initial</div>
 </div>
 ```
 
@@ -212,43 +208,44 @@ By default flex items don't shrink below their minimum content size. To change t
 ```css
 #flex-container {
   display: flex;
-  flex-direction: row;
-}
-
-#flex-container > .flex-item {
-  flex: auto;
-}
-
-#flex-container > .raw-item {
-  width: 5rem;
-}
-```
-
-```js hidden
-const flex = document.getElementById("flex");
-const raw = document.getElementById("raw");
-flex.addEventListener("click", () => {
-  raw.style.display = raw.style.display === "none" ? "block" : "none";
-});
-```
-
-```css hidden
-#flex-container {
-  width: 100%;
   font-family: Consolas, Arial, sans-serif;
 }
 
 #flex-container > div {
-  border: 1px solid #f00;
   padding: 1rem;
 }
 
-#flex-container > .raw-item {
+#flex-auto {
+  flex: auto;
+  border: 1px solid #f00;
+}
+
+#flex-initial {
   border: 1px solid #000;
 }
 ```
 
+#### JavaScript
+
+```js
+const flexAuto = document.getElementById("flex-auto");
+const flexInitial = document.getElementById("flex-initial");
+flexAuto.addEventListener("click", () => {
+  flexInitial.style.display =
+    flexInitial.style.display === "none" ? "block" : "none";
+});
+```
+
 #### Result
+
+The flex container contains two flex items:
+
+- "flex: auto" has a `flex` value of [`auto`](auto)
+- "flex: initial" has a `flex` value of [`initial`](#initial)
+
+The "flex: initial" item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by "flex: auto".
+
+When you click "flex: auto", we set "flex: initial"'s {{cssxref("display")}} property to `none`, removing it from the layout. The "flex: auto" item then expands to occupy all the available space in the container.
 
 {{EmbedLiveSample('Setting_flex_auto','100%','100')}}
 
@@ -262,5 +259,5 @@ flex.addEventListener("click", () => {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

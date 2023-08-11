@@ -1,13 +1,8 @@
 ---
-title: DataTransfer.effectAllowed
+title: "DataTransfer: effectAllowed property"
+short-title: effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.effectAllowed
 ---
 
@@ -116,9 +111,9 @@ function dropHandler(ev) {
   log(`drop: effectAllowed = ${ev.dataTransfer.effectAllowed}`);
 
   ev.preventDefault();
- // Get the id of the target and add the element to the target's DOM
- const data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  // Get the id of the target and add the element to the target's DOM
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 
 function dragoverHandler(ev) {
@@ -129,9 +124,9 @@ function dragoverHandler(ev) {
 const source = document.querySelector("#source");
 const target = document.querySelector("#target");
 
-source.addEventListener("dragstart", dragstartHandler)
-target.addEventListener("dragover", dragoverHandler)
-target.addEventListener("drop", dropHandler)
+source.addEventListener("dragstart", dragstartHandler);
+target.addEventListener("dragover", dragoverHandler);
+target.addEventListener("drop", dropHandler);
 
 function log(message) {
   const output = document.querySelector("#output");

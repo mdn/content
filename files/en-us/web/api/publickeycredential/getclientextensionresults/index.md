@@ -1,37 +1,22 @@
 ---
-title: PublicKeyCredential.getClientExtensionResults()
+title: "PublicKeyCredential: getClientExtensionResults() method"
+short-title: getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.PublicKeyCredential.getClientExtensionResults
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-**`getClientExtensionResults()`** is a method of the
-{{domxref("PublicKeyCredential")}} interface that returns an {{jsxref("ArrayBuffer")}}
-which contains a map between the extensions identifiers and their results after having
-being processed by the client.
+The **`getClientExtensionResults()`** method of the
+{{domxref("PublicKeyCredential")}} interface returns a map between the identifiers of extensions requested during credential creation or authentication, and their results after processing by the user agent.
 
-During the creation or fetching of a `PublicKeyCredential` (respectively via
+During the creation or fetching of a `PublicKeyCredential` (via
 {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} and
-{{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}), it is possible
-to have "custom" processing by the client for different extensions which are
-respectively given by {{domxref("PublicKeyCredentialCreationOptions.extensions")}} and
-{{domxref("PublicKeyCredentialRequestOptions.extensions")}}.
+{{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} respectively), it is possible
+to request "custom" processing by the client for different extensions, specified in the `publicKey` option's `extensions` property. You can find more information about requesting the different extensions in [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
 
-> **Note:** Extensions are optional and different browsers may recognize
-> different extensions. All extensions are optional for the client to process them: if a
-> browser does not know of a given extension, that will not cause any failure.
-
-> **Note:** This method may only be used in top-level contexts and will
-> not be available in an {{HTMLElement("iframe")}} for example.
+> **Note:** `getClientExtensionResults()` only returns the results from extensions processed by the user agent (client). The results from extensions processed by the authenticator can be found in the [authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data) available in {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}.
 
 ## Syntax
 
@@ -45,48 +30,32 @@ None.
 
 ### Return value
 
-An {{jsxref("ArrayBuffer")}} containing the result of the processing of the different
-extensions by the client. This object contains a map between the extensions' identifiers
-and their results from the processing.
-
-> **Warning:** As of March 2019, only `appId` (used during
-> creation with {{domxref("PublicKeyCredentialRequestOptions.extensions")}}) is
-> supported by [Chromium](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) and
-> Firefox does not seem to [support any extension](https://bugzilla.mozilla.org/show_bug.cgi?id=1370728).
+A {{jsxref("Map", "map")}}, with each entry being an extensions' identifier string as the key, and the output from the processing of the extension by the client as the value.
 
 ## Examples
 
 ```js
 const publicKey = {
-  // Here are the extensions (as "inputs")
+  // Here are the extension "inputs"
   extensions: {
-    "loc": true, // This extension has been defined to include location information in attestation
-    "uvi": true  // user verification index: how the user was verified
+    appid: "https://accounts.example.com",
+  },
+  allowCredentials: {
+    id: "fgrt46jfgd...",
+    transports: ["usb", "nfc"],
+    type: "public-key",
   },
   challenge: new Uint8Array(16) /* from the server */,
-  rp: {
-    name: "Example CORP",
-    id  : "login.example.com"
-  },
-  user: {
-    id: new Uint8Array(16) /* from the server */,
-    name: "canand@example.com",
-    displayName: "Carina Anand",
-  },
-  pubKeyCredParams: [
-    {
-      type: "public-key",
-      alg: -7
-    }
-  ]
 };
 
-navigator.credentials.create({ publicKey })
-  .then((newCredentialInfo) => {
-    const myBuffer = newCredentialInfo.getClientExtensionResults();
-    // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
-  }).catch((err) => {
-     console.error(err);
+navigator.credentials
+  .get({ publicKey })
+  .then((publicKeyCred) => {
+    const myResults = publicKeyCred.getClientExtensionResults();
+    // myResults will contain the output of processing the "appid" extension
+  })
+  .catch((err) => {
+    console.error(err);
   });
 ```
 
@@ -98,12 +67,10 @@ navigator.credentials.create({ publicKey })
 
 {{Compat}}
 
+> **Note:** Extensions are optional and different browsers may recognize different extensions. Processing extensions is always optional for the client: if a browser does not recognize a given extension, it will just ignore it. For information on which extensions are supported by which browsers, see [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
+
 ## See also
 
 - [The list of the currently defined extensions](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} which contains the
   result of the authenticator's extensions processing
-- {{domxref("PublicKeyCredentialCreationOptions.extensions")}} which contains the
-  client extensions' input values for the creation of the credential
-- {{domxref("PublicKeyCredentialRequestOptions.extensions")}} which contains the
-  client extensions' input values for the retrieval of the credential

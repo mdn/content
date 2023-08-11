@@ -2,12 +2,6 @@
 title: mask-clip
 slug: Web/CSS/mask-clip
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.mask-clip
 ---
 
@@ -15,12 +9,13 @@ browser-compat: css.properties.mask-clip
 
 The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area which is affected by a mask. The painted content of an element must be restricted to this area.
 
+## Syntax
+
 ```css
 /* <geometry-box> values */
 mask-clip: content-box;
 mask-clip: padding-box;
 mask-clip: border-box;
-mask-clip: margin-box;
 mask-clip: fill-box;
 mask-clip: stroke-box;
 mask-clip: view-box;
@@ -46,8 +41,6 @@ mask-clip: revert-layer;
 mask-clip: unset;
 ```
 
-## Syntax
-
 One or more of the keyword values listed below, separated by commas.
 
 ### Values
@@ -58,8 +51,6 @@ One or more of the keyword values listed below, separated by commas.
   - : The painted content is clipped to the padding box.
 - `border-box`
   - : The painted content is clipped to the border box.
-- `margin-box`
-  - : The painted content is clipped to the margin box.
 - `fill-box`
   - : The painted content is clipped to the object bounding box.
 - `stroke-box`

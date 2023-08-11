@@ -2,12 +2,6 @@
 title: backface-visibility
 slug: Web/CSS/backface-visibility
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.backface-visibility
 ---
 
@@ -199,4 +193,4 @@ td {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

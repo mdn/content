@@ -2,15 +2,6 @@
 title: ":fullscreen"
 slug: Web/CSS/:fullscreen
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Fullscreen
-  - Fullscreen API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - fullscreen
-  - screen
 browser-compat: css.selectors.fullscreen
 ---
 
@@ -20,8 +11,10 @@ The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:fullscreen
+```css
+:fullscreen {
+  /* ... */
+}
 ```
 
 ## Usage notes
@@ -83,4 +76,4 @@ When the document _is_ in fullscreen mode, the following CSS applies instead, se
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute

@@ -2,17 +2,10 @@
 title: syntax
 slug: Web/CSS/@property/syntax
 page-type: css-at-rule-descriptor
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
-  - Experimental
 browser-compat: css.at-rules.property.syntax
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and describes the allowable syntax for the property.
 

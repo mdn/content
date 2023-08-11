@@ -2,10 +2,6 @@
 title: lighting-color
 slug: Web/SVG/Attribute/lighting-color
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG Filter
 browser-compat: svg.attributes.presentation.lighting-color
 ---
 

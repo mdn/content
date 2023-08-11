@@ -1,20 +1,14 @@
 ---
 title: Example 4
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
-tags:
-  - Advanced
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
+page-type: learn-module-chapter
 ---
 
 This is the fourth example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## Change states
 
-### HTML Content
+### HTML
 
 ```html
 <form class="no-widget">
@@ -39,7 +33,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 </form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 .widget select,
@@ -108,7 +102,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -162,7 +156,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 // -------------------- //
@@ -170,95 +164,95 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 // -------------------- //
 
 function deactivateSelect(select) {
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains("active")) return;
 
-  const optList = select.querySelector('.optList');
+  const optList = select.querySelector(".optList");
 
-  optList.classList.add('hidden');
-  select.classList.remove('active');
+  optList.classList.add("hidden");
+  select.classList.remove("active");
 }
 
 function activeSelect(select, selectList) {
-  if (select.classList.contains('active')) return;
+  if (select.classList.contains("active")) return;
 
   selectList.forEach(deactivateSelect);
-  select.classList.add('active');
-};
+  select.classList.add("active");
+}
 
 function toggleOptList(select, show) {
-  const optList = select.querySelector('.optList');
+  const optList = select.querySelector(".optList");
 
-  optList.classList.toggle('hidden');
+  optList.classList.toggle("hidden");
 }
 
 function highlightOption(select, option) {
-  const optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll(".option");
 
   optionList.forEach((other) => {
-    other.classList.remove('highlight');
+    other.classList.remove("highlight");
   });
 
-  option.classList.add('highlight');
-};
+  option.classList.add("highlight");
+}
 
 function updateValue(select, index) {
   const nativeWidget = select.previousElementSibling;
-  const value = select.querySelector('.value');
-  const optionList = select.querySelectorAll('.option');
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
   highlightOption(select, optionList[index]);
-};
+}
 
 function getIndex(select) {
   const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
-};
+}
 
 // ------------- //
 // Event binding //
 // ------------- //
 
 window.addEventListener("load", () => {
-  const form = document.querySelector('form');
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 
-window.addEventListener('load', () => {
-  const selectList = document.querySelectorAll('.select');
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
   selectList.forEach((select) => {
-    const optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll(".option");
 
     optionList.forEach((option) => {
-      option.addEventListener('mouseover', () => {
+      option.addEventListener("mouseover", () => {
         highlightOption(select, option);
       });
     });
 
-    select.addEventListener('click', (event) => {
+    select.addEventListener("click", (event) => {
       toggleOptList(select);
     });
 
-    select.addEventListener('focus', (event) => {
+    select.addEventListener("focus", (event) => {
       activeSelect(select, selectList);
     });
 
-    select.addEventListener('blur', (event) => {
+    select.addEventListener("blur", (event) => {
       deactivateSelect(select);
     });
   });
 });
 
-window.addEventListener('load', () => {
-  const selectList = document.querySelectorAll('.select');
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
   selectList.forEach((select) => {
-    const optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll(".option");
     const selectedIndex = getIndex(select);
 
     select.tabIndex = 0;
@@ -267,21 +261,21 @@ window.addEventListener('load', () => {
     updateValue(select, selectedIndex);
 
     optionList.forEach((option, index) => {
-      option.addEventListener('click', (event) => {
+      option.addEventListener("click", (event) => {
         updateValue(select, index);
       });
     });
 
-    select.addEventListener('keyup', (event) => {
+    select.addEventListener("keyup", (event) => {
       let index = getIndex(select);
 
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
-      if (event.keyCode === 40 && index < optionList.length - 1) {
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
       }
-      if (event.keyCode === 38 && index > 0) {
+      if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
 

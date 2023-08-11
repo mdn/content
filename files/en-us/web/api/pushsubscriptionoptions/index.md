@@ -2,11 +2,6 @@
 title: PushSubscriptionOptions
 slug: Web/API/PushSubscriptionOptions
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions
 ---
 
@@ -34,7 +29,7 @@ navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const options = subscription.options;
     console.log(options); // a PushSubscriptionOptions object
-  })
+  });
 });
 ```
 

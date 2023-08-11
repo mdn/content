@@ -1,11 +1,8 @@
 ---
-title: Node.previousSibling
+title: "Node: previousSibling property"
+short-title: previousSibling
 slug: Web/API/Node/previousSibling
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.previousSibling
 ---
 
@@ -46,7 +43,7 @@ In this example, we have a series of `img` elements directly adjacent to each ot
 ```
 
 ```js
-document.getElementById("b1").previousSibling;    // <img id="b0">
+document.getElementById("b1").previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.id; // "b1"
 ```
 
@@ -61,11 +58,11 @@ In this example, there are whitespace text nodes (line breaks) between the `img`
 ```
 
 ```js
-document.getElementById("b1").previousSibling;                 // #text
+document.getElementById("b1").previousSibling; // #text
 document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
-document.getElementById("b2").previousSibling;                 // #text
-document.getElementById("b2").previousSibling.id;              // undefined
+document.getElementById("b2").previousSibling; // #text
+document.getElementById("b2").previousSibling.id; // undefined
 ```
 
 ## Specifications

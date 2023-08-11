@@ -1,16 +1,8 @@
 ---
-title: HTMLElement.hidden
+title: "HTMLElement: hidden property"
+short-title: hidden
 slug: Web/API/HTMLElement/hidden
 page-type: web-api-instance-property
-tags:
-  - API
-  - Attribute
-  - Element
-  - HTML
-  - HTML element
-  - Property
-  - Reference
-  - hidden
 browser-compat: api.HTMLElement.hidden
 ---
 
@@ -33,7 +25,7 @@ For details on the usage of this attribute, see the page for the [`hidden`](/en-
 
 ## Examples
 
-Here's an example where a hidden block is used to contain a thank you message that is
+Here's an example where a hidden block is used to contain a 'thank you' message that is
 displayed after a user agrees to an unusual request.
 
 ### HTML
@@ -59,7 +51,11 @@ The content is styled using the CSS below.
 
 ```css
 .panel {
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border: 1px solid #22d;
   padding: 12px;
   width: 500px;
@@ -67,7 +63,11 @@ The content is styled using the CSS below.
 }
 
 .button {
-  font: 22px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    22px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 5px 36px;
 }
 
@@ -88,7 +88,7 @@ document.getElementById("okButton").addEventListener(
     document.getElementById("welcome").hidden = true;
     document.getElementById("awesome").hidden = false;
   },
-  false
+  false,
 );
 ```
 
@@ -106,5 +106,5 @@ document.getElementById("okButton").addEventListener(
 
 ## See also
 
-- {{htmlattrxref("hidden")}} attribute
+- [hidden](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute
 - {{cssxref("display")}}

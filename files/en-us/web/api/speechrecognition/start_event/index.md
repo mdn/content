@@ -1,11 +1,8 @@
 ---
-title: 'SpeechRecognition: start event'
+title: "SpeechRecognition: start event"
+short-title: start
 slug: Web/API/SpeechRecognition/start_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechRecognition.start_event
 ---
 
@@ -18,9 +15,9 @@ The **`start`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('start', (event) => { })
+addEventListener("start", (event) => {});
 
-onstart = (event) => { }
+onstart = (event) => {};
 ```
 
 ## Event type
@@ -34,8 +31,8 @@ You can use the `start` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('start', () => {
-  console.log('Speech recognition service has started');
+recognition.addEventListener("start", () => {
+  console.log("Speech recognition service has started");
 });
 ```
 
@@ -43,8 +40,8 @@ Or use the `onstart` event handler property:
 
 ```js
 recognition.onstart = () => {
-  console.log('Speech recognition service has started');
-}
+  console.log("Speech recognition service has started");
+};
 ```
 
 ## Specifications

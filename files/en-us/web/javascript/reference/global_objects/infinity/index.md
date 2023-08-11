@@ -1,16 +1,13 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
-tags:
-  - JavaScript
-  - Property
-  - Reference
+page-type: javascript-global-property
 browser-compat: javascript.builtins.Infinity
 ---
 
 {{jsSidebar("Objects")}}
 
-The global property **`Infinity`** is a numeric value representing infinity.
+The **`Infinity`** global property is a numeric value representing infinity.
 
 {{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
 

@@ -2,11 +2,6 @@
 title: WebGL constants
 slug: Web/API/WebGL_API/Constants
 page-type: guide
-tags:
-  - API
-  - Reference
-  - WebGL
-  - constants
 spec-urls:
   - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14
   - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7
@@ -129,7 +124,7 @@ Constants passed to {{domxref("WebGLRenderingContext.drawElements()")}} or {{dom
 
 ### Blending modes
 
-Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxref("WebGLRenderingContext.blendFuncSeparate()")}} to specify the blending mode (for both, RBG and alpha, or separately).
+Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxref("WebGLRenderingContext.blendFuncSeparate()")}} to specify the blending mode (for both, RGB and alpha, or separately).
 
 <table class="no-markdown">
   <thead>
@@ -266,7 +261,7 @@ Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxre
 
 ### Blending equations
 
-Constants passed to {{domxref("WebGLRenderingContext.blendEquation()")}} or {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} to control how the blending is calculated (for both, RBG and alpha, or separately).
+Constants passed to {{domxref("WebGLRenderingContext.blendEquation()")}} or {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} to control how the blending is calculated (for both, RGB and alpha, or separately).
 
 <table class="no-markdown">
   <thead>
@@ -1851,7 +1846,7 @@ For more information, see {{domxref("WEBGL_compressed_texture_s3tc")}}.
     <tr>
       <td><code>COMPRESSED_RGB8_ETC2</code></td>
       <td>0x9274</td>
-      <td>Compresses RBG8 data with no alpha channel.</td>
+      <td>Compresses RGB8 data with no alpha channel.</td>
     </tr>
     <tr>
       <td><code>COMPRESSED_RGBA8_ETC2_EAC</code></td>
@@ -1864,7 +1859,7 @@ For more information, see {{domxref("WEBGL_compressed_texture_s3tc")}}.
     <tr>
       <td><code>COMPRESSED_SRGB8_ETC2</code></td>
       <td>0x9276</td>
-      <td>Compresses sRBG8 data with no alpha channel.</td>
+      <td>Compresses sRGB8 data with no alpha channel.</td>
     </tr>
     <tr>
       <td><code>COMPRESSED_SRGB8_ALPHA8_ETC2_EAC</code></td>

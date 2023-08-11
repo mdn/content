@@ -2,17 +2,6 @@
 title: Adding 2D content to a WebGL context
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 page-type: guide
-tags:
-  - 2D Graphics
-  - 3D
-  - 3D Graphics
-  - Drawing
-  - Graphics
-  - Intermediate
-  - Shaders
-  - Tutorial
-  - WebGL
-  - WebGL API
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
@@ -28,7 +17,7 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
 > **Note:** Update your "index.html" so it looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -39,7 +28,7 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
       integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
       crossorigin="anonymous"
       defer></script>
-    <script src="webgl-demo.js" type="module" defer></script>
+    <script src="webgl-demo.js" type="module"></script>
   </head>
 
   <body>
@@ -130,8 +119,8 @@ function initShaderProgram(gl, vsSource, fsSource) {
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
     alert(
       `Unable to initialize the shader program: ${gl.getProgramInfoLog(
-        shaderProgram
-      )}`
+        shaderProgram,
+      )}`,
     );
     return null;
   }
@@ -158,7 +147,7 @@ function loadShader(gl, type, source) {
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
     alert(
-      `An error occurred compiling the shaders: ${gl.getShaderInfoLog(shader)}`
+      `An error occurred compiling the shaders: ${gl.getShaderInfoLog(shader)}`,
     );
     gl.deleteShader(shader);
     return null;
@@ -290,7 +279,7 @@ function drawScene(gl, programInfo, buffers) {
   mat4.translate(
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to translate
-    [-0.0, 0.0, -6.0]
+    [-0.0, 0.0, -6.0],
   ); // amount to translate
 
   // Tell WebGL how to pull out the positions from the position
@@ -304,12 +293,12 @@ function drawScene(gl, programInfo, buffers) {
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.projectionMatrix,
     false,
-    projectionMatrix
+    projectionMatrix,
   );
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.modelViewMatrix,
     false,
-    modelViewMatrix
+    modelViewMatrix,
   );
 
   {
@@ -335,7 +324,7 @@ function setPositionAttribute(gl, buffers, programInfo) {
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
 }

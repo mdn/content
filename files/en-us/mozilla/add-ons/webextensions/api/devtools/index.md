@@ -1,23 +1,17 @@
 ---
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.inspectedWindow
-  - devtools.network
-  - devtools.panels
+page-type: webextension-api
 browser-compat: webextensions.api.devtools
 ---
 
 {{AddonSidebar}}
 
-Enables extensions to interact with the browser's {{Glossary("Developer Tools")}}. You can use this API to create Developer Tools pages, interact with the window that is being inspected, inspect the page network usage.
+Enables extensions to interact with the browser's {{Glossary("Developer Tools")}}. You use this API to create Developer Tools pages, interact with the window that is being inspected, inspect the page network usage.
 
-To use this API you need to have the `"devtools"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) specified in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. This permission can not be optional.
+To use this API, you must specify the [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest key. The use of this manifest key triggers [an install-time permission warning about devtools](https://support.mozilla.org/en-US/kb/permission-request-messages-firefox-extensions#w_extend-developer-tools-to-access-your-data-in-open-tabs). To avoid an install-time permission warning, mark the feature as optional by listing the `"devtools"` permission in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key.
+
+> NOTE: The "devtools" optional permission is only supported by Firefox and not Chrome ([Chromium issue 1143015](https://crbug.com/1143015)).
 
 ## Properties
 

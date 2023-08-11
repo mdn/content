@@ -1,11 +1,10 @@
 ---
 title: SOAP
 slug: Glossary/SOAP
-tags:
-  - Infrastructure
-  - SOAP
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **SOAP** (Simple Object Access Protocol) is a {{glossary('protocol')}} for transmitting data in {{glossary('XML')}} format.
 

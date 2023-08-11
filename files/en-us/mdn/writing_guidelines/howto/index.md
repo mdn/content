@@ -2,9 +2,6 @@
 title: How-to guides
 slug: MDN/Writing_guidelines/Howto
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

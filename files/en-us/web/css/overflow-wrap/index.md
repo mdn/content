@@ -2,12 +2,6 @@
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.overflow-wrap
 ---
 
@@ -146,4 +140,4 @@ p {
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

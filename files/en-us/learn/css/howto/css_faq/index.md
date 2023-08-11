@@ -1,13 +1,7 @@
 ---
 title: CSS FAQ
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - Example
-  - FAQ
-  - Guide
-  - Web
-  - questions
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}
@@ -23,12 +17,12 @@ Modern browsers have two main rendering modes:
 - _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
 - _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
 
-Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode)_ that has only a few minor quirks.
+Gecko-based browsers have a third [limited quirks mode](https://en.wikipedia.org/wiki/Quirks_mode#Limited_quirks_mode) that has only a few minor quirks.
 
 The standard `DOCTYPE` declaration that will trigger standards mode is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
@@ -272,7 +266,7 @@ text-stroke: 4px navy;
 
 > **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions), [Microsoft CSS Extensions](/en-US/docs/Web/CSS/Microsoft_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
+> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 

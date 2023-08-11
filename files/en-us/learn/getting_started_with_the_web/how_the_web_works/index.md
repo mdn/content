@@ -1,17 +1,7 @@
 ---
 title: How the web works
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-tags:
-  - Beginner
-  - Client
-  - DNS
-  - HTTP
-  - IP
-  - Infrastructure
-  - Learn
-  - Server
-  - TCP
-  - "l10n:priority"
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -68,9 +58,9 @@ When browsers send requests to servers for HTML files, those HTML files often co
 
 ## DNS explained
 
-Real web addresses aren't the nice, memorable strings you type into your address bar to find your favorite websites. They are special numbers that look like this: `63.245.215.20`.
+Real web addresses aren't the nice, memorable strings you type into your address bar to find your favorite websites. They are special numbers that look like this: `192.0.2.172`.
 
-This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why Domain Name Servers were invented. These are special servers that match up a web address you type into your browser (like "mozilla.org") to the website's real (IP) address.
+This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why the Domain Name System was invented. This system uses special servers that match up a web address you type into your browser (like "mozilla.org") to the website's real (IP) address.
 
 Websites can be reached directly via their IP addresses. You can use a [DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/) to find the IP address of a website.
 
@@ -80,7 +70,7 @@ Earlier we used the term "packets" to describe the format in which the data is s
 
 ## See also
 
-- [How the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [How the Internet works](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)
@@ -90,14 +80,3 @@ Earlier we used the term "packets" to describe the format in which the data is s
 Street photo: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [kevin digga](https://www.pinterest.com/kevindigga/).
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -1,11 +1,7 @@
 ---
 title: Evolution of HTTP
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-tags:
-  - Guide
-  - HTTP
-  - NeedsUpdate
-  - NeedsUpdate(HTTP/3)
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -150,9 +146,9 @@ The extensibility of HTTP made it easy to create new headers and methods. Even t
 
 ### Using HTTP for secure transmissions
 
-The largest change to HTTP was made at the end of 1994. Instead of sending HTTP over a basic TCP/IP stack, the computer-services company Netscape Communications created an additional encrypted transmission layer on top of it: SSL. SSL 1.0 was never released to the public, but SSL 2.0 and its successor SSL 3.0 allowed for the creation of ecommerce websites. To do this, they encrypted and guaranteed the authenticity of the messages exchanged between the server and client. SSL was eventually standardized and became TLS.
+The largest change to HTTP was made at the end of 1994. Instead of sending HTTP over a basic TCP/IP stack, the computer-services company Netscape Communications created an additional encrypted transmission layer on top of it: SSL. SSL 1.0 was never released to the public, but SSL 2.0 and its successor SSL 3.0 allowed for the creation of e-commerce websites. To do this, they encrypted and guaranteed the authenticity of the messages exchanged between the server and client. SSL was eventually standardized and became TLS.
 
-During the same time period, it became clear that an encrypted transport layer was needed. The web was no longer a mostly academic network, and instead became a jungle where advertisers, random individuals, and criminals competed for as much private data as possible. As the applications built over HTTP became more powerful and required access to private information like address books, email, and user location, TLS became necessary outside of the ecommerce use case.
+During the same time period, it became clear that an encrypted transport layer was needed. The web was no longer a mostly academic network, and instead became a jungle where advertisers, random individuals, and criminals competed for as much private data as possible. As the applications built over HTTP became more powerful and required access to private information like address books, email, and user location, TLS became necessary outside the e-commerce use case.
 
 ### Using HTTP for complex applications
 
@@ -167,7 +163,7 @@ Since 2005, more APIs have become available to web pages. Several of these APIs 
 
 ### Relaxing the security-model of the web
 
-HTTP is independent of the web security model, known as the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). In fact, the current web security model was developed after the creation of HTTP! Over the years, it proved useful to lift some of the restrictions of this policy under certain constraints. The server transmitted how much and when to lift such restrictions to the client using a new set of HTTP headers. These were defined in specifications like [Cross-Origin Resource Sharing](/en-US/docs/Glossary/CORS) (CORS) and the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP).
+HTTP is independent of the web security model, known as the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). In fact, the current web security model was developed after the creation of HTTP! Over the years, it proved useful to lift some restrictions of this policy under certain constraints. The server transmitted how much and when to lift such restrictions to the client using a new set of HTTP headers. These were defined in specifications like [Cross-Origin Resource Sharing](/en-US/docs/Glossary/CORS) (CORS) and the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP).
 
 In addition to these large extensions, many other headers were added, sometimes only experimentally. Notable headers are the Do Not Track ({{HTTPHeader("DNT")}}) header to control privacy, {{HTTPHeader("X-Frame-Options")}}, and {{HTTPHeader('Upgrade-Insecure-Requests')}} but many more exist.
 
@@ -196,7 +192,7 @@ HTTP's extensibility is still being used to add new features. Notably, we can ci
 
 ## HTTP/3 - HTTP over QUIC
 
-The next major version of HTTP, HTTP/3 has the same semantics as earlier versions of HTTP but uses {{Glossary("QUIC")}} instead of {{Glossary("TCP")}} for the transport layer portion. By October 2022, [26% of all websites were using HTTP/3](https://w3techs.com/technologies/details/ce-http3)).
+The next major version of HTTP, HTTP/3 has the same semantics as earlier versions of HTTP but uses {{Glossary("QUIC")}} instead of {{Glossary("TCP")}} for the transport layer portion. By October 2022, [26% of all websites were using HTTP/3](https://w3techs.com/technologies/details/ce-http3).
 
 QUIC is designed to provide much lower latency for HTTP connections. Like HTTP/2, it is a multiplexed protocol, but HTTP/2 runs over a single TCP connection, so packet loss detection and retransmission handled at the TCP layer can block all streams. QUIC runs multiple streams over {{Glossary("UDP")}} and implements packet loss detection and retransmission independently for each stream, so that if an error occurs, only the stream with data in that packet is blocked.
 

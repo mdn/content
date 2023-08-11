@@ -1,14 +1,8 @@
 ---
-title: KeyboardEvent.shiftKey
+title: "KeyboardEvent: shiftKey property"
+short-title: shiftKey
 slug: Web/API/KeyboardEvent/shiftKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.shiftKey
 ---
 
@@ -45,7 +39,7 @@ A boolean value.
             "\n" +
             "ALT key pressed: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>

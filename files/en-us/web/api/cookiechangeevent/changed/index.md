@@ -1,14 +1,10 @@
 ---
-title: CookieChangeEvent.changed
+title: "CookieChangeEvent: changed property"
+short-title: changed
 slug: Web/API/CookieChangeEvent/changed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - changed
-  - CookieChangeEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieChangeEvent.changed
 ---
 
@@ -34,7 +30,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
   - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
@@ -42,8 +38,6 @@ An array of objects containing the changed cookie(s). Each object contains the f
       - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
     - `"none"`
       - : Cookies will be sent in all contexts.
-
-    > **Note:** For more information on SameSite cookies see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
 
 ## Examples
 

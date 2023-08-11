@@ -1,17 +1,10 @@
 ---
-title: PerformanceNavigation.redirectCount
+title: "PerformanceNavigation: redirectCount property"
+short-title: redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTML
-  - Navigation Timing
-  - PerformanceNavigation
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceNavigation.redirectCount
 ---
 

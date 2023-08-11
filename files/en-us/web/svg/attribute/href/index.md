@@ -2,9 +2,6 @@
 title: href
 slug: Web/SVG/Attribute/href
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.href
 ---
 
@@ -20,7 +17,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("feImage")}}
 - {{SVGElement("image")}}
 - {{SVGElement("linearGradient")}}
@@ -90,37 +86,6 @@ If the `href` attribute or the deprecated {{SVGAttr("xlink:href")}} attribute is
 Refer to the descriptions of the individual animation elements for any restrictions on what types of elements can be targets of particular types of animations.
 
 Except for any SVG-specific rules explicitly mentioned in this specification, the normative definition for this attribute is the {{Glossary("SMIL")}} Animation specification. In particular, see [SMIL Animation: Specifying the animation target](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#SpecifyingAnimationTarget).
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
-
-### discard
-
-For {{SVGElement("discard")}}, `href` defines a URL referring the target element to discard. See the [definition of `href` on animation elements](#href_on_animation_elements) for details on identifying a target element.
-
-> **Note:** Unlike other animation elements, the `<discard>` element does not support the deprecated {{SVGAttr("xlink:href")}} attribute.
-
-Note that if the target element is not part of the current SVG document fragment, then whether the target element will be removed or not is defined by the host language.
-
-If the `href` attribute is not provided, then the target element will be the immediate parent element of the `<discard>` element.
 
 <table class="properties">
   <tbody>
@@ -236,7 +201,7 @@ For {{SVGElement("linearGradient")}}, `href` defines URL referring to a template
 
 ### mpath
 
-For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) which defines the motion path.
+For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) which defines the motion path.
 
 <table class="properties">
   <tbody>
@@ -336,7 +301,7 @@ For {{SVGElement("script")}}, `href` defines a URL referring to an external reso
 
 ### textPath
 
-For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) onto which the text will be rendered if no {{SVGAttr("path")}} attribute is provided. On the {{SVGElement("textPath")}} element, the `href` attribute is animatable.
+For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGElement("path")}} element or [basic shape](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) onto which the text will be rendered if no {{SVGAttr("path")}} attribute is provided. On the {{SVGElement("textPath")}} element, the `href` attribute is animatable.
 
 <table class="properties">
   <tbody>

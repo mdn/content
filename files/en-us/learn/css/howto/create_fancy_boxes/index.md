@@ -1,11 +1,7 @@
 ---
-title: create fancy boxes
-slug: Learn/CSS/Howto/create_fancy_boxes
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Learn
+title: Create fancy boxes
+slug: Learn/CSS/Howto/Create_fancy_boxes
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}
@@ -76,11 +72,11 @@ Yes, we get a circle:
 
 ## Backgrounds
 
-When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
+When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
 
 Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.
 
-- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
+- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
 - Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.
 
 ```html hidden
@@ -89,7 +85,7 @@ Before we jump to some practical examples, let's step back a bit as there are tw
 
 Okay, let's have fun with backgrounds:
 
-```css
+```css-nolint
 .fancy {
   padding: 1em;
   width: 100%;
@@ -122,7 +118,7 @@ Okay, let's have fun with backgrounds:
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients).
 
 ## Pseudo-elements
 
@@ -243,7 +239,11 @@ blockquote::before,
 blockquote::after {
   position: absolute;
   height: 3rem;
-  font: 6rem/100% Georgia, "Times New Roman", Times, serif;
+  font:
+    6rem/100% Georgia,
+    "Times New Roman",
+    Times,
+    serif;
 }
 
 blockquote::before {

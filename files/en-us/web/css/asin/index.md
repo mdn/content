@@ -2,14 +2,6 @@
 title: asin()
 slug: Web/CSS/asin
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - asin
 browser-compat: css.types.asin
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: Immutable
 slug: Glossary/Immutable
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 An immutable value is one whose content cannot be changed without creating an entirely new value.
 

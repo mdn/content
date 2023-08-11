@@ -2,13 +2,6 @@
 title: TimeRanges
 slug: Web/API/TimeRanges
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - NeedsExample
-  - Reference
 browser-compat: api.TimeRanges
 ---
 

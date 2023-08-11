@@ -1,12 +1,8 @@
 ---
-title: PerformanceEntry.startTime
+title: "PerformanceEntry: startTime property"
+short-title: startTime
 slug: Web/API/PerformanceEntry/startTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.startTime
 ---
 
@@ -29,6 +25,8 @@ The meaning of this property depends on the value of this performance entry's {{
   - : The time the first input event was created, i.e. that event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp).
 - `largest-contentful-paint`
   - : The value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
+- `layout-shift`
+  - : The time when the layout shift started.
 - `longtask`
   - : The time when the task started.
 - `mark`
@@ -43,6 +41,8 @@ The meaning of this property depends on the value of this performance entry's {{
   - : The value of this entry's {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} property.
 - `taskattribution`
   - : Always `0`.
+- `visibility-state`
+  - : The time when the visibility state change occurred.
 
 ## Examples
 
@@ -56,18 +56,18 @@ Note: The {{domxref("performance.mark()")}} method allows you to set your own `s
 performance.mark("my-mark");
 performance.mark("my-other-mark", { startTime: 12.5 });
 
-loginButton.addEventListener('click', (clickEvent) => {
+loginButton.addEventListener("click", (clickEvent) => {
   performance.measure("login-click", { start: clickEvent.timeStamp });
 });
 
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.entryType === "mark") {
       console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-    };
+    }
     if (entry.entryType === "measure") {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);

@@ -1,10 +1,7 @@
 ---
 title: Updating add-ons for Firefox 5
 slug: Mozilla/Firefox/Releases/5/Updating_add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox 5
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -50,7 +47,7 @@ Don't use those keywords anywhere in your code, even as object property names.
 
 ## Interface changes
 
-Instantiating certain services, including the `nsICertOverrideService`, at startup can make Firefox unusable ({{ bug(650858) }}. This happens only if you try to instantiate a service before the `load` event is fired.
+Instantiating certain services, including the `nsICertOverrideService`, at startup can make Firefox unusable ([Firefox bug 650858](https://bugzil.la/650858). This happens only if you try to instantiate a service before the `load` event is fired.
 
 To fix this, move your instantiation of these services into your `load` event handler:
 
@@ -67,7 +64,7 @@ window.addEventListener(
   function () {
     MyObject.init();
   },
-  false
+  false,
 );
 ```
 

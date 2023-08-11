@@ -2,14 +2,6 @@
 title: circle()
 slug: Web/CSS/basic-shape/circle
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - circle
-  - CSS Functions
-  - Data Type
-  - Reference
 browser-compat: css.types.basic-shape.circle
 ---
 
@@ -59,4 +51,4 @@ In the example below, the {{cssxref("shape-outside")}} property has a value of `
 ## See also
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
+- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)

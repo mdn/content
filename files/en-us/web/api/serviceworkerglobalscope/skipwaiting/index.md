@@ -1,15 +1,8 @@
 ---
-title: ServiceWorkerGlobalScope.skipWaiting()
+title: "ServiceWorkerGlobalScope: skipWaiting() method"
+short-title: skipWaiting()
 slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - skipWaiting
 browser-compat: api.ServiceWorkerGlobalScope.skipWaiting
 ---
 
@@ -31,7 +24,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that immediately resolves with `undefined`.
+A {{jsxref("Promise")}} that resolves with `undefined` after trying to activate the newly installed service worker.
 
 ## Examples
 

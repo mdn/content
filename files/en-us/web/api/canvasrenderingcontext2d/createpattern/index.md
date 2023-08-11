@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.createPattern()
+title: "CanvasRenderingContext2D: createPattern() method"
+short-title: createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createPattern
 ---
 
@@ -84,7 +79,8 @@ const ctx = canvas.getContext("2d");
 
 const img = new Image();
 img.src = "canvas_createpattern.png";
-img.onload = () => { // Only use the image after it's loaded
+// Only use the image after it's loaded
+img.onload = () => {
   const pattern = ctx.createPattern(img, "repeat");
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 300, 300);

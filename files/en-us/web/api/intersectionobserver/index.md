@@ -2,13 +2,6 @@
 title: IntersectionObserver
 slug: Web/API/IntersectionObserver
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - observers
 browser-compat: api.IntersectionObserver
 ---
 
@@ -52,10 +45,10 @@ const intersectionObserver = new IntersectionObserver((entries) => {
   if (entries[0].intersectionRatio <= 0) return;
 
   loadItems(10);
-  console.log('Loaded new items');
+  console.log("Loaded new items");
 });
 // start observing
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));
+intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
 ## Specifications

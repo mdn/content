@@ -1,12 +1,6 @@
 ---
 title: Right rotate
 slug: WebAssembly/Reference/Numeric/Right_rotate
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
 ---
 
 {{WebAssemblySidebar}}

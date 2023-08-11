@@ -1,12 +1,10 @@
 ---
 title: Code splitting
 slug: Glossary/Code_splitting
-tags:
-  - Reference
-  - Web Performance
-  - code splitting
-  - latency
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Code splitting** is the splitting of code into various bundles or components which can then be loaded on demand or in parallel.
 

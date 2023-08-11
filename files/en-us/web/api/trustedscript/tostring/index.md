@@ -1,13 +1,8 @@
 ---
-title: TrustedScript.toString()
+title: "TrustedScript: toString() method"
+short-title: toString()
 slug: Web/API/TrustedScript/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toString
-  - TrustedScript
 browser-compat: api.TrustedScript.toString
 ---
 

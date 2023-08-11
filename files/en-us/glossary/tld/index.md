@@ -1,10 +1,10 @@
 ---
 title: TLD
 slug: Glossary/TLD
-tags:
-  - Web
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A TLD (_top-level domain_) is the most generic {{Glossary("domain")}} in the Internet's hierarchical {{Glossary("DNS")}} (domain name system). A TLD is the final component of a {{Glossary("domain name")}}, for example, "org" in `developer.mozilla.org`.
 

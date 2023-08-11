@@ -1,15 +1,7 @@
 ---
 title: contextualIdentities.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.remove
 ---
 
@@ -57,8 +49,9 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.remove("firefox-container-1").
-  then(onRemoved, onError);
+browser.contextualIdentities
+  .remove("firefox-container-1")
+  .then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

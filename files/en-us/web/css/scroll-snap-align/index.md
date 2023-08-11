@@ -2,14 +2,6 @@
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Web
-  - Example
-  - NeedsLiveSample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.scroll-snap-align
 ---
 
@@ -46,8 +38,6 @@ scroll-snap-align: unset;
 - `center`
   - : The center alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 
-Safari had the two value syntax in the wrong order, the first value being inline the second block. See [bug #191865](https://bugs.webkit.org/show_bug.cgi?id=191865).
-
 ## Formal definition
 
 {{cssinfo}}
@@ -66,5 +56,5 @@ Safari had the two value syntax in the wrong order, the first value being inline
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

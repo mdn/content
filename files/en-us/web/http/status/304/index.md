@@ -1,11 +1,7 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
-tags:
-  - HTTP
-  - Redirection
-  - Reference
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.304
 ---
 
@@ -18,8 +14,9 @@ a {{glossary("Safe/HTTP", "safe")}} method, such as {{HTTPMethod("GET")}} or {{H
 or when the request is conditional and uses an {{HTTPHeader("If-None-Match")}} or an
 {{HTTPHeader("If-Modified-Since")}} header.
 
-The equivalent {{HTTPStatus("200")}} `OK` response would have included the
-headers {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
+The response must not contain a body and must include the headers that would
+have been sent in an equivalent {{HTTPStatus("200")}} `OK` response:
+{{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
 {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, and
 {{HTTPHeader("Vary")}}.
 
@@ -44,10 +41,11 @@ headers {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
 ### Compatibility notes
 
 - Browser behavior differs if this response erroneously includes a body on persistent
-  connections See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more
+  connections. See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more
   detail.
 
 ## See also
 
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}
+- [204 No Content](/en-US/docs/Web/HTTP/Status/204)

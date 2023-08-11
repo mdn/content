@@ -2,15 +2,8 @@
 title: Using VR controllers with WebVR
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 page-type: guide
-tags:
-  - Experimental
-  - Gamepad API
-  - Guide
-  - VR
-  - Virtual Reality
-  - WebGL
-  - WebVR
-  - controllers
+status:
+  - experimental
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -54,10 +47,11 @@ The first notable code is as follows:
 let initialRun = true;
 
 if (navigator.getVRDisplays && navigator.getGamepads) {
-  info.textContent = 'WebVR API and Gamepad API supported.'
+  info.textContent = "WebVR API and Gamepad API supported.";
   reportDisplays();
 } else {
-  info.textContent = 'WebVR API and/or Gamepad API not supported by this browser.'
+  info.textContent =
+    "WebVR API and/or Gamepad API not supported by this browser.";
 }
 ```
 
@@ -70,8 +64,9 @@ function reportDisplays() {
     displays.forEach((display, i) => {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
+      const listItem = document.createElement("li");
+      listItem.innerHTML =
+        `<strong>Display ${i + 1}</strong><br>` +
         `VR Display ID: ${display.displayId}<br>` +
         `VR Display Name: ${display.displayName}<br>` +
         `Display can present content: ${cap.canPresent}<br>` +
@@ -98,20 +93,21 @@ The `reportGamepads()` function looks like this:
 
 ```js
 function reportGamepads() {
-    const gamepads = navigator.getGamepads();
-    console.log(`${gamepads.length} controllers`);
-    for (const gp of gamepads) {
-        const listItem = document.createElement('li');
-        listItem.classList = 'gamepad';
-        listItem.innerHTML = `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
-          `Associated with VR Display ID: ${gp.displayId}<br>` +
-          `Gamepad associated with which hand: ${gp.hand}<br>` +
-          `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
-          `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
-          `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
-        list.appendChild(listItem);
-    }
-    initialRun = false;
+  const gamepads = navigator.getGamepads();
+  console.log(`${gamepads.length} controllers`);
+  for (const gp of gamepads) {
+    const listItem = document.createElement("li");
+    listItem.classList = "gamepad";
+    listItem.innerHTML =
+      `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
+      `Associated with VR Display ID: ${gp.displayId}<br>` +
+      `Gamepad associated with which hand: ${gp.hand}<br>` +
+      `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
+      `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
+      `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
+    list.appendChild(listItem);
+  }
+  initialRun = false;
 }
 ```
 
@@ -135,7 +131,7 @@ At the end of our example we first include the `removeGamepads()` function:
 
 ```js
 function removeGamepads() {
-  const gpLi = document.querySelectorAll('.gamepad');
+  const gpLi = document.querySelectorAll(".gamepad");
   for (let i = 0; i < gpLi.length; i++) {
     list.removeChild(gpLi[i]);
   }
@@ -148,14 +144,14 @@ This function grabs references to all list items with a class name of `gamepad`,
 `removeGamepads()` will be run each time a gamepad is connected or disconnected, via the following event handlers:
 
 ```js
-window.addEventListener('gamepadconnected', (e) => {
+window.addEventListener("gamepadconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} connected.`;
   if (!initialRun) {
     setTimeout(removeGamepads, 1000);
   }
 });
 
-window.addEventListener('gamepaddisconnected', (e) => {
+window.addEventListener("gamepaddisconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} disconnected.`;
   setTimeout(removeGamepads, 1000);
 });
@@ -200,22 +196,14 @@ Slightly later in the code, you can find this block:
 ```js
 if (gp && gpPose.hasPosition) {
   mvTranslate([
-    0.0 + (curPos[0] * 15) - (curOrient[1] * 15),
-    0.0 + (curPos[1] * 15) + (curOrient[0] * 15),
-    -15.0 + (curPos[2] * 25)
+    0.0 + curPos[0] * 15 - curOrient[1] * 15,
+    0.0 + curPos[1] * 15 + curOrient[0] * 15,
+    -15.0 + curPos[2] * 25,
   ]);
 } else if (gp) {
-  mvTranslate([
-    0.0 + (curOrient[1] * 15),
-    0.0 + (curOrient[0] * 15),
-    -15.0
-  ]);
+  mvTranslate([0.0 + curOrient[1] * 15, 0.0 + curOrient[0] * 15, -15.0]);
 } else {
-  mvTranslate([
-    0.0,
-    0.0,
-    -15.0
-  ]);
+  mvTranslate([0.0, 0.0, -15.0]);
 }
 ```
 
@@ -231,26 +219,31 @@ In the `displayPoseStats()` function, we grab all of the data we want to display
 function displayPoseStats(pose) {
   const pos = pose.position;
 
-  const formatCoords = ([x, y, z]) => `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
+  const formatCoords = ([x, y, z]) =>
+    `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
 
   posStats.textContent = pose.hasPosition
     ? `Position: ${formatCoords(pose.position)}`
-    : 'Position not reported';
+    : "Position not reported";
 
   orientStats.textContent = pose.hasOrientation
     ? `Orientation: ${formatCoords(pose.orientation)}`
-    : 'Orientation not reported';
+    : "Orientation not reported";
 
-  linVelStats.textContent = `Linear velocity: ${formatCoords(pose.linearVelocity)}`;
-  angVelStats.textContent = `Angular velocity: ${formatCoords(pose.angularVelocity)}`;
+  linVelStats.textContent = `Linear velocity: ${formatCoords(
+    pose.linearVelocity,
+  )}`;
+  angVelStats.textContent = `Angular velocity: ${formatCoords(
+    pose.angularVelocity,
+  )}`;
 
   linAccStats.textContent = pose.linearAcceleration
     ? `Linear acceleration: ${formatCoords(pose.linearAcceleration)}`
-    : 'Linear acceleration not reported';
+    : "Linear acceleration not reported";
 
   angAccStats.textContent = pose.angularAcceleration
     ? `Angular acceleration: ${formatCoords(pose.angularAcceleration)}`
-    : 'Angular acceleration not reported';
+    : "Angular acceleration not reported";
 }
 ```
 

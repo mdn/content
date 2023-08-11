@@ -2,14 +2,8 @@
 title: PresentationConnectionCloseEvent
 slug: Web/API/PresentationConnectionCloseEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Presentation API
-  - PresentationConnectionCloseEvent
-  - PresentationRequest
-  - Reference
-  - events
+status:
+  - experimental
 browser-compat: api.PresentationConnectionCloseEvent
 ---
 

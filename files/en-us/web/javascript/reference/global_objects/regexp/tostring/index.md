@@ -1,19 +1,13 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the regular expression.
+The **`toString()`** method of {{jsxref("RegExp")}} instances returns a string representing this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-tostring.html", "taller")}}
 

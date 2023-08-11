@@ -2,9 +2,6 @@
 title: target
 slug: Web/SVG/Attribute/target
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.a.target
 ---
 
@@ -26,7 +23,10 @@ svg {
 }
 
 text {
-  font: 20px Arial, Helvetica, sans-serif;
+  font:
+    20px Arial,
+    Helvetica,
+    sans-serif;
   fill: blue;
   text-decoration: underline;
 }

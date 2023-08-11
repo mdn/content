@@ -1,12 +1,7 @@
 ---
 title: Using CSS transitions
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - CSS Transitions
-  - Guide
 spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 
@@ -18,13 +13,11 @@ Animations that involve transitioning between two states are often called _impli
 
 ![A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions.](transitionsprinciple.png)
 
-CSS transitions let you decide which properties to animate (by _listing them explicitly_), when the animation will start (by setting a _delay)_, how long the transition will last (by setting a _duration_), and how the transition will run (by defining a _timing function_, e.g., linearly or quick at the beginning, slow at the end).
+CSS transitions let you decide which properties to animate (by [_listing them explicitly_](/en-US/docs/Web/CSS/transition-property)), when the animation will start (by setting a [_delay_](/en-US/docs/Web/CSS/transition-delay)), how long the transition will last (by setting a [_duration_](/en-US/docs/Web/CSS/transition-duration)), and how the transition will run (by defining an [_easing function_](/en-US/docs/Web/CSS/transition-timing-function), e.g., linearly or quick at the beginning, slow at the end).
 
 ## Which CSS properties can be transitioned?
 
-The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. As it doesn't make sense to animate some properties, the [list of animatable properties](/en-US/docs/Web/CSS/CSS_animated_properties) is limited to a finite set.
-
-> **Note:** The set of properties that can be animated is changing as the specification develops.
+The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. However, some properties are [not animatable](/en-US/docs/Web/CSS/CSS_animated_properties) as it doesn't make sense to animate them.
 
 > **Note:** The `auto` value is often a very complex case. The specification recommends not animating from and to `auto`. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with `auto` may lead to unpredictable results, depending on the browser and its version, and should be avoided.
 
@@ -39,7 +32,7 @@ You can control the individual components of the transition with the following s
 - {{cssxref("transition-duration")}}
   - : Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
 - {{cssxref("transition-timing-function")}}
-  - : Specifies a function to define how intermediate values for properties are computed. _Timing functions_ determine how intermediate values of the transition are calculated. Most [timing functions](/en-US/docs/Web/CSS/easing-function) can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from [Easing Functions Cheat Sheet](https://easings.net/).
+  - : Specifies a function to define how intermediate values for properties are computed. _Easing functions_ determine how intermediate values of the transition are calculated. Most [easing functions](/en-US/docs/Web/CSS/easing-function) can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from [Easing functions cheat sheet](https://easings.net/).
 - {{cssxref("transition-delay")}}
   - : Defines how long to wait between the time a property is changed and the transition actually begins.
 
@@ -76,13 +69,13 @@ This example performs a four-second font size transition with a two-second delay
 <body>
   <p>
     The box below combines transitions for: width, height, background-color,
-    transform. Hover over the box to see these properties animated.
+    rotate. Hover over the box to see these properties animated.
   </p>
   <div class="box">Sample</div>
 </body>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 .box {
@@ -92,7 +85,11 @@ This example performs a four-second font size transition with a two-second delay
   width: 100px;
   height: 100px;
   background-color: #0000ff;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    rotate 2s;
 }
 
 .box:hover {
@@ -209,11 +206,15 @@ Transitions are a great tool to make things look much smoother without having to
 Using JavaScript you can make the effect of moving the ball to a certain position happen:
 
 ```js
-const f = document.getElementById('foo');
-document.addEventListener('click', (ev) => {
-  f.style.transform = `translateY(${ev.clientY - 25}px)`;
-  f.style.transform += `translateX(${ev.clientX - 25}px)`;
-}, false);
+const f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  (ev) => {
+    f.style.transform = `translateY(${ev.clientY - 25}px)`;
+    f.style.transform += `translateX(${ev.clientX - 25}px)`;
+  },
+  false,
+);
 ```
 
 With CSS you can make it smooth without any extra effort. Add a transition to the element and any change will happen smoothly:
@@ -235,7 +236,7 @@ With CSS you can make it smooth without any extra effort. Add a transition to th
 
 ### Detecting the start and completion of a transition
 
-You can use the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event to detect that an animation has finished running. This is a {{domxref("TransitionEvent")}} object, which has two added properties beyond a typical {{domxref("Event")}} object:
+You can use the {{domxref("Element/transitionend_event", "transitionend")}} event to detect that an animation has finished running. This is a {{domxref("TransitionEvent")}} object, which has two added properties beyond a typical {{domxref("Event")}} object:
 
 - `propertyName`
   - : A string indicating the name of the CSS property whose transition completed.
@@ -248,7 +249,7 @@ As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventLis
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-You detect the beginning of a transition using {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} (fires before any delay) and {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} (fires after any delay), in the same kind of fashion:
+You detect the beginning of a transition using {{domxref("Element/transitionrun_event", "transitionrun")}} (fires before any delay) and {{domxref("Element/transitionstart_event", "transitionstart")}} (fires after any delay), in the same kind of fashion:
 
 ```js
 el.addEventListener("transitionrun", signalStart, true);
@@ -263,5 +264,5 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## See also
 
-- The {{domxref("TransitionEvent")}} interface and the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- The {{domxref("TransitionEvent")}} interface and the {{domxref("Element/transitionend_event", "transitionend")}} event
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)

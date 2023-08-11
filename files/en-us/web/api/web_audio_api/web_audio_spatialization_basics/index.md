@@ -2,10 +2,6 @@
 title: Web audio spatialization basics
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 page-type: guide
-tags:
-  - PannerNode
-  - Web Audio API
-  - panning
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -54,13 +50,13 @@ const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 const listener = audioCtx.listener;
 
-const posX = window.innerWidth/2;
-const posY = window.innerHeight/2;
+const posX = window.innerWidth / 2;
+const posY = window.innerHeight / 2;
 const posZ = 300;
 
 listener.positionX.value = posX;
 listener.positionY.value = posY;
-listener.positionZ.value = posZ-5;
+listener.positionZ.value = posZ - 5;
 ```
 
 We could move the listener left or right using `positionX`, up or down using `positionY`, or in or out of the room using `positionZ`. Here we are setting the listener to be in the middle of the viewport and slightly in front of our boombox. We can also set the direction the listener is facing. The default values for these work well:
@@ -91,7 +87,7 @@ This is the spacialization algorithm that's used to position the audio in 3D spa
 Pretty clever stuff. Let's use the `HRTF` model!
 
 ```js
-const panningModel = 'HRTF';
+const panningModel = "HRTF";
 ```
 
 The [`coneInnerAngle`](/en-US/docs/Web/API/PannerNode/coneInnerAngle) and [`coneOuterAngle`](/en-US/docs/Web/API/PannerNode/coneOuterAngle) properties specify where the volume emanates from.
@@ -110,7 +106,7 @@ const outerGain = 0.3;
 The next parameter is [`distanceModel`](/en-US/docs/Web/API/PannerNode/distanceModel) — this can only be set to `linear`, `inverse`, or `exponential`. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use `linear`, as it is simple:
 
 ```js
-const distanceModel = 'linear';
+const distanceModel = "linear";
 ```
 
 We can set a maximum distance ([`maxDistance`](/en-US/docs/Web/API/PannerNode/maxDistance)) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point.
@@ -170,7 +166,7 @@ const panner = new PannerNode(audioCtx, {
   coneInnerAngle: innerCone,
   coneOuterAngle: outerCone,
   coneOuterGain: outerGain,
-})
+});
 ```
 
 ## Moving the boombox
@@ -180,12 +176,14 @@ We can move it left and right, up and down, and back and forth; we can also rota
 The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e. make it project to the back when the boombox is rotated 180 degrees and facing away from us.
 
 We need to set up a few things for the interface.
-First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms) to actually do the movement.
+First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) to actually do the movement.
 Finally, we'll set some bounds so our boombox doesn't move too far in any direction:
 
 ```js
-const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
-const boombox = document.querySelector('.boombox-body');
+const moveControls = document
+  .querySelector("#move-controls")
+  .querySelectorAll("button");
+const boombox = document.querySelector(".boombox-body");
 
 // the values for our CSS transforms
 const transform = {
@@ -193,8 +191,8 @@ const transform = {
   yAxis: 0,
   zAxis: 0.8,
   rotateX: 0,
-  rotateY: 0
-}
+  rotateY: 0,
+};
 
 // set our bounds
 const topBound = -posY;
@@ -213,25 +211,25 @@ We'll move the boombox along these axis and update the appropriate position.
 ```js
 function moveBoombox(direction) {
   switch (direction) {
-    case 'left':
+    case "left":
       if (transform.xAxis > leftBound) {
         transform.xAxis -= 5;
         panner.positionX.value -= 0.1;
       }
       break;
-    case 'up':
+    case "up":
       if (transform.yAxis > topBound) {
         transform.yAxis -= 5;
         panner.positionY.value -= 0.3;
       }
       break;
-    case 'right':
+    case "right":
       if (transform.xAxis < rightBound) {
         transform.xAxis += 5;
         panner.positionX.value += 0.1;
       }
       break;
-    case 'down':
+    case "down":
       if (transform.yAxis < bottomBound) {
         transform.yAxis += 5;
         panner.positionY.value += 0.3;
@@ -268,15 +266,15 @@ Let's set up a rotation rate, which we'll convert into a radian range value for 
 // set up rotation constants
 const rotationRate = 60; // bigger number equals slower sound rotation
 
-const q = Math.PI/rotationRate; //rotation increment in radians
+const q = Math.PI / rotationRate; //rotation increment in radians
 ```
 
 We can also use this to work out degrees rotated, which will help with the CSS transforms we will have to create (note we need both an x and y-axis for the CSS transforms):
 
 ```js
 // get degrees for CSS
-const degreesX = (q * 180)/Math.PI;
-const degreesY = (q * 180)/Math.PI;
+const degreesX = (q * 180) / Math.PI;
+const degreesY = (q * 180) / Math.PI;
 ```
 
 Let's take a look at our left rotation as an example. We need to change the x orientation and the z orientation of the panner coordinates, to move around the y-axis for our left rotation:
@@ -339,79 +337,95 @@ Here's the final `moveBoombox` function.
 ```js
 function moveBoombox(direction, prevMove) {
   switch (direction) {
-    case 'left':
+    case "left":
       if (transform.xAxis > leftBound) {
         transform.xAxis -= 5;
         panner.positionX.value -= 0.1;
       }
       break;
-    case 'up':
+    case "up":
       if (transform.yAxis > topBound) {
         transform.yAxis -= 5;
         panner.positionY.value -= 0.3;
       }
       break;
-    case 'right':
+    case "right":
       if (transform.xAxis < rightBound) {
         transform.xAxis += 5;
         panner.positionX.value += 0.1;
       }
       break;
-    case 'down':
+    case "down":
       if (transform.yAxis < bottomBound) {
         transform.yAxis += 5;
         panner.positionY.value += 0.3;
       }
       break;
-    case 'back':
+    case "back":
       if (transform.zAxis > innerBound) {
         transform.zAxis -= 0.01;
         panner.positionZ.value += 40;
       }
       break;
-    case 'forward':
+    case "forward":
       if (transform.zAxis < outerBound) {
         transform.zAxis += 0.01;
         panner.positionZ.value -= 40;
       }
       break;
-    case 'rotate-left':
+    case "rotate-left":
       transform.rotateY -= degreesY;
 
       // 'left' is rotation about y-axis with negative angle increment
-      z = panner.orientationZ.value*Math.cos(q) - panner.orientationX.value*Math.sin(q);
-      x = panner.orientationZ.value*Math.sin(q) + panner.orientationX.value*Math.cos(q);
+      z =
+        panner.orientationZ.value * Math.cos(q) -
+        panner.orientationX.value * Math.sin(q);
+      x =
+        panner.orientationZ.value * Math.sin(q) +
+        panner.orientationX.value * Math.cos(q);
       y = panner.orientationY.value;
 
       panner.orientationX.value = x;
       panner.orientationY.value = y;
       panner.orientationZ.value = z;
       break;
-    case 'rotate-right':
+    case "rotate-right":
       transform.rotateY += degreesY;
       // 'right' is rotation about y-axis with positive angle increment
-      z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
-      x = panner.orientationZ.value*Math.sin(-q) + panner.orientationX.value*Math.cos(-q);
+      z =
+        panner.orientationZ.value * Math.cos(-q) -
+        panner.orientationX.value * Math.sin(-q);
+      x =
+        panner.orientationZ.value * Math.sin(-q) +
+        panner.orientationX.value * Math.cos(-q);
       y = panner.orientationY.value;
       panner.orientationX.value = x;
       panner.orientationY.value = y;
       panner.orientationZ.value = z;
       break;
-    case 'rotate-up':
+    case "rotate-up":
       transform.rotateX += degreesX;
       // 'up' is rotation about x-axis with negative angle increment
-      z = panner.orientationZ.value*Math.cos(-q) - panner.orientationY.value*Math.sin(-q);
-      y = panner.orientationZ.value*Math.sin(-q) + panner.orientationY.value*Math.cos(-q);
+      z =
+        panner.orientationZ.value * Math.cos(-q) -
+        panner.orientationY.value * Math.sin(-q);
+      y =
+        panner.orientationZ.value * Math.sin(-q) +
+        panner.orientationY.value * Math.cos(-q);
       x = panner.orientationX.value;
       panner.orientationX.value = x;
       panner.orientationY.value = y;
       panner.orientationZ.value = z;
       break;
-    case 'rotate-down':
+    case "rotate-down":
       transform.rotateX -= degreesX;
       // 'down' is rotation about x-axis with positive angle increment
-      z = panner.orientationZ.value*Math.cos(q) - panner.orientationY.value*Math.sin(q);
-      y = panner.orientationZ.value*Math.sin(q) + panner.orientationY.value*Math.cos(q);
+      z =
+        panner.orientationZ.value * Math.cos(q) -
+        panner.orientationY.value * Math.sin(q);
+      y =
+        panner.orientationZ.value * Math.sin(q) +
+        panner.orientationY.value * Math.cos(q);
       x = panner.orientationX.value;
       panner.orientationX.value = x;
       panner.orientationY.value = y;
@@ -419,7 +433,8 @@ function moveBoombox(direction, prevMove) {
       break;
   }
 
-  boombox.style.transform = `translateX(${transform.xAxis}px) ` +
+  boombox.style.transform =
+    `translateX(${transform.xAxis}px) ` +
     `translateY(${transform.yAxis}px) ` +
     `scale(${transform.zAxis}) ` +
     `rotateY(${transform.rotateY}deg) ` +
@@ -438,23 +453,29 @@ Wiring up out control buttons is comparatively simple — now we can listen for 
 ```js
 // for each of our controls, move the boombox and change the position values
 moveControls.forEach((el) => {
-
   let moving;
-  el.addEventListener('mousedown', () => {
-    const direction = this.dataset.control;
-    if (moving && moving.frameId) {
-      cancelAnimationFrame(moving.frameId);
-    }
-    moving = moveBoombox(direction);
-  }, false);
+  el.addEventListener(
+    "mousedown",
+    () => {
+      const direction = this.dataset.control;
+      if (moving && moving.frameId) {
+        cancelAnimationFrame(moving.frameId);
+      }
+      moving = moveBoombox(direction);
+    },
+    false,
+  );
 
-  window.addEventListener('mouseup', () => {
-    if (moving && moving.frameId) {
-      cancelAnimationFrame(moving.frameId);
-    }
-  }, false)
-
-})
+  window.addEventListener(
+    "mouseup",
+    () => {
+      if (moving && moving.frameId) {
+        cancelAnimationFrame(moving.frameId);
+      }
+    },
+    false,
+  );
+});
 ```
 
 ## Connecting our graph
@@ -469,7 +490,7 @@ We need to grab the source from that element and pipe it into the Web Audio API 
 
 ```js
 // get the audio element
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
@@ -489,23 +510,27 @@ Let's create a play button, that when clicked will play or pause the audio depen
 
 ```js
 // Select our play button
-const playButton = document.querySelector('button');
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', () => {
-  // Check if context is in suspended state (autoplay policy)
-  if (audioContext.state === 'suspended') {
-    audioContext.resume();
-  }
+playButton.addEventListener(
+  "click",
+  () => {
+    // Check if context is in suspended state (autoplay policy)
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
+    }
 
-  // Play or pause track depending on state
-  if (playButton.dataset.playing === 'false') {
-    audioElement.play();
-    playButton.dataset.playing = 'true';
-  } else if (playButton.dataset.playing === 'true') {
-    audioElement.pause();
-    playButton.dataset.playing = 'false';
-  }
-}, false);
+    // Play or pause track depending on state
+    if (playButton.dataset.playing === "false") {
+      audioElement.play();
+      playButton.dataset.playing = "true";
+    } else if (playButton.dataset.playing === "true") {
+      audioElement.pause();
+      playButton.dataset.playing = "false";
+    }
+  },
+  false,
+);
 ```
 
 For a more in depth look at playing/controlling audio and audio graphs check out [Using The Web Audio API.](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

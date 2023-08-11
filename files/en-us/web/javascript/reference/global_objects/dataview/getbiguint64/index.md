@@ -1,23 +1,13 @@
 ---
 title: DataView.prototype.getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArrays
-  - getBigUint64
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getBigUint64
 ---
 
 {{JSRef}}
 
-The **`getBigUint64()`** method gets an unsigned 64-bit integer
-(unsigned long long) at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`getBigUint64()`** method of {{jsxref("DataView")}} instances reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit unsigned integer.
 
 {{EmbedInteractiveExample("pages/js/dataview-getbiguint64.html")}}
 
@@ -30,10 +20,10 @@ getBigUint64(byteOffset, littleEndian)
 
 ### Parameters
 
-- byteOffset
+- `byteOffset`
   - : The offset, in bytes, from the start of the view to read the data from.
-- littleEndian
-  - : {{optional_inline}} Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
     `false` or `undefined`, a big-endian value is read.
 
 ### Return value

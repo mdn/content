@@ -1,16 +1,12 @@
 ---
 title: Grid template areas
-slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 page-type: guide
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
 ---
 
 {{CSSRef}}
 
-In the [previous guide](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) we looked at grid lines, and how to position items against those lines. When you use CSS Grid Layout you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas, and we will find out exactly how this method works. You will see very quickly why we sometimes call this the ascii-art method of grid layout!
+In the [previous guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement), we looked at grid lines and how to position items against those lines. When you use CSS grid layout, you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas, and we will find out exactly how this method works. You will see very quickly why we sometimes call this the ascii-art method of grid layout!
 
 ## Naming a grid area
 

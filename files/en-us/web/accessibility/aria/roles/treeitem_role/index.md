@@ -1,13 +1,7 @@
 ---
 title: "ARIA: treeitem role"
 slug: Web/Accessibility/ARIA/Roles/treeitem_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - treeitem
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#treeitem
   - https://w3c.github.io/aria-practices/#TreeView
@@ -31,7 +25,7 @@ Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibil
 
 > **Note:** ARIA tree views use navigation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
-Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the {{HTMLattrxref('id')}} of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
+Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
 
 Trees can be "single-select", allowing users to choose just one `treeitem` for an action, or "multi-select", where users are able to select more than one `treeitem` nodes for an action. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
 

@@ -2,13 +2,6 @@
 title: Using CSS custom properties (variables)
 slug: Web/CSS/Using_CSS_custom_properties
 page-type: guide
-tags:
-  - CSS
-  - CSS Variables
-  - Custom Properties
-  - Guide
-  - Web
-  - cascading variables
 ---
 
 {{CSSRef}}
@@ -18,6 +11,8 @@ tags:
 Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. Custom properties allow a value to be stored in one place, then referenced in multiple other places. An additional benefit is semantic identifiers. For example, `--main-text-color` is easier to understand than `#00ff00`, especially if this same color is also used in other contexts.
 
 Custom properties are subject to the cascade and inherit their value from their parent.
+
+> **Note:** Variables do not work inside media queries and container queries. The {{cssxref("var", "var()")}} function can be used in place of any part of a value in any property on an element. The {{cssxref("var", "var()")}} function cannot be used as property names, selectors, or anything else besides property values. So, we can't use it in a media query or container query.
 
 ## Basic usage
 
@@ -195,7 +190,7 @@ Keep in mind that these are custom properties, not actual variables like you mig
 
 ## Custom property fallback values
 
-Using the [`var()`](/en-US/docs/Web/CSS/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+Using the [`var()`](/en-US/docs/Web/CSS/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
 > **Note:** Fallback values aren't used to fix the browser compatibility. If the browser doesn't support CSS custom properties, the fallback value won't help. It's just a backup for the browser which supports CSS custom properties to choose a different value if the given variable isn't defined or has an invalid value.
 
@@ -232,7 +227,7 @@ However, when the values of custom properties are parsed, the browser doesn't ye
 
 Unfortunately, these valid values can be used, via the `var()` functional notation, in a context where they might not make sense. Properties and custom variables can lead to invalid CSS statements, leading to the new concept of _valid at computed time._
 
-When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/inheritance) value of the property is used.
+When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/Inheritance) value of the property is used.
 
 The next two examples illustrate this.
 
@@ -316,3 +311,4 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 - [Custom property syntax](/en-US/docs/Web/CSS/--*)
 - [`var()`](/en-US/docs/Web/CSS/var)
+- {{cssxref("@property")}} at-rule

@@ -2,14 +2,6 @@
 title: StyleSheet
 slug: Web/API/StyleSheet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - DOM
-  - Interface
-  - Reference
-  - StyleSheet
 browser-compat: api.StyleSheet
 ---
 

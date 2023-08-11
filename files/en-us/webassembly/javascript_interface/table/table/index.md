@@ -1,11 +1,6 @@
 ---
 title: WebAssembly.Table() constructor
 slug: WebAssembly/JavaScript_interface/Table/Table
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Table.Table
 ---
 
@@ -94,7 +89,7 @@ We instantiate `table2.wasm` using the [`WebAssembly.instantiateStreaming()`](/e
 ```js
 const instantiating = WebAssembly.instantiateStreaming(
   fetch("table2.wasm"),
-  importObject
+  importObject,
 );
 ```
 

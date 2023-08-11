@@ -1,14 +1,10 @@
 ---
-title: Document.domain
+title: "Document: domain property"
+short-title: domain
 slug: Web/API/Document/domain
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Document.domain
 ---
 
@@ -21,6 +17,11 @@ document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-orig
 ## Value
 
 A string.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 
@@ -60,7 +61,7 @@ Other alternatives that provide slightly different information are
 ### Setting the domain
 
 ```js
-document.domain = domainString
+document.domain = domainString;
 ```
 
 The setter for this property can be used to _change_ a page's
@@ -117,8 +118,8 @@ blanket exposure of all data caused by `document.domain`.
 The setter will throw a "`SecurityError`" {{domxref("DOMException")}} in
 several cases:
 
-- The {{httpheader('Feature-Policy/document-domain','document-domain')}}
-  {{HTTPHeader("Feature-Policy")}} is disabled.
+- The {{httpheader('Permissions-Policy/document-domain','document-domain')}}
+  {{HTTPHeader("Permissions-Policy")}} is disabled.
 - The document is inside a sandboxed {{htmlelement("iframe")}}.
 - The document has no {{glossary("browsing context")}}.
 - The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.

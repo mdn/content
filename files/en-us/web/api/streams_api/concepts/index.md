@@ -2,13 +2,9 @@
 title: Streams API concepts
 slug: Web/API/Streams_API/Concepts
 page-type: guide
-tags:
-  - API
-  - Streams
-  - concepts
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 The [Streams API](/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
 
@@ -21,7 +17,7 @@ There are two types of underlying source:
 - **Push sources** constantly push data at you when you've accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/[Web sockets](/en-US/docs/Web/API/WebSockets_API).
 - **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a [Fetch](/en-US/docs/Web/API/Fetch_API) or [XHR](/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest) call.
 
-The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
+The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
 
 ![Readable streams data flow](readable_streams.png)
 

@@ -1,12 +1,10 @@
 ---
-title: NDEFRecord.recordType
+title: "NDEFRecord: recordType property"
+short-title: recordType
 slug: Web/API/NDEFRecord/recordType
 page-type: web-api-instance-property
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.recordType
 ---
 

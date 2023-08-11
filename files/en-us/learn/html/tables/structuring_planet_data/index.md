@@ -1,13 +1,7 @@
 ---
 title: Structuring planet data
 slug: Learn/HTML/Tables/Structuring_planet_data
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Learn
-  - Tables
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
@@ -81,9 +75,3 @@ If you would like your work assessed or are stuck and want to ask for help:
    - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## In this module
-
-- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

@@ -1,11 +1,10 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - CodingScripting
-  - HTML
-  - "l10n:priority"
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **HTML** (HyperText Markup Language) is a descriptive language that specifies webpage structure.
 

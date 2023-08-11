@@ -1,14 +1,10 @@
 ---
 title: Iterators and generators
-slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - "l10n:priority"
+slug: Web/JavaScript/Guide/Iterators_and_generators
+page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
 
 Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of {{jsxref("Statements/for...of","for...of")}} loops.
 
@@ -53,7 +49,7 @@ function makeRangeIterator(start = 0, end = Infinity, step = 1) {
         return result;
       }
       return { value: iterationCount, done: true };
-    }
+    },
   };
   return rangeIterator;
 }
@@ -66,11 +62,11 @@ const it = makeRangeIterator(1, 10, 2);
 
 let result = it.next();
 while (!result.done) {
- console.log(result.value); // 1 3 5 7 9
- result = it.next();
+  console.log(result.value); // 1 3 5 7 9
+  result = it.next();
 }
 
-console.log("Iterated over sequence of size: ", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
+console.log("Iterated over sequence of size:", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
 ```
 
 > **Note:** It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).
@@ -144,8 +140,8 @@ const myIterable = {
     yield 1;
     yield 2;
     yield 3;
-  }
-}
+  },
+};
 ```
 
 User-defined iterables can be used in `for...of` loops or the spread syntax as usual.
@@ -170,24 +166,24 @@ for (const value of myIterable) {
 Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/yield*","yield*")}}.
 
 ```js
-for (const value of ['a', 'b', 'c']) {
+for (const value of ["a", "b", "c"]) {
   console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-[...'abc'];
+[..."abc"];
 // ["a", "b", "c"]
 
 function* gen() {
-  yield* ['a', 'b', 'c'];
+  yield* ["a", "b", "c"];
 }
 
 gen().next();
 // { value: "a", done: false }
 
-[a, b, c] = new Set(['a', 'b', 'c']);
+[a, b, c] = new Set(["a", "b", "c"]);
 a;
 // "a"
 ```
@@ -217,17 +213,17 @@ function* fibonacci() {
 }
 
 const sequence = fibonacci();
-console.log(sequence.next().value);     // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
-console.log(sequence.next().value);     // 5
-console.log(sequence.next().value);     // 8
+console.log(sequence.next().value); // 0
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
+console.log(sequence.next().value); // 5
+console.log(sequence.next().value); // 8
 console.log(sequence.next(true).value); // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
 ```
 
 You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the `yield` that is currently suspended were instead a `throw value` statement.
@@ -236,4 +232,4 @@ If the exception is not caught from within the generator, it will propagate up t
 
 Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.
 
-{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}

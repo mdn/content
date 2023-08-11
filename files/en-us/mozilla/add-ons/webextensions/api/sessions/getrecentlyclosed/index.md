@@ -1,16 +1,7 @@
 ---
 title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getRecentlyClosed
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getRecentlyClosed
 ---
 
@@ -50,7 +41,7 @@ This code restores the single most recently-closed session, whether it's a tab o
 ```js
 function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -67,7 +58,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreMostRecent, onError);
 });

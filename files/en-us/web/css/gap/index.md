@@ -2,15 +2,6 @@
 title: gap
 slug: Web/CSS/gap
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - gap
-  - recipe:css-property
 browser-compat: css.properties.gap
 ---
 
@@ -189,4 +180,4 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 ## See also
 
 - Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

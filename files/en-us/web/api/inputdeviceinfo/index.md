@@ -2,12 +2,6 @@
 title: InputDeviceInfo
 slug: Web/API/InputDeviceInfo
 page-type: web-api-interface
-tags:
-  - API
-  - Media Streams API
-  - Interface
-  - Reference
-  - InputDeviceInfo
 browser-compat: api.InputDeviceInfo
 ---
 
@@ -29,12 +23,11 @@ The **`InputDeviceInfo`** interface of the {{domxref('Media Capture and Streams 
 The following example gets all media devices with {{domxref("MediaDevices.enumerateDevices()")}}. If any of the devices are input devices then `console.log(device)` will print an `InputDeviceInfo` object to the console.
 
 ```js
-navigator.mediaDevices.enumerateDevices()
-  .then((devices) => {
-    devices.forEach((device) => {
-      console.log(device); // an InputDeviceInfo object if the device is an input device, otherwise a MediaDeviceInfo object.
-    });
-  })
+navigator.mediaDevices.enumerateDevices().then((devices) => {
+  devices.forEach((device) => {
+    console.log(device); // an InputDeviceInfo object if the device is an input device, otherwise a MediaDeviceInfo object.
+  });
+});
 ```
 
 ## Specifications

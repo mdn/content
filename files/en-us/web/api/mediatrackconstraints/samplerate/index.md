@@ -1,19 +1,8 @@
 ---
-title: MediaTrackConstraints.sampleRate
+title: "MediaTrackConstraints: sampleRate property"
+short-title: sampleRate
 slug: Web/API/MediaTrackConstraints/sampleRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - sampleRate
 browser-compat: api.MediaTrackConstraints.sampleRate
 ---
 
@@ -41,7 +30,7 @@ best-possible value.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

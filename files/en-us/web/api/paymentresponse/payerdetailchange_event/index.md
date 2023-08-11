@@ -1,20 +1,11 @@
 ---
-title: 'PaymentResponse: payerdetailchange event'
+title: "PaymentResponse: payerdetailchange event"
+short-title: payerdetailchange
 slug: Web/API/PaymentResponse/payerdetailchange_event
 page-type: web-api-event
-tags:
-  - Commerce
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Response
-  - Validation
-  - Event
-  - payerdetail
-  - payment
-  - validate
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.payerdetailchange_event
 ---
 
@@ -31,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('payerdetailchange', async (event) => { });
+addEventListener("payerdetailchange", async (event) => {});
 
-onpayerdetailchange = async (event) => { };
+onpayerdetailchange = async (event) => {};
 ```
 
 ## Event type
@@ -99,7 +90,7 @@ response.onpayerdetailchange = async (ev) => {
   // validation to the errors list
 
   const errors = await Promise.all(promisesToValidate).then((results) =>
-    results.reduce((errors, result), Object.assign(errors, result))
+    results.reduce((errors, result), Object.assign(errors, result)),
   );
 
   // If we found any errors, wait for them to be corrected

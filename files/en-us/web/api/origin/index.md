@@ -1,16 +1,8 @@
 ---
-title: origin
+title: origin global property
+short-title: origin
 slug: Web/API/origin
 page-type: web-api-global-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web
-  - Window
-  - Worker
-  - origin
 browser-compat: api.origin
 ---
 

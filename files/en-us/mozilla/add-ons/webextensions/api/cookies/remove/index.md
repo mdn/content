@@ -1,16 +1,7 @@
 ---
 title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.remove
 ---
 
@@ -76,12 +67,12 @@ function onError(error) {
 function removeCookie(tabs) {
   let removing = browser.cookies.remove({
     url: tabs[0].url,
-    name: "favorite-color"
+    name: "favorite-color",
   });
   removing.then(onRemoved, onError);
 }
 
-let getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({ active: true, currentWindow: true });
 getActive.then(removeCookie);
 ```
 

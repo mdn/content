@@ -1,14 +1,8 @@
 ---
-title: 'MIDIPort: statechange event'
+title: "MIDIPort: statechange event"
+short-title: statechange
 slug: Web/API/MIDIPort/statechange_event
 page-type: web-api-event
-tags:
-  - statechange
-  - API
-  - Event
-  - Reference
-  - MIDIPort
-  - Secure context
 browser-compat: api.MIDIPort.statechange_event
 ---
 
@@ -21,9 +15,9 @@ The **`statechange`** event of the {{domxref("MIDIPort")}} interface is fired wh
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('statechange', (event) => { });
+addEventListener("statechange", (event) => {});
 
-onstatechange = (event) => { };
+onstatechange = (event) => {};
 ```
 
 ## Event type
@@ -44,7 +38,7 @@ In the following example the current {{domxref("MIDIPort.state")}} is logged eac
 ```js
 port.onstatechange = (event) => {
   console.log(port.state);
-}
+};
 ```
 
 ## Specifications

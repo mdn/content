@@ -1,16 +1,7 @@
 ---
 title: i18n.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - detectLanguage
-  - i18n
+page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.detectLanguage
 ---
 
@@ -64,7 +55,7 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-let text = "L'homme est né libre, et partout il est dans les fers."
+let text = "L'homme est né libre, et partout il est dans les fers.";
 
 let detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);

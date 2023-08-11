@@ -1,14 +1,10 @@
 ---
 title: <xsl:variable>
 slug: Web/XSLT/Element/variable
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - variable
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:variable>` element declares a global or local variable in a stylesheet and gives it a value. Because XSLT permits no side-effects, once the value of the variable has been established, it remains the same until the variable goes out of scope
 

@@ -1,31 +1,7 @@
 ---
-title: 'Viewpoints and viewers: Simulating cameras in WebXR'
+title: "Viewpoints and viewers: Simulating cameras in WebXR"
 slug: Web/API/WebXR_Device_API/Cameras
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Advanced
-  - Cameras
-  - Coordinates
-  - Guide
-  - Location
-  - Motion
-  - Position
-  - VR
-  - Viewers
-  - Viewpoints
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - XRView
-  - XRViewerPose
-  - rotation
-  - transform
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -41,7 +17,7 @@ There are a few articles about the fundamental math, geometry, and other concept
 - [WebGL model view projection](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection)
 - [Geometry and reference spaces in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Geometry)
 
-_Ed. note: Most diagrams used in this article to show how the camera moves while performing standard movements were taken from [an article on the FilmmakerIQ web site](https://web.archive.org/web/20170525025459/https://filmmakeriq.com/2016/09/the-importance-and-not-so-importance-of-film-terminology/); namely, from [this image](https://filmmakeriq.com/wp-content/uploads/2016/09/Pan-Tilt.png) which is found all over the web. We assume due to their frequent reuse that they're available under a permissive license, ownership is not certain. We hope that it's freely usable; if not, and you're the owner, please let us know and we'll find or produce new diagrams. Or, if you're happy to let us continue to use the images, please let us know so we can credit you properly!_
+_Ed. note: Most diagrams used in this article to show how the camera moves while performing standard movements were taken from [an article on the FilmmakerIQ website](https://web.archive.org/web/20170525025459/https://filmmakeriq.com/2016/09/the-importance-and-not-so-importance-of-film-terminology/); namely, from [this image](https://filmmakeriq.com/wp-content/uploads/2016/09/Pan-Tilt.png) which is found all over the web. We assume due to their frequent reuse that they're available under a permissive license, ownership is not certain. We hope that it's freely usable; if not, and you're the owner, please let us know and we'll find or produce new diagrams. Or, if you're happy to let us continue to use the images, please let us know so we can credit you properly!_
 
 ## Cameras and relative movement
 
@@ -141,12 +117,16 @@ Thus a matrix that looks like this:
 
 Is represented in array form like this:
 
-```js
-let matrixArray = [a1, a2, a3, a4, a5, a6, a7, a8,
-                   a9, a10, a11, a12, a13, a14, a15, a16];
+```js-nolint
+let matrixArray = [
+  a1, a2, a3, a4,
+  a5, a6, a7, a8,
+  a9, a10, a11, a12,
+  a13, a14, a15, a16,
+];
 ```
 
-In this array, the leftmost column contains the entries _a_₁, _a_₂, _a_₃, and _a_₄. The topmost row contains the entries _a_₁, _a_₅, _a_₉, and _a_₁₃.
+In this array, the leftmost column contains the entries `a1`, `a2`, `a3`, and `a4`. The topmost row contains the entries `a1`, `a5`, `a9`, and `a13`.
 
 Keep in mind that most WebGL and WebXR programming is done using third-party libraries which expand upon the basic functionality of WebGL by adding routines that make it much easier to perform not only core matrix and other operations, but often also to simulate these standard cinematography techniques. You should strongly consider using one instead of directly using WebGL. This guide uses WebGL directly since it's useful to understand to some extent what goes on under the hood, and to aide in the development of libraries or to help you optimize code.
 
@@ -176,8 +156,7 @@ function createPerspectiveMatrix(viewport, fovDegrees, nearClip, farClip) {
   const aspectRatio = viewport.width / viewport.height;
 
   const transform = mat4.create();
-  mat4.perspective(transform, fovRadians, aspectRatio,
-                   nearClip, farClip);
+  mat4.perspective(transform, fovRadians, aspectRatio, nearClip, farClip);
   return transform;
 }
 ```
@@ -194,7 +173,11 @@ If you start each frame's rendering pass by computing the perspective matrix, yo
 
 ```js
 const transform = createPerspectiveMatrix(viewport, 130, 1, 100);
-const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistance);
+const translateVec = vec3.fromValues(
+  -trackDistance,
+  -craneDistance,
+  pushDistance,
+);
 mat4.translate(transform, transform, translateVec);
 ```
 
@@ -206,12 +189,12 @@ Unlike a true "zoom", **scaling** involves multiplying each of the `x`, `y`, and
 
 If you want to scale up by a factor of 2, you need to multiply each component by 2.0. To scale down by the same amount, multiply them by -2.0. In matrix terms, this is performed using a transform matrix with scaling factored into it, like this:
 
-```js
+```js-nolint
 let scaleTransform = [
-  Sx,  0,  0,  0,
-   0, Sy,  0,  0,
-   0,  0, Sz,  0,
-   0,  0,  0,  1
+  Sx, 0, 0, 0,
+  0, Sy, 0, 0,
+  0, 0, Sz, 0,
+  0, 0, 0, 1
 ];
 ```
 
@@ -219,27 +202,17 @@ This matrix represents a transform that scales up or down by a factor indicated 
 
 If the same scaling factor is to be applied in every direction, you can create a simple function to generate the scaling transform matrix for you:
 
-```js
+```js-nolint
 function createScalingMatrix(f) {
-  return [
-    f, 0, 0, 0,
-    0, f, 0, 0,
-    0, 0, f, 0,
-    0, 0, 0, 1
-  ];
+  return [f, 0, 0, 0, 0, f, 0, 0, 0, 0, f, 0, 0, 0, 0, 1];
 }
 ```
 
 With the transform matrix in hand, we apply the transform `scaleTransform` to the vector (or vertex) `myVector`:
 
-```js
+```js-nolint
 let myVector = [2, 1, -3];
-let scaleTransform = [
-  2, 0, 0, 0,
-  0, 2, 0, 0,
-  0, 0, 2, 0,
-  0, 0, 0, 1
-];
+let scaleTransform = [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1];
 vec4.transformMat4(myVector, myVector, scaleTransform);
 ```
 
@@ -353,8 +326,11 @@ mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);
 The solution here is obvious. SInce the translation is expressed as a vector providing the distance to move along each axis, we can combine them like this:
 
 ```js
-mat4.translate(viewMatrix, viewMatrix,
-     [-truckDistance, -pedestalDistance, dollyDistance]);
+mat4.translate(viewMatrix, viewMatrix, [
+  -truckDistance,
+  -pedestalDistance,
+  dollyDistance,
+]);
 ```
 
 This will shift the origin of the matrix `viewMatrix` by the specified amount along each axis.
@@ -412,7 +388,9 @@ function myAnimationFrameCallback(time, frame) {
   const adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
   const pose = frame.getViewerPose(adjustedRefSpace);
 
-  animationFrameRequestID = frame.session.requestAnimationFrame(myAnimationFrameCallback);
+  animationFrameRequestID = frame.session.requestAnimationFrame(
+    myAnimationFrameCallback,
+  );
 
   if (pose) {
     const glLayer = frame.session.renderState.baseLayer;

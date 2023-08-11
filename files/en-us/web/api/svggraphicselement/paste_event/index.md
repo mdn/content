@@ -1,13 +1,8 @@
 ---
 title: "SVGGraphicsElement: paste event"
+short-title: paste
 slug: Web/API/SVGGraphicsElement/paste_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SVG
-  - SVG OM
 browser-compat: api.Element.paste_event
 ---
 
@@ -28,9 +23,9 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paste', (event) => { });
+addEventListener("paste", (event) => {});
 
-onpaste = (event) => { };
+onpaste = (event) => {};
 ```
 
 ## Event type
@@ -74,10 +69,14 @@ input {
 ### JavaScript
 
 ```js
-document.getElementById("element-to-paste-text").addEventListener("paste", (evt) => {
-  evt.target.textContent = evt.clipboardData.getData("text/plain").toUpperCase();
-  evt.preventDefault();
-});
+document
+  .getElementById("element-to-paste-text")
+  .addEventListener("paste", (evt) => {
+    evt.target.textContent = evt.clipboardData
+      .getData("text/plain")
+      .toUpperCase();
+    evt.preventDefault();
+  });
 ```
 
 ### Result

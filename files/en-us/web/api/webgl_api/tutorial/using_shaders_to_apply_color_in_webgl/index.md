@@ -2,10 +2,6 @@
 title: Using shaders to apply color in WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 page-type: guide
-tags:
-  - Graphics
-  - Tutorial
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
@@ -153,7 +149,7 @@ function setColorAttribute(gl, buffers, programInfo) {
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
 }

@@ -1,13 +1,10 @@
 ---
-title: TaskAttributionTiming.toJSON()
+title: "TaskAttributionTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/TaskAttributionTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.TaskAttributionTiming.toJSON
 ---
 

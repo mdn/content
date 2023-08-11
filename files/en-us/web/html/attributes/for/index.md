@@ -1,12 +1,7 @@
 ---
-title: 'HTML attribute: for'
+title: "HTML attribute: for"
 slug: Web/HTML/Attributes/for
-tags:
-  - Attribute
-  - Attributes
-  - HTML
-  - for
-  - Reference
+page-type: html-attribute
 browser-compat:
   - html.elements.label.for
   - html.elements.output.for

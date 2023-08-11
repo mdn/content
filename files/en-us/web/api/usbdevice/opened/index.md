@@ -1,17 +1,10 @@
 ---
-title: USBDevice.opened
+title: "USBDevice: opened property"
+short-title: opened
 slug: Web/API/USBDevice/opened
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - opened
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.opened
 ---
 
@@ -41,13 +34,16 @@ async function setDeviceColor(usbDevice, r, g, b) {
     // it be in a Uint8Array.
     const payload = new Uint8Array([r, g, b]);
 
-    await usbDevice.controlTransferOut({
-      requestType: 'vendor',
-      recipient: 'device',
-      request: 1,
-      value: 0,
-      index: 0,
-    }, payload);
+    await usbDevice.controlTransferOut(
+      {
+        requestType: "vendor",
+        recipient: "device",
+        request: 1,
+        value: 0,
+        index: 0,
+      },
+      payload,
+    );
   }
 }
 ```

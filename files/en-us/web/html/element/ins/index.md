@@ -1,15 +1,7 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Inserted Text
-  - Insertion
-  - Reference
-  - Web
-  - ins
+page-type: html-element
 browser-compat: html.elements.ins
 ---
 
@@ -23,15 +15,15 @@ The **`<ins>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -40,7 +32,7 @@ The **`<ins>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text 
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent</a
         >.
       </td>
@@ -53,7 +45,7 @@ The **`<ins>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -81,10 +73,10 @@ The **`<ins>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : This attribute defines the URI of a resource that explains the change, such as a link to meeting minutes or a ticket in a troubleshooting system.
-- {{htmlattrdef("datetime")}}
-  - : This attribute indicates the time and date of the change and must be a valid date with an optional time string. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. For the format of the string without a time, see [Format of a valid date string](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings). The format of the string if it includes both date and time is covered in [Format of a valid local date and time string](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
+- `datetime`
+  - : This attribute indicates the time and date of the change and must be a valid date with an optional time string. If the value cannot be parsed as a date with an optional time string, the element does not have an associated timestamp. For the format of the string without a time, see [Format of a valid date string](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings). The format of the string if it includes both date and time is covered in [Format of a valid local date and time string](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
 
 ## Examples
 

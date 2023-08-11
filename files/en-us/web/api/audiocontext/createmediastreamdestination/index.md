@@ -1,14 +1,8 @@
 ---
-title: AudioContext.createMediaStreamDestination()
+title: "AudioContext: createMediaStreamDestination() method"
+short-title: createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createMediaStreamDestination
 browser-compat: api.AudioContext.createMediaStreamDestination
 ---
 
@@ -43,7 +37,7 @@ When the button is clicked, the oscillator starts, and the `MediaRecorder` is st
 From here, you can play and save the opus file.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

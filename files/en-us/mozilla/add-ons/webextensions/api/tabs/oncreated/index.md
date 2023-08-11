@@ -1,16 +1,7 @@
 ---
 title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreated
-  - tabs
+page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onCreated
 ---
 
@@ -23,14 +14,14 @@ Note that the tab's URL may not be given its final value at the time this event 
 ## Syntax
 
 ```js-nolint
-browser.tabs.onCreated.addListener(callback)
+browser.tabs.onCreated.addListener(listener)
 browser.tabs.onCreated.removeListener(listener)
 browser.tabs.onCreated.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Details of the tab that was created.

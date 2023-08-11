@@ -1,19 +1,14 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toExponential
 ---
 
 {{JSRef}}
 
-The **`toExponential()`** method returns a string representing
-the {{jsxref("Number")}} object in exponential notation.
+The **`toExponential()`** method of {{jsxref("Number")}} values returns a string representing
+this number in exponential notation.
 
 {{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
 
@@ -39,11 +34,9 @@ with one digit before the decimal point, rounded to
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `fractionDigits` is too small or too large. Values between
-    `0` and `100`, inclusive, will not cause a
-    {{jsxref("RangeError")}}.
+  - : Thrown if `fractionDigits` is not between `0` and `100` (inclusive).
 - {{jsxref("TypeError")}}
-  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
+  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 
@@ -72,7 +65,7 @@ const numObj = 77.1234;
 console.log(numObj.toExponential()); // 7.71234e+1
 console.log(numObj.toExponential(4)); // 7.7123e+1
 console.log(numObj.toExponential(2)); // 7.71e+1
-console.log(77.1234.toExponential()); // 7.71234e+1
+console.log((77.1234).toExponential()); // 7.71234e+1
 console.log((77).toExponential()); // 7.7e+1
 ```
 

@@ -2,9 +2,6 @@
 title: Getting started with WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 page-type: guide
-tags:
-  - Tutorial
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
@@ -29,12 +26,12 @@ First, create two new files:
 The "index.html" file should contain the following:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>WebGL Demo</title>
-    <script src="webgl-demo.js" type="module" defer></script>
+    <script src="webgl-demo.js" type="module"></script>
   </head>
 
   <body>
@@ -63,7 +60,7 @@ function main() {
   // Only continue if WebGL is available and working
   if (gl === null) {
     alert(
-      "Unable to initialize WebGL. Your browser or machine may not support it."
+      "Unable to initialize WebGL. Your browser or machine may not support it.",
     );
     return;
   }
