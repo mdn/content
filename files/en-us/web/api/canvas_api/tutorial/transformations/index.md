@@ -44,7 +44,6 @@ Canvas states are stored on a stack. Every time the `save()` method is called, t
 You can call the `save()` method as many times as you like. Each time the `restore()` method is called, the last saved state is popped off the stack and all saved settings are restored.
 
 ### A `save` and `restore` canvas state example
-This example tries to illustrate how the saved context states stack and restore by drawing a set of consecutive squares.
 
 
 ```js
