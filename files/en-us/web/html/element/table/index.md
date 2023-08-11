@@ -139,7 +139,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute defines an alternative text that summarizes the content of the table. Use the {{htmlelement("caption")}} element instead.
 - `width` {{Deprecated_inline}}
   - : This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.
-
+- `height` {{Deprecated_inline}}
+  - : A table does not support height attribute. 
+  - : Warning: Some browser misinterpret this attribute. For more info, visit [Setting height attribute](https://jsfiddle.net/zQNS4/1/) 
 ## Examples
 
 ### Simple table
