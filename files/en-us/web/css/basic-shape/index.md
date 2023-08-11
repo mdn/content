@@ -30,7 +30,35 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines an inset rectangle.
 
     ```css
-    inset( <shape-arg>{1,4} [round <border-radius>]? )
+    inset( <length-percentage>{1,4} [round <`border-radius`>]? )
+    ```
+
+    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, or four values.
+
+    The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
+
+    A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
+
+- `{{cssxref("basic-shape/rect","rect()")}}`
+
+  - : Defines a rectangle with specific inset distances from the top and left edges of the reference box.
+
+    ```css
+    rect( [ <length-percentage> | auto]{4} [round <`border-radius`>]? )
+    ```
+
+    When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.
+
+    The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
+
+    A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
+
+- `{{cssxref("basic-shape/xywh","xywh()")}}`
+
+  - : Defines a rectangle with specific inset distances from the top and left edges of the reference box along with the specified width and height
+
+    ```css
+    rect( [ <length-percentage> | auto]{4} [round <`border-radius`>]? )
     ```
 
     When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.

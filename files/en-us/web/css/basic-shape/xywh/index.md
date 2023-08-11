@@ -1,15 +1,13 @@
 ---
-title: inset()
-slug: Web/CSS/basic-shape/inset
+title: xywh()
+slug: Web/CSS/basic-shape/xywh
 page-type: css-function
-browser-compat: css.types.basic-shape.inset
+browser-compat: css.types.basic-shape.xywh
 ---
 
 {{CSSRef}}
 
-The **`inset()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle at the specified inset distances from each side of the reference box. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).
-
-{{EmbedInteractiveExample("pages/css/function-inset.html")}}
+The **`rect()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle with the specified width and height values and positioned at the specified inset distances from the top and left edges of the reference box. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).
 
 ## Syntax
 
