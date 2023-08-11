@@ -39,7 +39,8 @@ The `<em>` element is often used to indicate an implicit or explicit contrast.
 
 ```html
 <p>
-  Ice cream is made with milk, sweetener, and cream. Frozen custard, on the other hand, is made of milk, cream, sweetener, and <em> egg yolks</em>.
+  Ice cream is made with milk, sweetener, and cream. Frozen custard, on the
+  other hand, is made of milk, cream, sweetener, and <em> egg yolks</em>.
 </p>
 ```
 
