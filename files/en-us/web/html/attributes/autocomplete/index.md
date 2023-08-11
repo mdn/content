@@ -66,9 +66,10 @@ If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("text
   - : A company or organization name, such as "Acme Widget Company" or "Girl Scouts of America".
 - "`street-address`"
   - : A street address. This can be multiple lines of text, and should fully identify the location of the address within its second administrative level (typically a city or town), but should not include the city name, ZIP or postal code, or country name.
-   > **Note:** a user's address to send their desired good and the transaction address can be distinguished by use the following tokens next to this value:
-  > - "`shipping`": means the given street address is where to send the product or act of service.
-  > - "`billing`": means the provided street address is where to send the receipt of the purchased product or service. 
+    > **Note:** a user's address to send their desired good and the transaction address can be distinguished by use the following tokens next to this value:
+    >
+    > - "`shipping`": means the given street address is where to send the product or act of service.
+    > - "`billing`": means the provided street address is where to send the receipt of the purchased product or service.
 - "`address-line1`", "`address-line2`", "`address-line3`"
   - : Each individual line of the street address. These should only be present if the "`street-address`" is not present.
 - "`address-level4`"
