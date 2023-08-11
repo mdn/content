@@ -28,10 +28,13 @@ This header is modeled on the {{cssxref("@media/prefers-color-scheme", "prefers-
   </tbody>
 </table>
 
-The **`Sec-CH-Prefers-Color-Scheme`** header expresses the user's media preference to see content in dark or light color schemes, allowing sites to obtain it at request time to inline the right CSS for performance reasons. If the server inlines CSS, it might want to include the {{HTTPHeader("Vary")}} header with `Sec-CH-Prefers-Color-Scheme` to specify that the response is tailored for a particular color scheme.
-The value reported by `Sec-CH-Prefers-Color-Scheme` should be equivalent to the same value used in CSS Media Queries [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) and the JavaScript API {{domxref("Window.matchMedia()")}}.
+## Usage notes
 
-`Sec-CH-Prefers-Color-Scheme` is a high entropy hint so the site needs to opt into receiving it by sending an appropriate response header {{HTTPHeader("Accept-CH")}}. A user agent may intentionally omit the `Sec-CH-Prefers-Color-Scheme` header to preserve user privacy, since the user's preference could in theory be used for fingerprinting.
+The **`Sec-CH-Prefers-Color-Scheme`** header allows sites to obtain user color scheme preference at request time; they could then choose to provide the relevant CSS for the user's preference inline, for performance reasons. If the server inlines the CSS, it might want to include a {{HTTPHeader("Vary")}} response header specifying `Sec-CH-Prefers-Color-Scheme`, to indicate that the response is tailored for a particular color scheme.
+
+If performance is not a critical consideration in this context, you could instead handle the user's color scheme preference using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query, and/or the {{domxref("Window.matchMedia()")}} API.
+
+`Sec-CH-Prefers-Color-Scheme` is a high entropy hint so the site needs to opt into receiving it by sending an appropriate {{HTTPHeader("Accept-CH")}} response header. A user agent may intentionally omit the `Sec-CH-Prefers-Color-Scheme` header to preserve user privacy since the user's preference could, in theory, be used for fingerprinting.
 
 ## Syntax
 
