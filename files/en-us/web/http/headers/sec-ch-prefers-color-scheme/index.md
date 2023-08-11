@@ -31,7 +31,7 @@ This header is modeled on the {{cssxref("@media/prefers-color-scheme", "prefers-
 The **`Sec-CH-Prefers-Color-Scheme`** header expresses the user's media preference to see content in dark or light color schemes, allowing sites to obtain it at request time to inline the right CSS for performance reasons. If the server inlines CSS, it might want to include the {{HTTPHeader("Vary")}} header with `Sec-CH-Prefers-Color-Scheme` to specify that the response is tailored for a particular color scheme.
 The value reported by `Sec-CH-Prefers-Color-Scheme` should be equivalent to the same value used in CSS Media Queries [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) and the JavaScript API {{domxref("Window.matchMedia()")}}.
 
-`Sec-CH-Prefers-Color-Scheme` is a high entropy hint so the site needs to opt into receiving it by sending an appropriate response header {{HTTPHeader("Accept-CH")}}. The user agent may intentionally omit the `Sec-CH-Prefers-Color-Scheme` header to preserve user privacy since the reported user preference could in theory be used for user fingerprinting.
+`Sec-CH-Prefers-Color-Scheme` is a high entropy hint so the site needs to opt into receiving it by sending an appropriate response header {{HTTPHeader("Accept-CH")}}. A user agent may intentionally omit the `Sec-CH-Prefers-Color-Scheme` header to preserve user privacy, since the user's preference could in theory be used for fingerprinting.
 
 ## Syntax
 
