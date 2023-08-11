@@ -107,7 +107,7 @@ Like with Firefox, because this quota is calculated based on the hard drive tota
 
 #### Safari
 
-Starting with macOS 14 and iOS 17, Safari allots  up to around 20% of the total disk space for each origin. If the user has saved it as a web app on the Home Screen or the Dock, this limit is increased to up to 60% of the disk size. For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
+Starting with macOS 14 and iOS 17, Safari allots up to around 20% of the total disk space for each origin. If the user has saved it as a web app on the Home Screen or the Dock, this limit is increased to up to 60% of the disk size. For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
 
 For instance, a macOS device with a 1 TiB drive will limit each origin to around 200 GiB. If the user stores a web app on its Dock, that will be alloted a greater limit of around 600 GiB.
 
