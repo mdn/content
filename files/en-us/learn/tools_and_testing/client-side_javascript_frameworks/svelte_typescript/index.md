@@ -207,7 +207,7 @@ In this case, if you run `npm run check` (either in the VS Code console or termi
 
 ![Check command being run inside VS Code showing type error, ms variable should be assigned a number](07-vscode-svelte-check.png)
 
-Even better, if you run it from the VS Code integrated terminal (you can open it with the <kbd>Ctrl</kbd> + <kbd>`</kbd> keyboard shortcut), <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> clicking on the file name will take you to the line containing the error.
+Even better, if you run it from the VS Code integrated terminal (you can open it with the <kbd>Ctrl</kbd> + <kbd>\`</kbd> keyboard shortcut), <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> clicking on the file name will take you to the line containing the error.
 
 You can also run the `check` script in watch mode with `npm run check -- --watch`. In this case, the script will execute whenever you change any file. If you are running this in your regular terminal, keep it running in the background in a separate terminal window so that it can keep reporting errors but won't interfere with other terminal usage.
 
@@ -300,7 +300,10 @@ Let's start with our `Alert.svelte` component.
 1. Add `lang="ts"` into your `Alert.svelte` component's `<script>` tag. You'll see some warnings in the output of the `check` script:
 
    ```bash
-   $ npm run check -- --watch
+   npm run check -- --watch
+   ```
+
+   ```plain
    > svelte-check "--watch"
 
    ./svelte-todo-typescript
@@ -345,7 +348,7 @@ Now we'll do the same for the `MoreActions.svelte` component.
 
 1. Add the `lang='ts'` attribute, like before. TypeScript will warn us about the `todos` prop and the `t` variable in the call to `todos.filter((t) =>...)`.
 
-   ```
+   ```plain
    Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
      export let todos
 
@@ -543,7 +546,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
 
 We are encountering the following errors related to passing `todos` to the `TodosStatus.svelte` (and `Todo.svelte`) components:
 
-```
+```plain
 ./src/components/Todos.svelte:70:39
 Error: Type 'TodoType[]' is not assignable to type 'undefined'. (ts)
   <TodosStatus bind:this={todosStatus} {todos} />

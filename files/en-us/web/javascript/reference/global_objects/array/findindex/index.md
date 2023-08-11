@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.findIndex
 
 {{JSRef}}
 
-The **`findIndex()`** method returns the index of the first element in an array that satisfies the provided testing function.
+The **`findIndex()`** method of {{jsxref("Array")}} instances returns the index of the first element in an array that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).

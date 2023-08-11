@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.every
 
 {{JSRef}}
 
-The **`every()`** method tests whether
+The **`every()`** method of {{jsxref("Array")}} instances tests whether
 all elements in the array pass the test implemented by the provided function. It
 returns a Boolean value.
 
@@ -59,7 +59,7 @@ The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 
 ### Testing size of all array elements
 
-The following example tests whether all elements in the array are bigger than 10.
+The following example tests whether all elements in the array are bigger than 9.
 
 ```js
 function isBigEnough(element, index, array) {

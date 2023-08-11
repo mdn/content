@@ -63,7 +63,7 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
   - {{cssxref("::cue", "::cue()")}}
   - {{cssxref("::cue-region")}}
 
-- CSS scoping module
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
@@ -77,7 +77,7 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
 
   - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
-  - [Combinators](/en-US/docs/Web/CSS/CSS_Selectors/selectors_and_combinators#combinators)
+  - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
   - [Class selectors](/en-US/docs/Web/CSS/Class_selectors)
   - [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
   - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)

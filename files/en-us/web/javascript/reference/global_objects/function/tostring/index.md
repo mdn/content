@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Function.toString
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the source code of the specified {{jsxref("Function")}}.
+The **`toString()`** method of {{jsxref("Function")}} instances returns a string representing the source code of this function.
 
 {{EmbedInteractiveExample("pages/js/function-tostring.html")}}
 

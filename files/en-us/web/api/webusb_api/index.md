@@ -26,7 +26,7 @@ When connecting a new WebUSB-compatible device, the browser displays a notificat
 - {{domxref("USB")}}
   - : Provides attributes and methods for finding and connecting USB devices from a web page.
 - {{domxref("USBConnectionEvent")}}
-  - : The event type passed to {{domxref("USB.onconnect")}} or {{domxref("USB.ondisconnect")}} when the user agent detects a new USB device has been connected to, or disconnected from the host.
+  - : The event type passed to `USB` {{domxref("USB.connect_event", "connect")}} or {{domxref("USB.disconnect_event", "disconnect")}} events when the user agent detects a new USB device has been connected to, or disconnected from the host.
 - {{domxref("USBDevice")}}
   - : Provides access to metadata about a paired USB device and methods for controlling it.
 - {{domxref("USBInTransferResult")}}

@@ -133,6 +133,8 @@ console.log(Int8Array.from.call(NotArray2, [1, 2, 3]));
 ## See also
 
 - [Polyfill of `TypedArray.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.of()")}}
+- {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("Array.from()")}}
-- {{jsxref("Array.prototype.map()")}}

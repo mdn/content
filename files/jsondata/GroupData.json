@@ -485,9 +485,9 @@
       "properties": [],
       "events": []
     },
-    "File System Access API": {
-      "overview": ["File System Access API"],
-      "guides": [],
+    "File System API": {
+      "overview": ["File System API"],
+      "guides": ["/docs/Web/API/File_System_API/Origin_private_file_system"],
       "interfaces": [
         "FileSystemHandle",
         "FileSystemFileHandle",
