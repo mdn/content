@@ -26,7 +26,7 @@ The different output gate types are detailed below:
   </thead>
   <tbody>
     <tr>
-      <td>Content Selection</td>
+      <td>URL Selection</td>
       <td>Used to select a URL from a provided list to display to the user, based on shared storage data.</td>
       <td>{{domxref("SharedStorageSelectURLOperation")}}</td>
       <td>{{domxref("WindowSharedStorage.selectURL()", "selectURL()")}}</td>
@@ -48,7 +48,7 @@ Many shared storage worklet module scripts only define and register a single ope
 
 ## Defining multiple operations
 
-It is however perfectly possible, in more advanced cases, to define and register multiple operations in the same shared storage worklet module script with different names. In the following worklet module script, we define a Content Selection operation called `SelectURLOperation` that selects a URL for A/B testing, and a Run operation called `ExperimentGroupReportingOperation`, which runs a histogram report based on the user's A/B testing group:
+It is however perfectly possible, in more advanced cases, to define and register multiple operations in the same shared storage worklet module script with different names. In the following worklet module script, we define a URL Selection operation called `SelectURLOperation` that selects a URL for A/B testing, and a Run operation called `ExperimentGroupReportingOperation`, which runs a histogram report based on the user's A/B testing group:
 
 ```js
 // ab-testing-worklet.js

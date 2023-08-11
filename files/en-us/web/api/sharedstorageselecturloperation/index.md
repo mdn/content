@@ -9,14 +9,14 @@ browser-compat: api.SharedStorageSelectURLOperation
 
 {{APIRef("Shared Storage API")}}{{SeeCompatTable}}
 
-The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a Content Selection output gate operation.
+The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a URL Selection output gate operation.
 
 {{InheritanceDiagram}}
 
 ## Instance methods
 
 - {{domxref("SharedStorageSelectURLOperation.run", "run()")}} {{Experimental_Inline}}
-  - : Defines the structure that the `run()` method defined inside a Content Selection output gate operation should conform to.
+  - : Defines the structure that the `run()` method defined inside a URL Selection output gate operation should conform to.
 
 ## Examples
 
