@@ -123,7 +123,7 @@ browser.bookmarks.onCreated.addListener(() => {
 
 Do not register listeners asynchronously, as they will not be properly triggered. So, rather than:
 
-```js
+```js example-bad
 window.onload = () => {
   // WARNING! This event is not persisted, and will not restart the event page.
   browser.bookmarks.onCreated.addListener(() => {
@@ -264,7 +264,7 @@ browser.runtime.onStartup.addListener(() => {
 
 Scripts now open and close as needed. So, do not rely on global variables.
 
-```js bad-example
+```js example-bad
 var count = 101;
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === "count") {
