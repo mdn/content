@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### CSS
 
+- The [`math-style`](/en-US/docs/Web/CSS/math-style) and [`math-depth`](/en-US/docs/Web/CSS/math-depth) properties are now supported, as well as the `math` value for the [`font-size`](/en-US/docs/Web/CSS/font-size#values) property ([Firefox bug 1845516](https://bugzil.la/1845516)).
+
 #### Removals
 
 ### JavaScript
@@ -33,6 +35,9 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### HTTP
 
+- Fixed a bug where the [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) `'strict-dynamic'` source expression was not being enforced in `default-src` directives.
+  The behavior now matches the specification where `default-src` directive values are used as a fallback when `script-src` is not provided ([Firefox bug 1313937](https://bugzil.la/1313937)).
+
 #### Removals
 
 ### Security
@@ -40,6 +45,9 @@ This article provides information about the changes in Firefox 117 that affect d
 #### Removals
 
 ### APIs
+
+- The {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} method can now be used to get the 2D context attributes being used by the browser ([Firefox bug 1517786](https://bugzil.la/1517786)).
+- The {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} static member is now supported, allowing developers to construct a readable stream from any iterable or async iterable object ([Firefox bug 1772772](https://bugzil.la/1772772)).
 
 #### DOM
 

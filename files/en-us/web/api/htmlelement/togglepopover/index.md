@@ -33,13 +33,9 @@ togglePopover(force)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
-
-<!-- Spec requirement - from undefined to boolean. Waiting on implementation such as https://bugzilla.mozilla.org/show_bug.cgi?id=1842845
 `true` if the popup is open after the call, and `false` otherwise.
 
-{{jsxref("undefined")}} may be returned in older browsers (see [browser compatibility](#browser_compatibility)).
--->
+None ({{jsxref("undefined")}}) may be returned in older browser versions (see [browser compatibility](#browser_compatibility)).
 
 ## Examples
 
@@ -96,20 +92,17 @@ We also log whether the popup was open or closed after the call, but only if a `
 if (HTMLElement.prototype.hasOwnProperty("popover")) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "h") {
-      popover.togglePopover();
+      const popupOpened = popover.togglePopover();
+
+      // Check if popover is opened or closed on supporting browsers
+      if (popupOpened !== undefined) {
+        instructions.innerText +=
+          popupOpened === true ? `\nOpened` : `\nClosed`;
+      }
     }
   });
 }
 ```
-
-<!-- modifications to code once togglePopover() returns boolean
-      const popupOpened = popover.togglePopover();
-
-      // If not undefined, you can check if popover is opened or closed.
-      console.log(`popupOpened: ${popupOpened}`)
-      if (popupOpened === true) instructions.innerText += `\nOpened`;
-      if (popupOpened === false) instructions.innerText += `\nClosed`;
--->
 
 You can test this out using the live example below.
 

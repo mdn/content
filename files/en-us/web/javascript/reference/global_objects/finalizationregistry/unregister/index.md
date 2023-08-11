@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.FinalizationRegistry.unregister
 
 {{JSRef}}
 
-The **`unregister()`** method unregisters a target value from a
-{{jsxref("FinalizationRegistry")}} instance.
+The **`unregister()`** method of {{jsxref("FinalizationRegistry")}} instances unregisters a target value from this `FinalizationRegistry`.
 
 ## Syntax
 

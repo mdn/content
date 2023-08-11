@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Set.delete
 
 {{JSRef}}
 
-The **`delete()`** method removes a specified value from a
-`Set` object, if it is in the set.
+The **`delete()`** method of {{jsxref("Set")}} instances removes a specified value from this set, if it is in the set.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 

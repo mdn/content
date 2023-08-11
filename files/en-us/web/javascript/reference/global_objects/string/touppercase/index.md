@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.String.toUpperCase
 
 {{JSRef}}
 
-The **`toUpperCase()`** method returns the calling string value
-converted to uppercase (the value will be converted to a string if it isn't one).
+The **`toUpperCase()`** method of {{jsxref("String")}} values returns this string converted to uppercase.
 
 {{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
 

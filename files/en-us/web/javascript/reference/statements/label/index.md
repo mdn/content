@@ -94,7 +94,7 @@ Given an array of items and an array of tests, this example counts the number of
 
 ```js
 // Numbers from 1 to 100
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -117,7 +117,7 @@ Note how the `continue itemIteration;` statement skips the rest of the tests for
 
 ```js
 // Numbers from 1 to 100
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -145,7 +145,7 @@ Given an array of items and an array of tests, this example determines whether a
 
 ```js
 // Numbers from 1 to 100
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -167,7 +167,7 @@ Again, if you don't use a label, you would need to use a boolean flag instead.
 
 ```js
 // Numbers from 1 to 100
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },

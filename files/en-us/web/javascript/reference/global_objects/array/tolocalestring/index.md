@@ -7,10 +7,10 @@ browser-compat: javascript.builtins.Array.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method returns a string representing
-the elements of the array. The elements are converted to Strings using their
-`toLocaleString` methods and these Strings are separated by a locale-specific
-String (such as a comma ",").
+The **`toLocaleString()`** method of {{jsxref("Array")}} instances returns a string representing
+the elements of the array. The elements are converted to strings using their
+`toLocaleString` methods and these strings are separated by a locale-specific
+string (such as a comma ",").
 
 {{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}
 
