@@ -1,15 +1,6 @@
 ---
 title: Sec-CH-Prefers-Color-Scheme
 slug: Web/HTTP/Headers/Sec-CH-Prefers-Color-Scheme
-tags:
-  - Sec-CH-Prefers-Color-Scheme
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - prefers-color-scheme
-  - Reference
-  - Request header
-  - Experimental
 browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
 ---
 
