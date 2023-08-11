@@ -31,7 +31,11 @@ A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
-  - : The data sent by the message emitter. For text data, this will be a `string`. For binary data, it will be a {{domxref("Blob")}} (with {{domxref("Blob.type")}} `""`), or an {{jsxref("ArrayBuffer")}}, depending on the value of {{domxref("WebSocket.binarytype")}}.
+  - : The data sent by the message emitter. The type of this property depends on the type of the WebSocket message and the value of {{domxref("WebSocket.binaryType")}}.
+    - If the message type is "text", then this field is a string.
+    - If the message type is "binary" type, then the type of this property can be inferred from the `binaryType` of this socket:
+      - {{jsxref("ArrayBuffer")}} if `binaryType` is `"arraybuffer"`,
+      - {{domxref("Blob")}} if `binaryType` is `"blob"`. This does not have an associated media type ({{domxref("Blob.type")}} is `""`).
 - {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
   - : A string representing the origin of the message emitter.
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
