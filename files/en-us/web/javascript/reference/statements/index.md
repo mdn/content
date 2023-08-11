@@ -129,7 +129,7 @@ You can see declarations as "{{glossary("binding")}} identifiers to values", and
 
 As another example, [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) can only be attached to statements.
 
-```js example-bad
+```js-nolint example-bad
 label: const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 

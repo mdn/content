@@ -187,7 +187,7 @@ console.log(`Hello``World`); // TypeError: "Hello" is not a function
 
 The only exception is optional chaining, which will throw a syntax error.
 
-```js example-bad
+```js-nolint example-bad
 console.log?.`Hello`; // SyntaxError: Invalid tagged template on optional chain
 console?.log`Hello`; // SyntaxError: Invalid tagged template on optional chain
 ```
@@ -340,7 +340,7 @@ latex`\unicode`;
 
 Note that the escape-sequence restriction is only dropped from _tagged_ templates, but not from _untagged_ template literals:
 
-```js example-bad
+```js-nolint example-bad
 const bad = `bad escape sequence: \unicode`;
 ```
 
