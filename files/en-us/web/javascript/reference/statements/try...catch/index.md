@@ -42,7 +42,7 @@ The `try` statement always starts with a `try` block. Then, a `catch` block or a
 
 Unlike other constructs such as [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for), the `try`, `catch`, and `finally` blocks must be _blocks_, instead of single statements.
 
-```js example-bad
+```js-nolint example-bad
 try doSomething(); // SyntaxError
 catch (e) console.log(e);
 ```
@@ -72,7 +72,7 @@ try {
 
 The bindings created by the `catch` clause live in the same scope as the `catch` block, so any variables declared in the `catch` block cannot have the same name as the bindings created by the `catch` clause. (There's [one exception to this rule](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements), but it's a deprecated syntax.)
 
-```js example-bad
+```js-nolint example-bad
 try {
   throw new TypeError("oops");
 } catch ({ name, message }) {

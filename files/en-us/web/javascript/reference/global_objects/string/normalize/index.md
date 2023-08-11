@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.String.normalize
 
 {{JSRef}}
 
-The **`normalize()`** method returns the Unicode Normalization
-Form of the string.
+The **`normalize()`** method of {{jsxref("String")}} values returns the Unicode Normalization
+Form of this string.
 
 {{EmbedInteractiveExample("pages/js/string-normalize.html", "taller")}}
 

@@ -16,7 +16,7 @@ The {{domxref("RTCRtpSender")}} method **`setStreams()`** associates the sender'
 setStreams()
 setStreams(mediaStream0)
 setStreams(mediaStream0, mediaStream1)
-setStreams(mediaStream0, mediaStream1, /* … ,*/ mediaStreamN)
+setStreams(mediaStream0, mediaStream1, /* …, */ mediaStreamN)
 ```
 
 ### Parameters

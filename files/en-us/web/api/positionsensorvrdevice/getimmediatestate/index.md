@@ -58,7 +58,7 @@ function setView() {
 }
 ```
 
-Here we are grabbing a {{domxref("VRPose")}} object using `getImmediateState()` and storing it in `posState` (the actual live demo uses `getState()`, but both seem to do the same thing currently.) We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.hasPosition")}} and {{domxref("VRPose.hasOrientation")}} (these return `null` if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)
+Here we are grabbing a {{domxref("VRPose")}} object using `getImmediateState()` and storing it in `posState` (the actual live demo uses `getState()`, but both seem to do the same thing currently.) We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} (these return `null` if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)
 
 We then output the x, y and z position and orientation values for informational purposes, and use those values to update the `xPos`, `yPos`, `zPos`, `xOrient`, `yOrient`, and `zOrient` variables, which are used to update the scene rendering on each frame.
 

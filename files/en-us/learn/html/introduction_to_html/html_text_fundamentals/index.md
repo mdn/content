@@ -271,7 +271,7 @@ Now let's turn our attention to lists. Lists are everywhere in life—from your 
 
 Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:
 
-```
+```plain
 milk
 eggs
 bread
@@ -438,7 +438,7 @@ textarea.onkeyup = () => {
 
 Ordered lists are lists in which the order of the items _does_ matter. Let's take a set of directions as an example:
 
-```
+```plain
 Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts

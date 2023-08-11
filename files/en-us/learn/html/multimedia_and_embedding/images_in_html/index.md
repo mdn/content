@@ -205,7 +205,7 @@ It is better to include such supporting information in the main article text, ra
 
 It is now your turn to play! This active learning section will have you up and running with a simple embedding exercise. You are provided with a basic {{htmlelement("img")}} tag; we'd like you to embed the image located at the following URL:
 
-```
+```url
 https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
 ```
 

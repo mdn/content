@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Error.toString
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-specified {{jsxref("Error")}} object.
+The **`toString()`** method of {{jsxref("Error")}} instances returns a string representing this error.
 
 ## Syntax
 

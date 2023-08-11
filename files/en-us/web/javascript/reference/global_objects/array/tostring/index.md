@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.toString
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
+The **`toString()`** method of {{jsxref("Array")}} instances returns a string representing the
 specified array and its elements.
 
 {{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}

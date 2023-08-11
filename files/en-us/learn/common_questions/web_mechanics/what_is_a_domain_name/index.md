@@ -90,7 +90,12 @@ To find out whether a given domain name is available,
 - Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
 
   ```bash
-  $ whois mozilla.org
+  whois mozilla.org
+  ```
+
+  This will output the following:
+
+  ```plain
   Domain Name:MOZILLA.ORG
   Domain ID: D1409563-LROR
   Creation Date: 1998-01-24T05:00:00Z
@@ -119,11 +124,16 @@ As you can see, I can't register `mozilla.org` because the Mozilla Foundation ha
 On the other hand, let's see if I could register `afunkydomainname.org`:
 
 ```bash
-$ whois afunkydomainname.org
+whois afunkydomainname.org
+```
+
+This will output the following (at the time of writing):
+
+```plain
 NOT FOUND
 ```
 
-As you can see, the domain does not exist in the `whois` database (at the time of writing), so we could ask to register it. Good to know!
+As you can see, the domain does not exist in the `whois` database, so we could ask to register it. Good to know!
 
 #### Getting a domain name
 
