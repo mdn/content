@@ -80,7 +80,7 @@ To create a flex container, we set its {{cssxref("display")}} property value to 
 
 We define the widths of the flex items on the flex items themselves; setting different widths better demonstrates the `column-gap` property. We use the {{cssxref("flex-basis")}} component of the {{cssxref("flex")}} shorthand property to make all the flex items `200px` wide. We then target every third flex item with the {{cssxref(":nth-of-type", ":nth-of-type(3n)")}} selector, widening them to `300px`.
 
-We set `column-gap: 20px;` on the flex container to create 20px of horizontal space -- a 20px gap -- between adjacent flex items in each row.
+We set `column-gap: 20px;` on the flex container to create 20px of horizontal space — a 20px gap — between adjacent flex items in each row.
 
 ```css
 .flexbox {
