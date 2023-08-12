@@ -194,7 +194,7 @@ console?.log`Hello`; // SyntaxError: Invalid tagged template on optional chain
 
 Note that these two expressions are still parsable. This means they would not be subject to [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), which will only insert semicolons to fix code that's otherwise unparsable.
 
-```js example-bad
+```js-nolint example-bad
 // Still a syntax error
 const a = console?.log
 `Hello`
