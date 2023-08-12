@@ -40,7 +40,7 @@ In this example, the `<em>` element is used to hilite an implicit or explicit co
 ```html
 <p>
   Ice cream is made with milk, sweetener, and cream. Frozen custard, on the
-  other hand, is made of milk, cream, sweetener, and <em> egg yolks</em>.
+  other hand, is made of milk, cream, sweetener, and <em>egg yolks</em>.
 </p>
 ```
 
