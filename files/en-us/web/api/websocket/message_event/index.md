@@ -38,12 +38,11 @@ _In addition to the properties listed below, properties from the parent interfac
       - {{domxref("Blob")}} if `binaryType` is `"blob"`. This does not have an associated media type ({{domxref("Blob.type")}} is `""`).
 - {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
   - : A string representing the origin of the message emitter.
+ 
+Other properties from the {{domxref("MessageEvent")}} interface are present, but do not pertain to the WebSocket API and are left at their default values:
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
-  - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
-  - : A `MessageEventSource` (which can be a {{domxref("Window")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
