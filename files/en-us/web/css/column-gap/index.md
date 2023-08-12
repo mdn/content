@@ -59,6 +59,8 @@ The `column-gap` property is specified as one of the values listed below.
 
 ### Flex layout
 
+In this example, a flex container contains six flex items of two different widths, creating flex items that are not laid out as a grid. The horizontal space between adjacent flex items is set using the `column-gap` property.
+
 #### HTML
 
 ```html
@@ -73,6 +75,12 @@ The `column-gap` property is specified as one of the values listed below.
 ```
 
 #### CSS
+
+To create a flex container, we set its {{cssxref("display")}} property value to `flex`. We then use the {{cssxref("flex-flow")}} shorthand property to set the {{cssxref("flex-direction")}} to row (the default) and the {{cssxref("flex-wrap")}} to `wrap`, allowing the flex items to flow onto new lines if needed. By default, flex items stretch to be as tall as their container. By setting a {{cssxref("height")}}, even our empty flex items will be 100% tall.
+
+We define the widths of the flex items on the flex items themselves; setting different widths better demonstrates the `column-gap` property. We use the {{cssxref("flex-basis")}} component of the {{cssxref("flex")}} shorthand property to make all the flex items `200px` wide. We then target every third flex item with the {{cssxref(":nth-of-type", ":nth-of-type(3n)")}} selector, widening them to `300px`.
+
+We set `column-gap: 20px;` on the flex container to create 20px of horizontal space -- a 20px gap -- between adjacent flex items in each row.
 
 ```css
 .flexbox {
@@ -95,6 +103,10 @@ div:nth-of-type(3n) {
 #### Result
 
 {{EmbedLiveSample("Flex_layout", "auto", "220px")}}
+
+The `column-gap` property defines the width of horizontal space between adjacent flex items. 
+
+While there is horizontal space between adjacent flex items in each flex row, there is no space between the rows. To set vertical space between flex rows, a non-zero value for the {{cssxref("row-gap")}} property is used. The {{cssxref("gap")}} shorthand property is also available to set both the `row-gap` and `column-gap` in one declaration, in that order.
 
 ### Grid layout
 
