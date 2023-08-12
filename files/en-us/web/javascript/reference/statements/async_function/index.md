@@ -34,7 +34,7 @@ async function name(param0, param1, /* …, */ paramN) {
 - `name`
   - : The function's name.
 - `param` {{optional_inline}}
-  - : The name of an argument to be passed to the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements comprising the body of the function. The `await`
     mechanism may be used.
