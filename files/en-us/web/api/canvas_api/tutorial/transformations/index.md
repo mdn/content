@@ -45,7 +45,6 @@ You can call the `save()` method as many times as you like. Each time the `resto
 
 ### A `save` and `restore` canvas state example
 
-
 ```js
 function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
