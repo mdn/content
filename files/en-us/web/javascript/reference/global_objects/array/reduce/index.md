@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.reduce
 
 {{JSRef}}
 
-The **`reduce()`** method executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
+The **`reduce()`** method of {{jsxref("Array")}} instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
 The final result of running the reducer across all elements of the array is a single value.
 
 The first time that the callback is run there is no "return value of the previous calculation".
@@ -238,7 +238,7 @@ console.log([1, 2, undefined, 4].reduce((a, b) => a + b)); // NaN
 
 ### Calling reduce() on non-array objects
 
-The `reduce()` method reads the `length` property of `this` and then accesses each integer index.
+The `reduce()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -246,6 +246,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 99, // ignored by reduce() since length is 3
 };
 console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 // 9
@@ -317,7 +318,7 @@ Some of the acceptable use cases of `reduce()` are given above (most notably, su
   const flattened = array.flat();
   ```
 
-- Grouping objects by a property. Use {{jsxref("Array/group", "group()")}} instead.
+- Grouping objects by a property. Use {{jsxref("Object.groupBy()")}} instead.
 
   ```js example-bad
   const groups = array.reduce((acc, obj) => {
@@ -328,7 +329,7 @@ Some of the acceptable use cases of `reduce()` are given above (most notably, su
   ```
 
   ```js example-good
-  const groups = array.group((obj) => obj.name);
+  const groups = Object.groupBy(array, (obj) => obj.name);
   ```
 
 - Concatenating arrays contained in an array of objects. Use {{jsxref("Array/flatMap", "flatMap()")}} instead.
@@ -407,10 +408,10 @@ In cases where `reduce()` is the best choice, documentation and semantic variabl
 - [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
-- {{jsxref("Array.prototype.group()")}}
-- {{jsxref("Array.prototype.groupToMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}
 - {{jsxref("TypedArray.prototype.reduce()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

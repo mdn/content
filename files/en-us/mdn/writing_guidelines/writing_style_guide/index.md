@@ -150,7 +150,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is <!--link to be revised-->. Be sure every section that it should have is present and has appropriate content.
   - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters are listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
-  - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details and the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information. <!--link to be revised-->
+  - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
@@ -415,7 +415,7 @@ A page on MDN Web Docs can contain more than one code example. The following lis
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
 - When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) <!--link to be revised-->, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
-To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide). <!--link to be revised-->
+To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 ### External links
 
@@ -552,8 +552,8 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Correct**: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors for styling checkboxes
 - Don't use the conjunction "and" before the last item in the series.
   - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
-- After an external link and the source website, mention the date or year when the article was published within parentheses. Specify date using the format "January 1, 1900". The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
-  - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)
+- After an external link and the source website, mention the year when the article was published within parentheses. The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
+  - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
 
 #### Order of links
 
@@ -572,7 +572,7 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 - [JavaScript/Guide](/en-US/docs/Web/JavaScript/Guide) – Main table-of-contents page
 - [JavaScript/Guide/JavaScript Overview](/en-US/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/Guide/Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 Try to avoid putting your article at the top of the hierarchy, which slows the site down and makes search and site navigation less effective.
 

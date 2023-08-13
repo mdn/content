@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.values
 
 {{JSRef}}
 
-The **`values()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
+The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
@@ -129,7 +129,7 @@ for (const element of [, "a"].values()) {
 
 ### Calling values() on non-array objects
 
-The `values()` method reads the `length` property of `this` and then accesses each integer index.
+The `values()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -137,6 +137,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "d", // ignored by values() since length is 3
 };
 for (const entry of Array.prototype.values.call(arrayLike)) {
   console.log(entry);

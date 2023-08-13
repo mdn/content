@@ -147,7 +147,11 @@ Here are some sample colors in HSL notation:
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -254,7 +258,7 @@ The HTML responsible for creating the above example is shown here:
 
 This is pretty simple, using a {{HTMLElement("div")}} as a wrapper around the contents, which consists of two more `<div>`s, each styled differently with a single paragraph ({{HTMLElement("p")}}) in each box.
 
-The magic happens, as usual, in the CSS, where we'll apply colors define the layout for the HTML above.
+The magic happens, as usual, in the CSS, where we'll apply colors and define the layout for the HTML above.
 
 #### CSS
 
@@ -282,7 +286,10 @@ Our two colored boxes share a number of properties in common, so next we establi
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,7 +369,11 @@ The CSS establishes a size for the box and some basic styling for appearances. T
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -382,7 +393,7 @@ colorPicker.addEventListener(
   (event) => {
     box.style.borderColor = event.target.value;
   },
-  false
+  false,
 );
 
 colorPicker.addEventListener(
@@ -390,7 +401,7 @@ colorPicker.addEventListener(
   (event) => {
     output.innerText = `Color set to ${colorPicker.value}.`;
   },
-  false
+  false,
 );
 ```
 

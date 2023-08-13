@@ -13,6 +13,7 @@ The **`get()`** method of the {{domxref("CredentialsContainer")}} interface retu
 - The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) uses `get()` to authenticate using basic federated credentials or username/password credentials.
 - The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) uses `get()` to authenticate or provide additional factors during MFA with public key credentials (based on asymmetric cryptography).
 - The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) uses `get()` to authenticate with federated identity providers.
+- The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) uses `get()` to request retrieval of a one-time password (OTP) from a specially-formatted SMS message sent by an app server.
 
 The below reference page starts with a syntax section that explains the general method call structure and parameters that apply to all the different APIs. After that, it is split into separate sections providing parameters, return values, and examples specific to each API.
 
@@ -36,6 +37,7 @@ get(options)
         - `federated`: An object containing requirements for a requested credential from a federated identify provider. Bear in mind that the Federated Credential Management API (the `identity` credential type) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
         - `password`: A boolean value indicating that a password credential is being requested. See the [Credential Management API](#credential_management_api) section below for more details.
         - `identity`: An object containing details of federated identity providers (IdPs) that a relying party (RP) website can use to sign users in. Causes the `get()` call to initiate a request for a user to sign in to a relying party with an IdP. See the [Federated Credential Management API](#federated_credential_management_api) section below for more details.
+        - `otp`: An object containing transport type hints. Causes the `get()` call to initiate a request for the retrieval of an OTP. See the [WebOTP API](#webotp_api) section below for more details.
         - `publicKey`: An object containing requirements for returned public key credentials. Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party. See the [Web Authentication API](#web_authentication_api) section below for more details.
 
     - `mediation` {{optional_inline}}
@@ -108,7 +110,7 @@ The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)
 - `configURL`
   - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for more information.
 - `clientId`
-  - : A string specifying the the RP's client identifier, issued by the IdP to the RP in a completely separate process specific to the IdP.
+  - : A string specifying the RP's client identifier, issued by the IdP to the RP in a completely separate process specific to the IdP.
 - `nonce` {{optional_inline}}
   - : A random string that can be included to ensure the response is issued for this specific request, and prevent {{glossary("replay attack", "replay attacks")}}.
 
@@ -144,6 +146,49 @@ async function signIn() {
 ```
 
 Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+
+## WebOTP API
+
+The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) lets a web client request an OTP from an SMS sent by the web app's server. This capability is intended to streamline usage of OTPs in web apps, for example when using phone numbers as additional factors in sign-in flows. The OTP is retrieved from the SMS and can be set as a verification input value automatically after the user gives consent, avoiding the need for the user to manually go into their SMS app and copy and paste it.
+
+### `otp` object structure
+
+`otp` will contain the following properties:
+
+- `transport`
+  - : An array of strings representing transport hints for how the OTP should ideally be transmitted. This will always contain a single hint — `"sms"`. Unknown values will be ignored.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with an {{domxref("OTPCredential")}} object instance.
+
+### Exceptions
+
+- `AbortError` {{domxref("DOMException")}}
+  - : The `get()` operation is associated with an {{domxref("AbortSignal")}} (i.e., set in the `signal` property) that has already been aborted.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Either the usage is blocked by a {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) or the calling domain is not a valid domain.
+
+### Examples
+
+The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted, then the promise resolves with an `OTPCredential` object. The contained `code` value is then set as the value of an {{htmlelement("input")}} form element, which is then submitted.
+
+```js
+navigator.credentials
+  .get({
+    otp: { transport: ["sms"] },
+    signal: ac.signal,
+  })
+  .then((otp) => {
+    input.value = otp.code;
+    if (form) form.submit();
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+```
+
+> **Note:** For a full explanation of the code, see the {{domxref('WebOTP API','','',' ')}} landing page. You can also [see this code as part of a full working demo](https://web-otp.glitch.me/).
 
 ## Web Authentication API
 
@@ -264,10 +309,10 @@ navigator.credentials.get({ publicKey }).then((publicKeyCredential) => {
   const clientJSON = response.clientDataJSON;
 
   // Access signature ArrayBuffer
-  const clientJSON = response.signature;
+  const signature = response.signature;
 
   // Access userHandle ArrayBuffer
-  const clientJSON = response.userHandle;
+  const userHandle = response.userHandle;
 });
 ```
 

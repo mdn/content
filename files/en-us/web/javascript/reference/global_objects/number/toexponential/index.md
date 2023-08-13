@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.Number.toExponential
 
 {{JSRef}}
 
-The **`toExponential()`** method returns a string representing
-the {{jsxref("Number")}} object in exponential notation.
+The **`toExponential()`** method of {{jsxref("Number")}} values returns a string representing
+this number in exponential notation.
 
 {{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
 
@@ -34,7 +34,7 @@ with one digit before the decimal point, rounded to
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `fractionDigits` is not between `1` and `100` (inclusive).
+  - : Thrown if `fractionDigits` is not between `0` and `100` (inclusive).
 - {{jsxref("TypeError")}}
   - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 

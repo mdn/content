@@ -7,7 +7,7 @@ browser-compat: webextensions.api.webNavigation.onDOMContentLoaded
 
 {{AddonSidebar()}}
 
-Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event) event is fired in the page. At this point the document is loaded and parsed, and the DOM is fully constructed, but linked resources such as images, stylesheets and subframes may not yet be loaded.
+Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event is fired in the page. At this point the document is loaded and parsed, and the DOM is fully constructed, but linked resources such as images, stylesheets and subframes may not yet be loaded.
 
 ## Syntax
 
@@ -68,18 +68,17 @@ Logs the target URLs for `onDOMContentLoaded`, if the target URL's hostname cont
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnDOMContentLoaded(details) {
   console.log(`onDOMContentLoaded: ${details.url}`);
 }
 
-browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(
+  logOnDOMContentLoaded,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

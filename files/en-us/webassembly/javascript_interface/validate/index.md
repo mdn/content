@@ -6,7 +6,7 @@ browser-compat: javascript.builtins.WebAssembly.validate
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.validate()`** function validates a given [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of WebAssembly binary
+The **`WebAssembly.validate()`** function validates a given [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) of WebAssembly binary
 code, returning whether the bytes form a valid Wasm module (`true`) or not
 (`false`).
 
@@ -19,7 +19,7 @@ WebAssembly.validate(bufferSource)
 ### Parameters
 
 - `bufferSource`
-  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+  - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
     containing WebAssembly binary code to be validated.
 
 ### Return value
@@ -29,7 +29,7 @@ A boolean that specifies whether `bufferSource` is valid Wasm code
 
 ### Exceptions
 
-If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer),
+If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer),
 a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
@@ -47,7 +47,7 @@ fetch("simple.wasm")
   .then((bytes) => {
     const valid = WebAssembly.validate(bytes);
     console.log(
-      `The given bytes are ${valid ? "" : "not "}a valid Wasm module`
+      `The given bytes are ${valid ? "" : "not "}a valid Wasm module`,
     );
   });
 ```

@@ -1,6 +1,7 @@
 ---
 title: Legacy layout methods
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

@@ -26,7 +26,7 @@ window.addEventListener("gamepadconnected", (e) => {
     e.gamepad.index,
     e.gamepad.id,
     e.gamepad.buttons.length,
-    e.gamepad.axes.length
+    e.gamepad.axes.length,
   );
 });
 ```
@@ -42,7 +42,7 @@ window.addEventListener("gamepaddisconnected", (e) => {
   console.log(
     "Gamepad disconnected from index %d: %s",
     e.gamepad.index,
-    e.gamepad.id
+    e.gamepad.id,
   );
 });
 ```
@@ -52,12 +52,12 @@ The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-
 ```js
 const gamepads = {};
 
-function gamepadHandler(event, connecting) {
+function gamepadHandler(event, connected) {
   const gamepad = event.gamepad;
   // Note:
   // gamepad === navigator.getGamepads()[gamepad.index]
 
-  if (connecting) {
+  if (connected) {
     gamepads[gamepad.index] = gamepad;
   } else {
     delete gamepads[gamepad.index];
@@ -69,14 +69,14 @@ window.addEventListener(
   (e) => {
     gamepadHandler(e, true);
   },
-  false
+  false,
 );
 window.addEventListener(
   "gamepaddisconnected",
   (e) => {
     gamepadHandler(e, false);
   },
-  false
+  false,
 );
 ```
 
@@ -98,7 +98,7 @@ window.addEventListener("gamepadconnected", (e) => {
     gp.index,
     gp.id,
     gp.buttons.length,
-    gp.axes.length
+    gp.axes.length,
   );
 });
 ```
@@ -150,7 +150,7 @@ Now we use the {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnecte
 window.addEventListener("gamepaddisconnected", (e) => {
   gamepadInfo.textContent = "Waiting for gamepad.";
 
-  cancelRequestAnimationFrame(start);
+  cancelAnimationFrame(start);
 });
 ```
 
@@ -310,7 +310,7 @@ function updateStatus() {
       a.textContent = `${i}: ${axis.toFixed(4)}`;
       a.setAttribute("value", axis + 1);
     });
-  }
+  });
 
   requestAnimationFrame(updateStatus);
 }

@@ -13,7 +13,7 @@ are used.
 
 ## Message
 
-```
+```plain
 TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them (V8-based & Firefox)
 TypeError: 'arguments', 'callee', and 'caller' cannot be accessed in this context. (Safari)
 ```

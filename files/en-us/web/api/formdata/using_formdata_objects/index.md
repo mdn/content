@@ -130,7 +130,7 @@ form.addEventListener(
     request.send(formData);
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -204,4 +204,4 @@ The `FormData` object doesn't include data from the fields that are disabled or 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

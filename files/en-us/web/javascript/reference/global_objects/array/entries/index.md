@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.entries
 
 {{JSRef}}
 
-The **`entries()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.
+The **`entries()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
@@ -72,7 +72,7 @@ for (const element of [, "a"].entries()) {
 
 ### Calling entries() on non-array objects
 
-The `entries()` method reads the `length` property of `this` and then accesses each integer index.
+The `entries()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -80,6 +80,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "d", // ignored by entries() since length is 3
 };
 for (const entry of Array.prototype.entries.call(arrayLike)) {
   console.log(entry);

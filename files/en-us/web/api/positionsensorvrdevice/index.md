@@ -25,8 +25,6 @@ The **`PositionSensorVRDevice`** interface of the [WebVR API](/en-US/docs/Web/AP
 
 _This interface doesn't define any properties of its own, but it does inherit the properties of its parent interface, {{domxref("VRDisplay")}}._
 
-- {{domxref("VRDisplay.hardwareUnitId")}} {{ReadOnlyInline}}
-  - : Returns the distinct hardware ID for the overall hardware unit that this `VRDevice` is a part of. All devices that are part of the same physical piece of hardware will have the same `hardwareUnitId`.
 - {{domxref("VRDisplay.displayId")}} {{ReadOnlyInline}}
   - : Returns the ID for this specific `VRDevice`. The ID shouldn't change across browser restarts, allowing configuration data to be saved based on it.
 - {{domxref("VRDisplay.displayName")}} {{ReadOnlyInline}}
@@ -41,7 +39,7 @@ function setView() {
   const posState = gPositionSensor.getState();
   if (posState.hasPosition) {
     posPara.textContent = `Position: x${roundToTwo(
-      posState.position.x
+      posState.position.x,
     )} y${roundToTwo(posState.position.y)} z${roundToTwo(posState.position.z)}`;
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
@@ -50,9 +48,9 @@ function setView() {
 
   if (posState.hasOrientation) {
     orientPara.textContent = `Orientation: x${roundToTwo(
-      posState.orientation.x
+      posState.orientation.x,
     )} y${roundToTwo(posState.orientation.y)} z${roundToTwo(
-      posState.orientation.z
+      posState.orientation.z,
     )}`;
     xOrient = posState.orientation.x * WIDTH;
     yOrient = -posState.orientation.y * HEIGHT * 2;
@@ -61,7 +59,7 @@ function setView() {
 }
 ```
 
-Here we are grabbing a {{domxref("VRPose")}} object using {{domxref("PositionSensorVRDevice.getState()")}} and storing it in `posState`. We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.hasPosition")}} and {{domxref("VRPose.hasOrientation")}} (these return `null` if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)
+Here we are grabbing a {{domxref("VRPose")}} object using {{domxref("PositionSensorVRDevice.getState()")}} and storing it in `posState`. We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} (these return `null` if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)
 
 We then output the x, y and z position and orientation values for informational purposes, and use those values to update the `xPos`, `yPos`, `zPos`, `xOrient`, `yOrient`, and `zOrient` variables, which are used to update the scene rendering on each frame.
 

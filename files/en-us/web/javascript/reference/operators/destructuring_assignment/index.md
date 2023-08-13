@@ -76,7 +76,7 @@ This capability is similar to features present in languages such as Perl and Pyt
 
 ### Binding and assignment
 
-For both object and array destructuring, there are two kinds of destructuring patterns: _binding pattern_ and _assignment pattern_, with slightly different syntaxes.
+For both object and array destructuring, there are two kinds of destructuring patterns: _{{glossary("binding")}} pattern_ and _assignment pattern_, with slightly different syntaxes.
 
 In binding patterns, the pattern starts with a declaration keyword (`var`, `let`, or `const`). Then, each individual property must either be bound to a variable or further destructured.
 
@@ -116,7 +116,7 @@ const obj = { a: 1, b: 2 };
 
 Note that the equivalent _binding pattern_ of the code above is not valid syntax:
 
-```js example-bad
+```js-nolint example-bad
 const numbers = [];
 const obj = { a: 1, b: 2 };
 const { a: numbers[0], b: numbers[1] } = obj;
@@ -286,7 +286,7 @@ console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
 
 On the other hand, object destructuring can only have an identifier as the rest property.
 
-```js example-bad
+```js-nolint example-bad
 const { a, ...{ b } } = { a: 1, b: 2 };
 // SyntaxError: `...` must be followed by an identifier in declaration contexts
 

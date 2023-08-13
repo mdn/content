@@ -129,7 +129,7 @@ The language specifies APIs that either produce or consume iterables and iterato
 
 The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}} (currently unexposed), which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. In the future, these built-in iterators may have additional [helper methods](https://github.com/tc39/proposal-iterator-helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
 
-```
+```plain
 console.log([][Symbol.iterator]());
 
 Array Iterator {}
@@ -154,6 +154,8 @@ There are many APIs that accept iterables. Some examples include:
 - {{jsxref("Promise.race()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Array.from()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}
 
 ```js
 const myObj = {};
@@ -212,11 +214,11 @@ const obj = {
   },
 };
 
-const [b] = obj;
+const [a] = obj;
 // Returning 1
 // Closing
 
-const [a, b, c] = obj;
+const [b, c, d] = obj;
 // Returning 1
 // Returning 2
 // Returning 3

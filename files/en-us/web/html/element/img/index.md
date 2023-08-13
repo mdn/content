@@ -45,7 +45,7 @@ SVG remains the recommended format for images that must be drawn accurately at d
 
 ## Image loading errors
 
-If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
+If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
 
 - The `src` attribute is empty (`""`) or `null`.
 - The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
@@ -92,14 +92,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `decoding`
 
-  - : Provides an image decoding hint to the browser. Allowed values:
+  - : This attribute provides a hint to the browser as to whether it should perform image decoding along with rendering the other DOM content in a single presentation step that looks more "correct" (`sync`), or render and present the other DOM content first and then decode the image and present it later (`async`). In practice, `async` means that the next paint does not wait for the image to decode.
+
+    It is often difficult to perceive any noticeable effect when using `decoding` on static `<img>` elements. They'll likely be initially rendered as empty images while the image files are fetched (either from the network or from the cache) and then handled independently anyway, so the "syncing" of content updates is less apparent. However, the blocking of rendering while decoding happens, while often quite small, _can_ be measured — even if it is difficult to observe with the human eye. See [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) for a more detailed analysis (tunetheweb.com, 2023).
+
+    Using different `decoding` types can result in more noticeable differences when dynamically inserting `<img>` elements into the DOM via JavaScript — see {{domxref("HTMLImageElement.decoding")}} for more details.
+
+    Allowed values:
 
     - `sync`
-      - : Decode the image synchronously, for atomic presentation with other content.
+      - : Decode the image synchronously along with rendering the other DOM content, and present everything together.
     - `async`
-      - : Decode the image asynchronously, to reduce delay in presenting other content.
+      - : Decode the image asynchronously, after rendering and presenting the other DOM content.
     - `auto`
-      - : Default: no preference for the decoding mode. The browser decides what is best for the user.
+      - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value.
 
 - `elementtiming`
 
@@ -156,7 +162,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : One or more strings separated by commas, indicating a set of source sizes. Each source size consists of:
 
-    1. A [media condition](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
+    1. A [media condition](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
     2. A source size value.
 
     Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.

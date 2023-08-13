@@ -1,6 +1,7 @@
 ---
 title: Game development
 slug: Games
+page-type: landing-page
 ---
 
 {{GamesSidebar}}

@@ -1,5 +1,5 @@
 ---
-title: "SyntaxError: redeclaration of formal parameter \"x\""
+title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
 page-type: javascript-error
 ---
@@ -12,7 +12,7 @@ variable name occurs as a function parameter and is then redeclared using a
 
 ## Message
 
-```
+```plain
 SyntaxError: Identifier "x" has already been declared (V8-based)
 SyntaxError: redeclaration of formal parameter "x" (Firefox)
 SyntaxError: Cannot declare a let variable twice: 'x'. (Safari)
@@ -35,7 +35,7 @@ allowed in JavaScript.
 
 In this case, the variable "arg" redeclares the argument.
 
-```js example-bad
+```js-nolint example-bad
 function f(arg) {
   let arg = "foo";
 }

@@ -4,6 +4,8 @@ slug: Glossary/RTL
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **RTL** (**Right To Left**) is a {{Glossary("locale")}} property indicating that text is written from right to left.
 
 For example, the `he` locale (for Hebrew) specifies right-to-left. Arabic (`ar`) is another common language written RTL.

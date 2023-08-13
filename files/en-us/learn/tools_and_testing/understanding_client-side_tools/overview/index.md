@@ -1,6 +1,7 @@
 ---
 title: Client-side tooling overview
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

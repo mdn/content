@@ -13,7 +13,7 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 
 ## Syntax
 
-```
+```plain
 #RGB        // The three-value syntax
 #RGBA       // The four-value syntax
 #RRGGBB     // The six-value syntax

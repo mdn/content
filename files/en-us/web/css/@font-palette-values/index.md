@@ -62,7 +62,9 @@ p {
 }
 @font-palette-values --Alternate {
   font-family: "Bungee Spice";
-  override-colors: 0 #00ffbb, 1 #007744;
+  override-colors:
+    0 #00ffbb,
+    1 #007744;
 }
 .alternate {
   font-palette: --Alternate;

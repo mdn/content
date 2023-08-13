@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Form validation"
 slug: Learn/Forms/Test_your_skills:_Form_validation
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

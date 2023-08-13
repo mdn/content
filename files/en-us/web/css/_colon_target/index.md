@@ -18,7 +18,7 @@ The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 For example, the following URL has a fragment (denoted by the _#_ sign) that points to an element called `section2`:
 
-```
+```url
 http://www.example.com/index.html#section2
 ```
 
@@ -35,6 +35,8 @@ The following element would be selected by a `:target` selector when the current
   /* ... */
 }
 ```
+
+> **Note:** Due to [a possible bug in the CSS specification](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070), `:target` doesn't work within a [web component](/en-US/docs/Web/API/Web_components) because the [shadow root](/en-US/docs/Web/API/ShadowRoot) doesn't pass the target element down to the shadow tree.
 
 ## Examples
 
@@ -205,4 +207,4 @@ You can use the `:target` pseudo-class to create a lightbox without using any Ja
 
 ## See also
 
-- [Using the :target pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
+- [Using the :target pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)

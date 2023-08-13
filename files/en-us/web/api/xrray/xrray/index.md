@@ -66,7 +66,7 @@ let ray4 = new XRRay(DOMPoint.fromPoint(origin), DOMPoint.fromPoint(direction));
 // Using rigid transform
 let rigidTransform = new XRRigidTransform(
   DOMPoint.fromPoint(origin),
-  DOMPoint.fromPoint(direction)
+  DOMPoint.fromPoint(direction),
 );
 let ray5 = new XRRay(rigidTransform);
 ```

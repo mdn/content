@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.at
 
 {{JSRef}}
 
-The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
+The **`at()`** method of {{jsxref("Array")}} instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
 
 {{EmbedInteractiveExample("pages/js/array-at.html")}}
 
@@ -89,8 +89,10 @@ const arrayLike = {
   length: 2,
   0: "a",
   1: "b",
+  2: "c", // ignored by at() since length is 2
 };
-console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
+console.log(Array.prototype.at.call(arrayLike, 0)); // "a"
+console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ```
 
 ## Specifications

@@ -168,7 +168,7 @@ console.log(\u4f60\u597d); // Hello
 
 Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_words).
 
-```js example-bad
+```js-nolint example-bad
 function import() {} // Illegal: import is a reserved word.
 ```
 
@@ -189,7 +189,7 @@ Some keywords are _reserved_, meaning that they cannot be used as an identifier 
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
-```js example-bad
+```js-nolint example-bad
 const els\u{65} = 1;
 // `els\u{65}` encodes the same identifier as `else`
 ```
@@ -390,9 +390,8 @@ The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a n
 
 BigInt literals cannot start with `0` to avoid confusion with legacy octal literals.
 
-```js example-bad
-0755n;
-// SyntaxError: invalid BigInt syntax
+```js-nolint example-bad
+0755n; // SyntaxError: invalid BigInt syntax
 ```
 
 For octal `BigInt` numbers, always use zero followed by the letter "o" (uppercase or lowercase):
@@ -418,7 +417,7 @@ To improve readability for numeric literals, underscores (`_`, `U+005F`) can be 
 
 Note these limitations:
 
-```js example-bad
+```js-nolint example-bad
 // More than one underscore in a row is not allowed
 100__000; // SyntaxError
 
@@ -535,7 +534,7 @@ A regular expression literal cannot start with two forward slashes (`//`), becau
 
 ### Template literals
 
-One template literal consists of several tokens: `` `xxx${`` (template head), `}xxx${` (template middle), and `` }xxx`  `` (template tail) are individual tokens, while any expression may come between them.
+One template literal consists of several tokens: `` `xxx${`` (template head), `}xxx${` (template middle), and ``}xxx` `` (template tail) are individual tokens, while any expression may come between them.
 
 See also [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) for more information.
 
@@ -590,7 +589,7 @@ const a = 1
 
 However, semicolons are not inserted if the semicolon would then become the separator in the [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) statement's head.
 
-```js example-bad
+```js-nolint example-bad
 for (
   let a = 1 // No ASI here
   a < 10 // No ASI here
@@ -600,7 +599,7 @@ for (
 
 Semicolons are also never inserted as [empty statements](/en-US/docs/Web/JavaScript/Reference/Statements/Empty). For example, in the code below, if a semicolon is inserted after ")", then the code would be valid, with an empty statement as the `if` body and the `const` declaration being a separate statement. However, because automatically inserted semicolons cannot become empty statements, this causes a [declaration](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations) to become the body of the `if` statement, which is not valid.
 
-```js example-bad
+```js-nolint example-bad
 if (Math.random() > 0.5)
 const x = 1 // SyntaxError: Unexpected token 'const'
 ```
@@ -671,7 +670,7 @@ This happens to be valid syntax. `1[1, 2, 3]` is a [property accessor](/en-US/do
 
 Within classes, class fields and generator methods can be a pitfall as well.
 
-```js example-bad
+```js-nolint example-bad
 class A {
   a = 1
   *gen() {}
@@ -680,7 +679,7 @@ class A {
 
 It is seen as:
 
-```js example-bad
+```js-nolint example-bad
 class A {
   a = 1 * gen() {}
 }
@@ -831,5 +830,5 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
 ## See also
 
 - [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
-- [Micro-feature from ES6, now in Firefox Aurora and Nightly: binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/) by Jeff Walden (August 12, 2013)
-- [JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes) by Mathias Bynens (December 21, 2011)
+- [Micro-feature from ES6, now in Firefox Aurora and Nightly: binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/) by Jeff Walden (2013)
+- [JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes) by Mathias Bynens (2011)

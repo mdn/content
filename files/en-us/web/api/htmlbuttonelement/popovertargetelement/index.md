@@ -3,12 +3,10 @@ title: "HTMLButtonElement: popoverTargetElement property"
 short-title: popoverTargetElement
 slug: Web/API/HTMLButtonElement/popoverTargetElement
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLButtonElement.popoverTargetElement
 ---
 
-{{ APIRef("DOM") }}{{SeeCompatTable}}
+{{ APIRef("DOM") }}
 
 The **`popoverTargetElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the popover element to control via a button.
 

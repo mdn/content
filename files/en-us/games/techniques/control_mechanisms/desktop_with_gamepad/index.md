@@ -1,6 +1,7 @@
 ---
 title: Desktop gamepad controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_gamepad
+page-type: guide
 ---
 
 {{GamesSidebar}}

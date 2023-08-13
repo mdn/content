@@ -13,6 +13,8 @@ The **`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) property sets how strictly
 
 Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.
 
+## Syntax
+
 ```css
 /* Keyword values */
 scroll-snap-type: none;
@@ -36,8 +38,6 @@ scroll-snap-type: revert;
 scroll-snap-type: revert-layer;
 scroll-snap-type: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -240,5 +240,5 @@ body,
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)

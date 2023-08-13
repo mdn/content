@@ -158,7 +158,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 Scripts without [`async`](#async), [`defer`](#defer) or `type="module"` attributes, as well as inline scripts without the `type="module"` attribute, are fetched and executed immediately before the browser continues to parse the page.
 
 The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio type (`audio/*`), or `text/csv`.
-If the script is blocked, an {{domxref("Element/error_event", "error")}} event is sent to the element; otherwise, a {{domxref("Element/load_event", "load")}} event is sent.
+If the script is blocked, an {{domxref("HTMLElement/error_event", "error")}} event is sent to the element; otherwise, a {{domxref("HTMLElement/load_event", "load")}} event is sent.
 
 ## Examples
 
