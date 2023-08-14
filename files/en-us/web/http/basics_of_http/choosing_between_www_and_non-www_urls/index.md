@@ -57,8 +57,8 @@ With these techniques, you can configure your server to respond correctly for bo
 
 This is a very subjective topic — it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, here are some resources:
 
-- [Options for bare domains](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) (2020)
-- [WWW vs non-WWW – Which Is Better for WordPress SEO?](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) (2023)
+- [Options for bare domains](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) on www.netlify.com (2020)
+- [WWW vs non-WWW – Which Is Better for WordPress SEO?](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on www.wpbeginner.com (2023)
 
 ## See also
 
