@@ -1,0 +1,74 @@
+---
+title: "DocumentPictureInPicture: requestWindow() method"
+short-title: requestWindow()
+slug: Web/API/DocumentPictureInPicture/requestWindow
+page-type: web-api-instance-method
+status:
+  - experimental
+browser-compat: api.DocumentPictureInPicture.requestWindow
+---
+
+{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}
+
+The **`requestWindow()`** method of the
+{{domxref("DocumentPictureInPicture")}} interface opens the Picture-in-Picture window for the current main browsing context. It returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.
+
+The `requestWindow()` method requires [transient activation](/en-US/docs/Glossary/Transient_activation), i.e. it must be invoked in response to a user action such as a mouse click or button press.
+
+## Syntax
+
+```js-nolint
+requestWindow()
+requestWindow(options)
+```
+
+### Parameters
+
+- `options` {{optional_inline}}
+  - : An options object containing the following properties:
+    - `height`
+      - : A non-negative number representing the height to set for the Picture-in-Picture window's viewport, in pixels. If not specified, the default value 0 is used.
+    - `width` {{optional_inline}}
+      - : A non-negative number representing the width to set for the Picture-in-Picture window's viewport, in pixels. If not specified, the default value 0 is used.
+
+> **Note:** If one of the options is specified, the other one must be too, otherwise an error is thrown. If both values are not specified, or specified as 0 or too large, the browser will clamp or ignore the values as appropriate to provide a reasonable user experience.
+
+### Return value
+
+A {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} object instance representing the browsing context inside the Picture-in-Picture window.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if `requestWindow()` is invoked without [transient activation](/en-US/docs/Glossary/Transient_activation).
+- `RangeError` {{domxref("DOMException")}}
+  - : Thrown if only one of `height` and `width` are set, or if `height` and `width` are set with negative values.
+
+## Examples
+
+```js
+const videoPlayer = document.getElementById("player");
+
+// ...
+
+// Open a Picture-in-Picture window.
+pipWindow = await window.documentPictureInPicture.requestWindow({
+  width: videoPlayer.clientWidth,
+  height: videoPlayer.clientHeight,
+});
+
+// ...
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}
+- [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API/Using)
