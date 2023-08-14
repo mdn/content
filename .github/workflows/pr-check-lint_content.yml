@@ -12,6 +12,10 @@ on:
 permissions:
   pull-requests: write
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   lint-and-review-docs:
     runs-on: ubuntu-latest
