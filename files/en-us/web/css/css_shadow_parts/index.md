@@ -44,7 +44,7 @@ By default, elements in a shadow tree can be styled only within their respective
 - {{domxref("Element.shadowRoot")}} property
 - {{domxref("Element.attachShadow()")}} method
 - {{domxref("ShadowRoot")}} interface
-- CSS scoping module
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}

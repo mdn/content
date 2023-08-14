@@ -18,7 +18,7 @@ APIs that use match patterns usually accept a list of match patterns, and will p
 
 All match patterns are specified as strings. Apart from the special [`<all_urls>`](#all_urls) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.
 
-```
+```plain
 <scheme>://<host><path>
 ```
 

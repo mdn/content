@@ -215,3 +215,4 @@ container.appendChild(secondClone);
 
 - Web components: {{HTMLElement("slot")}} (and historical: `<shadow>`)
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

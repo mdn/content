@@ -128,7 +128,7 @@ The ability to create nested layers also removes the worry of having conflicting
 Layers can be created using any one of the following methods:
 
 - The `@layer` statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
-- The `@layer` block at-rule, in which all styles within a block are added to a name or unnamed layer.
+- The `@layer` block at-rule, in which all styles within a block are added to a named or unnamed layer.
 - The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.

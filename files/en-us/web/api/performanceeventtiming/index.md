@@ -87,15 +87,15 @@ The following event types are exposed by the Event Timing API:
     <tr>
       <th scope="row">Pointer events</th>
       <td>
-        {{domxref("HTMLElement/pointerover_event", "pointerover")}},
-        {{domxref("HTMLElement/pointerenter_event", "pointerenter")}},
-        {{domxref("HTMLElement/pointerdown_event", "pointerdown")}},
-        {{domxref("HTMLElement/pointerup_event", "pointerup")}},
-        {{domxref("HTMLElement/pointercancel_event", "pointercancel")}},
-        {{domxref("HTMLElement/pointerout_event", "pointerout")}},
-        {{domxref("HTMLElement/pointerleave_event", "pointerleave")}},
-        {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}},
-        {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
+        {{domxref("Element/pointerover_event", "pointerover")}},
+        {{domxref("Element/pointerenter_event", "pointerenter")}},
+        {{domxref("Element/pointerdown_event", "pointerdown")}},
+        {{domxref("Element/pointerup_event", "pointerup")}},
+        {{domxref("Element/pointercancel_event", "pointercancel")}},
+        {{domxref("Element/pointerout_event", "pointerout")}},
+        {{domxref("Element/pointerleave_event", "pointerleave")}},
+        {{domxref("Element/gotpointercapture_event", "gotpointercapture")}},
+        {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
       </td>
     </tr>
     <tr>

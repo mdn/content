@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.WeakSet.delete
 
 {{JSRef}}
 
-The **`delete()`** method removes the specified element from a
-`WeakSet` object.
+The **`delete()`** method of {{jsxref("WeakSet")}} instances removes the specified element from this `WeakSet`.
 
 {{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}
 

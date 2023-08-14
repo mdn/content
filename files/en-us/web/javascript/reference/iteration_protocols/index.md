@@ -154,6 +154,8 @@ There are many APIs that accept iterables. Some examples include:
 - {{jsxref("Promise.race()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Array.from()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}
 
 ```js
 const myObj = {};
@@ -212,11 +214,11 @@ const obj = {
   },
 };
 
-const [b] = obj;
+const [a] = obj;
 // Returning 1
 // Closing
 
-const [a, b, c] = obj;
+const [b, c, d] = obj;
 // Returning 1
 // Returning 2
 // Returning 3

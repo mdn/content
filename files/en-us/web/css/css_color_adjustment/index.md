@@ -16,7 +16,6 @@ Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color
 ### Properties
 
 - {{cssxref("color-scheme")}}
-- {{cssxref("color-adjust")}} shorthand
 - {{cssxref("forced-color-adjust")}}
 - {{cssxref("print-color-adjust")}}
 

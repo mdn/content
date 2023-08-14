@@ -22,7 +22,7 @@ function name(param0) {
 function name(param0, param1) {
   statements
 }
-function name(param0, param1, /* … ,*/ paramN) {
+function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -149,7 +149,7 @@ Whether `function` declarations can be redeclared in the same scope depends on w
 
 At the top level of a script, `function` declarations behave like `var` and can be redeclared by another `function` or `var` but not by {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, or {{jsxref("Statements/class", "class")}}.
 
-```js
+```js-nolint example-bad
 function a(b) {}
 function a(b, c) {}
 console.log(a.length); // 2
@@ -177,13 +177,13 @@ foo(2); // Logs "function"
 
 At the top level of a module or a block in strict mode, `function` declarations behave like `let` and cannot be redeclared by any other declaration.
 
-```js
+```js-nolint example-bad
 // Assuming current source is a module
 function foo() {}
 function foo() {} // SyntaxError: Identifier 'foo' has already been declared
 ```
 
-```js
+```js-nolint example-bad
 "use strict";
 {
   function foo() {}
@@ -193,7 +193,7 @@ function foo() {} // SyntaxError: Identifier 'foo' has already been declared
 
 A `function` declaration within a `catch` block cannot have the same name as the `catch`-bound identifier, even in non-strict mode.
 
-```js
+```js-nolint example-bad
 try {
 } catch (e) {
   function e() {} // SyntaxError: Identifier 'e' has already been declared
