@@ -977,6 +977,49 @@ See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](h
   </tbody>
 </table>
 
+### rect() and xywh() basic shape functions
+
+The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) basic shape functions enable you to create rectangular shapes in CSS properties such {{cssxref("clip-path")}} and {{cssxref("offset-path")}}. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the reference box. Using the `xywh()` function, you specify the rectangle edge offsets from the top edge and left edges of the reference box, along with the width and height of the rectangle. In both the functions, you can optionally round off the corners. Both the functions are [basic-shape](/en-US/docs/Web/CSS/basic-shape) data types.
+For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `rect()` function and [Firefox bug 1786160](https://bugzil.la/1786160) for the `xywh()` function.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preferences name</th>
+      <td colspan="2">
+      <code>layout.css.motion-path-basic-shapes.enabled</code>, <code>layout.css.basic-shape-rect.enabled</code>, <code>layout.css.basic-shape-xywh.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
