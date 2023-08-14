@@ -49,7 +49,9 @@ math-depth: unset;
 
 ## Examples
 
-### HTML
+### Specifying a math depth
+
+#### HTML
 
 ```html
 <p>
@@ -66,7 +68,7 @@ math-depth: unset;
       <mi>A</mi>
     </munder>
   </math>
-  <math class="depth-3">
+  <math class="depth-negative-1">
     <munder displaystyle="true">
       <mo>∑</mo>
       <mi>A</mi>
@@ -75,7 +77,7 @@ math-depth: unset;
 </p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 p {
@@ -91,14 +93,14 @@ math {
   math-depth: add(1);
 }
 
-.depth-3 {
-  math-depth: add(3);
+.depth-negative-1 {
+  math-depth: add(-1);
 }
 ```
 
-### Result
+#### Result
 
-{{embedlivesample('Examples')}}
+{{embedlivesample('Specifying_a_math_depth', 600, 200)}}
 
 ## Specifications
 

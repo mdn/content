@@ -41,7 +41,9 @@ math-style: unset;
 
 ## Examples
 
-### CSS
+### Changing the style of a formula to compact
+
+#### CSS
 
 ```css
 math {
@@ -52,7 +54,7 @@ math {
 }
 ```
 
-### HTML
+#### HTML
 
 ```html
 <p>
@@ -94,7 +96,7 @@ math {
 </p>
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample("Examples")}}
 
