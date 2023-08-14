@@ -55,8 +55,8 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - {{htmlelement("details")}}
 - {{htmlelement("figcaption")}}
 - {{htmlelement("figure")}}
-- {{htmlelement("form")}}
 - {{htmlelement("footer")}}
+- {{htmlelement("form")}}
 - {{htmlelement("header")}}
 - {{htmlelement("main")}}
 - {{htmlelement("mark")}}
@@ -73,5 +73,3 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("SEO")}}
-
-- Semantic elements in HTML:
