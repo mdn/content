@@ -31,6 +31,7 @@ contain-intrinsic-size: 1000px 1.5em;
 
 /* auto <length> */
 contain-intrinsic-size: auto 300px;
+contain-intrinsic-size: auto none;
 
 /* auto width | auto height */
 contain-intrinsic-size: auto 300px auto 4rem;
@@ -55,6 +56,7 @@ If a single value is specified, it applies to both width and height.
   - : The element has the specified {{cssxref("&lt;length&gt;")}} in the given dimension(s).
 - `auto <length>`
   - : A remembered value of the "normally rendered" element size if one exists and the element is skipping its contents (for example, when it is offscreen); otherwise the specified `<length>`.
+    The `none` keyword may be used in place of `<length>` to indicate that the element can fallback to `contain-intrinsic-size: none`.
 
 ## Description
 
@@ -67,6 +69,8 @@ The `contain-intrinsic-size` property allows authors to specify an appropriate v
 The `auto <length>` value allows the size of the element to be stored if the element is ever "normally rendered" (with its child elements), and then used instead of the specified length when the element is skipping its contents.
 This allows offscreen elements with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) to benefit from size containment without developers having to be as precise in their estimates of element size.
 The remembered value is not used if the child elements are being rendered (if size containment is enabled, the `<length>` will be used).
+
+Because `contain-intrinsic-size: none` may not be equivalent to `0px` lengths in multi column, or grid layouts, the `auto none` value allows the element to fallback to `contain-intrinsic-size: none` if no remembered value exists.
 
 ## Formal definition
 
