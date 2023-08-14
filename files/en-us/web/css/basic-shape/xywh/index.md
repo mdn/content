@@ -7,28 +7,26 @@ browser-compat: css.types.basic-shape.xywh
 
 {{CSSRef}}
 
-The **`rect()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle with the specified width and height values and positioned at the specified inset distances from the top and left edges of the reference box. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).
+The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle at the specified inset distances from the top and left edges of the reference box, with the specified width and height dimensions. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types). CSS properties such as {{cssxref("clip-path")}} and {{cssxref("offset-path")}} use the `xywh()` function to create a rectangular shape.
 
 ## Syntax
 
 ```css
-shape-outside: inset(20px 50px 10px 0 round 50px);
+offset-path: xywh(0px 1% 2px 3% round 0px 1px 2% 3px);
 ```
 
 ### Values
 
-- `<length-percentage>{1,4}`
-  - : When all of the four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.
-- `<border-radius>`
-  - : The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
+- `<length-percentage>`
+  - : Specifies the {{cssxref("&lt;length-percentage&gt;")}} values for the `x` and `y` coordinates of the rectangle element.
+- `<length-percentage [0,∞]>`
+  - : Specifies non-negative {{cssxref("&lt;length-percentage&gt;")}} values for the width and height of the rectangle element. The minimum value can be zero, and the maximum value has no limit.
+- `round <border-radius>`
+  - : Specifies the radius of the rounded corners of the rectangle using the {{cssxref("border-radius")}} shorthand syntax. This parameter is optional.
 
 ## Examples
 
-### Basic inset example
-
-In the example below we have an `inset()` shape used to pull content over the floated element. Change the offset values to see how the shape changes.
-
-{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset.html", '100%', 800)}}
+### Creating a rectangle using xywh()
 
 ## Specifications
 
@@ -40,5 +38,9 @@ In the example below we have an `inset()` shape used to pull content over the fl
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [`inset()`](/en-US/docs/Web/CSS/basic-shape#inset) function
+- [`rect()`](/en-US/docs/Web/CSS/basic-shape#rect) function
+- {{cssxref("clip-path")}} property
+- {{cssxref("offset-path")}} property
+- {{cssxref("&lt;basic-shape&gt;")}} data type
+- [Guide to basic shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
