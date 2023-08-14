@@ -73,4 +73,4 @@ Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit intege
 ## See also
 
 - [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
-- [Bitwise AND assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [Bitwise AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
