@@ -59,7 +59,7 @@ The `column-gap` property is specified as one of the values listed below.
 
 ### Flex layout
 
-In this example, a flex container contains six flex items of two different widths, creating flex items that are not laid out as a grid. The horizontal space between adjacent flex items is set using the `column-gap` property.
+In this example, a flex container contains six flex items of two different widths (`200px` and `300px`), creating flex items that are not laid out as a grid. The `column-gap` property is used to add horizontal space between the adjacent flex items.
 
 #### HTML
 
@@ -76,11 +76,11 @@ In this example, a flex container contains six flex items of two different width
 
 #### CSS
 
-To create a flex container, we set its {{cssxref("display")}} property value to `flex`. We then use the {{cssxref("flex-flow")}} shorthand property to set the {{cssxref("flex-direction")}} to row (the default) and the {{cssxref("flex-wrap")}} to `wrap`, allowing the flex items to flow onto new lines if needed. By default, flex items stretch to be as tall as their container. By setting a {{cssxref("height")}}, even our empty flex items will be 100% tall.
+To create a flex container, we set its {{cssxref("display")}} property value to `flex`. We then use the {{cssxref("flex-flow")}} shorthand property to set the {{cssxref("flex-direction")}} to row (the default) and {{cssxref("flex-wrap")}} to `wrap`, allowing the flex items to flow onto new lines if needed. By default, flex items stretch to be as tall as their container. By setting a {{cssxref("height")}}, even the empty flex items will be `100px` tall.
 
-We define the widths of the flex items on the flex items themselves; setting different widths better demonstrates the `column-gap` property. We use the {{cssxref("flex-basis")}} component of the {{cssxref("flex")}} shorthand property to make all the flex items `200px` wide. We then target every third flex item with the {{cssxref(":nth-of-type", ":nth-of-type(3n)")}} selector, widening them to `300px`.
+To better demonstrate the `column-gap` property, the flex items in this example have two different width values. The width of the flex items is set within the `<div>` flex items. We use the {{cssxref("flex-basis")}} component of the {{cssxref("flex")}} shorthand property to make all the flex items `200px` wide. We then target every third flex item by using the {{cssxref(":nth-of-type", ":nth-of-type(3n)")}} selector, widening them to `300px`.
 
-We set `column-gap: 20px;` on the flex container to create 20px of horizontal space — a 20px gap — between adjacent flex items in each row.
+The `column-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex items in each row.
 
 ```css
 .flexbox {
