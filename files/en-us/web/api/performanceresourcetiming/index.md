@@ -89,7 +89,7 @@ Additionally, this interface exposes the following properties containing more in
   - : A string representing the web platform feature that initiated the performance entry.
 - {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
   - : A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
-- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
+- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A string representing the render-blocking status. Either "`blocking`" or "`non-blocking`".
 - {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A number representing the HTTP response status code returned when fetching the resource.
@@ -97,6 +97,8 @@ Additionally, this interface exposes the following properties containing more in
   - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
+- {{domxref("PerformanceResourceTiming.deliveryType")}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : Returns the delivery type for how the resource was delivered, which currently can be "`cache`" or the empty string (this is expected to be expanded by future updates to this specification).
 
 ## Instance methods
 
