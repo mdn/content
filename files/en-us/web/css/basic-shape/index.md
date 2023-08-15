@@ -30,7 +30,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines an inset rectangle.
 
     ```css
-    inset( <length-percentage>{1,4} [round <`border-radius`>]? )
+    inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
     ```
 
     When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, or three values.
@@ -66,7 +66,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines a circle using a radius and a position.
 
     ```css
-    circle( [<shape-radius>]? [at <position>]? )
+    circle( <shape-radius>? [ at <position> ]? )
     ```
 
     The `<shape-radius>` argument represents _r_, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as `sqrt(width^2+height^2)/sqrt(2)`.
@@ -78,7 +78,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines an ellipse using two radii and a position.
 
     ```css
-    ellipse( [<shape-radius>{2}]? [at <position>]? )
+    ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
     ```
 
     The `<shape-radius>` arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box.
@@ -90,7 +90,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
 
     ```css
-    polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
+    polygon( <fill-rule>? [<shape-arg> <shape-arg>]# )
     ```
 
     `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
@@ -102,7 +102,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
 
     ```css
-    path( [<fill-rule>,]? <string>)
+    path( [<fill-rule>,]? <string> )
     ```
 
     The optional `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the path. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
