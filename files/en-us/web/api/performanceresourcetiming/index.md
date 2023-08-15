@@ -22,6 +22,7 @@ The properties of this interface allow you to calculate certain resource timing 
 - Measuring TCP handshake time (`connectEnd` - `connectStart`)
 - Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
+- Measuring interim request time (`firstInterimResponseStart` - `requestStart`)
 - Measuring request time (`responseStart` - `requestStart`)
 - Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
