@@ -15,24 +15,29 @@ The **Attribution Reporting API** enables developers to measure conversions — 
 
 Advertisers commonly want to measure conversions so that they can figure out what advertising placements are giving them the greatest return on investment (ROI) and can adjust their strategy to suit. This usually includes capturing data such as:
 
-- Which users converted (for example purchased an item, or signed up for a service), and how many
-- The geographic regions they are based in
-- What sites the ads were placed on
+- Which users converted (for example purchased an item, or signed up for a service), and how many.
+- The geographic regions they are based in.
+- What sites the ads were placed on.
 - How many products were sold, services were signed up for, etc.
-- How much revenue was generated
+- How much revenue was generated.
 
-Traditionally on the web conversion has been measured using third-party tracking cookies. an ad will typically be contained on a web page embedded in an {{htmlelement("iframe")}}, which can set a cookie containing information about the user and their interaction with the ad. Later on, when the user decides to visit the advertiser's site, provided it is from the same domain as the ad it can access that cookie and associate data from there with its own data. For example, did the user purchase a product after coming from the other site?
+Traditionally on the web, conversion has been measured using third-party tracking cookies. an ad will typically be contained on a web page embedded in an {{htmlelement("iframe")}}, which can set a cookie containing information about the user and their interaction with the ad. Later on, when the user decides to visit the advertiser's site, provided it is from the same domain as the ad it can access that cookie and associate data from there with its own data. For example, did the user purchase a product after coming from the other site?
 
 This is bad for user [privacy](/en-US/docs/Web/Privacy). At this point, any page from the same domain can get access to that cookie, plus information from sites that embed those pages, and a surprisingly large number of parties can see that data, and infer other data about the user based on their browsing habits.
 
 To mitigate this problem, The Attribution Reporting API allows developers to register:
 
-- **Attribution sources**: An ad-related event that can be used to measure a user's interaction with the ad. This can involve clicking a link or viewing an image or other asset.
-- **Attribution triggers**. An event on the advertiser's site, for example clicking a "purchase" button.
+- **Attribution sources**: An ad-related event that can be used to measure a user's interaction with the ad. This can involve clicking a link or viewing an image or other asset associated with an ad, on the site where it is published.
+- **Attribution triggers**. An event on the advertiser's own site, for example clicking a "purchase" button on an ecommerce site.
 
-When an attribution source event occurs (e.g. the user clicks the link in the ad), associated data is stored in a private local storage partition accessible only by the browser. This data includes any contextual reporting data that you want to measure (for example user ID, geographic region, campaign ID), plus the origin that the ad is hosted on and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s) — sites where you expect the conversion to occur (i.e where the attribution triggers are).
+When an attribution source event occurs (for example, the user clicks the link in the ad), associated data is stored in a private local cache accessible only by the browser. This data includes any contextual reporting data that you want to measure (for example user ID, geographic region, campaign ID), plus the origin that the ad is hosted on and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s) — sites where you expect the associated conversion to occur (i.e, where the attribution triggers are).
 
-Next, when the attribution trigger event occurs (e.g. the user clicks the "purchase" button), the browser attempts to match the attribution trigger to an entry in the private local storage partition. For a successful match, the trigger must be on a specified destination (specified in the source's associated {{httpheader("Attribution-Reporting-Register-Source")}} header) and be hosted on the same origin as the ad (EDITORIAL: IS THIS CORRECT?). This provides privacy protection, but also flexibility — the source and trigger can potentially be situated on the top-level site, or embedded in a frame.
+Next, when the attribution trigger event occurs (for example the user clicks the "purchase" button), the browser attempts to match the attribution trigger to an entry in the private local storage partition. For a successful match, the trigger must be:
+
+1. On a specified `destination` (specified in the source's associated {{httpheader("Attribution-Reporting-Register-Source")}} header)
+2. Hosted on the same origin as the ad (EDITORIAL: IS THIS CORRECT?).
+
+This provides privacy protection, but also flexibility — the source and trigger can potentially be situated on the top-level site, or embedded in a frame.
 
 If a successful match is found, the browser sends data to a reporting endpoint on a server typically owned by the ad tech provider where it can be securely analyzed. The data is not accessible by the site the ad is placed on, or the advertiser site, or any other site except for the site hosting the reporting endpoint.
 
@@ -56,18 +61,37 @@ In the following sections we will look at each of these in a little more detail.
 To begin with, you need to register an attribution source for users to interact with; this will take the form of a click or view on a hosted ad that causes the browser to store information on that interaction. All of the different methods of initiating an attribution source registration are listed in the sections below. They all work the same way:
 
 1. All of the methods cause an HTTP request to be sent. Including `attributionsrc`/`attributionRequest` as indicated causes the {{httpheader("Attribution-Reporting-Eligible")}} header to be sent along with that request, to indicate that the request is eligible for attribution reporting.
-2. When the server receives such a request, you should include a {{httpheader("Attribution-Reporting-Register-Source")}} along with the response — this provides the information that the browser should store when the attribution source is interacted with.
+2. When the server receives such a request, you should include a {{httpheader("Attribution-Reporting-Register-Source")}} along with the response — this takes a JSON string as its value, and provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which type of report the browser will generate.
 
-The `Attribution-Reporting-Register-Source` header takes a JSON string as its value. For example:
+The following minimalist example will cause an event-level report to be generated when a trigger is matched to a source:
 
 ```js
 JSON.stringify({
   source_event_id: "412444888111012",
   destination: "https://advertiser.example",
-  // Optional fields
   expiry: "604800",
   priority: "100",
   debug_key: "122939999",
+  event_report_window: "86400",
+});
+```
+
+To make the browser generate a summary report when a trigger is matched to a source, you need to include some additional fields, _in addition_ to those included in an event-level report.
+
+```js
+JSON.stringify({
+  source_event_id: "412444888111012",
+  destination: "https://advertiser.example",
+  expiry: "604800",
+  priority: "100",
+  debug_key: "122939999",
+  event_report_window: "86400",
+
+  aggregation_keys: {
+    campaignCounts: "0x159",
+    geoValue: "0x5",
+  },
+  aggregatable_report_window: "86400",
 });
 ```
 
@@ -93,10 +117,12 @@ To register a click-based attribution source, you can:
 - Add the `attributionsrc` feature keyword to the features property of a {{domxref("Window.open()")}} call:
 
   ```js
-  window.open("https://ourshop.example.com", "_blank", "attributionsrc");
+  elem.addEventListener("click", () => {
+    window.open("https://ourshop.example.com", "_blank", "attributionsrc");
+  });
   ```
 
-  > **Note:** It is much better for accessibility to use an `<a>` element, but this method is available for cases where that isn't an option and the user is clicking something else to trigger the navigation. Note that, to register the source, this method must be called within five seconds of user interaction.
+  > **Note:** It is much better for accessibility to use an `<a>` element, but this method is available for cases where that isn't an option and the user is clicking something else to trigger the navigation. Note that, to register the source, this method must be called with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handle such as `click`), within five seconds of user interaction.
 
 ### View-based attribution sources
 
@@ -126,9 +152,7 @@ To register a view-based attribution source, you can:
   scriptElem.attributionSrc = "";
   ```
 
-  EDITORIAL: AGAIN, WHAT WOULD THE USAGE OF THIS ACTUALLY LOOK LIKE?
-
-- Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+  Then send a request containing the `attributionReporting` option. For example using {{domxref("fetch()")}}:
 
   ```js
   const attributionReporting = {
@@ -143,9 +167,7 @@ To register a view-based attribution source, you can:
   });
   ```
 
-  EDITORIAL: AGAIN, HOW SHOULD WE RECOMMEND THAT PEOPLE ACTUALLY USE THIS? IS IT THE CASE THAT YOU USE ATTRIBUTIONSRC ON THE SCRIPT ELEMENT IN COMBINATION WITH ATTRIBUTIONREPORTING IN FETCH (OR XHR?) AND IN THAT CASE HOW DOES THE SCRIPT ELEMENT GET USED AS A SOURCE/TRIGGER?
-
-- Send an {{domxref("XMLHttpRequest")}} request with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object:
+  Or {{domxref("XMLHttpRequest")}} request with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object:
 
   ```js
   const attributionReporting = {
@@ -191,11 +213,13 @@ In the case of a {{domxref("Window.open()")}} call, the different URLs have to b
 const encodedUrlA = encodeURIComponent("https://a.example/register-source");
 const encodedUrlB = encodeURIComponent("https://b.example/register-source");
 
-window.open(
-  "https://ourshop.example.com",
-  "_blank",
-  `attributionsrc=${encodedUrl1},attributionsrc=${encodedUrl2}`,
-);
+elem.addEventListener("click", () => {
+  window.open(
+    "https://ourshop.example.com",
+    "_blank",
+    `attributionsrc=${encodedUrl1},attributionsrc=${encodedUrl2}`,
+  );
+});
 ```
 
 In this case, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc`; this is required if the resource pointed to in `href` or `src` is not on a server you control, and you want to register the attribution source on separate servers that you _do_ control. `attributionsrc` instructs the browser to make the required extra requests and specifies their destinations.
@@ -205,21 +229,52 @@ In this case, the {{httpheader("Attribution-Reporting-Eligible")}} header will b
 With your sources registered, you now need to register attribution triggers — these are events occurring on the advertiser's site (e.g. clicking a "purchase" button) that tell the browser to capture conversions, which as explained before involves the browser attempting to match the attribution trigger to an attribution source entry in the private local storage partition. All of the different methods of initiating an attribution trigger registration are listed in the sections below. They all work the same way:
 
 1. All of the methods cause an HTTP request to be sent. Including `attributionsrc`/`attributionRequest` as indicated causes the {{httpheader("Attribution-Reporting-Eligible")}} header to be sent along with that request, to indicate that the request is eligible for attribution reporting. Alternatively, you can just send the header directly via a conversion pixel.
-2. When the server receives such a request from a trigger source, you should include a {{httpheader("Attribution-Reporting-Register-Trigger")}} along with the response — this provides data that can be included in generated reports, such as the ID of the trigger, and priority and deduplication values.
+2. When the server receives such a request from a trigger source, you should include a {{httpheader("Attribution-Reporting-Register-Trigger")}} along with the response. This takes a JSON string as its value containing data that can be included in generated reports, such as the ID of the trigger, and priority and deduplication values.
 
-The `Attribution-Reporting-Register-Trigger` header takes a JSON string as its value. For example:
+You must provide different data in your `Attribution-Reporting-Register-Trigger` header, depending on whether the trigger is intended to match with an event-level report aggregation source or a summary report aggregation source.
+
+The following minimal example is intended to match with a event-level report aggregation source:
 
 ```js
 JSON.stringify({
   event_trigger_data: [
     {
       trigger_data: "412444888111012",
-      // Optional
       priority: "1000000000000",
       deduplication_key: "2345698765",
     },
   ],
   debug_key: "1115698977",
+});
+```
+
+A trigger intended to match with a summary report aggregation source should be registered with an `Attribution-Reporting-Register-Trigger` response value that includes two additional fields, like the following:
+
+```js
+JSON.stringify({
+  event_trigger_data: [
+    {
+      trigger_data: "412444888111012",
+      priority: "1000000000000",
+      deduplication_key: "2345698765",
+    },
+  ],
+  debug_key: "1115698977",
+
+  aggregatable_trigger_data: [
+    {
+      key_piece: "0x400",
+      source_keys: ["campaignCounts"],
+    },
+    {
+      key_piece: "0xA80",
+      source_keys: ["geoValue", "nonMatchingKeyIdsAreIgnored"],
+    },
+  ],
+  aggregatable_values: {
+    campaignCounts: 32768,
+    geoValue: 1664,
+  },
 });
 ```
 
@@ -315,19 +370,31 @@ EDITORIAL: AGAIN, HOW SHOULD WE RECOMMEND THAT PEOPLE ACTUALLY USE THESE?
 
 ## Collecting data and generating reports
 
-EDITORIAL: I HAVE LEFT THIS SECTION BLANK BECAUSE I'M NOT SURE:
+When a match occurs between a conversion trigger and a source, the browser sends a report to a specific endpoint:
 
-1. HOW YOU SPECIFY WHETHER YOU WANT AN EVENT-LEVEL OR SUMMARY REPORT GENERATED
-2. HOW THE BROWSER GENERATES A REPORT AFTER IT MATCHES A CONVERSION TO A SOURCE
-3. WHAT DATA THAT REPORT CONTAINS
-4. HOW YOU SPECIFY THE LOCATION OF THE REPORTING ENDPOINT
-5. WHAT THE AD SERVER IS SUPPOSED TO DO WITH THE REPORT ONCE IT REACHES THE ENDPOINT
+- For event-level reports, this is `https://<reporting origin>/.well-known/attribution-reporting/report-event-attribution`.
+- For summary reports, this is `https://<reporting origin>/.well-known/attribution-reporting/report-aggregate-attribution`.
+
+EDITORIAL: HOW DO YOU SPECIFY THE LOCATION OF THE REPORTING ORIGIN?
+
+The data contained in the report is in JSON format, and is as follows:
+
+EDITORIAL: SEE
+
+- https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#attribution-reports
+- https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#aggregatable-reports
+
+IS THERE AN OFFICIAL SPEC FOR THESE DATA STRUCTURES?
+
+WHAT IS THE AD SERVER SUPPOSED TO DO WITH THE REPORT ONCE IT REACHES THE ENDPOINT
 
 IN THIS SECTION WE'LL ALSO NEED TO TALK ABOUT:
 
 - REPORT WINDOWS, WHEN THEY ARE SENT, ETC.: https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/custom-report-windows/
 - HOW NOISE IS ATTRIBUTED TO SUMMARY REPORTS (SEE https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/understanding-noise/)
 - CONTRIBUTION BUDGETS (SEE https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/contribution-budget/)
+- FILTERS: see https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/define-filters/
+- DEBUGGING REPORTS
 
 ## Interfaces
 

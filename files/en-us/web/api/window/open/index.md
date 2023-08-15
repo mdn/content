@@ -37,7 +37,7 @@ open(url, target, windowFeatures)
 
     - `attributionsrc`
 
-      - : Indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the `open()` request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response to complete registration of an attribution source. See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+      - : Indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the `open()` call. This call must be made with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handle such as `click`), within five seconds of user interaction. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response to complete registration of an attribution source. See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
         > **Note:** `open()` calls cannot be used to register an attribution trigger.
 
