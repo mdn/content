@@ -5,6 +5,10 @@ on:
   pull_request_target:
     types: [synchronize]
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   label-rebase-needed:
     uses: mdn/workflows/.github/workflows/pr-rebase-needed.yml@main
