@@ -33,9 +33,9 @@ The following shapes are supported. All `<basic-shape>` values use functional no
     inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
     ```
 
-    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, or three values.
+    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
 
-    The optional `round <border-radius>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [border-radius](/en-US/docs/Web/CSS/border-radius) shorthand property.
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
 
     A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
 
@@ -47,9 +47,9 @@ The following shapes are supported. All `<basic-shape>` values use functional no
     rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
     ```
 
-    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The dimensions of the rectangle depend on the size of the reference box, the offset values, and whether those offsets are relative or absolute.
+    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangles dimensions depend on the size of the reference box and the offset values.
 
-    The optional `round <border-radius>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [border-radius](/en-US/docs/Web/CSS/border-radius) shorthand property.
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
 
 - `{{cssxref("basic-shape/xywh","xywh()")}}`
 
@@ -59,7 +59,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
     xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
     ```
 
-    The optional `round <border-radius>` parameter defines rounded corners for the inset rectangle using the [border-radius](/en-US/docs/Web/CSS/border-radius) shorthand syntax.
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand syntax.
 
 - `{{cssxref("basic-shape/circle","circle()")}}`
 
@@ -90,7 +90,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
 
     ```css
-    polygon( <fill-rule>? [<shape-arg> <shape-arg>]# )
+    polygon( <fill-rule>? [ <shape-arg> <shape-arg> ]# )
     ```
 
     `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
@@ -102,7 +102,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
   - : Defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
 
     ```css
-    path( [<fill-rule>,]? <string> )
+    path( [ <fill-rule>, ]? <string> )
     ```
 
     The optional `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the path. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.

@@ -26,29 +26,29 @@ The inset rectangle is defined by specifying four offset values, starting with t
 
 - `auto`
 
-  - : Makes the edge for which this value is used to coincide with the corresponding edge of the containing block. If `auto` is used for the first (top) or fourth (left) value, the value of `auto` is `0%`, and if used for the second (right) or third (bottom) value, the value of `auto` is `100%`.
+  - : Makes the edge for which this value is used to coincide with the corresponding edge of the containing block. If `auto` is used for the first (top) or fourth (left) value, the value of `auto` is `0`, and if used for the second (right) or third (bottom) value, the value of `auto` is `100%`.
 
-- `round <border-radius>`
-  - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [border-radius](/en-US/docs/Web/CSS/border-radius) shorthand property. This parameter is optional.
+- `round <'border-radius'>`
+  - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property. This parameter is optional.
 
 ## Examples
 
 ### Creating offset-path using rect()
 
-In this example, the {{cssxref("offset-path")}} property uses the `rect()` function to define the shape of the path on which the element, red box in this case, moves. Three different scenarios are shown, each using different values for the `rect()` function.
+In this example, the {{cssxref("offset-path")}} property uses the `rect()` function to define the shape of the path on which the element, a red box in this case, moves. Three different scenarios are shown, each using different values for the `rect()` function.
 
 ```html
 <div class="container">
   Rectangular path 1
-  <div class="path rect-path-1"></div>
+  <div class="path rect-path-1">→</div>
 </div>
 <div class="container">
   Rectangular path 2
-  <div class="path rect-path-2"></div>
+  <div class="path rect-path-2">→</div>
 </div>
 <div class="container">
   Rectangular path 3
-  <div class="path rect-path-3"></div>
+  <div class="path rect-path-3">→</div>
 </div>
 ```
 
@@ -66,22 +66,20 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 .path {
   width: 40px;
   height: 40px;
+  background-color: red;
   position: absolute;
   animation: move 10s linear infinite;
 }
 
 .rect-path-1 {
-  background-color: red;
   offset-path: rect(50px 150px 200px 50px round 20%);
 }
 
 .rect-path-2 {
-  background-color: red;
   offset-path: rect(50px auto 200px 50px round 20%);
 }
 
 .rect-path-3 {
-  background-color: red;
   offset-path: rect(50px auto 200px auto);
 }
 
@@ -101,7 +99,7 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 
 - The path 1 rectangle specifies the distances of the four edges (top, right, bottom, and left) from the containing block. The top and bottom values are distances from the top edge of the containing block. The right and left values are distances from the left edge of the containing block. In addition, the corner of the rectangle is rounded at `20%`, making the red box element follow the rounded corners as it moves along this path.
 - The path 2 rectangle is similar to the path 1 rectangle, except that the right value is `auto`, which is equal to the value `100%`. This causes the right edge of the rectangle to match the right edge of the containing block, creating a wider rectangle than path 1.
-- The path 3 rectangle specifies both the left and right edge parameters as `auto` and omits the `round <border-radius>` parameter. This creates a rectangle that has the width of the containing block and rectangular corners instead of rounded corners like in path 1 and path 2 rectangles.
+- The path 3 rectangle specifies both the left and right edge parameters as `auto` and omits the `round <'border-radius'>` parameter. This creates a rectangle that has the width of the containing block and rectangular corners instead of rounded corners like in path 1 and path 2 rectangles.
 
 ## Specifications
 
