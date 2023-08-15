@@ -7,12 +7,13 @@ browser-compat: css.types.basic-shape.xywh
 
 {{CSSRef}}
 
-The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified offsets from the top and left edges of the reference box, with the specified width and height dimensions. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Types). CSS properties such as {{cssxref("clip-path")}} and {{cssxref("offset-path")}} use the `xywh()` function to create the rectangular shape path along which an element moves.
+The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified offsets from the top and left edges of the reference box, with the specified width and height dimensions. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Types). You can use the `xywh()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
 
 ## Syntax
 
 ```css
-offset-path: xywh(0px 1% 2px 3% round 0px 1px 2% 3px);
+offset-path: xywh(0 1% 2px 3% round 0 1px 2% 3px);
+clip-path: xywh(1px 2% 3px 4em round 0px 1% 2px 3em);
 ```
 
 ### Values
@@ -22,13 +23,13 @@ offset-path: xywh(0px 1% 2px 3% round 0px 1px 2% 3px);
 - `<length-percentage [0,∞]>`
   - : Specifies non-negative {{cssxref("&lt;length-percentage&gt;")}} values for the width and height of the rectangle. The minimum value can be zero, and the maximum value has no limit.
 - `round <border-radius>`
-  - : Specifies the radius of the rounded corners of the rectangle using the {{cssxref("border-radius")}} shorthand syntax. This parameter is optional.
+  - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [border-radius](/en-US/docs/Web/CSS/border-radius) shorthand property. This parameter is optional.
 
 ## Examples
 
 ### Creating offset-path using xywh()
 
-In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` function to define the shape of the path on which the element, red box in this case, moves. Two different scenarios are shown, each using different values for the `xywh()` function.
+In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` function to define the shape of the path on which the element, a magenta box in this case, moves. Two different scenarios are shown, each with different values for the `xywh()` function.
 
 ```html
 <div class="container">
@@ -98,4 +99,5 @@ In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` 
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
 - [Guide to basic shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)

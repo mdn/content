@@ -7,28 +7,29 @@ browser-compat: css.types.basic-shape.rect
 
 {{CSSRef}}
 
-The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Types). CSS properties such as {{cssxref("clip-path")}} and {{cssxref("offset-path")}} use the `rect()` function to create the rectangular shape path along which an element moves.
+The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Types). You can use the `rect()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
 
 ## Syntax
 
 ```css
-offset-path: rect(0px 1% auto 3% round 0 1px);
+offset-path: rect(0 1% auto 3% round 0 1px);
+clip-path: rect(50px 70px 80% 20%);
 ```
 
 ### Values
 
-The inset rectangle is specified using four values, going clockwise starting with the top edge. Each value is a `<length>`, a `<percentage>`, or the keyword `auto`.
+The inset rectangle is defined by specifying four offset values, starting with the top edge offset and going clockwise, and an optional `round` keyword with the `border-radius` parameter to add rounded corners to the rectangle. Each offset value can be either a `<length>`, a `<percentage>`, or the keyword `auto`.
 
 - `<length-percentage>`
 
-  - : Specifies the {{cssxref("&lt;length-percentage&gt;")}} value for the distance of the top, right, bottom, and left edges of the rectangle from the containing block. The first (top) and third (bottom) values are distances from the top edge of the containing block, and the second (right) and fourth (left) values are distances from the left edge of the containing block. The second (right) and third (bottom) values are limited by the fourth (left) and second (top) values, respectively, to correct the bottom edge from crossing over the top edge and right edge from crossing over the left edge. For example, `rect(10px 0 0 20px)` gets corrected to `rect(10px 20px 10px 20px)`.
+  - : Specifies the {{cssxref("&lt;length-percentage&gt;")}} value of the distance of the top, right, bottom, or left edge of the rectangle from the top or left edge of the containing block. The first (top) and third (bottom) values are distances from the top edge of the containing block, and the second (right) and fourth (left) values are distances from the left edge of the containing block. The second (right) and third (bottom) values are clamped by the fourth (left) and second (top) values, respectively, to prevent the bottom edge from crossing over the top edge and right edge from crossing over the left edge. For example, `rect(10px 0 0 20px)` is clamped to `rect(10px 20px 10px 20px)`.
 
 - `auto`
 
-  - : Makes the edge for which this value is used to coincide with the corresponding edge of the containing block. If `auto` is used for the first (top) or fourth (left) value, the value of `auto` is equivalent to 0%, and if used for the the second (right) or third (bottom) value, `auto` value is equivalent to 100%.
+  - : Makes the edge for which this value is used to coincide with the corresponding edge of the containing block. If `auto` is used for the first (top) or fourth (left) value, the value of `auto` is `0%`, and if used for the second (right) or third (bottom) value, the value of `auto` is `100%`.
 
 - `round <border-radius>`
-  - : Specifies the radius of the rounded corners of the rectangle using the {{cssxref("border-radius")}} shorthand syntax. This parameter is optional.
+  - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [border-radius](/en-US/docs/Web/CSS/border-radius) shorthand property. This parameter is optional.
 
 ## Examples
 
@@ -63,8 +64,8 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 }
 
 .path {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   animation: move 10s linear infinite;
 }
@@ -96,11 +97,11 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 
 #### Result
 
-{{EmbedLiveSample("Creating an offset-path using rect", "100%", 300)}}
+{{EmbedLiveSample("Creating an offset-path using rect", "100%", 400)}}
 
-- Path 1 rectangle specifies distances of all edges (top, right, bottom, and left) from the containing block. Top and bottom values are distances from the top edge of the containing block. Right and left values are distances from the left edge of the containing block. In addition, the corner of the rectangle is rounded`20%`, so the element moving on this path follows the rounded corner.
-- Path 2 is similar to path 1 except that the right value is `auto`. As a result, the right edge of the rectangle matches the right edge of the containing block.
-- Path 3 omits the corner rounding. Also, both right and left values are set to `auto`.
+- The path 1 rectangle specifies the distances of the four edges (top, right, bottom, and left) from the containing block. The top and bottom values are distances from the top edge of the containing block. The right and left values are distances from the left edge of the containing block. In addition, the corner of the rectangle is rounded at `20%`, making the red box element follow the rounded corners as it moves along this path.
+- The path 2 rectangle is similar to the path 1 rectangle, except that the right value is `auto`, which is equal to the value `100%`. This causes the right edge of the rectangle to match the right edge of the containing block, creating a wider rectangle than path 1.
+- The path 3 rectangle specifies both the left and right edge parameters as `auto` and omits the `round <border-radius>` parameter. This creates a rectangle that has the width of the containing block and rectangular corners instead of rounded corners like in path 1 and path 2 rectangles.
 
 ## Specifications
 
@@ -117,4 +118,5 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
 - [Guide to basic shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
