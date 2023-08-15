@@ -41,13 +41,13 @@ The `const` declaration is very similar to {{jsxref("Statements/let", "let")}}:
 - `const` declarations cannot be [redeclared](/en-US/docs/Web/JavaScript/Reference/Statements/let#redeclarations) by any other declaration in the same scope.
 - `const` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-  ```js example-bad
+  ```js-nolint example-bad
   if (true) const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
   ```
 
 An initializer for a constant is required. You must specify its value in the same declaration. (This makes sense, given that it can't be changed later.)
 
-```js example-bad
+```js-nolint example-bad
 const FOO; // SyntaxError: Missing initializer in const declaration
 ```
 
@@ -70,7 +70,7 @@ const MY_FAV = 7;
 console.log("my favorite number is: " + MY_FAV);
 ```
 
-```js
+```js-nolint example-bad
 // Re-assigning to a constant variable throws an error
 MY_FAV = 20; // TypeError: Assignment to constant variable
 
@@ -84,7 +84,7 @@ let MY_FAV = 20; // SyntaxError: Identifier 'MY_FAV' has already been declared
 
 It's important to note the nature of block scoping.
 
-```js
+```js-nolint
 const MY_FAV = 7;
 
 if (MY_FAV === 7) {

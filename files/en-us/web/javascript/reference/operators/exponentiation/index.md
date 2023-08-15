@@ -93,12 +93,12 @@ To force the base of an exponentiation expression to be a negative number:
 
 ## See also
 
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division (`/`)](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication (`*`)](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Increment (`++`)](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement (`--`)](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

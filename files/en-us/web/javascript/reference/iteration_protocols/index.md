@@ -214,11 +214,11 @@ const obj = {
   },
 };
 
-const [b] = obj;
+const [a] = obj;
 // Returning 1
 // Closing
 
-const [a, b, c] = obj;
+const [b, c, d] = obj;
 // Returning 1
 // Returning 2
 // Returning 3

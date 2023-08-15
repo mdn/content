@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.push
 
 {{JSRef}}
 
-The **`push()`** method adds the specified elements to the end of
+The **`push()`** method of {{jsxref("Array")}} instances adds the specified elements to the end of
 an array and returns the new length of the array.
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}
