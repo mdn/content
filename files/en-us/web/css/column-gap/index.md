@@ -104,8 +104,6 @@ div:nth-of-type(3n) {
 
 {{EmbedLiveSample("Flex_layout", "auto", "220px")}}
 
-The `column-gap` property defines the width of horizontal space between adjacent flex items.
-
 > **Note:** While there is horizontal space between adjacent flex items in each flex row, there is no space between the rows. To set vertical space between flex rows, you can specify a non-zero value for the {{cssxref("row-gap")}} property. The {{cssxref("gap")}} shorthand property is also available to set both the `row-gap` and `column-gap` in one declaration, in that order.
 
 ### Grid layout
