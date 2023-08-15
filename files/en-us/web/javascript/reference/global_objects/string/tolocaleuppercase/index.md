@@ -45,7 +45,7 @@ characters might result in two (or even more) characters when transformed to upp
 Therefore the length of the result string can differ from the input length. This also
 implies that the conversion is not stable, so i.E. the following can return
 `false`:
-`x.toLocaleUpperCase() === x.toLocaleUpperCase().toLocaleUpperCase()`
+`x. toLocaleLowerCase() === x.toLocaleUpperCase(). toLocaleLowerCase()`
 
 ## Examples
 
