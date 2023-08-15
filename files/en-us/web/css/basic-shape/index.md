@@ -47,7 +47,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
     rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
     ```
 
-    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangles dimensions depend on the size of the reference box and the offset values.
+    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangle's dimensions depend on the size of the reference box and the offset values.
 
     The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
 

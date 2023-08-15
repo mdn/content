@@ -35,7 +35,7 @@ The inset rectangle is defined by specifying four offset values, starting with t
 
 ### Creating offset-path using rect()
 
-In this example, the {{cssxref("offset-path")}} property uses the `rect()` function to define the shape of the path on which the element, a red box in this case, moves. Three different scenarios are shown, each using different values for the `rect()` function.
+In this example, the {{cssxref("offset-path")}} property uses the `rect()` function to define the shape of the path on which the element, a red box in this case, moves. Three different scenarios are shown, each using different values for the `rect()` function. The arrow inside the boxes points to the right edge of the box.
 
 ```html
 <div class="container">
@@ -97,9 +97,9 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 
 {{EmbedLiveSample("Creating an offset-path using rect", "100%", 400)}}
 
-- The path 1 rectangle specifies the distances of the four edges (top, right, bottom, and left) from the containing block. The top and bottom values are distances from the top edge of the containing block. The right and left values are distances from the left edge of the containing block. In addition, the corner of the rectangle is rounded at `20%`, making the red box element follow the rounded corners as it moves along this path.
+- The path 1 rectangle specifies the distances of the four edges (top, right, bottom, and left) from the containing block. The top and bottom values are distances from the top edge of the containing block. The right and left values are distances from the left edge of the containing block. In addition, the corner of the rectangle is rounded at `20%`, making the red box element follow the rounded corners as it moves along this path. Notice how the arrow inside the box follows curve at the rectangular path corners.
 - The path 2 rectangle is similar to the path 1 rectangle, except that the right value is `auto`, which is equal to the value `100%`. This causes the right edge of the rectangle to match the right edge of the containing block, creating a wider rectangle than path 1.
-- The path 3 rectangle specifies both the left and right edge parameters as `auto` and omits the `round <'border-radius'>` parameter. This creates a rectangle that has the width of the containing block and rectangular corners instead of rounded corners like in path 1 and path 2 rectangles.
+- The path 3 rectangle specifies both the left and right edge parameters as `auto` and omits the `round <'border-radius'>` parameter. This creates a rectangle that has the width of the containing block and rectangular corners instead of rounded corners like in path 1 and path 2 rectangles. Notice the movement of the arrow inside this box at the corners.
 
 ## Specifications
 

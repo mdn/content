@@ -29,7 +29,7 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 
 ### Creating offset-path using xywh()
 
-In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` function to define the shape of the path on which the element, a magenta box in this case, moves. Two different scenarios are shown, each with different values for the `xywh()` function. The arrow inside the box points to the right edge of the box.
+In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` function to define the shape of the path on which the element, a magenta box in this case, moves. Two different scenarios are shown, each with different values for the `xywh()` function. The arrow inside the boxes points to the right edge of the box.
 
 ```html
 <div class="container">
