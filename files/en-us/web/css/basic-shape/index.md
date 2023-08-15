@@ -41,7 +41,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
 - `{{cssxref("basic-shape/rect","rect()")}}`
 
-  - : Defines a rectangle with specific inset distances from the top and left edges of the reference box.
+  - : Defines a rectangle with specific inset distances from the top and left edges of the containing block.
 
     ```css
     rect( [ <length-percentage> | auto]{4} [round <`border-radius`>]? )
@@ -53,7 +53,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
 - `{{cssxref("basic-shape/xywh","xywh()")}}`
 
-  - : Defines a rectangle with inset distances from the top and left edges of the reference box along with width and height of the rectangle.
+  - : Defines a rectangle with inset distances from the top and left edges of the containing block along with width and height of the rectangle.
 
     ```css
     xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [round <`border-radius`>]? )

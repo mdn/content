@@ -7,7 +7,7 @@ browser-compat: css.types.basic-shape.xywh
 
 {{CSSRef}}
 
-The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle at the specified inset distances from the top and left edges of the reference box, with the specified width and height dimensions. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types). CSS properties such as {{cssxref("clip-path")}} and {{cssxref("offset-path")}} use the `xywh()` function to create a rectangular shape.
+The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified offsets from the top and left edges of the reference box, with the specified width and height dimensions. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Types). CSS properties such as {{cssxref("clip-path")}} and {{cssxref("offset-path")}} use the `xywh()` function to create the rectangular shape path along which an element moves.
 
 ## Syntax
 
@@ -18,15 +18,70 @@ offset-path: xywh(0px 1% 2px 3% round 0px 1px 2% 3px);
 ### Values
 
 - `<length-percentage>`
-  - : Specifies the {{cssxref("&lt;length-percentage&gt;")}} values for the `x` and `y` coordinates of the rectangle element.
+  - : Specifies the {{cssxref("&lt;length-percentage&gt;")}} values for the `x` and `y` coordinates of the rectangle.
 - `<length-percentage [0,∞]>`
-  - : Specifies non-negative {{cssxref("&lt;length-percentage&gt;")}} values for the width and height of the rectangle element. The minimum value can be zero, and the maximum value has no limit.
+  - : Specifies non-negative {{cssxref("&lt;length-percentage&gt;")}} values for the width and height of the rectangle. The minimum value can be zero, and the maximum value has no limit.
 - `round <border-radius>`
   - : Specifies the radius of the rounded corners of the rectangle using the {{cssxref("border-radius")}} shorthand syntax. This parameter is optional.
 
 ## Examples
 
-### Creating a rectangle using xywh()
+### Creating offset-path using xywh()
+
+In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` function to define the shape of the path on which the element, red box in this case, moves. Two different scenarios are shown, each using different values for the `xywh()` function.
+
+```html
+<div class="container">
+  Rectangular path 1
+  <div class="path xywh-path-1"></div>
+</div>
+<div class="container">
+  Rectangular path 2
+  <div class="path xywh-path-2"></div>
+</div>
+```
+
+```css
+.container {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 15px;
+  text-align: center;
+}
+
+.path {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  animation: move 10s linear infinite;
+}
+
+.xywh-path-1 {
+  background-color: magenta;
+  offset-path: xywh(20% 30% 150px 100% round 20%);
+}
+
+.xywh-path-2 {
+  background-color: magenta;
+  offset-path: xywh(30px 30% 100px 80px);
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Creating offset-path using xywh", "100%", 400)}}
 
 ## Specifications
 
