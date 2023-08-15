@@ -288,7 +288,7 @@ In the first line, we import `components-lib.css` into the `components` layer. I
 
 The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. The nested `components.narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already contains a `narrow` layer, in which case, the contents of `narrowtheme.css` would be appended to the `components.narrow` nested layer. Additional nested named layers can be added to the `components` layer using the pattern `components.<layerName>`. As mentioned before, unnamed layers can be created but they cannot be accessed subsequently.
 
-Let's look at another example, where we import [`layers1.css`]([#the_layer_block_at-rule_for_named_and_anonymous_layers) into a named layer using the following statement:
+Let's look at another example, where we import [`layers1.css`](#the_layer_block_at-rule_for_named_and_anonymous_layers) into a named layer using the following statement:
 
 ```css
 @import url(layers1.css) layer(example);
