@@ -36,6 +36,8 @@ Intl.NumberFormat(locales, options)
     - `nu`
       - : See [`numberingSystem`](#numberingsystem).
 
+    This key can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
+
 - `options` {{optional_inline}}
 
   - : An object. For ease of reading, the property list is broken into sections based on their purposes.
@@ -118,29 +120,7 @@ The above properties fall into two groups: `minimumIntegerDigits`, `minimumFract
 
 - `roundingIncrement`
 
-  - : Specifies the rounding-increment precision. Possible values are `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`.
-
-    > **Note:** The `roundingIncrement` option controls the rounding increment to be used when formatting numbers:
-    >
-    > - It indicates the increment at which rounding should take place relative to the calculated rounding magnitude.
-    > - It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
-    >
-    > For example, if `maximumFractionDigits` is 2 and `roundingIncrement` is 5, then the number is rounded to the nearest 0.05 ("nickel rounding").
-    >
-    > ```js
-    > const nf = new Intl.NumberFormat("en-US", {
-    >   style: "currency",
-    >   currency: "USD",
-    >   maximumFractionDigits: 2,
-    >   roundingIncrement: 5,
-    > });
-    >
-    > console.log(nf.format(11.29)); // "$11.30"
-    > console.log(nf.format(11.25)); // "$11.25"
-    > console.log(nf.format(11.22)); // "$11.20"
-    > ```
-    >
-    > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
+  - : Indicates the increment at which rounding should take place relative to the calculated rounding magnitude. Possible values are `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`. It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
 
 - `roundingMode`
 
