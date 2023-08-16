@@ -69,7 +69,7 @@ If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("text
   - "`shipping`"
     - : The street address to send the product. This can be combined with other tokens, such as "`shipping street-address`" and "`shipping address-level2`".
   - "`billing`"
-     - : The street address to associate with the form of payment used. This can be combined with other tokens, such as "`billing street-address`" and "`billing address-level2`".
+    - : The street address to associate with the form of payment used. This can be combined with other tokens, such as "`billing street-address`" and "`billing address-level2`".
 - "`address-line1`", "`address-line2`", "`address-line3`"
   - : Each individual line of the street address. These should only be present if the "`street-address`" is not present.
 - "`address-level4`"
