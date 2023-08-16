@@ -979,7 +979,7 @@ See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](h
 
 ### rect() and xywh() basic shape functions
 
-The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) basic shape functions enable you to create rectangular paths along which an element moves. They are used in CSS properties such as {{cssxref("offset-path")}}. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block, along with the width and height of the rectangle. In both the functions, you can optionally round off the corners. Both these functions are [basic-shape](/en-US/docs/Web/CSS/basic-shape) data types.
+The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type functions enable you to define a rectangle. In CSS properties such as {{cssxref("offset-path")}}, these functions are used to define the shape of the path along which an element moves. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the left and top edges of the containing block, along with the width and height of the rectangle. In both the functions, you can optionally round off the corners.
 For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `rect()` function and [Firefox bug 1786160](https://bugzil.la/1786160) for the `xywh()` function.
 
 <table>
