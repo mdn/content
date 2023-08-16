@@ -95,6 +95,9 @@ Note that `grid-row-gap` is an alias for this property.
   <div></div>
   <div></div>
   <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 ```
 
@@ -104,7 +107,7 @@ Note that `grid-row-gap` is an alias for this property.
 #grid {
   display: grid;
   height: 200px;
-  grid-template-columns: 200px;
+  grid-template-columns: 150px 1fr;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 20px;
 }
