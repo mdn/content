@@ -9,11 +9,11 @@ browser-compat: api.IdentityCredential
 
 {{SeeCompatTable}}{{DefaultAPISidebar("FedCM API")}}
 
-The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API for sites that depend on those services for sign-in functionality to make use of them.
+The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API for sites that depend on those services for sign-in functionality to make use of them.
 
 ## FedCM concepts
 
-Identity federation is the delegation of user authentication from a website that requires user sign-in such as an e-commerce or social networking site (also known as a relying party or RP) to a trusted third party identity provider (IdP). Users will sign up an account with the IdP, which can then be used to sign-in to one or more RPs. Identity federation via a small set of dedicated identity providers has improved web authentication in terms of security, consumer confidence, and user experience, versus having every site handling their own sign-in needs with a separate username and password.
+Identity federation is the delegation of user authentication from a website that requires user sign-in such as an e-commerce or social networking site (also known as a relying party or RP) to a trusted third party IdP. Users will sign up an account with the IdP, which can then be used to sign-in to one or more RPs. Identity federation via a small set of dedicated IdPs has improved web authentication in terms of security, consumer confidence, and user experience, versus having every site handling their own sign-in needs with a separate username and password.
 
 The problem is that traditional identity federation relies on {{htmlelement("iframe")}}s, redirects, and third-party cookies, which are also used for third-party tracking. Browsers are limiting the usage of these features in an effort to preserve user privacy, but a side effect is that this makes valid, non-tracking uses more difficult to implement, and this includes identity federation.
 
@@ -30,7 +30,7 @@ There are two sides to using the FedCM API — IdP integration with FedCM, and R
 
 ## IdP integration with FedCM
 
-To integrate with FedCM, an identity provider needs to do the following:
+To integrate with FedCM, an IdP needs to do the following:
 
 1. Provide a well-known file to identify the IdP.
 2. Provide a config file and endpoints for accounts list and assertion issuance (and optionally, client metadata).
@@ -92,21 +92,26 @@ This endpoint returns a list of all the IdP accounts that the user is currently 
 
 ```json
 {
- "accounts": [{
-   "id": "1234",
-   "given_name": "John",
-   "name": "John Doe",
-   "email": "john_doe@idp.example",
-   "picture": "https://idp.example/profile/123",
-   "approved_clients": ["123", "456", "789"],
-  }, {
-   "id": "5678",
-   "given_name": "Johnny",
-   "name": "Johnny",
-   "email": "johnny@idp.example",
-   "picture": "https://idp.example/profile/456"
-   "approved_clients": ["abc", "def", "ghi"],
-  }]
+  "accounts": [
+    {
+      "id": "john_doe",
+      "given_name": "John",
+      "name": "John Doe",
+      "email": "john_doe@idp.example",
+      "picture": "https://idp.example/profile/123",
+      "approved_clients": ["123", "456", "789"],
+      "login_hints": ["john_doe", "john_doe@idp.example"]
+    },
+    {
+      "id": "johnny",
+      "given_name": "Johnny",
+      "name": "Johnny",
+      "email": "johnny@idp.example",
+      "picture": "https://idp.example/profile/456",
+      "approved_clients": ["abc", "def", "ghi"],
+      "login_hints": ["johnny", "johnny@idp.example"]
+    }
+  ]
 }
 ```
 
@@ -124,6 +129,8 @@ This includes the following information:
   - : The URL of the user's avatar image.
 - `approved_clients` {{optional_inline}}
   - : An array of RP clients that the user has registered with.
+- `login_hints` {{optional_inline}}
+  - : An array of strings representing the account, which are used to filter the list of account options the browser provides for the user to sign in with when the `loginHint` property is provided in the [`identity`](/en-US/docs/Web/API/CredentialsContainer/get#identity_object_structure) object of an associated `get()` call. Each account that has a string in its `login_hints` array matching the provided `loginHint` is included.
 
 > **Note:**: If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
 
@@ -150,17 +157,19 @@ When sent valid user credentials, this endpoint should respond with a validation
 
 ## RP sign-in using the JavaScript API
 
-RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to make a request for users to sign in to the RP with the IdP, using the available IdP config and endpoints (as described above). A typical request would look like this:
+RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to make a request for users to sign in to the RP with the IdP, using the available IdP config and endpoints (as described above). A typical request might look like this:
 
 ```js
 async function signIn() {
   const identityCredential = await navigator.credentials.get({
     identity: {
+      context: "signup",
       providers: [
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
           nonce: "******",
+          loginHint: "user1@example.com",
         },
       ],
     },
@@ -168,7 +177,11 @@ async function signIn() {
 }
 ```
 
-The `identity.providers` property takes an array of objects containing the path to an IdP config file, the RP's client identifier issued by the IdP, and an optional random nonce that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
+The `identity.providers` property takes an array of objects containing the path to an IdP config file and the RP's client identifier issued by the IdP; the example above also includes a couple of optional features:
+
+- `identity.context` specifies the context in which the user is authenticating with FedCM (for example is it a first-time signup for this account, or a sign-in with an existing account?). The browser uses this to vary the text in its FedCM sign-in UI so that it better suits the context.
+- `identity.providers.nonce` provides a random nonce value that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
+- `identity.providers.loginHint` provides a hint as to which account option(s) the browser should provide for the user to sign in with, which is matched against the `login_hints` values provided by the IdP from the [accounts list endpoint](#the_accounts_list_endpoint).
 
 The browser requests the IdP config file and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Sign in to the relying party with the identity provider](https://developer.chrome.com/docs/privacy-sandbox/fedcm/#sign-into-rp).
 
@@ -280,11 +293,13 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 - {{domxref("IdentityCredential")}}
   - : Represents a user identity credential arising from a successful federated sign-in. A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an {{domxref("IdentityCredential")}} instance.
+- {{domxref("IdentityProvider")}}
+  - : Represents an IdP and provides access to related information. The static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method returns information about a previously signed in user on their return to an IdP, which can be used to provide a personalized welcome message and sign-in button.
 
 ## Extensions to other interfaces
 
 - {{domxref("CredentialsContainer.get()")}}, the `identity` option.
-  - : `identity` is an object containing details of federated identity providers (IdPs) that a relying party (RP) website can use to sign users in. Causes a `get()` call to initiate a request for a user to sign in to a RP with an IdP.
+  - : `identity` is an object containing details of federated IdPs that a relying party (RP) website can use to sign users in. Causes a `get()` call to initiate a request for a user to sign in to a RP with an IdP.
 
 ## Examples
 
