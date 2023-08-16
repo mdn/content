@@ -143,7 +143,7 @@ console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not availabl
 
 ## See also
 
-- The [nullish coalescing assignment (`??=`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-- The [optional chaining (`?.`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- The [logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Default parameters in functions](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Nullish coalescing assignment (`??=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+- [Optional chaining (`?.`)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Logical OR (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
