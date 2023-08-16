@@ -50,9 +50,17 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} identical to the one returned by
+    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
     {{domxref('performance.now()')}}, indicating the point in time when
-    `requestAnimationFrame()` starts to execute callback functions.
+    `requestAnimationFrame()` starts to execute callback functions. The differences
+    between this argument and {{domxref('performance.now()')}} are worth noting. First,
+    in order to deal with a security issue, all the browsers reduced the precision of
+    {{domxref('performance.now()')}} to varying degrees, and Firefox returns an integer.
+    This argument also has its precision limited as illustrated by the limited number of
+    decimal places is uses, again varying by browser. In terms of the values themselves,
+    the {{domxref('performance.now()')}} value is always higher. The amount higher varies
+    by browser and momentary circumstances, but in some cases it can be almost as much as
+    an entire frame (16.7ms @60hz).
 
 ### Return value
 
