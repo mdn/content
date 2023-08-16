@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.toLocaleTimeString
 
 {{JSRef}}
 
-The **`toLocaleTimeString()`** method returns a string with a language-sensitive representation of the time portion of the date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+The **`toLocaleTimeString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of the time portion of the date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
 
 When formatting large numbers of dates, it is better to create an {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method.
 

@@ -75,7 +75,7 @@ console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encode
 
 Note that `encodeURI()` by itself _cannot_ form proper HTTP {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} requests, such as for {{domxref("XMLHttpRequest")}}, because `&`, `+`, and `=` are not encoded, which are treated as special characters in `GET` and `POST` requests. `encodeURIComponent()`, however, does encode these characters.
 
-### Encoding a lone high surrogate throws
+### Encoding a lone surrogate throws
 
 A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
 
@@ -83,10 +83,10 @@ A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate wh
 // High-low pair OK
 encodeURI("\uD800\uDFFF"); // "%F0%90%8F%BF"
 
-// Lone high surrogate throws "URIError: malformed URI sequence"
+// Lone high-surrogate code unit throws "URIError: malformed URI sequence"
 encodeURI("\uD800");
 
-// Lone low surrogate throws "URIError: malformed URI sequence"
+// Lone low-surrogate code unit throws "URIError: malformed URI sequence"
 encodeURI("\uDFFF");
 ```
 

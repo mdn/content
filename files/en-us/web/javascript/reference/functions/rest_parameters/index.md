@@ -40,7 +40,7 @@ myFun("one", "two", "three", "four", "five", "six");
 
 A function definition can only have one rest parameter, and the rest parameter must be the last parameter in the function definition.
 
-```js example-bad
+```js-nolint example-bad
 function wrong1(...one, ...wrong) {}
 function wrong2(...wrong, arg2, arg3) {}
 ```

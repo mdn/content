@@ -67,4 +67,4 @@ Left shifting any number `x` by `0` returns `x` converted to a 32-bit integer. D
 ## See also
 
 - [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
-- [Left shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [Left shift assignment (`<<=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

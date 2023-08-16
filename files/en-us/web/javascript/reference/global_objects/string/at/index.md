@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.at
 
 {{JSRef}}
 
-The **`at()`** method takes an integer value and returns a new {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
+The **`at()`** method of {{jsxref("String")}} values takes an integer value and returns a new {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
 
 {{EmbedInteractiveExample("pages/js/string-at.html")}}
 

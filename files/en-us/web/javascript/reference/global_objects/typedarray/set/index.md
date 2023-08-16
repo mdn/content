@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.set
 
 {{JSRef}}
 
-The **`set()`** method stores multiple values in the typed
+The **`set()`** method of {{jsxref("TypedArray")}} instances stores multiple values in the typed
 array, reading input values from a specified array.
 
 {{EmbedInteractiveExample("pages/js/typedarray-set.html")}}
@@ -44,7 +44,7 @@ set(typedarray, targetOffset)
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if one of the two conditions is met:
+  - : Thrown in one of the following cases:
     - An element will be stored beyond the end of the typed array, either because `targetOffset` is too large or because `array` or `typedarray` is too large.
     - `targetOffset` is negative.
 

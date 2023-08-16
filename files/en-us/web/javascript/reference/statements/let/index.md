@@ -56,7 +56,7 @@ Compared with {{jsxref("Statements/var", "var")}}, `let` declarations have the f
 - `let` declarations cannot be [redeclared](#redeclarations) by any other declaration in the same scope.
 - `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-  ```js example-bad
+  ```js-nolint example-bad
   if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
   ```
 
@@ -115,7 +115,7 @@ console.log(typeof undeclaredVariable); // "undefined"
 
 `let` declarations cannot be in the same scope as any other declaration, including `let`, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and {{jsxref("Statements/import", "import")}} declaration.
 
-```js example-bad
+```js-nolint example-bad
 {
   let foo;
   let foo; // SyntaxError: Identifier 'a' has already been declared
@@ -124,7 +124,7 @@ console.log(typeof undeclaredVariable); // "undefined"
 
 A `let` declaration within a function's body cannot have the same name as a parameter. A `let` declaration within a `catch` block cannot have the same name as the `catch`-bound identifier.
 
-```js
+```js-nolint example-bad
 function foo(a) {
   let a = 1; // SyntaxError: Identifier 'a' has already been declared
 }
@@ -138,7 +138,7 @@ If you're experimenting in a REPL, such as the Firefox web console (**Tools** > 
 
 You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements because there is only one block.
 
-```js example-bad
+```js-nolint example-bad
 let x = 1;
 
 switch (x) {
@@ -257,7 +257,7 @@ console.log(b); // 2
 
 However, this combination of `var` and `let` declarations below is a {{jsxref("SyntaxError")}} because `var` not being block-scoped, leading to them being in the same scope. This results in an implicit re-declaration of the variable.
 
-```js example-bad
+```js-nolint example-bad
 let x = 1;
 
 {
