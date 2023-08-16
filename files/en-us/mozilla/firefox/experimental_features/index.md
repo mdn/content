@@ -969,7 +969,7 @@ See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](h
       <td>No</td>
     </tr>
     <tr>
-      <th>Preferences name</th>
+      <th>Preference name</th>
       <td colspan="2">
       <code>layout.css.abs-sign.enabled</code>
     </td>
@@ -979,7 +979,7 @@ See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](h
 
 ### rect() and xywh() basic shape functions
 
-The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type functions enable you to define a rectangle. In CSS properties such as {{cssxref("offset-path")}}, these functions are used to define the shape of the path along which an element moves. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the left and top edges of the containing block, along with the width and height of the rectangle. In both the functions, you can optionally round off the corners.
+The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions enable you to define a rectangle using the [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type. In CSS properties such as {{cssxref("offset-path")}}, these functions are used to define the shape of the path along which an element moves. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the left and top edges of the containing block as well as the width and height of the rectangle. In both the functions, you can optionally round off the corners.
 For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `rect()` function and [Firefox bug 1786160](https://bugzil.la/1786160) for the `xywh()` function.
 
 <table>
@@ -1012,7 +1012,7 @@ For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `
       <td>No</td>
     </tr>
     <tr>
-      <th>Preferences name</th>
+      <th>Preference names</th>
       <td colspan="2">
       <code>layout.css.motion-path-basic-shapes.enabled</code>, <code>layout.css.basic-shape-rect.enabled</code>, <code>layout.css.basic-shape-xywh.enabled</code>
     </td>
