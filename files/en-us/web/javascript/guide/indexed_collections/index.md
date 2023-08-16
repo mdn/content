@@ -59,14 +59,21 @@ const obj = { prop: [element0, element1, /* …, */ elementN] };
 
 If you wish to initialize an array with a single element, and the element happens to be a `Number`, you must use the bracket syntax. When a single `Number` value is passed to the `Array()` constructor or function, it is interpreted as an `arrayLength`, not as a single element.
 
+This creates an array with only one element: the number 42.
+
 ```js
-// This creates an array with only one element: the number 42.
 const arr = [42];
+```
 
-// This creates an array with no elements and arr.length set to 42.
+This creates an array with no elements and `arr.length` set to 42.
+
+```js
 const arr = Array(42);
+```
 
-// This is equivalent to:
+This is equivalent to:
+
+```js
 const arr = [];
 arr.length = 42;
 ```

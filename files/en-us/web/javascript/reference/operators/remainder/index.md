@@ -79,13 +79,13 @@ Infinity % Infinity; // NaN
 
 ## See also
 
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division (`/`)](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication (`*`)](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment (`++`)](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement (`--`)](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
 - [Remainder operator vs. modulo operator](https://2ality.com/2019/08/remainder-vs-modulo.html)

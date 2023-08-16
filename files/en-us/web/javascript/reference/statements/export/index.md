@@ -196,7 +196,7 @@ import { a } from "./barrel.js";
 
 The following is syntactically invalid despite its import equivalent:
 
-```js example-bad
+```js-nolint example-bad
 export DefaultExport from "bar.js"; // Invalid
 ```
 
