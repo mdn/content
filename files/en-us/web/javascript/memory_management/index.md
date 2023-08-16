@@ -101,7 +101,7 @@ In this context, the notion of an "object" is extended to something broader than
 
 ### Reference-counting garbage collection
 
-> **Note:** no modern browser uses reference-counting for garbage collection anymore.
+> **Note:** no modern JavaScript engine uses reference-counting for garbage collection anymore.
 
 This is the most naïve garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it. An object is said to be "garbage", or collectible if there are zero references pointing to it.
 
