@@ -74,7 +74,7 @@ The interface supports the following timestamp properties which you can see in t
 - {{domxref('PerformanceResourceTiming.requestStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.
 - {{domxref('PerformanceResourceTiming.firstInterimResponseStart')}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} that represents the interim response time (e.g. 100 continue or 103 early hints).
+  - : A {{domxref("DOMHighResTimeStamp")}} that represents the interim response time (for example, 100 Continue or 103 Early Hints).
 - {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
 - {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
@@ -101,7 +101,7 @@ Additionally, this interface exposes the following properties containing more in
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 - {{domxref("PerformanceResourceTiming.deliveryType")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : Returns the delivery type for how the resource was delivered, which currently can be "`cache`" or the empty string (this is expected to be expanded by future updates to this specification).
+  - : Indicates how the resource was delivered; currently can either be "`cache`", or the empty string. (The set of possible values is expected to be expanded in the future.)
 
 ## Instance methods
 

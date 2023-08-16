@@ -8,7 +8,7 @@ browser-compat: api.PerformanceResourceTiming.firstInterimResponseStart
 
 {{APIRef("Performance API")}}
 
-The **`firstInterimResponseStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the interim 1xx response (e.g. 100 continue or 103 early hints) from the server.
+The **`firstInterimResponseStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the interim 1xx response (for example, 100 Continue or 103 Early Hints) from the server.
 
 There is no _end_ property for `firstInterimResponseStart`.
 
@@ -24,13 +24,13 @@ The `firstInterimResponseStart` property can have the following values:
 
 ### Measuring request time
 
-The `firstInterimResponseStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long the request takes to send an interim response.
+The `firstInterimResponseStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long it takes to the browser to receive an interim response after the sending the request.
 
 ```js
 const request = entry.firstInterimResponseStart - entry.requestStart;
 ```
 
-Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+The following example uses a {{domxref("PerformanceObserver")}} to notify of new `resource` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used for accessing entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -45,7 +45,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+The following example uses {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call the method.
 
 ```js
 const resources = performance.getEntriesByType("resource");

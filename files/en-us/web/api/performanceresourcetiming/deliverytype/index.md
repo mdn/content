@@ -15,19 +15,19 @@ The **`deliveryType`** read-only property is a string indicating how the resourc
 The `deliveryType` property can have the following values:.
 
 - `cache`
-  - : If the request was retrieved from the cache.
+  - : If the resource was retrieved from the cache
 - `""` (empty string)
-  - : The empty string is returned otherwise.
+  - : If none of the other defined delivery types
 
-This is expected to be expanded by future updates to this specification, e.g. to describe consuming preloaded resources and prefetched navigation requests.
+This set of delivery types is expected to be expanded in the future — for example, to indicate preloaded resources and to indicate prefetched navigation requests.
 
 ## Examples
 
 ### Filtering resources
 
-The `deliveryType` property can be used to get specific resource timing entries only. For example, only those that were cached.
+The `deliveryType` property can be used to get specific resource timing entries only; for example, only those that were cached.
 
-Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+The following example uses a {{domxref("PerformanceObserver")}} to notify of new `resource` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used for accessing entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -40,7 +40,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+The following example uses {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call the method.
 
 ```js
 const scripts = performance.getEntriesByType("resource").filter((entry) => {
