@@ -152,7 +152,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
   - {{cssxref(":host-context", ":host-context()")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element
 
-- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo) (representing entities not included in HTML)
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements) (representing entities not included in HTML)
 
   - {{CSSXref("::after")}}
   - {{CSSXref("::before")}}
@@ -195,6 +195,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 ## See also
 
-- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo)
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
 - [CSS cascade and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
