@@ -57,7 +57,7 @@ requestAnimationFrame(callback)
     in order to deal with a security issue, all the browsers reduced the precision of
     {{domxref('performance.now()')}} to varying degrees, and Firefox returns an integer.
     This argument also has its precision limited as illustrated by the limited number of
-    decimal places is uses, again varying by browser. In terms of the values themselves,
+    decimal places it uses, again varying by browser. In terms of the values themselves,
     the {{domxref('performance.now()')}} value is always higher. The amount higher varies
     by browser and momentary circumstances, but in some cases it can be almost as much as
     an entire frame (16.7ms @60hz).
