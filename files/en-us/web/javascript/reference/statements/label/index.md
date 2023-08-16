@@ -217,7 +217,7 @@ L: function F() {}
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, however, this will throw a {{jsxref("SyntaxError")}}:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 L: function F() {}
 // SyntaxError: functions cannot be labelled
@@ -225,7 +225,7 @@ L: function F() {}
 
 Non-plain functions, such as [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) can neither be labeled in strict code, nor in non-strict code:
 
-```js example-bad
+```js-nolint example-bad
 L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
 ```

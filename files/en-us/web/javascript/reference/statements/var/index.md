@@ -145,14 +145,14 @@ console.log(a); // 1
 
 `var` declarations cannot be in the same scope as a {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, or {{jsxref("Statements/import", "import")}} declaration.
 
-```js example-bad
+```js-nolint example-bad
 var a = 1;
 let a = 2; // SyntaxError: Identifier 'a' has already been declared
 ```
 
 Because `var` declarations are not scoped to blocks, this also applies to the following case:
 
-```js example-bad
+```js-nolint example-bad
 let a = 1;
 {
   var a = 1; // SyntaxError: Identifier 'a' has already been declared
@@ -181,7 +181,7 @@ foo(2); // Logs 1
 
 A `var` declaration within a `catch` block can have the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a destructuring pattern. This is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements) and you should not rely on it. In this case, the declaration is hoisted to outside the `catch` block, but any value assigned within the `catch` block is not visible outside.
 
-```js example-bad
+```js-nolint example-bad
 try {
   throw 1;
 } catch (e) {

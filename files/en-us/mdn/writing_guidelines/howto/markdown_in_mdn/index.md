@@ -91,9 +91,9 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `yaml` - YAML
   - `toml` - TOML
   - `sql` - SQL Database
-  - `diff` - Diff file
   - `ignore` - Gitignore file
   - `apacheconf` - Apache configuration
+  - `nginx` - NGINX configuration
 - Templates
   - `django` - Django templates
   - `svelte` - Svelte templates
@@ -101,7 +101,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Other
   - `plain` - Plain text
-  - `diff` - Git diff
+  - `diff` - Diff file
   - `http` - HTTP headers
   - `regex` - Regex
   - `uri` - URIs and URLs

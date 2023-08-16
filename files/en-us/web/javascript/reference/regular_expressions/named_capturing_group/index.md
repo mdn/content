@@ -32,7 +32,7 @@ Named capturing groups can be used just like capturing groups — they also have
 
 All names must be unique within the same pattern. Multiple named capturing groups with the same name result in a syntax error.
 
-```js
+```js-nolint example-bad
 /(?<name>)(?<name>)/; // SyntaxError: Invalid regular expression: Duplicate capture group name
 ```
 

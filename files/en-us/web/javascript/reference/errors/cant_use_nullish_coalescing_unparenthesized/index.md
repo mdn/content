@@ -49,7 +49,7 @@ a ?? (b && c);
 
 When migrating legacy code that uses `||` and `&&` for guarding against `null` or `undefined`, you may often convert it partially:
 
-```js example-bad
+```js-nolint example-bad
 function getId(user, fallback) {
   // Previously: user && user.id || fallback
   return user && user.id ?? fallback; // SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions
