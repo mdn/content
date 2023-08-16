@@ -76,24 +76,24 @@ The following example returns true and applies the CSS style if the browser supp
 
 The table below describes the font technologies (`<font-tech>`), including color font technologies (`<color-font-tech>`), font feature technologies (`<font-features-tech>`) and other available font technologies that can be queried using this function:
 
-| Technology          | Supports                                                                                      |
-| :------------------ | :-------------------------------------------------------------------------------------------- |
-| **`<color-font-tech>`**                                                                                           |
-| `color-colrv0`      | Multi-colored glyphs via COLR version 0 table                                                 |
-| `color-colrv1`      | Multi-colored glyphs via COLR version 1 table                                                 |
-| `color-svg`         | SVG multi-colored tables                                                                      |
-| `color-sbix`        | Standard bitmap graphics tables                                                               |
-| `color-cbdt`        | Color bitmap data tables                                                                      |
-| **`<font-features-tech>`**                                                                                       |
-| `features-opentype` | OpenType `GSUB` and `GPOS` tables                                                             |
-| `features-aat`      | TrueType `morx` and `kerx` tables                                                             |
-| `features-graphite` | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
-| **Other <font-tech> values** |
-| `incremental-patch`       | Incremental font loading using the patch subset method                                  |
-| `incremental-range`       | Incremental font loading using the range request method                                 |
-| `incremental-auto`       | Incremental font loading using method negotiation                                        |
-| `variations`        | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
-| `palettes`          | Font palettes by means of `font-palette` to select one of many color palettes in the font     |
+| Technology                   | Supports                                                                                      |
+| :--------------------------- | :-------------------------------------------------------------------------------------------- |
+| **`<color-font-tech>`**      |
+| `color-colrv0`               | Multi-colored glyphs via COLR version 0 table                                                 |
+| `color-colrv1`               | Multi-colored glyphs via COLR version 1 table                                                 |
+| `color-svg`                  | SVG multi-colored tables                                                                      |
+| `color-sbix`                 | Standard bitmap graphics tables                                                               |
+| `color-cbdt`                 | Color bitmap data tables                                                                      |
+| **`<font-features-tech>`**   |
+| `features-opentype`          | OpenType `GSUB` and `GPOS` tables                                                             |
+| `features-aat`               | TrueType `morx` and `kerx` tables                                                             |
+| `features-graphite`          | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
+| **Other `<font-tech>` values** |
+| `incremental-patch`          | Incremental font loading using the patch subset method                                        |
+| `incremental-range`          | Incremental font loading using the range request method                                       |
+| `incremental-auto`           | Incremental font loading using method negotiation                                             |
+| `variations`                 | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
+| `palettes`                   | Font palettes by means of `font-palette` to select one of many color palettes in the font     |
 
 #### `font-format()`
 
