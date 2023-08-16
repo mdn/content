@@ -63,7 +63,7 @@ The ES module implementation in Node.js supports resolving module specifiers con
 
 ### Resolving a file relative to the current one
 
-In Node.js CommonJS modules, there's a `__dirname` variable that contains the absolute path to the folder containing current module, which is useful for resolving relative paths. However, ES modules cannot have contextual variables except for `import.meta`. Therefore, to resolve a relative file you can use [`import.meta.resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve). Note that this uses URLs rather than filesystem paths.
+In Node.js CommonJS modules, there's a `__dirname` variable that contains the absolute path to the folder containing current module, which is useful for resolving relative paths. However, ES modules cannot have contextual variables except for `import.meta`. Therefore, to resolve a relative file you can use `import.meta.url`. Note that this uses URLs rather than filesystem paths.
 
 Before (CommonJS):
 
@@ -80,7 +80,7 @@ After (ES modules):
 ```js
 import fs from "node:fs/promises";
 
-const fileUrl = import.meta.resolve("./someFile.txt");
+const fileUrl = new URL("./someFile.txt", import.meta.url);
 fs.readFile(fileUrl, "utf8").then(console.log);
 ```
 
