@@ -33,7 +33,7 @@ In this example we see three blocks of CSS. The first one shows how to write typ
 }
 ```
 
-#### Alternative nested CSS
+#### Expanded nested CSS
 
 ```css
 .foo {
