@@ -8,7 +8,7 @@ page-type: guide
 
 The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to wite your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors the file size can also be reduced.
 
-This guide show some of the different ways the nesting in CSS can be arranged.
+This guide shows different ways to arrange nesting in CSS.
 
 > **Note:** The early version of the specification did not allow the nesting of [Type selectors](/en-US/docs/Web/CSS/Type_selectors) without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This has now been updated and can be used without the `&` nesting selector. At the time of writing Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector to work.
 
