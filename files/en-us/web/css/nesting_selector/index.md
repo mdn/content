@@ -122,7 +122,7 @@ Both of the following examples produce the same output. The first one uses norma
 
 ### Normal CSS styles
 
-This example uses original CSS styling.
+This example uses normal CSS styling.
 
 #### HTML
 
