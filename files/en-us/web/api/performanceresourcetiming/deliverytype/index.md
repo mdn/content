@@ -3,10 +3,12 @@ title: "PerformanceResourceTiming: deliveryType property"
 short-title: deliveryType
 slug: Web/API/PerformanceResourceTiming/deliveryType
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceResourceTiming.deliveryType
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`deliveryType`** read-only property is a string indicating how the resource was delivered — for example, indicating whether the resource was delivered from the cache.
 
