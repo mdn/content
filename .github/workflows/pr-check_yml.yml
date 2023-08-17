@@ -1,13 +1,11 @@
 name: Lint YAML
-
-on:
   pull_request:
     branches:
       - main
       - .nvmrc
-      - yarn.lock
       - "**/*.yml"
       - .github/workflows/pr-check_yml.yml
+      *don't exit on code 2 until requirements are met
 
 jobs:
   lint-yml:
@@ -30,3 +28,4 @@ jobs:
 
       - name: Lint markdown files
         run: yarn lint:yml
+        -LOCK: lock yarn after workflow
