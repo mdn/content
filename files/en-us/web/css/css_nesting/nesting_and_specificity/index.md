@@ -41,7 +41,9 @@ b {
 }
 ```
 
-In this example the id selector (`#a`) has a specificity of [`1-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories), the type selector (`b`) has a specificity of `0-0-1` the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) and `:is()` pseudo selector both take the highest specificity making it `1-0-0` even though the `#a` id selector is never used. The `.foo` class selector has a specificity of `0-1-0`. This makes the specificity of `& c` a total of `1-0-1` and `.foo c` a total of `0-1-1` meaning that `color: blue;` wins out.
+In this example, the id selector (`#a`) has a specificity of [`1-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories), while the type selector (`b`) has a specificity of `0-0-1`. The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) and `:is()` pseudo-class both take a specificity of `1-0-0`, even though the `#a` id selector is never used.
+
+The `.foo` class selector has a specificity of `0-1-0`. This makes the total specificity `1-0-1` for `& c` and `0-1-1` for `.foo c`, meaning that `color: blue;` wins out.
 
 ## See Also
 
