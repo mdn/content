@@ -120,7 +120,7 @@ The `&` nesting selector can be placed multiple times:
 
 Both of the following examples produce the same output. The first one uses normal CSS styles and the second one uses the `&` nesting selector.
 
-### Original CSS styles
+### Normal CSS styles
 
 This example uses original CSS styling.
 
