@@ -14,7 +14,7 @@ The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, con
 ## Syntax
 
 ```css
-/* <font-stretch-css3> Keyword values */
+/* <font-stretch-css3> keyword values */
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
