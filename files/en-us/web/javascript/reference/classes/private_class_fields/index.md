@@ -55,19 +55,18 @@ Private properties are declared with **# names** (pronounced "hash names"), whic
 
 It is a syntax error to refer to `#` names from outside of the class. It is also a syntax error to refer to private properties that were not declared in the class body, or to attempt to remove declared properties with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
-```js example-bad
+```js-nolint example-bad
 class ClassWithPrivateField {
   #privateField;
 
-  constructor() {
-    this.#privateField = 42;
+  constructor() {;
     delete this.#privateField; // Syntax error
-    this.#undeclaredField = 444; // Syntax error
+    this.#undeclaredField = 42; // Syntax error
   }
 }
 
 const instance = new ClassWithPrivateField();
-instance.#privateField === 42; // Syntax error
+instance.#privateField; // Syntax error
 ```
 
 JavaScript, being a dynamic language, is able to perform this compile-time check because of the special hash identifier syntax, making it different from normal properties on the syntax level.

@@ -44,7 +44,7 @@ The syntax of **comments** is the same as in C++ and in many other languages:
 
 You can't nest block comments. This often happens when you accidentally include a `*/` sequence in your comment, which will terminate the comment.
 
-```js example-bad
+```js-nolint example-bad
 /* You can't, however, /* nest comments */ SyntaxError */
 ```
 
@@ -105,7 +105,7 @@ In essence, `let x = 42` is equivalent to `let x; x = 42`.
 
 `const` declarations always need an initializer, because they forbid any kind of assignment after declaration, and implicitly initializing it with `undefined` is likely a programmer mistake.
 
-```js example-bad
+```js-nolint example-bad
 const x; // SyntaxError: Missing initializer in const declaration
 ```
 
@@ -205,7 +205,7 @@ A constant cannot change value through assignment or be re-declared while the sc
 
 You cannot declare a constant with the same name as a function or variable in the same scope. For example:
 
-```js example-bad
+```js-nolint example-bad
 // THIS WILL CAUSE AN ERROR
 function f() {}
 const f = 5;
@@ -214,8 +214,6 @@ const f = 5;
 function f() {
   const g = 5;
   var g;
-
-  //statements
 }
 ```
 
@@ -488,7 +486,7 @@ Object property names can be any string, including the empty string. If the prop
 
 Property names that are not valid identifiers cannot be accessed as a dot (`.`) property.
 
-```js example-bad
+```js-nolint example-bad
 const unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'
