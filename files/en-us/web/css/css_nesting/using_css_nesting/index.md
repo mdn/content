@@ -410,7 +410,7 @@ In the following example, there is an invalid selector (`%` is not a valid chara
 
 #### Trying to concatenate a string in CSS
 
-In this example we are trying to replicate the way that pre-processors are used to concatenate the `__content` string onto the `.card` class. As we have [previously seen](#concatenation) this is not possible and makes the rule invalid.
+In this example, we are trying to replicate the way that pre-processors are used to concatenate strings to make new classes (in this case, concatenating the `__content` string onto the `.card` class). As we have [previously seen](#concatenation), this is not possible and makes the rule invalid.
 
 ##### HTML
 
