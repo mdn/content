@@ -54,9 +54,9 @@ If a single value is specified, it applies to both width and height.
   - : The element has no intrinsic size in the given dimension(s).
 - `<length>`
   - : The element has the specified {{cssxref("&lt;length&gt;")}} in the given dimension(s).
-- `auto <length>`
+- `auto [<length> | none]`
   - : A remembered value of the "normally rendered" element size if one exists and the element is skipping its contents (for example, when it is offscreen); otherwise the specified `<length>`.
-    The `none` keyword may be used in place of `<length>` to indicate that the element can fallback to `contain-intrinsic-size: none`.
+    The `none` keyword may be used in place of `<length>` where `0px` fixed lengths behave differently than `none` (such as in multi column, or grid layouts).
 
 ## Description
 
@@ -70,7 +70,9 @@ The `auto <length>` value allows the size of the element to be stored if the ele
 This allows offscreen elements with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) to benefit from size containment without developers having to be as precise in their estimates of element size.
 The remembered value is not used if the child elements are being rendered (if size containment is enabled, the `<length>` will be used).
 
-Because `contain-intrinsic-size: none` may not be equivalent to `0px` lengths in multi column, or grid layouts, the `auto none` value allows the element to fallback to `contain-intrinsic-size: none` if no remembered value exists.
+In grid and multi column layouts, an explicit height is treated as a stronger command than an implicit content-based height.
+Elements might lay out substantially differently than it would have were it simply filled with content up to that height.
+The `auto none` value allows the element to fallback to `contain-intrinsic-size: none` if no remembered value exists, which will allow the element to be laid out as though it had no contents instead of 0px height.
 
 ## Formal definition
 
@@ -81,6 +83,98 @@ Because `contain-intrinsic-size: none` may not be equivalent to `0px` lengths in
 {{csssyntax}}
 
 ## Examples
+
+### Using auto value pairs for intrinsic size
+
+This example uses `contain-intrinsic-size: auto [<length> | none]` with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) and offscreen elements.
+We can estimate that our paragraphs will be around 500px tall, so the intrinsic size of their parent elements can be set to `500px`.
+When the element is offscreen, the browser will use 500px size for the layout of that element, and when the element needs to be rendered onscreen, the browser will use the computed size of the element and remember this value when the paragraphs are scrolled off and onscreen again.
+
+#### CSS
+
+```css hidden
+div,
+p {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#container {
+  padding: 1rem;
+  width: 90%;
+  height: 80%;
+}
+```
+
+```css
+p {
+  border: 4px dotted;
+  background: lightblue;
+  height: 500px;
+  width: 500px;
+}
+
+.auto-length {
+  outline: 4px dotted blue;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+.large-intrinsic-size {
+  outline: 4px dotted red;
+  /* Setting an inaccurate intrinsic size for the element */
+  contain-intrinsic-size: auto 5000px;
+}
+
+.small {
+  border: 4px dotted green;
+  background: lightblue;
+  height: 100px;
+  width: 100px;
+}
+
+.none {
+  outline: 4px dotted red;
+  contain-intrinsic-size: auto none;
+}
+```
+
+#### HTML
+
+```html
+<div id="container">
+  <div class="auto-length">
+    <p>Lorem ipsum</p>
+  </div>
+  <div class="auto-length">
+    <p>Lorem ipsum</p>
+  </div>
+  <div class="auto-length large-intrinsic-size">
+    <p class="small">Lorem ipsum</p>
+  </div>
+  <div class="auto-length large-intrinsic-size">
+    <p class="small">Lorem ipsum</p>
+  </div>
+  <div class="auto-length none">
+    <p>Lorem ipsum</p>
+  </div>
+  <div class="auto-length none">
+    <p>Lorem ipsum</p>
+  </div>
+</div>
+```
+
+#### Result
+
+The effect is noticeable in the scrollbar when elements are scrolled into view.
+Scrolling is smooth for the first two elements that we have accurate intrinsic sizes for, but the scrollbar jumps when the third element is onscreen.
+The layout shift occurs because the "large-intrinsic-size" elements have content that is around 500px tall, but we have set an inaccurate value of 5000px for its intrinsic size.
+Once the layout of the large elements are rendered, the effect of `auto` is visible as size of the element is remembered and we can scroll from top to bottom without any noticeable effects.
+
+The last two elements have `contain-intrinsic-size: auto none` set, which means that the element will use `contain-intrinsic-size: none` when the element is offscreen.
+This means that instead of using an intrinsic size of 500px, the element will collapse to 0px height when offscreen.
+
+{{EmbedLiveSample('Using_auto_value_pairs_for_intrinsic_size', 800, 600)}}
 
 ### Setting the intrinsic size
 
