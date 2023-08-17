@@ -19,6 +19,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     permissions: read-all
+    if: github.repository == 'mdn/content'
     outputs:
       has_assets: ${{ steps.build-content.outputs.has_assets }}
     env:
