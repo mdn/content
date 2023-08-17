@@ -21,35 +21,30 @@ setBigInt64(byteOffset, value, littleEndian)
 ### Parameters
 
 - `byteOffset`
-  - : The offset, in bytes, from the start of the view to store the data from.
+  - : The offset, in bytes, from the start of the view to store the data in. There is no alignment constraint; multi-byte values may be stored at any offset.
 - `value`
-  - : The value to set as a {{jsxref("BigInt")}}. The highest possible value that fits in
-    a signed 64-bit integer is
-    `2n ** (64n -1n) - 1n` (`9223372036854775807n`). Upon
-    overflow, it will be negative (`-9223372036854775808n`).
+  - : The value to set as a {{jsxref("BigInt")}}. For how the value is encoded in bytes, see [Value encoding and normalization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#value_encoding_and_normalization).
 - `littleEndian` {{optional_inline}}
-  - : Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
-    `false` or `undefined`, a big-endian value is written.
+  - : Indicates whether the data is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If `false` or `undefined`, a big-endian value is written.
 
 ### Return value
 
 {{jsxref("undefined")}}.
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the `byteOffset` is set such that it would store beyond the end
-    of the view.
+  - : Thrown if the `byteOffset` is set such that it would store beyond the end of the view.
 
 ## Examples
 
-### Using the `setBigInt64` method
+### Using setBigInt64()
 
 ```js
-const buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(10);
 const dataview = new DataView(buffer);
 dataview.setBigInt64(0, 3n);
-dataview.getBigInt64(0); // 3n
+dataview.getBigInt64(1); // 768n
 ```
 
 ## Specifications
@@ -62,6 +57,7 @@ dataview.getBigInt64(0); // 3n
 
 ## See also
 
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
-- {{jsxref("BigInt")}}
+- {{jsxref("BigInt64Array")}}

@@ -21,33 +21,27 @@ getBigInt64(byteOffset, littleEndian)
 ### Parameters
 
 - `byteOffset`
-  - : The offset, in bytes, from the start of the view to read the data from.
+  - : The offset, in bytes, from the start of the view to read the data from. There is no alignment constraint; multi-byte values may be fetched from any offset.
 - `littleEndian` {{optional_inline}}
-  - : Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
-    `false` or `undefined`, a big-endian value is read.
+  - : Indicates whether the data is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If `false` or `undefined`, a big-endian value is read.
 
 ### Return value
 
-A {{jsxref("BigInt")}}.
+A {{jsxref("BigInt")}} from -2<sup>63</sup> to 2<sup>63</sup>-1, inclusive.
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the `byteOffset` is set such that it would read beyond the end
-    of the view.
-
-## Description
-
-There is no alignment constraint; multi-byte values may be fetched from any offset.
+  - : Thrown if the `byteOffset` is set such that it would read beyond the end of the view.
 
 ## Examples
 
-### Using the `getBigInt64` method
+### Using getBigInt64()
 
 ```js
-const buffer = new ArrayBuffer(8);
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 const dataview = new DataView(buffer);
-dataview.getBigInt64(0); // 0n
+console.log(dataview.getBigInt64(1)); // 72623859790382856n
 ```
 
 ## Specifications
@@ -60,6 +54,7 @@ dataview.getBigInt64(0); // 0n
 
 ## See also
 
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
-- {{jsxref("BigInt")}}
+- {{jsxref("BigInt64Array")}}
