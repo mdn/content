@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-Any [at-rule]() whose body contains style rules can be nested inside a style rule. Style rules are nested style rules, with their nesting selector taking its definition from the nearest ancestor style rule. Properties can be directly used, acting as if they were nested in a `& {...}` block.
+Any [at-rule](/en-US/docs/Web/CSS/At-rule) whose body contains style rules can be nested inside another style rule using CSS nesting. Style rules nested inside at-rules take their nesting selector definition from the nearest ancestor style rule. Properties can be directly included inside a nested at-rule, acting as if they were nested in a `& {...}` block.
 
 ## at-rules that can be nested
 
