@@ -1,11 +1,9 @@
-Things to do and run after a "PR Test" workflow has finished successfully.
-Note, as of right now, this workflow does a bunch of things. It might be
- worth considering to break it up so there's a dedicated post-PR
- workflow just to posting PR comments about flaws, for example.
+#Things to do and run after a "PR Test" workflow has finished successfully.
+#Note, as of right now, this workflow does a bunch of things. It might be
+ #worth considering to break it up so there's a dedicated post-PR
+ #workflow just to posting PR comments about flaws, for example.
 
-name: build artifact
-
- END OF STREAM <DOCTYPE>
+   STREAM yml <DOCTYPE>
 
 on:
   workflow_run:
