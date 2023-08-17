@@ -10,7 +10,7 @@ The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to wite you
 
 This guide shows different ways to arrange nesting in CSS.
 
-> **Note:** The early version of the specification did not allow the nesting of [Type selectors](/en-US/docs/Web/CSS/Type_selectors) without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This has now been updated and can be used without the `&` nesting selector. At the time of writing Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector to work.
+> **Note:** Early versions of the specification did not allow nesting of [type selectors](/en-US/docs/Web/CSS/Type_selectors) without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This has been updated so the `&` selector is no longer needed. At the time of writing Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector for type selector nesting.
 
 ## Child selectors
 
