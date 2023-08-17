@@ -209,7 +209,7 @@ In order to target an element with `class="a b"` the `&` nesting selector is nee
   /* styles for element with class="a" */
 }
 .a .b {
-  /* styles for element with class="b" which is a descendants of class="a" */
+  /* styles for element with class="b" which is a descendant of class="a" */
 }
 .a.b {
   /* styles for element with class="a b" */
