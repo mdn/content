@@ -128,7 +128,7 @@ The ability to create nested layers also removes the worry of having conflicting
 Layers can be created using any one of the following methods:
 
 - The `@layer` statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
-- The `@layer` block at-rule, in which all styles within a block are added to a name or unnamed layer.
+- The `@layer` block at-rule, in which all styles within a block are added to a named or unnamed layer.
 - The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
@@ -288,7 +288,7 @@ In the first line, we import `components-lib.css` into the `components` layer. I
 
 The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. The nested `components.narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already contains a `narrow` layer, in which case, the contents of `narrowtheme.css` would be appended to the `components.narrow` nested layer. Additional nested named layers can be added to the `components` layer using the pattern `components.<layerName>`. As mentioned before, unnamed layers can be created but they cannot be accessed subsequently.
 
-Let's look at another example, where we import [`layers1.css`](#anonymous-and-named-layer-block-at-rule-assignment) into a named layer using the following statement:
+Let's look at another example, where we [import `layers1.css` into a named layer](#the_layer_block_at-rule_for_named_and_anonymous_layers) using the following statement:
 
 ```css
 @import url(layers1.css) layer(example);

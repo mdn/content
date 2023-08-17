@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.Set.forEach
 
 {{JSRef}}
 
-The **`forEach()`** method executes a provided function once
-for each value in the `Set` object, in insertion order.
+The **`forEach()`** method of {{jsxref("Set")}} instances executes a provided function once
+for each value in this set, in insertion order.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
 

@@ -15,13 +15,13 @@ The **`Array()`** constructor creates {{jsxref("Array")}} objects.
 new Array()
 new Array(element0)
 new Array(element0, element1)
-new Array(element0, element1, /* … ,*/ elementN)
+new Array(element0, element1, /* …, */ elementN)
 new Array(arrayLength)
 
 Array()
 Array(element0)
 Array(element0, element1)
-Array(element0, element1, /* … ,*/ elementN)
+Array(element0, element1, /* …, */ elementN)
 Array(arrayLength)
 ```
 

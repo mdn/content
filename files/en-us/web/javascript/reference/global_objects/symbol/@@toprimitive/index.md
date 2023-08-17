@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Symbol.@@toPrimitive
 
 {{JSRef}}
 
-The **`[@@toPrimitive]()`** method converts a Symbol object to
-a primitive value.
+The **`[@@toPrimitive]()`** method of {{jsxref("Symbol")}} values returns this symbol value.
 
 ## Syntax
 
