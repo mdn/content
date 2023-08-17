@@ -448,7 +448,7 @@ In this example, we are trying to replicate the way that pre-processors are used
 }
 ```
 
-In the `__content` rule all of the enclosed styles and rules are ignored. This means that the content will not be italic or the links will not be styled. The rest of the rules all work as expected. In order to fix this we can change the `&__content` to show the full class name `& card__content`.
+In the `__content` rule all of the enclosed styles and rules are ignored. This means that the content will not be italic and the links will not be styled. The rest of the rules all work as expected. To fix this we could change the `&__content` to show the full class name — `& card__content`.
 
 ```css
 .card {
