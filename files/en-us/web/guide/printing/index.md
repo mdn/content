@@ -52,7 +52,9 @@ Here are some common examples.
 
 ### Open and automatically close a popup window when finished
 
-If you want to be able to automatically close a [popup window](/en-US/docs/Web/API/Window/open) (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:
+The following example will open a [popup window](/en-US/docs/Web/API/Window/open) (for example, the printer-friendly version of a document) and automatically close it after the user prints its contents.
+
+> **Warning:** This example is for demonstration only, use of {{domxref("document.write()")}} is strongly discouraged. And this example will not work in Firefox, as it will ignore the `window.close()` calls in non-script-owned windows ([Firefox bug 190515](https://bugzil.la/190515)).
 
 #### HTML
 
@@ -76,10 +78,6 @@ document.getElementById("open_window").addEventListener("click", () => {
 </body></html>`);
 });
 ```
-
-#### Result
-
-{{EmbedLiveSample('Open and automatically close a popup window when finished')}}
 
 ### Print an external page without opening it
 
