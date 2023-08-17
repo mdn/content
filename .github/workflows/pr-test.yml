@@ -154,7 +154,7 @@ jobs:
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
   review:
-    needs: build
+    needs: tests
     if: ${{ needs.tests.conclusion == 'success' &&
       needs.tests.outputs.has_assets }}
     permissions: write-all
