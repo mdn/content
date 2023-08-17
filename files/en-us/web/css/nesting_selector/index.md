@@ -40,7 +40,7 @@ In this example, nesting is done without the **`&` nesting selector**. When the 
 }
 ```
 
-When the nested selector needs to be attached to the parent selector, such as when using a {{cssxref('Pseudo-classes', 'pseudo selector')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) then this can be added immediately after the **`&` nesting selector**.
+When the nested selector needs to be attached to the parent selector, such as when using a {{cssxref('Pseudo-classes', 'pseudo class')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the **`&` nesting selector** can be immediately prepended to achieve the desired effect.
 
 Without the **`&` nesting selector**, whitespace is added and, any child of the parent selector that is hovered will be styled.
 
