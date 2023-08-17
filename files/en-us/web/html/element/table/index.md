@@ -150,7 +150,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ```html
 <table>
-  <caption>Alumni Directory</caption>
+  <caption>
+    Alumni Directory
+  </caption>
   <thead>
     <tr>
       <th>First Name</th>
@@ -395,7 +397,7 @@ The HTML for the data within the table is similar to the previous example, excep
 </table>
 ```
 
-Because the dates area spans two rows, the other headers also need to span two rows. We include the `rowspan` attribute on the other  {{HTMLElement("th")}} elements  to make the "Name", "ID", and "Balance" headers occupy two rows. We use the `colspan` attribute to make the "Membership Dates" header cell span the two date columns.
+Because the dates area spans two rows, the other headers also need to span two rows. We include the `rowspan` attribute on the other {{HTMLElement("th")}} elements to make the "Name", "ID", and "Balance" headers occupy two rows. We use the `colspan` attribute to make the "Membership Dates" header cell span the two date columns.
 
 ```css hidden
 table {
@@ -417,6 +419,7 @@ The heading area here is two rows, one with "Name", "ID", "Membership Dates", an
 - The first row's "Name", "ID", and "Balance" heading cells span both table header rows by using the `rowspan` attribute, making them each two rows tall.
 - The first row's "Membership Dates" heading cell span two columns using the `colspan` attribute, which causes this heading to be two columns wide.
 - Including only two header cells in the table header's second row. The HTML for the row contains only the "Joined" and "Canceled" headings because the other three columns are merged with the cells in the first-row that span two rows. The two header cells are correctly positioned under the "Membership Dates" heading.
+
 #### Explicitly specifying table content groups
 
 Before really getting into styling this table, let's take a moment to add row and column groups. This will improve the [semantics](/en-US/docs/Glossary/Semantics#semantics_in_html) and make our CSS easier.
@@ -483,7 +486,7 @@ td {
 
 ##### Result
 
-Visually, the output is unchanged.  The additions provide useful contextual information for assistive technologies, including screen readers and search engines:
+Visually, the output is unchanged. The additions provide useful contextual information for assistive technologies, including screen readers and search engines:
 
 {{EmbedLiveSample("Explicitly_specifying_table_content_groups", 500, 150)}}
 
