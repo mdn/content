@@ -83,25 +83,23 @@ The **CSS fonts** module defines font-related properties and how font resources 
 - [`<east-asian-width-values>`](/en-US/docs/Web/CSS/font-variant#values)
 - [`<feature-tag-value>`](/en-US/docs/Web/CSS/font-feature-settings#values)
 - [`<font-features-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
+- [`<font-variant-css2>`](/en-US/docs/Web/CSS/font-variant)
 - [`<font-format>`](/en-US/docs/Web/CSS/@supports#font-format)
 - [`<font-stretch-css3>`](/en-US/docs/Web/CSS/font-stretch#values)
 - [`<font-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
+- [`<font-weight-absolute>`](/en-US/docs/Web/CSS/font-weight#values)
 - [`<historical-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
 
 ```html
-<font-variant-css2>
-  <font-weight-absolute>
-    <numeric-figure-values>
-      <numeric-fraction-values>
-        <numeric-spacing-values>
-          <palette-identifier></palette-identifier></numeric-spacing-values></numeric-fraction-values></numeric-figure-values></font-weight-absolute
-></font-variant-css2>
+<numeric-figure-values />
+<numeric-fraction-values />
+<numeric-spacing-values />
+<palette-identifier />
 ```
 
 ### Interfaces
 
 - {{domxref("CSSFontFaceRule")}}
-- {{domxref("CSSFontFeatureValuesMap")}}
 - {{domxref("CSSFontFeatureValuesRule")}}
 - {{domxref("CSSFontPaletteValuesRule")}}
 
