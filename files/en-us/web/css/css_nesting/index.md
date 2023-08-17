@@ -13,7 +13,7 @@ This helps with the readability, modularity, and maintainability of CSS styleshe
 
 ### CSS nesting in action
 
-The following code blocks do the exact same thing, the first example uses ordinary style rules and the second uses CSS nesting.
+The following code blocks do exactly the same thing, with the first example using ordinary style rules and the second using CSS nesting.
 
 #### Ordinary style rules
 
