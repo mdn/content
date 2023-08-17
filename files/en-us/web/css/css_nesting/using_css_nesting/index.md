@@ -172,7 +172,7 @@ h2 {
     background-color: black;
   }
 }
-/* this code also be achieved with the & nesting selector */
+/* this code can also be written with the & nesting selector */
 /* 
 h2 {
   color: tomato;
