@@ -22,7 +22,7 @@ parent {
 
 ### `&` nesting selector and whitespace
 
-In this example nesting is done without the **`&` nesting selector**. The browser automatically adds whitespace.
+In this example, nesting is done without the **`&` nesting selector**. When the browser parses the nested styles, it automatically adds whitespace between the selectors to create a descendant relationship.
 
 ```css
 .parent-class {
