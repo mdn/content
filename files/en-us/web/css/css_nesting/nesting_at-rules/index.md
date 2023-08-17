@@ -111,7 +111,7 @@ Named cascade layers are defined prior to the named layers being used.
 
 #### Assigning rules to layers with nesting
 
-Here the selector `.foo` is assign the `@layer` **parent** with its rules. The `@layer` **child** is nested creating `parent.child` sub-layer, the the `&` nesting selector is used to create the rules for the selector `.foo .bar`.
+Here the `.foo` selector assigns its rules to the **parent** `@layer`. The nested **child** `@layer` creates the `parent.child` sub-layer, and the `&` nesting selector is used to create the rules for the `.foo .bar` selector .
 
 ```css
 .foo {
