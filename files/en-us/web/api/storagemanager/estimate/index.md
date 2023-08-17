@@ -62,7 +62,8 @@ navigator.storage.estimate().then((estimate) => {
     (estimate.usage / estimate.quota) *
     100
   ).toFixed(2);
-  document.getElementById("quota").value = (estimate.quota / 1024 / 1024).toFixed(2) + "MB";
+  document.getElementById("quota").value =
+    (estimate.quota / 1024 / 1024).toFixed(2) + "MB";
 });
 ```
 
