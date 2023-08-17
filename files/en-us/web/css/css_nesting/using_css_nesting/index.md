@@ -390,7 +390,7 @@ element.my-class {
 
 ## Invalid nested style rules
 
-If a nested CSS rule is invalid then all of the enclosed styles will be ignored. This does not effect the parent or proceeding rules.
+If a nested CSS rule is invalid then all of the enclosed styles will be ignored. This does not affect the parent or preceding rules.
 
 In the following example there is an invalid selector (`%invalid` `%` is not a valid character for selectors), this will ignore the styles with the rule.
 
