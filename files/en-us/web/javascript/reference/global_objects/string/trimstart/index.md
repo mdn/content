@@ -27,7 +27,7 @@ If the beginning of `str` has no whitespace, a new string is still returned (ess
 
 ### Aliasing
 
-After {{jsxref("String/trim", "trim()")}} was standardized, engines also implemented the non-standard method `trimLeft`. However, for consistency with {{jsxref("String/padEnd", "padEnd()")}}, when the method got standardized, its name was chosen as `trimStart`. For web compatibility reasons, `trimLeft` remains as an alias to `trimStart`, and they refer to the exact same function object. In some engines this means:
+After {{jsxref("String/trim", "trim()")}} was standardized, engines also implemented the non-standard method `trimLeft`. However, for consistency with {{jsxref("String/padStart", "padStart()")}}, when the method got standardized, its name was chosen as `trimStart`. For web compatibility reasons, `trimLeft` remains as an alias to `trimStart`, and they refer to the exact same function object. In some engines this means:
 
 ```js
 String.prototype.trimLeft.name === "trimStart";

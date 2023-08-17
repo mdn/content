@@ -42,7 +42,7 @@ A JSON string representing the given value, or undefined.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if one of the following is true:
+  - : Thrown in one of the following cases:
     - `value` contains a circular reference.
     - A {{jsxref("BigInt")}} value is encountered.
 
