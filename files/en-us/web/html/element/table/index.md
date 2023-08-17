@@ -483,7 +483,7 @@ td {
 
 ##### Result
 
-The output is entirely unchanged, despite the addition of useful contextual information under the hood:
+Visually, the output is unchanged.  The additions provide useful contextual information for assistive technologies, including screen readers and search engines:
 
 {{EmbedLiveSample("Explicitly_specifying_table_content_groups", 500, 150)}}
 
