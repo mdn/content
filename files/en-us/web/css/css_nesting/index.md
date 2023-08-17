@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-nesting-1/
 
 The **CSS nesting** module introduces the ability to nest one style rule inside another, with the selector of the child rule relative to the selector of the parent rule.
 
-This helps with the readability, modularity and maintainability of CSS stylesheets. It also helps reduce the file size of CSS files reducing the data used by users.
+This helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce the size of CSS files, thereby decreasing the amount of data downloaded by users.
 
 ### CSS nesting in action
 
