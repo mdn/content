@@ -92,7 +92,7 @@ Additionally, this interface exposes the following properties containing more in
   - : A string representing the web platform feature that initiated the performance entry.
 - {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
   - : A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
-- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
   - : A string representing the render-blocking status. Either "`blocking`" or "`non-blocking`".
 - {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A number representing the HTTP response status code returned when fetching the resource.
