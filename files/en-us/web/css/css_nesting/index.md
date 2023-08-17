@@ -29,14 +29,22 @@ parent child {
 
 #### CSS nesting
 
-Selectors can be nested and the child selector will be prepended by the parent selector.
+Selectors can be nested and the child selector will be prepended by the parent selector. This means that a new selector will be created like so `parent child {}`.
 
 ```css
 parent {
   /* parent styles */
   child {
-    /* child styles */
+    /* parent child styles */
   }
+}
+
+/* this becomes */
+parent {
+  /* parent styles */
+}
+parent child {
+  /* parent child styles */
 }
 ```
 
@@ -44,14 +52,45 @@ parent {
 
 An [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can be used to specifically state how the selectors are combined.
 
-### Without `&` nesting selector
+##### With `&` nesting selector
+
+If a space is placed after the `&` nesting selector then a space will be added in the new selector.
 
 ```css
 parent {
   /* parent styles */
   & child {
-    /* child styles */
+    /* parent child styles */
   }
+}
+
+/* this becomes */
+parent {
+  /* parent styles */
+}
+parent child {
+  /* parent child styles */
+}
+```
+
+##### Using `&` nesting selector with pseudo selector
+
+If no space is placed after the `&` nesting selector then selectors will be joined.
+
+```css
+parent {
+  /* parent styles */
+  &:hover {
+    /* parent:hover styles */
+  }
+}
+
+/* this becomes */
+parent {
+  /* parent styles */
+}
+parent:hover {
+  /* parent:hover styles */
 }
 ```
 
