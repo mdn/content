@@ -183,7 +183,7 @@ First let's look at arithmetic operators, for example:
 | `*`      | Multiplication | `3 * 7`   |
 | `/`      | Division       | `10 / 5`  |
 
-There are also some shortcut operators available, called augmented [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators). For example, if you want to add a new number to an existing one and return the result, you could do this:
+There are also some shortcut operators available, called [compound assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators). For example, if you want to add a new number to an existing one and return the result, you could do this:
 
 ```js
 let number1 = 1;
