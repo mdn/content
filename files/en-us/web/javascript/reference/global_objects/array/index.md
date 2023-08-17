@@ -750,20 +750,33 @@ const values = [];
 for (let x = 0; x < 10; x++) {
   values.push([2 ** x, 2 * x ** 2]);
 }
-console.table(values);
+
+for (let i = 0; i < values.length; i++) {
+  let val = "";
+
+  for (let j = 0; j < values[i].length; j++) {
+    if (j === 0) {
+      val += `${values[i][j]}  `;
+    } else {
+      val += `${values[i][j]}`;
+    }
+  }
+
+  console.log(`${i}  ${val}`);
+}
 ```
 
 Results in
 
 ```plain
 // The first column is the index
-0  1    0
-1  2    2
-2  4    8
-3  8    18
-4  16   32
-5  32   50
-6  64   72
+0  1  0
+1  2  2
+2  4  8
+3  8  18
+4  16  32
+5  32  50
+6  64  72
 7  128  98
 8  256  128
 9  512  162
