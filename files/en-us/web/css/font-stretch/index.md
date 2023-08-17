@@ -15,6 +15,7 @@ The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, con
 
 ```css
 /* <font-stretch-css3> keyword values */
+font-stretch: normal;
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
