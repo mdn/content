@@ -14,7 +14,7 @@ The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, con
 ## Syntax
 
 ```css
-/* Keyword values */
+/* <font-stretch-css3> Keyword values */
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
@@ -38,7 +38,7 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-This property may be specified as a single keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
+This property may be specified as a single `<font-stretch-css3>` keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
 
 ### Values
 
@@ -54,7 +54,7 @@ This property may be specified as a single keyword value or a single {{cssxref("
 
 ### Keyword to numeric mapping
 
-The table below shows the mapping between keyword values and numeric percentages:
+The table below shows the mapping between the `<font-stretch-css3>` keyword values and numeric percentages:
 
 | Keyword           | Percentage |
 | ----------------- | ---------- |
