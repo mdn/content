@@ -155,7 +155,6 @@ jobs:
 
   review:
     needs: tests
-    if: ${{ needs.tests.conclusion == 'success' &&
-      needs.tests.outputs.has_assets }}
+    if: ${{ needs.tests.outputs.has_assets }}
     permissions: write-all
     uses: ./.github/workflows/pr-review-companion.yml
