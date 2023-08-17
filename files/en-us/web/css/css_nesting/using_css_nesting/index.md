@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to wite your stylesheets so that they are easier to read, more modular and more maintainable. As you are not constantly repeating selectors the file size can also be drastically reduced too.
+The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to wite your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors the file size can also be reduced.
 
 This guide show some of the different ways the nesting in CSS can be arranged.
 
