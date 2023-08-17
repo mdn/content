@@ -372,7 +372,7 @@ In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to u
 }
 ```
 
-This is not possible in CSS nesting, as without an [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) the nested selector is treated as [type selector](/en-US/docs/Web/CSS/Type_selectors) and allowing concatenation would break this.
+This is not possible in CSS nesting: without a [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
 
 For [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) using `&Element` (a [Type selector](/en-US/docs/Web/CSS/Type_selectors)) would make the CSS invalid as the type selector must come first in a compound selector so must be written `Element&`.
 
