@@ -46,10 +46,9 @@ In these examples the `<input>` inside the `<label>` is being styled differently
 
 #### HTML
 
-```html
+```html-nolint
 <form>
-  <label for="name"
-    >Name:
+  <label for="name">Name:
     <input type="text" id="name" />
   </label>
   <label for="email">email:</label>
