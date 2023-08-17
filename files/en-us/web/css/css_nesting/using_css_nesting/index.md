@@ -152,7 +152,7 @@ label {
 
 #### Nesting the sibling combinator
 
-In this example the **first paragraph** after an **h2** is targeted with the [adjacent sibling combinator (`+`)](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) and this is done with CSS nesting.
+In this example, the first paragraph after an `<h2>` is targeted with the [adjacent sibling combinator (`+`)](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) using CSS nesting.
 
 ##### HTML
 
