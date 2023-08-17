@@ -74,7 +74,7 @@ The following example returns true and applies the CSS style if the browser supp
 }
 ```
 
-The table below describes the font technologies (`<font-tech>`), including color font technologies (`<color-font-tech>`), font feature technologies (`<font-features-tech>`) and other available font technologies that can be queried using this function:
+The table below describes the font technologies (`<font-tech>`), including color font technologies (`<color-font-tech>`), font feature technologies (`<font-features-tech>`), and other available font technologies that can be queried using the `font-tech()` function:
 
 | Technology                     | Supports                                                                                      |
 | :----------------------------- | :-------------------------------------------------------------------------------------------- |
