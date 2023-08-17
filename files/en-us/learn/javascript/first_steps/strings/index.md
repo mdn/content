@@ -82,9 +82,9 @@ You must use the same character for the start and end of a string, or you will g
 const badQuotes = 'This is not allowed!";
 ```
 
-Strings declared using single quotes and strings declared using double quotes are the same, and which you use is down to personal preference — although it is good practice to choose one method and use it consistently in your code.
+Strings declared using single quotes and strings declared using double quotes are the same, and which you use is down to personal preference — although it is good practice to choose one style and use it consistently in your code.
 
-Strings declared using backticks are a special kind of string called a _template literal_. In most ways, template literals are like normal strings, but they have some special properties:
+Strings declared using backticks are a special kind of string called a [_template literal_](/en-US/docs/Web/JavaScript/Reference/Template_literals). In most ways, template literals are like normal strings, but they have some special properties:
 
 - you can [embed JavaScript](#embedding_javascript) in them
 - you can declare template literals over [multiple lines](#multiline_strings)
@@ -230,7 +230,7 @@ const number = 242;
 console.log(`${name}${number}`); // "Front 242"
 ```
 
-You might expect this to return an error, but it works just fine. Trying to represent a string as a number doesn't really make sense, but representing a number as a string does, so the browser converts the number to a string and concatenates the two strings.
+You might expect this to return an error, but it works just fine. How numbers should be displayed as strings is fairly well-defined, so the browser automatically converts the number to a string and concatenates the two strings.
 
 If you have a numeric variable that you want to convert to a string but not change otherwise, or a string variable that you want to convert to a number but not change otherwise, you can use the following two constructs:
 
