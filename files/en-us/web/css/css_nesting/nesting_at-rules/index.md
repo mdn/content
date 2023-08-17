@@ -63,7 +63,7 @@ In this example we see three blocks of CSS. The first one shows how to write typ
 
 At-rules can be nested within other at-rules. Below you can see an example of this, and how it would be written without nesting.
 
-#### Nested CSS
+#### Nested at-rules
 
 ```css
 .foo {
