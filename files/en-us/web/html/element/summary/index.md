@@ -3,6 +3,7 @@ title: "<summary>: The Disclosure Summary element"
 slug: Web/HTML/Element/summary
 page-type: html-element
 browser-compat: html.elements.summary
+spec-urls: https://w3c.github.io/html-aria/#el-summary
 ---
 
 {{HTMLSidebar}}
@@ -127,11 +128,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
-            >button</a
-          ></code
-        >
+        <code>No corresponding role</code>
       </td>
     </tr>
     <tr>
