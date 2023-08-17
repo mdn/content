@@ -171,8 +171,8 @@ Scrolling is smooth for the first two elements that we have accurate intrinsic s
 The layout shift occurs because the "large-intrinsic-size" elements have content that is around 500px tall, but we have set an inaccurate value of 5000px for its intrinsic size.
 Once the layout of the large elements are rendered, the effect of `auto` is visible as size of the element is remembered and we can scroll from top to bottom without any noticeable effects.
 
-The last two elements have `contain-intrinsic-size: auto none` set, which means that the element will use `contain-intrinsic-size: none` when the element is offscreen.
-This means that instead of using an intrinsic size of 500px, the element will collapse to 0px height when offscreen.
+The last two elements have `contain-intrinsic-size: auto none` set, so the element will use `contain-intrinsic-size: none` when the element is offscreen.
+Instead of using an intrinsic size of 500px, the element will collapse to 0px height when offscreen.
 
 {{EmbedLiveSample('Using_auto_value_pairs_for_intrinsic_size', 800, 600)}}
 
