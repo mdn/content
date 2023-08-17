@@ -81,25 +81,21 @@ The **CSS fonts** module defines font-related properties and how font resources 
 - [`<discretionary-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
 - [`<east-asian-variant-values>`](/en-US/docs/Web/CSS/font-variant#values)
 - [`<east-asian-width-values>`](/en-US/docs/Web/CSS/font-variant#values)
+- [`<feature-tag-value>`](/en-US/docs/Web/CSS/font-feature-settings#values)
 - [`<font-features-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
 - [`<font-format>`](/en-US/docs/Web/CSS/@supports#font-format)
+- [`<font-stretch-css3>`](/en-US/docs/Web/CSS/font-stretch#values)
 - [`<font-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
 - [`<historical-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
 
 ```html
-- {{cssxref("")}}
-
-<family-name>
-  <feature-tag-value>
-    <feature-value-name>
-      <font-stretch-css3>
-        <font-variant-css2>
-          <font-weight-absolute>
-            <numeric-figure-values>
-              <numeric-fraction-values>
-                <numeric-spacing-values>
-                  <palette-identifier></palette-identifier></numeric-spacing-values></numeric-fraction-values></numeric-figure-values></font-weight-absolute></font-variant-css2></font-stretch-css3></feature-value-name></feature-tag-value
-></family-name>
+<font-variant-css2>
+  <font-weight-absolute>
+    <numeric-figure-values>
+      <numeric-fraction-values>
+        <numeric-spacing-values>
+          <palette-identifier></palette-identifier></numeric-spacing-values></numeric-fraction-values></numeric-figure-values></font-weight-absolute
+></font-variant-css2>
 ```
 
 ### Interfaces
