@@ -287,9 +287,9 @@ At this point, replace your current `checkGuess()` function with this version in
 function checkGuess() {
   const userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = "Previous guesses: ";
+    guesses.textContent = "Previous guesses:";
   }
-  guesses.textContent = `${guesses.textContent}${userGuess} `;
+  guesses.textContent = `${guesses.textContent} ${userGuess}`;
 
   if (userGuess === randomNumber) {
     lastResult.textContent = "Congratulations! You got it right!";
@@ -327,7 +327,7 @@ This is a lot of code — phew! Let's go through each section and explain what i
 
   If it is, we make the guesses paragraph's text content equal to `Previous guesses:`. If not, we don't.
 
-- Next, we use a template literal to append the current `userGuess` value onto the end of the `guesses` paragraph, plus a blank space so there will be a space between each guess shown.
+- Next, we use a template literal to append the current `userGuess` value onto the end of the `guesses` paragraph, with a blank space in between.
 - The next block does a few checks:
 
   - The first `if (){ }` checks whether the user's guess is equal to the `randomNumber` set at the top of our JavaScript. If it is, the player has guessed correctly and the game is won, so we show the player a congratulations message with a nice green color, clear the contents of the Low/High guess information box, and run a function called `setGameOver()`, which we'll discuss later.
