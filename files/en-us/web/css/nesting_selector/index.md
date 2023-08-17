@@ -118,7 +118,7 @@ The `&` nesting selector can be placed multiple times:
 
 ## Examples
 
-Both of the following examples produce the same output, the first uses normal CSS styles and the second uses the `&` nesting selector.
+Both of the following examples produce the same output. The first one uses normal CSS styles and the second one uses the `&` nesting selector.
 
 ### Original CSS styles
 
