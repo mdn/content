@@ -20,7 +20,7 @@ Any [at-rule](/en-US/docs/Web/CSS/At-rule) whose body contains style rules can b
 
 ### Nesting `@media` at-rule
 
-In this example we see 3 blocks of CSS the first is how the nesting can be written, the second an alternative way of writing the nesting (as the browser parses it) and finally the none nesting way of writing the CSS.
+In this example we see three blocks of CSS. The first one shows how to write typical at-rule nesting, the second is an expanded way of writing the nesting as the browser parses it, and the third one shows the non-nested equivalent.
 
 #### Nested CSS
 
