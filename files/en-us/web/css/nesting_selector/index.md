@@ -60,7 +60,7 @@ Consider an example where we want to style an element, providing styles to be ap
 }
 ```
 
-With the **`&` nesting selector** the parent will be styled when it is hovered.
+By including the **`&` nesting selector** we can get the desired rules after parsing, and the parent will be styled when hovered.
 
 ```css
 .parent-class {
