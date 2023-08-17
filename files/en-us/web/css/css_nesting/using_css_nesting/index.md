@@ -42,7 +42,7 @@ parent child {
 
 ### Examples
 
-In these examples the `<input>`s inside `<label>`s are being styled differently to the `<input>`s as a sibling of `<label>`s.
+In these examples the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
 
 #### HTML
 
