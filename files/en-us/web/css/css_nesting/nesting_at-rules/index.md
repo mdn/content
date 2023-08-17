@@ -97,7 +97,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
 
 ### Nesting Cascade Layers (`@layer`)
 
-{{cssxref('@layer', 'Cascade Layers')}} can be {{cssxref('@layer', 'nested to create child-layers', '#nesting_layers')}}, these are joined with a `.`.
+[Cascade Layers](/en-US/docs/Web/CSS/@layer) can be nested to [create child-layers](/en-US/docs/Web/CSS/@layer#nesting_layers), these are joined with a `.`(dot).
 
 #### Defining the parent & child layers
 
