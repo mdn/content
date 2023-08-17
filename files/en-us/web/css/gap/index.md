@@ -9,7 +9,7 @@ browser-compat: css.properties.gap
 
 The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the gaps ({{glossary("gutters")}}) between rows and columns.
 
-Note that `grid-gap` is an alias for this property.
+Early versions of the specification called this property `grid-gap`, and to maintain compatibility with legacy websites, browsers will still accept `grid-gap` as an alias for `gap`.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
