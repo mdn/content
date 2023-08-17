@@ -77,7 +77,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
 }
 ```
 
-#### Non-nested CSS
+#### Non-nested equivalent
 
 ```css
 .foo {
