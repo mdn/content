@@ -18,7 +18,7 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### CSS
 
-- The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module is now supported natively in Firefox, this also includes the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This allows the writer to write nested CSS which helps with the readability, modularity and maintainability of CSS stylesheets. It also helps reduce the file size of CSS files reducing the data used by users. ([Firefox bug 1835066](https://bugzil.la/1835066), [Firefox bug 1840781](https://bugzil.la/1840781))
+- The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module is now supported in Firefox, along with the the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This allows developers to write nested CSS, which helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce CSS file size, decreasing download sizes. ([Firefox bug 1835066](https://bugzil.la/1835066), [Firefox bug 1840781](https://bugzil.la/1840781))
 
 #### Removals
 
