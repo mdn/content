@@ -33,6 +33,7 @@ jobs:
           # filter out files that are not markdown
           DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
+
       - name: Checkout HEAD
         if: ${{ env.DIFF_DOCUMENTS }}
         uses: actions/checkout@v3
@@ -45,14 +46,17 @@ jobs:
         run: |
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
+
           rm -r files *.md
           mv pr_head/files pr_head/*.md .
           rm -r pr_head
+
           # To avoid contents of PR getting into the diff that we are going to generate
           # after running the linters, here we make a dummy commit.
           # Note, this commit is not getting pushed.
           git add .
           git commit -m "Code from PR head"
+
       - name: Setup Node.js environment
         if: ${{ env.DIFF_DOCUMENTS }}
         uses: actions/setup-node@v3
@@ -73,7 +77,9 @@ jobs:
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           EOF="$(openssl rand -hex 8)"
+
           files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
           MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_FAILED=true
@@ -81,6 +87,7 @@ jobs:
           echo "${MD_LINT_LOG}" >> $GITHUB_ENV
           echo "${EOF}" >> $GITHUB_ENV
           echo "MD_LINT_FAILED=${MD_LINT_FAILED}" >> $GITHUB_ENV
+
           echo "Linting front-matter"
           FM_LINT_FAILED=false
           FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true ${files_to_lint} 2>&1) || FM_LINT_FAILED=true
@@ -88,15 +95,19 @@ jobs:
           echo "${FM_LINT_LOG}" >> $GITHUB_ENV
           echo "${EOF}" >> $GITHUB_ENV
           echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> $GITHUB_ENV
+
           echo "Running Prettier"
           yarn prettier -w ${files_to_lint}
+
           if [[ -n $(git diff) ]]; then
             echo "FILES_MODIFIED=true" >> $GITHUB_ENV
           fi
+
           # info for troubleshooting
           echo MD_LINT_FAILED=${MD_LINT_FAILED}
           echo FM_LINT_FAILED=${FM_LINT_FAILED}
           git diff
+
       - name: Setup reviewdog
         if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
         uses: reviewdog/action-setup@v1
@@ -116,6 +127,7 @@ jobs:
             -f=diff \
             -f.diff.strip=1 \
             -reporter=github-pr-review < "${TMPFILE}"
+
       - name: Add reviews for markdownlint errors
         if: env.MD_LINT_FAILED == 'true'
         env:
@@ -128,6 +140,7 @@ jobs:
             -name="markdownlint" \
             -diff="git diff" \
             -reporter="github-pr-review"
+
       - name: Fail if any issues pending
         if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
         run: |
