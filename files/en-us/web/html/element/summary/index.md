@@ -3,7 +3,9 @@ title: "<summary>: The Disclosure Summary element"
 slug: Web/HTML/Element/summary
 page-type: html-element
 browser-compat: html.elements.summary
-spec-urls: https://w3c.github.io/html-aria/#el-summary
+spec-urls: 
+ - https://w3c.github.io/html-aria/#el-summary
+ - https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element
 ---
 
 {{HTMLSidebar}}
