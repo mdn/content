@@ -257,7 +257,7 @@ When we are running true/false tests (for example inside conditionals — see [b
 
 ### Text strings
 
-Strings are used for representing text. We've already seen a string variable. In the following code, `"I am a placeholder"` is a string:
+Strings are used for representing text. We've already seen a string variable: in the following code, `"I am a placeholder"` is a string:
 
 ```js
 function checkGuess() {
