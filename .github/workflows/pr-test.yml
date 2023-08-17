@@ -10,10 +10,6 @@ on:
   pull_request_target:
     branches:
       - main
-    paths:
-      - .nvmrc
-      - ".github/workflows/pr-test.yml"
-      - "files/**"
 
 jobs:
   tests:
@@ -33,6 +29,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: "${{ env.HEAD_SHA }}"
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
@@ -40,28 +38,7 @@ jobs:
           node-version-file: ".nvmrc"
           cache: yarn
 
-      # This is a "required" workflow so path filtering can not be used:
-      # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
-      # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
-      - uses: dorny/paths-filter@v2
-        name: See if any file needs checking
-        id: filter
-        with:
-          filters: |
-            required_files :
-              - ".nvmrc"
-              - ".github/workflows/pr-test.yml"
-              - "files/en-us/**"
-
-      - name: Install all yarn packages
-        if: steps.filter.outputs.required_files == 'true'
-        run: yarn --frozen-lockfile
-        env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Get changed files
-        if: steps.filter.outputs.required_files == 'true'
         run: |
           # Use the GitHub API to get the list of changed files
           # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
@@ -76,6 +53,13 @@ jobs:
           GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs)
           echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install all yarn packages
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build changed content
