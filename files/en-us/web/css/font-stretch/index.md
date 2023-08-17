@@ -20,7 +20,6 @@ font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
 font-stretch: semi-condensed;
-font-stretch: normal;
 font-stretch: semi-expanded;
 font-stretch: expanded;
 font-stretch: extra-expanded;
