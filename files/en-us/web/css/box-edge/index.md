@@ -13,12 +13,12 @@ The box-edge keywords are the components of, but not limited to, the data types 
 
 ## Syntax
 
-```css
-<visual-box> = content-box | padding-box | border-box /* also referred to as <box> */
-<layout-box> = <box> | margin-box /* also referred to as <shape-box> */
+```plain
+<visual-box> = content-box | padding-box | border-box /* the three <box> values */
+<layout-box> = <box> | margin-box /* the <shape-box> values */
 <paint-box> = <box> | fill-box | stroke-box
 <coord-box> = <box> | fill-box | stroke-box | view-box
-<geometry-box> = <layout-box> | fill-box | stroke-box | view-box
+<geometry-box> = <shape-box> | fill-box | stroke-box | view-box
 ```
 
 ### Values
@@ -27,15 +27,15 @@ A `<box-edge>` can be of the type `<visual-box>`, `<layout-box>`, `<paint-box>`,
 
 - `<visual-box>`
 
-  - : Refers to the rectangular box generated for an element as seen by a user on a web page. It includes the element's content, padding, and border. It excludes the margin area. This value type is used for the {{cssxref("background-clip")}} and {{cssxref("overflow-clip-margin")}} properties.
+  - : Refers to the rectangular box generated for an element as seen by a user on a web page. It includes the element's content, padding, and border. Also referred to as `<box>`, this value excludes the margin area. This value type is used for the {{cssxref("background-clip")}} and {{cssxref("overflow-clip-margin")}} properties.
 
 - `<layout-box>`
 
-  - : Refers to the space occupied by an element, including its content, padding, border, and margin. This value type is used for layout and positioning purposes. This value type is used for the {{cssxref("shape-outside")}} property.
+  - : Refers to the space occupied by an element, including its content, padding, border, and margin. This value type is used for layout and positioning purposes. Also referred to as `<shape-box>`, this value type is used for the {{cssxref("shape-outside")}} property.
 
 - `<paint-box>`
 
-  - : Refers to the area within the layout box that is used to render the content visually. This includes the area where the element's background and borders are painted. It excludes the margin area.
+  - : Refers to the area within the layout box that is used to visually render the content. This includes the area where the element's background and borders are painted. As an element's paintable area does not include its margins, this value excludes `margin-box`.
 
 - `<coord-box>`
 
@@ -50,19 +50,19 @@ The `<box-edge>` keywords are defined as follows:
 
 - `content-box`
 
-  - : Refers to the edge of the content area of the box. In SVG, this value is treated as `fill-box`. It is the innermost box and contains the actual content, such as text, images, or other HTML elements.
+  - : Refers to the outer edge of the box's content area. . The content box is the innermost box. The content area contains the actual content, such as text, images, or other HTML elements. In SVG, this value is treated as `fill-box`.
 
 - `padding-box`
 
-  - : Refers to the edge of the padding of the box. If there is no padding on a side, then the value is the same as `content-box`. In SVG, `padding-box` is treated as `fill-box`. The padding area surrounds the content area.
+  - : Refers to the outer edge of the padding of the box. If there is no padding on a side, then the value is the same as `content-box`. In SVG, `padding-box` is treated as `fill-box`. The padding area surrounds the content area, starting at the outer edge of the content box.
 
 - `border-box`
 
-  - : Refers to the edge of the border of the box. If there is no border on a side, then the value is the same as `padding-box`. In SVG, `border-box` is treated as `stroke-box`. The border area surrounds the padding area.
+  - : Refers to the outer edge of the border of the box. If there is no border on a side, then the value is the same as `padding-box`. In SVG, `border-box` is treated as `stroke-box`. The border area surrounds the padding area, starting at the outer edge of the padding box.
 
 - `margin-box`
 
-  - : Refers to the edge of the margin of the box. If there is no margin on a side, then the value is the same as `border-box`. In SVG, `margin-box` is treated as `stroke-box`.
+  - : Refers to the outer edge of the margin of the box. If there is no margin on a side, then the value is the same as `border-box`. In SVG, `margin-box` is treated as `stroke-box`.
 
 - `fill-box`
 
@@ -74,7 +74,7 @@ The `<box-edge>` keywords are defined as follows:
 
 - `view-box`
 
-  - : Refers to the nearest SVG viewport element's origin box. The origin box is a rectangle with the width and height of the initial SVG user coordinate system established by the {{svgattr("viewBox")}} attribute for that element. The origin box is positioned such that its top left corner is anchored at the coordinate system origin. In CSS, `view-box` treated as `border-box`.
+  - : Refers to the nearest SVG viewport element's origin box. The origin box is a rectangle with the width and height of the initial SVG user coordinate system established by the {{svgattr("viewBox")}} attribute for that element. The origin box is positioned such that its top left corner is anchored at the [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) origin. In CSS, `view-box` is treated as `border-box`.
     > **Note:** When the SVG viewport is not anchored at the origin, the origin box does not correspond to the SVG viewport.
 
 ## Specifications

@@ -7,7 +7,7 @@ browser-compat: css.properties.offset-path
 
 {{CSSRef}}
 
-The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for an element to follow and the element's positioning within the path's parent container or SVG coordinate system. The path is a line, a curve, or geometrical shape along which the element gets positioned or moves.
+The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for an element to follow and determines the element's positioning within the path's parent container or the SVG coordinate system. The path is a line, a curve, or a geometrical shape along which the element gets positioned or moves.
 
 The `offset-path` property is used in combination with the {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}}, and {{cssxref("offset-anchor")}} properties to control the position and orientation of the element along a path.
 
@@ -51,7 +51,7 @@ offset-path: unset;
 
 ### Values
 
-The `offset-path` takes as it's value an `<offset-path>` value, a `<coord-box>` value, or both or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}}, a {{cssxref("url","url()")}}, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
+The `offset-path` takes as it's value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}}, a {{cssxref("url","url()")}}, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
 
 - `none`
 
@@ -75,7 +75,7 @@ The `offset-path` takes as it's value an `<offset-path>` value, a `<coord-box>` 
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)
 
-  - : Specifies the size information of the reference box containing the path. The reference box is derived from the element that establishes the containing block for this element. This parameter is optional. If not specified, the default value is `border-box`. In SVG, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `url()` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
+  - : Specifies the size information of the [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box) containing the path. The reference box is derived from the element that establishes the containing block for this element. This parameter is optional. If not specified, the default value is `border-box`. In SVG, the value is treated as `view-box`. If `ray()` or `<basic-shape>` is used to define the offset path, the `<coord-box>` value provides the reference box for the ray or the `<basic-shape>`, respectively. If `url()` is used to define the offset path, the `<coord-box>` value provides the viewport and user coordinate system for the shape element, with the origin (`0 0`) at the top left corner and size being `1px`.
 
 ## Description
 
@@ -93,9 +93,9 @@ Early versions of the spec called this property `motion-path`. It was changed to
 
 ## Examples
 
-### Creating an offset-path using coord-box positioning
+### Creating an offset-path using box-edge positioning
 
-This example shows the how `<coord-box>` parameter of `offset-path` works in with {{cssxref("border-radius")}}.
+This example demonstrates using various `<coord-box>` values in the `offset-path` property.
 
 ```html hidden
 <div class="box blueBox"></div>
@@ -150,17 +150,17 @@ body {
 }
 ```
 
-In this example, the margin, border, and padding have been purposely been given large values to demonstrate the placement of the blue, green, and red boxes on their respective `coord-box` edges: border-box, padding-box, and content-box.
+In this example, the margin, border, and padding have been purposely given large values to demonstrate the placement of the blue, green, and red rectangles on their respective `<coord-box>` edges: border-box, padding-box, and content-box.
 
-![Box model showing the placement of the blue, red, and green boxes on the border-box, padding-box, and context-box, respectively, by using the coord-box value in the offset-path property.](offset-path-coord-box.png)
+![The blue rectangle sits on the outer edge of the border box, the green rectangle is on the inner border edge, which is the outer edge of the padding box, and the red rectangle is on the outer edge of the content box.](offset-path-coord-box.png)
 
 #### Result
 
-{{EmbedLiveSample('Creating an offset-path using coord-box positioning', '100%', 400)}}
+{{EmbedLiveSample('Creating an offset-path using box-edge positioning', '100%', 400)}}
 
 ### Animating an element with offset-path
 
-The `offset-path` properties in the CSS code sample defines a path that is identical to the `<path>` element in the SVG. The path, as can be seen in the rendering of the SVG code, is a line drawing of a house with a chimney.
+In the CSS code in this example, the `offset-path` property defines a path that is identical to the `<path>` element in the SVG. The path of the SVG animation is a line drawing of a house with a chimney.
 
 #### SVG
 
@@ -208,8 +208,6 @@ The top and bottom halves of the scissors would appear in the top left of the ca
     fill-rule="evenodd" />
 </svg>
 ```
-
-#### CSS
 
 ```css
 .scissorHalf {
