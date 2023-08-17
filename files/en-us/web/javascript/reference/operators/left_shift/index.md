@@ -23,7 +23,7 @@ The `<<` operator is overloaded for two types of operands: number and [BigInt](/
 
 The operator operates on the left operand's bit representation in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). For example, `9 << 2` yields 36:
 
-```
+```plain
      9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 << 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
@@ -67,4 +67,4 @@ Left shifting any number `x` by `0` returns `x` converted to a 32-bit integer. D
 ## See also
 
 - [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
-- [Left shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [Left shift assignment (`<<=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

@@ -17,7 +17,7 @@ The **`Math.min()`** static method returns the smallest of the numbers given as 
 Math.min()
 Math.min(value0)
 Math.min(value0, value1)
-Math.min(value0, value1, /* … ,*/ valueN)
+Math.min(value0, value1, /* …, */ valueN)
 ```
 
 ### Parameters

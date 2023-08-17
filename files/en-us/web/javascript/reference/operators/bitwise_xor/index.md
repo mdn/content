@@ -32,7 +32,7 @@ The truth table for the XOR operation is:
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-```
+```plain
      9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
@@ -75,4 +75,4 @@ Bitwise XORing any number `x` with `0` returns `x` converted to a 32-bit integer
 ## See also
 
 - [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
-- [Bitwise XOR assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+- [Bitwise XOR assignment (`^=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

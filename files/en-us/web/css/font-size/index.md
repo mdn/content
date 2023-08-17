@@ -54,9 +54,13 @@ The `font-size` property is specified in one of the following ways:
 ### Values
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
+
   - : Absolute-size keywords, based on the user's default font size (which is `medium`).
+
 - `larger`, `smaller`
+
   - : Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
+
 - {{cssxref("&lt;length&gt;")}}
 
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
@@ -64,12 +68,12 @@ The `font-size` property is specified in one of the following ways:
     For font-relative units that are root-based (such as `rem`), the font size is relative to the size of the font used by the {{HTMLElement("html")}} (root) element.
 
 - {{cssxref("&lt;percentage&gt;")}}
+
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
+    > **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
-> **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
-
-- `math` {{Experimental_Inline}}
-  Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) must be applied when determining the computed value of the `font-size` property.
+- `math`
+  - : Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) are applied when determining the computed value of the `font-size` property.
 
 ## Description
 

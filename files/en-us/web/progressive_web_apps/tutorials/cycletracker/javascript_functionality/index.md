@@ -17,7 +17,7 @@ The last line in the HTML file calls the `app.js` JavaScript file. This is the s
 
 At the end of this lesson, you will have a fully functional app. In future lessons, we will progressively enhance the app to create a fully installable PWA that works even when the user is offline.
 
-## Javascript task
+## JavaScript task
 
 When a user visits the page, we check if they have existing data stored in local storage. The first time a user visits the page, there won't be any data. When a new user selects two dates and submits the form, we need to:
 

@@ -1,6 +1,7 @@
 ---
 title: How to write in Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
+page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
@@ -61,13 +62,14 @@ On MDN, writers will use code fences for example code blocks. They must specify 
     - `cpp` - C++
     - `cs` - C#
     - `java` - Java
-    - `clike` - C-like (for any C-like language not defined)
   - Other
     - `python` - Python
     - `php` - PHP
     - `rust` - Rust
     - `glsl` - GLSL (OpenGL Shaders)
+    - `sql` - SeQueL commands
     - `wasm` - WebAssembly
+    - `webidl` - Web Interface Definition Language
 - Styling
   - `css` - CSS
   - `scss` - Sass (SCSS)
@@ -78,8 +80,9 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `xml` - XML
   - `mathml` - MathML
   - `md` - Markdown
+  - `latex` - LaTeX
 - Command Prompts
-  - `sh` - Bash/Shell
+  - `bash` - Bash/Shell
   - `batch` - Batch (Windows Shell)
   - `powershell` - PowerShell
 - Configuration/Data Files
@@ -88,11 +91,18 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `yaml` - YAML
   - `toml` - TOML
   - `sql` - SQL Database
-  - `diff` - Diff file
   - `ignore` - Gitignore file
-- Other
-  - `http` - HTTP headers
+  - `apacheconf` - Apache configuration
+  - `nginx` - NGINX configuration
+- Templates
+  - `django` - Django templates
+  - `svelte` - Svelte templates
+  - `handlebars` - Handlebars templates
   - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
+- Other
+  - `plain` - Plain text
+  - `diff` - Diff file
+  - `http` - HTTP headers
   - `regex` - Regex
   - `uri` - URIs and URLs
 
@@ -104,14 +114,14 @@ const greeting = "I will get JavaScript syntax highlighting";
 ```
 ````
 
-If the highlighting that you wish to use is not listed above you should markup the code block as `plain`.
+If the highlighting that you wish to use is not listed above, you should markup the code block as `plain`.
 Additional languages may be requested in the process [discussed on GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
 
 ### Suppressing linting
 
 Writers can add a `-nolint` suffix to any of the language identifiers:
 
-````plain
+````md-nolint
 ```html-nolint
 <p>
 I will not be linted.
@@ -121,9 +131,11 @@ I will not be linted.
 
 Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier. Authors should use this suffix for showing invalid code or alternative formatting that linters or formatters should not fix.
 
-### Additional words
+### Additional classes (info strings)
 
-Writers will be able to supply any one of the following additional words, which must come after the language word:
+GFM supports [info strings](https://github.github.com/gfm/#info-string), which allow authors to supply additional information about a code block. On MDN, info strings are converted into class names.
+
+Writers will be able to supply any one of the following info strings:
 
 - `example-good`: style this example as a good example (one to follow)
 - `example-bad`: style this example as a bad example (one to avoid)
@@ -138,6 +150,10 @@ const greeting = "I'm a good example";
 
 ```js example-bad
 const greeting = "I'm a bad example";
+```
+
+```js hidden
+const greeting = "I'm a secret greeting";
 ```
 ````
 
@@ -173,8 +189,6 @@ Processing of the markup works on the AST it produces, not on the exact characte
 Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
 The blockquote can contain code blocks or other block elements.
-
-Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
 
 ### Examples
 
@@ -251,6 +265,10 @@ This HTML will be rendered as a highlighted box:
 
 #### Translated warning
 
+Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
+
+The localizations are stored in [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) as JSON files in [gettext](https://www.gnu.org/software/gettext/) format. Refer to these files to determine what string should be used in place of "Note:" or "Warning:" for that locale. If a locale file is not defined, English will be used as a fallback.
+
 For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
 ```md
@@ -310,7 +328,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/3483>.
 
 ## Definition lists
 
-To create definition lists in MDN authors write a modified form of a GFM unordered list ({{HTMLElement("ul")}}). In this form:
+Definition lists are commonly used across MDN, but are not supported by GFM. MDN introduces a custom format for definition lists, which is a modified form of a GFM unordered list ({{HTMLElement("ul")}}). In this format:
 
 - The GFM `<ul>` contains any number of top-level GFM `<li>` elements.
 - Each of these top-level GFM `<li>` elements must contain, as its final element, one GFM `<ul>` element.
@@ -387,9 +405,18 @@ On MDN, this would produce the following HTML:
 
 Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>` elements. Using this syntax, it's not possible to write a list with more than one consecutive `<dt>` element or more than one consecutive `<dd>` element: the parser will treat this as an error. We expect almost all definition lists on MDN will work with this limitation, and for those that do not, authors can fall back to raw HTML.
 
+This is not permitted:
+
+```md example-bad
+- `param1`, `param2`, `param3`
+  - : My description of `param1`
+  - : My description of `param2`
+  - : My description of `param3`
+```
+
 As a workaround for cases where an author needs to associate multiple `<dt>` items with a single `<dd>`, consider providing them as a single `<dt>` that holds multiple terms, separated by commas, like this:
 
-```md
+```md example-good
 - `param1`, `param2`, `param3`
   - : My description of params 1, 2, and 3
 ```
@@ -402,7 +429,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4367>.
 
 ## Tables
 
-In GFM (but not CommonMark) there is a syntax for tables: <https://github.github.com/gfm/#tables-extension->. We will make use of this but:
+GFM provides a syntax for creating [tables](https://github.github.com/gfm/#tables-extension-), which we make use of in MDN. However, there are times when GFM tables do not suit our needs:
 
 - The GFM syntax only supports a subset of the features available in HTML. If you need to use table features that are not supported in GFM, use HTML for the table.
 - If the GFM representation of the table would be more than 150 characters wide, use HTML for the table.
@@ -412,11 +439,11 @@ So the general principle is that authors should use the GFM Markdown syntax when
 
 ### GFM table syntax style
 
-In GFM table syntax, authors can omit leading and trailing pipes for rows. MDN authors must include these pipes, for the sake of readability.
+In GFM table syntax, authors can omit leading and trailing pipes for rows. However, for the sake of readability, MDN authors must include these pipes. Additionally, authors must provide trailing spaces in rows, so that all cells in a column are the same length in plain text.
 
 That is, MDN authors must use this style:
 
-```md
+```md example-good
 | Heading 1 | Heading 2 | Heading 3 |
 | --------- | --------- | --------- |
 | cell 1    | cell 2    | cell 3    |
@@ -425,18 +452,20 @@ That is, MDN authors must use this style:
 
 and not this style:
 
-```md
+```md-nolint example-bad
 | Heading 1 | Heading 2 | Heading 3 |
-| --------- | --------- | --------- |
-| cell 1    | cell 2    | cell 3    |
-| cell 4    | cell 5    | cell 6    |
+| --------- | --- |----------------------|
+| cell 1 | cell 2 | cell 3 |
+cell 4 | cell 5 | cell 6
 ```
+
+Luckily, table formatting is auto-fixed by Prettier, so authors may rely on Prettier to format their tables properly.
 
 ### When to use HTML tables
 
 There are three main circumstances in which authors should use HTML tables rather than GFM syntax:
 
-1. The table uses features that are not supported in GFM.
+1. The table uses features that are not supported in GFM (see below).
 2. The GFM table would be too wide to be readable.
 3. The writer wants a special type of table called a "properties table".
 
@@ -447,6 +476,7 @@ The main limitations of GFM table syntax are:
 - GFM tables must have a header row.
 - GFM tables may not have a header column.
 - GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.
+- GFM tables cannot have classes assigned to them.
 - GFM doesn't support any table elements beyond `<table>`, `<tr>`, and `<th>`, and `<td>`.
 - GFM doesn't support any table element attributes like `colspan`, `rowspan`, or `scope`.
 
@@ -531,8 +561,8 @@ Properties tables are a specific type of table used for displaying structured pr
 These pages can't be represented in GFM because they have a header column, so writers should use HTML in this case.
 To get the special styling, writers should apply the `"properties"` class to the table:
 
-```html-nolint
-<table class="properties">
+```html
+<table class="properties"></table>
 ```
 
 ### Discussion reference
@@ -553,7 +583,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4578>.
 
 ## Page summary
 
-The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar or page banner macros](#kumascript).
+The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#sidebar_generation) or [page banner](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#page_or_section_header_indicators) macros.
 
 This summary is used for search engine optimization (SEO) and also automatically included alongside page listings by some macros.
 The first paragraph should therefore be both succinct and informative.
@@ -577,3 +607,5 @@ and \{{cssxref("margin-left")}}.
 The top and bottom margins have no effect on replaced inline elements, such as
 \{{HTMLElement("span")}} or \{{HTMLElement("code")}}.
 ```
+
+See [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros) for more information on macros.

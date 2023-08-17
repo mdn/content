@@ -24,16 +24,9 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 ### Parameters
 
 - `nameN`
-  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers).
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 - `valueN` {{optional_inline}}
   - : Initial value of the variable. It can be any legal expression. Default value is `undefined`.
-
-The [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
-
-```js
-let { bar } = foo; // where foo = { bar: 10, baz: 12 };
-// This creates a variable with the name 'bar', which has a value of 10
-```
 
 ## Description
 
@@ -56,7 +49,7 @@ Compared with {{jsxref("Statements/var", "var")}}, `let` declarations have the f
 - `let` declarations cannot be [redeclared](#redeclarations) by any other declaration in the same scope.
 - `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-  ```js example-bad
+  ```js-nolint example-bad
   if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
   ```
 
@@ -115,7 +108,7 @@ console.log(typeof undeclaredVariable); // "undefined"
 
 `let` declarations cannot be in the same scope as any other declaration, including `let`, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and {{jsxref("Statements/import", "import")}} declaration.
 
-```js example-bad
+```js-nolint example-bad
 {
   let foo;
   let foo; // SyntaxError: Identifier 'a' has already been declared
@@ -124,7 +117,7 @@ console.log(typeof undeclaredVariable); // "undefined"
 
 A `let` declaration within a function's body cannot have the same name as a parameter. A `let` declaration within a `catch` block cannot have the same name as the `catch`-bound identifier.
 
-```js
+```js-nolint example-bad
 function foo(a) {
   let a = 1; // SyntaxError: Identifier 'a' has already been declared
 }
@@ -138,7 +131,7 @@ If you're experimenting in a REPL, such as the Firefox web console (**Tools** > 
 
 You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements because there is only one block.
 
-```js example-bad
+```js-nolint example-bad
 let x = 1;
 
 switch (x) {
@@ -146,7 +139,7 @@ switch (x) {
     let foo;
     break;
   case 1:
-    let foo; // SyntaxError: Identifier 'a' has already been declared
+    let foo; // SyntaxError: Identifier 'foo' has already been declared
     break;
 }
 ```
@@ -257,13 +250,25 @@ console.log(b); // 2
 
 However, this combination of `var` and `let` declarations below is a {{jsxref("SyntaxError")}} because `var` not being block-scoped, leading to them being in the same scope. This results in an implicit re-declaration of the variable.
 
-```js example-bad
+```js-nolint example-bad
 let x = 1;
 
 {
   var x = 2; // SyntaxError for re-declaration
 }
 ```
+
+### Declaration with destructuring
+
+The left-hand side of each `=` can also be a binding pattern. This allows creating multiple variables at once.
+
+```js
+const result = /(a+)(b+)(c+)/.exec("aaabcc");
+let [, a, b, c] = result;
+console.log(a, b, c); // "aaa" "b" "cc"
+```
+
+For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ## Specifications
 

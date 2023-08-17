@@ -63,7 +63,7 @@ These data types are used to indicate quantities, indexes, and positions. The ma
 - {{cssxref("&lt;ratio&gt;")}}
   - : A ratio, written with the syntax `<number> / <number>`.
 - {{cssxref("&lt;flex&gt;")}}
-  - : A flexible length introduced for [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout), written as a `<number>` with the `fr` unit attached and used for grid track sizing.
+  - : A flexible length introduced for [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout), written as a `<number>` with the `fr` unit attached and used for grid track sizing.
 
 ## Quantities
 

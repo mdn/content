@@ -57,8 +57,8 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 <!---->
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
-- {{ domxref("BlobBuilder") }} is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
-- The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. [Webkit bug 585877](https://bugzil.la/585877)
+- `BlobBuilder` is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
+- The `Document.height` and `Document.width` have been removed. [Webkit bug 585877](https://bugzil.la/585877)
 - The {{ domxref("DocumentType") }} object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
 - The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
 - The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/Window/hashchange_event).
@@ -127,7 +127,7 @@ For an overview of the changes you may need to make in order to make your add-on
 
 #### XPCOMUtils.jsm
 
-- The new [`importRelative()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
+- The new `importRelative()` method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
 
 ### XPCOM
 

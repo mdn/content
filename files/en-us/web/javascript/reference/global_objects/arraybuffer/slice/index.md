@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer.slice
 
 {{JSRef}}
 
-The **`slice()`** method returns a new `ArrayBuffer`
+The **`slice()`** method of {{jsxref("ArrayBuffer")}} instances returns a new `ArrayBuffer`
 whose contents are a copy of this `ArrayBuffer`'s bytes from
 `begin`, inclusive, up to `end`, exclusive.
 

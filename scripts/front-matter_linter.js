@@ -43,9 +43,7 @@ async function lintFrontMatter(filesAndDirectories, options) {
     await Promise.all(filesAndDirectories.map(resolveDirectory))
   ).flat();
 
-  options.config = JSON.parse(
-    await fs.readFile("./front-matter-config.json", "utf-8"),
-  );
+  options.config = JSON.parse(await fs.readFile(options.configFile, "utf-8"));
 
   options.validator = getAjvValidator(options.config.schema);
 
@@ -91,7 +89,7 @@ function tryOrExit(f) {
       await f({ options, ...args });
     } catch (error) {
       if (options.verbose || options.v) {
-        console.error(chalk.red(error.stack));
+        console.error(error.stack);
       }
       throw error;
     }
@@ -102,6 +100,10 @@ program
   .option("--fix", "Save corrected output", {
     validator: program.BOOLEAN,
     default: false,
+  })
+  .option("--config-file", "Custom configuration file", {
+    validator: program.STRING,
+    default: "./front-matter-config.json",
   })
   .argument("[files...]", "list of files and/or directories to check", {
     default: ["./files/en-us"],

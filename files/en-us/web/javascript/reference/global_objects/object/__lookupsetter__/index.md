@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Object.lookupSetter
 
 > **Note:** This feature is deprecated in favor of the {{jsxref("Object.getOwnPropertyDescriptor()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
 
-The **`__lookupSetter__()`** method returns the function bound as a setter to the specified property.
+The **`__lookupSetter__()`** method of {{jsxref("Object")}} instances returns the function bound as a setter to the specified property.
 
 ## Syntax
 
@@ -77,7 +77,7 @@ const obj2 = {
 
 function findSetter(obj, prop) {
   while (obj) {
-    const desc = Object.getOwnPropertyDescriptor(obj, "foo");
+    const desc = Object.getOwnPropertyDescriptor(obj, prop);
     if (desc) {
       return desc.set;
     }

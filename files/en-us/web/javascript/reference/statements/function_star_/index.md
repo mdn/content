@@ -22,7 +22,7 @@ function* name(param0) {
 function* name(param0, param1) {
   statements
 }
-function* name(param0, param1, /* … ,*/ paramN) {
+function* name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -36,7 +36,7 @@ function* name(param0, param1, /* … ,*/ paramN) {
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
-  - : The name of a formal parameter for the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements comprising the body of the function.
 
@@ -70,7 +70,7 @@ When a generator is finished, subsequent `next()` calls will not execute any
 of that generator's code, they will just return an object of this form:
 `{value: undefined, done: true}`.
 
-`function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
+`function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
 
 ## Examples
 

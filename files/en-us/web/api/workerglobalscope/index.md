@@ -42,7 +42,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 ### Non-standard properties
 
-- {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+- {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
 
 ## Instance methods

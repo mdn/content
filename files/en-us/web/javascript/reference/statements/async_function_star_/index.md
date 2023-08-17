@@ -22,7 +22,7 @@ async function* name(param0) {
 async function* name(param0, param1) {
   statements
 }
-async function* name(param0, param1, /* … ,*/ paramN) {
+async function* name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -36,7 +36,7 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
-  - : The name of a formal parameter for the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements comprising the body of the function.
 
@@ -60,7 +60,7 @@ foo()
 
 `1` will be logged, because if the yielded promise rejects, the iterator result will reject as well. The `value` property of an async generator's resolved result will not be another promise.
 
-`async function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
+`async function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
 
 ## Examples
 

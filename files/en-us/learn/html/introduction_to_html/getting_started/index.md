@@ -38,7 +38,7 @@ In this article, we cover the absolute basics of HTML. To get you started, this 
 
 {{glossary("HTML")}} (HyperText Markup Language) is a _markup language_ that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of {{glossary("Element", "elements")}}, which you use to enclose, wrap, or _mark up_ different parts of content to make it appear or act in a certain way. The enclosing {{glossary("Tag", "tags")}} can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:
 
-```
+```plain
 My cat is very grumpy
 ```
 
@@ -522,7 +522,7 @@ You can now open this file in a web browser to see what the rendered code looks 
 - Edit the paragraph content to include text about a topic that you find interesting.
 - Make important words stand out in bold by wrapping them inside a `<strong>` opening tag and `</strong>` closing tag.
 - Add a link to your paragraph, as [explained earlier in the article](#active_learning_adding_attributes_to_an_element).
-- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#void_elements). Earn bonus points if you manage to link to a different image (either locally on your computer or somewhere else on the web).
+- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](#void_elements). Earn bonus points if you manage to link to a different image (either locally on your computer or somewhere else on the web).
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
@@ -752,6 +752,6 @@ At this point, you should understand what HTML looks like, and how it works at a
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

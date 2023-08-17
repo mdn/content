@@ -215,7 +215,7 @@ Legacy generator function statements and legacy generator function expressions a
 
 Array comprehensions and generator comprehensions are removed.
 
-```
+```js-nolint
 // Legacy array comprehensions
 [for (x of iterable) x]
 [for (x of iterable) if (condition) x]
