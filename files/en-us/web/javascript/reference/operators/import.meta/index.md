@@ -80,8 +80,8 @@ After (ES modules):
 ```js
 import fs from "node:fs/promises";
 
-const fileUrl = new URL("./someFile.txt", import.meta.url);
-fs.readFile(fileUrl, "utf8").then(console.log);
+const fileURL = new URL("./someFile.txt", import.meta.url);
+fs.readFile(fileURL, "utf8").then(console.log);
 ```
 
 ## Specifications
