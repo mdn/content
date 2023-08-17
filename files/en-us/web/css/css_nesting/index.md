@@ -11,11 +11,11 @@ The **CSS nesting** module introduces the ability to nest one style rule inside 
 
 This helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce the size of CSS files, thereby decreasing the amount of data downloaded by users.
 
-### CSS nesting in action
+## CSS nesting in action
 
 The following code blocks do exactly the same thing, with the first example using ordinary style rules and the second using CSS nesting.
 
-#### Ordinary style rules
+### Ordinary style rules
 
 ```css
 parent {
@@ -27,7 +27,7 @@ parent child {
 }
 ```
 
-#### CSS nesting
+### CSS nesting
 
 Selectors can be nested and the child selector will be prepended by the parent selector. This means that a new selector will be created like so `parent child {}`.
 
@@ -48,11 +48,11 @@ parent child {
 }
 ```
 
-#### CSS nesting with the `&` nesting selector
+### CSS nesting with the `&` nesting selector
 
 An [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can be used to specifically state how the selectors are combined.
 
-##### With `&` nesting selector
+#### With `&` nesting selector
 
 If a space is placed after the `&` nesting selector then a space will be added in the new selector.
 
@@ -73,7 +73,7 @@ parent child {
 }
 ```
 
-##### Using `&` nesting selector with pseudo selector
+#### Using `&` nesting selector with pseudo selector
 
 If no space is placed after the `&` nesting selector then selectors will be joined.
 
