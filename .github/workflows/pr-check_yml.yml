@@ -1,5 +1,5 @@
 name: Lint YAML
-  pull_request:
+ 
     branches:
       - main
       - .nvmrc
@@ -7,7 +7,7 @@ name: Lint YAML
       - .github/workflows/pr-check_yml.yml
       *don't exit on code 2 until requirements are met
 
-jobs:
+jobs: build
   lint-yml:
     runs-on: ubuntu-latest
 
