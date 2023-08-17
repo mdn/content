@@ -46,7 +46,7 @@ In this example we see three blocks of CSS. The first one shows how to write typ
 }
 ```
 
-#### Non-nested CSS
+#### Non-nested equivalent
 
 ```css
 .foo {
