@@ -7,13 +7,20 @@
 name: PR Test
 
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
+    paths:
+      - .nvmrc
+      - ".github/workflows/pr-test.yml"
+      - "files/**"
 
 jobs:
   tests:
     runs-on: ubuntu-latest
+    permissions: read-all
+    outputs:
+      has_assets: ${{ steps.build-content.outputs.has_assets }}
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -71,6 +78,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build changed content
+        id: build-content
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           CONTENT_ROOT: ${{ github.workspace }}/files
@@ -119,6 +127,9 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
 
+          # Set the output variable so the next job could skip if there are no assets
+          echo "has_assets=true" >> "$GITHUB_OUTPUT"
+
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
@@ -140,3 +151,10 @@ jobs:
 
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
+
+  review:
+    needs: build
+    if: ${{ needs.tests.conclusion == 'success' &&
+      needs.tests.outputs.has_assets }}
+    permissions: write-all
+    uses: ./.github/workflows/pr-review-companion.yml
