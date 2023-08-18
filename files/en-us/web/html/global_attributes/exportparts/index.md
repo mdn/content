@@ -19,6 +19,8 @@ Attribute `exportparts` must be placed on a _shadow Host_, which is the element 
 
 ## Examples
 
+First let's create a card component that we will then wrap with another component.
+
 ```js
 class CardComponent extends HTMLElement {
   connectedCallback () {
