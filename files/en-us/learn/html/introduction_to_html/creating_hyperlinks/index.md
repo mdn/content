@@ -81,7 +81,7 @@ This turns the heading into a link:
 
 ### Image links
 
-If you have an image you want to make into a link, use the {{htmlelement("a")}} element to wrap the image file referenced with the {{htmlelement("img")}} element.
+If you have an image you want to make into a link, use the {{htmlelement("a")}} element to wrap the local image file referenced with the {{htmlelement("img")}} element. The example below references an image file saved locally.
 
 ```css hidden
 img {
