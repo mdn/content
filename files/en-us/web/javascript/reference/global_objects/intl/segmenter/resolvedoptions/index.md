@@ -17,6 +17,10 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.Segmenter")}} instances ret
 resolvedOptions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new object with properties reflecting the locale and collation options computed

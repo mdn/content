@@ -19,6 +19,10 @@ existing values.
 maximize()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns

@@ -17,6 +17,10 @@ The **`getCalendars()`** method of {{jsxref("Intl.Locale")}} instances returns a
 getCalendars()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An array of strings representing all calendars commonly used for the `Locale`, sorted in descending preference. If the `Locale` already has a [`calendar`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar), then the returned array contains that single value.

@@ -15,6 +15,10 @@ The **`toString()`** method of {{jsxref("Error")}} instances returns a string re
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the specified {{jsxref("Error")}} object.

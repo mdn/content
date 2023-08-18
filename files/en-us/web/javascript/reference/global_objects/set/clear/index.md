@@ -17,6 +17,10 @@ The **`clear()`** method of {{jsxref("Set")}} instances removes all elements fro
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).

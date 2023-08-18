@@ -17,6 +17,10 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.PluralRules")}} instances r
 resolvedOptions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new object with properties reflecting the locale and plural formatting options computed during the initialization of the given {{jsxref("Intl.PluralRules")}} object.

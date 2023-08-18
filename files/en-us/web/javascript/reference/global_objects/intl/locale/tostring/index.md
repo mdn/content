@@ -17,6 +17,10 @@ The **`toString()`** method of {{jsxref("Intl.Locale")}} instances returns this 
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The _locale_'s Unicode locale identifier string.
