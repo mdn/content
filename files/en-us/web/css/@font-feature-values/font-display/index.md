@@ -7,9 +7,7 @@ browser-compat: css.at-rules.font-feature-values.font-display
 
 {{CSSRef}}
 
-The **`font-display`** descriptor for the {{cssxref("@font-feature-values")}} at-rule sets the default value of how a font face is displayed based on whether and when it is downloaded.
-
-Setting a value for the `font-display` descriptor within a `@font-feature-values` block sets the default `font-display` value for the {{cssxref("@font-face")}} at-rule descriptor for all the fonts with the same {{cssxref("@font-face/font-family", "font-family")}} value.
+The **`font-display`** descriptor for the {{cssxref("@font-feature-values")}} at-rule sets the default value of how a font face is displayed based on whether and when it is downloaded. Setting a value for the `font-display` descriptor within a `@font-feature-values` block sets the default value of the `font-display` descriptor for the {{cssxref("@font-face")}} at-rule for all the fonts with the same {{cssxref("@font-face/font-family", "font-family")}} value.
 
 ## Syntax
 
