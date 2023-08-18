@@ -9,11 +9,11 @@ spec-urls: https://drafts.csswg.org/css-fonts/
 
 The **CSS fonts** module defines font-related properties and how font resources are loaded. It lets you define the style of a font, such as its family, size and weight, and the glyph variants to use when multiple are available for a single character.
 
-A font is a resource file containing the visual representation of characters, mapping character codes to glyphs representing letters, numbers, punctuation and even emojis of a typeface. A font family is a group of fonts that share common design styles and font properties with each member of the group providing different ways of displaying the gylphs, varying by stroke weight, slant or relative width, among others. A font generally contains is a single style of a typeface, such as Helvetica that is Bold and Italic; a font family is the complete set of styles. Including a such a font is done by defining a separate `@font-face` declaration for each font resource.
+A font is a resource file containing the visual representation of characters, mapping character codes to glyphs that represent letters, numbers, punctuation and even emojis of a typeface. A font family is a group of fonts that share common design styles and font properties, with each member of the group providing different ways of displaying the glyphs, varying by stroke weight, slant, or relative width, among other attributes. A font typically represents a single style of a typeface, such as Helvetica that is Bold and Italic. A font family is the complete set of styles. Including such a font in a document or design is done by defining a separate `@font-face` declaration for each font resource.
 
-The properties, at-rules, and descriptors of the CSS fonts module enable downloading multiple variations of a font while defining which font file for a particular font characteristic, along with fallback instructions should a resource not load. The CSS font selection mechanism describes how to match a given set of CSS font properties to a single font face.
+The properties, at-rules, and descriptors of the CSS fonts module enable the downloading of multiple variations of a font. They also define the font file to use for a particular font characteristic, along with fallback instructions in case a resource fails to load. The CSS font selection mechanism describes the process of matching a given set of CSS font properties to a single font face.
 
-The CSS fonts module also provides for variable fonts. With regular fonts, each style is implemented as a separate font file. With variable fonts, all styles can be contained in a single file. Using a single `@font-face` declaration, you can import a single font that includes all the styles and, depending on the font, can include a multitude of font-variants.
+The CSS fonts module also supports variable fonts. Unlike regular fonts, where each style is implemented as a separate font file, variable fonts can contain all styles within a single file. By using a single `@font-face` declaration, you can import a variable font that includes all the styles. Depending on the font, this can include a multitude of font variants. Variable fonts are a part of the OpenType font specification.
 
 ## Reference
 
@@ -49,8 +49,8 @@ The CSS fonts module also provides for variable fonts. With regular fonts, each 
 
 ### At-rules and descriptors
 
-{{cssxref("@font-face")}}
-
+At-rule: {{cssxref("@font-face")}}
+Descriptors:
 - {{cssxref("@font-face/ascent-override", "ascent-override")}}
 - {{cssxref("@font-face/descent-override", "descent-override")}}
 - {{cssxref("@font-face/font-display", "font-display")}}
@@ -63,15 +63,16 @@ The CSS fonts module also provides for variable fonts. With regular fonts, each 
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
+- {{cssxref("@font-face/size-adjust", "size-adjust")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
 
-{{cssxref("@font-feature-values")}}
-
+At-rule: {{cssxref("@font-feature-values")}}
+Descriptor:
 - {{cssxref("@font-feature-values/font-display", "font-display")}}
 
-{{cssxref("@font-palette-values")}}
-
+At-rule: {{cssxref("@font-palette-values")}}
+Descriptors:
 - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
 - {{cssxref("@font-palette-values/font-family", "font-family")}}
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}}
@@ -109,11 +110,11 @@ The CSS fonts module also provides for variable fonts. With regular fonts, each 
 
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 
-  - : This beginner's learning article covers the basic fundamentals of text/font styling, including setting font weight, family and style, the {{cssxref("font")}} shorthand, text alignment and other effects, and line and letter spacing.
+  - : This beginner's learning article covers the basic fundamentals of text and font styling. It covers how to set the font weight, family, and style by using the {{cssxref("font")}} shorthand and how to align text and manage line and letter spacing.
 
 - [Learn: Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
 
-  - : This beginner's learning article explains how to use custom fonts with your web page to allow for more varied, custom text styling.
+  - : This beginner's learning article explains how to use custom fonts on your web page to allow for more varied and custom text styling.
 
 - [OpenType font features guide](/en-US/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
 
@@ -121,17 +122,17 @@ The CSS fonts module also provides for variable fonts. With regular fonts, each 
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
 
-  - : **Variable fonts** are an OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will get you started using variable fonts.
+  - : This article will help you get started with using variable fonts.
 
 - [Improving font perfomance](/en-US/docs/Learn/Performance/CSS#improving_font_performance)
 
-  - : Part of the CSS perfomance guide discussing font loading, loading only needed glyphs, and defining font display behavior with the `font-display` descriptor.
+  - : This article, part of the CSS performance guide, discusses font loading, loading only the required glyphs, and defining font display behavior with the `font-display` descriptor.
 
 ## Related concepts
 
-- CSS {{cssxref("line-height")}} property
-- CSS {{cssxref("text-transform")}} property
-- CSS {{cssxref("letter-spacing")}} property
+- {{cssxref("letter-spacing")}} CSS property
+- {{cssxref("line-height")}} CSS property
+- {{cssxref("text-transform")}} CSS property
 
 ## Specifications
 
