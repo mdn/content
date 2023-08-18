@@ -45,9 +45,9 @@ With the above component, we could wrap it with another component and export all
 
 ```js
 class CardWrapper extends HTMLElement {
-  connectedCallback () {
-    this.attachShadow({ mode: "open" })
-    this.shadowRoot.innerHTML = `<card-component exportparts="base, header, body, footer"></card-component>`
+  connectedCallback() {
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.innerHTML = `<card-component exportparts="base, header, body, footer"></card-component>`;
   }
 }
 
