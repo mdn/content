@@ -104,19 +104,25 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
     <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
     <td class="example Text3"><span>1994年に至っては</span></td>
   </tr>
-  <tr>
+  <tr class="experimental">
     <td>sideways-lr</td>
     <td class="example Text4"><span>我家没有电脑。</span></td>
     <td class="example Text4"><span>Example text</span></td>
     <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
     <td class="example Text4"><span>1994年に至っては</span></td>
   </tr>
-  <tr>
+  <tr class="experimental">
     <td>sideways-rl</td>
     <td class="example Text5"><span>我家没有电脑。</span></td>
     <td class="example Text5"><span>Example text</span></td>
     <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
     <td class="example Text5"><span>1994年に至っては</span></td>
+  </tr>
+  <tr class="notice">
+    <td colspan="5">
+      Your browser does not support the <code>sideways-lr</code> or
+      <code>sideways-rl</code> values.
+    </td>
   </tr>
 </table>
 ```
@@ -129,15 +135,30 @@ table {
 }
 td,
 th {
-  border: 1px black solid;
-  padding: 3px;
+  border: 2px black solid;
+  padding: 4px;
 }
 th {
   background-color: lightgray;
 }
-.example {
-  height: 75px;
-  width: 75px;
+
+.experimental {
+  display: none;
+}
+
+.notice {
+  display: table-row;
+  font-weight: bold;
+  text-align: center;
+}
+
+@supports (writing-mode: sideways-lr) {
+  .experimental {
+    display: table-row;
+  }
+  .notice {
+    display: none;
+  }
 }
 ```
 
@@ -172,11 +193,75 @@ The CSS that adjusts the directionality of the content looks like this:
 
 #### Result
 
-This image shows what the output should look like, in case your browser's support for `writing-mode` is incomplete:
+{{EmbedLiveSample("Using_multiple_writing_modes", 400, 700)}}
 
-![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb CSS properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
+### Using writing-mode with transforms
 
-{{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}
+If your browser doesn't support `sideways-lr` and `sideways-rl` writing modes, you can use `transform` to achieve the same effect.
+
+#### HTML
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Vertical LR</th>
+      <th>Vertical LR with transform</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span>我家没有电脑。</span>
+        <span>Example text</span>
+        <span>מלל ארוך לדוגמא</span>
+        <span>1994年に至っては</span>
+      </td>
+      <td>
+        <span class="rotated">我家没有电脑。</span>
+        <span class="rotated">Example text</span>
+        <span class="rotated">מלל ארוך לדוגמא</span>
+        <span class="rotated">1994年に至っては</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+```css
+span {
+  writing-mode: vertical-lr;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 2px black solid;
+  padding: 4px;
+}
+th {
+  background-color: lightgray;
+}
+span {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Using_writing-mode_with_transforms", 400, 200)}}
 
 ## Specifications
 
