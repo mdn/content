@@ -50,11 +50,11 @@ offset-position: unset;
 ### Values
 
 - `normal`
-  - : Indicates that the element does not have an offset starting position.
+  - : Indicates that the element does not have an offset starting position and places the element at `(50%, 50%)` of the containing block
 - `auto`
   - : Indicates that the offset starting position is the top-left corner of the element's box. This is the default value.
-- `<position>`
-  - : A {{cssxref("&lt;position&gt;")}}. The position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the {{cssxref("length-percentage")}} values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
+- {{cssxref("&lt;position&gt;")}}
+  - : Specifies the position as an x/y coordinate to place an element relative to its box edges. The position can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the {{cssxref("length-percentage")}} values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
 
 ## Formal definition
 
@@ -124,6 +124,7 @@ This example visually compares various initial offset starting position of an el
   <div class="box box0">0</div>
   <pre>
     offset-position: normal;
+    /* No offset-path specified */
   </pre>
 </div>
 
@@ -235,7 +236,7 @@ pre {
 
 {{EmbedLiveSample('Comparing various offset starting positions', '100%', 930)}}
 
-Notice that when `offset-position` is `normal`, the starting position of the ray is `50%, 50%` of the containing block. Also notice the difference between offset starting positions `auto` and `left top`. The value `auto` places the element such that its anchor point is at the top-left corner of the element box itself, whereas the value `left top` places the element such that the anchor point is the top-left corner of the containing block.
+Notice that when `offset-position` is `normal`, the starting position of the ray is (`50%, 50%`) of the containing block. Also notice the difference between offset starting positions `auto` and `left top`. The value `auto` places the element such that its anchor point is at the top-left corner of the element box itself, whereas the value `left top` places the element such that the anchor point is the top-left corner of the containing block.
 
 ## Specifications
 
