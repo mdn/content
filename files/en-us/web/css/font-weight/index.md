@@ -41,7 +41,7 @@ font-weight: revert-layer;
 font-weight: unset;
 ```
 
-The `font-weight` property is specified using any one of the `<font-weight-absolute>` or relative weight values, listed below.
+The `font-weight` property is specified using either a `<font-weight-absolute>` value or a relative weight value, as listed below.
 
 ### Values
 
@@ -55,7 +55,7 @@ The `font-weight` property is specified using any one of the `<font-weight-absol
 
 - `<number>`
 
-  - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. This allows fine-grain control for [variable fonts](#variable_fonts). For non-variable fonts, if the exact weight given is unavailable, a [fallback weight](#fallback-weights) algorithm is used with numeric values divisible by 100 corresponding to common weight names as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
+  - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, both values included. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. This allows fine-grain control for [variable fonts](#variable_fonts). For non-variable fonts, if the exact specified weight is unavailable, a [fallback weight](#fallback-weights) algorithm is used — numeric values that are divisible by 100 correspond to common weight names, as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
 
 - `lighter`
 
@@ -241,4 +241,4 @@ span {
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [CSS fonts module](/en-US/docs/Learn/CSS/CSS_fonts)
+- [CSS fonts](/en-US/docs/Learn/CSS/CSS_fonts) module
