@@ -105,20 +105,20 @@ At-rules can be nested within other at-rules. Below you can see an example of th
 Named cascade layers are defined prior to the named layers being used.
 
 ```css
-@layer parent {
-  @layer child;
+@layer base {
+  @layer support;
 }
 ```
 
 #### Assigning rules to layers with nesting
 
-Here the `.foo` selector assigns its rules to the **parent** `@layer`. The nested **child** `@layer` creates the `parent.child` sub-layer, and the `&` nesting selector is used to create the rules for the `.foo .bar` selector .
+Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested **support** `@layer` creates the `base.support` sub-layer, and the `&` nesting selector is used to create the rules for the `.foo .bar` selector .
 
 ```css
 .foo {
-  @layer parent {
+  @layer base {
     block-size: 100%;
-    @layer child {
+    @layer support {
       & .bar {
         min-block-size: 100%;
       }

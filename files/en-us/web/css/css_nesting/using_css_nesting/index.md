@@ -374,7 +374,7 @@ For [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#co
   }
 }
 
-/* This becomes the compound selector */
+/* the browser parses this to become a compound selector */
 .my-class {
 }
 element.my-class {
