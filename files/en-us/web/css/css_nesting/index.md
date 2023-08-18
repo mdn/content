@@ -39,7 +39,7 @@ parent {
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 parent {
   /* parent styles */
 }
@@ -64,7 +64,7 @@ parent {
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 parent {
   /* parent styles */
 }
@@ -85,7 +85,7 @@ parent {
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 parent {
   /* parent styles */
 }

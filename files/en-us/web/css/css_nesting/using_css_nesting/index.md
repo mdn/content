@@ -8,13 +8,21 @@ page-type: guide
 
 The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to wite your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors the file size can also be reduced.
 
+CSS nesting is different from CSS preprocessors such as [Sass](https://sass-lang.com/) in that it is parsed by the browser rather than being pre-compiled by a CSS preprocessor.
+
 This guide shows different ways to arrange nesting in CSS.
 
 > **Note:** Early versions of the specification did not allow nesting of [type selectors](/en-US/docs/Web/CSS/Type_selectors) without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This has been updated so the `&` selector is no longer needed. At the time of writing Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector for type selector nesting.
 
 ## Child selectors
 
-You can use CSS nesting to target selectors that are child selectors of a parent. This can be done with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector).
+You can use CSS nesting to create child selectors of a parent, which in turn can be used to target child elements of specific parents. This can be done with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector).
+
+There are certain instances where using the `&` nesting selector can be necessary or helpful:
+
+- When joining selectors together, such as using [compound selectors](#compound_selectors) or [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes).
+- For backwards compatability.
+- As a visual indicator to aid with readability, when seeing the `&` nesting selector you know that CSS nesting is being used.
 
 ```css
 /* Without nesting selector */
@@ -33,7 +41,7 @@ parent {
   }
 }
 
-/* both these become */
+/* the browser will parse both of these as */
 parent {
   /* parent styles */
 }
@@ -44,7 +52,7 @@ parent child {
 
 ### Examples
 
-In these examples the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
+In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
 
 #### HTML
 
@@ -59,17 +67,6 @@ In these examples the `<input>` inside the `<label>` is being styled differently
 ```
 
 #### Without `&` nesting selector
-
-```html hidden
-<form>
-  <label for="name"
-    >Name:
-    <input type="text" id="name" />
-  </label>
-  <label for="email">email:</label>
-  <input type="text" id="email" />
-</form>
-```
 
 ##### CSS
 
@@ -103,17 +100,6 @@ label {
 {{EmbedLiveSample('Without_&_nesting_selector','100%','120')}}
 
 #### With `&` nesting selector
-
-```html hidden
-<form>
-  <label for="name"
-    >Name:
-    <input type="text" id="name" />
-  </label>
-  <label for="email">email:</label>
-  <input type="text" id="email" />
-</form>
-```
 
 ##### CSS
 
@@ -207,7 +193,7 @@ In order to target an element with `class="a b"` the `&` nesting selector is nee
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 .a {
   /* styles for element with class="a" */
 }
@@ -228,71 +214,74 @@ In this example the `&` nesting selector is used to create compound selectors to
 ##### HTML
 
 ```html
-<div class="wrapper">
-  <div class="a c"></div>
-  <div class="a">
-    <div class="b c"></div>
-    <div class="b"></div>
+<div class="notices">
+  <div class="notice">
+    <h2>Notice</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+  <div class="notice warning">
+    <h2>Warning</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+  <div class="notice success">
+    <h2>Success</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </div>
 ```
 
 ##### CSS
 
-Styles for the `.wrapper` to create a {{cssxref('CSS_flexible_box_layout', 'flexbox layout')}}.
+Styles for the `.notices` to create a column using {{cssxref('CSS_flexible_box_layout', 'flexbox layout')}}.
 
 ```css
-.wrapper,
-.a {
+.notices {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding: 0.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 90%;
+  margin: auto;
 }
 ```
 
-Styles using nesting to create compound selectors.
+Styles using nesting to create compound selectors. The top level selector creates the basic styles for an element with `class="notice"`, the the `&` nesting selector is used to create a compound selector for elements with either `class="notice warning"` or `class="notice success"`.
 
 ```css
-.a {
-  /* styles for element with class="a" */
-  height: 50px;
-  width: 100px;
-  border-radius: 0.5rem;
-  border: red dotted 2px;
-  .b {
-    /* styles for element with class="a" and descendant with class="b" */
-    height: 40px;
-    width: 40px;
-    border: black solid 2px;
-    &.c {
-      /* styles for element with class="b c" */
-      border: blue solid;
+.notice {
+  width: 90%;
+  justify-content: center;
+  border-radius: 1rem;
+  border: black solid 2px;
+  background-color: #ffc107;
+  color: black;
+  padding: 1rem;
+  h2:before {
+    content: "ℹ︎ ";
+  }
+  &.warning {
+    background-color: #d81b60;
+    border-color: #d81b60;
+    color: white;
+    h2:before {
+      content: "! ";
     }
   }
-  &.c {
-    /* styles for element with class="a c" */
-    border: green solid;
+  &.success {
+    background-color: #004d40;
+    border-color: #004d40;
+    color: white;
+    h2:before {
+      content: "✓ ";
+    }
   }
 }
 ```
 
 ##### Result
 
-{{EmbedLiveSample('Nesting_and_compound_selectors','100%')}}
+{{EmbedLiveSample('Nesting_and_compound_selectors','100%', '455')}}
 
 ## Appended nesting selector
-
-Using the `&` nesting selector before a nested selector applies the styles to the child selector when it is within the parent selector.
-
-```css
-.parent {
-  /* .parent styles */
-  & .child {
-    /* .parent .child styles */
-  }
-}
-```
 
 The `&` nesting selector can also be appended to a nested selector which has the effect of reversing the context.
 
@@ -370,7 +359,7 @@ In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to u
   &__child-element {
   }
 }
-/* In SASS this becomes */
+/* In Sass this becomes */
 .component__child-element {
 }
 ```

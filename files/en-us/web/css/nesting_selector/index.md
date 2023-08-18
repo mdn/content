@@ -32,7 +32,7 @@ In this example, nesting is done without the **`&` nesting selector**. When the 
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 .parent-class {
   /* parent style properties */
 }
@@ -54,7 +54,7 @@ Consider an example where we want to style an element, providing styles to be ap
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 .parent-class {
   /* parent style properties */
 }
@@ -74,7 +74,7 @@ With the **`&` nesting selector** the parent will be styled when it is hovered.
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 .parent-class {
   /* parent style properties */
 }
@@ -96,7 +96,7 @@ The `&` nesting selector can also be appended to reverse the context of the sele
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 .card {
   /* .card styles */
 }
@@ -116,7 +116,7 @@ The `&` nesting selector can be placed multiple times:
   }
 }
 
-/* this becomes */
+/* the browser parses this as */
 .card {
   /* .card styles */
 }
@@ -163,7 +163,7 @@ This example uses normal CSS styling.
 
 #### Result
 
-{{EmbedLiveSample('Original_CSS_styles','100%','50')}}
+{{EmbedLiveSample('Original_CSS_styles','100%','65')}}
 
 ### Nested CSS styles
 
@@ -196,7 +196,7 @@ This example uses nested CSS styling.
 
 #### Result
 
-{{EmbedLiveSample('Nested_CSS_styles','100%','50')}}
+{{EmbedLiveSample('Nested_CSS_styles','100%','65')}}
 
 ## Specifications
 
@@ -208,4 +208,4 @@ This example uses nested CSS styling.
 
 ## See also
 
-- [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
