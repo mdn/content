@@ -86,7 +86,7 @@ The `auto none` value allows the element to fallback to `contain-intrinsic-size:
 
 ### Using auto value pairs for intrinsic size
 
-This example uses `contain-intrinsic-size: auto [<length> | none]` with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) and offscreen elements.
+This example demonstrates `contain-intrinsic-size: auto <length>` and `contain-intrinsic-size: auto none` with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) and offscreen elements.
 We can estimate that our paragraphs will be around 500px tall, so the intrinsic size of their parent elements can be set to `500px`.
 When the element is offscreen, the browser will use 500px size for the layout of that element, and when the element needs to be rendered onscreen, the browser will use the computed size of the element and remember this value when the paragraphs are scrolled off and onscreen again.
 
