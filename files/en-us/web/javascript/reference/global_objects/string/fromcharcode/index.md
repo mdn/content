@@ -14,6 +14,7 @@ The **`String.fromCharCode()`** static method returns a string created from the 
 ## Syntax
 
 ```js-nolint
+String.fromCharCode()
 String.fromCharCode(num1)
 String.fromCharCode(num1, num2)
 String.fromCharCode(num1, num2, /* …, */ numN)

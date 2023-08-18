@@ -15,7 +15,7 @@ of a {{jsxref("BigInt")}} object.
 ## Syntax
 
 ```js-nolint
-bigIntObj.valueOf()
+valueOf()
 ```
 
 ### Return value

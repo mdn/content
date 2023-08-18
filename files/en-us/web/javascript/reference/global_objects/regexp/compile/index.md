@@ -28,7 +28,7 @@ compile(pattern, flags)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -14,6 +14,7 @@ The **`String.fromCodePoint()`** static method returns a string created from the
 ## Syntax
 
 ```js-nolint
+String.fromCodePoint()
 String.fromCodePoint(num1)
 String.fromCodePoint(num1, num2)
 String.fromCodePoint(num1, num2, /* …, */ numN)
