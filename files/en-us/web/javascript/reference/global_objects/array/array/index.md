@@ -13,15 +13,15 @@ The **`Array()`** constructor creates {{jsxref("Array")}} objects.
 
 ```js-nolint
 new Array()
-new Array(element0)
-new Array(element0, element1)
-new Array(element0, element1, /* …, */ elementN)
+new Array(element1)
+new Array(element1, element2)
+new Array(element1, element2, /* …, */ elementN)
 new Array(arrayLength)
 
 Array()
-Array(element0)
-Array(element0, element1)
-Array(element0, element1, /* …, */ elementN)
+Array(element1)
+Array(element1, element2)
+Array(element1, element2, /* …, */ elementN)
 Array(arrayLength)
 ```
 
@@ -29,7 +29,7 @@ Array(arrayLength)
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : A JavaScript array is initialized with the given elements, except in the case where
     a single argument is passed to the `Array` constructor and that argument is
     a number (see the `arrayLength` parameter below). Note that this special case only

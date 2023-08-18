@@ -16,13 +16,14 @@ whose contents are a copy of this `ArrayBuffer`'s bytes from
 ## Syntax
 
 ```js-nolint
+slice()
 slice(begin)
 slice(begin, end)
 ```
 
 ### Parameters
 
-- `begin`
+- `begin` {{optional_inline}}
   - : Zero-based byte index at which to begin slicing.
 - `end` {{optional_inline}}
   - : Byte index before which to end slicing. If end is unspecified, the new

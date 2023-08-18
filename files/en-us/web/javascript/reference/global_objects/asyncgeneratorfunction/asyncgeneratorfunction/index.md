@@ -21,14 +21,14 @@ The `AsyncGeneratorFunction()` constructor is not intended to be used directly, 
 
 ```js-nolint
 new AsyncGeneratorFunction(functionBody)
-new AsyncGeneratorFunction(arg0, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, /* …, */ argN, functionBody)
+new AsyncGeneratorFunction(arg1, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 
 AsyncGeneratorFunction(functionBody)
-AsyncGeneratorFunction(arg0, functionBody)
-AsyncGeneratorFunction(arg0, arg1, functionBody)
-AsyncGeneratorFunction(arg0, arg1, /* …, */ argN, functionBody)
+AsyncGeneratorFunction(arg1, functionBody)
+AsyncGeneratorFunction(arg1, arg2, functionBody)
+AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
 > **Note:** `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
