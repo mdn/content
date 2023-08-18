@@ -290,17 +290,49 @@ npm link hello-wasm
 
 > **Note:** If you remove the `./node_modules` directory at any point, you'll need to run `npm link hello-wasm` again.
 
-Create a new file, `package.json`, and put the following code in it:
+Install the dev dependencies:
+
+```bash
+npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin
+```
+
+Next, we need to configure Webpack. Create `webpack.config.js` and put the following in it:
+
+```js
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
+  },
+  mode: "development",
+  experiments: {
+    asyncWebAssembly: true,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./dist/index.html",
+    }),
+  ],
+};
+```
+
+And in your `package.json`, you can add `build` and `serve` scripts that will run webpack with the config file we just created:
 
 ```json
 {
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack serve --config webpack.config.js --open"
   },
   "dependencies": {
     "hello-wasm": "^0.1.0"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
@@ -308,34 +340,17 @@ Create a new file, `package.json`, and put the following code in it:
 }
 ```
 
-Next, we need to configure Webpack. Create `webpack.config.js` and put the following in it:
+Next, create a file named `./src/index.js`, and give it these contents:
 
 ```js
-const path = require("path");
-module.exports = {
-  entry: "./index.js",
-  experiments: {
-    asyncWebAssembly: true,
-  },
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "index.js",
-  },
-  mode: "development",
-};
-```
-
-Next, create a file named `index.js`, and give it these contents:
-
-```js
-import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
+import("../node_modules/hello-wasm/hello_wasm.js").then((js) => {
   js.greet("WebAssembly with npm");
 });
 ```
 
 This imports the new module from the `node_modules` folder. This isn't considered a best practice, but this is a demo, so it's OK for now. Once it's loaded, it calls the `greet` function from that module, passing `"WebAssembly"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
 
-Finally, we need to add a HTML file to load the JavaScript. Create an `index.html` file and add the following:
+Finally, we need to add a HTML file to load the JavaScript. Create a `./dist/index.html` file and add the following:
 
 ```html
 <!doctype html>
@@ -353,22 +368,26 @@ Finally, we need to add a HTML file to load the JavaScript. Create an `index.htm
 The `hello-wasm/site` directory should look like this:
 
 ```plain
-├── index.html
-├── index.js
+├── dist
+│   └── index.html
 ├── node_modules
 │   └── hello-wasm -> ../../pkg
+├── package-lock.json
 ├── package.json
+├── src
+│   └── index.js
 └── webpack.config.js
 ```
 
 We're done making files. Let's give this a shot:
 
 ```bash
-npm install
-npm run start
+npm i
+npm run build
+npm run serve
 ```
 
-This starts a web server. Load `http://localhost:8080/index` and an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm.
+This starts a web server and opens `http://localhost:8080`. You should see an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm!
 
 ## Conclusion
 
