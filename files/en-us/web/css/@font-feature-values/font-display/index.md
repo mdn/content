@@ -35,7 +35,7 @@ font-display: optional;
 
 ## Description
 
-The `font-display` descriptor for `@font-feature-values` determines the font display timeline by setting a default font-display value for `@font-face` rules for the same `font-family` name. When font-display is omitted in an `@font-face` rule, the user agent uses the font-display value set via `@font-feature-values` for the relevant font-family if one is set, and otherwise defaults to `font-display: auto`, with the font display strategy being set by the user agent
+The `font-display` descriptor for `@font-feature-values` determines the font display timeline; it does so by setting a default `font-display` value for `@font-face` for the same `font-family` name. When `font-display` is omitted in `@font-face`, the user agent first looks for the `font-display` value that has been set via `@font-feature-values` for the relevant font-family. If no value is found, the user agent uses the `auto` value for `font-display`, in which case, the user agent determines the font display strategy.
 
 The font display timeline is based on a timer that begins the moment the user agent attempts to use a given downloaded font face. The timeline is divided into the three periods below which dictate the rendering behavior of any elements using the font face:
 
