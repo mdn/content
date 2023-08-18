@@ -40,6 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
   - : A string representing the origin of the message emitter.
 
 Other properties from the {{domxref("MessageEvent")}} interface are present, but do not pertain to the WebSocket API and are left at their default values:
+
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
 - {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
 - {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
