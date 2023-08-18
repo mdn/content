@@ -31,10 +31,12 @@ In this example, nesting is done without the **`&` nesting selector**. When the 
     /* child style properties */
   }
 }
+
 /* this becomes */
 .parent-class {
   /* parent style properties */
 }
+
 .parent-class .child-class {
   /* child style properties */
 }
@@ -51,10 +53,12 @@ Consider an example where we want to style an element, providing styles to be ap
     /* child style properties */
   }
 }
+
 /* this becomes */
 .parent-class {
   /* parent style properties */
 }
+
 .parent-class :hover {
   /* child style properties */
 }
@@ -69,10 +73,12 @@ With the **`&` nesting selector** the parent will be styled when it is hovered.
     /* child style properties */
   }
 }
+
 /* this becomes */
 .parent-class {
   /* parent style properties */
 }
+
 .parent-class:hover {
   /* child style properties */
 }
@@ -89,10 +95,12 @@ The `&` nesting selector can also be appended to reverse the context of the sele
     /* .featured .card styles */
   }
 }
+
 /* this becomes */
 .card {
   /* .card styles */
 }
+
 .featured .card {
   /* .featured .card styles */
 }
@@ -107,10 +115,12 @@ The `&` nesting selector can be placed multiple times:
     /* .featured .card .card .card styles */
   }
 }
+
 /* this becomes */
 .card {
   /* .card styles */
 }
+
 .featured .card .card .card {
   /* .featured .card .card .card styles */
 }
@@ -139,9 +149,11 @@ This example uses normal CSS styling.
   font-family: system-ui;
   font-size: 1.2rem;
 }
+
 .example > a {
   color: tomato;
 }
+
 .example > a:hover,
 .example > a:focus {
   color: ivory;

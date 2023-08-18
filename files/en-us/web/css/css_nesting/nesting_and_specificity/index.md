@@ -16,13 +16,13 @@ The {{cssxref('specificity')}} of the `&` nesting selector is calculated using t
 
 ## `&` nesting syntax
 
-```css
-#a,
-b {
+```css-nolint
+#a, b {
   & c {
     color: blue;
   }
 }
+
 .foo c {
   color: red;
 }
@@ -36,6 +36,7 @@ b {
     color: blue;
   }
 }
+
 .foo c {
   color: red;
 }

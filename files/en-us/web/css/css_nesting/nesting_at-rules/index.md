@@ -52,6 +52,7 @@ In this example we see three blocks of CSS. The first one shows how to write typ
 .foo {
   display: grid;
 }
+
 @media (orientation: landscape) {
   .foo {
     grid-auto-flow: column;

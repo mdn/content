@@ -24,6 +24,7 @@ parent {
     /* child of parent styles */
   }
 }
+
 /* Without nesting selector */
 parent {
   /* parent styles */
@@ -31,6 +32,7 @@ parent {
     /* child of parent styles */
   }
 }
+
 /* both these become */
 parent {
   /* parent styles */
@@ -204,6 +206,7 @@ In order to target an element with `class="a b"` the `&` nesting selector is nee
     /* styles for element with class="a b" */
   }
 }
+
 /* this becomes */
 .a {
   /* styles for element with class="a" */
@@ -381,6 +384,7 @@ For [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#co
   element& {
   }
 }
+
 /* This becomes the compound selector */
 .my-class {
 }
