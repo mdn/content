@@ -27,12 +27,12 @@ This is bad for user [privacy](/en-US/docs/Web/Privacy). At this point, any page
 
 To mitigate this problem, The Attribution Reporting API allows developers to register:
 
-- **Attribution sources**: An ad-related event that can be used to measure a user's interaction with the ad. This can involve clicking a link or viewing an image or other asset associated with an ad, on the site where it is published.
-- **Attribution triggers**. An event on the advertiser's own site, for example clicking a "purchase" button on an ecommerce site.
+- **Attribution sources**: Ad-related features that can be used to measure a user interaction with ads. This can involve clicking links or viewing images or other assets associated with the ads, on the sites where they are published.
+- **Attribution triggers**. Event on the advertiser's own sites, for example clicking a "purchase" button on an e-commerce site.
 
 When an attribution source event occurs (for example, the user clicks the link in the ad), associated data is stored in a private local cache accessible only by the browser. This data includes any contextual reporting data that you want to measure (for example user ID, geographic region, campaign ID), plus the origin that the ad is hosted on and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s) — sites where you expect the associated conversion to occur (i.e, where the attribution triggers are).
 
-Next, when the attribution trigger event occurs (for example the user clicks the "purchase" button), the browser attempts to match the attribution trigger to an entry in the private local storage partition. For a successful match, the trigger must be:
+Next, when the attribution trigger event occurs (for example the user clicks the "purchase" button), the browser attempts to match the attribution trigger to an entry in the private local storage. For a successful match, the trigger must be:
 
 1. On a `destination` specified in the source's associated {{httpheader("Attribution-Reporting-Register-Source")}} header.
 2. Same-origin with the request that specified the source registration.

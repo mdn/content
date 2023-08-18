@@ -51,11 +51,11 @@ Attribution-Reporting-Register-Trigger: <json-string>
     - `"aggregatable_values"`
       - : An object containing a property representing a value for each data point defined in `"aggregatable_trigger_data"`. In each case, the property name is equal to the name defined in `"source_keys"`, and the property value whatever arbitrary value you require. (EDITORIAL: I'M NOT SURE IF THIS IS CORRECT, OR WHAT THESE DO)
     - `"debug_key"` {{optional_inline}}
-      - : xx EDITORIAL: FILL THIS IN
+      - : A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
     - `"debug_reporting"` {{optional_inline}}
-      - : xx EDITORIAL: FILL THIS IN
+      - : A boolean value. Set this to `true` (in addition to setting a `debug_key`) if you want the generated debug report to be a verbose debug report. If omitted the default value, `false`, will result in the generation of a success debug report.
     - `"filters"` {{optional_inline}}
-      - : An object containing custom data that can be used to filter which conversions generate reports.
+      - : An object containing custom data that can be used to filter which conversions generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
     - `"event_trigger_data"`
       - : An object representing data about the conversion. Note that, because the header value must be a valid JSON string, this object is nested in square brackets. Available sub-fields are as follows:
         - `"trigger_data"`

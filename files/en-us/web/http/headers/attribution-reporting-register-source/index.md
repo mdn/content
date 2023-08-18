@@ -53,15 +53,15 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"aggregatable_report_window"` {{optional_inline}}
       - : A string representing a time in seconds, after which conversions will no longer be included in generated aggregatable reports. The reports are still generated at the same time. If not set, the event report window falls back to the `"expiry"` value.
     - `"debug_key"` {{optional_inline}}
-      - : xx EDITORIAL: FILL THIS IN
+      - : A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
     - `"debug_reporting"` {{optional_inline}}
-      - : xx EDITORIAL: FILL THIS IN
+      - : A boolean value. Set this to `true` (in addition to setting a `debug_key`) if you want the generated debug report to be a verbose debug report. If omitted the default value, `false`, will result in the generation of a success debug report.
     - `"event_report_window"` {{optional_inline}}
       - : A string representing a time in seconds, after which event-level reports will no longer be sent. This can be used to generate reports more quickly. if not set, the event report window falls back to the `"expiry"` value.
     - `"expiry"` {{optional_inline}}
       - : A string representing an expiry time, in seconds, for the attribution source, after which it will no longer be active (i.e. the browser will no longer record attribution source events based on this source). If not specified, the default is 2592000 seconds (30 days).
     - `"filter_data"` {{optional_inline}}
-      - : An object containing custom data that can be used to filter which conversions generate reports.
+      - : An object defining custom data that can be used to filter which conversions generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
     - `"priority"` {{optional_inline}}
       - : A string representing a priority value for the attribution source. By default, conversions are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to prioritise specific sources. For example, a value of `2` takes priority over the default value of `1`. See [Prioritize specific clicks or views for event-level or aggregatable reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/) for more information.
 

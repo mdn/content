@@ -38,8 +38,8 @@ A typical event-level report might look like this:
   "source_type": "navigation",
   "randomized_trigger_rate": 0.34,
   "scheduled_report_time": "1692255696",
-  "source_debug_key": 18446744073709551615n,
-  "trigger_debug_key": 19006744073709551615n
+  "source_debug_key": 647775351539539,
+  "trigger_debug_key": 647776891539539
 }
 ```
 
@@ -60,9 +60,9 @@ The properties are as follows:
 - `"scheduled_report_time"`
   - : A string representing the number of seconds since the Unix Epoch until the browser initially scheduled the report to be sent (to avoid noise around offline devices reporting late).
 - `"source_debug_key"` {{optional_inline}}
-  - : A 64 bit unsigned integer representing a debugging key for the attribution source.
+  - : A 64 bit unsigned integer representing a debugging key for the attribution source (see [Debug reports](#debug_reports)).
 - `"trigger_debug_key"` {{optional_inline}}
-  - : A 64 bit unsigned integer representing a debugging key for the attribution trigger.
+  - : A 64 bit unsigned integer representing a debugging key for the attribution trigger (see [Debug reports](#debug_reports)).
 
 ## Summary reports
 
@@ -81,12 +81,12 @@ A typical aggregatable report might look like this:
     {
       "payload": "[base64-encoded HPKE encrypted data readable only by the aggregation service]",
       "key_id": "[string identifying public key used to encrypt payload]",
-      "debug_cleartext_payload": "[base64-encoded unencrypted payload]",
-    },
+      "debug_cleartext_payload": "[base64-encoded unencrypted payload]"
+    }
   ],
   "aggregation_coordinator_origin": "https://publickeyservice.aws.privacysandboxservices.com",
-  "source_debug_key": 18446744073709551615n,
-  "trigger_debug_key": 19006744073709551615n
+  "source_debug_key": 647775351539539,
+  "trigger_debug_key": 647776891539539
 }
 ```
 
@@ -107,7 +107,7 @@ The properties are as follows:
     - `"source_registration_time"`
       - : A string representing the number of seconds since the Unix Epoch that the attribution source was registered, rounded down to a whole day.
     - `"version"`
-      - : A string representing the version of the API used to generate the report (EDITORIAL: WHAT ACTUALLY IS THIS API? HOW SHOULD I REFER TO IT).
+      - : A string representing the version of the API used to generate the report (EDITORIAL: WHAT ACTUALLY IS THIS API? HOW SHOULD I REFER TO IT?).
 - `"aggregation_service_payloads"`
 
   - : An array of objects representing payload objects containing the histogram contributions used by the aggregation service to assemble the data contained in the report (EDITORIAL: I'M GUESSING HERE; I DON'T UNDERSTAND WHAT THIS DOES). Currently, only a single payload is supported per report, configured by the browser. In the future multiple, customizable payloads may be supported (EDITORIAL: AGAIN, GUESSING, BUT THIS IS WHAT THE EXPLAINER IMPLIES). Each payload object can contain the following properties:
@@ -217,17 +217,25 @@ For example:
 
 In this context, `filters` can be an object or an array of objects. When a list is specified, only one dictionary has to match for the trigger to be considered.
 
+```json
 {
-"event_trigger_data": [
-{
-"trigger_data": "2",
-"filters": [
-{"product": ["1234"], "conversion_subdomain": ["electronics.megastore"]},
-{"product": ["4321"], "conversion_subdomain": ["electronics4.megastore"]}
-]
-},
-]
+  "event_trigger_data": [
+    {
+      "trigger_data": "2",
+      "filters": [
+        {
+          "product": ["1234"],
+          "conversion_subdomain": ["electronics.megastore"]
+        },
+        {
+          "product": ["4321"],
+          "conversion_subdomain": ["electronics4.megastore"]
+        }
+      ]
+    }
+  ]
 }
+```
 
 If the filters do not match for any of the event triggers, no event-level report will be created. If the filters match for multiple event triggers, the first matching event trigger is used.
 
@@ -269,7 +277,7 @@ To use debug reports, you need to:
    }
    ```
 
-4. Set up appropriate endpoints to receive the debug reports you want to geenrate. Debug reports are sent to three separate endpoints in the reporting origin:
+4. Set up appropriate endpoints to receive the debug reports you want to generate. Debug reports are sent to three separate endpoints in the reporting origin:
 
    - Endpoint for event-level success debug reports: `https://<reporting-origin>/.well-known/attribution-reporting/debug/report-event-attribution`
    - Endpoint for aggregatable success debug reports: `https://<reporting-origin>/.well-known/attribution-reporting/debug/report-aggregate-attribution`
