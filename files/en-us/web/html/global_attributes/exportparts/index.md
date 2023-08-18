@@ -70,9 +70,9 @@ And here's the prior `CardWrapper` with the remapping syntax:
 
 ```js
 class CardWrapper extends HTMLElement {
-  connectedCallback () {
-    this.attachShadow({ mode: "open" })
-    this.shadowRoot.innerHTML = `<card-component exportparts="base:card__base, header:card__header, body:card__body, footer:card__footer"></card-component>`
+  connectedCallback() {
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.innerHTML = `<card-component exportparts="base:card__base, header:card__header, body:card__body, footer:card__footer"></card-component>`;
   }
 }
 
