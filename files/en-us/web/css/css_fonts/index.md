@@ -49,56 +49,87 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 
 ### At-rules and descriptors
 
-At-rule: {{cssxref("@font-face")}}
-Descriptors:
-- {{cssxref("@font-face/ascent-override", "ascent-override")}}
-- {{cssxref("@font-face/descent-override", "descent-override")}}
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-language-override", "font-language-override")}}
-- {{cssxref("@font-face/font-named-instance", "font-named-instance")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
-- {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- At-rule: {{cssxref("@font-face")}}
 
-At-rule: {{cssxref("@font-feature-values")}}
-Descriptor:
-- {{cssxref("@font-feature-values/font-display", "font-display")}}
+  - : Descriptors:
+    - {{cssxref("@font-face/ascent-override", "ascent-override")}}
+    - {{cssxref("@font-face/descent-override", "descent-override")}}
+    - {{cssxref("@font-face/font-display", "font-display")}}
+    - {{cssxref("@font-face/font-family", "font-family")}}
+    - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
+    - {{cssxref("@font-face/font-language-override", "font-language-override")}}
+    - {{cssxref("@font-face/font-named-instance", "font-named-instance")}}
+    - {{cssxref("@font-face/font-stretch", "font-stretch")}}
+    - {{cssxref("@font-face/font-style", "font-style")}}
+    - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+    - {{cssxref("@font-face/font-weight", "font-weight")}}
+    - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
+    - {{cssxref("@font-face/size-adjust", "size-adjust")}}
+    - {{cssxref("@font-face/src", "src")}}
+    - {{cssxref("@font-face/unicode-range", "unicode-range")}}
 
-At-rule: {{cssxref("@font-palette-values")}}
-Descriptors:
-- {{cssxref("@font-palette-values/base-palette", "base-palette")}}
-- {{cssxref("@font-palette-values/font-family", "font-family")}}
-- {{cssxref("@font-palette-values/override-colors", "override-colors")}}
+- At-rule: {{cssxref("@font-feature-values")}}
+
+  - : Descriptor:
+    - {{cssxref("@font-feature-values/font-display", "font-display")}}
+
+- At-rule: {{cssxref("@font-palette-values")}}
+  - : Descriptors:
+    - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
+    - {{cssxref("@font-palette-values/font-family", "font-family")}}
+    - {{cssxref("@font-palette-values/override-colors", "override-colors")}}
 
 ### Data types
 
+`font-size` types:
+
 - {{cssxref("absolute-size")}}
-- {{cssxref("generic-family")}}
 - {{cssxref("relative-size")}}
+
+`font-family` type:
+
+- {{cssxref("generic-family")}}
+
+`font-feature-settings` type:
+
+- [`<feature-tag-value>`](/en-US/docs/Web/CSS/font-feature-settings#values)
+
+`font-format` type:
+
+- [`<font-format>`](/en-US/docs/Web/CSS/@supports#font-format)
+
+`font-stretch` type:
+
+- [`<font-stretch-css3>`](/en-US/docs/Web/CSS/font-stretch#values)
+
+`font-tech` types:
+
 - [`<color-font-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
+- [`<font-features-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
+- [`<font-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
+
+`font-variant` types:
+
+- [`<font-variant-css2>`](/en-US/docs/Web/CSS/font-variant)
+- [`<east-asian-variant-values>`](/en-US/docs/Web/CSS/font-variant#values)
+- [`<east-asian-width-values>`](/en-US/docs/Web/CSS/font-variant#values)
+
+`font-variant-ligatures` types:
+
 - [`<common-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
 - [`<contextual-alt-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
 - [`<discretionary-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
-- [`<east-asian-variant-values>`](/en-US/docs/Web/CSS/font-variant#values)
-- [`<east-asian-width-values>`](/en-US/docs/Web/CSS/font-variant#values)
-- [`<feature-tag-value>`](/en-US/docs/Web/CSS/font-feature-settings#values)
-- [`<font-features-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
-- [`<font-variant-css2>`](/en-US/docs/Web/CSS/font-variant)
-- [`<font-format>`](/en-US/docs/Web/CSS/@supports#font-format)
-- [`<font-stretch-css3>`](/en-US/docs/Web/CSS/font-stretch#values)
-- [`<font-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
+- [`<historical-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
+
+`font-variant-numeric` types:
+
 - [`<numeric-figure-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
 - [`<numeric-fraction-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
 - [`<numeric-spacing-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
+
+`font-weight` type:
+
 - [`<font-weight-absolute>`](/en-US/docs/Web/CSS/font-weight#values)
-- [`<historical-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
 
 ### Interfaces
 
