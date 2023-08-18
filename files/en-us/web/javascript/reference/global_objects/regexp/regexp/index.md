@@ -67,7 +67,7 @@ In all other cases, calling `RegExp()` with or without `new` both create a new `
 ### Exceptions
 
 - {{jsxref("SyntaxError")}}
-  - : Thrown if one of the following is true:
+  - : Thrown in one of the following cases:
     - `pattern` cannot be parsed as a valid regular expression.
     - `flags` contains repeated characters or any character outside of those allowed.
 

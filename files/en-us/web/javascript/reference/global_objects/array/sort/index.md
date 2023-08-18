@@ -96,7 +96,7 @@ The default lexicographic comparator satisfies all constraints above.
 
 To compare numbers instead of strings, the compare function can subtract `b`
 from `a`. The following function will sort the array in ascending order (if
-it doesn't contain `Infinity` and `NaN`):
+it doesn't contain `NaN`):
 
 ```js
 function compareNumbers(a, b) {

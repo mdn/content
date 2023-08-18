@@ -94,9 +94,9 @@ These properties are defined on `DataView.prototype` and shared by all `DataView
 - {{jsxref("DataView.prototype.getBigUint64()")}}
   - : Reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit unsigned integer.
 - {{jsxref("DataView.prototype.getFloat32()")}}
-  - : Reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit float.
+  - : Reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit floating point number.
 - {{jsxref("DataView.prototype.getFloat64()")}}
-  - : Reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit float.
+  - : Reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit floating point number.
 - {{jsxref("DataView.prototype.getInt16()")}}
   - : Reads 2 bytes starting at the specified byte offset of this `DataView` and interprets them as a 16-bit signed integer.
 - {{jsxref("DataView.prototype.getInt32()")}}

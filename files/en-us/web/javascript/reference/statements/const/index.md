@@ -20,16 +20,9 @@ const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : The constant's name, which can be any legal {{Glossary("identifier")}}.
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 - `valueN`
-  - : The constant's value. This can be any legal expression, including a function expression.
-
-The [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
-
-```js
-const { bar } = foo; // where foo = { bar: 10, baz: 12 };
-// This creates a constant with the name 'bar', which has a value of 10
-```
+  - : Initial value of the variable. It can be any legal expression.
 
 ## Description
 
@@ -128,6 +121,18 @@ Still, it's possible to push items into the array and thus mutate it.
 ```js
 MY_ARRAY.push("A"); // ["A"]
 ```
+
+### Declaration with destructuring
+
+The left-hand side of each `=` can also be a binding pattern. This allows creating multiple variables at once.
+
+```js
+const result = /(a+)(b+)(c+)/.exec("aaabcc");
+const [, a, b, c] = result;
+console.log(a, b, c); // "aaa" "b" "cc"
+```
+
+For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ## Specifications
 

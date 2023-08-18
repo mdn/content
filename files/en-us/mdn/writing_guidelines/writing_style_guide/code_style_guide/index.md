@@ -37,6 +37,7 @@ Some more general best practices include:
 - Don't include unnecessary server-side code, libraries, frameworks, preprocessors, and other such dependencies. They make the code less portable and harder to run and understand. Use vanilla code where possible.
 - Don't assume readers' knowledge of any libraries, frameworks, preprocessors, or other non-native features. For example, use class names that make sense within the example rather than class names that make sense to BEM or Bootstrap users.
 - Write your code to be as clean and understandable as possible, even if it is not the most efficient way to write it.
+- Be inclusive in your code examples; consider that MDN readers come from all over the world, and are diverse in their ethnicities, religions, ages, genders, etc. Ensure text in code examples reflects that diversity and is inclusive of all people.
 - Don't use bad practices for brevity (such as presentation elements like {{HTMLElement("big")}} or {{domxref("Document.write", "document.write()")}}); do it correctly.
 - In the case of API demos, if you are using multiple APIs together, point out which APIs are included and which features come from where.
 
@@ -157,7 +158,7 @@ These guidelines should be followed to ensure that the code examples you write d
 
 ### Mark rendered examples as good or bad
 
-You'll notice on this page that the code blocks that represent good practices to follow are rendered with a green check mark in the right corner, and the code blocks that demonstrate bad practices are rendered with white cross in red circle.
+You'll notice on this page that the code blocks that represent good practices to follow are rendered with a green check mark in the right corner, and the code blocks that demonstrate bad practices are rendered with a white cross in a red circle.
 
 You can follow the same style while writing code examples. You don't need to use this style everywhere — only on pages where you want to specifically call out good and bad practices in your code examples.
 
@@ -173,11 +174,11 @@ To represent the code block as a good or bad example, add `example-good` or `exa
 
 ````md
 ```html example-good
-<p class="brush: js example-good"></p>
+<p></p>
 ```
 
 ```html example-bad
-<p class="brush: js example-bad"></p>
+<p></p>
 ```
 ````
 
