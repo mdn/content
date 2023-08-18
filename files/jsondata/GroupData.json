@@ -2,6 +2,11 @@
   {
     "Attribution Reporting API": {
       "overview": ["Attribution Reporting API"],
+      "guides": [
+        "/docs/Web/API/Attribution_Reporting_API/Registering_sources",
+        "/docs/Web/API/Attribution_Reporting_API/Registering_triggers",
+        "/docs/Web/API/Attribution_Reporting_API/Generating_reports"
+      ],
       "methods": [
         "fetch()",
         "XMLHttpRequest.setAttributionReporting()",

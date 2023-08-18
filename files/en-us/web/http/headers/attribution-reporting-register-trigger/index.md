@@ -42,24 +42,30 @@ Attribution-Reporting-Register-Trigger: <json-string>
 
 - `<json-string>`
   - : A string of JSON-encoded data that provides data that can be included in generated reports, such as the ID of the trigger, and priority and deduplication values. Available fields are as follows:
-    - `aggregatable_trigger_data`
+    - `"aggregatable_trigger_data"`
       - : An array of objects, each one defining an aggregation key to apply to different source keys. Each object contains the following properties:
-      - `key_piece`
-        - : A hexadecimal value representing a key
-      - `source_keys`
-        - : An array containing one or more values. The first value is a string representing the key name, while subsequent values contain... I'M NOT SURE WHAT THEY ARE (EDITORIAL: COULD DO WITH BETTER DEFINITIONS OF THESE FIELDS. ALSO NEED TO FIND OUT HOW THESE RELATE TO THE AGGREGATION KEYS SET IN THE Attribution-Reporting-Register-Source HEADER)
-    - `aggregatable_values`
-      - : An object containing a property representing a value for each data point defined in `aggregatable_trigger_data`. In each case, the property name is equal to the name defined in `source_keys`, and the property value whatever arbitrary value you require. (EDITORIAL: I'M NOT SURE IF THIS IS CORRECT, OR WHAT THESE DO)
-    - `debug_key`
-      - : xx EDITORIAL: NEED TO FIND OUT WHAT THIS DOES
-    - `event_trigger_data`
+        - `"key_piece"`
+          - : A hexadecimal value representing a key.
+        - `"source_keys"`
+          - : An array containing one or more values. The first value is a string representing the key name, while subsequent values contain... I'M NOT SURE WHAT THEY ARE (EDITORIAL: COULD DO WITH BETTER DEFINITIONS OF THESE FIELDS. ALSO NEED TO FIND OUT HOW THESE RELATE TO THE AGGREGATION KEYS SET IN THE Attribution-Reporting-Register-Source HEADER)
+    - `"aggregatable_values"`
+      - : An object containing a property representing a value for each data point defined in `"aggregatable_trigger_data"`. In each case, the property name is equal to the name defined in `"source_keys"`, and the property value whatever arbitrary value you require. (EDITORIAL: I'M NOT SURE IF THIS IS CORRECT, OR WHAT THESE DO)
+    - `"debug_key"` {{optional_inline}}
+      - : xx EDITORIAL: FILL THIS IN
+    - `"debug_reporting"` {{optional_inline}}
+      - : xx EDITORIAL: FILL THIS IN
+    - `"filters"` {{optional_inline}}
+      - : An object containing custom data that can be used to filter which conversions generate reports.
+    - `"event_trigger_data"`
       - : An object representing data about the conversion. Note that, because the header value must be a valid JSON string, this object is nested in square brackets. Available sub-fields are as follows:
-        - `trigger_data`
+        - `"trigger_data"`
           - : A string representing unique data that describes the trigger. It usually includes a unique ID representing the trigger that can be used to aggregate data for that trigger together, and may also include other data such as user location ID, purchase amount, etc.
-        - `priority` {{optional_inline}}
+        - `"priority"` {{optional_inline}}
           - : A string representing a priority value for the attribution trigger. By default, conversions are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to make the conversion match older sources. For example, a value of `2` takes priority over the default value of `1`. See [Prioritize specific clicks or views for event-level or aggregatable reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/) for more information.
-        - `deduplication_key` {{optional_inline}}
+        - `"deduplication_key"` {{optional_inline}}
           - : A string representing a unique key that can be used to prevent reports from being counted multiple times, for example, if a checkout completion page is accidentally reloaded causing an attribution trigger to be fired twice. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
+        - `"filters"` {{optional_inline}}
+      - : An object containing filters that perform selective filtering to set `trigger_data` based on `filter_data` set in a corresponding {{httpheader("Attribution-Reporting-Register-Source")}} header (EDITORIAL: I'M NOT REALLY SURE WHAT THIS MEANS, BUT RECORDING IT HERE SO IT ISN'T FORGOTTEN ABOUT).
 
 ## Examples
 
@@ -69,7 +75,7 @@ A Node.js server might set the `Attribution-Reporting-Register-Trigger` response
 
 ```js
 res.set(
-  'Attribution-Reporting-Register-Trigger',
+  "Attribution-Reporting-Register-Trigger",
   JSON.stringify({
     "event_trigger_data": [
       {
@@ -89,7 +95,7 @@ When registering a trigger intended to match with a summary report aggregation s
 
 ```js
 res.set(
-  'Attribution-Reporting-Register-Trigger',
+  "Attribution-Reporting-Register-Trigger",
   JSON.stringify({
     "event_trigger_data": [
       {
