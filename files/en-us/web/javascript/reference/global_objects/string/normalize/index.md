@@ -42,10 +42,10 @@ normalize(form)
 
 A string containing the Unicode Normalization Form of the given string.
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : A {{jsxref("RangeError")}} is thrown if `form` isn't one of the values
+  - : Thrown if `form` isn't one of the values
     specified above.
 
 ## Description

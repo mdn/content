@@ -721,9 +721,9 @@ JavaScript has several top-level, built-in functions:
   - : The **`encodeURI()`** method encodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
   - : The **`encodeURIComponent()`** method encodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).
-- {{jsxref("Global_Objects/escape", "escape()")}}
-  - : The deprecated **`escape()`** method computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} instead.
-- {{jsxref("Global_Objects/unescape", "unescape()")}}
-  - : The deprecated **`unescape()`** method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("Global_Objects/escape", "escape")}}. Because `unescape()` is deprecated, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} instead.
+- {{jsxref("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+  - : The **`escape()`** method computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. It's deprecated and you should use {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} or {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} instead.
+- {{jsxref("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+  - : The **`unescape()`** method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("Global_Objects/escape", "escape()")}}. It's deprecated and you should use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}} instead.
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

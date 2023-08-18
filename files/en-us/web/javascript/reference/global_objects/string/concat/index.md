@@ -72,4 +72,4 @@ const greetList = ["Hello", " ", "Venkat", "!"];
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
