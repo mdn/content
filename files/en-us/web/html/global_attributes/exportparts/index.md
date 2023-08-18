@@ -57,7 +57,7 @@ window.customElements.define("card-wrapper", CardWrapper);
 Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
 
 ```css
-card-wrapper::part(header) { 
+card-wrapper::part(header) {
   font-weight: bold;
 }
 ```
