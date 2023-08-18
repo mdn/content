@@ -19,10 +19,10 @@ containing(codeUnitIndex)
 
 ### Parameters
 
-- `codeUnitIndex` {{ optional_inline }}
+- `codeUnitIndex` {{optional_inline}}
   - : A number specifying the index of the code unit in the original input string. If the value is omitted, it defaults to `0`.
 
-### Return Value
+### Return value
 
 An object describing the segment of the original string with the following properties, or `undefined` if the supplied index value is out of bounds.
 

@@ -29,7 +29,7 @@ test(str)
 - `str`
   - : The string against which to match the regular expression. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `test()` to search for the string `"undefined"`, which is rarely what you want.
 
-### Returns
+### Return value
 
 `true` if there is a match between the regular expression and the string
 `str`. Otherwise, `false`.
