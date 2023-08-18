@@ -36,7 +36,7 @@ class CardComponent extends HTMLElement {
   }
 }
 
-window.customElements.define("card-component", CardComponent)
+window.customElements.define("card-component", CardComponent);
 ```
 
 ### Re-exporting parts
