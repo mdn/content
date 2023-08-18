@@ -129,9 +129,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>
-        <code>No corresponding role</code>
-      </td>
+      <td>No corresponding role</td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
