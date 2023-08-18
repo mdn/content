@@ -211,7 +211,7 @@ const goodQuotes1 = 'She said "I think so!"';
 const goodQuotes2 = `She said "I'm not going in there!"`;
 ```
 
-Another option is to _escape_ the problem quoteation mark. Escaping characters means that we do something to them to make sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character. Try this:
+Another option is to _escape_ the problem quotation mark. Escaping characters means that we do something to them to make sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character. Try this:
 
 ```js-nolint
 const bigmouth = 'I\'ve got no right to take my place…';
