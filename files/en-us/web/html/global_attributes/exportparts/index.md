@@ -32,7 +32,7 @@ class CardComponent extends HTMLElement {
          <div part="body"><slot></slot></div>
          <div part="footer"><slot name="footer"></slot></div>
        </div>
-    `
+    `;
   }
 }
 
