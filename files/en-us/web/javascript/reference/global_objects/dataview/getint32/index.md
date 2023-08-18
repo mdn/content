@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.DataView.getInt32
 
 {{JSRef}}
 
-The **`getInt32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit signed integer.
+The **`getInt32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit signed integer. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 
 {{EmbedInteractiveExample("pages/js/dataview-getint32.html")}}
 
@@ -21,7 +21,7 @@ getInt32(byteOffset, littleEndian)
 ### Parameters
 
 - `byteOffset`
-  - : The offset, in bytes, from the start of the view to read the data from. There is no alignment constraint; multi-byte values may be fetched from any offset.
+  - : The offset, in bytes, from the start of the view to read the data from.
 - `littleEndian` {{optional_inline}}
   - : Indicates whether the data is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If `false` or `undefined`, a big-endian value is read.
 

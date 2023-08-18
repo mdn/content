@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.DataView.getFloat64
 
 {{JSRef}}
 
-The **`getFloat64()`** method of {{jsxref("DataView")}} instances reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit floating point number.
+The **`getFloat64()`** method of {{jsxref("DataView")}} instances reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit floating point number. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 
 {{EmbedInteractiveExample("pages/js/dataview-getfloat64.html")}}
 
@@ -21,7 +21,7 @@ getFloat64(byteOffset, littleEndian)
 ### Parameters
 
 - `byteOffset`
-  - : The offset, in bytes, from the start of the view to read the data from. There is no alignment constraint; multi-byte values may be fetched from any offset.
+  - : The offset, in bytes, from the start of the view to read the data from.
 - `littleEndian` {{optional_inline}}
   - : Indicates whether the data is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If `false` or `undefined`, a big-endian value is read.
 

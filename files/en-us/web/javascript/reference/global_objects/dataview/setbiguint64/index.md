@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.DataView.setBigUint64
 
 {{JSRef}}
 
-The **`setBigUint64()`** method of {{jsxref("DataView")}} instances takes a BigInt and stores it as a 64-bit unsigned integer in the 8 bytes starting at the specified byte offset of this `DataView`.
+The **`setBigUint64()`** method of {{jsxref("DataView")}} instances takes a BigInt and stores it as a 64-bit unsigned integer in the 8 bytes starting at the specified byte offset of this `DataView`. There is no alignment constraint; multi-byte values may be stored at any offset within bounds.
 
 {{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}
 
@@ -21,7 +21,7 @@ setBigUint64(byteOffset, value, littleEndian)
 ### Parameters
 
 - `byteOffset`
-  - : The offset, in bytes, from the start of the view to store the data in. There is no alignment constraint; multi-byte values may be stored at any offset.
+  - : The offset, in bytes, from the start of the view to store the data in.
 - `value`
   - : The value to set as a {{jsxref("BigInt")}}. For how the value is encoded in bytes, see [Value encoding and normalization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#value_encoding_and_normalization).
 - `littleEndian` {{optional_inline}}

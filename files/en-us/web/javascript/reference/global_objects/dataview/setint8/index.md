@@ -20,7 +20,7 @@ setInt8(byteOffset, value)
 ### Parameters
 
 - `byteOffset`
-  - : The offset, in bytes, from the start of the view to store the data in. There is no alignment constraint; multi-byte values may be stored at any offset.
+  - : The offset, in bytes, from the start of the view to store the data in.
 - `value`
   - : The value to set. For how the value is encoded in bytes, see [Value encoding and normalization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#value_encoding_and_normalization).
 
