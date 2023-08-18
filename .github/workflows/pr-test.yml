@@ -7,6 +7,10 @@
 name: PR Test
 
 on:
+  # The `GITHUB_TOKEN` in workflows triggered by the `pull_request_target` event
+  # is granted read/write repository access.
+  # Please pay attention to limit the permissions of each job!
+  # https://docs.github.com/actions/using-jobs/assigning-permissions-to-jobs
   pull_request_target:
     branches:
       - main
@@ -14,6 +18,8 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    # Set the permissions to `read-all`, preventing the workflow from
+    # any accidental write access to the repository.
     permissions: read-all
     if: github.repository == 'mdn/content'
     outputs:
@@ -32,12 +38,6 @@ jobs:
         with:
           ref: "${{ env.HEAD_SHA }}"
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".nvmrc"
-          cache: yarn
-
       - name: Get changed files
         run: |
           # Use the GitHub API to get the list of changed files
@@ -54,6 +54,13 @@ jobs:
           echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js environment
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
 
       - name: Install all yarn packages
         if: ${{ env.GIT_DIFF_CONTENT }}
@@ -140,5 +147,6 @@ jobs:
   review:
     needs: tests
     if: ${{ needs.tests.outputs.has_assets }}
+    # write permissions are required to create a comment in the corresponding PR
     permissions: write-all
     uses: ./.github/workflows/pr-review-companion.yml
