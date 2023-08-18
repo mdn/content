@@ -9,11 +9,11 @@ browser-compat: api.IdentityCredential
 
 {{SeeCompatTable}}{{DefaultAPISidebar("FedCM API")}}
 
-The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API for sites that depend on those services for sign-in functionality to make use of them.
+The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API enabling use of federated sign-in for purposes such as signing in or signing up to a website.
 
 ## FedCM concepts
 
-Identity federation is the delegation of user authentication from a website that requires user sign-in such as an e-commerce or social networking site (also known as a relying party or RP) to a trusted third party IdP. Users will sign up an account with the IdP, which can then be used to sign-in to one or more RPs. Identity federation via a small set of dedicated IdPs has improved web authentication in terms of security, consumer confidence, and user experience, versus having every site handling their own sign-in needs with a separate username and password.
+Identity federation is the delegation of user authentication from a website that requires user sign-up/sign-in — such as an e-commerce or social networking site (also known as a relying party or RP) — to a trusted third party IdP. Users will register an account with the IdP, which can then be used for sign-in on one or more RPs. Identity federation via a small set of dedicated IdPs has improved web authentication in terms of security, consumer confidence, and user experience, versus having every site handling their own sign-in needs with a separate username and password.
 
 The problem is that traditional identity federation relies on {{htmlelement("iframe")}}s, redirects, and third-party cookies, which are also used for third-party tracking. Browsers are limiting the usage of these features in an effort to preserve user privacy, but a side effect is that this makes valid, non-tracking uses more difficult to implement, and this includes identity federation.
 
@@ -26,7 +26,7 @@ Affected identity federation use cases that rely on third-party cookies:
 
 FedCM aims to work around this problem, providing a dedicated mechanism for federated identity flows on the web, and enabling supporting browsers to provide special UI elements on RPs, allowing users to choose an IdP account to use for sign-in.
 
-There are two sides to using the FedCM API — IdP integration with FedCM, and RP sign-in using the JavaScript API.
+There are two parts to using the FedCM API — IdP integration with FedCM, and RP sign-in using the JavaScript API.
 
 ## IdP integration with FedCM
 
@@ -49,11 +49,11 @@ For example, if the IdP endpoints are served under `https://accounts.idp.example
 }
 ```
 
-The `provider_urls` member should contain an array of URLs pointing to valid IdP config files that can be used by RPs to interact with the IdP. The array length is current limited to one.
+The `provider_urls` member should contain an array of URLs pointing to valid IdP config files that can be used by RPs to interact with the IdP. The array length is currently limited to one.
 
 ### Provide a config file
 
-The IdP config file provides a list of the endpoints required by the browser to process the identity federation flow and sign the user in. IdPs will host this config file and the required endpoints.
+The IdP config file provides a list of the endpoints required by the browser to process the identity federation flow and handle sign-in. IdPs will host this config file and the required endpoints.
 
 The config file (hosted at `https://accounts.idp.example/config.json` in our example) should have the following JSON structure:
 
@@ -78,13 +78,13 @@ The config file (hosted at `https://accounts.idp.example/config.json` in our exa
 The properties are as follows:
 
 - `accounts_endpoint`
-  - : The URL for the accounts list endpoint, which returns a list of accounts that the user is currently signed in to on the IdP. The browser uses these to create a list of sign-in choices to show to the user in the sign-in UI.
+  - : The URL for the accounts list endpoint, which returns a list of accounts that the user is currently signed in to on the IdP. The browser uses these to create a list of sign-in choices to show to the user in the browser-provided FedCM UI.
 - `client_metadata_endpoint` {{optional_inline}}
-  - : The URL for the client metadata endpoint, which provides URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied sign-in UI.
+  - : The URL for the client metadata endpoint, which provides URLs pointing to the RP's metadata and terms of service pages, to be used in the FedCM UI.
 - `id_assertion_endpoint`
   - : The URL for the ID assertion endpoint, which when sent valid user credentials should respond with a validation token that the RP can use to validate the authentication.
 - `branding` {{optional_inline}}
-  - : Contains branding information that will be used in the browser-supplied sign-in UI to customize its appearance as desired by the IdP.
+  - : Contains branding information that will be used in the browser-supplied FedCM UI to customize its appearance as desired by the IdP.
 
 #### The accounts list endpoint
 
@@ -130,13 +130,13 @@ This includes the following information:
 - `approved_clients` {{optional_inline}}
   - : An array of RP clients that the user has registered with.
 - `login_hints` {{optional_inline}}
-  - : An array of strings representing the account, which are used to filter the list of account options the browser provides for the user to sign in with when the `loginHint` property is provided in the [`identity`](/en-US/docs/Web/API/CredentialsContainer/get#identity_object_structure) object of an associated `get()` call. Each account that has a string in its `login_hints` array matching the provided `loginHint` is included.
+  - : An array of strings representing the account, which are used to filter the list of account options the browser provides for the user to sign in with when the `loginHint` property is provided inside [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#identity_object_structure) within an associated `get()` call. Each account that has a string in its `login_hints` array matching the provided `loginHint` is included.
 
 > **Note:**: If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
 
 #### The client metadata endpoint
 
-Provides URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied sign-in UI. This should follow the JSON structure seen below:
+Provides URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
 
 ```json
 {
@@ -179,7 +179,7 @@ async function signIn() {
 
 The `identity.providers` property takes an array of objects containing the path to an IdP config file and the RP's client identifier issued by the IdP; the example above also includes a couple of optional features:
 
-- `identity.context` specifies the context in which the user is authenticating with FedCM (for example is it a first-time signup for this account, or a sign-in with an existing account?). The browser uses this to vary the text in its FedCM sign-in UI so that it better suits the context.
+- `identity.context` specifies the context in which the user is authenticating with FedCM (for example is it a first-time signup for this account, or a sign-in with an existing account?). The browser uses this to vary the text in its FedCM UI so that it better suits the context.
 - `identity.providers.nonce` provides a random nonce value that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
 - `identity.providers.loginHint` provides a hint as to which account option(s) the browser should provide for the user to sign in with, which is matched against the `login_hints` values provided by the IdP from the [accounts list endpoint](#the_accounts_list_endpoint).
 
@@ -223,7 +223,7 @@ The browser requests the IdP config file and carries out the sign-in flow detail
 
 5. The IdP responds with the account information.
 
-6. {{optional_inline}} If included in the config file, the browser makes a request to the `client_metadata_endpoint` for the location of the RP's terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call included as a parameter, and without cookies.
+6. {{optional_inline}} If included in the config file, the browser makes a request to the `client_metadata_endpoint` for the location of the RP's terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call as a parameter, without cookies.
 
    For example:
 
@@ -258,11 +258,11 @@ The browser requests the IdP config file and carries out the sign-in flow detail
    - `client_id`
      - : The RP's client identifier.
    - `account_id`
-     - : The unique ID of the user to be signed in.
+     - : The unique ID of the user account to be signed in.
    - `nonce` {{optional_inline}}
      - : The request nonce, provided by the RP.
    - `disclosure_text_shown`
-     - : A string of "true" or "false" indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
+     - : A string of `"true"` or `"false"` indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
 
 10. The IdP checks that the account ID sent by the RP matches the ID for the account that is already signed in, and that the `Origin` matches the origin of the RP, which will have been registered in advance with the IdP. If everything looks good, it responds with the validation token.
 

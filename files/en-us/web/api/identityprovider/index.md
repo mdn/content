@@ -39,7 +39,7 @@ if (user_info.length > 0) {
 
   // ...
 
-  // Render the personalized sign-in button using the information above
+  // Render the personalized sign-in button using the information returned above
 }
 ```
 

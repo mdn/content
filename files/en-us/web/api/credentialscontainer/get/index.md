@@ -36,7 +36,7 @@ get(options)
 
         - `federated`: An object containing requirements for a requested credential from a federated identify provider. Bear in mind that the Federated Credential Management API (the `identity` credential type) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
         - `password`: A boolean value indicating that a password credential is being requested. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `identity`: An object containing details of federated identity providers (IdPs) that a relying party (RP) website can use to sign users in. Causes the `get()` call to initiate a request for a user to sign in to a relying party with an IdP. See the [Federated Credential Management API](#federated_credential_management_api) section below for more details.
+        - `identity`: An object containing details of federated identity providers (IdPs) that a relying party (RP) website can use for purposes such as signing in or signing up to a website. Causes the `get()` call to initiate a request for a user to sign in to a relying party with an IdP. See the [Federated Credential Management API](#federated_credential_management_api) section below for more details.
         - `otp`: An object containing transport type hints. Causes the `get()` call to initiate a request for the retrieval of an OTP. See the [WebOTP API](#webotp_api) section below for more details.
         - `publicKey`: An object containing requirements for returned public key credentials. Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party. See the [Web Authentication API](#web_authentication_api) section below for more details.
 
@@ -99,7 +99,7 @@ navigator.credentials
 
 ## Federated Credential Management API
 
-The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers to make identity federation services available on the web in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API for sites to sign in with those services. Check out the linked API landing page for more usage information.
+The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers to make identity federation services available on the web in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API enabling use of federated sign-in for purposes such as signing in or signing up to a website. Check out the linked API landing page for more usage information.
 
 > **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
@@ -108,7 +108,7 @@ The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)
 `identity` can contain the following properties:
 
 - `context` {{optional_inline}}
-  - : An enumerated value specifying the context in which the user is authenticating with FedCM. The browser uses this to vary the text in its FedCM sign-in UI so that it better suits the context. Possible values are:
+  - : An enumerated value specifying the context in which the user is authenticating with FedCM. The browser uses this to vary the text in its FedCM UI so that it better suits the context. Possible values are:
     - `continue`: Suitable for situations where the user is choosing an identity to continue to the next page in the flow, which requires a sign-in. Browsers will provide a text string similar to "Continue to \<page-origin\> with \<IdP\>".
     - `signin`: The default value, which is appropriate for general situations where the user is signing in with an IdP account they've already used on this origin. Browsers will provide a text string similar to "Sign in to \<page-origin\> with \<IdP\>".
     - `signup`: An option for situations where the user is signing in to the origin with a new IdP account they've not used here before. Browsers will provide a text string similar to "Sign up to \<page-origin\> with \<IdP\>".
@@ -177,7 +177,7 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on their return to get information about them (typically from within an {{htmlelement("iframe")}} containing a sign-in widget). This information can then be used to provide a personalized welcome message and sign-in button. This pattern is already common on sites that use identity federation for sign-in, but `getUserInfo()` provides a way to achieve it without relying on third-party cookies.
+> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on their return to get information about them. `getUserInfo()` has to be called from within an {{htmlelement("iframe")}} embedding a page from the IdP origin so that RP scripts cannot access the data. This information can then be used to provide a personalized welcome message and sign-in button. This pattern is already common on sites that use identity federation for sign-in, but `getUserInfo()` provides a way to achieve it without relying on third-party cookies.
 
 ## WebOTP API
 
