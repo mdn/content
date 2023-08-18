@@ -23,8 +23,8 @@ First let's create a card component that we will then wrap with another componen
 
 ```js
 class CardComponent extends HTMLElement {
-  connectedCallback () {
-    this.attachShadow({ mode: "open" })
+  connectedCallback() {
+    this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
        <style>.base { display: grid };</style>
        <div class="base" part="base">
