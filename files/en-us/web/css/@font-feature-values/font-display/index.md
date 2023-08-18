@@ -47,10 +47,6 @@ The font display timeline is based on a timer that starts when the user agent at
 
 The `font-display` descriptor allows you to set a default display policy for all `@font-face` rules, including those not under author control, such as third-party `@font-face` rules. When the `font-display` value is set via `@font-feature-values`, it becomes the default `font-display` value, and is applied to the entire font-family. However, any `font-display` value defined within individual `@font-face` blocks will override this default, but only for those blocks where the descriptor is defined.
 
-## Formal definition
-
-{{cssinfo}}
-
 ## Formal syntax
 
 {{csssyntax}}
