@@ -17,6 +17,74 @@ The global attribute [`part`](/en-US/docs/Web/HTML/Global_attributes#part) makes
 
 Attribute `exportparts` must be placed on a _shadow Host_, which is the element to which the _shadow tree_ is attached. The value of the attribute should be a comma-separated list of part names present in the shadow tree and which should be made available via a DOM outside of the current structure.
 
+## Examples
+
+```js
+class CardComponent extends HTMLElement {
+  connectedCallback () {
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.innerHTML = `
+       <style>.base { display: grid };</style>
+       <div class="base" part="base">
+         <div part="header"><slot name="header"></slot></div>
+         <div part="body"><slot></slot></div>
+         <div part="footer"><slot name="footer"></slot></div>
+       </div>
+    `
+  }
+}
+
+window.customElements.define("card-component", CardComponent)
+```
+
+### Re-exporting parts
+
+With the above component, we could wrap it with another component and export all of the "parts" as is.
+
+```js
+class CardWrapper extends HTMLElement {
+  connectedCallback () {
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.innerHTML = `<card-component exportparts="base, header, body, footer"></card-component>`
+  }
+}
+
+window.customElements.define("card-wrapper", CardWrapper)
+```
+
+Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
+
+```css
+card-wrapper::part(header) { 
+  font-weight: bold;
+}
+```
+
+### Renaming / Remapping parts
+
+To rename an exportpart the syntax looks something like this: `exportparts="<original-name>:<new-name>,<original-name>:<new-name>"`
+
+And here's the prior `CardWrapper` with the remapping syntax:
+
+```js
+class CardWrapper extends HTMLElement {
+  connectedCallback () {
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.innerHTML = `<card-component exportparts="base:card__base, header:card__header, body:card__body, footer:card__footer"></card-component>`
+  }
+}
+
+window.customElements.define("card-wrapper", CardWrapper)
+```
+
+Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
+
+```css
+card-wrapper::part(card__header) { 
+  font-weight: bold;
+}
+```
+
 ## Specifications
 
 {{Specifications}}
