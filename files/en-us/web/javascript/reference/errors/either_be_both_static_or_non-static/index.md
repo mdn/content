@@ -28,7 +28,7 @@ Private [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [sette
 
 ### Mismatched placement
 
-```js example-bad
+```js-nolint example-bad
 class Test {
   static set #foo(_) {}
   get #foo() {}

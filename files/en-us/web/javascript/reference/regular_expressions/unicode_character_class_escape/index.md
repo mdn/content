@@ -159,8 +159,8 @@ console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 
 However, you can't use `\P` to match "a string that does not have a property", because it's unclear how many characters should be consumed.
 
-```js
-/\P{RGI_Emoji_Flag_Sequence}/v; // Invalid regular expression: /\P{RGI_Emoji_Flag_Sequence}/v: Invalid property name
+```js-nolint example-bad
+/\P{RGI_Emoji_Flag_Sequence}/v; // SyntaxError: Invalid regular expression: Invalid property name
 ```
 
 ## Specifications

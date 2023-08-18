@@ -362,13 +362,13 @@ try {
 You can use a `catch` block to handle all exceptions that may be generated
 in the `try` block.
 
-```js
-catch (catchID) {
+```js-nolint
+catch (exception) {
   statements
 }
 ```
 
-The `catch` block specifies an identifier (`catchID`
+The `catch` block specifies an identifier (`exception`
 in the preceding syntax) that holds the value specified by the `throw`
 statement. You can use this identifier to get information about the exception that was
 thrown.
