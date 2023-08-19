@@ -241,4 +241,4 @@ span {
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [CSS fonts](/en-US/docs/Learn/CSS/CSS_fonts) module
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
