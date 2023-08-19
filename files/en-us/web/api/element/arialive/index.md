@@ -23,7 +23,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute on the element with an ID of `planetInfo` is set to "polite". We then update the value to "assertive".
+In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute on the element with an ID of `planetInfo` is set to `"polite"`. We then update the value to `"assertive"`.
 
 ```html
 <div role="region" id="planetInfo" aria-live="polite">
@@ -36,7 +36,7 @@ In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 let el = document.getElementById("planetInfo");
 console.log(el.ariaLive); // "polite"
 el.ariaLive = "assertive";
-console.log(el.ariaLive); // assertive
+console.log(el.ariaLive); // "assertive"
 ```
 
 ## Specifications
