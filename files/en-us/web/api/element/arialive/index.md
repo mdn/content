@@ -15,7 +15,7 @@ The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the
 A string with one of the following values:
 
 - `"assertive"`
-  - : Indicates that updates to the region have the highest priority and should be presented the user immediately.
+  - : Indicates that updates to the region have the highest priority and should be presented to the user immediately.
 - `"off"`
   - : Indicates that updates to the region should not be presented to the user unless the user is currently focused on that region.
 - `"polite"`
