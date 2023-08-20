@@ -6,7 +6,7 @@ page-type: guide
 
 {{jsSidebar}}
 
-JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) that can be easily created via expressions and passed around like any other object.
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) objects that can be easily created via expressions and passed around like any other object.
 
 This page serves as a quick overview of various JavaScript language features, written for readers with background in other languages, such as C or Java.
 
@@ -561,7 +561,7 @@ In the above code, the variable `args` holds all the values that were passed int
 
 The rest parameter will store all arguments _after_ where it's declared, but not before. In other words, `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
 
-If a function accepts a list of arguments and you already hold an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
+If a function accepts a list of arguments and you already hold them in an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
 We mentioned that JavaScript doesn't have named parameters. It's possible, though, to implement them using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which allows objects to be conveniently packed and unpacked.
 
@@ -748,7 +748,7 @@ There are three idiomatic ways to write asynchronous code in JavaScript:
 - [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), which is a syntactic sugar for Promises
 
-For example, here's how a file-read operation may look like in JavaScript:
+For example, here's how a file-read operation may look in JavaScript:
 
 ```js
 // Callback-based
@@ -818,7 +818,7 @@ A runtime, or a host, is something that feeds data to the JavaScript engine (the
 
 ## Further exploration
 
-This page offers a very basic insight into how various JavaScript features compare with other languages. If you want to learn more about the language itself and the nuances with each feature, you can read the [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
+This page offers a very basic insight into how various JavaScript features compare with other languages. If you want to learn more about the language itself and the nuances of each feature, you can read the [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
 There are some essential parts of the language that we have omitted due to space and complexity, but you can explore on your own:
 
