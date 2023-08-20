@@ -62,4 +62,4 @@ console.log(jaJP.getHourCycles()); // ["h23"]
 
 - {{jsxref("Intl.Locale")}}
 - [`Intl.Locale.prototype.hourCycle`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle)
-- [Unicode Hour Cycle extension key spec](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
+- [Unicode Hour Cycle Identifier](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier) in the Unicode locale data markup language spec

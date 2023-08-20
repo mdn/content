@@ -153,6 +153,5 @@ view.getInt16(1); // 42
 ## See also
 
 - [Polyfill of `DataView` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [jDataView](https://github.com/jDataView/jDataView): JavaScript library that polyfills and extends the `DataView` API to all browsers and Node.js.
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("SharedArrayBuffer")}}
