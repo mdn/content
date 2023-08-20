@@ -171,9 +171,8 @@ const normalArray = Array.prototype.slice.call(typedArray);
 
 ## See also
 
-- [Getting `ArrayBuffer`s or typed arrays from Base64-encoded strings](/en-US/docs/Glossary/Base64#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)
-- [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays/)
-- [Typed Arrays: Binary Data in the Browser](https://web.dev/webgl-typed-arrays/)
+- [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays/) on hacks.mozilla.org (2011)
+- [Typed arrays - Binary data in the browser](https://web.dev/webgl-typed-arrays/) on web.dev (2012)
 - [Endianness](/en-US/docs/Glossary/Endianness)
 
 {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}

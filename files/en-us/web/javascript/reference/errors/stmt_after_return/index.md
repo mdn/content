@@ -81,5 +81,4 @@ function g() {
 
 ## See also
 
-- {{jsxref("Statements/return", "Automatic Semicolon Insertion",
-    "#Automatic_Semicolon_Insertion", 1)}}
+- [`return` § Automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Statements/return#automatic_semicolon_insertion)

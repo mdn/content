@@ -301,6 +301,7 @@ const obj7 =  {
 ## See also
 
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
