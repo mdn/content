@@ -748,7 +748,7 @@ There are three idiomatic ways to write asynchronous code in JavaScript:
 - [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), which is a syntactic sugar for Promises
 
-For example, here's how a file-read operation may look in JavaScript:
+For example, here's what a file-read operation might look like in JavaScript:
 
 ```js
 // Callback-based
