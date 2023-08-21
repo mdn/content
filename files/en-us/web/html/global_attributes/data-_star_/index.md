@@ -15,7 +15,7 @@ All such custom data are available via the {{domxref("HTMLElement")}} interface 
 The `*` may be replaced by any name following [the production rule of XML names](https://www.w3.org/TR/REC-xml/#NT-Name) with the following restrictions:
 
 - The name must not start with `xml` (case-insensitive).
-- The name must not contain any colon characters (`:`).
+- The name must not contain any semi-colon characters (`;`).
 - The name must not contain any capital letters.
 
 Note that the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}}, and the name of the custom data attribute _data-test-value_ will be accessible via `HTMLElement.dataset.testValue` (or by `HTMLElement.dataset["testValue"]`) as any dash (`U+002D`) is replaced by the capitalization of the next letter, converting the name to camelcase.
