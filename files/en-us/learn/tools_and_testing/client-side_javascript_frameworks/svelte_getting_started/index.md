@@ -94,7 +94,7 @@ If you're using Windows, you will need to install some software to give you pari
 
 Also see the following for more information:
 
-- ["What is npm"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) on nodejs.org
+- ["About npm"](https://docs.npmjs.com/about-npm) on the npm documentation
 - ["Introducing npx"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) on the npm blog
 - ["The easiest way to get started with Svelte"](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte blog
 
