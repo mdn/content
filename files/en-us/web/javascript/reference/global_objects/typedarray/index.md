@@ -364,5 +364,4 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [TextDecoder](/en-US/docs/Web/API/TextDecoder) — Helper that decode
-  strings from numerical data
+- {{domxref("TextDecoder")}}
