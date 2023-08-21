@@ -11,7 +11,7 @@ The **CSS nesting** module defines a syntax for nesting selectors, providing the
 
 CSS nesting is different from CSS preprocessors such as [Sass](https://sass-lang.com/) in that it is parsed by the browser rather than being pre-compiled by a CSS preprocessor.
 
-This helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce the size of CSS files, thereby decreasing the amount of data downloaded by users.
+CSS nesting helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce the size of CSS files, thereby decreasing the amount of data downloaded by users.
 
 ## Reference
 
@@ -27,6 +27,12 @@ This helps with the readability, modularity, and maintainability of CSS styleshe
   - : Explains how to nest at-rules.
 - [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
   - : Explains the differences in specificity when nesting CSS.
+
+## Related concepts
+
+- [Selectors and Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [CSS preprocessor](/en-US/docs/Glossary/CSS_preprocessor)
 
 ## Specifications
 
