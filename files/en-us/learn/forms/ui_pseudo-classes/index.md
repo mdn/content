@@ -224,7 +224,7 @@ As in the previous example, we've got extra `<span>`s to generate content on, wh
 
 ```html
 <div>
-  <label for="fname">First name *: </label>
+  <label for="fname">First name: </label>
   <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
