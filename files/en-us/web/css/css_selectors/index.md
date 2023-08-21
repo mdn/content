@@ -98,6 +98,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
 - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
 - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
+- [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 
 ## Terms
 
