@@ -97,6 +97,18 @@ The benefit is that the browser does not need to repeatedly render the element c
 
 #### HTML
 
+```html hidden
+<p id="auto-none-note">
+  Your browser does not support "<code>contain-intrinsic-size: auto none</code
+  >".
+</p>
+<p id="auto-length-note">
+  Your browser does not support "<code
+    >contain-intrinsic-size: auto &lt;length&gt;</code
+  >".
+</p>
+```
+
 ```html
 <div id="container">
   <div class="auto-length">
@@ -135,6 +147,37 @@ p {
   padding: 1rem;
   width: 90%;
   height: 80%;
+}
+
+.auto-length {
+  display: none;
+}
+
+#auto-length-note,
+#auto-none-note {
+  margin-bottom: 0;
+  display: block;
+  width: 90%;
+  height: max-content;
+  font-size: 1rem;
+  background-color: tomato;
+}
+
+@supports (contain-intrinsic-size: auto none) {
+  .auto-length.none {
+    display: block;
+  }
+  #auto-none-note {
+    display: none;
+  }
+}
+@supports (contain-intrinsic-size: auto 500px) {
+  .auto-length {
+    display: block;
+  }
+  #auto-length-note {
+    display: none;
+  }
 }
 ```
 
