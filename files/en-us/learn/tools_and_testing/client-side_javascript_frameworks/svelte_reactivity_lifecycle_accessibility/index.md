@@ -297,7 +297,7 @@ We'd also like to add some usability features, like disabling the _Save_ button 
 
 To implement all these features, we'll need programmatic access to DOM nodes to run functions like [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) and [`select()`](/en-US/docs/Web/API/HTMLInputElement/select). We will also have to use [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) to run specific tasks when the control receives focus.
 
-The problem is that all these DOM nodes are dynamically created by Svelte at runtime. So we'll have to wait for them to be created and added to the DOM in order to use them. To do so, we'll have to learn about the [component lifecycle](https://svelte.dev/tutorial/onmount) to understand when we can access them — more on this later.
+The problem is that all these DOM nodes are dynamically created by Svelte at runtime. So we'll have to wait for them to be created and added to the DOM in order to use them. To do so, we'll have to learn about the [component lifecycle](https://learn.svelte.dev/tutorial/onmount) to understand when we can access them — more on this later.
 
 ## Creating a NewTodo component
 
@@ -427,7 +427,7 @@ The next feature will add to our `NewTodo` component will be an `autofocus` prop
 
 3. If you try your app out now, you'll see that the page is now blank, and in your DevTools web console you'll see an error along the lines of: `TypeError: nameEl is undefined`.
 
-To understand what's happening here, let's talk some more about that [component lifecycle](https://svelte.dev/tutorial/onmount) we mentioned earlier.
+To understand what's happening here, let's talk some more about that [component lifecycle](https://learn.svelte.dev/tutorial/onmount) we mentioned earlier.
 
 ## Component lifecycle, and the `onMount()` function
 
@@ -470,7 +470,7 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
 
 6. Go to your app again, and you'll now see the `<input>` field is focused on page load.
 
-> **Note:** You can have a look at the other [lifecycle functions in the Svelte docs](https://svelte.dev/docs#svelte), and you can see them in action in the [interactive tutorial](https://svelte.dev/tutorial/onmount).
+> **Note:** You can have a look at the other [lifecycle functions in the Svelte docs](https://svelte.dev/docs#svelte), and you can see them in action in the [interactive tutorial](https://learn.svelte.dev/tutorial/onmount).
 
 ## Waiting for the DOM to be updated with the `tick()` function
 
@@ -520,7 +520,7 @@ function onEdit() {
 }
 ```
 
-The above solution works, but it is rather inelegant. Svelte provides a better way to handle these cases. The [`tick()` function](https://svelte.dev/tutorial/tick) returns a promise that resolves as soon as any pending state changes have been applied to the DOM (or immediately, if there are no pending state changes). Let's try it now.
+The above solution works, but it is rather inelegant. Svelte provides a better way to handle these cases. The [`tick()` function](https://learn.svelte.dev/tutorial/tick) returns a promise that resolves as soon as any pending state changes have been applied to the DOM (or immediately, if there are no pending state changes). Let's try it now.
 
 1. First of all, import `tick` at the top of the `<script>` section alongside your existing import:
 
@@ -540,7 +540,7 @@ The above solution works, but it is rather inelegant. Svelte provides a better w
 
 3. If you try it now you'll see that everything works as expected.
 
-> **Note:** To see another example using `tick()`, visit the [Svelte tutorial](https://svelte.dev/tutorial/tick).
+> **Note:** To see another example using `tick()`, visit the [Svelte tutorial](https://learn.svelte.dev/tutorial/tick).
 
 ## Adding functionality to HTML elements with the `use:action` directive
 
