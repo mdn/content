@@ -184,5 +184,5 @@ console.log(usedOptions.timeZone);
 
 ## See also
 
+- [Polyfill of `Intl.DateTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat/)
 - {{jsxref("Intl")}}
-- [A polyfill of `Intl.DateTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat/)
