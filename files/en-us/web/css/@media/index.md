@@ -165,7 +165,7 @@ You can also combine multiple media queries into a single rule by separating the
 
 ### User agent client hints
 
-Some media queries have corresponding [User Agent client hints](/en-US/docs/Web/HTTP/Client_hints).
+Some media queries have corresponding [user agent client hints](/en-US/docs/Web/HTTP/Client_hints).
 These are HTTP headers that request content that is pre-optimized for the particular media requirement.
 They include: {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}, {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, and {{HTTPHeader("Save-Data")}}.
 
