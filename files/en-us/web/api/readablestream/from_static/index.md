@@ -41,16 +41,28 @@ A {{domxref("ReadableStream")}}.
 
 This live example demonstrates how you can convert an async iterable to a `ReadableStream`, and then how this stream might be consumed.
 
-```html hidden
+#### HTML
+
+The HTML is consists of single `<pre>` element, which is used for logging.
+
+```html
 <pre id="log"></pre>
 ```
 
-```js hidden
+#### JavaScript
+
+The example code creates a `log()` function to write to the log HTML element.
+
+```js
 const logElement = document.getElementById("log");
 function log(text) {
   logElement.innerText += `${text}\n`;
 }
+```
 
+It then checks if the static method is supported, and if not, logs the result.
+
+```js
 if (!ReadableStream.from) {
   log("ReadableStream.from() is not supported");
 }
@@ -88,14 +100,15 @@ async function consumeStream(readableStream) {
 }
 ```
 
+#### Result
+
 The output of consuming the stream is shown below (if `ReadableStream.from()` is supported).
 
 {{EmbedLiveSample("Convert an async iterator to a ReadableStream","100%", "80")}}
 
 ### Convert an Array to a ReadableStream
 
-This example demonstrates how you can convert an `Array`to a `ReadableStream`.
-The iterable is just an array of strings that is passed to `ReadableStream.from()` to create the `ReadableStream`.
+This example demonstrates how you can convert an `Array` to a `ReadableStream`.
 
 ```html hidden
 <pre id="log"></pre>
@@ -111,6 +124,10 @@ if (!ReadableStream.from) {
   log("ReadableStream.from() is not supported");
 }
 ```
+
+#### JavaScript
+
+The iterable is just an array of strings that is passed to `ReadableStream.from()` to create the `ReadableStream`.
 
 ```js
 // An Array of vegetable names
@@ -133,7 +150,10 @@ async function consumeStream(readableStream) {
 }
 ```
 
-We use the same approach as in the previous example to consume the stream (see previous section).
+We use the same approach as in the previous example log and to consume the stream, so that is not shown here.
+
+#### Result
+
 The output is shown below.
 
 {{EmbedLiveSample("Convert an Array to a ReadableStream","100%", "100")}}
