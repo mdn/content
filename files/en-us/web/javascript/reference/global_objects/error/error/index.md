@@ -97,7 +97,7 @@ console.log("cause" in error3); // false
 
 ## See also
 
-- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
+- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
-- [Error causes](https://v8.dev/features/error-cause) (v8.dev/features)
+- [Error causes](https://v8.dev/features/error-cause) on v8.dev (2021)
