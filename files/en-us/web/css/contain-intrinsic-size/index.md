@@ -86,9 +86,39 @@ The `auto none` value allows the element to fallback to `contain-intrinsic-size:
 
 ### Using auto value pairs for intrinsic size
 
-This example demonstrates `contain-intrinsic-size: auto <length>` and `contain-intrinsic-size: auto none` with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) and offscreen elements.
-We can estimate that our paragraphs will be around 500px tall, so the intrinsic size of their parent elements can be set to `500px`.
-When the element is offscreen, the browser will use 500px size for the layout of that element, and when the element needs to be rendered onscreen, the browser will use the computed size of the element and remember this value when the paragraphs are scrolled off and onscreen again.
+This example demonstrates `contain-intrinsic-size: auto <length>` and `contain-intrinsic-size: auto none` approximating an 'infinite scroll' layout where there are many of the same type of elements repeated vertically.
+Using `content-visibility: auto` skips rendering elements when they are offscreen, so this property is a good candidate to combine with `contain-intrinsic-size` to improve rendering performance and minimize [reflows](/en-US/docs/Glossary/Reflow).
+
+The `contain-intrinsic-size: auto 500px` value pair tells the browser to use 500px as a kind of 'placeholder' size (width and height) for the element when it is offscreen and the page is being laid out.
+When the element needs to be rendered onscreen (when the user scrolls to it), the browser will perform a render of the element and its contents.
+
+Once the browser has actual size information for the element, it will remember this size when the element scrolls offscreen again, and use the remembered size for layout calculations instead of the placeholder value.
+The benefit is that the browser does not need to repeatedly render the element contents to calculate its size and is especially useful when the contents are complex or depend on network resources or JavaScript.
+
+#### HTML
+
+```html
+<div id="container">
+  <div class="auto-length">
+    <p>Item one</p>
+  </div>
+  <div class="auto-length">
+    <p>Item two</p>
+  </div>
+  <div class="auto-length large-intrinsic-size">
+    <p class="small">Item three</p>
+  </div>
+  <div class="auto-length large-intrinsic-size">
+    <p class="small">Item four</p>
+  </div>
+  <div class="auto-length none">
+    <p>Item five</p>
+  </div>
+  <div class="auto-length none">
+    <p>Item six</p>
+  </div>
+</div>
+```
 
 #### CSS
 
@@ -97,6 +127,8 @@ div,
 p {
   padding: 1rem;
   margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: sans-serif;
 }
 
 #container {
@@ -108,73 +140,53 @@ p {
 
 ```css
 p {
-  border: 4px dotted;
-  background: lightblue;
   height: 500px;
   width: 500px;
+  border: 4px dotted;
+  background: lightblue;
 }
 
 .auto-length {
-  outline: 4px dotted blue;
   content-visibility: auto;
   contain-intrinsic-size: auto 500px;
+  background-color: linen;
+  outline: 4px dotted blue;
 }
 
 .large-intrinsic-size {
-  outline: 4px dotted red;
   /* Setting an inaccurate intrinsic size for the element */
   contain-intrinsic-size: auto 5000px;
+  background-color: lightgray;
+  outline: 4px dotted red;
 }
 
 .small {
-  border: 4px dotted green;
-  background: lightblue;
+  /* This element is a lot smaller than expected */
   height: 100px;
   width: 100px;
 }
 
 .none {
-  outline: 4px dotted red;
+  background-color: papayawhip;
   contain-intrinsic-size: auto none;
+  outline: 4px dotted red;
 }
-```
-
-#### HTML
-
-```html
-<div id="container">
-  <div class="auto-length">
-    <p>Lorem ipsum</p>
-  </div>
-  <div class="auto-length">
-    <p>Lorem ipsum</p>
-  </div>
-  <div class="auto-length large-intrinsic-size">
-    <p class="small">Lorem ipsum</p>
-  </div>
-  <div class="auto-length large-intrinsic-size">
-    <p class="small">Lorem ipsum</p>
-  </div>
-  <div class="auto-length none">
-    <p>Lorem ipsum</p>
-  </div>
-  <div class="auto-length none">
-    <p>Lorem ipsum</p>
-  </div>
-</div>
 ```
 
 #### Result
 
-The effect is noticeable in the scrollbar when elements are scrolled into view.
-Scrolling is smooth for the first two elements that we have accurate intrinsic sizes for, but the scrollbar jumps when the third element is onscreen.
-The layout shift occurs because the "large-intrinsic-size" elements have content that is around 500px tall, but we have set an inaccurate value of 5000px for its intrinsic size.
-Once the layout of the large elements are rendered, the effect of `auto` is visible as size of the element is remembered and we can scroll from top to bottom without any noticeable effects.
+- The first two boxes have an intrinsic size that matches their actual size, so as they flow into view, the layout is recalculated but we see no change in the scrollbar or the scroll position.
 
-The last two elements have `contain-intrinsic-size: auto none` set, so the element will use `contain-intrinsic-size: none` when the element is offscreen.
-Instead of using an intrinsic size of 500px, the element will collapse to 0px height when offscreen.
+- The third and fourth boxes have a huge intrinsic size, so the initial layout that the browser calculated is far too big.
+  The paragraphs in these boxes are much smaller so that it's obvious you've reached a point that forces a drastic layout change.
 
-{{EmbedLiveSample('Using_auto_value_pairs_for_intrinsic_size', 800, 600)}}
+  When the third and fourth boxes scroll into view, the size is recalculated, making the box and its parent less tall.
+  The effect is that the scroller jumps down the page (we've effectively scrolled further through the box than we'd estimated) and the scroller is longer, because the entire page is less tall than we'd estimated.
+
+- The last boxes have `auto none`, so they have zero estimated size.
+  When they scroll into view the size of the parent increases, the scroller decreases in size and moves up the bar.
+
+{{EmbedLiveSample('Using_auto_value_pairs_for_intrinsic_size', 800, 400)}}
 
 ### Setting the intrinsic size
 
