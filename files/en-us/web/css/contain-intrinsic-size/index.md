@@ -86,11 +86,12 @@ The `auto none` value allows the element to fallback to `contain-intrinsic-size:
 
 ### Using auto value pairs for intrinsic size
 
-This example demonstrates `contain-intrinsic-size: auto <length>` and `contain-intrinsic-size: auto none` approximating an 'infinite scroll' layout where there are many of the same type of elements repeated vertically.
+This example demonstrates `contain-intrinsic-size: auto <length>` and `contain-intrinsic-size: auto none`, using a layout where there are many elements displayed vertically that have both accurate and incorrect intrinsic size estimations.
 Using `content-visibility: auto` skips rendering elements when they are offscreen, so this property is a good candidate to combine with `contain-intrinsic-size` to improve rendering performance and minimize [reflows](/en-US/docs/Glossary/Reflow).
 
 The `contain-intrinsic-size: auto 500px` value pair tells the browser to use 500px as a kind of 'placeholder' size (width and height) for the element when it is offscreen and the page is being laid out.
-When the element needs to be rendered onscreen (when the user scrolls to it), the browser will perform a render of the element and its contents.
+When the user scrolls to the element and it needs to be displayed, the browser will calculate the actual size of the element and its contents.
+If there is a difference between the placeholder and calculated size this might force a new layout, with accompanying changes to the sidebar position.
 
 Once the browser has actual size information for the element, it will remember this size when the element scrolls offscreen again, and use the remembered size for layout calculations instead of the placeholder value.
 The benefit is that the browser does not need to repeatedly render the element contents to calculate its size and is especially useful when the contents are complex or depend on network resources or JavaScript.
@@ -220,14 +221,15 @@ p {
 
 - The first two boxes have an intrinsic size that matches their actual size, so as they flow into view, the layout is recalculated but we see no change in the scrollbar or the scroll position.
 
-- The third and fourth boxes have a huge intrinsic size, so the initial layout that the browser calculated is far too big.
-  The paragraphs in these boxes are much smaller so that it's obvious you've reached a point that forces a drastic layout change.
+- The third and fourth boxes have a huge intrinsic size, so the initial layout that the browser calculated is far too big, and we've made these boxes smaller so that it's obvious when you've reached a point that forces a drastic layout change.
 
   When the third and fourth boxes scroll into view, the size is recalculated, making the box and its parent less tall.
   The effect is that the scroller jumps down the page (we've effectively scrolled further through the box than we'd estimated) and the scroller is longer, because the entire page is less tall than we'd estimated.
 
 - The last boxes have `auto none`, so they have zero estimated size.
-  When they scroll into view the size of the parent increases, the scroller decreases in size and moves up the bar.
+  When they scroll into view the size of the element and its parent are recalculated to be much larger, so the scroller decreases in size and moves up the bar.
+
+After scrolling all the way to the bottom you can subsequently scroll up and down smoothly, because using `content-visibility: auto` saves the actual rendered size of the element for next time it is displayed.
 
 {{EmbedLiveSample('Using_auto_value_pairs_for_intrinsic_size', 800, 400)}}
 
