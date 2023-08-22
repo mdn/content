@@ -76,6 +76,9 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
 
 ```html
 <table>
+  <caption>
+    Using multiple writing modes
+  </caption>
   <tr>
     <th>Value</th>
     <th>Vertical script</th>
@@ -83,48 +86,46 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
     <th>Horizontal (RTL) script</th>
     <th>Mixed script</th>
   </tr>
-  <tr>
-    <td>horizontal-tb</td>
-    <td class="example Text1"><span>我家没有电脑。</span></td>
-    <td class="example Text1"><span>Example text</span></td>
-    <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text1"><span>1994年に至っては</span></td>
+  <tr class="text1">
+    <th>horizontal-tb</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
-  <tr>
-    <td>vertical-lr</td>
-    <td class="example Text2"><span>我家没有电脑。</span></td>
-    <td class="example Text2"><span>Example text</span></td>
-    <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text2"><span>1994年に至っては</span></td>
+  <tr class="text2">
+    <th>vertical-lr</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
-  <tr>
-    <td>vertical-rl</td>
-    <td class="example Text3"><span>我家没有电脑。</span></td>
-    <td class="example Text3"><span>Example text</span></td>
-    <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text3"><span>1994年に至っては</span></td>
+  <tr class="text3">
+    <th>vertical-rl</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
-  <tr class="experimental">
-    <td>sideways-lr</td>
-    <td class="example Text4"><span>我家没有电脑。</span></td>
-    <td class="example Text4"><span>Example text</span></td>
-    <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text4"><span>1994年に至っては</span></td>
+  <tr class="experimental text4">
+    <th>sideways-lr</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
-  <tr class="experimental">
-    <td>sideways-rl</td>
-    <td class="example Text5"><span>我家没有电脑。</span></td>
-    <td class="example Text5"><span>Example text</span></td>
-    <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text5"><span>1994年に至っては</span></td>
-  </tr>
-  <tr class="notice">
-    <td colspan="5">
-      Your browser does not support the <code>sideways-lr</code> or
-      <code>sideways-rl</code> values.
-    </td>
+  <tr class="experimental text5">
+    <th>sideways-rl</th>
+    <td>我家没有电脑。</td>
+    <td>Example text</td>
+    <td>מלל ארוך לדוגמא</td>
+    <td>1994年に至っては</td>
   </tr>
 </table>
+<p class="notice">
+  Your browser does not support the <code>sideways-lr</code> or
+  <code>sideways-rl</code> values.
+</p>
 ```
 
 #### CSS
@@ -165,28 +166,23 @@ th {
 The CSS that adjusts the directionality of the content looks like this:
 
 ```css
-.example.Text1 span,
-.example.Text1 {
+.text1 td {
   writing-mode: horizontal-tb;
 }
 
-.example.Text2 span,
-.example.Text2 {
+.text2 td {
   writing-mode: vertical-lr;
 }
 
-.example.Text3 span,
-.example.Text3 {
+.text3 td {
   writing-mode: vertical-rl;
 }
 
-.example.Text4 span,
-.example.Text4 {
+.text4 td {
   writing-mode: sideways-lr;
 }
 
-.example.Text5 span,
-.example.Text5 {
+.text5 td {
   writing-mode: sideways-rl;
 }
 ```
@@ -197,31 +193,42 @@ The CSS that adjusts the directionality of the content looks like this:
 
 ### Using writing-mode with transforms
 
-If your browser doesn't support `sideways-lr` and `sideways-rl` writing modes, you can use `transform` to achieve the same effect.
+If your browser doesn't support `sideways-lr`, a workaround is to use `transform` to achieve a similar effect depending on the script direction.
+The effect of `vertical-rl` is the same as with `sideways-lr`, so no transformation is required for left-to-right scripts.
+In some cases, rotating the text 180 degrees is sufficient to achieve the effect of `sideways-lr`, but font glyphs may not be designed to be rotated, so this may produce unexpected positioning or rendering.
 
 #### HTML
 
 ```html
 <table>
+  <caption>
+    Using writing-mode with transforms
+  </caption>
   <thead>
     <tr>
       <th>Vertical LR</th>
       <th>Vertical LR with transform</th>
+      <th>Sideways LR</th>
+      <th>Only rotate</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <span>我家没有电脑。</span>
-        <span>Example text</span>
-        <span>מלל ארוך לדוגמא</span>
-        <span>1994年に至っては</span>
+        <span class="vertical-lr">我家没有电脑。</span>
+        <span class="vertical-lr">Example text</span>
       </td>
       <td>
-        <span class="rotated">我家没有电脑。</span>
-        <span class="rotated">Example text</span>
-        <span class="rotated">מלל ארוך לדוגמא</span>
-        <span class="rotated">1994年に至っては</span>
+        <span class="vertical-lr rotated">我家没有电脑。</span>
+        <span class="vertical-lr rotated">Example text</span>
+      </td>
+      <td>
+        <span class="sideways-lr">我家没有电脑。</span>
+        <span class="sideways-lr">Example text</span>
+      </td>
+      <td>
+        <span class="only-rotate">我家没有电脑。</span>
+        <span class="only-rotate">Example text</span>
       </td>
     </tr>
   </tbody>
@@ -231,12 +238,21 @@ If your browser doesn't support `sideways-lr` and `sideways-rl` writing modes, y
 #### CSS
 
 ```css
-span {
+.vertical-lr {
   writing-mode: vertical-lr;
 }
 
 .rotated {
   transform: rotate(180deg);
+}
+
+.sideways-lr {
+  writing-mode: sideways-lr;
+}
+
+.only-rotate {
+  inline-size: fit-content;
+  transform: rotate(-90deg);
 }
 ```
 
