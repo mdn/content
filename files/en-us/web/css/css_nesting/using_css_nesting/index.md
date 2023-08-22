@@ -33,7 +33,7 @@ parent {
   }
 }
 
-/* Without nesting selector */
+/* With nesting selector */
 parent {
   /* parent styles */
   & child {
