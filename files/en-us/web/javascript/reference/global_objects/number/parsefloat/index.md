@@ -53,5 +53,5 @@ See {{jsxref("parseFloat", "parseFloat()")}} for more detail and examples.
 ## See also
 
 - [Polyfill of `Number.parseFloat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}: The object this method belongs to.
-- The global {{jsxref("parseFloat", "parseFloat()")}} method.
+- {{jsxref("Number")}}
+- {{jsxref("parseFloat", "parseFloat()")}}

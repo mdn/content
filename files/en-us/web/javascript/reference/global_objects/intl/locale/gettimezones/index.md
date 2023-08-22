@@ -53,4 +53,4 @@ console.log(ar.getTimeZones()); // undefined
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database)
+- [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) on Wikipedia

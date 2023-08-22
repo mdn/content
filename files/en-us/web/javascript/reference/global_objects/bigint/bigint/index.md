@@ -68,4 +68,4 @@ BigInt("  123  "); // 123n, leading and trailing whitespaces are allowed
 
 ## See also
 
-- {{jsxref("BigInt")}} class
+- {{jsxref("BigInt")}}

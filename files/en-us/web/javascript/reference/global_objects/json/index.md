@@ -156,7 +156,7 @@ console.log(JSON.parse(jsonText));
 ## See also
 
 - {{jsxref("Date.prototype.toJSON()")}}
-- [JSON Diff](https://json-diff.com/) checker
+- [JSON Diff](https://json-diff.com/)
 - [JSON Beautifier/editor](https://jsonbeautifier.org/)
 - [JSON Parser](https://jsonparser.org/)
 - [JSON Validator](https://tools.learningcontainer.com/json-validator/)
