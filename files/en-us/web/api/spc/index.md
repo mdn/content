@@ -46,8 +46,7 @@ extension specified.
 
 ```javascript
 const publicKey = {
-  challenge: Uint8Array.from(
-      randomStringFromServer, c => c.charCodeAt(0)),
+  challenge: Uint8Array.from(randomStringFromServer, (c) => c.charCodeAt(0)),
 
   rp: {
     name: "Fancy Bank",
