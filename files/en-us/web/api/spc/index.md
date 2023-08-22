@@ -167,7 +167,7 @@ try {
 ## Specifications
 
 - [Secure Payment Confirmation](https://www.w3.org/TR/secure-payment-confirmation/)
- 
+
 ## Browser Compatibility
 
 - See [pull request 20583](https://github.com/mdn/browser-compat-data/pull/20583)
@@ -189,6 +189,7 @@ Familiarity with these underlying specifications is valuable to understanding SP
 - General [flow diagram for SPC during a payment](https://github.com/w3c/wpsig/blob/gh-pages/spc-general.png)
 - [Secure Payment Confirmation Test Suite](https://wpt.fyi/results/secure-payment-confirmation?label=master&label=experimental&aligned)
 - [Chrome developer documentation for SPC](https://developer.chrome.com/articles/secure-payment-confirmation/)
-EMVCo Specifications that Support SPC
+
+### EMVCo Specifications that Support SPC
 - [EMV® 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/) (version 2.3)
 - [EMV® Secure Remote Commerce](https://www.emvco.com/emv-technologies/secure-remote-commerce/) (version 1.3)
