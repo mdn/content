@@ -255,22 +255,27 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  h2:before { /* same as `.notice h2:before` */
+  h2:before {
+    /* same as `.notice h2:before` */
     content: "ℹ︎ ";
   }
-  &.warning { /* equivalent to `.notice.warning` */
+  &.warning {
+    /* equivalent to `.notice.warning` */
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
-    h2:before { /* equivalent to `.notice.warning h2:before` */
+    h2:before {
+      /* equivalent to `.notice.warning h2:before` */
       content: "! ";
     }
   }
-  &.success { /* equivalent to `.notice.success` */
+  &.success {
+    /* equivalent to `.notice.success` */
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    h2:before {  /* equivalent to `.notice.success h2:before` */
+    h2:before {
+      /* equivalent to `.notice.success h2:before` */
       content: "✓ ";
     }
   }
@@ -337,9 +342,11 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
-  & h2 {  /* equivalent to `.card h2` */
+  & h2 {
+    /* equivalent to `.card h2` */
     color: slateblue;
-    .featured & {  /* equivalent to `.featured .card` */
+    .featured & {
+      /* equivalent to `.featured .card` */
       color: tomato;
     }
   }
