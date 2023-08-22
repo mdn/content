@@ -290,11 +290,27 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
 
 The `&` nesting selector can also be appended to a nested selector which has the effect of reversing the context.
 
+This can be useful when we have styles for a child element that change when a parent element is given a different class:
+
+```html
+<div>
+  <span class="foo">text</span>
+</div>
+```
+
+As opposed to:
+
+```html
+<div class="bar">
+  <span class="foo">text</span>
+</div>
+```
+
 ```css
-.parent {
-  /* .parent styles */
-  .child & {
-    /* .child .parent styles */
+.foo {
+  /* .foo styles */
+  .bar & {
+    /* .bar .for styles */
   }
 }
 ```
