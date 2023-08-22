@@ -113,24 +113,31 @@ An origin may invoke the Payment Request API with the `secure-payment-confirmati
 > **Note:** Per the Payment Request API, if `PaymentRequest` is used within a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `psp.com`, and `psp.com` wishes to use `PaymentRequest`), that iframe must have the 'payment' permission policy set.
 
 ```js
-const request = new PaymentRequest([{
-  supportedMethods: "secure-payment-confirmation",
-  data: {
-    // List of credential IDs obtained from the Account Provider.
-    credentialIds,
+const request = new PaymentRequest(
+  [
+    {
+      supportedMethods: "secure-payment-confirmation",
+      data: {
+        // List of credential IDs obtained from the Account Provider.
+        credentialIds,
 
-    // The challenge is also obtained from the Account Provider.
-    challenge: new Uint8Array(randomStringFromServer, c => c.charCodeAt(0)),
+        // The challenge is also obtained from the Account Provider.
+        challenge: new Uint8Array(randomStringFromServer, (c) =>
+          c.charCodeAt(0),
+        ),
 
-    instrument: {
-      displayName: "Fancy Card ****1234",
-      icon: "https://fancybank.com/card-art.png",
+        instrument: {
+          displayName: "Fancy Card ****1234",
+          icon: "https://fancybank.com/card-art.png",
+        },
+
+        payeeOrigin: "https://merchant.com",
+
+        timeout: 60000, // 1 minute
+      },
     },
-
-    payeeOrigin: "https://merchant.com",
-
-    timeout: 60000,  // 1 minute
-  }}], {
+  ],
+  {
     total: {
       label: "Total",
       amount: {
@@ -138,17 +145,20 @@ const request = new PaymentRequest([{
         value: "5.00",
       },
     },
-  });
+  },
+);
 
 try {
   // NOTE: canMakePayment() checks only public information for whether the SPC
   // call is valid. To preserve user privacy, it does not check whether any
   // passed credentials match the current device.
   const canMakePayment = await request.canMakePayment();
-  if (!canMakePayment) { throw new Error('Cannot make payment'); }
+  if (!canMakePayment) {
+    throw new Error("Cannot make payment");
+  }
 
   const response = await request.show();
-  await response.complete('success');
+  await response.complete("success");
 
   // response.details is a PublicKeyCredential, with a clientDataJSON that
   // contains the transaction data for verification by the issuing bank.
