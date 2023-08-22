@@ -18,12 +18,12 @@ Secure Payment Confirmation (SPC) is designed to enable streamlined strong custo
 
 Selecting “Verify” initiates a Web Authentication flow. When the user successfully authenticates (e.g., using biometric authenticators on their phone or laptop), the browser passes the data displayed in the dialog to the authenticator, which signs it and returns it as part of the resulting Web Authentication assertion. The assertion can then be passed to the Relying Party for validation. Because the browser passes the displayed data directly to the authenticator (with no JavaScript code able to alter the data), the Relying Party can have high confidence that the user consented to the displayed transaction data. 
 
-Thus, SPC builds on Web Authentication to enable Web sites to perform streamlined strong authentication and provide evidence of user consent. SPC will typically be used as part of the authentication framework of a given payment system. For example, SPC is supported by both EMV® 3-D  Secure (version 2.3.1) and EMV® Secure Remote Commerce (version 1.3) 
-but is designed to work with a wide variety of payment types including “push payments” like direct credit transfers and wallet payments. 
+Thus, SPC builds on Web Authentication to enable Web sites to perform streamlined strong authentication and provide evidence of user consent. SPC will typically be used as part of the authentication framework of a given payment system. For example, SPC is supported by both EMV® 3-D  Secure (version 2.3.1) and EMV® Secure Remote Commerce (version 1.3) but is designed to work with a wide variety of payment types including “push payments” like direct credit transfers and wallet payments. 
 
 ## Interfaces
 
 ### Payment Request Method
+
 Secure Payment Confirmation leverages underlying capabilities of the Payment Request API.  The standardized payment method identifier for the Secure Payment Confirmation payment handler is "secure-payment-confirmation".
 
 ### Web Authentication Extension
