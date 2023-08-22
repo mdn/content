@@ -7,7 +7,7 @@ browser-compat: css.at-rules.page
 
 {{CSSRef}}
 
-The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a printed pages. It targets and modifies the page's dimensions, page orientation, and margins. The **`@page`** at-rule can be used to target all pages in a print-out, or even specific ones using its various pseudo-classes.
+The **`@page`** at-rule is a CSS at-rule used to modify different aspects of printed pages. It targets and modifies the page's dimensions, orientation, and margins. The `@page` at-rule can be used to target all pages in a print-out or a subset using its various pseudo-classes.
 
 ## Syntax
 
@@ -44,7 +44,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
 
 ### Page properties
 
-The **`@page`** at-rule can contain only **page properties** and **margin at-rules**. Following properties have been implemented by at least one browser:
+The `@page` at-rule can contain only [page descriptors](#page-descriptors) and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
 
 - [`margin`](/en-US/docs/Web/CSS/margin)
   - : Specifies the page margins. Individual margin properties `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` can also be used.
@@ -160,9 +160,9 @@ and `<pseudo-selector>` represents these pseudo-classes:
 
 ## Margin at-rules
 
-> **Warning:** The margin at-rules have not been implemented by any user agent yet.
+> **Warning:** The margin at-rules have not been implemented by any user agent <small>(updated: August 2023)</small>.
 
-The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page and make changes based on the properties or content set in the block of code:
+The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page, styling the area of the printed page based on the property values set in the style block:
 
 ```css
 @page {
@@ -439,4 +439,5 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
 - The {{Cssxref("page")}} property
 - See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
-- [Paged.js](https://pagedjs.org/documentation/1-the-big-picture/#what-is-paged.js): a JavaScript library/polyfill that implements W3C paged media specifications
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture)
