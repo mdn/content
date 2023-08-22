@@ -92,6 +92,7 @@ navigator.credentials.create({ publicKey })
   });
 ```
 
+
 ### Creating a Credential in a Cross-Origin Iframe
 
 SPC allows a credential to be created in a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `bank.com`). This is intended to support the following flow:
