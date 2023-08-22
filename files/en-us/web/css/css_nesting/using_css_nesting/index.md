@@ -270,7 +270,7 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    h2:before {
+    h2:before {  /* equivalent to `.notice.success h2:before` */
       content: "✓ ";
     }
   }
