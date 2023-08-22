@@ -262,7 +262,7 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
-    h2:before {
+    h2:before { /* equivalent to `.notice.warning h2:before` */
       content: "! ";
     }
   }
