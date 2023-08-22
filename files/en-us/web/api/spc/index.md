@@ -6,8 +6,7 @@ status:
   - experimental
 ---
 
-{{SeeCompatTable}}
-{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 To protect against online payment fraud it is common to authenticate the account holder. Strong authentication lowers the risk of fraud, but increases the likelihood that friction during checkout will lead to shopping cart abandonment. Banks, merchants, payment services providers, and other entities in a payments ecosystem therefore consider a number of factors when deciding what type and strength of authentication to use for each transaction, including the amount, the items being purchased, the user's payment history, which party bears liability in the case of fraud, and regulatory requirements (such as [European Payment Services Directive 2](<https://en.wikipedia.org/wiki/Payment_Services_Directive#Revised_Directive_on_Payment_Services_(PSD2)>) requirements for strong customer authentication and evidence of user consent).
 
@@ -35,7 +34,7 @@ Secure Payment Confirmation defines a Web Authentication extension, `payment`, w
 2. Enforces that the User Agent appropriately communicates to the user that they are authenticating a transaction and the transaction details. Those details are then included in the assertion signed by the authenticator.
 3. Allows calling `navigator.credentials.create` in a cross-origin iframe, as long as a "payment" permission policy is set on the iframe.
 
-> **Note**: This ability is now part of WebAuthn Level 3, where it uses the "publickey-credential-create" permission policy instead. Developers are encouraged to use that where available, instead of relying on SPC's "payment" permission.
+> **Note:** This ability is now part of WebAuthn Level 3, where it uses the "publickey-credential-create" permission policy instead. Developers are encouraged to use that where available, instead of relying on SPC's "payment" permission.
 
 ## Examples
 
@@ -111,7 +110,7 @@ In order for these steps to happen in the merchant context (that is, without a r
 
 An origin may invoke the Payment Request API with the `secure-payment-confirmation` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface with transaction details (e.g., the payment currency and amount and the payee origin).
 
-> **Note**: Per the Payment Request API, if `PaymentRequest` is used within a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `psp.com`, and `psp.com` wishes to use `PaymentRequest`), that iframe must have the 'payment' permission policy set.
+> **Note:** Per the Payment Request API, if `PaymentRequest` is used within a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `psp.com`, and `psp.com` wishes to use `PaymentRequest`), that iframe must have the 'payment' permission policy set.
 
 ```js
 const request = new PaymentRequest([{
