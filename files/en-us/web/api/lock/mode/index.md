@@ -28,14 +28,14 @@ navigator.locks.request("my_resource", show_lock_properties);
 navigator.locks.request(
   "my_resource",
   { mode: "exclusive" },
-  show_lock_properties
+  show_lock_properties,
 );
 
 // Should show "shared"
 navigator.locks.request(
   "my_resource",
   { mode: "shared" },
-  show_lock_properties
+  show_lock_properties,
 );
 
 function show_lock_properties(lock) {

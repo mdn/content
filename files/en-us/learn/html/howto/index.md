@@ -1,6 +1,7 @@
 ---
 title: Use HTML to solve common problems
 slug: Learn/HTML/Howto
+page-type: landing-page
 ---
 
 {{LearnSidebar}}

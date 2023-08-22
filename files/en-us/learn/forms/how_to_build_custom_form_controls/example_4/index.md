@@ -1,13 +1,14 @@
 ---
 title: Example 4
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
+page-type: learn-module-chapter
 ---
 
 This is the fourth example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## Change states
 
-### HTML Content
+### HTML
 
 ```html
 <form class="no-widget">
@@ -32,7 +33,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 </form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 .widget select,
@@ -101,7 +102,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -155,7 +156,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 // -------------------- //

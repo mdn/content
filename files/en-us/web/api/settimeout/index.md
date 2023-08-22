@@ -21,7 +21,7 @@ setTimeout(functionRef)
 setTimeout(functionRef, delay)
 setTimeout(functionRef, delay, param1)
 setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -358,7 +358,7 @@ console.log("After setTimeout");
 
 Will write to the console:
 
-```
+```plain
 After setTimeout
 foo has been called
 ```

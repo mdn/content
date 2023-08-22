@@ -21,7 +21,7 @@ A string.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/href"
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/href",
 );
 console.log(url.href); // Logs: 'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
 ```

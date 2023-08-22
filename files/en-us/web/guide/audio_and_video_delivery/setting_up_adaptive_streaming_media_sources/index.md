@@ -1,6 +1,7 @@
 ---
 title: Setting up adaptive streaming media sources
 slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
@@ -115,7 +116,7 @@ A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https:/
 
 Once encoded your file structure may look something like this:
 
-```
+```plain
 play list ->                /segments/news.mp4.mpd
 
 main segment folder ->      /segments/main/
@@ -222,7 +223,7 @@ There are a number of useful tools available for HLS encoding
 
 The HLS Index File (much like MPEG-DASH's `.mpd` file) contains the information on where all the media segments reside, as well as other metadata such as bandwidth application. Apple uses the `.m3u8` format (an extension of its `.m3u` playlist format) for index files — see below for an example:
 
-```
+```plain
 #EXT-X-VERSION:3
 #EXTM3U
 #EXT-X-TARGETDURATION:10

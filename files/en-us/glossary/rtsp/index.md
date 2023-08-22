@@ -4,6 +4,8 @@ slug: Glossary/RTSP
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 Real-time streaming protocol (RTSP) is a network protocol that controls how the streaming of a media should occur between a {{glossary("server")}} and a {{glossary("client")}}. Basically, RTSP is the protocol that describes what happens when you click "Pause"/"Play" when streaming a video. If your computer were a remote control and the streaming server a television, RTSP would describe how the instruction of the remote control affects the TV.
 
 ## See also

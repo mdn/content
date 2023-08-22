@@ -1,6 +1,7 @@
 ---
 title: "Django Tutorial Part 8: User authentication and permissions"
 slug: Learn/Server-side/Django/Authentication
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
@@ -169,7 +170,7 @@ For this site, we'll put our HTML pages in the **templates/registration/** direc
 
 > **Note:** Your folder structure should now look like the below:
 >
-> ```
+> ```plain
 > locallibrary/   # Django project folder
 >   catalog/
 >   locallibrary/

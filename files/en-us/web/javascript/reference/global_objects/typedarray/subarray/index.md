@@ -7,11 +7,10 @@ browser-compat: javascript.builtins.TypedArray.subarray
 
 {{JSRef}}
 
-The **`subarray()`** method returns a new _TypedArray_
+The **`subarray()`** method of {{jsxref("TypedArray")}} instances returns a new typed array
 on the same {{jsxref("ArrayBuffer")}} store and with the same element types as for this
-_TypedArray_ object. The begin offset is **inclusive** and the end
-offset is **exclusive**. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+typed array. The begin offset is **inclusive** and the end
+offset is **exclusive**.
 
 {{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
 

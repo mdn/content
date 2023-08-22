@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Floats"
 slug: Learn/CSS/CSS_layout/Floats_skills
+page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}

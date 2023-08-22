@@ -15,8 +15,9 @@ The **`CustomStateSet`** interface of the [Document Object Model](/en-US/docs/We
 
 An HTML form element, such as a checkbox has different _states_, "checked" and "unchecked". Likewise, developers creating custom elements need to assign possible states to these elements. The `CustomStateList` allows these states to be stored, and accessed from the custom element.
 
-An instance of `CustomStateList` is returned by {{domxref("ElementInternals.states")}}. The `CustomStateList` object is described as _setlike_, and therefore the methods behave in a similar manner to those on a {{jsxref("Set")}}.
+An instance of `CustomStateList` is returned by {{domxref("ElementInternals.states")}}.
 
+A `CustomStateList` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) that can hold an ordered set of state values.
 Each value stored in a `CustomStateList` is a `<dashed-ident>`, in the format `--mystate`.
 
 ### Interaction with CSS

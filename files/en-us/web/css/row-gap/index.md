@@ -9,6 +9,8 @@ browser-compat: css.properties.row-gap
 
 The **`row-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows.
 
+Early versions of the specification called this property `grid-row-gap`, and to maintain compatibility with legacy websites, browsers will still accept `grid-row-gap` as an alias for `row-gap`.
+
 {{EmbedInteractiveExample("pages/css/row-gap.html")}}
 
 ## Syntax
@@ -30,8 +32,6 @@ row-gap: revert;
 row-gap: revert-layer;
 row-gap: unset;
 ```
-
-Note that `grid-row-gap` is an alias for this property.
 
 ### Values
 
@@ -95,6 +95,9 @@ Note that `grid-row-gap` is an alias for this property.
   <div></div>
   <div></div>
   <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 ```
 
@@ -104,7 +107,7 @@ Note that `grid-row-gap` is an alias for this property.
 #grid {
   display: grid;
   height: 200px;
-  grid-template-columns: 200px;
+  grid-template-columns: 150px 1fr;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 20px;
 }
@@ -130,4 +133,4 @@ Note that `grid-row-gap` is an alias for this property.
 ## See also
 
 - Related CSS properties: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

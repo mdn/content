@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.now
 
 {{JSRef}}
 
-The **`Date.now()`** static method returns the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC.
+The **`Date.now()`** static method returns the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
 {{EmbedInteractiveExample("pages/js/date-now.html")}}
 
@@ -19,16 +19,13 @@ Date.now()
 
 ### Return value
 
-A number representing the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC.
+A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), in milliseconds, of the current time.
 
-## Examples
+## Description
 
 ### Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
-`Date.now()` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
-default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `Date.now()` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
@@ -46,10 +43,19 @@ Date.now();
 // …
 ```
 
-In Firefox, you can also enable `privacy.resistFingerprinting`, the
-precision will be 100ms or the value of
-`privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever
-is larger.
+## Examples
+
+### Measuring time elapsed
+
+You can use `Date.now()` to get the current time in milliseconds, then subtract a previous time to find out how much time elapsed between the two calls.
+
+```js
+const start = Date.now();
+doSomeLongRunningProcess();
+console.log(`Time elapsed: ${Date.now() - start} ms`);
+```
+
+For more complex scenarios, you may want to use the [performance API](/en-US/docs/Web/API/Performance_API/High_precision_timing) instead.
 
 ## Specifications
 
@@ -62,6 +68,6 @@ is larger.
 ## See also
 
 - [Polyfill of `Date.now` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
-- {{domxref("Performance.now()")}} — provides timestamps with sub-millisecond
-  resolution for use in measuring web page performance
-- {{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}
+- {{domxref("Performance.now()")}}
+- {{domxref("console.time()")}}
+- {{domxref("console.timeEnd()")}}

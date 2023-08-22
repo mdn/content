@@ -1,6 +1,7 @@
 ---
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -20,7 +21,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Console
 
-- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Web/Privacy/Tracking_Protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ([Firefox bug 1522396](https://bugzil.la/1522396)).
+- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Web/Privacy/Firefox_tracking_protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ([Firefox bug 1522396](https://bugzil.la/1522396)).
 - All visible logs in the console can shared by saving to a file or copying to clipboard via a new _Export visible messages to_ context menu item ([Firefox bug 1517728](https://bugzil.la/1517728)).
 - The console's toolbar now responsively reduces its height into a single row to save vertical space ([Firefox bug 972530](https://bugzil.la/972530)).
 - Messages from content can now be hidden in the console to focus on logs from the Firefox UI ([Firefox bug 1523842](https://bugzil.la/1523842)).
@@ -49,7 +50,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Removals
 
-- The HTML {{HTMLElement("keygen")}} element has been removed from Firefox. It was deprecated some time ago, and its purpose has generally been supplanted by other technologies ([Firefox bug 1315460](https://bugzil.la/1315460)).
+- The HTML `<keygen>` element has been removed from Firefox. It was deprecated some time ago, and its purpose has generally been supplanted by other technologies ([Firefox bug 1315460](https://bugzil.la/1315460)).
 
 ### CSS
 
@@ -93,7 +94,7 @@ This article provides information about the changes in Firefox 69 that will affe
 - {{domxref("DOMMatrix.fromMatrix()")}} has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
 - We now support the six-parameter version of the {{domxref("DOMMatrix.scale()")}} method ([Firefox bug 1397945](https://bugzil.la/1397945)).
 - The arguments for {{domxref("DOMMatrix.translate()")}}, {{domxref("DOMMatrix.skewX()")}}, and {{domxref("DOMMatrix.skewY()")}} are now all optional, as per spec ([Firefox bug 1397949](https://bugzil.la/1397949)).
-- The {{domxref("NavigatorID/userAgent", "navigator.userAgent")}}, {{domxref("NavigatorID/platform", "navigator.platform")}}, and {{domxref("navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ([Firefox bug 1559747](https://bugzil.la/1559747)). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.
+- The {{domxref("Navigator.userAgent")}}, {{domxref("Navigator.platform")}}, and {{domxref("Navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ([Firefox bug 1559747](https://bugzil.la/1559747)). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.
 - The remaining methods of {{domxref("HTMLDocument")}} have been moved to {{domxref("Document")}}. This should have no appreciable impact on your work in most cases. In particular, the {{domxref("document.close", "close()")}}, {{domxref("document.open", "open()")}}, and {{domxref("document.write", "write()")}} methods have been moved. So have the various editor related methods, including {{domxref("document.execCommand", "execCommand()")}} as well as various properties ([Firefox bug 1549560](https://bugzil.la/1549560)).
 - We have implemented {{domxref("AbstractRange")}} and {{domxref("StaticRange")}} ([Firefox bug 1444847](https://bugzil.la/1444847)).
 

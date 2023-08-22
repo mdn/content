@@ -1,6 +1,7 @@
 ---
 title: Firefox 12 for developers
 slug: Mozilla/Firefox/Releases/12
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -35,7 +36,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 - {{domxref("DOMError")}} as defined in the DOM 4 specification has been implemented.
 - The {{domxref("Document.createNodeIterator()")}} method has been updated to match the DOM4 specification. This makes the `whatToShow` and `filter` parameters optional and removes the non-standard fourth parameter, `entityReferenceExpansion`.
 - The {{domxref("Blob")}} interface's `slice()` method was affected by a bug that prevented it from properly accepting `start` and `end` values outside the range of a signed 64-bit integer; this has been fixed.
-- The {{domxref("element.getBoundingClientRect()")}} method now considers effect of [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) when computing the element's bounding rectangle.
+- The {{domxref("element.getBoundingClientRect()")}} method now considers effect of [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) when computing the element's bounding rectangle.
 - The `crossOrigin` property is now supported by {{domxref("HTMLMediaElement")}}.
 
 #### New WebAPIs
@@ -79,7 +80,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 #### source-editor.jsm
 
 - The [`resetUndo()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) method was added; this lets you clear the undo stack.
-- The source editor now offers methods for providing search capability: [`find()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.html#find()>), [`findNext()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.html#findNext()>), and [`findPrevious()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.html#findPrevious()>).
+- The source editor now offers methods for providing search capability: `find()`, `findNext()`, and `findPrevious()`.
 
 ### XUL
 

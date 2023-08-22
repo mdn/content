@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.unshift
 
 {{JSRef}}
 
-The **`unshift()`** method adds the specified elements to the
+The **`unshift()`** method of {{jsxref("Array")}} instances adds the specified elements to the
 beginning of an array and returns the new length of the array.
 
 {{EmbedInteractiveExample("pages/js/array-unshift.html")}}
@@ -18,7 +18,7 @@ beginning of an array and returns the new length of the array.
 unshift()
 unshift(element0)
 unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element0, element1, /* …, */ elementN)
 ```
 
 ### Parameters
@@ -87,7 +87,7 @@ arr.unshift([-7, -6], [-5]); // the new array length is 8
 
 ### Calling unshift() on non-array objects
 
-The `unshift()` method reads the `length` property of `this`. It then shifts all properties in the range `0` to `length - 1` right by the number of arguments and sets each index starting at `0` with the arguments passed to `unshift()`. Finally, it sets the `length` to the previous length plus the number of prepended elements.
+The `unshift()` method reads the `length` property of `this`. It shifts all indices in the range `0` to `length - 1` right by the number of arguments (incrementing their values by this number). Then, it sets each index starting at `0` with the arguments passed to `unshift()`. Finally, it sets the `length` to the previous length plus the number of prepended elements.
 
 ```js
 const arrayLike = {

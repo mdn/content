@@ -31,7 +31,7 @@ const request = new PaymentRequest(
       label: "total",
       amount: { value: "10", currency: "USD" },
     },
-  }
+  },
 );
 ```
 
@@ -52,7 +52,7 @@ const request = new PaymentRequest(
       label: "total",
       amount: { value: "10", currency: "USD" },
     },
-  }
+  },
 );
 ```
 
@@ -160,7 +160,7 @@ self.addEventListener("canmakepayment", (e) => {
         .catch((error) => {
           reject(error);
         });
-    })
+    }),
   );
 });
 ```

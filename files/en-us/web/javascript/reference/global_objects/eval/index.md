@@ -40,7 +40,7 @@ The argument of the `eval()` function is a string. It will evaluate the source s
 
 In strict mode, declaring a variable named `eval` or re-assigning `eval` is a {{jsxref("SyntaxError")}}.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode

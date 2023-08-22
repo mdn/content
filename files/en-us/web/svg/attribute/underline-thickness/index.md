@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/underline-thickness
 page-type: svg-attribute
 ---
 
-« [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
+{{SVGRef}}
 
 The `underline-thickness` attribute represents the ideal thickness of the underline. The underline thickness is expressed in the font's coordinate system.
 

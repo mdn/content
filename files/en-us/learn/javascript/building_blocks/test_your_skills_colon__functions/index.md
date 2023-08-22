@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Functions"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Functions
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

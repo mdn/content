@@ -44,4 +44,4 @@ console.log(locale.script); // Prints "Latn"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [Unicode's script subtag specification](https://www.unicode.org/reports/tr35/#unicode_script_subtag_validity)
+- [Unicode script subtag](https://www.unicode.org/reports/tr35/#unicode_script_subtag_validity) in the Unicode locale data markup language spec

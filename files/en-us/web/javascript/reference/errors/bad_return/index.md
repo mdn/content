@@ -10,7 +10,7 @@ The JavaScript exception "return not in function" occurs when a [`return`](/en-U
 
 ## Message
 
-```
+```plain
 SyntaxError: Illegal return statement (V8-based)
 SyntaxError: return not in function (Firefox)
 SyntaxError: Return statements are only valid inside functions. (Safari)
@@ -28,7 +28,7 @@ A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement i
 
 ### Missing curly brackets
 
-```js example-bad
+```js-nolint example-bad
 function cheer(score) {
   if (score === 147)
     return "Maximum!";

@@ -17,7 +17,7 @@ The **`assign()`** method of the {{domxref("HTMLSlotElement")}} interface sets t
 ```js-nolint
 assign(node1)
 assign(node1, node2)
-assign(node1, node2, /* … ,*/ nodeN)
+assign(node1, node2, /* …, */ nodeN)
 ```
 
 ### Parameters

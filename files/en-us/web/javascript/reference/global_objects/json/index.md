@@ -32,7 +32,7 @@ The same text may represent different values in JavaScript object literals vs. J
 
 Valid JSON syntax is formally defined by the following grammar, expressed in [ABNF](https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form), and copied from [IETF JSON standard (RFC)](https://datatracker.ietf.org/doc/html/rfc8259):
 
-```
+```plain
 JSON-text = object / array
 begin-array     = ws %x5B ws  ; [ left square bracket
 begin-object    = ws %x7B ws  ; { left curly bracket
@@ -156,7 +156,7 @@ console.log(JSON.parse(jsonText));
 ## See also
 
 - {{jsxref("Date.prototype.toJSON()")}}
-- [JSON Diff](https://json-diff.com/) checker
+- [JSON Diff](https://json-diff.com/)
 - [JSON Beautifier/editor](https://jsonbeautifier.org/)
 - [JSON Parser](https://jsonparser.org/)
 - [JSON Validator](https://tools.learningcontainer.com/json-validator/)

@@ -38,7 +38,7 @@ Similarly to extensions, the limits of your system will be different than your c
 
 The minimum requirements for WebGL are quite low. In practice, effectively all systems support at least the following:
 
-```
+```plain
 MAX_CUBE_MAP_TEXTURE_SIZE: 4096
 MAX_RENDERBUFFER_SIZE: 4096
 MAX_TEXTURE_SIZE: 4096
@@ -288,7 +288,7 @@ If you have a float texture, iOS requires that you use `highp sampler2D foo;`, o
 
 The vertex language has the following predeclared globally scoped default precision statements:
 
-```
+```glsl
 precision highp float;
 precision highp int;
 precision lowp sampler2D;
@@ -297,7 +297,7 @@ precision lowp samplerCube;
 
 The fragment language has the following predeclared globally scoped default precision statements:
 
-```
+```glsl
 precision mediump int;
 precision lowp sampler2D;
 precision lowp samplerCube;
@@ -315,7 +315,7 @@ If `highp float` is available, `GL_FRAGMENT_PRECISION_HIGH` will be defined as `
 
 A good pattern for "always give me the highest precision":
 
-```
+```glsl
 #ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
@@ -432,7 +432,7 @@ Most texture uploads from DOM elements will incur a processing pass that will te
 
 In WebGL:
 
-```
+```glsl
     …
     useProgram(prog1)
 <pipeline flush>
@@ -446,7 +446,7 @@ In WebGL:
 
 Behind the scenes in the browser:
 
-```
+```glsl
     …
     useProgram(prog1)
 <pipeline flush>
@@ -471,7 +471,7 @@ Prefer doing uploads before starting drawing, or at least between pipelines:
 
 In WebGL:
 
-```
+```glsl
     …
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
@@ -486,7 +486,7 @@ In WebGL:
 
 Behind the scenes in the browser:
 
-```
+```glsl
     …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
@@ -548,7 +548,7 @@ async function getBufferSubDataAsync(
   srcByteOffset,
   dstBuffer,
   /* optional */ dstOffset,
-  /* optional */ length
+  /* optional */ length,
 ) {
   const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
   gl.flush();

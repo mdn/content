@@ -1,6 +1,7 @@
 ---
 title: Introduction to client-side frameworks
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

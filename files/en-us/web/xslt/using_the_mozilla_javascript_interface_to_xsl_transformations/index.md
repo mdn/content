@@ -1,7 +1,10 @@
 ---
 title: Using the Mozilla JavaScript interface to XSL Transformations
 slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
+page-type: guide
 ---
+
+{{XsltSidebar}}
 
 This document describes the JavaScript interface in Mozilla 1.2 and up to the XSLT Processing Engine (TransforMiiX).
 
@@ -62,7 +65,7 @@ You can also use {{domxref("XSLTProcessor.transformToFragment()")}} which will r
 const ownerDocument = document.implementation.createDocument("", "test", null);
 const newFragment = processor.transformToFragment(
   domToBeTransformed,
-  ownerDocument
+  ownerDocument,
 );
 ```
 
@@ -92,7 +95,7 @@ The following reflect the interface of the {{domxref("XSLTProcessor")}} object:
 ### See also
 
 - [The XSLT JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
-- [document.load()](/en-US/docs/Web/API/XMLDocument/load) regarding the loading of XML documents (as used above)
+- [document.load()](/en-US/docs/Web/API/XMLDocument) regarding the loading of XML documents (as used above)
 
 ### Original Document Information
 

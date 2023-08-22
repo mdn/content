@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.clear
 
 {{JSRef}}
 
-The **`clear()`** method removes all elements from a `Map` object.
+The **`clear()`** method of {{jsxref("Map")}} instances removes all elements from this map.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
 

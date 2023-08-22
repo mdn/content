@@ -1,6 +1,7 @@
 ---
 title: Autoplay guide for media and Web Audio APIs
 slug: Web/Media/Autoplay_guide
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -89,7 +90,7 @@ if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
 } else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
   // Mute audio on video
   video.muted = true;
-} else (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
+} else if (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
   // Set a default placeholder image.
   video.poster = "http://example.com/poster_image_url";
 }
@@ -104,7 +105,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
 } else if (navigator.getAutoplayPolicy(video) === "allowed-muted") {
   // Mute audio on video
   video.muted = true;
-} else (navigator.getAutoplayPolicy(video) === "disallowed") {
+} else if (navigator.getAutoplayPolicy(video) === "disallowed") {
   // Set a default placeholder image.
   video.poster = "http://example.com/poster_image_url";
 }
@@ -134,7 +135,7 @@ Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/en-US/docs/W
 
 ```js
 const video = document.getElementById("video");
-video.addEventListener("play", handleFirstPlay(event), false);
+video.addEventListener("play", handleFirstPlay, false);
 
 let hasPlayed = false;
 function handleFirstPlay(event) {
@@ -143,7 +144,7 @@ function handleFirstPlay(event) {
 
     // Remove listener so this only gets called once.
     const vid = event.target;
-    vid.removeEventListener("play", handleFirstPlay(event));
+    vid.removeEventListener("play", handleFirstPlay);
 
     // Start whatever you need to do after first playback has started
   }
