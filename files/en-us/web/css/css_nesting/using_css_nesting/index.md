@@ -339,7 +339,8 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
   border-radius: 0.5rem;
   & h2 {  /* equivalent to `.card h2` */
     color: slateblue;
-    .featured & {  /* equivalent to `.featured .card` */
+    .featured & {
+      /* equivalent to `.featured .card` */
       color: tomato;
     }
   }
