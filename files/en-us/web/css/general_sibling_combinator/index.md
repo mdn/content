@@ -19,7 +19,8 @@ img ~ p {
 
 ## Syntax
 
-```css
+```css-nolint
+/* The white space around the ~ combinator is optional but recommended. */
 former_element ~ target_element { style properties }
 ```
 
