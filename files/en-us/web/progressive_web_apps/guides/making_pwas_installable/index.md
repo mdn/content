@@ -114,7 +114,8 @@ On desktop:
 On mobile:
 
 - On Android, Firefox, Chrome, Edge, Opera, and Samsung Internet Browser all support installing PWAs.
-- On iOS 16.4 or later, PWAs can be installed from the Share menu in several major browsers, including Safari and recent versions of Chrome, Edge, Firefox, and Orion. PWAs with manifest files that set the `display` member to `fullscreen` or `standalone` will open as full screen web apps. Other websites will open in the user's default browser. Prior to iOS 16.4, only Safari was allowed to install and launch PWAs.
+- On iOS 16.3 and earlier, PWAs can only be installed with Safari.
+- On iOS 16.4 and later, PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion.
 
 ### Triggering the install prompt
 
