@@ -373,11 +373,11 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
 
 {{EmbedLiveSample('Appending_nesting_selector','100%','250')}}
 
-## Concatenation
+## Concatenation (is not possible)
 
 In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](http://getbem.com/naming/).
 
-```css
+```css example-bad
 .component {
   &__child-element {
   }
@@ -387,7 +387,7 @@ In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to u
 }
 ```
 
-This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
+> **Warning:** This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
 
 In [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type selector must come first. Writing `&Element` (a [type selector](/en-US/docs/Web/CSS/Type_selectors)) makes the CSS selector, and the entire selector block, invalid. As the type selector must come first, the compound selector must be written as `Element&`.
 
