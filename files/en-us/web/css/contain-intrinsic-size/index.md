@@ -46,9 +46,7 @@ contain-intrinsic-size: unset;
 
 ### Values
 
-Either one or two of the following values may be specified for an element.
-If two values are specified, the first value applies to the width, and the second to the height.
-If a single value is specified, it applies to both width and height.
+The following values may be specified for the `contain-intrinsic-size` property:
 
 - `none`
   - : The element has no intrinsic size in the given dimension(s).
@@ -57,6 +55,11 @@ If a single value is specified, it applies to both width and height.
 - `auto [<length> | none]`
   - : A remembered value of the "normally rendered" element size if one exists and the element is skipping its contents (for example, when it is offscreen); otherwise the specified `<length>`.
     The `none` keyword may be used in place of `<length>` where `0px` fixed lengths behave differently than `none` (such as in multi column, or grid layouts).
+
+If one value is provided as a keyword, a length or an `auto [<length> | none]` pair, it applies to both width and height.
+
+Two length values may be specified, which apply to the width and height in that order.
+If two `auto [<length> | none]` pairs are specified, the first pair applies to the width, and the second to the height.
 
 ## Description
 
@@ -70,7 +73,7 @@ The `auto <length>` value allows the size of the element to be stored if the ele
 This allows offscreen elements with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) to benefit from size containment without developers having to be as precise in their estimates of element size.
 The remembered value is not used if the child elements are being rendered (if size containment is enabled, the `<length>` will be used).
 
-In grid and multi column layouts, an explicit height is treated as a stronger command than an implicit content-based height.
+In grid and multi column layouts, an explicit size is treated differently than implicit content-based height.
 Elements might lay out substantially differently than it would have were it simply filled with content up to that height.
 The `auto none` value allows the element to fallback to `contain-intrinsic-size: none` if no remembered value exists, which will allow the element to be laid out as though it had no contents instead of 0px height.
 
@@ -100,13 +103,12 @@ The benefit is that the browser does not need to repeatedly render the element c
 
 ```html hidden
 <p id="auto-none-note">
-  Your browser does not support "<code>contain-intrinsic-size: auto none</code
-  >".
+  Your browser does not support
+  <code>contain-intrinsic-size: auto none</code>.
 </p>
 <p id="auto-length-note">
-  Your browser does not support "<code
-    >contain-intrinsic-size: auto &lt;length&gt;</code
-  >".
+  Your browser does not support
+  <code>contain-intrinsic-size: auto &lt;length&gt;</code>.
 </p>
 ```
 
@@ -142,6 +144,12 @@ p {
   margin-bottom: 1rem;
   font-size: 2rem;
   font-family: sans-serif;
+}
+
+code {
+  background-color: lightgray;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
 }
 
 #container {
