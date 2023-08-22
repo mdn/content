@@ -82,7 +82,7 @@ label {
 ```css
 input {
   /* styles for input not in a label  */
-  border-color: tomato;
+  border: tomato 2px solid;
 }
 label {
   /* styles for label */
