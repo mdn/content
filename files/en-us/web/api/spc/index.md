@@ -191,5 +191,6 @@ Familiarity with these underlying specifications is valuable to understanding SP
 - [Chrome developer documentation for SPC](https://developer.chrome.com/articles/secure-payment-confirmation/)
 
 ### EMVCo Specifications that Support SPC
+
 - [EMV® 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/) (version 2.3)
 - [EMV® Secure Remote Commerce](https://www.emvco.com/emv-technologies/secure-remote-commerce/) (version 1.3)
