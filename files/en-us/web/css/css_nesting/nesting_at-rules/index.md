@@ -102,7 +102,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
 
 #### Defining the parent & child layers
 
-Named cascade layers are defined prior to the named layers being used.
+We start by defining the named cascade layers, prior to using them, without any style assignments.
 
 ```css
 @layer base {
