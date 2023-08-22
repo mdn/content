@@ -47,7 +47,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of pri
 The `@page` at-rule can contain only [page descriptors](#page-descriptors) and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
 
 - [`margin`](/en-US/docs/Web/CSS/margin)
-  - : Specifies the page margins. Individual margin properties `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` can also be used.
+  - : Specifies the page margins. Individual margin properties [`margin-top`](/en-US/docs/Web/CSS/margin-top), [`margin-right`](/en-US/docs/Web/CSS/margin-right), [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom), and [`margin-left`](/en-US/docs/Web/CSS/margin-left) can also be used.
 - [`page-orientation`](/en-US/docs/Web/CSS/@page/page-orientation)
   - : Specifies the orientation of the page. This does not affect the layout of the page; the rotation is applied after the layout in the output medium.
 - [`size`](/en-US/docs/Web/CSS/@page/size)
@@ -160,7 +160,7 @@ and `<pseudo-selector>` represents these pseudo-classes:
 
 ## Margin at-rules
 
-> **Warning:** The margin at-rules have not been implemented by any user agent <small>(updated: August 2023)</small>.
+> **Warning:** The margin at-rules have not been implemented by any user agent (updated: August 2023).
 
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page, styling the area of the printed page based on the property values set in the style block:
 
@@ -176,55 +176,23 @@ The margin at-rules are used inside of the `@page` at-rule. They each target a d
 
 Other margin-at rules include:
 
-```plain
-@top-left-corner {
-  <page-margin-properties>
-}
-@top-left {
-  <page-margin-properties>
-}
-@top-center {
-  <page-margin-properties>
-}
-@top-right {
-  <page-margin-properties>
-}
-@top-right-corner {
-  <page-margin-properties>
-}
-@bottom-left-corner {
-  <page-margin-properties>
-}
-@bottom-left {
-  <page-margin-properties>
-}
-@bottom-center {
-  <page-margin-properties>
-}
-@bottom-right {
-  <page-margin-properties>
-}
-@bottom-right-corner {
-  <page-margin-properties>
-}
-@left-top {
-  <page-margin-properties>
-}
-@left-middle {
-  <page-margin-properties>
-}
-@left-bottom {
-  <page-margin-properties>
-}
-@right-top {
-  <page-margin-properties>
-}
-@right-middle {
-  <page-margin-properties>
-}
-@right-bottom {
-  <page-margin-properties>
-}
+```css-nolint
+@top-left-corner
+@top-left
+@top-center
+@top-right
+@top-right-corner
+@bottom-left-corner
+@bottom-left
+@bottom-center
+@bottom-right
+@bottom-right-corner
+@left-top
+@left-middle
+@left-bottom
+@right-top
+@right-middle
+@right-bottom
 ```
 
 #### Page-margin properties
