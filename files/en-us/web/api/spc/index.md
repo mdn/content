@@ -1,6 +1,6 @@
 ---
 title: Secure Payment Confirmation
-slug: Web/API/spc
+slug: Web/API/SPC
 page-type: web-api-overview
 status:
   - experimental
@@ -23,11 +23,11 @@ Thus, SPC builds on Web Authentication to enable Websites to perform streamlined
 
 ## Interfaces
 
-### Payment Request Method
+### Payment request method
 
 Secure Payment Confirmation leverages underlying capabilities of the Payment Request API. The standardized payment method identifier for the Secure Payment Confirmation payment handler is "secure-payment-confirmation."
 
-### Web Authentication Extension
+### Web authentication extension
 
 Secure Payment Confirmation defines a Web Authentication extension, `payment`, which adds three payments-specific capabilities on top of traditional Web Authentication:
 
@@ -35,16 +35,15 @@ Secure Payment Confirmation defines a Web Authentication extension, `payment`, w
 2. Enforces that the User Agent appropriately communicates to the user that they are authenticating a transaction and the transaction details. Those details are then included in the assertion signed by the authenticator.
 3. Allows calling `navigator.credentials.create` in a cross-origin iframe, as long as a "payment" permission policy is set on the iframe.
 
-> **NOTE**: This ability is now part of WebAuthn Level 3, where it uses the "publickey-credential-create" permission policy instead. Developers are encouraged to use that where available, instead of relying on SPC's "payment" permission.
+> **Note**: This ability is now part of WebAuthn Level 3, where it uses the "publickey-credential-create" permission policy instead. Developers are encouraged to use that where available, instead of relying on SPC's "payment" permission.
 
 ## Examples
 
-### Creating a Credential
+### Creating a credential
 
-Creating a credential in Secure Payment Confirmation is done by the same `navigator.credentials.create` call as with Web Authentication, but with a `payment`
-extension specified.
+Creating a credential in Secure Payment Confirmation is done by the same `navigator.credentials.create` call as with Web Authentication, but with a `payment` extension specified.
 
-```javascript
+```js
 const publicKey = {
   challenge: Uint8Array.from(randomStringFromServer, (c) => c.charCodeAt(0)),
 
@@ -94,13 +93,11 @@ navigator.credentials
   });
 ```
 
-### Creating a Credential in a Cross-Origin Iframe
+### Creating a credential in a cross-origin iframe
 
 SPC allows a credential to be created in a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `bank.com`). This is intended to support the following flow:
 
-As part of a transaction, the Relying Party (e.g., a bank) authenticates the account holder through some mechanism other than SPC (e.g., by using a one-time passcode or some other mechanism).
-The Relying Party then offers the user the option of registering an SPC credential to streamline future transactions.
-The user registers an SPC credential with the Relying Party.
+As part of a transaction, the Relying Party (e.g., a bank) authenticates the account holder through some mechanism other than SPC (e.g., by using a one-time passcode or some other mechanism). The Relying Party then offers the user the option of registering an SPC credential to streamline future transactions. The user registers an SPC credential with the Relying Party.
 
 In order for these steps to happen in the merchant context (that is, without a redirect), the cross-origin iframe must have the 'payment' permission policy set. For example:
 
@@ -110,14 +107,13 @@ In order for these steps to happen in the merchant context (that is, without a r
 <iframe src="https://example.org" allow="payment"></iframe>
 ```
 
-### Authenticating a Payment
+### Authenticating a payment
 
-An origin may invoke the Payment Request API with the `secure-payment-confirmation` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface with transaction details (e.g., the
-payment currency and amount and the payee origin).
+An origin may invoke the Payment Request API with the `secure-payment-confirmation` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface with transaction details (e.g., the payment currency and amount and the payee origin).
 
-> **NOTE**: Per the Payment Request API, if `PaymentRequest` is used within a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `psp.com`, and `psp.com` wishes to use `PaymentRequest`), that iframe must have the 'payment' permission policy set.
+> **Note**: Per the Payment Request API, if `PaymentRequest` is used within a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `psp.com`, and `psp.com` wishes to use `PaymentRequest`), that iframe must have the 'payment' permission policy set.
 
-```javascript
+```js
 const request = new PaymentRequest([{
   supportedMethods: "secure-payment-confirmation",
   data: {
@@ -125,8 +121,7 @@ const request = new PaymentRequest([{
     credentialIds,
 
     // The challenge is also obtained from the Account Provider.
-    challenge: new Uint8Array(
-        randomStringFromServer, c => c.charCodeAt(0)),
+    challenge: new Uint8Array(randomStringFromServer, c => c.charCodeAt(0)),
 
     instrument: {
       displayName: "Fancy Card ****1234",
@@ -136,7 +131,7 @@ const request = new PaymentRequest([{
     payeeOrigin: "https://merchant.com",
 
     timeout: 60000,  // 1 minute
-  }], {
+  }}], {
     total: {
       label: "Total",
       amount: {
@@ -159,39 +154,29 @@ try {
   // response.details is a PublicKeyCredential, with a clientDataJSON that
   // contains the transaction data for verification by the issuing bank.
 
-  /* send response.details to the issuing bank for verification */
+  // send response.details to the issuing bank for verification
 } catch (err) {
-  /* SPC cannot be used; merchant should fallback to traditional flows */
+  // SPC cannot be used; merchant should fallback to traditional flows
 }
 ```
 
 ## Specifications
 
-- [Secure Payment Confirmation](https://www.w3.org/TR/secure-payment-confirmation/)
+{{Specifications}}
 
-## Browser Compatibility
+## Browser compatibility
 
-- See [pull request 20583](https://github.com/mdn/browser-compat-data/pull/20583)
+{{Compat}}
 
 ## See also
-
-### Underlying specifications
-
-Familiarity with these underlying specifications is valuable to understanding SPC:
 
 - [Payment Request API](https://www.w3.org/TR/payment-request/)
 - [Payment Method Identifiers](https://www.w3.org/TR/payment-method-id/)
 - [Web Authentication](https://www.w3.org/TR/webauthn-2/)
-
-### SPC Resources
-
 - [Secure Payment Confirmation Explainer](https://github.com/w3c/secure-payment-confirmation/blob/main/explainer.md)
 - [Secure Payment Confirmation Scope](https://github.com/w3c/secure-payment-confirmation/blob/main/scope.md)
 - General [flow diagram for SPC during a payment](https://github.com/w3c/wpsig/blob/gh-pages/spc-general.png)
 - [Secure Payment Confirmation Test Suite](https://wpt.fyi/results/secure-payment-confirmation?label=master&label=experimental&aligned)
 - [Chrome developer documentation for SPC](https://developer.chrome.com/articles/secure-payment-confirmation/)
-
-### EMVCo Specifications that Support SPC
-
-- [EMV® 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/) (version 2.3)
-- [EMV® Secure Remote Commerce](https://www.emvco.com/emv-technologies/secure-remote-commerce/) (version 1.3)
+- [EMV® 3-D Secure (version 2.3)](https://www.emvco.com/emv-technologies/3-d-secure/)
+- [EMV® Secure Remote Commerce (version 1.3)](https://www.emvco.com/emv-technologies/secure-remote-commerce/)
