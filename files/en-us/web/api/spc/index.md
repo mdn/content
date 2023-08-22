@@ -75,7 +75,7 @@ const publicKey = {
     authenticatorAttachment: "platform",
   },
 
-  timeout: 60000,  // 1 minute
+  timeout: 60000, // 1 minute
 
   extensions: {
     payment: {
