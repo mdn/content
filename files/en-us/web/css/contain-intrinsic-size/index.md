@@ -101,19 +101,14 @@ The benefit is that the browser does not need to repeatedly render the element c
 
 #### HTML
 
-```html hidden
-<p id="auto-none-note">
-  Your browser does not support
-  <code>contain-intrinsic-size: auto none</code>.
-</p>
-<p id="auto-length-note">
-  Your browser does not support
-  <code>contain-intrinsic-size: auto &lt;length&gt;</code>.
-</p>
-```
-
 ```html
 <div id="container">
+  <div id="auto-length-note">
+    <p>
+      Your browser does not support
+      <code>contain-intrinsic-size: auto &lt;length&gt;</code>.
+    </p>
+  </div>
   <div class="auto-length">
     <p>Item one</p>
   </div>
@@ -125,6 +120,12 @@ The benefit is that the browser does not need to repeatedly render the element c
   </div>
   <div class="auto-length large-intrinsic-size">
     <p class="small">Item four</p>
+  </div>
+  <div id="auto-none-note">
+    <p>
+      Your browser does not support
+      <code>contain-intrinsic-size: auto none</code>.
+    </p>
   </div>
   <div class="auto-length none">
     <p>Item five</p>
@@ -153,22 +154,28 @@ code {
 }
 
 #container {
-  padding: 1rem;
   width: 90%;
   height: 80%;
 }
 
-.auto-length {
+.auto-length,
+.auto-length.none {
   display: none;
 }
 
 #auto-length-note,
 #auto-none-note {
-  margin-bottom: 0;
   display: block;
-  width: 90%;
+  padding: 0;
+}
+
+#auto-length-note p,
+#auto-none-note p {
+  padding: 0.5rem;
+  width: 100%;
   height: max-content;
   font-size: 1rem;
+  line-height: 1.5rem;
   background-color: tomato;
 }
 
