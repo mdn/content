@@ -1,7 +1,7 @@
 ---
-title: CSS first steps overview
-slug: Learn/CSS/First_steps
-page-type: learn-module
+title: CSS first steps overview -- TEST
+slug: Learn/CSS/First_steps -- TEST
+page-type: learn-module -- TEST
 ---
 
 {{LearnSidebar}}
