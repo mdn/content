@@ -266,7 +266,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
       content: "! ";
     }
   }
-  &.success { /* equivalent to `.notice.success` */
+  &.success {
+    /* equivalent to `.notice.success` */
     background-color: #004d40;
     border-color: #004d40;
     color: white;
