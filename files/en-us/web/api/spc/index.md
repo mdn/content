@@ -53,7 +53,7 @@ const publicKey = {
   },
 
   user: {
-    id: Uint8Array.from(userId, c => c.charCodeAt(0)),
+    id: Uint8Array.from(userId, (c) => c.charCodeAt(0)),
     name: "jane.doe@example.org",
     displayName: "Jane Doe",
   },
