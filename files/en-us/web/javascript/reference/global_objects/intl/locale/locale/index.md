@@ -41,7 +41,7 @@ new Intl.Locale(tag, options)
     - `caseFirst`
       - : The case-first sort option. Possible values are `"upper"`, `"lower"`, or `"false"`.
     - `hourCycle`
-      - : The hour cycle. Possible values are `"h11"`, `"h12"`, `"h23"`, or `"h24"`.
+      - : The hour cycle. Possible values are `"h11"` (Japanese 12-hour clock), `"h12"` (12-hour clock elsewhere), `"h23"` (24-hour clock), or `"h24"` (not used anywhere).
     - `numeric`
       - : The numeric sort option. A boolean.
 
