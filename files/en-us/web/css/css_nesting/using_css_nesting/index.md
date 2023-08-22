@@ -255,7 +255,7 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  h2:before {
+  h2:before { /* same as `.notice h2:before` */
     content: "ℹ︎ ";
   }
   &.warning {
