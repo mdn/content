@@ -2,7 +2,7 @@
 title: Secure Payment Confirmation
 slug: Web/API/spc
 page-type: web-api-overview
-status: 
+status:
   - experimental
 ---
 {{SeeCompatTable}} 
