@@ -422,8 +422,8 @@ In the second table the _of syntax_ is used to target only the `tr`s that are **
 
 ## See also
 
-- {{ Cssxref(":nth-of-type") }}
-- {{ Cssxref(":nth-last-child") }}
-- {{ Cssxre(":has()") }}: pseudo-class for selecting parent element
-- [Tree structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":has", ":has()") }}: pseudo-class for selecting parent element
+- [Tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
