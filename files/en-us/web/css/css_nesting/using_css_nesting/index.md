@@ -337,7 +337,8 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
-  & h2 {  /* equivalent to `.card h2` */
+  & h2 {
+    /* equivalent to `.card h2` */
     color: slateblue;
     .featured & {
       /* equivalent to `.featured .card` */
