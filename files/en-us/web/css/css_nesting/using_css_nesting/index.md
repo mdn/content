@@ -244,7 +244,7 @@ Styles for the `.notices` to create a column using {{cssxref('CSS_flexible_box_l
 }
 ```
 
-Styles using nesting to create compound selectors. The top level selector creates the basic styles for an element with `class="notice"`, the the `&` nesting selector is used to create a compound selector for elements with either `class="notice warning"` or `class="notice success"`.
+This CSS uses nesting to create compound selectors. The top-level selector defines the basic styles for an element with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`.
 
 ```css
 .notice {
