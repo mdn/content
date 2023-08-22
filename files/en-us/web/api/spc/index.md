@@ -61,12 +61,12 @@ const publicKey = {
   pubKeyCredParams: [
     {
       type: "public-key",
-      alg: -7 // "ES256"
+      alg: -7, // "ES256"
     },
     {
       type: "public-key",
-      alg: -257 // "RS256"
-    }
+      alg: -257, // "RS256"
+    },
   ],
 
   authenticatorSelection: {
@@ -84,30 +84,32 @@ const publicKey = {
   },
 };
 
-navigator.credentials.create({ publicKey })
+navigator.credentials
+  .create({ publicKey })
   .then(function (newCredentialInfo) {
     // Send new credential info to server for verification and registration.
-  }).catch(function (err) {
+  })
+  .catch(function (err) {
     // No acceptable authenticator or user refused consent. Handle appropriately.
   });
 ```
-
 
 ### Creating a Credential in a Cross-Origin Iframe
 
 SPC allows a credential to be created in a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `bank.com`). This is intended to support the following flow:
 
 As part of a transaction, the Relying Party (e.g., a bank) authenticates the account holder through some mechanism other than SPC (e.g., by using a one-time passcode or some other mechanism).
-The Relying Party then offers the user the option of registering an SPC credential to streamline future transactions. 
+The Relying Party then offers the user the option of registering an SPC credential to streamline future transactions.
 The user registers an SPC credential with the Relying Party.
 
-In order for these steps to happen in the merchant context (that is, without a redirect),  the cross-origin iframe must have the ‘payment' permission policy set. For example:
+In order for these steps to happen in the merchant context (that is, without a redirect), the cross-origin iframe must have the 'payment' permission policy set. For example:
 
 ```html
 <!-- Assume parent origin is merchant.com -->
 <!-- Inside this cross-origin iframe, script would be allowed to create a SPC credential for example.org -->
-<iframe src="https://example.org" allow="payment">
+<iframe src="https://example.org" allow="payment"></iframe>
 ```
+
 
 ### Authenticating a Payment
 
@@ -165,6 +167,7 @@ try {
 }
 ```
 
+
 ## Specifications
 
 - [Secure Payment Confirmation](https://www.w3.org/TR/secure-payment-confirmation/)
@@ -192,6 +195,7 @@ Familiarity with these underlying specifications is valuable to understanding SP
 - [Chrome developer documentation for SPC](https://developer.chrome.com/articles/secure-payment-confirmation/)
 
 ### EMVCo Specifications that Support SPC
+
 
 - [EMV® 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/) (version 2.3)
 - [EMV® Secure Remote Commerce](https://www.emvco.com/emv-technologies/secure-remote-commerce/) (version 1.3)
