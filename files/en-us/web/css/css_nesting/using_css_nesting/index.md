@@ -259,7 +259,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     /* same as `.notice h2:before` */
     content: "ℹ︎ ";
   }
-  &.warning { /* equivalent to `.notice.warning` */
+  &.warning {
+    /* equivalent to `.notice.warning` */
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
