@@ -193,7 +193,7 @@ formElem.addEventListener("formdata", (e) => {
 
 ## Submitting forms and uploading files via AJAX without `FormData` objects
 
-If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/Web/Guide/AJAX) _without_ using FormData objects, please read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
+If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/Web/Guide/AJAX) _without_ using FormData objects, please read [this paragraph](https://github.com/mdn/content/blob/92435b5f26c680a2314d392ef06f479216f0b4dd/files/en-us/web/api/xmlhttprequest/using_xmlhttprequest/index.md#submitting-forms-and-uploading-files).
 
 ## Gotchas
 

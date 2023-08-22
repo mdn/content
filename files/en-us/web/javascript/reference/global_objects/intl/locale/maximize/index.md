@@ -74,4 +74,4 @@ console.log(myLocMaximized.toString());
 
 - {{jsxref("Intl.Locale")}}
 - {{jsxref("Intl/Locale/baseName", "baseName")}}
-- [Unicode's Likely Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)
+- [Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) in the Unicode locale data markup language spec
