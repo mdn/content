@@ -1,6 +1,6 @@
 ---
 title: Secure Payment Confirmation
-slug: Web/API/SecurePaymentConfirmation
+slug: Web/API/spc
 page-type: web-api-overview
 status: 
   - experimental
