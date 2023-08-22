@@ -51,4 +51,4 @@ The `.foo` class selector has a specificity of `0-1-0`. This makes the total spe
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [Nesting `@` at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [Nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
