@@ -90,7 +90,7 @@ label {
   font-size: 1.25rem;
   input {
     /* styles for input in a label  */
-    border-color: blue;
+    border: blue 2px dashed;
   }
 }
 ```
