@@ -5,7 +5,8 @@ page-type: web-api-overview
 status:
   - experimental
 ---
-{{SeeCompatTable}} 
+
+{{SeeCompatTable}}
 {{SecureContext_Header}}
 
 To protect against online payment fraud it is common to authenticate the account holder. Strong authentication lowers the risk of fraud, but increases the likelihood that friction during checkout will lead to shopping cart abandonment. Banks, merchants, payment services providers, and other entities in a payments ecosystem therefore consider a number of factors when deciding what type and strength of authentication to use for each transaction, including the amount, the items being purchased, the user's payment history, which party bears liability in the case of fraud, and regulatory requirements (such as [European Payment Services Directive 2](https://en.wikipedia.org/wiki/Payment_Services_Directive#Revised_Directive_on_Payment_Services_(PSD2)) requirements for strong customer authentication and evidence of user consent). 
