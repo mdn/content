@@ -110,7 +110,6 @@ In order for these steps to happen in the merchant context (that is, without a r
 <iframe src="https://example.org" allow="payment"></iframe>
 ```
 
-
 ### Authenticating a Payment
 
 An origin may invoke the Payment Request API with the `secure-payment-confirmation` payment method to prompt the user to verify a Secure Payment Confirmation credential created by any other origin. The browser will display a native user interface with transaction details (e.g., the
@@ -166,7 +165,6 @@ try {
 }
 ```
 
-
 ## Specifications
 
 - [Secure Payment Confirmation](https://www.w3.org/TR/secure-payment-confirmation/)
@@ -194,7 +192,6 @@ Familiarity with these underlying specifications is valuable to understanding SP
 - [Chrome developer documentation for SPC](https://developer.chrome.com/articles/secure-payment-confirmation/)
 
 ### EMVCo Specifications that Support SPC
-
 
 - [EMV® 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/) (version 2.3)
 - [EMV® Secure Remote Commerce](https://www.emvco.com/emv-technologies/secure-remote-commerce/) (version 1.3)
