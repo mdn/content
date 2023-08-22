@@ -366,7 +366,7 @@ In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to u
 
 This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
 
-For [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) using `&Element` (a [type selector](/en-US/docs/Web/CSS/Type_selectors)) would make the CSS invalid. The type selector must come first in a compound selector, so it must be written as `Element&`.
+In [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type selector must come first. Writing `&Element` (a [type selector](/en-US/docs/Web/CSS/Type_selectors)) makes the CSS selector, and the entire selector block, invalid. As the type selector must come first, the compound selector must be written as `Element&`.
 
 ```css example-good
 .my-class {
