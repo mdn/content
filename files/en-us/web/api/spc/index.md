@@ -166,28 +166,29 @@ try {
 
 ## Specifications
 
- * [Secure Payment Confirmation](https://www.w3.org/TR/secure-payment-confirmation/)
+- [Secure Payment Confirmation](https://www.w3.org/TR/secure-payment-confirmation/)
  
 ## Browser Compatibility
 
-* See [pull request 20583](https://github.com/mdn/browser-compat-data/pull/20583)
+- See [pull request 20583](https://github.com/mdn/browser-compat-data/pull/20583)
 
 ## See also
 
 ### Underlying specifications
 
 Familiarity with these underlying specifications is valuable to understanding SPC:
-* [Payment Request API](https://www.w3.org/TR/payment-request/)
-* [Payment Method Identifiers](https://www.w3.org/TR/payment-method-id/)
-* [Web Authentication](https://www.w3.org/TR/webauthn-2/)
+
+- [Payment Request API](https://www.w3.org/TR/payment-request/)
+- [Payment Method Identifiers](https://www.w3.org/TR/payment-method-id/)
+- [Web Authentication](https://www.w3.org/TR/webauthn-2/)
 
 ### SPC Resources
 
-* [Secure Payment Confirmation Explainer](https://github.com/w3c/secure-payment-confirmation/blob/main/explainer.md)
-* [Secure Payment Confirmation Scope](https://github.com/w3c/secure-payment-confirmation/blob/main/scope.md)
-* General [flow diagram for SPC during a payment](https://github.com/w3c/wpsig/blob/gh-pages/spc-general.png)
-* [Secure Payment Confirmation Test Suite](https://wpt.fyi/results/secure-payment-confirmation?label=master&label=experimental&aligned)
-* [Chrome developer documentation for SPC](https://developer.chrome.com/articles/secure-payment-confirmation/)
+- [Secure Payment Confirmation Explainer](https://github.com/w3c/secure-payment-confirmation/blob/main/explainer.md)
+- [Secure Payment Confirmation Scope](https://github.com/w3c/secure-payment-confirmation/blob/main/scope.md)
+- General [flow diagram for SPC during a payment](https://github.com/w3c/wpsig/blob/gh-pages/spc-general.png)
+- [Secure Payment Confirmation Test Suite](https://wpt.fyi/results/secure-payment-confirmation?label=master&label=experimental&aligned)
+- [Chrome developer documentation for SPC](https://developer.chrome.com/articles/secure-payment-confirmation/)
 EMVCo Specifications that Support SPC
-* [EMV® 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/) (version 2.3)
-* [EMV® Secure Remote Commerce](https://www.emvco.com/emv-technologies/secure-remote-commerce/) (version 1.3)
+- [EMV® 3-D Secure](https://www.emvco.com/emv-technologies/3-d-secure/) (version 2.3)
+- [EMV® Secure Remote Commerce](https://www.emvco.com/emv-technologies/secure-remote-commerce/) (version 1.3)
