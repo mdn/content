@@ -21,15 +21,13 @@ reduce(callbackFn, initialValue)
 - `callbackFn`
   - : A function to execute for each element produced by the iterator. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the first element.
+      - : The value resulting from the previous call to `callbackFn`. On the first call, its value is `initialValue` if the latter is specified; otherwise its value is the first element of the iterator.
     - `currentValue`
-      - : The value of the current element. On first call, the first element if an `initialValue` was specified, otherwise the second element.
+      - : The value of the current element. On the first call, its value is the first element of the iterator if `initialValue` is specified; otherwise its value is the second element.
     - `currentIndex`
-      - : The index position of `currentValue`. On first call, `0` if `initialValue` was specified, otherwise `1`.
+      - : The index position of `currentValue`. On the first call, its value is `0` if `initialValue` is specified, otherwise `1`.
 - `initialValue` {{optional_inline}}
-  - : A value to which `accumulator` is initialized the first time the callback is called.
-    If `initialValue` is specified, `callbackFn` starts executing with the first element as `currentValue`.
-    If `initialValue` is _not_ specified, `accumulator` is initialized to the first element, and `callbackFn` starts executing with the second element as `currentValue`. In this case, if the iterator is empty (so that there's no first value to return as `accumulator`), an error is thrown.
+  - : A value to which `accumulator` is initialized the first time the callback is called. If `initialValue` is specified, `callbackFn` starts executing with the first element as `currentValue`. If `initialValue` is _not_ specified, `accumulator` is initialized to the first element, and `callbackFn` starts executing with the second element as `currentValue`. In this case, if the iterator is empty (so that there's no first value to return as `accumulator`), an error is thrown.
 
 ### Return value
 
