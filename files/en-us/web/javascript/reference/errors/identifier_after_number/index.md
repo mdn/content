@@ -57,4 +57,4 @@ const foo = life1;
 ## See also
 
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Grammar and types § Variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)

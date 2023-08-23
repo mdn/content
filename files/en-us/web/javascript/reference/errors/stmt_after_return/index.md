@@ -81,4 +81,4 @@ function g() {
 
 ## See also
 
-- [`return` § Automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Statements/return#automatic_semicolon_insertion)
+- [Automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
