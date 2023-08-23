@@ -10,15 +10,18 @@ An _array_ is an ordered collection of data (either {{Glossary("primitive")}} or
 
 Each item in an array has a number attached to it, called a numeric index, that allows you to access it. In JavaScript, arrays start at index zero and can be manipulated with various {{Glossary("Method", "methods")}}.
 
-What an array in JavaScript looks like:
+Array in JavaScript look like this:
 
 ```js
+//Arrays in JavaScript can hold different types of data
 let myArray = [1, 2, 3, 4];
 let catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
-//Arrays in JavaScript can hold different types of data, as shown above.
+
+// Array indexes starts at 0.
+console.log(myArray[0]); // output: 1
+console.log(catNamesArray[2]); // output: Autumn
 ```
 
 ## See also
 
-- [Array](https://en.wikipedia.org/wiki/Array_data_structure) on Wikipedia
 - JavaScript {{jsxref("Array")}} on MDN
