@@ -47,7 +47,7 @@ new Intl.DurationFormat("en").format(duration);
 //  "1 yr, 2 mths, 3 wks, 3 days, 4 hr, 5 min, 6 sec, 7 ms, 8 μs, 9 ns"
 ```
 
-### Using format() with different locales and styles
+### Using format with different locales and styles
 
 ```js
 const duration = {
@@ -77,7 +77,7 @@ new Intl.DurationFormat("en", { style: "digital" }).format(duration);
 // "1 hour, 46:40"
 ```
 
-### Using the fractionalDigits option
+### Using format with the fractionalDigits option
 
 ```js
 const duration = {
