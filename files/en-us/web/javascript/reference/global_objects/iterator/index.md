@@ -141,7 +141,7 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 ## Instance methods
 
 - {{jsxref("Iterator.prototype.drop()")}}
-  - : Returns a new iterator helper that skips the first few elements of the iteration.
+  - : Returns a new iterator helper that skips the given number of elements at the start of this iterator.
 - {{jsxref("Iterator.prototype.every()")}}
   - : Tests whether all elements produced by the iterator pass the test implemented by the provided function.
 - {{jsxref("Iterator.prototype.filter()")}}
@@ -149,7 +149,7 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 - {{jsxref("Iterator.prototype.find()")}}
   - : Returns the first element produced by the iterator that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 - {{jsxref("Iterator.prototype.flatMap()")}}
-  - : Returns a new iterator helper that takes each element in the original iterator, runs it through a mapping function, and yields elements yielded by the result of the mapping function (which should be another iterator or iterable).
+  - : Returns a new iterator helper that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 - {{jsxref("Iterator.prototype.forEach()")}}
   - : Executes a provided function once for each element produced by the iterator.
 - {{jsxref("Iterator.prototype.map()")}}
@@ -157,11 +157,11 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 - {{jsxref("Iterator.prototype.reduce()")}}
   - : Executes a user-supplied "reducer" callback function on each element produced by the iterator, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements is a single value.
 - {{jsxref("Iterator.prototype.some()")}}
-  - : Tests whether at least one element in the array passes the test implemented by the provided function. It returns a boolean value.
+  - : Tests whether at least one element in the iterator passes the test implemented by the provided function. It returns a boolean value.
 - {{jsxref("Iterator.prototype.take()")}}
-  - : Returns a new iterator helper that yields the first few elements of the iteration and then terminates.
+  - : Returns a new iterator helper that yields the given number of elements in this iterator and then terminates.
 - {{jsxref("Iterator.prototype.toArray()")}}
-  - : Creates a new {{jsxref("Array")}} instance populated with the elements from the iterator.
+  - : Creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
 - [`Iterator.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator)
   - : Returns the iterator object itself. This allows iterator objects to also be iterable.
 
