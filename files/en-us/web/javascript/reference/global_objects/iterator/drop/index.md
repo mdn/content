@@ -106,9 +106,9 @@ for (const n of fibonacci().take(5).drop(2)) {
 // 5
 ```
 
-### Drop count
+### Lower and upper bounds of drop count
 
-When the `limit` is {{jsxref("NaN")}} or negative, a {{jsxref("RangeError")}} is thrown:
+When the `limit` is negative or {{jsxref("NaN")}}, a {{jsxref("RangeError")}} is thrown:
 
 ```js
 fibonacci().drop(-1); // RangeError: -1 must be positive
