@@ -193,7 +193,7 @@ The CSS that adjusts the directionality of the content looks like this:
 
 ### Using writing-mode with transforms
 
-If your browser doesn't support `sideways-lr`, a workaround is to use `transform` to achieve a similar effect depending on the script direction.
+If your browser doesn't support `sideways-lr`, a workaround is to use {{cssxref("transform")}} to achieve a similar effect depending on the script direction.
 The effect of `vertical-rl` is the same as with `sideways-lr`, so no transformation is required for left-to-right scripts.
 In some cases, rotating the text 180 degrees is sufficient to achieve the effect of `sideways-lr`, but font glyphs may not be designed to be rotated, so this may produce unexpected positioning or rendering.
 
