@@ -30,7 +30,7 @@ A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iter
 
 ## Description
 
-The best advantage of iterator helpers over array methods is their ability to work with infinite iterators. With infinite iterators, `map()` allows you to create a new iterator that, when iterated, produces transformed elements.
+The main advantage of iterator helpers over array methods is their ability to work with infinite iterators. With infinite iterators, `map()` allows you to create a new iterator that, when iterated, produces transformed elements.
 
 ## Examples
 
