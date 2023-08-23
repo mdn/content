@@ -474,7 +474,7 @@ The value of the `title` attribute is usually presented to the user as a tooltip
 
 ## See also
 
-- {{HTMLElement("picture")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
+- {{HTMLElement("picture")}}, {{HTMLElement("object")}}, and {{HTMLElement("embed")}} elements
 - {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}: Image-related CSS properties.
 - {{domxref("HTMLImageElement")}} interface for this element
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
