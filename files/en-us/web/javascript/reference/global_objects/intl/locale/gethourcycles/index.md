@@ -32,7 +32,7 @@ Below is a list of supported hour cycle types.
 - `h11`
   - : Hour system using 0–11; corresponds to 'K' in patterns. The 12 hour clock, with midnight starting at 0:00 am. Mostly used in Japan.
 - `h24`
-  - : Hour system using 1–24; corresponds to 'k' in pattern. The 24 hour clock, with midnight starting at 24:00. (Not used anywhere.)
+  - : Hour system using 1–24; corresponds to 'k' in pattern. The 24 hour clock, with midnight starting at 24:00. Not used anywhere.
 
 ## Examples
 
