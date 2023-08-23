@@ -24,7 +24,7 @@ format(duration)
 
 ## Examples
 
-### Using format
+### Using format()
 
 The following example shows how to create a Duration formatter using the English language.
 
@@ -47,7 +47,7 @@ new Intl.DurationFormat("en").format(duration);
 //  "1 yr, 2 mths, 3 wks, 3 days, 4 hr, 5 min, 6 sec, 7 ms, 8 μs, 9 ns"
 ```
 
-### Using format with different locales and styles
+### Using format() with different locales and styles
 
 ```js
 const duration = {
@@ -58,15 +58,15 @@ const duration = {
 
 // With style set to "long" and locale "fr-FR"
 new Intl.DurationFormat("fr-FR", { style: "long" }).format(duration);
-//  "1 heure, 46 minutes et 40 secondes"
+// "1 heure, 46 minutes et 40 secondes"
 
 // With style set to "short" and locale set to "en"
 new Intl.DurationFormat("en", { style: "short" }).format(duration);
-//  "1 hr, 46 min and 40 sec"
+// "1 hr, 46 min and 40 sec"
 
 // With style set to "short" and locale set to "pt"
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-//  "1h 46min 40s"
+// "1h 46min 40s"
 
 // With style set to "digital" and locale set to "en"
 new Intl.DurationFormat("en", { style: "digital" }).format(duration);
@@ -77,7 +77,7 @@ new Intl.DurationFormat("en", { style: "digital" }).format(duration);
 // "1 hour, 46:40"
 ```
 
-### Using format with the fractionalDigits option
+### Using format() with the fractionalDigits option
 
 ```js
 const duration = {
