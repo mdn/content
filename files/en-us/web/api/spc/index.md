@@ -4,6 +4,7 @@ slug: Web/API/SPC
 page-type: web-api-overview
 status:
   - experimental
+browser-compat: api.SecurePaymentConfirmation
 ---
 
 {{SeeCompatTable}}{{SecureContext_Header}}
