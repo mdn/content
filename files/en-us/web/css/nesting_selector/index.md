@@ -7,7 +7,7 @@ browser-compat: css.selectors.nesting
 
 {{CSSRef}}
 
-The CSS **`&` nesting selector** is used to explicitly state the relationship between parent and child selectors when using [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting).
+The CSS **`&` nesting selector** is used to explicitly state the relationship between parent and child rules when using [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting). With the selector of the child rule relative to the selector of the parent rule.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ parent {
 
 ### `&` nesting selector and whitespace
 
-In this example, nesting is done without the **`&` nesting selector**. When the browser parses the nested styles, it automatically adds whitespace between the selectors to create a descendant relationship.
+In this example, nesting is done without the **`&` nesting selector**. When the browser parses the nested styles, it automatically adds whitespace between the selectors to create a new CSS rule.
 
 ```css
 .parent-class {
@@ -42,7 +42,7 @@ In this example, nesting is done without the **`&` nesting selector**. When the 
 }
 ```
 
-When the nested selector needs to be attached to the parent selector, such as when using a {{cssxref('Pseudo-classes', 'pseudo class')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the **`&` nesting selector** can be immediately prepended to achieve the desired effect.
+When the nested rule needs to be attached (with no whitespace) to the parent rule, such as when using a {{cssxref('Pseudo-classes', 'pseudo class')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the **`&` nesting selector** can be immediately prepended to achieve the desired effect.
 
 Consider an example where we want to style an element, providing styles to be applied at all times, and also nesting some styles to be applied only on hover. If the **`&` nesting selector** is not included, whitespace is added and we end up with a ruleset that applies the nested styles to any _hovered child of the parent selector_. This is not what we wanted.
 
@@ -64,7 +64,7 @@ Consider an example where we want to style an element, providing styles to be ap
 }
 ```
 
-With the **`&` nesting selector** the parent will be styled when it is hovered.
+With the **`&` nesting selector**, is added with no whitespace, the parent will be styled when it is hovered.
 
 ```css
 .parent-class {
@@ -86,7 +86,7 @@ With the **`&` nesting selector** the parent will be styled when it is hovered.
 
 ## Appending the `&` nesting selector
 
-The `&` nesting selector can also be appended to reverse the context of the selectors.
+The `&` nesting selector can also be appended to reverse the context of the rules.
 
 ```css
 .card {
