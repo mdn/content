@@ -11,7 +11,7 @@ browser-compat: api.SecurePaymentConfirmation
 
 The Secure Payment Confirmation API provides a mechanism for strong customer authentication during checkout, thereby protecting against online payment fraud.
 
-To protect against online payment fraud it is common to authenticate the account holder. Strong authentication lowers the risk of fraud, but increases the likelihood that friction during checkout will lead to shopping cart abandonment. Banks, merchants, payment services providers, and other entities in a payments ecosystem therefore consider a number of factors when deciding what type and strength of authentication to use for each transaction, including the amount, the items being purchased, the user's payment history, which party bears liability in the case of fraud, and regulatory requirements (such as [European Payment Services Directive 2](<https://en.wikipedia.org/wiki/Payment_Services_Directive#Revised_Directive_on_Payment_Services_(PSD2)>) requirements for strong customer authentication and evidence of user consent).
+To protect against online payment fraud, it is common to authenticate the account holder. Strong authentication lowers the risk of fraud, but increases the likelihood that friction during checkout will lead to shopping cart abandonment. Banks, merchants, payment services providers, and other entities in a payments ecosystem therefore consider a number of factors when deciding what type and strength of authentication to use for each transaction, including the amount, the items being purchased, the user's payment history, which party bears liability in the case of fraud, and regulatory requirements (such as [European Payment Services Directive 2](<https://en.wikipedia.org/wiki/Payment_Services_Directive#Revised_Directive_on_Payment_Services_(PSD2)>) requirements for strong customer authentication and evidence of user consent).
 
 A number of mechanisms are used in combination for strong authentication, including passwords, one-time SMS codes, mobile applications, and Web Authentication. Each one has its advantages and disadvantages. For example, one-time SMS codes are now familiar to users but can involve usability issues (such as device unavailability) and security vulnerabilities. Web Authentication offers better security and is available in all major browsers and all modern mobile devices and computers. However, Web Authentication alone does not provide evidence of user consent to make a payment.
 
@@ -21,7 +21,7 @@ Secure Payment Confirmation (SPC) is designed to enable streamlined strong custo
 
 Selecting "Verify" initiates a Web Authentication flow. When the user successfully authenticates (e.g., using biometric authenticators on their phone or laptop), the browser passes the data displayed in the dialog to the authenticator, which signs it and returns it as part of the resulting Web Authentication assertion. The assertion can then be passed to the Relying Party for validation. Because the browser passes the displayed data directly to the authenticator (with no JavaScript code able to alter the data), the Relying Party can have high confidence that the user consented to the displayed transaction data.
 
-Thus, SPC builds on Web Authentication to enable Websites to perform streamlined strong authentication and provide evidence of user consent. SPC will typically be used as part of the authentication framework of a given payment system. For example, SPC is supported by both EMV® 3-D Secure (version 2.3.1) and EMV® Secure Remote Commerce (version 1.3) but is designed to work with a wide variety of payment types including "push payments" like direct credit transfers and wallet payments.
+Thus, SPC builds on Web Authentication to enable sites to perform streamlined strong authentication and provide evidence of user consent. SPC will typically be used as part of the authentication framework of a given payment system. For example, SPC is supported by both EMV® 3-D Secure (version 2.3.1) and EMV® Secure Remote Commerce (version 1.3) but is designed to work with a wide variety of payment types, including "push payments" like direct credit transfers and wallet payments.
 
 ## Interfaces
 
@@ -54,7 +54,7 @@ const publicKey = {
   },
 
   user: {
-    id: Uint8Array.from(userId, (c) => c.charCodeAt(0)),
+    id: Uint8Array.from(userId, (c) => c.charCodeAt(0)), // Assuming that userId is ASCII-only
     name: "jane.doe@example.org",
     displayName: "Jane Doe",
   },
