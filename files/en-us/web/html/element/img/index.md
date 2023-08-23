@@ -92,14 +92,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `decoding`
 
-  - : Provides an image decoding hint to the browser. Allowed values:
+  - : This attribute provides a hint to the browser as to whether it should perform image decoding along with rendering the other DOM content in a single presentation step that looks more "correct" (`sync`), or render and present the other DOM content first and then decode the image and present it later (`async`). In practice, `async` means that the next paint does not wait for the image to decode.
+
+    It is often difficult to perceive any noticeable effect when using `decoding` on static `<img>` elements. They'll likely be initially rendered as empty images while the image files are fetched (either from the network or from the cache) and then handled independently anyway, so the "syncing" of content updates is less apparent. However, the blocking of rendering while decoding happens, while often quite small, _can_ be measured — even if it is difficult to observe with the human eye. See [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) for a more detailed analysis (tunetheweb.com, 2023).
+
+    Using different `decoding` types can result in more noticeable differences when dynamically inserting `<img>` elements into the DOM via JavaScript — see {{domxref("HTMLImageElement.decoding")}} for more details.
+
+    Allowed values:
 
     - `sync`
-      - : Decode the image synchronously, for atomic presentation with other content.
+      - : Decode the image synchronously along with rendering the other DOM content, and present everything together.
     - `async`
-      - : Decode the image asynchronously, to reduce delay in presenting other content.
+      - : Decode the image asynchronously, after rendering and presenting the other DOM content.
     - `auto`
-      - : Default: no preference for the decoding mode. The browser decides what is best for the user.
+      - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value.
 
 - `elementtiming`
 
@@ -138,6 +144,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 
     > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+
+    > **Note:** A [Firefox bug](https://bugzil.la/1647077) requires that the `loading` attribute must be placed before the `src` attribute, otherwise it has no effect.
 
 - `referrerpolicy`
 

@@ -48,5 +48,5 @@ b |= 2n; // 7n
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Bitwise OR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
+- [Bitwise OR (`|`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
 - [Logical OR assignment (`||=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

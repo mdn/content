@@ -109,7 +109,7 @@ Under the default CSP, inline JavaScript is not executed. This disallows both Ja
 <div onclick="console.log('click')">Click me!</div>
 ```
 
-If you are currently using code like `<body onload="main()">` to run your script when the page has loaded, listen for [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event) or [load](/en-US/docs/Web/API/Window/load_event) instead.
+If you are currently using code like `<body onload="main()">` to run your script when the page has loaded, listen for [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event) or [load](/en-US/docs/Web/API/Window/load_event) instead.
 
 ### WebAssembly
 

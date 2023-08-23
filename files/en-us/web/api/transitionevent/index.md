@@ -29,13 +29,13 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ## Types of `TransitionEvent`
 
-- {{domxref("HTMLElement.transitioncancel_event", "transitioncancel")}}
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has been cancelled.
-- {{domxref("HTMLElement.transitionend_event", "transitionend")}}
+- {{domxref("Element/transitionend_event", "transitionend")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has finished playing.
-- {{domxref("HTMLElement.transitionrun_event", "transitionrun")}}
+- {{domxref("Element/transitionrun_event", "transitionrun")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
-- {{domxref("HTMLElement.transitionstart_event", "transitionstart")}}
+- {{domxref("Element/transitionstart_event", "transitionstart")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has started transitioning.
 
 ## Instance methods

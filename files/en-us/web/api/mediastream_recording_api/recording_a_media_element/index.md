@@ -39,7 +39,7 @@ We present our main interface in two columns. On the left is a start button and 
   <div id="stopButton" class="button">Stop Recording</div>
   <h2>Recording</h2>
   <video id="recording" width="160" height="120" controls></video>
-  <a id="downloadButton" class="button"> Download </a>
+  <a id="downloadButton" class="button">Download</a>
 </div>
 ```
 

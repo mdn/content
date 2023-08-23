@@ -54,7 +54,7 @@ Its main current disadvantages are that it is a young framework — its ecosyste
 
 > **Note:** recently Svelte has added [official TypeScript support](https://svelte.dev/blog/svelte-and-typescript), one of its most requested features. We'll look at it later on in this tutorial series.
 
-We encourage you to go through the [Svelte tutorial](https://svelte.dev/tutorial/basics) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth.
+We encourage you to go through the [Svelte tutorial](https://learn.svelte.dev/) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth.
 
 ## Use cases
 
@@ -94,7 +94,7 @@ If you're using Windows, you will need to install some software to give you pari
 
 Also see the following for more information:
 
-- ["What is npm"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) on nodejs.org
+- ["About npm"](https://docs.npmjs.com/about-npm) on the npm documentation
 - ["Introducing npx"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) on the npm blog
 - ["The easiest way to get started with Svelte"](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte blog
 
@@ -199,7 +199,7 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
 <main>
   <h1>Hello {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -247,7 +247,7 @@ In the markup section you can insert any HTML you like, and in addition you can 
 <main>
   <h1>Hello {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -331,7 +331,7 @@ Try updating your `<script>` and markup sections like so:
   <h1>Hello {name}!</h1>
   <button on:click="{toggleName}">Toggle name</button>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>

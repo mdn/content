@@ -39,7 +39,7 @@ These properties are available only on instances of the `Notification` object.
 
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The actions array of the notification as specified in the constructor's `options` parameter.
-- {{domxref("Notification.badge")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.badge")}} {{ReadOnlyInline}}
   - : The URL of the image used to represent the notification when there is not enough space to display the notification itself.
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : The body string of the notification as specified in the constructor's `options` parameter.

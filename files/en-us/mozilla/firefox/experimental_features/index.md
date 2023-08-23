@@ -349,6 +349,50 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
+### ray() CSS function
+
+The CSS {{cssxref("ray")}} function is a way to define an {{cssxref("offset-path")}}. The function defines the path as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle ([Firefox bug 1582554](https://bugzil.la/1582554)).
+
+In version 112, the `<ray_size>` optional parameter was added to the function. If no `<ray_size>` parameter is provided, it assumes the default value of `closest-side` ([Firefox bug 1820071](https://bugzil.la/1820071)).
+
+In version 116, the `at <position>` optional parameter was added to the function. If omitted, the `offset-position` value of the element is used. If both `at <position>` and `offset-position` values are absent, `offset-position: auto` is used as ray's starting position, which places the element at the `top left` corner of the element's box. ([Firefox bug 1820070](https://bugzil.la/1820070)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>72</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>72</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.motion-path-ray.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Masonry grid layout
 
 Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See [Firefox bug 1607954](https://bugzil.la/1607954) for more details.
@@ -387,46 +431,6 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_grid_layout/Ma
       <td colspan="2">
         <code>layout.css.grid-template-masonry-value.enabled</code>
       </td>
-    </tr>
-  </tbody>
-</table>
-
-### math-style property
-
-The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See [Firefox bug 1665975](https://bugzil.la/1665975) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.math-style.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -930,6 +934,92 @@ The CSS {{cssxref("offset-position")}} property defines the initial position of 
   </tbody>
 </table>
 
+### abs() and sign() math functions
+
+The CSS [`abs()`](/en-US/docs/Web/CSS/abs) and [`sign()`](/en-US/docs/Web/CSS/sign) math functions allow you to get the absolute value and the sign of an argument, respectively.
+See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](https://bugzil.la/1814589) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.abs-sign.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+### rect() and xywh() basic shape functions
+
+The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions enable you to define a rectangle using the [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type. In CSS properties such as {{cssxref("offset-path")}}, these functions are used to define the shape of the path along which an element moves. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the left and top edges of the containing block as well as the width and height of the rectangle. In both the functions, you can optionally round off the corners.
+For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `rect()` function and [Firefox bug 1786160](https://bugzil.la/1786160) for the `xywh()` function.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference names</th>
+      <td colspan="2">
+      <code>layout.css.motion-path-basic-shapes.enabled</code>, <code>layout.css.basic-shape-rect.enabled</code>, <code>layout.css.basic-shape-xywh.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -976,11 +1066,11 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Array grouping methods
+### Array (iterable) grouping methods
 
-The {{jsxref("Array.prototype.group()")}} and {{jsxref("Array.prototype.groupToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
-The `groupBy` method should be used when strings can be used to represent element groups, while `groupByToMap()` should be used in cases where it makes sense to use a value as the key.
-(See [Firefox bug 1739648](https://bugzil.la/1739648) for more details.)
+The {{jsxref("Object.groupBy()")}} and {{jsxref("Map.groupBy()")}} static methods are used to group the elements of an iterable using a string or value returned by a test function (respectively).
+The first method should be used when strings can be used to represent element groups, while the method in `Map` might be used when elements are associated with a particular object.
+(See [Firefox bug 1841518](https://bugzil.la/1841518) for more details.)
 
 <table>
   <thead>
@@ -993,27 +1083,72 @@ The `groupBy` method should be used when strings can be used to represent elemen
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>98</td>
-      <td>Yes</td>
+      <td>117</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>98</td>
+      <td>NA</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>98</td>
+      <td>NA</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>98</td>
+      <td>NA</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2">None</td>
+      <td colspan="2"><code>javascript.options.experimental.array_grouping</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Array transfer
+
+The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
+The `transferToFixedLength()` method always creates a fixed length buffer, while `transfer()` may create a variable buffer, but only if the original buffer had a variable length.
+After transfer, the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
+(See [Firefox bug 1841113](https://bugzil.la/1841113) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>NA</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>NA</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>NA</td>
+      <td>No</td>
+    </tr>
+    <tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.experimental.arraybuffer_transfer</code></td>
+    </tr>
     </tr>
   </tbody>
 </table>
@@ -1366,6 +1501,49 @@ See [Firefox bug 1840480](https://bugzil.la/1840480) for more details.
   </tbody>
 </table>
 
+#### CSS Custom Highlight API
+
+The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) provides a mechanism for styling arbitrary text ranges in a document (generalizing the behavior of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}).
+The ranges are defined in JavaScript using [`Range`](/en-US/docs/Web/API/Range) instances grouped in a [`Highlight`](/en-US/docs/Web/API/Highlight), and then registered with a name using [`HighlightRegistry`](/en-US/docs/Web/API/HighlightRegistry).
+The CSS [`::highlight`](/en-US/docs/Web/CSS/::highlight) pseudo-element is used to apply styles to a registered highlight.
+See [Firefox bug 1703961](https://bugzil.la/1703961) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.customHighlightAPI.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Service Workers
 
 #### Preloading of service worker resources on navigation
@@ -1475,7 +1653,7 @@ The following HTML global attributes are supported:
 - [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
 - [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
 
-See [Firefox bug 934425](https://bugzil.la/934425) for more details.
+See [Firefox bug 1823757](https://bugzil.la/1823757) for more details.
 
 <table>
   <thead>

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.entries
 
 {{JSRef}}
 
-The **`entries()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.
+The **`entries()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
