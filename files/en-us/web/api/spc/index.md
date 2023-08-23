@@ -181,9 +181,9 @@ try {
 
 ## See also
 
-- [Payment Request API](https://www.w3.org/TR/payment-request/)
+- [Payment Request API](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API)
 - [Payment Method Identifiers](https://www.w3.org/TR/payment-method-id/)
-- [Web Authentication](https://www.w3.org/TR/webauthn-2/)
+- [Web Authentication](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)
 - [Secure Payment Confirmation Explainer](https://github.com/w3c/secure-payment-confirmation/blob/main/explainer.md)
 - [Secure Payment Confirmation Scope](https://github.com/w3c/secure-payment-confirmation/blob/main/scope.md)
 - General [flow diagram for SPC during a payment](https://github.com/w3c/wpsig/blob/gh-pages/spc-general.png)
