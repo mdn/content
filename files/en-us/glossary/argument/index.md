@@ -25,5 +25,5 @@ function example(parameter) {
 
 ## See also
 
-- {{Glossary("parameter", "Difference between Parameter and Argument")}}
+- {{Glossary("parameter", "Difference between parameter and argument")}}
 - The {{jsxref("Functions/arguments","arguments")}} object in {{glossary("JavaScript")}}
