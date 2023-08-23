@@ -84,10 +84,10 @@ const publicKey = {
 
 navigator.credentials
   .create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     // Send new credential info to server for verification and registration.
   })
-  .catch(function (err) {
+  .catch((err) => {
     // No acceptable authenticator or user refused consent. Handle appropriately.
   });
 ```
