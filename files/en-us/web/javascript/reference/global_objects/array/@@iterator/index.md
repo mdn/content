@@ -11,6 +11,8 @@ The **`[@@iterator]()`** method of {{jsxref("Array")}} instances implements the 
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Array.prototype.values")}} property.
 
+{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
+
 ## Syntax
 
 ```js-nolint
