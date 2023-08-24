@@ -44,7 +44,9 @@ Mouse events' {{domxref("MouseEvent.pageX", "pageX")}} and {{domxref("MouseEvent
 
 ### Screen
 
-Finally, we come to the "screen" model. It's probably fairly obvious what this is: it's the coordinate system where the origin is located at the top-left corner of the user's entire screen space. This means that the position of a given point within a document will change if the containing window is moved, for example, or if the user's screen geometry changes (by changing display resolution or by adding or removing monitors to their system).
+Finally, we come to the "screen" model where the origin is the top-left corner of the user's screen space.
+Each point in this coordinate system represents a single logical pixel, and so values increment and decrement by integer values along each axis.
+The position of a given point within a document will change if the containing window is moved, for example, or if the user's screen geometry changes (by changing display resolution or by adding or removing monitors to their system).
 
 The {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}} properties give the coordinates of a mouse event's position relative to the screen's origin.
 
