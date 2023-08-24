@@ -10,7 +10,7 @@ browser-compat: api.URL.revokeObjectURL_static
 
 The **`URL.revokeObjectURL()`** static
 method releases an existing object URL which was previously created by calling
-{{domxref("URL.createObjectURL_static", "createObjectURL()")}}.
+{{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 Call this method when you've finished
 using an object URL to let the browser know not to keep the reference to the file any
@@ -54,4 +54,4 @@ See [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_fil
 
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
-- {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
