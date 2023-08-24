@@ -34,7 +34,7 @@ getRootNode(options)
 An object inheriting from {{domxref('Node')}}. This will differ in exact form depending
 on:
 
-- where you called `getRootNode()`; for example:
+- where you call `getRootNode()`; for example:
 
   - Calling it on an element inside a standard web page will return an
     {{domxref("HTMLDocument")}} object representing the entire page (or {{HTMLElement("iframe")}}).
