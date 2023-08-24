@@ -14,9 +14,9 @@ The **`data-*`** [global attributes](/en-US/docs/Web/HTML/Global_attributes) for
 All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLElement.dataset")}} property gives access to them.
 The `*` may be replaced by any name following [the production rule of XML names](https://www.w3.org/TR/REC-xml/#NT-Name) which includes the following restrictions:
 
-- The name should not start with `xml` (case-insensitive).
-- The name should not contain any semi-colon characters (`;`).
-- The name should not contain any capital letters.
+- The name should not start with `xml` (case-insensitive), as it's reserved for future XML specifications.
+- The name should not contain any colon characters (`:`), as XML assigns meaning to such names.
+- The name should not contain any capital letters, as XML is all lowercase.
 
 In JavaScript, the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}} containing all the custom data attributes for an {{domxref("HTMLElement")}}. For example, `element.getAttribute("data-test")` is equivalent to `element.dataset.test`. The `dataset` version of the attribute name removes the "data-" prefix and converts the rest of the name from snake-case to camelCase. For example, `data-test-abc` will be accessible as `element.dataset.testAbc` (or by `element.dataset["testAbc"]`). Non-alphabetic characters following a hyphen are not valid, for example `data-test-1` or `data--test`. If you plan to use {{domxref("HTMLElement.dataset")}}, the name can only include characters allowed in JavaScript property names (and hyphens, which will be removed).
 
