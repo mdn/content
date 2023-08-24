@@ -12,13 +12,13 @@ The **`data-*`** [global attributes](/en-US/docs/Web/HTML/Global_attributes) for
 {{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
 
 All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLElement.dataset")}} property gives access to them.
-The `*` may be replaced by any name following [the production rule of XML names](https://www.w3.org/TR/REC-xml/#NT-Name) with the following restrictions:
+The `*` may be replaced by any name following [the production rule of XML names](https://www.w3.org/TR/REC-xml/#NT-Name) which includes the following restrictions:
 
-- The name must not start with `xml` (case-insensitive).
-- The name must not contain any semi-colon characters (`;`).
-- The name must not contain any capital letters.
+- The name should not start with `xml` (case-insensitive).
+- The name should not contain any semi-colon characters (`;`).
+- The name should not contain any capital letters.
 
-Note that the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}}, and the name of the custom data attribute _data-test-value_ will be accessible via `HTMLElement.dataset.testValue` (or by `HTMLElement.dataset["testValue"]`) as any dash (`U+002D`) is replaced by the capitalization of the next letter, converting the name to camelcase.
+In JavaScript, the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}} containing all the custom data attributes for an {{domxref("HTMLElement")}}. For example, `element.getAttribute("data-test")` is equivalent to `element.dataset.test`. The `dataset` version of the attribute name removes the "data-" prefix and converts the rest of the name from snake-case to camelCase. For example, `data-test-abc` will be accessible as `HTMLElement.dataset.testAbc` (or by `HTMLElement.dataset["testAbc"]`). Non-alphabetic characters following a hyphen are not valid, for example `data-test-1` or `data--test`. If you plan to use {{domxref("HTMLElement.dataset")}}, the name can only include characters allowed in JavaScript property names (and hyphens, which will be removed).
 
 ### Usage
 
