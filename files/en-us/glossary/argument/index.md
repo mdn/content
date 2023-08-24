@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 An **argument** is a {{glossary("value")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}.
 
-The argument order within the function call should be the same order as the {{Glossary("parameter","parameters")}} in the function. When there are more arguments in a function call then parameters in the function definition, the extra arguments are ignored.
+The argument order within the function call should be the same as the {{Glossary("parameter","parameters")}} order in the function definition.
 
 For example:
 
