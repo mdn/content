@@ -167,7 +167,9 @@ Note that the case of passing zero rest parameters is always included, even when
   - : The elements to add to the front of the array.
 ```
 
-Add `\{{optional_inline}}` here when passing zero rest parameters makes sense. Another example with some positional parameters before the rest parameter:
+Add `\{{optional_inline}}` here when passing zero rest parameters makes sense.
+
+Another example with some positional parameters before the rest parameter:
 
 ```js-nolint
 splice(start)
