@@ -85,3 +85,8 @@ I have created this behavior in the next live example. You can see how the stret
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/wrapped-visibility-collapse.html", '100%', 750)}}
 
 If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can't shift rows.
+
+### Using `visibility: hidden` and `display: none`
+
+In previous live example, try using `visibility: hidden` or `display: none` instead of `visiblity: collapse`. Using `visibility: hidden`, the item is made invisible but the box is kept in the formatting structure, so it still behaves as if it were part of the layout.
+When you use `display: none`, the item is completely removed from the formatting structure. Not only it is invisible but the strut is removed as well. What this means in practice is that counters ignore it, and things like transitions do not run.
