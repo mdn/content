@@ -64,7 +64,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 ## Static methods
 
-- {{DOMxRef("RTCPeerConnection.generateCertificate", "generateCertificate()")}}
+- {{DOMxRef("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}}
   - : Creates an X.509 certificate and its corresponding private key, returning a {{jsxref("Promise")}} that resolves with the new {{DOMxRef("RTCCertificate")}} once it is generated.
 
 ## Instance methods

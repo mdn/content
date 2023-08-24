@@ -62,7 +62,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 #### Media Capture and Streams API
 
-- Usage of a {{domxref("MediaStream")}} object as the input parameter to {{domxref("URL.createObjectURL_static")}} has been deprecated — the console will now show a warning (see [Firefox bug 1334564](https://bugzil.la/1334564)). You are advised to use {{domxref("HTMLMediaElement.srcObject")}} instead.
+- Usage of a {{domxref("MediaStream")}} object as the input parameter to {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} has been deprecated — the console will now show a warning (see [Firefox bug 1334564](https://bugzil.la/1334564)). You are advised to use {{domxref("HTMLMediaElement.srcObject")}} instead.
 
 #### Web Audio API
 
