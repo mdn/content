@@ -7,7 +7,7 @@ browser-compat: css.selectors.nesting
 
 {{CSSRef}}
 
-The CSS **`&` nesting selector** is used to explicitly state the relationship between parent and child rules when using [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting). With the selector of the child rule relative to the selector of the parent rule.
+The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting). Nested child rule selectors are relative to the parent rule selectors, with the child rule component having the same [specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
 
 ## Syntax
 
