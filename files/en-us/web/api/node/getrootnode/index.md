@@ -32,12 +32,18 @@ getRootNode(options)
 ### Return value
 
 An object inheriting from {{domxref('Node')}}. This will differ in exact form depending
-on where you called `getRootNode()`; for example:
+on:
 
-- Calling it on an element inside a standard web page will return an
-  {{domxref("HTMLDocument")}} object representing the entire page (or {{HTMLElement("iframe")}}).
-- Calling it on an element inside a shadow DOM will return the associated
-  {{domxref("ShadowRoot")}}.
+- where you called `getRootNode()`; for example:
+
+  - Calling it on an element inside a standard web page will return an
+    {{domxref("HTMLDocument")}} object representing the entire page (or {{HTMLElement("iframe")}}).
+  - Calling it on an element inside a shadow DOM will return the associated
+    {{domxref("ShadowRoot")}}.
+
+- whether an element has a parent or not:
+
+  - Calling it on an element that has no parent will return the element itself.
 
 ## Examples
 
@@ -90,6 +96,15 @@ output.textContent += `shadowChild.getRootNode({composed:true}).nodeName : ${
 ```
 
 {{ EmbedLiveSample('Example 2', '100%', '200px') }}
+
+### Example 3
+
+This example returns the element itself as it has no parent:
+
+```js
+const element = document.createElement("p");
+const rootNode = element.getRootNode(); // #p
+```
 
 ## Specifications
 
