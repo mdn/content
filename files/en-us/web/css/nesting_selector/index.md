@@ -12,9 +12,9 @@ The CSS **`&` nesting selector** explicitly states the relationship between pare
 ## Syntax
 
 ```css
-parent {
+parentRule {
   /* parent rule style properties */
-  & child {
+  & childRule {
     /* child rule style properties */
   }
 }
@@ -24,7 +24,7 @@ parent {
 
 In this example, nesting is done without the **`&` nesting selector**. When the browser parses the nested selectors, it automatically adds whitespace between the selectors to create a new CSS selector rule.
 
-```css
+````css
 .parent-rule {
   /* parent rule properties */
   .child-rule {
@@ -61,7 +61,7 @@ Consider an example where we want to style an element, providing styles to be ap
 .parent-rule *:hover {
   /* child rule properties */
 }
-```
+````
 
 With the **`&` nesting selector** added with no whitespace, the elements matched by the parent rule will be styled when hovered.
 
