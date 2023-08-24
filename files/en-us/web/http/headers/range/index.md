@@ -45,15 +45,34 @@ Range: <unit>=-<suffix-length>
 
 ## Examples
 
-Requesting three ranges from the file.
+### Making cors-safelisted requests
+
+The `Range` header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range.
+This means that it can be used in cross-origin requests without triggering a [preflight](/en-US/docs/Glossary/Preflight_request) request which is useful for requesting media and resuming downloads.
+
+This example requests the bytes from 100 to 200 of the resource:
+
+```http
+Range: bytes=100-200
+```
+
+The following example requests the last 500 bytes of the resource:
+
+```http
+Range: bytes=-500
+```
+
+### Requesting multiple ranges
+
+The following example requests three separate parts of a file, from `200`-`1000` (the first 800 bytes), `2000`-`6576` (the bytes from 2000 to 6576), and finally `19000-`.
+The ranges-specifier value `19000-` specifies `19000` as the first position, and omits any last position in order to indicate that all bytes from 19000 onward are part of the third range.
 
 ```http
 Range: bytes=200-1000, 2000-6576, 19000-
 ```
 
-The ranges-specifier value `19000-` specifies `19000` as the first position, and omits any last position — in order to indicate that all bytes from 19000 onward are part of the third range.
-
-Requesting the first 500 and last 500 bytes of the file. The request may be rejected by the server if the ranges overlap.
+This example requests the first 500 and last 500 bytes of the file.
+The request may be rejected by the server if these ranges overlap (i.e. the file is less than 1000 bytes long).
 
 ```http
 Range: bytes=0-499, -500
@@ -74,3 +93,4 @@ Range: bytes=0-499, -500
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPStatus("206", "206 Partial Content")}}
 - {{HTTPStatus("416", "416 Range Not Satisfiable")}}
+- [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header)
