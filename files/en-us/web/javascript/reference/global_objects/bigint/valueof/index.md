@@ -18,6 +18,10 @@ of a {{jsxref("BigInt")}} object.
 valueOf()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A BigInt representing the primitive value of the specified {{jsxref("BigInt")}} object.

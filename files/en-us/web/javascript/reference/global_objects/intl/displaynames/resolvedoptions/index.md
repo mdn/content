@@ -18,6 +18,10 @@ object.
 resolvedOptions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An object with properties reflecting the locale and formatting options computed during

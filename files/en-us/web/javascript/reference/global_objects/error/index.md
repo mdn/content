@@ -216,7 +216,7 @@ try {
 
 ## See also
 
-- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
+- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
-- The [V8 documentation](https://v8.dev/docs/stack-trace-api) for `Error.captureStackTrace()`, `Error.stackTraceLimit`, and `Error.prepareStackTrace()`.
+- [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

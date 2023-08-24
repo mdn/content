@@ -163,13 +163,20 @@ You can also combine multiple media queries into a single rule by separating the
 - `or`
   - : Equivalent to the `,` operator. Added in Media Queries Level 4.
 
+### User agent client hints
+
+Some media queries have corresponding [user agent client hints](/en-US/docs/Web/HTTP/Client_hints).
+These are HTTP headers that request content that is pre-optimized for the particular media requirement.
+They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
+
 ## Accessibility concerns
 
 To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 Both [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) and [`px`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) are valid units, but [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) works better if the user changes the browser text size.
 
-Also consider using Level 4 media queries to improve the user's experience. For example, `prefers-reduced-motion` to [detect if the user has requested that the system minimize the amount of animation](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or motion it uses.
+Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) to improve the user's experience.
+For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the eqivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.
 
 ## Security
 

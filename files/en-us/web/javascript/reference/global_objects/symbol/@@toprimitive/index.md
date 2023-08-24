@@ -15,6 +15,11 @@ The **`[@@toPrimitive]()`** method of {{jsxref("Symbol")}} values returns this s
 symbolValue[Symbol.toPrimitive](hint)
 ```
 
+### Parameters
+
+- `hint`
+  - : A string value indicating the primitive value to return. The value is ignored.
+
 ### Return value
 
 The primitive value of the specified {{jsxref("Symbol")}} object.

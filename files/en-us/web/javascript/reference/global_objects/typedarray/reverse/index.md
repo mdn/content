@@ -17,6 +17,10 @@ The **`reverse()`** method of {{jsxref("TypedArray")}} instances reverses a type
 reverse()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The reference to the original typed array, now reversed. Note that the typed array is reversed _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.

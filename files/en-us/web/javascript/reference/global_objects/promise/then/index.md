@@ -20,7 +20,7 @@ then(onFulfilled, onRejected)
 
 ### Parameters
 
-- `onFulfilled` {{optional_inline}}
+- `onFulfilled`
 
   - : A function to asynchronously execute when this promise becomes fulfilled. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
 

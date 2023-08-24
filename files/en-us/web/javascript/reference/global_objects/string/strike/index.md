@@ -19,6 +19,10 @@ The **`strike()`** method of {{jsxref("String")}} values creates a string that e
 strike()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with a `<strike>` start tag, then the text `str`, and then a `</strike>` end tag.

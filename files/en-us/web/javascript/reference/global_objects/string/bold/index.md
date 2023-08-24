@@ -19,6 +19,10 @@ The **`bold()`** method of {{jsxref("String")}} values creates a string that emb
 bold()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with a `<b>` start tag, then the text `str`, and then a `</b>` end tag.

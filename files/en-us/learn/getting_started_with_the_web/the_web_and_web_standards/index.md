@@ -113,7 +113,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
   In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality
 
-### Tooling
+### Tools
 
 Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 
