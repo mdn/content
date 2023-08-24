@@ -13,9 +13,9 @@ The CSS **`&` nesting selector** is used to explicitly state the relationship be
 
 ```css
 parent {
-  /* parent style properties */
+  /* parent rule style properties */
   & child {
-    /* child style properties */
+    /* child rule style properties */
   }
 }
 ```
