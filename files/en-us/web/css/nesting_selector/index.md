@@ -207,4 +207,6 @@ This example uses nested CSS styling.
 
 ## See also
 
+- [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
