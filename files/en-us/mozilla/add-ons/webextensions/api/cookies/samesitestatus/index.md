@@ -2,6 +2,7 @@
 title: cookies.SameSiteStatus
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/SameSiteStatus
 page-type: webextension-api-type
+browser-compat: webextensions.api.cookies.SameSiteStatus
 ---
 
 {{AddonSidebar()}}
@@ -13,10 +14,16 @@ The `SameSiteStatus` type of the {{WebExtAPIRef("cookies")}} API represents info
 Values of this type are strings. Possible values are:
 
 - `no_restriction`
-  - : Represents a cookie set without a `SameSite` attribute.
+  - : Corresponds to a cookie set with `SameSite=None`.
 - `lax`
-  - : Corresponds to `SameSite=Lax`
+  - : Corresponds to a cookie set with `SameSite=Lax`.
 - `strict`
-  - : Corresponds to a cookie set with `SameSite=Strict`
+  - : Corresponds to a cookie set with `SameSite=Strict`.
+- `unspecified`
+  - : Corresponds to a cookie set without the `SameSite` attribute.
 
 See [SameSite cookies](/en-US/docs/Web/HTTP/Cookies#samesite_cookies) for more information.
+
+## Browser compatibility
+
+{{Compat}}
