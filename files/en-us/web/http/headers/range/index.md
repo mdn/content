@@ -45,6 +45,9 @@ Range: <unit>=-<suffix-length>
 
 ## Examples
 
+The following examples show how to make requests using the `Range` header for CORS-safelisted requests, and for requesting multiple ranges.
+Other examples can be found in the [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests) guide.
+
 ### Making cors-safelisted requests
 
 The `Range` header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range.
@@ -93,4 +96,5 @@ Range: bytes=0-499, -500
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPStatus("206", "206 Partial Content")}}
 - {{HTTPStatus("416", "416 Range Not Satisfiable")}}
+- [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests) guide
 - [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header)
