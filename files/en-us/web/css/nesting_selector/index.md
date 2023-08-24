@@ -46,20 +46,20 @@ When the nested rule needs to be attached (with no whitespace) to the parent rul
 Consider an example where we want to style an element, providing styles to be applied at all times, and also nesting some styles to be applied only on hover. If the **`&` nesting selector** is not included, whitespace is added and we end up with a ruleset that applies the nested styles to any _hovered descendant of the parent rule selector_. This is not what we wanted.
 
 ```css
-.parent-class {
-  /* parent style properties */
+.parent-rule {
+  /* parent rule properties */
   :hover {
-    /* child style properties */
+    /* child rule properties */
   }
 }
 
 /* the browser parses this as */
-.parent-class {
-  /* parent style properties */
+.parent-rule {
+  /* parent rule properties */
 }
 
-.parent-class :hover {
-  /* child style properties */
+.parent-rule *:hover {
+  /* child rule properties */
 }
 ```
 
