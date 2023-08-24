@@ -45,11 +45,11 @@ in the locale identifier are called extension subtags and are not affected by th
 
 ```js
 const myLocale = new Intl.Locale("fr-Latn-FR", {
-  hourCycle: "h24",
+  hourCycle: "h12",
   calendar: "gregory",
 });
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
-console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
+console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h12"
 
 const myLocMinimized = myLocale.minimize();
 
@@ -57,7 +57,7 @@ const myLocMinimized = myLocale.minimize();
 // and is most likely to be spoken in France.
 console.log(myLocMinimized.baseName);
 
-// Prints "fr-u-ca-gregory-hc-h24".
+// Prints "fr-u-ca-gregory-hc-h12".
 // Note that the extension tags (after "-u") remain unchanged.
 console.log(myLocMinimized.toString());
 ```
