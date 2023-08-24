@@ -192,6 +192,7 @@ Important point to remember is that the animation lasts as long as the `subject`
   animation-name: grow;
   animation-fill-mode: both;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-timing-function: linear;
 }
 
 @keyframes grow {
