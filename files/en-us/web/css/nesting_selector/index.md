@@ -63,23 +63,23 @@ Consider an example where we want to style an element, providing styles to be ap
 }
 ```
 
-With the **`&` nesting selector**, is added with no whitespace, the parent will be styled when it is hovered.
+With the **`&` nesting selector** added with no whitespace, the elements matched by the parent rule will be styled when hovered.
 
 ```css
-.parent-class {
-  /* parent style properties */
+.parent-rule {
+  /* parent rule properties */
   &:hover {
-    /* child style properties */
+    /* child rule properties */
   }
 }
 
 /* the browser parses this as */
-.parent-class {
-  /* parent style properties */
+.parent-rule {
+  /* parent rule properties */
 }
 
-.parent-class:hover {
-  /* child style properties */
+.parent-rule:hover {
+  /* child rule properties */
 }
 ```
 
