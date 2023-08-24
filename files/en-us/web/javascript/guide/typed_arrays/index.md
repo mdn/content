@@ -18,7 +18,7 @@ To achieve maximum flexibility and efficiency, JavaScript typed arrays split the
 
 ## Buffers
 
-There are two types of buffers: {{jsxref("ArrayBuffer")}} and {{jsxref("SharedArrayBuffer")}}. Both are low-level representations of a memory span. They have "array" in their names, but they don't have much to do with arrays — you cannot read or write to them directly. Instead, buffers are generic objects that just contain raw data, In order to access the memory represented by a buffer, you need to use a view.
+There are two types of buffers: {{jsxref("ArrayBuffer")}} and {{jsxref("SharedArrayBuffer")}}. Both are low-level representations of a memory span. They have "array" in their names, but they don't have much to do with arrays — you cannot read or write to them directly. Instead, buffers are generic objects that just contain raw data. In order to access the memory represented by a buffer, you need to use a view.
 
 Buffers support the following actions:
 
