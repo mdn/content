@@ -16,6 +16,7 @@ whose contents are a copy of this `ArrayBuffer`'s bytes from
 ## Syntax
 
 ```js-nolint
+slice()
 slice(start)
 slice(start, end)
 ```
