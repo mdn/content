@@ -9,7 +9,7 @@ browser-compat: api.IdentityCredential
 
 {{SeeCompatTable}}{{DefaultAPISidebar("FedCM API")}}
 
-The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API enabling use of federated sign-in for purposes such as signing in or signing up to a website.
+The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API enabling use of federated authentication for purposes such as signing in or signing up to a website.
 
 ## FedCM concepts
 
@@ -287,12 +287,12 @@ Developers can explicitly grant permission for an {{htmlelement("iframe")}} to u
 The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 - Larger sites won't want a third-party sign-in script to gain control over the top-level frame; instead they will want to add that script and invoke FedCM from within an {{htmlelement("iframe")}}.
-- Some `<iframes>` may themselves require federated sign-in.
+- Some `<iframes>` may themselves require federated authentication.
 
 ## Interfaces
 
 - {{domxref("IdentityCredential")}}
-  - : Represents a user identity credential arising from a successful federated sign-in. A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an {{domxref("IdentityCredential")}} instance.
+  - : Represents a user identity credential arising from successful federated authentication. A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an {{domxref("IdentityCredential")}} instance.
 - {{domxref("IdentityProvider")}}
   - : Represents an IdP and provides access to related information. The static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method returns information about a previously signed in user on their return to an IdP, which can be used to provide a personalized welcome message and sign-in button.
 
