@@ -39,7 +39,7 @@ set(typedarray, targetOffset)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

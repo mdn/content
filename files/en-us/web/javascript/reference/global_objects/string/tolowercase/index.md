@@ -17,6 +17,10 @@ The **`toLowerCase()`** method of {{jsxref("String")}} values returns this strin
 toLowerCase()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new string representing the calling string converted to lower case.
