@@ -75,8 +75,6 @@ This article provides information about the changes in Firefox 117 that affect d
 - `headers` and `cookies` in `network` events are now serialized as `network.BytesValue`, which will provide a better support for non-UTF8 values ([Firefox bug 1842619](https://bugzil.la/1842619)).
 - The `browsingContext.create` command will now wait until the created context has a valid size ([Firefox bug 1847044](https://bugzil.la/1847044)).
 
-#### Marionette
-
 ## Changes for add-on developers
 
 ### Removals
