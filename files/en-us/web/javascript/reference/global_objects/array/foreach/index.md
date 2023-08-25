@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.forEach
 
 {{JSRef}}
 
-The **`forEach()`** method executes a provided function once
+The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.
 
 {{EmbedInteractiveExample("pages/js/array-foreach.html")}}
@@ -34,7 +34,7 @@ forEach(callbackFn, thisArg)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Description
 
@@ -79,7 +79,7 @@ To run a series of asynchronous operations sequentially or concurrently, see [pr
 
 ### Using forEach() on sparse arrays
 
-```js
+```js-nolint
 const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 

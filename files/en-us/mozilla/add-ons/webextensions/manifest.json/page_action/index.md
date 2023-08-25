@@ -90,7 +90,7 @@ The `page_action` key is an object that may have any of three properties, all op
         <p>
           The
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
+            href="https://github.com/mdn/webextensions-examples/tree/main/latest-download"
             >latest-download</a
           >
           example extension uses <code>browser_style</code> in its popup.
@@ -272,7 +272,7 @@ The `page_action` key is an object that may have any of three properties, all op
 A page action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.pageAction.onClicked.addListener(handleClick);
+browser.pageAction.onClicked.addListener(handleClick);
 ```
 
 ```json

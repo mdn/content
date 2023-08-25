@@ -1,6 +1,7 @@
 ---
 title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -68,7 +69,7 @@ _No change._
 
 ### Networking
 
-- You can now send the contents of [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
+- You can now send the contents of [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
 - WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
 - The HTTP `Accept` header for XSLT requests has been changed to "\*/\*" for simplicity. Since fetching XSLT has always fallen back to "\*/\*" anyway, it made sense to simplify the initial request.
 - Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/en-US/docs/Web/HTTP#more_on_redirection_responses) instead of actually redirecting. This prevents certain types of cross-site scripting attacks.

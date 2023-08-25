@@ -22,6 +22,10 @@ format(duration)
 - `duration`
   - : The duration object to be formatted. It should include some or all of the following properties: `"months"`, `"weeks"`, `"days"`, `"hours"`, `"minutes"`, `"seconds"`, `"milliseconds"`, `"microseconds"`, `"nanoseconds"`.
 
+### Return value
+
+A string representing the given `duration` formatted according to the locale and formatting options of this {{jsxref("Intl.DurationFormat")}} object.
+
 ## Examples
 
 ### Using format with an object as parameter

@@ -1,6 +1,7 @@
 ---
 title: Expose common app actions as shortcuts
 slug: Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
+page-type: how-to
 ---
 
 {{PWASidebar}}

@@ -45,7 +45,7 @@ Mathematical formulas involve many special characters, for example greek letters
 Since most of these characters are not part of Basic Latin Unicode block, it is recommended to specify your [document's character encoding](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding) and to serve it with appropriate [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts). Here is a basic template to use UTF-8 encoding and the [Latin Modern Math](/en-US/docs/Web/MathML/Fonts#fonts_with_a_math_table) font:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -76,7 +76,7 @@ We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_s
 Below is a more complex example, which says that the absolute value of a real number is equal to that number if and only if it is nonnegative. Spot the different token elements and what they are used for. Each time you click the corresponding text, it is highlighted and a confirmation message is displayed.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -120,7 +120,7 @@ math {
 
 ```js hidden
 const tokenElements = Array.from(
-  document.querySelectorAll("mi, mo, mn, mtext")
+  document.querySelectorAll("mi, mo, mn, mtext"),
 );
 const outputDiv = document.getElementById("output");
 function clearHighlight() {
@@ -134,7 +134,7 @@ tokenElements.forEach((token) => {
     token.classList.add("highlight");
     outputDiv.insertAdjacentHTML(
       "beforeend",
-      `<p><strong>You clicked an <code>&lt;${token.tagName}&gt;</code> element.</strong></p>`
+      `<p><strong>You clicked an <code>&lt;${token.tagName}&gt;</code> element.</strong></p>`,
     );
   });
 });
@@ -242,7 +242,7 @@ Operators have many other properties that we will see in more details later. For
 Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let's rewrite the `<p>` element in the [example at the top of the page](#unicode_characters_for_mathematics) with some actual MathML. Compare the visual rendering in your browser and explain the differences with the text-only version.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -302,10 +302,10 @@ document.getElementById("showSolution").addEventListener(
       `<ul>
       <li><strong>The <code>&lt;mi&gt;</code> elements containing the "A" and "n" variables are rendered in italic</strong>. However, the <code>&lt;mi&gt;</code> elements with multiple characters "𝔰𝔩" or whose character is "𝔽" are still rendered upright.</li>
       <li><strong>Spacing is automatically added around the <code>&lt;mo&gt;</code> elements whose text is "∀", "∊", "=" or a comma</strong>. However, some of them have no spacing added before while the parentheses still have no spacing around them.</li>
-    </ul>`
+    </ul>`,
     );
   },
-  { once: true }
+  { once: true },
 );
 ```
 
@@ -318,7 +318,7 @@ document.getElementById("showSolution").addEventListener(
 The operator dictionary defines a default _stretchy_ property as well as corresponding _stretch axis_ for some operators. For example, an operator can stretch vertically by default to cover the maximum height of non-stretchy siblings within its `<mrow>` container. By tweaking a bit the [previous exercise](#active_learning_recognize_token_elements), one can make operators stretch vertically. Can you find them?
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -377,10 +377,10 @@ math {
 
 ```js hidden
 const tokenElements = Array.from(
-  document.querySelectorAll("mi, mo, mn, mtext")
+  document.querySelectorAll("mi, mo, mn, mtext"),
 );
 const stretchyMoElements = Array.from(
-  document.getElementsByTagName("mo")
+  document.getElementsByTagName("mo"),
 ).slice(0, 2);
 const outputDiv = document.getElementById("output");
 function clearHighlight() {
@@ -401,7 +401,7 @@ tokenElements.forEach((token) => {
       message = `Correct, this ${tagName} element is indeed stretched to the height of its <code>&lt;mfrac&gt;</code> sibling.`;
     outputDiv.insertAdjacentHTML(
       "beforeend",
-      `<p><strong>${message}</strong></p>`
+      `<p><strong>${message}</strong></p>`,
     );
   });
 });

@@ -81,7 +81,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
     - {{domxref("Window/load_event", "load")}}
     - {{domxref("Window/unload_event", "unload")}}
     - {{domxref("HTMLMediaElement/abort_event", "abort")}}
-    - {{domxref("Element/error_event", "error")}}
+    - {{domxref("HTMLElement/error_event", "error")}}
     - {{domxref("HTMLInputElement/select_event", "select")}}
     - {{domxref("Window/resize_event", "resize")}}
     - {{domxref("Element/scroll_event", "scroll")}}

@@ -1,5 +1,5 @@
 ---
-title: Guidelines for styling HTML code examples
+title: Guidelines for writing HTML code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 page-type: mdn-writing-guide
 ---
@@ -27,7 +27,7 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible.
 
 ```html example-good
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 ### Document language
@@ -78,16 +78,16 @@ Omitting quotes can also cause problems. In the above example, the `alt` attribu
 
 ## Boolean attributes
 
-Don't write out boolean attributes in full; you can just write the attribute name to set it. For example, you can write:
+Don't include values for boolean attributes (but do include values for {{glossary("enumerated")}} attributes); you can just write the attribute name to set it. For example, you can write:
 
 ```html example-good
-required
+<input required />
 ```
 
-This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:
+This is perfectly understandable and works fine. If a boolean HTML attribute is present, the value is true. While including a value will work, it is not necessary and incorrect:
 
-```html-nolint example-bad
-required="required"
+```html example-bad
+<input required="required" />
 ```
 
 ## Case
@@ -114,18 +114,6 @@ Use semantic class/ID names, and separate multiple words with hyphens. Don't use
 <p class="bigRedBox">Blah blah blah</p>
 ```
 
-## Double quotes
-
-Use double quotes for HTML, not single quotes, like so:
-
-```html example-good
-<p class="important">Yes</p>
-```
-
-```html-nolint example-bad
-<p class='important'>Nope</p>
-```
-
 ## Entity references
 
 Don't use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
@@ -141,8 +129,6 @@ Instead of:
 ```html example-bad
 <p>&copy; 2018 Me</p>
 ```
-
-This is fine as long as you declare a UTF-8 character set.
 
 ## HTML elements
 

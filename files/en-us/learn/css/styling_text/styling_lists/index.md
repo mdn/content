@@ -97,7 +97,7 @@ The HTML for our list example looks like so:
 
 If you go to the live example now and investigate the list elements using [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), you'll notice a couple of styling defaults:
 
-- The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`).
+- The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`). If the directionality attribute [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) is set to right-to-left (`rtl`) for `ul` and `ol` elements, in that case {{cssxref("padding-right")}} comes into effect and its default value is `40px` (`2.5em`) .
 - The list items ({{htmlelement("li")}} elements) have no set defaults for spacing.
 - The {{htmlelement("dl")}} element has a top and bottom {{cssxref("margin")}} of `16px` (`1em`), but no padding set.
 - The {{htmlelement("dd")}} elements have {{cssxref("margin-left")}} of `40px` (`2.5em`).

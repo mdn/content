@@ -1,6 +1,7 @@
 ---
 title: last
 slug: Web/XPath/Functions/last
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `last` function returns a number equal to the context size from the expressi
 
 ### Syntax
 
-```
+```plain
 last()
 ```
 

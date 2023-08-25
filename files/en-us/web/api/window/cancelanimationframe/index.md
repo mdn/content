@@ -68,4 +68,3 @@ cancelAnimationFrame(myReq);
 ## See also
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

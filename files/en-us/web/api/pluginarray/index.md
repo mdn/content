@@ -58,12 +58,12 @@ const pluginsLength = navigator.plugins.length;
 
 document.write(
   `${pluginsLength.toString()} Plugin(s)<br>` +
-    `Name | Filename | description<br>`
+    `Name | Filename | description<br>`,
 );
 
 for (let i = 0; i < pluginsLength; i++) {
   document.write(
-    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`
+    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`,
   );
 }
 ```

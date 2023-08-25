@@ -60,7 +60,7 @@ console.log(`The character at index 999 is '${anyString.charAt(999)}'`);
 
 These lines display the following:
 
-```
+```plain
 The character at index 0   is 'B'
 
 The character at index 0   is 'B'
@@ -105,4 +105,4 @@ console.log([...str][0]); // "𠮷"
 - {{jsxref("String.prototype.codePointAt()")}}
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("String.fromCodePoint()")}}
-- [JavaScript has a Unicode problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)
+- [JavaScript has a Unicode problem](https://mathiasbynens.be/notes/javascript-unicode) by Mathias Bynens (2013)

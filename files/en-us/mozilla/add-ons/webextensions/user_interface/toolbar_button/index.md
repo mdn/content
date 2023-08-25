@@ -41,11 +41,11 @@ You can change many of the browser action properties programmatically using the 
 
 ## Icons
 
-For details on how to create icons to use with your browser action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography.html) in the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
+For details on how to create icons to use with your browser action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
 
 ## Examples
 
 The [`webextensions-examples`](https://github.com/mdn/webextensions-examples) repository on GitHub contains two examples of extensions that implement browser actions:
 
-- [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it) uses a browser action without a popup
-- [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) uses a browser action with a popup
+- [bookmark-it](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it) uses a browser action without a popup
+- [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify) uses a browser action with a popup

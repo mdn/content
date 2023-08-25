@@ -9,7 +9,7 @@ browser-compat: api.HTMLScriptElement
 
 HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** interface, which provides special properties and methods for manipulating the behavior and execution of `<script>` elements (beyond the inherited {{domxref("HTMLElement")}} interface).
 
-JavaScript files should be served with the `application/javascript` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{domxref("Element/error_event", "error")}} event; otherwise, it receives a {{domxref("Window/load_event", "load")}} event.
+JavaScript files should be served with the `application/javascript` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{domxref("HTMLElement/error_event", "error")}} event; otherwise, it receives a {{domxref("Window/load_event", "load")}} event.
 
 {{InheritanceDiagram}}
 
@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
     There are three possible execution modes:
 
     1. If the `async` attribute is present, then the script will be executed asynchronously as soon as it downloads.
-    2. If the `async` attribute is absent but the `defer` attribute is present, then the script is executed when [the page has finished parsing](/en-US/docs/Web/API/Window/DOMContentLoaded_event).
+    2. If the `async` attribute is absent but the `defer` attribute is present, then the script is executed when [the page has finished parsing](/en-US/docs/Web/API/Document/DOMContentLoaded_event).
     3. If neither attribute is present, then the script is fetched and executed immediately, blocking further parsing of the page.
 
     The `defer` attribute may be specified with the `async` attribute, so legacy browsers that only support `defer` (and not `async`) fall back to the `defer` behavior instead of the default blocking behavior.
@@ -56,7 +56,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Static methods
 
-- {{domxref("HTMLScriptElement.supports()")}}
+- {{domxref("HTMLScriptElement.supports_static", "HTMLScriptElement.supports()")}}
   - : Returns `true` if the browser supports scripts of the specified type and `false` otherwise.
     This method provides a simple and unified method for script-related feature detection.
 
@@ -89,7 +89,7 @@ function prefixScript(url, onloadFunction) {
   }
   document.currentScript.parentNode.insertBefore(
     newScript,
-    document.currentScript
+    document.currentScript,
   );
   newScript.src = url;
 }
@@ -124,7 +124,7 @@ affixScriptToHead("myScript2.js", () => {
 
 ### Checking if a script type is supported
 
-{{domxref("HTMLScriptElement.supports()")}} provides a unified mechanism for checking whether a browser supports particular types of scripts.
+{{domxref("HTMLScriptElement.supports_static", "HTMLScriptElement.supports()")}} provides a unified mechanism for checking whether a browser supports particular types of scripts.
 
 The example below shows how to check for module support, using the existence of the `noModule` attribute as a fallback.
 

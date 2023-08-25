@@ -61,7 +61,7 @@ extension.
       function getAllParaElems() {
         const allParas = document.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = allParas.length;
         alert(`There are ${num} &lt;p&gt; elements in this document`);
@@ -71,7 +71,7 @@ extension.
         const div1 = document.getElementById("div1");
         const div1Paras = div1.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = div1Paras.length;
         alert(`There are ${num} &lt;p&gt; elements in div1 element`);
@@ -81,7 +81,7 @@ extension.
         const div2 = document.getElementById("div2");
         const div2Paras = div2.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = div2Paras.length;
         alert(`There are ${num} &lt;p&gt; elements in div2 element`);

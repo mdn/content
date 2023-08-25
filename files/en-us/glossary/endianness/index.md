@@ -22,6 +22,6 @@ Examples with the number `0x12345678` (i.e. 305 419 896 in decimal):
 
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Endianness](https://en.wikipedia.org/wiki/Endianness) (Wikipedia)
 - {{Glossary("Data structure")}} (Glossary)

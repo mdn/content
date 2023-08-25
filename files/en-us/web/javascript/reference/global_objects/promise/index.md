@@ -115,7 +115,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action,10)`.
+An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action, 0)`.
 
 ```js
 const promiseA = new Promise((resolve, reject) => {
@@ -192,7 +192,7 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
 
-  - : Returns a new `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
+  - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
 
     Generally, if you don't know if a value is a promise or not, {{jsxref("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.
 
@@ -338,10 +338,13 @@ function testPromise() {
       `${thisPromiseCount}) Promise constructor<br>`,
     );
     // This is only an example to create asynchronism
-    setTimeout(() => {
-      // We fulfill the promise
-      resolve(thisPromiseCount);
-    }, Math.random() * 2000 + 1000);
+    setTimeout(
+      () => {
+        // We fulfill the promise
+        resolve(thisPromiseCount);
+      },
+      Math.random() * 2000 + 1000,
+    );
   });
 
   // We define what to do when the promise is resolved with the then() call,
@@ -378,7 +381,7 @@ To better picture this, we can take a closer look at how the realm might be an i
 To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- we have a realm here -->
 <script>
   // we have a realm here as well
@@ -394,7 +397,7 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
 The same concept applies to promises. If we modify the above example a little bit, we get this:
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- we have a realm here -->
 <script>
   // we have a realm here as well
@@ -411,7 +414,7 @@ If we change this so that the `<iframe>` in the document is listening to post me
 
 ```html
 <!-- y.html -->
-<!DOCTYPE html>
+<!doctype html>
 <iframe src="x.html"></iframe>
 <script>
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
@@ -421,7 +424,7 @@ If we change this so that the `<iframe>` in the document is listening to post me
 
 ```html
 <!-- x.html -->
-<!DOCTYPE html>
+<!doctype html>
 <script>
   window.addEventListener(
     "message",
@@ -452,5 +455,5 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 - [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [JavaScript Promises: an introduction](https://web.dev/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- [JavaScript Promises: an introduction](https://web.dev/promises/) on web.dev (2013)
+- [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript) slide show by Domenic Denicola (2011)

@@ -50,7 +50,7 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} identical to the one returned by
+    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
     {{domxref('performance.now()')}}, indicating the point in time when
     `requestAnimationFrame()` starts to execute callback functions.
 
@@ -117,4 +117,3 @@ window.requestAnimationFrame(step);
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
 - Paul Irish: [requestAnimationFrame API: now with sub-millisecond precision](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

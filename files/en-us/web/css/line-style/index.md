@@ -8,7 +8,7 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/#typedef-line-style
 
 {{CSSRef}}
 
-The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders) and [column](/en-US/docs/Web/CSS/CSS_Columns) properties:
+The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) and [column](/en-US/docs/Web/CSS/CSS_multicol_layout) properties:
 
 - {{cssxref("border")}}, {{cssxref("border-style")}}
 - {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
@@ -286,6 +286,6 @@ Notice that the almost-black color of `#000001` may be different from the actual
 
 ## See also
 
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders) module
-- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_Basic_User_Interface) module
-- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface) module
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module

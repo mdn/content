@@ -1,6 +1,7 @@
 ---
 title: Making PWAs work offline with Service workers
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
+page-type: guide
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
@@ -17,7 +18,7 @@ They run on a separate thread from the main JavaScript code of our page, and don
 
 Service workers can do more than offering offline capabilities, including handling notifications or performing heavy calculations. Service workers are quite powerful as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely.
 
-To learn more about service workers, see [Offline and background operation](Web/Progressive_web_apps/Guides/Offline_and_background_operation).
+To learn more about service workers, see [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
 
 ## Service workers in the js13kPWA app
 
@@ -97,7 +98,7 @@ self.addEventListener("install", (e) => {
       const cache = await caches.open(cacheName);
       console.log("[Service Worker] Caching all: app shell and content");
       await cache.addAll(contentToCache);
-    })()
+    })(),
   );
 });
 ```
@@ -144,7 +145,7 @@ self.addEventListener("fetch", (e) => {
       console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
       cache.put(e.request, response.clone());
       return response;
-    })()
+    })(),
   );
 });
 ```
@@ -175,7 +176,7 @@ self.addEventListener("install", (e) => {
     (async () => {
       const cache = await caches.open(cacheName);
       await cache.addAll(contentToCache);
-    })()
+    })(),
   );
 });
 ```
@@ -196,9 +197,9 @@ self.addEventListener("activate", (e) => {
             return;
           }
           return caches.delete(key);
-        })
+        }),
       );
-    })
+    }),
   );
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: WAI ARIA Live Regions/API Support
 slug: Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

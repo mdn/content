@@ -12,7 +12,7 @@ This page illustrates the application of CSS to the specialized language for cre
 
 Below you'll create a simple demonstration that runs in your SVG-enabled browser.
 
-> **Note:** Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/CSS_Variables).
+> **Note:** Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables).
 
 ## Example
 
@@ -425,7 +425,8 @@ See below how the structure then looks like.
   width="600px"
   height="600px"
   viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg">
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>SVG demonstration</title>
   <desc>Mozilla CSS Getting Started - SVG demonstration</desc>
 

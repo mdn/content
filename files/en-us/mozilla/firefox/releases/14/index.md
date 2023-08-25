@@ -1,6 +1,7 @@
 ---
 title: Firefox 14 for developers
 slug: Mozilla/Firefox/Releases/14
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -19,7 +20,7 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 - [input](/en-US/docs/Web/API/HTMLElement/input_event) events are fired also on editing host element of [contenteditable](/en-US/docs/Web/API/HTMLElement/contentEditable) editor and root element of [designMode](/en-US/docs/Web/API/Document/designMode) editor.
 - {{domxref("DOMException", "DOMException.code")}} is now deprecated per latest DOM Level 4 specification.
 - The {{domxref("Range.insertNode()")}} method now works correctly when used on collapsed ranges.
-- The {{domxref("BlobBuilder", "MozBlobBuilder")}} interface has been deprecated in favor of the constructor on {{domxref("Blob")}}. If you use `MozBlobBuilder` you'll see a warning message in the Web Console.
+- The `MozBlobBuilder` interface has been deprecated in favor of the constructor on {{domxref("Blob")}}. If you use `MozBlobBuilder` you'll see a warning message in the Web Console.
 - The {{domxref("Blob.Blob", "Blob()")}} constructor is now available to workers ([Firefox bug 736686](https://bugzil.la/736686)).
 - Support for the [Mutation Observers](/en-US/docs/Web/API/MutationObserver) has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.
 - The {{domxref("HTMLImageElement")}} interface's `x` and `y` properties were removed in Firefox 7.0 but restored in this release for compatibility reasons.

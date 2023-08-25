@@ -1,6 +1,7 @@
 ---
 title: The MDN Content Kitchensink
 slug: MDN/Kitchensink
+page-type: guide
 browser-compat: html.elements.video
 ---
 
@@ -33,7 +34,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
 ### Plain text
 
-```
+```plain
   ___________________________
 < I'm an expert in my field. >
   ---------------------------

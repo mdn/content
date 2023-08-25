@@ -10,7 +10,7 @@ The JavaScript exception "invalid assignment left-hand side" occurs when there w
 
 ## Message
 
-```
+```plain
 SyntaxError: Invalid left-hand side in assignment (V8-based)
 SyntaxError: invalid assignment left-hand side (Firefox)
 SyntaxError: Left side of assignment is not a reference. (Safari)
@@ -28,7 +28,7 @@ There was an unexpected assignment somewhere. This might be due to a mismatch of
 
 ### Typical invalid assignments
 
-```js example-bad
+```js-nolint example-bad
 if (Math.PI + 1 = 3 || Math.PI + 1 = 4) {
   console.log("no way!");
 }
@@ -42,7 +42,7 @@ const str = "Hello, "
 
 In the `if` statement, you want to use an equality operator (`===`), and for the string concatenation, the plus (`+`) operator is needed.
 
-```js example-good
+```js-nolint example-good
 if (Math.PI + 1 === 3 || Math.PI + 1 === 4) {
   console.log("no way!");
 }
@@ -56,7 +56,7 @@ const str = "Hello, "
 
 Invalid assignments don't always produce syntax errors. Sometimes the syntax is almost correct, but at runtime, the left hand side expression evaluates to a _value_ instead of a _reference_, so the assignment is still invalid. Such errors occur later in execution, when the line is actually executed.
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   return { a: 1 };
 }
@@ -78,7 +78,7 @@ foo().a = 1;
 
 [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) is not a valid target of assignment.
 
-```js example-bad
+```js-nolint example-bad
 obj?.foo = 1; // SyntaxError: invalid assignment left-hand side
 ```
 

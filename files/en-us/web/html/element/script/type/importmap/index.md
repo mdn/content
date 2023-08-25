@@ -37,7 +37,7 @@ Only the first import map in the document with an inline definition is processed
 
 Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
 
-An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script elements with `type="importmap"` that are not processed.
+An [`error` event](/en-US/docs/Web/API/HTMLElement/error_event) is fired at script elements with `type="importmap"` that are not processed.
 This might occur, for example, if module loading has already started when an import map is processed, or if multiple import maps are defined in the page.
 
 ## Description

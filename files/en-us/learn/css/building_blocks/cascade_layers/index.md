@@ -81,7 +81,7 @@ One last thing to note before moving on: order of appearance becomes relevant on
 
 ## Overview of cascade layers
 
-We now understand "cascade origin precedence", but what is "cascade layer precedence"? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover [regular layers](#creating_layers), [nested layers](#nested_layers), and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
+We now understand "cascade origin precedence", but what is "cascade layer precedence"? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover [regular layers](#creating_cascade_layers), [nested layers](#overview_of_nested_cascade_layers), and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
 
 ### Cascade layer precedence order
 
@@ -117,7 +117,7 @@ For example, a component library may be imported into a `components` layer. A re
 
 The ability to nest layers is very useful for anybody who works on developing component libraries, frameworks, third-party widgets, and themes.
 
-The ability to create nested layers also removes the worry of having conflicting layer names. We'll cover this in the [nested layer](#nested-layers) section.
+The ability to create nested layers also removes the worry of having conflicting layer names. We'll cover this in the [nested layer](#overview_of_nested_cascade_layers) section.
 
 > "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers."
 >
@@ -128,7 +128,7 @@ The ability to create nested layers also removes the worry of having conflicting
 Layers can be created using any one of the following methods:
 
 - The `@layer` statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
-- The `@layer` block at-rule, in which all styles within a block are added to a name or unnamed layer.
+- The `@layer` block at-rule, in which all styles within a block are added to a named or unnamed layer.
 - The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
@@ -139,7 +139,7 @@ Let's cover the three ways of creating a layer in a little more detail before di
 
 ### The @layer statement at-rule for named layers
 
-The order of layers is set by the order in which the layers appear in your CSS. Declaring layers using `@layer` followed by the names of one or more layers without assigning any styles is one way to define the [layer order](#ordering-layers).
+The order of layers is set by the order in which the layers appear in your CSS. Declaring layers using `@layer` followed by the names of one or more layers without assigning any styles is one way to define the [layer order](#determining_the_precedence_based_on_the_order_of_layers).
 
 The [`@layer`](/en-US/docs/Web/CSS/@layer) CSS at-rule is used to declare a cascade layer and to define the order of precedence when there are multiple cascade layers. The following at-rule declares three layers, in the order listed:
 
@@ -225,7 +225,7 @@ Try moving the last line, `@layer site, page;`, to make it the first line. What 
 
 #### Layer creation and media queries
 
-If you define a layer using [media](​​/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) or [feature](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries) queries, and the media is not a match or the feature is not supported, the layer is not created. The example below shows how changing the size of your device or browser may change the layer order. In this example, we create the `site` layer only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
+If you define a layer using [media](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) or [feature](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) queries, and the media is not a match or the feature is not supported, the layer is not created. The example below shows how changing the size of your device or browser may change the layer order. In this example, we create the `site` layer only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
 
@@ -252,7 +252,7 @@ You can import more than one CSS file into a single layer. The following declara
 @import url(sm-icons.css) layer(social);
 ```
 
-You can import styles and create layers based on specific conditions using [media queries](​​/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) and [feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
+You can import styles and create layers based on specific conditions using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) and [feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
 
 ```css
 @import url("ruby-narrow.css") layer(international) supports(display: ruby) and
@@ -279,7 +279,7 @@ If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with
 
 Let's look at the following example:
 
-```
+```css
 @import url("components-lib.css") layer(components);
 @import url("narrowtheme.css") layer(components.narrow);
 ```
@@ -288,7 +288,7 @@ In the first line, we import `components-lib.css` into the `components` layer. I
 
 The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. The nested `components.narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already contains a `narrow` layer, in which case, the contents of `narrowtheme.css` would be appended to the `components.narrow` nested layer. Additional nested named layers can be added to the `components` layer using the pattern `components.<layerName>`. As mentioned before, unnamed layers can be created but they cannot be accessed subsequently.
 
-Let's look at another example, where we import [`layers1.css`](#anonymous-and-named-layer-block-at-rule-assignment) into a named layer using the following statement:
+Let's look at another example, where we [import `layers1.css` into a named layer](#the_layer_block_at-rule_for_named_and_anonymous_layers) using the following statement:
 
 ```css
 @import url(layers1.css) layer(example);

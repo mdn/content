@@ -1,6 +1,7 @@
 ---
 title: Ajax
 slug: Web/Guide/AJAX
+page-type: landing-page
 ---
 
 <section id="Quick_links">
@@ -55,7 +56,7 @@ httpRequest.send();
 
 The parameter to the `send()` method can be any data you want to send to the server if `POST`-ing the request. Form data should be sent in a format that the server can parse, like a query string:
 
-```
+```plain
 "name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
 ```
 
@@ -66,7 +67,7 @@ Note that if you want to `POST` data, you may have to set the MIME type of the r
 ```js
 httpRequest.setRequestHeader(
   "Content-Type",
-  "application/x-www-form-urlencoded"
+  "application/x-www-form-urlencoded",
 );
 ```
 
@@ -245,7 +246,7 @@ function makeRequest(url, userName) {
   httpRequest.open("POST", url);
   httpRequest.setRequestHeader(
     "Content-Type",
-    "application/x-www-form-urlencoded"
+    "application/x-www-form-urlencoded",
   );
   httpRequest.send(`userName=${encodeURIComponent(userName)}`);
 }
@@ -287,7 +288,7 @@ For more on DOM methods, be sure to check out [Document Object Model (DOM)](/en-
 
 Another simple example follows — here we are loading a text file via XHR, the structure of which is assumed to be like this:
 
-```
+```plain
 TIME: 312.05
 TIME: 312.07
 TIME: 312.10
@@ -301,7 +302,7 @@ Once the text file is loaded, we `split()` the items into an array at each newli
 This is repeated every 5 seconds, using a `setInterval()` call. The idea would be that a server-side script of some kind would continually update the text file with new timestamps, and our XHR code would be used to report the latest timestamp on the client-side.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

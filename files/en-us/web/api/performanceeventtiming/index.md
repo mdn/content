@@ -87,15 +87,15 @@ The following event types are exposed by the Event Timing API:
     <tr>
       <th scope="row">Pointer events</th>
       <td>
-        {{domxref("HTMLElement/pointerover_event", "pointerover")}},
-        {{domxref("HTMLElement/pointerenter_event", "pointerenter")}},
-        {{domxref("HTMLElement/pointerdown_event", "pointerdown")}},
-        {{domxref("HTMLElement/pointerup_event", "pointerup")}},
-        {{domxref("HTMLElement/pointercancel_event", "pointercancel")}},
-        {{domxref("HTMLElement/pointerout_event", "pointerout")}},
-        {{domxref("HTMLElement/pointerleave_event", "pointerleave")}},
-        {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}},
-        {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
+        {{domxref("Element/pointerover_event", "pointerover")}},
+        {{domxref("Element/pointerenter_event", "pointerenter")}},
+        {{domxref("Element/pointerdown_event", "pointerdown")}},
+        {{domxref("Element/pointerup_event", "pointerup")}},
+        {{domxref("Element/pointercancel_event", "pointercancel")}},
+        {{domxref("Element/pointerout_event", "pointerout")}},
+        {{domxref("Element/pointerleave_event", "pointerleave")}},
+        {{domxref("Element/gotpointercapture_event", "gotpointercapture")}},
+        {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
       </td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the associated event's type.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timeStamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
 
 This interface also supports the following properties:
 
@@ -202,7 +202,7 @@ document.addEventListener(
   (event) => {
     firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
   },
-  { once: true }
+  { once: true },
 );
 
 // Sends the passed data to an analytics endpoint. This code

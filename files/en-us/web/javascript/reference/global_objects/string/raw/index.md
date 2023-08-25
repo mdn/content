@@ -14,7 +14,10 @@ The **`String.raw()`** static method is a tag function of [template literals](/e
 ## Syntax
 
 ```js-nolint
-String.raw(strings, ...substitutions)
+String.raw(strings)
+String.raw(strings, substitution1)
+String.raw(strings, substitution1, substitution2)
+String.raw(strings, substitution1, substitution2, /* …, */ substitutionN)
 
 String.raw`templateString`
 ```

@@ -81,7 +81,7 @@ function dragstart_handler(ev) {
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
   ev.dataTransfer.setData(
     "text/uri-list",
-    ev.target.ownerDocument.location.href
+    ev.target.ownerDocument.location.href,
   );
 }
 ```

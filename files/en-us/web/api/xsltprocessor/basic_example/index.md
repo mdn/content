@@ -62,7 +62,7 @@ To try out the example:
 3. Open **example.xml** from the browser.
 4. The browser output is then as shown below:
 
-   ```
+   ```plain
    Browser Output :
 
        Article - My Article

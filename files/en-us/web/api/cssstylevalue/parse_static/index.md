@@ -39,7 +39,7 @@ in a developer tools console.
 ```js
 const css = CSSStyleValue.parse(
   "transform",
-  "translate3d(10px,10px,0) scale(0.5)"
+  "translate3d(10px,10px,0) scale(0.5)",
 );
 ```
 
@@ -57,7 +57,7 @@ CSSTransformValue {0: CSSTranslate, 1: CSSScale, length: 2, is2D: false}
 
 ## See also
 
-- [`CSSStyleValue.parseAll()`](/en-us/docs/Web/API/CSSStyleValue/parseAll_static)
+- [`CSSStyleValue.parseAll()`](/en-US/docs/Web/API/CSSStyleValue/parseAll_static)
 
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

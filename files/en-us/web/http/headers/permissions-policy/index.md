@@ -149,6 +149,10 @@ You can specify
 
   - : Controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a {{domxref("DOMException")}}.
 
+- {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to use the [WebOTP API](/en-US/docs/Web/API/WebOTP_API) to request a one-time password (OTP) from a specially-formatted SMS message sent by the app's server, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}}.
+
 - {{httpheader('Permissions-Policy/payment', 'payment')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is enabled, the {{domxref("PaymentRequest","PaymentRequest()")}} constructor will throw a `SecurityError` {{domxref("DOMException")}}.
