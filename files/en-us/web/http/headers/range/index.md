@@ -54,10 +54,10 @@ Range: <unit>=-<suffix-length>
 The following examples show how to make requests using the `Range` header for CORS-safelisted requests, and for requesting multiple ranges.
 Other examples can be found in the [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests) guide.
 
-### Making cors-safelisted requests
+### Making CORS-safelisted requests
 
 The `Range` header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range.
-This means that it can be used in cross-origin requests without triggering a [preflight](/en-US/docs/Glossary/Preflight_request) request which is useful for requesting media and resuming downloads.
+This means that it can be used in cross-origin requests without triggering a [preflight](/en-US/docs/Glossary/Preflight_request) request, which is useful for requesting media and resuming downloads.
 
 This example requests the bytes from 100 to 200 of the resource:
 
