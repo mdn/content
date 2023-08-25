@@ -12,6 +12,9 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### Developer Tools
 
+- The area selected by the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) can now be controlled using the keyboard.
+  Pressing <kbd>Ctrl</kbd> + arrow keys (<kbd>Cmd</kbd> + arrow keys on a Mac) resizes the selected area with <kbd>Shift</kbd> + arrow keys as an accelerator for larger steps ([Firefox bug 1262782](https://bugzil.la/1262782)).
+
 ### HTML
 
 #### Removals
