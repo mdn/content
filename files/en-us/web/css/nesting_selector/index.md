@@ -24,7 +24,7 @@ parentRule {
 
 In this example, nesting is done without the **`&` nesting selector**. When the browser parses the nested selectors, it automatically adds whitespace between the selectors to create a new CSS selector rule.
 
-````css
+```css
 .parent-rule {
   /* parent rule properties */
   .child-rule {
@@ -40,6 +40,7 @@ In this example, nesting is done without the **`&` nesting selector**. When the 
 .parent-rule .child-rule {
   /* style properties for .child-rule descendants for .parent-rule ancestors */
 }
+```
 
 When the nested rule needs to be attached (with no whitespace) to the parent rule, such as when using a {{cssxref('Pseudo-classes', 'pseudo class')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the **`&` nesting selector** can be immediately prepended to achieve the desired effect.
 
