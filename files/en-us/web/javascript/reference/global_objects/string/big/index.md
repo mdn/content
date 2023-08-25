@@ -19,6 +19,10 @@ The **`big()`** method of {{jsxref("String")}} values creates a string that embe
 big()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with a `<big>` start tag, then the text `str`, and then a `</big>` end tag.

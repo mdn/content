@@ -19,6 +19,10 @@ remove information about this locale that would be added by calling
 minimize()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns

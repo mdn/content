@@ -17,6 +17,10 @@ The **`[@@iterator]()`** method of {{jsxref("String")}} values implements the [i
 string[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the Unicode code points of the string value as individual strings.

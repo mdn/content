@@ -17,6 +17,10 @@ The **`toString()`** method of {{jsxref("TypedArray")}} instances returns a stri
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the elements of the typed array.

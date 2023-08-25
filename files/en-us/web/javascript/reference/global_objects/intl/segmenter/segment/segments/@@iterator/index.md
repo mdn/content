@@ -17,6 +17,10 @@ The **`[@@iterator]()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Refer
 segments[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields data about each segment. Each yielded object has the same properties as the object returned by the [`containing()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing) method.
