@@ -32,7 +32,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{jsxref("Promise")}} that fulfills with an {{domxref("AudioBuffer")}}.
 
 ## Examples
 
