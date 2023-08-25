@@ -374,4 +374,4 @@ The `for...of` loop iterates and logs _values_ that `iterable`, as an array (whi
 
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Object.entries()")}} – Useful when using `for...of` over an object.
+- {{jsxref("Object.entries()")}}
