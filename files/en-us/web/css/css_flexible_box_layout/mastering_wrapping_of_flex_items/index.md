@@ -89,4 +89,4 @@ If this causes a problem for your layout it may require a rethinking of the stru
 ### Using `visibility: hidden` and `display: none`
 
 In previous live example, try using `visibility: hidden` or `display: none` instead of `visiblity: collapse`. Using `visibility: hidden`, the item is made invisible but the box is kept in the formatting structure, so it still behaves as if it were part of the layout.
-When you use `display: none`, the item is completely removed from the formatting structure. Not only it is invisible but the strut is removed as well. What this means in practice is that counters ignore it, and things like transitions do not run.
+When you use `display: none`, the item is completely removed from the formatting structure. Not only is it invisible but the structure is removed as well. This means counters ignore it and things like transitions do not run.
