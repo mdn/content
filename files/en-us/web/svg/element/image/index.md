@@ -38,7 +38,7 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
 - {{SVGAttr("y")}}: Positions the image vertically from the origin.
 - {{SVGAttr("width")}}: The width the image renders at. Unlike HTML's `<img>`, this attribute is required.
 - {{SVGAttr("height")}}: The height the image renders at. Unlike HTML's `<img>`, this attribute is required.
-- {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.
+- {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}{{deprecated_inline}}: Points at a URL for the image file.
 - {{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.
 - {{SVGAttr("crossorigin")}}: Defines the value of the credentials flag for CORS requests.
 - {{SVGAttr("decoding")}}: Provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
