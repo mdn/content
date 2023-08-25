@@ -40,7 +40,7 @@ Range: <unit>=-<suffix-length>
 
 - \<unit>
   - : The unit in which ranges are specified.
-    This is usually `bytes`.
+    This `bytes` for byte ranges (currently no other [range units are registered](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)).
 - \<range-start>
   - : An integer indicating the beginning of the request range, in the given unit.
 - \<range-end>
