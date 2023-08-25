@@ -12,6 +12,7 @@ Several parts can be requested at the same time in one `Range` header, and the s
 If the server sends back ranges, it uses the {{HTTPStatus("206", "206 Partial Content")}} for the response.
 If the ranges are invalid, the server returns the {{HTTPStatus("416", "416 Range Not Satisfiable")}} error.
 The server can also ignore the `Range` header and return the whole document with a {{HTTPStatus("200")}} status code.
+The header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the directive specifies a single byte range.
 
 <table class="properties">
   <tbody>
