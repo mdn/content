@@ -62,7 +62,7 @@ function onError(error) {
 
 let gettingFrame = browser.webNavigation.getFrame({
   tabId: 19,
-  frameId: 1537
+  frameId: 1537,
 });
 
 // Edge specific - processId is required not optional, must be integer not null

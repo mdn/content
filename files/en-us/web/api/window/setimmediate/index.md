@@ -21,7 +21,7 @@ updates.
 setImmediate(func)
 setImmediate(func, param0)
 setImmediate(func, param0, param1)
-setImmediate(func, param0, param1, /* … ,*/ paramN)
+setImmediate(func, param0, param1, /* …, */ paramN)
 ```
 
 ### Parameters

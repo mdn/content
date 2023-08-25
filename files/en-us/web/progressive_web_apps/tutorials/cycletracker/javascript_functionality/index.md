@@ -2,6 +2,7 @@
 title: "CycleTracker: JavaScript functionality"
 short-title: JavaScript functionality
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
+page-type: tutorial-chapter
 ---
 
 {{PWASidebar}}
@@ -16,7 +17,7 @@ The last line in the HTML file calls the `app.js` JavaScript file. This is the s
 
 At the end of this lesson, you will have a fully functional app. In future lessons, we will progressively enhance the app to create a fully installable PWA that works even when the user is offline.
 
-## Javascript task
+## JavaScript task
 
 When a user visits the page, we check if they have existing data stored in local storage. The first time a user visits the page, there won't be any data. When a new user selects two dates and submits the form, we need to:
 
@@ -202,7 +203,7 @@ function renderPastPeriods() {
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
     periodEl.textContent = `From ${formatDate(
-      period.startDate
+      period.startDate,
     )} to ${formatDate(period.endDate)}`;
     pastPeriodList.appendChild(periodEl);
   });
@@ -293,7 +294,7 @@ function renderPastPeriods() {
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
     periodEl.textContent = `From ${formatDate(
-      period.startDate
+      period.startDate,
     )} to ${formatDate(period.endDate)}`;
     pastPeriodList.appendChild(periodEl);
   });

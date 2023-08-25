@@ -49,7 +49,7 @@ The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#regul
 
 The boundaries of a character range must not specify more than one character, which happens if you use a [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape). For example:
 
-```js
+```js-nolint example-bad
 /[\s-9]/u; // SyntaxError: Invalid regular expression: Invalid character class
 ```
 

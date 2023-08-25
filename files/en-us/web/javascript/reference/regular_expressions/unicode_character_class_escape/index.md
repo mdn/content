@@ -159,8 +159,8 @@ console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 
 However, you can't use `\P` to match "a string that does not have a property", because it's unclear how many characters should be consumed.
 
-```js
-/\P{RGI_Emoji_Flag_Sequence}/v; // Invalid regular expression: /\P{RGI_Emoji_Flag_Sequence}/v: Invalid property name
+```js-nolint example-bad
+/\P{RGI_Emoji_Flag_Sequence}/v; // SyntaxError: Invalid regular expression: Invalid property name
 ```
 
 ## Specifications
@@ -181,6 +181,6 @@ However, you can't use `\P` to match "a string that does not have a property", b
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [Unicode character property](https://en.wikipedia.org/wiki/Unicode_character_property) on Wikipedia
 - [ES2018: RegExp Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html) by Dr. Axel Rauschmayer (2017)
-- [Unicode regular expressions § Properties](https://unicode.org/reports/tr18/#Categories) on unicode.org
+- [Unicode regular expressions § Properties](https://unicode.org/reports/tr18/#Categories)
 - [Unicode Utilities: UnicodeSet](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
 - [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) on v8.dev (2022)

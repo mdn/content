@@ -1,6 +1,7 @@
 ---
 title: Offline and background operation
 slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
+page-type: guide
 ---
 
 {{PWASidebar}}
@@ -112,7 +113,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/fallback.html",
-    })
+    }),
   );
 });
 ```
@@ -212,7 +213,7 @@ async function requestBackgroundFetch(movieData) {
       icons: movieIcons,
       title: "Downloading my movie",
       downloadTotal: 60 * 1024 * 1024,
-    }
+    },
   );
   //...
 }
@@ -257,7 +258,7 @@ self.addEventListener("backgroundfetchsuccess", (event) => {
     const registration = event.registration;
     const records = await registration.matchAll();
     const responsePromises = records.map(
-      async (record) => await record.responseReady
+      async (record) => await record.responseReady,
     );
 
     const responses = Promise.all(responsePromises);

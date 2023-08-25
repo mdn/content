@@ -1,6 +1,7 @@
 ---
 title: Installing and uninstalling web apps
 slug: Web/Progressive_web_apps/Guides/Installing
+page-type: guide
 ---
 
 {{PWASidebar}}

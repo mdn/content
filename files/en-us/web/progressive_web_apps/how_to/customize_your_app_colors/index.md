@@ -1,6 +1,7 @@
 ---
 title: Customize your app's theme and background colors
 slug: Web/Progressive_web_apps/How_to/Customize_your_app_colors
+page-type: how-to
 ---
 
 {{PWASidebar}}

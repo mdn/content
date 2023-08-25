@@ -46,7 +46,7 @@ Next up, we will initialize our paddle by adding the following `add.sprite()` ca
 paddle = game.add.sprite(
   game.world.width * 0.5,
   game.world.height - 5,
-  "paddle"
+  "paddle",
 );
 ```
 

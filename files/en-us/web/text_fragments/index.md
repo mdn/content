@@ -1,6 +1,7 @@
 ---
 title: Text fragments
 slug: Web/Text_fragments
+page-type: guide
 browser-compat:
   - html.elements.a.text_fragments
   - api.FragmentDirective
@@ -34,7 +35,7 @@ If the ID is changed or removed, the document fragment is ignored, and the link 
 
 In a similar manner to document fragments, text fragments are appended onto a URL after a hash symbol (`#`). The syntax however is a bit different:
 
-```
+```url
 https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ```
 
@@ -81,7 +82,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 ### textStart and textEnd
 
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=human,URL](/en-US/docs/Web/HTML/Element/a#:~:text=human,URL) scrolls to and highlights the first instance of a text string starting with `human` and ending with `URL`.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=human,URL](/en-US/docs/Web/HTML/Element/a#:~:text=human,url) scrolls to and highlights the first instance of a text string starting with `human` and ending with `URL`.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,defining%20a%20value](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,defining%20a%20value) scrolls to and highlights the first instance of a text string starting with `linked URL` and ending with `defining a value`. Note how the highlighted text spans across multiple block-level elements.
 
 ### Examples with prefix- and/or -suffix
@@ -95,7 +96,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 You can specify multiple text fragments to highlight in the same URL by separating them with ampersand (`&`) characters. Let's look at a couple of examples:
 
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked](/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked) scrolls to and highlights the first instances of the text strings `Causes` and `linked`.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked](/en-US/docs/Web/HTML/Element/a#:~:text=causes&text=linked) scrolls to and highlights the first instances of the text strings `Causes` and `linked`.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute) scrolls to and highlights two text instances:
   - The first instance of the text `linked URL` that has the text `'s format` directly following it.
   - The first instance of a text string starting with `attributes` and ending with `attribute`, which is prefixed by `Deprecated`.

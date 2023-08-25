@@ -37,7 +37,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 
 `encodeURIComponent()` uses the same encoding algorithm as described in {{jsxref("encodeURI()")}}. It escapes all characters **except**:
 
-```
+```plain
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 
@@ -93,7 +93,7 @@ function encodeRFC3986URIComponent(str) {
 }
 ```
 
-### Encoding a lone high surrogate throws
+### Encoding a lone surrogate throws
 
 A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
 
@@ -101,10 +101,10 @@ A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate wh
 // High-low pair OK
 encodeURIComponent("\uD800\uDFFF"); // "%F0%90%8F%BF"
 
-// Lone high surrogate throws "URIError: malformed URI sequence"
+// Lone high-surrogate code unit throws "URIError: malformed URI sequence"
 encodeURIComponent("\uD800");
 
-// Lone low surrogate throws "URIError: malformed URI sequence"
+// Lone high-surrogate code unit throws "URIError: malformed URI sequence"
 encodeURIComponent("\uDFFF");
 ```
 

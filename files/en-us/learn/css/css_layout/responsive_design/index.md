@@ -53,7 +53,7 @@ The rest of this article will point you to the various web platform features you
 
 ## Media Queries
 
-[Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
+[Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
 For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The CSS for the `.container` selector will only be applied if these two things are true.
 
@@ -73,7 +73,7 @@ If using breakpoints, best practices encourage defining media query breakpoints 
 
 There are different approaches to the styles defined within a media query block; ranging from using media queries to {{htmlelement("link")}} style sheets based on browser size ranges to only including custom properties variables to store values associated with each breakpoint.
 
-Find out more in the MDN documentation for [Media Queries](/en-US/docs/Web/CSS/Media_Queries).
+Find out more in the MDN documentation for [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries).
 
 Media queries can help with RWD, but are not a requirement. Flexible grids, relative units, and minimum and maximum unit values can be used without queries.
 

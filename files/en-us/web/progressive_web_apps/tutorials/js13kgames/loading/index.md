@@ -1,6 +1,7 @@
 ---
 title: Progressive loading
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
+page-type: guide
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

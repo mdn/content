@@ -1,6 +1,7 @@
 ---
 title: <xsl:when>
 slug: Web/XSLT/Element/when
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

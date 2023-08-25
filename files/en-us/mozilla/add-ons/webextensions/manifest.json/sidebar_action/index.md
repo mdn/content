@@ -224,7 +224,7 @@ The `sidebar_action` key is an object that may have any of the properties listed
 }
 ```
 
-For a simple example of an extension that uses a sidebar, see [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+For a simple example of an extension that uses a sidebar, see [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page).
 
 ## Browser compatibility
 

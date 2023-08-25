@@ -303,14 +303,16 @@ Closures can capture variables in block scopes and module scopes as well. For ex
 
 ```js
 function outer() {
-  const x = 5;
-  if (Math.random() > 0.5) {
+  let getY;
+  {
     const y = 6;
-    return () => console.log(x, y);
+    getY = () => y;
   }
+  console.log(typeof y); // undefined
+  console.log(getY()); // 6
 }
 
-outer()(); // Logs 5 6
+outer();
 ```
 
 Closures over modules can be more interesting.
@@ -334,7 +336,7 @@ setX(6);
 console.log(getX()); // 6
 ```
 
-Closures can close over imported values as well, which are regarded as _live bindings_, because when the original value changes, the imported one changes accordingly.
+Closures can close over imported values as well, which are regarded as _live {{glossary("binding", "bindings")}}_, because when the original value changes, the imported one changes accordingly.
 
 ```js
 // myModule.js

@@ -79,7 +79,7 @@ This may take one of three forms:
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
 ◉ One
 ◉ Two
 ◉ Three
@@ -115,7 +115,7 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
 ➀ One
 ➁ Two
 ➂ Three
@@ -155,7 +155,7 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
   a. One
   b. Two
   c. Three
@@ -201,7 +201,7 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
  a. One
  b. Two
  c. Three
@@ -247,7 +247,7 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-```
+```plain
  b. One
  c. Two
 ba. Three
@@ -350,8 +350,20 @@ This example renders a list using Roman numerals. Notice that a `range` is speci
 @counter-style upper-roman {
   system: additive;
   range: 1 3999;
-  additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL,
-    10 X, 9 IX, 5 V, 4 IV, 1 I;
+  additive-symbols:
+    1000 M,
+    900 CM,
+    500 D,
+    400 CD,
+    100 C,
+    90 XC,
+    50 L,
+    40 XL,
+    10 X,
+    9 IX,
+    5 V,
+    4 IV,
+    1 I;
 }
 
 ul {

@@ -83,7 +83,7 @@ fetch("some.json", {
   .catch((e) =>
     e instanceof TypeError && e.message === "Failed to fetch"
       ? { status: 504 } // Workaround for chrome; which fails with a TypeError
-      : Promise.reject(e)
+      : Promise.reject(e),
   )
   .then((res) => {
     if (res.status === 504) {

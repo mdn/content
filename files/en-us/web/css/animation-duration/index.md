@@ -35,7 +35,7 @@ animation-duration: unset;
 
 ### Values
 
-- `auto`
+- `auto` {{Experimental_Inline}}
 
   - : For time-based animations, `auto` is equivalent to a value of `0s` (see below). For [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), `auto` fills the entire timeline with the animation.
 

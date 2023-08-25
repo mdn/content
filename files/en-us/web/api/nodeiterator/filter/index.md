@@ -9,7 +9,7 @@ browser-compat: api.NodeIterator.filter
 {{APIRef("DOM")}}
 
 The **`NodeIterator.filter`** read-only property returns a
-{{domxref("NodeFilter")}} object, that is an object which implements an
+`NodeFilter` object, that is an object which implements an
 `acceptNode(node)` method, used to screen nodes.
 
 When creating the {{domxref("NodeIterator")}}, the filter object is passed in as the
@@ -21,7 +21,7 @@ node should be rejected.
 
 ## Value
 
-A {{domxref("NodeFilter")}} object.
+A `NodeFilter` object.
 
 ## Examples
 
@@ -33,7 +33,7 @@ const nodeIterator = document.createNodeIterator(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 nodeFilter = nodeIterator.filter;
 ```

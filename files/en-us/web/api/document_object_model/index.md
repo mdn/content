@@ -44,7 +44,6 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("MutationRecord")}}
 - {{DOMxRef("NamedNodeMap")}}
 - {{DOMxRef("Node")}}
-- {{DOMxRef("NodeFilter")}}
 - {{DOMxRef("NodeIterator")}}
 - {{DOMxRef("NodeList")}}
 - {{DOMxRef("ProcessingInstruction")}}
@@ -234,7 +233,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGAnimatedNumber")}}
 - {{DOMxRef("SVGAnimatedNumberList")}}
 - {{DOMxRef("SVGAnimatedPathData")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAnimatedPoints")}}
 - {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
 - {{DOMxRef("SVGAnimatedRect")}}
 - {{DOMxRef("SVGAnimatedString")}}

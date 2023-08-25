@@ -1,6 +1,7 @@
 ---
 title: Firefox 43 for developers
 slug: Mozilla/Firefox/Releases/43
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -80,7 +81,7 @@ _No change._
 - The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ([Firefox bug 1191178](https://bugzil.la/1191178)).
 - The modern [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) has been implemented: unprefixed {{domxref("Screen.orientation")}} and the {{domxref("ScreenOrientation")}} interface are now available ([Firefox bug 1131470](https://bugzil.la/1131470)). The non-standard {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, and {{domxref("Screen.mozUnlockOrientation()")}} will be removed in the future.
 - Under Linux, like under Windows, {{domxref("Event.timeStamp")}} now returns a {{domxref("DOMHighResTimeStamp")}} ([Firefox bug 1026803](https://bugzil.la/1026803)).
-- Experimental support for {{domxref("Selection")}} events {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Document/selectstart_event", "selectstart")}}, as well as the {{domxref("Document.selectionchange_event", "Document.onselectionchange")}} and {{domxref("HTMLInputElement.onselectstart")}} event handlers property has been added ([Firefox bug 571294](https://bugzil.la/571294)). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ([Firefox bug 1196479](https://bugzil.la/1196479)). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
+- Experimental support for {{domxref("Selection")}} events {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Node/selectstart_event", "selectstart")}}, as well as the {{domxref("Document.selectionchange_event", "Document.onselectionchange")}} and {{domxref("HTMLInputElement.onselectstart")}} event handlers property has been added ([Firefox bug 571294](https://bugzil.la/571294)). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ([Firefox bug 1196479](https://bugzil.la/1196479)). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
 - Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ([Firefox bug 1204841](https://bugzil.la/1204841)).
 - The {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} method has been removed ([Firefox bug 1206030](https://bugzil.la/1206030)).
 - The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{jsxref("TypeError")}} exception when used with a URL containing a username and password ([Firefox bug 1195820](https://bugzil.la/1195820)).

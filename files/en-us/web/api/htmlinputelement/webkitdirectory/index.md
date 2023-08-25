@@ -92,7 +92,7 @@ document.getElementById("filepicker").addEventListener(
       output.appendChild(item);
     }
   },
-  false
+  false,
 );
 ```
 

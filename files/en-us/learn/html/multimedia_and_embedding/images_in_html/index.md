@@ -118,7 +118,9 @@ Essentially, the key is to deliver a usable experience, even when the images can
 
 ### Width and height
 
-You can use the `width` and `height` attributes to specify the width and height of your image. You can find your image's width and height in a number of ways. For example on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the info display up for the image file. Returning to our example, we could do this:
+You can use the [`width`](/en-US/docs/Web/HTML/Element/img#width) and [`height`](/en-US/docs/Web/HTML/Element/img#height) attributes to specify the width and height of your image. They are given as integers without a unit, and represent the image's width and height in pixels.
+
+You can find your image's width and height in a number of ways. For example, on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the display information for the image file. Returning to our example, we could do this:
 
 ```html
 <img
@@ -129,15 +131,53 @@ You can use the `width` and `height` attributes to specify the width and height 
   height="341" />
 ```
 
-This doesn't result in much difference to the display, under normal circumstances. But if the image isn't being displayed, for example, the user has just navigated to the page, and the image hasn't yet loaded, you'll notice the browser is leaving a space for the image to appear in:
+There's a very good reason to do this. The HTML for your page and the image are separate resources, fetched by the browser as separate HTTP(S) requests. As soon as the browser has received the HTML, it will start to display it to the user. If the images haven't yet been received (and this will often be the case, as image file sizes are often much larger than HTML files), then the browser will render only the HTML, and will update the page with the image as soon as it is received.
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
+For example, suppose we have some text after the image:
 
-This is a good thing to do, resulting in the page loading quicker and more smoothly.
+```html
+<h1>Images in HTML</h1>
 
-However, you shouldn't alter the size of your images using HTML attributes. If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
+<img
+  src="dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+  title="A T-Rex on display in the Manchester University Museum" />
+<blockquote>
+  <p>
+    But down there it would be dark now, and not the lovely lighted aquarium she
+    imagined it to be during the daylight hours, eddying with schools of tiny,
+    delicate animals floating and dancing slowly to their own serene currents
+    and creating the look of a living painting. That was wrong, in any case. The
+    ocean was different from an aquarium, which was an artificial environment.
+    The ocean was a world. And a world is not art. Dorothy thought about the
+    living things that moved in that world: large, ruthless and hungry. Like us
+    up here.
+  </p>
+  <footer>- Rachel Ingalls, <cite>Mrs. Caliban</cite></footer>
+</blockquote>
+```
 
-> **Note:** If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
+As soon as the browser downloads the HTML, the browser will start to display the page.
+
+Once the image is loaded, the browser adds the image to the page. Because the image takes up space, the browser has to move the text down the page, to fit the image above it:
+
+![Comparison of page layout while the browser is loading a page and when it has finished, when no size is specified for the image.](no-size.png)
+
+Moving the text like this is extremely distracting to users, especially if they have already started to read it.
+
+If you specify the actual size of the image in your HTML, using the `width` and `height` attributes, then the browser knows, before it has downloaded the image, how much space it has to allow for it.
+
+This means that when the image has been downloaded, the browser doesn't have to move the surrounding content.
+
+![Comparison of page layout while the browser is loading a page and when it has finished, when the image size is specified.](size.png)
+
+For an excellent article on the history of this feature, see [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
+
+> **Note:** Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
+>
+> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
+>
+> If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
 
 ### Image titles
 
@@ -165,7 +205,7 @@ It is better to include such supporting information in the main article text, ra
 
 It is now your turn to play! This active learning section will have you up and running with a simple embedding exercise. You are provided with a basic {{htmlelement("img")}} tag; we'd like you to embed the image located at the following URL:
 
-```
+```url
 https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
 ```
 
@@ -280,7 +320,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -317,10 +357,10 @@ Let's look at some common categories of licenses you are likely to find on the w
 
 #### All rights reserved
 
-Creators of original work such as songs, books, or software often release their work under closed copyright protection. This means that, by default, they (or their publisher) have exclusive rights to use (for example, display or distribute) their work. If you want to use a copyrighted image with the _all rights reserved_ license, you need to:
+Creators of original work such as songs, books, or software often release their work under closed copyright protection. This means that, by default, they (or their publisher) have exclusive rights to use (for example, display or distribute) their work. If you want to use copyrighted images with an _all rights reserved_ license, you need to do one of the following:
 
 - Obtain explicit, written permission from the copyright holder.
-- Pay a license fee to use it. This can be a one-time fee for unlimited use ("royalty-free"), or it might be "rights-managed", in which case you might have to pay specific fees per use by time slot, geographic region, industry or media type, etc.
+- Pay a license fee to use them. This can be a one-time fee for unlimited use ("royalty-free"), or it might be "rights-managed", in which case you might have to pay specific fees per use by time slot, geographic region, industry or media type, etc.
 - Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://www.bl.uk/business-and-ip-centre/articles/fair-dealing-copyright-explained) in your jurisdiction.
 
 Authors are not required to include a copyright notice or license terms with their work. Copyright exists automatically in an original work of authorship once it is created in a tangible medium. So if you find an image online and there are no copyright notices or license terms, the safest course is to assume it is protected by copyright with all rights reserved.
@@ -525,7 +565,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;

@@ -1,6 +1,7 @@
 ---
 title: Firefox 39 for developers
 slug: Mozilla/Firefox/Releases/39
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

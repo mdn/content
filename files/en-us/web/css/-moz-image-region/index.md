@@ -11,6 +11,12 @@ browser-compat: css.properties.-moz-image-region
 
 For certain XUL elements and pseudo-elements that use an image from the {{CSSxRef("list-style-image")}} property, this property specifies a region of the image that is used in place of the whole image. This allows elements to use different pieces of the same image to improve performance.
 
+The syntax is similar to the {{CSSxRef("clip")}} property. All four values are relative to the upper left corner of the image.
+
+> **Note:** For a system that works on any background, see {{CSSxRef("-moz-image-rect")}}.
+
+## Syntax
+
 ```css
 /* Keyword value */
 -moz-image-region: auto;
@@ -23,12 +29,6 @@ For certain XUL elements and pseudo-elements that use an image from the {{CSSxRe
 -moz-image-region: initial;
 -moz-image-region: unset;
 ```
-
-The syntax is similar to the {{CSSxRef("clip")}} property. All four values are relative to the upper left corner of the image.
-
-> **Note:** For a system that works on any background, see {{CSSxRef("-moz-image-rect")}}.
-
-## Syntax
 
 ### Values
 

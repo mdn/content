@@ -2,36 +2,36 @@
 title: Prioritized Task Scheduling API
 slug: Web/API/Prioritized_Task_Scheduling_API
 page-type: web-api-overview
-browser-compat: api.Scheduler
+browser-compat:
+  - api.Scheduler
+  - api.Scheduling
 ---
 
 {{DefaultAPISidebar("Prioritized Task Scheduling API")}} {{AvailableInWorkers}}
 
-The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
+The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code or in third-party libraries and frameworks.
 
-The [task priorities](#task-priorities) are very coarse-grained, and are based around whether tasks block user interaction, or otherwise impact the user experience, or can run in the background.
-Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories defined by the API.
+The [task priorities](#task-priorities) are very coarse-grained and based around whether tasks block user interaction or otherwise impact the user experience, or can run in the background. Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories defined by the API.
 
 The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.
 
-## Concepts and Usage
+In this page, we also include information about the {{domxref("Scheduling.isInputPending", "navigator.scheduling.isInputPending()")}} method, which was defined in a different API specification but is very closely related to task scheduling. This method allows you to check whether there are pending input events in the event queue, and therefore handle task queues efficiently, only yielding to the main thread when it is needed.
 
-The API is available in both window and worker threads using the `scheduler` property on the global object.
-This property can be tested to feature-check for API support.
+## Concepts and usage
 
-### Overview
+### Prioritized task scheduling
+
+The Prioritized Task Scheduling API is available in both window and worker threads using the `scheduler` property on the global object.
 
 The main API method is {{domxref('Scheduler.postTask()')}}, which takes a callback function ("the task") and returns a promise that resolves with the return value of the function, or rejects with an error.
 
-The simplest form of the API is as shown below.
-This creates a task with default priority [`user-visible`](#user-visible) that has a fixed priority and cannot be aborted.
+The simplest form of the API is shown below. This creates a task with default priority [`user-visible`](#user-visible) that has a fixed priority and cannot be aborted.
 
 ```js
 const promise = scheduler.postTask(myTask);
 ```
 
-Because the method returns a promise you can wait on its resolution asynchronously using `then`, and catch errors thrown by the task callback function (or when the task is aborted) using `catch`.
-The callback function can be any kind of function (below we demonstrate an arrow function).
+Because the method returns a promise you can wait on its resolution asynchronously using `then`, and catch errors thrown by the task callback function (or when the task is aborted) using `catch`. The callback function can be any kind of function (below we demonstrate an arrow function).
 
 ```js
 scheduler
@@ -75,7 +75,7 @@ scheduler
   .catch((error) => console.error(`Error: ${error}`)); // Log any errors
 ```
 
-### Task priorities
+#### Task priorities
 
 Scheduled tasks are run in priority order, followed by the order that they were added to the scheduler queue.
 
@@ -97,7 +97,7 @@ There are just three priorities, which are listed below (ordered from highest to
   - : Tasks that are not time-critical.
     This might include log processing or initializing third party libraries that aren't required for rendering.
 
-### Mutable and immutable task priority
+#### Mutable and immutable task priority
 
 There are many use cases where the task priority never needs to change, while for others it does.
 For example fetching an image might change from a `background` task to `user-visible` as a carousel is scrolled into the viewing area.
@@ -115,32 +115,109 @@ If the priority is not set with `options.priority` or by passing a {{domxref("Ta
 Note that a task that needs to be aborted must set `options.signal` to either {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}.
 However for a task with an immutable priority, {{domxref("AbortSignal")}} more clearly indicates that the task priority cannot be changed using the signal.
 
+### isInputPending()
+
+The {{domxref("Scheduling.isInputPending", "isInputPending()")}} API is intended to help with task execution, enabling you to make task runners more efficient by yielding to the main thread only when the user is trying to interact with your app, rather than having to do it at arbitrary intervals.
+
+Let's run through an example to demonstrate what we mean by this. When you have several tasks that are of roughly the same priority, it makes sense to break them down into separate functions to aid with maintenance, debugging, and many other reasons.
+
+For example:
+
+```js
+function main() {
+  a();
+  b();
+  c();
+  d();
+  e();
+}
+```
+
+However, this kind of structure doesn't help with main thread blocking. Since all five of the tasks are being run inside one main function, the browser runs them all as a single task.
+
+To handle this, we tend to run a function periodically to get the code to _yield to the main thread_. This means that our code is split into multiple tasks, between the execution of which the browser is given the opportunity to handle high-priority tasks such as updating the UI. A common pattern for this function uses {{domxref("setTimeout()")}} to postpone execution into a separate task:
+
+```js
+function yield() {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 0);
+  });
+}
+```
+
+This can be used inside a task runner pattern like so, to yield to the main thread after each task has been run:
+
+```js
+async function main() {
+  // Create an array of functions to run
+  const tasks = [a, b, c, d, e];
+
+  // Loop over the tasks
+  while (tasks.length > 0) {
+    // Shift the first task off the tasks array
+    const task = tasks.shift();
+
+    // Run the task
+    task();
+
+    // Yield to the main thread
+    await yield();
+  }
+}
+```
+
+This helps with the main thread-blocking problem, but it could be better — we can use {{domxref("Scheduling.isInputPending", "navigator.scheduling.isInputPending()")}} to run the `yield()` function only when the user is attempting to interact with the page:
+
+```js
+async function main() {
+  // Create an array of functions to run
+  const tasks = [a, b, c, d, e];
+
+  while (tasks.length > 0) {
+    // Yield to a pending user input
+    if (navigator.scheduling.isInputPending()) {
+      await yield();
+    } else {
+      // Shift the first task off the tasks array
+      const task = tasks.shift();
+
+      // Run the task
+      task();
+    }
+  }
+}
+```
+
+This allows you to avoid blocking the main thread when the user is actively interacting with the page, potentially providing a smoother user experience. However, by only yielding when necessary, we can continue running the current task when there are no user inputs to process. This also avoids tasks being placed at the back of the queue behind other non-essential browser-initiated tasks that were scheduled after the current one.
+
 ## Interfaces
 
 - {{domxref("Scheduler")}}
-  - : Interface with method for adding prioritized tasks to be scheduled.
-    An object of this interface is available on the {{domxref("Window")}} or {{domxref("WorkerGlobalScope")}} global objects (`this.scheduler`).
+  - : Contains the {{domxref('Scheduler.postTask', 'postTask()')}} method for adding prioritized tasks to be scheduled.
+    An instance of this interface is available on the {{domxref("Window")}} or {{domxref("WorkerGlobalScope")}} global objects (`this.scheduler`).
+- {{domxref("Scheduling")}}
+  - : Contains the {{domxref('Scheduling.isInputPending', 'isInputPending()')}} method for checking whether there are pending input events in the event queue.
 - {{domxref("TaskController")}}
-  - : Interface that supports both aborting a task and changing its priority.
+  - : Supports both aborting a task and changing its priority.
 - {{domxref("TaskSignal")}}
-  - : Interface for a signal object that allows you to abort a task and change its priority, if required, using a {{domxref("TaskController")}} object.
+  - : A signal object that allows you to abort a task and change its priority, if required, using a {{domxref("TaskController")}} object.
 - {{domxref("TaskPriorityChangeEvent")}}
-  - : The interface for the {{domxref("TaskSignal/prioritychange_event","prioritychange")}} event, sent when the priority for a task is changed.
+  - : The interface for the {{domxref("TaskSignal/prioritychange_event","prioritychange")}} event, which is sent when the priority for a task is changed.
 
 > **Note:** If the [task priority](#task_priorities) never needs to be changed, you can use an {{domxref("AbortController")}} and its associated {{domxref("AbortSignal")}} instead of {{domxref("TaskController")}} and {{domxref("TaskSignal")}}.
 
 ### Extensions to other interfaces
 
-The Prioritized Task Scheduling API extends the following APIs, adding the listed features:
-
-- [`scheduler`](/en-US/docs/Web/API/Window/scheduler)
-  - : This property is the entry point for using this API.
+- [`Navigator.scheduling`](/en-US/docs/Web/API/Navigator/scheduling)
+  - : This property is the entry point for using the `Scheduling.isInputPending()` method.
+- [`Window.scheduler`](/en-US/docs/Web/API/Window/scheduler)
+  - : This property is the entry point for using the `Scheduler.postTask()` method.
     It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available through `this` in most scopes.
 
-## Examples
+## Task scheduling examples
 
 Note that the examples below use `mylog()` to write to a text area.
-The code for the log area and method is generally hidden in order to not to distract from more relevant code.
+The code for the log area and method is generally hidden to not distract from more relevant code.
 
 ```html hidden
 <textarea id="log" style="min-height: 20px; width: 95%"></textarea>
@@ -433,4 +510,5 @@ Note that the second string appears in log after about 2 seconds.
 
 ## See also
 
-- [Building a Faster Web Experience with the postTask Scheduler](https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91) (Airbnb blog)
+- [Building a Faster Web Experience with the postTask Scheduler](https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91) on the Airbnb blog (2021)
+- [Optimizing long tasks](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) on web.dev (2022)

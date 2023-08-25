@@ -1,6 +1,7 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `string` function converts the given argument to a string.
 
 ### Syntax
 
-```
+```plain
 string( [object] )
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Updating plug-ins for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_plug-ins
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
