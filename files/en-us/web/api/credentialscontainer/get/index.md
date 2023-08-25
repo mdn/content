@@ -177,7 +177,7 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on their return to get information about them. `getUserInfo()` has to be called from within an {{htmlelement("iframe")}} embedding a page from the IdP origin so that RP scripts cannot access the data. This information can then be used to provide a personalized welcome message and sign-in button. This pattern is already common on sites that use identity federation for sign-in, but `getUserInfo()` provides a way to achieve it without relying on third-party cookies.
+> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on their return to get information about them. `getUserInfo()` has to be called from within an IdP-origin {{htmlelement("iframe")}} so that RP scripts cannot access the data. This information can then be used to provide a personalized welcome message and sign-in button. This pattern is already common on sites that use identity federation for sign-in, but `getUserInfo()` provides a way to achieve it without relying on third-party cookies.
 
 ## WebOTP API
 
