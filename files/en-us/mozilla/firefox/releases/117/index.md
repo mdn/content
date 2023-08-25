@@ -42,7 +42,7 @@ This article provides information about the changes in Firefox 117 that affect d
   The behavior now matches the specification where `default-src` directive values are used as a fallback when `script-src` is not provided ([Firefox bug 1313937](https://bugzil.la/1313937)).
 
 - The `Range` header is now a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range (e.g., `bytes=100-200`).
-  This allows for using the `Range` header in cross-origin requests without triggering a preflight request which is useful for requesting media and resuming downloads ([Firefox bug 1733981](https://bugzil.la/1733981)).
+  This allows the `Range` header to be used in cross-origin requests without triggering a preflight request, which is useful for requesting media and resuming downloads ([Firefox bug 1733981](https://bugzil.la/1733981)).
 
 #### Removals
 
