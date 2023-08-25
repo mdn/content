@@ -18,6 +18,16 @@ Browsers that support `accent-color` currently apply it to the following HTML el
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
 - [`<progress>`](/en-US/docs/Web/HTML/Element/progress)
 
+There are some other HTML elements that may work in some browsers like:
+
+- [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
+- [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+- [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)
+- [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
+- Etc.
+
+Feel free to use them keeping in mind that they are not supported in all browsers.
+
 ## Syntax
 
 ```css
