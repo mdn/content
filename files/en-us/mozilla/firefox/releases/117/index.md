@@ -12,6 +12,8 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### Developer Tools
 
+- The Network Monitor now shows information about proxied requests, including the proxy address, proxy status and proxy HTTP version in the Headers panel ([Firefox bug 1707192](https://bugzil.la/1707192)).
+
 ### HTML
 
 #### Removals
