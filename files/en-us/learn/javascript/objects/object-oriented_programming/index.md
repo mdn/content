@@ -22,7 +22,7 @@ After that, in JavaScript, we'll look at how constructors and the prototype chai
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
         <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
-        >), and OOJS basics (see
+        >), and OOPS basics (see
         <a href="/en-US/docs/Learn/JavaScript/Objects/Basics"
           >Introduction to objects</a
         > and <a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a>).
