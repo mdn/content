@@ -80,11 +80,10 @@ If you'd like to try this API for yourself, Smashing Magazine has written an [in
 
 ## Class components
 
-Although this tutorial doesn't mention them, it is possible to build React components using classes – these are called class components. Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
-
-- [State and Lifecycle in the React Docs](https://reactjs.org/docs/state-and-lifecycle.html)
-- [Intro To React in the React Docs](https://react.dev/learn/tutorial-tic-tac-toe)
-- [Read about JavaScript classes at MDN](/en-US/docs/Web/JavaScript/Reference/Classes)
+Although this tutorial doesn't mention them, it is possible to build React components using [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) – these are called class components.
+Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects.
+They're still the only way to handle certain edge-cases, and they're common in legacy React projects.
+The official React docs maintain a reference for the [Component](https://react.dev/reference/react/Component) base class, but recommend [State: A Component's Memory](https://react.dev/learn/state-a-components-memory) and [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) to use hooks to manage state and side effects.
 
 ## Testing
 
