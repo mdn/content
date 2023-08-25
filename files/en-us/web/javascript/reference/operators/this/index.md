@@ -532,5 +532,4 @@ with (obj1) {
 ## See also
 
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- [Gentle explanation of 'this' keyword in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
-- Getting the global context: {{jsxref("globalThis")}}
+- {{jsxref("globalThis")}}

@@ -18,6 +18,10 @@ specified array and its elements.
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the elements of the array.
