@@ -2,10 +2,12 @@
 title: Iterator.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/some
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Iterator.some
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`some()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.some()")}}: it tests whether at least one element in the array passes the test implemented by the provided function. It returns a boolean value.
 
