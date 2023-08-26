@@ -236,9 +236,7 @@ You can also consider:
 
 When choosing a font for body copy, it is harder to be sure of the glyphs that will be used in it, especially if you are dealing with user-generated content and/or content across multiple languages.
 
-However, if you know you are going to use a specific set of glyphs (for example, glyphs for headings or specific punctuation characters only), you could limit the number of glyphs the browser has to download. This could be done in a brute-force way by creating a font file that only contains the required subset.
-
-However, there is a smarter way. The [`unicode-range`](/en-US/docs/Web/CSS/@font-face/unicode-range) `@font-face` descriptor can be used to specify the exact subset of glyphs, or glyph ranges, that you want to download:
+However, if you know you are going to use a specific set of glyphs (for example, glyphs for headings or specific punctuation characters only), you could limit the number of glyphs the browser has to download. This can be done by creating a font file that only contains the required subset. A process called [subsetting](https://fonts.google.com/knowledge/glossary/subsetting). The [`unicode-range`](/en-US/docs/Web/CSS/@font-face/unicode-range) `@font-face` descriptor can then be used to specify when your subset font is used. If the page doesn't use any character in this range, the font is not downloaded.
 
 ```css
 @font-face {
