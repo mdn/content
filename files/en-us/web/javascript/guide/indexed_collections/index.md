@@ -59,14 +59,21 @@ const obj = { prop: [element0, element1, /* …, */ elementN] };
 
 If you wish to initialize an array with a single element, and the element happens to be a `Number`, you must use the bracket syntax. When a single `Number` value is passed to the `Array()` constructor or function, it is interpreted as an `arrayLength`, not as a single element.
 
+This creates an array with only one element: the number 42.
+
 ```js
-// This creates an array with only one element: the number 42.
 const arr = [42];
+```
 
-// This creates an array with no elements and arr.length set to 42.
+This creates an array with no elements and `arr.length` set to 42.
+
+```js
 const arr = Array(42);
+```
 
-// This is equivalent to:
+This is equivalent to:
+
+```js
 const arr = [];
 arr.length = 42;
 ```
@@ -510,12 +517,12 @@ const inventory = [
 ];
 ```
 
-To use `group()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
+To use `Object.groupBy()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
 
 The code below uses an arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object). The result is an object that has properties named after the unique strings returned by the callback. Each property is assigned an array containing the elements in the group.
 
 ```js
-const result = inventory.group(({ type }) => type);
+const result = Object.groupBy(inventory, ({ type }) => type);
 console.log(result.vegetables);
 // [{ name: "asparagus", type: "vegetables" }]
 ```

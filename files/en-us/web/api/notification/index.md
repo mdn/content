@@ -22,7 +22,7 @@ These notifications' appearance and specific functionality vary across platforms
 
 These properties are available only on the `Notification` object itself.
 
-- {{domxref("Notification.permission")}} {{ReadOnlyInline}}
+- {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
 
   - : A string representing the current permission to display notifications. Possible values are:
 
@@ -30,7 +30,7 @@ These properties are available only on the `Notification` object itself.
     - `granted` — The user accepts having notifications displayed.
     - `default` — The user choice is unknown and therefore the browser will act as if the value were denied.
 
-- {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The maximum number of actions supported by the device and the User Agent.
 
 ## Instance properties
@@ -39,7 +39,7 @@ These properties are available only on instances of the `Notification` object.
 
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The actions array of the notification as specified in the constructor's `options` parameter.
-- {{domxref("Notification.badge")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.badge")}} {{ReadOnlyInline}}
   - : The URL of the image used to represent the notification when there is not enough space to display the notification itself.
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : The body string of the notification as specified in the constructor's `options` parameter.
@@ -72,7 +72,7 @@ These properties are available only on instances of the `Notification` object.
 
 These methods are available only on the `Notification` object itself.
 
-- {{domxref("Notification.requestPermission()")}}
+- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}
   - : Requests permission from the user to display notifications.
 
 ## Instance methods

@@ -178,4 +178,4 @@ Which is much clearer. However, in the rare case you find yourself wanting to do
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- [Conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
+- [Conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

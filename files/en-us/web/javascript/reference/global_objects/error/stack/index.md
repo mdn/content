@@ -129,5 +129,6 @@ Not part of any standard.
 
 ## See also
 
-- External projects: [TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/stacktracejs/stacktrace.js)
-- [Overview of the V8 JavaScript stack trace API](https://v8.dev/docs/stack-trace-api)
+- [TraceKit](https://github.com/csnover/TraceKit/) on GitHub
+- [stacktrace.js](https://github.com/stacktracejs/stacktrace.js) on GitHub
+- [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

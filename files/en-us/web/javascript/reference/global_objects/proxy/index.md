@@ -475,5 +475,4 @@ console.log(docCookies.myCookie1);
 
 ## See also
 
-- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](https://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [Tutorial on proxies](https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/)
+- [Proxies are awesome](https://youtu.be/sClk6aB_CPk) presentation by Brendan Eich at JSConf (2014)

@@ -35,7 +35,7 @@ line of a file, or accidentally forgetting the quotation marks around a DOM iden
 
 For each case, there might be something slightly wrong. For example
 
-```js example-bad
+```js-nolint example-bad
 document.querySelector(#some-element)
 ```
 
@@ -47,7 +47,7 @@ document.querySelector("#some-element");
 
 ### Outside of a class
 
-```js example-bad
+```js-nolint example-bad
 class ClassWithPrivateField {
   #privateField;
 

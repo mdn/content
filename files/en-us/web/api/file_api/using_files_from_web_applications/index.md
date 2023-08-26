@@ -278,7 +278,7 @@ Next, we establish the {{DOMxRef("FileReader")}} to handle asynchronously loadin
 
 ## Using object URLs
 
-The DOM {{DOMxRef("URL.createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL()")}} methods let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{DOMxRef("File")}} object, including local files on the user's computer.
+The DOM {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{DOMxRef("File")}} object, including local files on the user's computer.
 
 When you have a {{DOMxRef("File")}} object you'd like to reference by URL from HTML, you can create an object URL for it like this:
 
@@ -286,7 +286,7 @@ When you have a {{DOMxRef("File")}} object you'd like to reference by URL from H
 const objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-The object URL is a string identifying the {{DOMxRef("File")}} object. Each time you call {{DOMxRef("URL.createObjectURL()")}}, a unique object URL is created even if you've created an object URL for that file already. Each of these must be released. While they are released automatically when the document is unloaded, if your page uses them dynamically you should release them explicitly by calling {{DOMxRef("URL.revokeObjectURL()")}}:
+The object URL is a string identifying the {{DOMxRef("File")}} object. Each time you call {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, a unique object URL is created even if you've created an object URL for that file already. Each of these must be released. While they are released automatically when the document is unloaded, if your page uses them dynamically you should release them explicitly by calling {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}:
 
 ```js
 URL.revokeObjectURL(objectURL);
@@ -369,9 +369,9 @@ If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is `null`, we se
 
    1. Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
    2. Create a new image ({{HTMLElement("img")}}) element.
-   3. Set the image's source to a new object URL representing the file, using {{DOMxRef("URL.createObjectURL()")}} to create the blob URL.
+   3. Set the image's source to a new object URL representing the file, using {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} to create the blob URL.
    4. Set the image's height to 60 pixels.
-   5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxRef("URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
+   5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
    6. Append the new list item to the list.
 
 Here is a live demo of the code above:

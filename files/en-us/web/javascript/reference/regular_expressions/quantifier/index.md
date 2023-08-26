@@ -63,13 +63,13 @@ re.test("a{1, 3}"); // true
 
 This behavior is fixed in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), where braces cannot appear literally without [escaping](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape). The ability to use `{` and `}` literally without escaping is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
-```js
+```js-nolint example-bad
 /a{1, 3}/u; // SyntaxError: Invalid regular expression: Incomplete quantifier
 ```
 
 It is a syntax error if the minimum is greater than the maximum.
 
-```js
+```js-nolint example-bad
 /a{3,2}/; // SyntaxError: Invalid regular expression: numbers out of order in {} quantifier
 ```
 
@@ -109,7 +109,7 @@ Greedy quantifiers try to match as many _times_ as possible; it does not maximiz
 
 Quantifiers apply to a single atom. If you want to quantify a longer pattern or a disjunction, you must [group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group) it. Quantifiers cannot be applied to [assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#assertions).
 
-```js
+```js-nolint example-bad
 /^*/; // SyntaxError: Invalid regular expression: nothing to repeat
 ```
 

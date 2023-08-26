@@ -215,7 +215,7 @@ console.log(C.staticField === C); // true
 
 Unlike base class constructors, derived constructors have no initial `this` binding. Calling {{jsxref("Operators/super", "super()")}} creates a `this` binding within the constructor and essentially has the effect of evaluating the following line of code, where `Base` is the base class:
 
-```js
+```js-nolint
 this = new Base();
 ```
 
@@ -532,5 +532,4 @@ with (obj1) {
 ## See also
 
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- [Gentle explanation of 'this' keyword in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
-- Getting the global context: {{jsxref("globalThis")}}
+- {{jsxref("globalThis")}}

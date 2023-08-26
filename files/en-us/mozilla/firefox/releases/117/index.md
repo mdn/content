@@ -20,6 +20,9 @@ This article provides information about the changes in Firefox 117 that affect d
 
 - The [`math-style`](/en-US/docs/Web/CSS/math-style) and [`math-depth`](/en-US/docs/Web/CSS/math-depth) properties are now supported, as well as the `math` value for the [`font-size`](/en-US/docs/Web/CSS/font-size#values) property ([Firefox bug 1845516](https://bugzil.la/1845516)).
 
+- The [`contain-intrinsic-size: auto none;`](/en-US/docs/Web/CSS/contain-intrinsic-size) syntax is now supported, which allows for using the last-remembered size of an element if possible and falls back to `contain-intrinsic-size: none` otherwise.
+  This is useful in layouts using proportional sizes, such as grid or multi-column ([Firefox bug 1835813](https://bugzil.la/1835813)).
+
 #### Removals
 
 ### JavaScript
@@ -37,6 +40,9 @@ This article provides information about the changes in Firefox 117 that affect d
 
 - Fixed a bug where the [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) `'strict-dynamic'` source expression was not being enforced in `default-src` directives.
   The behavior now matches the specification where `default-src` directive values are used as a fallback when `script-src` is not provided ([Firefox bug 1313937](https://bugzil.la/1313937)).
+
+- The `Range` header is now a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range (e.g., `bytes=100-200`).
+  This allows the `Range` header to be used in cross-origin requests without triggering a preflight request, which is useful for requesting media and resuming downloads ([Firefox bug 1733981](https://bugzil.la/1733981)).
 
 #### Removals
 

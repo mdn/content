@@ -429,4 +429,4 @@ In this case, it's important to return only an integer—so a simple division wo
 
 ## See also
 
-- {{jsxref("Date/Date", "Date()")}} constructor
+- {{jsxref("Date/Date", "Date()")}}
