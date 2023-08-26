@@ -217,7 +217,7 @@ console.log(float32View[0]); // 4.484155085839415e-44
 
 ### Reading text from a buffer
 
-Buffers don't always represent numbers. For example, reading a file can give you a text data buffer. You can read this data out of the buffer using a typed array. 
+Buffers don't always represent numbers. For example, reading a file can give you a text data buffer. You can read this data out of the buffer using a typed array.
 
 The following reads UTF-8 text using the {{domxref("TextDecoder")}} web API:
 
