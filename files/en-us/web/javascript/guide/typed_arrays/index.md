@@ -24,14 +24,14 @@ Buffers support the following actions:
 
 - _Allocate_: As soon as a new buffer is created, a new memory span is allocated and initialized to `0`.
 - _Copy_: Using the {{jsxref("ArrayBuffer/slice", "slice()")}} method, you can efficiently copy a portion of the memory without creating views to manually copy each byte.
-- _Transfer_: Using the {{jsxref("ArrayBuffer/transfer", "transfer()")}} and {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} methods, you can transfer ownership of the memory span to a new buffer object. This is useful when transferring data between different execution contexts and you want to avoid copying. After the transfer, the original buffer is no longer usable. `SharedArrayBuffer` cannot be transferred (as they are already shared by all execution contexts).
+- _Transfer_: Using the {{jsxref("ArrayBuffer/transfer", "transfer()")}} and {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} methods, you can transfer ownership of the memory span to a new buffer object. This is useful when transferring data between different execution contexts without copying. After the transfer, the original buffer is no longer usable. A `SharedArrayBuffer` cannot be transferred (as the buffer is already shared by all execution contexts).
 - _Resize_: Using the {{jsxref("ArrayBuffer/resize", "resize()")}} method, you can resize the memory span (either claim more memory space, as long as it doesn't pass the pre-set {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} limit, or release some memory space). `SharedArrayBuffer` can only be [grown](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/grow) but not shrunk.
 
-The difference between `ArrayBuffer` and `SharedArrayBuffer` is that the former is always owned by a single execution context at a time. If you pass an `ArrayBuffer` to a different execution context, it is _transferred_ and the original `ArrayBuffer` becomes unusable. This ensures that only one execution context can access the memory at a time. `SharedArrayBuffer` is not transferred when passed to a different execution context, so it can be accessed by multiple execution contexts at the same time. This may introduce race conditions when multiple threads access the same memory span, so operations such as {{jsxref("Atomics")}} become useful.
+The difference between `ArrayBuffer` and `SharedArrayBuffer` is that the former is always owned by a single execution context at a time. If you pass an `ArrayBuffer` to a different execution context, it is _transferred_ and the original `ArrayBuffer` becomes unusable. This ensures that only one execution context can access the memory at a time. A `SharedArrayBuffer` is not transferred when passed to a different execution context, so it can be accessed by multiple execution contexts at the same time. This may introduce race conditions when multiple threads access the same memory span, so operations such as {{jsxref("Atomics")}} methods become useful.
 
 ## Views
 
-There are currently two main kinds of views: typed array views and {{jsxref("DataView")}}. Typed arrays provide utility methods that allow you to conveniently transform binary data. `DataView` is more low-level and allows granular control of how data is accessed. The ways to read and write data using the two views are very different.
+There are currently two main kinds of views: typed array views and {{jsxref("DataView")}}. Typed arrays provide [utility methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#instance_methods) that allow you to conveniently transform binary data. `DataView` is more low-level and allows granular control of how data is accessed. The ways to read and write data using the two views are very different.
 
 Both kinds of views cause {{jsxref("ArrayBuffer.isView()")}} to return `true`. They both have the following properties:
 
@@ -42,7 +42,7 @@ Both kinds of views cause {{jsxref("ArrayBuffer.isView()")}} to return `true`. T
 - `byteLength`
   - : The length, in bytes, of the view.
 
-Both constructors accept the above three as separate arguments, although typed array constructors accept `length` in number of elements instead of bytes.
+Both constructors accept the above three as separate arguments, although typed array constructors accept `length` as the number of elements rather than the number of bytes.
 
 ### Typed array views
 
@@ -64,30 +64,30 @@ Typed array views have self-descriptive names and provide views for all the usua
 
 All typed array views have the same methods and properties, as defined by the {{jsxref("TypedArray")}} class. They only differ in the underlying data type and the size in bytes. This is discussed in more detail in [Value encoding and normalization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#value_encoding_and_normalization).
 
-Typed arrays are in principle fixed-length, so array methods that may change the length of an array are not available. This includes `pop`, `push`, `shift`, `splice`, and `unshift`. In addition, `flat` is unavailable because there's no nested typed arrays, and related methods including `concat` and `flatMap` do not have great use cases and so are unavailable. `toSpliced` is unavailable because `splice` isn't, either. All other array methods are shared between `Array` and `TypedArray`.
+Typed arrays are, in principle, fixed-length, so array methods that may change the length of an array are not available. This includes `pop`, `push`, `shift`, `splice`, and `unshift`. In addition, `flat` is unavailable because there are no nested typed arrays, and related methods including `concat` and `flatMap` do not have great use cases so are unavailable. As `splice` is unavailable, so too is `toSpliced`. All other array methods are shared between `Array` and `TypedArray`.
 
-On the other hand, `TypedArray` has the extra `set` and `subarray` methods that optimize working with multiple typed arrays that view the same buffer. `set` allows you to set multiple typed array indices at once, using data from another array or typed array. If the two typed arrays share the same underlying buffer, the operation may be more efficient as it's a fast memory move. `subarray` allows you to create a new typed array view that references the same buffer as the original typed array, but with a narrower span.
+On the other hand, `TypedArray` has the extra `set` and `subarray` methods that optimize working with multiple typed arrays that view the same buffer. The `set()` method allows setting multiple typed array indices at once, using data from another array or typed array. If the two typed arrays share the same underlying buffer, the operation may be more efficient as it's a fast memory move. The `subarray()` method creates a new typed array view that references the same buffer as the original typed array, but with a narrower span.
 
-There's no way to directly change the length of a typed array without changing the underlying buffer. However, when the typed array views a resizable buffer and does not have a fixed `byteLength`, it is _length-tracking_. See [Behavior when viewing a resizable buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#behavior_when_viewing_a_resizable_buffer) for details.
+There's no way to directly change the length of a typed array without changing the underlying buffer. However, when the typed array views a resizable buffer and does not have a fixed `byteLength`, it is _length-tracking_, and will automatically resize to fit the underlying buffer as the resizable buffer is resized. See [Behavior when viewing a resizable buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#behavior_when_viewing_a_resizable_buffer) for details.
 
-You can access typed array elements like in arrays, using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation). The corresponding bytes in the underlying buffer are retrieved and interpreted as a number. Any property access using a number (or the string representation of a number, since numbers are always converted to strings when accessing properties) will be proxied by the typed array — they never interact with the object itself. This means, for example:
+Similar to regular arrays, you can access typed array elements using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation). The corresponding bytes in the underlying buffer are retrieved and interpreted as a number. Any property access using a number (or the string representation of a number, since numbers are always converted to strings when accessing properties) will be proxied by the typed array — they never interact with the object itself. This means, for example:
 
 - Out-of-bounds index access always returns `undefined`, without actually accessing the property on the object.
-- Any attempt to write to such an out-of-bounds property appears to succeed but is a no-op.
+- Any attempt to write to such an out-of-bounds property has no effect: it does not throw an error but doesn't change the buffer or typed array either.
 - Typed array indices appear to be configurable and writable, but any attempt to change their attributes will fail.
 
 ```js
 const uint8 = new Uint8Array([1, 2, 3]);
 console.log(uint8[0]); // 1
 
-// You should probably not do this in any case
+// For illustrative purposes only. Not for production code.
 uint8[-1] = 0;
 uint8[2.5] = 0;
 uint8[NaN] = 0;
 console.log(Object.keys(uint8)); // ["0", "1", "2"]
 console.log(uint8[NaN]); // undefined
 
-// Non-number accesses still work
+// Non-numeric access still works
 uint8[true] = 0;
 console.log(uint8[true]); // 0
 
@@ -96,9 +96,9 @@ Object.freeze(uint8); // TypeError: Cannot freeze array buffer views with elemen
 
 ### DataView
 
-The {{jsxref("DataView")}} is a low-level interface that provides a getter/setter API to read and write arbitrary data to the buffer. This is useful when dealing with different types of data, for example. Typed array views are in the native byte-order (see [Endianness](/en-US/docs/Glossary/Endianness)) of your platform. With a `DataView` you are able to control the byte-order. It is big-endian by default and can be set to little-endian in the getter/setter methods.
+The {{jsxref("DataView")}} is a low-level interface that provides a getter/setter API to read and write arbitrary data to the buffer. This is useful when dealing with different types of data, for example. Typed array views are in the native byte-order (see [Endianness](/en-US/docs/Glossary/Endianness)) of your platform. With a `DataView`, the byte-order can be controlled. By default, it's big-endian—the bytes are ordered from most significant to least significant. This can be reversed, with the bytes ordered from least significant to most significant (little-endian), using getter/setter methods.
 
-`DataView` does not require any kind of alignment. You can do multi-byte read and write starting at any specified offset. The setter methods work the same way.
+`DataView` does not require alignment; multi-byte read and write can be started at any specified offset. The setter methods work the same way.
 
 The following example uses a `DataView` to get the binary representation of any number:
 
@@ -208,7 +208,7 @@ Int32Array  |     32      |      2      |      4      |      6      |
 ArrayBuffer | 00 02 00 00 | 02 00 00 00 | 04 00 00 00 | 06 00 00 00 |
 ```
 
-You can do this with any view type, although if you set an integer and then read it as a floating-point number, you will probably get a strange result because how the bits are interpreted is different.
+You can do this with any view type, although if you set an integer and then read it as a floating-point number, you will probably get a strange result because the bits are interpreted differently.
 
 ```js
 const float32View = new Float32Array(buffer);
@@ -217,7 +217,9 @@ console.log(float32View[0]); // 4.484155085839415e-44
 
 ### Reading text from a buffer
 
-Buffers don't always represent numbers. For example, reading a file can give you a buffer containing text data. You can use a typed array to read this data out of the buffer. The following reads UTF-8 text using the {{domxref("TextDecoder")}} web API:
+Buffers don't always represent numbers. For example, reading a file can give you a text data buffer. You can read this data out of the buffer using a typed array. 
+
+The following reads UTF-8 text using the {{domxref("TextDecoder")}} web API:
 
 ```js
 const buffer = new ArrayBuffer(8);
