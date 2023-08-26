@@ -9,11 +9,11 @@ browser-compat:
 
 {{HTMLSidebar}}
 
-The **`placeholder`** defines the text displayed in a form control when the control has no value. The placeholder text should provide a brief hint to the user as to the expected type of data that should be entered into the control.
+The **`placeholder`** attribute defines the text displayed in a form control when the control has no value. The placeholder text should provide a brief hint to the user as to the expected type of data that should be entered into the control.
 
 Effective placeholder text includes a word or short phrase that hints at the expected data type, not an explanation or prompt. The placeholder must not be used instead of a {{HTMLElement("label")}}. As the placeholder is not visible if the value of the form control is not null, using `placeholder` instead of a `<label>` for a prompt harms usability and accessibility.
 
-The **`placeholder`** attribute is supported by the following input types: `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}`, and `{{HTMLElement("input/password", "password")}}`. It is also supported by the `{{HTMLElement("textarea")}}` element. The [example](#example) below shows the `placeholder` attribute in use to explain the expected format of an input field.
+The `placeholder` attribute is supported by the following input types: `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}`, and `{{HTMLElement("input/password", "password")}}`. It is also supported by the `{{HTMLElement("textarea")}}` element. The [example](#example) below shows the `placeholder` attribute in use to explain the expected format of an input field.
 
 > **Note:** The `placeholder` attribute can't include any line feeds (LF) or carriage returns (CR). If either is included in the value, the placeholder text will be clipped.
 
