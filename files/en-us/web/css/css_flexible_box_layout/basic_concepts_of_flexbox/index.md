@@ -67,8 +67,8 @@ An area of a document laid out using flexbox is called a **flex container**. To 
 - The items start from the start edge of the main axis.
 - The items do not stretch on the main dimension, but can shrink.
 - The items will stretch to fill the size of the cross axis.
-- The {{cssxref("flex-basis")}} property is set to `auto`.
-- The {{cssxref("flex-wrap")}} property is set to `nowrap`.
+- The items keep same behavior in stretch and shrink (the {{cssxref("flex-basis")}} property is set to `auto`).
+- The items will keep in the same row, even if there are too many items (the {{cssxref("flex-wrap")}} property is set to `nowrap`).
 
 The result of this is that your items will all line up in a row, using the size of the content as their size in the main axis. If there are more items than can fit in the container, they will not wrap but will instead overflow. If some items are taller than others, all items will stretch along the cross axis to fill its full size.
 
