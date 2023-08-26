@@ -230,8 +230,8 @@ The `sort()` method returns a reference to the original array, so mutating the r
 const numbers = [3, 1, 4, 1, 5];
 const sorted = numbers.sort((a, b) => a - b);
 // numbers and sorted are both [1, 1, 3, 4, 5]
-sorted[0] = 10;
-console.log(numbers[0]); // 10
+sorted[0] = 1;
+console.log(numbers[0]); // 1
 ```
 
 In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toSorted", "toSorted()")}} method. Alternatively, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
@@ -240,7 +240,7 @@ In case you want `sort()` to not mutate the original array, but return a [shallo
 const numbers = [3, 1, 4, 1, 5];
 // [...numbers] creates a shallow copy, so sort() does not mutate the original
 const sorted = [...numbers].sort((a, b) => a - b);
-sorted[0] = 10;
+sorted[0] = 1;
 console.log(numbers[0]); // 3
 ```
 
