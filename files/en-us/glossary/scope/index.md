@@ -26,14 +26,16 @@ function exampleFunction() {
   console.log("Inside function");
   console.log(x);
 }
+//x is defined in the function only
 
+//Outside the function there is no variable named x
 console.log(x); // Causes error
 ```
 
 However, the following code is valid due to the variable being declared outside the function, making it global:
 
 ```js example-good
-const x = "declared outside function";
+const x = "declared outside function"; // x is declared outside the function, hence available to everyone
 
 exampleFunction();
 
@@ -43,7 +45,7 @@ function exampleFunction() {
 }
 
 console.log("Outside function");
-console.log(x);
+console.log(x); // x is available 
 ```
 
 Blocks only scope `let` and `const` declarations, but not `var` declarations.
