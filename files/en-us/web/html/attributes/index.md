@@ -497,7 +497,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/form">form</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/button#form">form</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
