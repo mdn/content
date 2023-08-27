@@ -6198,6 +6198,9 @@
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
 /en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests	https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html
 /en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
+/en-US/docs/Mozilla/Thunderbird/Autoconfiguration	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration
+/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/definition
+/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/howto
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
@@ -6863,9 +6866,9 @@
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/The_add-on_bar	/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar
 /en-US/docs/The_data_URL_scheme	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
-/en-US/docs/Thunderbird/Autoconfiguration	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration
-/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/definition
-/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/howto
+/en-US/docs/Thunderbird/Autoconfiguration	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo
 /en-US/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /en-US/docs/Toolbox	https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html
 /en-US/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
