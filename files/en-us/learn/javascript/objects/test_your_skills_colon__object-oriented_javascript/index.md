@@ -40,6 +40,7 @@ Try updating the live code below to recreate the finished example:
 Next we'd like you to create a `Square` class that inherits from `Shape`, and adds a `calcArea()` method that calculates the square's area. Also set up the constructor so that the `name` property of `Square` object instances is automatically set to `square`, and the `sides` property is automatically set to `4`. When invoking the constructor, you should therefore just need to provide the `sideLength` property.
 
 Create an instance of the `Square` class called `square` with appropriate property values, and call its `calcPerimeter()` and `calcArea()` methods to show that it works OK.
+**since we are extending from prevously created class Shape were we already created an instance called square.  This new instance of square cannot be created with the same name of square above.  We can simply update the previous instance of square as long as we didn't use const to previuosly created it. Therefore, the instructions on this line (line 42) should be clarified to say "update the previous instance of square" or "create an instance of Square class called secondSquare".  
 
 Try updating the live code below to recreate the finished example:
 
