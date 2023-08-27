@@ -45,7 +45,7 @@ function exampleFunction() {
 }
 
 console.log("Outside function");
-console.log(x); // x is available 
+console.log(x); // x is available
 ```
 
 Blocks only scope `let` and `const` declarations, but not `var` declarations.
