@@ -52,5 +52,5 @@ Placeholders can not be relied upon as a replacement for a label even for those 
 ## See also
 
 - HTML [`title`](/en-US/docs/Web/HTML/Global_attributes/title)
-- CSS [`:placeholder-shown`](/en-US/docs/Web/CSS/_colon_placeholder-shown) pseudo-class selector
+- CSS [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) pseudo-class selector
 - CSS [`::placeholder`](/en-US/docs/Web/CSS/::placeholder) pseudo-element selector
