@@ -17,6 +17,10 @@ The **`toString()`** method of {{jsxref("Symbol")}} values returns a string repr
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the specified symbol value.

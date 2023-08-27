@@ -644,4 +644,4 @@ console.log(prot); // "456"
 ## See also
 
 - [Assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators)
-- ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
+- [ES6 in Depth: Destructuring](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) on hacks.mozilla.org (2015)

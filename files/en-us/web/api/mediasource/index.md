@@ -31,7 +31,7 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 
 ## Static properties
 
-- {{domxref("MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
 
 ## Instance methods
@@ -51,7 +51,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 ## Static methods
 
-- {{domxref("MediaSource.isTypeSupported()")}}
+- {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}
   - : Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
 
 ## Events

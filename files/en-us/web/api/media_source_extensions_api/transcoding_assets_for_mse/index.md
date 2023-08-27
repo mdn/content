@@ -38,7 +38,7 @@ Sample media should be placed in the Bento4 `utils` directory and worked here.
 
 As specified in [section 1.1 of the MSE spec: Goals](https://www.w3.org/TR/media-source/#goals), MSE is designed not to require support for any particular media format or codec. While this is true on paper, browser support varies for specific container/codec combinations.
 
-To check if the browser supports a particular container, you can pass a string of the MIME type to the {{domxref("MediaSource.isTypeSupported")}} method:
+To check if the browser supports a particular container, you can pass a string of the MIME type to the {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} method:
 
 ```js
 MediaSource.isTypeSupported("audio/mp3"); // false

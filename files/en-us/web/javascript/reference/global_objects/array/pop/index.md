@@ -19,6 +19,10 @@ array.
 pop()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The removed element from the array; {{jsxref("undefined")}} if the array is empty.

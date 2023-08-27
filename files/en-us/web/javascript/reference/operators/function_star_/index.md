@@ -74,11 +74,8 @@ const x = function* (y) {
 
 ## See also
 
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("GeneratorFunction")}} object
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("GeneratorFunction")}}
 - [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Operators/function", "function")}} expression

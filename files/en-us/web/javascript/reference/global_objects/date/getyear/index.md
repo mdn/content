@@ -17,6 +17,10 @@ The **`getYear()`** method of {{jsxref("Date")}} instances returns the year for 
 getYear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer representing the year for the given date according to local time, minus 1900. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
