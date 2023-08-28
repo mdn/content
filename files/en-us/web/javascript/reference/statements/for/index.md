@@ -250,7 +250,7 @@ for (let l = 0, r = arr.length - 1; l < r; l++, r--) {
 
 ## See also
 
-- [empty statement](/en-US/docs/Web/JavaScript/Reference/Statements/Empty)
+- [Empty statement](/en-US/docs/Web/JavaScript/Reference/Statements/Empty)
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/while", "while")}}

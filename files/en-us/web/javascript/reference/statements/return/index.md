@@ -116,5 +116,5 @@ answer(1337); // 56154
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Closures](/en-US/docs/Web/JavaScript/Closures)

@@ -1,5 +1,5 @@
 ---
-title: function declaration
+title: function
 slug: Web/JavaScript/Reference/Statements/function
 page-type: javascript-statement
 browser-compat: javascript.statements.function

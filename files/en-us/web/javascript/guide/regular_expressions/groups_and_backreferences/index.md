@@ -190,8 +190,8 @@ console.log(lines.join("\n"));
 
 ## See also
 
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
 - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
 - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-- [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

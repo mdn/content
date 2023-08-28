@@ -159,7 +159,7 @@ console.log(map.get("a")); // 2
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
 - [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)

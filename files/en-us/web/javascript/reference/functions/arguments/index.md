@@ -197,5 +197,5 @@ console.log(typeof arguments[0]); // returns the type of the first argument
 ## See also
 
 - [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)

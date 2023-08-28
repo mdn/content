@@ -43,4 +43,4 @@ const a = BigInt(1);
 ## See also
 
 - [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
-- [`Number.isInteger`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
+- [`Number.isInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)

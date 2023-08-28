@@ -222,7 +222,7 @@ console.log(
 ## See also
 
 - [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Object.defineProperty()")}}
 - [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)

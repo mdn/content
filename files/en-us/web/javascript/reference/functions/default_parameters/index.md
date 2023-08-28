@@ -244,6 +244,6 @@ preFilledObject({ z: 2 }); // 2
 ## See also
 
 - [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
