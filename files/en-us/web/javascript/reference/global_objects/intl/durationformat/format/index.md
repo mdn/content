@@ -48,6 +48,15 @@ new Intl.DurationFormat("en").format(duration);
 ```
 
 ### Using format() with different locales and styles
+// With style set to "long"
+new Intl.DurationFormat("en", { style: "long" }).format(duration);
+// "1 year, 2 months, 3 weeks, 3 days, 4 hours, 5 minutes, 6 seconds, 7 milliseconds, 8 microseconds, 9 nanoseconds"
+
+// With style set to "narrow"
+new Intl.DurationFormat("en", { style: "narrow" }).format(duration);
+// "1y 2mo 3w 3d 4h 5m 6s 7ms 8μs 9ns"
+
+### Using format with different locales and styles
 
 ```js
 const duration = {
