@@ -44,7 +44,7 @@ const duration = {
 
 // Without options, style defaults to "short"
 new Intl.DurationFormat("en").format(duration);
-//  "1 yr, 2 mths, 3 wks, 3 days, 4 hr, 5 min, 6 sec, 7 ms, 8 μs, 9 ns"
+// "1 yr, 2 mths, 3 wks, 3 days, 4 hr, 5 min, 6 sec, 7 ms, 8 μs, 9 ns"
 
 // With style set to "long"
 new Intl.DurationFormat("en", { style: "long" }).format(duration);
