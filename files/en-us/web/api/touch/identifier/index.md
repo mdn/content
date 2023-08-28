@@ -13,6 +13,8 @@ this point of contact with the touch surface. This value remains consistent for 
 event involving this finger's (or stylus's) movement on the surface until it is lifted
 off the surface.
 
+On some devices this is a number between 0-9, however on other devices it can be a very large negative or positive number.
+
 ## Value
 
 A `long` that represents the unique ID of the {{ domxref("Touch") }} object.
