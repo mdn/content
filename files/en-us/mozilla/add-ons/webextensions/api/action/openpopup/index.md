@@ -11,17 +11,19 @@ Open the browser action's popup.
 
 > **Note:** This API is available in Manifest V3 or higher.
 
+In stable versions of Firefox, you can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions). See [Browser compatibility](#browser_compatibility) for details.
+
 ## Syntax
 
 ```js-nolint
 browser.action.openPopup(
-  options // object
+  options // optional object
 )
 ```
 
 ### Parameters
 
-- `details`
+- `details` {{optional_inline}}
 
   - : An object with the following properties:
 
