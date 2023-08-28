@@ -45,9 +45,7 @@ const duration = {
 // Without options, style defaults to "short"
 new Intl.DurationFormat("en").format(duration);
 //  "1 yr, 2 mths, 3 wks, 3 days, 4 hr, 5 min, 6 sec, 7 ms, 8 μs, 9 ns"
-```
 
-### Using format() with different locales and styles
 // With style set to "long"
 new Intl.DurationFormat("en", { style: "long" }).format(duration);
 // "1 year, 2 months, 3 weeks, 3 days, 4 hours, 5 minutes, 6 seconds, 7 milliseconds, 8 microseconds, 9 nanoseconds"
@@ -55,8 +53,9 @@ new Intl.DurationFormat("en", { style: "long" }).format(duration);
 // With style set to "narrow"
 new Intl.DurationFormat("en", { style: "narrow" }).format(duration);
 // "1y 2mo 3w 3d 4h 5m 6s 7ms 8μs 9ns"
+```
 
-### Using format with different locales and styles
+### Using format() with different locales and styles
 
 ```js
 const duration = {
@@ -82,7 +81,7 @@ new Intl.DurationFormat("en", { style: "digital" }).format(duration);
 // "1:46:40"
 
 // With style set to "digital", locale set to "en", and hours set to "long"
-new Intl.DurationFormat("en", { style: "digital" }).format(duration);
+new Intl.DurationFormat("en", { style: "digital", hours: "long" }).format(duration);
 // "1 hour, 46:40"
 ```
 
