@@ -12,6 +12,8 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### Developer Tools
 
+- Styles that are unsupported in highlight pseudo-elements ([`::highlight`](/en-US/docs/Web/CSS/::highlight), [`::target-text`](/en-US/docs/Web/CSS/::target-text), [`::spelling-error`](/en-US/docs/Web/CSS/::spelling-error), [`::grammar-error`](/en-US/docs/Web/CSS/::grammar-error), [`::selection`](/en-US/docs/Web/CSS/::selection)) are now reported in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) CSS rules panel ([Firefox bug 1842157](https://bugzil.la/1842157)).
+
 ### HTML
 
 #### Removals
