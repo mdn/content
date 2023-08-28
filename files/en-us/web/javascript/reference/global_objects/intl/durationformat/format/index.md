@@ -81,7 +81,9 @@ new Intl.DurationFormat("en", { style: "digital" }).format(duration);
 // "1:46:40"
 
 // With style set to "digital", locale set to "en", and hours set to "long"
-new Intl.DurationFormat("en", { style: "digital", hours: "long" }).format(duration);
+new Intl.DurationFormat("en", { style: "digital", hours: "long" }).format(
+  duration,
+);
 // "1 hour, 46:40"
 ```
 
