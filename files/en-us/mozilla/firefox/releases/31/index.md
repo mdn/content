@@ -54,7 +54,7 @@ New ECMAScript 2015 features implemented:
 - `KeyboardEvent.isComposing` attribute has been implemented ([Webkit bug 993234](https://bugzil.la/993234)).
 - `InputEvent` interface has been implemented ([Webkit bug 993253](https://bugzil.la/993253)).
 - `InputEvent.isComposing` attribute has been implemented ([Webkit bug 993253](https://bugzil.la/993253)).
-- {{domxref("CSS.escape_static")}} has been implemented ([Webkit bug 955860](https://bugzil.la/955860)).
+- {{domxref("CSS.escape_static", "CSS.escape()")}} has been implemented ([Webkit bug 955860](https://bugzil.la/955860)).
 - {{domxref("Element/mousemove_event", "mousemove")}} is now cancelable like in other browsers ([Webkit bug 704423](https://bugzil.la/704423)). Calling `preventDefault()` only sets `defaultPrevented` attribute to `true;` any other behaviors are not changed. E.g., it cannot prevent to set `:hover` state.
 - The {{domxref("Path2D")}} interface has been implemented.
 - The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
