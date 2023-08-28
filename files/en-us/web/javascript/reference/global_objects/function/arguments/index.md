@@ -92,4 +92,4 @@ Not part of any standard.
 ## See also
 
 - {{jsxref("Functions/arguments", "arguments")}}
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)

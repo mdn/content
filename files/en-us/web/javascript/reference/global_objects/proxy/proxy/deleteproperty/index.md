@@ -98,6 +98,6 @@ console.log(result2); // false
 ## See also
 
 - {{jsxref("Proxy")}}
-- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
+- [`Proxy()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Reflect.deleteProperty()")}}

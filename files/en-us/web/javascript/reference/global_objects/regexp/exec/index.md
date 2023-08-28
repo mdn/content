@@ -134,5 +134,5 @@ This will log a message containing `'hello world!'`.
 
 ## See also
 
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("RegExp")}}

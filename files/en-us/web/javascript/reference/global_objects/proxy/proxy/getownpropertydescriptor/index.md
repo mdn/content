@@ -102,6 +102,6 @@ Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
+- [`Proxy()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
