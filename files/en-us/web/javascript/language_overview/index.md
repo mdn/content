@@ -272,7 +272,7 @@ JavaScript grammar is very similar to the C family. There are a few points worth
 
 - [Identifiers](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) can have Unicode characters, but they cannot be one of the [reserved words](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
 - [Comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) are commonly `//` or `/* */`, while many other scripting languages like Perl, Python, and Bash use `#`.
-- Semicolons are optional in JavaScript — the language [automatically inserts them](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) when needed. However, there are certain caveats to watch out, since unlike Python, semicolons are still part of the syntax.
+- Semicolons are optional in JavaScript — the language [automatically inserts them](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) when needed. However, there are certain caveats to watch out for, since unlike Python, semicolons are still part of the syntax.
 
 For an in-depth look at the JavaScript grammar, see the [reference page for lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar).
 
