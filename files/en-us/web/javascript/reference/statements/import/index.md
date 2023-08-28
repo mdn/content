@@ -237,9 +237,8 @@ setTimeout(() => {
 - {{JSxRef("Statements/export", "export")}}
 - [Dynamic imports](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
-- Limin Zhu, Brian Terlson and Microsoft Edge Team:
-  [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
-- Hacks blog post by Jason Orendorff: [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
-- Hacks blog post by Lin Clark: [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
-- Axel Rauschmayer's book: ["Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
-- The Modern JavaScript Tutorial(javascript.info): [Export and Import](https://javascript.info/import-export)
+- [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/) on blogs.windows.com (2016)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
+- [Export and Import](https://javascript.info/import-export) on javascript.info

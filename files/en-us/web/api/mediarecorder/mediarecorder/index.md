@@ -41,7 +41,7 @@ new MediaRecorder(stream, options)
         provide detailed information about which codecs to use and how to configure them.
         Applications can check in advance if a `mimeType` is supported by the
         {{Glossary("user agent")}} by calling
-        {{domxref("MediaRecorder.isTypeSupported()")}}.
+        {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}.
     - `audioBitsPerSecond`
       - : The chosen bitrate for the audio component of
         the media.
