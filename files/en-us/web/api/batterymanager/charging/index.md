@@ -18,13 +18,13 @@ A boolean.
 
 ## Examples
 
-### HTML Content
+### HTML
 
 ```html
 <div id="charging">(charging state unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {

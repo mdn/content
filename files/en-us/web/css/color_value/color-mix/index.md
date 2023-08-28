@@ -7,7 +7,7 @@ browser-compat: css.types.color.color-mix
 
 {{CSSRef}}
 
-The **`color-mix()`** functional notation takes two {{cssxref("color_value","&lt;color>")}} values and returns the result of mixing them in a given colorspace by a given amount.
+The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}} values and returns the result of mixing them in a given colorspace by a given amount.
 
 ## Syntax
 
@@ -20,29 +20,15 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 ### Values
 
-Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], color[ p1], color[ p2])`
+Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
 
-- `in`
+- `method`
 
-  - : A literal token as a component of the syntax.
+  - : A {{CSSXref("&lt;color-interpolation-method&gt;")}} specifying the interpolation color space.
 
-- `colorspace`
+- `color1`, `color2`
 
-  - : One of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, or `oklch`, specifying the color space for interpolation.
-
-- `hue-interpolation-method` {{optional_inline}}
-
-  - : One of `shorter`, `longer`, `increasing`, or `decreasing`, specifying how {{CSSXref("&lt;hue&gt;")}} values of the colors are interpolated.
-
-    > **Note:** This value is only valid if `colorspace` is one of `hsl`, `hwb`, `lch`, and `oklch`.
-
-- `hue`
-
-  - : A literal token as a component of the syntax.
-
-- `color`
-
-  - : Any valid {{CSSXref("&lt;color&gt;")}}.
+  - : {{CSSXref("&lt;color&gt;")}} values to mix.
 
 - `p1`, `p2` {{optional_inline}}
 
@@ -127,77 +113,63 @@ li:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample('Mixing two colors','100%', 150)}}
+{{EmbedLiveSample("mixing_two_colors", "100%", 150)}}
 
-### Using hue interpolation methods
+### Using hue interpolation in color-mix()
 
-Hue interpolation methods can be used to control how the {{cssxref("&lt;hue&gt;")}} is interpolated between two colors.
-For `shorter` the result will be the shortest distance between the two angles (the default) and conversely, `longer` uses the larger value between the two angles in a circle.
-
-For `increasing`, the result will be the angle between 0 and 360 degrees and for `decreasing` the result will be the angle between -360 and 0 degrees.
-
-#### HTML
+When using shorter hue interpolation, the resulting hue angle is halfway between the input angles when taking the shortest route around the color wheel.
+The longer hue interpolation method results in a hue angle which is the midpoint when taking the longer route around the color wheel.
+For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
 
 ```html
-<div id="shorter">shorter</div>
-<div id="longer">longer</div>
-<div id="increasing">increasing</div>
-<div id="decreasing">decreasing</div>
+<div class="color-one">color one</div>
+<div class="color-two">color two</div>
+<div class="shorter">mixed shorter</div>
+<div class="longer">mixed longer</div>
 ```
 
 #### CSS
 
 ```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
 div {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
   border: 1px solid;
-  display: inline-block;
+  font: bold 150% monospace;
+  height: 100px;
+  margin: 10px 5%;
+  width: 30%;
 }
 ```
 
 ```css
-/* 20 degrees */
-#shorter {
+.color-one {
+  background-color: hsl(10 100% 50%);
+}
+.color-two {
+  background-color: hsl(60 100% 50%);
+}
+.shorter {
   background-color: color-mix(
     in hsl shorter hue,
     hsl(10 100% 50%),
-    hsl(350 100% 50%)
+    hsl(60 100% 50%)
   );
 }
-
-/* 340 degrees */
-#longer {
+.longer {
   background-color: color-mix(
     in hsl longer hue,
     hsl(10 100% 50%),
-    hsl(350 100% 50%)
-  );
-}
-
-/* The resulting angle is between 0 and 360 degrees */
-#increasing {
-  background-color: color-mix(
-    in hsl increasing hue,
-    hsl(10 100% 50%),
-    hsl(350 100% 50%)
-  );
-}
-
-/* The resulting angle is between -360 and 0 degrees */
-#decreasing {
-  background-color: color-mix(
-    in hsl decreasing hue,
-    hsl(10 100% 50%),
-    hsl(350 100% 50%)
+    hsl(60 100% 50%)
   );
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Using hue interpolation methods','100%', 150)}}
+{{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 250)}}
 
 ## Specifications
 
@@ -209,5 +181,6 @@ div {
 
 ## See also
 
-- {{cssxref("color_value")}}
+- {{CSSXref("&lt;color&gt;")}}
+- {{CSSXref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;hue&gt;")}}

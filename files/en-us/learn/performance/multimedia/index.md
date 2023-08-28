@@ -1,6 +1,7 @@
 ---
 title: "Multimedia: Images"
 slug: Learn/Performance/Multimedia
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}

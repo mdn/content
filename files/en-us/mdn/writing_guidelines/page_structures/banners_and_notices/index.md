@@ -17,7 +17,7 @@ Banners are added using macros.
 Banners macros should be inserted below the page metadata, alongside the page sidebar macro.
 For example, the `\{{SeeCompatTable}}` macro is added below to indicate that the [Ink API](/en-US/docs/Web/API/Ink_API) is [Experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 
-```
+```md
 ---
 title: Ink API
 slug: Web/API/Ink_API

@@ -12,7 +12,7 @@ underscore (\_), or dollar sign ($).
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected identifier after numeric literal (Edge)
 SyntaxError: identifier starts immediately after numeric literal (Firefox)
 SyntaxError: Unexpected number (Chrome)
@@ -36,7 +36,7 @@ They can't start with a digit! Only subsequent characters can be digits (0-9).
 
 Variable names can't start with numbers in JavaScript. The following fails:
 
-```js example-bad
+```js-nolint example-bad
 const 1life = "foo";
 // SyntaxError: identifier starts immediately after numeric literal
 
@@ -57,5 +57,4 @@ const foo = life1;
 ## See also
 
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables)
-  in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)

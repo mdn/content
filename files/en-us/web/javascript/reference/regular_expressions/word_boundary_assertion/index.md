@@ -22,8 +22,8 @@ A **word boundary assertion** checks if the current position in the string is a 
 
 A word character includes the following:
 
-- Letters (A–Z, a–z), numbers (0–9), and underscore (_).
-- If the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) and [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flags are both set, other Unicode characters that get canonicalized to one of the characters above through [case folding](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
+- Letters (A–Z, a–z), numbers (0–9), and underscore (\_).
+- If the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) and the [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag is set, other Unicode characters that get canonicalized to one of the characters above through [case folding](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
 
 Word characters are also matched by the `\w` [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape).
 

@@ -3,7 +3,7 @@ title: "AbortSignal: timeout() static method"
 short-title: timeout()
 slug: Web/API/AbortSignal/timeout_static
 page-type: web-api-static-method
-browser-compat: api.AbortSignal.timeout
+browser-compat: api.AbortSignal.timeout_static
 ---
 
 {{APIRef("DOM")}}
@@ -52,7 +52,7 @@ try {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc."
+      "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");

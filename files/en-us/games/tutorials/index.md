@@ -1,6 +1,7 @@
 ---
 title: Tutorials
 slug: Games/Tutorials
+page-type: landing-page
 ---
 
 {{GamesSidebar}}

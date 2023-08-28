@@ -291,15 +291,11 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the currently open modal dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key to close the modal dialog.
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
-  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
-- {{domxref("Element/error_event", "error")}}
-  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
-- {{domxref("Element/select_event", "select")}}
-  - : Fired when some text has been selected.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
 
@@ -307,13 +303,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
 - {{domxref("Element/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
 - {{domxref("Element/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
 
 ### Composition events
 

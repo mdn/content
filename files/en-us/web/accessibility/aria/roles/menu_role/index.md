@@ -86,7 +86,7 @@ Below are two example menu implementations.
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
-      <a role="menuitem" href="#description"> Description </a>
+      <a role="menuitem" href="#description">Description</a>
     </li>
     <li role="presentation">
       <a
@@ -101,13 +101,13 @@ Below are two example menu implementations.
       </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#examples"> Examples </a>
+      <a role="menuitem" href="#examples">Examples</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#specifications"> Specifications </a>
+      <a role="menuitem" href="#specifications">Specifications</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#see_also"> See Also </a>
+      <a role="menuitem" href="#see_also">See Also</a>
     </li>
   </ul>
 </div>

@@ -14,7 +14,7 @@ The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function
 ## Syntax
 
 ```js-nolint
-catch(onRejected)
+promiseObject.catch(onRejected)
 ```
 
 ### Parameters

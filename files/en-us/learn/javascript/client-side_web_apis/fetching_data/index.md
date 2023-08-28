@@ -1,6 +1,7 @@
 ---
 title: Fetching data from the server
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -71,7 +72,7 @@ This series of files will act as our fake database; in a real application, we'd 
 
 To begin this example, make a local copy of [fetch-start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) and the four text files — [verse1.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt) — in a new directory on your computer. In this example, we will fetch a different verse of the poem (which you may well recognize) when it's selected in the drop-down menu.
 
-Just inside the {{htmlelement("script")}} element, add the following code. This stores references to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements and adds a listener to the `<select>` element, so that when the user selects a new value, the new value is passed to function named `updateDisplay()` as a parameter.
+Just inside the {{htmlelement("script")}} element, add the following code. This stores references to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements and adds a listener to the `<select>` element, so that when the user selects a new value, the new value is passed to the function named `updateDisplay()` as a parameter.
 
 ```js
 const verseChoose = document.querySelector("select");
@@ -259,7 +260,7 @@ This article shows how to start working with Fetch to fetch data from the server
 
 There are however a lot of different subjects discussed in this article, which has only really scratched the surface. For a lot more detail on these subjects, try the following articles:
 
-- [Ajax — Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+- [Ajax](/en-US/docs/Web/Guide/AJAX)
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)

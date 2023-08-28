@@ -27,7 +27,7 @@ setInterval(func)
 setInterval(func, delay)
 setInterval(func, delay, arg0)
 setInterval(func, delay, arg0, arg1)
-setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
+setInterval(func, delay, arg0, arg1, /* …, */ argN)
 ```
 
 ### Parameters

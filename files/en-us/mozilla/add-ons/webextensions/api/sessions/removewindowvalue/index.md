@@ -53,13 +53,13 @@ async function removeFromActiveWindow() {
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-my-item",
   title: "remove item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info) => {

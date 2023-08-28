@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.filter
 
 {{JSRef}}
 
-The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+The **`filter()`** method of {{jsxref("Array")}} instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
 {{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
 
@@ -55,7 +55,7 @@ The `filter()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_O
 
 ### Filtering out all small values
 
-The following example uses `filter()` to create a filtered array that has all elements with values less than `10` removed.
+The following example uses `filter()` to create a filtered array that has all elements with values less than 10 removed.
 
 ```js
 function isBigEnough(value) {
@@ -151,7 +151,7 @@ console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
 
 ### Calling filter() on non-array objects
 
-The `filter()` method reads the `length` property of `this` and then accesses each integer index.
+The `filter()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -159,6 +159,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "a", // ignored by filter() since length is 3
 };
 console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 // [ 'a', 'b' ]

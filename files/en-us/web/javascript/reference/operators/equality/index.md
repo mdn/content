@@ -113,7 +113,7 @@ console.log(string4 == string4); // true
 ### Comparing Dates and strings
 
 ```js
-const d = new Date("December 17, 1995 03:24:00");
+const d = new Date("1995-12-17T03:24:00");
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
 console.log(d == s); //true
 ```
@@ -140,6 +140,6 @@ c == d; // true
 
 ## See also
 
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Inequality (`!=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality (`===`)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality (`!==`)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

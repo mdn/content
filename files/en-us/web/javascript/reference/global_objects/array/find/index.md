@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.find
 
 {{JSRef}}
 
-The **`find()`** method returns the first element in the provided array that satisfies the provided testing function.
+The **`find()`** method of {{jsxref("Array")}} instances returns the first element in the provided array that satisfies the provided testing function.
 If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 - If you need the **index** of the found element in the array, use {{jsxref("Array/findIndex", "findIndex()")}}.
@@ -154,11 +154,12 @@ array.find((value, index) => {
 
 ### Calling find() on non-array objects
 
-The `find()` method reads the `length` property of `this` and then accesses each integer index.
+The `find()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
   length: 3,
+  "-1": 0.1, // ignored by find() since -1 < 0
   0: 2,
   1: 7.3,
   2: 4,

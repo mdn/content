@@ -96,7 +96,7 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 
 Alternatively, the following example demonstrates how to open a popup, using the `popup` feature.
 
-> **Warning:** Modern browsers have built-in popup blockers, preventing the opening of such popups. Users must have changed their browser settings to enable popups or enable them on a site-per-site basis from the browser's user interface (a notification may appear when the site attempts to open a popup for the first time, giving the option to enable or discard them).
+> **Warning:** Modern browsers have built-in popup blockers, limiting the opening of such popups to being in direct response to user input. Popups opened outside the context of a click may cause a notification to appear, giving the option to enable or discard them.
 
 ```js
 window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
@@ -109,7 +109,7 @@ const windowFeatures = "left=100,top=100,width=320,height=320";
 const handle = window.open(
   "https://www.mozilla.org/",
   "mozillaWindow",
-  windowFeatures
+  windowFeatures,
 );
 if (!handle) {
   // The window wasn't allowed to open
@@ -154,7 +154,7 @@ link.addEventListener(
     openRequestedTab(link.href);
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -210,7 +210,7 @@ function openRequestedSingleTab(url) {
 }
 
 const links = document.querySelectorAll(
-  "a[target='SingleSecondaryWindowName']"
+  "a[target='SingleSecondaryWindowName']",
 );
 for (const link of links) {
   link.addEventListener(
@@ -219,7 +219,7 @@ for (const link of links) {
       openRequestedSingleTab(link.href);
       event.preventDefault();
     },
-    false
+    false,
   );
 }
 ```

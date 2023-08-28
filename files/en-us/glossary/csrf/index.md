@@ -4,6 +4,8 @@ slug: Glossary/CSRF
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **CSRF** (Cross-Site Request Forgery) is an attack that impersonates a trusted user and sends a website unwanted commands.
 
 This can be done, for example, by including malicious parameters in a {{glossary("URL")}} behind a link that purports to go somewhere else:

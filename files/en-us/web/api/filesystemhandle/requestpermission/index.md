@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileSystemHandle.requestPermission
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the
@@ -79,5 +79,5 @@ async function verifyPermission(fileHandle, withWrite) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -519,7 +519,7 @@ So the HTML above makes it difficult to cache `bundle.js` and `build.css` with `
 
 Therefore, you can serve the JavaScript and CSS with URLs that include a changing part based on a version number or hash value. Some of the ways to do that are shown below.
 
-```
+```plain
 # version in filename
 bundle.v123.js
 
@@ -549,7 +549,7 @@ With that design, both JavaScript and CSS resources can be cached for a long tim
 
 Some commonly-used cache-header values are shown below.
 
-```
+```plain
 36 cache-control max-age=0
 37 cache-control max-age=604800
 38 cache-control max-age=2592000

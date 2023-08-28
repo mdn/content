@@ -1,6 +1,7 @@
 ---
 title: Create Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
+page-type: learn-module-chapter
 ---
 
 This subarticle shows how to define a page for creating `Author` objects.
@@ -49,11 +50,11 @@ exports.author_create_post = [
     .isAlphanumeric()
     .withMessage("Family name has non-alphanumeric characters."),
   body("date_of_birth", "Invalid date of birth")
-    .optional({ checkFalsy: true })
+    .optional({ values: "falsy" })
     .isISO8601()
     .toDate(),
   body("date_of_death", "Invalid date of death")
-    .optional({ checkFalsy: true })
+    .optional({ values: "falsy" })
     .isISO8601()
     .toDate(),
 
@@ -117,12 +118,12 @@ The validation code demonstrates several new features:
   ```
 
 - We can use the `optional()` function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields).
-  For example, below we check that the optional date of birth is an ISO8601-compliant date (the `checkFalsy` flag means that we'll accept either an empty string or `null` as an empty value).
+  For example, below we check that the optional date of birth is an ISO8601-compliant date (the `{ values: "falsy" }` object passed means that we'll accept either an empty string or `null` as an empty value).
 
   ```js
   [
     body("date_of_birth", "Invalid date of birth")
-      .optional({ checkFalsy: true })
+      .optional({ values: "falsy" })
       .isISO8601()
       .toDate(),
   ];

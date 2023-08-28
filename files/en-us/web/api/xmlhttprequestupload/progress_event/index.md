@@ -49,7 +49,7 @@ You can use the `progress` event to get info about the progress of a lengthy upl
 xhr.upload.addEventListener("progress", (event) => {
   progressBar.value = event.loaded; // Update the progress bar
   log.textContent = `Uploading (${((event.loaded / event.total) * 100).toFixed(
-    2
+    2,
   )}%)…`;
 });
 ```

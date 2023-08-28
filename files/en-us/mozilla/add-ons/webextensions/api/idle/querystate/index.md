@@ -38,10 +38,10 @@ In this simple snippet, we call `queryState()` and then check if the returned `n
 
 ```js
 function onGot(newState) {
-  if (newState === 'idle') {
-    console.log('Please come back — we miss you!');
-  } else if (newState === 'active') {
-    console.log('Glad to still have you with us!');
+  if (newState === "idle") {
+    console.log("Please come back — we miss you!");
+  } else if (newState === "active") {
+    console.log("Glad to still have you with us!");
   }
 }
 

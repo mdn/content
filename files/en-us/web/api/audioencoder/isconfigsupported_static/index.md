@@ -5,7 +5,7 @@ slug: Web/API/AudioEncoder/isConfigSupported_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.AudioEncoder.isConfigSupported
+browser-compat: api.AudioEncoder.isConfigSupported_static
 ---
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
@@ -57,7 +57,7 @@ for (const config of configs) {
   console.log(
     `AudioEncoder's config ${JSON.stringify(support.config)} support: ${
       support.supported
-    }`
+    }`,
   );
 }
 ```

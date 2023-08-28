@@ -1,6 +1,7 @@
 ---
 title: Firefox 23 for developers
 slug: Mozilla/Firefox/Releases/23
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -20,7 +21,7 @@ slug: Mozilla/Firefox/Releases/23
 
 ### HTML
 
-- The {{HTMLElement("blink")}} element support is now completely dropped. The `<blink>` tag now implements the {{domxref("HTMLUnknownElement")}} interface ([Firefox bug 857820](https://bugzil.la/857820)).
+- The `<blink>` element support is now completely dropped. The `<blink>` tag now implements the {{domxref("HTMLUnknownElement")}} interface ([Firefox bug 857820](https://bugzil.la/857820)).
 - The `range` type of the {{HTMLElement("input")}} element ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) has been switched on by default ([Firefox bug 841950](https://bugzil.la/841950)).
 
 ### JavaScript
@@ -40,7 +41,7 @@ slug: Mozilla/Firefox/Releases/23
 - The {{domxref("AnimationEvent.pseudoElement")}} property has been implemented ([Firefox bug 848293](https://bugzil.la/848293)).
 - The {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} constructor has been added ([Firefox bug 848291](https://bugzil.la/848291)).
 - The {{domxref("TransitionEvent.pseudoElement")}} property has been implemented ([Firefox bug 848291](https://bugzil.la/848291)).
-- The non-standard {{domxref("TransitionEvent.initTransitionEvent()")}} and `AnimationEvent.initAnimationEvent()` have been removed ([Firefox bug 868751](https://bugzil.la/868751)).
+- The non-standard `TransitionEvent.initTransitionEvent()` and `AnimationEvent.initAnimationEvent()` have been removed ([Firefox bug 868751](https://bugzil.la/868751)).
 
 ### WebRTC
 

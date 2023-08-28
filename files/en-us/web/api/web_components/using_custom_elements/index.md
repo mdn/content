@@ -14,7 +14,7 @@ The controller of custom elements on a web document is the {{domxref("CustomElem
 
 To register a custom element on the page, you use the {{domxref("CustomElementRegistry.define()")}} method. This takes as its arguments:
 
-- A string representing the name you are giving to the element. Note that custom element names [require a dash to be used in them](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case); they can't be single words.
+- A string representing the name you are giving to the element. Note that custom element names [require a dash to be used in them](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name) (kebab-case); they can't be single words.
 - A [class](/en-US/docs/Web/JavaScript/Reference/Classes) object that defines the behavior of the element.
 - {{optional_inline}} An options object containing an `extends` property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).
 

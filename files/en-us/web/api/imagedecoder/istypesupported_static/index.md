@@ -5,7 +5,7 @@ slug: Web/API/ImageDecoder/isTypeSupported_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.ImageDecoder.isTypeSupported
+browser-compat: api.ImageDecoder.isTypeSupported_static
 ---
 
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}

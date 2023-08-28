@@ -42,7 +42,7 @@ delete object[property]
 
 The `delete` operator has the same [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) as other unary operators like [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof). Therefore, it accepts any expression formed by higher-precedence operators. However, the following forms lead to early syntax errors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
 
-```js example-bad
+```js-nolint example-bad
 delete identifier;
 delete object.#privateProperty;
 ```
@@ -78,7 +78,7 @@ It is important to consider the following scenarios:
 // Since we are using var, this is marked as non-configurable.
 var empCount = 43;
 
-// Creates the property adminName on the global scope.
+// Creates the property EmployeeDetails on the global scope.
 // Since it was defined without "var", it is marked configurable.
 EmployeeDetails = {
   name: "xyz",

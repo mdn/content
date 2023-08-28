@@ -77,10 +77,10 @@ const variables = ["foo", "foo:bar", "  foo  "];
 
 function toAssignment(key) {
   if (isValidIdentifier(key)) {
-    return `globalThis.${key} = undefined;`
+    return `globalThis.${key} = undefined;`;
   }
   // JSON.stringify() escapes quotes and other special characters
-  return `globalThis[${JSON.stringify(key)}] = undefined;`
+  return `globalThis[${JSON.stringify(key)}] = undefined;`;
 }
 
 const statements = variables.map(toAssignment).join("\n");

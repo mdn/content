@@ -1,6 +1,7 @@
 ---
 title: Making decisions in your code — conditionals
 slug: Learn/JavaScript/Building_blocks/conditionals
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
@@ -275,20 +276,21 @@ if (x === 5 || x === 7 || x === 10 || x === 20) {
 
 In such a case, [`switch` statements](/en-US/docs/Web/JavaScript/Reference/Statements/switch) are your friend — they take a single expression/value as an input, and then look through several choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
 
-```
+```js
 switch (expression) {
   case choice1:
-    run this code
+    // run this code
     break;
 
   case choice2:
-    run this code instead
+    // run this code instead
     break;
 
   // include as many cases as you like
 
   default:
-    actually, just run this code
+    // actually, just run this code
+    break;
 }
 ```
 
@@ -361,7 +363,7 @@ function setWeather() {
 
 There is one final bit of syntax we want to introduce you to before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
-```
+```js-nolint
 condition ? run this code : run this code instead
 ```
 
@@ -400,7 +402,9 @@ function update(bgColor, textColor) {
 }
 
 select.addEventListener("change", () =>
-  select.value === "black" ? update("black", "white") : update("white", "black")
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black"),
 );
 ```
 
@@ -618,7 +622,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;
@@ -805,7 +809,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;

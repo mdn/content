@@ -22,7 +22,7 @@ h1 {
 }
 ```
 
-More recently we have gained [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout). To access these we also use values of the `display` property — `display: grid` and `display: flex`. Only when the value of `display` is changed do the children become flex or grid items and begin to respond to the other properties in the grid or flexbox specifications. Changing an element's `display` value changes the formatting context of its direct children.
+More recently we have gained [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout). To access these we also use values of the `display` property — `display: grid` and `display: flex`. Only when the value of `display` is changed do the children become flex or grid items and begin to respond to the other properties in the grid or flexbox specifications. Changing an element's `display` value changes the formatting context of its direct children.
 
 What grid and flexbox demonstrate, however, is that an element has both an **outer** and an **inner** display type. The outer display type describes whether the element is block-level or inline-level. The inner display type describes how the children of that box behave.
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.splice
 
 {{JSRef}}
 
-The **`splice()`** method changes the contents of an array by
+The **`splice()`** method of {{jsxref("Array")}} instances changes the contents of an array by
 removing or replacing existing elements and/or adding new elements [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 
 To create a new array with a segment removed and/or replaced without mutating the original array, use {{jsxref("Array/toSpliced", "toSpliced()")}}. To access part of an array without modifying it, see {{jsxref("Array.prototype.slice()", "slice()")}}.
@@ -19,8 +19,9 @@ To create a new array with a segment removed and/or replaced without mutating th
 ```js-nolint
 splice(start)
 splice(start, deleteCount)
-splice(start, deleteCount, item1)
-splice(start, deleteCount, item1, item2, itemN)
+splice(start, deleteCount, item0)
+splice(start, deleteCount, item0, item1)
+splice(start, deleteCount, item0, item1, /* …, */ itemN)
 ```
 
 ### Parameters
@@ -42,7 +43,7 @@ splice(start, deleteCount, item1, item2, itemN)
     If `deleteCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).
 
-- `item1`, …, `itemN` {{optional_inline}}
+- `item0`, …, `itemN` {{optional_inline}}
 
   - : The elements to add to the array, beginning from `start`.
 

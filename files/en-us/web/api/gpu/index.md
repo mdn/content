@@ -15,6 +15,11 @@ The `GPU` object for the current context is accessed via the {{domxref("Navigato
 
 {{InheritanceDiagram}}
 
+## Instance properties
+
+- {{domxref("GPU.wgslLanguageFeatures", "wgslLanguageFeatures")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : A {{domxref("WGSLLanguageFeatures")}} object that reports the [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) supported by the WebGPU implementation.
+
 ## Instance methods
 
 - {{domxref("GPU.requestAdapter", "requestAdapter()")}} {{Experimental_Inline}}

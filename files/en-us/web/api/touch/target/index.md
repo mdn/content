@@ -33,7 +33,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].target = ${e.targetTouches[i].target}`);
     }
   },
-  false
+  false,
 );
 ```
 

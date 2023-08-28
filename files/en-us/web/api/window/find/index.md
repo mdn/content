@@ -47,7 +47,7 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
 ```js
 function findString(text) {
   document.querySelector("#output").textContent = `String found? ${window.find(
-    text
+    text,
   )}`;
 }
 ```

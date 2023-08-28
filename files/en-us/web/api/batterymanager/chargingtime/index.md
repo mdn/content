@@ -22,20 +22,20 @@ A number.
 
 ## Examples
 
-### HTML Content
+### HTML
 
 ```html
 <div id="chargingTime">(charging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {
   const time = battery.chargingTime;
 
   document.querySelector(
-    "#chargingTime"
+    "#chargingTime",
   ).textContent = `Time to fully charge the battery: ${time}s`;
 });
 ```

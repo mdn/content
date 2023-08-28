@@ -145,7 +145,7 @@ Where `TypedArray` is a constructor for one of the concrete types.
 - `length` {{optional_inline}}
   - : When called with a non-object, the parameter will be treated as a number specifying the length of the typed array. An internal array buffer is created in memory, of size `length` multiplied by [`BYTES_PER_ELEMENT`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) bytes, filled with zeros. Omitting all parameters is equivalent to using `0` as `length`.
 - `buffer`, `byteOffset` {{optional_inline}}, `length` {{optional_inline}}
-  - : When called with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) instance, and optionally a `byteOffset` and a `length` argument, a new typed array view is created that views the specified buffer. The `byteOffset` and `length` parameters specify the memory range that will be exposed by the typed array view. If both are omitted, all of `buffer` is viewed; if only `length` is omitted, the remainder of `buffer` starting from `byteOffset` is viewed. If `length` is omitted, the typed array becomes [length-tracking](#behavior_when_viewing_a_resizable_buffer).
+  - : When called with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) instance, and optionally a `byteOffset` and a `length` argument, a new typed array view is created that views the specified buffer. The `byteOffset` (in bytes) and `length` (in number of elements, each occupying [`BYTES_PER_ELEMENT`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) bytes) parameters specify the memory range that will be exposed by the typed array view. If both are omitted, all of `buffer` is viewed; if only `length` is omitted, the remainder of `buffer` starting from `byteOffset` is viewed. If `length` is omitted, the typed array becomes [length-tracking](#behavior_when_viewing_a_resizable_buffer).
 
 ### Exceptions
 
@@ -364,5 +364,4 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [TextDecoder](/en-US/docs/Web/API/TextDecoder) — Helper that decode
-  strings from numerical data
+- {{domxref("TextDecoder")}}

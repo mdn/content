@@ -31,7 +31,7 @@ A {{jsxref("BigInt")}} value. Number values must be integers and are converted t
 - {{jsxref("RangeError")}}
   - : Thrown if the parameter is a non-integral number.
 - {{jsxref("TypeError")}}
-  - : Thrown if at least one of these conditions is met:
+  - : Thrown in one of the following cases:
     - The parameter cannot be converted to a primitive.
     - After conversion to a primitive, the result is {{jsxref("undefined")}}, {{jsxref("Operators/null", "null")}}, {{jsxref("symbol")}}.
 - {{jsxref("SyntaxError")}}
@@ -68,4 +68,4 @@ BigInt("  123  "); // 123n, leading and trailing whitespaces are allowed
 
 ## See also
 
-- {{jsxref("BigInt")}} class
+- {{jsxref("BigInt")}}

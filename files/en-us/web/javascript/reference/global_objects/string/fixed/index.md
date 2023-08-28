@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.fixed
 
 {{JSRef}} {{deprecated_header}}
 
-The **`fixed()`** method creates a string that embeds a string in a {{HTMLElement("tt")}} element (`<tt>str</tt>`), which causes a string to be displayed in a fixed-pitch font.
+The **`fixed()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("tt")}} element (`<tt>str</tt>`), which causes this string to be displayed in a fixed-pitch font.
 
 > **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
@@ -18,6 +18,10 @@ The **`fixed()`** method creates a string that embeds a string in a {{HTMLElemen
 ```js-nolint
 fixed()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

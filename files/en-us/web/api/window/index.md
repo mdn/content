@@ -96,7 +96,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : Returns a reference to the parent of the current window or subframe.
 - {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Navigation_timing_API) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
+  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Performance_API/Navigation_timing) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
 - {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
@@ -303,13 +303,13 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
+    Also available via the {{domxref("HTMLElement/copy_event", "oncopy")}} property.
 - {{domxref("Window/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
+    Also available via the {{domxref("HTMLElement/cut_event", "oncut")}} property.
 - {{domxref("Window/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
+    Also available via the {{domxref("HTMLElement/paste_event", "onpaste")}} property.
 
 ### Connection events
 
@@ -347,8 +347,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
   - : Fired when the window, the document and its resources are about to be unloaded.
-- {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 - {{domxref("Window/load_event", "load")}}
   - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
 - {{domxref("Window/unload_event", "unload")}}
@@ -385,13 +383,13 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 ### Transition events
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ### Deprecated events
 

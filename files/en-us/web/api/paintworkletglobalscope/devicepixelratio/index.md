@@ -26,7 +26,7 @@ A double-precision integer.
 
 ## See also
 
-- [CSS.paintWorklet](/en-US/docs/Web/API/CSS/paintWorklet)
+- [CSS.paintWorklet](/en-US/docs/Web/API/CSS/paintWorklet_static)
 - [Worklet](/en-US/docs/Web/API/Worklet)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [Houdini APIs](/en-US/docs/Web/Guide/Houdini)
