@@ -10,7 +10,7 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ## Changes for web developers
 
-### Developer Tools
+### Developer tools
 
 - The area selected by the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) can now be resized and moved using keyboard shortcuts.
   Pressing the arrow keys moves the selected area, while pressing <kbd>Ctrl</kbd> + arrow keys (or <kbd>Cmd</kbd> + arrow keys on a Mac) resizes the selected area.
