@@ -37,7 +37,7 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 
 ## Static methods
 
-- {{domxref('XRWebGLLayer.getNativeFramebufferScaleFactor()', "getNativeFramebufferScaleFactor()")}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer/getNativeFramebufferScaleFactor_static', "getNativeFramebufferScaleFactor()")}} {{Experimental_Inline}}
   - : Returns the scaling factor that can be used to scale the resolution of the recommended WebGL framebuffer resolution to the rendering device's native resolution.
 
 ## Instance methods

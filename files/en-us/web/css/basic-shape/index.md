@@ -39,7 +39,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
 
-- `{{cssxref("basic-shape/rect","rect()")}}`
+- `{{cssxref("basic-shape/rect","rect()")}}` {{Experimental_Inline}}
 
   - : Defines a rectangle using the specified distances from the top and left edges of the reference box.
 
@@ -51,7 +51,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
 
-- `{{cssxref("basic-shape/xywh","xywh()")}}`
+- `{{cssxref("basic-shape/xywh","xywh()")}}` {{Experimental_Inline}}
 
   - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
 

@@ -190,12 +190,8 @@ console.log(lines.join("\n"));
 
 ## See also
 
-- A polyfill of [`RegExp` named capture groups](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
-
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [ClassRanges in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-classranges)

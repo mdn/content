@@ -17,6 +17,10 @@ The **`keys()`** method of {{jsxref("Array")}} instances returns a new _[array i
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).

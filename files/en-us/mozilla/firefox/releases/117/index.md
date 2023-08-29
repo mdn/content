@@ -41,6 +41,9 @@ This article provides information about the changes in Firefox 117 that affect d
 - Fixed a bug where the [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) `'strict-dynamic'` source expression was not being enforced in `default-src` directives.
   The behavior now matches the specification where `default-src` directive values are used as a fallback when `script-src` is not provided ([Firefox bug 1313937](https://bugzil.la/1313937)).
 
+- The `Range` header is now a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range (e.g., `bytes=100-200`).
+  This allows the `Range` header to be used in cross-origin requests without triggering a preflight request, which is useful for requesting media and resuming downloads ([Firefox bug 1733981](https://bugzil.la/1733981)).
+
 #### Removals
 
 ### Security
@@ -66,7 +69,14 @@ This article provides information about the changes in Firefox 117 that affect d
 
 #### WebDriver BiDi
 
-#### Marionette
+- Added the `browser.close` command that allows users to terminate all WebDriver sessions and close the browser ([Firefox bug 1829334](https://bugzil.la/1829334)).
+- Added the `browsingContext.setViewport` command that allows users to change the dimensions of a top level browsing context ([Firefox bug 1838664](https://bugzil.la/1838664)).
+- Added the `browsingContext.fragmentNavigated` event which is emitted for same-document navigations ([Firefox bug 1841039](https://bugzil.la/1841039)).
+- Added support for the `background` argument of the `browsingContext.create` command, which will force the new context to be created in the background. This argument is optional and defaults to `false`, meaning that `browsingContext.create` now opens new contexts in the foreground by default ([Firefox bug 1843507](https://bugzil.la/1843507)).
+- Added support for the `clip` argument of the `browsingContext.captureScreenshot` command, which allows to restrict the screenshot either to a specific area or to an element. When clipping to an element, you can optionally scroll the element into view before taking the screenshot ([Firefox bug 1840998](https://bugzil.la/1840998)).
+- All commands and events related to a navigation will now provide a `navigation` id, which is a `UUID` identifying a specific navigation. This property is available in the `browsingContext.navigate` response, in the `browsingContext.load`, `browsingContext.domContentLoaded`, `browsingContext.fragmentNavigated` events, as well as in all `network` events created for a navigation request ([Firefox bug 1763122](https://bugzil.la/1763122), [Firefox bug 1789484](https://bugzil.la/1789484), [Firefox bug 1805405](https://bugzil.la/1805405)).
+- `headers` and `cookies` in `network` events are now serialized as `network.BytesValue`, which will provide a better support for non-UTF8 values ([Firefox bug 1842619](https://bugzil.la/1842619)).
+- The `browsingContext.create` command will now wait until the created context has a valid size ([Firefox bug 1847044](https://bugzil.la/1847044)).
 
 ## Changes for add-on developers
 

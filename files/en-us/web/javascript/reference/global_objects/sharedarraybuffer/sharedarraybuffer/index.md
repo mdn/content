@@ -16,7 +16,6 @@ The **`SharedArrayBuffer()`** constructor creates {{jsxref("SharedArrayBuffer")}
 ## Syntax
 
 ```js-nolint
-new SharedArrayBuffer()
 new SharedArrayBuffer(length)
 new SharedArrayBuffer(length, options)
 ```
@@ -25,7 +24,7 @@ new SharedArrayBuffer(length, options)
 
 ### Parameters
 
-- `length` {{optional_inline}}
+- `length`
   - : The size, in bytes, of the array buffer to create.
 - `options` {{optional_inline}}
   - : An object, which can contain the following properties:

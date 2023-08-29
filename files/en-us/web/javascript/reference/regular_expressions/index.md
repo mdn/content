@@ -150,7 +150,7 @@ In addition, `\` can be followed by some non-letter-or-digit characters, in whic
 - `\-`: only valid inside [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - `\!`, `\#`, `\%`, `\&`, `\,`, `\:`, `\;`, `\<`, `\=`, `\>`, `\@`, `` \` ``, `\~`: only valid inside [`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class)
 
-The other ASCII characters, namely space character, `"`, `'`, `_`, and any letter character not mentioned above, are not valid escape sequences. In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), escape sequences that are not one of the above become _identity escapes_: they represent the character that follows the backslash. For example, `\a` represents the character `a`. This behavior limits the ability to introduce new escape sequences without causing backward compatibility issues, and is therefore forbidden in Unicode-aware mode.
+The other {{glossary("ASCII")}} characters, namely space character, `"`, `'`, `_`, and any letter character not mentioned above, are not valid escape sequences. In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), escape sequences that are not one of the above become _identity escapes_: they represent the character that follows the backslash. For example, `\a` represents the character `a`. This behavior limits the ability to introduce new escape sequences without causing backward compatibility issues, and is therefore forbidden in Unicode-aware mode.
 
 ## Specifications
 
