@@ -44,7 +44,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
+For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely ({{Glossary("ASCII")}}) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
 
 ### At-rule syntax
 
@@ -60,7 +60,7 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Selectors
 
-The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), which allow styles to be conditional based on various features of elements within the DOM.
+The following are the various [selectors](/en-US/docs/Web/CSS/CSS_selectors), which allow styles to be conditional based on various features of elements within the DOM.
 
 ### Basic selectors
 
@@ -101,7 +101,7 @@ Combinators are selectors that establish a relationship between two or more simp
 
 > **Callout:**
 >
-> See also [Selectors in the Selectors Level 4 specification](https://www.w3.org/TR/selectors/#overview).
+> See also [selectors in the Selectors specification](https://drafts.csswg.org/selectors/) and the [pseudo-element specification](https://drafts.csswg.org/css-pseudo/).
 
 ## Concepts
 
@@ -131,12 +131,12 @@ Combinators are selectors that establish a relationship between two or more simp
 ### Layout
 
 - [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
-- [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
-- [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

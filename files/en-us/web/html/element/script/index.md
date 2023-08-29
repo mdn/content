@@ -142,14 +142,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.
         All of the other attributes will be ignored, including the `src` attribute.
 
-- `blocking`
+- `blocking` {{Experimental_Inline}}
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
     - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
 
 - `charset` {{Deprecated_inline}}
-  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
+  - : If present, its value must be an {{Glossary("ASCII")}} case-insensitive match for "`utf-8`". It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
 - `language` {{Deprecated_inline}} {{Non-standard_Inline}}
   - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 
@@ -158,7 +158,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 Scripts without [`async`](#async), [`defer`](#defer) or `type="module"` attributes, as well as inline scripts without the `type="module"` attribute, are fetched and executed immediately before the browser continues to parse the page.
 
 The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio type (`audio/*`), or `text/csv`.
-If the script is blocked, an {{domxref("Element/error_event", "error")}} event is sent to the element; otherwise, a {{domxref("Element/load_event", "load")}} event is sent.
+If the script is blocked, an {{domxref("HTMLElement/error_event", "error")}} event is sent to the element; otherwise, a {{domxref("HTMLElement/load_event", "load")}} event is sent.
 
 ## Examples
 

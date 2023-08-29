@@ -1,6 +1,7 @@
 ---
 title: Firefox 87 for developers
 slug: Mozilla/Firefox/Releases/87
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

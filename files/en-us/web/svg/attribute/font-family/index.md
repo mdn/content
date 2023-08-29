@@ -13,7 +13,6 @@ The **`font-family`** attribute indicates which font family will be used to rend
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}

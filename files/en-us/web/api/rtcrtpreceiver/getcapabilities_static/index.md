@@ -3,14 +3,14 @@ title: "RTCRtpReceiver: getCapabilities() static method"
 short-title: getCapabilities()
 slug: Web/API/RTCRtpReceiver/getCapabilities_static
 page-type: web-api-static-method
-browser-compat: api.RTCRtpReceiver.getCapabilities
+browser-compat: api.RTCRtpReceiver.getCapabilities_static
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
 
 The _static method_ **`RTCRtpReceiver.getCapabilities()`** returns an object describing the codec and header extension capabilities supported by {{domxref("RTCRtpReceiver")}} objects on the current device.
 
-You can, similarly, obtain the capabilities of {{domxref("RTCRtpSender")}} objects by calling the static function {{domxref("RTCRtpSender.getCapabilities()")}}.
+You can, similarly, obtain the capabilities of {{domxref("RTCRtpSender")}} objects by calling the static function {{domxref("RTCRtpSender.getCapabilities_static", "RTCRtpSender.getCapabilities()")}}.
 
 ## Syntax
 
@@ -119,7 +119,7 @@ const log = document.querySelector("#log");
 ```js
 log.textContent = `RTCRtpReceiver.getCapabilities() supported: ${Object.hasOwn(
   RTCRtpReceiver,
-  "getCapabilities"
+  "getCapabilities",
 )}`;
 ```
 

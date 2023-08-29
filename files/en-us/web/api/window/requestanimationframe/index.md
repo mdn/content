@@ -50,7 +50,7 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} identical to the one returned by
+    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
     {{domxref('performance.now()')}}, indicating the point in time when
     `requestAnimationFrame()` starts to execute callback functions.
 
@@ -74,13 +74,13 @@ const element = document.getElementById("some-element-you-want-to-animate");
 let start, previousTimeStamp;
 let done = false;
 
-function step(timestamp) {
+function step(timeStamp) {
   if (start === undefined) {
-    start = timestamp;
+    start = timeStamp;
   }
-  const elapsed = timestamp - start;
+  const elapsed = timeStamp - start;
 
-  if (previousTimeStamp !== timestamp) {
+  if (previousTimeStamp !== timeStamp) {
     // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
     element.style.transform = `translateX(${count}px)`;
@@ -89,7 +89,7 @@ function step(timestamp) {
 
   if (elapsed < 2000) {
     // Stop the animation after 2 seconds
-    previousTimeStamp = timestamp;
+    previousTimeStamp = timeStamp;
     if (!done) {
       window.requestAnimationFrame(step);
     }
@@ -110,9 +110,10 @@ window.requestAnimationFrame(step);
 ## See also
 
 - {{domxref("Window.cancelAnimationFrame()")}}
+- {{domxref("OffscreenCanvas")}}
+- [DedicatedWorkerGlobalScope](/en-US/docs/Web/API/DedicatedWorkerGlobalScope)
 - [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) – Blog post
 - [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
 - Paul Irish: [requestAnimationFrame API: now with sub-millisecond precision](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

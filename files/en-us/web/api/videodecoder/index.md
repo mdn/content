@@ -35,7 +35,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Static methods
 
-- {{domxref("VideoDecoder.isConfigSupported()")}}
+- {{domxref("VideoDecoder.isConfigSupported_static", "VideoDecoder.isConfigSupported()")}}
   - : Returns a promise indicating whether the provided `VideoDecoderConfig` is supported.
 
 ## Instance methods

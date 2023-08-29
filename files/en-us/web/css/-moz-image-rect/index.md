@@ -159,4 +159,4 @@ Not part of any standard.
 ## See also
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
-- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)

@@ -34,7 +34,7 @@ const nestedProp = obj.first && obj.first.second;
 ```
 
 The value of `obj.first` is confirmed to be non-`null` (and
-non-`undefined`) before then accessing the value of
+non-`undefined`) before accessing the value of
 `obj.first.second`. This prevents the error that would occur if you accessed
 `obj.first.second` directly without testing `obj.first`.
 
@@ -118,7 +118,7 @@ printMagicIndex(); // undefined; if not using ?., this would throw
 
 It is invalid to try to assign to the result of an optional chaining expression:
 
-```js example-bad
+```js-nolint example-bad
 const object = {};
 object?.property = 1; // SyntaxError: Invalid left-hand side in assignment
 ```
@@ -266,4 +266,4 @@ printCustomerCity({
 
 ## See also
 
-- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

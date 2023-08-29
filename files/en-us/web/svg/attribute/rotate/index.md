@@ -7,6 +7,8 @@ status:
 spec-urls: https://svgwg.org/specs/animations/#RotateAttribute
 ---
 
+{{SVGRef}}
+
 The `rotate` attribute specifies how the animated element rotates as it travels along a path specified in an {{SVGElement("animateMotion")}} element.
 
 You can use this attribute with the following SVG elements:

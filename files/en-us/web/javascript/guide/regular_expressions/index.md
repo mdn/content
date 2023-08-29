@@ -306,15 +306,16 @@ If you need to access the properties of a regular expression created with an obj
 Regular expressions have optional flags that allow for functionality like global searching and case-insensitive searching.
 These flags can be used separately or together in any order, and are included as part of the regular expression.
 
-| Flag | Description                                                                                   | Corresponding property                        |
-| ---- | --------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}} |
-| `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}         |
-| `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}} |
-| `m`  | Allows `^` and `$` to match newline characters.                                               | {{jsxref("RegExp/multiline", "multiline")}}   |
-| `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}         |
-| `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}       |
-| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. | {{jsxref("RegExp/sticky", "sticky")}}         |
+| Flag | Description                                                                                   | Corresponding property                          |
+| ---- | --------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
+| `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}           |
+| `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
+| `m`  | Allows `^` and `$` to match newline characters.                                               | {{jsxref("RegExp/multiline", "multiline")}}     |
+| `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}           |
+| `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}         |
+| `v`  | An upgrade to the `u` mode with more Unicode features.                                        | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. | {{jsxref("RegExp/sticky", "sticky")}}           |
 
 To include a flag with the regular expression, use this syntax:
 

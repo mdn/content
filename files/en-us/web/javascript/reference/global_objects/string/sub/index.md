@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.sub
 
 {{JSRef}} {{deprecated_header}}
 
-The **`sub()`** method creates a string that embeds a string in a {{HTMLElement("sub")}} element (`<sub>str</sub>`), which causes a string to be displayed as subscript.
+The **`sub()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("sub")}} element (`<sub>str</sub>`), which causes this string to be displayed as subscript.
 
 > **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
@@ -18,6 +18,10 @@ The **`sub()`** method creates a string that embeds a string in a {{HTMLElement(
 ```js-nolint
 sub()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

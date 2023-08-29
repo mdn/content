@@ -22,7 +22,7 @@ function (param0) {
 function (param0, param1) {
   statements
 }
-function (param0, param1, /* … ,*/ paramN) {
+function (param0, param1, /* …, */ paramN) {
   statements
 }
 
@@ -32,7 +32,7 @@ function name(param0) {
 function name(param0, param1) {
   statements
 }
-function name(param0, param1, /* … ,*/ paramN) {
+function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -44,7 +44,7 @@ function name(param0, param1, /* … ,*/ paramN) {
 - `name` {{optional_inline}}
   - : The function name. Can be omitted, in which case the function is _anonymous_. The name is only local to the function body.
 - `paramN` {{optional_inline}}
-  - : The name of an argument to be passed to the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
@@ -54,7 +54,7 @@ A `function` expression is very similar to, and has almost the same syntax as, a
 
 ### Function expression hoisting
 
-Function expressions in JavaScript are not hoisted, unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function#function_declaration_hoisting). You can't use function expressions before you create them:
+Function expressions in JavaScript are not hoisted, unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function#hoisting). You can't use function expressions before you create them:
 
 ```js
 console.log(notHoisted); // undefined
@@ -86,6 +86,19 @@ math.factit(3); //3;2;1;
 ```
 
 If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property of the function is set to that name, instead of the implicit name inferred from syntax (such as the variable the function is assigned to).
+
+Unlike declarations, the name of the function expressions is read-only.
+
+```js
+function foo() {
+  foo = 1;
+}
+foo();
+console.log(foo); // 1
+(function foo() {
+  foo = 1; // TypeError: Assignment to constant variable.
+})();
+```
 
 ## Examples
 
@@ -137,10 +150,5 @@ An anonymous function is created and called:
 
 - {{jsxref("Functions/Arrow_functions", "Arrow functions", "", 1)}}
 - {{jsxref("Functions", "Functions", "", 1)}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("Operators/function*", "function*")}} expression
-- {{jsxref("GeneratorFunction")}} object
-- {{jsxref("Statements/async_function", "async function")}} declaration
-- {{jsxref("Operators/async_function", "async function")}} expression
+- {{jsxref("Function")}}
+- {{jsxref("Statements/function", "function")}}

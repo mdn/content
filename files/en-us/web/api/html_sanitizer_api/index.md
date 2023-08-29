@@ -116,7 +116,7 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
 > const sanitizedString = new Sanitizer().sanitizeFor(
 >   "div",
->   unsanitized_string
+>   unsanitized_string,
 > ).innerHTML;
 > ```
 

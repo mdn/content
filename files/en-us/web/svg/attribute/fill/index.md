@@ -11,7 +11,6 @@ The **`fill`** attribute has two different meanings. For shapes and text it's a 
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('path')}}
@@ -67,35 +66,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## altGlyph
-
-> **Warning:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('altGlyph')}}, `fill` is a presentation attribute that defines the color of the glyph.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## animate
 

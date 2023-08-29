@@ -25,7 +25,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
       - The {{HTTPHeader("Content-Disposition")}} HTTP header
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
-      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
 
     - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
@@ -113,7 +113,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com"> Mozilla </a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### Result
@@ -145,7 +145,7 @@ a {
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down"> Jump to the heading below </a></p>
+<p><a href="#Section_further_down">Jump to the heading below</a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
@@ -232,6 +232,7 @@ a {
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 c.fillStyle = "hotpink";
+let isDrawing;
 
 function draw(x, y) {
   if (isDrawing) {
@@ -243,7 +244,7 @@ function draw(x, y) {
 }
 
 canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY)
+  draw(event.offsetX, event.offsetY),
 );
 canvas.addEventListener("mousedown", () => (isDrawing = true));
 canvas.addEventListener("mouseup", () => (isDrawing = false));
@@ -252,7 +253,7 @@ document
   .querySelector("a")
   .addEventListener(
     "click",
-    (event) => (event.target.href = canvas.toDataURL())
+    (event) => (event.target.href = canvas.toDataURL()),
   );
 ```
 
@@ -327,7 +328,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
+<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
 ```
 
 If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):

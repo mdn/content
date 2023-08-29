@@ -45,11 +45,7 @@ configure(configuration)
         - `GPUTextureUsage.TEXTURE_BINDING`: The texture can be bound for use as a sampled texture in a shader, for example in a bind group entry in a {{domxref("GPUDevice.createBindGroup()")}} call.
         - `GPUTextureUsage.STORAGE_BINDING`: The texture can be bound for use as a storage texture in a shader, for example in a bind group entry in a {{domxref("GPUDevice.createBindGroup()")}} call.
 
-        Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
-
-        ```js
-        usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT;
-        ```
+        Note that multiple possible usages can be specified using the [bitwise OR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR). For example, `usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT`.
 
     - `viewFormats` {{optional_inline}}
       - : An array of formats that views created from textures returned by `getCurrentTexture()` may use. See [Texture Formats](https://gpuweb.github.io/gpuweb/#texture-formats) for all the possible values.

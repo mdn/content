@@ -3,6 +3,8 @@ title: Advanced example
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 ---
 
+{{XsltSidebar}}
+
 ## Advanced example
 
 This advanced example sorts several divs based on their content. The example allows sorting the content multiple times, alternating between ascending and descending order. The JavaScript loads the .xsl file only on the first sort and sets the `xslloaded` variable to true once it has finished loading the file. Using the {{domxref("XSLTProcessor.getParameter()")}} method, the code can figure whether to sort in ascending or descending order. It defaults to ascending if the parameter is empty (the first time the sorting happens, as there is no value for it in the XSLT file). The sorting value is set using {{domxref("XSLTProcessor.setParameter()")}}.

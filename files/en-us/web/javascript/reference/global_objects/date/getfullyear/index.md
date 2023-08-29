@@ -19,6 +19,10 @@ Use this method instead of the {{jsxref("Date/getYear", "getYear()")}} method.
 getFullYear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer representing the year for the given date according to local time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
@@ -34,7 +38,7 @@ Unlike {{jsxref("Date/getYear", "getYear()")}}, the value returned by `getFullYe
 The `fullYear` variable has value `1995`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const fullYear = xmas95.getFullYear();
 
 console.log(fullYear); // 1995

@@ -27,15 +27,11 @@ The function also accepts a legacy syntax in which all values are separated with
 Functional notation: `rgb(R G B[ / A])`
 
 - `R`, `G`, `B`
-
-  - : Each as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, representing red, green, and blue channels, respectively. You can't mix percentages and numbers, so:
-
-    - if any of these values is a number, then they must all be numbers or `none`
-    - if any of these values is a percentage, then they must all be percentages or `none`.
-
+  - : Each as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which represent the red, green, and blue channels, respectively.
 - `A` {{optional_inline}}
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
-  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 

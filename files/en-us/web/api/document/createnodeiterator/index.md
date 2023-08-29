@@ -64,7 +64,7 @@ const nodeIterator = document.createNodeIterator(
   (node) =>
     node.nodeName.toLowerCase() === "p"
       ? NodeFilter.FILTER_ACCEPT
-      : NodeFilter.FILTER_REJECT
+      : NodeFilter.FILTER_REJECT,
 );
 const pars = [];
 let currentNode;
@@ -86,7 +86,7 @@ const nodeIterator = document.createNodeIterator(
         ? NodeFilter.FILTER_ACCEPT
         : NodeFilter.FILTER_REJECT;
     },
-  }
+  },
 );
 const pars = [];
 let currentNode;

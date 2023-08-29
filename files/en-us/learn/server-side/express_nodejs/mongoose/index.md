@@ -1,6 +1,7 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
@@ -143,7 +144,7 @@ try {
 
 The asynchronous methods above are run in sequence.
 If the methods don't depend on each other then you can run them in parallel and finish the whole operation more quickly.
-This done using the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method, which takes an iterable of promises as input and returns a single `Promise`.
+This is done using the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method, which takes an iterable of promises as input and returns a single `Promise`.
 This returned promise fulfills when all of the input's promises fulfill, with an array of the fulfillment values.
 It rejects when any of the input's promises rejects, with this first rejection reason.
 
@@ -404,7 +405,7 @@ const Athlete = mongoose.model("Athlete", yourSchema);
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
 const tennisPlayers = await Athlete.find(
   { sport: "Tennis" },
-  "name age"
+  "name age",
 ).exec();
 ```
 
@@ -564,7 +565,7 @@ Now that we understand something of what Mongoose can do and how we want to desi
 
 For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/atlas/database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [ObjectRocket](https://www.objectrocket.com/)).
 
-> **Note:** If you prefer, you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
+> **Note:** If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
 > In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 
 You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
@@ -650,7 +651,8 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`). Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
+Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
+Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _MongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
@@ -665,6 +667,10 @@ async function main() {
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+
+Note that hard-coding database credentials in source code as shown above is not recommended.
+We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.
+We'll show you how to do this more safely when [deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#database_configuration)!
 
 ## Defining the LocalLibrary Schema
 
@@ -818,12 +824,12 @@ In order to test the models (and to create some example books and other items th
 
 1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/main/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
-   > **Note:** You don't need to know how `populatedb.js` works; it just adds sample data into the database.
+   > **Note:** The code in `populatedb.js` may be useful in learning JavaScript, but understanding it is not necessary for this tutorial.
 
 2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
    ```bash
-   node populatedb <your mongodb url>
+   node populatedb <your MongoDB url>
    ```
 
    > **Note:** On Windows you need to wrap the database URL inside double (").
@@ -831,7 +837,7 @@ In order to test the models (and to create some example books and other items th
 
 3. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab).
+> **Note:** Go to your database on MongoDB Atlas (in the _Collections_ tab).
 > You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## Summary

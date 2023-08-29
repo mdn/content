@@ -1,6 +1,7 @@
 ---
 title: Basic native form controls
 slug: Learn/Forms/Basic_native_form_controls
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
@@ -290,7 +291,7 @@ If the image button is used to submit the form, this control doesn't submit its 
 
 So for example when you click on the image at coordinate (123, 456) and it submits via the `get` method, you'll see the values appended to the URL as follows:
 
-```
+```url
 http://foo.com?pos.x=123&pos.y=456
 ```
 

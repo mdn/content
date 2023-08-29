@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.keys
 
 {{JSRef}}
 
-The **`keys()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the array.
+The **`keys()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
@@ -16,6 +16,10 @@ The **`keys()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScri
 ```js-nolint
 keys()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
