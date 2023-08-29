@@ -171,7 +171,7 @@ Note that:
 - `disclosure-closed`
   - : Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.
 
-Refer ['All list style types'](#all_list_style_types) example to see these values in action. Details of all the available counter styles used by various cultures around the world can be found in [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) document.
+Refer to the [All list style types](#all_list_style_types) example to see the above values in action. Details of all the available counter styles used by various cultures around the world can be found in [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/).
 
 ### Non-standard extensions
 
