@@ -1,6 +1,7 @@
 ---
 title: Add-ons
 slug: Mozilla/Add-ons
+page-type: landing-page
 ---
 
 {{AddonSidebarMain}}

@@ -17,6 +17,10 @@ The **`getMinutes()`** method of {{jsxref("Date")}} instances returns the minute
 getMinutes()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer, between 0 and 59, representing the minutes for the given date according to local time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
@@ -28,7 +32,7 @@ An integer, between 0 and 59, representing the minutes for the given date accord
 The `minutes` variable has value `15`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const minutes = xmas95.getMinutes();
 
 console.log(minutes); // 15

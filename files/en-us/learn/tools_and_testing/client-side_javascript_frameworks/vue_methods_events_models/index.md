@@ -1,6 +1,7 @@
 ---
 title: "Adding a new todo form: Vue events, methods, and models"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -216,7 +217,7 @@ The first thing we need is a `data` property in our form to track the value of t
 
 4. Now go back to your running app, add some text to the `<input>` field, and click the "Add" button. You should see the value you entered logged to your console, for example:
 
-   ```
+   ```plain
    Label value: My value
    ```
 

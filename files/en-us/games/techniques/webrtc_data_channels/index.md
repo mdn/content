@@ -1,6 +1,7 @@
 ---
 title: WebRTC data channels
 slug: Games/Techniques/WebRTC_data_channels
+page-type: guide
 ---
 
 {{GamesSidebar}}

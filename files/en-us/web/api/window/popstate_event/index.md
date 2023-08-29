@@ -84,7 +84,7 @@ A page at `http://example.com/example.html` running the following code will gene
 ```js
 window.addEventListener("popstate", (event) => {
   console.log(
-    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
   );
 });
 history.pushState({ page: 1 }, "title 1", "?page=1");
@@ -100,7 +100,7 @@ The same example using the `onpopstate` event handler property:
 ```js
 window.onpopstate = (event) => {
   console.log(
-    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
   );
 };
 history.pushState({ page: 1 }, "title 1", "?page=1");

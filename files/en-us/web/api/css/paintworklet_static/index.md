@@ -5,7 +5,7 @@ slug: Web/API/CSS/paintWorklet_static
 page-type: web-api-static-property
 status:
   - experimental
-browser-compat: api.CSS.paintWorklet
+browser-compat: api.CSS.paintWorklet_static
 ---
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}

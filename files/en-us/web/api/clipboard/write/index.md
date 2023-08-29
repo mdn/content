@@ -57,7 +57,7 @@ function setClipboard(text) {
     },
     () => {
       /* failure */
-    }
+    },
   );
 }
 ```
@@ -84,7 +84,7 @@ function copyCanvasContentsToClipboard(canvas, onDone, onError) {
       },
       (err) => {
         onError(err);
-      }
+      },
     );
   });
 }

@@ -1,6 +1,7 @@
 ---
 title: Firefox 72 for Developers
 slug: Mozilla/Firefox/Releases/72
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -39,7 +40,7 @@ _No changes._
 ### CSS
 
 - CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
-- [CSS Motion Path](/en-US/docs/Web/CSS/CSS_Motion_Path) has been shipped ([Firefox bug 1582554](https://bugzil.la/1582554), also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
+- [CSS Motion Path](/en-US/docs/Web/CSS/CSS_motion_path) has been shipped ([Firefox bug 1582554](https://bugzil.la/1582554), also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
 
   - {{cssxref("offset")}}
   - {{cssxref("offset-path")}}
@@ -57,7 +58,7 @@ _No changes._
 
 ### JavaScript
 
-- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) has been implemented ([Firefox bug 1566141](https://bugzil.la/1566141)).
+- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) has been implemented ([Firefox bug 1566141](https://bugzil.la/1566141)).
 
 ### APIs
 
@@ -81,11 +82,11 @@ _No changes._
   - {{domxref("Location.href")}}
   - {{domxref("MediaList.mediaText")}}
   - {{domxref("URL.href")}}
-  - {{domxref("URLUtilsReadOnly/href", "WorkerLocation.href")}}
+  - {{domxref("WorkerLocation.href")}}
 
 #### DOM events
 
-- {{domxref("Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ([Firefox bug 1593644](https://bugzil.la/1593644)).
+- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ([Firefox bug 1593644](https://bugzil.la/1593644)).
 
 #### Media, Web Audio, and WebRTC
 

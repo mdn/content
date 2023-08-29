@@ -64,7 +64,7 @@ function resolved(record) {
 let resolving = browser.dns.resolve("example.com");
 resolving.then(resolved);
 
-// > e.g. Array [ "73.284.240.12" ]
+// > e.g. Array [ "192.0.2.172" ]
 ```
 
 Bypass the cache, and ask for the canonical name:
@@ -75,12 +75,14 @@ function resolved(record) {
   console.log(record.addresses);
 }
 
-let resolving = browser.dns.resolve("developer.mozilla.org",
-                                   ["bypass_cache", "canonical_name"]);
+let resolving = browser.dns.resolve("developer.mozilla.org", [
+  "bypass_cache",
+  "canonical_name",
+]);
 resolving.then(resolved);
 
 // > e.g. xyz.us-west-2.elb.amazonaws.com
-// > e.g. Array [ "78.18.187.134", "34.79.135.234" ]
+// > e.g. Array [ "192.0.2.172", "198.51.100.45" ]
 ```
 
 {{WebExtExamples}}

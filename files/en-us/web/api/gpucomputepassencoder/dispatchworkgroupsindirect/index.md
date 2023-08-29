@@ -104,7 +104,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE
+  BUFFER_SIZE,
 );
 
 // End frame by passing array of command buffers to command queue for execution

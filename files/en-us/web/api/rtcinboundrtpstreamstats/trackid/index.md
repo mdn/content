@@ -10,7 +10,7 @@ browser-compat: api.RTCInboundRtpStreamStats.trackId
 
 {{APIRef("WebRTC")}} {{Deprecated_Header}}
 
-The **`trackId`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the {{domxref("RTCStats.id", "id")}} of the {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or {{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the {{domxref("MediaStreamTrack")}} which is receiving the incoming media.
+The **`trackId`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the {{domxref("RTCInboundRtpStreamStats.id", "id")}} of the {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or {{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the {{domxref("MediaStreamTrack")}} which is receiving the incoming media.
 
 ## Value
 

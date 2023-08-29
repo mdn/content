@@ -7,7 +7,7 @@ browser-compat: css.properties.transition-property
 
 {{CSSRef}}
 
-The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) should be applied.
+The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) should be applied.
 
 {{EmbedInteractiveExample("pages/css/transition-property.html")}}
 
@@ -28,7 +28,10 @@ transition-property: sliding-vertically;
 /* Multiple values */
 transition-property: test1, animation4;
 transition-property: all, height, color;
-transition-property: all, -moz-specific, sliding;
+transition-property:
+  all,
+  -moz-specific,
+  sliding;
 
 /* Global values */
 transition-property: inherit;
@@ -83,7 +86,7 @@ This example performs a four-second font size transition when the user hovers ov
 
 {{EmbedLiveSample('Simple_example', 600, 100)}}
 
-You will find more examples of `transition-property` included in the main [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) article.
+You will find more examples of `transition-property` included in the main [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) article.
 
 ## Specifications
 
@@ -95,7 +98,7 @@ You will find more examples of `transition-property` included in the main [CSS t
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref('transition')}}
 - {{cssxref('transition-duration')}}
 - {{cssxref('transition-timing-function')}}

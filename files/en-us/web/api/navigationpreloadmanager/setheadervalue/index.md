@@ -43,11 +43,11 @@ The code below demonstrates how the value might be set.
 ```js
 navigator.serviceWorker.ready
   .then((registration) =>
-    registration.navigationPreload.setHeaderValue(newValue)
+    registration.navigationPreload.setHeaderValue(newValue),
   )
   .then(() => console.log("Done!"))
   .catch((e) =>
-    console.error(`NavigationPreloadManager not supported: ${e.message}`)
+    console.error(`NavigationPreloadManager not supported: ${e.message}`),
   );
 ```
 

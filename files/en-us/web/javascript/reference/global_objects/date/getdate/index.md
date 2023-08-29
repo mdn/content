@@ -17,6 +17,10 @@ The **`getDate()`** method of {{jsxref("Date")}} instances returns the day of th
 getDate()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer, between 1 and 31, representing the day of the month for the given date according to local time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
@@ -28,7 +32,7 @@ An integer, between 1 and 31, representing the day of the month for the given da
 The `day` variable has value `25`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const day = xmas95.getDate();
 
 console.log(day); // 25

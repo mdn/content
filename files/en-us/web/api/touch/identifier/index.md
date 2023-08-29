@@ -27,11 +27,11 @@ someElement.addEventListener(
     // since the last event and print each touch point's identifier.
     for (let i = 0; i < e.changedTouches.length; i++) {
       console.log(
-        `changedTouches[${i}].identifier = ${e.changedTouches[i].identifier}`
+        `changedTouches[${i}].identifier = ${e.changedTouches[i].identifier}`,
       );
     }
   },
-  false
+  false,
 );
 ```
 

@@ -89,7 +89,7 @@ If your site is `burgers.example.com`, and you have a `web+burger:` scheme, you 
 ```js
 navigator.unregisterProtocolHandler(
   "web+burger",
-  "https://burgers.example.com/?burger=%s"
+  "https://burgers.example.com/?burger=%s",
 );
 ```
 

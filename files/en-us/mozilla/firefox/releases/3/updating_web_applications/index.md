@@ -1,6 +1,7 @@
 ---
 title: Updating web applications for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -56,7 +57,7 @@ Firefox 3 only allows web content to access items in the `chrome://browser/` and
 
 There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their `chrome.manifest` file, like this:
 
-```
+```plain
 content mypackage location/ contentaccessible=yes
 ```
 

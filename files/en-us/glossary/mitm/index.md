@@ -4,6 +4,8 @@ slug: Glossary/MitM
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **manipulator-in-the-middle attack** (MitM) intercepts a communication between two systems. For example, a Wi-Fi router can be compromised.
 
 Comparing this to physical mail: If you're writing letters to each other, the mail carrier can intercept each letter you mail. They open it, read it, eventually modify it, and then repackage the letter and only then send it to whom you intended to sent the letter for. The original recipient would then mail you a letter back, and the mail carrier would again open the letter, read it, eventually modify it, repackage it, and give it to you. You wouldn't know there's a manipulator in the middle in your communication channel – the mail carrier is invisible to you and to your recipient.

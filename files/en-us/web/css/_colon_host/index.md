@@ -11,6 +11,8 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host.html", "tabbed-shorter")}}
+
 ```css
 /* Selects a shadow root host */
 :host {
@@ -75,3 +77,5 @@ The `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` rule styles all i
 - [Web components](/en-US/docs/Web/API/Web_components)
 - {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}
+- {{CSSXref("::slotted")}}
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

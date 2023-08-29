@@ -29,7 +29,7 @@ The textual content for a {{SVGElement("text")}} [SVG](/en-US/docs/Web/SVG) elem
 
 ### Specific attributes
 
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 
@@ -52,7 +52,7 @@ This element implements the {{domxref("SVGTRefElement")}} interface.
   </text>
 
   <text x="100" y="200" font-size="45" fill="red" >
-    <tref xlink:href="#ReferencedText"/>
+    <tref href="#ReferencedText"/>
   </text>
 
   <!-- Show outline of canvas using 'rect' element -->

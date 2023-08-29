@@ -89,7 +89,7 @@ The `-webkit-device-pixel-ratio` feature is specified as a {{cssxref("&lt;number
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("resolution")}}
 - [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
 - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)

@@ -100,9 +100,8 @@ async function init() {
     layout: "auto",
   };
 
-  const renderPipeline = await device.createRenderPipelineAsync(
-    pipelineDescriptor
-  );
+  const renderPipeline =
+    await device.createRenderPipelineAsync(pipelineDescriptor);
 
   // ...
 }

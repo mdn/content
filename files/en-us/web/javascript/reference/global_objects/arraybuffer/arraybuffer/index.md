@@ -24,9 +24,9 @@ new ArrayBuffer(length, options)
 
 - `length`
   - : The size, in bytes, of the array buffer to create.
-- `options` {{optional_inline}} {{experimental_inline}}
+- `options` {{optional_inline}}
   - : An object, which can contain the following properties:
-    - `maxByteLength` {{optional_inline}} {{experimental_inline}}
+    - `maxByteLength` {{optional_inline}}
       - : The maximum size, in bytes, that the array buffer can be resized to.
 
 ### Return value
@@ -36,7 +36,7 @@ A new `ArrayBuffer` object of the specified size, with its {{jsxref("ArrayBuffer
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if one of the following is true:
+  - : Thrown in one of the following cases:
     - `length` or `maxByteLength` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) or negative.
     - `length` is larger than `maxByteLength`.
 

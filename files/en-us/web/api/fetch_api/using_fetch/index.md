@@ -13,14 +13,14 @@ Unlike {{domxref("XMLHttpRequest")}} that is a callback-based API, Fetch is prom
 A basic fetch request looks like this:
 
 ```js
-async function logJSONData() {
+async function logMovies() {
   const response = await fetch("http://example.com/movies.json");
-  const jsonData = await response.json();
-  console.log(jsonData);
+  const movies = await response.json();
+  console.log(movies);
 }
 ```
 
-Here we are fetching a JSON file across the network and printing it to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.
+Here we are fetching a JSON file across the network, parsing it, and printing the data to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.
 
 The {{domxref("Response")}} object, in turn, does not directly contain the actual JSON response body but is instead a representation of the entire HTTP response. So, to extract the JSON body content from the {{domxref("Response")}} object, we use the {{domxref("Response.json()", "json()")}} method, which returns a second promise that resolves with the result of parsing the response body text as JSON.
 
@@ -416,14 +416,14 @@ addEventListener("fetch", (event) => {
   event.respondWith(
     new Response(myBody, {
       headers: { "Content-Type": "text/plain" },
-    })
+    }),
   );
 });
 ```
 
 The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)
 
-> **Note:** The static method {{domxref("Response.error","error()")}} returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.
+> **Note:** The static method {{domxref("Response/error_static","error()")}} returns an error response. Similarly, {{domxref("Response/redirect_static","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.
 
 ## Body
 
@@ -458,7 +458,7 @@ fetch("/login", {
 });
 ```
 
-Both request and response (and by extension the `fetch()` function), will try to intelligently determine the content type. A request will also automatically set a `Content-Type` header if none is set in the dictionary.
+Both request and response (and by extension the `fetch()` function), will try to intelligently determine the content type. A request will also automatically set a `Content-Type` header if none is set in the [`options`](/en-US/docs/Web/API/fetch#options) parameter.
 
 ## Feature detection
 

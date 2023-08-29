@@ -1,6 +1,7 @@
 ---
 title: Making PWAs installable
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
+page-type: guide
 ---
 
 {{PWASidebar}}
@@ -27,7 +28,7 @@ A web app manifest is a JSON file that tells the browser how the PWA should appe
 The manifest is included using a {{HTMLElement("link")}} element in the app's HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <link rel="manifest" href="manifest.json" />
@@ -65,11 +66,9 @@ Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsof
 
 For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
 
-### HTTPS
+### Secure context
 
-For a web app to be installable, it must be served over HTTPS.
-
-Note that to make development easier, browsers do not require HTTPS if the web app is accessed via the `localhost` domain.
+For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
 
 ### Service worker
 
@@ -77,7 +76,7 @@ For a web app to be installable, it must include a [service worker](/en-US/docs/
 
 ## Installation from an app store
 
-Users expect to find apps in the app store for their platform, like the Google Play Store or the Apple Store.
+Users expect to find apps in the app store for their platform, like the Google Play Store or the Apple App Store.
 
 If your app meets the installability prerequisites, you can package it and distribute it through app stores. The process is specific to each app store:
 
@@ -114,8 +113,9 @@ On desktop:
 
 On mobile:
 
-- Firefox, Chrome, Edge, Opera, and Samsung Internet Browser all support installing PWAs on Android.
-- Only Safari is allowed to install PWAs on iOS.
+- On Android, Firefox, Chrome, Edge, Opera, and Samsung Internet Browser all support installing PWAs.
+- On iOS 16.3 and earlier, PWAs can only be installed with Safari.
+- On iOS 16.4 and later, PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion.
 
 ### Triggering the install prompt
 
@@ -127,6 +127,8 @@ This technique relies on the [`beforeinstallprompt`](/en-US/docs/Web/API/Window/
 - listen for the `beforeinstallprompt` event
 - cancel the event's default behavior by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)
 - in the event handler for its own "Install" button, call [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt).
+
+This is not supported on iOS.
 
 ### Customizing the installation prompt
 

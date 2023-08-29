@@ -120,7 +120,11 @@ After that come the classes `horizontal` and `vertical`, which add the {{cssxref
   padding: 4px;
   background-color: #abcdef;
   color: #000;
-  font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial",
+    sans-serif;
   max-block-size: 160px;
   min-block-size: 100px;
 }

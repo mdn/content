@@ -41,6 +41,7 @@ The following table provides an overview about the availability of the performan
 | {{domxref("PerformanceServerTiming")}}                     | x      | x      |
 | {{domxref("PerformanceTiming")}} {{deprecated_inline}}     | x      |        |
 | {{domxref("TaskAttributionTiming")}}                       | x      |        |
+| {{domxref("VisibilityStateEntry")}}                        | x      |        |
 
 ## Specifications
 

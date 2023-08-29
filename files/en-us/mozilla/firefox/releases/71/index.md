@@ -1,6 +1,7 @@
 ---
 title: Firefox 71 for Developers
 slug: Mozilla/Firefox/Releases/71
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -39,8 +40,8 @@ This article provides information about the changes in Firefox 71 that will affe
 
 ### CSS
 
-- Added the [subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ([Firefox bug 1580894](https://bugzil.la/1580894))
-- Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_Columns) ([Firefox bug 1426010](https://bugzil.la/1426010))
+- Added the [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ([Firefox bug 1580894](https://bugzil.la/1580894))
+- Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1426010](https://bugzil.la/1426010))
 - Added support for the `path()` value of {{cssxref("clip-path")}} ([Firefox bug 1488530](https://bugzil.la/1488530))
 - Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ([Firefox bug 1585637](https://bugzil.la/1585637)). [See the guide to this feature on MDN](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
 
@@ -112,7 +113,7 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 
 #### Removals
 
-- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) functions have been removed ([Firefox bug 1443259](https://bugzil.la/1443259)). {{WebExtAPIRef("proxy.onRequest")}} should now be used to handle the proxying of requests.
+- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) functions have been removed ([Firefox bug 1443259](https://bugzil.la/1443259)). {{WebExtAPIRef("proxy.onRequest")}} should now be used to handle the proxying of requests.
 
 ## See also
 

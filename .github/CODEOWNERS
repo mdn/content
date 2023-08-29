@@ -77,7 +77,7 @@
 /.github/     @mdn/core-dev
 /*            @mdn/core-dev
 /*.md         @mdn/core-yari-content
-# These are @schalkneethling because the auto-merge GHA workflow uses my PAT and will assign me.
-# If we add another reviewer, the auto-merge will cease to be automatic.
-/package.json @schalkneethling
-/yarn.lock    @schalkneethling
+# These are @mdn-bot because the auto-merge GHA workflow uses the PAT of this account.
+# If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
+/package.json @mdn-bot
+/yarn.lock    @mdn-bot

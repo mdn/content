@@ -1,6 +1,7 @@
 ---
 title: Move the ball
 slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
+page-type: guide
 ---
 
 {{GamesSidebar}}

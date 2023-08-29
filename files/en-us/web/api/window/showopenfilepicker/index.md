@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.showOpenFilePicker
 ---
 
-{{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showOpenFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to select a file
@@ -105,5 +105,5 @@ async function getFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
