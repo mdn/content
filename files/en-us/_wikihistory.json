@@ -13811,30 +13811,9 @@
     "modified": "2020-10-15T22:04:26.547Z",
     "contributors": ["kernp", "rebloor", "irenesmith", "wbamberg"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/proxy/register": {
-    "modified": "2020-10-15T21:54:19.906Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rebloor",
-      "irenesmith",
-      "evilpie",
-      "wbamberg",
-      "andrewtruongmoz"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/API/proxy/settings": {
     "modified": "2020-10-15T22:02:07.731Z",
     "contributors": ["irenesmith", "wbamberg"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/proxy/unregister": {
-    "modified": "2020-10-15T21:55:55.766Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rebloor",
-      "irenesmith",
-      "evilpie",
-      "wbamberg"
-    ]
   },
   "Mozilla/Add-ons/WebExtensions/API/runtime": {
     "modified": "2020-10-15T21:38:49.156Z",
