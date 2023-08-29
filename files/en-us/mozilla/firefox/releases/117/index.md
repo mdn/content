@@ -10,10 +10,6 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ## Changes for web developers
 
-### Developer tools
-
-- Properties that are not supported in highlight pseudo-elements ([`::highlight()`](/en-US/docs/Web/CSS/::highlight), [`::target-text`](/en-US/docs/Web/CSS/::target-text), [`::spelling-error`](/en-US/docs/Web/CSS/::spelling-error), [`::grammar-error`](/en-US/docs/Web/CSS/::grammar-error), and [`::selection`](/en-US/docs/Web/CSS/::selection)) are now reported in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) CSS rules panel ([Firefox bug 1842157](https://bugzil.la/1842157)).
-
 ### HTML
 
 #### Removals
@@ -79,6 +75,14 @@ This article provides information about the changes in Firefox 117 that affect d
 - All commands and events related to a navigation will now provide a `navigation` id, which is a `UUID` identifying a specific navigation. This property is available in the `browsingContext.navigate` response, in the `browsingContext.load`, `browsingContext.domContentLoaded`, `browsingContext.fragmentNavigated` events, as well as in all `network` events created for a navigation request ([Firefox bug 1763122](https://bugzil.la/1763122), [Firefox bug 1789484](https://bugzil.la/1789484), [Firefox bug 1805405](https://bugzil.la/1805405)).
 - `headers` and `cookies` in `network` events are now serialized as `network.BytesValue`, which will provide a better support for non-UTF8 values ([Firefox bug 1842619](https://bugzil.la/1842619)).
 - The `browsingContext.create` command will now wait until the created context has a valid size ([Firefox bug 1847044](https://bugzil.la/1847044)).
+
+### Developer tools
+
+- The area selected by the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) can now be resized and moved using keyboard shortcuts.
+  Pressing the arrow keys moves the selected area, while pressing <kbd>Ctrl</kbd> + arrow keys (or <kbd>Cmd</kbd> + arrow keys on a Mac) resizes the selected area.
+  Holding down the <kbd>Shift</kbd> key accelerates the moving and resizing actions when using these key combinations ([Firefox bug 1262782](https://bugzil.la/1262782)).
+
+- Properties that are not supported in highlight pseudo-elements ([`::highlight()`](/en-US/docs/Web/CSS/::highlight), [`::target-text`](/en-US/docs/Web/CSS/::target-text), [`::spelling-error`](/en-US/docs/Web/CSS/::spelling-error), [`::grammar-error`](/en-US/docs/Web/CSS/::grammar-error), and [`::selection`](/en-US/docs/Web/CSS/::selection)) are now reported in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) CSS rules panel ([Firefox bug 1842157](https://bugzil.la/1842157)).
 
 ## Changes for add-on developers
 

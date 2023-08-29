@@ -5185,10 +5185,10 @@ markdownlint-cli2-formatter-default@0.0.4:
   resolved "https://registry.npmjs.org/markdownlint-cli2-formatter-default/-/markdownlint-cli2-formatter-default-0.0.4.tgz"
   integrity sha512-xm2rM0E+sWgjpPn1EesPXx5hIyrN2ddUnUwnbCsD/ONxYtw3PX6LydvdH6dciWAoFDpwzbHM1TO7uHfcMd6IYg==
 
-markdownlint-cli2@0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/markdownlint-cli2/-/markdownlint-cli2-0.9.0.tgz#841896e8894fdde5f6234afed39f71976b535d66"
-  integrity sha512-BS4iLajH0ZdM3CmKAesA2rKLASctj5VC8EFxvgC2T2tUnivmOsHvBZB8xOqn1ByADL2cJHF0WQUF6VL4CYtEIw==
+markdownlint-cli2@0.9.2:
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/markdownlint-cli2/-/markdownlint-cli2-0.9.2.tgz#ed714905e0e4ce583e5c3d95134ba1e2d0287552"
+  integrity sha512-ndijEHIOikcs29W8068exHXlfkFviGFT/mPhREia7zSfQzHvTDkL2s+tWizvELjLHiKRO4KGTkkJyR3oeR8A5g==
   dependencies:
     globby "13.2.2"
     markdownlint "0.30.0"
