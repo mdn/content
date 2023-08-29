@@ -179,7 +179,7 @@ If the autocomplete attribute is specified, there must be a value that contains 
 </fieldset>
 ```
 
-In the snippet above, the `section-` string are matched with the tokens `lemon shipping` and `red-velvet shipping ` . This ensures that each cake order will be shipped to the customer's address.
+In the snippet above, the `section-` string are matched with the tokens `lemon shipping` and `red-velvet shipping` . This ensures that each cake order will be shipped to the customer's address.
 
 ## Administrative levels in addresses
 
