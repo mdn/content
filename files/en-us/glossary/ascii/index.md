@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**ASCII** (_American Standard Code for Information Interchange_) is a character encoding standard of 128 7-bit used by computers for converting letters, numbers, punctuation and control codes into digital form.
+**ASCII** (_American Standard Code for Information Interchange_) is a character encoding standard of 128 7-bit used by computers for converting letters, numbers, punctuation, and control codes into digital form.
 
 ASCII has 128 code points. The first 33 points are non-printing control codes including the carriage return, line feed, tab, and several obsolete non-printable code stemming from its origin as telegraph codes. The other 95 are printable characters, including digits (0-9), lowercase (a-z) and uppercase (A-Z) letters, and punctuation symbols.
 
