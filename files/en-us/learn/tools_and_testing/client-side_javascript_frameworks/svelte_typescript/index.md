@@ -416,7 +416,7 @@ Now we'll take care of the `FilterButton` component.
        <span>Active</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button class="btn toggle-btn" class:btn__primary={filter === "completed"} aria-pressed={filter === Filter.COMPLETED} on:click={()=> filter = Filter.COMPLETED} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.COMPLETED} aria-pressed={filter === Filter.COMPLETED} on:click={()=> filter = Filter.COMPLETED} >
        <span class="visually-hidden">Show</span>
        <span>Completed</span>
        <span class="visually-hidden">tasks</span>
