@@ -113,7 +113,7 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 
 #### Removals
 
-- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) functions have been removed ([Firefox bug 1443259](https://bugzil.la/1443259)). {{WebExtAPIRef("proxy.onRequest")}} should now be used to handle the proxying of requests.
+- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) functions have been removed ([Firefox bug 1443259](https://bugzil.la/1443259)). {{WebExtAPIRef("proxy.onRequest")}} should now be used to handle the proxying of requests.
 
 ## See also
 
