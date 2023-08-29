@@ -30,7 +30,9 @@ oninput = (event) => {};
 
 ## Event type
 
-A generic {{domxref("Event")}}.
+A {{domxref("InputEvent")}}. Inherits from {{domxref("UIEvent")}}.
+
+{{InheritanceDiagram("InputEvent")}}
 
 ## Examples
 
