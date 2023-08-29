@@ -159,6 +159,28 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 </div>
 ```
 
+## Tokens 
+If the autocomplete attribute is specified, there must be a value that contains an ordered set of [space-separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens) that consists of only autofill detail tokens.
+
+## Examples
+
+```html
+<fieldset>
+  <legend> Send the red velvet cake to...</legend>
+  <p><label> Address 1: <textarea name=rvc autocomplete="section-red velvet shipping street-address"></textarea></label> 
+  <p> <label> City:        <input name=rvc autocomplete="section-red velvet shipping address-level2"> </label>
+ <p> <label> Postal Code: <input name=rvpc autocomplete="section-red velvet shipping postal-code"> </label>
+</fieldset>
+<fieldset>
+ <legend>Ship the lemon cake to...</legend>
+ <p> <label> Address:     <textarea name=la autocomplete="section-lemon shipping street-address"></textarea> </label>
+ <p> <label> City:        <input name=lc autocomplete="section-lemon shipping address-level2"> </label>
+ <p> <label> Postal Code: <input name=lpc autocomplete="section-lemon shipping postal-code"> </label>
+</fieldset>
+```
+
+In the snippet above, the `section-` string are matched with the tokens `lemon shipping` and `red-velvet shipping ` . This ensures that each cake order will be shipped to the customer's address.
+
 ## Administrative levels in addresses
 
 The four administrative level fields (`address-level1` through `address-level4`) describe the address in terms of increasing levels of precision within the country in which the address is located. Each country has its own system of administrative levels, and may arrange the levels in different orders when addresses are written.
