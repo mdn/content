@@ -58,7 +58,7 @@ When a user toggles a `<Todo/>` template from viewing to editing, we should focu
 
 ### Targeting our elements
 
-In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) hook creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
+In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://react.dev/reference/react/useRef) hook creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
 
 Change the `import` statement at the top of `Todo.js` so that it includes `useRef`:
 
@@ -102,7 +102,7 @@ The "Edit" button in your view template should read like this:
 
 ### Focusing on our refs with useEffect
 
-To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://reactjs.org/docs/hooks-reference.html#useeffect). `useEffect()` is so named because it runs after React renders a given component, and will run any side-effects that we'd like to add to the render process, which we can't run inside the main function body. `useEffect()` is useful in the current situation because we cannot focus on an element until after the `<Todo />` component renders and React knows where our refs are.
+To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs after React renders a given component, and will run any side-effects that we'd like to add to the render process, which we can't run inside the main function body. `useEffect()` is useful in the current situation because we cannot focus on an element until after the `<Todo />` component renders and React knows where our refs are.
 
 Change the import statement of `Todo.js` again to add `useEffect`:
 

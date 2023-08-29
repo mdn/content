@@ -13,7 +13,7 @@ The **`@charset`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-r
 @charset "utf-8";
 ```
 
-This at-rule is useful when using non-ASCII characters in some CSS properties, like {{ cssxref("content") }}.
+This at-rule is useful when using non-{{Glossary("ASCII")}} characters in some CSS properties, like {{ cssxref("content") }}.
 
 As there are several ways to define the character encoding of a style sheet, the browser will try the following methods in the following order (and stop as soon as one yields a result) :
 

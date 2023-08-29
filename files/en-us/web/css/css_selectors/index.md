@@ -144,6 +144,9 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 ## Related concepts
 
 - {{CSSXref(":popover-open")}} pseudo-class
+- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+
+  - : [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 
