@@ -31,7 +31,7 @@ In addition, In Chrome and Firefox you cannot request notifications at all unles
 
 ### Checking current permission status
 
-You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission")}} read only property. It can have one of three possible values:
+You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission_static", "Notification.permission")}} read only property. It can have one of three possible values:
 
 - `default`
   - : The user hasn't been asked for permission yet, so notifications won't be displayed.
@@ -42,7 +42,7 @@ You can check to see if you already have permission by checking the value of the
 
 ### Getting permission
 
-If permission to display notifications hasn't been granted yet, the application needs to use the {{domxref("Notification.requestPermission()")}} method to request this from the user. In its simplest form, we just include the following:
+If permission to display notifications hasn't been granted yet, the application needs to use the {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} method to request this from the user. In its simplest form, we just include the following:
 
 ```js
 Notification.requestPermission().then((result) => {
@@ -96,7 +96,7 @@ Looking at the second main block first, you'll see that we first check to see if
 
 To avoid duplicating code, we have stored a few bits of housekeeping code inside the `handlePermission()` function, which is the first main block inside this snippet. Inside here we explicitly set the `Notification.permission` value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.
 
-> **Note:** Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the `load` event handler (see [issue 274284](https://crbug.com/274284)).
+> **Note:** Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} in the `load` event handler (see [issue 274284](https://crbug.com/274284)).
 
 ## Creating a notification
 

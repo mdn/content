@@ -150,10 +150,5 @@ An anonymous function is created and called:
 
 - {{jsxref("Functions/Arrow_functions", "Arrow functions", "", 1)}}
 - {{jsxref("Functions", "Functions", "", 1)}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("Operators/function*", "function*")}} expression
-- {{jsxref("GeneratorFunction")}} object
-- {{jsxref("Statements/async_function", "async function")}} declaration
-- {{jsxref("Operators/async_function", "async function")}} expression
+- {{jsxref("Function")}}
+- {{jsxref("Statements/function", "function")}}

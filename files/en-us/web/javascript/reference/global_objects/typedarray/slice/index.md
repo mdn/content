@@ -62,9 +62,5 @@ uint8.slice(0, 1); // Uint8Array [ 1 ]
 - [Polyfill of `TypedArray.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.pop()")}}
-- {{jsxref("TypedArray.prototype.shift()")}}
-- {{jsxref("TypedArray.prototype.concat()")}}
-- {{jsxref("TypedArray.prototype.splice()")}}
 - {{jsxref("Array.prototype.slice()")}}
 - {{jsxref("String.prototype.slice()")}}

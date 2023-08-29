@@ -16,6 +16,10 @@ The **`keys()`** method of {{jsxref("Set")}} instances is an alias for the [`val
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
