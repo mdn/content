@@ -85,7 +85,7 @@ Note that:
 - `lower-greek`
   - : Lowercase classical Greek.
 - `lower-alpha`, `lower-latin`
-  - : Lowercase ASCII letters.
+  - : Lowercase {{Glossary("ASCII")}} letters.
 - `upper-alpha`, `upper-latin`
   - : Uppercase ASCII letters.
 - `arabic-indic`, `-moz-arabic-indic`
