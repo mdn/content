@@ -109,7 +109,7 @@ In this example we are using two`<img>` elements. The first element does not hav
 
 The following code sets `3/2` as the preferred aspect ratio and `auto` as a fallback.
 
-```css hidden
+```css
 img {
   display: inline;
   width: 200px;
