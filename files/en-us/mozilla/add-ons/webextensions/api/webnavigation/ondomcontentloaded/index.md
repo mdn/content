@@ -52,7 +52,7 @@ Events have three functions:
 - `url`
   - : `string`. The URL to which the given frame has navigated.
 - `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`. This value is never set in modern browsers. It used to represent the ID of the process running the renderer for this tab.
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. Frame in which the navigation is occurring. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `timeStamp`

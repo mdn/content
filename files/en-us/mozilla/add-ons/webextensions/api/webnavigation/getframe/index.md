@@ -28,7 +28,7 @@ let gettingFrame = browser.webNavigation.getFrame(
     - `tabId`
       - : `integer`. The ID of the tab in which the frame is.
     - `processId` {{optional_inline}} {{deprecated_inline}}
-      - : `integer`. This value is never set in modern browsers. It used to represent the ID of the process running the renderer for this tab.
+      - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
     - `frameId`
       - : `integer`. The ID of the frame in the given tab.
 
