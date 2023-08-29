@@ -56,7 +56,7 @@ Example
 Output
 
 ```plain
-The quick red fdx.   
+The quick red fex.   
 ```
 <!-- this is just what i've changed.. if it's ok for you.. i will change the example to another -->
 
