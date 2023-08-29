@@ -406,7 +406,7 @@ Now we'll take care of the `FilterButton` component.
    </script>
 
    <div class="filters btn-group stack-exception">
-     <button class="btn toggle-btn" class:btn__primary={filter === "all"} aria-pressed={filter === Filter.ALL} on:click={()=> filter = Filter.ALL} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ALL} aria-pressed={filter === Filter.ALL} on:click={()=> filter = Filter.ALL} >
        <span class="visually-hidden">Show</span>
        <span>All</span>
        <span class="visually-hidden">tasks</span>
