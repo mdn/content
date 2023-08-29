@@ -6,7 +6,7 @@ page-type: learn-topic
 
 {{LearnSidebar}}
 
-{{Glossary("JavaScript")}} is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.
+{{Glossary("JavaScript")}} is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved. JavaScript is an interpreted language, which means it executes code directly without any compilation. Additionally, it is a single-threaded language. Despite this, why is JavaScript so popular today?
 
 > **Callout:**
 >
