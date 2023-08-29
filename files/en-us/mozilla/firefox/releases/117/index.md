@@ -78,6 +78,8 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### Developer tools
 
+- The Network Monitor now shows information about proxied requests, including the proxy address, the proxy status, and the proxy HTTP version in the [Headers tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) ([Firefox bug 1707192](https://bugzil.la/1707192)).
+
 - The area selected by the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) can now be resized and moved using keyboard shortcuts.
   Pressing the arrow keys moves the selected area, while pressing <kbd>Ctrl</kbd> + arrow keys (or <kbd>Cmd</kbd> + arrow keys on a Mac) resizes the selected area.
   Holding down the <kbd>Shift</kbd> key accelerates the moving and resizing actions when using these key combinations ([Firefox bug 1262782](https://bugzil.la/1262782)).
