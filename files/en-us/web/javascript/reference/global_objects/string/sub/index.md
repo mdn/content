@@ -19,6 +19,10 @@ The **`sub()`** method of {{jsxref("String")}} values creates a string that embe
 sub()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with a `<sub>` start tag, then the text `str`, and then a `</sub>` end tag.

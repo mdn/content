@@ -270,16 +270,12 @@ This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberForm
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-
-  - : Thrown in the following cases:
-
+  - : Thrown in one of the following cases:
     - A property that takes enumerated values (such as `style`, `units`, `currency`, and so on) is set to an invalid value.
     - Both `maximumFractionDigits` and `minimumFractionDigits` are set, and they are set to different values.
-      Note that depending various formatting options, these properties can have default values.
+      Note that depending on various formatting options, these properties can have default values.
       It is therefore possible to get this error even if you only set one of the properties.
-
 - {{jsxref("TypeError")}}
-
   - : Thrown if the `options.style` property is set to "unit" or "currency", and no value has been set for the corresponding property `options.unit` or `options.currency`.
 
 ## Examples

@@ -23,7 +23,7 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 
 ## Static methods
 
-- {{domxref("RTCRtpReceiver.getCapabilities()")}}
+- {{domxref("RTCRtpReceiver.getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}}
   - : Returns the most optimistic view of the capabilities of the system for receiving media of the given kind.
 
 ## Instance methods

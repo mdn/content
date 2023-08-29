@@ -15,7 +15,7 @@ generator.
 ## Syntax
 
 ```js-nolint
-generatorObject.next(value)
+next(value)
 ```
 
 ### Parameters
