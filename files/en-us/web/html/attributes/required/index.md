@@ -7,7 +7,7 @@ browser-compat: html.elements.attributes.required
 
 {{HTMLSidebar}}
 
-The [Boolean](/en-US/docs/Glossary/Boolean/HTML) **`required`** attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
+The **`required`** attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
 
 The `required` attribute is supported by `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, `{{HTMLElement("input/number","number")}}`, `{{HTMLElement("input/checkbox","checkbox")}}`, `{{HTMLElement("input/radio","radio")}}`, `{{HTMLElement("input/file","file")}}`, {{HTMLElement("input")}} types along with the {{HTMLElement("select")}} and {{HTMLElement("textarea")}} form control elements. If present on any of these input types and elements, the {{cssxref(':required')}} pseudo class will match. If the attribute is not included, the {{cssxref(':optional')}} pseudo class will match.
 
