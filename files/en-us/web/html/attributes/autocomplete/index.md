@@ -170,7 +170,6 @@ If the autocomplete attribute is specified, there must be a value that contains 
 
 > **NOTE:** Numbers 1-3 are optional tokens.
 
-> **NOTE:** Numbers 1-3 are optional tokens. 
 ### Example
 
 ```html
