@@ -42,7 +42,7 @@ In this example, nesting is done without the **`&` nesting selector**. When the 
 }
 ```
 
-When the nested rule needs to be attached (with no whitespace) to the parent rule, such as when using a {{cssxref('Pseudo-classes', 'pseudo class')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the **`&` nesting selector** can be immediately prepended to achieve the desired effect.
+When the nested rule needs to be attached (with no whitespace) to the parent rule, such as when using a {{cssxref('Pseudo-classes', 'pseudo class')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the **`&` nesting selector** must be immediately prepended to achieve the desired effect.
 
 Consider an example where we want to style an element, providing styles to be applied at all times, and also nesting some styles to be applied only on hover. If the **`&` nesting selector** is not included, whitespace is added and we end up with a ruleset that applies the nested styles to any _hovered descendant of the parent rule selector_. This is not what we wanted.
 
@@ -62,7 +62,7 @@ Consider an example where we want to style an element, providing styles to be ap
 .parent-rule *:hover {
   /* child rule properties */
 }
-````
+```
 
 With the **`&` nesting selector** added with no whitespace, the elements matched by the parent rule will be styled when hovered.
 
