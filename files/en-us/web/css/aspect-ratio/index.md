@@ -43,9 +43,9 @@ aspect-ratio: unset;
 
 - `auto && ratio`
 
-  - : If the element is a replaced element, like [`<img>`](/en-US/docs/Web/HTML/Element/img), then the preferred `ratio` is used till the content is loaded. After the content is loaded, the `auto` value comes in effect and the natural aspect ratio of the loaded content is used.
+  - : If the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given `ratio` is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the natural aspect ratio of the loaded content is used.
 
-    If the element is a non-replaced element then the preferred `ratio` is used.
+    If the element is not a replaced element, then the given `ratio` is used.
 
 ## Formal definition
 
@@ -103,7 +103,7 @@ div:nth-child(5) {
 
 ### Fallback to natural aspect ratio
 
-In this example we are using two images. The first image doesn't have source.
+In this example we are using two`<img>` elements. The first element does not have its `src` attribute set to an image file.
 
 ```html
 <img src="" /> <img src="plumeria.jpg" />
@@ -119,7 +119,7 @@ img {
 }
 ```
 
-Following code sets `3/2` as preferred aspect ratio and `auto` value as a fallback.
+The following code sets `3/2` as the preferred aspect ratio and `auto` as a fallback.
 
 ```css
 img {
@@ -127,7 +127,7 @@ img {
 }
 ```
 
-Note how the first image without replaced content keeps the `3/2` aspect ratio. And the second image after the content is loaded uses the images natural aspect ratio.
+Note how the first image without replaced content keeps the `3/2` aspect ratio, while the second image after the content is loaded uses the image's natural aspect ratio.
 
 {{EmbedLiveSample('Fallback to natural aspect ratio', '100%', '300px')}}
 
