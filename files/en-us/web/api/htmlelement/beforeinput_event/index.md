@@ -26,7 +26,7 @@ onbeforeinput = (event) => {};
 
 ## Event type
 
-An {{domxref("InputEvent")}}. Inherits from {{domxref("Event")}}.
+An {{domxref("InputEvent")}}. Inherits from {{domxref("UIEvent")}}.
 
 {{InheritanceDiagram("InputEvent")}}
 
