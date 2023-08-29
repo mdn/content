@@ -8,9 +8,21 @@ page-type: glossary-definition
 
 An **argument** is a {{glossary("value")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}.
 
-The argument order within the function call should be the same as the {{Glossary("parameter","parameters")}} order in the function definition.
-
 For example:
+
+```js
+const argument1 = "Web";
+const argument2 = "Development;
+example(argument1, argument2); // passing two arguments
+
+// This function takes two values
+function example(parameter1, parameter2) {
+  console.log(parameter1); // Output = "Web"
+  console.log(parameter2); // Output = "Development
+}
+```
+
+The argument order within the function call should be the same as the {{Glossary("parameter","parameters")}} order in the function definition.
 
 ```js
 const argument1 = "foo";
