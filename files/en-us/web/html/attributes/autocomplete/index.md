@@ -159,11 +159,17 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 </div>
 ```
 
-## Tokens
+## Tokens and Sections
 
-If the autocomplete attribute is specified, there must be a value that contains an ordered set of [space-separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens) that consists of only autofill detail tokens.
+If the autocomplete attribute is specified, there must be a value that contains an ordered set of [space-separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens) that consists of only autofill detail tokens. These tokens should be placed in the following order:
 
-### Examples
+1. Start with `section-`
+2. Use values like "shipping" or "billing" for addresses
+3. Use values like "home", "mobile", "work", "fax", or "pager" for contact numbers
+4. A required token with an autocomplete field. See [W3's standard](https://www.w3.org/WAI/standards-guidelines/act/rules/73f2c2/2022-01-28/#correct-autocomplete-field) on this topic to learn more.  
+
+> **NOTE:** Numbers 1-3 are optional tokens. 
+### Example
 
 ```html
 <fieldset>
