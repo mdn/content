@@ -47,7 +47,6 @@ _This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and
 - {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
   - : Returns a {{JSxRef("Boolean")}} value indicating if the event is fired after {{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
-
 ## Examples
 
 This example logs the value whenever you change the value of the {{HtmlElement("input")}} element.
