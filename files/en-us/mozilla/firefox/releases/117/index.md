@@ -55,8 +55,7 @@ This article provides information about the changes in Firefox 117 that affect d
 - The {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} method can now be used to get the 2D context attributes being used by the browser ([Firefox bug 1517786](https://bugzil.la/1517786)).
 - The {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} static member is now supported, allowing developers to construct a readable stream from any iterable or async iterable object ([Firefox bug 1772772](https://bugzil.la/1772772)).
 - [WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) are now supported, allowing web applications to modify incoming and outgoing WebRTC encoded video and audio frames using a {{DOMxRef("TransformStream")}} running into a worker.
-  The supported interfaces include: {{domxref("RTCRtpScriptTransform")}}, {{domxref("RTCRtpReceiver.transform")}}, {{domxref("RTCRtpSender.transform")}}, {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event, {{domxref("RTCTransformEvent")}}, {{domxref("RTCRtpScriptTransformer")}}, {{domxref("RTCEncodedVideoFrame")}}, and {{domxref("RTCEncodedAudioFrame")}}.
-  ([Firefox bug 1631263](https://bugzil.la/1631263)).
+ The supported interfaces include: {{domxref("RTCRtpScriptTransform")}}, {{domxref("RTCRtpScriptTransformer")}}, {{domxref("RTCRtpSender.transform")}}, {{domxref("RTCRtpReceiver.transform")}}, {{domxref("RTCEncodedVideoFrame")}}, and {{domxref("RTCEncodedAudioFrame")}}, and the {{domxref("RTCTransformEvent")}} and worker {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event ([Firefox bug 1631263](https://bugzil.la/1631263)).
 
 #### DOM
 
