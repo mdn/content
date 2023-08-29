@@ -31,6 +31,10 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
+This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, then If the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
+
+If the element is not a replaced element, then the given `ratio` is used.
+
 ### Values
 
 - `auto`
@@ -40,12 +44,6 @@ aspect-ratio: unset;
 - {{cssxref("&lt;ratio&gt;")}}
 
   - : The box's preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
-
-- `auto && ratio`
-
-  - : If the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given `ratio` is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the natural aspect ratio of the loaded content is used.
-
-    If the element is not a replaced element, then the given `ratio` is used.
 
 ## Formal definition
 
@@ -109,6 +107,8 @@ In this example we are using two`<img>` elements. The first element does not hav
 <img src="" /> <img src="plumeria.jpg" />
 ```
 
+The following code sets `3/2` as the preferred aspect ratio and `auto` as a fallback.
+
 ```css hidden
 img {
   display: inline;
@@ -116,13 +116,7 @@ img {
   border: 2px dashed red;
   background-color: lime;
   vertical-align: top;
-}
-```
 
-The following code sets `3/2` as the preferred aspect ratio and `auto` as a fallback.
-
-```css
-img {
   aspect-ratio: 3/2 auto;
 }
 ```
