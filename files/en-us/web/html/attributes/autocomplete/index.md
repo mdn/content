@@ -161,7 +161,7 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 
 ## Tokens and Sections
 
-If the autocomplete attribute is specified, there must be a value that contains an ordered set of [space-separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens) that consists of only autofill detail tokens. These tokens should be placed in the following order:
+If the `autocomplete` attribute is specified, its value must contain one or more space-separated autofill detail tokens. When using tokens to <PUT WHAT THEY ARE USED FOR HERE>, the tokens should be placed in the following order:
 
 1. Start with `section-`
 2. Use values like "shipping" or "billing" for addresses
