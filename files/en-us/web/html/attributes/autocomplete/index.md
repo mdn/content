@@ -186,7 +186,7 @@ If the `autocomplete` attribute is specified, its value must contain one or more
     <label>
       City:
       <input
-        name="rvc"
+        name="rvc2"
         autocomplete="section-red velvet shipping address-level2" />
     </label>
   </p>
