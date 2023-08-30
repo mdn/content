@@ -2278,6 +2278,17 @@
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
     },
+    "Window Management API": {
+      "overview": ["Window Management API"],
+      "interfaces": ["ScreenDetails", "ScreenDetailed"],
+      "methods": ["Element.requestFullscreen()", "Window.getScreenDetails()"],
+      "properties": ["Screen.isExtended"],
+      "events": [
+        "Screen: change",
+        "ScreenDetails: currentscreenchange",
+        "ScreenDetails: screenschange"
+      ]
+    },
     "XMLHttpRequest": {
       "overview": ["XMLHttpRequest"],
       "guides": [
