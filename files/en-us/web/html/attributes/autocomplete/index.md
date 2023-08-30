@@ -164,8 +164,7 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 If the `autocomplete` attribute is specified, its value must contain one or more space-separated autofill detail tokens. When using tokens to <PUT WHAT THEY ARE USED FOR HERE>, the tokens should be placed in the following order:
 
 1. Start with `section-`
-2. Use values like "shipping" or "billing" for addresses
-3. Use values like "home", "mobile", "work", "fax", or "pager" for contact numbers
+2. Use the [defined autocomplete values](#values) like "shipping" or "billing" for addresses and "home", "mobile", "work", "fax", or "pager" for contact numbers
 4. A required token with an autocomplete field. See [W3's standard](https://www.w3.org/WAI/standards-guidelines/act/rules/73f2c2/2022-01-28/#correct-autocomplete-field) on this topic to learn more.
 
 > **NOTE:** Numbers 1-3 are optional tokens.
