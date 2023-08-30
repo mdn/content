@@ -50,33 +50,12 @@ Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxr
 
 Here are some common examples.
 
-### Open and automatically close a popup window when finished
+### Automatically close the window when finished
 
-The following example will open a [popup window](/en-US/docs/Web/API/Window/open) (for example, the printer-friendly version of a document) and automatically close it after the user prints its contents.
-
-> **Warning:** This example is for demonstration only, use of {{domxref("document.write()")}} is strongly discouraged. And this example will not work in Firefox, as it will ignore the `window.close()` calls in non-script-owned windows ([Firefox bug 190515](https://bugzil.la/190515)).
-
-#### HTML
-
-```html
-<p>
-  To try out the <code>afterprint</code> event, click the button below to open
-  the window to print. You can also try changing the code to use
-  <code>beforeprint</code> to see the difference.
-</p>
-<p><button id="open_window">Open Popup Window</button></p>
-```
-
-#### JavaScript
+The following example will close the window after the user has printed its contents:
 
 ```js
-document.getElementById("open_window").addEventListener("click", () => {
-  const myWindow = window.open("", "mywindow", "status=1,width=350,height=150");
-  myWindow.document.write(`<html><head><title>Print Me</title></head>
-<body onafterprint="self.close()">
-  <p>When you print this window, it will close afterward.</p>
-</body></html>`);
-});
+window.addEventListener("afterprint", () => self.close);
 ```
 
 ### Print an external page without opening it
