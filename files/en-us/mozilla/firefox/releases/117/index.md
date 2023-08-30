@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
@@ -23,18 +23,14 @@ This article provides information about the changes in Firefox 117 that affect d
 - The [`contain-intrinsic-size: auto none;`](/en-US/docs/Web/CSS/contain-intrinsic-size) syntax is now supported, which allows for using the last-remembered size of an element if possible and falls back to `contain-intrinsic-size: none` otherwise.
   This is useful in layouts using proportional sizes, such as grid or multi-column ([Firefox bug 1835813](https://bugzil.la/1835813)).
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
+No notable changes.
 
 ### SVG
 
 - Inline SVGs now support `<script>` elements with `type="module"`, `defer`, and `async` attributes.
   This allows SVGs to use modern JavaScript features, including ES modules, and to load scripts asynchronously ([Firefox bug 1839954](https://bugzil.la/1839954)).
-
-#### Removals
 
 ### HTTP
 
@@ -44,11 +40,7 @@ This article provides information about the changes in Firefox 117 that affect d
 - The `Range` header is now a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range (e.g., `bytes=100-200`).
   This allows the `Range` header to be used in cross-origin requests without triggering a preflight request, which is useful for requesting media and resuming downloads ([Firefox bug 1733981](https://bugzil.la/1733981)).
 
-#### Removals
-
 ### Security
-
-#### Removals
 
 ### APIs
 
@@ -56,16 +48,7 @@ This article provides information about the changes in Firefox 117 that affect d
 - The {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} static member is now supported, allowing developers to construct a readable stream from any iterable or async iterable object ([Firefox bug 1772772](https://bugzil.la/1772772)).
 - [WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) are now supported, allowing web applications to modify incoming and outgoing WebRTC encoded video and audio frames using a {{DOMxRef("TransformStream")}} running in a worker.
   The supported interfaces include: {{domxref("RTCRtpScriptTransform")}}, {{domxref("RTCRtpScriptTransformer")}}, {{domxref("RTCRtpSender.transform")}}, {{domxref("RTCRtpReceiver.transform")}}, {{domxref("RTCEncodedVideoFrame")}}, and {{domxref("RTCEncodedAudioFrame")}}, and the {{domxref("RTCTransformEvent")}} and worker {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event ([Firefox bug 1631263](https://bugzil.la/1631263)).
-
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
+- Notifications on Windows have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default via the the `dom.webnotifications.requireinteraction.enabled` preference which is set to `true` ([Firefox bug 1794475](https://bugzil.la/1794475)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -89,12 +72,6 @@ This article provides information about the changes in Firefox 117 that affect d
   Holding down the <kbd>Shift</kbd> key accelerates the moving and resizing actions when using these key combinations ([Firefox bug 1262782](https://bugzil.la/1262782)).
 
 - Properties that are not supported in highlight pseudo-elements ([`::highlight()`](/en-US/docs/Web/CSS/::highlight), [`::target-text`](/en-US/docs/Web/CSS/::target-text), [`::spelling-error`](/en-US/docs/Web/CSS/::spelling-error), [`::grammar-error`](/en-US/docs/Web/CSS/::grammar-error), and [`::selection`](/en-US/docs/Web/CSS/::selection)) are now reported in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) CSS rules panel ([Firefox bug 1842157](https://bugzil.la/1842157)).
-
-## Changes for add-on developers
-
-### Removals
-
-### Other
 
 ## Older versions
 
