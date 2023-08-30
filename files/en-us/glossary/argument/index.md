@@ -29,7 +29,7 @@ const argument1 = "foo";
 const argument2 = [1, 2, 3];
 example(argument1, argument2); // passing two arguments
 
-// This function takes a single value, so second argument passed is ignored
+// This function takes a single value, so the second argument passed is ignored
 function example(parameter) {
   console.log(parameter); // Output = foo
 }
