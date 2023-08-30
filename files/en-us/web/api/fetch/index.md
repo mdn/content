@@ -64,7 +64,7 @@ fetch(resource, options)
         or a {{domxref("ReadableStream")}} object. This latest possibility is still experimental; check the [compatibility information](/en-US/docs/Web/API/Request#browser_compatibility) to verify you can use it.
         Note that a request using the `GET` or `HEAD` method cannot have a body.
     - `mode`
-      - : The mode you want to use for the request, e.g., `cors`,
+      - : The [mode](/en-US/docs/Web/API/Request/mode) you want to use for the request, e.g., `cors`,
         `no-cors`, or `same-origin`.
     - `credentials`
 

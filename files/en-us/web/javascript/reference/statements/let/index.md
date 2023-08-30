@@ -24,16 +24,9 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 ### Parameters
 
 - `nameN`
-  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers).
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 - `valueN` {{optional_inline}}
   - : Initial value of the variable. It can be any legal expression. Default value is `undefined`.
-
-The [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
-
-```js
-let { bar } = foo; // where foo = { bar: 10, baz: 12 };
-// This creates a variable with the name 'bar', which has a value of 10
-```
 
 ## Description
 
@@ -118,7 +111,7 @@ console.log(typeof undeclaredVariable); // "undefined"
 ```js-nolint example-bad
 {
   let foo;
-  let foo; // SyntaxError: Identifier 'a' has already been declared
+  let foo; // SyntaxError: Identifier 'foo' has already been declared
 }
 ```
 
@@ -265,6 +258,18 @@ let x = 1;
 }
 ```
 
+### Declaration with destructuring
+
+The left-hand side of each `=` can also be a binding pattern. This allows creating multiple variables at once.
+
+```js
+const result = /(a+)(b+)(c+)/.exec("aaabcc");
+let [, a, b, c] = result;
+console.log(a, b, c); // "aaa" "b" "cc"
+```
+
+For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+
 ## Specifications
 
 {{Specifications}}
@@ -278,9 +283,9 @@ let x = 1;
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
 - [Hoisting](/en-US/docs/Glossary/Hoisting)
-- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/) on hacks.mozilla.org (July 31, 2015)
-- [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/) on blog.mozilla.org (October 14, 2015)
-- [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
+- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/) on hacks.mozilla.org (2015)
+- [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/) on blog.mozilla.org (2015)
+- [You Don't Know JS: Scope & Closures, Ch.3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md) by Kyle Simpson
 - [What is the Temporal Dead Zone?](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone/33198850) on Stack Overflow
 - [What is the difference between using `let` and `var`?](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var) on Stack Overflow
 - [Why was the name 'let' chosen for block-scoped variable declarations in JavaScript?](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri) on Stack Overflow

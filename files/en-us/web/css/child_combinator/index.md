@@ -20,8 +20,9 @@ Elements matched by the second selector must be the immediate children of the el
 
 ## Syntax
 
-```css
-selector1 > selector2 { style properties }
+```css-nolint
+/* The white space around the > combinator is optional but recommended. */
+selector1 > selector2 { /* style properties */ }
 ```
 
 ## Examples

@@ -19,6 +19,10 @@ The **`sup()`** method of {{jsxref("String")}} values creates a string that embe
 sup()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with a `<sup>` start tag, then the text `str`, and then a `</sup>` end tag.
