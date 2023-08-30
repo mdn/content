@@ -17,6 +17,10 @@ The **`toUpperCase()`** method of {{jsxref("String")}} values returns this strin
 toUpperCase()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new string representing the calling string converted to upper case.

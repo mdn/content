@@ -19,6 +19,10 @@ The **`small()`** method of {{jsxref("String")}} values creates a string that em
 small()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with a `<small>` start tag, then the text `str`, and then a `</small>` end tag.

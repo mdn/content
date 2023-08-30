@@ -19,6 +19,10 @@ The **`fixed()`** method of {{jsxref("String")}} values creates a string that em
 fixed()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with a `<tt>` start tag, then the text `str`, and then a `</tt>` end tag.

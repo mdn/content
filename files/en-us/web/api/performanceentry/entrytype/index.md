@@ -10,7 +10,7 @@ browser-compat: api.PerformanceEntry.entryType
 
 The read-only **`entryType`** property returns a string representing the type of performance metric that this entry represents.
 
-All supported `entryTypes` are available using the static property {{domxref("PerformanceObserver.supportedEntryTypes")}}.
+All supported `entryTypes` are available using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
 
 ## Value
 
@@ -144,6 +144,6 @@ observer.observe({ entryTypes: ["resource", "navigation"] });
 
 ## See also
 
-- {{domxref("PerformanceObserver.supportedEntryTypes")}}
+- {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}
 - {{domxref("Performance.getEntriesByType()")}}
 - {{domxref("PerformanceObserverEntryList.getEntriesByType()")}}

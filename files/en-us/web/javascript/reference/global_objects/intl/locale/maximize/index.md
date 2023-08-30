@@ -19,6 +19,10 @@ existing values.
 maximize()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
@@ -46,18 +50,18 @@ include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
 
 ```js
 const myLocale = new Intl.Locale("fr", {
-  hourCycle: "h24",
+  hourCycle: "h12",
   calendar: "gregory",
 });
 console.log(myLocale.baseName); // Prints "fr"
-console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h24"
+console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h12"
 const myLocMaximized = myLocale.maximize();
 
 // Prints "fr-Latn-FR". The "Latn" and "FR" tags are added,
 // since French is only written in the Latin script and is most likely to be spoken in France.
 console.log(myLocMaximized.baseName);
 
-// Prints "fr-Latn-FR-u-ca-gregory-hc-h24".
+// Prints "fr-Latn-FR-u-ca-gregory-hc-h12".
 // Note that the extension tags (after "-u") remain unchanged.
 console.log(myLocMaximized.toString());
 ```

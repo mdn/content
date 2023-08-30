@@ -15,6 +15,10 @@ The **`toReversed()`** method of {{jsxref("TypedArray")}} instances is the [copy
 toReversed()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new typed array containing the elements in reversed order.
