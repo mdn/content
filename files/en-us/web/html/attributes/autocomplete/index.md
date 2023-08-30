@@ -194,7 +194,7 @@ If the `autocomplete` attribute is specified, its value must contain one or more
     <label>
       Postal Code:
       <input
-        name="rvpc"
+        name="rvpc" inputmode="numeric"
         autocomplete="section-red velvet shipping postal-code" />
     </label>
   </p>
