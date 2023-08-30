@@ -111,7 +111,6 @@
   "code-block-style": {
     "style": "fenced"
   },
-  "no-space-in-code": true,
   "emphasis-style": {
     "style": "underscore"
   },
@@ -205,6 +204,12 @@
         "message": "Don't use localhost for links",
         "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
         "replace": "](/",
+        "searchScope": "text"
+      },
+      {
+        "name": "un-closed-md-link",
+        "message": "Missng closing bracket ')'",
+        "searchPattern": "/(\\[[^\\]]*?\\]\\(([^\\)\\n]|\\([^\\)\\n]\\)|\\s[\"'])+?)(\\n|\\s|[,:][\\s\\n])/gm",
         "searchScope": "text"
       }
     ]

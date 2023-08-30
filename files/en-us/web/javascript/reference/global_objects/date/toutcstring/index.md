@@ -17,6 +17,10 @@ The **`toUTCString()`** method of {{jsxref("Date")}} instances returns a string 
 toUTCString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the given date using the UTC time zone (see description for the format). Returns `"Invalid Date"` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

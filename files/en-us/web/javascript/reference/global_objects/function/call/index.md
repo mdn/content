@@ -16,7 +16,8 @@ The **`call()`** method of {{jsxref("Function")}} instances calls this function 
 ```js-nolint
 call(thisArg)
 call(thisArg, arg1)
-call(thisArg, arg1, /* …, */ argN)
+call(thisArg, arg1, arg2)
+call(thisArg, arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters

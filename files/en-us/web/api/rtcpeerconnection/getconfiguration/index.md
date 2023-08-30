@@ -60,7 +60,7 @@ configuration has a value for `certificates`, and (b) whether its length is
 zero.
 
 If it's determined that there are no certificates in place,
-{{domxref("RTCPeerConnection.generateCertificate()")}} is called to create a new
+{{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} is called to create a new
 certificate; we provide a fulfillment handler which adds a new array containing the one
 newly-created certificate to the current configuration and passes it to
 {{domxref("RTCPeerConnect.setConfiguration", "setConfiguration()")}} to add the

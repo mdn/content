@@ -67,6 +67,6 @@ This also makes the code's intent much clearer to other readers.
 
 ## See also
 
-- [Original discussion of exponentiation operator precedence](https://esdiscuss.org/topic/exponentiation-operator-precedence)
 - [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
 - [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+- [Original discussion of exponentiation operator precedence](https://esdiscuss.org/topic/exponentiation-operator-precedence) on esdiscuss.org
