@@ -12,7 +12,7 @@ For example:
 
 ```js
 const argument1 = "Web";
-const argument2 = "Development;
+const argument2 = "Development";
 example(argument1, argument2); // passing two arguments
 
 // This function takes two values
