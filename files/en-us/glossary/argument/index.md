@@ -18,7 +18,7 @@ example(argument1, argument2); // passing two arguments
 // This function takes two values
 function example(parameter1, parameter2) {
   console.log(parameter1); // Output = "Web"
-  console.log(parameter2); // Output = "Development
+  console.log(parameter2); // Output = "Development"
 }
 ```
 
