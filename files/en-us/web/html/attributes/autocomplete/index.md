@@ -161,7 +161,7 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 
 ## Tokens and Sections
 
-If the `autocomplete` attribute is specified, its value must contain one or more space-separated autofill detail tokens. When using tokens to distinguish different valu, the tokens should be placed in the following order:
+If the `autocomplete` attribute is specified, its value must contain one or more space-separated autofill detail tokens. When using tokens to distinguish different values, the tokens should be placed in the following order:
 
 1. Start with `section-`
 2. Use the [defined autocomplete values](#values) like "shipping" or "billing" for addresses and "home", "mobile", "work", "fax", or "pager" for contact numbers
