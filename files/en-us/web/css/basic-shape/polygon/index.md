@@ -62,18 +62,18 @@ In this example a shape is created for text to follow using the {{cssxref("shape
 .shape {
   float: left;
   shape-outside: polygon(
-      0px 10px,
-      15% 12%,
-      30% 15%,
-      40% 26%,
-      45% 35%,
-      45% 45%,
-      40% 55%,
-      10% 90%,
-      10% 98%,
-      8% 100%,
-      0 100%
-    ) border-box;
+    0px 10px,
+    15% 12%,
+    30% 15%,
+    40% 26%,
+    45% 35%,
+    45% 45%,
+    40% 55%,
+    10% 90%,
+    10% 98%,
+    8% 100%,
+    0 100%
+  );
   width: 300px;
   height: 320px;
 }
