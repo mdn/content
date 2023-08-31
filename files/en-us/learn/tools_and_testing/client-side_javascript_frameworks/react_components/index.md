@@ -263,7 +263,7 @@ Above the return statement of `App()`, make a new `const` called `taskList`. Let
 The `?.` operator let's us perform [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to check if `props.tasks` is `undefined` or `null` before attempting to create a new array of task names:
 
 ```jsx
-const taskList = props.tasks.map((task) => task.name);
+const taskList = props.tasks?.map((task) => task.name);
 ```
 
 Let's try replacing all the children of the `<ul>` with `taskList`:
