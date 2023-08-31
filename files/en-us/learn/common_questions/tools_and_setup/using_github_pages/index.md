@@ -98,4 +98,6 @@ git push
 
 You can replace _another commit_ with a more suitable message to describe what change you just made.
 
+[Create a static website with contact form on github pages](https://fabform.io/a/create-a-static-website-with-contact-form-on-github-pages)
+
 We have barely scratched the surface of Git. To learn more, check out our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page.
