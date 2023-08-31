@@ -374,6 +374,33 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
   - : Fired when the {{DOMxRef("Document/readyState", "readyState")}} attribute of a document has changed.
 
+### MouseEvent events
+
+- {{DOMxRef("Document/auxclick_event", "auxclick")}}
+  - : Fired when a non-primary button is clicked.
+- {{DOMxRef("Document/click_event", "click")}}
+  - : Fired when a pointing device button is pressed and released on an element.
+- {{DOMxRef("Document/contextmenu_event", "contextmenu")}}
+  - : Fired when the right button of the mouse is clicked (before the context menu is displayed).
+- {{DOMxRef("Document/dblclick_event", "dblclick")}}
+  - : Fired when a pointing device button is clicked twice on an element.
+- {{DOMxRef("Document/mousedown_event", "mousedown")}}
+  - : Fired when a pointing device button is pressed on an element.
+- {{DOMxRef("Document/mouseenter_event", "mouseenter")}}
+  - : Fired when a pointing device is moved onto the element that has the listener attached.
+- {{DOMxRef("Document/mouseleave_event", "mouseleave")}}
+  - : Fired when a pointing device is moved off the element that has the listener attached.
+- {{DOMxRef("Document/mousemove_event", "mousemove")}}
+  - : Fired when a pointing device is moved while over an element.
+- {{DOMxRef("Document/mouseout_event", "mouseout")}}
+  - : Fired when a pointing device is moved off the element that has the listener attached or off one of its children.
+- {{DOMxRef("Document/mouseover_event", "mouseover")}}
+  - : Fired when a pointing device is moved onto the element that has the listener attached or onto one of its children.
+- {{DOMxRef("Document/mouseup_event", "mouseup")}}
+  - : Fired when a pointing device button is released over an element.
+- {{DOMxRef("Document/wheel_event", "wheel")}}
+  - : Fired when a wheel button of a pointing device (usually a mouse) is rotated.
+
 ### Pointer events
 
 - {{DOMxRef("Document/gotpointercapture_event", "gotpointercapture")}}
