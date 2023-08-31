@@ -62,7 +62,7 @@ In this example a shape is created for text to follow using the {{cssxref("shape
 .shape {
   float: left;
   shape-outside: polygon(
-    0px 10px,
+    0 5%,
     15% 12%,
     30% 15%,
     40% 26%,
