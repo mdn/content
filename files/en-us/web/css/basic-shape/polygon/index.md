@@ -35,7 +35,7 @@ clip-path: polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%);
 
 ### Setting a polygon for shape-outside
 
-In this example a shape is created for text to follow using the {{cssxref("shape-outside")}} property. We've drawn the reference box for the shape, to help understand how the polygon is calculated.
+In this example a shape is created for text to follow using the {{cssxref("shape-outside")}} property.
 
 ```html
 <div class="box">
@@ -56,23 +56,34 @@ In this example a shape is created for text to follow using the {{cssxref("shape
 
 ```css
 .box {
-  width: 300px;
+  width: 250px;
 }
 
 .shape {
   float: left;
-  shape-outside: polygon(0px 0px, 80.67% 17.17%, 200px 150px, 0px 189px) border-box;
-  width: 200px;
-  height: 200px;
-  border: 1px solid red;
+  shape-outside: polygon(
+      0px 10px,
+      15% 12%,
+      30% 15%,
+      40% 26%,
+      45% 35%,
+      45% 45%,
+      40% 55%,
+      10% 90%,
+      10% 98%,
+      8% 100%,
+      0 100%
+    ) border-box;
+  width: 300px;
+  height: 320px;
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 ```
 
-{{EmbedLiveSample("Setting a polygon for shape-outside", '100%', 300)}}
+{{EmbedLiveSample("Setting a polygon for shape-outside", '100%', 400)}}
 
 ## Specifications
 
