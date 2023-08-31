@@ -17,6 +17,7 @@ The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref(
 clip-path: polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%);
 clip-path: polygon(0px 0px, 200px 100px, 0px 200px);
 clip-path: polygon(0% 0px, 100% 100px, 0px 100%);
+clip-path: polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%);
 ```
 
 ### Values
