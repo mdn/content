@@ -6198,9 +6198,9 @@
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
 /en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests	https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html
 /en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
-/en-US/docs/Mozilla/Thunderbird/Autoconfiguration	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration
-/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/definition
-/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/howto
+/en-US/docs/Mozilla/Thunderbird/Autoconfiguration	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/
+/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/config-file-format.html
+/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/how-to-create-your-own-config-file.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
