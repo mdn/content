@@ -127,7 +127,7 @@ This solution can make translation easier for both readers and translators.
 
 While the primary goal of any writing on MDN Web Docs should always be to explain and inform about open web technology so developers can quickly learn to do what they want or to find the little details they need to know in order to perfect their code, it's important that they be able to _find_ the material we write. We can achieve this by keeping Search Engine Optimization ({{Glossary("SEO")}}) in mind while writing.
 
-This section covers the standard practices, recommendations, and requirements for content to help ensure that search engines can easily categorize and index our material to ensure that users can easily reach what they need. The SEO guidelines includes ensuring that each page writers and editors work on is reasonably well-designed, written, and marked up to give search engines the context and clues they need to properly index articles.
+This section covers the standard practices, recommendations, and requirements for content to help ensure that search engines can easily categorize and index our material to ensure that readers can easily reach what they need. The SEO guidelines includes ensuring that each page writers and editors work on is reasonably well-designed, written, and marked up to give search engines the context and clues they need to properly index the articles.
 
 The following checklist is good to keep in mind while writing and reviewing content to help ensure that the page and its neighbors will be indexed properly by search engines:
 
@@ -147,7 +147,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   Here are some basic guidelines to help you create pages that have enough content to be properly searchable without resorting to cluttering them up with unnecessary text:
 
   - **Avoid stubs**: Obviously, if the article is a stub or is missing content, add it. We try to avoid outright "stub" pages on MDN web Docs, although they do exist, but there are plenty of pages that are missing large portions of their content.
-  - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is <!--link to be revised-->. Be sure every section that it should have is present and has appropriate content.
+  - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is. Be sure every section that it should have is present and has appropriate content.
   - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters are listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
@@ -155,7 +155,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
-  - **Focus on topic content**: With Google's Hummingbird update in 2013 <!--do we need to retain this-->, there has been an increasing focus on the use of natural language to convey information. This means that it is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
+  - **Focus on topic content**: With Google's Hummingbird update in 2013, there has been an increasing focus on the use of natural language to convey information. This means that it is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
 
 ## Writing style
 
@@ -177,7 +177,7 @@ Other than writing grammatically correct sentences in English, we recommend you 
 
 An abbreviation is a shortened version of a longer word, while an acronym is a new word created using the first letter of each word from a phrase. This section describes guidelines for abbreviations and acronyms.
 
-- **Expansions**: On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it—or better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
+- **Expansions**: On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it; or better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
 
   - **Correct**: "XUL (XML User Interface Language) is Mozilla's XML-based language..."
   - **Incorrect**: "XUL is Mozilla's XML-based language..."
@@ -369,9 +369,7 @@ Do not use variant spelling.
 
 These are our recommendations for using certain technical terms:
 
-- **HTML elements**: Use "elements" to refer to HTML and XML elements, rather than "tags". In addition, they should almost always be wrapped in "<>", and should be in the {{HTMLElement("code")}} style.
-
-  When you reference a given element for the first time in a section, you should use the [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) <!--this link should point to the macro's documentation--> macro to create a link to the documentation for the element (unless you're writing within that element's reference document page).
+- **HTML elements**: Use "elements" to refer to HTML and XML elements, instead of "tags". In addition, the elements should almost always be wrapped in angle brackets "<>", and should be styled using {{HTMLElement("code")}}.
 
   - **Correct**: the {{HTMLElement("span")}} element
   - **Incorrect**: the span tag
@@ -413,9 +411,30 @@ A page on MDN Web Docs can contain more than one code example. The following lis
   - **Result explanation**: An explanation after the example code that describes the result and how the code works.
 - In general, the code example should not only demonstrate the syntax of the feature and how it is used, but also highlight the purpose and situations in which a web developer might want or need to use the feature.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
-- When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) <!--link to be revised-->, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
+- When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
 To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+
+### Cross-references
+
+When linking to a page on MDN, follow sentence casing in the link text, that is, match the case used in the page title. Don't use quotation marks around the link text. To add a link to a page on MDN, use the following style:
+
+- **Correct**: "Refer to the [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) guide."
+- **Incorrect**: "Refer to the "[Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)" guide."
+
+Follow similar style when linking to a section on a page, as shown below:
+
+- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Memory_management#allocation_in_javascript) section on the Memory management page."
+
+If the section you're linking to is on the same page, indicate so by hinting at the location of the section by using the words "above" or "below".
+
+- **Correct**: "This concept is described in more detail in the [Accessibility concerns](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility_concerns) section below."
+
+You can link part of a sentence to an article or the section of an article. Be mindful to use descriptive phrases as link texts to provide enough context for the page being linked.
+
+- **Correct**: "Learn more about [how to add a user interface with a chrome.manifest](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest).
+- **Incorrect**: "Click [here](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) to learn more."
+- **Incorrect**: "Read [this article](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) to learn more."
 
 ### External links
 
@@ -482,7 +501,6 @@ If you include images or other media on a page, follow these guidelines:
 - Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
-- When displaying icons on a page (e.g., via {{cssxref("background-image")}}), use icons from the [mdn-dinocons](https://github.com/mdn/mdn-dinocons) repository, where appropriate, and try to match their style in other cases. <!--this is not valid anymore, the repo has been archived. do we want to point readers to another resource?-->
 
 ### Lists
 
