@@ -76,6 +76,8 @@ A common use case is to do something with a paragraph that follows a heading, as
 
 If you insert some other element such as a `<h2>` in between the `<h1>` and the `<p>`, you will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
 
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/adjacent.html -->
+
 {{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
 
 ## General sibling combinator
@@ -88,7 +90,39 @@ p ~ img
 
 In the example below we are selecting all `<p>` elements that come after the `<h1>`, and even though there is a `<div>` in the document as well, the `<p>` that comes after it is selected.
 
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/general.html -->
+
 {{EmbedGHLiveSample("css-examples/learn/selectors/general.html", '100%', 600)}}
+
+## Creating complex selectors with nesting
+
+The [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#combinators) allows you to write nested rules that use combinators to create [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector).
+
+```css
+p {
+  ~ img {
+  }
+}
+/* This is parsed by the browser as */
+p ~ img {
+}
+```
+
+The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be use to create compound selectors.
+
+```css
+p {
+  & img {
+  }
+}
+/* This is parsed by the browser as */
+p img {
+}
+```
+
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/nesting.html -->
+
+{{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
 
 ## Using combinators
 
