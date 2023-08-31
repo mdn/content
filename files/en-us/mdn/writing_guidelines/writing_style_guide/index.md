@@ -436,6 +436,8 @@ You can link part of a sentence to an article or the section of an article. Be m
 - **Incorrect**: "Click [here](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) to learn more."
 - **Incorrect**: "Read [this article](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) to learn more."
 
+To link to reference pages, you can use one of the corresponding macros. These set of macros are described on the [Commonly-used macros page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references). For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
+
 ### External links
 
 External links are allowed on MDN Web Docs in specific situations. Use the guidelines described in this section to decide whether or not it is okay to include an external link on MDN Web Docs. Your pull request to add an external link will be rejected if it does not meet the guidelines described here.
@@ -554,13 +556,13 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 #### Link text
 
-- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page will be:
+- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page with the page title "ARIA states and properties" will be:
   - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [WAI-ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) page will be:
+- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [WAI-ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) page in correct sentence case will be:
   - **Correct**: [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
-- Use the appropriate macro to link to a page as defined in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section. The use of macro will add code formatting to the keyword in the link text, as shown in the previous example.
-- No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required after a link text because it will invariably be a term or a phrase.
+- Use the appropriate macro to link to a page as defined in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
+- No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required at the end of the list item because it will invariably be a term or a phrase.
   - **Correct**: {{cssxref("revert-layer")}}
   - **Incorrect**: The {{cssxref("revert-layer")}} keyword.
 
@@ -570,12 +572,13 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Correct**: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors for styling checkboxes
 - Don't use the conjunction "and" before the last item in the series.
   - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
-- After an external link and the source website, mention the year when the article was published within parentheses. The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
-  - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
+- For external links, aim to specify the source website and the year of publication or last update (in parentheses) whenever feasible and appropriate. Providing this information upfront gives readers a clear idea of the destination they'll reach upon clicking the link. The date of publication or last update guides readers in assessing the relevance of the linked article and also helps MDN maintainers to review links to articles that have not been updated in a long time. If you provide a link to an article on Wikipedia, for example, you can ignore the publish/update date. The following list item is an example of adding a link to the [Top-level await](https://v8.dev/features/top-level-await) external article in the See also section, along with the source and year information:
+  - **Correct**: [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
+- For external links to books, you can also provide author names. You can see a few examples for this in the [Further reading](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#language_grammar_and_spelling) section below. Refrain from adding author names for blog posts or GitHub repositories you might link to.
 
 #### Order of links
 
-- For cross-referencing within MDN, list the links to reference pages first and then the links to the related guide, and tutorial pages.
+- For cross-referencing within MDN, list the links to reference pages first, followed by links to the related guide and tutorial pages.
 - If the list is a mix of internal and external links, list the internal links first and then the external ones.
 - Within each group of internal and external links, follow alphabetical or simple-to-advanced order, whatever makes more sense for the context.
 
