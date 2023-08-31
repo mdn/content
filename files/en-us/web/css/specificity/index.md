@@ -32,7 +32,7 @@ The selector weight categories are listed here in the order of decreasing specif
 
 Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
 
-The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither do the {{CSSxRef(":is", ":is()")}} or the {{CSSxRef(":has", ":has()")}} pseudo-classes. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()`, `:is()` and `:has()` exceptions](#the_is_not_and_has_exceptions) are discussed below.
+The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither do the {{CSSxRef(":is", ":is()")}}, the {{CSSxRef(":has", ":has()")}} pseudo-classes or [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity). The parameters in these selectors or nested rules do, however, do. The values of both come from the parameter or nested rules do in the list of parameters that has the highest specificity. The [`:not()`, `:is()`, `:has()` and CSS nesting exceptions](#the_is_not_has_and_css_nesting_exceptions) are discussed below.
 
 #### Matching selector
 
@@ -110,7 +110,7 @@ input.myClass {
 }
 ```
 
-### The `:is()`, `:not()` and `:has()` exceptions
+### The `:is()`, `:not()`, `:has()` and CSS nesting exceptions
 
 The matches-any pseudo-class {{CSSxRef(":is", ":is()")}}, the relational pseudo-class {{CSSxRef(":has", ":has()")}}, and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
 
@@ -157,6 +157,19 @@ div:not(.inner, #fakeId) p {
 ```
 
 In the above CSS code block, we have included `#fakeId` in the selectors. This `#fakeId` adds `1-0-0` to the specificity weight of each paragraph.
+
+When creating complex selector lists with [CSS nesting]() this behaves in exactly the same way as the `:is()` pseudo-class.
+
+```css
+p,
+#fakeId {
+  span {
+    /* 1-0-1 */
+  }
+}
+```
+
+In the above code block the complex selector `p, #fakeId` the specificity is taken from `#fakeId` and also the `span`, so this create a specificity of `1-0-1` for both `p span` and `#fakeId span`.
 
 Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these three pseudo-classes can help.
 
@@ -265,6 +278,32 @@ As a special case for increasing specificity, you can duplicate weights from the
 .myClass.myClass.myClass span {
   /* 0-3-1 */
 }
+```
+
+The same effect can be created using CSS nesting and using the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) with no whitespace between the `&` and the ID or CLASS.
+
+```css
+#myId {
+  &#myId {
+    &#myId {
+      span {
+        /* 3-0-1 */
+      }
+  }
+}
+/* the browser parses this as */
+#myId#myId#myId span {}
+
+#myClass {
+  &#myClass {
+    &#myClass {
+      span {
+        /* 3-0-1 */
+      }
+  }
+}
+/* the browser parses this as */
+.myClass.myClass.myClass span {}
 ```
 
 Use this sparingly, if at all. If using selector duplication, always comment your CSS.
