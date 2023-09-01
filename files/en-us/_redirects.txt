@@ -6866,9 +6866,9 @@
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/The_add-on_bar	/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar
 /en-US/docs/The_data_URL_scheme	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
-/en-US/docs/Thunderbird/Autoconfiguration	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration
-/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition
-/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo
+/en-US/docs/Thunderbird/Autoconfiguration	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/config-file-format.html
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/how-to-create-your-own
 /en-US/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /en-US/docs/Toolbox	https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html
 /en-US/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
