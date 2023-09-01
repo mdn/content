@@ -20,7 +20,7 @@ However, there are significant differences between Chrome (and Chromium-based br
 - Asynchronous APIs:
 
   - **In Firefox and Safari:** Asynchronous APIs are implemented using promises.
-  - **In Chrome and Edge:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifiest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932))
+  - **In Chrome and Edge:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932))
 
 The rest of this page details these and other incompatibilities.
 
@@ -73,7 +73,7 @@ The rest of this page details these and other incompatibilities.
   chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
   ```
 
-  In Manifiest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods.
+  In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods.
 
 ### Firefox supports both the chrome and browser namespaces
 
@@ -89,7 +89,7 @@ The [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensi
 
 The tables are generated from compatibility data stored as [JSON files in GitHub](https://github.com/mdn/browser-compat-data).
 
-The rest of this section describes compatibility issues not captured in the tables.
+The rest of this section describes the main compatibility issues you may need to consider when building a cross-browser extension. Also, remember to check the browser compatibility tables, as they may contain additional compatibility information.
 
 #### Notifications API
 
@@ -155,7 +155,7 @@ When calling `tabs.remove()`:
 
   - Some of the `browser.webRequest.*` APIs allow for returning Promises that resolves `webRequest.BlockingResponse` asynchronously.
 
-- **In Chrome:** Only `webRequest.onAuthRequired` supports asynchronous `webRequest.BlockingResponse` by supplying `'asyncBlocking'`.
+- **In Chrome:** Only `webRequest.onAuthRequired` supports asynchronous `webRequest.BlockingResponse` by supplying `'asyncBlocking'`, through a callback instead of a Promise.
 
 #### Windows API
 
@@ -176,7 +176,7 @@ When calling `tabs.remove()`:
 
 #### Support for dialogs in background pages
 
-- **In Firefox:** [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), and [`prompt()`](/en-US/docs/Web/API/Window/prompt) are not supported in background pages. Call
+- **In Firefox:** [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), and [`prompt()`](/en-US/docs/Web/API/Window/prompt) are not supported in background pages.
 
 #### web_accessible_resources
 
