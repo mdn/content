@@ -17,19 +17,17 @@ The {{domxref("RTCPeerConnection")}} method **`addTrack()`** adds a new media tr
 
 ```js-nolint
 addTrack(track)
-addTrack(track, stream0)
-addTrack(track, stream0, stream1)
-addTrack(track, stream0, stream1, /* …, */ streamN)
+addTrack(track, stream1)
+addTrack(track, stream1, stream2)
+addTrack(track, stream1, stream2, /* …, */ streamN)
 ```
 
 ### Parameters
 
 - `track`
-  - : A {{domxref("MediaStreamTrack")}} object representing the media track to add to the
-    peer connection.
-- `stream0, …, streamN` {{optional_inline}}
-  - : One or more local {{domxref("MediaStream")}} objects to which the track should be
-    added.
+  - : A {{domxref("MediaStreamTrack")}} object representing the media track to add to the peer connection.
+- `stream1`, …, `streamN` {{optional_inline}}
+  - : One or more local {{domxref("MediaStream")}} objects to which the track should be added.
 
 The specified `track` doesn't necessarily have to already be part of any of
 the specified `stream`s. Instead, the `stream`s are a way to group
