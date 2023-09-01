@@ -84,7 +84,7 @@ Once the stylesheet has been imported, `XSLTProcessor` has to perform two method
 
 ### Creating an XML document From a String 'XML Soup'
 
-While you can use IE `loadXML` method to load a string containing XML you have to perform some tweaking and tuning to do the same in Mozilla. You must use the DomParser.no to create any document, as this is handled by the DomParser.
+You can use the {{domxref("DOMParser")}} to create an XML document from a string of XML.
 
 ```js
 const parser = new DOMParser();
