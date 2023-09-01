@@ -54,7 +54,7 @@ const str = "Hello, "
 
 ### Assignments producing ReferenceErrors
 
-Invalid assignments don't always produce syntax errors. Sometimes the syntax is almost correct, but at runtime, the left hand side expression evaluates to a _value_ instead of a _reference_, so the assignment is still invalid. Such errors occur later in execution, when the line is actually executed.
+Invalid assignments don't always produce syntax errors. Sometimes the syntax is almost correct, but at runtime, the left hand side expression evaluates to a _value_ instead of a _reference_, so the assignment is still invalid. Such errors occur later in execution, when the statement is actually executed.
 
 ```js-nolint example-bad
 function foo() {

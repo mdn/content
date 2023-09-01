@@ -29,7 +29,7 @@ const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 The `const` declaration is very similar to {{jsxref("Statements/let", "let")}}:
 
 - `const` declarations are scoped to blocks as well as functions.
-- `const` declarations can only be accessed after the line of declaration is reached (see [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)). For this reason, `const` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
+- `const` declarations can only be accessed after the place of declaration is reached (see [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)). For this reason, `const` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 - `const` declarations do not create properties on {{jsxref("globalThis")}} when declared at the top level of a script.
 - `const` declarations cannot be [redeclared](/en-US/docs/Web/JavaScript/Reference/Statements/let#redeclarations) by any other declaration in the same scope.
 - `const` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
