@@ -2140,7 +2140,7 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
     <tr>
       <th>Release</th>
       <td>97</td>
-      <td>No.</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
@@ -2155,6 +2155,46 @@ The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Sched
 
 This is enabled on Firefox Nightly (only) from Firefox 101.
 No preference is provided to allow it to be enabled in other releases.
+
+### Notifications API
+
+Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default on Windows systems and in the Nightly release ([Firefox bug 1794475](https://bugzil.la/1794475)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>Windows only</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webnotifications.requireinteraction.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Security and privacy
 
