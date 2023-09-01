@@ -127,7 +127,7 @@ This solution can make translation easier for both readers and translators.
 
 While the primary goal of any writing on MDN Web Docs should always be to explain and inform about open web technology so developers can quickly learn to do what they want or to find the little details they need to know in order to perfect their code, it's important that they be able to _find_ the material we write. We can achieve this by keeping Search Engine Optimization ({{Glossary("SEO")}}) in mind while writing.
 
-This section covers the standard practices, recommendations, and requirements for content to help ensure that search engines can easily categorize and index our material to ensure that readers can easily reach what they need. The SEO guidelines includes ensuring that each page writers and editors work on is reasonably well-designed, written, and marked up to give search engines the context and clues they need to properly index the articles.
+This section covers the standard practices, recommendations, and requirements for content to help ensure that search engines can easily categorize and index our material to ensure that readers can easily find what they need. The SEO guidelines include ensuring that each page that writers and editors work on is reasonably well-designed, written, and marked up to give search engines the context and clues they need to properly index the articles.
 
 The following checklist is good to keep in mind while writing and reviewing content to help ensure that the page and its neighbors will be indexed properly by search engines:
 
@@ -147,7 +147,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   Here are some basic guidelines to help you create pages that have enough content to be properly searchable without resorting to cluttering them up with unnecessary text:
 
   - **Avoid stubs**: Obviously, if the article is a stub or is missing content, add it. We try to avoid outright "stub" pages on MDN web Docs, although they do exist, but there are plenty of pages that are missing large portions of their content.
-  - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is. Be sure every section that it should have is present and has appropriate content.
+  - **Review page structure**: Review the page to ensure that it's structured properly for its [page type](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is. Check to make sure that all sections are present and have appropriate content.
   - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters are listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
@@ -155,7 +155,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
-  - **Focus on topic content**: With Google's Hummingbird update in 2013, there has been an increasing focus on the use of natural language to convey information. This means that it is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
+  - **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
 
 ## Writing style
 
@@ -177,7 +177,7 @@ Other than writing grammatically correct sentences in English, we recommend you 
 
 An abbreviation is a shortened version of a longer word, while an acronym is a new word created using the first letter of each word from a phrase. This section describes guidelines for abbreviations and acronyms.
 
-- **Expansions**: On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it; or better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
+- **Expansions**: On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand the term. Better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
 
   - **Correct**: "XUL (XML User Interface Language) is Mozilla's XML-based language..."
   - **Incorrect**: "XUL is Mozilla's XML-based language..."
@@ -369,10 +369,15 @@ Do not use variant spelling.
 
 These are our recommendations for using certain technical terms:
 
-- **HTML elements**: Use "elements" to refer to HTML and XML elements, instead of "tags". In addition, the elements should almost always be wrapped in angle brackets "<>", and should be styled using {{HTMLElement("code")}}.
+- **HTML elements**: Use the term "element" to refer to HTML and XML elements, instead of "tag". In addition, the elements should be wrapped in angle brackets "<>" and should be styled using backticks (\`). For example, using \<input\> inside backticks will style it as `<input>` as is expected.
 
-  - **Correct**: the {{HTMLElement("span")}} element
+  - **Correct**: the `<span>` element
   - **Incorrect**: the span tag
+
+  On MDN, you can specify the HTML element in the [`HTMLElement` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), which will style the element, add the angle brackets "<>", as well as add a link to its reference page.
+
+  - **Using backticks**: `<span>`
+  - **Using the macro**: {{HTMLElement("span")}} (source in markdown: \\{{HTMLElement("span")\}})
 
 - **Parameters vs. arguments**: The preferred term on MDN Web Docs is **parameters**. Please avoid the term "arguments" for consistency whenever possible.
 
@@ -391,6 +396,7 @@ Try to be consistent, though.
 This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
 
 - [Code examples](#code_examples)
+- [Cross-references](#cross_references)
 - [External links](#external_links)
 - [Shortened URLs (shortlinks)](#shortened_urls_shortlinks)
 - [Heading levels](#heading_levels)
@@ -436,7 +442,7 @@ You can link part of a sentence to an article or the section of an article. Be m
 - **Incorrect**: "Click [here](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) to learn more."
 - **Incorrect**: "Read [this article](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) to learn more."
 
-To link to reference pages, you can use one of the corresponding macros. These set of macros are described on the [Commonly-used macros page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references). For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
+To link to reference pages, you can use one of the corresponding macros. These set of macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
 
 ### External links
 
@@ -574,7 +580,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
 - For external links, aim to specify the source website and the year of publication or last update (in parentheses) whenever feasible and appropriate. Providing this information upfront gives readers a clear idea of the destination they'll reach upon clicking the link. The date of publication or last update guides readers in assessing the relevance of the linked article and also helps MDN maintainers to review links to articles that have not been updated in a long time. If you provide a link to an article on Wikipedia, for example, you can ignore the publish/update date. The following list item is an example of adding a link to the [Top-level await](https://v8.dev/features/top-level-await) external article in the See also section, along with the source and year information:
   - **Correct**: [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
-- For external links to books, you can also provide author names. You can see a few examples for this in the [Further reading](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#language_grammar_and_spelling) section below. Refrain from adding author names for blog posts or GitHub repositories you might link to.
+- For external links to books, you can also provide author names. You can see a few examples for this in the [Further reading](#language_grammar_and_spelling) section below. Refrain from adding author names for blog posts or GitHub repositories you might link to.
 
 #### Order of links
 
@@ -631,6 +637,14 @@ Keep the following guidelines in mind when writing titles:
   - **Avoid common term in lower-level heading**: Do not repeat the text in the title of a higher-level heading in lower-level titles. For example, in a section titled "Commas", name the title of a subsection "After introductory clauses" instead of "Commas after introductory clauses".
   - **Don't begin with article**: Avoid starting titles with articles "a", "an", or "the".
   - **Add lead-in information**: After a title, add some introductory text to explain what will be covered in the section.
+
+## See also
+
+- [Guidelines for writing code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
+- [Guidelines for writing HTML code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
+- [Guidelines for writing CSS code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
+- [Guidelines for writing JavaScript code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
+- [Guidelines for writing shell prompt code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
 
 ## Further reading
 
