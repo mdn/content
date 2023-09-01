@@ -16,14 +16,14 @@ an array and returns the new length of the array.
 
 ```js-nolint
 push()
-push(element0)
-push(element0, element1)
-push(element0, element1, /* …, */ elementN)
+push(element1)
+push(element1, element2)
+push(element1, element2, /* …, */ elementN)
 ```
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : The element(s) to add to the end of the array.
 
 ### Return value

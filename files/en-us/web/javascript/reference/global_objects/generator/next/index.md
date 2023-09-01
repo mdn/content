@@ -15,12 +15,13 @@ generator.
 ## Syntax
 
 ```js-nolint
+next()
 next(value)
 ```
 
 ### Parameters
 
-- `value`
+- `value` {{optional_inline}}
 
   - : The value to send to the generator.
 
