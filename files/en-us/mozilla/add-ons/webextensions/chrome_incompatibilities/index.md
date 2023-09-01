@@ -15,12 +15,12 @@ However, there are significant differences between Chrome (and Chromium-based br
 - Namespace:
 
   - **In Firefox and Safari:** JavaScript APIs are accessed under the `browser` namespace. To support browser compatibility, Firefox also supports the `chrome` namespace.
-  - **In Chrome and Edge:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
+  - **In Chrome:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
 
 - Asynchronous APIs:
 
   - **In Firefox and Safari:** Asynchronous APIs are implemented using promises.
-  - **In Chrome and Edge:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932))
+  - **In Chrome:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932))
 
 The rest of this page details these and other incompatibilities.
 
@@ -34,7 +34,7 @@ The rest of this page details these and other incompatibilities.
   browser.browserAction.setIcon({ path: "path/to/icon.png" });
   ```
 
-- **In Chrome and Edge:** The APIs are accessed using the `chrome` namespace.
+- **In Chrome:** The APIs are accessed using the `chrome` namespace.
 
   ```js
   chrome.browserAction.setIcon({ path: "path/to/icon.png" });
@@ -59,7 +59,7 @@ The rest of this page details these and other incompatibilities.
   setCookie.then(logCookie, logError);
   ```
 
-- **In Chrome and Edge:** In Manifest V2, asynchronous APIs use callbacks to return values and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
+- **In Chrome:** In Manifest V2, asynchronous APIs use callbacks to return values and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
 
   ```js
   function logCookie(c) {
