@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
@@ -23,18 +23,14 @@ This article provides information about the changes in Firefox 117 that affect d
 - The [`contain-intrinsic-size: auto none;`](/en-US/docs/Web/CSS/contain-intrinsic-size) syntax is now supported, which allows for using the last-remembered size of an element if possible and falls back to `contain-intrinsic-size: none` otherwise.
   This is useful in layouts using proportional sizes, such as grid or multi-column ([Firefox bug 1835813](https://bugzil.la/1835813)).
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
+No notable changes.
 
 ### SVG
 
 - Inline SVGs now support `<script>` elements with `type="module"`, `defer`, and `async` attributes.
   This allows SVGs to use modern JavaScript features, including ES modules, and to load scripts asynchronously ([Firefox bug 1839954](https://bugzil.la/1839954)).
-
-#### Removals
 
 ### HTTP
 
@@ -44,11 +40,9 @@ This article provides information about the changes in Firefox 117 that affect d
 - The `Range` header is now a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range (e.g., `bytes=100-200`).
   This allows the `Range` header to be used in cross-origin requests without triggering a preflight request, which is useful for requesting media and resuming downloads ([Firefox bug 1733981](https://bugzil.la/1733981)).
 
-#### Removals
-
 ### Security
 
-#### Removals
+No notable changes.
 
 ### APIs
 
@@ -59,13 +53,15 @@ This article provides information about the changes in Firefox 117 that affect d
 
 #### DOM
 
+No notable changes.
+
 #### Media, WebRTC, and Web Audio
 
-#### Removals
+No notable changes.
 
 ### WebAssembly
 
-#### Removals
+No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -92,9 +88,7 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ## Changes for add-on developers
 
-### Removals
-
-### Other
+No notable changes.
 
 ## Older versions
 
