@@ -50,17 +50,13 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
-    {{domxref('performance.now()')}}, indicating the point in time when
-    `requestAnimationFrame()` starts to execute callback functions. The differences
-    between this argument and {{domxref('performance.now()')}} are worth noting. First,
-    in order to deal with a security issue, all the browsers reduced the precision of
-    {{domxref('performance.now()')}} to varying degrees, and Firefox returns an integer.
-    This argument also has its precision limited as illustrated by the limited number of
-    decimal places it uses, again varying by browser. In terms of the values themselves,
-    the {{domxref('performance.now()')}} value is always higher. The amount higher varies
-    by browser and momentary circumstances, but in some cases it can be almost as much as
-    an entire frame (16.7ms @60hz).
+    {{domxref("DOMHighResTimeStamp")}} indicating the point in time when
+    `requestAnimationFrame()` starts to execute callback functions. This timestamp's
+    value is shared between all windows that run on the same agent (i.e. all same origin
+    windows, and more importantly same-origin iframes), which allows synchronizing an
+    animation across multiple `requestAnimationFrame` callbacks. For `Window` objects
+    (not `Workers`), this timestamp's value is equal to {{domxref("document.timeline.currentTime")}}.
+    It is also similar to {{domxref('performance.now()')}}, but never the same value.
 
 ### Return value
 
@@ -120,8 +116,6 @@ window.requestAnimationFrame(step);
 - {{domxref("Window.cancelAnimationFrame()")}}
 - {{domxref("OffscreenCanvas")}}
 - [DedicatedWorkerGlobalScope](/en-US/docs/Web/API/DedicatedWorkerGlobalScope)
-- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) – Blog post
 - [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
-- Paul Irish: [requestAnimationFrame API: now with sub-millisecond precision](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
