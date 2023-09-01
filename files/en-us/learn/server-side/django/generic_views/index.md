@@ -63,6 +63,7 @@ Open **catalog/views.py**, and copy the following code into the bottom of the fi
 
 ```python
 from django.views import generic
+from .models import Book
 
 class BookListView(generic.ListView):
     model = Book
