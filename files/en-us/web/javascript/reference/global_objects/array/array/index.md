@@ -105,5 +105,5 @@ console.log(fruits[0]); // "Apple"
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

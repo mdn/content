@@ -126,7 +126,7 @@ numbers.push(5); // // TypeError: Cannot assign to read only property 'length' o
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - [`TypedArray.prototype.length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
 - [`String`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)

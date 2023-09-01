@@ -75,4 +75,4 @@ fn(10, 20).then((v) => {
 
 - [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
-- [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+- [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)

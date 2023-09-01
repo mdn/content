@@ -124,6 +124,6 @@ Object.getPrototypeOf(p2); // TypeError: expected same prototype value
 ## See also
 
 - {{jsxref("Proxy")}}
-- [`Proxy()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}

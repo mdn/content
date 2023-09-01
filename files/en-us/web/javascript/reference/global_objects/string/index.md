@@ -427,5 +427,5 @@ String(undefinedVar); // "undefined"
 
 ## See also
 
-- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
 - {{jsxref("RegExp")}}

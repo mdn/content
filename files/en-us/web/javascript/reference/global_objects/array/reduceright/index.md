@@ -260,7 +260,7 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 ## See also
 
 - [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}

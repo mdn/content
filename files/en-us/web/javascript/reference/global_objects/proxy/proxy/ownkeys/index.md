@@ -112,6 +112,6 @@ console.log(Object.getOwnPropertyNames(p));
 ## See also
 
 - {{jsxref("Proxy")}}
-- [`Proxy()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Reflect.ownKeys()")}}

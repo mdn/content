@@ -62,6 +62,6 @@ asyncGen.next().then((res) => console.log(res.value)); // 20
 
 - [`async function*`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
 - [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
-- [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
 - {{jsxref("Functions", "Functions", "", 1)}}

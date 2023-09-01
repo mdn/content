@@ -116,7 +116,7 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 ## See also
 
 - [Polyfill of `Array.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
 - {{jsxref("TypedArray.prototype.join()")}}

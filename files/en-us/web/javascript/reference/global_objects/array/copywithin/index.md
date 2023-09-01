@@ -109,6 +109,6 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.copyWithin()")}}
