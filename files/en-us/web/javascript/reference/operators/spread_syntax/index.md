@@ -79,6 +79,16 @@ const args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);
 ```
 
+Both arrays and objects can also be composed through conditional spreads.
+
+```js
+let arr1 = [0, 1, 2];
+const arr2 = [3, 4, 5];
+
+arr1 = [...arr1, (false ...arr2)]; // [0, 1, 2]
+arr1 = [...arr1, (true ...arr2)]; // [0, 1, 2, 3, 4, 5]
+```
+
 #### Apply for new operator
 
 When calling a constructor with {{jsxref("Operators/new", "new")}}, it's not possible to **directly** use an array and `apply()`, because `apply()` _calls_ the target function instead of _constructing_ it, which means, among other things, that [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) will be `undefined`. However, an array can be easily used with `new` thanks to spread syntax:
