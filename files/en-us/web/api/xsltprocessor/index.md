@@ -330,4 +330,7 @@ function sort() {
 
 ## See also
 
-- [Using the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+- [XSLT](/en-US/docs/Web/XSLT)
+- [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) at [IBM developer](https://developer.ibm.com/)
+- [XSLT Tutorial](https://www.zvon.org/xxl/XSLTutorial/Books/Book1/index.html) at [zvon.org](https://www.zvon.org/)
+- [XPath Tutorial](https://www.zvon.org/xxl/XPathTutorial/General/examples.html) at [zvon.org](https://www.zvon.org/)

@@ -7353,7 +7353,7 @@
 /en-US/docs/Using_theMozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_the_:target_selector	/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
-/en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
+/en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
 /en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
 /en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
@@ -10352,6 +10352,7 @@
 /en-US/docs/Web/API/XRWebGLLayerInit/stencil	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/XRWebGLSubImage/textureHeight	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureHeight
 /en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
+/en-US/docs/Web/API/XSLTProcessor/Resources	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
@@ -12964,6 +12965,7 @@
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes	/en-US/docs/Web/XPath/Axes
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Functions	/en-US/docs/Web/XPath/Functions
+/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example	/en-US/docs/Web/API/XSLTProcessor
@@ -13321,11 +13323,11 @@
 /en-US/docs/XSLT_in_Gecko/Basic_Example-redirect-1	/en-US/docs/Web/API/XSLTProcessor/Basic_Example
 /en-US/docs/XSLT_in_Gecko/Generating_HTML	/en-US/docs/Web/API/XSLTProcessor/Generating_HTML
 /en-US/docs/XSLT_in_Gecko/Introduction	/en-US/docs/Web/API/XSLTProcessor/Introduction
-/en-US/docs/XSLT_in_Gecko/Resources	/en-US/docs/Web/API/XSLTProcessor/Resources
+/en-US/docs/XSLT_in_Gecko/Resources	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/XSLT_in_Gecko:Basic_Example	/en-US/docs/Web/API/XSLTProcessor/Basic_Example
 /en-US/docs/XSLT_in_Gecko:Generating_HTML	/en-US/docs/Web/API/XSLTProcessor/Generating_HTML
 /en-US/docs/XSLT_in_Gecko:Introduction	/en-US/docs/Web/API/XSLTProcessor/Introduction
-/en-US/docs/XSLT_in_Gecko:Resources	/en-US/docs/Web/API/XSLTProcessor/Resources
+/en-US/docs/XSLT_in_Gecko:Resources	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/XSL_Transforms	/en-US/docs/Web/API/XSLTProcessor

@@ -71075,17 +71075,6 @@
     "modified": "2019-03-23T23:49:50.843Z",
     "contributors": ["SphinxKnight", "teoli", "Mgjbot", "Sebuls", "JdeValk"]
   },
-  "Web/API/XSLTProcessor/Resources": {
-    "modified": "2019-03-23T23:49:54.309Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Mgjbot",
-      "Sheppy",
-      "Sebuls",
-      "JdeValk"
-    ]
-  },
   "Web/API/atob": {
     "modified": "2020-10-15T21:05:14.914Z",
     "contributors": [
@@ -129319,29 +129308,6 @@
   "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/self": {
     "modified": "2019-01-16T16:26:11.469Z",
     "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations": {
-    "modified": "2019-03-24T00:02:54.806Z",
-    "contributors": [
-      "ThomasCharles94",
-      "Jean-MariePETIT",
-      "teoli",
-      "cvrebert",
-      "ethertank",
-      "trevorh",
-      "bensg",
-      "Brettz9",
-      "Hasse.bjork",
-      "sicking",
-      "Nickolay",
-      "Mgjbot",
-      "Tdallamura",
-      "Fredchat",
-      "Sebuls",
-      "NickolayBot",
-      "Callek",
-      "Anguis"
-    ]
   },
   "WebAssembly": {
     "modified": "2020-10-15T21:51:43.373Z",
