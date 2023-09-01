@@ -486,7 +486,7 @@ Note that we don't recommend the general use of `<caption>` elements on tables, 
 
 #### GFM table maximum width
 
-Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. Consider the following table:
+Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "{{Glossary("ASCII")}} art" approach to tables that is not readable when table rows get long. Consider the following table:
 
 ```html
 <table>

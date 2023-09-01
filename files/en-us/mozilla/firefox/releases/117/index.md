@@ -10,13 +10,13 @@ This article provides information about the changes in Firefox 117 that affect d
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
 #### Removals
 
 ### CSS
+
+- The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module is now supported in Firefox, along with the the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This allows developers to write nested CSS, which helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce CSS file size, decreasing download sizes. ([Firefox bug 1835066](https://bugzil.la/1835066), [Firefox bug 1840781](https://bugzil.la/1840781))
 
 - The [`math-style`](/en-US/docs/Web/CSS/math-style) and [`math-depth`](/en-US/docs/Web/CSS/math-depth) properties are now supported, as well as the `math` value for the [`font-size`](/en-US/docs/Web/CSS/font-size#values) property ([Firefox bug 1845516](https://bugzil.la/1845516)).
 
@@ -54,6 +54,8 @@ This article provides information about the changes in Firefox 117 that affect d
 
 - The {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} method can now be used to get the 2D context attributes being used by the browser ([Firefox bug 1517786](https://bugzil.la/1517786)).
 - The {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} static member is now supported, allowing developers to construct a readable stream from any iterable or async iterable object ([Firefox bug 1772772](https://bugzil.la/1772772)).
+- [WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) are now supported, allowing web applications to modify incoming and outgoing WebRTC encoded video and audio frames using a {{DOMxRef("TransformStream")}} running in a worker.
+  The supported interfaces include: {{domxref("RTCRtpScriptTransform")}}, {{domxref("RTCRtpScriptTransformer")}}, {{domxref("RTCRtpSender.transform")}}, {{domxref("RTCRtpReceiver.transform")}}, {{domxref("RTCEncodedVideoFrame")}}, and {{domxref("RTCEncodedAudioFrame")}}, and the {{domxref("RTCTransformEvent")}} and worker {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event ([Firefox bug 1631263](https://bugzil.la/1631263)).
 
 #### DOM
 
@@ -77,6 +79,16 @@ This article provides information about the changes in Firefox 117 that affect d
 - All commands and events related to a navigation will now provide a `navigation` id, which is a `UUID` identifying a specific navigation. This property is available in the `browsingContext.navigate` response, in the `browsingContext.load`, `browsingContext.domContentLoaded`, `browsingContext.fragmentNavigated` events, as well as in all `network` events created for a navigation request ([Firefox bug 1763122](https://bugzil.la/1763122), [Firefox bug 1789484](https://bugzil.la/1789484), [Firefox bug 1805405](https://bugzil.la/1805405)).
 - `headers` and `cookies` in `network` events are now serialized as `network.BytesValue`, which will provide a better support for non-UTF8 values ([Firefox bug 1842619](https://bugzil.la/1842619)).
 - The `browsingContext.create` command will now wait until the created context has a valid size ([Firefox bug 1847044](https://bugzil.la/1847044)).
+
+### Developer tools
+
+- The Network Monitor now shows information about proxied requests, including the proxy address, the proxy status, and the proxy HTTP version in the [Headers tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) ([Firefox bug 1707192](https://bugzil.la/1707192)).
+
+- The area selected by the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) can now be resized and moved using keyboard shortcuts.
+  Pressing the arrow keys moves the selected area, while pressing <kbd>Ctrl</kbd> + arrow keys (or <kbd>Cmd</kbd> + arrow keys on a Mac) resizes the selected area.
+  Holding down the <kbd>Shift</kbd> key accelerates the moving and resizing actions when using these key combinations ([Firefox bug 1262782](https://bugzil.la/1262782)).
+
+- Properties that are not supported in highlight pseudo-elements ([`::highlight()`](/en-US/docs/Web/CSS/::highlight), [`::target-text`](/en-US/docs/Web/CSS/::target-text), [`::spelling-error`](/en-US/docs/Web/CSS/::spelling-error), [`::grammar-error`](/en-US/docs/Web/CSS/::grammar-error), and [`::selection`](/en-US/docs/Web/CSS/::selection)) are now reported in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) CSS rules panel ([Firefox bug 1842157](https://bugzil.la/1842157)).
 
 ## Changes for add-on developers
 
