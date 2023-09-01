@@ -240,6 +240,7 @@ TODO: Edit the section after updating the links
 ### Nominating a spotlight contributor
 
 See who can be a [spotlight contributor](#spotlight_contributor).
+
 To nominate someone as a spotlight contributor, open an issue on GitHub:
 
 1. On the `Issues` tab in the `mdn/mdn` repository, click the [**New issue**](https://github.com/mdn/mdn/issues/new/choose) button on the right.

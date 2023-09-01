@@ -59,14 +59,21 @@ const obj = { prop: [element0, element1, /* …, */ elementN] };
 
 If you wish to initialize an array with a single element, and the element happens to be a `Number`, you must use the bracket syntax. When a single `Number` value is passed to the `Array()` constructor or function, it is interpreted as an `arrayLength`, not as a single element.
 
+This creates an array with only one element: the number 42.
+
 ```js
-// This creates an array with only one element: the number 42.
 const arr = [42];
+```
 
-// This creates an array with no elements and arr.length set to 42.
+This creates an array with no elements and `arr.length` set to 42.
+
+```js
 const arr = Array(42);
+```
 
-// This is equivalent to:
+This is equivalent to:
+
+```js
 const arr = [];
 arr.length = 42;
 ```
@@ -489,6 +496,40 @@ console.log(total); // 60
 The [`reduceRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) method works like `reduce()`, but starts with the last element.
 
 `reduce` and `reduceRight` are the least obvious of the iterative array methods. They should be used for algorithms that combine two values recursively in order to reduce a sequence down to a single value.
+
+## Array transformations
+
+You can transform back and forth between arrays and other data structures.
+
+### Grouping the elements of an array
+
+The {{jsxref("Object.groupBy()")}} method can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
+
+Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
+
+```js
+const inventory = [
+  { name: "asparagus", type: "vegetables" },
+  { name: "bananas", type: "fruit" },
+  { name: "goat", type: "meat" },
+  { name: "cherries", type: "fruit" },
+  { name: "fish", type: "meat" },
+];
+```
+
+To use `Object.groupBy()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
+
+The code below uses an arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object). The result is an object that has properties named after the unique strings returned by the callback. Each property is assigned an array containing the elements in the group.
+
+```js
+const result = Object.groupBy(inventory, ({ type }) => type);
+console.log(result.vegetables);
+// [{ name: "asparagus", type: "vegetables" }]
+```
+
+Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+
+If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Map.groupBy()")}}. This is very similar to `Object.groupBy()` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
 
 ## Sparse arrays
 

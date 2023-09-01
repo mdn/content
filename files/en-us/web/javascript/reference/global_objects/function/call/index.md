@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Function.call
 
 {{JSRef}}
 
-The **`call()`** method calls the function with a given `this` value and arguments provided individually.
+The **`call()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value and arguments provided individually.
 
 {{EmbedInteractiveExample("pages/js/function-call.html")}}
 
@@ -16,7 +16,8 @@ The **`call()`** method calls the function with a given `this` value and argumen
 ```js-nolint
 call(thisArg)
 call(thisArg, arg1)
-call(thisArg, arg1, /* …, */ argN)
+call(thisArg, arg1, arg2)
+call(thisArg, arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters

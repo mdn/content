@@ -107,12 +107,12 @@ If you call `notifications.create()` more than once in rapid succession:
 
 #### Proxy API
 
-Firefox's {{WebExtAPIRef("proxy")}} API followed a completely different design from Chrome's Proxy API.
+Firefox and Chrome include a Proxy API. However, the design of these two APIs is incompatible.
 
-- **In Firefox**: An extension can register a PAC file.
-- **In Chrome**: An extension can register a PAC file, but can also define explicit proxying rules.
-
-Because this API is incompatible with Chrome's `proxy` API, the Firefox proxy API is only available through the `browser` namespace.
+- **In Firefox**: Proxies are set using the [proxy.settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings) property or [proxy.onRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest) to provide [ProxyInfo](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo) dynamically.
+  See [proxy](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) for more information on the API.
+- **In Chrome**: Proxy settings are defined in a [`proxy.ProxyConfig`](https://developer.chrome.com/docs/extensions/reference/proxy/#type-ProxyConfig) object. Depending on Chrome's proxy settings, the settings may contain [`proxy.ProxyRules`](https://developer.chrome.com/docs/extensions/reference/proxy/#type-ProxyRules) or a [`proxy.PacScript`](https://developer.chrome.com/docs/extensions/reference/proxy/#type-PacScript). Proxies are set using the [proxy.settings](https://developer.chrome.com/docs/extensions/reference/proxy/#property-settings) property.
+  See [chrome.proxy](https://developer.chrome.com/docs/extensions/reference/proxy/) for more information on the API.
 
 #### Tabs API
 
