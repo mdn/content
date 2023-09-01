@@ -19,9 +19,9 @@ updates.
 
 ```js-nolint
 setImmediate(func)
-setImmediate(func, param0)
-setImmediate(func, param0, param1)
-setImmediate(func, param0, param1, /* …, */ paramN)
+setImmediate(func, param1)
+setImmediate(func, param1, param2)
+setImmediate(func, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ setImmediate(func, param0, param1, /* …, */ paramN)
 
   - : The function you wish to call.
 
-- `param0`, …, `paramN`
+- `param1`, …, `paramN`
   - : All parameters will be passed directly to your function.
 
 ### Return value
