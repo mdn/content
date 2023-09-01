@@ -47,7 +47,6 @@ No notable changes.
 - [WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) are now supported, allowing web applications to modify incoming and outgoing WebRTC encoded video and audio frames using a {{DOMxRef("TransformStream")}} running in a worker.
   The supported interfaces include: {{domxref("RTCRtpScriptTransform")}}, {{domxref("RTCRtpScriptTransformer")}}, {{domxref("RTCRtpSender.transform")}}, {{domxref("RTCRtpReceiver.transform")}}, {{domxref("RTCEncodedVideoFrame")}}, and {{domxref("RTCEncodedAudioFrame")}}, and the {{domxref("RTCTransformEvent")}} and worker {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event ([Firefox bug 1631263](https://bugzil.la/1631263)).
 
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
