@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 117 that affect developers. Firefox 117 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [August 29, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 117 that affect developers. Firefox 117 was released on August 29, 2023.
 
 ## Changes for web developers
 
@@ -40,10 +40,6 @@ No notable changes.
 - The `Range` header is now a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range (e.g., `bytes=100-200`).
   This allows the `Range` header to be used in cross-origin requests without triggering a preflight request, which is useful for requesting media and resuming downloads ([Firefox bug 1733981](https://bugzil.la/1733981)).
 
-### Security
-
-No notable changes.
-
 ### APIs
 
 - The {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} method can now be used to get the 2D context attributes being used by the browser ([Firefox bug 1517786](https://bugzil.la/1517786)).
@@ -51,17 +47,6 @@ No notable changes.
 - [WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) are now supported, allowing web applications to modify incoming and outgoing WebRTC encoded video and audio frames using a {{DOMxRef("TransformStream")}} running in a worker.
   The supported interfaces include: {{domxref("RTCRtpScriptTransform")}}, {{domxref("RTCRtpScriptTransformer")}}, {{domxref("RTCRtpSender.transform")}}, {{domxref("RTCRtpReceiver.transform")}}, {{domxref("RTCEncodedVideoFrame")}}, and {{domxref("RTCEncodedAudioFrame")}}, and the {{domxref("RTCTransformEvent")}} and worker {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event ([Firefox bug 1631263](https://bugzil.la/1631263)).
 
-#### DOM
-
-No notable changes.
-
-#### Media, WebRTC, and Web Audio
-
-No notable changes.
-
-### WebAssembly
-
-No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
