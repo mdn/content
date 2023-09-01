@@ -20,7 +20,7 @@ removeProperty(property)
 ### Parameters
 
 - `property`
-  - A string representing the property name to be removed. Multi-word property names are hyphenated and not camel-cased.
+  - A string representing the property name to be removed. Multi-word property names are snake-case, not camelCase.
 
 ### Return value
 
