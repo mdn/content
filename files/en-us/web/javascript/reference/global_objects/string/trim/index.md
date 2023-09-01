@@ -19,6 +19,10 @@ To return a new string with whitespace trimmed from just one end, use {{jsxref("
 trim()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new string representing `str` stripped of whitespace from both its beginning and end. Whitespace is defined as [white space](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) characters plus [line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators).

@@ -12,8 +12,8 @@ The **`next()`** method of {{jsxref("AsyncGenerator")}} instances returns the ne
 ## Syntax
 
 ```js-nolint
-asyncGeneratorObject.next()
-asyncGeneratorObject.next(value)
+next()
+next(value)
 ```
 
 ### Parameters

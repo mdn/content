@@ -14,6 +14,7 @@ The **`String.fromCharCode()`** static method returns a string created from the 
 ## Syntax
 
 ```js-nolint
+String.fromCharCode()
 String.fromCharCode(num1)
 String.fromCharCode(num1, num2)
 String.fromCharCode(num1, num2, /* …, */ numN)
@@ -21,7 +22,7 @@ String.fromCharCode(num1, num2, /* …, */ numN)
 
 ### Parameters
 
-- `numN`
+- `num1`, …, `numN`
   - : A number between `0` and `65535` (`0xFFFF`) representing a UTF-16 code unit. Numbers greater than `0xFFFF` are truncated to the last 16 bits. No validity checks are performed.
 
 ### Return value

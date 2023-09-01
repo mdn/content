@@ -32,8 +32,7 @@ function name(param0, param1, /* …, */ paramN) {
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
-  - : The name of an argument to be passed to the function. Maximum number of arguments
-    varies in different engines.
+  - : The name of a formal parameter for the function. Maximum number of arguments varies in different engines. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 

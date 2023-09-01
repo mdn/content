@@ -224,4 +224,4 @@ console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 
 ## See also
 
-- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)
+- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/) by [dorey](https://github.com/dorey)

@@ -72,5 +72,5 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 - [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
 - [Using the Permissions API to Detect How Often Users Allow or Deny Camera Access](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
-- {{DOMxRef("Notification.permission")}}
+- {{DOMxref("Notification.permission_static", "Notification.permission")}}
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

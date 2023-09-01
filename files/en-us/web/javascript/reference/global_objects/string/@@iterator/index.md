@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.String.@@iterator
 
 The **`[@@iterator]()`** method of {{jsxref("String")}} values implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows strings to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [string iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the Unicode code points of the string value as individual strings.
 
-{{EmbedInteractiveExample("pages/js/string-iterator.html")}}
+{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
 
 ## Syntax
 
 ```js-nolint
 string[Symbol.iterator]()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
