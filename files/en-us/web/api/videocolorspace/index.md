@@ -35,7 +35,7 @@ The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}
 In the following example, `colorSpace` is a `VideoColorSpace` object returned from {{domxref("VideoFrame")}}. The object is then printed to the console.
 
 ```js
-let colorSpace = VideoFrame.colorSpace
+let colorSpace = VideoFrame.colorSpace;
 console.log(colorSpace);
 ```
 

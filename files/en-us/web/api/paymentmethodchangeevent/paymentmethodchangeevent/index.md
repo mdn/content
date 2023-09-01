@@ -1,5 +1,6 @@
 ---
-title: PaymentMethodChangeEvent()
+title: "PaymentMethodChangeEvent: PaymentMethodChangeEvent() constructor"
+short-title: PaymentMethodChangeEvent()
 slug: Web/API/PaymentMethodChangeEvent/PaymentMethodChangeEvent
 page-type: web-api-constructor
 browser-compat: api.PaymentMethodChangeEvent.PaymentMethodChangeEvent

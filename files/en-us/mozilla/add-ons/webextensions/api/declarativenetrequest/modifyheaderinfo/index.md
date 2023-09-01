@@ -1,16 +1,8 @@
 ---
 title: declarativeNetRequest.ModifyHeaderInfo
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ModifyHeaderInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - ModifyHeaderInfo
-browser-compat: 
+page-type: webextension-api-type
+browser-compat:
   - webextensions.api.declarativeNetRequest.RuleAction.requestHeaders
   - webextensions.api.declarativeNetRequest.RuleAction.responseHeaders
 ---
@@ -67,6 +59,8 @@ In Chrome, `"append"` is supported for the following request headers:
 - `X-Forwarded-For`
 
 In Firefox, the extension needs host permissions for the new value of the `Host` header.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

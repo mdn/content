@@ -2,16 +2,6 @@
 title: tabs.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getCurrent
-  - tabs
 browser-compat: webextensions.api.tabs.getCurrent
 ---
 

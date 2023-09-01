@@ -1,5 +1,6 @@
 ---
-title: Selection.anchorNode
+title: "Selection: anchorNode property"
+short-title: anchorNode
 slug: Web/API/Selection/anchorNode
 page-type: web-api-instance-property
 browser-compat: api.Selection.anchorNode

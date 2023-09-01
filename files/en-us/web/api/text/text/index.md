@@ -1,5 +1,6 @@
 ---
-title: Text()
+title: "Text: Text() constructor"
+short-title: Text()
 slug: Web/API/Text/Text
 page-type: web-api-constructor
 browser-compat: api.Text.Text

@@ -1,5 +1,6 @@
 ---
-title: Element.ariaValueMin
+title: "Element: ariaValueMin property"
+short-title: ariaValueMin
 slug: Web/API/Element/ariaValueMin
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaValueMin

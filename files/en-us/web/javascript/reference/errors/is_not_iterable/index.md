@@ -14,7 +14,7 @@ is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_proto
 
 ## Message
 
-```
+```plain
 TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator)) (V8-based)
 TypeError: x is not iterable (Firefox)
 TypeError: undefined is not a function (near '...[x]...') (Safari)
@@ -104,7 +104,7 @@ for (const [country, capital] of map.entries()) {
 
 ### Iterating over a generator
 
-[Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
+[Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions)
 are functions you call to produce an iterable object.
 
 ```js example-bad
@@ -168,5 +168,5 @@ Array.from(myEmptyIterable); // []
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
-- [Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
+- [Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions)
 - [for...of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

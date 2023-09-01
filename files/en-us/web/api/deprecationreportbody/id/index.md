@@ -1,5 +1,6 @@
 ---
-title: DeprecationReportBody.id
+title: "DeprecationReportBody: id property"
+short-title: id
 slug: Web/API/DeprecationReportBody/id
 page-type: web-api-instance-property
 status:

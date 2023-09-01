@@ -1,5 +1,6 @@
 ---
-title: DataTransferItemList.clear()
+title: "DataTransferItemList: clear() method"
+short-title: clear()
 slug: Web/API/DataTransferItemList/clear
 page-type: web-api-instance-method
 browser-compat: api.DataTransferItemList.clear

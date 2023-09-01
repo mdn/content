@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.replace()
+title: "DOMTokenList: replace() method"
+short-title: replace()
 slug: Web/API/DOMTokenList/replace
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.replace

@@ -17,21 +17,31 @@ The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{H
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cols")}} {{Deprecated_Inline}}
+- `cols` {{Deprecated_Inline}}
   - : This attribute specifies the number and size of horizontal spaces in a frameset.
-- {{htmlattrdef("rows")}} {{Deprecated_Inline}}
+- `rows` {{Deprecated_Inline}}
   - : This attribute specifies the number and size of vertical spaces in a frameset.
 
 ## Example
 
+### A frameset document
+
+A frameset document has a `<frameset>` element instead of a {{HTMLElement("body")}} element. The {{HTMLElement("frame")}} elements are placed within the `<frameset>`.
+
 ```html
-<frameset cols="50%,50%">
-  <frame
-    src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset" />
-  <frame
-    src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame" />
-</frameset>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <!-- Document metadata goes here -->
+  </head>
+  <frameset cols="50%, 50%">
+    <frame src="https://developer.mozilla.org/en/HTML/Element/iframe" />
+    <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
+  </frameset>
+</html>
 ```
+
+If you want to embed another HTML page into the {{HTMLElement("body")}} of a document, use an {{HTMLElement("iframe")}} element.
 
 ## Specifications
 

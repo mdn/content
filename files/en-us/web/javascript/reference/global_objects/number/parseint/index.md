@@ -47,7 +47,7 @@ This method has the same functionality as the global {{jsxref("parseInt",
   "parseInt()")}} function:
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
 Its purpose is modularization of globals. Please see
@@ -64,5 +64,5 @@ Its purpose is modularization of globals. Please see
 ## See also
 
 - [Polyfill of `Number.parseInt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- The {{jsxref("Number")}} object it belongs to.
-- The global {{jsxref("parseInt", "parseInt()")}} method.
+- {{jsxref("Number")}}
+- {{jsxref("parseInt", "parseInt()")}}

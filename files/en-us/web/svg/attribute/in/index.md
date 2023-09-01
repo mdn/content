@@ -2,11 +2,6 @@
 title: in
 slug: Web/SVG/Attribute/in
 page-type: svg-attribute
-tags:
-  - Filters
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
 ---
 
@@ -98,7 +93,7 @@ You can use this attribute with the following SVG elements:
       </filter>
     </defs>
     <image
-      xlink:href="mdn_logo_only_color.png"
+      href="mdn_logo_only_color.png"
       x="10%"
       y="10%"
       width="80%"
@@ -119,7 +114,7 @@ You can use this attribute with the following SVG elements:
       <filter id="imageMultiply">
         <!-- This is a workaround. -->
         <feImage
-          xlink:href="mdn_logo_only_color.png"
+          href="mdn_logo_only_color.png"
           x="10%"
           y="10%"
           width="80%"

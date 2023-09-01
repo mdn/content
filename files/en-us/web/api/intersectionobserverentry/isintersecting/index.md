@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserverEntry.isIntersecting
+title: "IntersectionObserverEntry: isIntersecting property"
+short-title: isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.isIntersecting

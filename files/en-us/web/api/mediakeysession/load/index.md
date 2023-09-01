@@ -1,5 +1,6 @@
 ---
-title: MediaKeySession.load()
+title: "MediaKeySession: load() method"
+short-title: load()
 slug: Web/API/MediaKeySession/load
 page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.load

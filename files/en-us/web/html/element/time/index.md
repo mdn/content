@@ -1,5 +1,5 @@
 ---
-title: '<time>: The (Date) Time element'
+title: "<time>: The (Date) Time element"
 slug: Web/HTML/Element/time
 page-type: html-element
 browser-compat: html.elements.time
@@ -21,7 +21,7 @@ It may represent one of the following:
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : This attribute indicates the time and/or date of the element and must be in one of the formats described below.
 
 ## Usage notes
@@ -85,7 +85,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 <p>The concert starts at <time datetime="2018-07-07T20:00:00">20:00</time>.</p>
 ```
 
-#### Output
+#### Result
 
 {{EmbedLiveSample('Simple_example', 250, 80)}}
 
@@ -99,7 +99,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 </p>
 ```
 
-#### Output
+#### Result
 
 {{EmbedLiveSample('datetime_example', 250, 80)}}
 

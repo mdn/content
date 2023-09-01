@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.set()
+title: "HighlightRegistry: set() method"
+short-title: set()
 slug: Web/API/HighlightRegistry/set
 page-type: web-api-instance-method
 status:
@@ -49,9 +50,10 @@ const fooHighlight = new Highlight();
 const barHighlight = new Highlight();
 const bazHighlight = new Highlight();
 
-CSS.highlights.set("foo", fooHighlight)
-              .set("bar", barHighlight)
-              .set("baz", bazHighlight);
+CSS.highlights
+  .set("foo", fooHighlight)
+  .set("bar", barHighlight)
+  .set("baz", bazHighlight);
 ```
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
-title: RTCRtpStreamStats.nackCount
+title: "RTCRtpStreamStats: nackCount property"
+short-title: nackCount
 slug: Web/API/RTCRtpStreamStats/nackCount
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.nackCount

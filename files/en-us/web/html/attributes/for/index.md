@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: for'
+title: "HTML attribute: for"
 slug: Web/HTML/Attributes/for
 page-type: html-attribute
 browser-compat:

@@ -7,19 +7,21 @@ browser-compat: javascript.builtins.Intl.Locale.maximize
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.maximize()`** method gets the
-most likely values for the language, script, and region of the locale based on
+The **`maximize()`** method of {{jsxref("Intl.Locale")}} instances gets the
+most likely values for the language, script, and region of this locale based on
 existing values.
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
 ```js-nolint
 maximize()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -48,18 +50,18 @@ include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
 
 ```js
 const myLocale = new Intl.Locale("fr", {
-  hourCycle: "h24",
+  hourCycle: "h12",
   calendar: "gregory",
 });
 console.log(myLocale.baseName); // Prints "fr"
-console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h24"
+console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h12"
 const myLocMaximized = myLocale.maximize();
 
 // Prints "fr-Latn-FR". The "Latn" and "FR" tags are added,
 // since French is only written in the Latin script and is most likely to be spoken in France.
 console.log(myLocMaximized.baseName);
 
-// Prints "fr-Latn-FR-u-ca-gregory-hc-h24".
+// Prints "fr-Latn-FR-u-ca-gregory-hc-h12".
 // Note that the extension tags (after "-u") remain unchanged.
 console.log(myLocMaximized.toString());
 ```
@@ -76,4 +78,4 @@ console.log(myLocMaximized.toString());
 
 - {{jsxref("Intl.Locale")}}
 - {{jsxref("Intl/Locale/baseName", "baseName")}}
-- [Unicode's Likely Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)
+- [Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) in the Unicode locale data markup language spec

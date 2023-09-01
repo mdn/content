@@ -1,6 +1,7 @@
 ---
 title: Creating and triggering events
 slug: Web/Events/Creating_and_triggering_events
+page-type: guide
 ---
 
 This article demonstrates how to create and dispatch DOM events. Such events are commonly called **synthetic events**, as opposed to the events fired by the browser itself.
@@ -18,7 +19,7 @@ elem.addEventListener(
   (e) => {
     /* … */
   },
-  false
+  false,
 );
 
 // Dispatch the event.
@@ -63,7 +64,7 @@ elem.addEventListener(
   (e) => {
     // e.target matches elem
   },
-  false
+  false,
 );
 
 // target can be any Element or other EventTarget.
@@ -120,14 +121,14 @@ textarea.addEventListener("input", function () {
     new CustomEvent("awesome", {
       bubbles: true,
       detail: { text: () => textarea.value },
-    })
+    }),
   );
 });
 ```
 
 ## Triggering built-in events
 
-This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. [View the example in action.](https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html)
+This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. [View the example in action.](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)
 
 ```js
 function simulateClick() {

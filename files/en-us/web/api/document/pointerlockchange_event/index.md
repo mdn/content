@@ -1,5 +1,6 @@
 ---
 title: "Document: pointerlockchange event"
+short-title: pointerlockchange
 slug: Web/API/Document/pointerlockchange_event
 page-type: web-api-event
 browser-compat: api.Document.pointerlockchange_event
@@ -8,6 +9,8 @@ browser-compat: api.Document.pointerlockchange_event
 {{APIRef}}
 
 The `pointerlockchange` event is fired when the pointer is locked/unlocked.
+
+The event handler can use {{domxref("Document.pointerLockElement")}} to determine whether the pointer is locked, and if so, to which element it is locked.
 
 This event is not cancelable.
 
@@ -30,8 +33,12 @@ A generic {{domxref("Event")}}.
 Using `addEventListener()`:
 
 ```js
-document.addEventListener("pointerlockchange", (event) => {
-  console.log("Pointer lock changed");
+addEventListener("pointerlockchange", (event) => {
+  if (document.pointerLockElement)
+    console.log("The pointer is locked to: ", document.pointerLockElement);
+  else {
+    console.log("The pointer is not locked");
+  }
 });
 ```
 
@@ -39,7 +46,11 @@ Using the `onpointerlockchange` event handler property:
 
 ```js
 document.onpointerlockchange = (event) => {
-  console.log("Pointer lock changed");
+  if (document.pointerLockElement)
+    console.log("The pointer is locked to: ", document.pointerLockElement);
+  else {
+    console.log("The pointer is not locked");
+  }
 };
 ```
 

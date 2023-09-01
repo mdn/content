@@ -62,7 +62,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Examples
 
-In our basic [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`.
+In our basic [Speech synthesizer demo](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`.
 After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.
 
 Inside the `inputForm.onsubmit` handler, we stop the form submitting with {{domxref("Event.preventDefault","preventDefault()")}}, use the {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} to create a new utterance instance containing the text from the text {{htmlelement("input")}}, set the utterance's {{domxref("SpeechSynthesisUtterance.voice","voice")}} to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.
@@ -70,16 +70,16 @@ Inside the `inputForm.onsubmit` handler, we stop the form submitting with {{domx
 ```js
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('input');
-const voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
 let voices;
 
 function loadVoices() {
   voices = synth.getVoices();
   for (let i = 0; i < voices.length; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = `${voices[i].name} (${voices[i].lang})`;
     option.value = i;
     voiceSelect.appendChild(option);
@@ -87,7 +87,7 @@ function loadVoices() {
 }
 
 // in Google Chrome the voices are not ready on page load
-if ('onvoiceschanged' in synth) {
+if ("onvoiceschanged" in synth) {
   synth.onvoiceschanged = loadVoices;
 } else {
   loadVoices();
@@ -100,7 +100,7 @@ inputForm.onsubmit = (event) => {
   utterThis.voice = voices[voiceSelect.value];
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

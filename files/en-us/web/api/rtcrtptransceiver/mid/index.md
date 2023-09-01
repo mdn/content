@@ -1,5 +1,6 @@
 ---
-title: RTCRtpTransceiver.mid
+title: "RTCRtpTransceiver: mid property"
+short-title: mid
 slug: Web/API/RTCRtpTransceiver/mid
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpTransceiver.mid

@@ -1,5 +1,6 @@
 ---
-title: PaymentMethodChangeEvent.methodName
+title: "PaymentMethodChangeEvent: methodName property"
+short-title: methodName
 slug: Web/API/PaymentMethodChangeEvent/methodName
 page-type: web-api-instance-property
 browser-compat: api.PaymentMethodChangeEvent.methodName

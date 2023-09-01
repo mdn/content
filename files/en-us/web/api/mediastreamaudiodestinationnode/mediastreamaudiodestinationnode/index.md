@@ -1,5 +1,6 @@
 ---
-title: MediaStreamAudioDestinationNode()
+title: "MediaStreamAudioDestinationNode: MediaStreamAudioDestinationNode() constructor"
+short-title: MediaStreamAudioDestinationNode()
 slug: Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode
 page-type: web-api-constructor
 browser-compat: api.MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode

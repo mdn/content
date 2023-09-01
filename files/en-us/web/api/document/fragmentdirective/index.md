@@ -1,5 +1,6 @@
 ---
-title: Document.fragmentDirective
+title: "Document: fragmentDirective property"
+short-title: fragmentDirective
 slug: Web/API/Document/fragmentDirective
 page-type: web-api-instance-property
 status:

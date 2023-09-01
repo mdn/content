@@ -1,5 +1,6 @@
 ---
-title: FontFace.style
+title: "FontFace: style property"
+short-title: style
 slug: Web/API/FontFace/style
 page-type: web-api-instance-property
 browser-compat: api.FontFace.style

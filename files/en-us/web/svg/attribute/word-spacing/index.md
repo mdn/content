@@ -2,9 +2,6 @@
 title: word-spacing
 slug: Web/SVG/Attribute/word-spacing
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.word-spacing
 ---
 
@@ -20,7 +17,6 @@ If a \<length> is provided with one of the unit identifiers (e.g. .25em or 1%), 
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}

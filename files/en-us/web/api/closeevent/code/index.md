@@ -1,5 +1,6 @@
 ---
-title: CloseEvent.code
+title: "CloseEvent: code property"
+short-title: code
 slug: Web/API/CloseEvent/code
 page-type: web-api-instance-property
 browser-compat: api.CloseEvent.code

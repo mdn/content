@@ -1,5 +1,6 @@
 ---
-title: EXT_texture_norm16
+title: EXT_texture_norm16 extension
+short-title: EXT_texture_norm16
 slug: Web/API/EXT_texture_norm16
 page-type: webgl-extension
 browser-compat: api.EXT_texture_norm16

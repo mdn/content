@@ -2,14 +2,6 @@
 title: management.getPermissionWarningsByManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - getPermissionWarningsByManifest
-  - management
 browser-compat: webextensions.api.management.getPermissionWarningsByManifest
 ---
 
@@ -50,11 +42,11 @@ Log the permission warnings for the given manifest file:
 
 ```js
 let manifest = {
-  "manifest_version": 2,
-  "name": "test",
-  "version": "1.0",
-  "permissions": ["management", "<all_urls>"]
-}
+  manifest_version: 2,
+  name: "test",
+  version: "1.0",
+  permissions: ["management", "<all_urls>"],
+};
 
 let manifestString = JSON.stringify(manifest);
 
@@ -66,7 +58,8 @@ function gotError(error) {
   console.log(`Error: ${error}`);
 }
 
-let gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
+let gettingWarnings =
+  browser.management.getPermissionWarningsByManifest(manifestString);
 gettingWarnings.then(gotWarnings, gotError);
 ```
 

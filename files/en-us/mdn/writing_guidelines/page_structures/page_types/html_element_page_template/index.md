@@ -40,7 +40,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > - **page-type**
 >   - : Always `html-element`.
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `html.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -59,7 +59,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
@@ -67,6 +67,8 @@ browser-compat: path.to.feature.NameOfTheElement
 > - `\{{HTMLSidebar}}` — this generates the left-hand-side reference sidebar for the element.
 >   The content of the sidebar depends on the tags in the page metadata.
 > - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>
+> Samples of the **Experimental** and **Deprecated** banners are shown right after this note block.
 >
 > _Remember to remove this whole explanatory note before publishing_
 
@@ -192,14 +194,20 @@ Optionally, warn of any potential accessibility concerns that exist with using t
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-- Include list of
-- other links related to
-- this Element that might be useful
+Include links to reference pages and guides related to the current element. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2
+- external_link (year)

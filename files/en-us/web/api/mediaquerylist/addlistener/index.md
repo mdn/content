@@ -1,5 +1,6 @@
 ---
-title: MediaQueryList.addListener()
+title: "MediaQueryList: addListener() method"
+short-title: addListener()
 slug: Web/API/MediaQueryList/addListener
 page-type: web-api-instance-method
 status:
@@ -38,18 +39,18 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const paragraph = document.querySelector('p');
-const mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector("p");
+const mediaQueryList = window.matchMedia("(max-width: 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    paragraph.textContent = 'This is a narrow screen — 600px wide or less.';
-    document.body.style.backgroundColor = 'pink';
+    paragraph.textContent = "This is a narrow screen — 600px wide or less.";
+    document.body.style.backgroundColor = "pink";
   } else {
     /* the viewport is more than 600 pixels wide */
-    paragraph.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'aquamarine';
+    paragraph.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "aquamarine";
   }
 }
 
@@ -66,8 +67,8 @@ mediaQueryList.addListener(screenTest);
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

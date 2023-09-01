@@ -1,12 +1,7 @@
 ---
 title: firefoxOptions
 slug: Web/WebDriver/Capabilities/firefoxOptions
-tags:
-  - Reference
-  - WebDriver
-  - capabilities
-  - Extension capabilities
-  - firefoxOptions
+page-type: webdriver-capability
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}

@@ -1,5 +1,6 @@
 ---
-title: XRWebGLSubImage.colorTexture
+title: "XRWebGLSubImage: colorTexture property"
+short-title: colorTexture
 slug: Web/API/XRWebGLSubImage/colorTexture
 page-type: web-api-instance-property
 status:
@@ -23,7 +24,9 @@ The `colorTexture` property can be passed to {{domxref("WebGL2RenderingContext.f
 
 ```js
 const xrGlBinding = new XRWebGLBinding(xrSession, gl);
-const layer = xrGlBinding.createProjectionLayer({ textureType: "texture-array" });
+const layer = xrGlBinding.createProjectionLayer({
+  textureType: "texture-array",
+});
 const framebuffer = gl.createFramebuffer();
 
 xrSession.updateRenderState({ layers: [layer] });
@@ -38,10 +41,20 @@ function onXRFrame(time, xrFrame) {
 
   for (const view in xrViewerPose.views) {
     const subImage = xrGlBinding.getViewSubImage(layer, view);
-    gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
-      subImage.colorTexture, 0, subImage.imageIndex);
-    gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,
-      subImage.depthStencilTexture, 0, subImage.imageIndex);
+    gl.framebufferTextureLayer(
+      gl.FRAMEBUFFER,
+      gl.COLOR_ATTACHMENT0,
+      subImage.colorTexture,
+      0,
+      subImage.imageIndex,
+    );
+    gl.framebufferTextureLayer(
+      gl.FRAMEBUFFER,
+      gl.DEPTH_ATTACHMENT,
+      subImage.depthStencilTexture,
+      0,
+      subImage.imageIndex,
+    );
 
     // Render from the viewpoint of xrView
   }

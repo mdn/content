@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.kind
+title: "MediaStreamTrack: kind property"
+short-title: kind
 slug: Web/API/MediaStreamTrack/kind
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrack.kind

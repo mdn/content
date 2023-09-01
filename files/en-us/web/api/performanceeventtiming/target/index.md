@@ -1,5 +1,6 @@
 ---
-title: PerformanceEventTiming.target
+title: "PerformanceEventTiming: target property"
+short-title: target
 slug: Web/API/PerformanceEventTiming/target
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEventTiming.target
@@ -13,7 +14,7 @@ The read-only **`target`** property returns the associated event's last [`target
 
 A {{domxref("Node")}} onto which the event was last dispatched.
 
-Or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the `Node` is disconnected from the document's DOM or is in the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+Or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the `Node` is disconnected from the document's DOM or is in the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
 ## Examples
 
@@ -32,7 +33,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 // Register the observer for events
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 ```
 
 ## Specifications

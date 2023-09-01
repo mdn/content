@@ -1,5 +1,6 @@
 ---
-title: Highlight.clear()
+title: "Highlight: clear() method"
+short-title: clear()
 slug: Web/API/Highlight/clear
 page-type: web-api-instance-method
 status:

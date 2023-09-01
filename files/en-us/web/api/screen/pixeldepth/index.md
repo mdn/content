@@ -1,5 +1,6 @@
 ---
-title: Screen.pixelDepth
+title: "Screen: pixelDepth property"
+short-title: pixelDepth
 slug: Web/API/Screen/pixelDepth
 page-type: web-api-instance-property
 browser-compat: api.Screen.pixelDepth

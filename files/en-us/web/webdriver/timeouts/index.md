@@ -1,9 +1,7 @@
 ---
 title: Timeouts
 slug: Web/WebDriver/Timeouts
-tags:
-  - WebDriver
-  - timeouts
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}

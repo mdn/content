@@ -1,5 +1,6 @@
 ---
-title: InterventionReportBody.sourceFile
+title: "InterventionReportBody: sourceFile property"
+short-title: sourceFile
 slug: Web/API/InterventionReportBody/sourceFile
 page-type: web-api-instance-property
 status:
@@ -23,9 +24,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

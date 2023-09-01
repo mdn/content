@@ -2,9 +2,6 @@
 title: keyPoints
 slug: Web/SVG/Attribute/keyPoints
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.animateMotion.keyPoints
 ---
 
@@ -15,7 +12,6 @@ The **`keyPoints`** attribute indicates the simple duration of an animation.
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
@@ -51,7 +47,7 @@ svg {
       keyPoints="0;0.5;1"
       keyTimes="0;0.15;1"
       calcMode="linear">
-      <mpath xlink:href="#motionPath" />
+      <mpath href="#motionPath" />
     </animateMotion>
   </circle>
 </svg>

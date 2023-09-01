@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.delete()
+title: "IDBObjectStore: delete() method"
+short-title: delete()
 slug: Web/API/IDBObjectStore/delete
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.delete

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getUniformIndices()
+title: "WebGL2RenderingContext: getUniformIndices() method"
+short-title: getUniformIndices()
 slug: Web/API/WebGL2RenderingContext/getUniformIndices
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getUniformIndices
@@ -32,7 +33,11 @@ An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLuint")}} containing th
 ## Examples
 
 ```js
-const uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
+const uniformIndices = gl.getUniformIndices(program, [
+  "UBORed",
+  "UBOGreen",
+  "UBOBlue",
+]);
 ```
 
 ## Specifications

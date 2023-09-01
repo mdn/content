@@ -74,7 +74,7 @@ Object.getPrototypeOf(ChildClass) === ParentClass;
 Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
 ```
 
-The right-hand side of `extends` does not have to be an identifier. You can use any expression that evaluates to a constructor. This is often useful to create [mixins](#mix-ins).
+The right-hand side of `extends` does not have to be an identifier. You can use any expression that evaluates to a constructor. This is often useful to create [mixins](#mix-ins). The `this` value in the `extends` expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await", "await")}} and {{jsxref("Operators/yield", "yield")}} work as expected in this expression.
 
 ```js
 class SomeClass extends class {
@@ -108,6 +108,7 @@ console.log(new ParentClass()); // ParentClass {}
 
 class ChildClass extends ParentClass {
   constructor() {
+    super();
     return 1;
   }
 }
@@ -221,13 +222,47 @@ d.speak(); // Mitzie makes a noise.
 
 This example extends the built-in {{jsxref("Date")}} object. This example is extracted from this [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
-```js
+```js-nolint
 class MyDate extends Date {
   getFormattedDate() {
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const months = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    ];
     return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
   }
 }
+```
+
+### Extending `Object`
+
+All JavaScript objects inherit from `Object.prototype` by default, so writing `extends Object` at first glance seems redundant. The only difference from not writing `extends` at all is that the constructor itself inherits static methods from `Object`, such as {{jsxref("Object.keys()")}}. However, because no `Object` static method uses the `this` value, there's still no value in inheriting these static methods.
+
+The {{jsxref("Object/Object", "Object()")}} constructor special-cases the subclassing scenario. If it's implicitly called via [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super), it always initializes a new object with `new.target.prototype` as its prototype. Any value passed to `super()` is ignored.
+
+```js
+class C extends Object {
+  constructor(v) {
+    super(v);
+  }
+}
+
+console.log(new C(1) instanceof Number); // false
+console.log(C.keys({ a: 1, b: 2 })); // [ 'a', 'b' ]
+```
+
+Compare this behavior with a custom wrapper that does not special-case subclassing:
+
+```js
+function MyObject(v) {
+  return new Object(v);
+}
+class D extends MyObject {
+  constructor(v) {
+    super(v);
+  }
+}
+console.log(new D(1) instanceof Number); // true
 ```
 
 ### Species
@@ -342,7 +377,8 @@ In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still i
 
 ## See also
 
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
-- [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+- {{jsxref("Classes/constructor", "constructor")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Operators/super", "super")}}

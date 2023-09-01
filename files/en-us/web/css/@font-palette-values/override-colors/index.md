@@ -21,14 +21,20 @@ override-colors: 0 red;
 /* using hex-color */
 override-colors: 0 #f00;
 
-/* using rbg */
+/* using rgb */
 override-colors: 0 rgb(255, 0, 0);
 
 /* overriding multiple colors */
-override-colors: 0 #f00, 1 #0f0, 2 #00f;
+override-colors:
+  0 #f00,
+  1 #0f0,
+  2 #00f;
 
 /* overriding multiple colors with readability */
-override-colors: 0 #f00, 1 #0f0, 2 #00f;
+override-colors:
+  0 #f00,
+  1 #0f0,
+  2 #00f;
 ```
 
 The `override-colors` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) takes a comma-separated list of the color index and new color value.
@@ -170,3 +176,4 @@ This example shows the that in `base-palette` `3`, the color at index 0 is overr
 - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
 - {{cssxref("@font-palette-values/font-family", "font-family")}}
 - {{cssxref("font-palette/", "font-palette")}}
+- {{domxref("CSSFontPaletteValuesRule.overrideColors")}}

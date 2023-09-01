@@ -1,6 +1,7 @@
 ---
 title: "ARIA: banner role"
 slug: Web/Accessibility/ARIA/Roles/banner_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#banner
   - https://w3c.github.io/aria-practices/#aria_lh_banner

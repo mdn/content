@@ -21,6 +21,11 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 - {{domxref("ReadableStream.locked")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether or not the readable stream is locked to a reader.
 
+## Static methods
+
+- {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} {{Experimental_Inline}}
+  - : Returns `ReadableStream` from a provided iterable or async iterable object, such as an array, a set, an async generator, and so on.
+
 ## Instance methods
 
 - {{domxref("ReadableStream.cancel()")}}
@@ -104,7 +109,7 @@ fetch("https://www.example.org")
   })
   .then((stream) =>
     // Respond with our stream
-    new Response(stream, { headers: { "Content-Type": "text/html" } }).text()
+    new Response(stream, { headers: { "Content-Type": "text/html" } }).text(),
   )
   .then((result) => {
     // Do things with result
@@ -112,9 +117,15 @@ fetch("https://www.example.org")
   });
 ```
 
-### Convert async iterator to stream
+### Convert an iterator or async iterator to a stream
 
-Converting an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) to a readable stream:
+The {{domxref("ReadableStream/from_static", "from()")}} static method can convert an iterator, such as an {{jsxref("Array")}} or {{jsxref("Map")}}, or an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) to a readable stream:
+
+```js
+const myReadableStream = ReadableStream.from(iteratorOrAsyncIterator);
+```
+
+On browsers that don't support the `from()` method you can instead create your own [custom readable stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#creating_your_own_custom_readable_stream) to achieve the same result:
 
 ```js
 function iteratorToStream(iterator) {
@@ -132,8 +143,6 @@ function iteratorToStream(iterator) {
 }
 ```
 
-This works with both async and non-async iterators.
-
 ### Async iteration of a stream using for await...of
 
 This example shows how you can process the `fetch()` response using a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop to iterate through the arriving chunks.
@@ -142,7 +151,7 @@ This example shows how you can process the `fetch()` response using a [`for awai
 const response = await fetch("https://www.example.org");
 let total = 0;
 
-// Iterate response.body (a ReadableStream) asynchronously 
+// Iterate response.body (a ReadableStream) asynchronously
 for await (const chunk of response.body) {
   // Do something with each chunk
   // Here we just accumulate the size of the response.
@@ -163,5 +172,8 @@ console.log(total);
 
 ## See also
 
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
-- [web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills

@@ -1,5 +1,5 @@
 ---
-title: '<nobr>: The Non-Breaking Text element'
+title: "<nobr>: The Non-Breaking Text element"
 slug: Web/HTML/Element/nobr
 page-type: html-element
 status:

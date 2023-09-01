@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSettings.sampleRate
+title: "MediaTrackSettings: sampleRate property"
+short-title: sampleRate
 slug: Web/API/MediaTrackSettings/sampleRate
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.sampleRate

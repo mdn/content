@@ -1,5 +1,6 @@
 ---
-title: Window.sidebar
+title: "Window: sidebar property"
+short-title: sidebar
 slug: Web/API/Window/sidebar
 page-type: web-api-instance-property
 status:

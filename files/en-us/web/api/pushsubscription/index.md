@@ -36,12 +36,15 @@ An instance of this interface can be serialized.
 ```js
 navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
-    subscription.unsubscribe().then((successful) => {
-      // You've successfully unsubscribed
-    }).catch((e) => {
-      // Unsubscribing failed
-    })
-  })
+    subscription
+      .unsubscribe()
+      .then((successful) => {
+        // You've successfully unsubscribed
+      })
+      .catch((e) => {
+        // Unsubscribing failed
+      });
+  });
 });
 ```
 

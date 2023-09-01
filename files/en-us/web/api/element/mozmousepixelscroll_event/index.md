@@ -1,5 +1,6 @@
 ---
 title: "Element: MozMousePixelScroll event"
+short-title: MozMousePixelScroll
 slug: Web/API/Element/MozMousePixelScroll_event
 page-type: web-api-event
 status:
@@ -26,9 +27,9 @@ onMozMousePixelScroll = (event) => {};
 
 ## Event type
 
-A {{domxref("MouseWheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram("MouseWheelEvent")}}
+{{InheritanceDiagram("WheelEvent")}}
 
 ## Getting the distance scrolled
 

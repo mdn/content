@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.direction
+title: "IDBCursor: direction property"
+short-title: direction
 slug: Web/API/IDBCursor/direction
 page-type: web-api-instance-property
 browser-compat: api.IDBCursor.direction
@@ -37,7 +38,7 @@ In this simple fragment we create a transaction, retrieve an object store, then 
 cursor to iterate through all the records in the object store. Within each iteration we
 log the direction of the cursor, something like this:
 
-```
+```plain
 prev
 ```
 
@@ -52,24 +53,24 @@ working example, see our [IDBCursor example](https://github.com/mdn/dom-examples
 
 ```js
 function backwards() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readonly');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor(null,'prev').onsuccess = (event) => {
+  objectStore.openCursor(null, "prev").onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-        list.appendChild(listItem);
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
+      list.appendChild(listItem);
 
-        console.log(cursor.direction);
-        cursor.continue();
-      } else {
-        console.log('Entries displayed backwards.');
-      }
+      console.log(cursor.direction);
+      cursor.continue();
+    } else {
+      console.log("Entries displayed backwards.");
+    }
   };
-};
+}
 ```
 
 ## Specifications

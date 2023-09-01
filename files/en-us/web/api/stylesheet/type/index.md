@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.type
+title: "StyleSheet: type property"
+short-title: type
 slug: Web/API/StyleSheet/type
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.type
@@ -17,7 +18,7 @@ A string.
 ## Examples
 
 ```js
- myStyleSheet.type = 'text/css';
+myStyleSheet.type = "text/css";
 ```
 
 ## Specifications

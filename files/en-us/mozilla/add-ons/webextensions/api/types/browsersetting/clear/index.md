@@ -2,15 +2,6 @@
 title: clear()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Types
-  - WebExtensions
-  - clear
 ---
 
 {{AddonSidebar}}

@@ -1,5 +1,6 @@
 ---
-title: VRFieldOfView.upDegrees
+title: "VRFieldOfView: upDegrees property"
+short-title: upDegrees
 slug: Web/API/VRFieldOfView/upDegrees
 page-type: web-api-instance-property
 status:

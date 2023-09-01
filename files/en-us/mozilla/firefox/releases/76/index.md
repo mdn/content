@@ -1,6 +1,7 @@
 ---
 title: Firefox 76 for developers
 slug: Mozilla/Firefox/Releases/76
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -35,7 +36,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 ### HTML
 
-- The {{HTMLElement("input")}} element's {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes now work correctly when the value of `min` is greater than the value of `max` for control types whose values are periodic (that is, values that wrap around at some point). This is particularly helpful, for example, with date and time inputs, where you might want to specify a time range of 11 PM to 2 AM ([Firefox bug 1608010](https://bugzil.la/1608010)).
+- The {{HTMLElement("input")}} element's [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes now work correctly when the value of `min` is greater than the value of `max` for control types whose values are periodic (that is, values that wrap around at some point). This is particularly helpful, for example, with date and time inputs, where you might want to specify a time range of 11 PM to 2 AM ([Firefox bug 1608010](https://bugzil.la/1608010)).
 
 ### CSS
 

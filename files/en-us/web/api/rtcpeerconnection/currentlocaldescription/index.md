@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.currentLocalDescription
+title: "RTCPeerConnection: currentLocalDescription property"
+short-title: currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.currentLocalDescription

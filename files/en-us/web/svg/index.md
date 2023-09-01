@@ -2,19 +2,6 @@
 title: "SVG: Scalable Vector Graphics"
 slug: Web/SVG
 page-type: landing-page
-tags:
-  - 2D Graphics
-  - Graphics
-  - Icons
-  - Images
-  - Reference
-  - Responsive Design
-  - SVG
-  - Scalable Graphics
-  - Scalable Images
-  - Vector Graphics
-  - Web
-  - "l10n:priority"
 ---
 
 {{SVGRef}}

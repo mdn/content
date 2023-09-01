@@ -1,5 +1,6 @@
 ---
-title: PannerNode.coneOuterGain
+title: "PannerNode: coneOuterGain property"
+short-title: coneOuterGain
 slug: Web/API/PannerNode/coneOuterGain
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.coneOuterGain

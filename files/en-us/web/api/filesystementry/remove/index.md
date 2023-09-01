@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.remove()
+title: "FileSystemEntry: remove() method"
+short-title: remove()
 slug: Web/API/FileSystemEntry/remove
 page-type: web-api-instance-method
 status:
@@ -66,7 +67,7 @@ workingDirectory.getFile(
       /* the file was removed successfully */
     });
   },
-  handleError
+  handleError,
 );
 ```
 

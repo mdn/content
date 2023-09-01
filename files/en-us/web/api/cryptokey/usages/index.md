@@ -1,5 +1,6 @@
 ---
-title: CryptoKey.usages
+title: "CryptoKey: usages property"
+short-title: usages
 slug: Web/API/CryptoKey/usages
 page-type: web-api-instance-property
 browser-compat: api.CryptoKey.usages
@@ -39,7 +40,7 @@ function importSecretKey(rawKey) {
 
 const key = importSecretKey(rawKey);
 console.log(
-  `The following usages are reported for this key: ${key.usages.toString()}`
+  `The following usages are reported for this key: ${key.usages.toString()}`,
 );
 ```
 

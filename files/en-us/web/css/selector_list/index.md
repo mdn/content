@@ -45,13 +45,8 @@ When applying the same styles to elements matching different criteria, grouping 
 
 This example shows grouping selectors in a single line using a comma-separated list.
 
-```css
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+```css-nolint
+h1, h2, h3, h4, h5, h6 {
   font-family: helvetica;
 }
 ```
@@ -71,7 +66,7 @@ h1 + p {
 
 ## Valid and invalid selector lists
 
-An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving-selector-list).
+An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving_selector_list).
 
 ### Invalid selector list
 
@@ -129,7 +124,7 @@ The difference between the two is that the specificity of `:is()` is its most sp
 
 ### Relative selector list
 
-A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector), which begin with an explicit or implied combinator.
+A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector), which begin with an explicit or implied combinator.
 
 ```css
 h2:has(+ p, + ul.red) {
@@ -152,4 +147,4 @@ In the above example, the italic style will be applied to any `h2` heading that 
 - The [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-classes accept forgiving selector lists.
 - The [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-class accepts a regular selector list
 - The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class accepts a relative selector list.
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)

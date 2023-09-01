@@ -1,5 +1,6 @@
 ---
-title: PerformanceNavigationTiming.unloadEventEnd
+title: "PerformanceNavigationTiming: unloadEventEnd property"
+short-title: unloadEventEnd
 slug: Web/API/PerformanceNavigationTiming/unloadEventEnd
 page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.unloadEventEnd
@@ -39,7 +40,7 @@ const observer = new PerformanceObserver((list) => {
     const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
     if (unloadEventTime > 0) {
       console.log(
-        `${entry.name}: unload event handler time: ${unloadEventTime}ms`
+        `${entry.name}: unload event handler time: ${unloadEventTime}ms`,
       );
     }
   });

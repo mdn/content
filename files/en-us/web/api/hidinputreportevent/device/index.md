@@ -1,5 +1,6 @@
 ---
-title: HIDInputReportEvent.device
+title: "HIDInputReportEvent: device property"
+short-title: device
 slug: Web/API/HIDInputReportEvent/device
 page-type: web-api-instance-property
 status:

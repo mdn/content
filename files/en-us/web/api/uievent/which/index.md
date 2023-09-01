@@ -1,5 +1,6 @@
 ---
-title: UIEvent.which
+title: "UIEvent: which property"
+short-title: which
 slug: Web/API/UIEvent/which
 page-type: web-api-instance-property
 status:
@@ -48,7 +49,7 @@ In this case, the values are read from right to left.
             `keyCode property: ${evt.keyCode}\n` +
             `which property: ${evt.which}\n` +
             `charCode property: ${evt.charCode}\n` +
-            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`
+            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`,
         );
       }
 
@@ -56,7 +57,7 @@ In this case, the values are read from right to left.
         alert(
           `onkeydown handler:\n` +
             `keyCode property: ${evt.keyCode}\n` +
-            `which property: ${evt.which}\n`
+            `which property: ${evt.which}\n`,
         );
       }
     </script>

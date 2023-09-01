@@ -1,5 +1,6 @@
 ---
 title: "CookieStore: change event"
+short-title: change
 slug: Web/API/CookieStore/change_event
 page-type: web-api-event
 status:

@@ -26,6 +26,8 @@ gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
+> **Note:** Certain online IDEs and editors may implement the console API differently than the browsers. As a result, certain functionality of the console API, such as the timer methods, may not be outputted in the console of online IDEs or editors. Always open your browser's DevTools console to see the logs as shown in this documentation.
+
 ## Instance methods
 
 - {{domxref("console.assert()")}}
@@ -139,7 +141,7 @@ for (let i = 0; i < 5; i++) {
 
 The output looks like this:
 
-```
+```plain
 Hello, Bob. You've called me 1 times.
 Hello, Bob. You've called me 2 times.
 Hello, Bob. You've called me 3 times.
@@ -154,7 +156,7 @@ You can use the `%c` directive to apply a CSS style to console output:
 ```js
 console.log(
   "This is %cMy stylish message",
-  "color: yellow; font-style: italic; background-color: blue;padding: 2px"
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
 );
 ```
 
@@ -169,7 +171,7 @@ console.log(
   "Multiple styles: %cred %corange",
   "color: red",
   "color: orange",
-  "Additional unformatted message"
+  "Additional unformatted message",
 );
 ```
 

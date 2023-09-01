@@ -2,15 +2,6 @@
 title: sessions.getTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTabValue
-  - sessions
 browser-compat: webextensions.api.sessions.getTabValue
 ---
 
@@ -60,7 +51,9 @@ function onGetRejected(e) {
 }
 
 browser.tabs.onCreated.addListener((tab) => {
-  browser.sessions.getTabValue(tab.id, "my-key").then(onGetResolved, onGetRejected);
+  browser.sessions
+    .getTabValue(tab.id, "my-key")
+    .then(onGetResolved, onGetRejected);
 });
 ```
 

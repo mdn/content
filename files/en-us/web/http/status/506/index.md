@@ -1,10 +1,7 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-tags:
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
 ---
 

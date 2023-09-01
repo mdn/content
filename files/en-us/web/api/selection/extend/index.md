@@ -1,5 +1,6 @@
 ---
-title: Selection.extend()
+title: "Selection: extend() method"
+short-title: extend()
 slug: Web/API/Selection/extend
 page-type: web-api-instance-method
 browser-compat: api.Selection.extend

@@ -1,5 +1,6 @@
 ---
-title: Document.children
+title: "Document: children property"
+short-title: children
 slug: Web/API/Document/children
 page-type: web-api-instance-property
 browser-compat: api.Document.children

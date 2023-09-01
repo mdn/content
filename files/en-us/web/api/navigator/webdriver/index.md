@@ -1,5 +1,6 @@
 ---
-title: Navigator.webdriver
+title: "Navigator: webdriver property"
+short-title: webdriver
 slug: Web/API/Navigator/webdriver
 page-type: web-api-instance-property
 browser-compat: api.Navigator.webdriver

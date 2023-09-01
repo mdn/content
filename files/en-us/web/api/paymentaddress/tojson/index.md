@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.toJSON()
+title: "PaymentAddress: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PaymentAddress/toJSON
 page-type: web-api-instance-method
 status:

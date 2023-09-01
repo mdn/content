@@ -1,5 +1,6 @@
 ---
 title: "Document: afterscriptexecute event"
+short-title: afterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
 page-type: web-api-event
 status:
@@ -37,7 +38,7 @@ document.addEventListener("afterscriptexecute", finished, true);
 document.onafterscriptexecute = finished;
 ```
 
-[View Live Example](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[View Live Example](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Browser compatibility
 

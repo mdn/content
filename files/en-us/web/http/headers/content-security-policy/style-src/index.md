@@ -1,17 +1,7 @@
 ---
 title: "CSP: style-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Style
-  - source
-  - style-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src
 ---
 
@@ -112,12 +102,13 @@ These types of manipulations can be prevented by disallowing JavaScript via the 
 > **Note:** Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides. However, if you absolutely have to use it, there are a few mechanisms that will allow them.
 
 To allow inline styles, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
+The following Content Security Policy will allow inline styles like the {{HTMLElement("style")}} element, and the `style` attribute on any element:
 
-```bash
+```http
 Content-Security-Policy: style-src 'unsafe-inline';
 ```
 
-The above Content Security Policy will allow inline styles like the {{HTMLElement("style")}} element, and the `style` attribute on any element:
+The following {{HTMLElement("style")}} element and `style` attribute will be allowed by the policy:
 
 ```html
 <style>
@@ -129,7 +120,9 @@ The above Content Security Policy will allow inline styles like the {{HTMLElemen
 <div style="display:none">Foo</div>
 ```
 
-You can use a nonce-source to only allow specific inline style blocks:
+You can use a nonce-source to only allow specific inline style blocks.
+You need to generate a random nonce value (using a cryptographically secure random token generator) and include it in the policy.
+It is important to note, this nonce value needs to be dynamically generated as it has to be unique for each HTTP request:
 
 ```http
 Content-Security-Policy: style-src 'nonce-2726c7f26c'

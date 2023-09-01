@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.linkProgram()
+title: "WebGLRenderingContext: linkProgram() method"
+short-title: linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.linkProgram

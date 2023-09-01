@@ -1,5 +1,6 @@
 ---
 title: "Element: beforematch event"
+short-title: beforematch
 slug: Web/API/Element/beforematch_event
 page-type: web-api-event
 status:
@@ -82,7 +83,7 @@ div {
 const untilFound = document.querySelector("#until-found-box");
 untilFound.addEventListener(
   "beforematch",
-  () => (untilFound.textContent = "I've been revealed!")
+  () => (untilFound.textContent = "I've been revealed!"),
 );
 ```
 

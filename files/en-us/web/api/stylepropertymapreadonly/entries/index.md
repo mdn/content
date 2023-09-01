@@ -1,13 +1,12 @@
 ---
-title: StylePropertyMapReadOnly.entries()
+title: "StylePropertyMapReadOnly: entries() method"
+short-title: entries()
 slug: Web/API/StylePropertyMapReadOnly/entries
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.StylePropertyMapReadOnly.entries
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`StylePropertyMapReadOnly.entries()`** method returns an
 array of a given object's own enumerable property `[key, value]` pairs, in
@@ -37,7 +36,7 @@ on an elements computed styles.
 
 ```js
 // grab a DOM element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();

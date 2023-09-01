@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.location
+title: "WorkerGlobalScope: location property"
+short-title: location
 slug: Web/API/WorkerGlobalScope/location
 page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.location
@@ -23,7 +24,7 @@ console.log(location);
 
 inside a worker (which would basically be the equivalent of `self.console.log(self.location);`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerLocation")}} object written to the console — something like the following:
 
-```
+```plain
 WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
   hash: ""
   host: "localhost:8000"

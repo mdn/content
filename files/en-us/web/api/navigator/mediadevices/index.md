@@ -1,5 +1,6 @@
 ---
-title: Navigator.mediaDevices
+title: "Navigator: mediaDevices property"
+short-title: mediaDevices
 slug: Web/API/Navigator/mediaDevices
 page-type: web-api-instance-property
 browser-compat: api.Navigator.mediaDevices

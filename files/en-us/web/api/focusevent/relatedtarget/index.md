@@ -1,5 +1,6 @@
 ---
-title: FocusEvent.relatedTarget
+title: "FocusEvent: relatedTarget property"
+short-title: relatedTarget
 slug: Web/API/FocusEvent/relatedTarget
 page-type: web-api-instance-property
 browser-compat: api.FocusEvent.relatedTarget

@@ -1,6 +1,7 @@
 ---
 title: "ARIA: meter role"
 slug: Web/Accessibility/ARIA/Roles/meter_role
+page-type: aria-role
 spec-urls: https://www.w3.org/TR/wai-aria-1.2/#meter
 ---
 

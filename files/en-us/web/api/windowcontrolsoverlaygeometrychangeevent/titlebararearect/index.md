@@ -1,5 +1,6 @@
 ---
-title: WindowControlsOverlayGeometryChangeEvent.titlebarAreaRect
+title: "WindowControlsOverlayGeometryChangeEvent: titlebarAreaRect property"
+short-title: titlebarAreaRect
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/titlebarAreaRect
 page-type: web-api-instance-property
 status:

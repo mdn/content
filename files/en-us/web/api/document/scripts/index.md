@@ -1,5 +1,6 @@
 ---
-title: Document.scripts
+title: "Document: scripts property"
+short-title: scripts
 slug: Web/API/Document/scripts
 page-type: web-api-instance-property
 browser-compat: api.Document.scripts

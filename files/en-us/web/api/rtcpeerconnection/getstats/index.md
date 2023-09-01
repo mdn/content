@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.getStats()
+title: "RTCPeerConnection: getStats() method"
+short-title: getStats()
 slug: Web/API/RTCPeerConnection/getStats
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getStats
@@ -70,14 +71,19 @@ setInterval(() => {
     let statsOutput = "";
 
     stats.forEach((report) => {
-      statsOutput += `<h2>Report: ${report.type}</h2>\n<strong>ID:</strong> ${report.id}<br>\n` +
-                     `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
+      statsOutput +=
+        `<h2>Report: ${report.type}</h2>\n<strong>ID:</strong> ${report.id}<br>\n` +
+        `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
 
       // Now the statistics for this report; we intentionally drop the ones we
       // sorted to the top above
 
       Object.keys(report).forEach((statName) => {
-        if (statName !== "id" && statName !== "timestamp" && statName !== "type") {
+        if (
+          statName !== "id" &&
+          statName !== "timestamp" &&
+          statName !== "type"
+        ) {
           statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
         }
       });
@@ -89,7 +95,7 @@ setInterval(() => {
 ```
 
 This works by calling `getStats()`, then, when the promise is resolved,
-iterates over the {{domxref("RTCStats")}} objects on the returned
+iterates over the {{domxref("RTCStatsReport")}} objects on the returned
 {{domxref("RTCStatsReport")}}. A section is created for each report with a header and
 all of the statistics below, with the type, ID, and timestamp handled specially to place
 them at the top of the list.

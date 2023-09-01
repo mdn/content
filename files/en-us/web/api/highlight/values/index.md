@@ -1,5 +1,6 @@
 ---
-title: Highlight.values()
+title: "Highlight: values() method"
+short-title: values()
 slug: Web/API/Highlight/values
 page-type: web-api-instance-method
 status:
@@ -10,7 +11,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prot
 
 {{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
-The **`values()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each `Range` object in the `Highlight` object in insertion order.
+The **`values()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains the values for each `Range` object in the `Highlight` object in insertion order.
 
 > **Note:** The **`keys()`** method is an alias for this method. It behaves exactly the same and returns **values** of `Highlight` elements.
 

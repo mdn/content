@@ -1,5 +1,6 @@
 ---
-title: Document.execCommand()
+title: "Document: execCommand() method"
+short-title: execCommand()
 slug: Web/API/Document/execCommand
 page-type: web-api-instance-method
 status:
@@ -49,7 +50,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `decreaseFontSize`
       - : Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point.
     - `defaultParagraphSeparator`
-      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
+      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
     - `delete`
       - : Deletes the current selection.
     - `enableAbsolutePositionEditor`
@@ -153,7 +154,7 @@ An example of [how to use execCommand with contentEditable elements](https://cod
 
 ### Using insertText
 
-This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the {{htmlattrxref("contenteditable")}} attribute set.
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute set.
 
 Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
 
@@ -192,7 +193,7 @@ for (const buttonContainer of buttonContainers) {
   for (const button of buttons) {
     const elementName = button.getAttribute("data-el");
     button.addEventListener("click", () =>
-      insertText(`<${elementName}></${elementName}>`, pasteTarget)
+      insertText(`<${elementName}></${elementName}>`, pasteTarget),
     );
   }
 }

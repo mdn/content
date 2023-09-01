@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.stop()
+title: "MediaRecorder: stop() method"
+short-title: stop()
 slug: Web/API/MediaRecorder/stop
 page-type: web-api-instance-method
 browser-compat: api.MediaRecorder.stop

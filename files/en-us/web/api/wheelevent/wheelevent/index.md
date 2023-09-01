@@ -1,5 +1,6 @@
 ---
-title: WheelEvent()
+title: "WheelEvent: WheelEvent() constructor"
+short-title: WheelEvent()
 slug: Web/API/WheelEvent/WheelEvent
 page-type: web-api-constructor
 browser-compat: api.WheelEvent.WheelEvent

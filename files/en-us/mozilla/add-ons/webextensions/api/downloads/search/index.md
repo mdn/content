@@ -2,16 +2,6 @@
 title: downloads.search()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Search
-  - WebExtensions
-  - downloads
 browser-compat: webextensions.api.downloads.search
 ---
 
@@ -129,7 +119,7 @@ browser.downloads
   .then(logDownloads, onError);
 ```
 
-You can see this code in action in our [latest-download](https://github.com/mdn/webextensions-examples/blob/master/latest-download/popup/latest_download.js) example.
+You can see this code in action in our [latest-download](https://github.com/mdn/webextensions-examples/blob/main/latest-download/popup/latest_download.js) example.
 
 {{WebExtExamples}}
 

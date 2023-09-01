@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletProcessor()
+title: "AudioWorkletProcessor: AudioWorkletProcessor() constructor"
+short-title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
 page-type: web-api-constructor
 browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
@@ -102,7 +103,7 @@ const testNode = new AudioWorkletNode(audioContext, "test-processor", {
 
 The console output will be as follows:
 
-```
+```plain
 > 1 // AudioWorkletNode options.numberOfInputs set to default
 > Map(2) { 1 => "one", 2 => "two" } // A cloned map under someUsefulVariable
 ```

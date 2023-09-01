@@ -1,5 +1,6 @@
 ---
-title: AudioContext.resume()
+title: "AudioContext: resume() method"
+short-title: resume()
 slug: Web/API/AudioContext/resume
 page-type: web-api-instance-method
 browser-compat: api.AudioContext.resume

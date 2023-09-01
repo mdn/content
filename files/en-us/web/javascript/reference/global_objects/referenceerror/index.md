@@ -15,7 +15,7 @@ The **`ReferenceError`** object represents an error when a variable that doesn't
 
 ## Constructor
 
-- {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
+- {{jsxref("ReferenceError/ReferenceError", "ReferenceError()")}}
   - : Creates a new `ReferenceError` object.
 
 ## Instance properties
@@ -44,10 +44,7 @@ try {
   console.log(e instanceof ReferenceError); // true
   console.log(e.message); // "undefinedVariable is not defined"
   console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 6
-  console.log(e.stack); // "@Scratchpad/2:2:7\n"
+  console.log(e.stack); // Stack of the error
 }
 ```
 
@@ -55,15 +52,12 @@ try {
 
 ```js
 try {
-  throw new ReferenceError("Hello", "someFile.js", 10);
+  throw new ReferenceError("Hello");
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // Stack of the error
 }
 ```
 

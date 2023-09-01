@@ -1,5 +1,6 @@
 ---
-title: MediaKeySession.sessionId
+title: "MediaKeySession: sessionId property"
+short-title: sessionId
 slug: Web/API/MediaKeySession/sessionId
 page-type: web-api-instance-property
 browser-compat: api.MediaKeySession.sessionId

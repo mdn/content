@@ -91,4 +91,5 @@ arr instanceof Array; // false
 ## See also
 
 - [Polyfill of `Array.isArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}

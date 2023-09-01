@@ -1,5 +1,6 @@
 ---
-title: CanMakePaymentEvent.respondWith()
+title: "CanMakePaymentEvent: respondWith() method"
+short-title: respondWith()
 slug: Web/API/CanMakePaymentEvent/respondWith
 page-type: web-api-instance-method
 status:
@@ -39,7 +40,7 @@ self.addEventListener("canmakepayment", (e) => {
         .catch((error) => {
           reject(error);
         });
-    })
+    }),
   );
 });
 ```

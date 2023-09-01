@@ -29,8 +29,8 @@ Related properties are {{cssxref("border-block-start-color")}}, {{cssxref("borde
 
 ### Values
 
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 
@@ -82,6 +82,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

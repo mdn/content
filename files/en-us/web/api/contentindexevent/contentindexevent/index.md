@@ -1,5 +1,6 @@
 ---
-title: ContentIndexEvent()
+title: "ContentIndexEvent: ContentIndexEvent() constructor"
+short-title: ContentIndexEvent()
 slug: Web/API/ContentIndexEvent/ContentIndexEvent
 page-type: web-api-constructor
 status:

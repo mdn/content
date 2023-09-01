@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.bezierCurveTo()
+title: "CanvasRenderingContext2D: bezierCurveTo() method"
+short-title: bezierCurveTo()
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.bezierCurveTo

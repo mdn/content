@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.getImageData()
+title: "CanvasRenderingContext2D: getImageData() method"
+short-title: getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.getImageData

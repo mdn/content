@@ -1,5 +1,6 @@
 ---
-title: MediaKeyMessageEvent()
+title: "MediaKeyMessageEvent: MediaKeyMessageEvent() constructor"
+short-title: MediaKeyMessageEvent()
 slug: Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent
 page-type: web-api-constructor
 browser-compat: api.MediaKeyMessageEvent.MediaKeyMessageEvent

@@ -1,5 +1,6 @@
 ---
-title: LargestContentfulPaint.size
+title: "LargestContentfulPaint: size property"
+short-title: size
 slug: Web/API/LargestContentfulPaint/size
 page-type: web-api-instance-property
 status:

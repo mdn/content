@@ -1,5 +1,6 @@
 ---
-title: IDBDatabase.deleteObjectStore()
+title: "IDBDatabase: deleteObjectStore() method"
+short-title: deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
 page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.deleteObjectStore

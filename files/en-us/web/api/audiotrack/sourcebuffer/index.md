@@ -1,5 +1,6 @@
 ---
-title: AudioTrack.sourceBuffer
+title: "AudioTrack: sourceBuffer property"
+short-title: sourceBuffer
 slug: Web/API/AudioTrack/sourceBuffer
 page-type: web-api-instance-property
 browser-compat: api.AudioTrack.sourceBuffer

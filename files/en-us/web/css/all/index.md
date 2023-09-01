@@ -11,6 +11,10 @@ The **`all`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US
 
 {{EmbedInteractiveExample("pages/css/all.html")}}
 
+## Constituent properties
+
+This property is a shorthand for all CSS properties except for {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
+
 ## Syntax
 
 ```css
@@ -29,7 +33,7 @@ The `all` property is specified as one of the CSS global keyword values. Note th
 - {{cssxref("initial")}}
   - : Specifies that all the element's properties should be changed to their [initial values](/en-US/docs/Web/CSS/initial_value).
 - {{cssxref("inherit")}}
-  - : Specifies that all the element's properties should be changed to their [inherited values](/en-US/docs/Web/CSS/inheritance).
+  - : Specifies that all the element's properties should be changed to their [inherited values](/en-US/docs/Web/CSS/Inheritance).
 - {{cssxref("unset")}}
   - : Specifies that all the element's properties should be changed to their inherited values if they inherit by default, or to their initial values if not.
 - {{cssxref("revert")}}

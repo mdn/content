@@ -1,5 +1,6 @@
 ---
-title: 'VideoTrackList: removetrack event'
+title: "VideoTrackList: removetrack event"
+short-title: removetrack
 slug: Web/API/VideoTrackList/removetrack_event
 page-type: web-api-event
 browser-compat: api.VideoTrackList.removetrack_event
@@ -14,9 +15,9 @@ The `removetrack` event is fired when a video track is removed from a [`VideoTra
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('removetrack', (event) => { })
+addEventListener("removetrack", (event) => {});
 
-onremovetrack = (event) => { }
+onremovetrack = (event) => {};
 ```
 
 ## Event type
@@ -37,9 +38,9 @@ _In addition to the properties listed below, properties from the parent interfac
 Using `addEventListener()`:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
-videoElement.videoTracks.addEventListener('removetrack', (event) => {
+videoElement.videoTracks.addEventListener("removetrack", (event) => {
   console.log(`Video track: ${event.track.label} removed`);
 });
 ```
@@ -47,7 +48,7 @@ videoElement.videoTracks.addEventListener('removetrack', (event) => {
 Using the `onremovetrack` event handler property:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
 videoElement.videoTracks.onremovetrack = (event) => {
   console.log(`Video track: ${event.track.label} removed`);

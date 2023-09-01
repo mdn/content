@@ -1,5 +1,6 @@
 ---
-title: ExtendableMessageEvent.lastEventId
+title: "ExtendableMessageEvent: lastEventId property"
+short-title: lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
 page-type: web-api-instance-property
 browser-compat: api.ExtendableMessageEvent.lastEventId

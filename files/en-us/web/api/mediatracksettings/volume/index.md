@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSettings.volume
+title: "MediaTrackSettings: volume property"
+short-title: volume
 slug: Web/API/MediaTrackSettings/volume
 page-type: web-api-instance-property
 status:

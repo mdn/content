@@ -1,6 +1,7 @@
 ---
 title: Sizing items in CSS
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
@@ -66,7 +67,7 @@ This is because percentages resolve against the size of the containing block. Wi
 
 ### Percentage margins and padding
 
-If you set `margins` and `padding` as a percentage, you may notice some strange behavior. In the below example we have a box. We have given the inner box a {{cssxref("margin")}} of 10% and a {{cssxref("padding")}} of 10%. The padding and margin on the top and bottom of the box are the same size as the margin on the left and right.
+If you set `margins` and `padding` as a percentage, you may notice some strange behavior. In the below example we have a box. We have given the inner box a {{cssxref("margin")}} of 10% and a {{cssxref("padding")}} of 10%. The padding and margin on the top and bottom of the box are the same size as the padding and margin on the left and right.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-mp.html", '100%', 800)}}
 

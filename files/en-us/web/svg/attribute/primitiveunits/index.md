@@ -2,11 +2,6 @@
 title: primitiveUnits
 slug: Web/SVG/Attribute/primitiveUnits
 page-type: svg-attribute
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-  - SVG Filter
 browser-compat: svg.elements.filter.primitiveUnits
 ---
 

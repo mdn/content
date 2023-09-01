@@ -2,16 +2,6 @@
 title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onInstalled
-  - runtime
 browser-compat: webextensions.api.runtime.onInstalled
 ---
 
@@ -31,7 +21,7 @@ browser.runtime.onInstalled.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -44,7 +34,7 @@ Events have three functions:
 
 - `function`
 
-  - : The callback function called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `details`
 
@@ -71,7 +61,7 @@ When the extension is installed, log the install reason and open <https://exampl
 function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
-    url: "https://example.com"
+    url: "https://example.com",
   });
 }
 

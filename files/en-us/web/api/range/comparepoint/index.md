@@ -1,5 +1,6 @@
 ---
-title: Range.comparePoint()
+title: "Range: comparePoint() method"
+short-title: comparePoint()
 slug: Web/API/Range/comparePoint
 page-type: web-api-instance-method
 browser-compat: api.Range.comparePoint
@@ -39,8 +40,8 @@ Returns `-1`, `0`, or `1`.
 
 ```js
 range = document.createRange();
-range.selectNode(document.getElementsByTagName('div').item(0));
-returnValue = range.comparePoint(document.getElementsByTagName('p').item(0), 1);
+range.selectNode(document.getElementsByTagName("div").item(0));
+returnValue = range.comparePoint(document.getElementsByTagName("p").item(0), 1);
 ```
 
 ## Specifications

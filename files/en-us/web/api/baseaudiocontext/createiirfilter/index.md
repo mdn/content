@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createIIRFilter()
+title: "BaseAudioContext: createIIRFilter() method"
+short-title: createIIRFilter()
 slug: Web/API/BaseAudioContext/createIIRFilter
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createIIRFilter

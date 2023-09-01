@@ -1,5 +1,6 @@
 ---
-title: Range.toString()
+title: "Range: toString() method"
+short-title: toString()
 slug: Web/API/Range/toString
 page-type: web-api-instance-method
 browser-compat: api.Range.toString
@@ -45,9 +46,9 @@ A string.
 ```js
 const range = document.createRange();
 
-range.setStartBefore(document.getElementsByTagName('em').item(0), 0);
-range.setEndAfter(document.getElementsByTagName('em').item(1), 0);
-document.getElementById('log').textContent = range.toString();
+range.setStartBefore(document.getElementsByTagName("em").item(0), 0);
+range.setEndAfter(document.getElementsByTagName("em").item(1), 0);
+document.getElementById("log").textContent = range.toString();
 ```
 
 ### Result

@@ -1,5 +1,6 @@
 ---
-title: ClipboardItem.getType()
+title: "ClipboardItem: getType() method"
+short-title: getType()
 slug: Web/API/ClipboardItem/getType
 page-type: web-api-instance-method
 browser-compat: api.ClipboardItem.getType

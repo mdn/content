@@ -1,5 +1,6 @@
 ---
-title: FontFaceSet.ready
+title: "FontFaceSet: ready property"
+short-title: ready
 slug: Web/API/FontFaceSet/ready
 page-type: web-api-instance-property
 browser-compat: api.FontFaceSet.ready

@@ -1,5 +1,6 @@
 ---
-title: Animation.pause()
+title: "Animation: pause() method"
+short-title: pause()
 slug: Web/API/Animation/pause
 page-type: web-api-instance-method
 browser-compat: api.Animation.pause
@@ -42,7 +43,7 @@ const nommingCake = document
       fill: "forwards",
       easing: "steps(4, end)",
       duration: aliceChange.effect.timing.duration / 2,
-    }
+    },
   );
 
 // doesn't actually need to be eaten until a click event, so pause it initially:

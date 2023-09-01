@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.sampleRate
+title: "MediaTrackConstraints: sampleRate property"
+short-title: sampleRate
 slug: Web/API/MediaTrackConstraints/sampleRate
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.sampleRate

@@ -1,5 +1,6 @@
 ---
-title: 'RTCIceTransport: statechange event'
+title: "RTCIceTransport: statechange event"
+short-title: statechange
 slug: Web/API/RTCIceTransport/statechange_event
 page-type: web-api-event
 browser-compat: api.RTCIceTransport.statechange_event
@@ -16,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('statechange', (event) => { });
+addEventListener("statechange", (event) => {});
 
-onstatechange = (event) => { };
+onstatechange = (event) => {};
 ```
 
 ## Event type
@@ -32,11 +33,15 @@ Given an {{domxref("RTCPeerConnection")}}, `pc`, the following code creates an e
 ```js
 let iceTransport = pc.getSenders()[0].transport.iceTransport;
 
-iceTransport.addEventListener("statechange", (ev) => {
-  if (iceTransport.state === "failed") {
-    handleFailure(pc);
-  }
-}, false);
+iceTransport.addEventListener(
+  "statechange",
+  (ev) => {
+    if (iceTransport.state === "failed") {
+      handleFailure(pc);
+    }
+  },
+  false,
+);
 ```
 
 The same code, using the `onstatechange` event handler property, looks like this:

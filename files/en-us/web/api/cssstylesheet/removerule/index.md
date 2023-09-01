@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.removeRule()
+title: "CSSStyleSheet: removeRule() method"
+short-title: removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
 page-type: web-api-instance-method
 status:

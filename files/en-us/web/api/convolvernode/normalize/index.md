@@ -1,5 +1,6 @@
 ---
-title: ConvolverNode.normalize
+title: "ConvolverNode: normalize property"
+short-title: normalize
 slug: Web/API/ConvolverNode/normalize
 page-type: web-api-instance-property
 browser-compat: api.ConvolverNode.normalize
@@ -48,7 +49,7 @@ ajaxRequest.onload = () => {
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
     },
-    (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    (e) => console.error(`Error with decoding audio data: ${e.err}`),
   );
 };
 

@@ -4,6 +4,8 @@ slug: Glossary/Identifier
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 An **identifier** is a sequence of characters in the code that identifies a {{glossary("variable")}}, {{glossary("function")}}, or {{glossary("property")}}.
 
 In {{glossary("JavaScript")}}, identifiers are case-sensitive and can contain {{glossary("Unicode")}} letters, `$`, `_`, and digits (0-9), but may not start with a digit.

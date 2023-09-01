@@ -1,11 +1,7 @@
 ---
 title: 423 Locked
 slug: Web/HTTP/Status/423
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Client Error
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.3
 ---
 
@@ -17,13 +13,13 @@ The HTTP **`423 Locked`** error response code indicates that either the resource
 
 ## Status
 
-```
+```plain
 423 Locked
 ```
 
 ### Example
 
-```
+```http
 HTTP/1.1 423 Locked
 Content-Type: application/xml; charset="utf-8"
 Content-Length: xxxx

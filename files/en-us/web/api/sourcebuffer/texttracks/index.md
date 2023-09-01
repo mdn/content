@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.textTracks
+title: "SourceBuffer: textTracks property"
+short-title: textTracks
 slug: Web/API/SourceBuffer/textTracks
 page-type: web-api-instance-property
 status:

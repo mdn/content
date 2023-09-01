@@ -1,5 +1,6 @@
 ---
-title: FontFaceSetLoadEvent()
+title: "FontFaceSetLoadEvent: FontFaceSetLoadEvent() constructor"
+short-title: FontFaceSetLoadEvent()
 slug: Web/API/FontFaceSetLoadEvent/FontFaceSetLoadEvent
 page-type: web-api-constructor
 browser-compat: api.FontFaceSetLoadEvent.FontFaceSetLoadEvent

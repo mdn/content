@@ -1,5 +1,6 @@
 ---
-title: WebSocket.extensions
+title: "WebSocket: extensions property"
+short-title: extensions
 slug: Web/API/WebSocket/extensions
 page-type: web-api-instance-property
 browser-compat: api.WebSocket.extensions

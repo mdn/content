@@ -1,5 +1,6 @@
 ---
-title: XREquirectLayer.lowerVerticalAngle
+title: "XREquirectLayer: lowerVerticalAngle property"
+short-title: lowerVerticalAngle
 slug: Web/API/XREquirectLayer/lowerVerticalAngle
 page-type: web-api-instance-property
 status:
@@ -29,7 +30,7 @@ const equirectLayer = xrGlBinding.createEquirectLayer({
   centralHorizontalAngle: 2 * Math.PI,
   upperVerticalAngle: Math.PI / 2.0,
   lowerVerticalAngle: -Math.PI / 2.0,
-  radius: 0
+  radius: 0,
 });
 
 equirectLayer.lowerVerticalAngle; // -1.5707963267948966

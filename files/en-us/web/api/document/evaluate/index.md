@@ -1,5 +1,6 @@
 ---
-title: Document.evaluate()
+title: "Document: evaluate() method"
+short-title: evaluate()
 slug: Web/API/Document/evaluate
 page-type: web-api-instance-method
 browser-compat: api.Document.evaluate
@@ -100,7 +101,7 @@ const headings = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 /* Search the document for all h2 elements.
  * The result will likely be an unordered node iterator. */

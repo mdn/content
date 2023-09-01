@@ -1,5 +1,6 @@
 ---
-title: Document.visibilityState
+title: "Document: visibilityState property"
+short-title: visibilityState
 slug: Web/API/Document/visibilityState
 page-type: web-api-instance-property
 browser-compat: api.Document.visibilityState

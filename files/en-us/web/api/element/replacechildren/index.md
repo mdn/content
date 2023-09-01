@@ -1,5 +1,6 @@
 ---
-title: Element.replaceChildren()
+title: "Element: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/Element/replaceChildren
 page-type: web-api-instance-method
 browser-compat: api.Element.replaceChildren
@@ -16,7 +17,7 @@ can be string or {{domxref("Node")}} objects.
 ```js-nolint
 replaceChildren(param1)
 replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* … ,*/ paramN)
+replaceChildren(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -147,7 +148,7 @@ yesBtn.addEventListener("click", () => {
 
 noBtn.addEventListener("click", () => {
   const selectedTransferOptions = document.querySelectorAll(
-    "#yes option:checked"
+    "#yes option:checked",
   );
   const existingNoOptions = document.querySelectorAll("#no option");
   noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);

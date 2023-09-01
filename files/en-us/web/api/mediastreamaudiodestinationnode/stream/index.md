@@ -1,5 +1,6 @@
 ---
-title: MediaStreamAudioDestinationNode.stream
+title: "MediaStreamAudioDestinationNode: stream property"
+short-title: stream
 slug: Web/API/MediaStreamAudioDestinationNode/stream
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamAudioDestinationNode.stream

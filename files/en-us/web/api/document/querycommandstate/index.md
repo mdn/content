@@ -1,5 +1,6 @@
 ---
-title: Document.queryCommandState()
+title: "Document: queryCommandState() method"
+short-title: queryCommandState()
 slug: Web/API/Document/queryCommandState
 page-type: web-api-instance-method
 status:

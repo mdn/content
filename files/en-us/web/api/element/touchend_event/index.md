@@ -1,5 +1,6 @@
 ---
 title: "Element: touchend event"
+short-title: touchend
 slug: Web/API/Element/touchend_event
 page-type: web-api-event
 browser-compat: api.Element.touchend_event
@@ -63,4 +64,3 @@ Code samples for those events are available on the dedicated page: [Touch events
 ## See also
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
-- This event on {{domxref("Document")}} targets: {{domxref("Document/touchend_event", "touchend")}}

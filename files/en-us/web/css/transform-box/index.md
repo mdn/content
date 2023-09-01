@@ -9,6 +9,8 @@ browser-compat: css.properties.transform-box
 
 The **`transform-box`** CSS property defines the layout box to which the {{cssxref("transform")}}, individual transform properties {{cssxref("translate")}},{{cssxref("scale")}}, and {{cssxref("rotate")}}, and {{cssxref("transform-origin")}} properties relate.
 
+## Syntax
+
 ```css
 /* Keyword values */
 transform-box: content-box;
@@ -25,8 +27,6 @@ transform-box: revert-layer;
 transform-box: unset;
 ```
 
-## Syntax
-
 The `transform-box` property is specified as one of the keyword values listed below.
 
 ### Values
@@ -36,11 +36,11 @@ The `transform-box` property is specified as one of the keyword values listed be
 - `border-box`
   - : The border box is used as the reference box. The reference box of a {{htmlElement("table")}} is the border box of its table wrapper box, not its table box.
 - `fill-box`
-  - : The object bounding box is used as the reference box.
+  - : The object bounding box is used as the reference box. For elements with associated CSS layout box, acts as `content-box`.
 - `stroke-box`
-  - : The stroke bounding box is used as the reference box.
+  - : The stroke bounding box is used as the reference box. For elements with associated CSS layout box, acts as `border-box`.
 - `view-box`
-  - : The nearest {{Glossary("SVG")}} viewport is used as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute, and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
+  - : The nearest {{Glossary("SVG")}} viewport is used as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute, and the dimension of the reference box is set to the width and height values of the `viewBox` attribute. For elements with associated CSS layout box, acts as `border-box`.
 
 ## Formal definition
 
@@ -114,7 +114,7 @@ Full credit for this example goes to [Pogany](https://codepen.io/giaco); see [th
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("transform")}}, {{cssxref("transform-origin")}}
 - Individual transform properties:
   - {{cssxref("translate")}}

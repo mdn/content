@@ -42,7 +42,7 @@ This example creates a listener that watches for the visibility state of the ses
 
 ```js
 xrSession.addEventListener("visibilitystate", (e) => {
-  switch(e.session.visibilitystate) {
+  switch (e.session.visibilitystate) {
     case "visible":
     case "visible-blurred":
       mySessionVisible(true);

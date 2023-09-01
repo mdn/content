@@ -116,7 +116,7 @@ The following properties control how text is laid out.
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
-- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
   - : Letter spacing. Default: `0px`.
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
   - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
@@ -126,7 +126,7 @@ The following properties control how text is laid out.
   - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
 - {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
-- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
 
 ### Fill and stroke styles
@@ -264,8 +264,8 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 - {{domxref("CanvasRenderingContext2D.canvas")}}
   - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
-  - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
-- {{domxref("CanvasRenderingContext2D.reset()")}} {{Experimental_Inline}}
+  - : Returns an object containing the context attributes used by the browser. Context attributes can be requested when using {{domxref("HTMLCanvasElement.getContext()")}} to create the 2D context.
+- {{domxref("CanvasRenderingContext2D.reset()")}}
   - : Resets the rendering context, including the backing buffer, the drawing state stack, path, and styles.
 - {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
   - : Returns `true` if the rendering context was lost.

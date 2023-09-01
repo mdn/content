@@ -1,5 +1,5 @@
 ---
-title: '<rb>: The Ruby Base element'
+title: "<rb>: The Ruby Base element"
 slug: Web/HTML/Element/rb
 page-type: html-element
 status:
@@ -29,12 +29,13 @@ In this example, we provide an annotation for the original character equivalent 
 
 ```html
 <ruby>
-  <rb>漢<rb>字
-  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
+  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
 Note how we've included two `<rb>` elements, to delimit the two separate parts of the ruby base text. The annotation on the other hand is delimited by two {{htmlelement("rt")}} elements.
+
+#### Result
 
 {{EmbedLiveSample("Using_rb", "100%", 60)}}
 
@@ -44,10 +45,13 @@ Note that we could also write this example with the two base text parts annotate
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Separate annotations')}}
 
 See the article about the {{HTMLElement("ruby")}} element for further examples.
 

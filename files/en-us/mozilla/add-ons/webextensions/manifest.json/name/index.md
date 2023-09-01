@@ -2,10 +2,6 @@
 title: name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.manifest.name
 ---
 

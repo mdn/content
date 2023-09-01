@@ -77,7 +77,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

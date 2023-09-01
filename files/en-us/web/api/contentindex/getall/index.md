@@ -1,5 +1,6 @@
 ---
-title: ContentIndex.getAll()
+title: "ContentIndex: getAll() method"
+short-title: getAll()
 slug: Web/API/ContentIndex/getAll
 page-type: web-api-instance-method
 status:

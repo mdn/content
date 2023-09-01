@@ -1,5 +1,6 @@
 ---
-title: DataTransferItem.webkitGetAsEntry()
+title: "DataTransferItem: webkitGetAsEntry() method"
+short-title: webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 page-type: web-api-instance-method
 browser-compat: api.DataTransferItem.webkitGetAsEntry
@@ -34,7 +35,7 @@ In this example, a drop zone is created, which responds to the {{domxref("HTMLEl
 by scanning through the dropped files and directories, outputting a hierarchical
 directory listing.
 
-### HTML content
+### HTML
 
 The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} element with the ID `"dropzone"`, and an unordered list element with the ID `"listing"`.
 
@@ -50,7 +51,7 @@ The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} ele
 <ul id="listing"></ul>
 ```
 
-### CSS content
+### CSS
 
 The styles used by the example are shown here.
 
@@ -70,17 +71,21 @@ The styles used by the example are shown here.
   vertical-align: middle;
   text-align: center;
   color: black;
-  font: bold 2em "Arial", sans-serif;
+  font:
+    bold 2em "Arial",
+    sans-serif;
   width: 300px;
   height: 100px;
 }
 
 body {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
-### JavaScript content
+### JavaScript
 
 First, let's look at the recursive `scanFiles()` function.
 This function takes as input a {{domxref("FileSystemEntry")}} representing an entry in the file system to be scanned and processed (the `item` parameter), and an element into which to insert the list of contents (the `container` parameter).
@@ -131,7 +136,7 @@ dropzone.addEventListener(
   (event) => {
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -154,7 +159,7 @@ dropzone.addEventListener(
       }
     }
   },
-  false
+  false,
 );
 ```
 

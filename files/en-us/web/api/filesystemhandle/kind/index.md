@@ -1,11 +1,12 @@
 ---
-title: FileSystemHandle.kind
+title: "FileSystemHandle: kind property"
+short-title: kind
 slug: Web/API/FileSystemHandle/kind
 page-type: web-api-instance-property
 browser-compat: api.FileSystemHandle.kind
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`kind`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the type of entry. This is
@@ -51,5 +52,5 @@ async function getFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [File System API](/en-US/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

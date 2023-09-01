@@ -2,11 +2,6 @@
 title: <switch>
 slug: Web/SVG/Element/switch
 page-type: svg-element
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.switch
 ---
 
@@ -42,7 +37,7 @@ This element implements the {{domxref("SVGSwitchElement")}} interface.
 
 This example demonstrates showing different text content depending on the browser's language settings. The `switch` element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
 
-### HTML Content
+### HTML
 
 ```html
 <svg viewBox="0 -20 100 50">

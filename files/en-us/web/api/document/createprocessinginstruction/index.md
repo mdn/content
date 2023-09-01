@@ -1,5 +1,6 @@
 ---
-title: Document.createProcessingInstruction()
+title: "Document: createProcessingInstruction() method"
+short-title: createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 page-type: web-api-instance-method
 browser-compat: api.Document.createProcessingInstruction
@@ -42,7 +43,7 @@ None ({{jsxref("undefined")}}).
 const doc = new DOMParser().parseFromString("<foo />", "application/xml");
 const pi = doc.createProcessingInstruction(
   "xml-stylesheet",
-  'href="mycss.css"'
+  'href="mycss.css"',
 );
 
 doc.insertBefore(pi, doc.firstChild);

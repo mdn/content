@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.movementY
+title: "MouseEvent: movementY property"
+short-title: movementY
 slug: Web/API/MouseEvent/movementY
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.movementY
@@ -33,8 +34,8 @@ function logMovement(event) {
   log.innerText = `movement: ${event.movementX}, ${event.movementY}\n${log.innerText}`;
 }
 
-const log = document.getElementById('log');
-document.addEventListener('mousemove', logMovement);
+const log = document.getElementById("log");
+document.addEventListener("mousemove", logMovement);
 ```
 
 ### Result

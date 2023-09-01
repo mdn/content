@@ -1,10 +1,7 @@
 ---
-title: 'y'
+title: "y"
 slug: Web/SVG/Attribute/y
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-y
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-y
@@ -22,7 +19,6 @@ The **`y`** attribute defines a y-axis coordinate in the user coordinate system.
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("cursor")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
@@ -81,36 +77,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## altGlyph
-
-> **Warning:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('altGlyph')}}, `y` defines the y-axis coordinate of the alternate glyph.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        List of
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
-            >&#x3C;length></a
-          ></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
 
 ## feBlend
 

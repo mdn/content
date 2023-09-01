@@ -1,5 +1,6 @@
 ---
-title: XRPose.emulatedPosition
+title: "XRPose: emulatedPosition property"
+short-title: emulatedPosition
 slug: Web/API/XRPose/emulatedPosition
 page-type: web-api-instance-property
 browser-compat: api.XRPose.emulatedPosition

@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.copyTo()
+title: "FileSystemEntry: copyTo() method"
+short-title: copyTo()
 slug: Web/API/FileSystemEntry/copyTo
 page-type: web-api-instance-method
 status:
@@ -77,10 +78,10 @@ workingDirectory.getFile(
       (dirEntry) => {
         fileEntry.copyTo(dirEntry);
       },
-      handleError
+      handleError,
     );
   },
-  handleError
+  handleError,
 );
 ```
 

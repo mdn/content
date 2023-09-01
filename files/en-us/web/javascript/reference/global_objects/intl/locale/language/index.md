@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.language
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.language`** property is an accessor property that returns the language associated with the locale.
+The **`language`** accessor property of {{jsxref("Intl.Locale")}} instances returns the language associated with this locale.
 
 ## Description
 
@@ -44,4 +44,4 @@ console.log(locale.language); // Prints "es"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [Unicode language subtag specification](https://www.unicode.org/reports/tr35/#unicode_language_subtag_validity)
+- [Unicode language subtag](https://www.unicode.org/reports/tr35/#unicode_language_subtag_validity) in the Unicode locale data markup language spec

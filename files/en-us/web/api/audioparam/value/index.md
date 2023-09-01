@@ -1,5 +1,6 @@
 ---
-title: AudioParam.value
+title: "AudioParam: value property"
+short-title: value
 slug: Web/API/AudioParam/value
 page-type: web-api-instance-property
 browser-compat: api.AudioParam.value

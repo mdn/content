@@ -1,5 +1,6 @@
 ---
-title: HTMLTableRowElement.rowIndex
+title: "HTMLTableRowElement: rowIndex property"
+short-title: rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
 page-type: web-api-instance-property
 browser-compat: api.HTMLTableRowElement.rowIndex
@@ -60,7 +61,7 @@ This example uses JavaScript to label all the row numbers in a table.
 ### JavaScript
 
 ```js
-let rows = document.querySelectorAll('tr');
+let rows = document.querySelectorAll("tr");
 
 rows.forEach((row) => {
   let z = document.createElement("td");

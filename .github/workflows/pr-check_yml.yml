@@ -11,7 +11,7 @@ on:
       - .github/workflows/pr-check_yml.yml
 
 jobs:
-  docs:
+  lint-yml:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,9 +24,10 @@ jobs:
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint markdown files
-        run: |
-          yarn lint:yml
+        run: yarn lint:yml

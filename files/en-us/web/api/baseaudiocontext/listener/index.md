@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.listener
+title: "BaseAudioContext: listener property"
+short-title: listener
 slug: Web/API/BaseAudioContext/listener
 page-type: web-api-instance-property
 browser-compat: api.BaseAudioContext.listener

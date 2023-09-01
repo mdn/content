@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.getKey()
+title: "IDBObjectStore: getKey() method"
+short-title: getKey()
 slug: Web/API/IDBObjectStore/getKey
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.getKey

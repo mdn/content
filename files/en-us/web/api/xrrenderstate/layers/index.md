@@ -1,5 +1,6 @@
 ---
-title: XRRenderState.layers
+title: "XRRenderState: layers property"
+short-title: layers
 slug: Web/API/XRRenderState/layers
 page-type: web-api-instance-property
 status:
@@ -24,7 +25,7 @@ Layers can be set using the {{domxref("XRSession.updateRenderState()")}} method.
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-  optionalFeatures: ["layers"]
+  optionalFeatures: ["layers"],
 });
 
 function onXRSessionStarted(xrSession) {
@@ -32,10 +33,13 @@ function onXRSessionStarted(xrSession) {
   const gl = glCanvas.getContext("webgl", { xrCompatible: true });
   const xrGlBinding = new XRWebGLBinding(xrSession, gl);
   const projectionLayer = new XRWebGLLayer(xrSession, gl);
-  const quadLayer = xrGlBinding.createQuadLayer({ pixelWidth: 1024, pixelHeight: 1024 });
+  const quadLayer = xrGlBinding.createQuadLayer({
+    pixelWidth: 1024,
+    pixelHeight: 1024,
+  });
 
   xrSession.updateRenderState({
-    layers: [projectionLayer, quadLayer]
+    layers: [projectionLayer, quadLayer],
   });
 
   xrSession.renderState.layers; // [projectionLayer, quadLayer]

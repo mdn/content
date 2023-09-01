@@ -1,5 +1,6 @@
 ---
-title: DocumentType.before()
+title: "DocumentType: before() method"
+short-title: before()
 slug: Web/API/DocumentType/before
 page-type: web-api-instance-method
 browser-compat: api.DocumentType.before
@@ -17,7 +18,7 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 ```js-nolint
 before(param1)
 before(param1, param2)
-before(param1, param2, /* … ,*/ paramN)
+before(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -48,7 +49,7 @@ let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
 docType.before(
-  document.createComment("<!--[if !IE]> conditional comment <![endif]-->")
+  document.createComment("<!--[if !IE]> conditional comment <![endif]-->"),
 );
 
 myDoc.childNodes;

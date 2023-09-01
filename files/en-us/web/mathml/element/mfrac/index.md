@@ -1,11 +1,7 @@
 ---
 title: <mfrac>
 slug: Web/MathML/Element/mfrac
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mfrac
 ---
 
@@ -33,7 +29,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `numalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - : The alignment of the numerator over the fraction. Possible values are: `left`, `center` (default), and `right`.
 
-> **Note:** For the `linethickness` attribute, some browsers may also accept the deprecated values `medium`, `thin` and `thick` (whose exact interpretation is left to implementers) or [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+> **Note:** For the `linethickness` attribute, some browsers may also accept the deprecated values `medium`, `thin` and `thick` (whose exact interpretation is left to implementers) or [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 

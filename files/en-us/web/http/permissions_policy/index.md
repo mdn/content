@@ -1,24 +1,13 @@
 ---
 title: Permissions Policy
 slug: Web/HTTP/Permissions_Policy
-tags:
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Introduction
-  - Overview
-  - Reference
-  - Security
-  - access
-  - delegation
-  - header
-  - permission
+page-type: guide
 browser-compat: http.headers.Permissions-Policy
 ---
 
 {{HTTPSidebar}}
 
-**Permissions Policy** provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a web site. You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features. This allows you to enforce best practices, even as the codebase evolves — as well as more safely compose third-party content.
+**Permissions Policy** provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a website. You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features. This allows you to enforce best practices, even as the codebase evolves — as well as more safely compose third-party content.
 
 Permissions Policy is similar to {{Glossary("CSP", "Content Security Policy")}} but controls features instead of security behavior.
 
@@ -29,7 +18,7 @@ Examples of what you can do with Permissions Policy:
 - Allow iframes to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API).
 - Stop items from being scripted if they are not visible in the viewport, to improve performance.
 
-> **Note:** Permissions Policy used to be called Feature Policy. The name has changed, and so has the HTTP header syntax, so bear this in in mind if you have used Feature Policy in the past, and check the browser support tables. The `<iframe allow=" ... ">` syntax has stayed the same.
+> **Note:** Permissions Policy used to be called Feature Policy. The name has changed, and so has the HTTP header syntax, so bear this in mind if you have used Feature Policy in the past, and check the browser support tables. The `<iframe allow=" ... ">` syntax has stayed the same.
 
 ## Concepts and usage
 

@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionEvent.results
+title: "SpeechRecognitionEvent: results property"
+short-title: results
 slug: Web/API/SpeechRecognitionEvent/results
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionEvent.results
@@ -41,7 +42,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

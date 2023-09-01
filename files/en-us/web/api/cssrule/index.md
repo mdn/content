@@ -9,6 +9,7 @@ browser-compat: api.CSSRule
 
 The **`CSSRule`** interface represents a single CSS rule. There are several types of rules which inherit properties from `CSSRule`.
 
+- {{DOMXRef("CSSGroupingRule")}}
 - {{DOMXRef("CSSStyleRule")}}
 - {{DOMXRef("CSSImportRule")}}
 - {{DOMXRef("CSSMediaRule")}}
@@ -18,10 +19,12 @@ The **`CSSRule`** interface represents a single CSS rule. There are several type
 - {{DOMXRef("CSSKeyframesRule")}}
 - {{DOMXRef("CSSKeyframeRule")}}
 - {{DOMXRef("CSSCounterStyleRule")}}
-- {{DOMXRef("CSSDocumentRule")}}
 - {{DOMXRef("CSSSupportsRule")}}
 - {{DOMXRef("CSSFontFeatureValuesRule")}}
-- {{DOMXRef("CSSViewportRule")}}
+- {{DOMXRef("CSSFontPaletteValuesRule")}}
+- {{DOMXRef("CSSLayerBlockRule")}}
+- {{DOMXRef("CSSLayerStatementRule")}}
+- {{DOMXRef("CSSPropertyRule")}}
 
 ## Instance properties
 

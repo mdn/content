@@ -1,5 +1,6 @@
 ---
-title: CustomEvent.initCustomEvent()
+title: "CustomEvent: initCustomEvent() method"
+short-title: initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 page-type: web-api-instance-method
 status:

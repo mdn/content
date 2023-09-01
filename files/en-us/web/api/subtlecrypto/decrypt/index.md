@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.decrypt()
+title: "SubtleCrypto: decrypt() method"
+short-title: decrypt()
 slug: Web/API/SubtleCrypto/decrypt
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.decrypt
@@ -64,7 +65,7 @@ function decryptMessage(privateKey, ciphertext) {
   return window.crypto.subtle.decrypt(
     { name: "RSA-OAEP" },
     privateKey,
-    ciphertext
+    ciphertext,
   );
 }
 ```
@@ -79,7 +80,7 @@ function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
     { name: "AES-CTR", counter, length: 64 },
     key,
-    ciphertext
+    ciphertext,
   );
 }
 ```

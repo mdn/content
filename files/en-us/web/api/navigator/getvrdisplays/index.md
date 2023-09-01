@@ -1,5 +1,6 @@
 ---
-title: Navigator.getVRDisplays()
+title: "Navigator: getVRDisplays() method"
+short-title: getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
 page-type: web-api-instance-method
 status:

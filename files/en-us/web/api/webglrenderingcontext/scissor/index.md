@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.scissor()
+title: "WebGLRenderingContext: scissor() method"
+short-title: scissor()
 slug: Web/API/WebGLRenderingContext/scissor
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.scissor

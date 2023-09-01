@@ -1,5 +1,6 @@
 ---
-title: caches
+title: caches global property
+short-title: caches
 slug: Web/API/caches
 page-type: web-api-global-property
 browser-compat: api.caches
@@ -37,8 +38,8 @@ this.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```

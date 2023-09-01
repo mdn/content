@@ -1,6 +1,7 @@
 ---
 title: aria-description
 slug: Web/Accessibility/ARIA/Attributes/aria-description
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-description
 ---
 

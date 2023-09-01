@@ -1,8 +1,9 @@
 ---
 title: "Element: pointerup event"
+short-title: pointerup
 slug: Web/API/Element/pointerup_event
-browser-compat: api.Element.pointerup_event
 page-type: web-api-event
+browser-compat: api.Element.pointerup_event
 ---
 
 {{APIRef}}

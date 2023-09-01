@@ -2,12 +2,10 @@
 title: UserActivation
 slug: Web/API/UserActivation
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.UserActivation
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`UserActivation`** interface allows querying information about a window's user activation state.
 
@@ -24,9 +22,9 @@ This API is only available in the window context and not exposed to workers.
 
 ## Instance properties
 
-- {{domxref("UserActivation.hasBeenActive")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("UserActivation.hasBeenActive")}} {{ReadOnlyInline}}
   - : Indicates whether the current window has sticky user activation.
-- {{domxref("UserActivation.isActive")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("UserActivation.isActive")}} {{ReadOnlyInline}}
   - : Indicates whether the current window has transient user activation.
 
 ## Examples

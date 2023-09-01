@@ -1,5 +1,5 @@
 ---
-title: '<title>: The Document Title element'
+title: "<title>: The Document Title element"
 slug: Web/HTML/Element/title
 page-type: html-element
 browser-compat: html.elements.title
@@ -86,7 +86,7 @@ A few guidelines and tips for composing good titles:
 - Don't use "keyword blobs." If your title is just a list of words, algorithms often reduce your page's position in the search results.
 - Try to make sure your titles are as unique as possible within your own site. Duplicate—or near-duplicate—titles can contribute to inaccurate search results.
 
-## Example
+## Examples
 
 ```html
 <title>Awesome interesting stuff</title>
@@ -100,7 +100,7 @@ It is important to provide an accurate and concise title to describe the page's 
 
 A common navigation technique for users of assistive technology is to read the page title and infer the content the page contains. This is because navigating into a page to determine its content can be a time-consuming and potentially confusing process. Titles should be unique to every page of a website, ideally surfacing the primary purpose of the page first, followed by the name of the website. Following this pattern will help ensure that the primary purpose of the page is announced by a screen reader first. This provides a far better experience than having to listen to the name of a website before the unique page title, for every page a user navigates to in the same website.
 
-### Example
+### Examples
 
 ```html
 <title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
@@ -126,3 +126,7 @@ If a form submission contains errors and the submission re-renders the current p
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) element

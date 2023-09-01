@@ -1,11 +1,12 @@
 ---
-title: Response.redirected
+title: "Response: redirected property"
+short-title: redirected
 slug: Web/API/Response/redirected
 page-type: web-api-instance-property
 browser-compat: api.Response.redirected
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The read-only **`redirected`** property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.
 

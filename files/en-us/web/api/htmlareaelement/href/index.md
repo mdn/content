@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.href
+title: "HTMLAreaElement: href property"
+short-title: href
 slug: Web/API/HTMLAreaElement/href
 page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.href

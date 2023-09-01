@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.getViewSubImage()
+title: "XRWebGLBinding: getViewSubImage() method"
+short-title: getViewSubImage()
 slug: Web/API/XRWebGLBinding/getViewSubImage
 page-type: web-api-instance-method
 status:
@@ -55,10 +56,20 @@ function onXRFrame(time, xrFrame) {
 
   for (const view in xrViewerPose.views) {
     const subImage = xrGlBinding.getViewSubImage(layer, view);
-    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
-      gl.TEXTURE_2D, subImage.colorTexture, 0);
-    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,
-      gl.TEXTURE_2D, subImage.depthStencilTexture, 0);
+    gl.framebufferTexture2D(
+      gl.FRAMEBUFFER,
+      gl.COLOR_ATTACHMENT0,
+      gl.TEXTURE_2D,
+      subImage.colorTexture,
+      0,
+    );
+    gl.framebufferTexture2D(
+      gl.FRAMEBUFFER,
+      gl.DEPTH_ATTACHMENT,
+      gl.TEXTURE_2D,
+      subImage.depthStencilTexture,
+      0,
+    );
     const viewport = subImage.viewport;
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 

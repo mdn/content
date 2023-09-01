@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.contains()
+title: "DOMTokenList: contains() method"
+short-title: contains()
 slug: Web/API/DOMTokenList/contains
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.contains

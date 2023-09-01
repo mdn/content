@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.instrumentKey
+title: "PaymentRequestEvent: instrumentKey property"
+short-title: instrumentKey
 slug: Web/API/PaymentRequestEvent/instrumentKey
 page-type: web-api-instance-property
 status:

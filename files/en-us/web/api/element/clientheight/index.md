@@ -1,5 +1,6 @@
 ---
-title: Element.clientHeight
+title: "Element: clientHeight property"
+short-title: clientHeight
 slug: Web/API/Element/clientHeight
 page-type: web-api-instance-property
 browser-compat: api.Element.clientHeight

@@ -1,7 +1,5 @@
 ---
-title: >-
-  SyntaxError: a declaration in the head of a for-of loop can't have an
-  initializer
+title: "SyntaxError: a declaration in the head of a for-of loop can't have an initializer"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 page-type: javascript-error
 ---
@@ -12,7 +10,7 @@ The JavaScript exception "a declaration in the head of a for-of loop can't have 
 
 ## Message
 
-```
+```plain
 SyntaxError: for-of loop variable declaration may not have an initializer. (V8-based)
 SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
 SyntaxError: Cannot assign to the loop variable inside a for-of loop header. (Safari)
@@ -30,7 +28,7 @@ The head of a [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...o
 
 ### Invalid for-of loop
 
-```js example-bad
+```js-nolint example-bad
 const iterable = [10, 20, 30];
 
 for (const value = 50 of iterable) {
@@ -60,5 +58,5 @@ for (let value of iterable) {
 ## See also
 
 - [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) – disallows an initializer in strict mode as well ([SyntaxError: for-in loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) – allows to define an initializer when iterating.
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for)

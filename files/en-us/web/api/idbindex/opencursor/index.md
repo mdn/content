@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.openCursor()
+title: "IDBIndex: openCursor() method"
+short-title: openCursor()
 slug: Web/API/IDBIndex/openCursor
 page-type: web-api-instance-method
 browser-compat: api.IDBIndex.openCursor

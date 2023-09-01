@@ -2,16 +2,6 @@
 title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - Windows
 browser-compat: webextensions.api.windows.update
 ---
 
@@ -77,13 +67,11 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let updating = browser.windows.update(tab.windowId, {
     left: 0,
-    top: 0
+    top: 0,
   });
   updating.then(onUpdated, onError);
-
 });
 ```
 

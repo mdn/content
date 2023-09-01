@@ -1,5 +1,6 @@
 ---
-title: RTCRtpEncodingParameters.maxFramerate
+title: "RTCRtpEncodingParameters: maxFramerate property"
+short-title: maxFramerate
 slug: Web/API/RTCRtpEncodingParameters/maxFramerate
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpEncodingParameters.maxFramerate

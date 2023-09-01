@@ -1,13 +1,14 @@
 ---
 title: "Element: transitionstart event"
+short-title: transitionstart
 slug: Web/API/Element/transitionstart_event
-browser-compat: api.Element.transitionstart_event
 page-type: web-api-event
+browser-compat: api.Element.transitionstart_event
 ---
 
 {{APIRef}}
 
-The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.
+The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.
 
 This event is not cancelable.
 
@@ -120,5 +121,3 @@ The difference is that:
 - The {{domxref("TransitionEvent")}} interface
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
 - Related events: {{domxref("Element/transitionend_event", "transitionend")}}, {{domxref("Element/transitionrun_event", "transitionrun")}}, {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/transitionstart_event", "transitionstart")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/transitionstart_event", "transitionstart")}}

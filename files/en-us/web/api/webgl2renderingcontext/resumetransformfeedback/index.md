@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.resumeTransformFeedback()
+title: "WebGL2RenderingContext: resumeTransformFeedback() method"
+short-title: resumeTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/resumeTransformFeedback
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.resumeTransformFeedback

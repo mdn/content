@@ -1,5 +1,6 @@
 ---
-title: ResizeObserver()
+title: "ResizeObserver: ResizeObserver() constructor"
+short-title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
 page-type: web-api-constructor
 browser-compat: api.ResizeObserver.ResizeObserver
@@ -55,19 +56,34 @@ const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentBoxSize) {
       if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200)}rem`;
-        pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize[0].inlineSize / 600)}rem`;
+        h1Elem.style.fontSize = `${Math.max(
+          1.5,
+          entry.contentBoxSize[0].inlineSize / 200,
+        )}rem`;
+        pElem.style.fontSize = `${Math.max(
+          1,
+          entry.contentBoxSize[0].inlineSize / 600,
+        )}rem`;
       } else {
         // legacy path
-        h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
-        pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
+        h1Elem.style.fontSize = `${Math.max(
+          1.5,
+          entry.contentBoxSize.inlineSize / 200,
+        )}rem`;
+        pElem.style.fontSize = `${Math.max(
+          1,
+          entry.contentBoxSize.inlineSize / 600,
+        )}rem`;
       }
     } else {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200,
+      )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }
-  console.log('Size changed');
+  console.log("Size changed");
 });
 
 resizeObserver.observe(divElem);

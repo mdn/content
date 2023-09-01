@@ -1,5 +1,6 @@
 ---
-title: Selection.deleteFromDocument()
+title: "Selection: deleteFromDocument() method"
+short-title: deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 page-type: web-api-instance-method
 browser-compat: api.Selection.deleteFromDocument
@@ -44,8 +45,8 @@ button, the
 ### JavaScript
 
 ```js
-let button = document.querySelector('button');
-button.addEventListener('click', deleteSelection);
+let button = document.querySelector("button");
+button.addEventListener("click", deleteSelection);
 
 function deleteSelection() {
   let selection = window.getSelection();

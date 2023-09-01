@@ -1,5 +1,6 @@
 ---
 title: "BaseAudioContext: statechange event"
+short-title: statechange
 slug: Web/API/BaseAudioContext/statechange_event
 page-type: web-api-event
 browser-compat: api.BaseAudioContext.statechange_event

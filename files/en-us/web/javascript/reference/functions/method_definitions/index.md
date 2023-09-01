@@ -77,7 +77,7 @@ new obj.method(); // TypeError: obj.method is not a constructor
 
 Only functions defined as methods have access to the [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) keyword. `super.prop` looks up the property on the prototype of the object that the method was initialized on.
 
-```js example-bad
+```js-nolint example-bad
 const obj = {
   __proto__: {
     prop: "foo",
@@ -169,7 +169,7 @@ Note that the asterisk (`*`) in the generator method syntax must be _before_ the
 
 ```js
 // Using a named property
-const obj2 = {
+const obj = {
   g: function* () {
     let index = 0;
     while (true) {
@@ -197,14 +197,14 @@ console.log(it.next().value); // 1
 
 ```js
 // Using a named property
-const obj3 = {
+const obj = {
   f: async function () {
     await somePromise;
   },
 };
 
 // The same object using shorthand syntax
-const obj3 = {
+const obj2 = {
   async f() {
     await somePromise;
   },
@@ -214,7 +214,7 @@ const obj3 = {
 ### Async generator methods
 
 ```js
-const obj4 = {
+const obj = {
   f: async function* () {
     yield 1;
     yield 2;
@@ -223,7 +223,7 @@ const obj4 = {
 };
 
 // The same object using shorthand syntax
-const obj4 = {
+const obj2 = {
   async *f() {
     yield 1;
     yield 2;
@@ -242,6 +242,9 @@ const obj4 = {
 
 ## See also
 
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- {{jsxref("Statements/class", "class")}}

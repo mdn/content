@@ -1,5 +1,6 @@
 ---
-title: Element.getElementsByClassName()
+title: "Element: getElementsByClassName() method"
+short-title: getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
 page-type: web-api-instance-method
 browser-compat: api.Element.getElementsByClassName
@@ -117,7 +118,7 @@ We can also use {{jsxref("Array")}} methods on any {{domxref("HTMLCollection")}}
 const testElements = document.getElementsByClassName("test");
 const testDivs = Array.prototype.filter.call(
   testElements,
-  (testElement) => testElement.nodeName === "DIV"
+  (testElement) => testElement.nodeName === "DIV",
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Useful string methods
 slug: Learn/JavaScript/First_steps/Useful_string_methods
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
@@ -31,7 +32,7 @@ Now that we've looked at the very basics of strings, let's move up a gear and st
 Most things are objects in JavaScript. When you create a string, for example by using
 
 ```js
-const string = 'This is my string';
+const string = "This is my string";
 ```
 
 your variable becomes a string object instance, and as a result has a large number of properties and methods available to it. You can see this if you go to the {{jsxref("String")}} object page and look down the list on the side of the page!
@@ -45,7 +46,7 @@ Let's enter some examples into the [browser developer console](/en-US/docs/Learn
 This is easy — you use the {{jsxref("String.prototype.length", "length")}} property. Try entering the following lines:
 
 ```js
-const browserType = 'mozilla';
+const browserType = "mozilla";
 browserType.length;
 ```
 
@@ -64,7 +65,7 @@ Remember: computers count from 0, not 1!
 To retrieve the last character of _any_ string, we could use the following line, combining this technique with the `length` property we looked at above:
 
 ```js
-browserType[browserType.length-1];
+browserType[browserType.length - 1];
 ```
 
 The length of the string "mozilla" is 7, but because the count starts at 0, the last character's position is 6; using `length-1` gets us the last character.
@@ -76,34 +77,34 @@ Sometimes you'll want to find if a smaller string is present inside a larger one
 It returns `true` if the string contains the substring, and `false` otherwise.
 
 ```js
-const browserType = 'mozilla';
+const browserType = "mozilla";
 
-if (browserType.includes('zilla')) {
-  console.log('Found zilla!');
+if (browserType.includes("zilla")) {
+  console.log("Found zilla!");
 } else {
-  console.log('No zilla here!');
+  console.log("No zilla here!");
 }
 ```
 
 Often you'll want to know if a string starts or ends with a particular substring. This is a common enough need that there are two special methods for this: {{jsxref("String.prototype.startsWith()", "startsWith()")}} and {{jsxref("String.prototype.endsWith()", "endsWith()")}}:
 
 ```js
-const browserType = 'mozilla';
+const browserType = "mozilla";
 
-if (browserType.startsWith('zilla')) {
-  console.log('Found zilla!');
+if (browserType.startsWith("zilla")) {
+  console.log("Found zilla!");
 } else {
-  console.log('No zilla here!');
+  console.log("No zilla here!");
 }
 ```
 
 ```js
-const browserType = 'mozilla';
+const browserType = "mozilla";
 
-if (browserType.endsWith('zilla')) {
-  console.log('Found zilla!');
+if (browserType.endsWith("zilla")) {
+  console.log("Found zilla!");
 } else {
-  console.log('No zilla here!');
+  console.log("No zilla here!");
 }
 ```
 
@@ -114,14 +115,14 @@ You can find the position of a substring inside a larger string using the {{jsxr
 If the string contains the substring, `indexOf()` returns the index of the first occurrence of the substring. If the string does not contain the substring, `indexOf()` returns `-1`.
 
 ```js
-const tagline = 'MDN - Resources for developers, by developers';
-console.log(tagline.indexOf('developers')); // 20
+const tagline = "MDN - Resources for developers, by developers";
+console.log(tagline.indexOf("developers")); // 20
 ```
 
 Starting at `0`, if you count the number of characters (including the whitespace) from the beginning of the string, the first occurrence of the substring `"developers"` is at index `20`.
 
 ```js
-console.log(tagline.indexOf('x')); // -1
+console.log(tagline.indexOf("x")); // -1
 ```
 
 This, on the other hand, returns `-1` because the character `x` is not present in the string.
@@ -129,8 +130,8 @@ This, on the other hand, returns `-1` because the character `x` is not present i
 So now that you know how to find the first occurrence of a substring, how do you go about finding subsequent occurrences? You can do that by passing in a value that's greater than the index of the previous occurrence as the second parameter to the method.
 
 ```js
-const firstOccurrence = tagline.indexOf('developers');
-const secondOccurrence = tagline.indexOf('developers', firstOccurrence + 1);
+const firstOccurrence = tagline.indexOf("developers");
+const secondOccurrence = tagline.indexOf("developers", firstOccurrence + 1);
 
 console.log(firstOccurrence); // 20
 console.log(secondOccurrence); // 35
@@ -148,7 +149,7 @@ You can extract a substring from a string using the {{jsxref("String.prototype.s
 For example:
 
 ```js
-const browserType = 'mozilla';
+const browserType = "mozilla";
 console.log(browserType.slice(1, 4)); // "ozi"
 ```
 
@@ -171,7 +172,7 @@ The string methods {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}
 Let's try entering the following lines to see what happens:
 
 ```js
-const radData = 'My NaMe Is MuD';
+const radData = "My NaMe Is MuD";
 console.log(radData.toLowerCase());
 console.log(radData.toUpperCase());
 ```
@@ -183,20 +184,20 @@ You can replace one substring inside a string with another substring using the {
 In this example, we're providing two parameters — the string we want to replace, and the string we want to replace it with:
 
 ```js
-const browserType = 'mozilla';
-const updated = browserType.replace('moz','van');
+const browserType = "mozilla";
+const updated = browserType.replace("moz", "van");
 
-console.log(updated);      // "vanilla"
-console.log(browserType);  // "mozilla"
+console.log(updated); // "vanilla"
+console.log(browserType); // "mozilla"
 ```
 
 Note that `replace()`, like many string methods, doesn't change the string it was called on, but returns a new string. If you want to update the original `browserType` variable, you would have to do something like this:
 
 ```js
-let browserType = 'mozilla';
-browserType = browserType.replace('moz','van');
+let browserType = "mozilla";
+browserType = browserType.replace("moz", "van");
 
-console.log(browserType);  // "vanilla"
+console.log(browserType); // "vanilla"
 ```
 
 Also note that we now have to declare `browserType` using `let`, not `const`, because we are reassigning it.
@@ -204,10 +205,10 @@ Also note that we now have to declare `browserType` using `let`, not `const`, be
 Be aware that `replace()` in this form only changes the first occurrence of the substring. If you want to change all occurrences, you can use {{jsxref("String.prototype.replaceAll()", "replaceAll()")}}:
 
 ```js
-let quote = 'To be or not to be';
-quote = quote.replaceAll('be','code');
+let quote = "To be or not to be";
+quote = quote.replaceAll("be", "code");
 
-console.log(quote);  // "To code or not to code"
+console.log(quote); // "To code or not to code"
 ```
 
 ## Active learning examples
@@ -283,9 +284,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -293,21 +294,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -334,8 +335,8 @@ for (const greeting of greetings) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -343,7 +344,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -355,7 +356,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -370,7 +374,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -449,9 +453,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -459,21 +463,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -495,16 +499,16 @@ for (const city of cities) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -516,7 +520,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -528,10 +535,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -547,13 +554,13 @@ textarea.onkeyup = function(){
 
 In this last exercise, the array contains a bunch of strings containing information about train stations in the North of England. The strings are data items that contain the three-letter station code, followed by some machine-readable data, followed by a semicolon, followed by the human-readable station name. For example:
 
-```
+```plain
 MAN675847583748sjt567654;Manchester Piccadilly
 ```
 
 We want to extract the station code and name, and put them together in a string with the following structure:
 
-```
+```plain
 MAN: Manchester Piccadilly
 ```
 
@@ -625,9 +632,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -635,21 +642,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -675,16 +682,16 @@ for (const station of stations) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -696,7 +703,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -708,10 +718,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

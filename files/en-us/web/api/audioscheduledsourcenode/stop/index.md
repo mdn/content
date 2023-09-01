@@ -1,5 +1,6 @@
 ---
-title: AudioScheduledSourceNode.stop()
+title: "AudioScheduledSourceNode: stop() method"
+short-title: stop()
 slug: Web/API/AudioScheduledSourceNode/stop
 page-type: web-api-instance-method
 browser-compat: api.AudioScheduledSourceNode.stop

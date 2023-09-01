@@ -29,7 +29,7 @@ The following parameters are passed to the `construct()` method. `this` is bound
 - `argumentsList`
   - : The list of arguments for the constructor.
 - `newTarget`
-  - : The constructor that was originally called, `p` above.
+  - : The constructor that was originally called.
 
 ### Return value
 
@@ -109,5 +109,5 @@ new p(); // TypeError is thrown, "p" is not a constructor
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/new", "new")}} operator.
+- {{jsxref("Operators/new", "new")}}
 - {{jsxref("Reflect.construct()")}}

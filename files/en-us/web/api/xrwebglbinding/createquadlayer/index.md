@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.createQuadLayer()
+title: "XRWebGLBinding: createQuadLayer() method"
+short-title: createQuadLayer()
 slug: Web/API/XRWebGLBinding/createQuadLayer
 page-type: web-api-instance-method
 status:
@@ -108,10 +109,10 @@ function onXRSessionStarted(xrSession) {
     space: xrReferenceSpace,
     viewPixelHeight: 512,
     viewPixelWidth: 512,
-    transform: new XRRigidTransform({z: -2})
+    transform: new XRRigidTransform({ z: -2 }),
   });
   xrSession.updateRenderState({
-    layers: [quadLayer]
+    layers: [quadLayer],
   });
 }
 ```

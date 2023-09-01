@@ -1,5 +1,6 @@
 ---
-title: Document.createTouchList()
+title: "Document: createTouchList() method"
+short-title: createTouchList()
 slug: Web/API/Document/createTouchList
 page-type: web-api-instance-method
 status:
@@ -17,7 +18,7 @@ The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef(
 ```js-nolint
 createTouchList(touch1)
 createTouchList(touch1, touch2)
-createTouchList(touch1, touch2, /* … ,*/ touchN)
+createTouchList(touch1, touch2, /* …, */ touchN)
 ```
 
 ### Parameters

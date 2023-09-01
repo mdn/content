@@ -1,6 +1,7 @@
 ---
 title: Firefox 52 for developers
 slug: Mozilla/Firefox/Releases/52
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -38,7 +39,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Implemented Flexbox layout for {{cssxref("align-self")}}|{{cssxref("justify-self")}}: \[ first | last ]? baseline ([Firefox bug 1221524](https://bugzil.la/1221524)).
 - The {{cssxref("touch-action")}} property is now enabled by default on all platforms. (For the full story, see [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) and [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M).)
 - Flexbox {{cssxref("align-content")}} handling & single-line-sizing should depend on {{cssxref("flex-wrap")}}, not number of lines ([Firefox bug 1090031](https://bugzil.la/1090031)).
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) can now be used to animate non-interpolated properties (see [Firefox bug 1064937](https://bugzil.la/1064937)).
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) can now be used to animate non-interpolated properties (see [Firefox bug 1064937](https://bugzil.la/1064937)).
 - Changed `baseline|last-baseline` to `[ first | last ]? baseline` ([Firefox bug 1313254](https://bugzil.la/1313254)).
 - The used value for `left`/`right` is `start` for the block-axis ([Firefox bug 1221565](https://bugzil.la/1221565)).
 - Stretching flexible tracks with an indefinite containing block length now respects the min/max size([Firefox bug 1309407](https://bugzil.la/1309407)).
@@ -55,7 +56,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### CSS Grids
 
-- [CSS Grids](/en-US/docs/Web/CSS/CSS_Grid_Layout) are implemented.
+- [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) are implemented.
 
 #### Changes and removals
 
@@ -64,7 +65,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Implemented grid container baselines ([Firefox bug 1151204](https://bugzil.la/1151204)).
 - Removed `<flex>` min-sizing from the style system ([Firefox bug 1305244](https://bugzil.la/1305244)).
 - Remove preference `layout.css.masking.enabled` ([Firefox bug 1308239](https://bugzil.la/1308239)).
-- The proprietary `-moz-images-in-menus` and `-moz-images-in-buttons` [media types](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) have been removed (see [Firefox bug 1302157](https://bugzil.la/1302157)).
+- The proprietary `-moz-images-in-menus` and `-moz-images-in-buttons` [media types](/en-US/docs/Web/CSS/@media#media_features) have been removed (see [Firefox bug 1302157](https://bugzil.la/1302157)).
 - Removed `-moz-use-text-color` value from color properties; use [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) instead ([Firefox bug 1306214](https://bugzil.la/1306214)).
 - \[css-grid] 'max-width' set on grid item causes text to overflow ([Firefox bug 1330380](https://bugzil.la/1330380)).
 
@@ -80,7 +81,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### Changes and removals
 
-- [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#assigning_the_rest_of_an_array_to_a_variable) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
+- [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
 - Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1204024](https://bugzil.la/1204024)).
 - {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "`locales`" and "`options`" ([Firefox bug 1130636](https://bugzil.la/1130636)).
 - {{jsxref("TypedArray")}} constructors now accept [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) to create new typed arrays ([Firefox bug 1232266](https://bugzil.la/1232266)).
@@ -95,10 +96,10 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### DOM
 
-- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{domxref("Document/selectstart_event", "selectstart")}} and {{domxref("Document/selectionchange_event", "selectionchange")}} events ([Firefox bug 1309612](https://bugzil.la/1309612)).
+- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{domxref("Node/selectstart_event", "selectstart")}} and {{domxref("Document/selectionchange_event", "selectionchange")}} events ([Firefox bug 1309612](https://bugzil.la/1309612)).
 - The property {{domxref("Event.composed")}} is now supported; this Boolean value indicates whether or not the event can bubble through the shadow root into the standard DOM ([Firefox bug 1292063](https://bugzil.la/1292063)).
 - Only HTML elements, plus the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ([Firefox bug 1305928](https://bugzil.la/1305928)).
-- [Touch events](/en-US/docs/Web/API/Touch_events) have been reenabled on Windows desktop platforms — see [Firefox bug 1244402](https://bugzil.la/1244402). (They were disabled in Firefox 24 because they broke a number of major sites; see [Firefox bug 888304](https://bugzil.la/888304).)
+- [Touch events](/en-US/docs/Web/API/Touch_events) have been re-enabled on Windows desktop platforms — see [Firefox bug 1244402](https://bugzil.la/1244402). (They were disabled in Firefox 24 because they broke a number of major sites; see [Firefox bug 888304](https://bugzil.la/888304).)
 - The {{domxref("Element/focusin_event", "focusin")}} and {{domxref("Element/focusout_event", "focusout")}} events are now implemented ([Firefox bug 687787](https://bugzil.la/687787)).
 - The {{domxref("isSecureContext")}} property has been implemented (see [Firefox bug 1269052](https://bugzil.la/1269052)).
 - The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.appinstalled_event")}}, {{domxref("Window.appinstalled", "appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See [Firefox bug 1309099](https://bugzil.la/1309099) for more details about this update.
@@ -106,7 +107,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see [Firefox bug 1264769](https://bugzil.la/1264769)).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see [Firefox bug 862395](https://bugzil.la/862395).)
 - The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see [Firefox bug 1267339](https://bugzil.la/1267339)), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Attributes/rel).
-- The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/Web_Components) has been implemented (see [Firefox bug 1275838](https://bugzil.la/1275838)).
+- The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/API/Web_components) has been implemented (see [Firefox bug 1275838](https://bugzil.la/1275838)).
 - [Pointer Event](/en-US/docs/Web/API/Pointer_events) {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see [Firefox bug 1304315](https://bugzil.la/1304315)).
 - The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been updated to include changes in the [latest spec](https://wicg.github.io/entries-api/) (see [Firefox bug 1284987](https://bugzil.la/1284987) for the exact details).
 - The {{domxref("Event.cancelBubble", "cancelBubble")}} property, which was defined on {{domxref("UIEvent")}}, is now defined on the {{domxref("Event")}} interface instead. See [Firefox bug 1298970](https://bugzil.la/1298970) for more details.

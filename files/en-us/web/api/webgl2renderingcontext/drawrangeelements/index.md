@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.drawRangeElements()
+title: "WebGL2RenderingContext: drawRangeElements() method"
+short-title: drawRangeElements()
 slug: Web/API/WebGL2RenderingContext/drawRangeElements
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.drawRangeElements

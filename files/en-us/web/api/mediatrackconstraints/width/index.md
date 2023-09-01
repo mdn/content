@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.width
+title: "MediaTrackConstraints: width property"
+short-title: width
 slug: Web/API/MediaTrackConstraints/width
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.width

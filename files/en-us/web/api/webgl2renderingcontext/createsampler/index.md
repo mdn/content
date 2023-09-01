@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.createSampler()
+title: "WebGL2RenderingContext: createSampler() method"
+short-title: createSampler()
 slug: Web/API/WebGL2RenderingContext/createSampler
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.createSampler

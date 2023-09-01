@@ -1,17 +1,7 @@
 ---
 title: "CSP: script-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Script
-  - Security
-  - script-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src
 ---
 
@@ -56,7 +46,7 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 
 ## Examples
 
-### Blocking resources from untrusted domains
+### Whitelisting resources from trusted domains
 
 Given this CSP header that only allows scripts from `https://example.com`:
 
@@ -85,6 +75,56 @@ document.getElementById("btn").addEventListener("click", doSomething);
 If you cannot replace inline event handlers, you can use the `'unsafe-hashes'` source expression to allow them.
 See [Unsafe hashes](#unsafe_hashes) for more information.
 
+### Whitelisting external scripts using hashes
+
+Allowing trusted domains, as shown in the section above, is a broad-brushed approach for specifying the locations from which code can safely be loaded.
+This is a pragmatic approach, in particular when your site uses many resources and you have confidence that the trusted site will not be compromised.
+
+An alternative method is to specify allowed scripts using file hashes.
+Using this approach an external file in a `<script>` element can only be loaded and executed if all the valid hash values in its [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute match the allowed values in the CSP header.
+The [Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) feature additionally checks that the downloaded file has the indicated hash value, and therefore has not been modified.
+This is safer than trusting a domain, because files will only be used if they are unmodified, even if loaded from a compromised site.
+It is however more granular, and requires that hash values are updated in CSP and script elements whenever the associated scripts are changed.
+
+The CSP header below demonstrates the approach.
+It allows scripts for which the SHA384 hash is `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` or the SHA256 hash is `fictional_value`.
+
+```http
+Content-Security-Policy: script-src 'sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC' 'sha256-fictional_value'
+```
+
+The `example-framework.js` script below should load because the hash value in its `integrity` attribute is also present in the CSP (provided the file actually does have that hash once downloaded!)
+
+```html
+<script
+  src="https://example.com/example-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
+```
+
+The `integrity` attribute can have multiple values, each providing a hash for the file calculated using a different algorithm.
+In order for an external script to be loaded, CSP requires that _all_ valid hash values in the attribute must also be in the CSP `script-src` declaration.
+Therefore the script below would not load, because the second hash is not present in the CSP header above.
+
+```html
+<script
+  src="https://example.com/example-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC sha256-not-in-csp"
+  crossorigin="anonymous"></script>
+```
+
+This rule only applies to _valid_ hash values.
+Values that are not recognized as hashes by the browser are ignored, so the following script should load:
+
+```html
+<script
+  src="https://example.com/example-framework.js"
+  integrity="invalid-or-unsupported-hash sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
+```
+
+[Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) contains more information about calculating hashes and using the `integrity` attribute.
+
 ### Unsafe inline script
 
 > **Note:**
@@ -110,7 +150,8 @@ The following {{HTMLElement("script")}} element will be allowed by the policy:
 ```
 
 Allowing all inline scripts is considered a security risk, so it's recommended to use a nonce-source or a hash-source instead.
-To allow inline scripts and styles with a nonce-source, you need to generate a random value and include it in the policy:
+To allow inline scripts and styles with a nonce-source, you need to generate a random nonce value (using a cryptographically secure random token generator) and include it in the policy.
+It is important to note, this nonce value needs to be dynamically generated as it has to be unique for each HTTP request:
 
 ```http
 Content-Security-Policy: script-src 'nonce-2726c7f26c'

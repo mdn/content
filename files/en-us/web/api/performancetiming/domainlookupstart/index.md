@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.domainLookupStart
+title: "PerformanceTiming: domainLookupStart property"
+short-title: domainLookupStart
 slug: Web/API/PerformanceTiming/domainLookupStart
 page-type: web-api-instance-property
 status:

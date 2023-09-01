@@ -1,5 +1,6 @@
 ---
-title: Geolocation.getCurrentPosition()
+title: "Geolocation: getCurrentPosition() method"
+short-title: getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 page-type: web-api-instance-method
 browser-compat: api.Geolocation.getCurrentPosition

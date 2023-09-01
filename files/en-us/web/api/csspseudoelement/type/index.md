@@ -1,5 +1,6 @@
 ---
-title: CSSPseudoElement.type
+title: "CSSPseudoElement: type property"
+short-title: type
 slug: Web/API/CSSPseudoElement/type
 page-type: web-api-instance-property
 status:
@@ -11,7 +12,7 @@ browser-compat: api.CSSPseudoElement.type
 
 The **`type`** read-only property of the
 {{DOMxRef('CSSPseudoElement')}} interface returns the type of the pseudo-element as a
-string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors#pseudo-elements).
+string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors#pseudo-elements).
 
 ## Value
 

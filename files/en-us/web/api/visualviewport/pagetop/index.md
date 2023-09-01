@@ -1,5 +1,6 @@
 ---
-title: VisualViewport.pageTop
+title: "VisualViewport: pageTop property"
+short-title: pageTop
 slug: Web/API/VisualViewport/pageTop
 page-type: web-api-instance-property
 browser-compat: api.VisualViewport.pageTop

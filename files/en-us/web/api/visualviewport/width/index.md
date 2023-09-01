@@ -1,5 +1,6 @@
 ---
-title: VisualViewport.width
+title: "VisualViewport: width property"
+short-title: width
 slug: Web/API/VisualViewport/width
 page-type: web-api-instance-property
 browser-compat: api.VisualViewport.width

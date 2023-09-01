@@ -1,5 +1,6 @@
 ---
-title: VRDisplayCapabilities.canPresent
+title: "VRDisplayCapabilities: canPresent property"
+short-title: canPresent
 slug: Web/API/VRDisplayCapabilities/canPresent
 page-type: web-api-instance-property
 status:

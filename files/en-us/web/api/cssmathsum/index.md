@@ -2,12 +2,10 @@
 title: CSSMathSum
 slug: Web/API/CSSMathSum
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSMathSum
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathSum`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
@@ -22,7 +20,7 @@ A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get
 
 ## Instance properties
 
-- {{domxref('CSSMathSum.values')}} {{Experimental_Inline}}
+- {{domxref('CSSMathSum.values')}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Static methods

@@ -2,16 +2,6 @@
 title: browserAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setPopup
 browser-compat: webextensions.api.browserAction.setPopup
 ---
 
@@ -81,7 +71,7 @@ browser.contextMenus.create(
     contexts: ["all"],
     checked: true,
   },
-  onCreated
+  onCreated,
 );
 
 browser.contextMenus.create(
@@ -92,7 +82,7 @@ browser.contextMenus.create(
     contexts: ["all"],
     checked: false,
   },
-  onCreated
+  onCreated,
 );
 
 browser.contextMenus.onClicked.addListener((info, tab) => {

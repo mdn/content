@@ -1,5 +1,6 @@
 ---
-title: 'SpeechRecognition: speechend event'
+title: "SpeechRecognition: speechend event"
+short-title: speechend
 slug: Web/API/SpeechRecognition/speechend_event
 page-type: web-api-event
 browser-compat: api.SpeechRecognition.speechend_event
@@ -14,9 +15,9 @@ The **`speechend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('speechend', (event) => { })
+addEventListener("speechend", (event) => {});
 
-onspeechend = (event) => { }
+onspeechend = (event) => {};
 ```
 
 ## Event type
@@ -30,8 +31,8 @@ You can use the `speechend` event in an [`addEventListener`](/en-US/docs/Web/API
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('speechend', () => {
-  console.log('Speech has stopped being detected');
+recognition.addEventListener("speechend", () => {
+  console.log("Speech has stopped being detected");
 });
 ```
 
@@ -39,8 +40,8 @@ Or use the `onspeechend` event handler property:
 
 ```js
 recognition.onspeechend = () => {
-  console.log('Speech has stopped being detected');
-}
+  console.log("Speech has stopped being detected");
+};
 ```
 
 ## Specifications

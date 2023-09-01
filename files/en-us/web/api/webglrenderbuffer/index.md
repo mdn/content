@@ -25,8 +25,8 @@ The `WebGLRenderbuffer` object does not define any methods or properties of its 
 ### Creating a render buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createRenderbuffer();
 ```
 

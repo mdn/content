@@ -1,5 +1,6 @@
 ---
 title: "Element: DOMMouseScroll event"
+short-title: DOMMouseScroll
 slug: Web/API/Element/DOMMouseScroll_event
 page-type: web-api-event
 status:
@@ -30,9 +31,9 @@ onDOMMouseScroll = (event) => {};
 
 ## Event type
 
-A {{domxref("MouseWheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram("MouseWheelEvent")}}
+{{InheritanceDiagram("WheelEvent")}}
 
 ## Event properties
 

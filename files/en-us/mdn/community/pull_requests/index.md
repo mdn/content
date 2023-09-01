@@ -19,7 +19,7 @@ Regardless of how content changes are done, they are submitted as pull requests 
 The content changes go through the following stages before they are published on MDN Web Docs:
 
 1. **Submitting changes:** As a pull request author, you submit changes via opening a pull request.
-   See the sections [Before you start](#before-you-start), [Open a pull request](#open-a-pull-request), and (After you open a pull request)(#after-you-open-a-pull-request) to learn more about our processes.
+   See the sections [Before you start](#before-you-start), [Open a pull request](#open-a-pull-request), and [After you open a pull request](#after-you-open-a-pull-request) to learn more about our processes.
 2. **Reviewing changes:** Your changes are reviewed by [MDN members and volunteers](#pull-request-review-process).
    See the section [Pull request review process](#pull-request-review-process) for more details.
 3. **Viewing published changes:** Content updated on `mdn/content` goes live within a day of merging via a site rebuild once every 24 hours.
@@ -48,7 +48,7 @@ When looking to contribute to the MDN project, you will find yourself in one of 
 
 - **If you have found a problem on MDN**, you should open an issue first.
   **Issues need a response from maintainers before you start working** so that you know a problem addressed by a pull request is valid and that your pull request will be accepted.
-  More information on issues can be found on our [Community pages for GitHub issues](https://github.com/mdn/mdn/issues/new?assignees=schalkneethling&labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here).
+  More information on issues can be found on our [Community pages for GitHub issues](https://github.com/mdn/mdn/issues/new?labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here).
 
 - **If you want to suggest new content or a new feature**, submit a proposal through the 'New content or feature suggestion' [GitHub issue template](https://github.com/mdn/mdn/issues/new/choose).
 
@@ -131,6 +131,11 @@ When you are reviewing a pull request, you should:
 - **Request load balancing** if your plate is full and you don't have bandwidth for the review.
   Tag the `@core-yari-content` team and ask if someone else can step in.
 - **Don't merge unless 'depends on'** pull requests are merged first.
+- **Don't merge pull requests that have failing tests.**
+  It is good [open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette) to keep the `main` branch stable to avoid disruption for contributors, maintainers, and for automated processes.
+  An unstable `main` branch blocks all other pull requests and makes it difficult for others to review and merge contributions.
+  In addition, contributors who watch repositories receive high volumes of notifications and unnecessary noise caused by failing tests can be frustrating.
+  If you are not sure how to fix the failing tests, [ask for help](/en-US/docs/MDN/Community/Communication_channels) or assign the pull request to someone else.
 
 If a pull request looks good apart from small typos or other minor issues, you may want to fix the problem directly.
 You can do this provided the pull request [has been set up to allow changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).

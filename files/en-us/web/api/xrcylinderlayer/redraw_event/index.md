@@ -1,5 +1,6 @@
 ---
-title: 'XRCylinderLayer: redraw event'
+title: "XRCylinderLayer: redraw event"
+short-title: redraw
 slug: Web/API/XRCylinderLayer/redraw_event
 page-type: web-api-event
 status:
@@ -18,9 +19,9 @@ See also the {{domxref("XRCompositionLayer.needsRedraw")}} property which is als
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('redraw', (event) => { })
+addEventListener("redraw", (event) => {});
 
-onredraw = (event) => { }
+onredraw = (event) => {};
 ```
 
 ## Event type
@@ -50,8 +51,8 @@ Alternatively, you can use the `onredraw` event handler property to establish a 
 
 ```js
 cylinderLayer.onredraw = (event) => {
- // redraw the layer
-}
+  // redraw the layer
+};
 ```
 
 ## Specifications

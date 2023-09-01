@@ -1,6 +1,7 @@
 ---
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -25,7 +26,7 @@ This article provides information about the changes in Firefox 65 that will affe
 
 - Events are now dispatched on disabled HTML elements, i.e. {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} elements with `disabled` attributes set on them ([Firefox bug 329509](https://bugzil.la/329509)).
 - Removing the `src` attribute of an {{htmlelement("iframe")}} element now causes `about:blank` to be loaded into it, giving it parity with Chrome and Safari ([Firefox bug 1507842](https://bugzil.la/1507842)). Previously removing `src` had no effect on the `iframe` content.
-- We have added support for the {{htmlattrxref("referrerpolicy", "script")}} attribute on {{htmlelement("script")}} elements ([Firefox bug 1460920](https://bugzil.la/1460920)).
+- We have added support for the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) attribute on {{htmlelement("script")}} elements ([Firefox bug 1460920](https://bugzil.la/1460920)).
 
 ### CSS
 
@@ -38,7 +39,7 @@ This article provides information about the changes in Firefox 65 that will affe
   - {{cssxref("break-inside")}} is now an alias for {{cssxref("page-break-inside")}}.
 
 - The {{cssxref("overflow-wrap")}} property's `anywhere` value has been implemented ([Firefox bug 1505786](https://bugzil.la/1505786)).
-- The new step position keywords `jump-start`, `jump-end`, `jump-none`, and `jump-both` — usable inside the [`steps()` timing function](</en-US/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) — have been implemented ([Firefox bug 1496619](https://bugzil.la/1496619)). This also coincides with the removal of the `frames()` timing function, which was the previous way of implementing such functionality, now deprecated.
+- The new step position keywords `jump-start`, `jump-end`, `jump-none`, and `jump-both` — usable inside the [`steps()` timing function](/en-US/docs/Web/CSS/easing-function#step_easing_function) — have been implemented ([Firefox bug 1496619](https://bugzil.la/1496619)). This also coincides with the removal of the `frames()` timing function, which was the previous way of implementing such functionality, now deprecated.
 - Some new {{cssxref("appearance", "-webkit-appearance")}} values have been added, for compatibility with other browsers. In particular:
 
   - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. The existing value `meterbar` is now an alias for `meter` ([Firefox bug 1501483](https://bugzil.la/1501483)).
@@ -105,7 +106,7 @@ _No changes._
 
 #### Fetch and Service workers
 
-- The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ([Firefox bug 1503276](https://bugzil.la/1503276)).
+- The {{domxref("Response.redirect_static", "Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ([Firefox bug 1503276](https://bugzil.la/1503276)).
 - The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 - The {{domxref("FetchEvent.replacesClientId")}} and {{domxref("FetchEvent.resultingClientId")}} properties are now supported ([Firefox bug 1264177](https://bugzil.la/1264177)).
 - The {{domxref("ServiceWorkerGlobalScope.messageerror_event", "ServiceWorkerGlobalScope.onmessageerror")}} and {{domxref("ServiceWorkerContainer.onmessageerror")}} handler properties have been implemented ([Firefox bug 1399446](https://bugzil.la/1399446)).
@@ -157,7 +158,7 @@ _No changes._
 
 ### Other
 
-- Support for [WebP](/en-US/docs/Glossary/webp) images has been added ([Firefox bug 1294490](https://bugzil.la/1294490)).
+- Support for [WebP](/en-US/docs/Glossary/WebP) images has been added ([Firefox bug 1294490](https://bugzil.la/1294490)).
 
   - In addition, to facilitate cross-browser compatibility in certain situations the WebP MIMEType (`image/webp`) has been added to the standard HTTP Request {{httpheader("Accept")}} header for HTML files ([Firefox bug 1507691](https://bugzil.la/1507691)).
 

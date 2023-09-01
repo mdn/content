@@ -1,5 +1,6 @@
 ---
-title: CustomElementRegistry.upgrade()
+title: "CustomElementRegistry: upgrade() method"
+short-title: upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
 page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.upgrade

@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTService.uuid
+title: "BluetoothRemoteGATTService: uuid property"
+short-title: uuid
 slug: Web/API/BluetoothRemoteGATTService/uuid
 page-type: web-api-instance-property
 status:

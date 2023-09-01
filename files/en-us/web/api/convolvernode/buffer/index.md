@@ -1,5 +1,6 @@
 ---
-title: ConvolverNode.buffer
+title: "ConvolverNode: buffer property"
+short-title: buffer
 slug: Web/API/ConvolverNode/buffer
 page-type: web-api-instance-property
 browser-compat: api.ConvolverNode.buffer
@@ -43,7 +44,7 @@ ajaxRequest.onload = () => {
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
     },
-    (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    (e) => console.error(`Error with decoding audio data: ${e.err}`),
   );
 };
 

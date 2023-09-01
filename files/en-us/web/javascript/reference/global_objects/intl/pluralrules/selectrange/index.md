@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 
 {{JSRef}}
 
-The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
+The **`selectRange()`** method of {{jsxref("Intl.PluralRules")}} instances receives two values and returns a string indicating which plural rule to use for locale-aware formatting of the indicated range.
 
 ## Syntax
 
@@ -15,14 +15,26 @@ The **`Intl.PluralRules.prototype.selectRange()`** method receives two values an
 selectRange(startRange, endRange)
 ```
 
+### Parameters
+
+- `startRange`
+  - : A number representing the start of the range.
+- `endRange`
+  - : A number representing the end of the range.
+
 ### Return value
 
-A string representing the pluralization category of the `number`.
-This can be one of `zero`, `one`, `two`, `few`, `many` or `other`, that are relevant for the locale whose localization is specified in [LDML Language Plural Rules](https://unicode-org.github.io/cldr-staging/charts/37/supplemental/language_plural_rules.html#rules).
+A string representing the pluralization category of the specified range.
+This can be one of `zero`, `one`, `two`, `few`, `many` or `other`, that are relevant for the locale whose localization is specified in [LDML Language Plural Rules](https://www.unicode.org/cldr/charts/43/supplemental/language_plural_rules.html).
 
 ## Description
 
 This function selects a pluralization category according to the locale and formatting options of an {{jsxref("Intl.PluralRules")}} object.
+
+Conceptually the behavior is the same as getting plural rules for a single cardinal or ordinal number.
+Languages have one or more forms for describing ranges, and this method returns the appropriate form given the supplied locale and formatting options.
+In English there is only one plural form, such as "1–10 apples", and the method will return `other`.
+Other languages can have many forms.
 
 ## Examples
 

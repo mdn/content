@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.bufferedAmount
+title: "RTCDataChannel: bufferedAmount property"
+short-title: bufferedAmount
 slug: Web/API/RTCDataChannel/bufferedAmount
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.bufferedAmount

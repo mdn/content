@@ -1,5 +1,6 @@
 ---
-title: AudioBuffer.copyFromChannel()
+title: "AudioBuffer: copyFromChannel() method"
+short-title: copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
 page-type: web-api-instance-method
 browser-compat: api.AudioBuffer.copyFromChannel

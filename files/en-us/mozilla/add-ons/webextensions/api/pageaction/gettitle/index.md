@@ -2,16 +2,6 @@
 title: pageAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getTitle
-  - pageAction
 browser-compat: webextensions.api.pageAction.getTitle
 ---
 
@@ -57,7 +47,7 @@ function gotTitle(title) {
 
 browser.pageAction.onClicked.addListener((tab) => {
   let gettingTitle = browser.pageAction.getTitle({
-    tabId: tab.id
+    tabId: tab.id,
   });
   gettingTitle.then(gotTitle);
 });

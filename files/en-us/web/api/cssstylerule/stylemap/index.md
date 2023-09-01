@@ -1,5 +1,6 @@
 ---
-title: CSSStyleRule.styleMap
+title: "CSSStyleRule: styleMap property"
+short-title: styleMap
 slug: Web/API/CSSStyleRule/styleMap
 page-type: web-api-instance-property
 browser-compat: api.CSSStyleRule.styleMap

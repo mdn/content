@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Advanced HTML text"
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}

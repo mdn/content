@@ -1,5 +1,6 @@
 ---
-title: PerformanceElementTiming.toJSON()
+title: "PerformanceElementTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceElementTiming/toJSON
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: Document.linkColor
+title: "Document: linkColor property"
+short-title: linkColor
 slug: Web/API/Document/linkColor
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: 'HTMLCanvasElement: webglcontextlost event'
+title: "HTMLCanvasElement: webglcontextlost event"
+short-title: webglcontextlost
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 page-type: web-api-event
 browser-compat: api.HTMLCanvasElement.webglcontextlost_event
@@ -16,9 +17,9 @@ This event does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('webglcontextlost', (event) => {});
+addEventListener("webglcontextlost", (event) => {});
 
-onwebglcontextlost = (event) => { };
+onwebglcontextlost = (event) => {};
 ```
 
 ## Event type
@@ -39,14 +40,14 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the `webglcontextlost` event:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', (event) => {
+canvas.addEventListener("webglcontextlost", (event) => {
   console.log(event);
 });
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // "webglcontextlost" event is logged.
 ```

@@ -2,16 +2,6 @@
 title: downloads.removeFile()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - removeFile
 browser-compat: webextensions.api.downloads.removeFile
 ---
 
@@ -70,7 +60,7 @@ function remove(downloadItems) {
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(remove, onError);

@@ -15,6 +15,9 @@ A service worker is an event-driven [worker](/en-US/docs/Web/API/Worker) registe
 
 A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous [XHR](/en-US/docs/Web/API/XMLHttpRequest) and [Web Storage](/en-US/docs/Web/API/Web_Storage_API) can't be used inside a service worker.
 
+Service workers can't import JavaScript module dynamically, and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#browser_compatibility) will throw if it is called in a service worker global scope.
+Static import using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement is allowed.
+
 Service workers only run over HTTPS, for security reasons. Most significantly, HTTP connections are susceptible to malicious code injection by {{Glossary("MitM", "man in the middle")}} attacks, and such attacks could be worse if allowed access to these powerful APIs. In Firefox, service worker APIs are also hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
 > **Note:** On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu.
@@ -69,6 +72,7 @@ Service workers are also intended to be used for such things as:
 - Hooks for background services.
 - Custom templating based on certain URL patterns.
 - Performance enhancements, for example pre-fetching resources that the user is likely to need in the near future, such as the next few pictures in a photo album.
+- API mocking.
 
 In the future, service workers will be able to do a number of other useful things for the web platform that will bring it closer towards native app viability. Interestingly, other specifications can and will start to make use of the service worker context, for example:
 

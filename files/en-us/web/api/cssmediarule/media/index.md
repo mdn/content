@@ -1,5 +1,6 @@
 ---
-title: CSSMediaRule.media
+title: "CSSMediaRule: media property"
+short-title: media
 slug: Web/API/CSSMediaRule/media
 page-type: web-api-instance-property
 browser-compat: api.CSSMediaRule.media

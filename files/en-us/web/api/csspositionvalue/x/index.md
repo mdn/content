@@ -1,5 +1,6 @@
 ---
-title: CSSPositionValue.x
+title: "CSSPositionValue: x property"
+short-title: x
 slug: Web/API/CSSPositionValue/x
 page-type: web-api-instance-property
 status:

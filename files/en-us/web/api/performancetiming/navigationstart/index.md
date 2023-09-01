@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.navigationStart
+title: "PerformanceTiming: navigationStart property"
+short-title: navigationStart
 slug: Web/API/PerformanceTiming/navigationStart
 page-type: web-api-instance-property
 status:

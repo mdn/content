@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.createQuery()
+title: "WebGL2RenderingContext: createQuery() method"
+short-title: createQuery()
 slug: Web/API/WebGL2RenderingContext/createQuery
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.createQuery

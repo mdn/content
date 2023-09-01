@@ -1,13 +1,14 @@
 ---
 title: "Element: animationstart event"
+short-title: animationstart
 slug: Web/API/Element/animationstart_event
-browser-compat: api.Element.animationstart_event
 page-type: web-api-event
+browser-compat: api.Element.animationstart_event
 ---
 
 {{APIRef}}
 
-The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) has started. If there is an {{cssxref("animation-delay")}}, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).
+The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) has started. If there is an {{cssxref("animation-delay")}}, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).
 
 ## Syntax
 
@@ -108,10 +109,10 @@ animated.onanimationstart = () => {
 ```js
 const animation = document.querySelector("p.animation");
 const animationEventLog = document.querySelector(
-  ".animation-example>.event-log"
+  ".animation-example>.event-log",
 );
 const applyAnimation = document.querySelector(
-  ".animation-example>button.activate"
+  ".animation-example>button.activate",
 );
 let iterationCount = 0;
 
@@ -159,9 +160,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - Related events: {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/animationstart_event", "animationstart")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/animationstart_event", "animationstart")}}

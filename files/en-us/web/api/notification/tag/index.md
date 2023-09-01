@@ -1,5 +1,6 @@
 ---
-title: Notification.tag
+title: "Notification: tag property"
+short-title: tag
 slug: Web/API/Notification/tag
 page-type: web-api-instance-property
 browser-compat: api.Notification.tag
@@ -23,7 +24,7 @@ A string.
 
 ## Examples
 
-Our [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#dealing_with_repeated_notifications) article has a good example of tag usage.
+Our [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#replacing_existing_notifications) article has a good example of tag usage.
 
 ## Specifications
 

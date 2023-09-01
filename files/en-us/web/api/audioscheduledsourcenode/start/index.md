@@ -1,5 +1,6 @@
 ---
-title: AudioScheduledSourceNode.start()
+title: "AudioScheduledSourceNode: start() method"
+short-title: start()
 slug: Web/API/AudioScheduledSourceNode/start
 page-type: web-api-instance-method
 browser-compat: api.AudioScheduledSourceNode.start

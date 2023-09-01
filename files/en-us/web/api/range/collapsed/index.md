@@ -1,5 +1,6 @@
 ---
-title: Range.collapsed
+title: "Range: collapsed property"
+short-title: collapsed
 slug: Web/API/Range/collapsed
 page-type: web-api-instance-property
 browser-compat: api.Range.collapsed

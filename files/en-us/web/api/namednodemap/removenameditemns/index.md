@@ -1,5 +1,6 @@
 ---
-title: NamedNodeMap.removeNamedItemNS()
+title: "NamedNodeMap: removeNamedItemNS() method"
+short-title: removeNamedItemNS()
 slug: Web/API/NamedNodeMap/removeNamedItemNS
 page-type: web-api-instance-method
 browser-compat: api.NamedNodeMap.removeNamedItemNS

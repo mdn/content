@@ -50,14 +50,14 @@ This is the list of guides and pages in this section.
 
   - : Issues are used to track all bugs and work that has a clear actionable outcome. This article contains guidelines on opening and working on issues. This article also covers the following topics:
 
-    - [Issue triage](/en-US/docs/MDN/Community/Issues/Issue_triage)
+    - [Issue triage](/en-US/docs/MDN/Community/Issues)
     - [Content and feature suggestions](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
 
 - [Pull requests](/en-US/docs/MDN/Community/Pull_requests)
 
   - : This section covers our guidelines for submitting pull requests and what you should expect from the review process.
 
-- [Users and teams](/en-US/docs/MDN/Community/Users_teams)
+- [Roles and teams](/en-US/docs/MDN/Community/Roles_teams)
 
   - : This section provides an overview of the users and teams that are part of the MDN Web Docs project and details what it means to be part of a team.
 

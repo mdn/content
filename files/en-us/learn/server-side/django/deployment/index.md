@@ -1,6 +1,7 @@
 ---
 title: "Django Tutorial Part 11: Deploying Django to production"
 slug: Learn/Server-side/Django/Deployment
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
@@ -315,7 +316,7 @@ It lists the commands that will be executed by Railway to start your site.
 Create the file `Procfile` (with no file extension) in the root of your GitHub repo and copy/paste in the following text:
 
 ```plain
-web: python manage.py migrate && python manage.py collectstatic && gunicorn locallibrary.wsgi
+web: python manage.py migrate && python manage.py collectstatic --no-input && gunicorn locallibrary.wsgi
 ```
 
 The `web:` prefix tells Railway that this is a web process and can be sent HTTP traffic.

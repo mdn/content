@@ -108,15 +108,7 @@ cases:
         <p>
           The order was first defined for own properties only in ECMAScript
           2015; ECMAScript 2020 defines order for inherited properties as well.
-          See the
-          <a href="https://tc39.es/ecma262/#sec-ordinaryownpropertykeys"
-            >OrdinaryOwnPropertyKeys</a
-          >
-          and
-          <a href="https://tc39.es/ecma262/#sec-enumerate-object-properties"
-            >EnumerateObjectProperties</a
-          >
-          abstract specification operations. But note that no single mechanism
+          But note that no single mechanism
           iterates
           <strong>all</strong> of an object's properties; the various mechanisms
           each include different subsets of properties.
@@ -238,8 +230,8 @@ Therefore, this appears to work in a way:
 
 ```js example-bad
 const wrongMap = new Map();
-wrongMap['bla'] = 'blaa';
-wrongMap['bla2'] = 'blaaa2';
+wrongMap["bla"] = "blaa";
+wrongMap["bla2"] = "blaaa2";
 
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
@@ -249,25 +241,59 @@ structure. It uses the feature of the generic object. The value of 'bla' is not
 stored in the Map for queries. Other operations on the data fail:
 
 ```js example-bad
-wrongMap.has('bla')    // false
-wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+wrongMap.has("bla"); // false
+wrongMap.delete("bla"); // false
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 The correct usage for storing data in the Map is through the `set(key, value)`
 method.
 
 ```js example-good
-const contacts = new Map()
-contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
-contacts.has('Jessie') // true
-contacts.get('Hilary') // undefined
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
-contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete('Raymond') // false
-contacts.delete('Jessie') // true
-console.log(contacts.size) // 1
+const contacts = new Map();
+contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.has("Jessie"); // true
+contacts.get("Hilary"); // undefined
+contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
+contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete("Raymond"); // false
+contacts.delete("Jessie"); // true
+console.log(contacts.size); // 1
 ```
+
+### Map-like browser APIs
+
+**Browser `Map`-like objects** (or "maplike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a `Map`.
+
+Just like `Map`, entries can be iterated in the same order that they were added to the object.
+`Map`-like objects and `Map` also have properties and methods that share the same name and behavior.
+However unlike `Map` they only allow specific predefined types for the keys and values of each entry.
+
+The allowed types are set in the specification IDL definition.
+For example, {{domxref("RTCStatsReport")}} is a `Map`-like object that must use strings for keys and objects for values.
+This is defined in the specification IDL below:
+
+```webidl
+interface RTCStatsReport {
+  readonly maplike<DOMString, object>;
+};
+```
+
+`Map`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
+
+- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`@@iterator`](#map.prototypeiterator).
+- Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
+
+The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
+
+The following are examples of read-only `Map`-like browser objects:
+
+- {{domxref("AudioParamMap")}}
+- {{domxref("RTCStatsReport")}}
+- {{domxref("EventCounts")}}
+- {{domxref("KeyboardLayoutMap")}}
+- {{domxref("MIDIInputMap")}}
+- {{domxref("MIDIOutputMap")}}
 
 ## Constructor
 
@@ -276,8 +302,13 @@ console.log(contacts.size) // 1
 
 ## Static properties
 
-- {{jsxref("Map.@@species", "get Map[@@species]")}}
+- {{jsxref("Map/@@species", "Map[@@species]")}}
   - : The constructor function that is used to create derived objects.
+
+## Static methods
+
+- {{jsxref("Map.groupBy()")}} {{Experimental_Inline}}
+  - : Groups the elements of a given iterable using the values returned by a provided callback function. The final returned `Map` uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
 
 ## Instance properties
 
@@ -298,22 +329,22 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : Returns `true` if an element in the `Map` object existed and has been
     removed, or `false` if the element does not exist. `map.has(key)`
     will return `false` afterwards.
-- {{jsxref("Map.prototype.get()")}}
-  - : Returns the value associated to the passed key, or `undefined` if there is none.
-- {{jsxref("Map.prototype.has()")}}
-  - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
-- {{jsxref("Map.prototype.set()")}}
-  - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
-- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
-  - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
-- {{jsxref("Map.prototype.keys()")}}
-  - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.
-- {{jsxref("Map.prototype.values()")}}
-  - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.entries()")}}
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.forEach()")}}
   - : Calls `callbackFn` once for each key-value pair present in the `Map` object, in insertion order. If a `thisArg` parameter is provided to `forEach`, it will be used as the `this` value for each callback.
+- {{jsxref("Map.prototype.get()")}}
+  - : Returns the value associated to the passed key, or `undefined` if there is none.
+- {{jsxref("Map.prototype.has()")}}
+  - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
+- {{jsxref("Map.prototype.keys()")}}
+  - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.
+- {{jsxref("Map.prototype.set()")}}
+  - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
+- {{jsxref("Map.prototype.values()")}}
+  - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
+- [`Map.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+  - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 
 ## Examples
 
@@ -322,14 +353,14 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
 ```js
 const myMap = new Map();
 
-const keyString = 'a string';
+const keyString = "a string";
 const keyObj = {};
-const keyFunc = function() {};
+const keyFunc = function () {};
 
 // setting the values
 myMap.set(keyString, "value associated with 'a string'");
-myMap.set(keyObj, 'value associated with keyObj');
-myMap.set(keyFunc, 'value associated with keyFunc');
+myMap.set(keyObj, "value associated with keyObj");
+myMap.set(keyFunc, "value associated with keyFunc");
 
 console.log(myMap.size); // 3
 
@@ -338,9 +369,9 @@ console.log(myMap.get(keyString)); // "value associated with 'a string'"
 console.log(myMap.get(keyObj)); // "value associated with keyObj"
 console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 
-console.log(myMap.get('a string')); // "value associated with 'a string'", because keyString === 'a string'
+console.log(myMap.get("a string")); // "value associated with 'a string'", because keyString === 'a string'
 console.log(myMap.get({})); // undefined, because keyObj !== {}
-console.log(myMap.get(function() {})); // undefined, because keyFunc !== function () {}
+console.log(myMap.get(function () {})); // undefined, because keyFunc !== function () {}
 ```
 
 ### Using NaN as Map keys
@@ -351,12 +382,12 @@ not equal to itself (`NaN !== NaN` is true), the following example works because
 
 ```js
 const myMap = new Map();
-myMap.set(NaN, 'not a number');
+myMap.set(NaN, "not a number");
 
 myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo');
+const otherNaN = Number("foo");
 myMap.get(otherNaN);
 // "not a number"
 ```
@@ -367,8 +398,8 @@ Maps can be iterated using a `for...of` loop:
 
 ```js
 const myMap = new Map();
-myMap.set(0, 'zero');
-myMap.set(1, 'one');
+myMap.set(0, "zero");
+myMap.set(1, "one");
 
 for (const [key, value] of myMap) {
   console.log(`${key} = ${value}`);
@@ -411,12 +442,15 @@ myMap.forEach((value, key) => {
 ### Relation with Array objects
 
 ```js
-const kvArray = [['key1', 'value1'], ['key2', 'value2']];
+const kvArray = [
+  ["key1", "value1"],
+  ["key2", "value2"],
+];
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
 const myMap = new Map(kvArray);
 
-console.log(myMap.get('key1')); // "value1"
+console.log(myMap.get("key1")); // "value1"
 
 // Use Array.from() to transform a map into a 2D key-value Array
 console.log(Array.from(myMap)); // Will show you exactly the same Array as kvArray
@@ -433,9 +467,7 @@ console.log(Array.from(myMap.keys())); // ["key1", "key2"]
 Just like `Array`s, `Map`s can be cloned:
 
 ```js
-const original = new Map([
-  [1, 'one'],
-]);
+const original = new Map([[1, "one"]]);
 
 const clone = new Map(original);
 
@@ -449,14 +481,14 @@ Maps can be merged, maintaining key uniqueness:
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // Merge two maps. The last repeated key wins.
@@ -472,18 +504,18 @@ Maps can be merged with Arrays, too:
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // Merge maps with an array. The last repeated key wins.
-const merged = new Map([...first, ...second, [1, 'eins']]);
+const merged = new Map([...first, ...second, [1, "eins"]]);
 
 console.log(merged.get(1)); // eins
 console.log(merged.get(2)); // dos
@@ -500,8 +532,7 @@ console.log(merged.get(3)); // three
 
 ## See also
 
-- A polyfill of `Map` is available in
-  [`core-js`](https://github.com/zloirock/core-js#map)
+- [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

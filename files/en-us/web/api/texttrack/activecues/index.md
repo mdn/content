@@ -1,5 +1,6 @@
 ---
-title: TextTrack.activeCues
+title: "TextTrack: activeCues property"
+short-title: activeCues
 slug: Web/API/TextTrack/activeCues
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.activeCues
@@ -18,7 +19,7 @@ A {{domxref("TextTrackCueList")}} object.
 The following example adds a new `TextTrack` to a video. The `activeCues` are printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.activeCues);

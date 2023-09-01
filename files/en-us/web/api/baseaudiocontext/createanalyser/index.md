@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createAnalyser()
+title: "BaseAudioContext: createAnalyser() method"
+short-title: createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createAnalyser

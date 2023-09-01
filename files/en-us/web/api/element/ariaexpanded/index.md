@@ -1,5 +1,6 @@
 ---
-title: Element.ariaExpanded
+title: "Element: ariaExpanded property"
+short-title: ariaExpanded
 slug: Web/API/Element/ariaExpanded
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaExpanded

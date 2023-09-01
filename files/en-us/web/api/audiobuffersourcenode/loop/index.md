@@ -1,5 +1,6 @@
 ---
-title: AudioBufferSourceNode.loop
+title: "AudioBufferSourceNode: loop property"
+short-title: loop
 slug: Web/API/AudioBufferSourceNode/loop
 page-type: web-api-instance-property
 browser-compat: api.AudioBufferSourceNode.loop
@@ -56,7 +57,7 @@ function getData() {
         source.loop = true;
       },
 
-      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+      (e) => console.error(`Error with decoding audio data: ${e.err}`),
     );
   };
 

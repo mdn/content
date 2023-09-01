@@ -18,7 +18,7 @@ The **`RTCIceCandidatePair`** dictionary describes a pair of ICE candidates whic
 
 ## Examples
 
-See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event#example) for example code.
+See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event#examples) for example code.
 
 ## Specifications
 

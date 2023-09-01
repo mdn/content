@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.channelCount
+title: "MediaTrackSupportedConstraints: channelCount property"
+short-title: channelCount
 slug: Web/API/MediaTrackSupportedConstraints/channelCount
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.channelCount
@@ -33,7 +34,9 @@ you'll get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

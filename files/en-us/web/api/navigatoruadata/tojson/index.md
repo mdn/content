@@ -1,5 +1,6 @@
 ---
-title: NavigatorUAData.toJSON()
+title: "NavigatorUAData: toJSON() method"
+short-title: toJSON()
 slug: Web/API/NavigatorUAData/toJSON
 page-type: web-api-instance-method
 status:

@@ -9,11 +9,11 @@ browser-compat: api.Highlight
 
 {{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
-The **`Highlight`** interface is used to represent a collection of {{domxref("Range")}} instances to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
+The **`Highlight`** interface of the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) is used to represent a collection of {{domxref("Range")}} instances to be styled using the API.
 
 To style arbitrary ranges in a page, instantiate a new `Highlight` object, add one or more `Range` objects to it, and register it using the {{domxref("HighlightRegistry")}}.
 
-A single `Highlight` object can hold one or more `Range` objects and behaves like a {{jsxref("Set")}}.
+A `Highlight` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) that can hold one or more `Range` objects.
 
 {{InheritanceDiagram}}
 
@@ -74,7 +74,7 @@ range2.setEnd(parentNode, 60);
 const highlight = new Highlight(range1, range2);
 
 // Register the ranges in the HighlightRegistry.
-CSS.highlights.set('my-custom-highlight', highlight);
+CSS.highlights.set("my-custom-highlight", highlight);
 ```
 
 The following CSS code snippet demonstrates how to style the registered custom highlight by using the {{cssxref("::highlight")}} pseudo-element:

@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.getAllKeys()
+title: "IDBIndex: getAllKeys() method"
+short-title: getAllKeys()
 slug: Web/API/IDBIndex/getAllKeys
 page-type: web-api-instance-method
 browser-compat: api.IDBIndex.getAllKeys

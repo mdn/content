@@ -1,16 +1,7 @@
 ---
 title: declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/GUARANTEED_MINIMUM_STATIC_RULES
-tags:
-  - GUARANTEED_MINIMUM_STATIC_RULES
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - GUARANTEED_MINIMUM_STATIC_RULES
+page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES
 ---
 
@@ -20,7 +11,7 @@ The minimum number of static rules guaranteed to an extension across its enabled
 
 Its value is `30000` on Chrome.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

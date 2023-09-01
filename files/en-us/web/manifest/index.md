@@ -1,25 +1,23 @@
 ---
 title: Web app manifests
 slug: Web/Manifest
-tags:
-  - App
-  - Manifest
-  - PWA
-  - Progressive web apps
-  - Reference
-  - Web
+page-type: landing-page
 browser-compat: html.manifest
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-**Web app manifests** are part of a collection of web technologies called [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs), which are websites that can be installed to a device's homescreen without an app store. Unlike regular web apps with simple homescreen links or bookmarks, PWAs can be downloaded in advance and can work offline, as well as use regular [Web APIs](/en-US/docs/Web/API).
+A **web application manifest**, defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, is a {{Glossary("JSON")}} text file that provides information about a web application.
 
-A web application manifest, as defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, provides information about a web application in a {{Glossary("JSON")}} text file, necessary for the web app to be downloaded and be presented to the user similarly to a native app (e.g., be installed on the homescreen of a device, providing users with quicker access and a richer experience). PWA manifests include its name, author, icon(s), version, description, and list of all the necessary resources (among other things).
+The most common use for a web application manifest is to provide information that the browser needs to install a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) on a device, such as the app's name and icon.
+
+A web application manifest contains a single JSON object where the top-level keys are called _members_.
 
 ## Members
 
-Web application manifests can contain the following keys. Click on each one to link through to more information about it:
+This section lists the members that may appear in the manifest.
+
+All members are optional in the specification, but some applications require some members to be present. For example, [PWAs must provide certain manifest members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members).
 
 {{ListSubpages("/en-US/docs/Web/Manifest")}}
 
@@ -27,7 +25,6 @@ Web application manifests can contain the following keys. Click on each one to l
 
 ```json
 {
-  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "start_url": ".",
@@ -93,11 +90,11 @@ If the manifest requires credentials to fetch, the [`crossorigin`](/en-US/docs/W
 
 ## Splash screens
 
-In some browsers (Chrome 47 and later, for example), a splash screen is displayed for sites launched from a homescreen. This splash screen is auto-generated from properties in the web app manifest, specifically:
+In some browsers and operating systems, a splash screen is displayed when an installed PWA is launched. This splash screen is automatically generated and its appearance is defined by members in the web app manifest, specifically:
 
 - [`name`](/en-US/docs/Web/Manifest/name)
 - [`background_color`](/en-US/docs/Web/Manifest/background_color)
-- The icon in the [`icons`](/en-US/docs/Web/Manifest/icons) array that is closest to 128dpi for the device.
+- [`icons`](/en-US/docs/Web/Manifest/icons)
 
 ## Browser compatibility
 

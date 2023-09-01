@@ -1,5 +1,6 @@
 ---
-title: CredentialsContainer.store()
+title: "CredentialsContainer: store() method"
+short-title: store()
 slug: Web/API/CredentialsContainer/store
 page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.store
@@ -51,7 +52,7 @@ if ("PasswordCredential" in window) {
     },
     (err) => {
       console.error("Error while storing the credential: ", err);
-    }
+    },
   );
 }
 ```

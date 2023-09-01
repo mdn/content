@@ -1,5 +1,6 @@
 ---
-title: ConvolverNode()
+title: "ConvolverNode: ConvolverNode() constructor"
+short-title: ConvolverNode()
 slug: Web/API/ConvolverNode/ConvolverNode
 page-type: web-api-constructor
 browser-compat: api.ConvolverNode.ConvolverNode

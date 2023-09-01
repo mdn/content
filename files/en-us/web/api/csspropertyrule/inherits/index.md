@@ -1,5 +1,6 @@
 ---
-title: CSSPropertyRule.inherits
+title: "CSSPropertyRule: inherits property"
+short-title: inherits
 slug: Web/API/CSSPropertyRule/inherits
 page-type: web-api-instance-property
 browser-compat: api.CSSPropertyRule.inherits

@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.buffered
+title: "SourceBuffer: buffered property"
+short-title: buffered
 slug: Web/API/SourceBuffer/buffered
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.buffered

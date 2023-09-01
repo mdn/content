@@ -7,7 +7,7 @@ browser-compat: javascript.statements.import
 
 {{jsSidebar("Statements")}}
 
-The static **`import`** declaration is used to import read-only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
+The static **`import`** declaration is used to import read-only live {{glossary("binding", "bindings")}} which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
 
 In order to use the `import` declaration in a source file, the file must be interpreted by the runtime as a [module](/en-US/docs/Web/JavaScript/Guide/Modules). In HTML, this is done by adding `type="module"` to the {{HTMLElement("script")}} tag. Modules are automatically interpreted in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
@@ -44,7 +44,11 @@ import "module-name";
 
 `import` declarations can only be present in modules, and only at the top-level (i.e. not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
 
+All imported bindings cannot be in the same scope as any other declaration, including {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and `import` declaration.
+
 `import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await).
+
+### Forms of import declarations
 
 There are four forms of `import` declarations:
 
@@ -55,9 +59,9 @@ There are four forms of `import` declarations:
 
 Below are examples to clarify the syntax.
 
-### Named import
+#### Named import
 
-Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from 'another.js'`) or explicitly using the {{JSxRef("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
+Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from "another.js"` or explicitly using the {{jsxref("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
 
 ```js
 import { myExport } from "/modules/my-module.js";
@@ -89,7 +93,7 @@ import { "a-b" as a } from "/modules/my-module.js";
 
 > **Note:** `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
 
-### Default import
+#### Default import
 
 Default exports need to be imported with the corresponding default import syntax. The simplest version directly imports the default:
 
@@ -118,7 +122,7 @@ Importing a name called `default` has the same effect as a default import. It is
 import { default as myDefault } from "/modules/my-module.js";
 ```
 
-### Namespace import
+#### Namespace import
 
 The following code inserts `myModule` into the current scope, containing all the exports from the module located at `/modules/my-module.js`.
 
@@ -136,7 +140,7 @@ myModule.doAllTheAmazingThings();
 
 > **Note:** JavaScript does not have wildcard imports like `import * from "module-name"`, because of the high possibility of name conflicts.
 
-### Import a module for its side effects only
+#### Import a module for its side effects only
 
 Import an entire module for side effects only, without importing anything. This runs
 the module's global code, but doesn't actually import any values.
@@ -146,6 +150,16 @@ import "/modules/my-module.js";
 ```
 
 This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate the global variables.
+
+### Hoisting
+
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, that means that the identifiers the imports introduce are available in the entire module scope, and their side effects are produced before the rest of the module's code runs.
+
+```js
+myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings is imported by the next line
+
+import * as myModule from "/modules/my-module.js";
+```
 
 ## Examples
 
@@ -223,9 +237,8 @@ setTimeout(() => {
 - {{JSxRef("Statements/export", "export")}}
 - [Dynamic imports](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
-- Limin Zhu, Brian Terlson and Microsoft Edge Team:
-  [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
-- Hacks blog post by Jason Orendorff: [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
-- Hacks blog post by Lin Clark: [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
-- Axel Rauschmayer's book: ["Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
-- The Modern JavaScript Tutorial(javascript.info): [Export and Import](https://javascript.info/import-export)
+- [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/) on blogs.windows.com (2016)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
+- [Export and Import](https://javascript.info/import-export) on javascript.info

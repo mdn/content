@@ -1,5 +1,6 @@
 ---
-title: Window.blur()
+title: "Window: blur() method"
+short-title: blur()
 slug: Web/API/Window/blur
 page-type: web-api-instance-method
 browser-compat: api.Window.blur

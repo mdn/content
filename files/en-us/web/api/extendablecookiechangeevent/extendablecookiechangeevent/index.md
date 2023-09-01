@@ -1,5 +1,6 @@
 ---
-title: ExtendableCookieChangeEvent()
+title: "ExtendableCookieChangeEvent: ExtendableCookieChangeEvent() constructor"
+short-title: ExtendableCookieChangeEvent()
 slug: Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent
 page-type: web-api-constructor
 browser-compat: api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent

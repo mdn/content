@@ -1,5 +1,6 @@
 ---
-title: VRFieldOfView.downDegrees
+title: "VRFieldOfView: downDegrees property"
+short-title: downDegrees
 slug: Web/API/VRFieldOfView/downDegrees
 page-type: web-api-instance-property
 status:

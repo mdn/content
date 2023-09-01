@@ -1,5 +1,6 @@
 ---
-title: WorkerLocation.search
+title: "WorkerLocation: search property"
+short-title: search
 slug: Web/API/WorkerLocation/search
 page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.search

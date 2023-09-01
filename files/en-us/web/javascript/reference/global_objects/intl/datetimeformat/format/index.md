@@ -7,13 +7,9 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.format
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.prototype.format()`** method formats
-a date according to the locale and formatting options of this
-{{jsxref("Intl.DateTimeFormat")}} object.
+The **`format()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a date according to the locale and formatting options of this `Intl.DateTimeFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -26,10 +22,9 @@ format(date)
 - `date`
   - : The date to format.
 
-## Description
+### Return value
 
-The `format` getter formats a date into a string according to the locale and
-formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
+A string representing the given `date` formatted according to the locale and formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
 
 ## Examples
 

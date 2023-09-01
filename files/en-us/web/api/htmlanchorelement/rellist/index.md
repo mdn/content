@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.relList
+title: "HTMLAnchorElement: relList property"
+short-title: relList
 slug: Web/API/HTMLAnchorElement/relList
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.relList
@@ -23,7 +24,7 @@ const anchors = document.getElementsByTagName("a");
 for (const anchor of anchors) {
   const list = anchor.relList;
   console.log(
-    `New anchor node found with ${list.length} link types in relList.`
+    `New anchor node found with ${list.length} link types in relList.`,
   );
   list.forEach((relValue) => {
     console.log(relValue);

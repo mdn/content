@@ -1,7 +1,7 @@
 ---
 title: Getting started with Svelte
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -54,7 +54,7 @@ Its main current disadvantages are that it is a young framework — its ecosyste
 
 > **Note:** recently Svelte has added [official TypeScript support](https://svelte.dev/blog/svelte-and-typescript), one of its most requested features. We'll look at it later on in this tutorial series.
 
-We encourage you to go through the [Svelte tutorial](https://svelte.dev/tutorial/basics) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth.
+We encourage you to go through the [Svelte tutorial](https://learn.svelte.dev/) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth.
 
 ## Use cases
 
@@ -66,7 +66,11 @@ Nevertheless, Svelte is particularly appropriate to tackle the following situati
 - Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.
 - Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.
 
-Moreover, with the help of [Sapper](https://sapper.svelte.dev/) (a framework based on Svelte), you can also develop applications with advanced features like server-side rendering, code splitting, file-based routing and offline support. And then there's also [Svelte Native](https://svelte-native.technology/), which lets you build native mobile applications.
+The Svelte team launched [SvelteKit](https://kit.svelte.dev), a framework for building web applications using Svelte. It contains features found in modern web frameworks, such as filesystem-based routing, server-side rendering (SSR), page-specific rendering modes, offline support, and more. For more information about SvelteKit, see the [official tutorial](https://learn.svelte.dev) and [documentation](https://kit.svelte.dev/docs).
+
+> **Note:** SvelteKit is designed to replace [Sapper](https://sapper.svelte.dev/) as the recommended Svelte framework for building web applications.
+
+Svelte is also available for mobile development via [Svelte Native](https://svelte-native.technology).
 
 ## How does Svelte work?
 
@@ -90,7 +94,7 @@ If you're using Windows, you will need to install some software to give you pari
 
 Also see the following for more information:
 
-- ["What is npm"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) on nodejs.org
+- ["About npm"](https://docs.npmjs.com/about-npm) on the npm documentation
 - ["Introducing npx"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) on the npm blog
 - ["The easiest way to get started with Svelte"](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte blog
 
@@ -117,7 +121,7 @@ After running `npm run dev`, Svelte will compile and build your application. It 
 
 The starter template comes with the following structure:
 
-```
+```plain
 moz-todo-svelte
 ├── README.md
 ├── package.json
@@ -195,7 +199,7 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
 <main>
   <h1>Hello {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -243,7 +247,7 @@ In the markup section you can insert any HTML you like, and in addition you can 
 <main>
   <h1>Hello {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -327,7 +331,7 @@ Try updating your `<script>` and markup sections like so:
   <h1>Hello {name}!</h1>
   <button on:click="{toggleName}">Toggle name</button>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -372,7 +376,7 @@ It also compiles the markup and `<script>` section of every component and stores
 Finally the file `public/index.html` includes the generated `bundle.css` and `bundle.js` files:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

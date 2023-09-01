@@ -2,16 +2,6 @@
 title: storage.StorageArea.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/onChanged
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-  - onChanged
 browser-compat: webextensions.api.storage.StorageArea.onChanged
 ---
 
@@ -23,14 +13,14 @@ Fires when one or more items in a storage area change. Compared to {{WebExtAPIRe
 
 ```js-nolint
 // local can also be sync, managed, or session
-browser.storage.local.onChanged.addListener(callback)
+browser.storage.local.onChanged.addListener(listener)
 browser.storage.local.onChanged.removeListener(listener)
 browser.storage.local.onChanged.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stops listening to this event. The `listener` argument is the listener to remove.
@@ -41,9 +31,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : The function called when this event occurs. The function is passed these arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `changes`
       - : `object`. Object describing the change. This contains one property for each key that changed. The name of the property is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
@@ -56,7 +46,6 @@ Log the old value and its new value of
 changes in the local storage.
 */
 function logStorageChange(changes) {
-
   const changedItems = Object.keys(changes);
 
   for (const item of changedItems) {

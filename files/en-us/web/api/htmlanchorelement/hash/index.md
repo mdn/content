@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.hash
+title: "HTMLAnchorElement: hash property"
+short-title: hash
 slug: Web/API/HTMLAnchorElement/hash
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.hash

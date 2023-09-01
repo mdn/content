@@ -1,5 +1,6 @@
 ---
-title: XRWebGLSubImage.colorTextureWidth
+title: "XRWebGLSubImage: colorTextureWidth property"
+short-title: colorTextureWidth
 slug: Web/API/XRWebGLSubImage/colorTextureWidth
 page-type: web-api-instance-property
 status:

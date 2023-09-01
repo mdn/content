@@ -2,10 +2,6 @@
 title: <feColorMatrix>
 slug: Web/SVG/Element/feColorMatrix
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feColorMatrix
 ---
 
@@ -25,7 +21,7 @@ The **`<feColorMatrix>`** SVG filter element changes colors based on a transform
 
 In simplified terms, below is how each color channel in the new pixel is calculated. The last row is ignored because its values are constant.
 
-```
+```plain
 R' = r1*R + r2*G + r3*B + r4*A + r5
 G' = g1*R + g2*G + g3*B + g4*A + g5
 B' = b1*R + b2*G + b3*B + b4*A + b5
@@ -73,15 +69,15 @@ In it, every new value is exactly 1 times its old value, with nothing else added
 
 - [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 - [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes), including the `x`, `y`, `width`, `height`, and `result` attributes.
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
 ### Specific attributes
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("type")}}
-- {{SVGAttr("values")}}
+- {{SVGAttr("in")}}: Values include `SourceGraphic`, `SourceAlpha`, `BackgroundImage`, `BackgroundAlpha`, `FillPaint`, `StrokePaint`, or a reference to another filter primitive.
+- {{SVGAttr("type")}}: Values include `matrix`, `saturate`, `hueRotate`, and `luminanceToAlpha`.
+- {{SVGAttr("values")}}: The value for the matrix type set in the `type` attribute.
 
 ## DOM Interface
 

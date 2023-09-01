@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.lineNumber
+title: "SecurityPolicyViolationEvent: lineNumber property"
+short-title: lineNumber
 slug: Web/API/SecurityPolicyViolationEvent/lineNumber
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.lineNumber

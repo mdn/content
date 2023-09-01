@@ -1,5 +1,6 @@
 ---
-title: WindowControlsOverlay.visible
+title: "WindowControlsOverlay: visible property"
+short-title: visible
 slug: Web/API/WindowControlsOverlay/visible
 page-type: web-api-instance-property
 status:

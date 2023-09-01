@@ -2,12 +2,6 @@
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 page-type: landing-page
-tags:
-  - Add-ons
-  - Extensions
-  - Overview
-  - WebExtensions
-  - manifest.json
 browser-compat: webextensions.manifest
 ---
 
@@ -98,7 +92,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
   },
 
   "background": {
-    "scripts": ["jquery.js", "my-background.js"],
+    "scripts": ["jquery.js", "my-background.js"]
   },
 
   "browser_action": {
@@ -157,7 +151,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
   "version": "0.1",
 
   "user_scripts": {
-    "api_script": "apiscript.js",
+    "api_script": "apiscript.js"
   },
 
   "web_accessible_resources": ["images/my-image.png"]

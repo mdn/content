@@ -7,15 +7,13 @@ browser-compat: javascript.builtins.Array.copyWithin
 
 {{JSRef}}
 
-The **`copyWithin()`** method shallow copies part of an array
-to another location in the same array and returns it without modifying its length.
+The **`copyWithin()`** method of {{jsxref("Array")}} instances shallow copies part of this array to another location in the same array and returns this array without modifying its length.
 
 {{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
 
 ## Syntax
 
 ```js-nolint
-copyWithin(target)
 copyWithin(target, start)
 copyWithin(target, start, end)
 ```
@@ -28,10 +26,10 @@ copyWithin(target, start, end)
     - If `target < -array.length`, `0` is used.
     - If `target >= array.length`, nothing is copied.
     - If `target` is positioned after `start` after normalization, copying only happens until the end of `array.length` (in other words, `copyWithin()` never extends the array).
-- `start` {{optional_inline}}
+- `start`
   - : Zero-based index at which to start copying elements from, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
-    - If `start < -array.length` or `start` is omitted, `0` is used.
+    - If `start < -array.length`, `0` is used.
     - If `start >= array.length`, nothing is copied.
 - `end` {{optional_inline}}
   - : Zero-based index at which to end copying elements from, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `copyWithin()` copies up to but not including `end`.
@@ -48,6 +46,13 @@ The modified array.
 
 The `copyWithin()` method works like C and C++'s `memmove`, and is a high-performance method to shift the data of an {{jsxref("Array")}}. This especially applies to the {{jsxref("TypedArray/copyWithin", "TypedArray")}} method of the same name. The sequence is copied and pasted as one operation; the pasted sequence will have the copied values even when the copy and paste region overlap.
 
+Because `undefined` becomes `0` when converted to an integer, omitting the `start` parameter has the same effect as passing `0`, which copies the entire array to the target position, equivalent to a right shift where the right boundary is clipped off and the left boundary is duplicated. This behavior may confuse readers of your code, so you should explicitly pass `0` as `start` instead.
+
+```js
+console.log([1, 2, 3, 4, 5].copyWithin(2));
+// [1, 2, 1, 2, 3]; move all elements to the right by 2 positions
+```
+
 The `copyWithin()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter the length of `this`, but it will change the content of `this` and create new properties or delete existing properties, if necessary.
 
 The `copyWithin()` method preserves empty slots. If the region to be copied from is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots' corresponding new indices are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) and also become empty slots.
@@ -59,9 +64,6 @@ The `copyWithin()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Glob
 ### Using copyWithin()
 
 ```js
-console.log([1, 2, 3, 4, 5].copyWithin(-2));
-// [1, 2, 3, 1, 2]
-
 console.log([1, 2, 3, 4, 5].copyWithin(0, 3));
 // [4, 5, 3, 4, 5]
 
@@ -107,4 +109,6 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.copyWithin()")}}

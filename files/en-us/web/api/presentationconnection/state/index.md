@@ -1,5 +1,6 @@
 ---
-title: PresentationConnection.state
+title: "PresentationConnection: state property"
+short-title: state
 slug: Web/API/PresentationConnection/state
 page-type: web-api-instance-property
 status:

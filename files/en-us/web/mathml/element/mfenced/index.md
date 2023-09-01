@@ -1,13 +1,10 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Element/mfenced
-tags:
-  - Deprecated
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
-  - Non-standard
+page-type: mathml-element
+status:
+  - deprecated
+  - non-standard
 browser-compat: mathml.elements.mfenced
 ---
 

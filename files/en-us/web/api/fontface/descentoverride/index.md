@@ -1,5 +1,6 @@
 ---
-title: FontFace.descentOverride
+title: "FontFace: descentOverride property"
+short-title: descentOverride
 slug: Web/API/FontFace/descentOverride
 page-type: web-api-instance-property
 browser-compat: api.FontFace.descentOverride
@@ -20,7 +21,7 @@ A string.
 let fontFace = new FontFace(
   "Roboto",
   "url(https://fonts.example.com/roboto.woff2)",
-  { descentOverride: "90%" }
+  { descentOverride: "90%" },
 );
 console.log(fontFace.descentOverride); // 90%
 fontFace.descentOverride = "normal";

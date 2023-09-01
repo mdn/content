@@ -2,17 +2,6 @@
 title: Interact with the clipboard
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 page-type: guide
-tags:
-  - Add-ons
-  - Clip
-  - Clipboard
-  - Cut
-  - Editing
-  - Extensions
-  - Text
-  - WebExtensions
-  - copy
-  - paste
 browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard
@@ -47,7 +36,7 @@ The Clipboard API writes arbitrary data to the clipboard from your extension. Us
 For page scripts, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
 
 ```js
-navigator.permissions.query({name: "clipboard-write"}).then((result) => {
+navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
   if (result.state === "granted" || result.state === "prompt") {
     /* write to the clipboard now */
   }
@@ -60,11 +49,14 @@ This function takes a string and writes it to the clipboard:
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(() => {
-    /* clipboard successfully set */
-  }, () => {
-    /* clipboard write failed */
-  });
+  navigator.clipboard.writeText(newClip).then(
+    () => {
+      /* clipboard successfully set */
+    },
+    () => {
+      /* clipboard write failed */
+    },
+  );
 }
 ```
 
@@ -102,7 +94,7 @@ function copy() {
 }
 
 browser.alarms.create({
-  delayInMinutes: 0.1
+  delayInMinutes: 0.1,
 });
 
 browser.alarms.onAlarm.addListener(copy);
@@ -141,8 +133,9 @@ The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readTex
 Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily. For example, this snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
 
 ```js
-navigator.clipboard.readText().then((clipText) =>
-  document.getElementById("outbox").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
 ```
 
 ### Using execCommand()
@@ -170,7 +163,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### Browser-specific considerations
 
-Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/Guide/HTML/Editable_content), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
+Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/HTML/Global_attributes/contenteditable), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
 
 ## Browser compatibility
 
@@ -180,5 +173,4 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
-- {{htmlattrxref("contenteditable")}}
+- [Make content editable](/en-US/docs/Web/HTML/Global_attributes#contenteditable)

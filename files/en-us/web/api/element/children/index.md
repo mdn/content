@@ -1,5 +1,6 @@
 ---
-title: Element.children
+title: "Element: children property"
+short-title: children
 slug: Web/API/Element/children
 page-type: web-api-instance-property
 browser-compat: api.Element.children

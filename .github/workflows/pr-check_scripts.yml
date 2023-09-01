@@ -24,8 +24,10 @@ jobs:
           cache: yarn
 
       - name: yarn install
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: yarn up-to-date-check
 
@@ -42,8 +44,10 @@ jobs:
           cache: yarn
 
       - name: yarn install
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: yarn start
         run: yarn start > /tmp/stdout.log 2> /tmp/stderr.log &
@@ -80,8 +84,10 @@ jobs:
           cache: yarn
 
       - name: yarn install
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: yarn filecheck --help
 
@@ -98,8 +104,10 @@ jobs:
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: yarn content --help
 
@@ -116,7 +124,9 @@ jobs:
           cache: yarn
 
       - name: yarn install
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: yarn build --help

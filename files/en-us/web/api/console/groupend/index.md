@@ -1,5 +1,6 @@
 ---
-title: console.groupEnd()
+title: "console: groupEnd() method"
+short-title: groupEnd()
 slug: Web/API/console/groupEnd
 page-type: web-api-instance-method
 browser-compat: api.console.groupEnd

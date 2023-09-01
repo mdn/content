@@ -1,5 +1,6 @@
 ---
-title: MutationObserver.takeRecords()
+title: "MutationObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 page-type: web-api-instance-method
 browser-compat: api.MutationObserver.takeRecords
@@ -46,8 +47,8 @@ disconnecting the observer.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

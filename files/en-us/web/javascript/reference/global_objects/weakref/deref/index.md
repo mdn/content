@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.WeakRef.deref
 
 {{JSRef}}
 
-The **`deref()`** method returns the {{jsxref("WeakRef")}} instance's target
-object, or `undefined` if the target object has been garbage-collected.
+The **`deref()`** method of {{jsxref("WeakRef")}} instances returns this `WeakRef`'s target value, or `undefined` if the target value has been garbage-collected.
 
 ## Syntax
 
@@ -16,10 +15,13 @@ object, or `undefined` if the target object has been garbage-collected.
 deref()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-The target object of the WeakRef, or `undefined` if the object has been
-garbage-collected.
+The target value of the WeakRef, which is either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). Returns `undefined` if the value has been garbage-collected.
 
 ## Description
 
@@ -27,7 +29,7 @@ See the [Notes on WeakRefs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 
 ## Examples
 
-### Using deref
+### Using deref()
 
 See the [Examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#examples)
 section of the {{jsxref("WeakRef")}} page for the complete example.

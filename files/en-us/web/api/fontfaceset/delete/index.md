@@ -1,5 +1,6 @@
 ---
-title: FontFaceSet.delete()
+title: "FontFaceSet: delete() method"
+short-title: delete()
 slug: Web/API/FontFaceSet/delete
 page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.delete

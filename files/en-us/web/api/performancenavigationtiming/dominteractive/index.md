@@ -1,5 +1,6 @@
 ---
-title: PerformanceNavigationTiming.domInteractive
+title: "PerformanceNavigationTiming: domInteractive property"
+short-title: domInteractive
 slug: Web/API/PerformanceNavigationTiming/domInteractive
 page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.domInteractive
@@ -31,7 +32,7 @@ Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navig
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
     console.log(
-      `${entry.name}: domInteractive time: ${entry.domInteractive}ms`
+      `${entry.name}: domInteractive time: ${entry.domInteractive}ms`,
     );
   });
 });

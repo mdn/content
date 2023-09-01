@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.outerText
+title: "HTMLElement: outerText property"
+short-title: outerText
 slug: Web/API/HTMLElement/outerText
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.outerText

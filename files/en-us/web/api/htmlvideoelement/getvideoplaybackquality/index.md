@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.getVideoPlaybackQuality()
+title: "HTMLVideoElement: getVideoPlaybackQuality() method"
+short-title: getVideoPlaybackQuality()
 slug: Web/API/HTMLVideoElement/getVideoPlaybackQuality
 page-type: web-api-instance-method
 browser-compat: api.HTMLVideoElement.getVideoPlaybackQuality

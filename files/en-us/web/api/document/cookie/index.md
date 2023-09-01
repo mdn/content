@@ -1,5 +1,6 @@
 ---
-title: Document.cookie
+title: "Document: cookie property"
+short-title: cookie
 slug: Web/API/Document/cookie
 page-type: web-api-instance-property
 browser-compat: api.Document.cookie
@@ -45,7 +46,7 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
     > the domain of the JavaScript origin. Setting cookies to foreign
     > domains will be silently ignored.
 
-  - `;expires=date-in-GMTString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` specified it will expire at the end of session.
+  - `;expires=date-in-GMTString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
 
     > **Warning:** When user privacy is a concern, it's important that any web app
     > implementation invalidate cookie data after a certain timeout

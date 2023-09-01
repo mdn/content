@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.loadEventStart
+title: "PerformanceTiming: loadEventStart property"
+short-title: loadEventStart
 slug: Web/API/PerformanceTiming/loadEventStart
 page-type: web-api-instance-property
 status:

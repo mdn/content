@@ -1,6 +1,7 @@
 ---
 title: Robust
 slug: Web/Accessibility/Understanding_WCAG/Robust
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

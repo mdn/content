@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver.rootMargin
+title: "IntersectionObserver: rootMargin property"
+short-title: rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserver.rootMargin

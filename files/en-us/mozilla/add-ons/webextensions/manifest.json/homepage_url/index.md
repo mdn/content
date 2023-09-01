@@ -2,10 +2,6 @@
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.manifest.homepage_url
 ---
 
@@ -46,7 +42,7 @@ This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Inter
 ## Example
 
 ```json
-"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+"homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify"
 ```
 
 ## Browser compatibility

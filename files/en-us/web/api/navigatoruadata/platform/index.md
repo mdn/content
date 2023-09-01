@@ -1,5 +1,6 @@
 ---
-title: NavigatorUAData.platform
+title: "NavigatorUAData: platform property"
+short-title: platform
 slug: Web/API/NavigatorUAData/platform
 page-type: web-api-instance-property
 status:

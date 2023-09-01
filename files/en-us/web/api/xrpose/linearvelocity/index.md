@@ -1,5 +1,6 @@
 ---
-title: XRPose.linearVelocity
+title: "XRPose: linearVelocity property"
+short-title: linearVelocity
 slug: Web/API/XRPose/linearVelocity
 page-type: web-api-instance-property
 browser-compat: api.XRPose.linearVelocity

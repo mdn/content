@@ -2,16 +2,6 @@
 title: extension.inIncognitoContext
 slug: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - inIncognitoContext
 browser-compat: webextensions.api.extension.inIncognitoContext
 ---
 

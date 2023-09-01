@@ -1,5 +1,6 @@
 ---
-title: Window.console
+title: "Window: console property"
+short-title: console
 slug: Web/API/Window/console
 page-type: web-api-instance-property
 spec-urls: https://console.spec.whatwg.org/

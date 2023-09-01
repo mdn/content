@@ -1,6 +1,7 @@
 ---
 title: WAI-ARIA basics
 slug: Learn/Accessibility/WAI-ARIA_basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
@@ -59,7 +60,7 @@ The problem here is that visually they work, but screen readers can't make any s
 
 ### Enter WAI-ARIA
 
-[WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
+[WAI-ARIA](https://www.w3.org/TR/wai-aria/) (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
 
 - **[Roles](/en-US/docs/Web/Accessibility/ARIA/Roles)** — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of structural elements, such as `role="navigation"` ({{htmlelement("nav")}}) or `role="complementary"` ({{htmlelement("aside")}}). Some other roles describe different page structures, such as `role="banner"`, `role="search"`, `role="tablist"`, and `role="tabpanel"`, which are commonly found in UIs.
 - **Properties** — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, `aria-required="true"` specifies that a form input needs to be filled in order to be valid, whereas `aria-labelledby="label"` allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using `<label for="input">`. As an example, you could use `aria-labelledby` to specify that a key description contained in a {{htmlelement("div")}} is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the `alt` attribute. You can see an example of this at [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
@@ -231,7 +232,7 @@ We'd like you to take a copy of [aria-no-live.html](https://github.com/mdn/learn
 
 This will cause a screen reader to read out the content as it is updated.
 
-> **Note:** Most browsers will throw a security exception if you try to do an `XMLHttpRequest` call from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example [using GitHub](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages), or a local web server like [Python's SimpleHTTPServer](https://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/).
+> **Note:** Most browsers will throw a security exception if you try to do an `XMLHttpRequest` call from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example [using GitHub](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages), or a local web server like [Python's SimpleHTTPServer](https://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/).
 
 There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
 
@@ -430,10 +431,10 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 
 ## See also
 
-- [Definition of Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) — ARIA roles reference.
-- [Definitions of States and Properties (all aria-\* attributes)](/en-US/docs/Web/Accessibility/ARIA/Attributes) — properties and states reference.
-- [Deque university code library](https://dequeuniversity.com/library/) — a library of really useful practical examples showing complex UI controls made accessible using WAI-ARIA features.
-- [WAI-ARIA Authoring Practices](https://w3c.github.io/aria-practices/) — very detailed design patterns from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features.
-- [ARIA in HTML](https://www.w3.org/TR/html-aria/) — A W3C spec that defines, for each HTML feature, what accessibility (ARIA) semantics that feature implicitly has set on it by the browser, and what WAI-ARIA features you may set on it if extra semantics are required.
+- [Aria states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes): All aria-\* attributes
+- [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles): Categories of ARIA roles and the roles covered on MDN
+- [ARIA in HTML](https://www.w3.org/TR/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
+- [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
+- [WAI-ARIA authoring practices](https://w3c.github.io/aria-practices/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}

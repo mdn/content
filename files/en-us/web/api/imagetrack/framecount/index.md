@@ -1,5 +1,6 @@
 ---
-title: ImageTrack.frameCount
+title: "ImageTrack: frameCount property"
+short-title: frameCount
 slug: Web/API/ImageTrack/frameCount
 page-type: web-api-instance-property
 status:

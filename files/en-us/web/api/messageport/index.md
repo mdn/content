@@ -37,14 +37,14 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 In the following example, you can see a new channel being created using the {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} constructor.
 
-When the IFrame has loaded, we register an {{domxref("MessagePort.onmessage","onmessage")}} handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
+When the IFrame has loaded, we register an {{domxref("MessagePort/message_event","onmessage")}} handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
 
 When a message is received back from the IFrame, the `onMessage` function outputs the message to a paragraph.
 
 ```js
 const channel = new MessageChannel();
-const output = document.querySelector('.output');
-const iframe = document.querySelector('iframe');
+const output = document.querySelector(".output");
+const iframe = document.querySelector("iframe");
 
 // Wait for the iframe to load
 iframe.addEventListener("load", onLoad);
@@ -54,7 +54,9 @@ function onLoad() {
   channel.port1.onmessage = onMessage;
 
   // Transfer port2 to the iframe
-  iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  iframe.contentWindow.postMessage("Hello from the main page!", "*", [
+    channel.port2,
+  ]);
 }
 
 // Handle messages received on port1

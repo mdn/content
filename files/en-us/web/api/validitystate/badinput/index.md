@@ -1,5 +1,6 @@
 ---
-title: ValidityState.badInput
+title: "ValidityState: badInput property"
+short-title: badInput
 slug: Web/API/ValidityState/badInput
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.badInput

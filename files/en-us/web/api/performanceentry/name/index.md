@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.name
+title: "PerformanceEntry: name property"
+short-title: name
 slug: Web/API/PerformanceEntry/name
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.name
@@ -24,6 +25,10 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
     <tr>
       <td>{{domxref('LargestContentfulPaint')}}</td>
       <td>Always returns an empty string.</td>
+    </tr>
+    <tr>
+      <td>{{domxref('LayoutShift')}}</td>
+      <td>Always returns <code>"layout-shift"</code>.</td>
     </tr>
     <tr>
       <td>{{domxref('PerformanceElementTiming')}}</td>
@@ -89,6 +94,15 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
       <td>{{domxref('TaskAttributionTiming')}}</td>
       <td>Always returns <code>"unknown"</code>.</td>
     </tr>
+    <tr>
+      <td>{{domxref('VisibilityStateEntry')}}</td>
+      <td>One of the following strings:
+        <ul>
+          <li><code>"visible"</code></li>
+          <li><code>"hidden"</code></li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -122,8 +136,8 @@ debugMarks.forEach((entry) => {
 // PerformanceObserver version
 // Log all marks named "debug-marks" when they happen
 function perfObserver(list, observer) {
-  list.getEntriesByName("debug-mark", "mark").forEach((entry) =>  {
-     console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+  list.getEntriesByName("debug-mark", "mark").forEach((entry) => {
+    console.log(`${entry.name}'s startTime: ${entry.startTime}`);
   });
 }
 const observer = new PerformanceObserver(perfObserver);

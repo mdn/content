@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.openWindow()
+title: "PaymentRequestEvent: openWindow() method"
+short-title: openWindow()
 slug: Web/API/PaymentRequestEvent/openWindow
 page-type: web-api-instance-method
 status:

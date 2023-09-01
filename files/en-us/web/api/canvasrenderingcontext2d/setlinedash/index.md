@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.setLineDash()
+title: "CanvasRenderingContext2D: setLineDash() method"
+short-title: setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.setLineDash

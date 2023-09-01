@@ -1,5 +1,6 @@
 ---
-title: "DeviceMotionEventRotationRate: beta"
+title: "DeviceMotionEventRotationRate: beta property"
+short-title: beta
 slug: Web/API/DeviceMotionEventRotationRate/beta
 page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEventRotationRate.beta

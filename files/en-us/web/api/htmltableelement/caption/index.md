@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.caption
+title: "HTMLTableElement: caption property"
+short-title: caption
 slug: Web/API/HTMLTableElement/caption
 page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.caption

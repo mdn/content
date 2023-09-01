@@ -1,5 +1,6 @@
 ---
-title: NDEFRecord.lang
+title: "NDEFRecord: lang property"
+short-title: lang
 slug: Web/API/NDEFRecord/lang
 page-type: web-api-instance-property
 status:

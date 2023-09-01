@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.addressLine
+title: "PaymentAddress: addressLine property"
+short-title: addressLine
 slug: Web/API/PaymentAddress/addressLine
 page-type: web-api-instance-property
 status:

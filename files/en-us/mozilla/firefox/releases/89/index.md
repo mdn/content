@@ -1,6 +1,7 @@
 ---
 title: Firefox 89 for developers
 slug: Mozilla/Firefox/Releases/89
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -23,12 +24,12 @@ _No changes._
 
 - The {{cssxref("@media/forced-colors","forced-colors")}} media feature has been implemented ([Firefox bug 1659511](https://bugzil.la/1659511)).
 - The {{cssxref("@font-face/ascent-override", "ascent-override")}}, {{cssxref("@font-face/descent-override", "descent-override")}}, and {{cssxref("@font-face/line-gap-override", "line-gap-override")}} `@font-face` descriptors have been implemented ([Firefox bug 1681691](https://bugzil.la/1681691) and [Firefox bug 1704494](https://bugzil.la/1704494)).
-- The `type()` function for {{cssxref("image-set","image-set()")}} has been implemented ([Firefox bug 1695404](https://bugzil.la/1695404)).
+- The `type()` function for {{cssxref("image/image-set")}} has been implemented ([Firefox bug 1695404](https://bugzil.la/1695404)).
 - The {{cssxref("aspect-ratio")}} CSS property is now supported ([Firefox bug 1672073](https://bugzil.la/1672073)).
 
 ### JavaScript
 
-- Top-level [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level-await) is now enabled by default ([Firefox bug 1681046](https://bugzil.la/1681046)).
+- Top-level [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) is now enabled by default ([Firefox bug 1681046](https://bugzil.la/1681046)).
 - [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)s can now be created with a length greater than 2GB-1 (up to 8GB) on 64-bit systems ([Firefox bug 1703505](https://bugzil.la/1703505)).
 
 ### HTTP
@@ -46,8 +47,8 @@ _No changes._
 
 - The following sensor events and their associated handlers have been removed (primarily for better compatibility with other major browser engines, and to address concerns related to privacy leaks):
 
-  - {{domxref("DeviceProximityEvent")}} and its event handler `window.ondeviceproximity` ([Firefox bug 1699707](https://bugzil.la/1699707)).
-  - {{domxref("UserProximityEvent")}} and its event handler `window.onuserproximity`) ([Firefox bug 1699707](https://bugzil.la/1699707)).
+  - `DeviceProximityEvent` and its event handler `window.ondeviceproximity` ([Firefox bug 1699707](https://bugzil.la/1699707)).
+  - `UserProximityEvent` and its event handler `window.onuserproximity`) ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `DeviceLightEvent` and its event handler `window.ondevicelight` ([Firefox bug 1701824](https://bugzil.la/1701824)).
 
 ### WebDriver conformance (Marionette)

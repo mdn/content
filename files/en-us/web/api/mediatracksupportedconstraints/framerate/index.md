@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.frameRate
+title: "MediaTrackSupportedConstraints: frameRate property"
+short-title: frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.frameRate
@@ -44,7 +45,9 @@ result.textContent = supported ? "Supported!" : "Not supported!";
 
 ```css
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

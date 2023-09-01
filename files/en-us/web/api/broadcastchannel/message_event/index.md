@@ -1,5 +1,6 @@
 ---
 title: "BroadcastChannel: message event"
+short-title: message
 slug: Web/API/BroadcastChannel/message_event
 page-type: web-api-event
 browser-compat: api.BroadcastChannel.message_event
@@ -61,7 +62,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -106,7 +109,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 ```
@@ -134,7 +139,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 ```

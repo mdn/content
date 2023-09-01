@@ -1,5 +1,5 @@
 ---
-title: '<rtc>: The Ruby Text Container element'
+title: "<rtc>: The Ruby Text Container element"
 slug: Web/HTML/Element/rtc
 page-type: html-element
 status:
@@ -38,6 +38,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   font-size: 36px;
 }
 ```
+
+### Result
 
 {{EmbedLiveSample("Examples", 600, 120)}}
 

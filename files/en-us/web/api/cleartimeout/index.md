@@ -1,5 +1,6 @@
 ---
-title: clearTimeout()
+title: clearTimeout() global function
+short-title: clearTimeout()
 slug: Web/API/clearTimeout
 page-type: web-api-global-function
 browser-compat: api.clearTimeout
@@ -59,7 +60,7 @@ const alarm = {
         this.remind(msg);
       },
       1000,
-      "Wake up!"
+      "Wake up!",
     );
   },
 

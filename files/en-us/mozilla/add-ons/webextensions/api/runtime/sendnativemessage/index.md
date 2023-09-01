@@ -2,16 +2,6 @@
 title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendNativeMessage
 browser-compat: webextensions.api.runtime.sendNativeMessage
 ---
 

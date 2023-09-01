@@ -1,5 +1,6 @@
 ---
-title: CanvasCaptureMediaStreamTrack.requestFrame()
+title: "CanvasCaptureMediaStreamTrack: requestFrame() method"
+short-title: requestFrame()
 slug: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
 page-type: web-api-instance-method
 browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame

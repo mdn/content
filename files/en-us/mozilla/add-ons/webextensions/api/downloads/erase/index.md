@@ -2,16 +2,6 @@
 title: downloads.erase()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - erase
 browser-compat: webextensions.api.downloads.erase
 ---
 
@@ -61,7 +51,7 @@ function onError(error) {
 
 let erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 erasing.then(onErased, onError);

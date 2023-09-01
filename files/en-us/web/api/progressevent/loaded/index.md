@@ -1,5 +1,6 @@
 ---
-title: ProgressEvent.loaded
+title: "ProgressEvent: loaded property"
+short-title: loaded
 slug: Web/API/ProgressEvent/loaded
 page-type: web-api-instance-property
 browser-compat: api.ProgressEvent.loaded

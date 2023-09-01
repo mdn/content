@@ -1,5 +1,6 @@
 ---
-title: PasswordCredential.iconURL
+title: "PasswordCredential: iconURL property"
+short-title: iconURL
 slug: Web/API/PasswordCredential/iconURL
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: PerformanceElementTiming.intersectionRect
+title: "PerformanceElementTiming: intersectionRect property"
+short-title: intersectionRect
 slug: Web/API/PerformanceElementTiming/intersectionRect
 page-type: web-api-instance-property
 status:

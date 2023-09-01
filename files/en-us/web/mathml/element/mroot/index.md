@@ -1,11 +1,7 @@
 ---
 title: <mroot>
 slug: Web/MathML/Element/mroot
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mroot
 ---
 
@@ -28,7 +24,7 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 </math>
 ```
 
-{{ EmbedLiveSample('mroot_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.checkValidity()
+title: "HTMLObjectElement: checkValidity() method"
+short-title: checkValidity()
 slug: Web/API/HTMLObjectElement/checkValidity
 page-type: web-api-instance-method
 browser-compat: api.HTMLObjectElement.checkValidity

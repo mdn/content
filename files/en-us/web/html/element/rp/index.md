@@ -1,5 +1,5 @@
 ---
-title: '<rp>: The Ruby Fallback Parenthesis element'
+title: "<rp>: The Ruby Fallback Parenthesis element"
 slug: Web/HTML/Element/rp
 page-type: html-element
 browser-compat: html.elements.rp
@@ -27,8 +27,7 @@ This example uses ruby annotations to display the [Romaji](https://en.wikipedia.
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -38,7 +37,7 @@ body {
 }
 ```
 
-The result looks like this in your browser:
+#### Result
 
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 

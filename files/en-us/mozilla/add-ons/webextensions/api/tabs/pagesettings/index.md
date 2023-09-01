@@ -2,15 +2,6 @@
 title: tabs.PageSettings
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - PageSettings
-  - Reference
-  - Type
-  - WebExtensions
-  - tabs
 browser-compat: webextensions.api.tabs.PageSettings
 ---
 

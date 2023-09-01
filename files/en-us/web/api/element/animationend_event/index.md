@@ -1,13 +1,14 @@
 ---
 title: "Element: animationend event"
+short-title: animationend
 slug: Web/API/Element/animationend_event
-browser-compat: api.Element.animationend_event
 page-type: web-api-event
+browser-compat: api.Element.animationend_event
 ---
 
 {{APIRef}}
 
-The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
+The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
 
 ## Syntax
 
@@ -111,10 +112,10 @@ animated.onanimationend = () => {
 ```js
 const animation = document.querySelector("p.animation");
 const animationEventLog = document.querySelector(
-  ".animation-example>.event-log"
+  ".animation-example>.event-log",
 );
 const applyAnimation = document.querySelector(
-  ".animation-example>button.activate"
+  ".animation-example>button.activate",
 );
 let iterationCount = 0;
 
@@ -162,9 +163,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - Related events: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/animationend_event", "animationend")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/animationend_event", "animationend")}}

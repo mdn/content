@@ -1,5 +1,6 @@
 ---
-title: RTCIceServer.credentialType
+title: "RTCIceServer: credentialType property"
+short-title: credentialType
 slug: Web/API/RTCIceServer/credentialType
 page-type: web-api-instance-property
 status:
@@ -49,12 +50,12 @@ creative password "turnpassword".
 const myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      urls: "turn:turnserver.example.org",  // A TURN server
+      urls: "turn:turnserver.example.org", // A TURN server
       username: "webrtc",
       credential: "turnpassword",
-      credentialType: "password"
-    }
-  ]
+      credentialType: "password",
+    },
+  ],
 });
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: PresentationRequest.reconnect()
+title: "PresentationRequest: reconnect() method"
+short-title: reconnect()
 slug: Web/API/PresentationRequest/reconnect
 page-type: web-api-instance-method
 status:

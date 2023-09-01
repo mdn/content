@@ -18,7 +18,7 @@ Some user agents subclass this interface to provide more precise information or 
 ## Constructor
 
 - {{domxref("MediaStream.MediaStream", "MediaStream()")}}
-  - : Creates and returns a new MediaStream object. You can create an empty stream, a stream which is based upon an existing stream, or a stream that contains a specified list of tracks (specified as an array of {{domxref("MediaStreamTrack")}} objects).
+  - : Creates and returns a new `MediaStream` object. You can create an empty stream, a stream which is based upon an existing stream, or a stream that contains a specified list of tracks (specified as an array of {{domxref("MediaStreamTrack")}} objects).
 
 ## Instance properties
 

@@ -1,5 +1,6 @@
 ---
-title: CharacterData.before()
+title: "CharacterData: before() method"
+short-title: before()
 slug: Web/API/CharacterData/before
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.before

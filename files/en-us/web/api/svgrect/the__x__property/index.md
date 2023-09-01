@@ -1,10 +1,12 @@
 ---
-title: The 'X' property
+title: "SVGRect: x property"
+short-title: x
 slug: Web/API/SVGRect/The__X__property
 page-type: web-api-instance-property
 ---
 
 {{APIRef("SVG")}}
+
 The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes the horizontal coordinate of the position of the element.
 
 ## Usage context
@@ -76,12 +78,16 @@ The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes
 
 ## Simple usage
 
-A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength)
+A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength).
 
-```go
-// Rect draws a rectangle with upper left-hand corner at x,y, with width w, and height h, with optional style
-// Standard Reference: http://www.w3.org/TR/SVG11/shapes.html#RectElement
-func (svg *SVG) Rect(x float64, y float64, w float64, h float64, s ...string) {
-  svg.printf(`<rect %s %s`, dim(x, y, w, h, svg.Decimals), endstyle(s, emptyclose))
-}
+```html
+<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="0" width="40" height="40" fill="blue"></rect>
+</svg>
+
+<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
+  <rect x="40" y="0" width="40" height="40" fill="green"></rect>
+</svg>
 ```
+
+{{EmbedLiveSample("Simple usage", "100%", "100")}}

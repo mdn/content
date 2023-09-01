@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.href
+title: "StyleSheet: href property"
+short-title: href
 slug: Web/API/StyleSheet/href
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.href
@@ -21,7 +22,7 @@ A string containing the stylesheet's URI.
 On a local Windows machine:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

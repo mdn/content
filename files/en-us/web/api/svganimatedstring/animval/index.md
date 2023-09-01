@@ -1,5 +1,6 @@
 ---
-title: SVGAnimatedString.animVal
+title: "SVGAnimatedString: animVal property"
+short-title: animVal
 slug: Web/API/SVGAnimatedString/animVal
 page-type: web-api-instance-property
 browser-compat: api.SVGAnimatedString.animVal

@@ -1,5 +1,6 @@
 ---
-title: VideoTrackList.selectedIndex
+title: "VideoTrackList: selectedIndex property"
+short-title: selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
 page-type: web-api-instance-property
 browser-compat: api.VideoTrackList.selectedIndex

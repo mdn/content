@@ -1,5 +1,6 @@
 ---
-title: VRStageParameters.sittingToStandingTransform
+title: "VRStageParameters: sittingToStandingTransform property"
+short-title: sittingToStandingTransform
 slug: Web/API/VRStageParameters/sittingToStandingTransform
 page-type: web-api-instance-property
 status:

@@ -7,13 +7,9 @@ browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 
 {{JSRef}}
 
-The **`Intl.NumberFormat()`** constructor creates
-{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}} objects that enable language-sensitive
-number formatting.
+The **`Intl.NumberFormat()`** constructor creates {{jsxref("Intl.NumberFormat")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -33,7 +29,7 @@ Intl.NumberFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation). The following Unicode extension key is allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument). The following Unicode extension key is allowed:
 
     - `nu`
       - : The numbering system to be used. Possible values include:
@@ -55,7 +51,7 @@ Intl.NumberFormat(locales, options)
     - `compactDisplay`
       - : Only used when `notation` is `"compact"`. Takes either `"short"` (default) or `"long"`.
     - `currency`
-      - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see the [Current currency & funds code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes).
+      - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see the [Current currency & funds code list](https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes).
         There is no default value; if the `style` is `"currency"`, the `currency` property must be provided.
     - `currencyDisplay`
 
@@ -93,7 +89,7 @@ Intl.NumberFormat(locales, options)
         - `"auto"`: sign display for negative numbers only, including negative zero.
         - `"always"`: always display sign.
         - `"exceptZero"`: sign display for positive and negative numbers, but not zero.
-        - `"negative"`: sign display for negative numbers only, excluding negative zero. {{experimental_inline}}
+        - `"negative"`: sign display for negative numbers only, excluding negative zero.
         - `"never"`: never display sign.
 
     - `style`
@@ -108,7 +104,7 @@ Intl.NumberFormat(locales, options)
     - `unit`
 
       - : The unit to use in `unit` formatting, Possible values are core unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements).
-        A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier) of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
+        A [subset](https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers) of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
         Pairs of simple units can be concatenated with "-per-" to make a compound unit.
         There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
 
@@ -120,7 +116,7 @@ Intl.NumberFormat(locales, options)
         - `"short"` (e.g., `16 l`).
         - `"narrow"` (e.g., `16l`).
 
-    - `useGrouping` {{experimental_inline}}
+    - `useGrouping`
 
       - : Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators. The default is `auto`.
 
@@ -130,7 +126,7 @@ Intl.NumberFormat(locales, options)
         - `"min2"`: display grouping separators when there are at least 2 digits in a group.
         - `true`: alias for `always`.
 
-    - `roundingMode` {{experimental_inline}}
+    - `roundingMode`
 
       - : Options for rounding modes. The default is `halfExpand`.
 
@@ -167,7 +163,7 @@ Intl.NumberFormat(locales, options)
         These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and "DOWN", respectively.
         The [rounding modes](#rounding_modes) example below demonstrates how each mode works.
 
-    - `roundingPriority` {{experimental_inline}}
+    - `roundingPriority`
 
       - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are specified:
 
@@ -177,7 +173,7 @@ Intl.NumberFormat(locales, options)
 
         Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
 
-    - `roundingIncrement` {{experimental_inline}}
+    - `roundingIncrement`
 
       - : Specifies the rounding-increment precision.
         Must be one of the following integers:
@@ -205,7 +201,7 @@ Intl.NumberFormat(locales, options)
         >
         > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
 
-    - `trailingZeroDisplay` {{experimental_inline}}
+    - `trailingZeroDisplay`
 
       - : A string expressing the strategy for displaying trailing zeros on whole numbers.
         The default is `"auto"`.
@@ -270,6 +266,17 @@ console.log(Object.getOwnPropertyDescriptors(formatter));
 Note that there's only one actual `Intl.NumberFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange)) would fail with "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
 
 This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.NumberFormat`. If you call it directly as `Intl.NumberFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.NumberFormat` instance is created normally.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - A property that takes enumerated values (such as `style`, `units`, `currency`, and so on) is set to an invalid value.
+    - Both `maximumFractionDigits` and `minimumFractionDigits` are set, and they are set to different values.
+      Note that depending on various formatting options, these properties can have default values.
+      It is therefore possible to get this error even if you only set one of the properties.
+- {{jsxref("TypeError")}}
+  - : Thrown if the `options.style` property is set to "unit" or "currency", and no value has been set for the corresponding property `options.unit` or `options.currency`.
 
 ## Examples
 
@@ -448,7 +455,7 @@ console.log(
 // "4.33"
 ```
 
-The minimum factional digits have no effect if the value already has more than 2 fractional digits:
+The minimum fractional digits have no effect if the value already has more than 2 fractional digits:
 
 ```js
 // Minimum fractions have no effect if value is higher precision.
@@ -498,7 +505,7 @@ console.log(
 
 #### Using SignificantDigits
 
-The number of _significant digits_ is the total number of digits including both integer and factional parts.
+The number of _significant digits_ is the total number of digits including both integer and fractional parts.
 The `maximumSignificantDigits` is used to indicate the total number of digits from the original value to display.
 
 The examples below show how this works.

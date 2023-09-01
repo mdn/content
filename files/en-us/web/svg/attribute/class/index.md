@@ -2,10 +2,6 @@
 title: class
 slug: Web/SVG/Attribute/class
 page-type: svg-attribute
-tags:
-  - Reference
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.style.class
 ---
 
@@ -89,7 +85,6 @@ You can use this class to style SVG content using CSS.
 The following elements can use the `class` attribute:
 
 - {{ SVGElement("a") }}
-- {{ SVGElement("altGlyph") }}
 - {{ SVGElement("circle") }}
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("defs") }}

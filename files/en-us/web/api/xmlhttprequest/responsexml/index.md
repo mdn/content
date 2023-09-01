@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.responseXML
+title: "XMLHttpRequest: responseXML property"
+short-title: responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.responseXML
@@ -42,14 +43,14 @@ data is not XML/HTML.
 ## Examples
 
 ```js
-const xhr = new XMLHttpRequest;
-xhr.open('GET', '/server');
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "/server");
 
 // If specified, responseType must be empty string or "document"
-xhr.responseType = 'document';
+xhr.responseType = "document";
 
 // Force the response to be parsed as XML
-xhr.overrideMimeType('text/xml');
+xhr.overrideMimeType("text/xml");
 
 xhr.onload = () => {
   if (xhr.readyState === xhr.DONE && xhr.status === 200) {

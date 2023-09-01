@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisEvent.charLength
+title: "SpeechSynthesisEvent: charLength property"
+short-title: charLength
 slug: Web/API/SpeechSynthesisEvent/charLength
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.charLength
@@ -23,11 +24,11 @@ utterThis.onpause = (event) => {
   const charLeft = event.charLength;
   if (charLeft) {
     console.log(
-      `Speech paused. There are still ${charLeft} characters to be spoken.`
+      `Speech paused. There are still ${charLeft} characters to be spoken.`,
     );
   } else {
     console.log(
-      "Speech paused. The underlying speech engine can't tell how many characters are left."
+      "Speech paused. The underlying speech engine can't tell how many characters are left.",
     );
   }
 };

@@ -1,5 +1,6 @@
 ---
-title: FontFace.display
+title: "FontFace: display property"
+short-title: display
 slug: Web/API/FontFace/display
 page-type: web-api-instance-property
 browser-compat: api.FontFace.display

@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidateStats.protocol
+title: "RTCIceCandidateStats: protocol property"
+short-title: protocol
 slug: Web/API/RTCIceCandidateStats/protocol
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.protocol

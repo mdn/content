@@ -7,11 +7,9 @@ browser-compat: javascript.builtins.Intl.NumberFormat.format
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.format()`** method formats a number according to the [locale and formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) of this {{jsxref("Intl.NumberFormat")}} object.
+The **`format()`** method of {{jsxref("Intl.NumberFormat")}} instances formats a number according to the [locale and formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) of this `Intl.NumberFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -27,9 +25,11 @@ format(number)
 > **Note:** Older versions of the specification parsed strings as a {{jsxref("Number")}}.
 > Check the compatibility table for your browser.
 
-## Description
+### Return value
 
-The `format()` method formats a number into a string according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
+A string representing the given `number` formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
+
+## Description
 
 {{jsxref("Number")}} values in JavaScript suffer from loss of precision if they are too big or too small, making the text representation inaccurate.
 If you are performing calculations with integers larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} you should use a {{jsxref("BigInt")}} instead, which will format correctly:

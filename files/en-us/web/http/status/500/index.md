@@ -1,10 +1,7 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-tags:
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.500
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.isSync()
+title: "WebGL2RenderingContext: isSync() method"
+short-title: isSync()
 slug: Web/API/WebGL2RenderingContext/isSync
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.isSync

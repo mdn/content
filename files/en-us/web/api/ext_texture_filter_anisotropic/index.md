@@ -1,5 +1,6 @@
 ---
-title: EXT_texture_filter_anisotropic
+title: EXT_texture_filter_anisotropic extension
+short-title: EXT_texture_filter_anisotropic
 slug: Web/API/EXT_texture_filter_anisotropic
 page-type: webgl-extension
 browser-compat: api.EXT_texture_filter_anisotropic

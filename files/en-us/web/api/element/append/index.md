@@ -1,5 +1,6 @@
 ---
-title: Element.append()
+title: "Element: append() method"
+short-title: append()
 slug: Web/API/Element/append
 page-type: web-api-instance-method
 browser-compat: api.Element.append
@@ -27,7 +28,7 @@ Differences from {{domxref("Node.appendChild()")}}:
 ```js-nolint
 append(param1)
 append(param1, param2)
-append(param1, param2, /* … ,*/ paramN)
+append(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

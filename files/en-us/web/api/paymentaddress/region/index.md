@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.region
+title: "PaymentAddress: region property"
+short-title: region
 slug: Web/API/PaymentAddress/region
 page-type: web-api-instance-property
 status:

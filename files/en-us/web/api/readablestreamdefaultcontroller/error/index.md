@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultController.error()
+title: "ReadableStreamDefaultController: error() method"
+short-title: error()
 slug: Web/API/ReadableStreamDefaultController/error
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.error
@@ -49,3 +50,8 @@ manually trigger a stream error if another part of the system it relies on fails
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

@@ -1,5 +1,6 @@
 ---
-title: DecompressionStream.writable
+title: "DecompressionStream: writable property"
+short-title: writable
 slug: Web/API/DecompressionStream/writable
 page-type: web-api-instance-property
 browser-compat: api.DecompressionStream.writable
@@ -19,7 +20,7 @@ The following example returns a {{domxref("WritableStream")}} from a `Decompress
 
 ```js
 let stream = new DecompressionStream("gzip");
-console.log(stream.writeable); //a WritableStream
+console.log(stream.writable); // A WritableStream
 ```
 
 ## Specifications

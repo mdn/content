@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.multiple
+title: "HTMLInputElement: multiple property"
+short-title: multiple
 slug: Web/API/HTMLInputElement/multiple
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.multiple
@@ -17,14 +18,14 @@ A boolean value.
 
 ```js
 // fileInput is a <input type=file multiple>
-let fileInput = document.getElementById('myfileinput');
+let fileInput = document.getElementById("myfileinput");
 
 if (fileInput.multiple) {
   // Loop fileInput.files
   for (const file of fileInput.files) {
     // Perform action on one file
   }
-// Only one file available
+  // Only one file available
 } else {
   let [file] = fileInput.files;
 }

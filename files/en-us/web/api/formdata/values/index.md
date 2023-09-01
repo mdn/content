@@ -1,5 +1,6 @@
 ---
-title: FormData.values()
+title: "FormData: values() method"
+short-title: values()
 slug: Web/API/FormData/values
 page-type: web-api-instance-method
 browser-compat: api.FormData.values
@@ -40,7 +41,7 @@ for (const value of formData.values()) {
 
 The result is:
 
-```
+```plain
 value1
 value2
 ```

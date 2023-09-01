@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.stopNotifications()
+title: "BluetoothRemoteGATTCharacteristic: stopNotifications() method"
+short-title: stopNotifications()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications
 page-type: web-api-instance-method
 status:

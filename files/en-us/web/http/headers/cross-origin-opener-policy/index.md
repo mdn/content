@@ -1,12 +1,7 @@
 ---
 title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Opener-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
 ---
 

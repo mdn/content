@@ -1,5 +1,6 @@
 ---
-title: DOMImplementation.hasFeature()
+title: "DOMImplementation: hasFeature() method"
+short-title: hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
 page-type: web-api-instance-method
 status:

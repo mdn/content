@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.checkFramebufferStatus()
+title: "WebGLRenderingContext: checkFramebufferStatus() method"
+short-title: checkFramebufferStatus()
 slug: Web/API/WebGLRenderingContext/checkFramebufferStatus
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.checkFramebufferStatus

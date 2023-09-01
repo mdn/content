@@ -1,5 +1,6 @@
 ---
-title: FormData.append()
+title: "FormData: append() method"
+short-title: append()
 slug: Web/API/FormData/append
 page-type: web-api-instance-method
 browser-compat: api.FormData.append

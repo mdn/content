@@ -4,6 +4,8 @@ slug: Glossary/Composite_operation
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 In CSS, the value of a property in a CSS rule is the _underlying value_ of that property, and the value of that same property in a [keyframe](/en-US/docs/Web/CSS/@keyframes) is its _effect value_.
 
 The _composite operation_ is the specific operation that is used to combine an effect value with an underlying value to produce the final keyframe effect value. There are three types of composite operations:
@@ -16,5 +18,5 @@ The _composite operation_ is the specific operation that is used to combine an e
 
 ## See also
 
-- [`animation-composition`](/en-US/web/css/animation-composition)
+- [`animation-composition`](/en-US/docs/Web/CSS/animation-composition)
 - [`KeyframeEffect.composite`](/en-US/docs/Web/API/KeyframeEffect/composite)

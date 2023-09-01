@@ -1,5 +1,6 @@
 ---
-title: FontFaceSet.has()
+title: "FontFaceSet: has() method"
+short-title: has()
 slug: Web/API/FontFaceSet/has
 page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.has

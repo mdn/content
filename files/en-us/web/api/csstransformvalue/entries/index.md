@@ -1,13 +1,12 @@
 ---
-title: CSSTransformValue.entries()
+title: "CSSTransformValue: entries() method"
+short-title: entries()
 slug: Web/API/CSSTransformValue/entries
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSTransformValue.entries
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTransformValue.entries()`** method
 returns an array of a given object's own enumerable

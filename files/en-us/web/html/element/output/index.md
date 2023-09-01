@@ -1,5 +1,5 @@
 ---
-title: '<output>: The Output element'
+title: "<output>: The Output element"
 slug: Web/HTML/Element/output
 page-type: html-element
 browser-compat: html.elements.output
@@ -13,15 +13,15 @@ The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element i
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("for")}}
-  - : A space-separated list of other elements' {{htmlattrxref("id")}}s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
-- {{htmlattrdef("form")}}
+- `for`
+  - : A space-separated list of other elements' [`id`](/en-US/docs/Web/HTML/Global_attributes#id)s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
+- `form`
 
-  - : The {{HTMLElement("form")}} element to associate the output with (its _form owner_). The value of this attribute must be the {{htmlattrxref("id")}} of a `<form>` in the same document. (If this attribute is not set, the `<output>` is associated with its ancestor `<form>` element, if any.)
+  - : The {{HTMLElement("form")}} element to associate the output with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a `<form>` in the same document. (If this attribute is not set, the `<output>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<output>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
-- {{htmlattrdef("name")}}
+- `name`
   - : The element's name. Used in the {{domxref("HTMLFormElement.elements", "form.elements")}} API.
 
 The `<output>` value, name, and contents are NOT submitted during form submission.
@@ -37,6 +37,8 @@ In the following example, the form provides a slider whose value can range betwe
   <output name="result" for="a b">60</output>
 </form>
 ```
+
+### Result
 
 {{ EmbedLiveSample('Examples')}}
 

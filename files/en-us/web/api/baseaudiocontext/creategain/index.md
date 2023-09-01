@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createGain()
+title: "BaseAudioContext: createGain() method"
+short-title: createGain()
 slug: Web/API/BaseAudioContext/createGain
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createGain
@@ -68,7 +69,7 @@ if (navigator.mediaDevices.getUserMedia) {
     // Error callback
     (err) => {
       console.error(`The following gUM error occurred: ${err}`);
-    }
+    },
   );
 } else {
   console.error("getUserMedia not supported on your browser!");

@@ -1,5 +1,6 @@
 ---
-title: XRInputSource.handedness
+title: "XRInputSource: handedness property"
+short-title: handedness
 slug: Web/API/XRInputSource/handedness
 page-type: web-api-instance-property
 browser-compat: api.XRInputSource.handedness

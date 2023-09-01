@@ -1,5 +1,6 @@
 ---
-title: Blob.size
+title: "Blob: size property"
+short-title: size
 slug: Web/API/Blob/size
 page-type: web-api-instance-property
 browser-compat: api.Blob.size

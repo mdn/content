@@ -1,5 +1,6 @@
 ---
-title: CloseEvent()
+title: "CloseEvent: CloseEvent() constructor"
+short-title: CloseEvent()
 slug: Web/API/CloseEvent/CloseEvent
 page-type: web-api-constructor
 browser-compat: api.CloseEvent.CloseEvent

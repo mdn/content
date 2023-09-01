@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.values()
+title: "DOMTokenList: values() method"
+short-title: values()
 slug: Web/API/DOMTokenList/values
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.values

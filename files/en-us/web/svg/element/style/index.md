@@ -2,10 +2,6 @@
 title: <style>
 slug: Web/SVG/Element/style
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
 browser-compat: svg.elements.style
 ---
 

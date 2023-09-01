@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.info
+title: "NavigateEvent: info property"
+short-title: info
 slug: Web/API/NavigateEvent/info
 page-type: web-api-instance-property
 status:

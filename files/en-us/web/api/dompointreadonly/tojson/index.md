@@ -1,5 +1,6 @@
 ---
-title: DOMPointReadOnly.toJSON()
+title: "DOMPointReadOnly: toJSON() method"
+short-title: toJSON()
 slug: Web/API/DOMPointReadOnly/toJSON
 page-type: web-api-instance-method
 browser-compat: api.DOMPointReadOnly.toJSON

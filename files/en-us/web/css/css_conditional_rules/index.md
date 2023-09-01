@@ -1,6 +1,6 @@
 ---
-title: CSS Conditional Rules
-slug: Web/CSS/CSS_Conditional_Rules
+title: CSS conditional rules
+slug: Web/CSS/CSS_conditional_rules
 page-type: css-module
 browser-compat:
   - css.at-rules.import
@@ -11,7 +11,7 @@ browser-compat:
 
 {{CSSRef}}
 
-**CSS Conditional Rules** is a CSS module that allows to define a set of rules that will only apply based on the capabilities of the processor or the document the style sheet is being applied to.
+The **CSS conditional rules** module lets you define a set of rules that will only apply based on the capabilities of the processor or the document the style sheet is being applied to.
 
 ## Reference
 

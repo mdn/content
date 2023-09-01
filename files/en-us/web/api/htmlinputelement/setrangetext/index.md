@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.setRangeText()
+title: "HTMLInputElement: setRangeText() method"
+short-title: setRangeText()
 slug: Web/API/HTMLInputElement/setRangeText
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.setRangeText
@@ -65,9 +66,9 @@ inserted text will be highlighted (selected) afterwards.
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
-  input.setRangeText('ALREADY', 14, 17, 'select');
+  input.setRangeText("ALREADY", 14, 17, "select");
 }
 ```
 

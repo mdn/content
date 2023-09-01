@@ -2,15 +2,6 @@
 title: contextualIdentities.create()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - contextualIdentities
 browser-compat: webextensions.api.contextualIdentities.create
 ---
 
@@ -89,11 +80,13 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.create({
-  name: "my-thing",
-  color: "purple",
-  icon: "briefcase"
-}).then(onCreated, onError);
+browser.contextualIdentities
+  .create({
+    name: "my-thing",
+    color: "purple",
+    icon: "briefcase",
+  })
+  .then(onCreated, onError);
 ```
 
 {{WebExtExamples}}

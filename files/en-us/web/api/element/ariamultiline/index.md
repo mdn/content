@@ -1,5 +1,6 @@
 ---
-title: Element.ariaMultiLine
+title: "Element: ariaMultiLine property"
+short-title: ariaMultiLine
 slug: Web/API/Element/ariaMultiLine
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaMultiLine

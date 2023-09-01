@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.framebufferWidth
+title: "XRWebGLLayer: framebufferWidth property"
+short-title: framebufferWidth
 slug: Web/API/XRWebGLLayer/framebufferWidth
 page-type: web-api-instance-property
 status:

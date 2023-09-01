@@ -1,5 +1,6 @@
 ---
-title: NavigationDestination.index
+title: "NavigationDestination: index property"
+short-title: index
 slug: Web/API/NavigationDestination/index
 page-type: web-api-instance-property
 status:
@@ -19,7 +20,7 @@ A number representing the `index` of the destination {{domxref("NavigationHistor
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.index);
 });
 ```

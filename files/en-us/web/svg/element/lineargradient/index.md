@@ -2,10 +2,6 @@
 title: <linearGradient>
 slug: Web/SVG/Element/linearGradient
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Gradient
 browser-compat: svg.elements.linearGradient
 ---
 
@@ -62,8 +58,8 @@ svg {
 - {{SVGAttr("x2")}}
   - : This attribute defines the x coordinate of the ending point of the vector gradient along which the linear gradient is drawn.
     _Value type_: {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `100%`; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}}
-  - : {{Deprecated_Header}}An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to another `<linearGradient>` element that will be used as a template.
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+  - : An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to another `<linearGradient>` element that will be used as a template.
     _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("y1")}}
   - : This attribute defines the y coordinate of the starting point of the vector gradient along which the linear gradient is drawn.
@@ -83,7 +79,7 @@ svg {
 - [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
   - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - XLink Attributes
-  - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
+  - : {{SVGAttr("xlink:href")}} {{deprecated_inline}}, {{SVGAttr("xlink:title")}}
 
 ## Usage notes
 

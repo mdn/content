@@ -1,5 +1,6 @@
 ---
-title: AudioBufferSourceNode.playbackRate
+title: "AudioBufferSourceNode: playbackRate property"
+short-title: playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
 page-type: web-api-instance-property
 browser-compat: api.AudioBufferSourceNode.playbackRate
@@ -72,7 +73,7 @@ function getData() {
         source.loop = true;
       },
 
-      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+      (e) => console.error(`Error with decoding audio data: ${e.err}`),
     );
   };
 

@@ -1,5 +1,6 @@
 ---
-title: Highlight.forEach()
+title: "Highlight: forEach() method"
+short-title: forEach()
 slug: Web/API/Highlight/forEach
 page-type: web-api-instance-method
 status:
@@ -17,22 +18,8 @@ The **`forEach()`** method of the {{domxref("Highlight")}} interface executes a 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach(() => { /* ... */ })
-forEach((range) => { /* ... */ })
-forEach((range, key) => { /* ... */ })
-forEach((range, key, highlight) => { /* ... */ })
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function() { /* ... */ })
-forEach(function(range) { /* ... */ })
-forEach(function(range, key) { /* ... */ })
-forEach(function(range, key, highlight) { /* ... */ })
-forEach(function(range, key, highlight) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -60,7 +47,7 @@ The code snippet below shows how create a new highlight with two ranges, and the
 
 ```js
 function logRanges(range, key, highlight) {
-    console.log(`Highlight object ${highlight} contains range ${range}`);
+  console.log(`Highlight object ${highlight} contains range ${range}`);
 }
 
 const text = new Text("Time is an illusion. Lunchtime doubly so.");

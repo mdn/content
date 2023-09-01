@@ -1,5 +1,6 @@
 ---
-title: AudioDecoder.AudioDecoder()
+title: "AudioDecoder: AudioDecoder() constructor"
+short-title: AudioDecoder()
 slug: Web/API/AudioDecoder/AudioDecoder
 page-type: web-api-constructor
 status:

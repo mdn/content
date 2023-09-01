@@ -1,5 +1,6 @@
 ---
-title: location.protocol
+title: "location: protocol property"
+short-title: protocol
 slug: Web/API/Location/protocol
 page-type: web-api-instance-property
 browser-compat: api.Location.protocol

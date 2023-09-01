@@ -1,13 +1,14 @@
 ---
 title: "Element: animationiteration event"
+short-title: animationiteration
 slug: Web/API/Element/animationiteration_event
-browser-compat: api.Element.animationiteration_event
 page-type: web-api-event
+browser-compat: api.Element.animationiteration_event
 ---
 
 {{APIRef}}
 
-The **`animationiteration`** event is fired when an iteration of a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) ends, and another one begins. This event does not occur at the same time as the {{domxref("Element/animationend_event", "animationend")}} event, and therefore does not occur for animations with an `animation-iteration-count` of one.
+The **`animationiteration`** event is fired when an iteration of a [CSS Animation](/en-US/docs/Web/CSS/CSS_animations) ends, and another one begins. This event does not occur at the same time as the {{domxref("Element/animationend_event", "animationend")}} event, and therefore does not occur for animations with an `animation-iteration-count` of one.
 
 ## Syntax
 
@@ -114,10 +115,10 @@ animated.onanimationiteration = () => {
 ```js
 const animation = document.querySelector("p.animation");
 const animationEventLog = document.querySelector(
-  ".animation-example>.event-log"
+  ".animation-example>.event-log",
 );
 const applyAnimation = document.querySelector(
-  ".animation-example>button.activate"
+  ".animation-example>button.activate",
 );
 let iterationCount = 0;
 
@@ -165,9 +166,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - Related events: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/animationiteration_event", "animationiteration")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/animationiteration_event", "animationiteration")}}

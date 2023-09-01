@@ -1,5 +1,6 @@
 ---
-title: LargestContentfulPaint.loadTime
+title: "LargestContentfulPaint: loadTime property"
+short-title: loadTime
 slug: Web/API/LargestContentfulPaint/loadTime
 page-type: web-api-instance-property
 status:

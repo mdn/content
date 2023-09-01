@@ -1,5 +1,6 @@
 ---
-title: NetworkInformation.type
+title: "NetworkInformation: type property"
+short-title: type
 slug: Web/API/NetworkInformation/type
 page-type: web-api-instance-property
 status:

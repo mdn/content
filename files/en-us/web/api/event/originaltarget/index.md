@@ -1,5 +1,6 @@
 ---
-title: Event.originalTarget
+title: "Event: originalTarget property"
+short-title: originalTarget
 slug: Web/API/Event/originalTarget
 page-type: web-api-instance-property
 status:

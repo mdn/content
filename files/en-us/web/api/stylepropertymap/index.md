@@ -2,12 +2,10 @@
 title: StylePropertyMap
 slug: Web/API/StylePropertyMap
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.StylePropertyMap
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model_experimental) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 
@@ -21,13 +19,13 @@ _Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
 _Inherits methods from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
-- {{DOMxRef("StylePropertyMap.append()")}} {{Experimental_Inline}}
+- {{DOMxRef("StylePropertyMap.append()")}}
   - : Adds a new CSS declaration to the `StylePropertyMap` with the given property and value.
-- {{DOMxRef("StylePropertyMap.clear()")}} {{Experimental_Inline}}
+- {{DOMxRef("StylePropertyMap.clear()")}}
   - : Removes all declarations in the `StylePropertyMap`.
-- {{DOMxRef("StylePropertyMap.delete()")}} {{Experimental_Inline}}
+- {{DOMxRef("StylePropertyMap.delete()")}}
   - : Removes the CSS declaration with the given property.
-- {{DOMxRef("StylePropertyMap.set()")}} {{Experimental_Inline}}
+- {{DOMxRef("StylePropertyMap.set()")}}
   - : Changes the CSS declaration with the given property.
 
 ## Specifications

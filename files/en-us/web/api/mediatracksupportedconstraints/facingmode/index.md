@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.facingMode
+title: "MediaTrackSupportedConstraints: facingMode property"
+short-title: facingMode
 slug: Web/API/MediaTrackSupportedConstraints/facingMode
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.facingMode
@@ -33,7 +34,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

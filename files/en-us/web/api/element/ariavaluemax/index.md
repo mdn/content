@@ -1,5 +1,6 @@
 ---
-title: Element.ariaValueMax
+title: "Element: ariaValueMax property"
+short-title: ariaValueMax
 slug: Web/API/Element/ariaValueMax
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaValueMax

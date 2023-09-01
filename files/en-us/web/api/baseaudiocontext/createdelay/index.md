@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createDelay()
+title: "BaseAudioContext: createDelay() method"
+short-title: createDelay()
 slug: Web/API/BaseAudioContext/createDelay
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createDelay

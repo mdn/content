@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.groupId
+title: "MediaTrackSupportedConstraints: groupId property"
+short-title: groupId
 slug: Web/API/MediaTrackSupportedConstraints/groupId
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.groupId
@@ -33,7 +34,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

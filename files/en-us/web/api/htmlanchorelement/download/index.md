@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.download
+title: "HTMLAnchorElement: download property"
+short-title: download
 slug: Web/API/HTMLAnchorElement/download
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.download

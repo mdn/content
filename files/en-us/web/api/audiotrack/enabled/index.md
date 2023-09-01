@@ -1,5 +1,6 @@
 ---
-title: AudioTrack.enabled
+title: "AudioTrack: enabled property"
+short-title: enabled
 slug: Web/API/AudioTrack/enabled
 page-type: web-api-instance-property
 browser-compat: api.AudioTrack.enabled

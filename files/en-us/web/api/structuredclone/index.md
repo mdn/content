@@ -1,5 +1,6 @@
 ---
-title: structuredClone()
+title: structuredClone() global function
+short-title: structuredClone()
 slug: Web/API/structuredClone
 page-type: web-api-global-function
 browser-compat: api.structuredClone
@@ -83,7 +84,7 @@ For example, the code below would transfer `arrayBuffer1` from the passed in val
 ```js
 const transferred = structuredClone(
   { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-  { transfer: [arrayBuffer1] }
+  { transfer: [arrayBuffer1] },
 );
 ```
 

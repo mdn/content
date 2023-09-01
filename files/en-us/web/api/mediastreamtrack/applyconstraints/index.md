@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.applyConstraints()
+title: "MediaStreamTrack: applyConstraints() method"
+short-title: applyConstraints()
 slug: Web/API/MediaStreamTrack/applyConstraints
 page-type: web-api-instance-method
 browser-compat: api.MediaStreamTrack.applyConstraints
@@ -7,7 +8,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`applyConstraints()`** method of the {{domxref("MediaStreamTrack")}} interface applies a set of constraints to the track; these constraints let the Web site or app establish ideal values and acceptable ranges of values for the constrainable properties of the track, such as frame rate, dimensions, echo cancellation, and so forth.
+The **`applyConstraints()`** method of the {{domxref("MediaStreamTrack")}} interface applies a set of constraints to the track; these constraints let the website or app establish ideal values and acceptable ranges of values for the constrainable properties of the track, such as frame rate, dimensions, echo cancellation, and so forth.
 
 Constraints can be used to ensure that the media meets certain guidelines you prefer.
 For example, you may prefer high-density video but require that the frame rate be a little low to help keep the data rate low enough not overtax the network.
@@ -44,24 +45,21 @@ Note that these constraints also illustrate what the spec refers to as a _backof
 
 ```js
 const constraints = {
-  width: {min: 640, ideal: 1280},
-  height: {min: 480, ideal: 720},
-  advanced: [
-    {width: 1920, height: 1280},
-    {aspectRatio: 1.333}
-  ]
+  width: { min: 640, ideal: 1280 },
+  height: { min: 480, ideal: 720 },
+  advanced: [{ width: 1920, height: 1280 }, { aspectRatio: 1.333 }],
 };
 
-navigator.mediaDevices.getUserMedia({ video: true })
-.then((mediaStream) => {
+navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
   const track = mediaStream.getVideoTracks()[0];
-  track.applyConstraints(constraints)
-  .then(() => {
-    // Do something with the track such as using the Image Capture API.
-  })
-  .catch((e) => {
-    // The constraints could not be satisfied by the available devices.
-  });
+  track
+    .applyConstraints(constraints)
+    .then(() => {
+      // Do something with the track such as using the Image Capture API.
+    })
+    .catch((e) => {
+      // The constraints could not be satisfied by the available devices.
+    });
 });
 ```
 

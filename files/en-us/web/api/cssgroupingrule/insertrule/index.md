@@ -1,5 +1,6 @@
 ---
-title: CSSGroupingRule.insertRule()
+title: "CSSGroupingRule: insertRule() method"
+short-title: insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
 page-type: web-api-instance-method
 browser-compat: api.CSSGroupingRule.insertRule
@@ -44,7 +45,7 @@ The index of the new rule.
 let myRules = document.styleSheets[0].cssRules;
 myRules[0].insertRule(
   "html {background-color: blue;}",
-  0
+  0,
 ); /* inserts a rule for the HTML element at position 0 */
 ```
 

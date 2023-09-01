@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.add()
+title: "IDBObjectStore: add() method"
+short-title: add()
 slug: Web/API/IDBObjectStore/add
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.add
@@ -17,7 +18,7 @@ event is only triggered when the transaction has been successfully queued.
 
 The add method is an _insert only_ method. If a
 record already exists in the object store with the `key` parameter as its
-key, then an error `ConstrainError` event is fired on the returned request
+key, then an error `ConstraintError` event is fired on the returned request
 object. For updating existing records, you should use the
 {{domxref("IDBObjectStore.put")}} method instead.
 

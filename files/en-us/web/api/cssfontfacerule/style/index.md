@@ -1,5 +1,6 @@
 ---
-title: CSSFontFaceRule.style
+title: "CSSFontFaceRule: style property"
+short-title: style
 slug: Web/API/CSSFontFaceRule/style
 page-type: web-api-instance-property
 browser-compat: api.CSSFontFaceRule.style

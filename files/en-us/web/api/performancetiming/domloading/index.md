@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.domLoading
+title: "PerformanceTiming: domLoading property"
+short-title: domLoading
 slug: Web/API/PerformanceTiming/domLoading
 page-type: web-api-instance-property
 status:

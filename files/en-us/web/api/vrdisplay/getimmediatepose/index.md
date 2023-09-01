@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.getImmediatePose()
+title: "VRDisplay: getImmediatePose() method"
+short-title: getImmediatePose()
 slug: Web/API/VRDisplay/getImmediatePose
 page-type: web-api-instance-method
 status:

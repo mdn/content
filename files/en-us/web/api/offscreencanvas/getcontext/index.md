@@ -1,5 +1,6 @@
 ---
-title: OffscreenCanvas.getContext()
+title: "OffscreenCanvas: getContext() method"
+short-title: getContext()
 slug: Web/API/OffscreenCanvas/getContext
 page-type: web-api-instance-method
 browser-compat: api.OffscreenCanvas.getContext

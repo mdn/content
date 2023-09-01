@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.error
+title: "HTMLMediaElement: error property"
+short-title: error
 slug: Web/API/HTMLMediaElement/error
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.error
@@ -23,10 +24,12 @@ This example establishes a video element and adds an error handler to it; the er
 handler logs the details to console.
 
 ```js
-const videoElement = document.createElement('video');
+const videoElement = document.createElement("video");
 videoElement.onerror = () => {
-  console.error(`Error ${videoElement.error.code}; details: ${videoElement.error.message}`);
-}
+  console.error(
+    `Error ${videoElement.error.code}; details: ${videoElement.error.message}`,
+  );
+};
 videoElement.src = "https://example.com/bogusvideo.mp4";
 ```
 
@@ -40,5 +43,5 @@ videoElement.src = "https://example.com/bogusvideo.mp4";
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.error` property
 - {{HTMLElement("audio")}} and {{HTMLElement("video")}}

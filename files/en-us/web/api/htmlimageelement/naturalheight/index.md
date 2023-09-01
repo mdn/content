@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.naturalHeight
+title: "HTMLImageElement: naturalHeight property"
+short-title: naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.naturalHeight
@@ -82,10 +83,11 @@ let output = document.querySelector(".output");
 let image = document.querySelector("img");
 
 window.addEventListener("load", (event) => {
-  output.innerHTML += `Natural size: ${image.naturalWidth} x ` +
-                      `${image.naturalHeight} pixels<br>`;
-  output.innerHTML += `Displayed size: ${image.width} x ` +
-                      `${image.height} pixels`;
+  output.innerHTML +=
+    `Natural size: ${image.naturalWidth} x ` +
+    `${image.naturalHeight} pixels<br>`;
+  output.innerHTML +=
+    `Displayed size: ${image.width} x ` + `${image.height} pixels`;
 });
 ```
 

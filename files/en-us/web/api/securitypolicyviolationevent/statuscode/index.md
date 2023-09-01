@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.statusCode
+title: "SecurityPolicyViolationEvent: statusCode property"
+short-title: statusCode
 slug: Web/API/SecurityPolicyViolationEvent/statusCode
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.statusCode

@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.count()
+title: "IDBObjectStore: count() method"
+short-title: count()
 slug: Web/API/IDBObjectStore/count
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.count

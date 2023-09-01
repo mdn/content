@@ -1,5 +1,6 @@
 ---
-title: XRSession.interactionMode
+title: "XRSession: interactionMode property"
+short-title: interactionMode
 slug: Web/API/XRSession/interactionMode
 page-type: web-api-instance-property
 status:

@@ -1,6 +1,7 @@
 ---
 title: Introducing workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
@@ -27,9 +28,11 @@ In the first article of this module, we saw what happens when you have a long-ru
 
 Workers give you the ability to run some tasks in a different thread, so you can start the task, then continue with other processing (such as handling user actions).
 
-But there's a price to pay for this. With multithreaded code, you never know when your thread will be suspended and the other thread will get a chance to run. So if both threads have access to the same variables, it's possible for a variable to change unexpectedly at any time, and this causes bugs that are hard to find.
+One concern from all this is that if multiple threads can have access to the same shared data, it's possible for them to change it independently and unexpectedly (with respect to each other).
+This can cause bugs that are hard to find.
 
-To avoid these problems on the web, your main code and your worker code never get direct access to each other's variables. Workers and the main code run in completely separate worlds, and only interact by sending each other messages. In particular, this means that workers can't access the DOM (the window, document, page elements, and so on).
+To avoid these problems on the web, your main code and your worker code never get direct access to each other's variables, and can only truly "share" data in very specific cases.
+Workers and the main code run in completely separate worlds, and only interact by sending each other messages. In particular, this means that workers can't access the DOM (the window, document, page elements, and so on).
 
 There are three different sorts of workers:
 
@@ -49,12 +52,11 @@ Let's first take another look at the JavaScript in our previous example:
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -72,14 +74,17 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -98,7 +103,7 @@ For this example, start by making a local copy of the files at <https://github.c
 The "index.html" file and the "style.css" files are already complete:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -117,7 +122,7 @@ The "index.html" file and the "style.css" files are already complete:
 
     <textarea id="user-input" rows="5" cols="62">
 Try typing in here immediately after pressing "Generate primes"
-</textarea>
+    </textarea>
 
     <div id="output"></div>
   </body>
@@ -139,15 +144,15 @@ Now copy the following code into "main.js":
 
 ```js
 // Create a new worker, giving it the code in "generate.js"
-const worker = new Worker('./generate.js');
+const worker = new Worker("./generate.js");
 
 // When the user clicks "Generate primes", send a message to the worker.
 // The message command is "generate", and the message also contains "quota",
 // which is the number of primes to generate.
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   worker.postMessage({
-    command: 'generate',
+    command: "generate",
     quota,
   });
 });
@@ -155,12 +160,15 @@ document.querySelector('#generate').addEventListener('click', () => {
 // When the worker sends a message back to the main thread,
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
-worker.addEventListener('message', (message) => {
-  document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
+worker.addEventListener("message", (message) => {
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${message.data} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -182,19 +190,18 @@ Now for the worker code. Copy the following code into "generate.js":
 // Listen for messages from the main thread.
 // If the message command is "generate", call `generatePrimes()`
 addEventListener("message", (message) => {
-  if (message.data.command === 'generate') {
+  if (message.data.command === "generate") {
     generatePrimes(message.data.quota);
   }
 });
 
 // Generate primes (very inefficiently)
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }

@@ -1,5 +1,6 @@
 ---
-title: Navigator.xr
+title: "Navigator: xr property"
+short-title: xr
 slug: Web/API/Navigator/xr
 page-type: web-api-instance-property
 status:

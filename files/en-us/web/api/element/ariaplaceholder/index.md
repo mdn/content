@@ -1,5 +1,6 @@
 ---
-title: Element.ariaPlaceholder
+title: "Element: ariaPlaceholder property"
+short-title: ariaPlaceholder
 slug: Web/API/Element/ariaPlaceholder
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaPlaceholder

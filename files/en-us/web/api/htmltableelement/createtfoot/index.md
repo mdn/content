@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.createTFoot()
+title: "HTMLTableElement: createTFoot() method"
+short-title: createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.createTFoot

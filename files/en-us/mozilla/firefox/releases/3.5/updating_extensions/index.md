@@ -1,6 +1,7 @@
 ---
 title: Updating extensions for Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -115,7 +116,7 @@ In order to support the new audio and video features added in Gecko 1.9.1, the `
 
 ## Changes to chrome registration
 
-Firefox 3.5 closes a security hole that made it possible to use remote chrome. This will affect any add-on that includes a resource in their `chrome.manifest` file that references a web site, data or resource URLs. See [Security changes in Firefox 3.5](/en-US/Security_changes_in_Firefox_3.5) for details.
+Firefox 3.5 closes a security hole that made it possible to use remote chrome. This will affect any add-on that includes a resource in their `chrome.manifest` file that references a website, data or resource URLs. See [Security changes in Firefox 3.5](/en-US/Security_changes_in_Firefox_3.5) for details.
 
 ## Getting a load context from a request
 
@@ -134,7 +135,7 @@ try {
 } catch (ex) {
   try {
     loadContext = aRequest.loadGroup.notificationCallbacks.getInterface(
-      Components.interfaces.nsILoadContext
+      Components.interfaces.nsILoadContext,
     );
   } catch (ex) {
     loadContext = null;
@@ -153,14 +154,14 @@ function getWindowForRequest(request) {
     try {
       if (request.notificationCallbacks) {
         return request.notificationCallbacks.getInterface(
-          Components.interfaces.nsILoadContext
+          Components.interfaces.nsILoadContext,
         ).associatedWindow;
       }
     } catch (e) {}
     try {
       if (request.loadGroup && request.loadGroup.notificationCallbacks) {
         return request.loadGroup.notificationCallbacks.getInterface(
-          Components.interfaces.nsILoadContext
+          Components.interfaces.nsILoadContext,
         ).associatedWindow;
       }
     } catch (e) {}

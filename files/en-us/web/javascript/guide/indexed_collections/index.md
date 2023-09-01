@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Indexed_collections
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.
 
@@ -14,16 +14,16 @@ For example, consider an array called `emp`, which contains employees' names ind
 
 JavaScript does not have an explicit array data type. However, you can use the predefined `Array` object and its methods to work with arrays in your applications. The `Array` object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them. It has a property for determining the array length and other properties for use with regular expressions.
 
-We will be focusing on arrays in this article, but many of the same concepts apply to typed arrays as well, since arrays and typed arrays share many similar methods. For more information on typed arrays, see the [typed array reference](/en-US/docs/Web/JavaScript/Typed_arrays).
+We will be focusing on arrays in this article, but many of the same concepts apply to typed arrays as well, since arrays and typed arrays share many similar methods. For more information on typed arrays, see the [typed array guide](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
 
 ## Creating an array
 
 The following statements create equivalent arrays:
 
 ```js
-const arr1 = new Array(element0, element1, /* … ,*/ elementN);
-const arr2 = Array(element0, element1, /* … ,*/ elementN);
-const arr3 = [element0, element1, /* … ,*/ elementN];
+const arr1 = new Array(element0, element1, /* …, */ elementN);
+const arr2 = Array(element0, element1, /* …, */ elementN);
+const arr3 = [element0, element1, /* …, */ elementN];
 ```
 
 `element0, element1, …, elementN` is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's `length` property is set to the number of arguments.
@@ -51,22 +51,29 @@ In addition to a newly defined variable as shown above, arrays can also be assig
 ```js
 const obj = {};
 // …
-obj.prop = [element0, element1, /* … ,*/ elementN];
+obj.prop = [element0, element1, /* …, */ elementN];
 
 // OR
-const obj = { prop: [element0, element1, /* … ,*/ elementN] };
+const obj = { prop: [element0, element1, /* …, */ elementN] };
 ```
 
 If you wish to initialize an array with a single element, and the element happens to be a `Number`, you must use the bracket syntax. When a single `Number` value is passed to the `Array()` constructor or function, it is interpreted as an `arrayLength`, not as a single element.
 
+This creates an array with only one element: the number 42.
+
 ```js
-// This creates an array with only one element: the number 42.
 const arr = [42];
+```
 
-// This creates an array with no elements and arr.length set to 42.
+This creates an array with no elements and `arr.length` set to 42.
+
+```js
 const arr = Array(42);
+```
 
-// This is equivalent to:
+This is equivalent to:
+
+```js
 const arr = [];
 arr.length = 42;
 ```
@@ -87,7 +94,7 @@ const wisenArray = Array.of(9.3); // wisenArray contains only one element 9.3
 
 ## Referring to array elements
 
-Because elements are also properties, you can access them using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Suppose you define the following array:
+Because elements are also properties, you can access them using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). Suppose you define the following array:
 
 ```js
 const myArray = ["Wind", "Rain", "Fire"];
@@ -95,7 +102,7 @@ const myArray = ["Wind", "Rain", "Fire"];
 
 You can refer to the first element of the array as `myArray[0]`, the second element of the array as `myArray[1]`, etc… The index of the elements begins with zero.
 
-> **Note:** You can also use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) to access other properties of the array, like with an object.
+> **Note:** You can also use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to access other properties of the array, like with an object.
 >
 > ```js
 > const arr = ["one", "two", "three"];
@@ -490,6 +497,40 @@ The [`reduceRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/
 
 `reduce` and `reduceRight` are the least obvious of the iterative array methods. They should be used for algorithms that combine two values recursively in order to reduce a sequence down to a single value.
 
+## Array transformations
+
+You can transform back and forth between arrays and other data structures.
+
+### Grouping the elements of an array
+
+The {{jsxref("Object.groupBy()")}} method can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
+
+Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
+
+```js
+const inventory = [
+  { name: "asparagus", type: "vegetables" },
+  { name: "bananas", type: "fruit" },
+  { name: "goat", type: "meat" },
+  { name: "cherries", type: "fruit" },
+  { name: "fish", type: "meat" },
+];
+```
+
+To use `Object.groupBy()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
+
+The code below uses an arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object). The result is an object that has properties named after the unique strings returned by the callback. Each property is assigned an array containing the elements in the group.
+
+```js
+const result = Object.groupBy(inventory, ({ type }) => type);
+console.log(result.vegetables);
+// [{ name: "asparagus", type: "vegetables" }]
+```
+
+Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+
+If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Map.groupBy()")}}. This is very similar to `Object.groupBy()` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
+
 ## Sparse arrays
 
 Arrays can contain "empty slots", which are not the same as slots filled with the value `undefined`. Empty slots can be created in one of the following ways:
@@ -570,7 +611,7 @@ for (let i = 0; i < 4; i++) {
 
 This example creates an array with the following rows:
 
-```
+```plain
 Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
 Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
 Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
@@ -587,7 +628,7 @@ arr.property = "value";
 console.log(arr.property); // "value"
 ```
 
-For example, when an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of [`RegExp.prototype.exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match), and [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split). For information on using arrays with regular expressions, see [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+For example, when an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of [`RegExp.prototype.exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match), and [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split). For information on using arrays with regular expressions, see [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Working with array-like objects
 
@@ -621,4 +662,4 @@ Array.prototype.forEach.call("a string", (chr) => {
 });
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

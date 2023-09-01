@@ -1,5 +1,6 @@
 ---
-title: GamepadEvent.gamepad
+title: "GamepadEvent: gamepad property"
+short-title: gamepad
 slug: Web/API/GamepadEvent/gamepad
 page-type: web-api-instance-property
 browser-compat: api.GamepadEvent.gamepad
@@ -28,7 +29,7 @@ window.addEventListener("gamepadconnected", (e) => {
     e.gamepad.index,
     e.gamepad.id,
     e.gamepad.buttons.length,
-    e.gamepad.axes.length
+    e.gamepad.axes.length,
   );
 });
 ```

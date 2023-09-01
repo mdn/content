@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.activeTexture()
+title: "WebGLRenderingContext: activeTexture() method"
+short-title: activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.activeTexture

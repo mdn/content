@@ -1,5 +1,6 @@
 ---
-title: Document.createDocumentFragment()
+title: "Document: createDocumentFragment() method"
+short-title: createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 page-type: web-api-instance-method
 browser-compat: api.Document.createDocumentFragment

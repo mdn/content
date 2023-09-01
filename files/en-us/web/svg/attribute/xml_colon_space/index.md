@@ -2,10 +2,8 @@
 title: xml:space
 slug: Web/SVG/Attribute/xml:space
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - Deprecated
+status:
+  - deprecated
 browser-compat: svg.attributes.core.xml_space
 ---
 
@@ -29,7 +27,7 @@ svg {
 }
 ```
 
-```html
+```html-nolint
 <svg viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
   <text y="20" xml:space="default">    Default    spacing</text>
   <text y="40" xml:space="preserve">    Preserved    spacing</text>
@@ -70,7 +68,7 @@ svg {
 
   - : This value tells the user agent to convert all newline and tab characters into spaces. Then, it draws all space characters (including leading, trailing and multiple consecutive space characters).
 
-    For example, the string "a   b" (three spaces between "a" and "b") separates "a" and "b" more than "a b" (one space between "a" and "b").
+    For example, the string "a&nbsp;&nbsp;&nbsp;b" (three spaces between "a" and "b") separates "a" and "b" more than "a b" (one space between "a" and "b").
 
 ## Specifications
 

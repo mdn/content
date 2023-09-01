@@ -1,10 +1,10 @@
 ---
 title: Using classes
-slug: Web/JavaScript/Guide/Using_Classes
+slug: Web/JavaScript/Guide/Using_classes
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript is a prototype-based language — an object's behaviors are specified by its own properties and its prototype's properties. However, with the addition of [classes](/en-US/docs/Web/JavaScript/Reference/Classes), the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages such as Java. In this section, we will demonstrate how objects can be created from classes.
 
@@ -173,7 +173,7 @@ console.log(red);
 
 You should see some output like this:
 
-```
+```plain
 Object { values: (3) […] }
   values: Array(3) [ 255, 0, 0 ]
 ```
@@ -348,9 +348,11 @@ console.log(red.getRed()); // 255
 
 Accessing private fields outside the class is an early syntax error. The language can guard against this because `#privateField` is a special syntax, so it can do some static analysis and find all usage of private fields before even evaluating the code.
 
-```js example-bad
+```js-nolint example-bad
 console.log(red.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
 ```
+
+> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
 Private fields in JavaScript are _hard private_: if the class does not implement methods that expose these private fields, there's absolutely no mechanism to retrieve them from outside the class. This means you are safe to do any refactors to your class's private fields, as long as the behavior of exposed methods stay the same.
 
@@ -421,7 +423,7 @@ class Color {
 
 There are some limitations in using private properties: the same name can't be declared twice in a single class, and they can't be deleted. Both lead to early syntax errors.
 
-```js example-bad
+```js-nolint example-bad
 class BadIdeas {
   #firstName;
   #firstName; // syntax error occurs here
@@ -434,7 +436,7 @@ class BadIdeas {
 
 Methods, [getters, and setters](#accessor_fields) can be private as well. They're useful when you have something complex that the class needs to do internally but no other part of the code should be allowed to call.
 
-For example, imagine creating [HTML custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) that should do something somewhat complicated when clicked/tapped/otherwise activated. Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.
+For example, imagine creating [HTML custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that should do something somewhat complicated when clicked/tapped/otherwise activated. Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.
 
 ```js
 class Counter extends HTMLElement {
@@ -543,7 +545,7 @@ With the `Date` example, we have also encountered the [`Date.now()`](/en-US/docs
 - Static fields
 - Static getters and setters
 
-Everything also have private counterparts. For example, for our `Color` class, we can create a static method that checks whether a given triplet is a valid RGB value:
+Everything also has private counterparts. For example, for our `Color` class, we can create a static method that checks whether a given triplet is a valid RGB value:
 
 ```js
 class Color {
@@ -688,7 +690,7 @@ console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 
 Derived classes don't have access to the parent class's private fields — this is another key aspect to JavaScript private fields being "hard private". Private fields are scoped to the class body itself and do not grant access to _any_ outside code.
 
-```js example-bad
+```js-nolint example-bad
 class ColorWithAlpha extends Color {
   log() {
     console.log(this.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
@@ -762,4 +764,4 @@ In general, you should consider using classes when you want to create objects th
 
 JavaScript offers the mechanism to organize your code in a canonical object-oriented way, but whether and how to use it is entirely up to the programmer's discretion.
 
-{{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
+{{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}

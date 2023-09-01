@@ -1,5 +1,6 @@
 ---
-title: History.length
+title: "History: length property"
+short-title: length
 slug: Web/API/History/length
 page-type: web-api-instance-property
 browser-compat: api.History.length

@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackProcessor()
+title: "MediaStreamTrackProcessor: MediaStreamTrackProcessor() constructor"
+short-title: MediaStreamTrackProcessor()
 slug: Web/API/MediaStreamTrackProcessor/MediaStreamTrackProcessor
 page-type: web-api-constructor
 status:

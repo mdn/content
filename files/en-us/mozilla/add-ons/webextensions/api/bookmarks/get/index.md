@@ -2,16 +2,6 @@
 title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
 browser-compat: webextensions.api.bookmarks.get
 ---
 

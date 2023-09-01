@@ -1,5 +1,6 @@
 ---
-title: RTCOutboundRtpStreamStats.framesEncoded
+title: "RTCOutboundRtpStreamStats: framesEncoded property"
+short-title: framesEncoded
 slug: Web/API/RTCOutboundRtpStreamStats/framesEncoded
 page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.framesEncoded

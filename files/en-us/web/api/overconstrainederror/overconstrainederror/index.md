@@ -1,5 +1,6 @@
 ---
-title: OverconstrainedError()
+title: "OverconstrainedError: OverconstrainedError() constructor"
+short-title: OverconstrainedError()
 slug: Web/API/OverconstrainedError/OverconstrainedError
 page-type: web-api-constructor
 browser-compat: api.OverconstrainedError.OverconstrainedError

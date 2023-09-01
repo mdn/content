@@ -1,5 +1,6 @@
 ---
-title: ResizeObserverSize.blockSize
+title: "ResizeObserverSize: blockSize property"
+short-title: blockSize
 slug: Web/API/ResizeObserverSize/blockSize
 page-type: web-api-instance-property
 browser-compat: api.ResizeObserverSize.blockSize

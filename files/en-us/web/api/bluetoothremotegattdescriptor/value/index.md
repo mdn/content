@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTDescriptor.value
+title: "BluetoothRemoteGATTDescriptor: value property"
+short-title: value
 slug: Web/API/BluetoothRemoteGATTDescriptor/value
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: Document.readyState
+title: "Document: readyState property"
+short-title: readyState
 slug: Web/API/Document/readyState
 page-type: web-api-instance-property
 browser-compat: api.Document.readyState
@@ -18,7 +19,8 @@ The `readyState` of a document can be one of following:
   - : The {{domxref("document")}} is still loading.
 - `interactive`
   - : The document has finished loading and the document has been parsed but sub-resources
-    such as scripts, images, stylesheets and frames are still loading.
+    such as scripts, images, stylesheets and frames are still loading. The state indicates that
+    the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is about to fire.
 - `complete`
   - : The document and all sub-resources have finished loading. The state indicates that
     the {{domxref("Window/load_event", "load")}} event is about to fire.
@@ -43,7 +45,7 @@ switch (document.readyState) {
   case "complete":
     // The page is fully loaded.
     console.log(
-      `The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`
+      `The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`,
     );
     break;
 }

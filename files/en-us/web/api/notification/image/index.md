@@ -1,5 +1,6 @@
 ---
-title: Notification.image
+title: "Notification: image property"
+short-title: image
 slug: Web/API/Notification/image
 page-type: web-api-instance-property
 status:

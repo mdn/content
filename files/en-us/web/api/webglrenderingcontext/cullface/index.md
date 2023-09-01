@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.cullFace()
+title: "WebGLRenderingContext: cullFace() method"
+short-title: cullFace()
 slug: Web/API/WebGLRenderingContext/cullFace
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.cullFace

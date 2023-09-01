@@ -1,5 +1,6 @@
 ---
-title: origin
+title: origin global property
+short-title: origin
 slug: Web/API/origin
 page-type: web-api-global-property
 browser-compat: api.origin

@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.frameRate
+title: "MediaTrackConstraints: frameRate property"
+short-title: frameRate
 slug: Web/API/MediaTrackConstraints/frameRate
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.frameRate

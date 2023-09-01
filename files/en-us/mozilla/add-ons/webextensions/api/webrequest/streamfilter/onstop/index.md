@@ -2,14 +2,6 @@
 title: webRequest.StreamFilter.onstop
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstop
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.onstop
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.onstop
 ---
 
@@ -44,7 +36,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -72,7 +64,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

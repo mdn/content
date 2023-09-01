@@ -1,6 +1,7 @@
 ---
 title: Firefox 53 for developers
 slug: Mozilla/Firefox/Releases/53
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -20,7 +21,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 #### New features
 
-- The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/CSS_Masking)) are all supported and available by default (see [Firefox bug 1251161](https://bugzil.la/1251161)).
+- The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/CSS_masking)) are all supported and available by default (see [Firefox bug 1251161](https://bugzil.la/1251161)).
 - Added {{cssxref("caret-color")}} property ([Firefox bug 1063162](https://bugzil.la/1063162)).
 - Implemented the {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} shorthands ([Firefox bug 1319958](https://bugzil.la/1319958)).
 - Added `flow-root` value to {{cssxref("display")}} property ([Firefox bug 1322191](https://bugzil.la/1322191)).
@@ -41,7 +42,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 - ECMAScript 2015 semantics for the {{jsxref("Function.name")}} properties have been implemented. This includes inferred names on anonymous functions (`var foo = function() {}`) ([Firefox bug 883377](https://bugzil.la/883377)).
 - ECMAScript 2015 semantics for closing iterators have been implemented. This affects the [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, for example ([Firefox bug 1147371](https://bugzil.la/1147371)).
-- The [Template Literal Revision proposal](https://tc39.es/proposal-template-literal-revision/) that [lifts escape sequence restrictions on tagged template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals_and_escape_sequences) has been implemented ([Firefox bug 1317375](https://bugzil.la/1317375)).
+- The [Template Literal Revision proposal](https://tc39.es/proposal-template-literal-revision/) that [lifts escape sequence restrictions on tagged template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates_and_escape_sequences) has been implemented ([Firefox bug 1317375](https://bugzil.la/1317375)).
 - The static `length` property of {{jsxref("TypedArray")}} objects was changed from 3 to 0 as per ES2016 ([Firefox bug 1317306](https://bugzil.la/1317306)).
 - {{jsxref("SharedArrayBuffer")}} can now be used in {{jsxref("DataView")}} objects ([Firefox bug 1246597](https://bugzil.la/1246597)).
 - In earlier versions of the specification, {{jsxref("SharedArrayBuffer")}} objects needed to be explicitly transferred during [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). In the new specification they aren't [transferable objects](/en-US/docs/Web/API/Transferable) anymore and thus must not be in the transfer list. The new behavior used to present a console warning only, but will now throw an error ([Firefox bug 1302037](https://bugzil.la/1302037)).
@@ -50,11 +51,11 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### Events
 
-- CSS Transitions: The {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, and {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} events have been implemented (see [Firefox bug 1264125](https://bugzil.la/1264125) and [Firefox bug 1287983](https://bugzil.la/1287983)).
+- CSS Transitions: The {{domxref("Element/transitionstart_event", "transitionstart")}}, {{domxref("Element/transitionrun_event", "transitionrun")}}, and {{domxref("Element/transitioncancel_event", "transitioncancel")}} events have been implemented (see [Firefox bug 1264125](https://bugzil.la/1264125) and [Firefox bug 1287983](https://bugzil.la/1287983)).
 - The {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} constructor has been implemented (see [Firefox bug 1002256](https://bugzil.la/1002256)).
 - The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see [Firefox bug 424390](https://bugzil.la/424390)).
 - The {{domxref("Element/auxclick_event", "auxclick")}} event and corresponding event handler have been implemented (see [Firefox bug 1304044](https://bugzil.la/1304044)).
-- The {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled.
+- The {{domxref("Element/transitioncancel_event", "transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_transitions) is cancelled.
 
 ### DOM
 

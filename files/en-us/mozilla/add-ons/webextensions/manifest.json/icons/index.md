@@ -2,10 +2,6 @@
 title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.manifest.icons
 ---
 
@@ -24,17 +20,6 @@ browser-compat: webextensions.manifest.icons
     <tr>
       <th scope="row">Manifest version</th>
       <td>2 or higher</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
-      <td>
-        <pre class="brush: json">
-"icons": {
-  "48": "icon.png",
-  "96": "icon@2x.png"
-}</pre
-        >
-      </td>
     </tr>
   </tbody>
 </table>

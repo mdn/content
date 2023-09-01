@@ -216,7 +216,7 @@ The following sections expand on the various features outlined above.
 
 ### Feature detection
 
-You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports) static method (which is itself broadly supported):
+You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports_static) static method (which is itself broadly supported):
 
 ```js
 if (HTMLScriptElement.supports?.("importmap")) {
@@ -379,6 +379,9 @@ The script into which you import the module features basically acts as the top-l
 
 You can only use `import` and `export` statements inside modules, not regular scripts.
 
+> **Note:** Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreloaded"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+> This can significantly reduce load time when the modules are used.
+
 ## Other differences between modules and standard scripts
 
 - You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
@@ -390,7 +393,7 @@ You can only use `import` and `export` statements inside modules, not regular sc
 Module-defined variables are scoped to the module unless explicitly attached to the global object. On the other hand, globally-defined variables are available within the module. For example, given the following code:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -696,6 +699,11 @@ import("./modules/myModule.js").then((module) => {
 });
 ```
 
+> **Note:** Dynamic import is permitted in the browser main thread, and in shared and dedicated workers.
+> However `import()` will throw if called in a service worker or worklet.
+
+<!-- https://whatpr.org/html/6395/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability) -->
+
 Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.
 
 In this example we've only made changes to our [`index.html`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) and [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) files — the module exports remain the same as before.
@@ -816,6 +824,111 @@ const triangle1 = new Module.Triangle(
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
+## Import declarations are hoisted
+
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the place that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
+
+So for example, in `main.js`, importing `Canvas` in the middle of the code would still work:
+
+```js
+// …
+const myCanvas = new Canvas("myCanvas", document.body, 480, 320);
+myCanvas.create();
+import { Canvas } from "./modules/canvas.js";
+myCanvas.createReportList();
+// …
+```
+
+Still, it is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
+
+## Cyclic imports
+
+Modules can import other modules, and those modules can import other modules, and so on. This forms a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) called the "dependency graph". In an ideal world, this graph is [acyclic](https://en.wikipedia.org/wiki/Directed_acyclic_graph). In this case, the graph can be evaluated using a depth-first traversal.
+
+However, cycles are often inevitable. Cyclic import arises if module `a` imports module `b`, but `b` directly or indirectly depends on `a`. For example:
+
+```js
+// -- a.js --
+import { b } from "./b.js";
+
+// -- b.js --
+import { a } from "./a.js";
+
+// Cycle:
+// a.js ───> b.js
+//  ^         │
+//  └─────────┘
+```
+
+Cyclic imports don't always fail. The imported variable's value is only retrieved when the variable is actually used (hence allowing [live bindings](/en-US/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter)), and only if the variable remains uninitialized at that time will a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init) be thrown.
+
+```js
+// -- a.js --
+import { b } from "./b.js";
+
+setTimeout(() => {
+  console.log(b); // 1
+}, 10);
+
+export const a = 2;
+
+// -- b.js --
+import { a } from "./a.js";
+
+setTimeout(() => {
+  console.log(a); // 2
+}, 10);
+
+export const b = 1;
+```
+
+In this example, both `a` and `b` are used asynchronously. Therefore, at the time the module is evaluated, neither `b` nor `a` is actually read, so the rest of the code is executed as normal, and the two `export` declarations produce the values of `a` and `b`. Then, after the timeout, both `a` and `b` are available, so the two `console.log` statements also execute as normal.
+
+If you change the code to use `a` synchronously, the module evaluation fails:
+
+```js
+// -- a.js (entry module) --
+import { b } from "./b.js";
+
+export const a = 2;
+
+// -- b.js --
+import { a } from "./a.js";
+
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+export const b = 1;
+```
+
+This is because when JavaScript evaluates `a.js`, it needs to first evaluate `b.js`, the dependency of `a.js`. However, `b.js` uses `a`, which is not yet available.
+
+On the other hand, if you change the code to use `b` synchronously but `a` asynchronously, the module evaluation succeeds:
+
+```js
+// -- a.js (entry module) --
+import { b } from "./b.js";
+
+console.log(b); // 1
+export const a = 2;
+
+// -- b.js --
+import { a } from "./a.js";
+
+setTimeout(() => {
+  console.log(a); // 2
+}, 10);
+export const b = 1;
+```
+
+This is because the evaluation of `b.js` completes normally, so the value of `b` is available when `a.js` is evaluated.
+
+You should usually avoid cyclic imports in your project, because they make your code more error-prone. Some common cycle-elimination techniques are:
+
+- Merge the two modules into one.
+- Move the shared code into a third module.
+- Move some code from one module to the other.
+
+However, cyclic imports can also occur if the libraries depend on each other, which is harder to fix.
+
 ## Authoring "isomorphic" modules
 
 The introduction of modules encourages the JavaScript ecosystem to distribute and reuse code in a modular fashion. However, that doesn't necessarily mean a piece of JavaScript code can run in every environment. Suppose you discovered a module that generates SHA hashes of your user's password. Can you use it in the browser front end? Can you use it on your Node.js server? The answer is: it depends.
@@ -866,9 +979,9 @@ Here are a few tips that may help you if you are having trouble getting your mod
 
 ## See also
 
-- [Using JavaScript modules on the web](https://v8.dev/features/modules#mjs), by Addy Osmani and Mathias Bynens
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html), Book by Axel Rauschmayer
+- [JavaScript modules](https://v8.dev/features/modules) on v8.dev (2018)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

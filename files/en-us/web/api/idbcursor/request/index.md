@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.request
+title: "IDBCursor: request property"
+short-title: request
 slug: Web/API/IDBCursor/request
 page-type: web-api-instance-property
 browser-compat: api.IDBCursor.request
@@ -21,25 +22,25 @@ When you open a cursor, the `request` property is then available on that cursor 
 
 ```js
 function displayData() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readonly');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   const request = objectStore.openCursor();
 
   request.onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-        list.appendChild(listItem);
-        console.log(cursor.request);
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
-      }
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
+      list.appendChild(listItem);
+      console.log(cursor.request);
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed.");
+    }
   };
-};
+}
 ```
 
 ## Specifications

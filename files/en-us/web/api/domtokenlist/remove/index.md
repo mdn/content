@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.remove()
+title: "DOMTokenList: remove() method"
+short-title: remove()
 slug: Web/API/DOMTokenList/remove
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.remove
@@ -15,7 +16,7 @@ removes the specified _tokens_ from the list.
 ```js-nolint
 remove(token1)
 remove(token1, token2)
-remove(token1, token2, /* … ,*/ tokenN)
+remove(token1, token2, /* …, */ tokenN)
 ```
 
 ### Parameters

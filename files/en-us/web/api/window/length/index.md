@@ -1,5 +1,6 @@
 ---
-title: Window.length
+title: "Window: length property"
+short-title: length
 slug: Web/API/Window/length
 page-type: web-api-instance-property
 browser-compat: api.Window.length

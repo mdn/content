@@ -1,5 +1,6 @@
 ---
-title: NavigationDestination.id
+title: "NavigationDestination: id property"
+short-title: id
 slug: Web/API/NavigationDestination/id
 page-type: web-api-instance-property
 status:
@@ -21,7 +22,7 @@ A string representing the `id` of the destination {{domxref("NavigationHistoryEn
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.id);
 });
 ```

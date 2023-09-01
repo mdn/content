@@ -1,5 +1,6 @@
 ---
-title: USBDevice.controlTransferIn()
+title: "USBDevice: controlTransferIn() method"
+short-title: controlTransferIn()
 slug: Web/API/USBDevice/controlTransferIn
 page-type: web-api-instance-method
 status:
@@ -30,7 +31,7 @@ controlTransferIn(setup, length)
     - `request`
       - : A vendor-specific command.
     - `value`
-      - : Vender-specific request parameters.
+      - : Vendor-specific request parameters.
     - `index`
       - : The interface number of the recipient.
 

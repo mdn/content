@@ -1,5 +1,6 @@
 ---
-title: Document.hasFocus()
+title: "Document: hasFocus() method"
+short-title: hasFocus()
 slug: Web/API/Document/hasFocus
 page-type: web-api-instance-method
 browser-compat: api.Document.hasFocus
@@ -70,7 +71,7 @@ function openWindow() {
   window.open(
     "https://developer.mozilla.org/",
     "MDN",
-    "width=640,height=320,left=150,top=150"
+    "width=640,height=320,left=150,top=150",
   );
 }
 

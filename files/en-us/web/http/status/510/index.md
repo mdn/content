@@ -1,10 +1,7 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
-tags:
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.echoCancellation
+title: "MediaTrackSupportedConstraints: echoCancellation property"
+short-title: echoCancellation
 slug: Web/API/MediaTrackSupportedConstraints/echoCancellation
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.echoCancellation
@@ -33,13 +34,16 @@ you'll get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
 ```js
 const result = document.getElementById("result");
-const supported = navigator.mediaDevices.getSupportedConstraints().echoCancellation;
+const supported =
+  navigator.mediaDevices.getSupportedConstraints().echoCancellation;
 result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 

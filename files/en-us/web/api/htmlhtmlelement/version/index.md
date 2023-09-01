@@ -1,5 +1,6 @@
 ---
-title: HTMLHtmlElement.version
+title: "HTMLHtmlElement: version property"
+short-title: version
 slug: Web/API/HTMLHtmlElement/version
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: StaticRange.endOffset
+title: "StaticRange: endOffset property"
+short-title: endOffset
 slug: Web/API/StaticRange/endOffset
 page-type: web-api-instance-property
 browser-compat: api.StaticRange.endOffset

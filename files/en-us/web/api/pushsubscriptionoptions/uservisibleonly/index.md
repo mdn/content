@@ -1,5 +1,6 @@
 ---
-title: PushSubscriptionOptions.userVisibleOnly
+title: "PushSubscriptionOptions: userVisibleOnly property"
+short-title: userVisibleOnly
 slug: Web/API/PushSubscriptionOptions/userVisibleOnly
 page-type: web-api-instance-property
 browser-compat: api.PushSubscriptionOptions.userVisibleOnly

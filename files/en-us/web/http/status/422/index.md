@@ -1,13 +1,7 @@
 ---
 title: 422 Unprocessable Content
 slug: Web/HTTP/Status/422
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-  - WebDAV
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.422
 ---
 

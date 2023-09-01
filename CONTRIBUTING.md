@@ -4,25 +4,25 @@ Thanks for taking the time to contribute to [MDN Web Docs](https://developer.moz
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
 Everyone participating in this project is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
-If you want to jump right in, see [Getting started on MDN][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
+If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
 
 ## Getting started
 
 Before contributing, make sure you're familiar with the project guidelines and conventions:
 
-- [MDN guidelines][] - This page covers everything from how and what we write to general project guidelines.
+- [Writing guidelines][] - This page covers everything from how and what we write to general project guidelines.
 - [Writing style guide][] - This covers the language and style we use and how we write and format code examples.
-- [Guide to writing Markdown for MDN][] - Which Markdown features we support and custom extensions we've added.
+- [How to write in Markdown][] - This covers the Markdown features we support on MDN and custom extensions we've added.
 
 ### Prerequisite knowledge
 
 We expect contributors to MDN to have some knowledge of web technologies before working on content.
 We've put together relevant resources to get up to speed on specific topics before contributing:
 
-- **Open source:** If you're new to open source projects, see the [open source etiquette][] page.
-- **Git and GitHub:** If you are unfamiliar with these, [GitHub for complete beginners][] is a good primer.
+- **Open source:** If you're new to open source projects, see the [Open source etiquette][] page.
+- **Git and GitHub:** If you are unfamiliar with these, see the section [Getting ready to contribute][] to get pointers on where to start.
 - **Web technologies:** HTML, CSS, JavaScript, and more are covered in our [Learn web development][] tutorials.
-- **MDN repository:** To find out where everything lives, see [Where is everything on MDN?][].
+- **MDN repositories:** To find out where everything lives in various MDN repositories, see our [MDN Web Docs repositories][] page.
 
 ### Documentation conventions
 
@@ -42,19 +42,13 @@ Each document's `index.md` starts with front-matter, which is written in [YAML](
 The YAML is read by the MDN build system and is used to read the metadata of a document.
 
 The front-matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines (`---`).
-Front-matter defines the document's `title`, `slug`, and optional [`tags`][].
+Front-matter defines the document's `title` and `slug`, and may also include `status`, `browser-compat` and specification information.
 Here's an example of front-matter from the [JavaScript page](files/en-us/web/javascript/index.md):
 
 ```yaml
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
-  - "l10n:priority"
 ---
 ```
 
@@ -90,7 +84,7 @@ See the [Creating a pull request](#creating-a-pull-request) for more details on 
 
 If you're not certain of the changes that you want to make, [get in touch with us][]!
 
-> **Note:** You can click the **Source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
+> **Note:** You can click the **View the source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
 ### Forking and cloning the repository
 
@@ -153,9 +147,9 @@ To fork and clone the repository:
 The previous sections describe how to get started using the GitHub UI to make small changes to a single file and how to create a fork and clone the repository to prepare for making larger changes.
 This section describes how to build the project locally and how to prepare your changes for submission.
 
-### Installing and running the project
+### Preparing the project
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed.
+To serve the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn 1 (Classic)](https://classic.yarnpkg.com/) installed.
 You can check if these are installed by running the following commands:
 
 ```bash
@@ -163,12 +157,19 @@ node -v
 yarn -v
 ```
 
-After you have installed Node.js and Yarn, you can install the dependencies using `yarn` and start the local preview:
+After you have installed Node.js and Yarn, you can install the dependencies using `yarn`:
 
 ```bash
 # Assuming your fork is in ~/repos/content
 cd ~/repos/content
 yarn
+```
+
+### Running the project
+
+After you have installed all dependencies, you can start the local preview using `yarn start`:
+
+```bash
 yarn start
 ```
 
@@ -190,9 +191,7 @@ To edit files and track your changes, you should use feature branches.
 Feature branches are created from the `main` branch and should be named after the feature you're working on.
 This will make it easier to submit a pull request for your changes.
 
-> **Note**
-> Open a discussion if your changes will contain large, complex or structural changes.
-> Ask for feedback before embarking on large tasks.
+> **Note:** Open a discussion if your changes will contain large, complex or structural changes. Ask for feedback before embarking on large tasks.
 
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
 
@@ -202,13 +201,13 @@ This will make it easier to submit a pull request for your changes.
 3. Check for errors by clicking `Show flaws` on each previewed page.
    You may be able to fix flaws by running:
 
-   ```sh
+   ```bash
    yarn content flaws <page_slug>
    ```
 
 4. Commit your changes to the branch (our example is using the `fix-typo` branch) and push the changes to your fork's remote:
 
-   ```sh
+   ```bash
    # Adding all files to the commit
    git add .
    # Making a commit with a message describing the changes
@@ -218,6 +217,14 @@ This will make it easier to submit a pull request for your changes.
    # or "git push --set-upstream origin fix-typo" if you haven't pushed this branch before
    ```
 
+#### Linting edited files
+
+To ensure that all MDN documents follow the same formatting, we use both [Prettier](https://www.prettier.io) and [Markdownlint](https://github.com/DavidAnson/markdownlint) to format and lint Markdown files. This helps us enforce uniform styling across all documents with minimal reviewer intervention.
+
+If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
+
+> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us](/en-US/docs/MDN/Community/Communication_channels) for help.
+
 ### Adding a new document
 
 Adding a new document is relatively straightforward, especially if you can start by copying the `index.md` of a similar document.
@@ -226,7 +233,7 @@ There are a few things to keep in mind:
 - Documents must be written in Markdown.
 - A document is represented by an `index.md` file.
 - If you're creating a new CSS document for a property called `foo`, create a new folder `files/en-us/web/css/foo/` and put the Markdown file in this folder (`files/en-us/web/css/foo/index.md`).
-- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and optional [`tags`][].
+- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and, most of the time, `page-type`.
   You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 
 ### Moving documents
@@ -234,7 +241,7 @@ There are a few things to keep in mind:
 Moving one or more documents (or an entire tree of documents) is made easier with the `yarn content move` command.
 This command moves the file and fixes up redirects automatically. You can use this command as shown below:
 
-```sh
+```bash
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
@@ -250,7 +257,7 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 1. Starting from a fresh branch:
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -263,13 +270,13 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 2. Move files with `yarn content move`.
    This will delete and modify existing files, as well as create new files.
 
-   ```sh
+   ```bash
    yarn content move Learn/Accessibility Learn/A11y
    ```
 
 3. Commit all of the changes and push your branch to the remote:
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Move Learn/Accessibility to Learn/A11y"
    git push
@@ -285,14 +292,14 @@ Similar to moving files, you can delete documents or a tree of documents easily 
 
 You can use this command as shown below:
 
-```sh
+```bash
 yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
 ```
 
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
 If the slug of the page you wish to delete contains special characters, include it in quotes. For example:
 
-```sh
+```bash
 yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
 ```
 
@@ -301,7 +308,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 1. Start from a fresh branch.
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -313,7 +320,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 2. Run the `yarn content delete` command and redirect all deleted documents.
 
-   ```sh
+   ```bash
    yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
 
@@ -323,7 +330,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 3. Commit all of the changes and push your branch to the remote.
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Delete Learn/Accessibility pages"
    git push
@@ -339,7 +346,7 @@ You may do this by using the `yarn content add-redirect` command.
 
 1. Start a fresh branch to work in:
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -351,13 +358,13 @@ You may do this by using the `yarn content add-redirect` command.
 
 2. Add a redirect with `yarn content add-redirect`. The target page can be a page on MDN or an external URL:
 
-   ```sh
+   ```bash
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
 3. Commit all of the changed files and pushing your branch to your fork:
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Adding redirect after deleting Learn/Accessibility pages"
    git push
@@ -406,15 +413,14 @@ There are some important rules of etiquette to remember that will help during th
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
-[`tags`]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 [contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
-[getting started on mdn]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
-[github for complete beginners]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners
-[guide to writing markdown for mdn]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
+[getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
+[getting ready to contribute]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#getting_ready_to_contribute
+[how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [javascript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [learn web development]: https://developer.mozilla.org/en-US/docs/Learn
-[mdn guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
-[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette
-[where is everything on mdn?]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything
-[writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[writing guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
+[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette
+[mdn web docs repositories]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Our_repositories
+[writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 [get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels

@@ -1,5 +1,6 @@
 ---
-title: Navigator.keyboard
+title: "Navigator: keyboard property"
+short-title: keyboard
 slug: Web/API/Navigator/keyboard
 page-type: web-api-instance-property
 status:

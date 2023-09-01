@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.videoWidth
+title: "HTMLVideoElement: videoWidth property"
+short-title: videoWidth
 slug: Web/API/HTMLVideoElement/videoWidth
 page-type: web-api-instance-property
 browser-compat: api.HTMLVideoElement.videoWidth

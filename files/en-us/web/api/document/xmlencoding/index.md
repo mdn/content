@@ -1,5 +1,6 @@
 ---
-title: Document.xmlEncoding
+title: "Document: xmlEncoding property"
+short-title: xmlEncoding
 slug: Web/API/Document/xmlEncoding
 page-type: web-api-instance-property
 status:

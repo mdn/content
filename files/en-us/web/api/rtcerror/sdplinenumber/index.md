@@ -1,5 +1,6 @@
 ---
-title: RTCError.sdpLineNumber
+title: "RTCError: sdpLineNumber property"
+short-title: sdpLineNumber
 slug: Web/API/RTCError/sdpLineNumber
 page-type: web-api-instance-property
 browser-compat: api.RTCError.sdpLineNumber

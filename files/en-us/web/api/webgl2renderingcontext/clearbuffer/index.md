@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.clearBuffer[fiuv]()
+title: "WebGL2RenderingContext: clearBuffer[fiuv]() method"
+short-title: clearBuffer[fiuv]()
 slug: Web/API/WebGL2RenderingContext/clearBuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.clearBufferiv

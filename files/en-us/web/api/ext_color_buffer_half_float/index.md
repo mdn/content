@@ -1,5 +1,6 @@
 ---
-title: EXT_color_buffer_half_float
+title: EXT_color_buffer_half_float extension
+short-title: EXT_color_buffer_half_float
 slug: Web/API/EXT_color_buffer_half_float
 page-type: webgl-extension
 browser-compat: api.EXT_color_buffer_half_float
@@ -37,7 +38,7 @@ This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}
 ```js
 const ext = gl.getExtension("EXT_color_buffer_half_float");
 
-gl.renderbufferStorage(gl.RENDERBUFFER, ext.RBGA16F_EXT, 256, 256);
+gl.renderbufferStorage(gl.RENDERBUFFER, ext.RGBA16F_EXT, 256, 256);
 ```
 
 ## Specifications

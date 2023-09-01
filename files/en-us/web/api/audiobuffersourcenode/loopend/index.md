@@ -1,5 +1,6 @@
 ---
-title: AudioBufferSourceNode.loopEnd
+title: "AudioBufferSourceNode: loopEnd property"
+short-title: loopEnd
 slug: Web/API/AudioBufferSourceNode/loopEnd
 page-type: web-api-instance-property
 browser-compat: api.AudioBufferSourceNode.loopEnd
@@ -67,7 +68,7 @@ function getData() {
         loopendControl.setAttribute("max", Math.floor(songLength));
       },
 
-      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+      (e) => console.error(`Error with decoding audio data: ${e.err}`),
     );
   };
 

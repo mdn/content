@@ -2,16 +2,6 @@
 title: tabs.ZoomSettings
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - ZoomSettings
-  - tabs
 browser-compat: webextensions.api.tabs.ZoomSettings
 ---
 

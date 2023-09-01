@@ -1,6 +1,7 @@
 ---
 title: Firefox 78 for developers
 slug: Mozilla/Firefox/Releases/78
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -35,7 +36,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 - The {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes are now enabled by default ([Firefox bug 1632646](https://bugzil.la/1632646)).
 - The {{CSSxRef(":read-only")}} and {{CSSxRef(":read-write")}} pseudo-classes are now supported without prefixes ([Firefox bug 312971](https://bugzil.la/312971)).
 
-  - In addition, `:read-write` styles are no longer applied to disabled [`<input>`](/en-US/docs/Web/HTML/Element/input) and [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) elements, which was a violation of [the HTML spec](https://html.spec.whatwg.org/#selector-read-write) ([Firefox bug 888884](https://bugzil.la/888884)).
+  - In addition, `:read-write` styles are no longer applied to disabled [`<input>`](/en-US/docs/Web/HTML/Element/input) and [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) elements, which was a violation of [the HTML spec](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-write) ([Firefox bug 888884](https://bugzil.la/888884)).
 
 ### JavaScript
 
@@ -47,10 +48,10 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 - The {{JSxRef("RegExp")}} engine [has been updated](https://hacks.mozilla.org/2020/06/a-new-regexp-engine-in-spidermonkey/) and now supports all new features introduced in ECMAScript 2018:
 
-  - [Lookbehind assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) ([Firefox bug 1225665](https://bugzil.la/1225665))
+  - [Lookbehind assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) ([Firefox bug 1225665](https://bugzil.la/1225665))
   - {{JSxRef("RegExp.prototype.dotAll")}} ([Firefox bug 1361856](https://bugzil.la/1361856))
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) ([Firefox bug 1361876](https://bugzil.la/1361876))
-  - [Named capture groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) ([Firefox bug 1362154](https://bugzil.la/1362154))
+  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) ([Firefox bug 1361876](https://bugzil.la/1361876))
+  - [Named capture groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) ([Firefox bug 1362154](https://bugzil.la/1362154))
 
 - Due to a [WebIDL spec change](https://github.com/whatwg/webidl/pull/357) in mid-2020, we've [added a `Symbol.toStringTag` property to all DOM prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#tostringtag_available_on_all_dom_prototype_objects) ([Firefox bug 1277799](https://bugzil.la/1277799)).
 - The garbage collection of {{jsxref("WeakMap")}} objects has been improved. `WeakMaps` are now marked incrementally ([Firefox bug 1167452](https://bugzil.la/1167452)).
@@ -59,7 +60,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 #### DOM
 
-- The {{DOMxRef("ParentNode.replaceChildren()")}} method has been implemented ([Firefox bug 1626015](https://bugzil.la/1626015)).
+- The {{DOMxRef("Element.replaceChildren")}} method has been implemented ([Firefox bug 1626015](https://bugzil.la/1626015)).
 
 #### Service workers
 

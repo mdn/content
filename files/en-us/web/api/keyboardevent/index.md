@@ -182,7 +182,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
   - : This property is non-standard and has been deprecated in favor of {{domxref("KeyboardEvent.key")}}. It was part of an old version of DOM Level 3 Events.
 - {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : This is a non-standard deprecated alias for {{domxref("KeyboardEvent.location")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{ReadOnlyInline}}
 
   - : Returns a number representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
 
@@ -249,32 +249,40 @@ In these environments, unfortunately, there's no way for web content to tell the
 ## Example
 
 ```js
-document.addEventListener('keydown', (event) => {
-  const keyName = event.key;
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
 
-  if (keyName === 'Control') {
-    // do not alert when only Control key is pressed.
-    return;
-  }
+    if (keyName === "Control") {
+      // do not alert when only Control key is pressed.
+      return;
+    }
 
-  if (event.ctrlKey) {
-    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
-}, false);
+    if (event.ctrlKey) {
+      // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+      // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+      alert(`Combination of ctrlKey + ${keyName}`);
+    } else {
+      alert(`Key pressed ${keyName}`);
+    }
+  },
+  false,
+);
 
-document.addEventListener('keyup', (event) => {
-  const keyName = event.key;
+document.addEventListener(
+  "keyup",
+  (event) => {
+    const keyName = event.key;
 
-  // As the user releases the Ctrl key, the key is no longer active,
-  // so event.ctrlKey is false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
-}, false);
+    // As the user releases the Ctrl key, the key is no longer active,
+    // so event.ctrlKey is false.
+    if (keyName === "Control") {
+      alert("Control key was released");
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

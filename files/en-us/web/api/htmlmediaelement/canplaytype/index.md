@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.canPlayType()
+title: "HTMLMediaElement: canPlayType() method"
+short-title: canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.canPlayType
@@ -37,8 +38,8 @@ The string will be one of the following values:
 ## Examples
 
 ```js
-let obj = document.createElement('video');
-console.log(obj.canPlayType('video/mp4')); // "maybe"
+let obj = document.createElement("video");
+console.log(obj.canPlayType("video/mp4")); // "maybe"
 ```
 
 ## Specifications
@@ -51,8 +52,8 @@ console.log(obj.canPlayType('video/mp4')); // "maybe"
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- {{domxref("MediaCapabilities")}} in the Media Capabilities API
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.canPlayType()` method
+- {{domxref("MediaCapabilities")}}
 - [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [The `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Media type and format guide](/en-US/docs/Web/Media/Formats)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)

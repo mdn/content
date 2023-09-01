@@ -1,5 +1,6 @@
 ---
-title: XRView.transform
+title: "XRView: transform property"
+short-title: transform
 slug: Web/API/XRView/transform
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.getTransceivers()
+title: "RTCPeerConnection: getTransceivers() method"
+short-title: getTransceivers()
 slug: Web/API/RTCPeerConnection/getTransceivers
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getTransceivers

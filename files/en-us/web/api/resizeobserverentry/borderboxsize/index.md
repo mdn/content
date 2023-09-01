@@ -1,5 +1,6 @@
 ---
-title: ResizeObserverEntry.borderBoxSize
+title: "ResizeObserverEntry: borderBoxSize property"
+short-title: borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
 page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.borderBoxSize
@@ -40,12 +41,12 @@ const resizeObserver = new ResizeObserver((entries) => {
     if (entry.borderBoxSize?.length > 0) {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.borderBoxSize[0].inlineSize,
-        entry.borderBoxSize[0].blockSize
+        entry.borderBoxSize[0].blockSize,
       );
     } else {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.contentRect.width,
-        entry.contentRect.height
+        entry.contentRect.height,
       );
     }
   }

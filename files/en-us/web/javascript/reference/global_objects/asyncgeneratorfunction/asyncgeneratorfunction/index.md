@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunctio
 
 {{JSRef}}
 
-The **`AsyncGeneratorFunction()`** constructor creates a new {{jsxref("AsyncGeneratorFunction")}} object. In JavaScript, every [async generator function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) is actually an `AsyncGeneratorFunction` object.
+The **`AsyncGeneratorFunction()`** constructor creates {{jsxref("AsyncGeneratorFunction")}} objects.
 
 Note that `AsyncGeneratorFunction` is not a global object. It could be obtained by evaluating the following code.
 
@@ -21,14 +21,14 @@ The `AsyncGeneratorFunction()` constructor is not intended to be used directly, 
 
 ```js-nolint
 new AsyncGeneratorFunction(functionBody)
-new AsyncGeneratorFunction(arg0, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+new AsyncGeneratorFunction(arg1, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 
 AsyncGeneratorFunction(functionBody)
-AsyncGeneratorFunction(arg0, functionBody)
-AsyncGeneratorFunction(arg0, arg1, functionBody)
-AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+AsyncGeneratorFunction(arg1, functionBody)
+AsyncGeneratorFunction(arg1, arg2, functionBody)
+AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
 > **Note:** `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
@@ -63,5 +63,5 @@ asyncGen.next().then((res) => console.log(res.value)); // 20
 - [`async function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
 - [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 - {{jsxref("Functions", "Functions", "", 1)}}

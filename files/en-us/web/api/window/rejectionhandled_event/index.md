@@ -1,5 +1,6 @@
 ---
-title: 'Window: rejectionhandled event'
+title: "Window: rejectionhandled event"
+short-title: rejectionhandled
 slug: Web/API/Window/rejectionhandled_event
 page-type: web-api-event
 browser-compat: api.Window.rejectionhandled_event
@@ -16,8 +17,8 @@ This can be used in debugging and for general application resiliency, in tandem 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('rejectionhandled', (event) => { });
-onrejectionhandled = (event) => { };
+addEventListener("rejectionhandled", (event) => {});
+onrejectionhandled = (event) => {};
 ```
 
 ## Event type
@@ -46,9 +47,13 @@ In addition to the `Window` interface, the event handler property `onrejectionha
 You can use the `rejectionhandled` event to log promises that get rejected to the console, along with the reasons why they were rejected:
 
 ```js
-window.addEventListener("rejectionhandled", (event) => {
-  console.log(`Promise rejected; reason: ${event.reason}`);
-}, false);
+window.addEventListener(
+  "rejectionhandled",
+  (event) => {
+    console.log(`Promise rejected; reason: ${event.reason}`);
+  },
+  false,
+);
 ```
 
 ## Specifications

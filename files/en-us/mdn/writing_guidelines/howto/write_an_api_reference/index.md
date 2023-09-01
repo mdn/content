@@ -223,7 +223,6 @@ The features of a landing page are outlined below:
 5. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
 6. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for details.
 7. **See also**: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc.
-8. **Tags**: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.
 
 ### Structure of an interface page
 
@@ -260,8 +259,6 @@ Now you should be ready to start writing your interface pages. Each interface re
     - Do not put author names — we are a writer-neutral documentation site. Link to the document; the author name will be displayed there.
     - Pay special attention to blog posts: they tend to become outdated (old syntax, wrong compat information). Link to them only if they have a clear added value that can't be found in a maintained document.
     - Do not use action verb like "See … for more information" or "Click to…", you don't know if your reader is able to see, or to click on the link (like on a paper version of the document).
-
-11. **Tags**: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.
 
 #### Interface page examples
 
@@ -302,7 +299,6 @@ Property pages must have the following sections:
 7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
 8. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for details.
 9. **See also**: The "See also" section is a good place to include further links that may be useful when using this technology: like methods and properties affected by a change of this property or events thrown in relation to it. More links useful when learning about this technology, including MDN (and external) tutorials, examples, libraries,… can be added, though it may be useful to consider adding them on the interface reference page instead.
-10. **Tags**: There is a set of standard tags you should include for each property page — see the "Tags" section for more.
 
 #### Property page examples
 
@@ -354,39 +350,6 @@ The following are exemplary examples of method pages:
 
 - {{domxref("Document.getAnimations")}} from the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
 - {{domxref("fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).
-
-## Tagging
-
-For API reference pages, there are standard tags that all pages should have:
-
-- "API"
-- "Reference"
-- Name of API (e.g. "Web Audio API")
-- Any pertinent related keywords (e.g. "audio")
-
-For Interface pages, also add:
-
-- "Interface"
-- The name of the interface, e.g. "AudioContext"
-
-For method pages, also add:
-
-- "Method"
-- The name of the interface the method relates to, e.g. "AudioContext"
-- The name of the method, e.g. "createBuffer"
-
-For property pages, also add:
-
-- "Property"
-- The name of the interface the property relates to, e.g. "AudioContext"
-- The name of the property, e.g. "currentTime"
-
-In all cases, also add a keyword indicating the standardization status:
-
-- Deprecated
-- Non-standard
-
-These tags will be used to generate correct quicklinks, with nice icons. See [How to properly tag pages](/en-US/docs/MDN/Writing_guidelines/Howto/Tag) for additional information on tagging, as well as about other tags you may find useful.
 
 ## Sidebars
 

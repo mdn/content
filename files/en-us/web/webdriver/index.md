@@ -1,14 +1,7 @@
 ---
 title: WebDriver
 slug: Web/WebDriver
-tags:
-  - Automation
-  - Index
-  - Landing
-  - Reference
-  - Testing
-  - Web
-  - WebDriver
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages}}
@@ -48,7 +41,7 @@ with webdriver.Firefox() as driver:
 
 This might produce output akin to this:
 
-```
+```plain
 #1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
 ```
 

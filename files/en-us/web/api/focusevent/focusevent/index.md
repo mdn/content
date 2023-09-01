@@ -1,5 +1,6 @@
 ---
-title: FocusEvent()
+title: "FocusEvent: FocusEvent() constructor"
+short-title: FocusEvent()
 slug: Web/API/FocusEvent/FocusEvent
 page-type: web-api-constructor
 browser-compat: api.FocusEvent.FocusEvent

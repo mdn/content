@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.ellipse()
+title: "CanvasRenderingContext2D: ellipse() method"
+short-title: ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.ellipse

@@ -41,12 +41,12 @@ In order for an expression to be used as a statement, it must not be ambiguous w
 - `function`: which would be a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) or [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*), not a [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) or [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - `async function`: which would be an [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or [`async function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*), not an [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function) or [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
 - `class`: which would be a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class), not a [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- `let[`: which would be a [`let` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/let) with [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) on a variable called `let` (`let` can only be an identifier in [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words))
+- `let[`: which would be a [`let` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/let) with [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) on a variable called `let` (`let` can only be an identifier in [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words))
 - `{`: which would be a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block), not an [object literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 
 Therefore, all of the following are invalid:
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   console.log("foo");
 }(); // SyntaxError: Unexpected token '('
@@ -95,7 +95,7 @@ To avoid these problems, you can use parentheses, so that the statement is unamb
 
 ### Avoiding control flow statements
 
-You can avoid almost all use of control flow statements using expression statements. For example, `if...else` can be replaced with [ternary operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) and [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators). Iterative statements like `for` or `for...of` can be replaced with [array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods).
+You can avoid almost all use of control flow statements using expression statements. For example, `if...else` can be replaced with [ternary operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) and [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators). Iterative statements like `for` or `for...of` can be replaced with [array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods).
 
 ```js
 // Using control flow statements

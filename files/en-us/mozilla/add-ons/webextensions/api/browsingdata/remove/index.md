@@ -2,15 +2,6 @@
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - remove
 browser-compat: webextensions.api.browsingData.remove
 ---
 

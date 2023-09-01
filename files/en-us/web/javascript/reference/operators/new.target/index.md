@@ -24,12 +24,12 @@ new.target
 - In class constructors, it refers to the class that `new` was called upon, which may be a subclass of the current constructor, because subclasses transitively call the superclass's constructor through [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super).
 - In ordinary functions, if the function is constructed directly with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), `new.target` refers to the function itself. If the function is called without `new`, `new.target` is {{jsxref("undefined")}}. Functions can be used as the base class for [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends), in which case `new.target` may refer to the subclass.
 - If a constructor (class or function) is called via {{jsxref("Reflect.construct()")}}, then `new.target` refers to the value passed as `newTarget` (which defaults to `target`).
-- In [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `new.target` is inherited from the surrounding scope. If the arrow function is not defined within another class or function which has a `new.target` binding, then a syntax error is thrown.
+- In [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `new.target` is inherited from the surrounding scope. If the arrow function is not defined within another class or function which has a `new.target` {{glossary("binding")}}, then a syntax error is thrown.
 - In [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks), `new.target` is {{jsxref("undefined")}}.
 
 ## Description
 
-The `new.target` syntax consists of the keyword `new`, a dot, and the identifier `target`. Because `new` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), but a special expression syntax.
+The `new.target` syntax consists of the keyword `new`, a dot, and the identifier `target`. Because `new` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), but a special expression syntax.
 
 The `new.target` meta-property is available in all function/class bodies; using `new.target` outside of functions or classes is a syntax error.
 

@@ -1,5 +1,6 @@
 ---
-title: SVGPointList.clear()
+title: "SVGPointList: clear() method"
+short-title: clear()
 slug: Web/API/SVGPointList/clear
 page-type: web-api-instance-method
 browser-compat: api.SVGPointList.clear

@@ -1,5 +1,6 @@
 ---
-title: PerformanceElementTiming.url
+title: "PerformanceElementTiming: url property"
+short-title: url
 slug: Web/API/PerformanceElementTiming/url
 page-type: web-api-instance-property
 status:

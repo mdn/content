@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getSamplerParameter()
+title: "WebGL2RenderingContext: getSamplerParameter() method"
+short-title: getSamplerParameter()
 slug: Web/API/WebGL2RenderingContext/getSamplerParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getSamplerParameter

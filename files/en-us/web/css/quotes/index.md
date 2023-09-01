@@ -35,7 +35,7 @@ quotes: unset;
 - `none`
   - : The `open-quote` and `close-quote` values of the {{cssxref("content")}} property produce no quotation marks.
 - `auto`
-  - : Appropriate quote marks will be used for whatever language value is set on the selected elements (i.e. via the {{htmlattrxref("lang")}} attribute).
+  - : Appropriate quote marks will be used for whatever language value is set on the selected elements (i.e. via the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute).
 - `[<string> <string>]+`
   - : One or more pairs of {{cssxref("&lt;string&gt;")}} values for `open-quote` and `close-quote`. The first pair represents the outer level of quotation, the second pair is for the first nested level, next pair for third level and so on.
 
@@ -109,9 +109,9 @@ For most browsers, the default value of `quotes` is `auto` (Firefox 70+), or the
 #### CSS
 
 ```css
-/*q {
+q {
   quotes: auto;
-}*/
+}
 ```
 
 #### Result

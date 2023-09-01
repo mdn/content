@@ -2,9 +2,6 @@
 title: keySplines
 slug: Web/SVG/Attribute/keySplines
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#KeySplinesAttribute
 ---
 
@@ -19,7 +16,6 @@ If there are any errors in the keySplines specification (bad values, too many or
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 

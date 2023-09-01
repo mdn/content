@@ -1,5 +1,6 @@
 ---
-title: TrustedScript.toJSON()
+title: "TrustedScript: toJSON() method"
+short-title: toJSON()
 slug: Web/API/TrustedScript/toJSON
 page-type: web-api-instance-method
 browser-compat: api.TrustedScript.toJSON
@@ -29,7 +30,7 @@ The constant `sanitized` is an object created via a Trusted Types policy. The `t
 
 ```js
 const sanitized = scriptPolicy.createScript("eval('2 + 2')");
-  console.log(sanitized.toJSON());
+console.log(sanitized.toJSON());
 ```
 
 ## Specifications

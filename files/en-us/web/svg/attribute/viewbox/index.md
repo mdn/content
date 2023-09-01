@@ -2,9 +2,6 @@
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
 ---
 
@@ -103,17 +100,17 @@ For {{SVGElement('marker')}}, `viewBox` defines the position and dimension for t
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
@@ -145,17 +142,17 @@ For {{SVGElement('pattern')}}, `viewBox` defines the position and dimension for 
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
@@ -187,17 +184,17 @@ For {{SVGElement('svg')}}, `viewBox` defines the position and dimension for the 
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
@@ -229,17 +226,17 @@ For {{SVGElement('symbol')}}, `viewBox` defines the position and dimension for t
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
@@ -271,17 +268,17 @@ For {{SVGElement('view')}}, `viewBox` defines the position and dimension for the
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></strong
-        >?,
+        >,?
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a

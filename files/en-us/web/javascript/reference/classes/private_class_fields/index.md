@@ -51,26 +51,27 @@ Most class features have their private counterparts:
 
 These features are collectively called _private properties_. However, [constructors](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) cannot be private in JavaScript. To prevent classes from being constructed outside of the class, you have to [use a private flag](#simulating_private_constructors).
 
-Private properties are declared with **# names** (pronounced "hash names"), which are identifiers prefixed with `#`. The hash prefix is an inherent part of the property name — you can draw relationship with the old underscore prefix convention `_privateField` — but it's not an ordinary string property, so you can't dynamically access it with the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation).
+Private properties are declared with **# names** (pronounced "hash names"), which are identifiers prefixed with `#`. The hash prefix is an inherent part of the property name — you can draw relationship with the old underscore prefix convention `_privateField` — but it's not an ordinary string property, so you can't dynamically access it with the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation).
 
 It is a syntax error to refer to `#` names from outside of the class. It is also a syntax error to refer to private properties that were not declared in the class body, or to attempt to remove declared properties with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
-```js example-bad
+```js-nolint example-bad
 class ClassWithPrivateField {
   #privateField;
 
-  constructor() {
-    this.#privateField = 42;
+  constructor() {;
     delete this.#privateField; // Syntax error
-    this.#undeclaredField = 444; // Syntax error
+    this.#undeclaredField = 42; // Syntax error
   }
 }
 
 const instance = new ClassWithPrivateField();
-instance.#privateField === 42; // Syntax error
+instance.#privateField; // Syntax error
 ```
 
 JavaScript, being a dynamic language, is able to perform this compile-time check because of the special hash identifier syntax, making it different from normal properties on the syntax level.
+
+> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
 If you access a private property from an object that doesn't have the property, a {{jsxref("TypeError")}} is thrown, instead of returning `undefined` as normal properties do.
 
@@ -87,11 +88,31 @@ console.log(C.getX(new C())); // undefined
 console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
 ```
 
-You can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check for potentially missing private fields (or private methods). This will return `true` if the private field or method exists, and `false` otherwise.
+This example also illustrates that you can access private properties within static functions too, and on externally defined instances of the class.
+
+You can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check whether an externally defined object possesses a private property. This will return `true` if the private field or method exists, and `false` otherwise.
+
+```js example-good
+class C {
+  #x;
+  constructor(x) {
+    this.#x = x;
+  }
+  static getX(obj) {
+    if (#x in obj) return obj.#x;
+
+    return "obj must be an instance of C";
+  }
+}
+console.log(C.getX(new C("foo"))); // "foo"
+console.log(C.getX(new C(0.196))); // 0.196
+console.log(C.getX(new C(new Date()))); // the current date and time
+console.log(C.getX({})); // "obj must be an instance of C"
+```
 
 Note a corollary of private names being always pre-declared and non-deletable: if you found that an object possesses one private property of the current class (either from a `try...catch` or an `in` check), it must possess all other private properties. An object possessing the private properties of a class generally means it was constructed by that class (although [not always](#returning_overriding_object)).
 
-Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class.
+Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class. For this reason, {{jsxref("Object.freeze()")}} and {{jsxref("Object.seal()")}} have no effect on private properties.
 
 For more information on how and when private fields are initialized, see [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
@@ -99,11 +120,14 @@ For more information on how and when private fields are initialized, see [public
 
 ### Private fields
 
-Private fields include private instance fields and private static fields. Private fields are accessible on the class constructor from inside the class declaration itself. They are used for declaration of field names as well as for accessing a field's value.
+Private fields include private instance fields and private static fields. Private fields are only accessible from inside the class declaration.
 
 #### Private instance fields
 
-Like public fields, private fields are added before the constructor runs in a base class, or immediately after [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) is invoked in a subclass.
+Like their public counterparts, private instance fields:
+
+- are added before the constructor runs in a base class, or immediately after [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) is invoked in a subclass, and
+- are only available on instances of the class.
 
 ```js
 class ClassWithPrivateField {
@@ -114,7 +138,7 @@ class ClassWithPrivateField {
   }
 }
 
-class SubClass extends ClassWithPrivateField {
+class Subclass extends ClassWithPrivateField {
   #subPrivateField;
 
   constructor() {
@@ -123,8 +147,7 @@ class SubClass extends ClassWithPrivateField {
   }
 }
 
-new SubClass();
-// SubClass {#subPrivateField: 23}
+new Subclass(); // In some dev tools, it shows Subclass {#privateField: 42, #subPrivateField: 23}
 ```
 
 > **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
@@ -156,92 +179,95 @@ new Stamper(obj);
 console.log(obj); // In some dev tools, it shows {#stamp: 42}
 console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
+
+// You cannot stamp private properties twice
+new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
 > **Warning:** This is a potentially very confusing thing to do. You are generally advised to avoid returning anything from the constructor — especially something unrelated to `this`.
 
 #### Private static fields
 
-Private static fields are added to the class constructor at class evaluation time. Like their public counterparts, private static fields are only accessible on the class itself or on the `this` context of static methods, but not on the `this` context of instance methods.
+Like their public counterparts, private static fields:
+
+- are added to the class constructor at class evaluation time, and
+- are only available on the class itself.
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+  static #privateStaticField = 42;
 
   static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
-  }
-
-  publicInstanceMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+    return ClassWithPrivateStaticField.#privateStaticField;
   }
 }
 
 console.log(ClassWithPrivateStaticField.publicStaticMethod()); // 42
-console.log(new ClassWithPrivateStaticField().publicInstanceMethod()); // 42
 ```
 
-There is a restriction on private static fields: Only the class which defines the private static field can access the field. This can lead to unexpected behavior when using [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this). In the following example, `this` refers to the `SubClass` class (not the `BaseClassWithPrivateStaticField` class) when we try to call `SubClass.basePublicStaticMethod()`, and so causes a `TypeError`.
+There is a restriction on private static fields: only the class which defines the private static field can access the field. This can lead to unexpected behavior when using [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this). In the following example, `this` refers to the `Subclass` class (not the `ClassWithPrivateStaticField` class) when we try to call `Subclass.publicStaticMethod()`, and so causes a `TypeError`.
 
 ```js
-class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+class ClassWithPrivateStaticField {
+  static #privateStaticField = 42;
 
-  static basePublicStaticMethod() {
-    return this.#PRIVATE_STATIC_FIELD;
+  static publicStaticMethod() {
+    return this.#privateStaticField;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField {}
+class Subclass extends ClassWithPrivateStaticField {}
 
-SubClass.basePublicStaticMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
+Subclass.publicStaticMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
 This is the same if you call the method with `super`, because [`super` methods are not called with the super class as `this`](/en-US/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super).
 
 ```js
-class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+class ClassWithPrivateStaticField {
+  static #privateStaticField = 42;
 
-  static basePublicStaticMethod() {
+  static publicStaticMethod() {
     // When invoked through super, `this` still refers to Subclass
-    return this.#PRIVATE_STATIC_FIELD;
+    return this.#privateStaticField;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField {
-  static callSuperBaseMethod() {
-    return super.basePublicStaticMethod();
+class Subclass extends ClassWithPrivateStaticField {
+  static callSuperMethod() {
+    return super.publicStaticMethod();
   }
 }
 
-SubClass.callSuperBaseMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
+Subclass.callSuperMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
-You are advised to always access static private fields through the class name, not through `this`, so inheritance doesn't break the method.
+You are advised to always access private static fields through the class name, not through `this`, so inheritance doesn't break the method.
 
 ### Private methods
 
+Private methods include private instance methods and private static methods. Private methods are only accessible from inside the class declaration.
+
 #### Private instance methods
 
-Private instance methods are methods available on class instances whose access is restricted in the same manner as private instance fields.
+Unlike their public counterparts, private instance methods:
+
+- are installed immediately before the instance fields are installed, and
+- are only available on instances of the class, not on its `.prototype` property.
 
 ```js
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return "hello world";
+    return 42;
   }
 
-  getPrivateMessage() {
+  publicMethod() {
     return this.#privateMethod();
   }
 }
 
 const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage());
-// hello world
+console.log(instance.publicMethod()); // 42
 ```
 
 Private instance methods may be generator, async, or async generator functions. Private getters and setters are also possible, and follow the same syntax requirements as their public [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) counterparts.
@@ -263,27 +289,30 @@ class ClassWithPrivateAccessor {
   }
 }
 
-new ClassWithPrivateAccessor();
-// 🎬hello world🛑
+new ClassWithPrivateAccessor(); // 🎬hello world🛑
 ```
 
-Unlike public methods, private methods are not accessible on `Class.prototype`.
+Unlike public methods, private methods are not accessible on the `.prototype` property of their class.
 
 ```js
 class C {
   #method() {}
+
   static getMethod(x) {
     return x.#method;
   }
 }
 
 console.log(C.getMethod(new C())); // [Function: #method]
-console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
+console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instance of class C
 ```
 
 #### Private static methods
 
-Like their public equivalent, private static methods are called on the class itself, not instances of the class. Like private static fields, they are only accessible from inside the class declaration.
+Like their public counterparts, private static methods:
+
+- are added to the class constructor at class evaluation time, and
+- are only available on the class itself.
 
 ```js
 class ClassWithPrivateStaticMethod {
@@ -291,45 +320,32 @@ class ClassWithPrivateStaticMethod {
     return 42;
   }
 
-  static publicStaticMethod1() {
+  static publicStaticMethod() {
     return ClassWithPrivateStaticMethod.#privateStaticMethod();
-  }
-
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
   }
 }
 
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
-// true
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
-// true
+console.log(ClassWithPrivateStaticMethod.publicStaticMethod()); // 42
 ```
 
 Private static methods may be generator, async, and async generator functions.
 
-The same restriction previously mentioned for private static fields holds for private static methods, and similarly can lead to unexpected behavior when using `this`. In the following example, when we try to call `Derived.publicStaticMethod2()`, `this` refers to the `Derived` class (not the `Base` class) and so causes a `TypeError`.
+The same restriction previously mentioned for private static fields holds for private static methods, and similarly can lead to unexpected behavior when using `this`. In the following example, when we try to call `Subclass.publicStaticMethod()`, `this` refers to the `Subclass` class (not the `ClassWithPrivateStaticMethod` class) and so causes a `TypeError`.
 
 ```js
-class Base {
+class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
     return 42;
   }
-  static publicStaticMethod1() {
-    return Base.#privateStaticMethod();
-  }
-  static publicStaticMethod2() {
+
+  static publicStaticMethod() {
     return this.#privateStaticMethod();
   }
 }
 
-class Derived extends Base {}
+class Subclass extends ClassWithPrivateStaticMethod {}
 
-console.log(Derived.publicStaticMethod1());
-// 42
-console.log(Derived.publicStaticMethod2());
-// TypeError: Cannot read private member #privateStaticMethod
-// from an object whose class did not declare it
+console.log(Subclass.publicStaticMethod()); // TypeError: Cannot read private member #privateStaticMethod from an object whose class did not declare it
 ```
 
 ### Simulating private constructors
@@ -344,12 +360,13 @@ class PrivateConstructor {
     if (!PrivateConstructor.#isInternalConstructing) {
       throw new TypeError("PrivateConstructor is not constructable");
     }
+    PrivateConstructor.#isInternalConstructing = false;
+    // More initialization logic
   }
 
   static create() {
     PrivateConstructor.#isInternalConstructing = true;
     const instance = new PrivateConstructor();
-    PrivateConstructor.#isInternalConstructing = false;
     return instance;
   }
 }
@@ -368,8 +385,10 @@ PrivateConstructor.create(); // PrivateConstructor {}
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
-- [Public and private class fields](https://v8.dev/features/class-fields) article at the v8.dev site
+- {{jsxref("Statements/class", "class")}}
+- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md) in the TC39 class-fields proposal
+- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
+- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (2018)

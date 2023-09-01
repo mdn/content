@@ -1,5 +1,6 @@
 ---
-title: Document.pictureInPictureEnabled
+title: "Document: pictureInPictureEnabled property"
+short-title: pictureInPictureEnabled
 slug: Web/API/Document/pictureInPictureEnabled
 page-type: web-api-instance-property
 browser-compat: api.Document.pictureInPictureEnabled
@@ -52,7 +53,6 @@ function requestPictureInPicture() {
 ## See also
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}

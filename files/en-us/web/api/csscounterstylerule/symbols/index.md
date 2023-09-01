@@ -1,5 +1,6 @@
 ---
-title: CSSCounterStyleRule.symbols
+title: "CSSCounterStyleRule: symbols property"
+short-title: symbols
 slug: Web/API/CSSCounterStyleRule/symbols
 page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.symbols

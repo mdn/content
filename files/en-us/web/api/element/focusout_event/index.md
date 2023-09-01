@@ -1,5 +1,6 @@
 ---
 title: "Element: focusout event"
+short-title: focusout
 slug: Web/API/Element/focusout_event
 page-type: web-api-event
 browser-compat: api.Element.focusout_event

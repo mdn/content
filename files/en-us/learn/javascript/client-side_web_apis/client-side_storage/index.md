@@ -1,6 +1,7 @@
 ---
 title: Client-side storage
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -48,7 +49,7 @@ Client-side storage works on similar principles, but has different uses. It cons
 
 Often client-side and server-side storage are used together. For example, you could download a batch of music files (perhaps used by a web game or music player application), store them inside a client-side database, and play them as needed. The user would only have to download the music files once — on subsequent visits they would be retrieved from the database instead.
 
-> **Note:** There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) for more information.
+> **Note:** There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) for more information.
 
 ### Old school: Cookies
 
@@ -293,7 +294,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
    ```js
    // error handler signifies that the database didn't open successfully
    openRequest.addEventListener("error", () =>
-     console.error("Database failed to open")
+     console.error("Database failed to open"),
    );
 
    // success handler signifies that the database opened successfully
@@ -397,7 +398,7 @@ function addData(e) {
   });
 
   transaction.addEventListener("error", () =>
-    console.log("Transaction not opened due to error")
+    console.log("Transaction not opened due to error"),
   );
 }
 ```
@@ -568,7 +569,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
            displayVideo(
              request.result.mp4,
              request.result.webm,
-             request.result.name
+             request.result.name,
            );
          } else {
            // Fetch the videos from the network
@@ -589,10 +590,10 @@ Let's walk through the most interesting parts of the example. We won't look at i
    // Fetch the MP4 and WebM versions of the video using the fetch() function,
    // then expose their response bodies as blobs
    const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) =>
-     response.blob()
+     response.blob(),
    );
    const webmBlob = fetch(`videos/${video.name}.webm`).then((response) =>
-     response.blob()
+     response.blob(),
    );
 
    // Only run the next code when both promises have fulfilled
@@ -618,13 +619,13 @@ Let's walk through the most interesting parts of the example. We won't look at i
      const request = objectStore.add({ mp4, webm, name });
 
      request.addEventListener("success", () =>
-       console.log("Record addition attempt finished")
+       console.log("Record addition attempt finished"),
      );
      request.addEventListener("error", () => console.error(request.error));
    }
    ```
 
-5. Finally, we have `displayVideo()`, which creates the DOM elements needed to insert the video in the UI and then appends them to the page. The most interesting parts of this are those shown below — to actually display our video blobs in a `<video>` element, we need to create object URLs (internal URLs that point to the video blobs stored in memory) using the {{domxref("URL.createObjectURL()")}} method. Once that is done, we can set the object URLs to be the values of our {{htmlelement("source")}} element's `src` attributes, and it works fine.
+5. Finally, we have `displayVideo()`, which creates the DOM elements needed to insert the video in the UI and then appends them to the page. The most interesting parts of this are those shown below — to actually display our video blobs in a `<video>` element, we need to create object URLs (internal URLs that point to the video blobs stored in memory) using the {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} method. Once that is done, we can set the object URLs to be the values of our {{htmlelement("source")}} element's `src` attributes, and it works fine.
 
    ```js
    // Define the displayVideo() function
@@ -684,7 +685,7 @@ The first thing to note is that there's an extra bit of code placed in the main 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register(
-      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js"
+      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js",
     )
     .then(() => console.log("Service Worker Registered"));
 }
@@ -713,8 +714,8 @@ self.addEventListener("install", (e) => {
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html",
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```
@@ -737,7 +738,7 @@ If a match is found, we return it as the custom response. If not, we [fetch()](/
 self.addEventListener("fetch", (e) => {
   console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then((response) => response || fetch(e.request))
+    caches.match(e.request).then((response) => response || fetch(e.request)),
   );
 });
 ```

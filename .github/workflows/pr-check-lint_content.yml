@@ -1,0 +1,156 @@
+name: Lint and review content files
+
+on:
+  pull_request_target:
+    branches:
+      - main
+    paths:
+      - .nvmrc
+      - "*.md"
+      - "files/**/*.md"
+
+permissions:
+  pull-requests: write
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-review-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout BASE
+        uses: actions/checkout@v3
+
+      - name: Get changed files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Use the GitHub API to get the list of changed files
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
+          # filter out files that are not markdown
+          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
+          echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
+
+      - name: Checkout HEAD
+        if: ${{ env.DIFF_DOCUMENTS }}
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr_head
+
+      - name: Get changed content from HEAD
+        if: ${{ env.DIFF_DOCUMENTS }}
+        run: |
+          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
+          git config --global user.name "mdn-bot"
+
+          rm -r files *.md
+          mv pr_head/files pr_head/*.md .
+          rm -r pr_head
+
+          # To avoid contents of PR getting into the diff that we are going to generate
+          # after running the linters, here we make a dummy commit.
+          # Note, this commit is not getting pushed.
+          git add .
+          git commit -m "Code from PR head"
+
+      - name: Setup Node.js environment
+        if: ${{ env.DIFF_DOCUMENTS }}
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        if: ${{ env.DIFF_DOCUMENTS }}
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint and format markdown files
+        if: ${{ env.DIFF_DOCUMENTS }}
+        run: |
+          # Generate random delimiter
+          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+          EOF="$(openssl rand -hex 8)"
+
+          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+
+          echo "Running markdownlint --fix"
+          MD_LINT_FAILED=false
+          MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_FAILED=true
+          echo "MD_LINT_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${MD_LINT_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "MD_LINT_FAILED=${MD_LINT_FAILED}" >> $GITHUB_ENV
+
+          echo "Linting front-matter"
+          FM_LINT_FAILED=false
+          FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true ${files_to_lint} 2>&1) || FM_LINT_FAILED=true
+          echo "FM_LINT_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${FM_LINT_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> $GITHUB_ENV
+
+          echo "Running Prettier"
+          yarn prettier -w ${files_to_lint}
+
+          if [[ -n $(git diff) ]]; then
+            echo "FILES_MODIFIED=true" >> $GITHUB_ENV
+          fi
+
+          # info for troubleshooting
+          echo MD_LINT_FAILED=${MD_LINT_FAILED}
+          echo FM_LINT_FAILED=${FM_LINT_FAILED}
+          git diff
+
+      - name: Setup reviewdog
+        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
+        uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: latest
+
+      - name: Suggest changes using diff
+        if: env.FILES_MODIFIED == 'true'
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TMPFILE=$(mktemp)
+          git diff >"${TMPFILE}"
+          git stash -u && git stash drop
+          reviewdog \
+            -name="mdn-linter" \
+            -f=diff \
+            -f.diff.strip=1 \
+            -reporter=github-pr-review < "${TMPFILE}"
+
+      - name: Add reviews for markdownlint errors
+        if: env.MD_LINT_FAILED == 'true'
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "${{ env.MD_LINT_LOG }}" | \
+            reviewdog \
+            -efm="%f:%l:%c %m" \
+            -efm="%f:%l %m" \
+            -name="markdownlint" \
+            -diff="git diff" \
+            -reporter="github-pr-review"
+
+      - name: Fail if any issues pending
+        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
+        run: |
+          echo -e "\nLogs from markdownlint:"
+          echo "${{ env.MD_LINT_LOG }}"
+          echo -e "\nLogs from front-matter linter:"
+          echo "${{ env.FM_LINT_LOG }}"
+          echo -e "\nPlease fix all the linting issues mentioned in above logs and in the review comments."
+          exit 1

@@ -1,11 +1,12 @@
 ---
-title: ElementInternals.shadowRoot
+title: "ElementInternals: shadowRoot property"
+short-title: shadowRoot
 slug: Web/API/ElementInternals/shadowRoot
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.shadowRoot
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`shadowRoot`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("ShadowRoot")}} for this element.
 

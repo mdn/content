@@ -1,5 +1,6 @@
 ---
-title: Highlight()
+title: "Highlight: Highlight() constructor"
+short-title: Highlight()
 slug: Web/API/Highlight/Highlight
 page-type: web-api-constructor
 status:
@@ -17,12 +18,12 @@ The **`Highlight()`** constructor returns a newly created
 ```js-nolint
 new Highlight()
 new Highlight(range)
-new Highlight(range1, range2, /* … ,*/ rangeN)
+new Highlight(range1, range2, /* …, */ rangeN)
 ```
 
 ### Parameters
 
-- `range1, /* … ,*/ rangeN` {{optional_inline}}
+- `range1, /* …, */ rangeN` {{optional_inline}}
   - : One ore more initial {{domxref("Range")}} objects to add in the new highlight.
 
 ### Return value

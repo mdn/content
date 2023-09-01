@@ -1,5 +1,6 @@
 ---
-title: VREyeParameters.renderHeight
+title: "VREyeParameters: renderHeight property"
+short-title: renderHeight
 slug: Web/API/VREyeParameters/renderHeight
 page-type: web-api-instance-property
 status:

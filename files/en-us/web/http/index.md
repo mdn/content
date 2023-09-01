@@ -1,14 +1,7 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - HTTP
-  - Hypertext
-  - Reference
-  - TCP/IP
-  - Web
-  - Web Development
-  - "l10n:priority"
+page-type: landing-page
 ---
 
 {{HTTPSidebar}}
@@ -22,7 +15,7 @@ Learn how to use HTTP with guides and tutorials.
 - [Overview of HTTP](/en-US/docs/Web/HTTP/Overview)
   - : The basic features of the client-server protocol: what it can do and its intended uses.
 - [HTTP Cache](/en-US/docs/Web/HTTP/Caching)
-  - : Caching is very important for fast Web sites. This article describes different methods of caching and how to use HTTP Headers to control them.
+  - : Caching is very important for fast websites. This article describes different methods of caching and how to use HTTP Headers to control them.
 - [HTTP Cookies](/en-US/docs/Web/HTTP/Cookies)
   - : How cookies work is defined by [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265). When serving an HTTP request, a server can send a `Set-Cookie` HTTP header with the response. The client then returns the cookie's value with every request to the same server in the form of a `Cookie` request header. The cookie can also be set to expire on a certain date, or restricted to a specific domain and path.
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
@@ -65,4 +58,4 @@ Helpful tools and resources for understanding and debugging HTTP.
 - [RedBot](https://redbot.org/)
   - : Tools to check your cache-related headers.
 - [How Browsers Work (2011)](https://web.dev/howbrowserswork/)
-  - : A very comprehensive article on browser internals and request flow through HTTP protocol. A MUST-READ for any web developer.
+  - : A very comprehensive article on browser internals and request flow through HTTP protocol.

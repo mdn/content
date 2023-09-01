@@ -1,5 +1,6 @@
 ---
 title: "AudioDecoder: dequeue event"
+short-title: dequeue
 slug: Web/API/AudioDecoder/dequeue_event
 page-type: web-api-event
 status:

@@ -1,5 +1,6 @@
 ---
-title: TaskPriorityChangeEvent()
+title: "TaskPriorityChangeEvent: TaskPriorityChangeEvent() constructor"
+short-title: TaskPriorityChangeEvent()
 slug: Web/API/TaskPriorityChangeEvent/TaskPriorityChangeEvent
 page-type: web-api-constructor
 browser-compat: api.TaskPriorityChangeEvent.TaskPriorityChangeEvent

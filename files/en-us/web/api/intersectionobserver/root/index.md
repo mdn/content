@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver.root
+title: "IntersectionObserver: root property"
+short-title: root
 slug: Web/API/IntersectionObserver/root
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserver.root

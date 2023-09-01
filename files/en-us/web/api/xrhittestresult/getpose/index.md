@@ -1,5 +1,6 @@
 ---
-title: XRHitTestResult.getPose()
+title: "XRHitTestResult: getPose() method"
+short-title: getPose()
 slug: Web/API/XRHitTestResult/getPose
 page-type: web-api-instance-method
 status:

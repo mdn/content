@@ -1,5 +1,6 @@
 ---
-title: Document.hidden
+title: "Document: hidden property"
+short-title: hidden
 slug: Web/API/Document/hidden
 page-type: web-api-instance-property
 browser-compat: api.Document.hidden

@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.filter
+title: "CanvasRenderingContext2D: filter property"
+short-title: filter
 slug: Web/API/CanvasRenderingContext2D/filter
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.filter

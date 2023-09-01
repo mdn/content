@@ -27,7 +27,7 @@ There is an unterminated
 [string literal](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals) somewhere. String literals must be
 enclosed by single (`'`) or double (`"`) quotes. JavaScript makes
 no distinction between single-quoted strings and double-quoted strings.
-[Escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) work
+[Escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) work
 in strings created with either single or double quotes.
 To fix this error, check if:
 
@@ -41,7 +41,7 @@ To fix this error, check if:
 
 You can't split a string across multiple lines like this in JavaScript:
 
-```js example-bad
+```js-nolint example-bad
 const longString = "This is a very long string which needs
                     to wrap across multiple lines because
                     otherwise my code is unreadable.";

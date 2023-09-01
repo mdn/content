@@ -1,5 +1,6 @@
 ---
-title: USBDevice.reset()
+title: "USBDevice: reset() method"
+short-title: reset()
 slug: Web/API/USBDevice/reset
 page-type: web-api-instance-method
 status:

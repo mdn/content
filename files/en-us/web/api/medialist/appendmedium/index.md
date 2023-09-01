@@ -1,8 +1,9 @@
 ---
-title: MediaList.appendMedium()
+title: "MediaList: appendMedium() method"
+short-title: appendMedium()
 slug: Web/API/MediaList/appendMedium
 page-type: web-api-instance-method
-browser-compat: api.MediaList.appendMedium 
+browser-compat: api.MediaList.appendMedium
 ---
 
 {{APIRef("CSSOM")}}

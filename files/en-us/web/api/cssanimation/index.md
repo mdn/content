@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CSSAnimation
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 The **`CSSAnimation`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object.
 

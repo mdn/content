@@ -1,5 +1,6 @@
 ---
-title: Window.moveTo()
+title: "Window: moveTo() method"
+short-title: moveTo()
 slug: Web/API/Window/moveTo
 page-type: web-api-instance-method
 browser-compat: api.Window.moveTo

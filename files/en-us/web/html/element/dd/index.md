@@ -1,5 +1,5 @@
 ---
-title: '<dd>: The Description Details element'
+title: "<dd>: The Description Details element"
 slug: Web/HTML/Element/dd
 page-type: html-element
 browser-compat: html.elements.dd
@@ -15,7 +15,7 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}} {{Deprecated_Inline}}
+- `nowrap` {{Non-standard_inline}} {{Deprecated_Inline}}
   - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
 
 ## Examples

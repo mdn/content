@@ -79,7 +79,6 @@ Browsers must serialize the properties `name` and `message`, and are expected to
 - [HTML Specification: Safe passing of structured data](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
 - [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects)
 - {{domxref("structuredClone()")}}
-- {{domxref("window.history")}}
 - {{domxref("window.postMessage()")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)

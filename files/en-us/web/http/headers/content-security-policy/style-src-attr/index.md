@@ -1,18 +1,7 @@
 ---
 title: "CSP: style-src-attr"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Style
-  - source
-  - style-src
-  - style-src-attr
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src-attr
 ---
 

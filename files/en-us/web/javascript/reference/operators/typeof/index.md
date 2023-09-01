@@ -131,7 +131,7 @@ typeof func; // "function"
 
 ### Need for parentheses in syntax
 
-The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
+The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
 
 ```js
 // Parentheses can be used for determining the data type of expressions.
@@ -149,7 +149,7 @@ typeof (someData + " Wisen"); // "string"
 typeof undeclaredVariable; // "undefined"
 ```
 
-However, using `typeof` on lexical declarations ({{JSxRef("Statements/let", "let")}} {{JSxRef("Statements/const", "const")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the line of declaration will throw a {{JSxRef("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
+However, using `typeof` on lexical declarations ({{JSxRef("Statements/let", "let")}} {{JSxRef("Statements/const", "const")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the place of declaration will throw a {{JSxRef("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError

@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.WeakMap.get
 
 {{JSRef}}
 
-The **`get()`** method returns a specified element from a
-`WeakMap` object.
+The **`get()`** method of {{jsxref("WeakMap")}} instances returns a specified element from this `WeakMap`.
 
 {{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
 
@@ -21,12 +20,13 @@ get(key)
 ### Parameters
 
 - `key`
-  - : Required. The key of the element to return from the `WeakMap` object.
+  - : The key of the element to return from the `WeakMap` object.
 
 ### Return value
 
 The element associated with the specified key in the `WeakMap` object. If
-the key can't be found, {{jsxref("undefined")}} is returned.
+the key can't be found, {{jsxref("undefined")}} is returned. Always returns
+`undefined` if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 

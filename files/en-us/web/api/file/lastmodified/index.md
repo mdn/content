@@ -1,5 +1,6 @@
 ---
-title: File.lastModified
+title: "File: lastModified property"
+short-title: lastModified
 slug: Web/API/File/lastModified
 page-type: web-api-instance-property
 browser-compat: api.File.lastModified
@@ -79,7 +80,7 @@ console.log(fileWithoutDate.lastModified); // returns current time
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
 `someFile.lastModified` might get rounded depending on browser settings.
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.

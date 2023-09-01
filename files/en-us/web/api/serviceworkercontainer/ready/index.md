@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerContainer.ready
+title: "ServiceWorkerContainer: ready property"
+short-title: ready
 slug: Web/API/ServiceWorkerContainer/ready
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerContainer.ready
@@ -24,16 +25,15 @@ A {{jsxref("Promise")}} that will never reject, and which may eventually resolve
 ## Examples
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.ready
-  .then((registration) => {
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.ready.then((registration) => {
     console.log(`A service worker is active: ${registration.active}`);
 
     // At this point, you can call methods that require an active
     // service worker, like registration.pushManager.subscribe()
   });
 } else {
-  console.error('Service workers are not supported.');
+  console.error("Service workers are not supported.");
 }
 ```
 

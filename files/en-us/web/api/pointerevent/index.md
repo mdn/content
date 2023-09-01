@@ -70,7 +70,7 @@ The `PointerEvent` interface has several event types. To determine which event f
 
 - {{domxref('Element/pointermove_event', 'pointermove')}}
   - : This event is fired when a pointer changes coordinates.
-- {{domxref('HTMLElement/pointerrawupdate_event', 'pointerrawupdate')}} {{Experimental_Inline}}
+- {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
   - : This event is fired when any of a pointer's properties change.
 - {{domxref('Element/pointerup_event', 'pointerup')}}
   - : This event is fired when a pointer is no longer _active_.
@@ -101,5 +101,4 @@ Examples of each property, event type, and global event handler are included in 
 
 - {{ domxref("Touch_events","Touch Events") }}
 - {{ domxref("GestureEvent") }}
-- {{ domxref("MSGestureEvent") }}
 - {{cssxref("touch-action")}}

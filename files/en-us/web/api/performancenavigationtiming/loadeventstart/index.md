@@ -1,5 +1,6 @@
 ---
-title: PerformanceNavigationTiming.loadEventStart
+title: "PerformanceNavigationTiming: loadEventStart property"
+short-title: loadEventStart
 slug: Web/API/PerformanceNavigationTiming/loadEventStart
 page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.loadEventStart

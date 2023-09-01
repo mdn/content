@@ -1,5 +1,6 @@
 ---
-title: HTMLMetaElement.scheme
+title: "HTMLMetaElement: scheme property"
+short-title: scheme
 slug: Web/API/HTMLMetaElement/scheme
 page-type: web-api-instance-property
 status:

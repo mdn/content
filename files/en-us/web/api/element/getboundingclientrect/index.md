@@ -1,5 +1,6 @@
 ---
-title: Element.getBoundingClientRect()
+title: "Element: getBoundingClientRect() method"
+short-title: getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
 page-type: web-api-instance-method
 browser-compat: api.Element.getBoundingClientRect

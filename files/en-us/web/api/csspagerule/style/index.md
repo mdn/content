@@ -1,5 +1,6 @@
 ---
-title: CSSPageRule.style
+title: "CSSPageRule: style property"
+short-title: style
 slug: Web/API/CSSPageRule/style
 page-type: web-api-instance-property
 browser-compat: api.CSSPageRule.style

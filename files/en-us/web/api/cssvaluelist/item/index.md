@@ -1,5 +1,6 @@
 ---
-title: CSSValueList.item()
+title: "CSSValueList: item() method"
+short-title: item()
 slug: Web/API/CSSValueList/item
 page-type: web-api-instance-method
 status:

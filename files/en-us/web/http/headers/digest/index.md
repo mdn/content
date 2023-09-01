@@ -1,14 +1,13 @@
 ---
 title: Digest
 slug: Web/HTTP/Headers/Digest
-tags:
-  - HTTP
-  - HTTP Header
-  - Digest
+page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.Digest
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 The **`Digest`** response HTTP header provides a {{Glossary("digest")}} of the _selected representation_ of the requested resource.
 

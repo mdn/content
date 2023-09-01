@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.matchAll()
+title: "BackgroundFetchRegistration: matchAll() method"
+short-title: matchAll()
 slug: Web/API/BackgroundFetchRegistration/matchAll
 page-type: web-api-instance-method
 status:

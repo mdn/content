@@ -1,6 +1,7 @@
 ---
 title: Firefox 24 for developers
 slug: Mozilla/Firefox/Releases/24
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -29,7 +30,7 @@ slug: Mozilla/Firefox/Releases/24
 - Support for the {{domxref("Comment.Comment", "Comment()")}} constructor has been added ([Firefox bug 869006](https://bugzil.la/869006)).
 - Support for the {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} constructor has been added ([Firefox bug 869002](https://bugzil.la/869002)).
 - The {{domxref("FocusEvent")}} interface has been implemented ([Firefox bug 855741](https://bugzil.la/855741)).
-- Support for the {{domxref("ChildNode.remove()")}} method has been added ([Firefox bug 856629](https://bugzil.la/856629)).
+- Support for the {{domxref("Element.remove", "ChildNode.remove()")}} method has been added ([Firefox bug 856629](https://bugzil.la/856629)).
 - The WebVTT interfaces related to the {{HTMLElement("track")}} element, {{domxref("HTMLTrackElement")}}, {{domxref("TextTrack")}}, {{domxref("TextTrackCue")}}, {{domxref("TextTrackList")}}, and {{domxref("TextTrackCueList")}} have been implemented behind the `media.webvtt.enabled` property, defaulting to `false` ([Firefox bug 833385](https://bugzil.la/833385)).
 - The {{domxref("Gamepad")}} interface, and {{domxref("Navigator.getGamepads")}} have been implemented behind the `dom.gamepad.enabled` property, defaulting to `false` ([Firefox bug 690935](https://bugzil.la/690935)).
 - On desktop Firefox only, `HTMLCanvasElement.getContext()` can now take the `webgl` value, in addition to `experimental-webgl` ([Firefox bug 870232](https://bugzil.la/870232)).
@@ -45,7 +46,7 @@ slug: Mozilla/Firefox/Releases/24
 ### MathML
 
 - The `dir` attribute for controlling directionality of formulas on e.g. {{MathMLElement("math")}} or {{MathMLElement("mrow")}} elements is now equivalent to using the {{cssxref("direction")}} CSS property.
-- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Element/mo#attr-stretchy).
+- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Element/mo#stretchy).
 - The "`updiagonalarrow`" value for the `notation` attribute on {{MathMLElement("menclose")}} elements has been added.
 
 ## Changes for add-on and Mozilla developers

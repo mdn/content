@@ -1,5 +1,6 @@
 ---
-title: MessageChannel.port2
+title: "MessageChannel: port2 property"
+short-title: port2
 slug: Web/API/MessageChannel/port2
 page-type: web-api-instance-property
 browser-compat: api.MessageChannel.port2
@@ -31,15 +32,15 @@ IFrame (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it
 
 ```js
 const channel = new MessageChannel();
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-const ifr = document.querySelector('iframe');
+const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;

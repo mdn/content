@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.createProjectionLayer()
+title: "XRWebGLBinding: createProjectionLayer() method"
+short-title: createProjectionLayer()
 slug: Web/API/XRWebGLBinding/createProjectionLayer
 page-type: web-api-instance-method
 status:
@@ -51,7 +52,7 @@ createProjectionLayer(options)
         - `gl.DEPTH24_STENCIL24`
           The default value is `gl.DEPTH_COMPONENT`.
     - `scaleFactor` {{optional_inline}}
-      - : A floating-point value which is used to scale the layer during compositing. A value of `1.0` represents the default pixel size for the frame buffer. (See also {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}}.) Unlike other layers, the `XRProjectionLayer` can't be created with an explicit pixel width and height, because the size is inferred by the hardware. (Projection layers fill the observer's entire view.)
+      - : A floating-point value which is used to scale the layer during compositing. A value of `1.0` represents the default pixel size for the frame buffer. (See also {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor_static", "XRWebGLLayer.getNativeFramebufferScaleFactor()")}}.) Unlike other layers, the `XRProjectionLayer` can't be created with an explicit pixel width and height, because the size is inferred by the hardware. (Projection layers fill the observer's entire view.)
 
 ### Return value
 
@@ -69,12 +70,12 @@ function onXRSessionStarted(xrSession) {
   const gl = glCanvas.getContext("webgl2", { xrCompatible: true });
   const xrGlBinding = new XRWebGLBinding(xrSession, gl);
   const projectionLayer = xrGlBinding.createProjectionLayer({
-    textureType: "texture-array"
+    textureType: "texture-array",
   });
   xrSession.updateRenderState({
-    layers: [projectionLayer]
+    layers: [projectionLayer],
   });
- }
+}
 ```
 
 ## Specifications

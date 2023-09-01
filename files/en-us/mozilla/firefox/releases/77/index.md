@@ -1,6 +1,7 @@
 ---
 title: Firefox 77 for developers
 slug: Mozilla/Firefox/Releases/77
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -62,12 +63,17 @@ This article provides information about the changes in Firefox 77 that will affe
 
 ### Manifest changes
 
-- The following permissions are now optional, they can be specified in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key and requested using the {{WebExtAPIRef("permissions")}} API: `browsingData` ([Firefox bug 1630417](https://bugzil.la/1630417)), `pkcs11` ([Firefox bug 1630418](https://bugzil.la/1630418)), `proxy` ([Firefox bug 1548011](https://bugzil.la/1548011)), and `sessions` ([Firefox bug 1630414](https://bugzil.la/1630414)).
+- The following permissions are now optional, they can be specified in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key and requested using the {{WebExtAPIRef("permissions")}} API:
+  - `browsingData` ([Firefox bug 1630417](https://bugzil.la/1630417))
+  - `devtools` ([Firefox bug 1606862](https://bugzil.la/1606862)) – by setting this permission, an extension can introduce developer tools panels in an update without the extension being disabled (in Chrome) or blocked from updating (in Firefox).
+  - `pkcs11` ([Firefox bug 1630418](https://bugzil.la/1630418))
+  - `proxy` ([Firefox bug 1548011](https://bugzil.la/1548011))
+  - `sessions` ([Firefox bug 1630414](https://bugzil.la/1630414)).
 
 ### Other
 
 - Use of the `unlimitedStorage` permission no longer results in a prompt during extension installation or update. See [Requesting the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) for more information. ([Firefox bug 1630413](https://bugzil.la/1630413))
-- Changes related to [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
+- Changes related to [`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
 
 ## Older versions
 

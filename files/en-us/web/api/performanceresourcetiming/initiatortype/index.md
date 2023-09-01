@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.initiatorType
+title: "PerformanceResourceTiming: initiatorType property"
+short-title: initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.initiatorType

@@ -1,5 +1,6 @@
 ---
-title: CSSKeyframesRule.findRule()
+title: "CSSKeyframesRule: findRule() method"
+short-title: findRule()
 slug: Web/API/CSSKeyframesRule/findRule
 page-type: web-api-instance-method
 browser-compat: api.CSSKeyframesRule.findRule

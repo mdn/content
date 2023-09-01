@@ -1,5 +1,6 @@
 ---
-title: StyleSheetList.length
+title: "StyleSheetList: length property"
+short-title: length
 slug: Web/API/StyleSheetList/length
 page-type: web-api-instance-property
 browser-compat: api.StyleSheetList.length

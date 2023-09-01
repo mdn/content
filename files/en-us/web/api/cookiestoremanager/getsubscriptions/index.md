@@ -1,5 +1,6 @@
 ---
-title: CookieStoreManager.getSubscriptions()
+title: "CookieStoreManager: getSubscriptions() method"
+short-title: getSubscriptions()
 slug: Web/API/CookieStoreManager/getSubscriptions
 page-type: web-api-instance-method
 status:

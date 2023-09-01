@@ -2,15 +2,6 @@
 title: sidebarAction.toggle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/toggle
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sidebarAction
-  - toggle
 browser-compat: webextensions.api.sidebarAction.toggle
 ---
 
@@ -48,7 +39,7 @@ Toggles the sidebar when the user selects an item from the context menu:
 browser.menus.create({
   id: "toggle-sidebar",
   title: "Toggle sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

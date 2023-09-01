@@ -1,5 +1,6 @@
 ---
-title: Animation.persist()
+title: "Animation: persist() method"
+short-title: persist()
 slug: Web/API/Animation/persist
 page-type: web-api-instance-method
 browser-compat: api.Animation.persist
@@ -7,7 +8,7 @@ browser-compat: api.Animation.persist
 
 {{APIRef("Web Animations")}}
 
-The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, when it would otherwise be removed due to the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
+The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, preventing it from being [automatically removed](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations) when it is replaced by another animation.
 
 ## Syntax
 
@@ -25,32 +26,111 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-In our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html), you can see the following code:
+### Using `persist()`
 
-```js
-const divElem = document.querySelector("div");
+In this example, we have three buttons:
 
-document.body.addEventListener("mousemove", (evt) => {
-  const anim = divElem.animate(
-    { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
-    { duration: 500, fill: "forwards" }
-  );
+- "Add persistent animation" and "Add transient animation" each add a new transform animation to the red square. The animations alternate direction: so the first is left to right, the second is right to left, and so on. "Add persistent animation" calls `persist()` on the animation it creates.
 
-  anim.commitStyles();
+- The third button, "Cancel an animation", cancels the most recently added animation.
 
-  //anim.persist()
+The example displays a list of all animations that have not been canceled, in the order they were added, along with each animation's `replaceState`.
 
-  anim.onremove = (event) => {
-    console.log("Animation removed");
-  };
+#### HTML
 
-  console.log(anim.replaceState);
-});
+```html
+<div id="animation-target"></div>
+<button id="start-persistent">Add persistent animation</button>
+<button id="start-transient">Add transient animation</button>
+<button id="cancel">Cancel an animation</button>
+<ol id="stack"></ol>
 ```
 
-Here we have a `<div>` element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the `<div>` element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.
+```html hidden
+<template id="list-item-template">
+  <li>
+    <span class="replaceState"></span>,
+    <span class="description"></span>
+  </li>
+</template>
+```
 
-You can see the [`replaceState`](/en-US/docs/Web/API/Animation/replaceState) of the animation being logged at the end of the handler. This will be `active` for each animation by default, or `persisted` if the `persist()` call is uncommented.
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: translate(100px);
+}
+```
+
+#### JavaScript
+
+```js
+const target = document.getElementById("animation-target");
+const persistentButton = document.getElementById("start-persistent");
+const transientButton = document.getElementById("start-transient");
+const cancelButton = document.getElementById("cancel");
+persistentButton.addEventListener("click", () => startAnimation(true));
+transientButton.addEventListener("click", () => startAnimation(false));
+cancelButton.addEventListener("click", cancelTop);
+const stack = [];
+
+let offset = -100;
+
+function startAnimation(persist) {
+  offset = -offset;
+  const animation = target.animate(
+    { transform: `translate(${100 + offset}px)` },
+    { duration: 500, fill: "forwards" },
+  );
+  stack.push(animation);
+  if (persist) {
+    animation.persist();
+  }
+  // Add the animation to the displayed stack (implementation not shown)
+  show(animation, offset);
+}
+
+function cancelTop() {
+  stack.pop()?.cancel();
+}
+```
+
+```js hidden
+const stackDisplay = document.getElementById("stack");
+const template =
+  document.getElementById("list-item-template").content.firstElementChild;
+const nodes = new Map();
+
+function show(animation, offset) {
+  const direction = offset < 0 ? "left" : "right";
+  const li = template.cloneNode(true);
+  const description = li.querySelector(".description");
+  const replaceState = li.querySelector(".replaceState");
+  description.textContent = direction;
+  replaceState.textContent = animation.replaceState;
+  nodes.set(animation, { li, description, replaceState });
+  stackDisplay.append(li);
+  animation.addEventListener("cancel", () => {
+    nodes.get(animation).li.remove();
+    nodes.delete(animation);
+  });
+  animation.addEventListener("remove", () => {
+    nodes.get(animation).replaceState.textContent = animation.replaceState;
+  });
+}
+```
+
+#### Result
+
+Note that adding a new transient animation will replace any previously added transient animation. Those animations will be automatically removed, and their `replaceState` will be `"removed"`. However, persistent animations will not be removed.
+
+Also note that removed animations don't affect the display; the position of the {{htmlelement("div")}} is determined by the most recent active or persisted animation.
+
+{{EmbedLiveSample("using_persist","",300)}}
 
 ## Specifications
 
@@ -64,3 +144,5 @@ You can see the [`replaceState`](/en-US/docs/Web/API/Animation/replaceState) of 
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
+- {{domxref("Animation.replaceState")}}
+- {{domxref("Animation.remove_event","remove")}} event

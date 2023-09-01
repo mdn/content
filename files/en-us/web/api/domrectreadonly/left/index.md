@@ -1,5 +1,6 @@
 ---
-title: DOMRectReadOnly.left
+title: "DOMRectReadOnly: left property"
+short-title: left
 slug: Web/API/DOMRectReadOnly/left
 page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.left

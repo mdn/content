@@ -1,13 +1,12 @@
 ---
-title: console.timeLog()
+title: "console: timeLog() method"
+short-title: timeLog()
 slug: Web/API/console/timeLog
 page-type: web-api-instance-method
 browser-compat: api.console.timeLog
 ---
 
-{{APIRef("Console API")}}
-
-{{AvailableInWorkers}}
+{{APIRef("Console API")}}{{AvailableInWorkers}}
 
 The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling {{domxref("console.time()")}}.
 
@@ -16,12 +15,16 @@ The **`console.timeLog()`** method logs the current value of a timer that was pr
 ```js-nolint
 timeLog()
 timeLog(label)
+timeLog(label, val1)
+timeLog(label, val1, /* …, */ valN)
 ```
 
 ### Parameters
 
 - `label` {{optional_inline}}
   - : The name of the timer to log to the console. If this is omitted the label "default" is used.
+- `valN` {{optional_inline}}
+  - : Additional values to be logged to the console after the timer output.
 
 ### Return value
 
@@ -58,8 +61,17 @@ console.timeLog();
 
 If there is no corresponding timer, `timeLog()` logs a warning like:
 
-```
+```plain
 Timer "timer name" doesn't exist.
+```
+
+You can log additional values to the console after the timer output:
+
+```js
+console.time();
+reticulateSplines();
+console.timeLog("default", "Hello", "world");
+// default: 780ms Hello world
 ```
 
 See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for more details and examples.
@@ -77,7 +89,7 @@ console.timeEnd("answer time");
 The output from the example above shows the time taken by the user to dismiss the first
 alert box, followed by the cumulative time it took for the user to dismiss both alerts:
 
-```
+```plain
 answer time: 2542ms debugger eval code:3:9
 answer time: 4161ms - timer ended
 ```

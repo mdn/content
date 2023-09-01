@@ -1,5 +1,6 @@
 ---
-title: CSSRule.parentStyleSheet
+title: "CSSRule: parentStyleSheet property"
+short-title: parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
 page-type: web-api-instance-property
 browser-compat: api.CSSRule.parentStyleSheet

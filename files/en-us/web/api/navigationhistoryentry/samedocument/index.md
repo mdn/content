@@ -1,5 +1,6 @@
 ---
-title: NavigationHistoryEntry.sameDocument
+title: "NavigationHistoryEntry: sameDocument property"
+short-title: sameDocument
 slug: Web/API/NavigationHistoryEntry/sameDocument
 page-type: web-api-instance-property
 status:

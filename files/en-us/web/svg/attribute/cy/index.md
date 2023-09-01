@@ -2,9 +2,6 @@
 title: cy
 slug: Web/SVG/Attribute/cy
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#CY
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCYAttribute

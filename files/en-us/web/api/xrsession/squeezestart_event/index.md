@@ -1,5 +1,6 @@
 ---
-title: 'XRSession: squeezestart event'
+title: "XRSession: squeezestart event"
+short-title: squeezestart
 slug: Web/API/XRSession/squeezestart_event
 page-type: web-api-event
 status:
@@ -18,9 +19,9 @@ Primary squeeze actions are actions which are meant to represent gripping or squ
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeezestart', (event) => { })
+addEventListener("squeezestart", (event) => {});
 
-onsqueezestart = (event) => { }
+onsqueezestart = (event) => {};
 ```
 
 ## Event type
@@ -84,7 +85,7 @@ function onSqueezeEvent(event) {
     return;
   }
 
-  switch(event.type) {
+  switch (event.type) {
     case "squeezestart":
       targetObj = myBeginTracking(targetRayPose.matrix);
       break;

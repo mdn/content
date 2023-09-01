@@ -2,16 +2,6 @@
 title: history.onVisitRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onVisitRemoved
 browser-compat: webextensions.api.history.onVisitRemoved
 ---
 
@@ -33,7 +23,7 @@ browser.history.onVisitRemoved.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -44,9 +34,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following argument:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `removed`
 

@@ -1,5 +1,6 @@
 ---
-title: FileSystem.root
+title: "FileSystem: root property"
+short-title: root
 slug: Web/API/FileSystem/root
 page-type: web-api-instance-property
 browser-compat: api.FileSystem.root

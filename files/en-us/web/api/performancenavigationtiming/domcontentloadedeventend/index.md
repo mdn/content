@@ -1,5 +1,6 @@
 ---
-title: PerformanceNavigationTiming.domContentLoadedEventEnd
+title: "PerformanceNavigationTiming: domContentLoadedEventEnd property"
+short-title: domContentLoadedEventEnd
 slug: Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd
 page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.domContentLoadedEventEnd
@@ -29,7 +30,7 @@ const observer = new PerformanceObserver((list) => {
     const domContentLoadedTime =
       entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
     console.log(
-      `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`
+      `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`,
     );
   });
 });
@@ -45,7 +46,7 @@ entries.forEach((entry) => {
   const domContentLoadedTime =
     entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
   console.log(
-    `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`
+    `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`,
   );
 });
 ```

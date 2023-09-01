@@ -1,5 +1,6 @@
 ---
-title: BiquadFilterNode.Q
+title: "BiquadFilterNode: Q property"
+short-title: Q
 slug: Web/API/BiquadFilterNode/Q
 page-type: web-api-instance-property
 browser-compat: api.BiquadFilterNode.Q

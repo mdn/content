@@ -1,5 +1,6 @@
 ---
-title: CompressionStream.writable
+title: "CompressionStream: writable property"
+short-title: writable
 slug: Web/API/CompressionStream/writable
 page-type: web-api-instance-property
 browser-compat: api.CompressionStream.writable
@@ -19,7 +20,7 @@ The following example returns a {{domxref("WritableStream")}} from a `Compressio
 
 ```js
 let stream = new CompressionStream("gzip");
-console.log(stream.writeable); //a WritableStream
+console.log(stream.writable); // A WritableStream
 ```
 
 ## Specifications

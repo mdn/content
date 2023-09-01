@@ -1,6 +1,7 @@
 ---
 title: Digital video concepts
 slug: Web/Media/Formats/Video_concepts
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

@@ -1,5 +1,6 @@
 ---
-title: Window.open()
+title: "Window: open() method"
+short-title: open()
 slug: Web/API/Window/open
 page-type: web-api-instance-method
 browser-compat: api.Window.open
@@ -28,7 +29,7 @@ open(url, target, windowFeatures)
 
   - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
 
-    This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target) elements.
+    This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target) elements.
 
 - `windowFeatures` {{optional_inline}}
 
@@ -95,7 +96,7 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 
 Alternatively, the following example demonstrates how to open a popup, using the `popup` feature.
 
-> **Warning:** Modern browsers have built-in popup blockers, preventing the opening of such popups. Users must have changed their browser settings to enable popups or enable them on a site-per-site basis from the browser's user interface (a notification may appear when the site attempts to open a popup for the first time, giving the option to enable or discard them).
+> **Warning:** Modern browsers have built-in popup blockers, limiting the opening of such popups to being in direct response to user input. Popups opened outside the context of a click may cause a notification to appear, giving the option to enable or discard them.
 
 ```js
 window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
@@ -108,7 +109,7 @@ const windowFeatures = "left=100,top=100,width=320,height=320";
 const handle = window.open(
   "https://www.mozilla.org/",
   "mozillaWindow",
-  windowFeatures
+  windowFeatures,
 );
 if (!handle) {
   // The window wasn't allowed to open
@@ -153,13 +154,13 @@ link.addEventListener(
     openRequestedTab(link.href);
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 
 The above code solves a few usability problems related to links opening popups. The purpose of the `event.preventDefault()` in the code is to cancel the default action of the link: if the event listener for `click` is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the event listener for `click` is ignored, and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and name it `"WikipediaWindowName"`.
 
-> **Note:** For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target).
+> **Note:** For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target).
 
 ### Reuse existing windows and avoid `target="_blank"`
 
@@ -209,7 +210,7 @@ function openRequestedSingleTab(url) {
 }
 
 const links = document.querySelectorAll(
-  "a[target='SingleSecondaryWindowName']"
+  "a[target='SingleSecondaryWindowName']",
 );
 for (const link of links) {
   link.addEventListener(
@@ -218,7 +219,7 @@ for (const link of links) {
       openRequestedSingleTab(link.href);
       event.preventDefault();
     },
-    false
+    false,
   );
 }
 ```
@@ -297,7 +298,7 @@ When extreme changes in context are explicitly identified before they occur, the
 
 - `target` attribute documentation:
   - [`<a>`](/en-US/docs/Web/HTML/Element/a#target)
-  - [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target)
+  - [`<form>`](/en-US/docs/Web/HTML/Element/form#target)
 - [`window.close()`](/en-US/docs/Web/API/Window/close)
 - [`window.closed`](/en-US/docs/Web/API/Window/closed)
 - [`window.focus()`](/en-US/docs/Web/API/Window/focus)

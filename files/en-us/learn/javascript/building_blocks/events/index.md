@@ -1,6 +1,7 @@
 ---
 title: Introduction to events
 slug: Learn/JavaScript/Building_blocks/Events
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
@@ -157,17 +158,16 @@ btn.removeEventListener("click", changeBackground);
 Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the `AbortSignal`.
 For example, to add an event handler that we can remove with an `AbortSignal`:
 
-```js
+```js-nolint
 const controller = new AbortController();
 
-btn.addEventListener(
-  "click",
+btn.addEventListener("click",
   () => {
     const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
     document.body.style.backgroundColor = rndCol;
   },
-  { signal: controller.signal }
-); // pass an AbortSignal to this handler
+  { signal: controller.signal } // pass an AbortSignal to this handler
+);
 ```
 
 Then the event handler created by the code above can be removed like this:
@@ -344,10 +344,9 @@ Some event objects add extra properties that are relevant to that particular typ
 ```js
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
-textBox.addEventListener(
-  "keydown",
-  (event) => (output.textContent = `You pressed "${event.key}".`)
-);
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}".`;
+});
 ```
 
 ```css hidden
@@ -450,7 +449,7 @@ container.addEventListener("click", handleClick);
 
 You'll see that the parent fires a click event when the user clicks the button:
 
-```
+```plain
 You clicked on a DIV element
 ```
 
@@ -489,7 +488,7 @@ button.addEventListener("click", handleClick);
 
 You'll see that all three elements fire a click event when the user clicks the button:
 
-```
+```plain
 You clicked on a BUTTON element
 You clicked on a DIV element
 You clicked on a BODY element
@@ -680,7 +679,7 @@ button.addEventListener("click", handleClick);
 
 In this case, the order of messages is reversed: the `<body>` event handler fires first, followed by the `<div>` event handler, followed by the `<button>` event handler:
 
-```
+```plain
 You clicked on a BODY element
 You clicked on a DIV element
 You clicked on a BUTTON element
@@ -743,10 +742,9 @@ function bgChange() {
 
 const container = document.querySelector("#container");
 
-container.addEventListener(
-  "click",
-  (event) => (event.target.style.backgroundColor = bgChange())
-);
+container.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = bgChange();
+});
 ```
 
 The output is as follows (try clicking around on it):

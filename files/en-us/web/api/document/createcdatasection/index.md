@@ -1,5 +1,6 @@
 ---
-title: Document.createCDATASection()
+title: "Document: createCDATASection() method"
+short-title: createCDATASection()
 slug: Web/API/Document/createCDATASection
 page-type: web-api-instance-method
 browser-compat: api.Document.createCDATASection

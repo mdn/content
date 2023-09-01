@@ -27,11 +27,18 @@ cursor: zoom-out;
 cursor: url(hand.cur), pointer;
 
 /* URL and coordinates, with mandatory keyword fallback */
-cursor: url(cursor_1.png) 4 12, auto;
-cursor: url(cursor_2.png) 2 2, pointer;
+cursor:
+  url(cursor_1.png) 4 12,
+  auto;
+cursor:
+  url(cursor_2.png) 2 2,
+  pointer;
 
 /* URLs and fallback URLs (some with coordinates), with mandatory keyword fallback */
-cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), /* … ,*/ url(cursor_n.cur) 5 5,
+cursor:
+  url(cursor_1.svg) 4 5,
+  url(cursor_2.svg),
+  /* …, */ url(cursor_n.cur) 5 5,
   progress;
 
 /* Global values */
@@ -353,6 +360,10 @@ Desktop browsers also broadly support the `.cur` file format.
 
 The specification further indicates that user agents _should_ also support SVG v1.1 files in secure animated mode that contain a natural size, along with any other animated images file formats they support for images in other properties.
 User agents _may_ support both static and animated SVG images that do not contain a natural size.
+
+### iPadOS
+
+iPadOS supports pointer devices like trackpads and mouses. By default, the iPad cursor is displayed as a circle, and the only supported value that will change an appearance of the pointer is `text`.
 
 ### Other notes
 

@@ -1,5 +1,6 @@
 ---
-title: Document.createNodeIterator()
+title: "Document: createNodeIterator() method"
+short-title: createNodeIterator()
 slug: Web/API/Document/createNodeIterator
 page-type: web-api-instance-method
 browser-compat: api.Document.createNodeIterator
@@ -63,7 +64,7 @@ const nodeIterator = document.createNodeIterator(
   (node) =>
     node.nodeName.toLowerCase() === "p"
       ? NodeFilter.FILTER_ACCEPT
-      : NodeFilter.FILTER_REJECT
+      : NodeFilter.FILTER_REJECT,
 );
 const pars = [];
 let currentNode;
@@ -85,7 +86,7 @@ const nodeIterator = document.createNodeIterator(
         ? NodeFilter.FILTER_ACCEPT
         : NodeFilter.FILTER_REJECT;
     },
-  }
+  },
 );
 const pars = [];
 let currentNode;

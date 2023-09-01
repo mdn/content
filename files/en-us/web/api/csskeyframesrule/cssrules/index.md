@@ -1,5 +1,6 @@
 ---
-title: CSSKeyframesRule.cssRules
+title: "CSSKeyframesRule: cssRules property"
+short-title: cssRules
 slug: Web/API/CSSKeyframesRule/cssRules
 page-type: web-api-instance-property
 browser-compat: api.CSSKeyframesRule.cssRules

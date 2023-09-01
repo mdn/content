@@ -1,5 +1,6 @@
 ---
-title: Document.childElementCount
+title: "Document: childElementCount property"
+short-title: childElementCount
 slug: Web/API/Document/childElementCount
 page-type: web-api-instance-property
 browser-compat: api.Document.childElementCount

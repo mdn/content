@@ -1,6 +1,7 @@
 ---
 title: Mobile accessibility checklist
 slug: Web/Accessibility/Mobile_accessibility_checklist
+page-type: guide
 ---
 
 <section id="Quick_links">

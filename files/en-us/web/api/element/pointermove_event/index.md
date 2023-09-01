@@ -1,8 +1,9 @@
 ---
 title: "Element: pointermove event"
+short-title: pointermove
 slug: Web/API/Element/pointermove_event
-browser-compat: api.Element.pointermove_event
 page-type: web-api-event
+browser-compat: api.Element.pointermove_event
 ---
 
 {{APIRef}}

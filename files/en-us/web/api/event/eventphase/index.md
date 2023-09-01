@@ -1,5 +1,6 @@
 ---
-title: Event.eventPhase
+title: "Event: eventPhase property"
+short-title: eventPhase
 slug: Web/API/Event/eventPhase
 page-type: web-api-instance-property
 browser-compat: api.Event.eventPhase
@@ -23,7 +24,7 @@ flow. Possible values are:
     This process starts with the {{domxref("Window")}}, then {{domxref("Document")}},
     then the {{domxref("HTMLHtmlElement")}}, and so on through the elements
     until the target's parent is reached.
-    {{domxref("EventListener", "Event listeners", "", 1)}}
+    {{domxref("EventTarget/addEventListener", "Event listeners", "", 1)}}
     registered for capture mode when {{domxref("EventTarget.addEventListener()")}} was
     called are triggered during this phase.
 - `Event.AT_TARGET (2)`
@@ -37,7 +38,7 @@ flow. Possible values are:
   - : The event is propagating back up through the target's ancestors in reverse order,
     starting with the parent, and eventually reaching the containing {{domxref("Window")}}.
     This is known as _bubbling_, and occurs only if {{domxref("Event.bubbles")}} is
-    `true`. {{domxref("EventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.
+    `true`. {{domxref("EventTarget/addEventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.
 
 ## Example
 

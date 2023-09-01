@@ -1,5 +1,6 @@
 ---
-title: OfflineAudioContext.length
+title: "OfflineAudioContext: length property"
+short-title: length
 slug: Web/API/OfflineAudioContext/length
 page-type: web-api-instance-property
 browser-compat: api.OfflineAudioContext.length

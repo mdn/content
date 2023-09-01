@@ -1,5 +1,6 @@
 ---
-title: IDBVersionChangeEvent.oldVersion
+title: "IDBVersionChangeEvent: oldVersion property"
+short-title: oldVersion
 slug: Web/API/IDBVersionChangeEvent/oldVersion
 page-type: web-api-instance-property
 browser-compat: api.IDBVersionChangeEvent.oldVersion

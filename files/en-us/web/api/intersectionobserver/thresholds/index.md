@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver.thresholds
+title: "IntersectionObserver: thresholds property"
+short-title: thresholds
 slug: Web/API/IntersectionObserver/thresholds
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserver.thresholds

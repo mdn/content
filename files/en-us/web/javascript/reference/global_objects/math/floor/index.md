@@ -65,7 +65,7 @@ function decimalAdjust(type, value, exp) {
   type = String(type);
   if (!["round", "floor", "ceil"].includes(type)) {
     throw new TypeError(
-      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'."
+      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'.",
     );
   }
   exp = Number(exp);

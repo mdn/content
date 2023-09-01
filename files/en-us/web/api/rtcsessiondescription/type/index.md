@@ -1,5 +1,6 @@
 ---
-title: RTCSessionDescription.type
+title: "RTCSessionDescription: type property"
+short-title: type
 slug: Web/API/RTCSessionDescription/type
 page-type: web-api-instance-property
 browser-compat: api.RTCSessionDescription.type

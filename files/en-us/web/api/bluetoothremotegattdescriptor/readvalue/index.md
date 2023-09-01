@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTDescriptor.readValue()
+title: "BluetoothRemoteGATTDescriptor: readValue() method"
+short-title: readValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/readValue
 page-type: web-api-instance-method
 status:

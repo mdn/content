@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest.shippingOption
+title: "PaymentRequest: shippingOption property"
+short-title: shippingOption
 slug: Web/API/PaymentRequest/shippingOption
 page-type: web-api-instance-property
 status:
@@ -41,7 +42,7 @@ request.onshippingaddresschange = (ev) => {
 // Sync update to the total
 request.onshippingoptionchange = (ev) => {
   const shippingOption = shippingOptions.find(
-    (option) => option.id === request.id
+    (option) => option.id === request.id,
   );
   const newTotal = {
     currency: "USD",

@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.secureConnectionStart
+title: "PerformanceTiming: secureConnectionStart property"
+short-title: secureConnectionStart
 slug: Web/API/PerformanceTiming/secureConnectionStart
 page-type: web-api-instance-property
 status:

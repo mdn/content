@@ -14,9 +14,11 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 ```css
 @font-face {
   font-family: "Trickster";
-  src: local("Trickster"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
-      format("opentype"), url("trickster-outline.woff") format("woff");
+  src:
+    local("Trickster"),
+    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+    url("trickster-outline.otf") format("opentype"),
+    url("trickster-outline.woff") format("woff");
 }
 ```
 
@@ -40,7 +42,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
     > **Note:** The font-variant descriptor was removed from the specification in 2018. The {{cssxref("font-variant")}} value property is supported, but there is no descriptor equivalent.
 
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : Allows control over advanced typographic features in OpenType fonts.
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Allows low-level control over OpenType or TrueType font variations, by specifying the four letter axis names of the features to vary, along with their variation values.
@@ -104,7 +106,7 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 This example specifies a downloadable font to use, applying it to the entire body of the document:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

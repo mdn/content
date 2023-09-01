@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.isSampler()
+title: "WebGL2RenderingContext: isSampler() method"
+short-title: isSampler()
 slug: Web/API/WebGL2RenderingContext/isSampler
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.isSampler

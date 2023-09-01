@@ -1,6 +1,7 @@
 ---
 title: Normal Flow
 slug: Learn/CSS/CSS_layout/Normal_Flow
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -39,13 +40,15 @@ Before digging deeper into different layout methods, it's worth revisiting some 
 
 The process begins as the boxes of individual elements are laid out in such a way that any padding, border, or margin they happen to have is added to their content. This is what we call the **box model**.
 
-By default, a [block level element](/en-US/docs/Web/HTML/Block-level_elements)'s content fills the available inline space of the parent element containing it and the element grows along the block dimension to accommodate its content. The size of [inline elements](/en-US/docs/Web/HTML/Inline_elements) is just the size of their content. You can't set width or height on inline elements — they just sit inside the content of block level elements — except for images. Unlike other inline elements, images can be resized without changing their `display` property. If you want to control the size of an inline element in this manner, you need to set it to behave like a block level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
+By default, a [block-level element](/en-US/docs/Glossary/Block-level_content)'s content fills the available inline space of the parent element containing it, growing along the block dimension to accommodate its content. The size of [inline-level elements](/en-US/docs/Glossary/Inline-level_content) is just the size of their content. You can set {{cssxref("width")}} or {{cssxref("height")}} on some elements that have a default {{cssxref("display")}} property value of `inline`, like {{HTMLElement("img")}}, but `display` value will still remain `inline`.
+
+If you want to control the `display` property of an inline-level element in this manner, use CSS to set it to behave like a block-level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
 
 That explains how elements are structured individually, but how about the way they're structured when they interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the _block flow direction_, which is based on the parent's [writing mode](/en-US/docs/Web/CSS/writing-mode) (_initial_: horizontal-tb). Each element will appear on a new line below the last one, with each one separated by whatever margin that's been specified. In English, for example, (or any other horizontal, top to bottom writing mode) block-level elements are laid out vertically.
 
 Inline elements behave differently. They don't appear on new lines; instead, they all sit on the same line along with any adjacent (or wrapped) text content as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing content will move down to a new line.
 
-If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 Collapsing margins is only relevant in the **vertical direction**.
 
 Let's look at a simple example that explains all of this:

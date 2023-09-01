@@ -1,5 +1,6 @@
 ---
-title: Element.scrollWidth
+title: "Element: scrollWidth property"
+short-title: scrollWidth
 slug: Web/API/Element/scrollWidth
 page-type: web-api-instance-property
 browser-compat: api.Element.scrollWidth
@@ -30,7 +31,7 @@ A number.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

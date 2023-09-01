@@ -1,5 +1,6 @@
 ---
-title: Event.composedPath()
+title: "Event: composedPath() method"
+short-title: composedPath()
 slug: Web/API/Event/composedPath
 page-type: web-api-instance-method
 browser-compat: api.Event.composedPath
@@ -49,7 +50,7 @@ customElements.define(
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 
 customElements.define(
@@ -64,7 +65,7 @@ customElements.define(
       const shadowRoot = this.attachShadow({ mode: "closed" });
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 ```
 

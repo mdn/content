@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.payerEmail
+title: "PaymentResponse: payerEmail property"
+short-title: payerEmail
 slug: Web/API/PaymentResponse/payerEmail
 page-type: web-api-instance-property
 status:

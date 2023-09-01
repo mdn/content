@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackGenerator.writable
+title: "MediaStreamTrackGenerator: writable property"
+short-title: writable
 slug: Web/API/MediaStreamTrackGenerator/writable
 page-type: web-api-instance-property
 status:
@@ -22,11 +23,13 @@ In the following example video frames are transformed then written to the {{domx
 
 ```js
 const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 /* */
 
-trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
+trackProcessor.readable
+  .pipeThrough(transformer)
+  .pipeTo(trackGenerator.writable);
 ```
 
 ## Specifications

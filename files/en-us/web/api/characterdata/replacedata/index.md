@@ -1,5 +1,6 @@
 ---
-title: CharacterData.replaceData()
+title: "CharacterData: replaceData() method"
+short-title: replaceData()
 slug: Web/API/CharacterData/replaceData
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.replaceData

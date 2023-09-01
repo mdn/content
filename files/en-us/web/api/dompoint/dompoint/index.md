@@ -1,5 +1,6 @@
 ---
-title: DOMPoint()
+title: "DOMPoint: DOMPoint() constructor"
+short-title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
 page-type: web-api-constructor
 browser-compat: api.DOMPoint.DOMPoint
@@ -12,7 +13,7 @@ creates and returns a new {{domxref("DOMPoint")}} object, given the values for s
 all of its properties.
 
 You can also create a `DOMPoint` by calling the
-{{domxref("DOMPoint.fromPoint()")}} static function. That function accepts any object with the required parameters, including a `DOMPoint` or
+{{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} static function. That function accepts any object with the required parameters, including a `DOMPoint` or
 {{domxref("DOMPointReadOnly")}}.
 
 ## Syntax

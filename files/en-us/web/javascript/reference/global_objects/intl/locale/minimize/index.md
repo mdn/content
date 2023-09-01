@@ -7,19 +7,21 @@ browser-compat: javascript.builtins.Intl.Locale.minimize
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.minimize()`** method attempts to
-remove information about the locale that would be added by calling
+The **`minimize()`** method of {{jsxref("Intl.Locale")}} instances attempts to
+remove information about this locale that would be added by calling
 {{jsxref("Intl/Locale/maximize", "maximize()")}}.
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
 ```js-nolint
 minimize()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -47,11 +49,11 @@ in the locale identifier are called extension subtags and are not affected by th
 
 ```js
 const myLocale = new Intl.Locale("fr-Latn-FR", {
-  hourCycle: "h24",
+  hourCycle: "h12",
   calendar: "gregory",
 });
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
-console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
+console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h12"
 
 const myLocMinimized = myLocale.minimize();
 
@@ -59,7 +61,7 @@ const myLocMinimized = myLocale.minimize();
 // and is most likely to be spoken in France.
 console.log(myLocMinimized.baseName);
 
-// Prints "fr-u-ca-gregory-hc-h24".
+// Prints "fr-u-ca-gregory-hc-h12".
 // Note that the extension tags (after "-u") remain unchanged.
 console.log(myLocMinimized.toString());
 ```

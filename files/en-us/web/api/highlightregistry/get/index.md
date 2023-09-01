@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.get()
+title: "HighlightRegistry: get() method"
+short-title: get()
 slug: Web/API/HighlightRegistry/get
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: XRInputSource.hand
+title: "XRInputSource: hand property"
+short-title: hand
 slug: Web/API/XRInputSource/hand
 page-type: web-api-instance-property
 browser-compat: api.XRInputSource.hand

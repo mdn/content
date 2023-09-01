@@ -1,5 +1,6 @@
 ---
-title: LaunchParams.targetURL
+title: "LaunchParams: targetURL property"
+short-title: targetURL
 slug: Web/API/LaunchParams/targetURL
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.LaunchParams.targetURL
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef("Launch Handler API")}}{{SeeCompatTable}}
 
 The **`targetURL`** read-only property of the {{domxref("LaunchParams")}} interface returns the target URL of the associated web app launch.
 
@@ -18,13 +19,13 @@ A string.
 ## Examples
 
 ```js
-if ('launchQueue' in window) {
-  window.launchQueue.setConsumer(launchParams => {
+if ("launchQueue" in window) {
+  window.launchQueue.setConsumer((launchParams) => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;
 
       // Assuming a music player app that gets a track passed to it to be played
-      const track = params.get('track');
+      const track = params.get("track");
       if (track) {
         audio.src = track;
         title.textContent = new URL(track).pathname.substr(1);

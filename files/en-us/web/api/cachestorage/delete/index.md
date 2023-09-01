@@ -1,5 +1,6 @@
 ---
-title: CacheStorage.delete()
+title: "CacheStorage: delete() method"
+short-title: delete()
 slug: Web/API/CacheStorage/delete
 page-type: web-api-instance-method
 browser-compat: api.CacheStorage.delete
@@ -49,9 +50,9 @@ this.addEventListener("activate", (event) => {
           if (!cachesToKeep.includes(key)) {
             return caches.delete(key);
           }
-        })
-      )
-    )
+        }),
+      ),
+    ),
   );
 });
 ```

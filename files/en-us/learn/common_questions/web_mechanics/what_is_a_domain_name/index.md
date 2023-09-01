@@ -1,6 +1,7 @@
 ---
 title: What is a Domain Name?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -33,7 +34,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 
 Domain names are a key part of the Internet infrastructure. They provide a human-readable address for any web server available on the Internet.
 
-Any Internet-connected computer can be reached through a public {{Glossary("IP Address")}}, either an IPv4 address (e.g. `173.194.121.32`) or an IPv6 address (e.g., `2027:0da8:8b73:0000:0000:8a2e:0370:1337`).
+Any Internet-connected computer can be reached through a public {{Glossary("IP Address")}}, either an IPv4 address (e.g. `192.0.2.172`) or an IPv6 address (e.g., `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
 
 Computers can handle such addresses easily, but people have a hard time finding out who is running the server or what service the website offers. IP addresses are hard to remember and might change over time.
 
@@ -63,7 +64,7 @@ Each of those parts provides specific information about the whole domain name.
 
 - Label (or component)
 
-  - : The labels are what follow the TLD. A label is a case-insensitive character sequence anywhere from one to sixty-three characters in length, containing only the letters A through Z, digits 0 through 9, and the - character (which may not be the first or last character in the label). `a`, `97`, and `hello-strange-person-16-how-are-you` are all examples of valid labels.
+  - : The labels are what follow the TLD. A label is a case-insensitive character sequence anywhere from one to sixty-three characters in length, containing only the letters `A` through `Z`, digits `0` through `9`, and the '-' character (which may not be the first or last character in the label). `a`, `97`, and `hello-strange-person-16-how-are-you` are all examples of valid labels.
 
     The label located right before the TLD is also called a _Secondary Level Domain_ (SLD).
 
@@ -89,7 +90,12 @@ To find out whether a given domain name is available,
 - Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
 
   ```bash
-  $ whois mozilla.org
+  whois mozilla.org
+  ```
+
+  This will output the following:
+
+  ```plain
   Domain Name:MOZILLA.ORG
   Domain ID: D1409563-LROR
   Creation Date: 1998-01-24T05:00:00Z
@@ -118,11 +124,16 @@ As you can see, I can't register `mozilla.org` because the Mozilla Foundation ha
 On the other hand, let's see if I could register `afunkydomainname.org`:
 
 ```bash
-$ whois afunkydomainname.org
+whois afunkydomainname.org
+```
+
+This will output the following (at the time of writing):
+
+```plain
 NOT FOUND
 ```
 
-As you can see, the domain does not exist in the `whois` database (at the time of writing), so we could ask to register it. Good to know!
+As you can see, the domain does not exist in the `whois` database, so we could ask to register it. Good to know!
 
 #### Getting a domain name
 

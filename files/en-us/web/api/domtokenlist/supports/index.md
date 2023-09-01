@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.supports()
+title: "DOMTokenList: supports() method"
+short-title: supports()
 slug: Web/API/DOMTokenList/supports
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.supports

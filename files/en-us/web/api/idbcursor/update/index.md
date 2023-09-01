@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.update()
+title: "IDBCursor: update() method"
+short-title: update()
 slug: Web/API/IDBCursor/update
 page-type: web-api-instance-method
 browser-compat: api.IDBCursor.update

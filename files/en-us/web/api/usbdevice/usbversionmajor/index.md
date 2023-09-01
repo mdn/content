@@ -1,5 +1,6 @@
 ---
-title: USBDevice.usbVersionMajor
+title: "USBDevice: usbVersionMajor property"
+short-title: usbVersionMajor
 slug: Web/API/USBDevice/usbVersionMajor
 page-type: web-api-instance-property
 status:

@@ -76,4 +76,4 @@ When the document _is_ in fullscreen mode, the following CSS applies instead, se
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute

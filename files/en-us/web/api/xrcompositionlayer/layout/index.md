@@ -1,5 +1,6 @@
 ---
-title: XRCompositionLayer.layout
+title: "XRCompositionLayer: layout property"
+short-title: layout
 slug: Web/API/XRCompositionLayer/layout
 page-type: web-api-instance-property
 status:
@@ -41,9 +42,9 @@ To specify a layer's layout, use a layer creation method (like {{domxref("XRWebG
 
 ```js
 const layer = xrGlBinding.createQuadLayer({
-   pixelWidth: 1024,
-   pixelHeight: 768,
-   layout: "stereo"
+  pixelWidth: 1024,
+  pixelHeight: 768,
+  layout: "stereo",
 });
 
 layer.layout; // "stereo"

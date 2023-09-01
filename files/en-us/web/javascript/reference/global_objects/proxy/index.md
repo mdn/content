@@ -145,7 +145,7 @@ Most of the internal methods are straightforward in what they do. The only two t
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+- {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : Creates a new `Proxy` object.
 
 > **Note:** There's no `Proxy.prototype` property, so `Proxy` instances do not have any special properties or methods.
@@ -252,7 +252,7 @@ const proxy = new Proxy(aSecret, {
 console.log(proxy.x());
 ```
 
-Some native JavaScript objects have properties called _[internal slots](https://tc39.es/ecma262/#sec-object-internal-methods-and-internal-slots)_, which are not accessible from JavaScript code. For example, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects have an internal slot called `[[MapData]]`, which stores the key-value pairs of the map. As such, you cannot trivially create a forwarding proxy for a map:
+Some native JavaScript objects have properties called _[internal slots](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-object-internal-methods-and-internal-slots)_, which are not accessible from JavaScript code. For example, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects have an internal slot called `[[MapData]]`, which stores the key-value pairs of the map. As such, you cannot trivially create a forwarding proxy for a map:
 
 ```js
 const proxy = new Proxy(new Map(), {});
@@ -405,71 +405,6 @@ console.log(products.latestBrowser);
 //  'Edge'
 ```
 
-### Finding an array item object by its property
-
-This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement/rows", "table.rows")}}.
-
-```js
-const products = new Proxy(
-  [
-    { name: "Firefox", type: "browser" },
-    { name: "SeaMonkey", type: "browser" },
-    { name: "Thunderbird", type: "mailer" },
-  ],
-  {
-    get(obj, prop) {
-      // The default behavior to return the value; prop is usually an integer
-      if (prop in obj) {
-        return obj[prop];
-      }
-
-      // Get the number of products; an alias of products.length
-      if (prop === "number") {
-        return obj.length;
-      }
-
-      let result;
-      const types = {};
-
-      for (const product of obj) {
-        if (product.name === prop) {
-          result = product;
-        }
-        if (types[product.type]) {
-          types[product.type].push(product);
-        } else {
-          types[product.type] = [product];
-        }
-      }
-
-      // Get a product by name
-      if (result) {
-        return result;
-      }
-
-      // Get products by type
-      if (prop in types) {
-        return types[prop];
-      }
-
-      // Get product types
-      if (prop === "types") {
-        return Object.keys(types);
-      }
-
-      return undefined;
-    },
-  },
-);
-
-console.log(products[0]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Chrome"]); // undefined
-console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
-console.log(products.types); // ['browser', 'mailer']
-console.log(products.number); // 3
-```
-
 ### A complete traps list example
 
 Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non-native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework).
@@ -540,5 +475,4 @@ console.log(docCookies.myCookie1);
 
 ## See also
 
-- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](https://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [Tutorial on proxies](https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/)
+- [Proxies are awesome](https://youtu.be/sClk6aB_CPk) presentation by Brendan Eich at JSConf (2014)

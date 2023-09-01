@@ -192,7 +192,7 @@ async function getPrice() {
 }
 ```
 
-However, note that the execution of `promptForChoice` and `fetchPrices` don't depend on the result of each other. While the user is choosing their dish, it's fine for the prices to be fetched in the background, but in the code above, the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator causes the async function to pause until the choice is made, and then again until the prices are fetched. We can use `Promise.all` to run them concurrently, so that the user doesn't have to wait for the prices to be fetched before the result is given:
+However, note that the execution of `promptForDishChoice` and `fetchPrices` don't depend on the result of each other. While the user is choosing their dish, it's fine for the prices to be fetched in the background, but in the code above, the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator causes the async function to pause until the choice is made, and then again until the prices are fetched. We can use `Promise.all` to run them concurrently, so that the user doesn't have to wait for the prices to be fetched before the result is given:
 
 ```js example-good
 async function getPrice() {
@@ -206,7 +206,7 @@ async function getPrice() {
 
 `Promise.all` is the best choice of [concurrency method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) here, because error handling is intuitive — if any of the promises reject, the result is no longer available, so the whole `await` expression throws.
 
-`Promise.all` accepts an iterable of promises, so if you are using it to parallelize execution of several async functions, you need to call the async functions and use the returned promises. Directly passing the functions to `Promise.all` does not work, since they are not promises.
+`Promise.all` accepts an iterable of promises, so if you are using it to run several async functions concurrently, you need to call the async functions and use the returned promises. Directly passing the functions to `Promise.all` does not work, since they are not promises.
 
 ```js example-bad
 async function getPrice() {

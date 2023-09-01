@@ -1,11 +1,12 @@
 ---
-title: AnimationEvent()
+title: "AnimationEvent: AnimationEvent() constructor"
+short-title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 page-type: web-api-constructor
 browser-compat: api.AnimationEvent.AnimationEvent
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 The **`AnimationEvent()`** constructor returns a new {{domxref("AnimationEvent")}} object, representing an event in relation with an animation.
 
@@ -42,7 +43,7 @@ new AnimationEvent(type, options)
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

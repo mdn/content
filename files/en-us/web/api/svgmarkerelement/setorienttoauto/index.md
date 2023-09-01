@@ -1,5 +1,6 @@
 ---
-title: SVGMarkerElement.setOrientToAuto()
+title: "SVGMarkerElement: setOrientToAuto() method"
+short-title: setOrientToAuto()
 slug: Web/API/SVGMarkerElement/setOrientToAuto
 page-type: web-api-instance-method
 browser-compat: api.SVGMarkerElement.setOrientToAuto

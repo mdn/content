@@ -1,5 +1,6 @@
 ---
-title: Window.innerWidth
+title: "Window: innerWidth property"
+short-title: innerWidth
 slug: Web/API/Window/innerWidth
 page-type: web-api-instance-property
 browser-compat: api.Window.innerWidth

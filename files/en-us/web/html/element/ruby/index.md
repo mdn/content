@@ -1,5 +1,5 @@
 ---
-title: '<ruby>: The Ruby Annotation element'
+title: "<ruby>: The Ruby Annotation element"
 slug: Web/HTML/Element/ruby
 page-type: html-element
 browser-compat: html.elements.ruby
@@ -80,18 +80,23 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Example 1: Character')}}
 
 ### Example 2: Word
 
 ```html
-<ruby>
-  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
-</ruby>
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Example 1: Word')}}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: Firefox 8 for developers
 slug: Mozilla/Firefox/Releases/8
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -11,7 +12,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### HTML
 
-- The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the {{ htmlattrxref("crossorigin", "img") }} attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
+- The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
 - The {{ domxref("HTMLSelectElement","","add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [Firefox bug 666200](https://bugzil.la/666200))
 - The `HTMLIsIndexElement` constructor has been removed. No elements have implemented this interface since before Firefox 4.
 - The HTML5 "context menu" feature (`contextmenu` attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see [Firefox bug 617528](https://bugzil.la/617528)).
@@ -23,7 +24,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 ### DOM
 
 - The {{ domxref("Element.insertAdjacentHTML","insertAdjacentHTML") }} method has been implemented.
-- {{ domxref("BlobBuilder") }} now has a `getFile()` method that returns the content of the blob as a file.
+- `BlobBuilder` now has a `getFile()` method that returns the content of the blob as a file.
 - The {{ domxref("FileReaderSync") }} interface (part of the FileAPI) has been implemented.
 - Event handling in nested {{ HTMLElement("label") }}s has been fixed.
 - You can now use {{ domxref("window.postMessage()") }} to pass {{ domxref("File") }} and {{ domxref("FileList") }} objects between windows.

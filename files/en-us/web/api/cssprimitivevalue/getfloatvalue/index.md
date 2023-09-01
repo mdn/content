@@ -1,5 +1,6 @@
 ---
-title: CSSPrimitiveValue.getFloatValue()
+title: "CSSPrimitiveValue: getFloatValue() method"
+short-title: getFloatValue()
 slug: Web/API/CSSPrimitiveValue/getFloatValue
 page-type: web-api-instance-method
 status:

@@ -2,14 +2,6 @@
 title: devtools.panels.ExtensionSidebarPane.setPage()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setPage
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setPage
 ---
 
@@ -44,7 +36,7 @@ Create a new pane, and populate it with an HTML page. You could run this code in
 
 ```js
 function onCreated(sidebarPane) {
-  sidebarPane.setPage('sidebar/sidebar.html');
+  sidebarPane.setPage("sidebar/sidebar.html");
 }
 ```
 

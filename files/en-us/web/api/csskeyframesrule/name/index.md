@@ -1,5 +1,6 @@
 ---
-title: CSSKeyframesRule.name
+title: "CSSKeyframesRule: name property"
+short-title: name
 slug: Web/API/CSSKeyframesRule/name
 page-type: web-api-instance-property
 browser-compat: api.CSSKeyframesRule.name

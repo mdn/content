@@ -1,5 +1,6 @@
 ---
-title: FontFace.lineGapOverride
+title: "FontFace: lineGapOverride property"
+short-title: lineGapOverride
 slug: Web/API/FontFace/lineGapOverride
 page-type: web-api-instance-property
 browser-compat: api.FontFace.lineGapOverride
@@ -20,7 +21,7 @@ A string.
 let fontFace = new FontFace(
   "Roboto",
   "url(https://fonts.example.com/roboto.woff2)",
-  { lineGapOverride: "90%" }
+  { lineGapOverride: "90%" },
 );
 console.log(fontFace.lineGapOverride); // 90%
 fontFace.lineGapOverride = "normal";

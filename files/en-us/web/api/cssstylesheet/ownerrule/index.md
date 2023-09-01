@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.ownerRule
+title: "CSSStyleSheet: ownerRule property"
+short-title: ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
 page-type: web-api-instance-property
 browser-compat: api.CSSStyleSheet.ownerRule
@@ -34,7 +35,7 @@ for (const rule of ruleList) {
 }
 ```
 
-This snipped obtains a reference to the stylesheet associated with the
+This snippet obtains a reference to the stylesheet associated with the
 `@import` and processes it in some manner:
 
 ```js

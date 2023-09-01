@@ -1,5 +1,6 @@
 ---
-title: XRSession.renderState
+title: "XRSession: renderState property"
+short-title: renderState
 slug: Web/API/XRSession/renderState
 page-type: web-api-instance-property
 status:

@@ -2,9 +2,6 @@
 title: font-size-adjust
 slug: Web/SVG/Attribute/font-size-adjust
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.font-size-adjust
 ---
 
@@ -16,7 +13,6 @@ The `font-size-adjust` attribute allows authors to specify an aspect value for a
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}

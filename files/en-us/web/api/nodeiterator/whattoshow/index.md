@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.whatToShow
+title: "NodeIterator: whatToShow property"
+short-title: whatToShow
 slug: Web/API/NodeIterator/whatToShow
 page-type: web-api-instance-property
 browser-compat: api.NodeIterator.whatToShow
@@ -119,11 +120,13 @@ The values that can be combined to form the bitmask are:
 const nodeIterator = document.createNodeIterator(
   document.body,
   NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT,
-  { acceptNode: (node) => NodeFilter.FILTER_ACCEPT }
+  { acceptNode: (node) => NodeFilter.FILTER_ACCEPT },
 );
-if ((nodeIterator.whatToShow & NodeFilter.SHOW_ALL) ||
-    (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT)) {
-    // nodeIterator will show comments
+if (
+  nodeIterator.whatToShow & NodeFilter.SHOW_ALL ||
+  nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT
+) {
+  // nodeIterator will show comments
 }
 ```
 

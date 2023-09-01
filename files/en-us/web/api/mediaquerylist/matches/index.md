@@ -1,5 +1,6 @@
 ---
-title: MediaQueryList.matches
+title: "MediaQueryList: matches property"
+short-title: matches
 slug: Web/API/MediaQueryList/matches
 page-type: web-api-instance-property
 browser-compat: api.MediaQueryList.matches
@@ -48,8 +49,8 @@ mql.addEventListener("change", (event) => {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

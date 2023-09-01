@@ -1,5 +1,6 @@
 ---
-title: DeviceOrientationEvent.gamma
+title: "DeviceOrientationEvent: gamma property"
+short-title: gamma
 slug: Web/API/DeviceOrientationEvent/gamma
 page-type: web-api-instance-property
 browser-compat: api.DeviceOrientationEvent.gamma

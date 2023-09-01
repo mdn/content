@@ -1,5 +1,6 @@
 ---
-title: ContentIndexEvent.id
+title: "ContentIndexEvent: id property"
+short-title: id
 slug: Web/API/ContentIndexEvent/id
 page-type: web-api-instance-property
 status:

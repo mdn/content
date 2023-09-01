@@ -2,10 +2,6 @@
 title: externally_connectable
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
 browser-compat: webextensions.manifest.externally_connectable
 ---
 

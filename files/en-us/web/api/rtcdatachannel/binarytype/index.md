@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.binaryType
+title: "RTCDataChannel: binaryType property"
+short-title: binaryType
 slug: Web/API/RTCDataChannel/binaryType
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.binaryType

@@ -1,5 +1,6 @@
 ---
-title: LinearAccelerationSensor()
+title: "LinearAccelerationSensor: LinearAccelerationSensor() constructor"
+short-title: LinearAccelerationSensor()
 slug: Web/API/LinearAccelerationSensor/LinearAccelerationSensor
 page-type: web-api-constructor
 browser-compat: api.LinearAccelerationSensor.LinearAccelerationSensor

@@ -1,5 +1,6 @@
 ---
-title: 'HTMLMediaElement: abort event'
+title: "HTMLMediaElement: abort event"
+short-title: abort
 slug: Web/API/HTMLMediaElement/abort_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.abort_event
@@ -16,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', (event) => {});
+addEventListener("abort", (event) => {});
 
-onabort = (event) => { };
+onabort = (event) => {};
 ```
 
 ## Event type
@@ -28,16 +29,16 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://example.org/path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://example.org/path/to/video.webm";
 
-video.addEventListener('abort', () => {
+video.addEventListener("abort", () => {
   console.log(`Abort loading: ${videoSrc}`);
 });
 
-const source = document.createElement('source');
-source.setAttribute('src', videoSrc);
-source.setAttribute('type', 'video/webm');
+const source = document.createElement("source");
+source.setAttribute("src", videoSrc);
+source.setAttribute("type", "video/webm");
 
 video.appendChild(source);
 ```

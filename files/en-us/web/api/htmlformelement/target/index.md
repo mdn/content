@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.target
+title: "HTMLFormElement: target property"
+short-title: target
 slug: Web/API/HTMLFormElement/target
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.target

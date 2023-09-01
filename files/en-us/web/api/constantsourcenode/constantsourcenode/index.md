@@ -1,5 +1,6 @@
 ---
-title: ConstantSourceNode()
+title: "ConstantSourceNode: ConstantSourceNode() constructor"
+short-title: ConstantSourceNode()
 slug: Web/API/ConstantSourceNode/ConstantSourceNode
 page-type: web-api-constructor
 browser-compat: api.ConstantSourceNode.ConstantSourceNode

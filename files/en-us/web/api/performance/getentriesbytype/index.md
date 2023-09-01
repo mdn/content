@@ -1,5 +1,6 @@
 ---
-title: performance.getEntriesByType()
+title: "Performance: getEntriesByType() method"
+short-title: getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
 page-type: web-api-instance-method
 browser-compat: api.Performance.getEntriesByType
@@ -33,7 +34,7 @@ getEntriesByType(type)
 ### Parameters
 
 - `type`
-  - : The type of entry to retrieve such as "`mark`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}. The supported `entryTypes` can be retrieved using the static property {{domxref("PerformanceObserver.supportedEntryTypes")}}.
+  - : The type of entry to retrieve such as "`mark`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}. The supported `entryTypes` can be retrieved using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
 
 ### Return value
 
@@ -64,4 +65,4 @@ resources.forEach((entry) => {
 
 - {{domxref("Performance.getEntries()")}}
 - {{domxref("Performance.getEntriesByName()")}}
-- {{domxref("PerformanceObserver.supportedEntryTypes")}}
+- {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.createShader()
+title: "WebGLRenderingContext: createShader() method"
+short-title: createShader()
 slug: Web/API/WebGLRenderingContext/createShader
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.createShader

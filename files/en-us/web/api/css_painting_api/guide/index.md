@@ -9,7 +9,7 @@ The [CSS Paint API](/en-US/docs/Web/API/CSS_Painting_API) is designed to enable 
 
 To programmatically create an image used by a CSS stylesheet we need to work through a few steps:
 
-1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function
+1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorkletGlobalScope/registerPaint) function
 2. Register the worklet
 3. Include the `{{cssxref("image/paint","paint()")}}` CSS function
 
@@ -21,7 +21,7 @@ To elaborate over these steps, we're going to start by creating a half-highlight
 
 ## CSS paint worklet
 
-In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function to name our [CSS Paint worklet](/en-US/docs/Web/API/PaintWorklet). It takes two parameters. The first is the name we give the worklet — this is the name we will use in our CSS as the parameter of the `paint()` function when we want to apply this styling to an element. The second parameter is the class that does all the magic, defining the context options and what to paint to the two-dimensional canvas that will be our image.
+In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/API/PaintWorkletGlobalScope/registerPaint) function to name our [CSS Paint worklet](/en-US/docs/Web/API/Worklet). It takes two parameters. The first is the name we give the worklet — this is the name we will use in our CSS as the parameter of the `paint()` function when we want to apply this styling to an element. The second parameter is the class that does all the magic, defining the context options and what to paint to the two-dimensional canvas that will be our image.
 
 ```js
 registerPaint(
@@ -44,7 +44,7 @@ registerPaint(
       ctx.fillStyle = "hsl(55 90% 60% / 1.0)";
       ctx.fillRect(0, 15, 200, 20); /* order: x, y, w, h */
     }
-  }
+  },
 );
 ```
 
@@ -64,7 +64,7 @@ We tried to keep the example simple. For more options, look at the [canvas docum
 
 To use the paint worklet, we need to register it using [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) and include it in our CSS, ensuring the CSS selector matches a DOM node in our HTML
 
-The setup and design of our paint worklet took place in the external script shown above. We need to register that [worklet](/en-US/docs/Web/API/PaintWorklet) from our main script.
+The setup and design of our paint worklet took place in the external script shown above. We need to register that [worklet](/en-US/docs/Web/API/Worklet) from our main script.
 
 ```js
 CSS.paintWorklet.addModule("nameOfPaintWorkletFile.js");
@@ -98,7 +98,7 @@ We can then add the fancy class to any element on the page to add a yellow box a
 <h1 class="fancy">My Cool Header</h1>
 ```
 
-The following example will look like the image above in [browsers supporting the CSS Painting API](/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility).
+The following example will look like the image above in [browsers supporting the CSS Painting API](/en-US/docs/Web/API/CSS/paintWorklet_static#browser_compatibility).
 
 {{EmbedGHLiveSample("dom-examples/css-painting/half-highlight-fixed-size/", 120, 120)}}
 
@@ -132,7 +132,7 @@ registerPaint(
       ctx.fillStyle = "hsl(55 90% 60% / 1.0)";
       ctx.fillRect(0, size.height / 3, size.width * 0.4, size.height * 0.6);
     }
-  }
+  },
 );
 ```
 
@@ -176,7 +176,7 @@ CSS.paintWorklet.addModule("header-highlight.js");
 
 #### Result
 
-In [browsers that support the CSS Paint API](/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility), the elements in the example below should get yellow backgrounds proportional to their font size.
+In [browsers that support the CSS Paint API](/en-US/docs/Web/API/CSS/paintWorklet_static#browser_compatibility), the elements in the example below should get yellow backgrounds proportional to their font size.
 
 {{EmbedGHLiveSample("dom-examples/css-painting/half-highlight-paintsize", 200, 200)}}
 
@@ -201,11 +201,11 @@ registerPaint(
     paint(drawingContext, elementSize, styleMap) {
       // Paint code goes here.
     }
-  }
+  },
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_Variables), and returns an {{jsxref("Array", "array")}} of property names. We'll take a look at `inputArguments` in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array")}} of property names. We'll take a look at `inputArguments` in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 
@@ -245,10 +245,10 @@ registerPaint(
         0,
         size.height / 3,
         size.width * 0.4 - props.get("--widthSubtractor"),
-        size.height * 0.6
+        size.height * 0.6,
       );
     }
-  }
+  },
 );
 ```
 
@@ -361,18 +361,18 @@ registerPaint(
         ctx.lineTo(blockWidth + start * 10 + 20, y);
         ctx.lineTo(
           blockWidth + start * 10 + 20 + highlightHeight,
-          highlightHeight
+          highlightHeight,
         );
         ctx.lineTo(
           blockWidth + start * 10 + 10 + highlightHeight,
-          highlightHeight
+          highlightHeight,
         );
         ctx.lineTo(blockWidth + start * 10 + 10, y);
         ctx.closePath();
         ctx.fill();
       }
     } // paint
-  }
+  },
 );
 ```
 
@@ -386,7 +386,7 @@ We can then create a little HTML that will accept this image as backgrounds:
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-We give each header a different value for the `--highColor` [custom property](/en-US/docs/Web/CSS/CSS_Variables)
+We give each header a different value for the `--highColor` [custom property](/en-US/docs/Web/CSS/CSS_cascading_variables)
 
 ```css
 .fancy {
@@ -572,7 +572,7 @@ registerPaint(
         ctx.stroke();
       }
     } // paint
-  }
+  },
 );
 ```
 

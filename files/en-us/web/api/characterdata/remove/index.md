@@ -1,5 +1,6 @@
 ---
-title: CharacterData.remove()
+title: "CharacterData: remove() method"
+short-title: remove()
 slug: Web/API/CharacterData/remove
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.remove

@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.lineNumber
+title: "Error: lineNumber"
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 page-type: javascript-instance-data-property
 status:

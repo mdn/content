@@ -1,5 +1,6 @@
 ---
-title: FontFace.family
+title: "FontFace: family property"
+short-title: family
 slug: Web/API/FontFace/family
 page-type: web-api-instance-property
 browser-compat: api.FontFace.family
@@ -23,7 +24,7 @@ A string.
 ```js
 let fontFace = new FontFace(
   "Roboto",
-  "url(https://fonts.example.com/roboto.woff2)"
+  "url(https://fonts.example.com/roboto.woff2)",
 );
 console.log(fontFace.family); // 'Roboto'
 

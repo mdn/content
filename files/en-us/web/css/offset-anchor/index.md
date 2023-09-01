@@ -38,6 +38,7 @@ offset-anchor: right 3em bottom 10px;
 offset-anchor: inherit;
 offset-anchor: initial;
 offset-anchor: revert;
+offset-anchor: revert-layer;
 offset-anchor: unset;
 ```
 

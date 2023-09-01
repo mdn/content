@@ -2,16 +2,6 @@
 title: runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getManifest
-  - runtime
 browser-compat: webextensions.api.runtime.getManifest
 ---
 

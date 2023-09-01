@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTDescriptor.characteristic
+title: "BluetoothRemoteGATTDescriptor: characteristic property"
+short-title: characteristic
 slug: Web/API/BluetoothRemoteGATTDescriptor/characteristic
 page-type: web-api-instance-property
 status:

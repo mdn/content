@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletNode.port
+title: "AudioWorkletNode: port property"
+short-title: port
 slug: Web/API/AudioWorkletNode/port
 page-type: web-api-instance-property
 browser-compat: api.AudioWorkletNode.port

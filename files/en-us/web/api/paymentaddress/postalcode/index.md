@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.postalCode
+title: "PaymentAddress: postalCode property"
+short-title: postalCode
 slug: Web/API/PaymentAddress/postalCode
 page-type: web-api-instance-property
 status:

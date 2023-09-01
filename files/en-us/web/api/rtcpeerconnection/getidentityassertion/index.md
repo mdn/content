@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.getIdentityAssertion()
+title: "RTCPeerConnection: getIdentityAssertion() method"
+short-title: getIdentityAssertion()
 slug: Web/API/RTCPeerConnection/getIdentityAssertion
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getIdentityAssertion

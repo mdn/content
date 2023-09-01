@@ -2,16 +2,6 @@
 title: storage.session
 slug: Mozilla/Add-ons/WebExtensions/API/storage/session
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - session
 browser-compat: webextensions.api.storage.session
 ---
 
@@ -34,6 +24,8 @@ The `session` object implements the methods defined on the {{WebExtAPIRef("stora
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()", "storage.session.set()")}}
   - : Stores one or more items in the storage area. If the item exists, its value is updated.
+- {{WebExtAPIRef("storage.StorageArea.setAccessLevel", "storage.session.setAccessLevel()")}}
+  - : Sets the access level for the storage area.
 - {{WebExtAPIRef("storage.StorageArea.remove()", "storage.session.remove()")}}
   - : Removes one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.clear()", "storage.session.clear()")}}

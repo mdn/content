@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.prefers-color-scheme
 
 {{CSSRef}}
 
-The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
+The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
 A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
 ## Embedded elements
@@ -63,14 +63,14 @@ Theme A (brown) uses a light color scheme by default, but will switch to a dark 
 
 ```css
 .theme-a {
-    background: #dca;
-    color: #731;
+  background: #dca;
+  color: #731;
 }
 @media (prefers-color-scheme: dark) {
   .theme-a.adaptive {
-      background: #753;
-      color: #dcb;
-      outline: 5px dashed #000;
+    background: #753;
+    color: #dcb;
+    outline: 5px dashed #000;
   }
 }
 ```
@@ -79,14 +79,14 @@ Theme B (blue) uses a dark color scheme by default, but will switch to a light s
 
 ```css
 .theme-b {
-    background: #447;
-    color: #bbd;
+  background: #447;
+  color: #bbd;
 }
 @media (prefers-color-scheme: light) {
   .theme-b.adaptive {
-      background: #bcd;
-      color: #334;
-      outline: 5px dotted #000;
+    background: #bcd;
+    color: #334;
+    outline: 5px dotted #000;
   }
 }
 ```
@@ -154,6 +154,7 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 ## See also
 
 - {{cssxref("color-scheme")}} CSS property
+- {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - [Simulate prefers-color-scheme in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme) (Firefox Page Inspector > Examine and edit CSS)
 - [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)

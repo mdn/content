@@ -1,5 +1,6 @@
 ---
-title: XRInputSource.targetRaySpace
+title: "XRInputSource: targetRaySpace property"
+short-title: targetRaySpace
 slug: Web/API/XRInputSource/targetRaySpace
 page-type: web-api-instance-property
 browser-compat: api.XRInputSource.targetRaySpace

@@ -2,14 +2,6 @@
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - management
-  - uninstallSelf
 browser-compat: webextensions.api.management.uninstallSelf
 ---
 
@@ -60,7 +52,7 @@ function onCanceled(error) {
 }
 
 let uninstalling = browser.management.uninstallSelf({
-  showConfirmDialog: true
+  showConfirmDialog: true,
 });
 
 uninstalling.then(null, onCanceled);
@@ -75,7 +67,7 @@ function onCanceled(error) {
 
 let uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true,
-  dialogMessage: "Testing self-uninstall"
+  dialogMessage: "Testing self-uninstall",
 });
 
 uninstalling.then(null, onCanceled);

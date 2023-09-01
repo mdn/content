@@ -7,7 +7,7 @@ browser-compat: html.elements.a
 
 {{HTMLSidebar}}
 
-The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
+The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
 Content within each `<a>` _should_ indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
@@ -25,7 +25,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
       - The {{HTTPHeader("Content-Disposition")}} HTTP header
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
-      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
 
     - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
@@ -96,7 +96,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
-    > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
+    > **Note:** Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes#id) instead.
 
 - `rev` {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
@@ -113,7 +113,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com"> Mozilla </a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### Result
@@ -145,11 +145,15 @@ a {
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down"> Jump to the heading below </a></p>
+<p><a href="#Section_further_down">Jump to the heading below</a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Linking to an element on the same page')}}
 
 > **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
@@ -161,6 +165,10 @@ To create links that open in the user's email program to let them send a new mes
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
+#### Result
+
+{{EmbedLiveSample('Linking to an email address')}}
+
 For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
@@ -169,6 +177,10 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 <a href="tel:+49.157.0156">+49 157 0156</a>
 <a href="tel:+1(800)555-0123">(800) 555-0123</a>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Linking to telephone numbers')}}
 
 `tel:` link behavior varies with device capabilities:
 
@@ -220,6 +232,7 @@ a {
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 c.fillStyle = "hotpink";
+let isDrawing;
 
 function draw(x, y) {
   if (isDrawing) {
@@ -231,7 +244,7 @@ function draw(x, y) {
 }
 
 canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY)
+  draw(event.offsetX, event.offsetY),
 );
 canvas.addEventListener("mousedown", () => (isDrawing = true));
 canvas.addEventListener("mouseup", () => (isDrawing = false));
@@ -240,7 +253,7 @@ document
   .querySelector("a")
   .addEventListener(
     "click",
-    (event) => (event.target.href = canvas.toDataURL())
+    (event) => (event.target.href = canvas.toDataURL()),
   );
 ```
 
@@ -268,6 +281,10 @@ A sadly common mistake is to only link the words "click here" or "here":
 <p>Learn more about our products <a href="/products">here</a>.</p>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Inaccessible, weak link text')}}
+
 #### Strong link text
 
 Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
@@ -275,6 +292,10 @@ Luckily, this is an easy fix, and it's actually shorter than the inaccessible ve
 ```html example-good
 <p>Learn more <a href="/products">about our products</a>.</p>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Strong link text')}}
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
@@ -300,13 +321,17 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 </a>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Link that opens a new tab/window')}}
+
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
+<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
 ```
 
-If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
+If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
@@ -319,6 +344,10 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
   <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Link to a non-HTML resource')}}
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
@@ -350,6 +379,10 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
   top: 0;
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample('Skip links')}}
 
 Skip links let keyboard users bypass content repeated throughout multiple pages, such as header navigation.
 

@@ -1,5 +1,6 @@
 ---
-title: RTCDtlsTransport.iceTransport
+title: "RTCDtlsTransport: iceTransport property"
+short-title: iceTransport
 slug: Web/API/RTCDtlsTransport/iceTransport
 page-type: web-api-instance-property
 browser-compat: api.RTCDtlsTransport.iceTransport

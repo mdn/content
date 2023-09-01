@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.add()
+title: "CustomStateSet: add() method"
+short-title: add()
 slug: Web/API/CustomStateSet/add
 page-type: web-api-instance-method
 status:

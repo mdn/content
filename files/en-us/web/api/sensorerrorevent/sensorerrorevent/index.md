@@ -1,5 +1,6 @@
 ---
-title: SensorErrorEvent()
+title: "SensorErrorEvent: SensorErrorEvent() constructor"
+short-title: SensorErrorEvent()
 slug: Web/API/SensorErrorEvent/SensorErrorEvent
 page-type: web-api-constructor
 browser-compat: api.SensorErrorEvent.SensorErrorEvent

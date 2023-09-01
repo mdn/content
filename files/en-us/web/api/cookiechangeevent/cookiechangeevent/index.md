@@ -1,5 +1,6 @@
 ---
-title: CookieChangeEvent()
+title: "CookieChangeEvent: CookieChangeEvent() constructor"
+short-title: CookieChangeEvent()
 slug: Web/API/CookieChangeEvent/CookieChangeEvent
 page-type: web-api-constructor
 status:

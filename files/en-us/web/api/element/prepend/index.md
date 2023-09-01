@@ -1,5 +1,6 @@
 ---
-title: Element.prepend()
+title: "Element: prepend() method"
+short-title: prepend()
 slug: Web/API/Element/prepend
 page-type: web-api-instance-method
 browser-compat: api.Element.prepend
@@ -17,7 +18,7 @@ equivalent {{domxref("Text")}} nodes.
 ```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* … ,*/ paramN)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

@@ -11,6 +11,10 @@ browser-compat: css.properties.-moz-user-focus
 
 The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicate whether an element can have the focus.
 
+By setting its value to `ignore`, you can disable focusing the element, which means that the user will not be able to activate the element. The element will be skipped in the tab sequence.
+
+## Syntax
+
 ```css
 /* Keyword values */
 -moz-user-focus: normal;
@@ -21,12 +25,6 @@ The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicat
 -moz-user-focus: initial;
 -moz-user-focus: unset;
 ```
-
-By setting its value to `ignore`, you can disable focusing the element, which means that the user will not be able to activate the element. The element will be skipped in the tab sequence.
-
-{{cssinfo}}
-
-## Syntax
 
 ### Values
 
@@ -85,5 +83,5 @@ Not part of any standard.
 ## See also
 
 - {{cssxref("-moz-user-input")}}
-- {{cssxref("-moz-user-modify")}}
-- {{cssxref("-moz-user-select")}}
+- {{cssxref("user-modify")}}
+- {{cssxref("user-select", "-moz-user-select")}}

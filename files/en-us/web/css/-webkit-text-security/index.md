@@ -7,7 +7,7 @@ status:
 browser-compat: css.properties.-webkit-text-security
 ---
 
-{{CSSRef}} {{ Non-standard_header() }}
+{{CSSRef}}{{Non-standard_Header}}
 
 **`-webkit-text-security`** is a non-standard CSS property that obfuscates characters in a {{HtmlElement("form")}} field (such as {{HtmlElement("input")}} or {{HtmlElement("textarea")}}) by replacing them with a shape. It only affects fields that are _not_ of `type=password`.
 
@@ -18,6 +18,13 @@ browser-compat: css.properties.-webkit-text-security
 -webkit-text-security: disc;
 -webkit-text-security: square;
 -webkit-text-security: none;
+
+/* Global values */
+-webkit-text-security: inherit;
+-webkit-text-security: initial;
+-webkit-text-security: revert;
+-webkit-text-security: revert-layer;
+-webkit-text-security: unset;
 ```
 
 ## Formal definition

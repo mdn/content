@@ -2,15 +2,6 @@
 title: scripting.unregisterContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/unregisterContentScripts
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - unregisterContentScripts
-  - tabs
 browser-compat: webextensions.api.scripting.unregisterContentScripts
 ---
 

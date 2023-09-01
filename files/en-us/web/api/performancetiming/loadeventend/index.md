@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.loadEventEnd
+title: "PerformanceTiming: loadEventEnd property"
+short-title: loadEventEnd
 slug: Web/API/PerformanceTiming/loadEventEnd
 page-type: web-api-instance-property
 status:

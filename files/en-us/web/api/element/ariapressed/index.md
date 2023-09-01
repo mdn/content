@@ -1,5 +1,6 @@
 ---
-title: Element.ariaPressed
+title: "Element: ariaPressed property"
+short-title: ariaPressed
 slug: Web/API/Element/ariaPressed
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaPressed

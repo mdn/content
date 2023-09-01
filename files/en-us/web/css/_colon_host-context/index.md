@@ -7,7 +7,7 @@ browser-compat: css.selectors.host-context
 
 {{CSSRef}}
 
-The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
+The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
 
 In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.
 
@@ -15,14 +15,12 @@ One typical use of this is with a descendant selector expression — for example
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
+
 ```css
 /* Selects a shadow root host, only if it is
    a descendant of the selector argument given */
 :host-context(h1) {
-  font-weight: bold;
-}
-
-:host-context(main article) {
   font-weight: bold;
 }
 
@@ -74,7 +72,6 @@ style.textContent =
   "span:hover { text-decoration: underline; }" +
   ":host-context(h1) { font-style: italic; }" +
   ':host-context(h1):after { content: " - no links in headers!" }' +
-  ":host-context(article, aside) { color: gray; }" +
   ":host(.footer) { color : red; }" +
   ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
@@ -91,6 +88,9 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { c
 
 ## See also
 
-- [Web components](/en-US/docs/Web/Web_Components)
-- {{cssxref(":host")}}
-- {{cssxref(":host_function", ":host()")}}
+- [Web components](/en-US/docs/Web/API/Web_components)
+- CSS {{cssxref(":host")}} pseudo-class
+- CSS {{cssxref(":host_function", ":host()")}} pseudo-class
+- CSS {{CSSXref("::slotted")}} pseudo-element
+- HTML {{HTMLElement("template")}} element
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

@@ -63,7 +63,7 @@ so the loop terminates.
 
 ### Using an assignment as a condition
 
-In some cases, it can make sense to use an assignment as a condition — but when you do, there's a best-practice syntax you should know about and follow.
+In some cases, it can make sense to use an assignment as a condition. This comes with readability tradeoffs, so there are certain stylistic recommendations that would make the pattern more obvious for everyone.
 
 Consider the following example, which iterates over a document's comments, logging them to the console.
 
@@ -77,7 +77,7 @@ while (currentNode = iterator.nextNode()) {
 
 That's not completely a good-practice example, due to the following line specifically:
 
-```js example-bad
+```js-nolint example-bad
 while (currentNode = iterator.nextNode()) {
 ```
 
@@ -89,19 +89,19 @@ The _effect_ of that line is fine — in that, each time a comment node is found
 
 …and then, when there are no more comment nodes in the document:
 
-1. `iterator.nextNode()` returns [null](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+1. `iterator.nextNode()` returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 2. The value of `currentNode = iterator.nextNode()` is therefore also `null`, which is [falsy](/en-US/docs/Glossary/Truthy).
 3. So the loop ends.
 
-But although the code _works_ as expected, the problem with that particular line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
+The problem with this line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
 
-Therefore, in cases like that one, some [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) and [code-linting tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint and JSHint — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
+Therefore, in cases like that one, some [code-linting tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint's [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) rule — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
 
 > Expected a conditional expression and instead saw an assignment.
 
-But there's a best-practice way to avoid that warning: Make the code more-explicitly indicate it intends the condition to be whether the value of the `currentNode = iterator.nextNode()` assignment is truthy. And you do that minimally by putting additional parentheses as a [grouping operator](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) around the assignment:
+Many style guides recommend more explicitly indicating the intention for the condition to be an assignment. You can do that minimally by putting additional parentheses as a [grouping operator](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) around the assignment:
 
-```js
+```js example-good
 const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
 let currentNode;
 while ((currentNode = iterator.nextNode())) {
@@ -109,17 +109,34 @@ while ((currentNode = iterator.nextNode())) {
 }
 ```
 
-But the real best practice is to go a step further and make the code even more clear — by adding a comparison operator to turn the condition into an explicit comparison:
+In fact, this is the style enforced by ESLint's `no-cond-assign`'s default configuration, as well as [Prettier](https://prettier.io/), so you'll likely see this pattern a lot in the wild.
+
+Some people may further recommend adding a comparison operator to turn the condition into an explicit comparison:
+
+```js-nolint example-good
+while ((currentNode = iterator.nextNode()) !== null) {
+```
+
+There are other ways to write this pattern, such as:
+
+```js-nolint example-good
+while ((currentNode = iterator.nextNode()) && currentNode) {
+```
+
+Or, forgoing the idea of using a `while` loop altogether:
 
 ```js example-good
 const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
-let currentNode;
-while ((currentNode = iterator.nextNode()) !== null) {
+for (
+  let currentNode = iterator.nextNode();
+  currentNode;
+  currentNode = iterator.nextNode()
+) {
   console.log(currentNode.textContent.trim());
 }
 ```
 
-Along with preventing any warnings in IDEs and code-linting tools, what that code is actually doing will be much more obvious to anybody coming along later who needs to read and understand it or modify it.
+If the reader is sufficiently familiar with the assignment as condition pattern, all these variations should have equivalent readability. Otherwise, the last form is probably the most readable, albeit the most verbose.
 
 ## Specifications
 

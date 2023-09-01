@@ -1,5 +1,6 @@
 ---
-title: UIEvent.view
+title: "UIEvent: view property"
+short-title: view
 slug: Web/API/UIEvent/view
 page-type: web-api-instance-property
 browser-compat: api.UIEvent.view

@@ -1,5 +1,6 @@
 ---
-title: FontFace.stretch
+title: "FontFace: stretch property"
+short-title: stretch
 slug: Web/API/FontFace/stretch
 page-type: web-api-instance-property
 browser-compat: api.FontFace.stretch

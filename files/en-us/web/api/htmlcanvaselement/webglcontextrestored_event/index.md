@@ -1,5 +1,6 @@
 ---
-title: 'HTMLCanvasElement: webglcontextrestored event'
+title: "HTMLCanvasElement: webglcontextrestored event"
+short-title: webglcontextrestored
 slug: Web/API/HTMLCanvasElement/webglcontextrestored_event
 page-type: web-api-event
 browser-compat: api.HTMLCanvasElement.webglcontextrestored_event
@@ -18,9 +19,9 @@ This event does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('webglcontextrestored', (event) => {});
+addEventListener("webglcontextrestored", (event) => {});
 
-onwebglcontextrestored = (event) => { };
+onwebglcontextrestored = (event) => {};
 ```
 
 ## Event type
@@ -41,14 +42,18 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the `webglcontextrestored` event:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextrestored', (e) => {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextrestored",
+  (e) => {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').restoreContext();
+gl.getExtension("WEBGL_lose_context").restoreContext();
 
 // "webglcontextrestored" event is logged.
 ```

@@ -2,16 +2,6 @@
 title: pageAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPopup
-  - pageAction
 browser-compat: webextensions.api.pageAction.getPopup
 ---
 
@@ -57,12 +47,12 @@ function gotPopup(popupURL) {
 
 browser.contextMenus.create({
   id: "get-popup",
-  title: "Get popup URL"
+  title: "Get popup URL",
 });
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "get-popup") {
-    let gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
+    let gettingPopup = browser.pageAction.getPopup({ tabId: tab.id });
     gettingPopup.then(gotPopup);
   }
 });

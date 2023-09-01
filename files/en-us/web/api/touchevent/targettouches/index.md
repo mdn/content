@@ -1,5 +1,6 @@
 ---
-title: TouchEvent.targetTouches
+title: "TouchEvent: targetTouches property"
+short-title: targetTouches
 slug: Web/API/TouchEvent/targetTouches
 page-type: web-api-instance-property
 browser-compat: api.TouchEvent.targetTouches

@@ -1,5 +1,6 @@
 ---
-title: Document.title
+title: "Document: title property"
+short-title: title
 slug: Web/API/Document/title
 page-type: web-api-instance-property
 browser-compat: api.Document.title
@@ -27,7 +28,7 @@ document).
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

@@ -1,5 +1,6 @@
 ---
-title: DOMException.name
+title: "DOMException: name property"
+short-title: name
 slug: Web/API/DOMException/name
 page-type: web-api-instance-property
 browser-compat: api.DOMException.name

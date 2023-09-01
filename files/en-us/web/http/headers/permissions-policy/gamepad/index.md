@@ -1,12 +1,9 @@
 ---
 title: "Permissions-Policy: gamepad"
 slug: Web/HTTP/Headers/Permissions-Policy/gamepad
-tags:
-  - Permissions Policy
-  - Gamepad
-  - HTTP
-  - header
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.gamepad
 ---
 

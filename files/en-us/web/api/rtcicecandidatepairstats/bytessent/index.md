@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.bytesSent
+title: "RTCIceCandidatePairStats: bytesSent property"
+short-title: bytesSent
 slug: Web/API/RTCIceCandidatePairStats/bytesSent
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.bytesSent

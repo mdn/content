@@ -1,5 +1,6 @@
 ---
-title: Element.ariaLabel
+title: "Element: ariaLabel property"
+short-title: ariaLabel
 slug: Web/API/Element/ariaLabel
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaLabel

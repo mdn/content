@@ -1,5 +1,6 @@
 ---
-title: Document.activeElement
+title: "Document: activeElement property"
+short-title: activeElement
 slug: Web/API/Document/activeElement
 page-type: web-api-instance-property
 browser-compat: api.Document.activeElement
@@ -58,7 +59,7 @@ function onMouseUp(e) {
   const activeTextarea = document.activeElement;
   const selection = activeTextarea.value.substring(
     activeTextarea.selectionStart,
-    activeTextarea.selectionEnd
+    activeTextarea.selectionEnd,
   );
 
   const outputElement = document.getElementById("output-element");

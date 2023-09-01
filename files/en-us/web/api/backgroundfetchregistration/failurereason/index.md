@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.failureReason
+title: "BackgroundFetchRegistration: failureReason property"
+short-title: failureReason
 slug: Web/API/BackgroundFetchRegistration/failureReason
 page-type: web-api-instance-property
 status:

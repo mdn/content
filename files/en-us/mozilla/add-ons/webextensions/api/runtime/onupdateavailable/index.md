@@ -2,16 +2,6 @@
 title: runtime.onUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onUpdateAvailable
-  - runtime
 browser-compat: webextensions.api.runtime.onUpdateAvailable
 ---
 
@@ -35,7 +25,7 @@ browser.runtime.onUpdateAvailable.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -46,9 +36,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : `object`. Contains a single property, a string named `version`, which represents the version number of the update.

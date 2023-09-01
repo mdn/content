@@ -1,5 +1,6 @@
 ---
-title: DocumentType.after()
+title: "DocumentType: after() method"
+short-title: after()
 slug: Web/API/DocumentType/after
 page-type: web-api-instance-method
 browser-compat: api.DocumentType.after
@@ -17,7 +18,7 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 ```js-nolint
 after(param1)
 after(param1, param2)
-after(param1, param2, /* … ,*/ paramN)
+after(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

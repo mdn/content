@@ -1,7 +1,7 @@
 ---
 title: Information contained in a WebIDL file
-slug: >-
-  MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
@@ -125,7 +125,7 @@ MyInterface implements MyMixin;
 
 Availability in Web workers (of any type) and on the Window scope is defined using an annotation: `[Exposed=(Window,Worker)]`. The annotation applies to the partial interface it is listed with.
 
-```
+```webidl
 [Exposed=(Window,Worker)]
 interface Performance {
    [DependsOn=DeviceState, Affects=Nothing]

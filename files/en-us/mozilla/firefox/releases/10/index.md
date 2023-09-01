@@ -1,6 +1,7 @@
 ---
 title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -14,7 +15,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 ### HTML
 
 - The new HTML5 {{ HTMLElement("bdi") }} element, bi-directional isolation, allowing isolation of parts of text with a different directionality has been implemented. This is especially useful when displaying text with an unknown directionality, coming from a database for example, in the middle of text with a known, and potentially, different one.
-- You may now specify a fragment of "top" for the {{ htmlattrxref("href", "a") }} attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
+- You may now specify a fragment of "top" for the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
 
 ### JavaScript
 
@@ -87,13 +88,13 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - The ESC key no longer incorrectly results in the {{ domxref("Element.keydown_event", "onkeydown") }} handler incorrectly getting called.
 - The `NameList` interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
 - The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
-- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
+- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See note in [Firefox bug 707142](https://bugzil.la/707142#c13).
 
 ### CSS
 
-- CSS 3D Transforms are now supported. This includes support for the {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }} and {{ cssxref("backface-visibility") }} properties, as well as for 3D transform functions in the {{ cssxref("transform") }} and {{ cssxref("transform-function") }} properties. See [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms#3d_specific_css_properties) for details.
+- CSS 3D Transforms are now supported. This includes support for the {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }} and {{ cssxref("backface-visibility") }} properties, as well as for 3D transform functions in the {{ cssxref("transform") }} and {{ cssxref("transform-function") }} properties. See [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#3d_specific_css_properties) for details.
 - Two new values for the CSS property {{ cssxref("unicode-bidi") }} have been added: `-moz-isolation` and `-moz-plaintext`. The `-moz-isolation` value isolates, from a directionality point of view, the element from its environment, letting it have a different directionality. An element with `unicode-bidi:-moz-isolation` behaves like a {{ HTMLElement("bdi") }} element. The `-moz-plaintext` indicates the browser to use the Unicode browser heuristic to determine directionality and not the CSS {{ cssxref("direction") }} property.
-- The CSS {{ cssxref("linear-gradient()") }} and {{ cssxref("repeating-linear-gradient()") }} properties have been updated to support the new `to` syntax and the _magic corner_ algorithm. This allows to give a precise color on the corner of a gradient-filled box.
+- The CSS {{ cssxref("gradient/linear-gradient") }} and {{ cssxref("gradient/repeating-linear-gradient") }} properties have been updated to support the new `to` syntax and the _magic corner_ algorithm. This allows to give a precise color on the corner of a gradient-filled box.
 - The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the `text-overflow` property is set to overflow on only one [has been corrected](/en-US/docs/Web/CSS/text-overflow#gecko_notes).
 - Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements [has been fixed](/en-US/docs/Web/CSS/position#gecko_notes). **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
 - Margin collapsing around {{ HTMLElement("table") }} elements has been fixed to match the CSS specification. Previously, table elements' margins would not be collapsed along with other adjacent elements, leading to incorrect layout. **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**

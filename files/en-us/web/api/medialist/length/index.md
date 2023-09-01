@@ -1,8 +1,8 @@
 ---
-title: MediaList.length
+title: "MediaList: length property"
+short-title: length
 slug: Web/API/MediaList/length
 page-type: web-api-instance-property
-
 browser-compat: api.MediaList.length
 ---
 

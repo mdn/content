@@ -1,5 +1,6 @@
 ---
-title: FontData.style
+title: "FontData: style property"
+short-title: style
 slug: Web/API/FontData/style
 page-type: web-api-instance-property
 status:

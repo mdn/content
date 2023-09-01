@@ -1,5 +1,6 @@
 ---
-title: Bluetooth.getDevices()
+title: "Bluetooth: getDevices() method"
+short-title: getDevices()
 slug: Web/API/Bluetooth/getDevices
 page-type: web-api-instance-method
 status:

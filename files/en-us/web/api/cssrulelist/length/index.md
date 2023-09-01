@@ -1,5 +1,6 @@
 ---
-title: CSSRuleList.length
+title: "CSSRuleList: length property"
+short-title: length
 slug: Web/API/CSSRuleList/length
 page-type: web-api-instance-property
 browser-compat: api.CSSRuleList.length

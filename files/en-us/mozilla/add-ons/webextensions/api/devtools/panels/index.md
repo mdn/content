@@ -2,14 +2,6 @@
 title: devtools.panels
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - devtools.panels
 browser-compat: webextensions.api.devtools.panels
 ---
 
@@ -53,7 +45,7 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 ## Example extensions
 
-- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/master/devtools-panels)
+- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/main/devtools-panels)
 
 ## Browser compatibility
 

@@ -1,5 +1,6 @@
 ---
-title: CookieStoreManager.unsubscribe()
+title: "CookieStoreManager: unsubscribe() method"
+short-title: unsubscribe()
 slug: Web/API/CookieStoreManager/unsubscribe
 page-type: web-api-instance-method
 status:

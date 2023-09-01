@@ -1,5 +1,6 @@
 ---
-title: GamepadPose.hasPosition
+title: "GamepadPose: hasPosition property"
+short-title: hasPosition
 slug: Web/API/GamepadPose/hasPosition
 page-type: web-api-instance-property
 status:

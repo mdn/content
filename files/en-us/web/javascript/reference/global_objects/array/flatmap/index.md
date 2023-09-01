@@ -7,44 +7,27 @@ browser-compat: javascript.builtins.Array.flatMap
 
 {{JSRef}}
 
-The **`flatMap()`** method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}} followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
+The **`flatMap()`** method of {{jsxref("Array")}} instances returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}} followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
 
 {{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}
 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-flatMap((element) => { /* … */ })
-flatMap((element, index) => { /* … */ })
-flatMap((element, index, array) => { /* … */ })
-
-// Callback function
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
-
-// Inline callback function
-flatMap(function (element) { /* … */ })
-flatMap(function (element, index) { /* … */ })
-flatMap(function (element, index, array) { /* … */ })
-flatMap(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `flatMap()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -155,7 +138,7 @@ console.log([1, 2, 3, 4].flatMap((x) => [, x * 2])); // [2, 4, 6, 8]
 
 ### Calling flatMap() on non-array objects
 
-The `flatMap()` method reads the `length` property of `this` and then accesses each integer index. If the return value of the callback function is not an array, it is always directly appended to the result array.
+The `flatMap()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`. If the return value of the callback function is not an array, it is always directly appended to the result array.
 
 ```js
 const arrayLike = {
@@ -163,6 +146,7 @@ const arrayLike = {
   0: 1,
   1: 2,
   2: 3,
+  3: 4, // ignored by flatMap() since length is 3
 };
 console.log(Array.prototype.flatMap.call(arrayLike, (x) => [x, x * 2]));
 // [1, 2, 2, 4, 3, 6]
@@ -188,7 +172,9 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.flatMap` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}

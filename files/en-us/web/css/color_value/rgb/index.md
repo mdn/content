@@ -16,38 +16,22 @@ The **`rgb()`** functional notation expresses a color according to its red, gree
 ## Syntax
 
 ```css
-/* Syntax with space-separated values */
 rgb(255 255 255)
 rgb(255 255 255 / .5)
-
-/* Syntax with comma-separated values */
-rgb(255, 255, 255)
-rgb(255, 255, 255, .5)
-
-/* Legacy rgba() syntax */
-rgba(255 255 255)
-rgba(255 255 255 / .5)
-
-rgba(255, 255, 255)
-rgba(255, 255, 255, .5)
 ```
-
-The `rgb()` function accepts three space-separated values, representing respectively values for `red`, `green`, and `blue`. Optionally it may also be given a slash `/` followed by a fourth value, representing `alpha`.
 
 The function also accepts a legacy syntax in which all values are separated with commas.
 
 ### Values
 
-- `red`, `green`, `blue`
+Functional notation: `rgb(R G B[ / A])`
 
-  - : These values represent color channels and may each be a {{cssxref("&lt;number&gt;")}}
-    clamped between 0 and 255, or a {{cssxref("&lt;percentage&gt;")}}, or the keyword `none`. You can't mix percentages and numbers, so:
+- `R`, `G`, `B`
+  - : Each as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which represent the red, green, and blue channels, respectively.
+- `A` {{optional_inline}}
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
-    - if any of these values is a number, then they must all be numbers or `none`
-    - if any of these values is a percentage, then they must all percentages or `none`.
-
-- `alpha`
-  - : A {{cssxref("&lt;number&gt;")}} clamped between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}. This value represents opacity, where the number `1` corresponds to `100%` (full opacity). It defaults to 100%.
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 
@@ -128,3 +112,7 @@ div.rgba {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- The {{CSSXref("&lt;color&gt;")}} data type for a list of all color notations

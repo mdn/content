@@ -1,5 +1,6 @@
 ---
-title: XRJointSpace.jointName
+title: "XRJointSpace: jointName property"
+short-title: jointName
 slug: Web/API/XRJointSpace/jointName
 page-type: web-api-instance-property
 browser-compat: api.XRJointSpace.jointName

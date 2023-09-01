@@ -1,5 +1,6 @@
 ---
-title: ExtendableMessageEvent.data
+title: "ExtendableMessageEvent: data property"
+short-title: data
 slug: Web/API/ExtendableMessageEvent/data
 page-type: web-api-instance-property
 browser-compat: api.ExtendableMessageEvent.data

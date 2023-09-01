@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.size
+title: "CustomStateSet: size property"
+short-title: size
 slug: Web/API/CustomStateSet/size
 page-type: web-api-instance-property
 status:

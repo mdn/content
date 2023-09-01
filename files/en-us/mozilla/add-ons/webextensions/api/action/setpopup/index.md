@@ -2,16 +2,6 @@
 title: action.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setPopup
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - setPopup
 browser-compat: webextensions.api.action.setPopup
 ---
 
@@ -79,7 +69,7 @@ browser.contextMenus.create(
     contexts: ["all"],
     checked: true,
   },
-  onCreated
+  onCreated,
 );
 
 browser.contextMenus.create(
@@ -90,7 +80,7 @@ browser.contextMenus.create(
     contexts: ["all"],
     checked: false,
   },
-  onCreated
+  onCreated,
 );
 
 browser.contextMenus.onClicked.addListener((info, tab) => {

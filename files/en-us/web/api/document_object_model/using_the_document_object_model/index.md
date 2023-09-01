@@ -34,13 +34,13 @@ When a web browser parses an HTML document, it builds a DOM tree and then uses i
 
 ## What does the Document API do?
 
-The Document API, also sometimes called the DOM API, allows you to modify a DOM tree in _any way you want_. It enables you to create any HTML or XML document from scratch or to change any contents of a given HTML or XML document. Web page authors can edit the DOM of a document using JavaScript to access the `document`")}} property of the global object. This `document` object implements the {{domxref("Document")}} interface.
+The Document API, also sometimes called the DOM API, allows you to modify a DOM tree in _any way you want_. It enables you to create any HTML or XML document from scratch or to change any contents of a given HTML or XML document. Web page authors can edit the DOM of a document using JavaScript to access the `document` property of the global object. This `document` object implements the {{domxref("Document")}} interface.
 
 ## A simple example
 
 Suppose the author wants to change the header of the above document and write two paragraphs instead of one. The following script would do the job:
 
-### HTML Content
+### HTML
 
 ```html
 <html lang="en">
@@ -55,7 +55,7 @@ Suppose the author wants to change the header of the above document and write tw
 </html>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 function change() {

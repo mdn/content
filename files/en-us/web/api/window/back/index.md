@@ -1,5 +1,6 @@
 ---
-title: Window.back()
+title: "Window: back() method"
+short-title: back()
 slug: Web/API/Window/back
 page-type: web-api-instance-method
 status:

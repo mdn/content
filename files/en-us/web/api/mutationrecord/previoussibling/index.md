@@ -1,5 +1,6 @@
 ---
-title: MutationRecord.previousSibling
+title: "MutationRecord: previousSibling property"
+short-title: previousSibling
 slug: Web/API/MutationRecord/previousSibling
 page-type: web-api-instance-property
 browser-compat: api.MutationRecord.previousSibling

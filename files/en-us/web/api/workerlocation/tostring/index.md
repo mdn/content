@@ -1,5 +1,6 @@
 ---
-title: WorkerLocation.toString()
+title: "WorkerLocation: toString() method"
+short-title: toString()
 slug: Web/API/WorkerLocation/toString
 page-type: web-api-instance-method
 browser-compat: api.WorkerLocation.toString

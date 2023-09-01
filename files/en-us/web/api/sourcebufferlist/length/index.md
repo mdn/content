@@ -1,5 +1,6 @@
 ---
-title: SourceBufferList.length
+title: "SourceBufferList: length property"
+short-title: length
 slug: Web/API/SourceBufferList/length
 page-type: web-api-instance-property
 browser-compat: api.SourceBufferList.length

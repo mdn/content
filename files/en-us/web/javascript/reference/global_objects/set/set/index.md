@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Set.Set
 
 {{JSRef}}
 
-The **`Set` constructor** lets you
-create `Set` objects that store unique values of any type, whether [primitive values](/en-US/docs/Glossary/Primitive) or object
-references.
+The **`Set()`** constructor creates {{jsxref("Set")}} objects.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
 

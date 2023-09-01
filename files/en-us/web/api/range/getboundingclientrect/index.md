@@ -1,5 +1,6 @@
 ---
-title: Range.getBoundingClientRect()
+title: "Range: getBoundingClientRect() method"
+short-title: getBoundingClientRect()
 slug: Web/API/Range/getBoundingClientRect
 page-type: web-api-instance-method
 browser-compat: api.Range.getBoundingClientRect
@@ -27,7 +28,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{domxref("DOMRect")}} object that encloses the union of the bounding rectangles for all elements in the range.
 
 ## Examples
 
@@ -61,11 +62,11 @@ p {
 
 ```js
 const range = document.createRange();
-range.setStartBefore(document.getElementsByTagName('em').item(0));
-range.setEndAfter(document.getElementsByTagName('em').item(1));
+range.setStartBefore(document.getElementsByTagName("em").item(0));
+range.setEndAfter(document.getElementsByTagName("em").item(1));
 
 const clientRect = range.getBoundingClientRect();
-const highlight = document.getElementById('highlight');
+const highlight = document.getElementById("highlight");
 highlight.style.left = `${clientRect.x}px`;
 highlight.style.top = `${clientRect.y}px`;
 highlight.style.width = `${clientRect.width}px`;

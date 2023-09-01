@@ -1,15 +1,12 @@
 ---
 title: HTTP range requests
 slug: Web/HTTP/Range_requests
-tags:
-  - Guide
-  - HTTP
-  - HTTP range requests
+page-type: guide
 ---
 
 {{HTTPSidebar}}
 
-An HTTP range request asks the server to send only a portion of an HTTP message back to a client. Range requests are useful for clients like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume the download.
+An HTTP {{HTTPHeader("Range")}} request asks the server to send only a portion of an HTTP message back to a client. Range requests are useful for clients like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume the download.
 
 ## Checking if a server supports partial requests
 

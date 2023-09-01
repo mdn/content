@@ -1,5 +1,6 @@
 ---
-title: SubmitEvent()
+title: "SubmitEvent: SubmitEvent() constructor"
+short-title: SubmitEvent()
 slug: Web/API/SubmitEvent/SubmitEvent
 page-type: web-api-constructor
 browser-compat: api.SubmitEvent.SubmitEvent

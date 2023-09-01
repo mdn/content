@@ -1,17 +1,10 @@
 ---
 title: "CSP: plugin-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Java
-  - Plugin
-  - Plugins
-  - Security
-  - Deprecated
-  - Non-standard
+page-type: http-csp-directive
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Content-Security-Policy.plugin-types
 ---
 
@@ -21,8 +14,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`plugin-types`** directive restricts the set of plugins that
 can be embedded into a document by limiting the types of resources which can be loaded.
 
-Instantiation of an {{HTMLElement("embed")}}, {{HTMLElement("object")}} or
-{{HTMLElement("applet")}} element will fail if:
+Instantiation of an {{HTMLElement("embed")}} or {{HTMLElement("object")}} element will fail if:
 
 - the element to load does not declare a valid MIME type,
 - the declared type does not match one of specified types in the
@@ -71,15 +63,6 @@ is only used if you are allowing plugins with `object-src` at all.
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
 ```
 
-### Allowing Java applets
-
-To load an {{HTMLElement("applet")}} you must specify
-`application/x-java-applet`:
-
-```http
-Content-Security-Policy: plugin-types application/x-java-applet
-```
-
 ## Specifications
 
 Not part of any current specification. Used to be defined in [CSP 2](https://www.w3.org/TR/CSP2/#directive-plugin-types).
@@ -93,5 +76,4 @@ Not part of any current specification. Used to be defined in [CSP 2](https://www
 - {{HTTPHeader("Content-Security-Policy")}}: {{CSP("object-src")}}
 - {{HTMLElement("object")}}
 - {{HTMLElement("embed")}}
-- {{HTMLElement("applet")}}
 - {{HTTPHeader("X-Content-Type-Options")}}

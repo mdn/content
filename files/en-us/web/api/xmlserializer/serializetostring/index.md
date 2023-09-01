@@ -1,5 +1,6 @@
 ---
-title: XMLSerializer.serializeToString()
+title: "XMLSerializer: serializeToString() method"
+short-title: serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
 page-type: web-api-instance-method
 browser-compat: api.XMLSerializer.serializeToString

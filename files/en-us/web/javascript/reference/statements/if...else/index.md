@@ -149,13 +149,22 @@ if (x > 50) {
 
 You should almost never have an `if...else` with an assignment like `x = y` as a condition:
 
-```js-nolint example-bad
-if (x = y) {
-  // do something
+```js example-bad
+if ((x = y)) {
+  // …
 }
 ```
 
-However, in the rare case you find yourself wanting to do something like that, the [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with an example showing a general best-practice syntax you should know about and follow.
+Because unlike {{jsxref("Statements/while", "while")}} loops, the condition is only evaluated once, so the assignment is only performed once. The code above is equivalent to:
+
+```js example-good
+x = y;
+if (x) {
+  // …
+}
+```
+
+Which is much clearer. However, in the rare case you find yourself wanting to do something like that, the [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with our recommendations.
 
 ## Specifications
 
@@ -169,4 +178,4 @@ However, in the rare case you find yourself wanting to do something like that, t
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- [Conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

@@ -1,5 +1,6 @@
 ---
-title: XRProjectionLayer.textureArrayLength
+title: "XRProjectionLayer: textureArrayLength property"
+short-title: textureArrayLength
 slug: Web/API/XRProjectionLayer/textureArrayLength
 page-type: web-api-instance-property
 status:

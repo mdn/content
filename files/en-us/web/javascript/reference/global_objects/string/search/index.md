@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.search
 
 {{JSRef}}
 
-The **`search()`** method executes a search for a match between a regular expression and this {{jsxref("String")}} object.
+The **`search()`** method of {{jsxref("String")}} values executes a search for a match between a regular expression and this string, returning the index of the first match in the string.
 
 {{EmbedInteractiveExample("pages/js/string-search.html")}}
 
@@ -65,7 +65,7 @@ console.log(str.search(reDot)); // returns -1 cannot find '.' dot punctuation
 ## See also
 
 - [Polyfill of `String.prototype.search` in `core-js` with fixes and implementation of modern behavior like `Symbol.search` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)

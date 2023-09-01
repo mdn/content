@@ -1,6 +1,7 @@
 ---
 title: "ARIA: menuitem role"
 slug: Web/Accessibility/ARIA/Roles/menuitem_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitem
   - https://w3c.github.io/aria-practices/#menu
@@ -75,7 +76,7 @@ When items in a `menubar` are arranged vertically and items in menu containers a
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
-      <a role="menuitem" href="#description"> Description </a>
+      <a role="menuitem" href="#description">Description</a>
     </li>
     <li role="presentation">
       <a
@@ -90,13 +91,13 @@ When items in a `menubar` are arranged vertically and items in menu containers a
       </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#examples"> Examples </a>
+      <a role="menuitem" href="#examples">Examples</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#specifications"> Specifications </a>
+      <a role="menuitem" href="#specifications">Specifications</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#see_also"> See Also </a>
+      <a role="menuitem" href="#see_also">See Also</a>
     </li>
   </ul>
 </div>

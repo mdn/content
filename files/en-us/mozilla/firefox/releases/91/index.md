@@ -1,6 +1,7 @@
 ---
 title: Firefox 91 for developers
 slug: Mozilla/Firefox/Releases/91
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -22,7 +23,7 @@ No changes
 
 #### Removals
 
-- The non-standard {{cssxref("-moz-outline-radius")}} property has been removed ([Firefox bug 1715984](https://bugzil.la/1715984)). The property has not been usable by web developers since Firefox 88, this completes the removal.
+- The non-standard `-moz-outline-radius` property has been removed ([Firefox bug 1715984](https://bugzil.la/1715984)). The property has not been usable by web developers since Firefox 88, this completes the removal.
 
 ### JavaScript
 
@@ -43,10 +44,11 @@ No changes
   The API provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document, as well as to the window's content area.
   It also provides events that allow changes to the viewport to be monitored. ([Firefox bug 1551302](https://bugzil.la/1551302)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}.
-  If disallowed by the [feature policy](/en-US/docs/Web/HTTP/Feature_Policy), calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}},
+  If disallowed by the [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy), calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}},
   and the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
   The default `allowlist` is `*`; this default will be updated to `self` in a future release, in order to match the specification. ([Firefox bug 1704005](https://bugzil.la/1704005)).
 - `Window.clientInformation` has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ([Firefox bug 1717072](https://bugzil.la/1717072)).
+- Changing the playback speed of a media element ([`<video>`](/en-US/docs/Web/HTML/Element/video) or [`<audio>`](/en-US/docs/Web/HTML/Element/audio)) using the [`playbackRate`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) attribute now works when the media element is captured to a [`MediaStream`](/en-US/docs/Web/API/MediaStream) or via [`AudioContext.createMediaElementSource`](/en-US/docs/Web/API/AudioContext/createMediaElementSource) ([Firefox bug 1517199](https://bugzil.la/1517199)).
 
 ### WebDriver conformance (Marionette)
 

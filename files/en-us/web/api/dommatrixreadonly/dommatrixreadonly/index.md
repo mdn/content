@@ -1,5 +1,6 @@
 ---
-title: DOMMatrixReadOnly()
+title: "DOMMatrixReadOnly: DOMMatrixReadOnly() constructor"
+short-title: DOMMatrixReadOnly()
 slug: Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly
 page-type: web-api-constructor
 browser-compat: api.DOMMatrixReadOnly.DOMMatrixReadOnly

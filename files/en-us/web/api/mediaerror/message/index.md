@@ -1,5 +1,6 @@
 ---
-title: MediaError.message
+title: "MediaError: message property"
+short-title: message
 slug: Web/API/MediaError/message
 page-type: web-api-instance-property
 browser-compat: api.MediaError.message
@@ -25,7 +26,7 @@ available, this string is empty.
 
 This example creates a {{HTMLElement("audio")}} element, establishes an error handler
 for it, then lets the user click buttons to choose whether to assign a valid audio file
-or a missing file to the element's {{htmlattrxref("src", "audio")}} attribute. The error
+or a missing file to the element's [`src`](/en-US/docs/Web/HTML/Element/audio#src) attribute. The error
 handler outputs a message to a box onscreen describing the error, including both the
 `code` and the `message`.
 
@@ -39,36 +40,37 @@ we add to the `<audio>` element itself.
 The error handler looks like this:
 
 ```js
-  audioElement.onerror = () => {
-    let s = "";
-    const err = audioElement.error;
+audioElement.onerror = () => {
+  let s = "";
+  const err = audioElement.error;
 
-    switch(err.code) {
-      case MediaError.MEDIA_ERR_ABORTED:
-        s += "The user canceled the audio.";
-        break;
-      case MediaError.MEDIA_ERR_NETWORK:
-        s+= "A network error occurred while fetching the audio.";
-        break;
-      case MediaError.MEDIA_ERR_DECODE:
-        s+= "An error occurred while decoding the audio.";
-        break;
-      case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
-        s+= "The audio is missing or is in a format not supported by your browser.";
-        break;
-      default:
-        s += "An unknown error occurred.";
-        break;
-    }
+  switch (err.code) {
+    case MediaError.MEDIA_ERR_ABORTED:
+      s += "The user canceled the audio.";
+      break;
+    case MediaError.MEDIA_ERR_NETWORK:
+      s += "A network error occurred while fetching the audio.";
+      break;
+    case MediaError.MEDIA_ERR_DECODE:
+      s += "An error occurred while decoding the audio.";
+      break;
+    case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
+      s +=
+        "The audio is missing or is in a format not supported by your browser.";
+      break;
+    default:
+      s += "An unknown error occurred.";
+      break;
+  }
 
-    const message = err.message;
+  const message = err.message;
 
-    if (message?.length > 0) {
-      s += ` ${message}`;
-    }
+  if (message?.length > 0) {
+    s += ` ${message}`;
+  }
 
-    displayErrorMessage(`<strong>Error ${err.code}:</strong> ${s}<br>`);
-  };
+  displayErrorMessage(`<strong>Error ${err.code}:</strong> ${s}<br>`);
+};
 ```
 
 This gets the {{domxref("MediaError")}} object describing the error from the
@@ -94,5 +96,5 @@ You can try out this example below, and can [see the example in action outside t
 
 ## See also
 
-- {{HTMLElement("video")}} and {{HTMLElement("audio")}}
-- The interface defining it, {{domxref("MediaError")}}.
+- {{domxref("MediaError")}}: Interface used to define the `MediaError.message` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}

@@ -1,13 +1,7 @@
 ---
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
-tags:
-  - Access-Control-Allow-Credentials
-  - CORS
-  - HTTP
-  - Reference
-  - credentials
-  - header
+page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Credentials
 ---
 

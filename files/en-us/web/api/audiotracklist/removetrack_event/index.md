@@ -1,5 +1,6 @@
 ---
 title: "AudioTrackList: removetrack event"
+short-title: removetrack
 slug: Web/API/AudioTrackList/removetrack_event
 page-type: web-api-event
 browser-compat: api.AudioTrackList.removetrack_event

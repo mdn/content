@@ -1,5 +1,6 @@
 ---
-title: DeprecationReportBody.lineNumber
+title: "DeprecationReportBody: lineNumber property"
+short-title: lineNumber
 slug: Web/API/DeprecationReportBody/lineNumber
 page-type: web-api-instance-property
 status:

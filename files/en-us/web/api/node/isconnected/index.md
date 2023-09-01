@@ -1,5 +1,6 @@
 ---
-title: Node.isConnected
+title: "Node: isConnected property"
+short-title: isConnected
 slug: Web/API/Node/isConnected
 page-type: web-api-instance-property
 browser-compat: api.Node.isConnected
@@ -23,7 +24,7 @@ and `false` if not.
 A standard DOM example:
 
 ```js
-let test = document.createElement('p');
+let test = document.createElement("p");
 console.log(test.isConnected); // Returns false
 document.body.appendChild(test);
 console.log(test.isConnected); // Returns true
@@ -35,10 +36,10 @@ A shadow DOM example:
 
 ```js
 // Create a shadow root
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 
 // Create some CSS to apply to the shadow DOM
-const style = document.createElement('style');
+const style = document.createElement("style");
 console.log(style.isConnected); // returns false
 
 style.textContent = `

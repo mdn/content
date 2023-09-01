@@ -1,5 +1,6 @@
 ---
-title: FontFace.variationSettings
+title: "FontFace: variationSettings property"
+short-title: variationSettings
 slug: Web/API/FontFace/variationSettings
 page-type: web-api-instance-property
 status:

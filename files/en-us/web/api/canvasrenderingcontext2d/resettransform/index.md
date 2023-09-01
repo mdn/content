@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.resetTransform()
+title: "CanvasRenderingContext2D: resetTransform() method"
+short-title: resetTransform()
 slug: Web/API/CanvasRenderingContext2D/resetTransform
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.resetTransform
@@ -14,7 +15,7 @@ method of the Canvas 2D API resets the current transform to the identity matrix.
 ## Syntax
 
 ```js-nolint
-void ctx.resetTransform()
+resetTransform()
 ```
 
 ## Examples

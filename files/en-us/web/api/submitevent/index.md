@@ -40,7 +40,10 @@ form.addEventListener("submit", (event) => {
   if (handler) {
     processOrder(form, handler);
   } else {
-    showAlertMessage("An unknown or unaccepted payment type was selected. Please try again.", "OK");
+    showAlertMessage(
+      "An unknown or unaccepted payment type was selected. Please try again.",
+      "OK",
+    );
   }
 });
 ```

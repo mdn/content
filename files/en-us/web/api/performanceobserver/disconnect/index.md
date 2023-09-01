@@ -1,5 +1,6 @@
 ---
-title: PerformanceObserver.disconnect()
+title: "PerformanceObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/PerformanceObserver/disconnect
 page-type: web-api-instance-method
 browser-compat: api.PerformanceObserver.disconnect
@@ -31,13 +32,12 @@ The following example disconnects the performance observer to disable receiving 
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
-  list.getEntries()
-    .forEach((entry) => {
-      // Process "measure" events
-      // …
-      // Disable additional performance events
-      observer.disconnect();
-    });
+  list.getEntries().forEach((entry) => {
+    // Process "measure" events
+    // …
+    // Disable additional performance events
+    observer.disconnect();
+  });
 });
 observer.observe({ entryTypes: ["mark", "measure"] });
 ```

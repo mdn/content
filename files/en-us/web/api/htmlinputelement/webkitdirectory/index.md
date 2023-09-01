@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.webkitdirectory
+title: "HTMLInputElement: webkitdirectory property"
+short-title: webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.webkitdirectory
@@ -71,24 +72,28 @@ In this example, a directory picker is presented which lets the user choose one 
 directories. When the {{domxref("HTMLElement/change_event", "change")}} event occurs, a list of all files contained
 within the selected directory hierarchies is generated and displayed.
 
-### HTML content
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", (event) => {
-  let output = document.getElementById("listing");
-  for (const file of event.target.files) {
-    let item = document.createElement("li");
-    item.textContent = file.webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+document.getElementById("filepicker").addEventListener(
+  "change",
+  (event) => {
+    let output = document.getElementById("listing");
+    for (const file of event.target.files) {
+      let item = document.createElement("li");
+      item.textContent = file.webkitRelativePath;
+      output.appendChild(item);
+    }
+  },
+  false,
+);
 ```
 
 ### Result

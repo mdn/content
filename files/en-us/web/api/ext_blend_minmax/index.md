@@ -1,5 +1,6 @@
 ---
-title: EXT_blend_minmax
+title: EXT_blend_minmax extension
+short-title: EXT_blend_minmax
 slug: Web/API/EXT_blend_minmax
 page-type: webgl-extension
 browser-compat: api.EXT_blend_minmax

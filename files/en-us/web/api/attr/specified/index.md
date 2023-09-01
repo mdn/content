@@ -1,5 +1,6 @@
 ---
-title: Attr.specified
+title: "Attr: specified property"
+short-title: specified
 slug: Web/API/Attr/specified
 page-type: web-api-instance-property
 status:

@@ -1,11 +1,7 @@
 ---
 title: Stale element reference
 slug: Web/WebDriver/Errors/StaleElementReference
-tags:
-  - Error
-  - Reference
-  - Stale element reference
-  - WebDriver
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
@@ -45,7 +41,7 @@ except exceptions.StaleElementReferenceException as e:
 
 Output:
 
-```
+```plain
 StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
 ```
 
@@ -78,7 +74,7 @@ except exceptions.StaleElementReferenceException as e:
 
 Output:
 
-```
+```plain
 StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
 ```
 

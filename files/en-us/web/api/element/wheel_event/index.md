@@ -1,5 +1,6 @@
 ---
 title: "Element: wheel event"
+short-title: wheel
 slug: Web/API/Element/wheel_event
 page-type: web-api-event
 browser-compat: api.Element.wheel_event
@@ -122,4 +123,4 @@ el.addEventListener("wheel", zoom, { passive: false });
 ## See also
 
 - {{domxref("WheelEvent")}}
-- [Document: `wheel` event](/en-US/docs/Web/API/Document/wheel_event)
+- [Document: `wheel` event](/en-US/docs/Web/API/Element/wheel_event)

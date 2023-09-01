@@ -2,16 +2,6 @@
 title: runtime.onSuspend
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSuspend
-  - runtime
 browser-compat: webextensions.api.runtime.onSuspend
 ---
 
@@ -31,7 +21,7 @@ browser.runtime.onSuspend.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,8 +32,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs.
+- `listener`
+  - : The function called when this event occurs.
 
 ## Browser compatibility
 

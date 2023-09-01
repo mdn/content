@@ -1,5 +1,6 @@
 ---
-title: BarProp.visible
+title: "BarProp: visible property"
+short-title: visible
 slug: Web/API/BarProp/visible
 page-type: web-api-instance-property
 browser-compat: api.BarProp.visible

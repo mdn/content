@@ -1,5 +1,6 @@
 ---
-title: location.host
+title: "location: host property"
+short-title: host
 slug: Web/API/Location/host
 page-type: web-api-instance-property
 browser-compat: api.Location.host

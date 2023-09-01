@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.formatToParts()`** method
-allows locale-aware formatting of strings produced by `NumberFormat`
-formatters.
+The **`formatToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances allows locale-aware formatting of strings produced by this `Intl.NumberFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-formattoparts.html")}}
 
@@ -159,5 +157,5 @@ console.log(numberString);
 ## See also
 
 - {{jsxref("Intl.NumberFormat")}}
-- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}
-- Formatting dates: {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
+- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}

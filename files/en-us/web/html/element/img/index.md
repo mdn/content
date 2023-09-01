@@ -18,9 +18,9 @@ The above example shows usage of the `<img>` element:
 
 There are many other attributes to achieve various purposes:
 
-- [Referrer](/en-US/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see {{htmlattrxref("crossorigin", "img")}} and {{htmlattrxref("referrerpolicy", "img")}}.
-- Use both {{htmlattrxref("width", "img")}} and {{htmlattrxref("height", "img")}} to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
-- Responsive image hints with {{htmlattrxref("sizes", "img")}} and {{htmlattrxref("srcset", "img")}} (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
+- [Referrer](/en-US/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
+- Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
 
 ## Supported image formats
 
@@ -39,13 +39,13 @@ The image file formats that are most commonly used on the web are:
 - [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
 - [WebP (Web Picture format)](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
 
-Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images. WebP is widely supported while AVIF lacks support in Safari.
+Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images. WebP is widely supported while AVIF lacks support in Edge.
 
 SVG remains the recommended format for images that must be drawn accurately at different sizes.
 
 ## Image loading errors
 
-If an error occurs while loading or rendering an image, and an {{htmlattrxref("onerror")}} event handler has been set on the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
 
 - The `src` attribute is empty (`""`) or `null`.
 - The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
@@ -92,14 +92,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `decoding`
 
-  - : Provides an image decoding hint to the browser. Allowed values:
+  - : This attribute provides a hint to the browser as to whether it should perform image decoding along with rendering the other DOM content in a single presentation step that looks more "correct" (`sync`), or render and present the other DOM content first and then decode the image and present it later (`async`). In practice, `async` means that the next paint does not wait for the image to decode.
+
+    It is often difficult to perceive any noticeable effect when using `decoding` on static `<img>` elements. They'll likely be initially rendered as empty images while the image files are fetched (either from the network or from the cache) and then handled independently anyway, so the "syncing" of content updates is less apparent. However, the blocking of rendering while decoding happens, while often quite small, _can_ be measured — even if it is difficult to observe with the human eye. See [What does the image decoding attribute actually do?](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) for a more detailed analysis (tunetheweb.com, 2023).
+
+    Using different `decoding` types can result in more noticeable differences when dynamically inserting `<img>` elements into the DOM via JavaScript — see {{domxref("HTMLImageElement.decoding")}} for more details.
+
+    Allowed values:
 
     - `sync`
-      - : Decode the image synchronously, for atomic presentation with other content.
+      - : Decode the image synchronously along with rendering the other DOM content, and present everything together.
     - `async`
-      - : Decode the image asynchronously, to reduce delay in presenting other content.
+      - : Decode the image asynchronously, after rendering and presenting the other DOM content.
     - `auto`
-      - : Default: no preference for the decoding mode. The browser decides what is best for the user.
+      - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value.
 
 - `elementtiming`
 
@@ -120,13 +126,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-    > **Note:** Including `height` and [`width`](#attr-width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+    > **Note:** Including `height` and [`width`](#width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 - `ismap`
 
   - : This Boolean attribute indicates that the image is part of a [server-side map](https://en.wikipedia.org/wiki/Image_map#Server-side). If so, the coordinates where the user clicked on the image are sent to the server.
 
-    > **Note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.
+    > **Note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute. This gives users without pointing devices a fallback destination.
 
 - `loading`
 
@@ -156,7 +162,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : One or more strings separated by commas, indicating a set of source sizes. Each source size consists of:
 
-    1. A [media condition](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
+    1. A [media condition](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
     2. A source size value.
 
     Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.
@@ -214,12 +220,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.
 - `longdesc` {{deprecated_inline}}
 
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/en-US/docs/Web/HTML/Global_attributes#id).
 
     > **Note:** This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
-  - : A name for the element. Use the {{htmlattrxref("id")}} attribute instead.
+  - : A name for the element. Use the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute instead.
 - `vspace` {{deprecated_inline}}
   - : The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.
 
@@ -323,7 +329,7 @@ Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correc
 
 ### The title attribute
 
-The {{htmlattrxref("title")}} attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
+The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
 
 The `title` attribute should also not be used as supplemental captioning information to accompany an image's `alt` description. If an image needs a caption, use the [`figure`](/en-US/docs/Web/HTML/Element/figure) and [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption) elements.
 
@@ -468,8 +474,9 @@ The value of the `title` attribute is usually presented to the user as a tooltip
 
 ## See also
 
+- {{HTMLElement("picture")}}, {{HTMLElement("object")}}, and {{HTMLElement("embed")}} elements
+- {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}: Image-related CSS properties.
+- {{domxref("HTMLImageElement")}} interface for this element
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- {{HTMLElement("picture")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
-- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}.

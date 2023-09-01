@@ -1,5 +1,6 @@
 ---
-title: WindowControlsOverlayGeometryChangeEvent()
+title: "WindowControlsOverlayGeometryChangeEvent: WindowControlsOverlayGeometryChangeEvent() constructor"
+short-title: WindowControlsOverlayGeometryChangeEvent()
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent
 page-type: web-api-constructor
 status:

@@ -11,15 +11,12 @@ IndexedDB is a low-level API for client-side storage of significant amounts of s
 
 {{AvailableInWorkers}}
 
-> **Note:** IndexedDB API is powerful, but may seem too complicated for simple cases. If you'd prefer a simple API, try libraries in [See also](#see_also) section that make IndexedDB more programmer-friendly.
-
 ## Key concepts and usage
 
 IndexedDB is a transactional database system, like an SQL-based RDBMS. However, unlike SQL-based RDBMSes, which use fixed-column tables, IndexedDB is a JavaScript-based object-oriented database. IndexedDB lets you store and retrieve objects that are indexed with a **key**; any objects supported by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) can be stored. You need to specify the database schema, open a connection to your database, and then retrieve and update data within a series of **transactions**.
 
 - Read more about [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology).
 - Learn to use IndexedDB asynchronously from first principles with our [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) guide.
-- Combine IndexedDB for storing data offline with Service Workers for storing assets offline, as outlined in [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers).
 
 > **Note:** Like most web storage solutions, IndexedDB follows a [same-origin policy](https://www.w3.org/Security/wiki/Same_Origin_Policy). So while you can access stored data within a domain, you cannot access data across different domains.
 
@@ -29,7 +26,7 @@ Operations performed using IndexedDB are done asynchronously, so as not to block
 
 ### Storage limits and eviction criteria
 
-There are a number of web technologies that store data of one kind or another on the client side (i.e. on your local disk). IndexedDB is most commonly talked about. The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) attempts to explain how this works, at least in the case of Firefox.
+There are a number of web technologies that store data of one kind or another on the client side (i.e. on your local disk). IndexedDB is most commonly talked about. The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) attempts to explain how this works, at least in the case of Firefox.
 
 ## Interfaces
 
@@ -80,12 +77,7 @@ This specification fires events with the following custom interface:
 
 ## See also
 
-- [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to Web SQL (deprecated) and then localStorage in browsers that don't support IndexedDB.
-- [Dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
-- [JsStore](https://jsstore.net/): An IndexedDB wrapper with SQL like syntax.
-- [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory mongodb backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
-- [PouchDB](https://pouchdb.com): A client-side implementation of CouchDB in the browser using IndexedDB
-- [idb](https://www.npmjs.com/package/idb): A tiny (\~1.15k) library that mostly mirrors the IndexedDB API, but with small improvements that make a big difference to usability.
-- [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
-- [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.
-- [RxDB](https://rxdb.info/) A NoSQL client side database that can be used on top of IndexedDB. Supports indexes, compression and replication. Also adds cross tab functionality and observability to IndexedDB.
+- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
+- [Window: localStorage property](/en-US/docs/Web/API/Window/localStorage)
+- [Window: sessionStorage property](/en-US/docs/Web/API/Window/sessionStorage)
+- [StorageEvent](/en-US/docs/Web/API/StorageEvent)

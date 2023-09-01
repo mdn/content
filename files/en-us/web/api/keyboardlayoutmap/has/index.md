@@ -1,5 +1,6 @@
 ---
-title: KeyboardLayoutMap.has()
+title: "KeyboardLayoutMap: has() method"
+short-title: has()
 slug: Web/API/KeyboardLayoutMap/has
 page-type: web-api-instance-method
 status:

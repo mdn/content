@@ -1,5 +1,6 @@
 ---
-title: self.performance
+title: performance global property
+short-title: performance
 slug: Web/API/performance_property
 page-type: web-api-global-property
 browser-compat: api.performance
@@ -40,6 +41,7 @@ The following table provides an overview about the availability of the performan
 | {{domxref("PerformanceServerTiming")}}                     | x      | x      |
 | {{domxref("PerformanceTiming")}} {{deprecated_inline}}     | x      |        |
 | {{domxref("TaskAttributionTiming")}}                       | x      |        |
+| {{domxref("VisibilityStateEntry")}}                        | x      |        |
 
 ## Specifications
 

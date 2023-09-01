@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createOscillator()
+title: "BaseAudioContext: createOscillator() method"
+short-title: createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createOscillator

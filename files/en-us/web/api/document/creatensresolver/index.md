@@ -1,5 +1,6 @@
 ---
-title: Document.createNSResolver()
+title: "Document: createNSResolver() method"
+short-title: createNSResolver()
 slug: Web/API/Document/createNSResolver
 page-type: web-api-instance-method
 browser-compat: api.Document.createNSResolver

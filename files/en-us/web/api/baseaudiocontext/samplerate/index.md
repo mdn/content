@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.sampleRate
+title: "BaseAudioContext: sampleRate property"
+short-title: sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
 page-type: web-api-instance-property
 browser-compat: api.BaseAudioContext.sampleRate

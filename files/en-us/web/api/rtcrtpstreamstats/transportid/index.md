@@ -1,5 +1,6 @@
 ---
-title: RTCRtpStreamStats.transportId
+title: "RTCRtpStreamStats: transportId property"
+short-title: transportId
 slug: Web/API/RTCRtpStreamStats/transportId
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.transportId

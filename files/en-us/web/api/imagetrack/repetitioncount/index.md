@@ -1,5 +1,6 @@
 ---
-title: ImageTrack.repetitionCount
+title: "ImageTrack: repetitionCount property"
+short-title: repetitionCount
 slug: Web/API/ImageTrack/repetitionCount
 page-type: web-api-instance-property
 status:

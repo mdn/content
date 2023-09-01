@@ -1,5 +1,6 @@
 ---
 title: "AudioContext: sinkchange event"
+short-title: sinkchange
 slug: Web/API/AudioContext/sinkchange_event
 page-type: web-api-event
 status:

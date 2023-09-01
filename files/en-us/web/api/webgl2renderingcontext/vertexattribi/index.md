@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.vertexAttribI4[u]i[v]()
+title: "WebGL2RenderingContext: vertexAttribI4[u]i[v]() method"
+short-title: vertexAttribI4[u]i[v]()
 slug: Web/API/WebGL2RenderingContext/vertexAttribI
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.vertexAttribI4i

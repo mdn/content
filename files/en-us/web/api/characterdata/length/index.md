@@ -1,5 +1,6 @@
 ---
-title: CharacterData.length
+title: "CharacterData: length property"
+short-title: length
 slug: Web/API/CharacterData/length
 page-type: web-api-instance-property
 browser-compat: api.CharacterData.length

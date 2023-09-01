@@ -47,4 +47,4 @@ RegExp.$_; // "hi world!"
 - {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
 - {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1, …, RegExp.$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

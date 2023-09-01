@@ -2,10 +2,6 @@
 title: result
 slug: Web/SVG/Attribute/result
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-result
 ---
 

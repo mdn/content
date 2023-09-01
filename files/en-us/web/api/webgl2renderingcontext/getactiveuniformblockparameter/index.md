@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getActiveUniformBlockParameter()
+title: "WebGL2RenderingContext: getActiveUniformBlockParameter() method"
+short-title: getActiveUniformBlockParameter()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getActiveUniformBlockParameter
@@ -62,7 +63,7 @@ error occurs, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is r
 const blockSize = gl.getActiveUniformBlockParameter(
   program,
   blockIndex,
-  gl.UNIFORM_BLOCK_DATA_SIZE
+  gl.UNIFORM_BLOCK_DATA_SIZE,
 );
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: FileList.length
+title: "FileList: length property"
+short-title: length
 slug: Web/API/FileList/length
 page-type: web-api-instance-property
 browser-compat: api.FileList.length

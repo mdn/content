@@ -1,5 +1,6 @@
 ---
-title: Sensor.stop()
+title: "Sensor: stop() method"
+short-title: stop()
 slug: Web/API/Sensor/stop
 page-type: web-api-instance-method
 browser-compat: api.Sensor.stop

@@ -1,5 +1,6 @@
 ---
-title: Element.insertAdjacentHTML()
+title: "Element: insertAdjacentHTML() method"
+short-title: insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
 page-type: web-api-instance-method
 browser-compat: api.Element.insertAdjacentHTML
@@ -113,7 +114,7 @@ insert.addEventListener("click", () => {
   const positionSelect = document.querySelector("#position");
   subject.insertAdjacentHTML(
     positionSelect.value,
-    "<strong>inserted text</strong>"
+    "<strong>inserted text</strong>",
   );
 });
 

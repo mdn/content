@@ -1,13 +1,7 @@
 ---
 title: "CSP: worker-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.worker-src
 ---
 

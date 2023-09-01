@@ -1,6 +1,7 @@
 ---
 title: aria-autocomplete
 slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-autocomplete,
   - https://w3c.github.io/aria-practices/#combobox
@@ -32,7 +33,7 @@ If an autocomplete list value is automatically accepted when the field loses foc
 ## Values
 
 - `none` (default)
-  - : When a user is providing input, not automatic suggestion is displayed.
+  - : When a user is providing input, no automatic suggestion is displayed.
 - `inline`
   - : `aria-autocomplete="inline"` text suggesting one way to complete the provided input may be dynamically inserted after the caret.
 - `list`

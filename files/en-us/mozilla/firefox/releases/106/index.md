@@ -1,6 +1,7 @@
 ---
 title: Firefox 106 for developers
 slug: Mozilla/Firefox/Releases/106
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -11,7 +12,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### HTML
 
-- The {{HTMLElement("source")}} element now supports [`height`](/en-US/docs/Web/HTML/Element/source#attr-height) & [`width`](/en-US/docs/Web/HTML/Element/source#attr-width) attributes when it is a child of a {{HTMLElement("picture")}} element.
+- The {{HTMLElement("source")}} element now supports [`height`](/en-US/docs/Web/HTML/Element/source#height) & [`width`](/en-US/docs/Web/HTML/Element/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality is an experimental feature enabled using the `dom.picture_source_dimension_attributes.enabled` preference ([Firefox bug 1694741](https://bugzil.la/1694741)).
 
 ### MathML

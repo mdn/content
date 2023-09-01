@@ -1,5 +1,6 @@
 ---
-title: Document.getElementsByClassName()
+title: "Document: getElementsByClassName() method"
+short-title: getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 page-type: web-api-instance-method
 browser-compat: api.Document.getElementsByClassName
@@ -73,7 +74,7 @@ we'll find all div elements that have a class of 'test':
 const testElements = document.getElementsByClassName("test");
 const testDivs = Array.prototype.filter.call(
   testElements,
-  (testElement) => testElement.nodeName === "DIV"
+  (testElement) => testElement.nodeName === "DIV",
 );
 ```
 

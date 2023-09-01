@@ -1,5 +1,6 @@
 ---
-title: Document.adoptNode()
+title: "Document: adoptNode() method"
+short-title: adoptNode()
 slug: Web/API/Document/adoptNode
 page-type: web-api-instance-method
 browser-compat: api.Document.adoptNode

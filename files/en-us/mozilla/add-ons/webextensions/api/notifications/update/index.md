@@ -2,16 +2,6 @@
 title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - Update
-  - WebExtensions
 browser-compat: webextensions.api.notifications.update
 ---
 
@@ -91,10 +81,9 @@ browser.browserAction.onClicked.addListener(() => {
       message: "Something something cake",
       progress,
     });
-    browser.alarms.create(
-      "cake-progress",
-      { periodInMinutes: CAKE_PREP_INTERVAL }
-    );
+    browser.alarms.create("cake-progress", {
+      periodInMinutes: CAKE_PREP_INTERVAL,
+    });
   });
 });
 ```

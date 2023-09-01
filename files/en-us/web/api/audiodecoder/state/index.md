@@ -1,5 +1,6 @@
 ---
-title: AudioDecoder.state
+title: "AudioDecoder: state property"
+short-title: state
 slug: Web/API/AudioDecoder/state
 page-type: web-api-instance-property
 status:

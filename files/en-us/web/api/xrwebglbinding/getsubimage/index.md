@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.getSubImage()
+title: "XRWebGLBinding: getSubImage() method"
+short-title: getSubImage()
 slug: Web/API/XRWebGLBinding/getSubImage
 page-type: web-api-instance-method
 status:
@@ -58,11 +59,11 @@ const xrGlBinding = new XRWebGLBinding(xrSession, gl);
 const quadLayer = xrGlBinding.createQuadLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 // Position 2 meters away from the origin with a width and height of 1.5 meters
-quadLayer.transform = new XRRigidTransform({z: -2});
+quadLayer.transform = new XRRigidTransform({ z: -2 });
 quadLayer.width = 1.5;
 quadLayer.height = 1.5;
 
@@ -75,7 +76,12 @@ function onXRFrame(time, xrFrame) {
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
   let subImage = xrGlBinding.getSubImage(quadLayer, xrFrame);
-  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, subImage.colorTexture, 0);
+  gl.framebufferTexture2D(
+    gl.FRAMEBUFFER,
+    gl.COLOR_ATTACHMENT0,
+    subImage.colorTexture,
+    0,
+  );
   let viewport = subImage.viewport;
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 

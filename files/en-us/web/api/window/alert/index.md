@@ -1,5 +1,6 @@
 ---
-title: Window.alert()
+title: "Window: alert() method"
+short-title: alert()
 slug: Web/API/Window/alert
 page-type: web-api-instance-method
 browser-compat: api.Window.alert

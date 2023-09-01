@@ -122,7 +122,7 @@ Math.max(10, 20,);
 
 Function parameter definitions or function invocations only containing a comma will throw a {{jsxref("SyntaxError")}}. Furthermore, when using [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), trailing commas are not allowed:
 
-```js example-bad
+```js-nolint example-bad
 function f(,) {} // SyntaxError: missing formal parameter
 (,) => {};       // SyntaxError: expected expression, got ','
 f(,)             // SyntaxError: expected expression, got ','
@@ -208,7 +208,7 @@ export { A as B, C as D, E as F, };
 
 ### Quantifier prefix
 
-> **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
+> **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
 
 ```js
 /x{2}/; // Exactly 2 occurrences of "x"; equivalent to /xx/
@@ -226,4 +226,4 @@ export { A as B, C as D, E as F, };
 
 ## See also
 
-- Initial ECMAScript proposal: [trailing function commas](https://github.com/tc39/proposal-trailing-function-commas) by Jeff Morrison
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)

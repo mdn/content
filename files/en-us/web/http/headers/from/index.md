@@ -1,10 +1,7 @@
 ---
 title: From
 slug: Web/HTTP/Headers/From
-tags:
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.From
 ---
 

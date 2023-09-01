@@ -12,16 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".nvmrc"
-
       - name: Checkout content
         uses: actions/checkout@v3
         with:
           path: mdn-content
           ref: main
+
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: "mdn-content/.nvmrc"
 
       - name: Checkout webref
         uses: actions/checkout@v3
@@ -35,7 +35,7 @@ jobs:
         run: node scripts/update-interface-data.js ../webref/
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v5
         with:
           path: mdn-content
           token: ${{ secrets.AUTOMERGE_TOKEN }}

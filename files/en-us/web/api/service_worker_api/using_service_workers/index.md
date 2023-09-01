@@ -128,7 +128,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 ```
@@ -227,7 +227,7 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+const cacheFirst = async ({ request, fallbackUrl }) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
@@ -262,7 +262,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+    }),
   );
 });
 ```
@@ -363,7 +363,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 
@@ -373,7 +373,7 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+    }),
   );
 });
 ```
@@ -406,7 +406,7 @@ self.addEventListener("install", (event) => {
       // …
 
       // include other new resources for the new version…
-    ])
+    ]),
   );
 });
 ```

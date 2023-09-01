@@ -1,5 +1,6 @@
 ---
-title: XRDepthInformation.rawValueToMeters
+title: "XRDepthInformation: rawValueToMeters property"
+short-title: rawValueToMeters
 slug: Web/API/XRDepthInformation/rawValueToMeters
 page-type: web-api-instance-property
 status:

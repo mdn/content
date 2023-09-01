@@ -1,5 +1,6 @@
 ---
-title: DeprecationReportBody.anticipatedRemoval
+title: "DeprecationReportBody: anticipatedRemoval property"
+short-title: anticipatedRemoval
 slug: Web/API/DeprecationReportBody/anticipatedRemoval
 page-type: web-api-instance-property
 status:

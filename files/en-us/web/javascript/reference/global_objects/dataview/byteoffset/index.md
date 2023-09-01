@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.DataView.byteOffset
 
 {{JSRef}}
 
-The **`byteOffset`** accessor property represents the offset (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.
+The **`byteOffset`** accessor property of {{jsxref("DataView")}} instances returns the offset (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.
 
 {{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}
 

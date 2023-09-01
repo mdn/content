@@ -1,5 +1,6 @@
 ---
 title: "EventSource: open event"
+short-title: open
 slug: Web/API/EventSource/open_event
 page-type: web-api-event
 browser-compat: api.EventSource.open_event

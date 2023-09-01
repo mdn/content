@@ -1,11 +1,12 @@
 ---
-title: ElementInternals.ariaModal
+title: "ElementInternals: ariaModal property"
+short-title: ariaModal
 slug: Web/API/ElementInternals/ariaModal
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaModal
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaModal`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
 

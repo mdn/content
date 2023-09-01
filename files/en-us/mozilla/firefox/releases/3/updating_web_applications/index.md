@@ -1,11 +1,12 @@
 ---
 title: Updating web applications for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
 
-There are a number of changes in the upcoming Firefox 3 that may affect your web site or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
+There are a number of changes in the upcoming Firefox 3 that may affect your website or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
 
 ## DOM changes
 
@@ -56,7 +57,7 @@ Firefox 3 only allows web content to access items in the `chrome://browser/` and
 
 There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their `chrome.manifest` file, like this:
 
-```
+```plain
 content mypackage location/ contentaccessible=yes
 ```
 
@@ -84,7 +85,7 @@ The same-origin policy for file: URIs has changed in Firefox 3. This may affect 
 
 ## JavaScript changes
 
-Firefox 3 supports [JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8). One important change that may require updates to your web site or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
+Firefox 3 supports [JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8). One important change that may require updates to your website or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
 
 ## See also
 

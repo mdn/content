@@ -1,5 +1,6 @@
 ---
-title: Element.matches()
+title: "Element: matches() method"
+short-title: matches()
 slug: Web/API/Element/matches
 page-type: web-api-instance-method
 browser-compat: api.Element.matches
@@ -66,5 +67,5 @@ has indeed a `class` attribute with value `endangered`.
 
 ## See also
 
-- [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - Other {{domxref("Element")}} methods that take selectors: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, and {{domxref("element.closest()")}}.

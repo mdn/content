@@ -1,5 +1,6 @@
 ---
-title: WEBGL_lose_context.loseContext()
+title: "WEBGL_lose_context: loseContext() method"
+short-title: loseContext()
 slug: Web/API/WEBGL_lose_context/loseContext
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_lose_context.loseContext
@@ -35,14 +36,18 @@ With this method, you can simulate the
 event:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', (e) => {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextlost",
+  (e) => {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // WebGLContextEvent event with type "webglcontextlost" is logged.
 ```

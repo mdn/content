@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.unwrapKey()
+title: "SubtleCrypto: unwrapKey() method"
+short-title: unwrapKey()
 slug: Web/API/SubtleCrypto/unwrapKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.unwrapKey
@@ -38,7 +39,7 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
   - : The {{domxref("CryptoKey")}} to use to decrypt the wrapped key. The key must have the `unwrapKey` usage set.
 - `unwrapAlgo`
   - : An object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
-    to be used to encrypt the exported key, and any extra parameters as required:
+    to be used to decrypt the wrapped key, and any extra parameters as required:
     - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
       pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams) object.
     - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
@@ -154,7 +155,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -179,7 +180,7 @@ async function getUnwrappingKey() {
     keyMaterial,
     { name: "AES-KW", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -201,7 +202,7 @@ async function unwrapSecretKey(wrappedKey) {
     "AES-KW", // algorithm identifier for key encryption key
     "AES-GCM", // algorithm identifier for key to unwrap
     true, // extractability of key to unwrap
-    ["encrypt", "decrypt"] // key usages for key to unwrap
+    ["encrypt", "decrypt"], // key usages for key to unwrap
   );
 }
 ```
@@ -346,7 +347,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -371,7 +372,7 @@ async function getUnwrappingKey() {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -404,7 +405,7 @@ async function unwrapPrivateKey(wrappedKey) {
       hash: "SHA-256",
     },
     true, // extractability of key to unwrap
-    ["sign"] // key usages for key to unwrap
+    ["sign"], // key usages for key to unwrap
   );
 }
 ```

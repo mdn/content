@@ -1,6 +1,7 @@
 ---
 title: Content-DPR
 slug: Web/HTTP/Headers/Content-DPR
+page-type: http-header
 status:
   - deprecated
   - non-standard
@@ -72,4 +73,4 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Headers/DPR#examples) header example.
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

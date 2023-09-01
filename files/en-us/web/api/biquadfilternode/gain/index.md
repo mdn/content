@@ -1,5 +1,6 @@
 ---
-title: BiquadFilterNode.gain
+title: "BiquadFilterNode: gain property"
+short-title: gain
 slug: Web/API/BiquadFilterNode/gain
 page-type: web-api-instance-property
 browser-compat: api.BiquadFilterNode.gain

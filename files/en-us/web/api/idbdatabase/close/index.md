@@ -1,5 +1,6 @@
 ---
-title: IDBDatabase.close()
+title: "IDBDatabase: close() method"
+short-title: close()
 slug: Web/API/IDBDatabase/close
 page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.close

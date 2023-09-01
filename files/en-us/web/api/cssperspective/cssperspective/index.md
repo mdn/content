@@ -1,13 +1,12 @@
 ---
-title: CSSPerspective()
+title: "CSSPerspective: CSSPerspective() constructor"
+short-title: CSSPerspective()
 slug: Web/API/CSSPerspective/CSSPerspective
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSPerspective()`** constructor creates
 a new {{domxref("CSSPerspective")}} object representing the [perspective()](/en-US/docs/Web/CSS/transform-function/perspective) value of

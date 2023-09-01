@@ -11,6 +11,11 @@ The **`SpeechSynthesisErrorEvent`** interface of the [Web Speech API](/en-US/doc
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("SpeechSynthesisErrorEvent.SpeechSynthesisErrorEvent", "SpeechSynthesisErrorEvent()")}}
+  - : Creates a new `SpeechSynthesisErrorEvent`.
+
 ## Instance properties
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits properties from its parent interface, {{domxref("Event")}}._
@@ -27,9 +32,9 @@ _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} int
 ```js
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('input');
-const voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
 const voices = synth.getVoices();
 
@@ -39,8 +44,9 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (let i = 0; i < voices.length ; i++) {
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
     if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -49,11 +55,13 @@ inputForm.onsubmit = (event) => {
   synth.speak(utterThis);
 
   utterThis.onerror = (event) => {
-    console.log(`An error has occurred with the speech synthesis: ${event.error}`);
-  }
+    console.log(
+      `An error has occurred with the speech synthesis: ${event.error}`,
+    );
+  };
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

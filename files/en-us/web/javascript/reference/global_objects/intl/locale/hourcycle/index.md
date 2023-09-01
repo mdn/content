@@ -7,13 +7,13 @@ browser-compat: javascript.builtins.Intl.Locale.hourCycle
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.hourCycle`** accessor property returns the hour cycle type for the locale.
+The **`hourCycle`** accessor property of {{jsxref("Intl.Locale")}} instances returns the hour cycle type for this locale.
 
 ## Description
 
 There are 2 main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. The `hourCycle` property's value is set at construction time, either through the `hc` key of the locale identifier or through the `hourCycle` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
-For a list of supported hour cycle types, see [`Intl.Locale.prototype.hourCycles`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycles#supported_hour_cycle_types).
+For a list of supported hour cycle types, see [`Intl.Locale.prototype.getHourCycles()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types).
 
 The set accessor of `hourCycle` is `undefined`. You cannot change this property directly.
 
@@ -50,5 +50,5 @@ console.log(locale.hourCycle); // "h12"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [`Intl.Locale.prototype.hourCycles`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycles)
-- [Unicode Hour Cycle extension key spec](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
+- [`Intl.Locale.prototype.getHourCycles()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles)
+- [Unicode Hour Cycle Identifier](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier) in the Unicode locale data markup language spec

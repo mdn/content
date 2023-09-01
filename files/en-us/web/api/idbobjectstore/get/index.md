@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.get()
+title: "IDBObjectStore: get() method"
+short-title: get()
 slug: Web/API/IDBObjectStore/get
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.get
@@ -9,7 +10,7 @@ browser-compat: api.IDBObjectStore.get
 
 The **`get()`** method of the {{domxref("IDBObjectStore")}}
 interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
-returns the object store selected by the specified key. This is for retrieving
+returns the object selected by the specified key. This is for retrieving
 specific records from an object store.
 
 If a value is successfully found, then a structured clone of it is created and set as

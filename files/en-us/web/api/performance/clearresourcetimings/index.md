@@ -1,5 +1,6 @@
 ---
-title: performance.clearResourceTimings()
+title: "Performance: clearResourceTimings() method"
+short-title: clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 page-type: web-api-instance-method
 browser-compat: api.Performance.clearResourceTimings

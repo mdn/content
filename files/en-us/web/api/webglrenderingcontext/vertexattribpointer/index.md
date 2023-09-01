@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.vertexAttribPointer()
+title: "WebGLRenderingContext: vertexAttribPointer() method"
+short-title: vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.vertexAttribPointer
@@ -40,6 +41,7 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
+
     - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
     - `gl.INT`: 32-bit signed binary integer
     - `gl.UNSIGNED_INT`: 32-bit unsigned binary integer

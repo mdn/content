@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.sample
+title: "SecurityPolicyViolationEvent: sample property"
+short-title: sample
 slug: Web/API/SecurityPolicyViolationEvent/sample
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.sample

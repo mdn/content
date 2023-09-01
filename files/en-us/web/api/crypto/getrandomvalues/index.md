@@ -1,5 +1,6 @@
 ---
-title: Crypto.getRandomValues()
+title: "Crypto: getRandomValues() method"
+short-title: getRandomValues()
 slug: Web/API/Crypto/getRandomValues
 page-type: web-api-instance-method
 browser-compat: api.Crypto.getRandomValues

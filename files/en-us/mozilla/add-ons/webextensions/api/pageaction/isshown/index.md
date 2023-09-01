@@ -2,15 +2,6 @@
 title: pageAction.isShown()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - isShown
-  - pageAction
 browser-compat: webextensions.api.pageAction.isShown
 ---
 
@@ -52,11 +43,11 @@ Check the state of the currently active tab:
 ```js
 async function shownInActiveTab() {
   let tabs = await browser.tabs.query({
-    currentWindow:true,
-    active: true
+    currentWindow: true,
+    active: true,
   });
   let shown = await browser.pageAction.isShown({
-    tabId: tabs[0].id
+    tabId: tabs[0].id,
   });
   console.log(shown);
 }

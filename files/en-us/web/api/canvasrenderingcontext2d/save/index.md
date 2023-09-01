@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.save()
+title: "CanvasRenderingContext2D: save() method"
+short-title: save()
 slug: Web/API/CanvasRenderingContext2D/save
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.save

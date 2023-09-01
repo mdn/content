@@ -1,5 +1,6 @@
 ---
-title: Gamepad.index
+title: "Gamepad: index property"
+short-title: index
 slug: Web/API/Gamepad/index
 page-type: web-api-instance-property
 browser-compat: api.Gamepad.index

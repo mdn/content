@@ -1,5 +1,6 @@
 ---
-title: VideoTrack.kind
+title: "VideoTrack: kind property"
+short-title: kind
 slug: Web/API/VideoTrack/kind
 page-type: web-api-instance-property
 browser-compat: api.VideoTrack.kind

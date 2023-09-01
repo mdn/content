@@ -1,5 +1,6 @@
 ---
-title: XRViewport.width
+title: "XRViewport: width property"
+short-title: width
 slug: Web/API/XRViewport/width
 page-type: web-api-instance-property
 browser-compat: api.XRViewport.width

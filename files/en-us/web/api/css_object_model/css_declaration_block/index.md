@@ -20,7 +20,7 @@ Each property and value pairing is known as a [CSS declaration](/en-US/docs/Web/
 - owner node
   - : The {{domxref("element")}} that the CSS declaration block is associated with, otherwise null.
 - updating flag
-  - : Set when the CSS declaration block is updating the owner node's {{htmlattrxref("style")}} attribute.
+  - : Set when the CSS declaration block is updating the owner node's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 
 When a {{domxref("CSSStyleDeclaration")}} is returned by a [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) interface these properties are set to appropriate values as defined by the specification.
 

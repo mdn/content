@@ -1,5 +1,6 @@
 ---
-title: Document.scrollingElement
+title: "Document: scrollingElement property"
+short-title: scrollingElement
 slug: Web/API/Document/scrollingElement
 page-type: web-api-instance-property
 browser-compat: api.Document.scrollingElement

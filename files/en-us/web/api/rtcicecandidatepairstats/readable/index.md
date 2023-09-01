@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.readable
+title: "RTCIceCandidatePairStats: readable property"
+short-title: readable
 slug: Web/API/RTCIceCandidatePairStats/readable
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: window.requestIdleCallback()
+title: "window: requestIdleCallback() method"
+short-title: requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 page-type: web-api-instance-method
 browser-compat: api.Window.requestIdleCallback
@@ -68,4 +69,3 @@ in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/
 - {{domxref("setTimeout()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

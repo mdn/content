@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.offsetParent
+title: "HTMLElement: offsetParent property"
+short-title: offsetParent
 slug: Web/API/HTMLElement/offsetParent
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.offsetParent

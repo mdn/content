@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesis.resume()
+title: "SpeechSynthesis: resume() method"
+short-title: resume()
 slug: Web/API/SpeechSynthesis/resume
 page-type: web-api-instance-method
 browser-compat: api.SpeechSynthesis.resume
@@ -30,14 +31,18 @@ None ({{jsxref("undefined")}}).
 ```js
 let synth = window.speechSynthesis;
 
-let utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
-let utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
+let utterance1 = new SpeechSynthesisUtterance(
+  "How about we say this now? This is quite a long sentence to say.",
+);
+let utterance2 = new SpeechSynthesisUtterance(
+  "We should say another sentence too, just to be on the safe side.",
+);
 
 synth.speak(utterance1);
 synth.speak(utterance2);
 
 synth.pause(); // pauses utterances being spoken
-synth.resume() // resumes speaking
+synth.resume(); // resumes speaking
 ```
 
 ## Specifications

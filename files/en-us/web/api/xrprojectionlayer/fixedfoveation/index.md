@@ -1,5 +1,6 @@
 ---
-title: XRProjectionLayer.fixedFoveation
+title: "XRProjectionLayer: fixedFoveation property"
+short-title: fixedFoveation
 slug: Web/API/XRProjectionLayer/fixedFoveation
 page-type: web-api-instance-property
 status:

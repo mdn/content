@@ -1,28 +1,19 @@
 ---
 title: declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
-tags:
-  - MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
+page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
 ---
 
 {{AddonSidebar()}}
 
-The maximum number of static rulesets an extension can have enabled, i.e., the number of values in the [`declarative_net_request.rule_resources`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key with `"enabled"` set to `true`. Static rulesets exceeding the limit are ignored.
+The maximum number of static rulesets an extension can have enabled, i.e., the number of values in the [`declarative_net_request.rule_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key with `"enabled"` set to `true`. Static rulesets exceeding the limit are ignored.
 
 An extension can change the number of enabled rulesets using the {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets", "updateEnabledRulesets")}} method.
 
 Its value is `10`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -1,5 +1,6 @@
 ---
 title: "Animation: finish event"
+short-title: finish
 slug: Web/API/Animation/finish_event
 page-type: web-api-event
 browser-compat: api.Animation.finish_event

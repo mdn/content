@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultReader()
+title: "ReadableStreamDefaultReader: ReadableStreamDefaultReader() constructor"
+short-title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 page-type: web-api-constructor
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
@@ -63,7 +64,7 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -82,3 +83,10 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableStreamDefaultController")}}

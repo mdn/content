@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: progress event"
+short-title: progress
 slug: Web/API/HTMLMediaElement/progress_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.progress_event
@@ -16,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('progress', (event) => {});
+addEventListener("progress", (event) => {});
 
-onprogress = (event) => { };
+onprogress = (event) => {};
 ```
 
 ## Event type
@@ -81,32 +82,34 @@ video {
 #### JavaScript
 
 ```js
-const loadVideo = document.querySelector('button');
-const video = document.querySelector('video');
-const eventLog = document.querySelector('.event-log-contents');
+const loadVideo = document.querySelector("button");
+const video = document.querySelector("video");
+const eventLog = document.querySelector(".event-log-contents");
 let source = null;
 
 function handleEvent(event) {
-    eventLog.textContent += `${event.type}\n`;
+  eventLog.textContent += `${event.type}\n`;
 }
 
-video.addEventListener('loadstart', handleEvent);
-video.addEventListener('progress', handleEvent);
-video.addEventListener('canplay', handleEvent);
-video.addEventListener('canplaythrough', handleEvent);
+video.addEventListener("loadstart", handleEvent);
+video.addEventListener("progress", handleEvent);
+video.addEventListener("canplay", handleEvent);
+video.addEventListener("canplaythrough", handleEvent);
 
-loadVideo.addEventListener('click', () => {
+loadVideo.addEventListener("click", () => {
+  if (source) {
+    document.location.reload();
+  } else {
+    loadVideo.textContent = "Reset example";
+    source = document.createElement("source");
+    source.setAttribute(
+      "src",
+      "https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4",
+    );
+    source.setAttribute("type", "video/mp4");
 
-    if (source) {
-        document.location.reload();
-    } else {
-        loadVideo.textContent = "Reset example";
-        source = document.createElement('source');
-        source.setAttribute('src', 'https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4');
-        source.setAttribute('type', 'video/mp4');
-
-        video.appendChild(source);
-    }
+    video.appendChild(source);
+  }
 });
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.userAgentData
+title: "WorkerNavigator: userAgentData property"
+short-title: userAgentData
 slug: Web/API/WorkerNavigator/userAgentData
 page-type: web-api-instance-property
 status:

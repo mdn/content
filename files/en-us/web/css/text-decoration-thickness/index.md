@@ -88,7 +88,7 @@ text-decoration-thickness: unset;
 
 #### Results
 
-{{ EmbedLiveSample('Varying_thickness', '', '', '') }}
+{{EmbedLiveSample('Varying_thickness')}}
 
 ## Specifications
 

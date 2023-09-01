@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.includes()
+title: "IDBKeyRange: includes() method"
+short-title: includes()
 slug: Web/API/IDBKeyRange/includes
 page-type: web-api-instance-method
 browser-compat: api.IDBKeyRange.includes
@@ -36,12 +37,12 @@ A boolean value.
 ## Examples
 
 ```js
-const keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
+const keyRangeValue = IDBKeyRange.bound("A", "K", false, false);
 
-keyRangeValue.includes('F');
+keyRangeValue.includes("F");
 // Returns true
 
-keyRangeValue.includes('W');
+keyRangeValue.includes("W");
 // Returns false
 ```
 

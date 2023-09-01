@@ -1,5 +1,6 @@
 ---
 title: "Element: focus event"
+short-title: focus
 slug: Web/API/Element/focus_event
 page-type: web-api-event
 browser-compat: api.Element.focus_event
@@ -102,7 +103,7 @@ form.addEventListener(
   (event) => {
     event.target.style.background = "pink";
   },
-  true
+  true,
 );
 
 form.addEventListener(
@@ -110,7 +111,7 @@ form.addEventListener(
   (event) => {
     event.target.style.background = "";
   },
-  true
+  true,
 );
 ```
 

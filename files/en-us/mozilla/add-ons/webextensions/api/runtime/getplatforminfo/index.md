@@ -2,16 +2,6 @@
 title: runtime.getPlatformInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPlatformInfo
-  - runtime
 browser-compat: webextensions.api.runtime.getPlatformInfo
 ---
 

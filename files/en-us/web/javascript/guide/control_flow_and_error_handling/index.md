@@ -17,7 +17,7 @@ contains exhaustive details about the statements in this chapter. The semicolon
 (`;`) character is used to separate statements in JavaScript code.
 
 Any JavaScript expression is also a statement.
-See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
 for complete information about expressions.
 
 ## Block statement
@@ -334,7 +334,7 @@ function. If the value does not correspond to a month number
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
-```js
+```js-nolint
 function getMonthName(mo) {
   mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
   const months = [
@@ -362,13 +362,13 @@ try {
 You can use a `catch` block to handle all exceptions that may be generated
 in the `try` block.
 
-```js
-catch (catchID) {
+```js-nolint
+catch (exception) {
   statements
 }
 ```
 
-The `catch` block specifies an identifier (`catchID`
+The `catch` block specifies an identifier (`exception`
 in the preceding syntax) that holds the value specified by the `throw`
 statement. You can use this identifier to get information about the exception that was
 thrown.
@@ -496,7 +496,7 @@ If an inner `try` block does _not_ have a corresponding
 2. the enclosing `try...catch` statement's `catch` block is
    checked for a match.
 
-For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
+For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try_blocks)
 on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 reference page.
 

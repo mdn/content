@@ -1,5 +1,6 @@
 ---
-title: AudioData.clone()
+title: "AudioData: clone() method"
+short-title: clone()
 slug: Web/API/AudioData/clone
 page-type: web-api-instance-method
 status:

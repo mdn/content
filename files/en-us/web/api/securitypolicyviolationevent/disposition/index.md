@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.disposition
+title: "SecurityPolicyViolationEvent: disposition property"
+short-title: disposition
 slug: Web/API/SecurityPolicyViolationEvent/disposition
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.disposition

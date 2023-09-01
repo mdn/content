@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.stop()
+title: "MediaStreamTrack: stop() method"
+short-title: stop()
 slug: Web/API/MediaStreamTrack/stop
 page-type: web-api-instance-method
 browser-compat: api.MediaStreamTrack.stop

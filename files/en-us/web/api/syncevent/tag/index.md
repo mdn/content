@@ -1,5 +1,6 @@
 ---
-title: SyncEvent.tag
+title: "SyncEvent: tag property"
+short-title: tag
 slug: Web/API/SyncEvent/tag
 page-type: web-api-instance-property
 status:

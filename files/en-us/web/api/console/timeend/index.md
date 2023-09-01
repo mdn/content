@@ -1,5 +1,6 @@
 ---
-title: console.timeEnd()
+title: "console: timeEnd() method"
+short-title: timeEnd()
 slug: Web/API/console/timeEnd
 page-type: web-api-instance-method
 browser-compat: api.console.timeEnd
@@ -17,15 +18,16 @@ details and examples.
 ## Syntax
 
 ```js-nolint
+timeEnd()
 timeEnd(label)
 ```
 
 ### Parameters
 
-- `label`
+- `label` {{optional_inline}}
   - : A `string` representing the name of the timer to stop. Once stopped, the elapsed time is automatically
     displayed in the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) along
-    with an indicator that the time has ended.
+    with an indicator that the time has ended. If omitted, the label "default" is used.
 
 ### Return value
 

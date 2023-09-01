@@ -30,18 +30,17 @@ browser-compat: css.properties.NameOfTheProperty
 > ```
 >
 > - **title**
->   - : The title heading is displayed at the top of the page. The title format is _NameOfTheProperty_.
+>   - : The `title` value is displayed at the top of the page. The title format is _NameOfTheProperty_.
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.
 > - **slug**
->   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/CSS/NameOfTheProperty`.
->     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
+>   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/NameOfTheProperty`.
+>     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn/HTML/Getting_started`.
 > - **page-type**
->   - : The `page-type` key for CSS properties is `css-shorthand-property` for shorthand properties; otherwise it is `css-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` but for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property, it is `css-property`.
+>   - : The `page-type` value for CSS properties is `css-property`. For a shorthand CSS property, the value is `css-shorthand-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` because it is a shorthand property, whereas the `page-type` value for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property is `css-property`.
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
+>   - : If applicable, the value of the technology `status` key can be [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), and/or **non-standard** (if not on a standards track).
 > - **browser-compat**
->
->   - : Replace the placeholder value <code>css.properties.NameOfTheProperty</code> with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
+>   - : Replace the placeholder value <code>css.properties.NameOfTheProperty</code> with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data/tree/main/css/properties). Check the _Other macros in the page_ section of this note block to see how this key-value is used to generate content for the _Specifications_ and _Browser compatibility_ sections.
 >
 > ---
 >
@@ -50,20 +49,22 @@ browser-compat: css.properties.NameOfTheProperty
 > A number of macro calls appear at the top of the content section (immediately below the page front matter).
 > You should update or delete them according to the advice below:
 >
-> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   If the technology you are documenting is not experimental, you can remove this.
->   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{SeeCompatTable}}`: This macro generates an **Experimental** banner, which indicates that the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
+>   If the technology you are documenting is not experimental, you can remove this macro.
+>   If the technology is experimental and is hidden behind a preference in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+> - `\{{Deprecated_Header}}`: This macro generates a **Deprecated** banner, which indicates that the use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
-> - `\{{CSSRef}}` — this must be present on every CSS property page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
->   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+> - `\{{CSSRef}}`: This macro must be present on every CSS property page. It generates a suitable CSS sidebar, depending on the tags included on the page.
+>   Remember to remove the `\{{MDNSidebar}}` macro when you use this template.
+>
+> Samples of the **Experimental** and **Deprecated** banners are shown right after this note block.
 >
 > ---
 >
 > **Other macros in the page**
 >
-> - Formal definition and Formal syntax sections: The content of the _Formal definition_ and _Formal syntax_ sections is generated in place of the `\{{CSSInfo}}` and `\{{CSSSyntax}}` macros, respectively. For these sections to have data, you must ensure an appropriate entry has been filled in for the property in our [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) data file. See [properties.md](https://github.com/mdn/data/blob/main/css/properties.md) for more information.
-> - Specifications and Browser compatibility sections: The build tool automatically uses the `browser-compat` key-value pair to insert data into the Specifications and Browser compatibility sections (replacing the `\{{Specifications}}` and `\{{Compat}}` macros in those sections, respectively).
+> - Formal definition and Formal syntax sections: The content for the _Formal definition_ and _Formal syntax_ sections is generated using the `\{{CSSInfo}}` and `\{{CSSSyntax}}` macros, respectively. For these sections to have data, you must ensure an appropriate entry has been filled in for the corresponding property in the [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) data file in the `mdn/data` repository. See the [Properties](https://github.com/mdn/data/blob/main/css/properties.md) page for more information.
+> - Specifications and Browser compatibility sections: The build tool automatically uses the `browser-compat` key-value pair from the page front matter to insert data into the _Specifications_ and _Browser compatibility_ sections (replacing the `\{{Specifications}}` and `\{{Compat}}` macros in those sections, respectively).
 >
 >   Note that you may first need to create/update an entry for the property and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
 >   See our [compatibility tables guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for information on adding or editing entries.
@@ -72,14 +73,14 @@ browser-compat: css.properties.NameOfTheProperty
 
 {{SeeCompatTable}}{{deprecated_header}}{{CSSRef}}
 
-In the introductory paragraph, start by naming the property and saying what it does.
+Begin the content on the page with an introductory paragraph, which names the property and says what it does.
 This should ideally be one or two short sentences.
 
 ## Try it
 
 _This title is auto-generated by the macro `\{{EmbedInteractiveExample}}`._
 
-This section is for interactive examples added using the `\{{EmbedInteractiveExample}}` macro. See the [Interactive example demo](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_example_demo) section in our writing guidelines for more information.
+This section is for interactive examples added using the `\{{EmbedInteractiveExample}}` macro. You create these examples in the [mdn/interactive-examples repository](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md). See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) section in our _Writing guidelines_ for more information.
 
 ## Constituent properties
 
@@ -98,9 +99,9 @@ Include the common use cases as a code block and describe the component subvalue
 
 Include one term and definition for each subvalue.
 
-- subvalue1
+- `subvalue1`
   - : Include a description of the subvalue, its data type, and what it represents.
-- subvalue2
+- `subvalue2`
   - : Include a description of the subvalue, its data type, and what it represents.
 
 ## Description
@@ -111,13 +112,13 @@ This is an optional section to include a description of the property and explain
 
 `\{{CSSInfo}}`
 
-_Remember to remove the backticks and backslash to use this macro._
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Formal syntax
 
 `\{CSSSyntax}}`
 
-_Remember to remove the backticks and backslash to use this macro._
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Examples
 
@@ -165,17 +166,18 @@ This is an optional section. You can include any warnings here for accessibility
 
 `\{{Specifications}}`
 
-_Remember to remove the backticks and backslash to use this macro._
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
 `\{{Compat}}`
 
-_Remember to remove the backticks and backslash to use this macro._
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-Include guides relating to the current property or a list of other properties here.
+Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2
+- external_link (year)

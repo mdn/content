@@ -1,6 +1,6 @@
 ---
 title: Operator precedence
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 page-type: guide
 ---
 
@@ -74,7 +74,7 @@ a OP2 OP1 b
 
 Then the binary operator `OP2` must have lower precedence than the unary operator `OP1` for it to be grouped as `a OP2 (OP1 b)`. For example, the following is invalid:
 
-```js example-bad
+```js-nolint example-bad
 function* foo() {
   a + yield 1;
 }
@@ -90,7 +90,7 @@ OP1 OP2 a
 
 Then the unary operator closer to the operand, `OP2`, must have higher precedence than `OP1` for it to be grouped as `OP1 (OP2 a)`. It's possible to get it the other way and end up with `(OP1 OP2) a`:
 
-```js example-bad
+```js-nolint example-bad
 async function* foo() {
   await yield 1;
 }
@@ -100,7 +100,7 @@ Because [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) has high
 
 For postfix unary operators (namely, `++` and `--`), the same rules apply. Luckily, both operators have higher precedence than any binary operator, so the grouping is always what you would expect. Moreover, because `++` evaluates to a _value_, not a _reference_, you can't chain multiple increments together either, as you may do in C.
 
-```js example-bad
+```js-nolint example-bad
 let a = 1;
 a++++; // SyntaxError: Invalid left-hand side in postfix operation.
 ```
@@ -251,7 +251,7 @@ Several notes about the table:
     <tr>
       <td rowspan="5">17</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Member Access", "#Dot_notation",
+        {{jsxref("Operators/Property_accessors", "Member Access", "#Dot_notation",
                 1)}}
       </td>
       <td rowspan="2">left-to-right</td>
@@ -268,7 +268,7 @@ Several notes about the table:
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Computed Member
+        {{jsxref("Operators/Property_accessors", "Computed Member
                 Access","#Bracket_notation", 1)}}
       </td>
       <td rowspan="3">n/a</td>
@@ -652,7 +652,7 @@ Several notes about the table:
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
           >Conditional (ternary) operator</a
         >
       </td>
@@ -689,7 +689,7 @@ Several notes about the table:
     <tr>
       <td >1</td>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator"
           >Comma / Sequence</a
         >
       </td>

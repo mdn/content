@@ -1,5 +1,6 @@
 ---
-title: ProcessingInstruction.sheet
+title: "ProcessingInstruction: sheet property"
+short-title: sheet
 slug: Web/API/ProcessingInstruction/sheet
 page-type: web-api-instance-property
 browser-compat: api.ProcessingInstruction.sheet
@@ -18,7 +19,7 @@ The associated {{DOMxref("Stylesheet")}} object, or `null` if there are none.
 
 ## Example
 
-```html
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="rule.css"?>
 …

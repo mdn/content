@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.offsetWidth
+title: "HTMLElement: offsetWidth property"
+short-title: offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.offsetWidth

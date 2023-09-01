@@ -1,13 +1,12 @@
 ---
-title: CSSUnitValue.value
+title: "CSSUnitValue: value property"
+short-title: value
 slug: Web/API/CSSUnitValue/value
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSUnitValue.value
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSUnitValue.value`** property of the
 {{domxref("CSSUnitValue")}} interface returns a double indicating the number of units.
@@ -25,7 +24,7 @@ The following creates a {{domxref('CSSPositionValue')}} from individual
 ```js
 const pos = new CSSPositionValue(
   new CSSUnitValue(5, "px"),
-  new CSSUnitValue(10, "px")
+  new CSSUnitValue(10, "px"),
 );
 
 console.log(pos.x.value); // 5

@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.has()
+title: "HighlightRegistry: has() method"
+short-title: has()
 slug: Web/API/HighlightRegistry/has
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: SVGImageElement.x
+title: "SVGImageElement: x property"
+short-title: x
 slug: Web/API/SVGImageElement/x
 page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.x

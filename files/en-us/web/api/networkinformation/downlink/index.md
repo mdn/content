@@ -1,5 +1,6 @@
 ---
-title: NetworkInformation.downlink
+title: "NetworkInformation: downlink property"
+short-title: downlink
 slug: Web/API/NetworkInformation/downlink
 page-type: web-api-instance-property
 status:

@@ -20,7 +20,7 @@ _This interface inherits all the methods of its parent interface, {{domxref("IDB
 
 _This interface inherits all the properties of its parent interface, {{domxref("IDBKeyRange")}}._
 
-Bear in mind however that `IDBLocaleAwareKeyRange` has its own implementation of {{domxref("IDBKeyRange.bound")}}. This is because when you use `bound()`, it checks if lower bound < upper bound, and throws an exception if that's not the case. With locale-aware indexes, the meaning of < depends on the locale, so for example in Lithuanian Y is sorted between I and K. The only difference between `IDBKeyRange` and `IDBLocaleAwareKeyRange` is that the latter doesn't do the aforementioned check.
+Bear in mind however that `IDBLocaleAwareKeyRange` has its own implementation of {{domxref("IDBKeyRange.bound_static", "IDBKeyRange.bound()")}}. This is because when you use `bound()`, it checks if lower bound < upper bound, and throws an exception if that's not the case. With locale-aware indexes, the meaning of < depends on the locale, so for example in Lithuanian Y is sorted between I and K. The only difference between `IDBKeyRange` and `IDBLocaleAwareKeyRange` is that the latter doesn't do the aforementioned check.
 
 Developers should always use `IDBLocaleAwareKeyRange` when dealing with locale-aware indexes.
 
@@ -30,30 +30,31 @@ Developers should always use `IDBLocaleAwareKeyRange` when dealing with locale-a
 function displayData() {
   const keyRangeValue = IDBLocaleAwareKeyRange.bound("A", "F");
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
-  const myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
   myIndex.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
-                         + `<td>${cursor.value.lName}</td>`
-                         + `<td>${cursor.value.fName}</td>`
-                         + `<td>${cursor.value.jTitle}</td>`
-                         + `<td>${cursor.value.company}</td>`
-                         + `<td>${cursor.value.eMail}</td>`
-                         + `<td>${cursor.value.phone}</td>`
-                         + `<td>${cursor.value.age}</td>`;
+      const tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        `<td>${cursor.value.id}</td>` +
+        `<td>${cursor.value.lName}</td>` +
+        `<td>${cursor.value.fName}</td>` +
+        `<td>${cursor.value.jTitle}</td>` +
+        `<td>${cursor.value.company}</td>` +
+        `<td>${cursor.value.eMail}</td>` +
+        `<td>${cursor.value.phone}</td>` +
+        `<td>${cursor.value.age}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

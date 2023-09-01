@@ -1,5 +1,6 @@
 ---
-title: Document.lastStyleSheetSet
+title: "Document: lastStyleSheetSet property"
+short-title: lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 page-type: web-api-instance-property
 status:

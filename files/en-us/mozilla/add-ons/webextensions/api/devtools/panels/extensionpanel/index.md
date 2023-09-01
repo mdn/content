@@ -2,14 +2,6 @@
 title: devtools.panels.ExtensionPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Type
-  - Reference
-  - WebExtensions
-  - devtools.panels
 browser-compat: webextensions.api.devtools.panels.ExtensionPanel
 ---
 
@@ -43,14 +35,16 @@ function handleHidden(e) {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",                 // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html" // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 {{WebExtExamples}}

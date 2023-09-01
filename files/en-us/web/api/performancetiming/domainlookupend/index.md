@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.domainLookupEnd
+title: "PerformanceTiming: domainLookupEnd property"
+short-title: domainLookupEnd
 slug: Web/API/PerformanceTiming/domainLookupEnd
 page-type: web-api-instance-property
 status:

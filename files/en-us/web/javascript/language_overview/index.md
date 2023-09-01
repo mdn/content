@@ -1,12 +1,12 @@
 ---
 title: JavaScript language overview
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 page-type: guide
 ---
 
 {{jsSidebar}}
 
-JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) that can be easily created via expressions and passed around like any other object.
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) objects that can be easily created via expressions and passed around like any other object.
 
 This page serves as a quick overview of various JavaScript language features, written for readers with background in other languages, such as C or Java.
 
@@ -88,7 +88,7 @@ Number values also include {{jsxref("NaN")}} (short for "Not a Number") and {{js
 
 ### Strings
 
-Strings in JavaScript are sequences of Unicode characters. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+Strings in JavaScript are sequences of Unicode characters. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ```js
 console.log("Hello, world");
@@ -167,7 +167,7 @@ console.log(Pi); // 3.14
 
 A variable declared with `const` cannot be reassigned.
 
-```js example-bad
+```js-nolint example-bad
 const Pi = 3.14;
 Pi = 1; // will throw an error because you cannot change a constant variable.
 ```
@@ -264,7 +264,7 @@ Or for caching values (when falsy values are invalid):
 const name = cachedName || (cachedName = getName());
 ```
 
-For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ## Grammar
 
@@ -272,7 +272,7 @@ JavaScript grammar is very similar to the C family. There are a few points worth
 
 - [Identifiers](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) can have Unicode characters, but they cannot be one of the [reserved words](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
 - [Comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) are commonly `//` or `/* */`, while many other scripting languages like Perl, Python, and Bash use `#`.
-- Semicolons are optional in JavaScript — the language [automatically inserts them](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) when needed. However, there are certain caveats to watch out, since unlike Python, semicolons are still part of the syntax.
+- Semicolons are optional in JavaScript — the language [automatically inserts them](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) when needed. However, there are certain caveats to watch out for, since unlike Python, semicolons are still part of the syntax.
 
 For an in-depth look at the JavaScript grammar, see the [reference page for lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar).
 
@@ -413,7 +413,7 @@ const obj = {
 };
 ```
 
-Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
+Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
 
 ```js
 // Dot notation
@@ -561,7 +561,7 @@ In the above code, the variable `args` holds all the values that were passed int
 
 The rest parameter will store all arguments _after_ where it's declared, but not before. In other words, `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
 
-If a function accepts a list of arguments and you already hold an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
+If a function accepts a list of arguments and you already hold them in an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
 We mentioned that JavaScript doesn't have named parameters. It's possible, though, to implement them using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which allows objects to be conveniently packed and unpacked.
 
@@ -736,11 +736,11 @@ class Admin extends withAuthentication(Person) {
 
 Static properties are created by prepending `static`. Private properties are created by prepending a hash `#` (not `private`). The hash is an integral part of the property name. (Think about `#` as `_` in Python.) Unlike most other languages, there's absolutely no way to read a private property outside the class body — not even in derived classes.
 
-For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_Classes).
+For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_classes).
 
 ## Asynchronous programming
 
-JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/EventLoop), which allows a set of tasks to be queued and polled for completion.
+JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which allows a set of tasks to be queued and polled for completion.
 
 There are three idiomatic ways to write asynchronous code in JavaScript:
 
@@ -748,7 +748,7 @@ There are three idiomatic ways to write asynchronous code in JavaScript:
 - [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), which is a syntactic sugar for Promises
 
-For example, here's how a file-read operation may look like in JavaScript:
+For example, here's what a file-read operation might look like in JavaScript:
 
 ```js
 // Callback-based
@@ -789,7 +789,7 @@ To learn more about asynchronous programming, you can read about [using promises
 
 ## Modules
 
-JavaScript also specifies a module system supported by most runtimes. A module is usually a file, identified by it's file path or URL. You can use the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements to exchange data between modules:
+JavaScript also specifies a module system supported by most runtimes. A module is usually a file, identified by its file path or URL. You can use the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements to exchange data between modules:
 
 ```js
 import { foo } from "./foo.js";
@@ -818,11 +818,11 @@ A runtime, or a host, is something that feeds data to the JavaScript engine (the
 
 ## Further exploration
 
-This page offers a very basic insight into how various JavaScript features compare with other languages. If you want to learn more about the language itself and the nuances with each feature, you can read the [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
+This page offers a very basic insight into how various JavaScript features compare with other languages. If you want to learn more about the language itself and the nuances of each feature, you can read the [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
 There are some essential parts of the language that we have omitted due to space and complexity, but you can explore on your own:
 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [Closures](/en-US/docs/Web/JavaScript/Closures)
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

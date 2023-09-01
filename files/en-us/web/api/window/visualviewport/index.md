@@ -1,5 +1,6 @@
 ---
-title: Window.visualViewport
+title: "Window: visualViewport property"
+short-title: visualViewport
 slug: Web/API/Window/visualViewport
 page-type: web-api-instance-property
 browser-compat: api.Window.visualViewport

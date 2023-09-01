@@ -1,5 +1,6 @@
 ---
-title: FileReader.abort()
+title: "FileReader: abort() method"
+short-title: abort()
 slug: Web/API/FileReader/abort
 page-type: web-api-instance-method
 browser-compat: api.FileReader.abort

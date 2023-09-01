@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.responseText
+title: "XMLHttpRequest: responseText property"
+short-title: responseText
 slug: Web/API/XMLHttpRequest/responseText
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.responseText
@@ -38,10 +39,10 @@ You know the entire content has been received when the value of
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // If specified, responseType must be empty string or "text"
-xhr.responseType = 'text';
+xhr.responseType = "text";
 
 xhr.onload = () => {
   if (xhr.readyState === xhr.DONE) {

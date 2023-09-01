@@ -1,5 +1,6 @@
 ---
-title: Document.preferredStyleSheetSet
+title: "Document: preferredStyleSheetSet property"
+short-title: preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
 page-type: web-api-instance-property
 status:
@@ -25,7 +26,7 @@ If there isn't a preferred style sheet set defined by the author, the empty stri
 ```js
 if (document.preferredStyleSheetSet) {
   console.log(
-    `The preferred style sheet set is: ${document.preferredStyleSheetSet}`
+    `The preferred style sheet set is: ${document.preferredStyleSheetSet}`,
   );
 } else {
   console.log("There is no preferred style sheet.");

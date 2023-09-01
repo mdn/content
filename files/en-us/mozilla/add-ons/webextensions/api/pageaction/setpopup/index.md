@@ -2,16 +2,6 @@
 title: pageAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - setPopup
 browser-compat: webextensions.api.pageAction.setPopup
 ---
 
@@ -58,12 +48,12 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
     if (changeInfo.status === "loading") {
       browser.pageAction.setPopup({
         tabId,
-        popup: "/popup/loading.html"
+        popup: "/popup/loading.html",
       });
     } else {
       browser.pageAction.setPopup({
         tabId,
-        popup: "/popup/complete.html"
+        popup: "/popup/complete.html",
       });
     }
   }

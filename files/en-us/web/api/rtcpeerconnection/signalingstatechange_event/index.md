@@ -1,5 +1,6 @@
 ---
-title: 'RTCPeerConnection: signalingstatechange event'
+title: "RTCPeerConnection: signalingstatechange event"
+short-title: signalingstatechange
 slug: Web/API/RTCPeerConnection/signalingstatechange_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.signalingstatechange_event
@@ -16,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('signalingstatechange', (event) => { });
+addEventListener("signalingstatechange", (event) => {});
 
-onsignalingstatechange = (event) => { };
+onsignalingstatechange = (event) => {};
 ```
 
 ## Event type
@@ -30,24 +31,28 @@ A generic {{domxref("Event")}}.
 Given an {{domxref("RTCPeerConnection")}}, `pc`, and an `updateStatus()` function that presents status information to the user, this code sets up an event handler to let the user know when the ICE negotiation process finishes up.
 
 ```js
-pc.addEventListener("signalingstatechange", (ev) => {
-  switch(pc.signalingState) {
-    case "stable":
-      updateStatus("ICE negotiation complete");
-      break;
-  }
-}, false);
+pc.addEventListener(
+  "signalingstatechange",
+  (ev) => {
+    switch (pc.signalingState) {
+      case "stable":
+        updateStatus("ICE negotiation complete");
+        break;
+    }
+  },
+  false,
+);
 ```
 
 Using `onsignalingstatechange`, it looks like this:
 
 ```js
 pc.onsignalingstatechange = (ev) => {
-  switch(pc.signalingState) {
+  switch (pc.signalingState) {
     case "stable":
       updateStatus("ICE negotiation complete");
       break;
-    }
+  }
 };
 ```
 

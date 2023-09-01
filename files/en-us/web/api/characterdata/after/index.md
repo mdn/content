@@ -1,5 +1,6 @@
 ---
-title: CharacterData.after()
+title: "CharacterData: after() method"
+short-title: after()
 slug: Web/API/CharacterData/after
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.after

@@ -1,5 +1,6 @@
 ---
-title: Element.insertAdjacentElement()
+title: "Element: insertAdjacentElement() method"
+short-title: insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
 page-type: web-api-instance-method
 browser-compat: api.Element.insertAdjacentElement

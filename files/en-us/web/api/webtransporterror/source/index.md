@@ -1,13 +1,12 @@
 ---
-title: WebTransportError.source
+title: "WebTransportError: source property"
+short-title: source
 slug: Web/API/WebTransportError/source
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportError.source
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`source`** read-only property of the {{domxref("WebTransportError")}} interface returns an enumerated value indicating the source of the error.
 
@@ -23,7 +22,6 @@ An enumerated value; can be either `stream` or `session`.
 const url = "notaurl";
 
 async function initTransport(url) {
-
   try {
     // Initialize transport connection
     const transport = new WebTransport(url);
@@ -32,11 +30,11 @@ async function initTransport(url) {
     await transport.ready;
 
     // ...
-  } catch(error) {
+  } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.
                  Source: ${error.source}.
-                 Error code: ${error.streamErrorCode}.`
+                 Error code: ${error.streamErrorCode}.`;
     console.log(msg);
   }
 }

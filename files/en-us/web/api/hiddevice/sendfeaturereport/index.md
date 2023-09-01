@@ -1,5 +1,6 @@
 ---
-title: HIDDevice.sendFeatureReport()
+title: "HIDDevice: sendFeatureReport() method"
+short-title: sendFeatureReport()
 slug: Web/API/HIDDevice/sendFeatureReport
 page-type: web-api-instance-method
 status:

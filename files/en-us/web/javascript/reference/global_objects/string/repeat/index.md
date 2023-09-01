@@ -7,9 +7,8 @@ browser-compat: javascript.builtins.String.repeat
 
 {{JSRef}}
 
-The **`repeat()`** method constructs and returns a new string
-which contains the specified number of copies of the string on which it was called,
-concatenated together.
+The **`repeat()`** method of {{jsxref("String")}} values constructs and returns a new string
+which contains the specified number of copies of this string, concatenated together.
 
 {{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}
 
@@ -32,10 +31,8 @@ A new string containing the specified number of copies of the given string.
 
 ### Exceptions
 
-- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: repeat count must be
-  non-negative.
-- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: repeat count must be
-  less than infinity and not overflow maximum string size.
+- {{jsxref("RangeError")}}
+  - : Thrown if `count` is negative or if `count` overflows maximum string length.
 
 ## Examples
 

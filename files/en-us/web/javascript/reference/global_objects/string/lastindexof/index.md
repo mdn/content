@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.lastIndexOf
 
 {{JSRef}}
 
-The **`lastIndexOf()`** method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the last occurrence of the specified substring. Given a second argument: a number, the method returns the last occurrence of the specified substring at an index less than or equal to the specified number.
+The **`lastIndexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the last occurrence of the specified substring. It takes an optional starting position and returns the last occurrence of the specified substring at an index less than or equal to the specified number.
 
 {{EmbedInteractiveExample("pages/js/string-lastindexof.html", "shorter")}}
 
@@ -22,7 +22,7 @@ lastIndexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `indexOf()` to search for the string `"undefined"`, which is rarely what you want.
+  - : Substring to search for. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `lastIndexOf()` to search for the string `"undefined"`, which is rarely what you want.
 
 - `position` {{optional_inline}}
 
@@ -68,7 +68,7 @@ expression returns `-1`:
 
 The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}} and
 `lastIndexOf()` to locate values in the string
-"`Brave, Brave New World`".
+`"Brave, Brave New World"`.
 
 ```js
 const anyString = "Brave, Brave New World";

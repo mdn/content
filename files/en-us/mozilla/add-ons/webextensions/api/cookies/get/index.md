@@ -2,16 +2,6 @@
 title: cookies.get()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/get
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
 browser-compat: webextensions.api.cookies.get
 ---
 
@@ -75,14 +65,14 @@ function logCookie(cookie) {
 function getCookie(tabs) {
   let getting = browser.cookies.get({
     url: tabs[0].url,
-    name: "favorite-color"
+    name: "favorite-color",
   });
   getting.then(logCookie);
 }
 
 let getActive = browser.tabs.query({
   active: true,
-  currentWindow: true
+  currentWindow: true,
 });
 getActive.then(getCookie);
 ```

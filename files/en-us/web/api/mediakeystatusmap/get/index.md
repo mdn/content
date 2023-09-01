@@ -1,5 +1,6 @@
 ---
-title: MediaKeyStatusMap.get()
+title: "MediaKeyStatusMap: get() method"
+short-title: get()
 slug: Web/API/MediaKeyStatusMap/get
 page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.get

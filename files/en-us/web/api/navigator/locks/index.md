@@ -1,5 +1,6 @@
 ---
-title: Navigator.locks
+title: "Navigator: locks property"
+short-title: locks
 slug: Web/API/Navigator/locks
 page-type: web-api-instance-property
 browser-compat: api.Navigator.locks

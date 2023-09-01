@@ -1,5 +1,6 @@
 ---
-title: RTCRtpReceiver.getContributingSources()
+title: "RTCRtpReceiver: getContributingSources() method"
+short-title: getContributingSources()
 slug: Web/API/RTCRtpReceiver/getContributingSources
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpReceiver.getContributingSources

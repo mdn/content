@@ -1,5 +1,6 @@
 ---
 title: "BatteryManager: levelchange event"
+short-title: levelchange
 slug: Web/API/BatteryManager/levelchange_event
 page-type: web-api-event
 browser-compat: api.BatteryManager.levelchange_event
@@ -45,7 +46,7 @@ navigator.getBattery().then((battery) => {
       }`;
     } else {
       document.querySelector(
-        "#stateBattery"
+        "#stateBattery",
       ).textContent = `Discharging time: ${battery.dischargingTime / 60}`;
     }
   };

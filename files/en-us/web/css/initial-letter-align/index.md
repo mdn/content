@@ -11,6 +11,8 @@ browser-compat: css.properties.initial-letter-align
 
 The **`initial-letter-align`** CSS property specifies the alignment of initial letters within a paragraph.
 
+## Syntax
+
 ```css
 /* Keyword values */
 initial-letter-align: auto;
@@ -25,8 +27,6 @@ initial-letter-align: revert;
 initial-letter-align: revert-layer;
 initial-letter-align: unset;
 ```
-
-## Syntax
 
 One of the keyword values listed below.
 
@@ -97,6 +97,8 @@ One of the keyword values listed below.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
 
 - {{cssxref("initial-letter")}}
 - [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

@@ -2,16 +2,6 @@
 title: webRequest.UploadData
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/UploadData
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - UploadData
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.UploadData
 ---
 

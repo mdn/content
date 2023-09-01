@@ -49,10 +49,9 @@ const cred = new PasswordCredential({
   iconURL,
 });
 
-navigator.credentials.store(cred)
-  .then(() => {
+navigator.credentials.store(cred).then(() => {
   // Do something else.
-  });
+});
 ```
 
 ## Specifications

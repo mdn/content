@@ -1,5 +1,6 @@
 ---
-title: Document.createRange()
+title: "Document: createRange() method"
+short-title: createRange()
 slug: Web/API/Document/createRange
 page-type: web-api-instance-method
 browser-compat: api.Document.createRange

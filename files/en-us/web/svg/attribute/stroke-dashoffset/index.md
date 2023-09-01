@@ -2,9 +2,6 @@
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-dashoffset
 ---
 
@@ -16,7 +13,6 @@ The **`stroke-dashoffset`** attribute is a presentation attribute defining an of
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('path')}}

@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.createLinearGradient()
+title: "CanvasRenderingContext2D: createLinearGradient() method"
+short-title: createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createLinearGradient

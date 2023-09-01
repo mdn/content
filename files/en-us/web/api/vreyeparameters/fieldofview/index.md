@@ -1,5 +1,6 @@
 ---
-title: VREyeParameters.fieldOfView
+title: "VREyeParameters: fieldOfView property"
+short-title: fieldOfView
 slug: Web/API/VREyeParameters/fieldOfView
 page-type: web-api-instance-property
 status:

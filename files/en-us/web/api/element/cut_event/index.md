@@ -1,5 +1,6 @@
 ---
 title: "Element: cut event"
+short-title: cut
 slug: Web/API/Element/cut_event
 page-type: web-api-event
 browser-compat: api.Element.cut_event

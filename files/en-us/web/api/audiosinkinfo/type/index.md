@@ -1,5 +1,6 @@
 ---
-title: AudioSinkInfo.type
+title: "AudioSinkInfo: type property"
+short-title: type
 slug: Web/API/AudioSinkInfo/type
 page-type: web-api-instance-property
 status:

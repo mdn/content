@@ -1,7 +1,7 @@
 ---
 title: Getting started with Ember
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -124,7 +124,7 @@ Ember uses a command-line interface (CLI) tool for building and scaffolding part
 1. You'll need node and npm installed before you can install ember-cli. [Go here to find out how to install node and npm](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups), if you haven't already got them.
 2. Now type the following into your terminal to install ember-cli:
 
-   ```
+   ```bash
    npm install -g ember-cli
    ```
 
@@ -211,7 +211,7 @@ ember server
 
 This should give you an output similar to the following:
 
-```
+```plain
 Build successful (190ms) – Serving on http://localhost:4200/
 
 Slowest Nodes (totalTime >= 5%)          | Total (avg)

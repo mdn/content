@@ -1,6 +1,7 @@
 ---
 title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -19,7 +20,7 @@ This article provides information about the changes in Firefox 59 that will affe
 
 ### HTML
 
-- The {{HTMLElement("textarea")}} element's {{htmlattrxref("autocomplete", "textarea")}} attribute has been implemented. This lets you enable or disable form auto-fill for the element.
+- The {{HTMLElement("textarea")}} element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute has been implemented. This lets you enable or disable form auto-fill for the element.
 
 ### CSS
 
@@ -27,7 +28,7 @@ This article provides information about the changes in Firefox 59 that will affe
 - The behavior of "unusual elements" (elements that aren't rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ([Firefox bug 1427292](https://bugzil.la/1427292)). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specified behaviors are.
 - {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn/HTML/Tables) parts (e.g. {{htmlelement("th")}} elements) ([Firefox bug 975644](https://bugzil.la/975644)).
 - {{cssxref("calc", "calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ([Firefox bug 984021](https://bugzil.la/984021)).
-- {{cssxref("calc", "calc()")}} in [media query](/en-US/docs/Web/CSS/Media_Queries) values is now supported [Firefox bug 1396057](https://bugzil.la/1396057).
+- {{cssxref("calc", "calc()")}} in [media query](/en-US/docs/Web/CSS/CSS_media_queries) values is now supported [Firefox bug 1396057](https://bugzil.la/1396057).
 - The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ([Firefox bug 1035091](https://bugzil.la/1035091)).
 - Implement the {{cssxref("font-optical-sizing")}} property ([Firefox bug 1435692](https://bugzil.la/1435692)).
 
@@ -106,12 +107,12 @@ _No changes._
 
 ### HTML
 
-The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g. `type="application/javascript;version=1.8"`) has been removed ([Firefox bug 1428745](https://bugzil.la/1428745)).
+The non-standard `version` parameter of the {{htmlelement("script")}} element's [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute (e.g. `type="application/javascript;version=1.8"`) has been removed ([Firefox bug 1428745](https://bugzil.la/1428745)).
 
 ### CSS
 
 - The proprietary `mozmm` {{cssxref("&lt;length&gt;")}} unit has been removed ([Firefox bug 1416564](https://bugzil.la/1416564)).
-- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("-moz-border-left-colors")}} properties have been limited to usage in chrome code only ([Firefox bug 1417200](https://bugzil.la/1417200)).
+- The proprietary `-moz-border-top-colors`, `-moz-border-right-colors`, `-moz-border-bottom-colors`, and `-moz-border-left-colors` properties have been limited to usage in chrome code only ([Firefox bug 1417200](https://bugzil.la/1417200)).
 
 ### JavaScript
 

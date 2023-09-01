@@ -23,8 +23,8 @@ The **WebGLShaderPrecisionFormat** interface is part of the [WebGL API](/en-US/d
 A `WebGLShaderPrecisionFormat` object is returned by the {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} method.
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 // WebGLShaderPrecisionFormat { rangeMin: 127, rangeMax: 127, precision: 23 }
 ```

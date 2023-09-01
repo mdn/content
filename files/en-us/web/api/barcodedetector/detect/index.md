@@ -1,5 +1,6 @@
 ---
-title: BarcodeDetector.detect()
+title: "BarcodeDetector: detect() method"
+short-title: detect()
 slug: Web/API/BarcodeDetector/detect
 page-type: web-api-instance-method
 status:

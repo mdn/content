@@ -1,5 +1,6 @@
 ---
-title: Event.bubbles
+title: "Event: bubbles property"
+short-title: bubbles
 slug: Web/API/Event/bubbles
 page-type: web-api-instance-property
 browser-compat: api.Event.bubbles

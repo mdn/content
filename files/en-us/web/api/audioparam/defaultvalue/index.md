@@ -1,5 +1,6 @@
 ---
-title: AudioParam.defaultValue
+title: "AudioParam: defaultValue property"
+short-title: defaultValue
 slug: Web/API/AudioParam/defaultValue
 page-type: web-api-instance-property
 browser-compat: api.AudioParam.defaultValue

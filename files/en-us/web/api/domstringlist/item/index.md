@@ -1,5 +1,6 @@
 ---
-title: DOMStringList.item()
+title: "DOMStringList: item() method"
+short-title: item()
 slug: Web/API/DOMStringList/item
 page-type: web-api-instance-method
 browser-compat: api.DOMStringList.item

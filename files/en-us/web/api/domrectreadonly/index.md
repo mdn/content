@@ -35,7 +35,7 @@ The **`DOMRectReadOnly`** interface specifies the standard properties used by {{
 
 ## Static methods
 
-- {{domxref("DOMRectReadOnly.fromRect()")}}
+- {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}}
   - : Creates a new `DOMRect` object with a given location and dimensions.
 
 ## Specifications

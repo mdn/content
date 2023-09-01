@@ -1,5 +1,6 @@
 ---
-title: PerformanceLongTaskTiming.attribution
+title: "PerformanceLongTaskTiming: attribution property"
+short-title: attribution
 slug: Web/API/PerformanceLongTaskTiming/attribution
 page-type: web-api-instance-property
 status:

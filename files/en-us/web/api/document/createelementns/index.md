@@ -1,5 +1,6 @@
 ---
-title: Document.createElementNS()
+title: "Document: createElementNS() method"
+short-title: createElementNS()
 slug: Web/API/Document/createElementNS
 page-type: web-api-instance-method
 browser-compat: api.Document.createElementNS

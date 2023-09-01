@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.getViewport()
+title: "XRWebGLLayer: getViewport() method"
+short-title: getViewport()
 slug: Web/API/XRWebGLLayer/getViewport
 page-type: web-api-instance-method
 status:

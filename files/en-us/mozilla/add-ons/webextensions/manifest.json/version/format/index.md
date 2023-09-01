@@ -2,10 +2,6 @@
 title: Legacy Version Formats
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version/format
 page-type: guide
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 ---
 
 {{AddonSidebar}}
@@ -16,7 +12,7 @@ This page describes legacy web extension version string formats. See the manifes
 
 A **version string** consists of one or more _version parts_, separated by dots.
 
-Each **version part** is parsed as a sequence of four parts: `<number-a><string-b><number-c><string-d>`. Each of the parts is optional. Numbers are integers base 10 (may be negative), and strings are non-numeric ASCII characters.
+Each **version part** is parsed as a sequence of four parts: `<number-a><string-b><number-c><string-d>`. Each of the parts is optional. Numbers are integers base 10 (may be negative), and strings are non-numeric {{Glossary("ASCII")}} characters.
 
 Here are a few examples of valid version parts:
 
@@ -50,7 +46,7 @@ Version parts are also compared left to right; parts A and C are compared as num
 
 ## Examples
 
-```
+```plain
 1.-1
 < 1 == 1. == 1.0 == 1.0.0
 < 1.1a < 1.1aa < 1.1ab < 1.1b < 1.1c

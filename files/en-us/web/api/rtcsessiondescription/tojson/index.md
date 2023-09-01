@@ -1,5 +1,6 @@
 ---
-title: RTCSessionDescription.toJSON()
+title: "RTCSessionDescription: toJSON() method"
+short-title: toJSON()
 slug: Web/API/RTCSessionDescription/toJSON
 page-type: web-api-instance-method
 browser-compat: api.RTCSessionDescription.toJSON

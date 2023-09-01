@@ -1,12 +1,9 @@
 ---
 title: <maction>
 slug: Web/MathML/Element/maction
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Enlivening Expressions
-  - Deprecated
+page-type: mathml-element
+status:
+  - deprecated
 browser-compat: mathml.elements.maction
 ---
 

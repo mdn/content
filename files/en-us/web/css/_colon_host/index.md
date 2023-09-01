@@ -7,9 +7,11 @@ browser-compat: css.selectors.host
 
 {{CSSRef}}
 
-The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside — in other words, this allows you to select a custom element from inside its shadow DOM.
+The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside — in other words, this allows you to select a custom element from inside its shadow DOM.
 
 > **Note:** This has no effect when used outside a shadow DOM.
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host.html", "tabbed-shorter")}}
 
 ```css
 /* Selects a shadow root host */
@@ -72,6 +74,8 @@ The `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` rule styles all i
 
 ## See also
 
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)
 - {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}
+- {{CSSXref("::slotted")}}
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

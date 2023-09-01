@@ -1,15 +1,7 @@
 ---
 title: Permissions-Policy
 slug: Web/HTTP/Headers/Permissions-Policy
-tags:
-  - Authorization
-  - Permissions-Policy
-  - HTTP
-  - Permissions
-  - Reference
-  - Security
-  - Web
-  - header
+page-type: http-header
 browser-compat: http.headers.Permissions-Policy
 ---
 
@@ -52,7 +44,7 @@ Permissions-Policy: <directive> <allowlist>
 
     The values `*` and `()` may only be used on their own, while `self` and `src` may be used in combination with one or more origins.
 
-    > **Note:** Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives). For `<iframe>` `allow` attributes , the default behavior is always `src`.
+    > **Note:** Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](#directives). For `<iframe>` `allow` attributes , the default behavior is always `src`.
 
 Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
 
@@ -133,6 +125,10 @@ You can specify
 
   - : Controls whether the current document is allowed to use the {{domxref("WebHID API", "WebHID API", "", "nocode")}} to connect to uncommon or exotic human interface devices such as alternative keyboards or gamepads.
 
+- {{httpheader('Permissions-Policy/identity-credentials-get','identity-credentials-get')}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to use the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API), and more specifically the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method with an `identity` option. Where this policy forbids use of the API, the {{jsxref("Promise")}} returned by the `get()` call will reject with a `NotAllowedError` {{domxref("DOMException")}}.
+
 - {{httpheader('Permissions-Policy/idle-detection','idle-detection')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the {{domxref("Idle Detection API", "Idle Detection API", "", "nocode")}} to detect when users are interacting with their devices, for example to report "available"/"away" status in chat applications.
@@ -153,6 +149,10 @@ You can specify
 
   - : Controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a {{domxref("DOMException")}}.
 
+- {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to use the [WebOTP API](/en-US/docs/Web/API/WebOTP_API) to request a one-time password (OTP) from a specially-formatted SMS message sent by the app's server, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}}.
+
 - {{httpheader('Permissions-Policy/payment', 'payment')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is enabled, the {{domxref("PaymentRequest","PaymentRequest()")}} constructor will throw a `SecurityError` {{domxref("DOMException")}}.
@@ -161,9 +161,13 @@ You can specify
 
   - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
 
+- {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.
+
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}} {{Experimental_Inline}}
 
-  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.
+  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
 
 - {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}} {{Experimental_Inline}}
 
@@ -176,6 +180,10 @@ You can specify
 - {{httpheader("Permissions-Policy/speaker-selection", "speaker-selection")}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) to list and select speakers.
+
+- {{httpheader("Permissions-Policy/storage-access", "storage-access")}} {{Experimental_Inline}}
+
+  - : Controls whether a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
 
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
 

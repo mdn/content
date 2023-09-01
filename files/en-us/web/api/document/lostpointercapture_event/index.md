@@ -1,5 +1,6 @@
 ---
 title: "Document: lostpointercapture event"
+short-title: lostpointercapture
 slug: Web/API/Document/lostpointercapture_event
 page-type: web-api-event
 browser-compat: api.Document.lostpointercapture_event
@@ -92,13 +93,13 @@ para.addEventListener("pointerdown", (event) => {
 
 - Related events
 
-  - {{domxref("Document/pointerover_event", "pointerover")}}
-  - {{domxref("Document/pointerenter_event", "pointerenter")}}
-  - {{domxref("Document/pointerdown_event", "pointerdown")}}
-  - {{domxref("Document/pointermove_event", "pointermove")}}
-  - {{domxref("Document/pointerup_event", "pointerup")}}
-  - {{domxref("Document/pointercancel_event", "pointercancel")}}
-  - {{domxref("Document/pointerout_event", "pointerout")}}
-  - {{domxref("Document/pointerleave_event", "pointerleave")}}
+  - {{domxref("Element/pointerover_event", "pointerover")}}
+  - {{domxref("Element/pointerenter_event", "pointerenter")}}
+  - {{domxref("Element/pointerdown_event", "pointerdown")}}
+  - {{domxref("Element/pointermove_event", "pointermove")}}
+  - {{domxref("Element/pointerup_event", "pointerup")}}
+  - {{domxref("Element/pointercancel_event", "pointercancel")}}
+  - {{domxref("Element/pointerout_event", "pointerout")}}
+  - {{domxref("Element/pointerleave_event", "pointerleave")}}
 
 - This event on `Element` targets: {{domxref("Element/lostpointercapture_event", "lostpointercapture")}} event

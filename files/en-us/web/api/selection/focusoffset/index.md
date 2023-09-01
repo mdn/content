@@ -1,5 +1,6 @@
 ---
-title: Selection.focusOffset
+title: "Selection: focusOffset property"
+short-title: focusOffset
 slug: Web/API/Selection/focusOffset
 page-type: web-api-instance-property
 browser-compat: api.Selection.focusOffset

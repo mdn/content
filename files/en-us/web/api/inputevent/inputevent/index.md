@@ -1,5 +1,6 @@
 ---
-title: InputEvent()
+title: "InputEvent: InputEvent() constructor"
+short-title: InputEvent()
 slug: Web/API/InputEvent/InputEvent
 page-type: web-api-constructor
 browser-compat: api.InputEvent.InputEvent

@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.wrapKey()
+title: "SubtleCrypto: wrapKey() method"
+short-title: wrapKey()
 slug: Web/API/SubtleCrypto/wrapKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.wrapKey
@@ -14,7 +15,7 @@ Wrapping a key helps protect it in untrusted environments, such as inside an oth
 As with {{DOMxRef("SubtleCrypto.exportKey()")}}, you specify an [export format](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats) for the key.
 To export a key, it must have {{DOMxRef("CryptoKey.extractable")}} set to `true`.
 
-But because `wrapKey()` also encrypts the key to be imported, you also need to pass in the key that must be used to encrypt it.
+But because `wrapKey()` also encrypts the key to be exported, you also need to pass in the key that must be used to encrypt it.
 This is sometimes called the "wrapping key".
 
 The inverse of `wrapKey()` is {{domxref("SubtleCrypto.unwrapKey()")}}: while `wrapKey` is composed of export + encrypt, `unwrapKey` is composed of import + decrypt.
@@ -53,14 +54,13 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
     - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
       pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams) object.
     - To use [AES-KW](#aes-kw),
-      pass the string `"AES-KW"`, or an object of the form `{ "name": "AES-KW }`.
+      pass the string `"AES-KW"`, or an object of the form `{ name: "AES-KW" }`.
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  that fulfills with an
-  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-  containing the encrypted exported key.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with
+an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+containing the encrypted exported key.
 
 ### Exceptions
 
@@ -95,7 +95,7 @@ AES-KW is specified in [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394)
 ### Raw wrap
 
 This example wraps an AES key.
-It uses "raw" as the export format and AES-KW, with a password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js).
+It uses "raw" as the export format and AES-KW, with a password-derived key, to encrypt it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js)
 
 ```js
 let salt;
@@ -112,7 +112,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -131,7 +131,7 @@ function getKey(keyMaterial, salt) {
     keyMaterial,
     { name: "AES-KW", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -158,7 +158,7 @@ window.crypto.subtle
       length: 256,
     },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   )
   .then((secretKey) => wrapCryptoKey(secretKey))
   .then((wrappedKey) => console.log(wrappedKey));
@@ -186,7 +186,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -205,7 +205,7 @@ function getKey(keyMaterial, salt) {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -239,7 +239,7 @@ window.crypto.subtle
       hash: "SHA-256",
     },
     true,
-    ["sign", "verify"]
+    ["sign", "verify"],
   )
   .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
   .then((wrappedKey) => {
@@ -268,7 +268,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -287,7 +287,7 @@ function getKey(keyMaterial, salt) {
     keyMaterial,
     { name: "AES-CBC", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -321,15 +321,15 @@ window.crypto.subtle
       hash: "SHA-256",
     },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   )
   .then((keyPair) => wrapCryptoKey(keyPair.publicKey))
   .then((wrappedKey) => console.log(wrappedKey));
 ```
 
-### JSON Web Key import
+### JSON Web Key wrap
 
-This code wraps an ECDSA private signing key. It uses "jwk" as the export format and AES-GCM, with a password-derived key, to encrypt it.
+This example wraps an ECDSA private signing key. It uses "jwk" as the export format and AES-GCM, with a password-derived key, to encrypt it.
 [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/jwk.js)
 
 ```js
@@ -348,7 +348,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -367,7 +367,7 @@ function getKey(keyMaterial, salt) {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -398,7 +398,7 @@ window.crypto.subtle
       namedCurve: "P-384",
     },
     true,
-    ["sign", "verify"]
+    ["sign", "verify"],
   )
   .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
   .then((wrappedKey) => console.log(wrappedKey));

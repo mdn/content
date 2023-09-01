@@ -1,5 +1,6 @@
 ---
-title: Geolocation.clearWatch()
+title: "Geolocation: clearWatch() method"
+short-title: clearWatch()
 slug: Web/API/Geolocation/clearWatch
 page-type: web-api-instance-method
 browser-compat: api.Geolocation.clearWatch

@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryEntry.getDirectory()
+title: "FileSystemDirectoryEntry: getDirectory() method"
+short-title: getDirectory()
 slug: Web/API/FileSystemDirectoryEntry/getDirectory
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryEntry.getDirectory

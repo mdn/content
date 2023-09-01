@@ -2,15 +2,6 @@
 title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Method
-  - WebExtensions
-  - devtools.inspectedWindow
-  - reload
 browser-compat: webextensions.api.devtools.inspectedWindow.reload
 ---
 
@@ -52,8 +43,8 @@ const reloadButton = document.querySelector("#reload-button");
 
 reloadButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.reload({
-    injectedScript:"alert(navigator.userAgent);",
-    userAgent: "Not a real UA"
+    injectedScript: "alert(navigator.userAgent);",
+    userAgent: "Not a real UA",
   });
 });
 ```

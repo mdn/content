@@ -1,5 +1,6 @@
 ---
-title: ExtendableMessageEvent.origin
+title: "ExtendableMessageEvent: origin property"
+short-title: origin
 slug: Web/API/ExtendableMessageEvent/origin
 page-type: web-api-instance-property
 browser-compat: api.ExtendableMessageEvent.origin

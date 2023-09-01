@@ -1,5 +1,6 @@
 ---
-title: TextDecoderStream.writable
+title: "TextDecoderStream: writable property"
+short-title: writable
 slug: Web/API/TextDecoderStream/writable
 page-type: web-api-instance-property
 browser-compat: api.TextDecoderStream.writable
@@ -19,7 +20,7 @@ Returning a {{domxref("WritableStream")}} from a `TextDecoderStream`.
 
 ```js
 stream = new TextDecoderStream();
-console.log(stream.writeable); //a WritableStream
+console.log(stream.writable); // A WritableStream
 ```
 
 ## Specifications

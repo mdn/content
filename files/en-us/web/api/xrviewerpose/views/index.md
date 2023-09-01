@@ -1,5 +1,6 @@
 ---
-title: XRViewerPose.views
+title: "XRViewerPose: views property"
+short-title: views
 slug: Web/API/XRViewerPose/views
 page-type: web-api-instance-property
 browser-compat: api.XRViewerPose.views

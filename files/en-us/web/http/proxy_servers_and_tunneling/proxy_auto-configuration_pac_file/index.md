@@ -1,11 +1,7 @@
 ---
 title: Proxy Auto-Configuration (PAC) file
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-tags:
-  - Necko
-  - Networking
-  - PAC
-  - Proxy
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -250,8 +246,8 @@ function alertEval(str) {
   alert(`${str} is ${eval(str)}`);
 }
 function FindProxyForURL(url, host) {
-  alertEval('isInNet(host, "63.245.213.24", "255.255.255.255")');
-  // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
+  alertEval('isInNet(host, "192.0.2.172", "255.255.255.255")');
+  // "PAC-alert: isInNet(host, "192.0.2.172", "255.255.255.255") is true"
 }
 ```
 
@@ -292,7 +288,7 @@ Concatenates the four dot-separated bytes into one 4-byte word and converts it t
 #### Example
 
 ```js
-convert_addr("104.16.41.2"); // returns the decimal number 1745889538
+convert_addr("192.0.2.172"); // returns the decimal number 1745889538
 ```
 
 ### myIpAddress()
@@ -393,7 +389,7 @@ Only the first parameter is mandatory. Either the second, the third, or both may
 
 If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.
 
-If both **wd1** and **wd1** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
+If both **wd1** and **wd2** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
 
 > **Warning:** _The order of the days matters_.
 > Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to `true`.
@@ -414,7 +410,7 @@ weekdayRange("FRI", "MON") // returns true Friday and Monday only (note, the ord
 
 #### Syntax
 
-```
+```js-nolint
 dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
 dateRange(<day1>, <day2>, [gmt])
 dateRange(<month1>, <month2>, [gmt])
@@ -431,14 +427,14 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 - day
   - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-```
+```plain
 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
 ```
 
 - month
   - : Is one of the ordered month strings below.
 
-```
+```plain
 "JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
 ```
 
@@ -619,7 +615,7 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0")) {
+  if (isInNet(host, "192.0.2.172", "255.255.0.0")) {
     return "DIRECT";
   }
   return "PROXY proxy.mydomain.com:8080";
@@ -633,7 +629,7 @@ function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
-    isInNet(host, "198.95.0.0", "255.255.0.0")
+    isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
   } else {

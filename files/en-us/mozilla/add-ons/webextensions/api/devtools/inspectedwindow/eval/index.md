@@ -2,15 +2,6 @@
 title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Method
-  - WebExtensions
-  - devtools.inspectedWindow
-  - eval
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
 ---
 
@@ -114,8 +105,7 @@ function handleResult(result) {
 const checkjQuery = "typeof jQuery !== 'undefined'";
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(checkjQuery)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(checkjQuery).then(handleResult);
 });
 ```
 
@@ -142,8 +132,7 @@ function handleResult(result) {
 }
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(evalString)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(evalString).then(handleResult);
 });
 ```
 
@@ -168,8 +157,7 @@ function handleResult(result) {
 }
 
 inspectButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(inspectString)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(inspectString).then(handleResult);
 });
 ```
 

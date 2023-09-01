@@ -1,5 +1,6 @@
 ---
-title: RemotePlayback.prompt()
+title: "RemotePlayback: prompt() method"
+short-title: prompt()
 slug: Web/API/RemotePlayback/prompt
 page-type: web-api-instance-method
 browser-compat: api.RemotePlayback.prompt
@@ -53,10 +54,11 @@ In the following example the user is prompted to select a remote playback device
 ```js
 devicesBtn.onclick = () => {
   // Request the user to select a remote playback device.
-  videoElem.remote.prompt()
+  videoElem.remote
+    .prompt()
     // Update the UI and monitor the connected state.
     .then(updateRemotePlaybackState);
-    // Otherwise, the user cancelled the selection UI or no screens were found.
+  // Otherwise, the user cancelled the selection UI or no screens were found.
 };
 ```
 

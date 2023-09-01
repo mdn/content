@@ -1,6 +1,7 @@
 ---
 title: Firefox 63 for developers
 slug: Mozilla/Firefox/Releases/63
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -31,16 +32,16 @@ This article provides information about the changes in Firefox 63 that will affe
 ### CSS
 
 - Support for the {{CSSxRef(":defined")}} pseudo-class has been added ([Firefox bug 1331334](https://bugzil.la/1331334)).
-- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#the_gap_properties) ([Firefox bug 1398483](https://bugzil.la/1398483)).
+- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) ([Firefox bug 1398483](https://bugzil.la/1398483)).
 - Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ([Firefox bug 1444139](https://bugzil.la/1444139)).
-- Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ([Firefox bug 1472843](https://bugzil.la/1472843)).
+- Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
-- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4) ([Firefox bug 1422225](https://bugzil.la/1422225)).
+- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax_improvements_in_level_4) ([Firefox bug 1422225](https://bugzil.la/1422225)).
 - Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).
 - Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ([Firefox bug 1464786](https://bugzil.la/1464786)).
 - Implemented flexbox layout for `safe` & `unsafe` values in {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("justify-content")}} ([Firefox bug 1297774](https://bugzil.la/1297774)).
-- The [logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties) (where appropriate) are now animatable ([Firefox bug 1309752](https://bugzil.la/1309752)).
+- The [logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) (where appropriate) are now animatable ([Firefox bug 1309752](https://bugzil.la/1309752)).
 
 #### Removals
 
@@ -54,7 +55,7 @@ _No changes._
 
 - The {{JSxRef("Symbol.prototype.description")}} property has been implemented ([Firefox bug 1472170](https://bugzil.la/1472170)).
 - The {{JSxRef("Object.fromEntries()")}} method has been added ([Firefox bug 1469019](https://bugzil.la/1469019)).
-- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of `TypeError: x is undefined` the console now returns the more descriptive [`x is undefined; can't access its "y" property`](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property) ([Firefox bug 1259822](https://bugzil.la/1259822)).
+- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of `TypeError: x is undefined` the console now returns the more descriptive [`x is undefined; can't access its "y" property`](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1259822](https://bugzil.la/1259822)).
 
 #### Removals
 
@@ -64,7 +65,7 @@ _No changes._
 
 #### New APIs
 
-- The Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) and Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)) APIs have been enabled by default; See [Web components](/en-US/docs/Web/Web_Components) for more details.
+- The Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) and Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)) APIs have been enabled by default; See [Web components](/en-US/docs/Web/API/Web_components) for more details.
 - The {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} has been implemented ([Firefox bug 1409664](https://bugzil.la/1409664)).
 - The {{domxref("Clipboard", "Async Clipboard API", "", "1")}} has been implemented and enabled by default for all channels ([Firefox bug 1461465](https://bugzil.la/1461465)). As is the case with Chrome, Firefox currently implements only the {{domxref("Clipboard.writeText", "writeText()")}} and {{domxref("Clipboard.readText", "readText()")}} methods; however, unlike Chrome, `readText()` is only available in [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 - The {{DOMxRef("SecurityPolicyViolationEvent")}} interface is now supported. It allows sending events when the {{HTTPHeader("Content-Security-Policy")}} is violated ([Firefox bug 1472661](https://bugzil.la/1472661)).
@@ -109,8 +110,8 @@ _No changes._
 #### Removals
 
 - The obsolete and non-standard Firefox-only methods {{DOMxRef("Window.back()")}} and {{DOMxRef("Window.forward()")}} have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ([Firefox bug 1479486](https://bugzil.la/1479486)).
-- The {{DOMxRef("URL.createObjectURL", "createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL", "revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ([Firefox bug 1264182](https://bugzil.la/1264182)).
-- Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties {{DOMxRef("AudioListener.dopplerFactor", "dopplerFactor")}} and {{DOMxRef("AudioListener.speedOfSound", "speedOfSound")}} have been removed, along with the `PannerNode` method {{DOMxRef("PannerNode.setVelocity", "setVelocity()")}} ([Firefox bug 1148354](https://bugzil.la/1148354)).
+- The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ([Firefox bug 1264182](https://bugzil.la/1264182)).
+- Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties `dopplerFactor` and `speedOfSound` have been removed, along with the `PannerNode` method `setVelocity()` ([Firefox bug 1148354](https://bugzil.la/1148354)).
 
 ### CSSOM
 
@@ -192,7 +193,7 @@ _No changes._
 - {{WebExtAPIRef("tabs.update")}} now supports changing the selection status of a tab without changing the focused tab ([Firefox bug 1486050](https://bugzil.la/1486050)) by including both `highlighted: true` and `active: false` in the `updateProperties` parameter.
 - {{WebExtAPIRef("tabs.query")}} now returns an array of {{WebExtAPIRef("tabs.Tab")}} objects if multiple tabs are selected ([Firefox bug 1465170](https://bugzil.la/1465170)).
 - The {{WebExtAPIRef("tabs.Tab")}} property now properly reflects which tabs in a browser window are selected (highlighted) and {{WebExtAPIRef("tabs.highlight")}} supports changing the highlighted status of multiple tabs ([Firefox bug 1464862](https://bugzil.la/1464862)).
-- The `isarticle` property in the `extraParameters` object passed into {{WebExtAPIRef("tabs.onUpdated")}} has been renamed to `isArticle`. The old name is retained but deprecated. This change was uplifted to Firefox 62 ([Firefox bug 1461695](https://bugzil.la/1461695)).
+- The `isarticle` property in the `filter` object passed into {{WebExtAPIRef("tabs.onUpdated")}} has been renamed to `isArticle`. The old name is retained but deprecated. This change was uplifted to Firefox 62 ([Firefox bug 1461695](https://bugzil.la/1461695)).
 - The {{WebExtAPIRef('tabs.onUpdated')}} event can be used to track when a tab is drawing the user's attention with `attention` property of the `changeInfo` object ([Firefox bug 1396684](https://bugzil.la/1396684)).
 
 #### Menus

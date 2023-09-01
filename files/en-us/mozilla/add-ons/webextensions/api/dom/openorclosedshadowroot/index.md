@@ -1,18 +1,7 @@
 ---
 title: dom.openOrClosedShadowRoot()
 slug: Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Mozilla
-  - Needs Privileges
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - openOrClosedShadowRoot
-  - shadow DOM
+page-type: webextension-api-function
 browser-compat: webextensions.api.dom.openOrClosedShadowRoot
 ---
 

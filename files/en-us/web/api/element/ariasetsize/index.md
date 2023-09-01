@@ -1,5 +1,6 @@
 ---
-title: Element.ariaSetSize
+title: "Element: ariaSetSize property"
+short-title: ariaSetSize
 slug: Web/API/Element/ariaSetSize
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaSetSize

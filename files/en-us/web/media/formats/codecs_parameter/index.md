@@ -1,6 +1,7 @@
 ---
-title: The "codecs" parameter in common media types
+title: Codecs in common media types
 slug: Web/Media/Formats/codecs_parameter
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -261,7 +262,7 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority website's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1[.PPCCLL]` (AVC video)
@@ -915,7 +916,7 @@ The first four components are required; everything from `CC` (chroma subsampling
 
 You can use the `codecs` parameter in a few situations. Firstly, you can use it with the {{HTMLElement("source")}} element when creating an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, in order to establish a group of options for the browser to choose from when selecting the format of the media to present to the user in the element.
 
-You can also use the codecs parameter when specifying a MIME media type to the {{domxref("MediaSource.isTypeSupported()")}} method; this method returns a Boolean which indicates whether or not the media is likely to work on the current device.
+You can also use the codecs parameter when specifying a MIME media type to the {{domxref("MediaSource/isTypeSupported_static", "MediaSource.isTypeSupported()")}} method; this method returns a Boolean which indicates whether or not the media is likely to work on the current device.
 
 ## See also
 

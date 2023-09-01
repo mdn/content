@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannelEvent()
+title: "RTCDataChannelEvent: RTCDataChannelEvent() constructor"
+short-title: RTCDataChannelEvent()
 slug: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
 page-type: web-api-constructor
 browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent
@@ -39,7 +40,7 @@ In this example, a new {{DOMxRef("RTCPeerConnection.datachannel_event", "datacha
 data channel which already exists.
 
 ```js
-const event = new RTCDataChannelEvent("datachannel", {"channel": dc});
+const event = new RTCDataChannelEvent("datachannel", { channel: dc });
 ```
 
 ## Specifications

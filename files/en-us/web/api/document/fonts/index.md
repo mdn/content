@@ -1,5 +1,6 @@
 ---
-title: Document.fonts
+title: "Document: fonts property"
+short-title: fonts
 slug: Web/API/Document/fonts
 page-type: web-api-instance-property
 browser-compat: api.Document.fonts
@@ -18,14 +19,20 @@ The `FontFaceSet` interface is useful for loading new fonts, checking the status
 
 ## Examples
 
-### Doing operation after all fonts are loaded
+### Doing operation after fonts are loaded
 
 ```js
-document.fonts.ready.then(() => {
-  // Any operation that needs to be done only after all the fonts
+document.fonts.ready.then((fontFaceSet) => {
+  // Any operation that needs to be done only after all used fonts
   // have finished loading can go here.
+  const fontFaces = [...fontFaceSet];
+  console.log(fontFaces);
+  // some fonts may still be unloaded if they aren't used on the site
+  console.log(fontFaces.map((f) => f.status));
 });
 ```
+
+The promise fulfils when loading and layout operations of all used fonts are done. The set of used fonts can be different from the set of _declared_ fonts, e.g. if optional fonts (i.e. fonts declared via `font-display: optional`) were not able to load in time.
 
 ## Specifications
 

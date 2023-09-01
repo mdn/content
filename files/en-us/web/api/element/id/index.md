@@ -1,5 +1,6 @@
 ---
-title: Element.id
+title: "Element: id property"
+short-title: id
 slug: Web/API/Element/id
 page-type: web-api-instance-property
 browser-compat: api.Element.id

@@ -2,15 +2,10 @@
 title: SVG Event Attributes
 slug: Web/SVG/Attribute/Events
 page-type: svg-attribute
-tags:
-  - Advanced
-  - Attribute
-  - Draft
-  - Landing
-  - NeedsUpdate
-  - SVG
 browser-compat: svg.attributes.events.global
 ---
+
+{{SVGRef}}
 
 Event attributes always have their name starting with "on" followed by the name of the event for which they are intended. They specifies some script to run when the event of the given type is dispatched to the element on which the attributes are specified.
 

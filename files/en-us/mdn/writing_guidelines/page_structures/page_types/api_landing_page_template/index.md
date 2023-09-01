@@ -12,7 +12,7 @@ page-type: mdn-writing-guide
 >
 > **Page front matter:**
 >
-> The frontmatter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular interface.
 >
 > ```md
@@ -38,19 +38,19 @@ page-type: mdn-writing-guide
 > - **page-type**
 >   - : The `page-type` key for Web/API landing pages is always `web-api-overview`.
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 >
 > ---
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+> A number of macro calls appear at the top of the content section (immediately below the page front matter).
 > You should update or delete them according to the advice below:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
@@ -85,10 +85,9 @@ page-type: mdn-writing-guide
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{APIRef("GroupDataName")}}{{securecontext_header}}
+{{securecontext_header}}
 
-The summary paragraph — start by naming the API, and saying what it is used for.
-This should ideally be 1 or 2 short sentences.
+Begin the content on the page with an introductory paragraph — start by naming the API and saying what it does. This should ideally be one or two short sentences.
 
 ## Concepts and usage
 
@@ -103,7 +102,9 @@ To help improve content discoverability and {{Glossary("SEO")}}, keep the follow
 
 ## Interfaces
 
-- {{domxref("NameOfTheInterface")}}
+_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), remove the backticks and backslash in the markdown file._
+
+- `\{{domxref("NameOfTheInterface")}}`
   - : Include a brief description of the interface and what it does here.
     Include one term and definition for each interface or dictionary.
 
@@ -113,13 +114,13 @@ The _name of interface_ extends the following APIs, adding the listed features.
 
 #### Interface 1
 
-- {{domxref("addition1")}}
+- `\{{domxref("addition1")}}`
   - : Description of the feature of Interface#1 that is added to that API by the API you are currently documenting.
     One \*term and definition for each feature. If this API doesn't extend any other interfaces, you can delete these sections.
 
 #### Interface 2
 
-- {{domxref("addition1")}}
+- `\{{domxref("addition1")}}`
   - : Description of the feature of Interface#2 that is added to that API by the API you are currently documenting, etc.
 
 ## Examples
@@ -162,18 +163,24 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## Specifications
 
-{{Specifications("path.to.feature.Interface_1")}}
+`\{{Specifications("path.to.feature.Interface_1")}}`
 
-{{Specifications("path.to.feature.Interface_2")}}
+`\{{Specifications("path.to.feature.Interface_2")}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat("path.to.feature.Interface_1")}}
+`\{{Compat("path.to.feature.Interface_1")}}`
 
-{{Compat("path.to.feature.Interface_2")}}
+`\{{Compat("path.to.feature.Interface_2")}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-- Include list of
-- other links related to
-- this API that might be useful
+Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2
+- external_link (year)

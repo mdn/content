@@ -1,5 +1,6 @@
 ---
-title: XRInputSource.gripSpace
+title: "XRInputSource: gripSpace property"
+short-title: gripSpace
 slug: Web/API/XRInputSource/gripSpace
 page-type: web-api-instance-property
 browser-compat: api.XRInputSource.gripSpace

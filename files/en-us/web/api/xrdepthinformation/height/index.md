@@ -1,5 +1,6 @@
 ---
-title: XRDepthInformation.height
+title: "XRDepthInformation: height property"
+short-title: height
 slug: Web/API/XRDepthInformation/height
 page-type: web-api-instance-property
 status:

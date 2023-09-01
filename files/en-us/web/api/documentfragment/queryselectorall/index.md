@@ -1,5 +1,6 @@
 ---
-title: DocumentFragment.querySelectorAll()
+title: "DocumentFragment: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
 page-type: web-api-instance-method
 browser-compat: api.DocumentFragment.querySelectorAll

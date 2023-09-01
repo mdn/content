@@ -7,25 +7,47 @@ browser-compat: css.properties.container-name
 
 {{CSSRef}}
 
-The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of query container names used by the [@container](/en-US/docs/Web/CSS/@container) at-rule in a [container query](/en-US/docs/Web/CSS/CSS_Container_Queries).
+The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of query container names used by the [@container](/en-US/docs/Web/CSS/@container) at-rule in a [container query](/en-US/docs/Web/CSS/CSS_container_queries).
 A container query will apply styles to elements based on the size of the nearest ancestor with a containment context.
 When a containment context is given a name, it can be specifically targeted using the {{Cssxref("@container")}} at-rule instead of the nearest ancestor with containment.
 
 ## Syntax
 
-```plain
-container-name: <container-name>;
+```css
+/* A single name */
+container-name: myLayout;
+
+/* Multiple names */
+container-name: myPageLayout myComponentLibrary;
+
+/* Global Values */
+container-name: inherit;
+container-name: initial;
+container-name: revert;
+container-name: revert-layer;
+container-name: unset;
 ```
 
 ### Values
 
 - `<container-name>`
+
   - : A case-sensitive string that is used to identify the container.
+
     The following conditions apply:
-  - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
-  - The name value must not be in quotes.
-  - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
-  - A list of multiple names separated by a space is allowed.
+
+    - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
+    - The name value must not be in quotes.
+    - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
+    - A list of multiple names separated by a space is allowed.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 
@@ -80,7 +102,7 @@ The following example has two container queries, one that will apply only to the
 }
 ```
 
-For more information on writing container queries, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries) page.
+For more information on writing container queries, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_container_queries) page.
 
 ### Using multiple container names
 
@@ -103,7 +125,7 @@ This is useful if you want to target the same container with multiple container 
   }
 }
 
-@container nav (max-height: 200px) {
+@container card (max-height: 200px) {
   h2 {
     font-size: 1.5em;
   }
@@ -120,7 +142,7 @@ This is useful if you want to target the same container with multiple container 
 
 ## See also
 
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries)
 - {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-type")}} property

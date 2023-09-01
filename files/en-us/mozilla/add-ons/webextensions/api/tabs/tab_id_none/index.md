@@ -2,16 +2,6 @@
 title: tabs.TAB_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - TAB_ID_NONE
-  - WebExtensions
-  - tabs
 browser-compat: webextensions.api.tabs.TAB_ID_NONE
 ---
 

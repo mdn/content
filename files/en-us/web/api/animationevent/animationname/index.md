@@ -1,11 +1,12 @@
 ---
-title: AnimationEvent.animationName
+title: "AnimationEvent: animationName property"
+short-title: animationName
 slug: Web/API/AnimationEvent/animationName
 page-type: web-api-instance-property
 browser-compat: api.AnimationEvent.animationName
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 The **`AnimationEvent.animationName`** read-only property is a
 string containing the value of the {{cssxref("animation-name")}} CSS
@@ -25,7 +26,7 @@ A string containing the value of the {{cssxref("animation-name")}} CSS property.
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

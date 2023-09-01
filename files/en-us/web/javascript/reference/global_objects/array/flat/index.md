@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.flat
 
 {{JSRef}}
 
-The **`flat()`** method creates a new array with all sub-array
+The **`flat()`** method of {{jsxref("Array")}} instances creates a new array with all sub-array
 elements concatenated into it recursively up to the specified depth.
 
 {{EmbedInteractiveExample("pages/js/array-flat.html")}}
@@ -77,7 +77,7 @@ console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
 
 ### Calling flat() on non-array objects
 
-The `flat()` method reads the `length` property of `this` and then accesses each integer index. If the element is not an array, it's directly appended to the result. If the element is an array, it's flattened according to the `depth` parameter.
+The `flat()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`. If the element is not an array, it's directly appended to the result. If the element is an array, it's flattened according to the `depth` parameter.
 
 ```js
 const arrayLike = {
@@ -86,6 +86,7 @@ const arrayLike = {
   // Array-like objects aren't flattened
   1: { length: 2, 0: 3, 1: 4 },
   2: 5,
+  3: 3, // ignored by flat() since length is 3
 };
 console.log(Array.prototype.flat.call(arrayLike));
 // [ 1, 2, { '0': 3, '1': 4, length: 2 }, 5 ]
@@ -102,7 +103,9 @@ console.log(Array.prototype.flat.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.flat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}

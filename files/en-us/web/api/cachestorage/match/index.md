@@ -1,5 +1,6 @@
 ---
-title: CacheStorage.match()
+title: "CacheStorage: match() method"
+short-title: match()
 slug: Web/API/CacheStorage/match
 page-type: web-api-instance-method
 browser-compat: api.CacheStorage.match
@@ -99,7 +100,7 @@ self.addEventListener("fetch", (event) => {
           })
           .catch(() => caches.match("/gallery/myLittleVader.jpg"));
       }
-    })
+    }),
   );
 });
 ```

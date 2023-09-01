@@ -226,17 +226,7 @@ label:
 
 The value of `label` may be any JavaScript identifier that is not a
 reserved word. The `statement` that you identify with a label may be
-any statement.
-
-### Example
-
-In this example, the label `markLoop` identifies a `while` loop.
-
-```js
-markLoop: while (theMark) {
-  doSomething();
-}
-```
+any statement. For examples of using labeled statements, see the examples of `break` and `continue` below.
 
 ## break statement
 
@@ -251,7 +241,7 @@ Use the {{jsxref("statements/break","break")}} statement to terminate a loop,
 
 The syntax of the `break` statement looks like this:
 
-```js
+```js-nolint
 break;
 break label;
 ```
@@ -278,11 +268,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log("Outer loops: ", x);
+  console.log("Outer loops:", x);
   x += 1;
   z = 1;
   while (true) {
-    console.log("Inner loops: ", z);
+    console.log("Inner loops:", z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -311,7 +301,7 @@ statement.
 
 The syntax of the `continue` statement looks like the following:
 
-```js
+```js-nolint
 continue;
 continue label;
 ```
@@ -334,7 +324,8 @@ while (i < 5) {
   n += i;
   console.log(n);
 }
-//1,3,7,12
+// Logs:
+// 1 3 7 12
 ```
 
 If you comment out the `continue;`, the loop would run till the end and you would see `1,3,6,10,15`.
@@ -366,10 +357,10 @@ checkiandj: while (i < 4) {
     if (j % 2 === 0) {
       continue checkj;
     }
-    console.log(j, " is odd.");
+    console.log(j, "is odd.");
   }
-  console.log("i = ", i);
-  console.log("j = ", j);
+  console.log("i =", i);
+  console.log("j =", j);
 }
 ```
 
@@ -404,7 +395,7 @@ function dumpProps(obj, objName) {
 
 For an object `car` with properties `make` and `model`, `result` would be:
 
-```
+```plain
 car.make = Ford
 car.model = Mustang
 ```

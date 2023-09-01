@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.bindBuffer()
+title: "WebGLRenderingContext: bindBuffer() method"
+short-title: bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindBuffer
@@ -29,6 +30,7 @@ bindBuffer(target, buffer)
       - : Buffer used for element indices.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+
     - `gl.COPY_READ_BUFFER`
       - : Buffer for copying from one buffer object to another.
     - `gl.COPY_WRITE_BUFFER`
@@ -65,8 +67,8 @@ and the current binding will remain untouched.
 ### Binding a buffer to a target
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);

@@ -91,7 +91,7 @@ The `ElementInternals` interface includes the following properties, defined on t
   - : A string reflecting the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 - {{domxref("ElementInternals.ariaRequired")}}
   - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
-- {{domxref("ElementInternals.role")}} {{Experimental_Inline}}
+- {{domxref("ElementInternals.role")}}
   - : A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
 - {{domxref("ElementInternals.ariaRoleDescription")}}
   - : A string reflecting the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an Element.

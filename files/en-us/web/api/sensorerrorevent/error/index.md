@@ -1,5 +1,6 @@
 ---
-title: SensorErrorEvent.error
+title: "SensorErrorEvent: error property"
+short-title: error
 slug: Web/API/SensorErrorEvent/error
 page-type: web-api-instance-property
 browser-compat: api.SensorErrorEvent.error

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.frontFace()
+title: "WebGLRenderingContext: frontFace() method"
+short-title: frontFace()
 slug: Web/API/WebGLRenderingContext/frontFace
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.frontFace

@@ -49,7 +49,7 @@ customElements.define(
 
       let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
     }
-  }
+  },
 );
 ```
 
@@ -103,4 +103,4 @@ This is useful if you have a complex custom element that takes a while to load i
 
 ## See also
 
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)

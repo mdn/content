@@ -1,5 +1,6 @@
 ---
-title: PannerNode.orientationY
+title: "PannerNode: orientationY property"
+short-title: orientationY
 slug: Web/API/PannerNode/orientationY
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.orientationY

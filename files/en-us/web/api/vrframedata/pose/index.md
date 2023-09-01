@@ -1,5 +1,6 @@
 ---
-title: VRFrameData.pose
+title: "VRFrameData: pose property"
+short-title: pose
 slug: Web/API/VRFrameData/pose
 page-type: web-api-instance-property
 status:

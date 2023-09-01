@@ -2,12 +2,9 @@
 title: Getting started
 slug: Web/SVG/Tutorial/Getting_Started
 page-type: guide
-tags:
-  - Beginner
-  - NeedsBeginnerUpdate
-  - SVG
-  - SVG:Tutorial
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
@@ -29,7 +26,7 @@ Let us dive straight in with a simple example. Take a look at the following code
 </svg>
 ```
 
-Copy the code and paste it in a file, demo1.svg. Then open the file in a browser. It will render as shown in the following screenshot. (Firefox users: click [here](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
+Copy the code and paste it in a file, demo1.svg. Then open the file in a browser. It will render as shown in the following screenshot. (Firefox users: click [here](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
 ![Red background composed of a centered green circle. White text centered inside the circle is SVG.](svgdemo1.png)
 

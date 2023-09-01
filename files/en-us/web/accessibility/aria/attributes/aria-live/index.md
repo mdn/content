@@ -1,6 +1,7 @@
 ---
 title: aria-live
 slug: Web/Accessibility/ARIA/Attributes/aria-live
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-live
 ---
 

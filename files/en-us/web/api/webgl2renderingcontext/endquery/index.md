@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.endQuery()
+title: "WebGL2RenderingContext: endQuery() method"
+short-title: endQuery()
 slug: Web/API/WebGL2RenderingContext/endQuery
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.endQuery

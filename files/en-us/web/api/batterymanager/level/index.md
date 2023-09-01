@@ -1,5 +1,6 @@
 ---
-title: BatteryManager.level
+title: "BatteryManager: level property"
+short-title: level
 slug: Web/API/BatteryManager/level
 page-type: web-api-instance-property
 browser-compat: api.BatteryManager.level

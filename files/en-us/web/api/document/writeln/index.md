@@ -1,5 +1,6 @@
 ---
-title: document.writeln()
+title: "document: writeln() method"
+short-title: writeln()
 slug: Web/API/Document/writeln
 page-type: web-api-instance-method
 browser-compat: api.Document.writeln

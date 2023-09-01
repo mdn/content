@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.timeout
+title: "XMLHttpRequest: timeout property"
+short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.timeout
@@ -17,7 +18,7 @@ The **`XMLHttpRequest.timeout`** property is an `unsigned long` representing the
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // time in milliseconds
 

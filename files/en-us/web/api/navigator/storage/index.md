@@ -1,5 +1,6 @@
 ---
-title: Navigator.storage
+title: "Navigator: storage property"
+short-title: storage
 slug: Web/API/Navigator/storage
 page-type: web-api-instance-property
 browser-compat: api.Navigator.storage

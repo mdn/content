@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.port
+title: "RTCIceCandidate: port property"
+short-title: port
 slug: Web/API/RTCIceCandidate/port
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.port
@@ -29,8 +30,8 @@ A 16-bit number indicating the port number on the device at the address indicate
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
 candidate:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 The port number is found in the sixth field, which is `"44323"`. In this case, the value of `port` will be 44323.
@@ -43,8 +44,8 @@ into an object for future use.
 ```js
 const candidateLoc = {
   address: candidate.ip,
-  port: candidate.port
-}
+  port: candidate.port,
+};
 ```
 
 ## Specifications

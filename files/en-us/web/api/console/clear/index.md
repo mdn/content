@@ -1,5 +1,6 @@
 ---
-title: console.clear()
+title: "console: clear() method"
+short-title: clear()
 slug: Web/API/console/clear
 page-type: web-api-instance-method
 browser-compat: api.console.clear

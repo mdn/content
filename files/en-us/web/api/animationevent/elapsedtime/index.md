@@ -1,11 +1,12 @@
 ---
-title: AnimationEvent.elapsedTime
+title: "AnimationEvent: elapsedTime property"
+short-title: elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
 page-type: web-api-instance-property
 browser-compat: api.AnimationEvent.elapsedTime
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 The **`AnimationEvent.elapsedTime`** read-only property is a
 `float` giving the amount of time the animation has been running, in seconds,
@@ -29,7 +30,7 @@ A `float` giving the amount of time in seconds.
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

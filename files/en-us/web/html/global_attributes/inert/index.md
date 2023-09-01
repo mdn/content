@@ -44,5 +44,6 @@ While providing visual and non-visual cues about content inertness, also remembe
 ## See also
 
 - HTML {{HTMLElement("dialog")}} element
+- {{domxref("HTMLElement.inert")}} HTML DOM property
 - [Introducing inert](https://developer.chrome.com/articles/inert/)
 - [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)

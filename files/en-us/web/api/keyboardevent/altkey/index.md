@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.altKey
+title: "KeyboardEvent: altKey property"
+short-title: altKey
 slug: Web/API/KeyboardEvent/altKey
 page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.altKey
@@ -18,7 +19,7 @@ A boolean value.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -36,7 +37,7 @@ A boolean value.
             "\n" +
             "ALT key KeyDown: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>

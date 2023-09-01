@@ -1,5 +1,6 @@
 ---
-title: FormData.entries()
+title: "FormData: entries() method"
+short-title: entries()
 slug: Web/API/FormData/entries
 page-type: web-api-instance-method
 browser-compat: api.FormData.entries
@@ -39,7 +40,7 @@ for (const pair of formData.entries()) {
 
 The result is:
 
-```
+```plain
 key1, value1
 key2, value2
 ```

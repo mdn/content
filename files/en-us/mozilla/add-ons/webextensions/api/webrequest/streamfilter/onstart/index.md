@@ -2,14 +2,6 @@
 title: webRequest.StreamFilter.onstart
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstart
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.onstart
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.onstart
 ---
 
@@ -34,13 +26,13 @@ function listener(details) {
     let encoder = new TextEncoder();
     filter.write(encoder.encode("replacement content"));
     filter.close();
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

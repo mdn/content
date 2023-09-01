@@ -1,5 +1,6 @@
 ---
-title: XRWebGLSubImage.colorTextureHeight
+title: "XRWebGLSubImage: colorTextureHeight property"
+short-title: colorTextureHeight
 slug: Web/API/XRWebGLSubImage/colorTextureHeight
 page-type: web-api-instance-property
 status:

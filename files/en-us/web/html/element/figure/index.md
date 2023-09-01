@@ -1,5 +1,5 @@
 ---
-title: '<figure>: The Figure with Optional Caption element'
+title: "<figure>: The Figure with Optional Caption element"
 slug: Web/HTML/Element/figure
 page-type: html-element
 browser-compat: html.elements.figure
@@ -37,6 +37,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </figure>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Images", "100%", 375)}}
 
 ### Code snippets
@@ -59,6 +61,8 @@ function NavigatorExample() {
 </figure>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Code_snippets", "100%", 250)}}
 
 ### Quotations
@@ -73,23 +77,25 @@ function NavigatorExample() {
 </figure>
 ```
 
-{{EmbedLiveSample("Quotations")}}
+#### Result
+
+{{EmbedLiveSample('Quotations')}}
 
 ### Poems
 
 ```html
 <figure>
   <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear,
-    Or like a fairy trip upon the green,
-    Or, like a nymph, with long dishevelled hair,
-    Dance on the sands, and yet no footing seen:
-    Love is a spirit all compact of fire,
-    Not gross to sink, but light, and will aspire.
+    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
+    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
+    yet no footing seen: Love is a spirit all compact of fire, Not gross to
+    sink, but light, and will aspire.
   </p>
   <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Poems", "100%", 250)}}
 

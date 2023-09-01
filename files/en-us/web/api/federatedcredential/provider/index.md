@@ -1,5 +1,6 @@
 ---
-title: FederatedCredential.provider
+title: "FederatedCredential: provider property"
+short-title: provider
 slug: Web/API/FederatedCredential/provider
 page-type: web-api-instance-property
 status:

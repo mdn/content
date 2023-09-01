@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.labels
+title: "HTMLSelectElement: labels property"
+short-title: labels
 slug: Web/API/HTMLSelectElement/labels
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.labels

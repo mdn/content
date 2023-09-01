@@ -30,6 +30,7 @@ is a processing instruction whose `target` is `xml`.
 _This interface also inherits properties from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 - {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
+
   - : Returns the associated {{domxref("StyleSheet")}} object, if any; or `null` if none.
 
 - {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}

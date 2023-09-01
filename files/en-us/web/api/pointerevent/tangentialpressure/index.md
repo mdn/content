@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.tangentialPressure
+title: "PointerEvent: tangentialPressure property"
+short-title: tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.tangentialPressure
@@ -28,18 +29,22 @@ are called depending on the value of the event's `tangentialPressure`
 property.
 
 ```js
-someElement.addEventListener('pointerdown', (event) => {
-  if (event.tangentialPressure === 0) {
-    // No pressure
-    process_no_tanPressure(event);
-  } else if (event.tangentialPressure === 1) {
-    // Maximum pressure
-    process_max_tanPressure(event);
-  } else {
-    // Default
-    process_tanPressure(event);
-  }
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.tangentialPressure === 0) {
+      // No pressure
+      process_no_tanPressure(event);
+    } else if (event.tangentialPressure === 1) {
+      // Maximum pressure
+      process_max_tanPressure(event);
+    } else {
+      // Default
+      process_tanPressure(event);
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

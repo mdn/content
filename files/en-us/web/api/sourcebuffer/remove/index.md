@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.remove()
+title: "SourceBuffer: remove() method"
+short-title: remove()
 slug: Web/API/SourceBuffer/remove
 page-type: web-api-instance-method
 browser-compat: api.SourceBuffer.remove

@@ -1,5 +1,6 @@
 ---
-title: AbstractRange.startOffset
+title: "AbstractRange: startOffset property"
+short-title: startOffset
 slug: Web/API/AbstractRange/startOffset
 page-type: web-api-instance-property
 browser-compat: api.AbstractRange.startOffset

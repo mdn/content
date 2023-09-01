@@ -1,11 +1,12 @@
 ---
-title: ElementInternals.validationMessage
+title: "ElementInternals: validationMessage property"
+short-title: validationMessage
 slug: Web/API/ElementInternals/validationMessage
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.validationMessage
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`validationMessage`** read-only property of the {{domxref("ElementInternals")}} interface returns the validation message for the element.
 

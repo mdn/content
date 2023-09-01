@@ -44,7 +44,9 @@ border-inline-style: unset;
 
 ## Examples
 
-### HTML Content
+### Setting border-inline-style
+
+#### HTML
 
 ```html
 <div>
@@ -52,7 +54,7 @@ border-inline-style: unset;
 </div>
 ```
 
-### CSS Content
+#### CSS
 
 ```css
 div {
@@ -68,7 +70,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("Setting border-inline-style", 140, 140)}}
 
 ## Specifications
 
@@ -80,6 +82,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -1,5 +1,6 @@
 ---
 title: "AudioTrackList: change event"
+short-title: change
 slug: Web/API/AudioTrackList/change_event
 page-type: web-api-event
 browser-compat: api.AudioTrackList.change_event

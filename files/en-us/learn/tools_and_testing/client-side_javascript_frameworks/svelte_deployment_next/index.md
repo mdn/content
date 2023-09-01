@@ -1,7 +1,7 @@
 ---
 title: Deployment and next steps
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -70,7 +70,7 @@ So far we've been running our app in development mode with `npm run dev`. As we 
 
 Your generated `bundle.js` and `bundle.css` files will be something like this (file size on the left):
 
-```
+```plain
   504 Jul 13 02:43 bundle.css
 95981 Jul 13 02:43 bundle.js
 ```
@@ -79,7 +79,7 @@ To compile our application for production we have to run `npm run build` instead
 
 So, after running `npm run build`, our generated `bundle.js` and `bundle.css` files will be more like this:
 
-```
+```plain
   504 Jul 13 02:43 bundle.css
 21782 Jul 13 02:43 bundle.js
 ```
@@ -158,7 +158,7 @@ There are [many plugins for rollup](https://github.com/rollup/awesome) that allo
 
 From the point of view of a web server, a Svelte application is nothing more than a bunch of HTML, CSS, and JavaScript files. All you need is a web server capable of serving static files, which means you have plenty of options to choose from. Let's look at a couple of examples.
 
-> **Note:** the following section could be applied to any client-side static web site requiring a build step, not just Svelte apps.
+> **Note:** the following section could be applied to any client-side static website requiring a build step, not just Svelte apps.
 
 ### Deploying with Vercel
 
@@ -171,7 +171,10 @@ To deploy our app, follow these steps.
 3. Run `npx vercel` again, and you'll be prompted to answer a few questions, like this:
 
    ```bash
-   > npx vercel
+   npx vercel
+   ```
+
+   ```plain
    Vercel CLI 19.1.2
    ? Set up and deploy "./mdn-svelte-tutorial"? [Y/n] y
    ? Which scope do you want to deploy to? opensas
@@ -199,7 +202,7 @@ You can also [import a Svelte git project](https://vercel.com/import/svelte) int
 
 ### Automatic deployment to GitLab pages
 
-For hosting static files there are several online services that allow you to automatically deploy your site whenever you push changes to a git repository. Most of them involve setting up a deployment pipeline that gets triggered on every `git push`, and takes care of building and deploying your web site.
+For hosting static files there are several online services that allow you to automatically deploy your site whenever you push changes to a git repository. Most of them involve setting up a deployment pipeline that gets triggered on every `git push`, and takes care of building and deploying your website.
 
 To demonstrate this, we will deploy our todos app to [GitLab Pages](https://about.gitlab.com/stages-devops-lifecycle/pages/).
 
@@ -231,7 +234,7 @@ Let's have a go at doing this now.
 
 1. Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
 
-   ```
+   ```yaml
    image: node:latest
    pages:
      stage: deploy
@@ -264,17 +267,10 @@ Let's have a go at doing this now.
 3. Now we just have to commit and push our changes to GitLab. Do this by running the following commands:
 
    ```bash
-   > git add public/index.html
-   > git add .gitlab-ci.yml
-   > git commit -m "Added .gitlab-ci.yml file and fixed index.html absolute paths"
-   > git push
-   Counting objects: 5, done.
-   Delta compression using up to 8 threads.
-   Compressing objects: 100% (5/5), done.
-   Writing objects: 100% (5/5), 541 bytes | 541.00 KiB/s, done.
-   Total 5 (delta 3), reused 0 (delta 0)
-   To gitlab.com:opensas/mdn-svelte-todo.git
-      7dac9f3..5725f46  main -> main
+   git add public/index.html
+   git add .gitlab-ci.yml
+   git commit -m "Added .gitlab-ci.yml file and fixed index.html absolute paths"
+   git push
    ```
 
 Whenever there's a job running GitLab will display an icon showing the process of the job. Clicking on it will let you inspect the output of the job.
@@ -295,7 +291,7 @@ In this section we'll give you some resources and projects to go and check out, 
 
 ### Svelte documentation
 
-To go further and learn more about Svelte, you should definitely visit the [Svelte homepage](https://svelte.dev/). There you'll find [many articles](https://svelte.dev/blog) explaining Svelte's philosophy. If you haven't already done it, make sure you go through the [Svelte interactive tutorial](https://svelte.dev/tutorial/basics). We already covered most of its content, so it won't take you much time to complete it — you should consider it as practice!
+To go further and learn more about Svelte, you should definitely visit the [Svelte homepage](https://svelte.dev/). There you'll find [many articles](https://svelte.dev/blog) explaining Svelte's philosophy. If you haven't already done it, make sure you go through the [Svelte interactive tutorial](https://learn.svelte.dev/). We already covered most of its content, so it won't take you much time to complete it — you should consider it as practice!
 
 You can also consult the [Svelte API docs](https://svelte.dev/docs) and the available [examples](https://svelte.dev/examples/hello-world).
 
@@ -335,7 +331,7 @@ There are a number of different ways to get support and interact with the Svelte
 Congratulations! You have completed the Svelte tutorial. In the previous articles we went from zero knowledge about Svelte to building and deploying a complete application.
 
 - We learned about Svelte philosophy and what sets it apart from other front-end frameworks.
-- We saw how to add dynamic behavior to our web site, how to organize our app in components and different ways to share information among them.
+- We saw how to add dynamic behavior to our website, how to organize our app in components and different ways to share information among them.
 - We took advantage of the Svelte reactivity system and learned how to avoid common pitfalls.
 - We also saw some advanced concepts and techniques to interact with DOM elements and to programmatically extend HTML element capabilities using the `use` directive.
 - Then we saw how to use stores to work with a central data repository, and we created our own custom store to persist our application's data to Web Storage.

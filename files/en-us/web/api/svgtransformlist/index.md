@@ -357,7 +357,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
 
 In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation — such as `translate`, `rotate`, and `scale`. We apply multiple transformation by appending the transform object to the `SVGTransformList` associated with an SVG element.
 
-```html
+```html-nolint
 <svg
   id="my-svg"
   viewBox="0 0 300 280"

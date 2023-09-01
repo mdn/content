@@ -1,5 +1,6 @@
 ---
-title: EventSource.withCredentials
+title: "EventSource: withCredentials property"
+short-title: withCredentials
 slug: Web/API/EventSource/withCredentials
 page-type: web-api-instance-property
 browser-compat: api.EventSource.withCredentials

@@ -1,6 +1,7 @@
 ---
 title: Firefox 48 for developers
 slug: Mozilla/Firefox/Releases/48
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -27,7 +28,7 @@ slug: Mozilla/Firefox/Releases/48
   - The default style for these elements has been adapted to match the spec ([Firefox bug 1258657](https://bugzil.la/1258657)).
   - The {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ([Firefox bug 1225412](https://bugzil.la/1225412)).
 
-- The {{htmlattrxref("meta", "referrer")}} attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ([Firefox bug 1178337](https://bugzil.la/1178337)).
+- The [`meta`](/en-US/docs/Web/HTML/Element/meta) attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ([Firefox bug 1178337](https://bugzil.la/1178337)).
 
 ### CSS
 
@@ -45,7 +46,7 @@ slug: Mozilla/Firefox/Releases/48
 - The `luminance` value for {{cssxref("mask-mode")}} has been added; the `auto` value has been renamed to `match-source`, to match the spec ([Firefox bug 1228354](https://bugzil.la/1228354)).
 - Interpolation of {{cssxref("clip-path")}} basic shapes in CSS animations and transitions is now supported ([Firefox bug 1110460](https://bugzil.la/1110460)).
 - Support for horizontal-in-vertical (_tate-chu-yoko_) text has been added via the `all` value of the {{cssxref("text-combine-upright")}} property ([Firefox bug 1097499](https://bugzil.la/1097499)).
-- Support for the experimental {{cssxref("color-adjust")}} property has been added, allowing pages to specify that background colors and images should be printed ([Firefox bug 1209273](https://bugzil.la/1209273)).
+- Support for the experimental {{cssxref("print-color-adjust", "color-adjust")}} property has been added, allowing pages to specify that background colors and images should be printed ([Firefox bug 1209273](https://bugzil.la/1209273)).
 - The {{cssxref("::first-letter")}} pseudo-element now also matches punctuation characters of type Pd that precede or immediately follow the actual first letter; this is a new requirement of CSS Pseudo-element module level 4 ([Firefox bug 1260366](https://bugzil.la/1260366)).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false`:
 
@@ -55,7 +56,7 @@ slug: Mozilla/Firefox/Releases/48
   - `-webkit-box-direction`, `-webkit-box-orient` ([Firefox bug 1262049](https://bugzil.la/1262049).
   - The value `-webkit-inline-box` is now an alias of `inline-flex` on the {{cssxref("display")}} property. ([Firefox bug 1257661](https://bugzil.la/1257661)).
   - `-webkit-flex-direction`, `-webkit-flex-wrap`, `-webkit-flex-flow`, `-webkit-order`, `-webkit-flex`, `-webkit-flex-grow`, `-webkit-flex-shrink`, `-webkit-flex-basis`, `-webkit-justify-content`, `-webkit-align-items`, `-webkit-align-self` and `-webkit-align-content` were added as aliases for the unprefixed properties and the values `-webkit-flex` and `-webkit-inline-flex` for the {{cssxref("display")}} property as aliases for the unprefixed values ([Firefox bug 1274096](https://bugzil.la/1274096)).
-  - Added `-webkit-box-flex`, `-webkit-box-ordinal-group`, `-webkit-box-align` and `-webkit-box-pack` properties and `-webkit-box` value to {{cssxref("display")}} as aliases for modern [CSS Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox) ([Firefox bug 1208635](https://bugzil.la/1208635)).
+  - Added `-webkit-box-flex`, `-webkit-box-ordinal-group`, `-webkit-box-align` and `-webkit-box-pack` properties and `-webkit-box` value to {{cssxref("display")}} as aliases for modern [CSS Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) ([Firefox bug 1208635](https://bugzil.la/1208635)).
 
 - The `text` value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ([Firefox bug 1263516](https://bugzil.la/1263516)).
 - The `absolute` value of {{cssxref("position")}} properties on the top layer element ([Firefox bug 1236828](https://bugzil.la/1236828)).
@@ -76,7 +77,7 @@ slug: Mozilla/Firefox/Releases/48
 
 - The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction()`) has been removed. Use the standard {{jsxref("Proxy")}} object instead ([Firefox bug 892903](https://bugzil.la/892903)).
 - The `String.prototype.contains()` method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ([Firefox bug 1103588](https://bugzil.la/1103588)).
-- The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) instead ([Firefox bug 1219757](https://bugzil.la/1219757)).
+- The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) instead ([Firefox bug 1219757](https://bugzil.la/1219757)).
 - The [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) and [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods can no longer be called at the global scope without any object. ([Firefox bug 1253016](https://bugzil.la/1253016)).
 
 ### Interfaces/APIs/DOM
@@ -84,7 +85,7 @@ slug: Mozilla/Firefox/Releases/48
 #### DOM & HTML DOM
 
 - Dropped the "Moz" prefix from the {{domxref("CSSKeyframeRule")}} and {{domxref("CSSKeyframesRule")}} interfaces ([Firefox bug 1256178](https://bugzil.la/1256178)).
-- The {{domxref("NavigatorConcurrentHardware")}} {{Glossary("mixin")}} has been implemented, which adds the {{domxref("NavigatorConcurrentHardware.hardwareConcurrency", "window.navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets Web sites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ([Firefox bug 1008453](https://bugzil.la/1008453)).
+- The `NavigatorConcurrentHardware` {{Glossary("mixin")}} has been implemented, which adds the {{domxref("Navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets websites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ([Firefox bug 1008453](https://bugzil.la/1008453)).
 - The {{domxref("Node.isSameNode()")}} method, which was removed in Firefox 10, has returned after being added back into the specification after a lengthy absence ([Firefox bug 1256299](https://bugzil.la/1256299)).
 - Firefox now returns proper exceptions instead of numbers when things go wrong during a call to {{domxref("Navigator.registerProtocolHandler()")}}.
 - {{domxref("Element.animate()")}} is now activated by default ([Firefox bug 1245000](https://bugzil.la/1245000)).

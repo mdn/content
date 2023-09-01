@@ -1,5 +1,6 @@
 ---
-title: IdleDetector()
+title: "IdleDetector: IdleDetector() constructor"
+short-title: IdleDetector()
 slug: Web/API/IdleDetector/IdleDetector
 page-type: web-api-constructor
 status:

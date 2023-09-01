@@ -1,5 +1,6 @@
 ---
-title: FileSystemFileEntry.createWriter()
+title: "FileSystemFileEntry: createWriter() method"
+short-title: createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
 page-type: web-api-instance-method
 status:
@@ -51,7 +52,7 @@ function writeToFileEntry(entry, text) {
     },
     (fileError) => {
       /* do whatever to handle the error */
-    }
+    },
   );
 }
 ```

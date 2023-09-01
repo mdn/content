@@ -1,5 +1,6 @@
 ---
-title: MerchantValidationEvent.validationURL
+title: "MerchantValidationEvent: validationURL property"
+short-title: validationURL
 slug: Web/API/MerchantValidationEvent/validationURL
 page-type: web-api-instance-property
 status:

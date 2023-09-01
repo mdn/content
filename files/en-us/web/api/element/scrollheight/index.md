@@ -1,5 +1,6 @@
 ---
-title: Element.scrollHeight
+title: "Element: scrollHeight property"
+short-title: scrollHeight
 slug: Web/API/Element/scrollHeight
 page-type: web-api-instance-property
 browser-compat: api.Element.scrollHeight
@@ -136,7 +137,7 @@ function checkReading() {
   checkReading.read =
     this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
   document.registration.accept.disabled = document.getElementById(
-    "nextstep"
+    "nextstep",
   ).disabled = !checkReading.read;
   checkReading.noticeBox.textContent = checkReading.read
     ? "Thank you."

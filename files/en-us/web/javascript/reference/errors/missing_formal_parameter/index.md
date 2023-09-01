@@ -42,7 +42,7 @@ identifier is part of the code.
 Function parameters must be identifiers when setting up a function. All these function
 declarations fail, as they are providing values for their parameters:
 
-```js example-bad
+```js-nolint example-bad
 function square(3) {
   return number * number;
 }
@@ -87,7 +87,4 @@ log({ obj: "value" }); // { obj: "value" }
 
 ## See also
 
-- Other errors regarding formal parameters:
-
-  - [SyntaxError: Malformed formal parameter](/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
-  - [SyntaxError: redeclaration of formal parameter "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)
+- [SyntaxError: redeclaration of formal parameter "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

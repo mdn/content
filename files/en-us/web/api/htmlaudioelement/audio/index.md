@@ -1,5 +1,6 @@
 ---
-title: Audio()
+title: "HTMLAudioElement: Audio() constructor"
+short-title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
 page-type: web-api-constructor
 browser-compat: api.HTMLAudioElement.Audio

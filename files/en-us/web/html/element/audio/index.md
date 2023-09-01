@@ -1,5 +1,5 @@
 ---
-title: '<audio>: The Embed Audio element'
+title: "<audio>: The Embed Audio element"
 slug: Web/HTML/Element/audio
 page-type: html-element
 browser-compat: html.elements.audio
@@ -155,6 +155,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <td>
+        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+      </td>
+      <td>Fired when the browser has started to load the resource.</td>
+    </tr>
+    <tr>
+      <td>
         {{domxref("HTMLMediaElement.pause_event", 'pause')}}
       </td>
       <td>Playback has been paused.</td>
@@ -254,6 +260,7 @@ Other usage notes:
 - To allow precise control over your audio content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.
 - You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.
 - `<audio>` elements can't have subtitles or captions associated with them in the same way that `<video>` elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/) by Ian Devlin for some useful information and workarounds.
+- To test the fallback content on browsers that support the element, you can replace `<audio>` with a non-existing element like `<notanaudio>`.
 
 A good general source of information on using HTML `<audio>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
 
@@ -348,7 +355,7 @@ The `<audio>` element doesn't directly support WebVTT. You will have to find a l
 
 In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone. For example, in the WebVTT below, note the use of square brackets to provide tone and emotional insight to the viewer; this can help establish the mood otherwise provided using music, nonverbal sounds and crucial sound effects, and so forth.
 
-```
+```plain
 1
 00:00:00 --> 00:00:45
 [Energetic techno music]
@@ -395,14 +402,14 @@ Also it's a good practice to provide some content (such as the direct download l
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content. If it has a
-        {{htmlattrxref("controls", "audio")}} attribute: interactive
+        <a href="/en-US/docs/Web/HTML/Element/audio#controls"><code>controls</code></a> attribute: interactive
         content and palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        If the element has a {{htmlattrxref("src", "audio")}}
+        If the element has a <a href="/en-US/docs/Web/HTML/Element/audio#src"><code>src</code></a>
         attribute: zero or more {{HTMLElement("track")}} elements
         followed by transparent content that contains no
         {{HTMLElement("audio")}} or {{HTMLElement("video")}}

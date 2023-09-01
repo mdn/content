@@ -2,13 +2,6 @@
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - Permissions
-  - Reference
-  - WebExtensions
-  - manifest.json
 browser-compat: webextensions.manifest.permissions
 ---
 
@@ -49,13 +42,13 @@ For information on how to test and preview permission requests, see [Test permis
 
 The key can contain three kinds of permissions:
 
-- host permissions (Manifest V2 only, host permissions are specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for Manifest V3 or higher.)
+- host permissions (Manifest V2 only, host permissions are specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for Manifest V3 or higher.)
 - API permissions
 - the `activeTab` permission
 
 ## Host permissions
 
-> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
+> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
@@ -70,7 +63,7 @@ The extra privileges include:
 
 In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:
 
-```
+```url
 moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 
@@ -104,6 +97,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `declarativeNetRequest`
 - `declarativeNetRequestFeedback`
 - `declarativeNetRequestWithHostAccess`
+- `devtools` (This permission is granted implicitly when the [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest key is present.)
 - `dns`
 - `downloads`
 - `downloads.open`

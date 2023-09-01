@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.blendEquation()
+title: "WebGLRenderingContext: blendEquation() method"
+short-title: blendEquation()
 slug: Web/API/WebGLRenderingContext/blendEquation
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.blendEquation

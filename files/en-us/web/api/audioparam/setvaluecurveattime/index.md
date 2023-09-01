@@ -1,5 +1,6 @@
 ---
-title: AudioParam.setValueCurveAtTime()
+title: "AudioParam: setValueCurveAtTime() method"
+short-title: setValueCurveAtTime()
 slug: Web/API/AudioParam/setValueCurveAtTime
 page-type: web-api-instance-method
 browser-compat: api.AudioParam.setValueCurveAtTime

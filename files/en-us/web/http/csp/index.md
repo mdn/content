@@ -1,13 +1,7 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - CSP
-  - Content Security Policy
-  - Example
-  - Guide
-  - Security
-  - access
+page-type: guide
 browser-compat: http.headers.Content-Security-Policy
 ---
 
@@ -87,7 +81,7 @@ This section provides examples of some common security policy scenarios.
 
 ### Example 1
 
-A web site administrator wants all content to come from the site's own origin (this excludes subdomains.)
+A website administrator wants all content to come from the site's own origin (this excludes subdomains.)
 
 ```http
 Content-Security-Policy: default-src 'self'
@@ -95,7 +89,7 @@ Content-Security-Policy: default-src 'self'
 
 ### Example 2
 
-A web site administrator wants to allow content from a trusted domain and all its subdomains (it doesn't have to be the same domain that the CSP is set on.)
+A website administrator wants to allow content from a trusted domain and all its subdomains (it doesn't have to be the same domain that the CSP is set on.)
 
 ```http
 Content-Security-Policy: default-src 'self' example.com *.example.com
@@ -103,7 +97,7 @@ Content-Security-Policy: default-src 'self' example.com *.example.com
 
 ### Example 3
 
-A web site administrator wants to allow users of a web application to include images from any origin in their own content,
+A website administrator wants to allow users of a web application to include images from any origin in their own content,
 but to restrict audio or video media to trusted providers, and all scripts only to a specific server that hosts trusted code.
 
 ```http
@@ -118,7 +112,7 @@ Here, by default, content is only permitted from the document's origin, with the
 
 ### Example 4
 
-A web site administrator for an online banking site wants to ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.
+A website administrator for an online banking site wants to ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.
 
 ```http
 Content-Security-Policy: default-src https://onlinebanking.example.com
@@ -128,7 +122,7 @@ The server permits access only to documents being loaded specifically over HTTPS
 
 ### Example 5
 
-A web site administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but not JavaScript or other potentially dangerous content.
+A website administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but not JavaScript or other potentially dangerous content.
 
 ```http
 Content-Security-Policy: default-src 'self' *.example.com; img-src *
@@ -200,7 +194,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-t
 The HTML of `signup.html` looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

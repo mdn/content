@@ -2,15 +2,6 @@
 title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Property
-  - WebExtensions
-  - devtools.inspectedWindow
-  - tabId
 browser-compat: webextensions.api.devtools.inspectedWindow.tabId
 ---
 
@@ -28,7 +19,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 attachContentScriptButton.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -38,7 +29,7 @@ attachContentScriptButton.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 

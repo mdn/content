@@ -1,5 +1,6 @@
 ---
-title: RTCOutboundRtpStreamStats.sliCount
+title: "RTCOutboundRtpStreamStats: sliCount property"
+short-title: sliCount
 slug: Web/API/RTCOutboundRtpStreamStats/sliCount
 page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.sliCount

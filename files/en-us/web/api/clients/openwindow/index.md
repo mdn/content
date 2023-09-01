@@ -1,5 +1,6 @@
 ---
-title: Clients.openWindow()
+title: "Clients: openWindow() method"
+short-title: openWindow()
 slug: Web/API/Clients/openWindow
 page-type: web-api-instance-method
 browser-compat: api.Clients.openWindow
@@ -38,6 +39,15 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("WindowClient")}} object if
 URL is from the same origin as the service worker or a {{Glossary("null", "null
   value")}} otherwise.
 
+### Exceptions
+
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : The promise is rejected with this exception if none of the windows in the app's origin have [transient activation](/en-US/docs/Web/Security/User_activation).
+
+## Security requirements
+
+- At least one window in the app's origin must have [transient activation](/en-US/docs/Web/Security/User_activation).
+
 ## Examples
 
 ```js
@@ -50,7 +60,7 @@ if (self.Notification.permission === "granted") {
   };
   self.registration.showNotification(
     "You've got messages!",
-    notificationObject
+    notificationObject,
   );
 }
 
@@ -65,14 +75,14 @@ self.addEventListener("notificationclick", (e) => {
       const hadWindowToFocus = clientsArr.some((windowClient) =>
         windowClient.url === e.notification.data.url
           ? (windowClient.focus(), true)
-          : false
+          : false,
       );
       // Otherwise, open a new tab to the applicable URL and focus it.
       if (!hadWindowToFocus)
         clients
           .openWindow(e.notification.data.url)
           .then((windowClient) => (windowClient ? windowClient.focus() : null));
-    })
+    }),
   );
 });
 ```

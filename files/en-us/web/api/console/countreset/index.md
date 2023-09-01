@@ -1,5 +1,6 @@
 ---
-title: console.countReset()
+title: "console: countReset() method"
+short-title: countReset()
 slug: Web/API/console/countReset
 page-type: web-api-instance-method
 browser-compat: api.console.countReset
@@ -53,7 +54,7 @@ console.countReset();
 
 Console output will look something like this:
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
@@ -87,7 +88,7 @@ console.count("alice");
 
 We will see output like this:
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"

@@ -43,10 +43,15 @@ xrSession.requestAnimationFrame((time, xrFrame) => {
 
   for (const xrView of viewerPose.views) {
     const xrViewport = xrWebGLLayer.getViewport(xrView);
-    gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);
+    gl.viewport(
+      xrViewport.x,
+      xrViewport.y,
+      xrViewport.width,
+      xrViewport.height,
+    );
 
-   // Now we can use WebGL to draw into a viewport matching
-   // the viewer's needs
+    // Now we can use WebGL to draw into a viewport matching
+    // the viewer's needs
   }
 });
 ```

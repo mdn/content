@@ -115,7 +115,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action,10)`.
+An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action, 0)`.
 
 ```js
 const promiseA = new Promise((resolve, reject) => {
@@ -173,39 +173,28 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 - {{jsxref("Promise/Promise", "Promise()")}}
   - : Creates a new `Promise` object. The constructor is primarily used to wrap functions that do not already support promises.
 
+## Static properties
+
+- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+  - : Returns the constructor used to construct return values from promise methods.
+
 ## Static methods
 
-- {{JSxRef("Promise.all()")}}
-
-  - : Wait for all promises to be fulfilled, or for any to be rejected.
-
-    If the returned promise fulfills, it is fulfilled with an aggregating array of the values from the fulfilled promises, in the same order as defined in the iterable of multiple promises.
-
-    If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.
-
-- {{JSxRef("Promise.allSettled()")}}
-
-  - : Wait until all promises have settled (each may fulfill or reject).
-
-    Returns a Promise that fulfills after all of the given promises is either fulfilled or rejected, with an array of objects that each describe the outcome of each promise.
-
-- {{JSxRef("Promise.any()")}}
-  - : Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that fulfills with the value from that promise.
-- {{JSxRef("Promise.race()")}}
-
-  - : Wait until any of the promises is fulfilled or rejected.
-
-    If the returned promise fulfills, it is fulfilled with the value of the first promise in the iterable that fulfilled.
-
-    If it rejects, it is rejected with the reason from the first promise that was rejected.
-
-- {{JSxRef("Promise.reject()")}}
+- {{jsxref("Promise.all()")}}
+  - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises reject, with this first rejection reason.
+- {{jsxref("Promise.allSettled()")}}
+  - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
+- {{jsxref("Promise.any()")}}
+  - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
+- {{jsxref("Promise.race()")}}
+  - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise settles with the eventual state of the first promise that settles.
+- {{jsxref("Promise.reject()")}}
   - : Returns a new `Promise` object that is rejected with the given reason.
-- {{JSxRef("Promise.resolve()")}}
+- {{jsxref("Promise.resolve()")}}
 
-  - : Returns a new `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
+  - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
 
-    Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.
+    Generally, if you don't know if a value is a promise or not, {{jsxref("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.
 
 ## Instance properties
 
@@ -218,14 +207,12 @@ These properties are defined on `Promise.prototype` and shared by all `Promise` 
 
 ## Instance methods
 
-See the [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how these methods use the Microtask queue and services.
-
 - {{jsxref("Promise.prototype.catch()")}}
   - : Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.
-- {{jsxref("Promise.prototype.then()")}}
-  - : Appends fulfillment and rejection handlers to the promise, and returns a new promise resolving to the return value of the called handler, or to its original settled value if the promise was not handled (i.e. if the relevant handler `onFulfilled` or `onRejected` is not a function).
 - {{jsxref("Promise.prototype.finally()")}}
   - : Appends a handler to the promise, and returns a new promise that is resolved when the original promise is resolved. The handler is called when the promise is settled, whether fulfilled or rejected.
+- {{jsxref("Promise.prototype.then()")}}
+  - : Appends fulfillment and rejection handlers to the promise, and returns a new promise resolving to the return value of the called handler, or to its original settled value if the promise was not handled (i.e. if the relevant handler `onFulfilled` or `onRejected` is not a function).
 
 ## Examples
 
@@ -318,7 +305,7 @@ new Promise(tetheredGetNumber)
 
 This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
 
-The fulfillment of the promise is logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.
+The fulfillment of the promise is logged, via a fulfill callback set using {{jsxref("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.
 
 By clicking the button several times in a short amount of time, you'll even see the different promises being fulfilled one after another.
 
@@ -351,10 +338,13 @@ function testPromise() {
       `${thisPromiseCount}) Promise constructor<br>`,
     );
     // This is only an example to create asynchronism
-    setTimeout(() => {
-      // We fulfill the promise
-      resolve(thisPromiseCount);
-    }, Math.random() * 2000 + 1000);
+    setTimeout(
+      () => {
+        // We fulfill the promise
+        resolve(thisPromiseCount);
+      },
+      Math.random() * 2000 + 1000,
+    );
   });
 
   // We define what to do when the promise is resolved with the then() call,
@@ -391,7 +381,7 @@ To better picture this, we can take a closer look at how the realm might be an i
 To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- we have a realm here -->
 <script>
   // we have a realm here as well
@@ -407,7 +397,7 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
 The same concept applies to promises. If we modify the above example a little bit, we get this:
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- we have a realm here -->
 <script>
   // we have a realm here as well
@@ -424,7 +414,7 @@ If we change this so that the `<iframe>` in the document is listening to post me
 
 ```html
 <!-- y.html -->
-<!DOCTYPE html>
+<!doctype html>
 <iframe src="x.html"></iframe>
 <script>
   const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
@@ -434,7 +424,7 @@ If we change this so that the `<iframe>` in the document is listening to post me
 
 ```html
 <!-- x.html -->
-<!DOCTYPE html>
+<!doctype html>
 <script>
   window.addEventListener(
     "message",
@@ -465,5 +455,5 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 - [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [JavaScript Promises: an introduction](https://web.dev/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- [JavaScript Promises: an introduction](https://web.dev/promises/) on web.dev (2013)
+- [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript) slide show by Domenic Denicola (2011)

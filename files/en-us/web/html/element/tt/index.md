@@ -1,5 +1,5 @@
 ---
-title: '<tt>: The Teletype Text element'
+title: "<tt>: The Teletype Text element"
 slug: Web/HTML/Element/tt
 page-type: html-element
 status:
@@ -29,7 +29,8 @@ This example uses `<tt>` to show text entered into, and output by, a terminal ap
 
 ```html
 <p>
-  Enter the following at the telnet command prompt: <code>set localecho</code><br />
+  Enter the following at the telnet command prompt:
+  <code>set localecho</code><br />
 
   The telnet client should display: <tt>Local Echo is on</tt>
 </p>
@@ -55,7 +56,8 @@ tt {
 
 ```html
 <p>
-  Enter the following at the telnet command prompt: <code>set localecho</code><br />
+  Enter the following at the telnet command prompt:
+  <code>set localecho</code><br />
 
   The telnet client should display: <tt>Local Echo is on</tt>
 </p>

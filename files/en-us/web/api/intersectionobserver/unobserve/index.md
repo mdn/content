@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver.unobserve()
+title: "IntersectionObserver: unobserve() method"
+short-title: unobserve()
 slug: Web/API/IntersectionObserver/unobserve
 page-type: web-api-instance-method
 browser-compat: api.IntersectionObserver.unobserve

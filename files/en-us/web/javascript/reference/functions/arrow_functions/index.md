@@ -9,7 +9,7 @@ browser-compat: javascript.functions.arrow_functions
 
 An **arrow function expression** is a compact alternative to a traditional [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), with some semantic differences and deliberate limitations in usage:
 
-- Arrow functions don't have their own bindings to [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](/en-US/docs/Glossary/Method).
+- Arrow functions don't have their own {{glossary("binding", "bindings")}} to [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](/en-US/docs/Glossary/Method).
 - Arrow functions cannot be used as [constructors](/en-US/docs/Glossary/Constructor). Calling them with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) throws a {{jsxref("TypeError")}}. They also don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions cannot use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) within their body and cannot be created as generator functions.
 
@@ -152,7 +152,7 @@ const func2 = (x, y) => {
 
 Returning object literals using the concise body syntax `(params) => { object: literal }` does not work as expected.
 
-```js example-bad
+```js-nolint example-bad
 const func = () => { foo: 1 };
 // Calling func() returns undefined!
 
@@ -247,11 +247,6 @@ For similar reasons, the [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_
 Arrow functions do not have their own [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object. Thus, in this example, `arguments` is a reference to the arguments of the enclosing scope:
 
 ```js
-const arguments = [1, 2, 3];
-const arr = () => arguments[0];
-
-arr(); // 1
-
 function foo(n) {
   const f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
   return f();
@@ -292,7 +287,7 @@ The [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) keyword cann
 
 An arrow function cannot contain a line break between its parameters and its arrow.
 
-```js example-bad
+```js-nolint example-bad
 const func = (a, b, c)
   => 1;
 // SyntaxError: Unexpected token '=>'
@@ -321,9 +316,9 @@ const func4 = (
 
 ### Precedence of arrow
 
-Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) compared to regular functions.
+Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) compared to regular functions.
 
-```js example-bad
+```js-nolint example-bad
 let callback;
 
 callback = callback || () => {};
@@ -476,4 +471,8 @@ obj.doSomethingLater(); // logs 11
 
 ## See also
 
-- ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Statements/function", "function")}}
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/) on hacks.mozilla.org (2015)

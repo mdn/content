@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.values()
+title: "URLSearchParams: values() method"
+short-title: values()
 slug: Web/API/URLSearchParams/values
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.values
@@ -42,7 +43,7 @@ for (const value of searchParams.values()) {
 
 The result is:
 
-```
+```plain
 value1
 value2
 ```
@@ -57,7 +58,7 @@ console.log(Array.from(searchParams.values()));
 
 The result is:
 
-```
+```plain
 ['value1', 'value2']
 ```
 

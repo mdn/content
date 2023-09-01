@@ -13,8 +13,6 @@ validated as structurally valid language tags.
 
 {{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
 ```js-nolint
@@ -52,7 +50,7 @@ Intl.getCanonicalLocales("EN_US");
 
 ## See also
 
+- [Polyfill of `Intl.getCanonicalLocales` in FormatJS](https://formatjs.io/docs/polyfills/intl-getcanonicallocales/)
 - {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
-- [A polyfill of `Intl.getCanonicalLocales` in FormatJS](https://formatjs.io/docs/polyfills/intl-getcanonicallocales/)

@@ -1,5 +1,6 @@
 ---
-title: Element.ariaSort
+title: "Element: ariaSort property"
+short-title: ariaSort
 slug: Web/API/Element/ariaSort
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaSort

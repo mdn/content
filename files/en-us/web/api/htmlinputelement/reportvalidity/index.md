@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.reportValidity()
+title: "HTMLInputElement: reportValidity() method"
+short-title: reportValidity()
 slug: Web/API/HTMLInputElement/reportValidity
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.reportValidity

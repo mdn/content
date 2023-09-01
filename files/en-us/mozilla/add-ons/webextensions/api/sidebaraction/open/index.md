@@ -2,14 +2,6 @@
 title: sidebarAction.open()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/open
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - open
-  - sidebarAction
 browser-compat: webextensions.api.sidebarAction.open
 ---
 
@@ -47,7 +39,7 @@ Open the sidebar when the user selects a context menu item:
 browser.menus.create({
   id: "open-sidebar",
   title: "open sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

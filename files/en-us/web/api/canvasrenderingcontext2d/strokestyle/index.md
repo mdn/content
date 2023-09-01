@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.strokeStyle
+title: "CanvasRenderingContext2D: strokeStyle property"
+short-title: strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.strokeStyle

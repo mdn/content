@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.tBodies
+title: "HTMLTableElement: tBodies property"
+short-title: tBodies
 slug: Web/API/HTMLTableElement/tBodies
 page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.tBodies

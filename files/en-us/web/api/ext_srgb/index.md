@@ -1,5 +1,6 @@
 ---
-title: EXT_sRGB
+title: EXT_sRGB extension
+short-title: EXT_sRGB
 slug: Web/API/EXT_sRGB
 page-type: webgl-extension
 browser-compat: api.EXT_sRGB
@@ -43,7 +44,7 @@ gl.texImage2D(
   0,
   ext.SRGB_EXT,
   gl.UNSIGNED_BYTE,
-  image
+  image,
 );
 ```
 

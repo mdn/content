@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.createImageData()
+title: "CanvasRenderingContext2D: createImageData() method"
+short-title: createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createImageData

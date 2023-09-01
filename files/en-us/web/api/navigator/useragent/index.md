@@ -1,5 +1,6 @@
 ---
-title: Navigator.userAgent
+title: "Navigator: userAgent property"
+short-title: userAgent
 slug: Web/API/Navigator/userAgent
 page-type: web-api-instance-property
 browser-compat: api.Navigator.userAgent
@@ -41,7 +42,7 @@ several pieces of info. Each of these pieces of info comes from other navigator
 properties which are also settable by the user. Gecko-based browsers comply with the
 following general structure:
 
-```
+```plain
 userAgent = appCodeName/appVersion number (Platform; Security; OS-or-CPU;
 Localization; rv: revision-version-number) product/productSub
 Application-Name Application-Name-version
@@ -50,7 +51,7 @@ Application-Name Application-Name-version
 ## Examples
 
 ```js
-alert(window.navigator.userAgent)
+alert(window.navigator.userAgent);
 // alerts "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"
 ```
 

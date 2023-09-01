@@ -1,5 +1,6 @@
 ---
-title: TransitionEvent()
+title: "TransitionEvent: TransitionEvent() constructor"
+short-title: TransitionEvent()
 slug: Web/API/TransitionEvent/TransitionEvent
 page-type: web-api-constructor
 browser-compat: api.TransitionEvent.TransitionEvent
@@ -51,7 +52,7 @@ A new {{domxref("TransitionEvent")}} object.
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}},
   {{cssxref("transition-duration")}}, {{cssxref("transition-property")}},
   {{cssxref("transition-timing-function")}}.

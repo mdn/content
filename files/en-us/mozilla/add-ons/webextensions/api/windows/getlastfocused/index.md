@@ -2,16 +2,6 @@
 title: windows.getLastFocused()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - getLastFocused
 browser-compat: webextensions.api.windows.getLastFocused
 ---
 

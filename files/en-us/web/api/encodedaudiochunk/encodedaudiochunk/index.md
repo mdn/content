@@ -1,5 +1,6 @@
 ---
-title: EncodedAudioChunk()
+title: "EncodedAudioChunk: EncodedAudioChunk() constructor"
+short-title: EncodedAudioChunk()
 slug: Web/API/EncodedAudioChunk/EncodedAudioChunk
 page-type: web-api-constructor
 status:
@@ -45,7 +46,7 @@ const init = {
   timestamp: 23000000,
   duration: 2000000,
 };
-chunk = EncodedAudioChunk(init);
+chunk = new EncodedAudioChunk(init);
 ```
 
 ## Specifications

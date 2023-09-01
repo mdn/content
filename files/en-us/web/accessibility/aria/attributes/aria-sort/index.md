@@ -1,6 +1,7 @@
 ---
 title: aria-sort
 slug: Web/Accessibility/ARIA/Attributes/aria-sort
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-sort
 ---
 

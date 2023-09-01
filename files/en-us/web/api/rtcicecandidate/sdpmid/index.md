@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.sdpMid
+title: "RTCIceCandidate: sdpMid property"
+short-title: sdpMid
 slug: Web/API/RTCIceCandidate/sdpMid
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.sdpMid

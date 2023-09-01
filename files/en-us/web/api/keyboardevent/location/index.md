@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.location
+title: "KeyboardEvent: location property"
+short-title: location
 slug: Web/API/KeyboardEvent/location
 page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.location

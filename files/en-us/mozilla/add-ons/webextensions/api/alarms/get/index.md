@@ -2,16 +2,6 @@
 title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - get
 browser-compat: webextensions.api.alarms.get
 ---
 

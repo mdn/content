@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.originalPolicy
+title: "SecurityPolicyViolationEvent: originalPolicy property"
+short-title: originalPolicy
 slug: Web/API/SecurityPolicyViolationEvent/originalPolicy
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.originalPolicy

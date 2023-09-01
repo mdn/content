@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.qpSum
+title: "RTCInboundRtpStreamStats: qpSum property"
+short-title: qpSum
 slug: Web/API/RTCInboundRtpStreamStats/qpSum
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.qpSum
@@ -54,14 +55,14 @@ compression. See the individual codec specifications for details.
 ### Calculating average quantization
 
 The `calculateAverageQP()` function shown below computes the average QP for
-the given {{domxref("RTCStats")}} object that contains RTP stream statistics, returning
+the given {{domxref("RTCStatsReport")}} object that contains RTP stream statistics, returning
 0 if the object doesn't describe an RTP stream.
 
 ```js
 function calculateAverageQP(stats) {
   let frameCount = 0;
 
-  switch(stats.type) {
+  switch (stats.type) {
     case "inbound-rtp":
     case "remote-inbound-rtp":
       frameCount = stats.framesDecoded;

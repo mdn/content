@@ -1,5 +1,6 @@
 ---
-title: HTMLMetaElement.name
+title: "HTMLMetaElement: name property"
+short-title: name
 slug: Web/API/HTMLMetaElement/name
 page-type: web-api-instance-property
 browser-compat: api.HTMLMetaElement.name

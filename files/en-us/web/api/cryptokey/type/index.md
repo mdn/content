@@ -1,5 +1,6 @@
 ---
-title: CryptoKey.type
+title: "CryptoKey: type property"
+short-title: type
 slug: Web/API/CryptoKey/type
 page-type: web-api-instance-property
 browser-compat: api.CryptoKey.type
@@ -24,7 +25,7 @@ This function verifies a message using {{domxref("SubtleCrypto.verify()")}} and 
 ```js
 async function verifyMessage(publicKey) {
   const signatureValue = document.querySelector(
-    ".rsassa-pkcs1 .signature-value"
+    ".rsassa-pkcs1 .signature-value",
   );
   signatureValue.classList.remove("valid", "invalid");
 
@@ -36,7 +37,7 @@ async function verifyMessage(publicKey) {
       "RSASSA-PKCS1-v1_5",
       publicKey,
       signature,
-      encoded
+      encoded,
     );
   }
 

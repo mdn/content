@@ -1,12 +1,7 @@
 ---
 title: WebDriver errors
 slug: Web/WebDriver/Errors
-tags:
-  - Automation
-  - Reference
-  - Testing
-  - Web
-  - WebDriver
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages}}

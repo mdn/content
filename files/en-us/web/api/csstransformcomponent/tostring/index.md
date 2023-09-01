@@ -1,15 +1,14 @@
 ---
-title: CSSTransformComponent.toString()
+title: "CSSTransformComponent: toString() method"
+short-title: toString()
 slug: Web/API/CSSTransformComponent/toString
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSTransformComponent.toString
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
-The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interface is a {{Glossary("stringifier")}} returning a [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) function.
+The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interface is a {{Glossary("stringifier")}} returning a [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms) function.
 
 ## Syntax
 

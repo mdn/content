@@ -2,16 +2,6 @@
 title: tabs.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRemoved
-  - tabs
 browser-compat: webextensions.api.tabs.onRemoved
 ---
 
@@ -22,14 +12,14 @@ Fired when a tab is closed.
 ## Syntax
 
 ```js-nolint
-browser.tabs.onRemoved.addListener(callback)
+browser.tabs.onRemoved.addListener(listener)
 browser.tabs.onRemoved.removeListener(listener)
 browser.tabs.onRemoved.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -40,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `tabId`
       - : `integer`. ID of the tab that closed.

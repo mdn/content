@@ -1,5 +1,6 @@
 ---
-title: FontData.family
+title: "FontData: family property"
+short-title: family
 slug: Web/API/FontData/family
 page-type: web-api-instance-property
 status:

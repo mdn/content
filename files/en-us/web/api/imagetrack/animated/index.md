@@ -1,5 +1,6 @@
 ---
-title: ImageTrack.animated
+title: "ImageTrack: animated property"
+short-title: animated
 slug: Web/API/ImageTrack/animated
 page-type: web-api-instance-property
 status:

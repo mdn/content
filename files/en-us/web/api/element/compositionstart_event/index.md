@@ -1,5 +1,6 @@
 ---
 title: "Element: compositionstart event"
+short-title: compositionstart
 slug: Web/API/Element/compositionstart_event
 page-type: web-api-event
 browser-compat: api.Element.compositionstart_event

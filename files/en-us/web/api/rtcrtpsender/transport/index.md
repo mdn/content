@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.transport
+title: "RTCRtpSender: transport property"
+short-title: transport
 slug: Web/API/RTCRtpSender/transport
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpSender.transport

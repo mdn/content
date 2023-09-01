@@ -1,5 +1,6 @@
 ---
-title: Element.getAttributeNames()
+title: "Element: getAttributeNames() method"
+short-title: getAttributeNames()
 slug: Web/API/Element/getAttributeNames
 page-type: web-api-instance-method
 browser-compat: api.Element.getAttributeNames
@@ -55,7 +56,7 @@ element.setAttribute("href", "https://example.com");
 element.setAttributeNS(
   "http://www.w3.org/1999/xlink",
   "xlink:href",
-  "https://example.com"
+  "https://example.com",
 );
 // set "show" attribute with namespace but no namespace prefix
 element.setAttributeNS("http://www.w3.org/1999/xlink", "show", "new");

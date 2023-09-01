@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.bindBufferBase()
+title: "WebGL2RenderingContext: bindBufferBase() method"
+short-title: bindBufferBase()
 slug: Web/API/WebGL2RenderingContext/bindBufferBase
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.bindBufferBase

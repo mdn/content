@@ -21,9 +21,11 @@ Web-based protocol handlers allow web-based applications to participate in the p
 Setting up a web application as a protocol handler is not a difficult process. Basically, the web application uses [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler) to register itself with the browser as a potential handler for a given protocol. For example:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "http://www.google.co.uk/?uri=%s",
+  "Burger handler",
+);
 ```
 
 Where the parameters are:
@@ -41,7 +43,7 @@ When a browser executes this code, it should let the user choose how to handle t
 ### Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -51,7 +53,7 @@ When a browser executes this code, it should let the user choose how to handle t
       navigator.registerProtocolHandler(
         "web+burger",
         "http://www.google.co.uk/?uri=%s",
-        "Burger handler"
+        "Burger handler",
       );
     </script>
   </head>
@@ -72,7 +74,7 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 ### Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Web Protocol Handler Sample - Test</title>
@@ -87,7 +89,7 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 
 The next phase is handling the action. The browser extracts the `href` from the activated link, combines it with the URL template supplied during handler registration and performs an HTTP GET on the URL. So, using the above examples, the browser would perform a GET on this URL:
 
-```
+```url
 http://www.google.co.uk/?uri=web+burger:cheeseburger
 ```
 

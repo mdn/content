@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.entries()
+title: "DOMTokenList: entries() method"
+short-title: entries()
 slug: Web/API/DOMTokenList/entries
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.entries

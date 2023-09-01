@@ -2,11 +2,6 @@
 title: <feComposite>
 slug: Web/SVG/Element/feComposite
 page-type: svg-element
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feComposite
 ---
 
@@ -164,51 +159,27 @@ This example defines filters for each of the supported operations (`over`, `atop
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="imageOver">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="over" />
     </filter>
     <filter id="imageIn">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="in" />
     </filter>
     <filter id="imageOut">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="out" />
     </filter>
     <filter id="imageAtop">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="atop" />
     </filter>
     <filter id="imageXor">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="xor" />
     </filter>
     <filter id="imageArithmetic">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite
         in2="SourceGraphic"
         operator="arithmetic"
@@ -218,11 +189,7 @@ This example defines filters for each of the supported operations (`over`, `atop
         k4="0.4" />
     </filter>
     <filter id="imageLighter">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="lighter" />
     </filter>
   </defs>

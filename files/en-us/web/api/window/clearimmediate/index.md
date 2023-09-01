@@ -1,5 +1,6 @@
 ---
-title: Window.clearImmediate()
+title: "Window: clearImmediate() method"
+short-title: clearImmediate()
 slug: Web/API/Window/clearImmediate
 page-type: web-api-instance-method
 browser-compat: api.Window.clearImmediate
@@ -35,8 +36,7 @@ let immediateID = setImmediate(() => {
   // Run some code
 });
 
-document.getElementById("button")
-  .addEventListener(() => {
+document.getElementById("button").addEventListener(() => {
   clearImmediate(immediateID);
 });
 ```

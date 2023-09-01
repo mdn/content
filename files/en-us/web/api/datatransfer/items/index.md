@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.items
+title: "DataTransfer: items property"
+short-title: items
 slug: Web/API/DataTransfer/items
 page-type: web-api-instance-property
 browser-compat: api.DataTransfer.items

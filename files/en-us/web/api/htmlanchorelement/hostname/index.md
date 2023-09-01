@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.hostname
+title: "HTMLAnchorElement: hostname property"
+short-title: hostname
 slug: Web/API/HTMLAnchorElement/hostname
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.hostname

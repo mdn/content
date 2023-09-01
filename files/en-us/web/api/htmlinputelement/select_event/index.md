@@ -1,8 +1,9 @@
 ---
 title: "HTMLInputElement: select event"
+short-title: select
 slug: Web/API/HTMLInputElement/select_event
-browser-compat: api.HTMLInputElement.select_event
 page-type: web-api-event
+browser-compat: api.HTMLInputElement.select_event
 ---
 
 {{APIRef}}
@@ -14,9 +15,9 @@ The **`select`** event fires when some text has been selected.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('select', (event) => {});
+addEventListener("select", (event) => {});
 
-onselect = (event) => { };
+onselect = (event) => {};
 ```
 
 ## Event type
@@ -34,13 +35,16 @@ A generic {{domxref("Event")}}.
 
 ```js
 function logSelection(event) {
-  const log = document.getElementById('log');
-  const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+  const log = document.getElementById("log");
+  const selection = event.target.value.substring(
+    event.target.selectionStart,
+    event.target.selectionEnd,
+  );
   log.textContent = `You selected: ${selection}`;
 }
 
-const input = document.querySelector('input');
-input.addEventListener('select', logSelection);
+const input = document.querySelector("input");
+input.addEventListener("select", logSelection);
 ```
 
 {{EmbedLiveSample("Selection_logger")}}

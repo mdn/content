@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.moveTo()
+title: "FileSystemEntry: moveTo() method"
+short-title: moveTo()
 slug: Web/API/FileSystemEntry/moveTo
 page-type: web-api-instance-method
 status:
@@ -84,12 +85,12 @@ workingDirectory.getFile(
           (dirEntry) => {
             fileEntry.moveTo(dirEntry);
           },
-          handleError
+          handleError,
         );
       }
     });
   },
-  handleError
+  handleError,
 );
 ```
 

@@ -1,12 +1,7 @@
 ---
 title: "Permissions-Policy: microphone"
 slug: Web/HTTP/Headers/Permissions-Policy/microphone
-tags:
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - header
-  - microphone
+page-type: http-permissions-policy-directive
 browser-compat: http.headers.Permissions-Policy.microphone
 ---
 

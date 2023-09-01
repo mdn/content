@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.
+The **`formatRange()`** method of {{jsxref("Intl.NumberFormat")}} instances formats a range of numbers according to the locale and formatting options of this `Intl.NumberFormat` object.
 
 ## Syntax
 
@@ -18,11 +18,13 @@ formatRange(startRange, endRange)
 ### Parameters
 
 - `startRange`
-
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
-
 - `endRange`
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
+
+### Return value
+
+A string representing the given range of numbers formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 
 ### Exceptions
 

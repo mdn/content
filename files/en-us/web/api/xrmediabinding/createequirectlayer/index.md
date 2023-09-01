@@ -1,5 +1,6 @@
 ---
-title: XRMediaBinding.createEquirectLayer()
+title: "XRMediaBinding: createEquirectLayer() method"
+short-title: createEquirectLayer()
 slug: Web/API/XRMediaBinding/createEquirectLayer
 page-type: web-api-instance-method
 status:
@@ -64,15 +65,15 @@ Create an {{domxref("XRMediaBinding")}} and use an {{domxref("HTMLVideoElement")
 ```js
 function onXRSessionStarted(xrSession) {
   const xrMediaBinding = new XRMediaBinding(xrSession);
-  const video = document.createElement('video');
-  video.src = 'just-fascination.mp4';
+  const video = document.createElement("video");
+  video.src = "just-fascination.mp4";
 
   const videoLayer = xrMediaBinding.createEquirectLayer(video, {
-    space: xrReferenceSpace
+    space: xrReferenceSpace,
   });
 
   xrSession.updateRenderState({
-    layers: [videoLayer]
+    layers: [videoLayer],
   });
 }
 ```

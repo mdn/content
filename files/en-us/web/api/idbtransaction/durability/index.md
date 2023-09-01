@@ -1,5 +1,6 @@
 ---
-title: IDBTransaction.durability
+title: "IDBTransaction: durability property"
+short-title: durability
 slug: Web/API/IDBTransaction/durability
 page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.durability

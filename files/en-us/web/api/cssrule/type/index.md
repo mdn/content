@@ -1,5 +1,6 @@
 ---
-title: CSSRule.type
+title: "CSSRule: type property"
+short-title: type
 slug: Web/API/CSSRule/type
 page-type: web-api-instance-property
 status:

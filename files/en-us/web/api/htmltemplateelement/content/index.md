@@ -1,5 +1,6 @@
 ---
-title: HTMLTemplateElement.content
+title: "HTMLTemplateElement: content property"
+short-title: content
 slug: Web/API/HTMLTemplateElement/content
 page-type: web-api-instance-property
 browser-compat: api.HTMLTemplateElement.content

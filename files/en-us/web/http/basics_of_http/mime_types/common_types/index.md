@@ -1,28 +1,17 @@
 ---
 title: Common MIME types
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-tags:
-  - Audio
-  - File Types
-  - Files
-  - HTTP
-  - MIME
-  - MIME Types
-  - PHP
-  - Reference
-  - Text
-  - Types
-  - Video
+page-type: guide
 ---
 
 {{HTTPSidebar}}
 
-This topic lists most common MIME types, with corresponding document types, ordered by their common extensions.
+This topic lists the most common MIME types with corresponding document types, ordered by their common extensions.
 
-Two primary MIME types are important for the role of default types:
+The following two important MIME types are the default types:
 
 - `text/plain` is the default value for textual files. A textual file should be human-readable and must not contain binary data.
-- `application/octet-stream` is the default value for all other cases. An unknown file type should use this type. Browsers pay a particular care when manipulating these files, to protect users from software vulnerabilities and possible dangerous behavior.
+- `application/octet-stream` is the default value for all other cases. An unknown file type should use this type. Browsers are particularly careful when manipulating these files to protect users from software vulnerabilities and possible dangerous behavior.
 
 IANA is the official registry of MIME media types and maintains a [list of all the official MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml). This table lists important MIME types for the Web:
 
@@ -83,7 +72,7 @@ IANA is the official registry of MIME media types and maintains a [list of all t
 | `.tif`, `.tiff` | Tagged Image File Format (TIFF)                                                            | `image/tiff`                                                                                                                                                                                                                                                                                                                                                                                              |
 | `.ts`           | MPEG transport stream                                                                      | `video/mp2t`                                                                                                                                                                                                                                                                                                                                                                                              |
 | `.ttf`          | TrueType Font                                                                              | `font/ttf`                                                                                                                                                                                                                                                                                                                                                                                                |
-| `.txt`          | Text, (generally ASCII or ISO 8859-_n_)                                                    | `text/plain`                                                                                                                                                                                                                                                                                                                                                                                              |
+| `.txt`          | Text, (generally {{Glossary("ASCII")}} or ISO 8859-_n_)                                    | `text/plain`                                                                                                                                                                                                                                                                                                                                                                                              |
 | `.vsd`          | Microsoft Visio                                                                            | `application/vnd.visio`                                                                                                                                                                                                                                                                                                                                                                                   |
 | `.wav`          | Waveform Audio Format                                                                      | `audio/wav`                                                                                                                                                                                                                                                                                                                                                                                               |
 | `.weba`         | WEBM audio                                                                                 | `audio/webm`                                                                                                                                                                                                                                                                                                                                                                                              |

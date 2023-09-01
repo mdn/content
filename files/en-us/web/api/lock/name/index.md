@@ -1,5 +1,6 @@
 ---
-title: Locks.name
+title: "Locks: name property"
+short-title: name
 slug: Web/API/Lock/name
 page-type: web-api-instance-property
 browser-compat: api.Lock.name

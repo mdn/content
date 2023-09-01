@@ -1,8 +1,9 @@
 ---
-title: OES_draw_buffers_indexed.blendEquationiOES()
+title: "OES_draw_buffers_indexed: blendEquationiOES() method"
+short-title: blendEquationiOES()
 slug: Web/API/OES_draw_buffers_indexed/blendEquationiOES
 page-type: web-api-instance-method
-browser-compat: api.OES_draw_buffers_indexed.blendEquationiOES 
+browser-compat: api.OES_draw_buffers_indexed.blendEquationiOES
 ---
 
 {{APIRef("WebGL")}}

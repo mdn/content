@@ -1,5 +1,6 @@
 ---
-title: CompositionEvent.initCompositionEvent()
+title: "CompositionEvent: initCompositionEvent() method"
+short-title: initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
 page-type: web-api-instance-method
 status:

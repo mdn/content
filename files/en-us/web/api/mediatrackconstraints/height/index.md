@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.height
+title: "MediaTrackConstraints: height property"
+short-title: height
 slug: Web/API/MediaTrackConstraints/height
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.height

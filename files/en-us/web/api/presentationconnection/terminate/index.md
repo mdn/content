@@ -1,5 +1,6 @@
 ---
-title: PresentationConnection.terminate()
+title: "PresentationConnection: terminate() method"
+short-title: terminate()
 slug: Web/API/PresentationConnection/terminate
 page-type: web-api-instance-method
 status:

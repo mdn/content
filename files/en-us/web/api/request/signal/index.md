@@ -1,5 +1,6 @@
 ---
-title: Request.signal
+title: "Request: signal property"
+short-title: signal
 slug: Web/API/Request/signal
 page-type: web-api-instance-property
 browser-compat: api.Request.signal
@@ -20,10 +21,10 @@ An {{DOMxRef("AbortSignal")}} object.
 const controller = new AbortController();
 
 // Create a request with this controller's AbortSignal object
-const req = new Request('/', { signal: controller.signal });
+const req = new Request("/", { signal: controller.signal });
 
 // Add an event handler logging a message in case of abort
-req.signal.addEventListener("signal", () => {
+req.signal.addEventListener("abort", () => {
   console.log("abort");
 });
 
@@ -38,7 +39,7 @@ fetch(req).catch(() => {
   } else {
     console.log("Request not aborted, but terminated abnormally.");
   }
-};
+});
 
 // Actually abort the request
 controller.abort();

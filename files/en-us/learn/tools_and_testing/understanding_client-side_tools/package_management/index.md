@@ -1,6 +1,7 @@
 ---
 title: Package management basics
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -188,7 +189,7 @@ Parcel expects an `index.html` and an `index.js` file to work with, but otherwis
 So now we need to add an `index.html` file to our working directory. Create `index.html` in your test directory, and give it the following contents:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -234,7 +235,7 @@ document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
 
 Go back to `http://localhost:1234` and you'll see how long ago it is since the author turned 18.
 
-What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field have been updated for us:
+What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field has been updated for us:
 
 ```json
 "dependencies": {

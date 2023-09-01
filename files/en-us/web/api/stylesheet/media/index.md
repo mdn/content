@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.media
+title: "StyleSheet: media property"
+short-title: media
 slug: Web/API/StyleSheet/media
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.media
@@ -16,7 +17,7 @@ A read-only array-like `MediaList` object.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -34,8 +35,8 @@ A read-only array-like `MediaList` object.
       for (let i = 0; i < document.styleSheets.length; i++) {
         console.log(
           `document.styleSheets[${i}].media: ${JSON.stringify(
-            document.styleSheets[i].media
-          )}`
+            document.styleSheets[i].media,
+          )}`,
         );
         if (iSheetIndex === 0)
           document.styleSheets[i].media.appendMedium("handheld");
@@ -43,8 +44,8 @@ A read-only array-like `MediaList` object.
           document.styleSheets[i].media.deleteMedium("print");
         console.log(
           `document.styleSheets[${i}].media: ${JSON.stringify(
-            document.styleSheets[i].media
-          )}`
+            document.styleSheets[i].media,
+          )}`,
         );
       }
       // This will log:

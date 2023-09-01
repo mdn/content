@@ -1,6 +1,7 @@
 ---
 title: The box model
 slug: Learn/CSS/Building_blocks/The_box_model
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
@@ -58,8 +59,8 @@ If a box has an outer display type of `inline`, then:
 
 - The box will not break onto a new line.
 - The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
-- Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
-- Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+- Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
+- Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
@@ -73,7 +74,7 @@ You can change the inner display type for example by setting `display: flex;`. T
 
 When you move on to learn about CSS Layout in more detail, you will encounter [`flex`](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and various other inner values that your boxes can have, for example [`grid`](/en-US/docs/Learn/CSS/CSS_layout/Grids).
 
-> **Note:** To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide [Block and Inline Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow).
+> **Note:** To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide [Block and Inline Layout](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow).
 
 ## Examples of different display types
 
@@ -238,7 +239,7 @@ In the example below, we have two paragraphs. The top paragraph has a `margin-bo
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}}
 
-A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
+A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
 
 ### Borders
 
@@ -299,7 +300,7 @@ In the example below, you can change the values for padding on the class `.box` 
 
 All of the above fully applies to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The horizontal padding, margins, and borders move other content away from the box.
+In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The top and bottom margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The left and right padding, margins, and borders move other content away from the box.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 700)}}
 

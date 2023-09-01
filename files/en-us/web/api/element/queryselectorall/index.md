@@ -1,5 +1,6 @@
 ---
-title: Element.querySelectorAll()
+title: "Element: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 page-type: web-api-instance-method
 browser-compat: api.Element.querySelectorAll
@@ -23,7 +24,7 @@ querySelectorAll(selectors)
 - `selectors`
 
   - : A string containing one or more selectors to match against. This
-    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
+    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_selectors)
     string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
     identify elements. Multiple selectors may be specified by separating them using
     commas.
@@ -33,7 +34,7 @@ querySelectorAll(selectors)
 > **Note:** Characters which are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping,
 > special care must be taken when writing string literals using these characters. See
-> [Escaping special characters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more information.
+> [Escaping special characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) for more information.
 
 ### Return value
 

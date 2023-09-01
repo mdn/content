@@ -2,10 +2,6 @@
 title: <metadata>
 slug: Web/SVG/Element/metadata
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Descriptive
 browser-compat: svg.elements.metadata
 ---
 
@@ -102,23 +98,23 @@ This element implements the {{domxref("SVGMetadataElement")}} interface.
         <!-- five groups each using the defined socket -->
         <g id="sock1et" transform="translate(25 20)">
           <title>Socket 1</title>
-          <use xlink:href="#hubPlug" />
+          <use href="#hubPlug" />
         </g>
         <g id="socket2" transform="translate(70 20)">
           <title>Socket 2</title>
-          <use xlink:href="#hubPlug" />
+          <use href="#hubPlug" />
         </g>
         <g id="socket3" transform="translate(115 20)">
           <title>Socket 3</title>
-          <use xlink:href="#hubPlug" />
+          <use href="#hubPlug" />
         </g>
         <g id="socket4" transform="translate(160 20)">
           <title>Socket 4</title>
-          <use xlink:href="#hubPlug" />
+          <use href="#hubPlug" />
         </g>
         <g id="socket5" transform="translate(205 20)">
           <title>Socket 5</title>
-          <use xlink:href="#hubPlug" />
+          <use href="#hubPlug" />
         </g>
       </g>
     </symbol>
@@ -161,19 +157,19 @@ This element implements the {{domxref("SVGMetadataElement")}} interface.
   <!-- Use the hub symbol. -->
   <g id="Hub" transform="translate(80 45)">
     <title>Hub</title>
-    <use xlink:href="#hub" transform="scale(0.75)" />
+    <use href="#hub" transform="scale(0.75)" />
   </g>
 
   <!-- Use the computer symbol. -->
   <g id="ComputerA" transform="translate(20 170)">
     <title>Computer A</title>
-    <use xlink:href="#computer" transform="scale(0.5)" />
+    <use href="#computer" transform="scale(0.5)" />
   </g>
 
   <!-- Use the same computer symbol. -->
   <g id="ComputerB" transform="translate(300 170)">
     <title>Computer B</title>
-    <use xlink:href="#computer" transform="scale(0.5)" />
+    <use href="#computer" transform="scale(0.5)" />
   </g>
 
   <!-- Draw Cable A. -->

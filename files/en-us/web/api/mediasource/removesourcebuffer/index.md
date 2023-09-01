@@ -1,5 +1,6 @@
 ---
-title: MediaSource.removeSourceBuffer()
+title: "MediaSource: removeSourceBuffer() method"
+short-title: removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
 page-type: web-api-instance-method
 browser-compat: api.MediaSource.removeSourceBuffer

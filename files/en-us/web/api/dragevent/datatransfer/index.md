@@ -1,5 +1,6 @@
 ---
-title: DragEvent.dataTransfer
+title: "DragEvent: dataTransfer property"
+short-title: dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 page-type: web-api-instance-property
 browser-compat: api.DragEvent.dataTransfer
@@ -32,7 +33,7 @@ dragTarget.addEventListener(
     // Call the drag and drop data processor
     if (ev.dataTransfer !== null) processData(ev.dataTransfer);
   },
-  false
+  false,
 );
 ```
 

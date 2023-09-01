@@ -1,5 +1,6 @@
 ---
-title: Cache.addAll()
+title: "Cache: addAll() method"
+short-title: addAll()
 slug: Web/API/Cache/addAll
 page-type: web-api-instance-method
 browser-compat: api.Cache.addAll
@@ -63,8 +64,8 @@ this.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```

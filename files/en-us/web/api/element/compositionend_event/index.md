@@ -1,5 +1,6 @@
 ---
 title: "Element: compositionend event"
+short-title: compositionend
 slug: Web/API/Element/compositionend_event
 page-type: web-api-event
 browser-compat: api.Element.compositionend_event

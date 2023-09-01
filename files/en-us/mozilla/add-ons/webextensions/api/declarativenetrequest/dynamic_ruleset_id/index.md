@@ -1,16 +1,7 @@
 ---
 title: declarativeNetRequest.DYNAMIC_RULESET_ID
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/DYNAMIC_RULESET_ID
-tags:
-  - DYNAMIC_RULESET_ID
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - DYNAMIC_RULESET_ID
+page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.DYNAMIC_RULESET_ID
 ---
 
@@ -20,7 +11,7 @@ Ruleset ID for the dynamic rules added by the extension using {{WebExtAPIRef("de
 
 Its value is `"_dynamic"`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

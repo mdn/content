@@ -1,5 +1,6 @@
 ---
-title: GeolocationCoordinates.altitude
+title: "GeolocationCoordinates: altitude property"
+short-title: altitude
 slug: Web/API/GeolocationCoordinates/altitude
 page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.altitude

@@ -2,9 +2,6 @@
 title: stroke
 slug: Web/SVG/Attribute/stroke
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke
 ---
 
@@ -16,7 +13,6 @@ The **`stroke`** attribute is a presentation attribute defining the color (_or a
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('line')}}

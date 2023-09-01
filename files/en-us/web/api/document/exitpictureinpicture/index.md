@@ -1,5 +1,6 @@
 ---
-title: Document.exitPictureInPicture()
+title: "Document: exitPictureInPicture() method"
+short-title: exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
 page-type: web-api-instance-method
 browser-compat: api.Document.exitPictureInPicture
@@ -60,7 +61,6 @@ Note that if you want to track which video on your page is currently playing in 
 ## See also
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}

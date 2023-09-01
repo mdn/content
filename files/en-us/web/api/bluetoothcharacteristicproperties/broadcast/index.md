@@ -1,5 +1,6 @@
 ---
-title: BluetoothCharacteristicProperties.broadcast
+title: "BluetoothCharacteristicProperties: broadcast property"
+short-title: broadcast
 slug: Web/API/BluetoothCharacteristicProperties/broadcast
 page-type: web-api-instance-property
 status:

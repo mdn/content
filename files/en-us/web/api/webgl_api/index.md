@@ -11,7 +11,7 @@ browser-compat:
 
 **WebGL** (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0 that can be used in HTML {{HTMLElement("canvas")}} elements. This conformance makes it possible for the API to take advantage of hardware graphics acceleration provided by the user's device.
 
-Support for WebGL is present in all modern browsers (see the [compatibility tables](#browser-compatibility) below); however, the user's device must also have hardware that supports these features.
+Support for WebGL is present in all modern browsers (see the [compatibility tables](#browser_compatibility) below); however, the user's device must also have hardware that supports these features.
 
 The [WebGL 2](#webgl_2) API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the {{domxref("WebGL2RenderingContext")}} interface.
 
@@ -138,7 +138,7 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 
 ## Resources
 
-- [Khronos WebGL site](https://www.khronos.org/webgl/) The main web site for WebGL at the Khronos Group.
+- [Khronos WebGL site](https://www.khronos.org/webgl/) The main website for WebGL at the Khronos Group.
 - [WebGL Fundamentals](https://web.dev/webgl-fundamentals/) A basic tutorial with fundamentals of WebGL.
 - [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) A talk by Nick Desaulniers that introduces the basics of WebGL.
 - [WebGL playground](http://webglplayground.net) An online tool for creating and sharing WebGL projects. Good for quick prototyping and experimenting.

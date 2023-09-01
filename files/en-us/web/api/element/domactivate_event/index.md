@@ -1,5 +1,6 @@
 ---
 title: "Element: DOMActivate event"
+short-title: DOMActivate
 slug: Web/API/Element/DOMActivate_event
 page-type: web-api-event
 status:

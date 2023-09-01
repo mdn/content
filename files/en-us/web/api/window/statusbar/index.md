@@ -1,5 +1,6 @@
 ---
-title: Window.statusbar
+title: "Window: statusbar property"
+short-title: statusbar
 slug: Web/API/Window/statusbar
 page-type: web-api-instance-property
 browser-compat: api.Window.statusbar

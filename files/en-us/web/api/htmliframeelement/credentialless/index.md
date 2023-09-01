@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.credentialless
+title: "HTMLIFrameElement: credentialless property"
+short-title: credentialless
 slug: Web/API/HTMLIFrameElement/credentialless
 page-type: web-api-instance-property
 status:
@@ -26,17 +27,18 @@ A boolean. The default value is `false`; set it to `true` to make the `<iframe>`
 Specify a credentialless `<iframe>` like so:
 
 ```html
-<iframe src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
-        title="Spectre vulnerability Wikipedia page"
-        width="960"
-        height="600"
-        credentialless>
+<iframe
+  src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
+  title="Spectre vulnerability Wikipedia page"
+  width="960"
+  height="600"
+  credentialless></iframe>
 ```
 
-Return the `credentialless`  property value:
+Return the `credentialless` property value:
 
 ```js
-const iframeElem = document.querySelector('iframe');
+const iframeElem = document.querySelector("iframe");
 console.log(iframeElem.credentialless); // will return true in supporting browsers
 ```
 
@@ -45,19 +47,18 @@ console.log(iframeElem.credentialless); // will return true in supporting browse
 Alternatively, specify the minimum of details in the HTML:
 
 ```html
-<iframe width="960"
-        height="600">
-</iframe>
+<iframe width="960" height="600"> </iframe>
 ```
 
 And set `credentialless` to `true` then load the `<iframe>` contents via script:
 
 ```js
-const iframeElem = document.querySelector('iframe');
+const iframeElem = document.querySelector("iframe");
 
 iframeElem.credentialless = true;
-iframeElem.title = 'Spectre vulnerability Wikipedia page';
-iframeElem.src = 'https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)';
+iframeElem.title = "Spectre vulnerability Wikipedia page";
+iframeElem.src =
+  "https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)";
 ```
 
 ## Specifications

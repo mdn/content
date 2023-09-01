@@ -1,5 +1,6 @@
 ---
-title: NodeList.entries()
+title: "NodeList: entries() method"
+short-title: entries()
 slug: Web/API/NodeList/entries
 page-type: web-api-instance-method
 browser-compat: api.NodeList.entries

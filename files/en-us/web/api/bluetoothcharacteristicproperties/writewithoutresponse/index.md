@@ -1,5 +1,6 @@
 ---
-title: BluetoothCharacteristicProperties.writeWithoutResponse
+title: "BluetoothCharacteristicProperties: writeWithoutResponse property"
+short-title: writeWithoutResponse
 slug: Web/API/BluetoothCharacteristicProperties/writeWithoutResponse
 page-type: web-api-instance-property
 status:

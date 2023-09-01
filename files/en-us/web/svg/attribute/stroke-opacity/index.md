@@ -2,9 +2,6 @@
 title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-opacity
 ---
 
@@ -16,7 +13,6 @@ The **`stroke-opacity`** attribute is a presentation attribute defining the opac
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('path')}}

@@ -1,15 +1,7 @@
 ---
-title: declarativeNetRequest.getAvailableStaticRuleCount
+title: declarativeNetRequest.getDynamicRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getDynamicRules
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - getDynamicRules
+page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getDynamicRules
 ---
 

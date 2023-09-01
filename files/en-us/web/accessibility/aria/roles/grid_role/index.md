@@ -1,6 +1,7 @@
 ---
 title: "ARIA: grid role"
 slug: Web/Accessibility/ARIA/Roles/grid_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#grid
 ---
 
@@ -251,7 +252,7 @@ trs.forEach((gridrow) => {
 
 function moveto(newrow, newcol) {
   const tgt = document.querySelector(
-    `[data-row="${newrow}"][data-col="${newcol}"]`
+    `[data-row="${newrow}"][data-col="${newcol}"]`,
   );
   if (tgt?.getAttribute("role") === "gridcell") {
     document.querySelectorAll("[role=gridcell]").forEach((el) => {
@@ -320,8 +321,8 @@ document.querySelector("table").addEventListener("keydown", (event) => {
         moveto(
           row,
           document.querySelector(
-            `[data-row="${event.target.dataset.row}"]:last-of-type`
-          ).dataset.col
+            `[data-row="${event.target.dataset.row}"]:last-of-type`,
+          ).dataset.col,
         );
       }
       break;

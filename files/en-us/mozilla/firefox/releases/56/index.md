@@ -1,6 +1,7 @@
 ---
 title: Firefox 56 for developers
 slug: Mozilla/Firefox/Releases/56
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -21,7 +22,7 @@ Firefox 56 was released on September 28, 2017. This article lists key changes th
 
 ### CSS
 
-- Implemented the proprietary Mozilla-specific {{cssxref("&lt;color&gt;")}} values `-moz-win-accentcolor` and `-moz-win-accentcolortext` (see [Firefox bug 1344910](https://bugzil.la/1344910)), and the proprietary media query [`-moz-windows-accent-color-in-titlebar`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) (see [Firefox bug 1379938](https://bugzil.la/1379938)).
+- Implemented the proprietary Mozilla-specific {{cssxref("&lt;color&gt;")}} values `-moz-win-accentcolor` and `-moz-win-accentcolortext` (see [Firefox bug 1344910](https://bugzil.la/1344910)), and the proprietary media query [`-moz-windows-accent-color-in-titlebar`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) (see [Firefox bug 1379938](https://bugzil.la/1379938)).
 
 ### SVG
 
@@ -44,7 +45,7 @@ _No changes._
 - The {{domxref("PerformanceTiming.secureConnectionStart")}} property has been implemented ([Firefox bug 772589](https://bugzil.la/772589)).
 - Firefox used to accept `iso-2022-jp-2` sequences silently when an `iso-2022-jp` {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} was instantiated, however this has now been removed to simplify the API, as no other browsers support it and no pages seem to use it. ([Firefox bug 715833](https://bugzil.la/715833)).
 - The 4ms clamping behavior of {{domxref("setTimeout()")}} and {{domxref("setInterval()")}} has been updated to be more in line with other browsers, as described in [Timeouts throttled to >=4ms](/en-US/docs/Web/API/setTimeout#timeouts_throttled_to_%3e4ms) ([Firefox bug 1378586](https://bugzil.la/1378586)).
-- The [Page Visibility API's](/en-US/docs/Web/API/Page_Visibility_API) {{domxref("Document.onvisibilitychange")}} handler has been added ([Firefox bug 1333912](https://bugzil.la/1333912)).
+- The [Page Visibility API's](/en-US/docs/Web/API/Page_Visibility_API) {{domxref("Document.visibilitychange_event", "onvisibilitychange")}} handler has been added ([Firefox bug 1333912](https://bugzil.la/1333912)).
 - The {{domxref("Window.showModalDialog()")}} method has been removed ([Firefox bug 981796](https://bugzil.la/981796)).
 - The implementation of the {{domxref("HTMLFormElement.action")}}, {{domxref("HTMLInputElement.formAction")}}, and {{domxref("HTMLButtonElement.formAction")}} properties has been updated so that they return the correct form submission URL, as per spec ([Firefox bug 1366361](https://bugzil.la/1366361)).
 
@@ -80,7 +81,7 @@ _No changes._
 ### HTML
 
 - The {{htmlelement("isindex")}} element has been removed from the HTML parser, and from form submission ([Firefox bug 1266495](https://bugzil.la/1266495)).
-- The {{htmlelement("applet")}} element has been removed ([Firefox bug 1279218](https://bugzil.la/1279218)).
+- The `<applet>` element has been removed ([Firefox bug 1279218](https://bugzil.la/1279218)).
 
 ### APIs
 
@@ -115,8 +116,8 @@ _No changes._
 - [privacy.services](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/services) now includes passwordSavingEnabled
 - [privacy.websites.referrersEnabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 - [protocol_handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) now supports "gopher"
-- proxy.registerProxyScript() is renamed to [proxy.register()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register)
-- [proxy.unregister()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister)
+- proxy.registerProxyScript() is renamed to [proxy.register()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+- [proxy.unregister()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 - [runtime.onInstalled](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) gets `temporary` flag
 - [tabs.print()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/print), [tabs.PageSettings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings), [tabs.printPreview()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/printPreview), [tabs.saveAsPDF()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF)
 - [tabs.Tab.lastAccessed](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)

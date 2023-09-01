@@ -1,13 +1,12 @@
 ---
-title: CSSNumericValue.div()
+title: "CSSNumericValue: div() method"
+short-title: div()
 slug: Web/API/CSSNumericValue/div
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSNumericValue.div
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`div()`** method of the
 {{domxref("CSSNumericValue")}} interface divides the `CSSNumericValue` by the

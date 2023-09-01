@@ -1,6 +1,7 @@
 ---
 title: "Django Tutorial Part 2: Creating a skeleton website"
 slug: Learn/Server-side/Django/skeleton_website
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
@@ -101,7 +102,7 @@ The _locallibrary_ project sub-folder is the entry point for the website:
 - **settings.py** contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.
 - **urls.py** defines the site URL-to-view mappings. While this could contain _all_ the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later.
 - **wsgi.py** is used to help your Django application communicate with the web server. You can treat this as boilerplate.
-- **asgi.py** is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.
+- **asgi.py** is a standard for Python asynchronous web apps and servers to communicate with each other. Asynchronous Server Gateway Interface (ASGI) is the asynchronous successor to Web Server Gateway Interface (WSGI). ASGI provides a standard for both asynchronous and synchronous Python apps, whereas WSGI provided a standard for synchronous apps only. ASGI is backward-compatible with WSGI and supports multiple servers and application frameworks.
 
 The **manage.py** script is used to create applications, work with databases, and start the development web server.
 
@@ -336,16 +337,7 @@ During development, you can serve the website first using the _development web s
 Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
 
 ```bash
-$ python3 manage.py runserver
-
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-March 01, 2022 - 04:08:45
-Django version 4.0.2, using settings 'locallibrary.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
+python3 manage.py runserver
 ```
 
 Once the server is running, you can view the site by navigating to `http://127.0.0.1:8000/` in your local web browser. You should see a site error page that looks like this:

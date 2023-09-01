@@ -1,5 +1,6 @@
 ---
-title: XRSession.depthDataFormat
+title: "XRSession: depthDataFormat property"
+short-title: depthDataFormat
 slug: Web/API/XRSession/depthDataFormat
 page-type: web-api-instance-property
 status:
@@ -34,8 +35,8 @@ navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
     usagePreference: ["cpu-optimized", "gpu-optimized"],
-    formatPreference: ["luminance-alpha", "float32"]
-  }
+    formatPreference: ["luminance-alpha", "float32"],
+  },
 });
 ```
 

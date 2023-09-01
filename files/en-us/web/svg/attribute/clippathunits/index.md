@@ -2,9 +2,6 @@
 title: clipPathUnits
 slug: Web/SVG/Attribute/clipPathUnits
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://drafts.fxtf.org/css-masking-1/#element-attrdef-clippath-clippathunits
 ---
 
@@ -43,12 +40,12 @@ svg {
   <rect id="r4" x="55" y="0" width="45" height="45" />
 
   <!-- The first 3 rect are clipped with userSpaceOnUse units -->
-  <use clip-path="url(#myClip1)" xlink:href="#r1" fill="red" />
-  <use clip-path="url(#myClip1)" xlink:href="#r2" fill="red" />
-  <use clip-path="url(#myClip1)" xlink:href="#r3" fill="red" />
+  <use clip-path="url(#myClip1)" href="#r1" fill="red" />
+  <use clip-path="url(#myClip1)" href="#r2" fill="red" />
+  <use clip-path="url(#myClip1)" href="#r3" fill="red" />
 
   <!-- The last rect is clipped with objectBoundingBox units -->
-  <use clip-path="url(#myClip2)" xlink:href="#r4" fill="red" />
+  <use clip-path="url(#myClip2)" href="#r4" fill="red" />
 </svg>
 ```
 

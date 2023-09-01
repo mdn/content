@@ -1,5 +1,6 @@
 ---
-title: DeviceOrientationEvent()
+title: "DeviceOrientationEvent: DeviceOrientationEvent() constructor"
+short-title: DeviceOrientationEvent()
 slug: Web/API/DeviceOrientationEvent/DeviceOrientationEvent
 page-type: web-api-constructor
 browser-compat: api.DeviceOrientationEvent.DeviceOrientationEvent

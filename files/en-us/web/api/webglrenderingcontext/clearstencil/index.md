@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.clearStencil()
+title: "WebGLRenderingContext: clearStencil() method"
+short-title: clearStencil()
 slug: Web/API/WebGLRenderingContext/clearStencil
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.clearStencil

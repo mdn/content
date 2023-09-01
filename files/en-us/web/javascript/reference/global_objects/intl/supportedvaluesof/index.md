@@ -9,14 +9,12 @@ browser-compat: javascript.builtins.Intl.supportedValuesOf
 
 The **`Intl.supportedValuesOf()`** static method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
 
-Duplicates are omitted and the array is sorted in ascending alphabetic order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function)
+Duplicates are omitted and the array is sorted in ascending lexicographical order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function).
 
 The method can be used to feature-test whether values are supported in a particular implementation and download a polyfill only if necessary.
 It can also be used to build UIs that allow users to select their preferred localized values, for example when the UI is created from WebGL or server-side.
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -27,8 +25,7 @@ Intl.supportedValuesOf(key)
 ### Parameters
 
 - `key`
-  - : A key string indicating the category of values to be returned.
-    This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
+  - : A key string indicating the category of values to be returned. This is one of: `"calendar"`, `"collation"`, `"currency"`, `"numberingSystem"`, `"timeZone"`, `"unit"`.
 
 ### Return value
 
@@ -36,8 +33,8 @@ A sorted array of unique string values indicating the values supported by the im
 
 ### Exceptions
 
-- `RangeError`
-  - : An unsupported key was passed as a parameter.
+- {{jsxref("RangeError")}}
+  - : Thrown if an unsupported key was passed as a parameter.
 
 ## Examples
 
@@ -108,5 +105,5 @@ try {
 
 ## See also
 
+- [Polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)
 - {{jsxref("Global_Objects/Intl", "Intl")}}
-- [A polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)

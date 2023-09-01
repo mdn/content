@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.setMediaKeys()
+title: "HTMLMediaElement: setMediaKeys() method"
+short-title: setMediaKeys()
 slug: Web/API/HTMLMediaElement/setMediaKeys
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.setMediaKeys

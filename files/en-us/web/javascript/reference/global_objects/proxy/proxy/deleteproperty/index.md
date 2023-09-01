@@ -32,7 +32,7 @@ The following parameters are passed to the `deleteProperty()` method.
 
 ### Return value
 
-The `deleteProperty()` method must return a {{jsxref("Boolean")}} indicating
+The `deleteProperty()` method must return a boolean value indicating
 whether or not the property has been successfully deleted.
 
 ## Description
@@ -99,5 +99,5 @@ console.log(result2); // false
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/delete", "delete")}} operator
+- {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Reflect.deleteProperty()")}}

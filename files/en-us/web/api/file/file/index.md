@@ -1,5 +1,6 @@
 ---
-title: File()
+title: "File: File() constructor"
+short-title: File()
 slug: Web/API/File/File
 page-type: web-api-constructor
 browser-compat: api.File.File

@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.WeakSet.add
 
 {{JSRef}}
 
-The **`add()`** method appends a new object to the end of a
-`WeakSet` object.
+The **`add()`** method of {{jsxref("WeakSet")}} instances appends a new object to the end of this `WeakSet`.
 
 {{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}
 
@@ -20,12 +19,17 @@ add(value)
 
 ### Parameters
 
-- value
-  - : Required. The object to add to the `WeakSet` collection.
+- `value`
+  - : Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). The value to add to the `WeakSet` collection.
 
 ### Return value
 
 The `WeakSet` object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `value` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 

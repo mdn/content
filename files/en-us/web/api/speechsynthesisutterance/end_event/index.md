@@ -1,5 +1,6 @@
 ---
-title: 'SpeechSynthesisUtterance: end event'
+title: "SpeechSynthesisUtterance: end event"
+short-title: end
 slug: Web/API/SpeechSynthesisUtterance/end_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.end_event
@@ -14,9 +15,9 @@ The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('end', (event) => { })
+addEventListener("end", (event) => {});
 
-onend = (event) => { }
+onend = (event) => {};
 ```
 
 ## Event type
@@ -43,8 +44,10 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('end', (event) => {
-  console.log(`Utterance has finished being spoken after ${event.elapsedTime} seconds.`);
+utterThis.addEventListener("end", (event) => {
+  console.log(
+    `Utterance has finished being spoken after ${event.elapsedTime} seconds.`,
+  );
 });
 ```
 
@@ -52,8 +55,10 @@ Or use the `onend` event handler property:
 
 ```js
 utterThis.onend = (event) => {
-  console.log(`Utterance has finished being spoken after ${event.elapsedTime} seconds.`);
-}
+  console.log(
+    `Utterance has finished being spoken after ${event.elapsedTime} seconds.`,
+  );
+};
 ```
 
 ## Specifications

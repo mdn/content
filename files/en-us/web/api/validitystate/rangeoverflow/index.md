@@ -1,5 +1,6 @@
 ---
-title: ValidityState.rangeOverflow
+title: "ValidityState: rangeOverflow property"
+short-title: rangeOverflow
 slug: Web/API/ValidityState/rangeOverflow
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.rangeOverflow

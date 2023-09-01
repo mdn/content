@@ -1,5 +1,5 @@
 ---
-title: '<rt>: The Ruby Text element'
+title: "<rt>: The Ruby Text element"
 slug: Web/HTML/Element/rt
 page-type: html-element
 browser-compat: html.elements.rt
@@ -24,10 +24,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This simple example provides Romaji transliteration for the kanji characters within the {{HTMLElement("ruby")}} element:
 
 ```html
-<ruby>
-  漢 <rt>Kan</rt>
-  字 <rt>ji</rt>
-</ruby>
+<ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>
 ```
 
 ```css hidden
@@ -36,7 +33,7 @@ body {
 }
 ```
 
-The output looks like this in your browser:
+#### Result
 
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 

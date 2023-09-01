@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.contentEditable
+title: "HTMLElement: contentEditable property"
+short-title: contentEditable
 slug: Web/API/HTMLElement/contentEditable
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.contentEditable
@@ -15,6 +16,7 @@ This enumerated attribute can have the following values:
 
 - '`true`' indicates that the element is `contenteditable`.
 - '`false`' indicates that the element cannot be edited.
+- '`plaintext-only`' indicates that the element's raw text is editable, but rich text formatting is disabled.
 - '`inherit`' indicates that the element inherits its parent's editable
   status.
 
@@ -35,6 +37,5 @@ A string.
 
 ## See also
 
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
 - {{domxref("HTMLElement.isContentEditable")}}
-- The {{htmlattrxref("contenteditable")}} global attribute.
+- The [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) global attribute.

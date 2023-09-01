@@ -1,5 +1,6 @@
 ---
-title: CaptureController()
+title: "CaptureController: CaptureController() constructor"
+short-title: CaptureController()
 slug: Web/API/CaptureController/CaptureController
 page-type: web-api-constructor
 status:

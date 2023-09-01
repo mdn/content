@@ -1,6 +1,7 @@
 ---
 title: Getting started with the web
 slug: Learn/Getting_started_with_the_web
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

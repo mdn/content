@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createBuffer()
+title: "BaseAudioContext: createBuffer() method"
+short-title: createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createBuffer
@@ -103,7 +104,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const myArrayBuffer = audioCtx.createBuffer(
   2,
   audioCtx.sampleRate * 3,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 // Fill the buffer with white noise;

@@ -1,5 +1,6 @@
 ---
-title: Document.domain
+title: "Document: domain property"
+short-title: domain
 slug: Web/API/Document/domain
 page-type: web-api-instance-property
 status:

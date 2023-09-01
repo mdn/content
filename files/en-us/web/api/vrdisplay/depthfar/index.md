@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.depthFar
+title: "VRDisplay: depthFar property"
+short-title: depthFar
 slug: Web/API/VRDisplay/depthFar
 page-type: web-api-instance-property
 status:

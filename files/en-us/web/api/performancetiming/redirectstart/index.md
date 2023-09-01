@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.redirectStart
+title: "PerformanceTiming: redirectStart property"
+short-title: redirectStart
 slug: Web/API/PerformanceTiming/redirectStart
 page-type: web-api-instance-property
 status:

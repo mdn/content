@@ -1,5 +1,6 @@
 ---
-title: MIDIPort.manufacturer
+title: "MIDIPort: manufacturer property"
+short-title: manufacturer
 slug: Web/API/MIDIPort/manufacturer
 page-type: web-api-instance-property
 browser-compat: api.MIDIPort.manufacturer

@@ -1,5 +1,6 @@
 ---
-title: FontFace()
+title: "FontFace: FontFace() constructor"
+short-title: FontFace()
 slug: Web/API/FontFace/FontFace
 page-type: web-api-constructor
 browser-compat: api.FontFace.FontFace

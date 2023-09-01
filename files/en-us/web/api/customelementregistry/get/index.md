@@ -1,5 +1,6 @@
 ---
-title: CustomElementRegistry.get()
+title: "CustomElementRegistry: get() method"
+short-title: get()
 slug: Web/API/CustomElementRegistry/get
 page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.get
@@ -38,7 +39,7 @@ customElements.define(
         .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
         .append(templateContent.cloneNode(true));
     }
-  }
+  },
 );
 
 // Return a reference to the my-paragraph constructor

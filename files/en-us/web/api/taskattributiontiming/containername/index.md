@@ -1,5 +1,6 @@
 ---
-title: TaskAttributionTiming.containerName
+title: "TaskAttributionTiming: containerName property"
+short-title: containerName
 slug: Web/API/TaskAttributionTiming/containerName
 page-type: web-api-instance-property
 status:
@@ -14,7 +15,7 @@ attribute. A container is the iframe, embed or object etc. that is being implica
 
 ## Value
 
-A string containing the container's `name` HTML content attribute (e.g. [`<iframe name="myIframe"`](/en-US/docs/Web/HTML/Element/iframe#name) or [`<object name="myObject"`](/en-US/docs/Web/HTML/Element/object#attr-name)).
+A string containing the container's `name` HTML content attribute (e.g. [`<iframe name="myIframe"`](/en-US/docs/Web/HTML/Element/iframe#name) or [`<object name="myObject"`](/en-US/docs/Web/HTML/Element/object#name)).
 
 ## Specifications
 

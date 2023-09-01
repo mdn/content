@@ -2,10 +2,8 @@
 title: glyph-name
 slug: Web/SVG/Attribute/glyph-name
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.glyph.glyph-name
 ---
 

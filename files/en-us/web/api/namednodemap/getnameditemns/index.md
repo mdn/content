@@ -1,5 +1,6 @@
 ---
-title: NamedNodeMap.getNamedItemNS()
+title: "NamedNodeMap: getNamedItemNS() method"
+short-title: getNamedItemNS()
 slug: Web/API/NamedNodeMap/getNamedItemNS
 page-type: web-api-instance-method
 browser-compat: api.NamedNodeMap.getNamedItemNS
@@ -44,7 +45,7 @@ const warning = doc.querySelector("warning");
 
 const value = warning.attributes.getNamedItemNS(
   "http://www.example.com/ob",
-  "one"
+  "one",
 ).value;
 
 pre.textContent = `The 'ob:one' attribute contains: ${value}.`;

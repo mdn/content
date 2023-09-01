@@ -2,16 +2,6 @@
 title: downloads.showDefaultFolder()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - showDefaultFolder
 browser-compat: webextensions.api.downloads.showDefaultFolder
 ---
 
@@ -38,11 +28,11 @@ None.
 The following snippet contains a show button, which when clicked invokes `showDefaultFolder()` to open the default downloads folder in the platform's file manager:
 
 ```js
-let showBtn = document.querySelector('.show');
+let showBtn = document.querySelector(".show");
 
 showBtn.onclick = () => {
   browser.downloads.showDefaultFolder();
-}
+};
 ```
 
 {{WebExtExamples}}

@@ -1,5 +1,6 @@
 ---
-title: CSSStyleDeclaration.removeProperty()
+title: "CSSStyleDeclaration: removeProperty() method"
+short-title: removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleDeclaration.removeProperty

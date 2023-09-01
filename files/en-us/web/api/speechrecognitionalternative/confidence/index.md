@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionAlternative.confidence
+title: "SpeechRecognitionAlternative: confidence property"
+short-title: confidence
 slug: Web/API/SpeechRecognitionAlternative/confidence
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionAlternative.confidence
@@ -38,7 +39,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(`Confidence: ${event.results[0][0].confidence}`);
-}
+};
 ```
 
 ## Specifications

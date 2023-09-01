@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.title
+title: "StyleSheet: title property"
+short-title: title
 slug: Web/API/StyleSheet/title
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.title

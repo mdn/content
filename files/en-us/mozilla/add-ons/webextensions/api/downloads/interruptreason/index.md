@@ -2,16 +2,6 @@
 title: downloads.InterruptReason
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - InterruptReason
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 browser-compat: webextensions.api.downloads.InterruptReason
 ---
 

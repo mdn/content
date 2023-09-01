@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.appendBuffer()
+title: "SourceBuffer: appendBuffer() method"
+short-title: appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
 page-type: web-api-instance-method
 browser-compat: api.SourceBuffer.appendBuffer

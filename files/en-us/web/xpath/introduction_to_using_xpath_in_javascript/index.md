@@ -1,11 +1,10 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
+page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/XPath")}}
-</section>
+{{XsltSidebar}}
 
 This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/), which means that XPath expressions can be run against both HTML and XML documents.
 
@@ -21,7 +20,7 @@ const xpathResult = document.evaluate(
   contextNode,
   namespaceResolver,
   resultType,
-  result
+  result,
 );
 ```
 
@@ -52,7 +51,7 @@ We create a namespace resolver using the `createNSResolver` method of the [docum
 const nsResolver = document.createNSResolver(
   contextNode.ownerDocument === null
     ? contextNode.documentElement
-    : contextNode.ownerDocument.documentElement
+    : contextNode.ownerDocument.documentElement,
 );
 ```
 
@@ -63,7 +62,7 @@ const xpEvaluator = new XPathEvaluator();
 const nsResolver = xpEvaluator.createNSResolver(
   contextNode.ownerDocument === null
     ? contextNode.documentElement
-    : contextNode.ownerDocument.documentElement
+    : contextNode.ownerDocument.documentElement,
 );
 ```
 
@@ -103,11 +102,11 @@ const paragraphCount = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 
 console.log(
-  `This document contains ${paragraphCount.numberValue} paragraph elements.`
+  `This document contains ${paragraphCount.numberValue} paragraph elements.`,
 );
 ```
 
@@ -119,11 +118,11 @@ const paragraphCount = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 
 console.log(
-  `This document contains ${paragraphCount.stringValue} paragraph elements.`
+  `This document contains ${paragraphCount.stringValue} paragraph elements.`,
 );
 ```
 
@@ -156,7 +155,7 @@ const iterator = document.evaluate(
   documentNode,
   null,
   XPathResult.UNORDERED_NODE_ITERATOR_TYPE,
-  null
+  null,
 );
 
 try {
@@ -188,7 +187,7 @@ const nodesSnapshot = document.evaluate(
   documentNode,
   null,
   XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-  null
+  null,
 );
 
 for (let i = 0; i < nodesSnapshot.snapshotLength; i++) {
@@ -213,11 +212,11 @@ const firstPhoneNumber = document.evaluate(
   documentNode,
   null,
   XPathResult.FIRST_ORDERED_NODE_TYPE,
-  null
+  null,
 );
 
 console.log(
-  `The first phone number found is ${firstPhoneNumber.singleNodeValue.textContent}`
+  `The first phone number found is ${firstPhoneNumber.singleNodeValue.textContent}`,
 );
 ```
 
@@ -243,7 +242,7 @@ const headings = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 
@@ -301,7 +300,7 @@ const xmlDoc = req.responseXML;
 const nsResolver = xmlDoc.createNSResolver(
   xmlDoc.ownerDocument === null
     ? xmlDoc.documentElement
-    : xmlDoc.ownerDocument.documentElement
+    : xmlDoc.ownerDocument.documentElement,
 );
 
 const personIterator = xmlDoc.evaluate(
@@ -309,7 +308,7 @@ const personIterator = xmlDoc.evaluate(
   xmlDoc,
   nsResolver,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 
@@ -319,7 +318,7 @@ const personIterator = xmlDoc.evaluate(
 
 This is an example for illustration only. This function will need to take namespace prefixes from the `xpathExpression` and return the URI that corresponds to that prefix. For example, the expression:
 
-```
+```plain
 '//xhtml:td/mathml:math'
 ```
 
@@ -345,7 +344,7 @@ document.evaluate(
   document,
   nsResolver,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 
@@ -389,7 +388,7 @@ While one can adapt the approach in the above section to test for namespaced ele
 
 For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `const xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
-This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes/attribute)).
+This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes#attribute)).
 
 In order to accurately grab elements with the XLink `@href` attribute (without also being confined to predefined prefixes in a namespace resolver), one could obtain them as follows:
 

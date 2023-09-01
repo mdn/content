@@ -1,5 +1,6 @@
 ---
-title: 'HTMLInputElement: search event'
+title: "HTMLInputElement: search event"
+short-title: search
 slug: Web/API/HTMLInputElement/search_event
 page-type: web-api-event
 status:
@@ -22,9 +23,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('search', (event) => {});
+addEventListener("search", (event) => {});
 
-onsearch = (event) => { };
+onsearch = (event) => {};
 ```
 
 ## Event type
@@ -37,8 +38,8 @@ A generic {{domxref("Event")}}.
 // addEventListener version
 const input = document.querySelector('input[type="search"]');
 
-input.addEventListener('search', () => {
- console.log(`The term searched for was ${input.value}`);
+input.addEventListener("search", () => {
+  console.log(`The term searched for was ${input.value}`);
 });
 ```
 
@@ -47,7 +48,7 @@ input.addEventListener('search', () => {
 const input = document.querySelector('input[type="search"]');
 
 input.onsearch = () => {
- console.log(`The term searched for was ${input.value}`);
+  console.log(`The term searched for was ${input.value}`);
 };
 ```
 

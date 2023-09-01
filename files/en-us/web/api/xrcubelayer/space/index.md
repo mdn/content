@@ -1,5 +1,6 @@
 ---
-title: XRCubeLayer.space
+title: "XRCubeLayer: space property"
+short-title: space
 slug: Web/API/XRCubeLayer/space
 page-type: web-api-instance-property
 status:
@@ -25,7 +26,7 @@ The {{domxref("XRWebGLBinding.createCubeLayer()")}} method creates a cube layer 
 const cubeLayer = xrGlBinding.createCubeLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 cubeLayer.space = someOtherSpace;

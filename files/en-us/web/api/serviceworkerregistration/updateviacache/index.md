@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.updateViaCache
+title: "ServiceWorkerRegistration: updateViaCache property"
+short-title: updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.updateViaCache

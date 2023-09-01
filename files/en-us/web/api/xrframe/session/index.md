@@ -1,5 +1,6 @@
 ---
-title: XRFrame.session
+title: "XRFrame: session property"
+short-title: session
 slug: Web/API/XRFrame/session
 page-type: web-api-instance-property
 status:

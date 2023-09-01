@@ -2,16 +2,6 @@
 title: i18n.getAcceptLanguages()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAcceptLanguages
-  - i18n
 browser-compat: webextensions.api.i18n.getAcceptLanguages
 ---
 

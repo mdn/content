@@ -2,16 +2,6 @@
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - tabs
 browser-compat: webextensions.api.tabs.create
 ---
 
@@ -91,7 +81,7 @@ Open "https\://example.org" in a new tab:
 
 ```js
 function onCreated(tab) {
-  console.log(`Created new tab: ${tab.id}`)
+  console.log(`Created new tab: ${tab.id}`);
 }
 
 function onError(error) {
@@ -100,7 +90,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let creating = browser.tabs.create({
-    url:"https://example.org"
+    url: "https://example.org",
   });
   creating.then(onCreated, onError);
 });

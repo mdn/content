@@ -1,5 +1,6 @@
 ---
-title: Permissions.revoke()
+title: "Permissions: revoke() method"
+short-title: revoke()
 slug: Web/API/Permissions/revoke
 page-type: web-api-instance-method
 status:
@@ -70,7 +71,7 @@ be revoked.
 
 ```js
 function revokePermission() {
-  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
+  navigator.permissions.revoke({ name: "geolocation" }).then((result) => {
     report(result.state);
   });
 }

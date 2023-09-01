@@ -1,5 +1,6 @@
 ---
-title: NetworkInformation.saveData
+title: "NetworkInformation: saveData property"
+short-title: saveData
 slug: Web/API/NetworkInformation/saveData
 page-type: web-api-instance-property
 status:

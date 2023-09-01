@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.globalCompositeOperation
+title: "CanvasRenderingContext2D: globalCompositeOperation property"
+short-title: globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
@@ -17,11 +18,6 @@ See also [Compositing and clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Comp
 ## Value
 
 A string identifying which of the compositing or blending mode operations to use.
-
-### Operations
-
-{{EmbedLiveSample("Compositing_example", 750, 6900, ""
-  ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
 ## Examples
 

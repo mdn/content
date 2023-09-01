@@ -1,11 +1,7 @@
 ---
 title: Access-Control-Request-Headers
 slug: Web/HTTP/Headers/Access-Control-Request-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Access-Control-Request-Headers
 ---
 

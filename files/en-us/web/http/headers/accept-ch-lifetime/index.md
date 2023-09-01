@@ -1,6 +1,7 @@
 ---
 title: Accept-CH-Lifetime
 slug: Web/HTTP/Headers/Accept-CH-Lifetime
+page-type: http-header
 status:
   - deprecated
   - non-standard

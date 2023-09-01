@@ -1,5 +1,6 @@
 ---
-title: ContentIndex.add()
+title: "ContentIndex: add() method"
+short-title: add()
 slug: Web/API/ContentIndex/add
 page-type: web-api-instance-method
 status:

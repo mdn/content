@@ -1,5 +1,6 @@
 ---
-title: VREyeParameters.renderWidth
+title: "VREyeParameters: renderWidth property"
+short-title: renderWidth
 slug: Web/API/VREyeParameters/renderWidth
 page-type: web-api-instance-property
 status:

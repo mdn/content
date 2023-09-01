@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.textAlign
+title: "CanvasRenderingContext2D: textAlign property"
+short-title: textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.textAlign

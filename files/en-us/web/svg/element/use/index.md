@@ -2,11 +2,6 @@
 title: <use>
 slug: Web/SVG/Element/use
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
 browser-compat: svg.elements.use
 ---
 
@@ -72,14 +67,14 @@ svg {
 - ARIA Attributes
   - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 - XLink Attributes
-  - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
+  - : {{SVGAttr("xlink:href")}} {{deprecated_inline}}, {{SVGAttr("xlink:title")}}
 
 ## Usage notes
 
 Most attributes on `use` are ignored if the corresponding attribute is already defined on the element _referenced_ by `use`. (This differs from how CSS style attributes override those set 'earlier' in the cascade).
 **Only** the attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} and {{SVGAttr("href")}} on the `use` element will or may have some effect, described later, if the referenced element has already defined the corresponding attribute. However, _any other attributes_ not set on the referenced element **will** be applied to the `use` element.
 
-Since the cloned nodes are not exposed, care must be taken when using [CSS](/en-US/docs/Web/CSS) to style a `use` element and its cloned descendants. CSS properties are not guaranteed to be inherited by the cloned DOM unless you explicitly request them using [CSS inheritance](/en-US/docs/Web/CSS/inheritance).
+Since the cloned nodes are not exposed, care must be taken when using [CSS](/en-US/docs/Web/CSS) to style a `use` element and its cloned descendants. CSS properties are not guaranteed to be inherited by the cloned DOM unless you explicitly request them using [CSS inheritance](/en-US/docs/Web/CSS/Inheritance).
 
 For security reasons, browsers may apply the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) on `use` elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for `use` elements.
 

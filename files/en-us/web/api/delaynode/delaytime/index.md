@@ -1,5 +1,6 @@
 ---
-title: DelayNode.delayTime
+title: "DelayNode: delayTime property"
+short-title: delayTime
 slug: Web/API/DelayNode/delayTime
 page-type: web-api-instance-property
 browser-compat: api.DelayNode.delayTime
@@ -19,7 +20,7 @@ An {{domxref("AudioParam")}}.
 
 ## Examples
 
-See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#example) for example code.
+See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#examples) for example code.
 
 ## Specifications
 

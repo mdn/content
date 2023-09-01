@@ -1,5 +1,6 @@
 ---
-title: RTCTrackEvent()
+title: "RTCTrackEvent: RTCTrackEvent() constructor"
+short-title: RTCTrackEvent()
 slug: Web/API/RTCTrackEvent/RTCTrackEvent
 page-type: web-api-constructor
 browser-compat: api.RTCTrackEvent.RTCTrackEvent

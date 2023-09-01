@@ -1,5 +1,6 @@
 ---
-title: AudioParam.cancelScheduledValues()
+title: "AudioParam: cancelScheduledValues() method"
+short-title: cancelScheduledValues()
 slug: Web/API/AudioParam/cancelScheduledValues
 page-type: web-api-instance-method
 browser-compat: api.AudioParam.cancelScheduledValues

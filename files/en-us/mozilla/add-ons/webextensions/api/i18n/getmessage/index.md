@@ -2,16 +2,6 @@
 title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getMessage
-  - i18n
 browser-compat: webextensions.api.i18n.getMessage
 ---
 
@@ -70,9 +60,9 @@ This would work with a \_locales/en/messages.json file containing:
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -81,7 +71,7 @@ This would work with a \_locales/en/messages.json file containing:
 
 If `target.url` is "https\://developer.mozilla.org", then the value of message, in the "en" locale, would be:
 
-```
+```plain
 "You clicked https://developer.mozilla.org."
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.response
+title: "PublicKeyCredential: response property"
+short-title: response
 slug: Web/API/PublicKeyCredential/response
 page-type: web-api-instance-property
 browser-compat: api.PublicKeyCredential.response
@@ -51,7 +52,7 @@ const options = {
   challenge: new Uint8Array(16) /* from the server */,
   rp: {
     name: "Example CORP",
-    id  : "login.example.com"
+    id: "login.example.com",
   },
   user: {
     id: new Uint8Array(16) /* from the server */,
@@ -61,21 +62,22 @@ const options = {
   pubKeyCredParams: [
     {
       type: "public-key",
-      alg: -7
-    }
-  ]
+      alg: -7,
+    },
+  ],
 };
 
-navigator.credentials.create({  publicKey: options })
+navigator.credentials
+  .create({ publicKey: options })
   .then((pubKeyCredential) => {
     const response = pubKeyCredential.response;
     const clientExtResults = pubKeyCredential.getClientExtensionResults();
     // Send response and client extensions to the server so that it can validate
     // and create credentials
-
-}).catch((err) => {
-  // Deal with any error
-});
+  })
+  .catch((err) => {
+    // Deal with any error
+  });
 ```
 
 ## Specifications

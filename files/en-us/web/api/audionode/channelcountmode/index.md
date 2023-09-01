@@ -1,5 +1,6 @@
 ---
-title: AudioNode.channelCountMode
+title: "AudioNode: channelCountMode property"
+short-title: channelCountMode
 slug: Web/API/AudioNode/channelCountMode
 page-type: web-api-instance-property
 browser-compat: api.AudioNode.channelCountMode

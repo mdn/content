@@ -1,5 +1,6 @@
 ---
-title: XRLayerEvent()
+title: "XRLayerEvent: XRLayerEvent() constructor"
+short-title: XRLayerEvent()
 slug: Web/API/XRLayerEvent/XRLayerEvent
 page-type: web-api-constructor
 status:
@@ -40,7 +41,7 @@ In this example, a new `redraw` event is created for an {{domxref("XRQuadLayer")
 
 ```js
 const redrawEvent = new XRLayerEvent("redraw", {
-  layer: quadLayer
+  layer: quadLayer,
 });
 
 quadLayer.dispatchEvent();

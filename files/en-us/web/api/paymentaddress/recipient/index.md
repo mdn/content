@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.recipient
+title: "PaymentAddress: recipient property"
+short-title: recipient
 slug: Web/API/PaymentAddress/recipient
 page-type: web-api-instance-property
 status:

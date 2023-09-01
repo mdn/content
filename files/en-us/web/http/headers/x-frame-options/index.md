@@ -1,13 +1,7 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-tags:
-  - Gecko
-  - HAProxy
-  - HTTP
-  - Response Header
-  - Security
-  - nginx
+page-type: http-header
 browser-compat: http.headers.X-Frame-Options
 ---
 
@@ -36,7 +30,7 @@ The added security is provided only if the user accessing the document is using 
 
 There are two possible directives for `X-Frame-Options`:
 
-```
+```http
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 ```
@@ -49,7 +43,7 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
   - : The page cannot be displayed in a frame, regardless of the site attempting to do so.
 - `SAMEORIGIN`
   - : The page can only be displayed if all ancestor frames are same origin to the page itself.
-- `ALLOW-FROM=url` {{deprecated_inline}}
+- `ALLOW-FROM origin` {{deprecated_inline}}
   - : This is an obsolete directive that no longer works in modern browsers. (Using it will give the same behavior as omitting the header.) Don't use it. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you can use instead.
 
 ## Examples
@@ -60,13 +54,13 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
 
 To configure Apache to send the `X-Frame-Options` header for all pages, add this to your site's configuration:
 
-```
+```plain
 Header always set X-Frame-Options "SAMEORIGIN"
 ```
 
 To configure Apache to set the `X-Frame-Options` DENY, add this to your site's configuration:
 
-```
+```plain
 Header set X-Frame-Options "DENY"
 ```
 
@@ -74,7 +68,7 @@ Header set X-Frame-Options "DENY"
 
 To configure Nginx to send the `X-Frame-Options` header, add this either to your http, server or location configuration:
 
-```
+```plain
 add_header X-Frame-Options SAMEORIGIN always;
 ```
 
@@ -102,13 +96,13 @@ Or see this [Microsoft support article on setting this configuration using the I
 
 To configure HAProxy to send the `X-Frame-Options` header, add this to your front-end, listen, or backend configuration:
 
-```
+```plain
 rspadd X-Frame-Options:\ SAMEORIGIN
 ```
 
 Alternatively, in newer versions:
 
-```
+```plain
 http-response set-header X-Frame-Options SAMEORIGIN
 ```
 

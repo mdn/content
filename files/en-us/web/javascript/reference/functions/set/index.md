@@ -1,5 +1,5 @@
 ---
-title: setter
+title: set
 slug: Web/JavaScript/Reference/Functions/set
 page-type: javascript-language-feature
 browser-compat: javascript.functions.set
@@ -43,7 +43,7 @@ a property that holds an actual value.
 
 ### Defining a setter on new objects in object initializers
 
-The following example define a pseudo-property `current` of object
+The following example defines a pseudo-property `current` of object
 `language`. When `current` is assigned a value, it updates
 `log` with that value:
 
@@ -150,10 +150,12 @@ console.log(obj.baz); // "baz"
 
 ## See also
 
-- [Getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("Operators/delete", "delete")}}
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Object.defineProperty()")}}
-- [`__defineGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`__defineSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining getters and setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) in JavaScript Guide
-- [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- {{jsxref("Statements/class", "class")}}
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) by Jeff Walden (2010)
+- [More SpiderMonkey changes: ancient, esoteric, very rarely used syntax for creating getters and setters is being removed](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) by Jeff Walden (2010)

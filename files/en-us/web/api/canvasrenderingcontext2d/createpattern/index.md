@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.createPattern()
+title: "CanvasRenderingContext2D: createPattern() method"
+short-title: createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createPattern

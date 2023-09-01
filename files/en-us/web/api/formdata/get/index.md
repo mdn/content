@@ -1,5 +1,6 @@
 ---
-title: FormData.get()
+title: "FormData: get() method"
+short-title: get()
 slug: Web/API/FormData/get
 page-type: web-api-instance-method
 browser-compat: api.FormData.get

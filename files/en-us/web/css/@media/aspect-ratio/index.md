@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.aspect-ratio
 
 {{CSSRef}}
 
-The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
 
 ## Syntax
 
@@ -62,7 +62,7 @@ Note that, when none of the media query conditions are true, the background will
 
 <iframe
   id="outer"
-  src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
+  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #9af; } } @media (max-aspect-ratio: 3/2) { div { background: #9ff; } } @media (aspect-ratio: 1/1) { div { background: #f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
 </iframe>
 ```
 
@@ -97,5 +97,5 @@ h.onchange = h.oninput = () => {
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

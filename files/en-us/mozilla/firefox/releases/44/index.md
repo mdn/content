@@ -1,6 +1,7 @@
 ---
 title: Firefox 44 for developers
 slug: Mozilla/Firefox/Releases/44
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -21,7 +22,7 @@ Highlights:
 
 ### HTML
 
-- [`<link rel="prefetch">`](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) now obeys the {{htmlattrxref("crossorigin", "link")}} attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
+- [`<link rel="prefetch">`](/en-US/docs/Glossary/Prefetch) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
 
 ### CSS
 
@@ -32,7 +33,7 @@ Highlights:
   - The value `sideways` of the {{cssxref("text-orientation")}} property has been implemented and `sideways-right` has been made an alias of it ([Firefox bug 1193488](https://bugzil.la/1193488)).
   - The value `sideways-rl` and `sideways-lr` of the {{cssxref("writing-mode")}} property ([Firefox bug 1193488](https://bugzil.la/1193488) and [Firefox bug 1193519](https://bugzil.la/1193519)).
 
-- The non-standard properties {{cssxref("-moz-math-display")}} and {{cssxref("-moz-window-shadow")}} are no more available from Web content ([Firefox bug 1207002](https://bugzil.la/1207002), [Firefox bug 1211040](https://bugzil.la/1211040), and [Firefox bug 1212607](https://bugzil.la/1212607)).
+- The non-standard properties `-moz-math-display` and `-moz-window-shadow` are no more available from Web content ([Firefox bug 1207002](https://bugzil.la/1207002), [Firefox bug 1211040](https://bugzil.la/1211040), and [Firefox bug 1212607](https://bugzil.la/1212607)).
 - The {{cssxref("font-style")}} property now distinguishes between `oblique` and `italic` when both variants are available ([Firefox bug 543715](https://bugzil.la/543715)).
 - Though not supported, the properties {{cssxref("@page/marks")}}, {{cssxref("orphans")}}, {{cssxref("page")}}, {{cssxref("size")}}, and {{cssxref("widows")}}, were parsed and {{cssxref("@supports")}} was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ([Firefox bug 1215702](https://bugzil.la/1215702)).
 - The internal value `-moz-mac-unified-toolbar` has been removed from the possible values for the {{cssxref("appearance")}} property ([Firefox bug 1206468](https://bugzil.la/1206468)).
@@ -83,13 +84,13 @@ Highlights:
 #### Changes
 
 - The [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) bindings in the global level have been made compliant with ES2015 semantics. See [Firefox bug 589199](https://bugzil.la/589199) and the blog post ["Breaking changes in let and const in Firefox Nightly 44"](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/). In addition, `let` is now available to default Web JavaScript (strict and non-strict) and does not require a version opt-in anymore ([Firefox bug 932517](https://bugzil.la/932517)).
-- If [typed arrays'](/en-US/docs/Web/JavaScript/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ([Firefox bug 980945](https://bugzil.la/980945), [Firefox bug 1214936](https://bugzil.la/1214936)).
+- If [typed arrays'](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ([Firefox bug 980945](https://bugzil.la/980945), [Firefox bug 1214936](https://bugzil.la/1214936)).
 - The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for [anchored sticky regular expressions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) ([Firefox bug 773687](https://bugzil.la/773687)).
 - The JavaScript shell (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ([Firefox bug 1192329](https://bugzil.la/1192329)).
 
 #### Removals
 
-- Support for the non-standard [`let` blocks](/en-US/docs/Web/JavaScript/Reference/Statements/let#let_blocks) has been dropped ([Firefox bug 1167029](https://bugzil.la/1167029).
+- Support for the non-standard [`let` blocks](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) has been dropped ([Firefox bug 1167029](https://bugzil.la/1167029).
 - The non-standard and deprecated property `Object.prototype.__noSuchMethod__` has been removed ([Firefox bug 683218](https://bugzil.la/683218)).
 
 ### Interfaces/APIs/DOM

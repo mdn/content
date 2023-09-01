@@ -1,5 +1,6 @@
 ---
-title: XRCompositionLayer.mipLevels
+title: "XRCompositionLayer: mipLevels property"
+short-title: mipLevels
 slug: Web/API/XRCompositionLayer/mipLevels
 page-type: web-api-instance-property
 status:
@@ -34,7 +35,9 @@ let quadLayer = xrGLBinding.createQuadLayer({
   width: 1.0,
   height: 1.0,
   mipLevels: 5,
-  transform : new XRRigidTransform({ /* … */}),
+  transform: new XRRigidTransform({
+    /* … */
+  }),
 });
 
 quadLayer.mipLevels; // 5

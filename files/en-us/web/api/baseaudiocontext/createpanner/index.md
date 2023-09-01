@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createPanner()
+title: "BaseAudioContext: createPanner() method"
+short-title: createPanner()
 slug: Web/API/BaseAudioContext/createPanner
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createPanner

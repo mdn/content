@@ -1,5 +1,6 @@
 ---
-title: AudioData.format
+title: "AudioData: format property"
+short-title: format
 slug: Web/API/AudioData/format
 page-type: web-api-instance-property
 status:

@@ -1,6 +1,7 @@
 ---
 title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -35,7 +36,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ### CSS
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Support for CSS animations has been added, using the `-moz-` prefix for now.
 
 ### DOM
@@ -52,7 +53,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 ### JavaScript
 
 - Regular expressions are no longer callable as if they were functions; this change has been made in concert with the WebKit team to ensure compatibility (see [Webkit bug 28285](https://webkit.org/b/28285). This feature had existed for a long time but was never documented (at least, not here on MDC).
-- The [`Function.prototype.isGenerator()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions).
+- The [`Function.prototype.isGenerator()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions).
 - The following [reserved words](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) were previously only treated as reserved when in strict mode; now they're always treated as reserved: `class`, `enum`, `export`, `extends`, `import`, and `super`.
 - DOM documents created in chrome code may no longer be exposed to sandboxed scripts.
 - The JSON parser has been re-written for improved speed and compliance. This includes a fix for [Firefox bug 572279](https://bugzil.la/572279).
@@ -90,12 +91,12 @@ For a guide to updating your add-on for Firefox 5, please see [Updating add-ons 
 
 #### NetUtil.jsm
 
-- The [`asyncFetch()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#asyncFetch()>) method now supports specifying the input source as an `nsIInputStream`.
+- The `asyncFetch()` method now supports specifying the input source as an `nsIInputStream`.
 
 ### Interface changes
 
 - The `nsIHttpChannelInternal` interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.
-- The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement)).
+- The {{ HTMLElement("canvas") }} element's [`width`](/en-US/docs/Web/HTML/Element/canvas#width) and [`height`](/en-US/docs/Web/HTML/Element/canvas#height) attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement)).
 - The `nsIAppStartup2` and `nsIAppStartup_MOZILLA_2_0` interfaces have been merged into the `nsIAppStartup` interface.
 - The `nsIDocShell_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIDocShell` interface.
 - The `nsIFocusManager_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIFocusManager` interface.
@@ -124,7 +125,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Build system changes
 
-- You can now build Firefox without a `mozconfig` file; the [`--enable-application` setting](/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#choose_an_application) now defaults to "browser". After pulling or downloading the code, you can `configure && make` (or `make -f client.mk`) to build Firefox.
+- You can now build Firefox without a `mozconfig` file; the [`--enable-application` setting](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html#choose_an_application) now defaults to "browser". After pulling or downloading the code, you can `configure && make` (or `make -f client.mk`) to build Firefox.
 
 ## See also
 

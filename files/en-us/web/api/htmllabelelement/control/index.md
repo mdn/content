@@ -1,5 +1,6 @@
 ---
-title: HTMLLabelElement.control
+title: "HTMLLabelElement: control property"
+short-title: control
 slug: Web/API/HTMLLabelElement/control
 page-type: web-api-instance-property
 browser-compat: api.HTMLLabelElement.control

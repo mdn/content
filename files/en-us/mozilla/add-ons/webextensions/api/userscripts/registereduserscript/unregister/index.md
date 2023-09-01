@@ -2,14 +2,6 @@
 title: RegisteredUserScript.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 page-type: webextension-api-function
-tags:
-  - Add-ons
-  - Extensions
-  - Method
-  - User Scripts API
-  - WebExtensions
-  - unregister
-  - userScripts
 browser-compat: webextensions.api.userScripts.RegisteredUserScript.unregister
 ---
 

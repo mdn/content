@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchUpdateUIEvent()
+title: "BackgroundFetchUpdateUIEvent: BackgroundFetchUpdateUIEvent() constructor"
+short-title: BackgroundFetchUpdateUIEvent()
 slug: Web/API/BackgroundFetchUpdateUIEvent/BackgroundFetchUpdateUIEvent
 page-type: web-api-constructor
 status:

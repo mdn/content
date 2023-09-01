@@ -1,6 +1,7 @@
 ---
 title: "ARIA: menuitemcheckbox role"
 slug: Web/Accessibility/ARIA/Roles/menuitemcheckbox_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitemcheckbox
   - https://w3c.github.io/aria-practices/#menu
@@ -16,7 +17,7 @@ These three elements can only be contained in, or owned by, an element with role
 
 Menu items, including `menuitemcheckbox` elements, may be grouped within `group` elements or separated by elements with the [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role or other equivalent native role such as {{HTMLElement('fieldset')}} and {{HTMLElement('hr')}}.
 
-Menu items containing the role of `menuitemcheckbox` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology, unless using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute should be used.
+Menu items containing the role of `menuitemcheckbox` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology, unless using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
 
 Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `checkbox`, the `aria-checked` attribute of a `menuitemcheckbox` indicates whether the menu item is checked (`true`), unchecked (`false`), or represents a sub-level menu of other menu items that have a mixture of checked and unchecked values (`mixed`). The `mixed` value is similar to the checkbox's [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) attribute, which gives the appearance of a third, neither checked nor unchecked, state. If missing, the value defaults to `false`.
 
@@ -103,7 +104,7 @@ If the `menuitemcheckbox` is in a submenu in a `menubar` or a menu opened with a
 
 The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the `menuitemcheckbox` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemcheckbox` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemcheckbox'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemcheckbox` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
-The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/inherit) the color.
+The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/CSS_generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/inherit) the color.
 
 ```css
 [role="menuitemcheckbox"]::before {

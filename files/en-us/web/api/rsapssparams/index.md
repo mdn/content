@@ -22,7 +22,7 @@ The **`RsaPssParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
     The maximum size of `saltLength` is given by:
 
     ```js
-    Math.ceil((keySizeInBits - 1)/8) - digestSizeInBytes - 2
+    Math.ceil((keySizeInBits - 1) / 8) - digestSizeInBytes - 2;
     ```
 
     So for a key length of 2048 bits and a digest output size of 32 bytes, the maximum size would be 222.

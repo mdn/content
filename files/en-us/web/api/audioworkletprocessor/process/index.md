@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletProcessor.process()
+title: "AudioWorkletProcessor: process() method"
+short-title: process()
 slug: Web/API/AudioWorkletProcessor/process
 page-type: web-api-instance-method
 status:

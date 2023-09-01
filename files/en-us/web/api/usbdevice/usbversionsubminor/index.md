@@ -1,5 +1,6 @@
 ---
-title: USBDevice.usbVersionSubminor
+title: "USBDevice: usbVersionSubminor property"
+short-title: usbVersionSubminor
 slug: Web/API/USBDevice/usbVersionSubminor
 page-type: web-api-instance-property
 status:

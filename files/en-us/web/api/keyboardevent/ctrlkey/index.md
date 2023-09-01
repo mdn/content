@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.ctrlKey
+title: "KeyboardEvent: ctrlKey property"
+short-title: ctrlKey
 slug: Web/API/KeyboardEvent/ctrlKey
 page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.ctrlKey

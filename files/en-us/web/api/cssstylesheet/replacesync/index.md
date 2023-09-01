@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.replaceSync()
+title: "CSSStyleSheet: replaceSync() method"
+short-title: replaceSync()
 slug: Web/API/CSSStyleSheet/replaceSync
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleSheet.replaceSync
@@ -55,4 +56,4 @@ stylesheet.replaceSync("body { font-size: 1.4em; } p { color: red; }");
 ## See also
 
 - [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

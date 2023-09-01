@@ -1,5 +1,6 @@
 ---
-title: MediaKeyStatusMap.size
+title: "MediaKeyStatusMap: size property"
+short-title: size
 slug: Web/API/MediaKeyStatusMap/size
 page-type: web-api-instance-property
 browser-compat: api.MediaKeyStatusMap.size

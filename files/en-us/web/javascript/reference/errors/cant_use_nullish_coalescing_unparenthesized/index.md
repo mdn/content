@@ -10,7 +10,7 @@ The JavaScript exception "cannot use `??` unparenthesized within `||` and `&&` e
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected token '??' (V8-based)
 SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions (Firefox)
 SyntaxError: Unexpected token '??'. Coalescing and logical operators used together in the same expression; parentheses must be used to disambiguate. (Safari)
@@ -22,9 +22,9 @@ SyntaxError: Unexpected token '??'. Coalescing and logical operators used togeth
 
 ## What went wrong?
 
-The [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) chain looks like this:
+The [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) chain looks like this:
 
-```
+```plain
 |   >   &&   >   ||   >   =
 |   >   ??   >   =
 ```
@@ -49,7 +49,7 @@ a ?? (b && c);
 
 When migrating legacy code that uses `||` and `&&` for guarding against `null` or `undefined`, you may often convert it partially:
 
-```js example-bad
+```js-nolint example-bad
 function getId(user, fallback) {
   // Previously: user && user.id || fallback
   return user && user.id ?? fallback; // SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions
@@ -74,6 +74,6 @@ function getId(user, fallback) {
 
 ## See also
 
-- [Original discussion of nullish coalescing precedence](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
+- [Issue about nullish coalescing precedence](https://github.com/tc39/proposal-nullish-coalescing/issues/15) in the TC39 nullish-coalescing proposal
 - [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

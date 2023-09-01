@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSettings.displaySurface
+title: "MediaTrackSettings: displaySurface property"
+short-title: displaySurface
 slug: Web/API/MediaTrackSettings/displaySurface
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.displaySurface

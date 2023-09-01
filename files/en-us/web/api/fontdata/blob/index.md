@@ -1,5 +1,6 @@
 ---
-title: FontData.blob()
+title: "FontData: blob() method"
+short-title: blob()
 slug: Web/API/FontData/blob
 page-type: web-api-instance-method
 status:

@@ -2,15 +2,6 @@
 title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Proxy
-  - Reference
-  - WebExtensions
-  - onRequest
 browser-compat: webextensions.api.proxy.onRequest
 ---
 
@@ -91,12 +82,14 @@ function shouldProxyRequest(requestInfo) {
 function handleProxyRequest(requestInfo) {
   if (shouldProxyRequest(requestInfo)) {
     console.log(`Proxying: ${requestInfo.url}`);
-    return {type: "http", host: "127.0.0.1", port: 65535};
+    return { type: "http", host: "127.0.0.1", port: 65535 };
   }
-  return {type: "direct"};
+  return { type: "direct" };
 }
 
-browser.proxy.onRequest.addListener(handleProxyRequest, {urls: ["<all_urls>"]});
+browser.proxy.onRequest.addListener(handleProxyRequest, {
+  urls: ["<all_urls>"],
+});
 ```
 
 {{WebExtExamples}}

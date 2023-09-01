@@ -2,15 +2,6 @@
 title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
 browser-compat: webextensions.api.idle
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: CSSImportRule.media
+title: "CSSImportRule: media property"
+short-title: media
 slug: Web/API/CSSImportRule/media
 page-type: web-api-instance-property
 browser-compat: api.CSSImportRule.media

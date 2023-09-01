@@ -2,16 +2,6 @@
 title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onClosed
 browser-compat: webextensions.api.notifications.onClosed
 ---
 
@@ -29,7 +19,7 @@ browser.notifications.onClosed.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -40,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `notificationId`
       - : `string`. ID of the notification that closed.

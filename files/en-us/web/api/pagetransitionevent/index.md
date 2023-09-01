@@ -11,6 +11,11 @@ The **`PageTransitionEvent`** event object is available inside handler functions
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("PageTransitionEvent.PageTransitionEvent", "PageTransitionEvent()")}}
+  - : Creates a new `PageTransitionEvent` object.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
@@ -23,7 +28,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <body></body>
 </html>
@@ -32,7 +37,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ### JavaScript
 
 ```js
-window.addEventListener('pageshow', (event) => {
+window.addEventListener("pageshow", (event) => {
   if (event.persisted) {
     alert("The page was cached by the browser");
   } else {
@@ -51,5 +56,5 @@ window.addEventListener('pageshow', (event) => {
 
 ## See also
 
-- [`pageshow` event](/en-US/docs/Web/API/Window/pageshow_event)
-- [`pagehide` event](/en-US/docs/Web/API/Window/pagehide_event)
+- [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) event
+- [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event

@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.autoGainControl
+title: "MediaTrackSupportedConstraints: autoGainControl property"
+short-title: autoGainControl
 slug: Web/API/MediaTrackSupportedConstraints/autoGainControl
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.autoGainControl
@@ -29,13 +30,16 @@ This example displays whether or not your browser supports the `autoGainControl`
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
 ```js
 const result = document.getElementById("result");
-const supported = navigator.mediaDevices.getSupportedConstraints().autoGainControl;
+const supported =
+  navigator.mediaDevices.getSupportedConstraints().autoGainControl;
 result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 

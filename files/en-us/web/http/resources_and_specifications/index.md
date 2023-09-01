@@ -1,9 +1,7 @@
 ---
 title: HTTP resources and specifications
 slug: Web/HTTP/Resources_and_specifications
-tags:
-  - Guide
-  - HTTP
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -55,3 +53,4 @@ HTTP was first specified in the early 1990s. Designed with extensibility in mind
 | [HTML Living Standard](https://html.spec.whatwg.org/multipage/)                            | HTML _Defines extensions of HTTP for Server-Sent Events_                                                                                                                                                                                              | Living Standard          |
 | [Reporting API](https://wicg.github.io/reporting/)                                         | `Report-To` header                                                                                                                                                                                                                                    | Draft                    |
 | [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-01)        | Expect-CT Extension for HTTP                                                                                                                                                                                                                          | IETF Draft               |
+| {{rfc(7486)}}                                                                              | HTTP Origin-Bound Auth (HOBA)                                                                                                                                                                                                                         | Experimental             |

@@ -1,5 +1,6 @@
 ---
-title: AudioListener.positionX
+title: "AudioListener: positionX property"
+short-title: positionX
 slug: Web/API/AudioListener/positionX
 page-type: web-api-instance-property
 browser-compat: api.AudioListener.positionX
@@ -17,7 +18,7 @@ An {{domxref("AudioParam")}}. Its default value is 0, and it can range between p
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

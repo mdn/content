@@ -1,5 +1,6 @@
 ---
-title: DataTransferItem.getAsFile()
+title: "DataTransferItem: getAsFile() method"
+short-title: getAsFile()
 slug: Web/API/DataTransferItem/getAsFile
 page-type: web-api-instance-method
 browser-compat: api.DataTransferItem.getAsFile

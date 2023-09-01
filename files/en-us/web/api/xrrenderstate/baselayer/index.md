@@ -1,5 +1,6 @@
 ---
-title: XRRenderState.baseLayer
+title: "XRRenderState: baseLayer property"
+short-title: baseLayer
 slug: Web/API/XRRenderState/baseLayer
 page-type: web-api-instance-property
 status:
@@ -43,9 +44,9 @@ function setNewWebGLLayer(gl) {
   }
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
-};
+}
 ```
 
 Here, the canvas obtained in the first line is the canvas into which WebGL is going to

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getParameter()
+title: "WebGLRenderingContext: getParameter() method"
+short-title: getParameter()
 slug: Web/API/WebGLRenderingContext/getParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getParameter

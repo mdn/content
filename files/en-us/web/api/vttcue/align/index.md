@@ -1,5 +1,6 @@
 ---
-title: VTTCue.align
+title: "VTTCue: align property"
+short-title: align
 slug: Web/API/VTTCue/align
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.align
@@ -29,12 +30,12 @@ A string containing one of the following values:
 In the following example a new {{domxref("VTTCue")}} is created, then the value of `align` is set to `"start"`. The value is then printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
-cue1.align = 'start';
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
+cue1.align = "start";
 console.log(cue1.align);
 
 track.addCue(cue1);

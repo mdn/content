@@ -1,5 +1,6 @@
 ---
-title: Clipboard.writeText()
+title: "Clipboard: writeText() method"
+short-title: writeText()
 slug: Web/API/Clipboard/writeText
 page-type: web-api-instance-method
 browser-compat: api.Clipboard.writeText
@@ -46,7 +47,7 @@ navigator.clipboard.writeText("<empty clipboard>").then(
   },
   () => {
     /* clipboard write failed */
-  }
+  },
 );
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: NetworkInformation.rtt
+title: "NetworkInformation: rtt property"
+short-title: rtt
 slug: Web/API/NetworkInformation/rtt
 page-type: web-api-instance-property
 status:

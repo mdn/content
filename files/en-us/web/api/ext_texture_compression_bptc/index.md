@@ -1,5 +1,6 @@
 ---
-title: EXT_texture_compression_bptc
+title: EXT_texture_compression_bptc extension
+short-title: EXT_texture_compression_bptc
 slug: Web/API/EXT_texture_compression_bptc
 page-type: webgl-extension
 browser-compat: api.EXT_texture_compression_bptc
@@ -43,7 +44,7 @@ gl.compressedTexImage2D(
   128,
   128,
   0,
-  textureData
+  textureData,
 );
 ```
 

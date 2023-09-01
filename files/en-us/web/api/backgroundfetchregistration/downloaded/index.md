@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.downloaded
+title: "BackgroundFetchRegistration: downloaded property"
+short-title: downloaded
 slug: Web/API/BackgroundFetchRegistration/downloaded
 page-type: web-api-instance-property
 status:

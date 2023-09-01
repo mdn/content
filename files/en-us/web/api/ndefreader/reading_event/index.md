@@ -1,5 +1,6 @@
 ---
 title: "NDEFReader: reading event"
+short-title: reading
 slug: Web/API/NDEFReader/reading_event
 page-type: web-api-event
 status:
@@ -37,7 +38,7 @@ ndef
     console.log("Scan started successfully.");
     ndef.onreadingerror = (event) => {
       console.log(
-        "Error! Cannot read data from the NFC tag. Try a different one?"
+        "Error! Cannot read data from the NFC tag. Try a different one?",
       );
     };
     ndef.onreading = (event) => {

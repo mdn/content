@@ -1,0 +1,521 @@
+{
+  "lineWidth": -1,
+  "schema": {
+    "title": "Front matter schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["title", "slug"],
+    "properties": {
+      "title": {
+        "title": "Title",
+        "description": "Rendered page title and for SEO",
+        "type": "string",
+        "maxLength": 120
+      },
+      "short-title": {
+        "title": "Short Title",
+        "description": "To be used in sidebars",
+        "type": "string",
+        "maxLength": 60
+      },
+      "slug": {
+        "title": "slug",
+        "description": "URL path of the page",
+        "type": "string"
+      },
+      "page-type": {
+        "title": "Page Type",
+        "description": "Type of the page",
+        "type": "string"
+      },
+      "status": {
+        "title": "Status",
+        "description": "Browser compatibility status",
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "enum": ["deprecated", "experimental", "non-standard"]
+        }
+      },
+      "browser-compat": {
+        "title": "Browser Compatibility",
+        "description": "Browser compatibility location",
+        "type": ["array", "string"]
+      },
+      "spec-urls": {
+        "title": "Specification URLs",
+        "description": "Specification locations",
+        "type": ["array", "string"],
+        "format": "uri",
+        "items": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "anyOf": [
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Glossary/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["glossary-definition", "glossary-disambiguation"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": { "slug": { "type": "string", "pattern": "^Learn/" } }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "learn-topic",
+                "learn-module",
+                "learn-module-chapter",
+                "learn-module-assessment",
+                "learn-faq"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": { "slug": { "type": "string", "pattern": "^MDN/" } }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "landing-page",
+                "mdn-community-guide",
+                "mdn-writing-guide"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Mozilla/Firefox" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "firefox-release-notes"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": { "slug": { "type": "string", "pattern": "^Web/SVG/" } }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "svg-attribute", "svg-element"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/HTML/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "html-attribute",
+                "html-attribute-value",
+                "html-element"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Mozilla/Add-ons/WebExtensions/"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "webextension-api-function",
+                "webextension-api",
+                "webextension-api-event",
+                "webextension-api-property",
+                "webextension-api-type",
+                "webextension-manifest-key"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": { "slug": { "type": "string", "pattern": "^Web/API/" } }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "web-api-overview",
+                "web-api-global-function",
+                "web-api-global-property",
+                "web-api-interface",
+                "web-api-constructor",
+                "web-api-instance-method",
+                "web-api-instance-property",
+                "web-api-instance-event",
+                "web-api-static-method",
+                "web-api-static-property",
+                "web-api-event",
+                "webgl-extension",
+                "webgl-extension-method"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": { "slug": { "type": "string", "pattern": "^Web/CSS/" } }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "css-at-rule",
+                "css-at-rule-descriptor",
+                "css-combinator",
+                "css-function",
+                "css-keyword",
+                "css-media-feature",
+                "css-module",
+                "css-property",
+                "css-pseudo-class",
+                "css-pseudo-element",
+                "css-selector",
+                "css-shorthand-property",
+                "css-type"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/JavaScript/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "javascript-class",
+                "javascript-constructor",
+                "javascript-error",
+                "javascript-function",
+                "javascript-global-property",
+                "javascript-instance-accessor-property",
+                "javascript-instance-data-property",
+                "javascript-instance-method",
+                "javascript-language-feature",
+                "javascript-namespace",
+                "javascript-operator",
+                "javascript-statement",
+                "javascript-static-accessor-property",
+                "javascript-static-data-property",
+                "javascript-static-method"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/Manifest/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "web-manifest-member"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/WebDriver/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "webdriver-command",
+                "webdriver-capability",
+                "webdriver-error"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Headers/Content-Security-Policy/"
+            }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["http-csp-directive"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Headers/Permissions-Policy/"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": { "enum": ["http-permissions-policy-directive"] }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Headers/"
+            }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["guide", "http-header"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/HTTP/Methods/" }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["http-method"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/HTTP/Status/" }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["http-status-code"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/MathML/Element/" }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["mathml-element"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/MathML/Global_attributes/"
+            }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["mathml-attribute"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/Accessibility/ARIA/Attributes/"
+            }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["aria-attribute"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/Accessibility/ARIA/Roles/"
+            }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["aria-role"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/HTTP/CORS/Errors/" }
+          }
+        },
+        "then": {
+          "properties": { "page-type": { "enum": ["http-cors-error"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": ".*" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "how-to",
+                "tutorial",
+                "tutorial-chapter"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/XPath" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "xpath-function"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/EXSLT" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "exslt-function"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/XSLT" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "xslt-element", "xslt-axis"]
+            }
+          }
+        },
+        "else": false
+      }
+    ]
+  },
+  "attribute-order": [
+    "title",
+    "short-title",
+    "slug",
+    "page-type",
+    "status",
+    "browser-compat",
+    "spec-urls"
+  ]
+}

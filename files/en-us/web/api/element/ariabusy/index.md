@@ -1,5 +1,6 @@
 ---
-title: Element.ariaBusy
+title: "Element: ariaBusy property"
+short-title: ariaBusy
 slug: Web/API/Element/ariaBusy
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaBusy

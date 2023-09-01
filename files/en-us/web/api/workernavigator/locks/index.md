@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.locks
+title: "WorkerNavigator: locks property"
+short-title: locks
 slug: Web/API/WorkerNavigator/locks
 page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.locks

@@ -1,5 +1,6 @@
 ---
-title: RTCRtpTransceiver.receiver
+title: "RTCRtpTransceiver: receiver property"
+short-title: receiver
 slug: Web/API/RTCRtpTransceiver/receiver
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpTransceiver.receiver

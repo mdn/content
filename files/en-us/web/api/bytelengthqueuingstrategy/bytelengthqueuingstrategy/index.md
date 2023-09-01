@@ -1,5 +1,6 @@
 ---
-title: ByteLengthQueuingStrategy()
+title: "ByteLengthQueuingStrategy: ByteLengthQueuingStrategy() constructor"
+short-title: ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 page-type: web-api-constructor
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
@@ -54,7 +55,7 @@ const readableStream = new ReadableStream(
       console.log("stream error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 const size = queuingStrategy.size(chunk);
@@ -67,3 +68,7 @@ const size = queuingStrategy.size(chunk);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy")}} interface

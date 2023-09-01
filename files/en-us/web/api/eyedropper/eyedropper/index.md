@@ -1,5 +1,6 @@
 ---
-title: EyeDropper()
+title: "EyeDropper: EyeDropper() constructor"
+short-title: EyeDropper()
 slug: Web/API/EyeDropper/EyeDropper
 page-type: web-api-constructor
 status:

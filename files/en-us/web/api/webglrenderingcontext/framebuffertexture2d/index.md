@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.framebufferTexture2D()
+title: "WebGLRenderingContext: framebufferTexture2D() method"
+short-title: framebufferTexture2D()
 slug: Web/API/WebGLRenderingContext/framebufferTexture2D
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.framebufferTexture2D
@@ -118,7 +119,7 @@ gl.framebufferTexture2D(
   gl.COLOR_ATTACHMENT0,
   gl.TEXTURE_2D,
   texture,
-  0
+  0,
 );
 ```
 

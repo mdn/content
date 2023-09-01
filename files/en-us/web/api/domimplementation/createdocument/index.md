@@ -1,5 +1,6 @@
 ---
-title: DOMImplementation.createDocument()
+title: "DOMImplementation: createDocument() method"
+short-title: createDocument()
 slug: Web/API/DOMImplementation/createDocument
 page-type: web-api-instance-method
 browser-compat: api.DOMImplementation.createDocument
@@ -39,7 +40,7 @@ None ({{jsxref("undefined")}}).
 const doc = document.implementation.createDocument(
   "http://www.w3.org/1999/xhtml",
   "html",
-  null
+  null,
 );
 const body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
 body.setAttribute("id", "abc");

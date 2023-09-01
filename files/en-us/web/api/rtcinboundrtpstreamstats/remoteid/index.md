@@ -1,17 +1,15 @@
 ---
-title: RTCInboundRtpStreamStats.remoteId
+title: "RTCInboundRtpStreamStats: remoteId property"
+short-title: remoteId
 slug: Web/API/RTCInboundRtpStreamStats/remoteId
 page-type: web-api-instance-property
-browser-compat: api.RTCInboundRtpStreamStats.remoteId
+browser-compat: api.RTCStatsReport.type_inbound-rtp.remoteId
 ---
 
 {{APIRef("WebRTC")}}
 
 The **`remoteId`** property of the
-{{domxref("RTCInboundRtpStreamStats")}} dictionary specifies the
-{{domxref("RTCStats.id", "id")}} of the {{domxref("RTCRemoteOutboundRtpStreamStats")}}
-object representing the remote peer's {{domxref("RTCRtpSender")}} which is sending the
-media to the local peer.
+{{domxref("RTCInboundRtpStreamStats")}} dictionary specifies the {{domxref("RTCInboundRtpStreamStats.id", "id")}} of the {{domxref("RTCRemoteOutboundRtpStreamStats")}} object representing the remote peer's {{domxref("RTCRtpSender")}} which is sending the media to the local peer.
 
 ## Value
 

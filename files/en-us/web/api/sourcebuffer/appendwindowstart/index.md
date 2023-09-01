@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.appendWindowStart
+title: "SourceBuffer: appendWindowStart property"
+short-title: appendWindowStart
 slug: Web/API/SourceBuffer/appendWindowStart
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.appendWindowStart

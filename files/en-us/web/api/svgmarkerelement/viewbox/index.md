@@ -1,5 +1,6 @@
 ---
-title: SVGMarkerElement.viewBox
+title: "SVGMarkerElement: viewBox property"
+short-title: viewBox
 slug: Web/API/SVGMarkerElement/viewBox
 page-type: web-api-instance-property
 browser-compat: api.SVGMarkerElement.viewBox

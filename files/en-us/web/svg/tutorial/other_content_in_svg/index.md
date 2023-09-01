@@ -2,11 +2,9 @@
 title: Other content in SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 page-type: guide
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutorial
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 
@@ -31,7 +29,7 @@ The embedded picture becomes a normal SVG element. This means, that you can use 
     width="128"
     height="146"
     transform="rotate(45)"
-    xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
+    href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
 </svg>
 ```
 

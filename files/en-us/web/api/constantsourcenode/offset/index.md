@@ -1,5 +1,6 @@
 ---
-title: ConstantSourceNode.offset
+title: "ConstantSourceNode: offset property"
+short-title: offset
 slug: Web/API/ConstantSourceNode/offset
 page-type: web-api-instance-property
 browser-compat: api.ConstantSourceNode.offset

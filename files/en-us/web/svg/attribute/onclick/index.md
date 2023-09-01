@@ -2,10 +2,6 @@
 title: onclick
 slug: Web/SVG/Attribute/onclick
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - events
 browser-compat: svg.attributes.events.global.onclick
 ---
 
@@ -16,7 +12,6 @@ The **`onclick`** attribute specifies some script to run when the element is cli
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}

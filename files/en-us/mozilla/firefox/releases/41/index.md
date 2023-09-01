@@ -1,6 +1,7 @@
 ---
 title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -43,7 +44,7 @@ Highlights:
 
 - {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ([Firefox bug 1167816](https://bugzil.la/1167816)).
 - SVG icons are now supported for site icons, that is favicons and shortcut icons ([Firefox bug 366324](https://bugzil.la/366324)).
-- The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Element/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
+- The [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Element/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
 - The picture element does not react to resize/viewport changes ([Firefox bug 1135812](https://bugzil.la/1135812)).
 
 ### JavaScript
@@ -106,7 +107,7 @@ Highlights:
 
 #### Miscellaneous
 
-- On OS X and Windows, {{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} now changes regarding network connectivity (it always returned `true`, unless "Work offline" mode was selected) before ([Firefox bug 654579](https://bugzil.la/654579)).
+- On OS X and Windows, {{domxref("Navigator.onLine")}} now changes regarding network connectivity (it always returned `true`, unless "Work offline" mode was selected) before ([Firefox bug 654579](https://bugzil.la/654579)).
 - {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ([Firefox bug 952139](https://bugzil.la/952139)) and ([Firefox bug 911972](https://bugzil.la/911972)).
 - The User Timing API is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 1155761](https://bugzil.la/1155761)).
 - The [Notifications API](/en-US/docs/Web/API/Notifications_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 916893](https://bugzil.la/916893)).

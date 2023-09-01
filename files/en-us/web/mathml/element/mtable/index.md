@@ -1,11 +1,7 @@
 ---
 title: <mtable>
 slug: Web/MathML/Element/mtable
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Tabular Math
+page-type: mathml-element
 browser-compat: mathml.elements.mtable
 ---
 
@@ -49,7 +45,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `width` {{Non-standard_Inline}}
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the width of the entire table.
 
-> **Note:** For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+> **Note:** For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
@@ -76,7 +72,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-{{ EmbedLiveSample('mtable_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Alignment with row number')}}
 
 ## Specifications
 

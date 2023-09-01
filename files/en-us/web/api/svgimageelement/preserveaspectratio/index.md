@@ -1,5 +1,6 @@
 ---
-title: SVGImageElement.preserveAspectRatio
+title: "SVGImageElement: preserveAspectRatio property"
+short-title: preserveAspectRatio
 slug: Web/API/SVGImageElement/preserveAspectRatio
 page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.preserveAspectRatio

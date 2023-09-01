@@ -1,5 +1,6 @@
 ---
-title: Element.ariaHidden
+title: "Element: ariaHidden property"
+short-title: ariaHidden
 slug: Web/API/Element/ariaHidden
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaHidden

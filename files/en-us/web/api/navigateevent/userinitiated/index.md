@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.userInitiated
+title: "NavigateEvent: userInitiated property"
+short-title: userInitiated
 slug: Web/API/NavigateEvent/userInitiated
 page-type: web-api-instance-property
 status:

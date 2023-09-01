@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.upperOpen
+title: "IDBKeyRange: upperOpen property"
+short-title: upperOpen
 slug: Web/API/IDBKeyRange/upperOpen
 page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.upperOpen

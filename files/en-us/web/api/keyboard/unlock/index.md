@@ -1,5 +1,6 @@
 ---
-title: Keyboard.unlock()
+title: "Keyboard: unlock() method"
+short-title: unlock()
 slug: Web/API/Keyboard/unlock
 page-type: web-api-instance-method
 status:

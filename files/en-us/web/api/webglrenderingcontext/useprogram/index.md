@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.useProgram()
+title: "WebGLRenderingContext: useProgram() method"
+short-title: useProgram()
 slug: Web/API/WebGLRenderingContext/useProgram
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.useProgram

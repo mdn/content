@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.add()
+title: "DOMTokenList: add() method"
+short-title: add()
 slug: Web/API/DOMTokenList/add
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.add
@@ -12,9 +13,9 @@ The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the giv
 ## Syntax
 
 ```js-nolint
-add(token0)
-add(token0, token1)
-add(token0, token1, /* … ,*/ tokenN)
+add(token1)
+add(token1, token2)
+add(token1, token2, /* …, */ tokenN)
 ```
 
 ### Parameters

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.iceConnectionState
+title: "RTCPeerConnection: iceConnectionState property"
+short-title: iceConnectionState
 slug: Web/API/RTCPeerConnection/iceConnectionState
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.iceConnectionState
