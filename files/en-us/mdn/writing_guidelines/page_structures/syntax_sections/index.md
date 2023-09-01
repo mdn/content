@@ -153,9 +153,30 @@ For methods that accept an arbitrary number of parameters, the syntax block is w
 
 ```js-nolint
 unshift()
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* …, */ elementN)
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
+```
+
+Prefer starting numbering from 1, which allows writing description like "`unshift` adds N elements to the beginning of the array", as well as "the first element" (instead of "the zeroth element").
+
+Note that the case of passing zero rest parameters is always included, even when it doesn't make much sense. Then, in the "Parameters" section, write this:
+
+```md
+- `element1`, …, `elementN`
+  - : The elements to add to the front of the array.
+```
+
+Add `\{{optional_inline}}` here when passing zero rest parameters makes sense.
+
+Another example with some positional parameters before the rest parameter:
+
+```js-nolint
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 #### Parameters section

@@ -23,7 +23,7 @@ concat(str1, str2, /* …, */ strN)
 
 ### Parameters
 
-- `strN`
+- `str1`, …, `strN`
   - : One or more strings to concatenate to `str`.
 
 ### Return value
