@@ -1,5 +1,5 @@
 ---
-title: delete operator
+title: delete
 slug: Web/JavaScript/Reference/Operators/delete
 page-type: javascript-operator
 browser-compat: javascript.operators.delete

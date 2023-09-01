@@ -175,4 +175,4 @@ import helpers from "./helpers";
 
 ## See also
 
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)

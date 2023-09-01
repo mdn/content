@@ -132,9 +132,9 @@ console.log((await files.next()).value);
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("AsyncGeneratorFunction")}}
 - [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
 - {{jsxref("Statements/function", "function")}}

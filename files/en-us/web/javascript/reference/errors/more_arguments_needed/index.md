@@ -52,4 +52,4 @@ const obj2 = Object.setPrototypeOf({}, null);
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

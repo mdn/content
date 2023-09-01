@@ -242,8 +242,8 @@ const obj2 = {
 
 ## See also
 
-- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
