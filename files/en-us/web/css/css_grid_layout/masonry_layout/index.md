@@ -2,6 +2,8 @@
 title: Masonry layout
 slug: Web/CSS/CSS_grid_layout/Masonry_layout
 page-type: guide
+status:
+  - experimental
 browser-compat:
   - css.properties.grid-template-columns.masonry
   - css.properties.grid-template-rows.masonry

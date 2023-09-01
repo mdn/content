@@ -74,17 +74,16 @@ You can [read more about React DevTools on the React blog](https://reactjs.org/b
 
 The application that we built in this tutorial utilized component props to pass data from its `App` component to the child components that needed it. Most of the time, props are an appropriate method for sharing data; for complex, deeply nested applications, however, they're not always best.
 
-React provides the [Context API](https://reactjs.org/docs/context.html) as a way to provide data to components that need it _without_ passing props down the component tree. There's also [a useContext hook](https://reactjs.org/docs/hooks-reference.html#usecontext) that facilitates this.
+React provides the [Context API](https://react.dev/learn/passing-data-deeply-with-context) as a way to provide data to components that need it _without_ passing props down the component tree. There's also [a useContext hook](https://react.dev/reference/react/useContext) that facilitates this.
 
 If you'd like to try this API for yourself, Smashing Magazine has written an [introductory article about React context](https://www.smashingmagazine.com/2020/01/introduction-react-context-api/).
 
 ## Class components
 
-Although this tutorial doesn't mention them, it is possible to build React components using classes – these are called class components. Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
-
-- [State and Lifecycle in the React Docs](https://reactjs.org/docs/state-and-lifecycle.html)
-- [Intro To React in the React Docs](https://reactjs.org/tutorial/tutorial.html)
-- [Read about JavaScript classes at MDN](/en-US/docs/Web/JavaScript/Reference/Classes)
+Although this tutorial doesn't mention them, it is possible to build React components using [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) – these are called class components.
+Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects.
+They're still the only way to handle certain edge-cases, and they're common in legacy React projects.
+The official React docs maintain a reference for the [Component](https://react.dev/reference/react/Component) base class, but recommend [State: A Component's Memory](https://react.dev/learn/state-a-components-memory) and [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) to use hooks to manage state and side effects.
 
 ## Testing
 

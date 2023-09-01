@@ -17,6 +17,10 @@ The **`valueOf()`** method of {{jsxref("Number")}} values returns the value of t
 valueOf()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A number representing the primitive value of the specified {{jsxref("Number")}} object.
