@@ -4,6 +4,7 @@ slug: Web/API/Response
 page-type: web-api-interface
 browser-compat: api.Response
 ---
+https://vercel.com
 
 {{APIRef("Fetch API")}}
 
