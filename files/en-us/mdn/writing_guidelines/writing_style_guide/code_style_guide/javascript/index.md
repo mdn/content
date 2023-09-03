@@ -225,7 +225,7 @@ array.forEach((value /* , index, array */) => {
 
 ### Function names
 
-For function names, use {{Glossary("camel_case", "camelCase")}}, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
+For function names, use {{Glossary("camel_case", "camel case")}}, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
 
 The following is a correct example of a function name:
 
