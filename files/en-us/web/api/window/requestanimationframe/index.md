@@ -26,7 +26,8 @@ background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve perfo
 and battery life.
 
 The callback method is passed a single argument, a {{domxref("DOMHighResTimeStamp")}},
-which indicates the current time (based on the number of milliseconds since [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)). When
+which indicates the current time (based on the number of milliseconds since
+[time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)). When
 multiple callbacks queued by `requestAnimationFrame()` begin to fire in a
 single frame, each receives the same timestamp even though time has passed during the
 computation of every previous callback's workload (in the code example below we only
@@ -49,10 +50,10 @@ requestAnimationFrame(callback)
 
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
-    The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} indicating end time of the previous frame's rendering.
+    The callback function is passed one single argument, a {{domxref("DOMHighResTimeStamp")}}
+    indicating end time of the previous frame's rendering.
     For `Window` objects (not `Workers`), the timestamp's value is equal to
-    {{domxref("document.timeline.currentTime")}}. The timestamp value is shared between
+    {{domxref("document.timeline.currentTime")}}. This value is shared between
     all windows that run on the same agent (i.e. all same origin windows, and more
     importantly same-origin iframes), which allows synchronizing an animation across
     multiple `requestAnimationFrame` callbacks. The timestamp value is also similar to
@@ -101,6 +102,57 @@ function step(timeStamp) {
 }
 
 window.requestAnimationFrame(step);
+```
+
+These next three examples illustrate different approaches to setting the zero point in time,
+the baseline for calculating the progress of your animation in each frame. If you
+want to synchronize to an external clock, such as {{domxref("BaseAudioContext.currentTime")}},
+the highest precision available is the duration of a single frame, 16.67ms @60hz. The
+callback's timestamp argument represents the end of the previous frame, so the soonest
+your newly calculated value(s) will be rendered is the next frame.
+
+This example uses {{domxref("document.timeline.currentTime")}} to set a zero value
+prior to the first call to `requestAnimationFrame`. {{domxref("document.timeline.currentTime")}}
+aligns with the timeStamp argument, so the zero value is equivalent to the
+0th frame's timestamp.
+
+```js
+const zero = document.timeline.currentTime;
+requestAnimationFrame(raf);
+function raf(timeStamp) {
+  animateValue(timeStamp - zero);
+  requestAnimationFrame(raf);
+}
+```
+
+This example waits until the first callback executes to set `zero`. If your animation
+jumps to a new value when it starts, you must structure it this way or like the first
+example on this page.
+
+```js
+let zero;
+requestAnimationFrame(rafZero);
+function rafZero(timeStamp) {
+  zero = timeStamp;
+  raf(timeStamp);
+}
+function raf(timeStamp) {
+  animateValue(timeStamp - zero);
+  requestAnimationFrame(raf);
+}
+```
+
+This example animates using {{domxref("performance.now()")}} instead of the callback's
+timestamp value. You might use this if you want to achieve slightly higher synchronization
+precision, though the extra degree of precision is variable and not much of an increase.
+Note: This example does not allow you to reliably synchronize animation callbacks.
+
+```js
+const zero = performance.now();
+function raf() {
+  animateValue(performance.now() - zero);
+  requestAnimationFrame(raf);
+}
 ```
 
 ## Specifications
