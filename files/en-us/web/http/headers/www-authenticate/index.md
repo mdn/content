@@ -93,7 +93,7 @@ Generally you will need to check the relevant specifications for these (keys for
 
 ### Basic
 
-- `<realm>` {{required_inline}}
+- `<realm>`
   - : As above.
 - `charset="UTF-8"` {{optional_inline}}
   - : Tells the client the server's preferred encoding scheme when submitting a username and password.
