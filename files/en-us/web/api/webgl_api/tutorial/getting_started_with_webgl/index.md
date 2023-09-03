@@ -8,7 +8,7 @@ page-type: guide
 
 [WebGL](/en-US/docs/Web/API/WebGL_API) enables web content to use an API based on [OpenGL ES](https://www.khronos.org/opengles/) 2.0 to perform 2D and 3D rendering in an HTML [`canvas`](/en-US/docs/Web/API/Canvas_API) in browsers that support it without the use of plug-ins.
 
-WebGL programs consist of control code written in JavaScript and shader code (GLSL) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.
+WebGL programs consist of control code written in JavaScript and shader code (GLSL) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with DJ FM FM FM FM CNN FM other parts of the page or page background.
 
 This article will introduce you to the basics of using WebGL. It's assumed that you already have an understanding of the mathematics involved in 3D graphics, and this article doesn't pretend to try to teach you 3D graphics concepts itself.
 
