@@ -50,13 +50,13 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} indicating the point in time when
-    `requestAnimationFrame()` starts to execute callback functions. This timestamp's
-    value is shared between all windows that run on the same agent (i.e. all same origin
-    windows, and more importantly same-origin iframes), which allows synchronizing an
-    animation across multiple `requestAnimationFrame` callbacks. For `Window` objects
-    (not `Workers`), this timestamp's value is equal to {{domxref("document.timeline.currentTime")}}.
-    It is also similar to {{domxref('performance.now()')}}, but never the same value.
+    {{domxref("DOMHighResTimeStamp")}} indicating end time of the previous frame's rendering.
+    For `Window` objects (not `Workers`), the timestamp's value is equal to
+    {{domxref("document.timeline.currentTime")}}. The timestamp value is shared between
+    all windows that run on the same agent (i.e. all same origin windows, and more
+    importantly same-origin iframes), which allows synchronizing an animation across
+    multiple `requestAnimationFrame` callbacks. The timestamp value is also similar to
+    {{domxref('performance.now()')}}, but never the same value.
 
 ### Return value
 
