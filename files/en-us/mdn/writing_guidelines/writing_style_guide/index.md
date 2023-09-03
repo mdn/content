@@ -369,12 +369,12 @@ Do not use variant spelling.
 
 These are our recommendations for using certain technical terms:
 
-- **HTML elements**: Use the term "element" to refer to HTML and XML elements, instead of "tag". In addition, the elements should be wrapped in angle brackets "<>" and should be styled using backticks (\`). For example, using \<input\> inside backticks will style it as `<input>` as is expected.
+- **HTML elements**: Use the term "element" to refer to HTML and XML elements, instead of "tag". In addition, the element should be wrapped in angle brackets "<>" and should be styled using backticks (\`). For example, using \<input\> inside backticks will style it as `<input>` as is expected.
 
   - **Correct**: the `<span>` element
   - **Incorrect**: the span tag
 
-  On MDN, you can specify the HTML element in the [`HTMLElement` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), which will style the element, add the angle brackets "<>", as well as add a link to its reference page.
+  On MDN, you can optionally specify the HTML element in the [`HTMLElement` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), which will style the element, add the angle brackets "<>", as well as add a link to its reference page.
 
   - **Using backticks**: `<span>`
   - **Using the macro**: {{HTMLElement("span")}} (source in markdown: \\{{HTMLElement("span")\}})
@@ -396,7 +396,7 @@ Try to be consistent, though.
 This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
 
 - [Code examples](#code_examples)
-- [Cross-references](#cross_references)
+- [Cross-references](#cross-references)
 - [External links](#external_links)
 - [Shortened URLs (shortlinks)](#shortened_urls_shortlinks)
 - [Heading levels](#heading_levels)
@@ -417,32 +417,34 @@ A page on MDN Web Docs can contain more than one code example. The following lis
   - **Result explanation**: An explanation after the example code that describes the result and how the code works.
 - In general, the code example should not only demonstrate the syntax of the feature and how it is used, but also highlight the purpose and situations in which a web developer might want or need to use the feature.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
-- When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
+- When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), it's helpful to be aware that all of the sample's code blocks that have the same type (HTML, CSS, and JavaScript) are concatenated together before running the example. This lets you break the code into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
 To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 ### Cross-references
 
-When linking to a page on MDN, follow sentence casing in the link text, that is, match the case used in the page title. Don't use quotation marks around the link text. To add a link to a page on MDN, use the following style:
+When referencing another page or the section of a page on MDN by its title, follow sentence casing in the link text (match the page or section title). Use sentence casing in the link text even if it is different from the linked page title or section title (it might be that the case used in the page or section title is incorrect). Don't use quotation marks around the link text. To refer to a page on MDN by its title, use the following style:
 
-- **Correct**: "Refer to the [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) guide."
-- **Incorrect**: "Refer to the "[Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)" guide."
+- **Correct**: "See the [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) guide."
+- **Incorrect**: "See the "[Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)" guide."
 
 Follow similar style when linking to a section on a page, as shown below:
 
-- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Memory_management#allocation_in_javascript) section on the Memory management page."
+- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Memory_management#allocation_in_javascript) section on the _Memory management_ page."
 
-If the section you're linking to is on the same page, indicate so by hinting at the location of the section by using the words "above" or "below".
+If the section you're linking to is on the same page, you can hint at the location of the section using the words "above" or "below".
 
 - **Correct**: "This concept is described in more detail in the [Accessibility concerns](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility_concerns) section below."
 
 You can link part of a sentence to an article or the section of an article. Be mindful to use descriptive phrases as link texts to provide enough context for the page being linked.
 
-- **Correct**: "Learn more about [how to add a user interface with a chrome.manifest](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest).
-- **Incorrect**: "Click [here](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) to learn more."
-- **Incorrect**: "Read [this article](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) to learn more."
+- **Correct**: "Learn more about [how to order flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)."
+- **Incorrect**: "Click [here](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
+- **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
 
-To link to reference pages, you can use one of the corresponding macros. These set of macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
+On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
+
+In the See also sections in reference pages, glossary pages, and guides, we follow the same cross-referencing guidelines to add links to MDN pages. For more details on the specific ordering and linking rules within the See also section, refer to the [See also section](#see-also-section) guidelines below.
 
 ### External links
 
@@ -554,7 +556,7 @@ However, depending on the type of list you are creating, you will want to adjust
 
 ### See also section
 
-Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This is a reference section containing cross-references to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
+Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This section contains [cross-references](#cross_references) to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
 
 In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn) area on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
 
@@ -564,13 +566,15 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 - The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page with the page title "ARIA states and properties" will be:
   - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [WAI-ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) page in correct sentence case will be:
-  - **Correct**: [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) page in correct sentence case will be:
+  - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
-- Use the appropriate macro to link to a page as defined in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
+- On MDN, you can optionally use a macro to link to a page, as is explained in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section on the _Commonly used macros_ page. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
 - No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required at the end of the list item because it will invariably be a term or a phrase.
-  - **Correct**: {{cssxref("revert-layer")}}
-  - **Incorrect**: The {{cssxref("revert-layer")}} keyword.
+  - **Correct**: [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)
+  - **Incorrect**: The [`revert-layer`](/en-US/docs/Web/CSS/revert-layer) keyword.
+  - **Correct**: [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
+  - **Incorrect**: The [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
 
 #### Descriptive text
 
@@ -584,7 +588,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 #### Order of links
 
-- For cross-referencing within MDN, list the links to reference pages first, followed by links to the related guide and tutorial pages.
+- List the links to MDN pages in the order of reference pages first, followed by links to the related guides and tutorial pages. This suggested order is mainly to aid in the scanability of the items in the list.
 - If the list is a mix of internal and external links, list the internal links first and then the external ones.
 - Within each group of internal and external links, follow alphabetical or simple-to-advanced order, whatever makes more sense for the context.
 
