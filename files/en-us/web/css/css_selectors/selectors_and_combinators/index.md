@@ -217,3 +217,4 @@ See the [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

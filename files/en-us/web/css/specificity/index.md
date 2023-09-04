@@ -499,3 +499,4 @@ A few things to remember about specificity:
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+  - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
