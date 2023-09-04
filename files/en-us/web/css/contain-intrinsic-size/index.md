@@ -75,7 +75,7 @@ The remembered value is not used if the child elements are being rendered (if si
 
 In grid and multi column layouts, an explicit size is treated differently than implicit content-based height.
 Elements might lay out substantially differently than it would have were it simply filled with content up to that height.
-The `auto none` value allows the element to fallback to `contain-intrinsic-size: none` if no remembered value exists, which will allow the element to be laid out as though it had no contents instead of 0px height.
+The `auto none` value allows the element to fallback to `contain-intrinsic-size: none` if no remembered value exists, which will allow the element to be laid out as though it had no contents. This is almost always preferred to setting 0px as the intrinsic size in grid and multi column layouts, where contained elements may overflow their parents and can result in unexpected page layout.
 
 ## Formal definition
 
