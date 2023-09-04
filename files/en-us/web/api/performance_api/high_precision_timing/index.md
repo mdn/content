@@ -16,7 +16,7 @@ High precision timing is achieved by using the {{domxref("DOMHighResTimeStamp")}
 
 All timestamps in the Performance API use the {{domxref("DOMHighResTimeStamp")}} type. Previously, the Performance API (and other Web APIs) used the `EpochTimeStamp` type (previously known as `DOMTimeStamp`). These types are now discouraged.
 
-## `Performance.now()` vs. `Date.now()`
+## `performance.now()` vs. `Date.now()`
 
 JavaScript defines {{jsxref("Date.now()")}} as the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC. The `performance.now()` method on the other hand is relative to the {{domxref("Performance.timeOrigin")}} property. For more information, see the [time origins section](#time_origins) below.
 
@@ -26,14 +26,14 @@ The `performance.now()` method (and all other `DOMHighResTimeStamp` values) prov
 
 ```js
 Date.now(); // 1678889977578
-Performance.now(); // 233936
+performance.now(); // 233936
 ```
 
-For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time available with {{domxref("Performance.now()")}} instead of JavaScript's {{jsxref("Date.now()")}}.
+For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time available with {{domxref("performance.now()")}} instead of JavaScript's {{jsxref("Date.now()")}}.
 
 To summarize:
 
-| -                        | {{domxref("Performance.now()")}}      | {{jsxref("Date.now()")}}          |
+| -                        | {{domxref("performance.now()")}}      | {{jsxref("Date.now()")}}          |
 | ------------------------ | ------------------------------------- | --------------------------------- |
 | Resolution               | sub-milliseconds                      | milliseconds                      |
 | Origin                   | {{domxref("Performance.timeOrigin")}} | Unix Epoch (January 1, 1970, UTC) |
