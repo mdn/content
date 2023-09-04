@@ -27,7 +27,7 @@ register(target, heldValue, unregisterToken)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

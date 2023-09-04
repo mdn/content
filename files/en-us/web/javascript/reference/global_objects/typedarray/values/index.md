@@ -17,6 +17,10 @@ The **`values()`** method of {{jsxref("TypedArray")}} instances returns a new _[
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).

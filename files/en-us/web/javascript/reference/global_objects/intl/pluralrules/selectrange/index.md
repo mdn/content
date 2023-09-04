@@ -15,6 +15,13 @@ The **`selectRange()`** method of {{jsxref("Intl.PluralRules")}} instances recei
 selectRange(startRange, endRange)
 ```
 
+### Parameters
+
+- `startRange`
+  - : A number representing the start of the range.
+- `endRange`
+  - : A number representing the end of the range.
+
 ### Return value
 
 A string representing the pluralization category of the specified range.

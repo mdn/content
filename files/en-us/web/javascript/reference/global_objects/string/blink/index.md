@@ -19,6 +19,10 @@ The **`blink()`** method of {{jsxref("String")}} values creates a string that em
 blink()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with a `<blink>` start tag, then the text `str`, and then a `</blink>` end tag.

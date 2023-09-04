@@ -32,10 +32,10 @@ Sets of files made available in this way are represented as {{domxref("FileList"
 
 ### Extensions to other interfaces
 
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
   - : Creates a URL that can be used to fetch a {{domxref("File")}} or {{domxref("Blob")}} object.
-- {{domxref("URL.revokeObjectURL()")}}
-  - : Releases an existing object URL which was previously created by calling {{domxref("URL.createObjectURL()")}}.
+- {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
+  - : Releases an existing object URL which was previously created by calling {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 ## Examples
 

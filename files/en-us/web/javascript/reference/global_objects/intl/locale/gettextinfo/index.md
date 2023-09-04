@@ -17,6 +17,10 @@ The **`getTextInfo()`** method of {{jsxref("Intl.Locale")}} instances returns th
 getTextInfo()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An object representing text typesetting information associated with the Locale data specified in [UTS 35's Layouts Elements](https://www.unicode.org/reports/tr35/tr35-general.html#Layout_Elements). It has the following properties:

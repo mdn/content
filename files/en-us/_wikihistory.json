@@ -13811,30 +13811,9 @@
     "modified": "2020-10-15T22:04:26.547Z",
     "contributors": ["kernp", "rebloor", "irenesmith", "wbamberg"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/proxy/register": {
-    "modified": "2020-10-15T21:54:19.906Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rebloor",
-      "irenesmith",
-      "evilpie",
-      "wbamberg",
-      "andrewtruongmoz"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/API/proxy/settings": {
     "modified": "2020-10-15T22:02:07.731Z",
     "contributors": ["irenesmith", "wbamberg"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/proxy/unregister": {
-    "modified": "2020-10-15T21:55:55.766Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rebloor",
-      "irenesmith",
-      "evilpie",
-      "wbamberg"
-    ]
   },
   "Mozilla/Add-ons/WebExtensions/API/runtime": {
     "modified": "2020-10-15T21:38:49.156Z",
@@ -71095,17 +71074,6 @@
   "Web/API/XSLTProcessor/Introduction": {
     "modified": "2019-03-23T23:49:50.843Z",
     "contributors": ["SphinxKnight", "teoli", "Mgjbot", "Sebuls", "JdeValk"]
-  },
-  "Web/API/XSLTProcessor/Resources": {
-    "modified": "2019-03-23T23:49:54.309Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Mgjbot",
-      "Sheppy",
-      "Sebuls",
-      "JdeValk"
-    ]
   },
   "Web/API/atob": {
     "modified": "2020-10-15T21:05:14.914Z",
@@ -129340,141 +129308,6 @@
   "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/self": {
     "modified": "2019-01-16T16:26:11.469Z",
     "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations": {
-    "modified": "2019-03-24T00:02:54.806Z",
-    "contributors": [
-      "ThomasCharles94",
-      "Jean-MariePETIT",
-      "teoli",
-      "cvrebert",
-      "ethertank",
-      "trevorh",
-      "bensg",
-      "Brettz9",
-      "Hasse.bjork",
-      "sicking",
-      "Nickolay",
-      "Mgjbot",
-      "Tdallamura",
-      "Fredchat",
-      "Sebuls",
-      "NickolayBot",
-      "Callek",
-      "Anguis"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko": {
-    "modified": "2019-03-23T23:59:02.189Z",
-    "contributors": [
-      "teoli",
-      "jmiguel2902j",
-      "ethertank",
-      "trevorh",
-      "Brettz9",
-      "Bedi",
-      "Fredchat",
-      "Sebuls",
-      "Nickolay",
-      "NickolayBot",
-      "Andreas Wuest",
-      "JdeValk"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example": {
-    "modified": "2020-12-12T16:03:50.676Z",
-    "contributors": [
-      "bershanskiy",
-      "jswisher",
-      "kamil.rzeszotarski",
-      "smoothie1998",
-      "teoli",
-      "cvrebert",
-      "MrTim",
-      "Brettz9",
-      "trevorh",
-      "Fredchat",
-      "Interfaced",
-      "JdeValk"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example": {
-    "modified": "2020-12-12T16:03:18.203Z",
-    "contributors": [
-      "bershanskiy",
-      "teoli",
-      "cvrebert",
-      "ethertank",
-      "trevorh",
-      "Messie",
-      "Fredchat",
-      "JdeValk"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Interface_List": {
-    "modified": "2019-03-23T23:54:18.927Z",
-    "contributors": [
-      "dkocho4",
-      "teoli",
-      "cvrebert",
-      "trevorh",
-      "Brettz9",
-      "Fredchat",
-      "JdeValk"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction": {
-    "modified": "2019-03-23T23:46:00.129Z",
-    "contributors": [
-      "dkocho4",
-      "teoli",
-      "cvrebert",
-      "trevorh",
-      "Kyodev",
-      "Mgjbot",
-      "Fredchat",
-      "Sebuls",
-      "JdeValk"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings": {
-    "modified": "2019-03-23T23:43:55.471Z",
-    "contributors": [
-      "dkocho4",
-      "teoli",
-      "cvrebert",
-      "Brettz9",
-      "trevorh",
-      "Fredchat",
-      "Dria",
-      "Mujib.ishola",
-      "Andreas Wuest",
-      "JdeValk"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Resources": {
-    "modified": "2019-03-18T20:59:13.657Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "cvrebert",
-      "trevorh",
-      "George3",
-      "Fredchat",
-      "JdeValk"
-    ]
-  },
-  "Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters": {
-    "modified": "2019-03-23T23:43:54.983Z",
-    "contributors": [
-      "teoli",
-      "cvrebert",
-      "Brettz9",
-      "trevorh",
-      "Fredchat",
-      "Sebuls",
-      "JdeValk"
-    ]
   },
   "WebAssembly": {
     "modified": "2020-10-15T21:51:43.373Z",
