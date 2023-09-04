@@ -14,7 +14,7 @@ The **`delete()`** method of {{jsxref("WeakMap")}} instances removes the specifi
 ## Syntax
 
 ```js-nolint
-weakMapObject.delete(key)
+weakMapInstance.delete(key)
 ```
 
 ### Parameters

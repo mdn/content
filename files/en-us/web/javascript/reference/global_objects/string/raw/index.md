@@ -15,9 +15,9 @@ The **`String.raw()`** static method is a tag function of [template literals](/e
 
 ```js-nolint
 String.raw(strings)
-String.raw(strings, substitution1)
-String.raw(strings, substitution1, substitution2)
-String.raw(strings, substitution1, substitution2, /* …, */ substitutionN)
+String.raw(strings, sub1)
+String.raw(strings, sub1, sub2)
+String.raw(strings, sub1, sub2, /* …, */ subN)
 
 String.raw`templateString`
 ```
@@ -26,7 +26,7 @@ String.raw`templateString`
 
 - `strings`
   - : Well-formed template literal array object, like `{ raw: ['foo', 'bar', 'baz'] }`. Should be an object with a `raw` property whose value is an array-like object of strings.
-- `...substitutions`
+- `sub1`, …, `subN`
   - : Contains substitution values.
 - `templateString`
   - : A [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), optionally with substitutions (`${...}`).

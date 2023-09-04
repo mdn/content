@@ -259,7 +259,8 @@ This array is now available to the App component as `props.tasks`. You can `cons
 
 To render our array of objects, we have to turn each object into a `<Todo />` component. JavaScript gives us an array method for transforming items into something else: [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-Above the return statement of `App()`, make a new `const` called `taskList`. Let's start by transforming each task in the `props.tasks` array into its `name`:
+Above the return statement of `App()`, make a new `const` called `taskList`. Let's start by transforming each task in the `props.tasks` array into its `name`.
+The `?.` operator let's us perform [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) to check if `props.tasks` is `undefined` or `null` before attempting to create a new array of task names:
 
 ```jsx
 const taskList = props.tasks?.map((task) => task.name);

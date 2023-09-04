@@ -2688,6 +2688,10 @@
       "inh": "",
       "impl": []
     },
+    "RestrictionTarget": {
+      "inh": "",
+      "impl": []
+    },
     "RTCCertificate": {
       "inh": "",
       "impl": []

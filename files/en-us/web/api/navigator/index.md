@@ -17,8 +17,10 @@ _Doesn't inherit any properties._
 
 ### Standard properties
 
+- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Provides a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
+  - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
 - {{domxref("Navigator.cookieEnabled")}} {{ReadOnlyInline}}
   - : Returns false if setting a cookie will be ignored and true otherwise.
 - {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}

@@ -11,10 +11,10 @@ The **`throw()`** method of {{jsxref("Generator")}} instances acts as if a `thro
 
 ## Syntax
 
-<!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
+<!-- We don't usually add the "generatorInstance" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
 
 ```js-nolint
-generatorObject.throw(exception)
+generatorInstance.throw(exception)
 ```
 
 ### Parameters

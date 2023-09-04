@@ -31,15 +31,22 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
       <stop offset="50%" stop-color="black" stop-opacity="0" />
       <stop offset="100%" stop-color="blue" />
     </linearGradient>
-    <style>
-      <![CDATA[
-              #rect1 { fill: url(#Gradient1); }
-              .stop1 { stop-color: red; }
-              .stop2 { stop-color: black; stop-opacity: 0; }
-              .stop3 { stop-color: blue; }
-            ]]>
-    </style>
   </defs>
+  <style>
+    #rect1 {
+      fill: url(#Gradient1);
+    }
+    .stop1 {
+      stop-color: red;
+    }
+    .stop2 {
+      stop-color: black;
+      stop-opacity: 0;
+    }
+    .stop3 {
+      stop-color: blue;
+    }
+  </style>
 
   <rect id="rect1" x="10" y="10" rx="15" ry="15" width="100" height="100" />
   <rect
@@ -65,9 +72,7 @@ To use a gradient, you have to reference it from an object's `fill` or `stroke` 
 
 ```svg
 <style>
-  <![CDATA[
-          #rect1 { fill: url(#Gradient1); }
-        ]]>
+  #rect1 { fill: url(#Gradient1); }
 </style>
 ```
 
