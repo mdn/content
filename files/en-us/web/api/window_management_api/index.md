@@ -29,6 +29,10 @@ However, the above features are limited. `Window.screen` only returns data about
 
 The Window Management API provides more robust, flexible window management. It allows you to query whether your display is extended with multiple screens and return information on each screen separately: windows can then be placed on each screen as desired. It also provides event handlers to allow you to respond to changes in the available screens, new fullscreen functionality to choose which screen to put into fullscreen mode (if any), and permissions functionality to control access to the API.
 
+### Multi-screen origin
+
+xx
+
 ## Use cases
 
 The Window Management API is useful in cases such as:
@@ -66,7 +70,7 @@ When `getScreenDetails()` is invoked, the user will be asked for permission to m
 - `availLeft` and `availTop`
   - : The top-left coordinate of the screen area available for opening windows in. These values are equal to `left` and `top`, plus the width/height of any OS-specific user interface elements drawn at the top-left of the screen.
 - `isPrimary`
-  - : A boolean indicating whether this screen is set as the OS primary screen or not.
+  - : A boolean indicating whether this screen is set as the operating system (OS) primary screen or not.
 - `isInternal`
   - : A boolean indicating whether this screen is internal to the device or not.
 - `label`
@@ -189,7 +193,7 @@ try {
 The {{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) can be used to control permission to use the Window Management API. Specifically:
 
 - Usage of the {{domxref("Window.getScreenDetails()")}} method. If blocked, its {{jsxref("Promise")}} will reject with a `NotAllowedError` exception.
-- Querying the {{domxref("Window.screen.isExtended")}} property. If blocked, it will always return `false`.
+- Querying the {{domxref("Screen.isExtended", "Window.screen.isExtended")}} property. If blocked, it will always return `false`.
 
 Developers can explicitly grant permission for an {{htmlelement("iframe")}} to use Window Management via the `allow` attribute:
 
@@ -206,8 +210,10 @@ Developers can explicitly grant permission for an {{htmlelement("iframe")}} to u
 
 ## Extensions to other interfaces
 
+- The `Screen` {{domxref("Screen.change_event", "change")}} event
+  - : Fired on a specific screen when it changes in some way — for example available width or height, or orientation.
 - {{domxref("Screen.isExtended")}}
-  - : A boolean property that returns `true` if the device has multiple screens, and `false` if not.
+  - : A boolean property that returns `true` if the user's device has multiple screens, and `false` if not.
 - {{domxref("Element.requestFullscreen()")}}, the `screen` option
   - : Specifies on which screen you want to put the element in fullscreen mode.
 - {{domxref("Window.getScreenDetails()")}}
