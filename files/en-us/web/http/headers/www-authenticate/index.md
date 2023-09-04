@@ -94,7 +94,8 @@ Generally you will need to check the relevant specifications for these (keys for
 ### Basic
 
 - `<realm>`
-  - : As above.
+  - : As [above](#realm).
+    Note that the realm is mandatory for basic authentication.
 - `charset="UTF-8"` {{optional_inline}}
   - : Tells the client the server's preferred encoding scheme when submitting a username and password.
     The only allowed value is the case-insensitive string "UTF-8".
