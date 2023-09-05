@@ -56,8 +56,6 @@ In these examples, one without and one with the `&` nesting selector, the `<inpu
 
 #### Without nesting selector
 
-Without the `&` nesting selector this may look different in older versions of Chrome and Safari as they use the old version of the specification.
-
 ##### HTML
 
 ```html-nolint
