@@ -96,7 +96,7 @@ The default lexicographic comparator satisfies all constraints above.
 
 To compare numbers instead of strings, the compare function can subtract `b`
 from `a`. The following function will sort the array in ascending order (if
-it doesn't contain `Infinity` and `NaN`):
+it doesn't contain `NaN`):
 
 ```js
 function compareNumbers(a, b) {
@@ -175,7 +175,7 @@ items.sort((a, b) => {
 
 ### Sorting non-ASCII characters
 
-For sorting strings with non-ASCII characters, i.e. strings with accented characters
+For sorting strings with non-{{Glossary("ASCII")}} characters, i.e. strings with accented characters
 (e, é, è, a, ä, etc.), strings from languages other than English, use
 {{jsxref("String.prototype.localeCompare()")}}. This function can compare those characters so they
 appear in the right order.

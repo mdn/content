@@ -293,11 +293,8 @@ console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
-
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [Assertions in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-assertion)

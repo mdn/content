@@ -34,7 +34,7 @@ async function name(param0, param1, /* …, */ paramN) {
 - `name`
   - : The function's name.
 - `param` {{optional_inline}}
-  - : The name of an argument to be passed to the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements comprising the body of the function. The `await`
     mechanism may be used.
@@ -359,4 +359,4 @@ it's not already a promise itself (as in the examples).
 - {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("Operators/await", "await")}}
 - {{jsxref("Promise")}}
-- [Decorating async JavaScript functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on innolitics.com (April 04, 2016)
+- [Decorating async JavaScript functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on innolitics.com (2016)

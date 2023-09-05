@@ -18,7 +18,7 @@ Links with `rel="modulepreload"` are similar to those with [`rel="preload"`](/en
 The main difference is that `preload` just downloads the file and stores it in the cache, while `modulepreload` gets the module, parses and compiles it, and puts the results into the module map so that it is ready to execute.
 
 When using `modulepreload` the fetch request mode is always [`cors`](/en-US/docs/Web/API/Request/mode#cors), and the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) property is used to determine the request [credential mode](/en-US/docs/Web/API/Request/credentials).
-If `crossorigin` is set to `anonymous` or `""` (default), then the credentials mode is [`same-origin`](/en-US/docs/Web/API/Request/credentials#same-origin), and user credentials such as cookies and authentication are only sent for requests with the `same-origin`.
+If `crossorigin` is set to [`anonymous`](/en-US/docs/Web/HTML/Attributes/crossorigin#anonymous) or [`""`](/en-US/docs/Web/HTML/Attributes/crossorigin#sect1) (default), then the credentials mode is [`same-origin`](/en-US/docs/Web/API/Request/credentials#same-origin), and user credentials such as cookies and authentication are only sent for requests with the `same-origin`.
 If `crossorigin` is set to [`use-credentials`](/en-US/docs/Web/HTML/Attributes/crossorigin#use-credentials) then the credentials mode is [`include`](/en-US/docs/Web/API/Request/credentials#include), and user credentials for both single- and cross-origin requests.
 
 The [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute is optional for links with `rel="modulepreload"`, and defaults to `"script"`.

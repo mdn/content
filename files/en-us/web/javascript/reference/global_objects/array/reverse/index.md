@@ -19,6 +19,10 @@ To reverse the elements in an array without mutating the original array, use {{j
 reverse()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The reference to the original array, now reversed. Note that the array is reversed _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.

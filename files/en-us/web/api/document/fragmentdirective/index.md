@@ -22,30 +22,11 @@ Try running the following in a supporting browser's devtools, in a tab with one 
 
 ```js
 document.fragmentDirective;
+// returns an empty FragmentDirective object, if supported
+// undefined otherwise
 ```
 
-You should get a {{domxref("FragmentDirective")}} object instance returned with a structure similar to the following:
-
-```js
-items: [
-  {
-    prefix: "",
-    textStart: "Module Workers",
-    textEnd: "",
-    suffix: "support",
-    type: "text",
-  },
-  {
-    prefix: "feedback on",
-    textStart: "usability",
-    textEnd: "",
-    suffix: "",
-    type: "text",
-  },
-];
-```
-
-This functionality is mainly intended for feature detection at present, but in future, it could be expanded to include other information such as translation hints.
+This functionality is mainly intended for feature detection at present. In the future, the `FragmentDirective` object could include additional information.
 
 ## Specifications
 

@@ -26,6 +26,10 @@ compile(pattern, flags)
 - `flags`
   - : Any combination of [flag values](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp#flags).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Using compile()
