@@ -68,9 +68,9 @@ const person = {
 After saving and refreshing, try entering some of the following into the JavaScript console on your browser devtools:
 
 ```js
-person.name;
-person.name[0];
-person.age;
+console.log(person.name);
+console.log(person.name[0]);
+console.log(person.age);
 person.bio();
 // "Bob Smith is 32 years old."
 person.introduceSelf();
