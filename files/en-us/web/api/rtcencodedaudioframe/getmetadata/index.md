@@ -84,3 +84,7 @@ Note that there are no contributing sources because there is just one source.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)

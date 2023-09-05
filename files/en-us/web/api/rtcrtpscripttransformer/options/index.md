@@ -10,15 +10,17 @@ browser-compat: api.RTCRtpScriptTransformer.options
 
 The **`options`** read-only property of the {{domxref("RTCRtpScriptTransformer")}} interface returns the object that was (optionally) passed as the second argument [during construction](/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) of the corresponding {{domxref("RTCRtpScriptTransform")}}.
 
+## Value
+
+An object.
+
+## Description
+
 The simplest use of options is for the main thread to indicate whether the corresponding {{domxref("RTCRtpScriptTransform")}} is to be added to the WebRTC sender or receiver pipeline. This is important if the same worker is used for processing both incoming and outgoing encoded frames, as it allows code to determine what transform should be applied to the frames.
 
 Options can also be used to send/transfer the second port of a [message channel](/en-US/docs/Web/API/Channel_Messaging_API) to the worker-side transform.
 This channel can then be used to send dynamic information to a transform stream, such as when encryption keys are changed or added.
 Note that you might also send messages to the transform using {{domxref("Worker.postMessage()")}}, but you would then have to appropriately redirect the messages if the worker is used in different contexts (while a message port option provides a direct channel for a specific transform).
-
-## Value
-
-An object.
 
 ## Examples
 

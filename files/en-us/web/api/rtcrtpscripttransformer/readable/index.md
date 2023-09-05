@@ -8,10 +8,11 @@ browser-compat: api.RTCRtpScriptTransformer.readable
 
 {{APIRef("WebRTC")}}
 
-The **`readable`** read-only property of the {{domxref("RTCRtpScriptTransformer")}} interface returns a {{domxref("ReadableStream")}} instance that can be used as a source for encoded media frames.
+The **`readable`** read-only property of the {{domxref("RTCRtpScriptTransformer")}} interface returns a {{domxref("ReadableStream")}} instance is a source for encoded media frames.
 
 When the corresponding {{domxref("RTCRtpScriptTransform")}} is inserted into the WebRTC sender and receiver pipelines, this stream may be enqueued with outgoing or incoming encoded media frames ({{domxref("RTCEncodedVideoFrame")}} or {{domxref("RTCEncodedAudioFrame")}}).
-A WebRTC encoded transform can modify the frames by piping them through a {{domxref("TransformStream")}} to {{domxref("RTCRtpScriptTransformer.writable")}}.
+A WebRTC encoded transform can read the frames, modify them as needed, and then send them back into the WebRTC pipeline by writing them to {{domxref("RTCRtpScriptTransformer.writable")}}.
+A common way to perform this operation is to pipe the frames through a {{domxref("TransformStream")}}.
 
 ## Value
 

@@ -8,7 +8,7 @@ browser-compat: api.RTCEncodedAudioFrame.data
 
 {{APIRef("WebRTC")}}
 
-The **`data`** property of the {{domxref("RTCEncodedAudioFrame")}} interface returns a buffer containing the encoded frame data.
+The **`data`** property of the {{domxref("RTCEncodedAudioFrame")}} interface returns a buffer containing the data for an encoded frame.
 
 ## Value
 
@@ -56,3 +56,7 @@ Note that the surrounding code shown here is described in [Using WebRTC Encoded 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)

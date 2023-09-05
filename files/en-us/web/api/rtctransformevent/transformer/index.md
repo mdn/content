@@ -8,22 +8,13 @@ browser-compat: api.RTCTransformEvent.transformer
 
 {{APIRef("WebRTC")}}
 
-The read-only **`transformer`** property of the {{domxref("RTCTransformEvent")}} interface indicates ...
+The read-only **`transformer`** property of the {{domxref("RTCTransformEvent")}} interface returns the {{domxref("RTCRtpScriptTransformer")}} associated with the event.
 
-the
-{{domxref("RTCRtpReceiver")}} which is used to receive data containing media for the
-{{domxref("RTCTransformEvent.track", "track")}} to which the event refers.
+The property exposes the WebRTC sender or receiver pipeline as a readable and writable stream of encoded media frames, which a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) can insert itself into in order to modify frames.
 
 ## Value
 
-The {{domxref("RTCRtpTransceiver")}} which pairs the `receiver` with a
-sender and other properties which establish a single bidirectional {{Glossary("RTP", "SRTP")}}
-stream for use by the {{domxref("RTCTrackEvent.track", "track")}} associated with the
-`RTCTrackEvent`.
-
-> **Note:** The {{domxref("RTCTrackEvent.transceiver", "transceiver")}}
-> includes its own {{domxref("RTCRtpTransceiver.receiver", "receiver")}} property, which
-> will always be the same {{domxref("RTCRtpReceiver")}} as this one.
+A {{domxref("RTCRtpScriptTransformer")}}.
 
 ## Specifications
 
@@ -32,3 +23,7 @@ stream for use by the {{domxref("RTCTrackEvent.track", "track")}} associated wit
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)

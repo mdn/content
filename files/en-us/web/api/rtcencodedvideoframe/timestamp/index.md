@@ -21,3 +21,7 @@ A positive integer containing the sampling instant of the first byte in this fra
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)

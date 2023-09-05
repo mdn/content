@@ -7,10 +7,10 @@ browser-compat: api.RTCTransformEvent
 
 {{APIRef("WebRTC")}}
 
-The **`RTCTransformEvent`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represent an event on a WebRTC Transform, which is used to modify the format of a frame in the incoming or outgoing WebRTC pipeline.
+The **`RTCTransformEvent`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represent an event that is fired in a dedicated worker when an encoded frame has been queued for processing by a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
-The event has a property that exposes a main thread pipeline and arbitrary options to the worker thread as a Stream API.
-The property exposes a readable stream and a writable stream: a worker can modify code by piping between these streams through a custom {{domxref("TransformStream")}}.
+The interface has a {{domxref("RTCTransformEvent.transformer","transformer")}} property that exposes a readable stream and a writable stream.
+A worker should read encoded frames from `transformer.readable`, modify them as needed, and write them to `transformer.writable` in the same order and without any duplication.
 
 At time of writing there is just one event based on `RTCTransformEvent`: {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}}.
 
@@ -35,8 +35,10 @@ You can add a `rtctransform` event listener to be notified when the new frame is
 
 ## Example
 
-This simple example creates an event listener for the {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event.
-The `options` are passed from constructor of the main-thread transform object: commonly we use them to select what transform is to be applied.
+This example creates an event listener for the {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event.
+
+The code first creates a {{domxref("TransformStream")}} (implementation not show), depending on the value of `options` passed from a {{domxref("RTCRtpScriptTransform")}} constructor in the main-thread.
+The code at the end shows how the stream is piped through the the transform stream from the `readable` to the `writable`.
 
 ```js
 addEventListener("rtctransform", (event) => {
@@ -44,8 +46,9 @@ addEventListener("rtctransform", (event) => {
   // Select a transform based on passed options
   if (event.transformer.options.name == "senderTransform") {
     transform = createSenderTransform(); // A TransformStream (not shown)
+  } else if (event.transformer.options.name == "receiverTransform") {
+    transform = createReceiverTransform(); // A TransformStream (not shown)
   }
-
   // Pipe frames from the readable to writeable through TransformStream
   event.transformer.readable
     .pipeThrough(transform)
@@ -53,8 +56,7 @@ addEventListener("rtctransform", (event) => {
 });
 ```
 
-The code at the end shows how the stream is piped through a {{domxref("TransformStream")}} (implementation not shown).
-Note that if the associated {{domxref("RTCRtpScriptTransform")}} has not yet been added to the WebRTC sender or receiver pipeline, no frames would be enqueued, so this would do nothing.
+Note that this code is part of a more complete example provided in [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
 ## Specifications
 

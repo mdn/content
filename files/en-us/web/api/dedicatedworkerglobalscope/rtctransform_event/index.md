@@ -8,7 +8,9 @@ browser-compat: api.DedicatedWorkerGlobalScope.rtctransform_event
 
 {{APIRef("WebRTC")}}
 
-The `rtctransform` event is fired at a worker's {{domxref('DedicatedWorkerGlobalScope')}} object when its associated {{domxref("RTCRtpScriptTransform")}} is constructed, or when a new encoded video or audio frame has been queued for processing.
+The `rtctransform` event is fired at a worker's {{domxref('DedicatedWorkerGlobalScope')}} object when an encoded video or audio frame has been queued for processing by a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
+
+The event's {{domxref("RTCTransformEvent.transformer","transformer")}} property returns a {{domxref("RTCRtpScriptTransformer")}} that exposes the {{domxref("ReadableStream")}} on which the frame is queued, and a {{domxref("WritableStream")}} where the frame can be written to inject it back into the WebRTC pipeline.
 
 This event is not cancellable and does not bubble.
 
@@ -39,29 +41,8 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ## Example
 
-A WebRTC Encoded transform is represented in the main thread by a {{domxref("RTCRtpScriptTransform")}}.
-The [`RTCRtpScriptTransform` constructor](/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) takes as arguments a {{domxref("Worker")}} that modifies frames using a {{domxref("TransformStream")}}, an "options" object that is typically used to communicate what transform is required, and an array of items to transfer to the worker.
-The {{domxref("RTCRtpScriptTransform")}} can be added to the WebRTC outgoing and incoming pipelines by adding to {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}, respectively.
-This is shown below for the {{domxref("RTCRtpSender")}} case (for receiver examples see {{domxref("RTCRtpScriptTransform")}}).
-
-```js
-// Get Video stream and MediaTrack
-const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-const [track] = stream.getTracks();
-const videoSender = peerConnection.addTrack(track, stream);
-
-// Create a worker containing a TransformStream
-const worker = new Worker("worker.js");
-videoSender.transform = new RTCRtpScriptTransform(worker, {
-  name: "senderTransform",
-});
-```
-
-The `rtctransform` event is fired at its associated worker when the {{domxref("RTCRtpScriptTransform")}} is constructed.
-The event is also fired each time an encoded frame is added for processing.
-
-The following code snippet shows a handler for the `rtctransform` event in the worker (added to the global scope using `addEventListener()`).
-The `event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker side counterpart to the {{domxref("RTCRtpScriptTransform")}}.
+The following code snippet shows a handler for the `rtctransform` event in the worker, added to the global scope using `addEventListener()`.
+The `event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker side counterpart to {{domxref("RTCRtpScriptTransform")}}.
 
 ```js
 addEventListener("rtctransform", (event) => {
@@ -80,9 +61,12 @@ addEventListener("rtctransform", (event) => {
 });
 ```
 
+The `rtctransform` event is fired when an encoded frame is enqueued on the {{domxref("RTCRtpScriptTransformer")}} and just once when the transformer's corresponding {{domxref("RTCRtpScriptTransformer")}} is constructed.
 The code first determines what transform to apply using `name` value passed in the options (this allows {{domxref("RTCRtpScriptTransform")}} instances added to the incoming and outgoing WebRTC pipelines to share a single worker).
 Encoded frames are then piped from the readable, through the selected transform {{domxref("TransformStream")}}, to a writeable.
 The actual tranforming code is not shown.
+
+Note that this code is part of a more complete example provided in [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
 ## Specifications
 
