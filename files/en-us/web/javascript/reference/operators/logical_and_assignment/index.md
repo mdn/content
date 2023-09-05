@@ -7,7 +7,7 @@ browser-compat: javascript.operators.logical_and_assignment
 
 {{jsSidebar("Operators")}}
 
-The **logical AND assignment (`x &&= y`)** operator only assigns if `x` is {{Glossary("truthy")}}.
+The **logical AND assignment (`&&=`)** operator only evaluates the right operand and assigns to the left if the left operand is {{Glossary("truthy")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
 
@@ -79,8 +79,8 @@ y &&= 0; // 0
 
 ## See also
 
-- [Logical AND (&&)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Logical AND (`&&`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Bitwise AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

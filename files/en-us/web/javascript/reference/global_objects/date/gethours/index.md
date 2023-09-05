@@ -17,6 +17,10 @@ The **`getHours()`** method of {{jsxref("Date")}} instances returns the hours fo
 getHours()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer, between 0 and 23, representing the hours for the given date according to local time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

@@ -34,7 +34,7 @@ In [case-insensitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 
 The backreference must refer to an existent capturing group. If the number it specifies is greater than the total number of capturing groups, a syntax error is thrown.
 
-```js
+```js-nolint example-bad
 /(a)\2/u; // SyntaxError: Invalid regular expression: Invalid escape
 ```
 

@@ -289,7 +289,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. [Webkit bug 572656](https://bugzil.la/572656)
 - The [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
-- The {{domxref("URL.createObjectURL_static")}} and {{domxref("URL.revokeObjectURL_static")}} methods let you create object URLs which reference local files.
+- The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
 - {{domxref("Node.mozMatchesSelector()")}} now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
 - You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("element.style")}} for details.

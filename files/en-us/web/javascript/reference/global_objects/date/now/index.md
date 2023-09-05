@@ -17,6 +17,10 @@ The **`Date.now()`** static method returns the number of milliseconds elapsed si
 Date.now()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), in milliseconds, of the current time.

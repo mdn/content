@@ -12,7 +12,7 @@ The **`with()`** method of {{jsxref("TypedArray")}} instances is the [copying](/
 ## Syntax
 
 ```js-nolint
-arrayObject.with(index, value)
+arrayInstance.with(index, value)
 ```
 
 ### Parameters

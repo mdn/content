@@ -435,46 +435,6 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_grid_layout/Ma
   </tbody>
 </table>
 
-### math-style property
-
-The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See [Firefox bug 1665975](https://bugzil.la/1665975) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>83</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.math-style.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### fit-content() function
 
 The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
@@ -641,47 +601,6 @@ See [Firefox bug 1715546](https://bugzil.la/1715546) for more details.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.font-tech.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### round() math function
-
-The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
-See [Firefox bug 1764850](https://bugzil.la/1764850) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>108</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.round.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -974,10 +893,10 @@ The CSS {{cssxref("offset-position")}} property defines the initial position of 
   </tbody>
 </table>
 
-### abs() and sign() math functions
+### rect() and xywh() basic shape functions
 
-The CSS [`abs()`](/en-US/docs/Web/CSS/abs) and [`sign()`](/en-US/docs/Web/CSS/sign) math functions allow you to get the absolute value and the sign of an argument, respectively.
-See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](https://bugzil.la/1814589) for more details.
+The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions enable you to define a rectangle using the [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type. In CSS properties such as {{cssxref("offset-path")}}, these functions are used to define the shape of the path along which an element moves. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the left and top edges of the containing block as well as the width and height of the rectangle. In both the functions, you can optionally round off the corners.
+For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `rect()` function and [Firefox bug 1786160](https://bugzil.la/1786160) for the `xywh()` function.
 
 <table>
   <thead>
@@ -1009,9 +928,9 @@ See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](h
       <td>No</td>
     </tr>
     <tr>
-      <th>Preferences name</th>
+      <th>Preference names</th>
       <td colspan="2">
-      <code>layout.css.abs-sign.enabled</code>
+      <code>layout.css.motion-path-basic-shapes.enabled</code>, <code>layout.css.basic-shape-rect.enabled</code>, <code>layout.css.basic-shape-xywh.enabled</code>
     </td>
     </tr>
   </tbody>
@@ -1498,9 +1417,9 @@ See [Firefox bug 1840480](https://bugzil.la/1840480) for more details.
   </tbody>
 </table>
 
-#### CSS Custom Hightlight API
+#### CSS Custom Highlight API
 
-The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) provides a mechanism for styling arbitrary text ranges in a document (generalizing the behaviour of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}).
+The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) provides a mechanism for styling arbitrary text ranges in a document (generalizing the behavior of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}).
 The ranges are defined in JavaScript using [`Range`](/en-US/docs/Web/API/Range) instances grouped in a [`Highlight`](/en-US/docs/Web/API/Highlight), and then registered with a name using [`HighlightRegistry`](/en-US/docs/Web/API/HighlightRegistry).
 The CSS [`::highlight`](/en-US/docs/Web/CSS/::highlight) pseudo-element is used to apply styles to a registered highlight.
 See [Firefox bug 1703961](https://bugzil.la/1703961) for more details.
@@ -2137,7 +2056,7 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
     <tr>
       <th>Release</th>
       <td>97</td>
-      <td>No.</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
@@ -2152,6 +2071,46 @@ The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Sched
 
 This is enabled on Firefox Nightly (only) from Firefox 101.
 No preference is provided to allow it to be enabled in other releases.
+
+### Notifications API
+
+Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default on Windows systems and in the Nightly release ([Firefox bug 1794475](https://bugzil.la/1794475)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>117</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>117</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>117</td>
+      <td>Windows only</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webnotifications.requireinteraction.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Security and privacy
 

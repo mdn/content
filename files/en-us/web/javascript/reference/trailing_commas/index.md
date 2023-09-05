@@ -122,7 +122,7 @@ Math.max(10, 20,);
 
 Function parameter definitions or function invocations only containing a comma will throw a {{jsxref("SyntaxError")}}. Furthermore, when using [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), trailing commas are not allowed:
 
-```js example-bad
+```js-nolint example-bad
 function f(,) {} // SyntaxError: missing formal parameter
 (,) => {};       // SyntaxError: expected expression, got ','
 f(,)             // SyntaxError: expected expression, got ','

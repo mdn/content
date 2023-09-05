@@ -324,7 +324,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                        |
 | [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                    |
 | [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                             |
-| [`dirname`](#dirname)                         | `search`, `text`                                                        | Name of form field to use for sending the element's directionality in form submission |
+| [`dirname`](#dirname)                         | `hidden`, `text`, `search`, `url`, `tel`, `email`                       | Name of form field to use for sending the element's directionality in form submission |
 | [`disabled`](#disabled)                       | all                                                                     | Whether the form control is disabled                                                  |
 | [`form`](#form)                               | all                                                                     | Associates the control with a form element                                            |
 | [`formaction`](#formaction)                   | `image`, `submit`                                                       | URL to use for form submission                                                        |
@@ -399,7 +399,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `dirname`
 
-  - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.
+  - : Valid for `hidden`, `text`, `search`, `url`, `tel`, and `email` input types, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), and the second being the value of the `dirname` attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
 
     ```html
     <form action="page.html" method="post">
@@ -523,7 +523,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `pattern`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}. No forward slashes should be specified around the pattern text.
 
     If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
 
