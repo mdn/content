@@ -106,11 +106,11 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Stepped value functions
 
-- {{CSSxRef("round", "round()")}} {{Experimental_Inline}}
+- {{CSSxRef("round", "round()")}}
   - : Calculates a rounded number based on a rounding strategy.
-- {{CSSxRef("mod", "mod()")}} {{Experimental_Inline}}
+- {{CSSxRef("mod", "mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
-- {{CSSxRef("rem", "rem()")}} {{Experimental_Inline}}
+- {{CSSxRef("rem", "rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
 ### Trigonometric functions
