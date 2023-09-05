@@ -27,11 +27,11 @@ requestWindow(options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `height`
-      - : A non-negative number representing the height to set for the Picture-in-Picture window's viewport, in pixels. If not specified, the default value 0 is used.
-    - `width` {{optional_inline}}
-      - : A non-negative number representing the width to set for the Picture-in-Picture window's viewport, in pixels. If not specified, the default value 0 is used.
+      - : A non-negative number representing the height to set for the Picture-in-Picture window's viewport, in pixels. If `options` is not specified, the default value 0 is used.
+    - `width`
+      - : A non-negative number representing the width to set for the Picture-in-Picture window's viewport, in pixels. If `options` is not specified, the default value 0 is used.
 
-> **Note:** If one of the options is specified, the other one must be too, otherwise an error is thrown. If both values are not specified, or specified as 0 or too large, the browser will clamp or ignore the values as appropriate to provide a reasonable user experience.
+> **Note:** If one of the options is specified, the other one must be too, otherwise an error is thrown. If both values are not specified, specified as 0, or set too large, the browser will clamp or ignore the values as appropriate to provide a reasonable user experience.
 
 ### Return value
 
@@ -40,7 +40,10 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} object instan
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if `requestWindow()` is invoked without [transient activation](/en-US/docs/Glossary/Transient_activation).
+  - : Thrown if:
+    - `requestWindow()` is invoked without [transient activation](/en-US/docs/Glossary/Transient_activation).
+    - The API has been explicitly disabled (for example via browser settings).
+    - `requestWindow()` is called from the `window` object of the Picture-in-Picture window (i.e. {{domxref("DocumentPictureInPicture.window")}})
 - `RangeError` {{domxref("DOMException")}}
   - : Thrown if only one of `height` and `width` are set, or if `height` and `width` are set with negative values.
 

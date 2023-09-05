@@ -11,7 +11,7 @@ browser-compat: api.Window.documentPictureInPicture
 {{APIRef}}{{seecompattable}}
 
 The **`documentPictureInPicture`** read-only property of the
-{{domxref("Window")}} interface returns a reference to the document Picture-in-Picture window for the current document context.
+{{domxref("Window")}} interface returns a reference to the {{domxref("DocumentPictureInPicture")}} object for the current document context.
 
 ## Value
 
@@ -20,6 +20,10 @@ A {{domxref("DocumentPictureInPicture")}} object instance.
 ## Examples
 
 ```js
+const videoPlayer = document.getElementById("player");
+
+// ...
+
 // Open a Picture-in-Picture window.
 await window.documentPictureInPicture.requestWindow({
   width: videoPlayer.clientWidth,

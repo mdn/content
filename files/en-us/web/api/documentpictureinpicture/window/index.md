@@ -20,6 +20,10 @@ A {{domxref("Window")}} object instance if the Picture-in-Picture window has alr
 ## Examples
 
 ```js
+const videoPlayer = document.getElementById("player");
+
+// ...
+
 await window.documentPictureInPicture.requestWindow({
   width: videoPlayer.clientWidth,
   height: videoPlayer.clientHeight,

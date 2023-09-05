@@ -9,7 +9,7 @@ browser-compat: api.DocumentPictureInPicture
 
 {{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}
 
-The **`DocumentPictureInPicture`** interface of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} represents the document Picture-in-Picture window for the current document context.
+The **`DocumentPictureInPicture`** interface of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} is the entry point for creating and handling document picture-in-picture windows.
 
 It is accessed via the {{domxref("Window.documentPictureInPicture")}} property.
 
