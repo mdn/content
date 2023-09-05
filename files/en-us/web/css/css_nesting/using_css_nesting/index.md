@@ -54,7 +54,11 @@ parent child {
 
 In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
 
-#### HTML
+#### Without nesting selector
+
+Without the `&` nesting selector this may look different in older versions of Chrome and Safari as they use the old version of the specification.
+
+##### HTML
 
 ```html-nolint
 <form>
@@ -65,8 +69,6 @@ In these examples, one without and one with the `&` nesting selector, the `<inpu
   <input type="text" id="email" />
 </form>
 ```
-
-#### Without `&` nesting selector
 
 ##### CSS
 
@@ -97,9 +99,21 @@ label {
 
 ##### Result
 
-{{EmbedLiveSample('Without_&_nesting_selector','100%','120')}}
+{{EmbedLiveSample('Without_nesting_selector','100%','120')}}
 
-#### With `&` nesting selector
+#### With nesting selector
+
+##### HTML
+
+```html-nolint
+<form>
+  <label for="name">Name:
+    <input type="text" id="name" />
+  </label>
+  <label for="email">email:</label>
+  <input type="text" id="email" />
+</form>
+```
 
 ##### CSS
 
@@ -130,7 +144,7 @@ label {
 
 ##### Result
 
-{{EmbedLiveSample('With_&_nesting_selector','100%','120')}}
+{{EmbedLiveSample('With_nesting_selector','100%','120')}}
 
 ## Combinators
 
