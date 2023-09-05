@@ -77,7 +77,7 @@ try {
   throw new TypeError("oops");
 } catch ({ name, message }) {
   var name; // SyntaxError: Identifier 'name' has already been declared
-  let message; // SyntaxError: Identifier 'name' has already been declared
+  let message; // SyntaxError: Identifier 'message' has already been declared
 }
 ```
 
