@@ -16,6 +16,9 @@ The following HTML sets up a basic video player.
 
 ```html
 <div id="container">
+  <p class="in-pip-message">
+    Video player is currently in the separate Picture-in-Picture window.
+  </p>
   <div id="player">
     <video
       src="assets/bigbuckbunny.mp4"
@@ -51,7 +54,7 @@ To check if the Document Picture-in-Picture API is supported, you can test wheth
 if ("documentPictureInPicture" in window) {
   document.querySelector(".no-picture-in-picture").remove();
 
-  togglePipButton = document.createElement("button");
+  const togglePipButton = document.createElement("button");
   togglePipButton.textContent = "Toggle Picture-in-Picture";
   togglePipButton.addEventListener("click", togglePictureInPicture, false);
 
@@ -63,17 +66,16 @@ If it is available, we remove the "Document Picture-in-Picture API not available
 
 ## Open a Picture-in-Picture window
 
-The following JavaScript calls {{domxref("DocumentPictureInPicture.requestWindow", "window.documentPictureInPicture.requestWindow()")}} to open a blank Picture-in-Picture window. The returned {{jsxref("Promise")}} fulfills with a Picture-in-Picture {{domxref("Window")}} object. The video player is moved to that window, and we replace it with a message informing the user that it has been moved; both operations are achieved using {{domxref("Element.append()")}},
+The following JavaScript calls {{domxref("DocumentPictureInPicture.requestWindow", "window.documentPictureInPicture.requestWindow()")}} to open a blank Picture-in-Picture window. The returned {{jsxref("Promise")}} fulfills with a Picture-in-Picture {{domxref("Window")}} object. The video player is moved to that window using {{domxref("Element.append()")}}, and we display the message informing the user that it has been moved.
 
 The `width` and `height` options of `requestWindow()` set the Picture-in-Picture window to the desired size. Browsers may clamp the option values if they are too large or too small to fit a user-friendly window size.
 
 ```js
 async function togglePictureInPicture() {
-  if (!pipActive) {
-    pipActive = true;
-
+  // Returns null if no pip window is currently open
+  if (!!window.documentPictureInPicture.window) {
     // Open a Picture-in-Picture window.
-    pipWindow = await documentPictureInPicture.requestWindow({
+    const pipWindow = await documentPictureInPicture.requestWindow({
       width: videoPlayer.clientWidth,
       height: videoPlayer.clientHeight,
     });
@@ -84,7 +86,7 @@ async function togglePictureInPicture() {
     pipWindow.document.body.append(videoPlayer);
 
     // Display a message to say it has been moved
-    playerContainer.append(inPIPMessage);
+    inPipMessage.style.display = "block";
   }
 }
 ```
@@ -123,23 +125,21 @@ To copy all CSS style sheets from the originating window, loop through all style
 
 ## Handle when the Picture-in-Picture window closes
 
-To handle the Picture-in-Picture window being closed again, we use a couple of different mechanisms (you may only have to use one, depending on how you write your code). We track its open state using a `pipActive` variable, which we set to `true` when it is opened, and `false` when it is closed again. The code for toggling the Picture-in-Picture window closed again when the button is pressed a second time looks like this:
+The code for toggling the Picture-in-Picture window closed again when the button is pressed a second time looks like this:
 
 ```js
-pipActive = false;
-inPIPMessage.remove();
+inPipMessage.style.display = "none";
 playerContainer.append(videoPlayer);
 window.documentPictureInPicture.window.close();
 ```
 
-In addition to toggling the tracking variable back to `false`, we reverse the DOM changes — removing the message and putting the video play back in the player container in the main app window, and we close the Picture-in-Picture window programmatically using the {{domxref("Window.close()")}} method.
+Here we reverse the DOM changes — hiding the message and putting the video player back in the player container in the main app window. We also close the Picture-in-Picture window programmatically using the {{domxref("Window.close()")}} method.
 
-However, you also need to consider the case where the user closes the Picture-in-Picture window by pressing the browser supplied close (X) button on the window itself. You handle this by detecting when the window closes using the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event:
+However, you also need to consider the case where the user closes the Picture-in-Picture window by pressing the browser supplied close (X) button on the window itself. You can handle this by detecting when the window closes using the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event:
 
 ```js
 pipWindow.addEventListener("pagehide", (event) => {
-  pipActive = false;
-  inPIPMessage.remove();
+  inPipMessage.style.display = "none";
   playerContainer.append(videoPlayer);
 });
 ```
@@ -180,7 +180,7 @@ You can access elements in the Picture-in-Picture window in several different wa
 
 - The {{domxref("Window")}} instance returned by the {{domxref("DocumentPictureInPicture.requestWindow()")}} method, as seen above.
 - Via the `window` property of the {{domxref("DocumentPictureInPictureEvent")}} event object (on the {{domxref("DocumentPictureInPicture.enter_event", "enter")}} event), as seen above.
-- Via the {{domxref("DocumentPictureInPicture.window")}} property, as shown below.
+- Via the {{domxref("DocumentPictureInPicture.window")}} property:
 
 ```js
 const pipWindow = window.documentPictureInPicture.window;

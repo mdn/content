@@ -38,13 +38,15 @@ const videoPlayer = document.getElementById("player");
 // ...
 
 // Open a Picture-in-Picture window.
-pipWindow = await window.documentPictureInPicture.requestWindow({
+const pipWindow = await window.documentPictureInPicture.requestWindow({
   width: videoPlayer.clientWidth,
   height: videoPlayer.clientHeight,
 });
 
 // ...
 ```
+
+See [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) for a full working demo (see the full [source code](https://github.com/chrisdavidmills/dom-examples/tree/main/document-picture-in-picture) also).
 
 ## Specifications
 

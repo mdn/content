@@ -52,7 +52,7 @@ const videoPlayer = document.getElementById("player");
 // ...
 
 // Open a Picture-in-Picture window.
-pipWindow = await window.documentPictureInPicture.requestWindow({
+const pipWindow = await window.documentPictureInPicture.requestWindow({
   width: videoPlayer.clientWidth,
   height: videoPlayer.clientHeight,
 });
