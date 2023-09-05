@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 118 that affect d
 
 ### CSS
 
+- Multiple CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/abs), [`sign()`](/en-US/docs/Web/CSS/sign), [`round()`](/en-US/docs/Web/CSS/round), [`mod()`](/en-US/docs/Web/CSS/mod), [`rem()`](/en-US/docs/Web/CSS/rem), [`pow()`](/en-US/docs/Web/CSS/pow), [`sqrt()`](/en-US/docs/Web/CSS/sqrt), [`hypot()`](/en-US/docs/Web/CSS/hypot), [`log()`](/en-US/docs/Web/CSS/log), and [`exp()`](/en-US/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
+
 #### Removals
 
 ### JavaScript

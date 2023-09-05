@@ -605,47 +605,6 @@ See [Firefox bug 1715546](https://bugzil.la/1715546) for more details.
   </tbody>
 </table>
 
-### round() math function
-
-The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
-See [Firefox bug 1764850](https://bugzil.la/1764850) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>108</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>108</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.round.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### font-variant-emoji
 
 The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
@@ -930,49 +889,6 @@ The CSS {{cssxref("offset-position")}} property defines the initial position of 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.motion-path-offset-position.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### abs() and sign() math functions
-
-The CSS [`abs()`](/en-US/docs/Web/CSS/abs) and [`sign()`](/en-US/docs/Web/CSS/sign) math functions allow you to get the absolute value and the sign of an argument, respectively.
-See [Firefox bug 1814588](https://bugzil.la/1814588) and [Firefox bug 1814589](https://bugzil.la/1814589) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>117</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-      <code>layout.css.abs-sign.enabled</code>
-    </td>
     </tr>
   </tbody>
 </table>
