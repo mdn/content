@@ -14,6 +14,7 @@ The **`Object()`** constructor turns the input into an object. Its behavior depe
 ```js-nolint
 new Object()
 new Object(value)
+
 Object()
 Object(value)
 ```
