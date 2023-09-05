@@ -69,10 +69,7 @@ There are four algorithms to determine which arc is used:
 
 - `increasing`
 
-  - : Use the clockwise arc. When the two radii coincide:
-
-    - If `θ1 < θ2`, the arc becomes the full circumference with a clockwise orientation.
-    - If `θ1 ≥ θ2`, the arc degenerates to a single point.
+  - : Use the clockwise arc. When the two radii coincide, the arc degenerates to a single point.
 
     | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 495deg`, `θ2 = 45deg`                                          |
     | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -80,10 +77,7 @@ There are four algorithms to determine which arc is used:
 
 - `decreasing`
 
-  - : Use the counterclockwise arc. When the two radii coincide:
-
-    - If `θ1 ≤ θ2`, the arc degenerates to a single point.
-    - If `θ1 > θ2`, the arc becomes the full circumference with a counterclockwise orientation.
+  - : Use the counterclockwise arc. When the two radii coincide, the arc degenerates to a single point.
 
     | `θ1 = 45deg`, `θ2 = 495deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
     | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
