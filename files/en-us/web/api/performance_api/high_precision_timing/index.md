@@ -16,24 +16,24 @@ High precision timing is achieved by using the {{domxref("DOMHighResTimeStamp")}
 
 All timestamps in the Performance API use the {{domxref("DOMHighResTimeStamp")}} type. Previously, the Performance API (and other Web APIs) used the `EpochTimeStamp` type (previously known as `DOMTimeStamp`). These types are now discouraged.
 
-## `performance.now()` vs. `Date.now()`
+## `Performance.now()` vs. `Date.now()`
 
-JavaScript defines {{jsxref("Date.now()")}} as the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC. The `performance.now()` method on the other hand is relative to the {{domxref("Performance.timeOrigin")}} property. For more information, see the [time origins section](#time_origins) below.
+JavaScript defines {{jsxref("Date.now()")}} as the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC. The `Performance.now()` method on the other hand is relative to the {{domxref("Performance.timeOrigin")}} property. For more information, see the [time origins section](#time_origins) below.
 
 JavaScript `Date` times are subject to system clock skew or adjustments. This means that the value of time may not always be monotonically increasing. The main purpose of `Date` objects is to display time and date information to the user and so many operating systems run a daemon which regularly synchronizes time. It might be that the clock is tweaked a few milliseconds several times per hour.
 
-The `performance.now()` method (and all other `DOMHighResTimeStamp` values) provide monotonically increasing time values and aren't subject to clock adjustments. This means that it is guaranteed `DOMHighResTimeStamp` values will be at least equal to, if not greater than, the last time you accessed it.
+The `Performance.now()` method (and all other `DOMHighResTimeStamp` values) provide monotonically increasing time values and aren't subject to clock adjustments. This means that it is guaranteed `DOMHighResTimeStamp` values will be at least equal to, if not greater than, the last time you accessed it.
 
 ```js
 Date.now(); // 1678889977578
 performance.now(); // 233936
 ```
 
-For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time available with {{domxref("performance.now()")}} instead of JavaScript's {{jsxref("Date.now()")}}.
+For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time available with {{domxref("Performance.now()")}} instead of JavaScript's {{jsxref("Date.now()")}}.
 
 To summarize:
 
-| -                        | {{domxref("performance.now()")}}      | {{jsxref("Date.now()")}}          |
+| -                        | {{domxref("Performance.now()")}}      | {{jsxref("Date.now()")}}          |
 | ------------------------ | ------------------------------------- | --------------------------------- |
 | Resolution               | sub-milliseconds                      | milliseconds                      |
 | Origin                   | {{domxref("Performance.timeOrigin")}} | Unix Epoch (January 1, 1970, UTC) |
@@ -46,7 +46,7 @@ The Performance API uses the {{domxref("Performance.timeOrigin")}} property to d
 
 In Window contexts, this time origin is the time when navigation has started. In {{domxref("Worker")}} and {{domxref("ServiceWorker")}} contexts, the time origin is the time when the worker is run.
 
-In the previous version of the specification (Level 1), the `performance.now()` method used to be relative to [`performance.timing.navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart) property from the Navigation Timing specification. However, this changed in a later version of the specification (Level 2) and `performance.now()` is now relative to {{domxref("Performance.timeOrigin")}} which avoids clock change risks when comparing timestamps across webpages.
+In the previous version of the specification (Level 1), the `Performance.now()` method used to be relative to [`performance.timing.navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart) property from the Navigation Timing specification. However, this changed in a later version of the specification (Level 2) and `Performance.now()` is now relative to {{domxref("Performance.timeOrigin")}} which avoids clock change risks when comparing timestamps across webpages.
 
 ```js
 // Level 1 (clock change risks)
