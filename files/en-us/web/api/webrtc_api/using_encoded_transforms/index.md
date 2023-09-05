@@ -104,7 +104,7 @@ A worker might support transforming incoming or outgoing encoded frames, or both
 ### Basic WebRTC Encoded Transform
 
 The example below shows a basic WebRTC Encoded transform, which negates all bits in queued frames.
-It does not use (or need) any options passed in from the main-thread because exactly the same algorithm can be used in the sender pipeline to negate the bits and the receiver pipeline to restore them.
+It does not use or need options passed in from the main thread because the same algorithm can be used in the sender pipeline to negate the bits and in the receiver pipeline to restore them.
 
 The code implements an event handler for the `rtctransform` event.
 This constructs a {{DOMxRef("TransformStream")}}, then pipes through it using {{domxref("ReadableStream.pipeThrough()")}}, and finally pipes to `event.transformer.writable` using {{domxref("ReadableStream.pipeTo()")}}.
