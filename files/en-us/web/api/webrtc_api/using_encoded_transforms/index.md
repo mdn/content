@@ -142,7 +142,7 @@ Like the generic stream, its [constructor](/en-US/docs/Web/API/TransformStream/T
 Unlike the generic constructor any `writableStrategy` or `readableStrategy` properties that are passed in the constructor object are ignored, and the queuing strategy is entirely managed by the user agent.
 
 The `transform()` method also differs in that it is passed either an {{domxref("RTCEncodedVideoFrame")}} or {{domxref("RTCEncodedAudioFrame")}} rather than a generic "chunk".
-The actual code shown here for the method isn't very interesting, other than it shows how you might convert the frame to a form in which you can modify it, and afterwards enqueue it on the stream.
+The actual code shown here for the method isn't notable other than it demonstrates how to convert the frame to a form where you can modify it and enqueue it afterwards on the stream.
 
 ### Using separate sender and receiver transforms
 
