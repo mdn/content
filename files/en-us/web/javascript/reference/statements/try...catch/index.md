@@ -113,7 +113,7 @@ The `finally` block contains statements to execute after the `try` block and `ca
 
 - Immediately after the `try` block finishes execution normally (and no exceptions were thrown);
 - Immediately after the `catch` block finishes execution normally;
-- Immediately after a control-flow statement (`return`, `throw`, `break`, `continue`) is executed in the `try` block or `catch` block.
+- Immediately before a control-flow statement (`return`, `throw`, `break`, `continue`) is executed in the `try` block or `catch` block.
 
 If an exception is thrown from the `try` block, even when there's no `catch` block to handle the exception, the `finally` block still executes, in which case the exception is still thrown immediately after the `finally` block finishes executing.
 
