@@ -16,9 +16,9 @@ An {{jsxref("ArrayBuffer")}}.
 
 ## Examples
 
-This example [WebRTC encoded transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) shows how you might get the frame data in a {{DOMxRef("TransformStream")}} `transform()` function and negate all the bits.
+This example [WebRTC encoded transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) shows how you might get the frame data in a {{domxref("TransformStream")}} `transform()` function and negate all the bits.
 
-The `transform()` function constructs a {{DOMxRef("DataView")}} on the buffer in the frame `data` property, and also creates a view on a new {{jsxref("ArrayBuffer")}}.
+The `transform()` function constructs a {{jsxref("DataView")}} on the buffer in the frame `data` property, and also creates a view on a new {{jsxref("ArrayBuffer")}}.
 It then writes the inverted bytes in the original data to the new buffer, assigns the buffer to the encoded frame `data` property, and enqueues the modified frame on the stream.
 
 ```js

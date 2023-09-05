@@ -7,10 +7,10 @@ browser-compat: api.RTCEncodedAudioFrame
 
 {{APIRef("WebRTC")}}
 
-The **`RTCEncodedAudioFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represents an encoded audio frame that may be enqueued for processing by a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
+The **`RTCEncodedAudioFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represents an encoded audio frame in the WebRTC receiver or sender pipeline, which may be modified using a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
 The interface provides methods and properties to get metadata about the frame, allowing its format and order in the sequence of frames to be determined.
-The `data` property allows access to the encoded frame data, which might be encrypted, or otherwise modified by a transform.
+The `data` property gives access to the encoded frame data as a buffer, which might be encrypted, or otherwise modified by a transform.
 
 > **Note:** This feature is available in [_Dedicated_ Web Workers](/en-US/docs/Web/API/Web_Workers_API#worker_types).
 
@@ -60,7 +60,7 @@ addEventListener("rtctransform", (event) => {
 });
 ```
 
-Note that there are more complete examples showing how encoded transforms are defined in [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
+Note that more complete examples are provided in [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
 ## Specifications
 

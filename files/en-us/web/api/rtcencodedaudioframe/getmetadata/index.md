@@ -46,7 +46,36 @@ An object with the following properties:
 
 ## Examples
 
-TBD
+This example [WebRTC encoded transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) implementation shows how you might get the frame metadata in a `transform()` function and log it.
+
+```js
+addEventListener("rtctransform", (event) => {
+  const async transform = new TransformStream({
+    async transform(encodedFrame, controller) {
+
+      // Get the metadata and log
+      const frameMetaData = encodedFrame.getMetadata();
+      console.log(frameMetaData)
+
+      // Enqueue the frame without modifying
+      controller.enqueue(encodedFrame);
+    },
+  });
+  event.transformer.readable
+    .pipeThrough(transform)
+    .pipeTo(event.transformer.writable);
+});
+```
+
+The resulting object from a local microphone might look like the one shown below.
+Note that there are no contributing sources because there is just one source.
+
+```js
+{
+  "payloadType": 109,
+  "synchronizationSource": 1876443470
+}
+```
 
 ## Specifications
 

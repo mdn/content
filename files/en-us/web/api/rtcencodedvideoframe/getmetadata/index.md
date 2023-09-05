@@ -86,7 +86,7 @@ addEventListener("rtctransform", (event) => {
 });
 ```
 
-The resulting object from a local webcam might looks like the one shown below.
+The resulting object from a local webcam might look like the one shown below.
 Note that there are no contributing sources because there is just one source.
 
 ```js

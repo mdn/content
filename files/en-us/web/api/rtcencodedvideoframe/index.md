@@ -70,7 +70,7 @@ addEventListener("rtctransform", (event) => {
 });
 ```
 
-Note that there are more complete examples showing how encoded transforms are defined in [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
+Note that more complete examples are provided in [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
 ## Specifications
 
