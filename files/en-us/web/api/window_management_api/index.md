@@ -25,13 +25,35 @@ const myWindow = window.open(
 
 You can retrieve information about your screen from the {{domxref("Window.screen")}} property, such as how much screen space you have available to place windows in.
 
-However, the above features are limited. `Window.screen` only returns data about the primary screen, and not the other monitors attached to a device. To move a window to a second monitor for example, you could use {{domxref("Window.MoveTo()")}}, but you'd have to guess what coordinates to use based on where it is placed in your setup relative to the primary display.
+However, the above features are limited. `Window.screen` only returns data about the primary screen, and not secondary displays available to a device. To move a window to a secondary display, you could use {{domxref("Window.MoveTo()")}}, but you'd have to guess what coordinates to use based on where it is placed in your setup relative to the primary display.
 
 The Window Management API provides more robust, flexible window management. It allows you to query whether your display is extended with multiple screens and return information on each screen separately: windows can then be placed on each screen as desired. It also provides event handlers to allow you to respond to changes in the available screens, new fullscreen functionality to choose which screen to put into fullscreen mode (if any), and permissions functionality to control access to the API.
 
 ### Multi-screen origin
 
-xx
+The Window Management API introduces the concept of the **multi-screen origin** — this is the (0,0) coordinate of the host operating system (OS)'s virtual screen arrangement, around which all available screens and windows are positioned. The multi-screen origin is the top-left corner of the OS primary screen (which can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock).
+
+On devices with multiple displays:
+
+- The values of {{domxref("ScreenDetailed.left")}}, {{domxref("ScreenDetailed.top")}}, {{domxref("ScreenDetailed.availLeft")}}, and {{domxref("ScreenDetailed.availTop")}} for each available screen are reported relative to the multi-screen origin.
+- The values of {{domxref("Window.screenLeft")}}, {{domxref("Window.screenTop")}}, {{domxref("Window.screenX")}}, {{domxref("Window.screenY")}} for each window are reported relative to the multi-screen origin.
+- When using {{domxref("Window.moveTo()")}} and {{domxref("Window.open()")}}, windows are positioned relative to the multi-screen origin.
+
+Say we have an external monitor of resolution 1920 x 1080 set as the primary monitor, and an internal laptop display of resolution 1440 x 900 set as a secondary monitor. Let's also say that the OS UI takes up 25px at the top of the screen, and is only drawn on the primary screen.
+
+If the secondary screen was positioned directly to the right of the primary screen, top screen edges in line:
+
+- The primary screen `left`/`top` values would be (0,0) while its `availLeft`/`availTop` values would be (0,25) — the OS UI thickness is added on.
+- The secondary screen `left`/`top` values would be (1920,0) while its `availLeft`/`availTop` values would also be (1920,0) — the OS UI is not drawn on the secondary screen.
+
+![Two rectangles representing the primary screen with the secondary screen positioned to the right, as described above](primary-screen-left.png)
+
+However, if the secondary screen was positioned directly to the left of the primary screen, top screen edges in line:
+
+- The primary screen `left`/`top` values would still be (0,0) while its `availLeft`/`availTop` values would be (0,25).
+- The secondary screen `left`/`top` values would be (-1440,0) while its `availLeft`/`availTop` values would also be (-1440,0).
+
+![Two rectangles representing the primary screen with the secondary screen positioned to the left, as described above](primary-screen-right.png)
 
 ## Use cases
 
@@ -66,11 +88,11 @@ When `getScreenDetails()` is invoked, the user will be asked for permission to m
 {{domxref("ScreenDetailed")}} objects inherit the properties of the {{domxref("Screen")}} interface, and contain useful information for placing windows on specific screens. For example:
 
 - `availWidth` and `availHeight`
-  - : The width and height of the screen area available for opening windows in. These values are equal to `width` and `height`, plus the width/height of any OS-specific user interface elements drawn on the screen.
+  - : The width and height of the screen area available for opening windows in. These values are equal to `width` and `height`, minus the width/height of any OS-specific user interface elements drawn on the screen.
 - `availLeft` and `availTop`
-  - : The top-left coordinate of the screen area available for opening windows in. These values are equal to `left` and `top`, plus the width/height of any OS-specific user interface elements drawn at the top-left of the screen.
+  - : The top-left coordinate of the screen area available for opening windows in. These values are equal to `left` and `top`, plus the width/height of any OS-specific user interface elements drawn at the top/left of the screen.
 - `isPrimary`
-  - : A boolean indicating whether this screen is set as the operating system (OS) primary screen or not.
+  - : A boolean indicating whether this screen is set as the OS primary screen or not.
 - `isInternal`
   - : A boolean indicating whether this screen is internal to the device or not.
 - `label`
@@ -140,7 +162,7 @@ function checkWindowClose() {
   });
 ```
 
-> **Note:** In our experiments, the {{domxref("setInterval()")}} polling method shown above seemed to work best for detecting window closure in the case of multiple windows. Using events such as {{domxref("Window.beforeunload_event", "beforeunload")}}, {{domxref("Window.pagehide_event", "pagehide")}}, or {{domxref("Document.visibilitychange_event", "visibilitychange")}} proved unreliable because, when opening multiple windows in the first place, the rapid shift in focus/visibility seemed to fire the handler function prematurely.
+> **Note:** In our experiments, the {{domxref("setInterval()")}} polling method shown above seemed to work best for detecting window closure in the case of multiple windows. Using events such as {{domxref("Window.beforeunload_event", "beforeunload")}}, {{domxref("Window.pagehide_event", "pagehide")}}, or {{domxref("Document.visibilitychange_event", "visibilitychange")}} proved unreliable because, when opening multiple windows at the same time, the rapid shift in focus/visibility seemed to fire the handler function prematurely.
 
 ### Window management events
 

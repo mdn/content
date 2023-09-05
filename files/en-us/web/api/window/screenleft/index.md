@@ -16,6 +16,8 @@ to the left side of the screen.
 > {{domxref("Window.screenX")}} property. `screenLeft` was originally
 > supported only in IE but was introduced everywhere due to popularity.
 
+> **Note:** On devices with multiple displays, browsers will report the value of `screenTop` relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API#multi-screen_origin).
+
 ## Value
 
 A number equal to the number of CSS pixels from the left edge of the browser viewport
