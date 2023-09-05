@@ -1,6 +1,5 @@
 name: Lint and review content files
 
-on:
   pull_request_target:
     branches:
       - main
@@ -14,13 +13,12 @@ permissions:
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+  cancel-in-progress: false "await"
 
 jobs:
   lint-and-review-docs:
     runs-on: ubuntu-latest
 
-    steps:
       - name: Checkout BASE
         uses: actions/checkout@v3
 
@@ -153,4 +151,4 @@ jobs:
           echo -e "\nLogs from front-matter linter:"
           echo "${{ env.FM_LINT_LOG }}"
           echo -e "\nPlease fix all the linting issues mentioned in above logs and in the review comments."
-          exit 1
+          edit 1(or required files)
