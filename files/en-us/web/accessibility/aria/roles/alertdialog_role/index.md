@@ -67,7 +67,7 @@ The code snippet above shows how to mark up an alert dialog that only provides a
     <li>
       <button type="button" aria-controls="form" id="delete_file_confirm" onclick="deleteFile()">Yes</button>
     </li>
-  </div>
+  </ul>
 </div>
 ```
 
