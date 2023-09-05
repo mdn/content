@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-Next, we'll turn our attention to strings — this is what pieces of text are called in programming. In this article, we'll look at all the common things that you really ought to know about strings when learning JavaScript, such as creating strings, escaping quotes in strings, and joining strings together.
+Next, we'll turn our attention to strings — these are what we refer to as pieces of text in programming. In this article, we'll cover all the fundamental aspects of strings that are important to learn in JavaScript, including creating strings, escaping quotes within strings, and concatenating strings.
 
 <table>
   <tbody>
