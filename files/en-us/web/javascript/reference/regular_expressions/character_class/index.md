@@ -69,7 +69,7 @@ In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Re
 /[😄-😛]/u.test("😑"); // true
 ```
 
-Even if the pattern [ignores case](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), the case of the two ends of a range is significant in determining which characters belong to the range. For example, the pattern `/[E-F]/i` only matches `E`, `F`, `e`, and `f`, while the pattern `/[E-f]/i` matches all uppercase and lowercase ASCII letters (because it spans over `E–Z` and `a–f`), as well as `[`, `\`, `]`, `^`, `_`, and `` ` ``.
+Even if the pattern [ignores case](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), the case of the two ends of a range is significant in determining which characters belong to the range. For example, the pattern `/[E-F]/i` only matches `E`, `F`, `e`, and `f`, while the pattern `/[E-f]/i` matches all uppercase and lowercase {{glossary("ASCII")}} letters (because it spans over `E–Z` and `a–f`), as well as `[`, `\`, `]`, `^`, `_`, and `` ` ``.
 
 ### Non-v-mode character class
 

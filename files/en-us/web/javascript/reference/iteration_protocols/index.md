@@ -127,7 +127,7 @@ The language specifies APIs that either produce or consume iterables and iterato
 
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) return [generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are iterable iterators. [Async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) return [async generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator), which are async iterable iterators.
 
-The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}} (currently unexposed), which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. In the future, these built-in iterators may have additional [helper methods](https://github.com/tc39/proposal-iterator-helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
+The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}}, which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. The `Iterator` class also provides additional [helper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
 
 ```plain
 console.log([][Symbol.iterator]());

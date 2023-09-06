@@ -17,6 +17,10 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.RelativeTimeFormat")}} inst
 resolvedOptions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new object with properties reflecting the locale and number formatting options computed during the initialization of the given {{jsxref("Intl.RelativeTimeFormat")}} object.

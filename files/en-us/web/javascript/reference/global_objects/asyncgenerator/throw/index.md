@@ -12,7 +12,7 @@ The **`throw()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a 
 ## Syntax
 
 ```js-nolint
-asyncGeneratorObject.throw(exception)
+asyncGeneratorInstance.throw(exception)
 ```
 
 ### Parameters

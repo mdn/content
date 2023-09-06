@@ -15,6 +15,10 @@ The **`isWellFormed()`** method of {{jsxref("String")}} values returns a boolean
 isWellFormed()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns `true` if this string does not contain any lone surrogates, `false` otherwise.

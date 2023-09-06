@@ -208,7 +208,7 @@ Next, we need to add an `index.js` file in the same directory as `index.html`. F
 Now we'll run our newly installed Parcel tool. In your terminal, run the following command:
 
 ```bash
- parcel index.html
+ npx parcel index.html
 ```
 
 You should see something like this printed in your terminal:
@@ -262,7 +262,7 @@ We can now prepare our bare bones example site for an imaginary deployment. Parc
 Run the following command:
 
 ```bash
-parcel build index.html
+npx parcel build index.html
 ```
 
 You should see an output like so:
@@ -298,7 +298,7 @@ Although the list grows by the month, there are three main offerings for tools t
 Let's stick with Parcel for now, given that we've already got it installed. Try running the following command:
 
 ```bash
-parcel build index.html --experimental-scope-hoisting
+npx parcel build index.html --experimental-scope-hoisting
 ```
 
 You'll see that this makes a huge difference:
