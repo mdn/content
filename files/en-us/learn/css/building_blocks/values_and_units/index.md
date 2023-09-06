@@ -392,9 +392,9 @@ There are places where you use strings in CSS. For example, [when specifying gen
 
 In programming, a function is a piece of code that does a specific task.
 Functions are useful because you can write code once, then reuse it many times instead of writing the same logic over and over.
-A lot of programming languages support functions and the convenient thing is that many languages come with built-in functions for common tasks so you don't have to write them yourself from scratch.
+Most programming languages not only support functions but also come with convenient built-in functions for common tasks so you don't have to write them yourself from scratch.
 
-CSS also has [functions](/en-US/docs/Web/CSS/CSS_Functions) (which you might see written as _functional notation_), and they work in a similar way as in other languages.
+CSS also has [functions](/en-US/docs/Web/CSS/CSS_Functions), which work in a similar way to functions in other languages.
 In fact, we've already seen CSS functions in the [Color](#color) section above with [`rgb()`](/en-US/docs/Web/CSS/color_value#rgb_function) and [`hsl()`](/en-US/docs/Web/CSS/color_value#hsl_function) functions.
 
 Aside from applying colors, you can use functions in CSS to do a lot of other things.
@@ -405,24 +405,24 @@ You might see [`translate()`](/en-US/docs/Web/CSS/transform-function/translate) 
 
 When you are creating styles for a project, you will probably start off with numbers like `300px` for lengths or `200ms` for durations.
 If you want to have these values change based on other values, you will need to do some math.
-You could calculate the percentage of a value, add or subtract a number from another number, then update your CSS with the result.
+You could calculate the percentage of a value or add a number to another number, then update your CSS with the result.
 
-Luckily, CSS has support for [Math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) which helps us perform calculations instead of writing out the numbers ourselves or even doing the math in JavaScript.
+CSS has support for [Math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions), which allow us to perform calculations instead of relying on static values or doing the math in JavaScript.
 One of the most common math functions is [`calc()`](/en-US/docs/Web/CSS/calc) which lets you do operations like addition, subtraction, multiplication, and division.
 
 Let's say you want values in your CSS that the browser should work out for you when someone is viewing your page.
-For example, we want to set the width of an element to be 20% of its parent container and add 100px to it.
-We might not be able to do this calculation beforehand if we don't know the width of the parent container if the parent uses a percentage width or a relative unit like `em` or `rem`.
-In our example, we can use `calc()` to calculate the width of the element and set it to be 20% of the parent container plus 100px.
+For example, let's say we want to set the width of an element to be 20% of its parent container plus 100px.
+We can't specify this width with a static value — if the parent uses a percentage width (or a relative unit like `em` or `rem`) then it will vary depending on the context it is used in, and other factors such as the user's device or browser window width.
+However, we can use `calc()` to set the width of the element to be 20% of its parent container plus 100px.
 The 20% is based on the width of the parent container (`.wrapper`) and if that width changes, the calculation will change too:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 500)}}
 
-There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/min), [`max()`](/en-US/docs/Web/CSS/max), and [`clamp()`](/en-US/docs/Web/CSS/clamp) which let you pick the smallest, largest, or middle value from a set of values.
-You can also use [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) like [`sin()`](/en-US/docs/Web/CSS/sin), [`cos()`](/en-US/docs/Web/CSS/cos), and [`tan()`](/en-US/docs/Web/CSS/tan) to calculate angles for rotating elements around a point, or even choosing colors that take a [hue angle](/en-US/docs/Web/CSS/hue) as a parameter.
-[Exponential functions](/en-US/docs/Web/CSS/CSS_Functions#exponential_functions) might also be used for animations, transitions, or having a very specific control over how something moves and looks.
+There are many other math functions that you can use in CSS, such as [`min()`](/en-US/docs/Web/CSS/min), [`max()`](/en-US/docs/Web/CSS/max), and [`clamp()`](/en-US/docs/Web/CSS/clamp); respectively these let you pick the smallest, largest, or middle value from a set of values.
+You can also use [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) like [`sin()`](/en-US/docs/Web/CSS/sin), [`cos()`](/en-US/docs/Web/CSS/cos), and [`tan()`](/en-US/docs/Web/CSS/tan) to calculate angles for rotating elements around a point, or choose colors that take a [hue angle](/en-US/docs/Web/CSS/hue) as a parameter.
+[Exponential functions](/en-US/docs/Web/CSS/CSS_Functions#exponential_functions) might also be used for animations and transitions, when you require very specific control over how something moves and looks.
 
-Knowing about these functions is useful so you recognize them when you see them, and if you feel like using them in your projects, they will help you avoid writing custom or repetitive code that you can do with regular CSS.
+Knowing about CSS functions is useful so you recognize them when you see them. You should start experimenting with them in your projects — they will help you avoid writing custom or repetitive code to achieve results that you can get with regular CSS.
 
 ## Test your skills!
 
