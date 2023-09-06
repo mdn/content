@@ -7,7 +7,7 @@ browser-compat: css.types.color.hwb
 
 {{CSSRef}}
 
-The **`hwb()`** functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
+The **`hwb()`** functional notation expresses an {{glossary("RGB", "sRGB")}} color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
 
 {{EmbedInteractiveExample("pages/css/function-hwb.html")}}
 
