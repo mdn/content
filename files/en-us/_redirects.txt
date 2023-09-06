@@ -11289,7 +11289,9 @@
 /en-US/docs/Web/CSS/:matches()	/en-US/docs/Web/CSS/:is
 /en-US/docs/Web/CSS/:not()	/en-US/docs/Web/CSS/:not
 /en-US/docs/Web/CSS/:nth-child()	/en-US/docs/Web/CSS/:nth-child
+/en-US/docs/Web/CSS/:nth-col	/en-US/docs/Web/CSS/:nth-child
 /en-US/docs/Web/CSS/:nth-last-child()	/en-US/docs/Web/CSS/:nth-last-child
+/en-US/docs/Web/CSS/:nth-last-col	/en-US/docs/Web/CSS/:nth-last-child
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
