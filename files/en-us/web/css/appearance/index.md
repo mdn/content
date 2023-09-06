@@ -31,17 +31,9 @@ appearance: revert;
 appearance: revert-layer;
 appearance: unset;
 
-/* All <compat-auto> values have the same effect as 'auto' */
+/* <compat-auto> values have the same effect as 'auto' */
 appearance: button;
 appearance: checkbox;
-
-/* Examples using the `-moz-` prefix in Gecko */
--moz-appearance: scrollbarbutton-up;
--moz-appearance: button-bevel;
-
-/* Examples using the `-webkit-` prefix in WebKit/Blink (as well as Gecko and Edge) */
--webkit-appearance: media-mute-button;
--webkit-appearance: caret;
 ```
 
 ### Values
@@ -76,79 +68,79 @@ The following values may be operational on historical browser versions using **`
 
 | Value                                  | Safari | Firefox | Chrome | Edge |
 | -------------------------------------- | ------ | ------- | ------ | ---- |
-| `attachment`                           | Y      | Y       | Y      | Y    |
-| `borderless-attachment`                | Y      | Y       | Y      | Y    |
-| `button-bevel`                         | N      | Y       | Y      | Y    |
-| `caps-lock-indicator`                  | Y      | N       | N      | Y    |
+| `attachment`                           | Y      |         |        |      |
+| `borderless-attachment`                | Y      |         |        |      |
+| `button-bevel`                         | Y      | Y       | Y      | Y    |
+| `caps-lock-indicator`                  | Y      |         |        | Y    |
 | `caret`                                | Y      | Y       | Y      | Y    |
-| `checkbox-container`                   | N      | Y       | N      | N    |
-| `checkbox-label`                       | N      | Y       | N      | N    |
-| `checkmenuitem`                        | N      | Y       | N      | N    |
-| `color-well`                           | Y      | N       | N      | N    |
-| `continuous-capacity-level-indicator`  | Y      | N       | N      | N    |
-| `default-button`                       | Y      | N       | N      | Y    |
-| `discrete-capacity-level-indicator`    | Y      | N       | N      | N    |
-| `inner-spin-button`                    | Y      | Y       | Y      | N    |
-| `image-controls-button`                | Y      | N       | N      | N    |
-| `list-button`                          | Y      | N       | N      | N    |
+| `checkbox-container`                   |        | Y       |        |      |
+| `checkbox-label`                       |        | Y       |        |      |
+| `checkmenuitem`                        |        | Y       |        |      |
+| `color-well`                           | Y      |         |        |      |
+| `continuous-capacity-level-indicator`  | Y      |         |        |      |
+| `default-button`                       | Y      |         |        | Y    |
+| `discrete-capacity-level-indicator`    | Y      |         |        |      |
+| `inner-spin-button`                    | Y      | Y       | Y      |      |
+| `image-controls-button`                | Y      |         |        |      |
+| `list-button`                          | Y      |         |        |      |
 | `listitem`                             | Y      | Y       | Y      | Y    |
-| `media-enter-fullscreen-button`        | N      | N       | Y      | N    |
-| `media-exit-fullscreen-button`         | N      | N       | Y      | N    |
-| `media-fullscreen-volume-slider`       | Y      | N       | N      | N    |
-| `media-fullscreen-volume-slider-thumb` | Y      | N       | N      | N    |
-| `media-mute-button`                    | N      | N       | Y      | Y    |
-| `media-play-button`                    | N      | N       | Y      | Y    |
-| `media-overlay-play-button`            | N      | N       | Y      | N    |
-| `media-return-to-realtime-button`      | Y      | N       | N      | N    |
-| `media-rewind-button`                  | Y      | N       | N      | N    |
-| `media-seek-back-button`               | N      | N       | N      | Y    |
-| `media-seek-forward-button`            | N      | N       | N      | Y    |
-| `media-toggle-closed-captions-button`  | N      | N       | Y      | N    |
-| `media-slider`                         | N      | N       | Y      | Y    |
-| `media-sliderthumb`                    | N      | N       | Y      | Y    |
-| `media-volume-slider-container`        | N      | N       | Y      | N    |
-| `media-volume-slider-mute-button`      | Y      | N       | N      | N    |
-| `media-volume-slider`                  | N      | N       | Y      | N    |
-| `media-volume-sliderthumb`             | N      | N       | Y      | N    |
-| `media-controls-background`            | N      | N       | Y      | N    |
-| `media-controls-dark-bar-background`   | Y      | N       | N      | N    |
-| `media-controls-fullscreen-background` | N      | N       | Y      | N    |
-| `media-controls-light-bar-background`  | Y      | N       | N      | N    |
-| `media-current-time-display`           | N      | N       | Y      | N    |
-| `media-time-remaining-display`         | N      | N       | Y      | N    |
+| `media-enter-fullscreen-button`        | Y      |         | Y      |      |
+| `media-exit-fullscreen-button`         | Y      |         | Y      |      |
+| `media-fullscreen-volume-slider`       | Y      |         |        |      |
+| `media-fullscreen-volume-slider-thumb` | Y      |         |        |      |
+| `media-mute-button`                    | Y      |         |        | Y    |
+| `media-play-button`                    | Y      |         |        | Y    |
+| `media-overlay-play-button`            | Y      |         | Y      |      |
+| `media-return-to-realtime-button`      | Y      |         |        |      |
+| `media-rewind-button`                  | Y      |         |        |      |
+| `media-seek-back-button`               | Y      |         | Y      |      |
+| `media-seek-forward-button`            | Y      |         | Y      |      |
+| `media-toggle-closed-captions-button`  | Y      |         | Y      |      |
+| `media-slider`                         | Y      |         | Y      | Y    |
+| `media-sliderthumb`                    | Y      |         | Y      | Y    |
+| `media-volume-slider-container`        | Y      |         | Y      |      |
+| `media-volume-slider-mute-button`      | Y      |         |        |      |
+| `media-volume-slider`                  | Y      |         | Y      |      |
+| `media-volume-sliderthumb`             | Y      |         | Y      |      |
+| `media-controls-background`            | Y      |         | Y      |      |
+| `media-controls-dark-bar-background`   | Y      |         |        |      |
+| `media-controls-fullscreen-background` | Y      |         | Y      |      |
+| `media-controls-light-bar-background`  | Y      |         |        |      |
+| `media-current-time-display`           | Y      |         | Y      |      |
+| `media-time-remaining-display`         | Y      |         | Y      |      |
 | `menulist-text`                        | Y      | Y       | Y      | Y    |
 | `menulist-textfield`                   | Y      | Y       | Y      | Y    |
-| `meterbar`                             | N      | Y       | N      | N    |
-| `number-input`                         | N      | Y       | N      | N    |
-| `progress-bar-value`                   | N      | N       | Y      | Y    |
-| `progressbar`                          | N      | Y       | N      | N    |
-| `progressbar-vertical`                 | N      | Y       | N      | N    |
-| `range`                                | N      | Y       | N      | N    |
-| `range-thumb`                          | N      | Y       | N      | N    |
-| `rating-level-indicator`               | Y      | N       | N      | N    |
-| `relevancy-level-indicator`            | Y      | N       | N      | N    |
-| `scale-horizontal`                     | N      | Y       | N      | N    |
-| `scalethumbend`                        | N      | Y       | N      | N    |
-| `scalethumb-horizontal`                | N      | Y       | N      | N    |
-| `scalethumbstart`                      | N      | Y       | N      | N    |
-| `scalethumbtick`                       | N      | Y       | N      | N    |
-| `scalethumb-vertical`                  | N      | Y       | N      | N    |
-| `scale-vertical`                       | N      | Y       | N      | N    |
-| `scrollbarthumb-horizontal`            | N      | Y       | N      | N    |
-| `scrollbarthumb-vertical`              | N      | Y       | N      | N    |
-| `scrollbartrack-horizontal`            | N      | Y       | N      | N    |
-| `scrollbartrack-vertical`              | N      | Y       | N      | N    |
-| `searchfield-decoration`               | Y      | N       | N      | Y    |
-| `searchfield-results-decoration`       | Y      | N       | Y      | Y    |
-| `searchfield-results-button`           | Y      | N       | N      | Y    |
-| `searchfield-cancel-button`            | Y      | N       | Y      | Y    |
-| `snapshotted-plugin-overlay`           | Y      | N       | N      | N    |
-| `sheet`                                | N/A    | N/A     | N/A    | N/A  |
-| `slider-vertical`                      | N      | N       | Y      | Y    |
-| `sliderthumb-horizontal`               | N      | N       | Y      | Y    |
-| `sliderthumb-vertical`                 | N      | N       | Y      | Y    |
-| `textfield-multiline`                  | N      | Y       | N      | N    |
-| `-apple-pay`                           | Y      | N       | N      | N    |
+| `meterbar`                             |        | Y       |        |      |
+| `number-input`                         |        | Y       |        |      |
+| `progress-bar-value`                   | Y      |         | Y      |      |
+| `progressbar`                          |        | Y       |        |      |
+| `progressbar-vertical`                 |        | Y       |        |      |
+| `range`                                |        | Y       |        |      |
+| `range-thumb`                          |        | Y       |        |      |
+| `rating-level-indicator`               | Y      |         |        |      |
+| `relevancy-level-indicator`            | Y      |         |        |      |
+| `scale-horizontal`                     |        | Y       |        |      |
+| `scalethumbend`                        |        | Y       |        |      |
+| `scalethumb-horizontal`                |        | Y       |        |      |
+| `scalethumbstart`                      |        | Y       |        |      |
+| `scalethumbtick`                       |        | Y       |        |      |
+| `scalethumb-vertical`                  |        | Y       |        |      |
+| `scale-vertical`                       |        | Y       |        |      |
+| `scrollbarthumb-horizontal`            |        | Y       |        |      |
+| `scrollbarthumb-vertical`              |        | Y       |        |      |
+| `scrollbartrack-horizontal`            |        | Y       |        |      |
+| `scrollbartrack-vertical`              |        | Y       |        |      |
+| `searchfield-decoration`               | Y      |         |        | Y    |
+| `searchfield-results-decoration`       | Y      | Y       | Y      | Y    |
+| `searchfield-results-button`           | Y      |         |        | Y    |
+| `searchfield-cancel-button`            | Y      | Y       | Y      | Y    |
+| `snapshotted-plugin-overlay`           | Y      |         |        |      |
+| `sheet`                                |        |         |        |      |
+| `slider-vertical`                      |        |         | Y      | Y    |
+| `sliderthumb-horizontal`               |        |         | Y      | Y    |
+| `sliderthumb-vertical`                 |        |         | Y      | Y    |
+| `textfield-multiline`                  |        | Y       |        |      |
+| `-apple-pay-button`                    | Y      |         |        |      |
 
 </details>
 
