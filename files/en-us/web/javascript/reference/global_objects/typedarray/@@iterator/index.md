@@ -11,11 +11,17 @@ The **`[@@iterator]()`** method of {{jsxref("TypedArray")}} instances implements
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("TypedArray.prototype.values")}} property.
 
+{{EmbedInteractiveExample("pages/js/typedarray-prototype-@@iterator.html")}}
+
 ## Syntax
 
 ```js-nolint
 typedArray[Symbol.iterator]()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

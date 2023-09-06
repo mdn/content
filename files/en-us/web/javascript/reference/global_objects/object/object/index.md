@@ -12,7 +12,10 @@ The **`Object()`** constructor turns the input into an object. Its behavior depe
 ## Syntax
 
 ```js-nolint
+new Object()
 new Object(value)
+
+Object()
 Object(value)
 ```
 
@@ -20,7 +23,7 @@ Object(value)
 
 ### Parameters
 
-- `value`
+- `value` {{optional_inline}}
   - : Any value.
 
 ### Return value

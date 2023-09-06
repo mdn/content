@@ -9,7 +9,7 @@ browser-compat: api.IDBIndex.objectStore
 {{ APIRef("IndexedDB") }}
 
 The **`objectStore`** property of the {{domxref("IDBIndex")}}
-interface returns the name of the object store referenced by the current index.
+interface returns the object store referenced by the current index.
 
 {{AvailableInWorkers}}
 

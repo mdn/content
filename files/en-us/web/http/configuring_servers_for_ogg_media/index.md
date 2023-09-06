@@ -30,11 +30,13 @@ You can find specific information about possible media file types and the codecs
 
 ## Handle HTTP 1.1 byte range requests correctly
 
-In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
+In order to support seeking and playing back regions of the media that aren't yet downloaded, Firefox uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position.
+In addition, it uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
 
 Your server should accept the {{HTTPHeader("Accept-Ranges")}}`: bytes` HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}`: Partial content` to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.
-
 Your server must also return `206: Partial Content` for the request `Range: bytes=0-` as well.
+
+For more information, see [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests).
 
 ## Include regular key frames
 

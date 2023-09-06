@@ -12,12 +12,13 @@ The **`return()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a
 ## Syntax
 
 ```js-nolint
-asyncGeneratorObject.return(value)
+asyncGeneratorInstance.return()
+asyncGeneratorInstance.return(value)
 ```
 
 ### Parameters
 
-- `value`
+- `value` {{optional_inline}}
   - : The value to return.
 
 ### Return value

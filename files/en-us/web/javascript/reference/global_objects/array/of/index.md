@@ -17,14 +17,14 @@ arguments.
 
 ```js-nolint
 Array.of()
-Array.of(element0)
-Array.of(element0, element1)
-Array.of(element0, element1, /* …, */ elementN)
+Array.of(element1)
+Array.of(element1, element2)
+Array.of(element1, element2, /* …, */ elementN)
 ```
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : Elements used to create the array.
 
 ### Return value

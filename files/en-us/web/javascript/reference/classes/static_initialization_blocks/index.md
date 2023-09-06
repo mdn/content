@@ -162,4 +162,4 @@ console.log(getDPrivateField(new D("private"))); // 'private'
 - {{jsxref("Classes/static", "static")}}
 - {{jsxref("Statements/class", "class")}}
 - [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) on v8.dev (2021)
-- [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) on 2ality.com (2021)
+- [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) by Dr. Axel Rauschmayer (2021)
