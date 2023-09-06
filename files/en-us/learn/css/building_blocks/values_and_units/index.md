@@ -6,10 +6,11 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
-The syntax of CSS uses [declarations](/en-US/docs/Web/CSS/Syntax#css_declarations) made of properties and values to create rules.
-There is something called a **value type** that describes what kind of value is allowed for a property.
-You will see on each [CSS property page](/en-US/docs/Web/CSS/Reference#index) that there's a syntax section that lists this value type.
-In this lesson we will take a look at some of the most frequently-used value types, what they are, and how they work.
+CSS rules contain [declarations](/en-US/docs/Web/CSS/Syntax#css_declarations), which in turn are composed of properties and values.
+Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
+In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
+
+> **Note:** Each [CSS property page](/en-US/docs/Web/CSS/Reference#index) has a syntax section that lists the value types you can use with that property.
 
 <table>
   <tbody>
@@ -410,7 +411,6 @@ You could calculate the percentage of a value or add a number to another number,
 CSS has support for [Math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions), which allow us to perform calculations instead of relying on static values or doing the math in JavaScript.
 One of the most common math functions is [`calc()`](/en-US/docs/Web/CSS/calc) which lets you do operations like addition, subtraction, multiplication, and division.
 
-Let's say you want values in your CSS that the browser should work out for you when someone is viewing your page.
 For example, let's say we want to set the width of an element to be 20% of its parent container plus 100px.
 We can't specify this width with a static value — if the parent uses a percentage width (or a relative unit like `em` or `rem`) then it will vary depending on the context it is used in, and other factors such as the user's device or browser window width.
 However, we can use `calc()` to set the width of the element to be 20% of its parent container plus 100px.
