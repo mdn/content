@@ -62,7 +62,7 @@ By default, parameters don't have a namespace at all. They are only known to be 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <script xlink:href="cool-script.js" type="text/ecmascript" />
+  <script href="cool-script.js" type="text/ecmascript" />
 </svg>
 ```
 
@@ -92,7 +92,7 @@ Note that because a namespace prefix is used for the `<svg:svg>` element and its
 
 ### Scripting in namespaced XML
 
-Namespaces affect markup and scripting ([and even CSS](/en-US/Docs/Web/CSS/CSS_namespaces/)). If you write scripts for namespaced XML such as SVG, read on.
+Namespaces affect markup and scripting ([and even CSS](/en-US/docs/Web/CSS/CSS_namespaces)). If you write scripts for namespaced XML such as SVG, read on.
 
 The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was created before the [original Namespaces in XML](https://www.w3.org/TR/REC-xml-names/) recommendation was released; therefore, DOM1 isn't namespace-aware. This causes problems for namespaced XML such as SVG. To resolve these problems, [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) added namespace-aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, it is important to use the [namespace-aware methods](https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations). The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.
 

@@ -283,7 +283,9 @@ In such a case, the browser starts at the beginning of the list and looks to see
 
 It is a good idea to provide a suitable generic font name at the end of the stack so that if none of the listed fonts are available, the browser can at least provide something approximately suitable. To emphasize this point, paragraphs are given the browser's default serif font if no other option is available — which is usually Times New Roman — this is no good for a sans-serif font!
 
-> **Note:** Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
+> **Note:** While you can use font family names that contain a space, such as `Trebuchet MS`, without quoting the name, to avoid mistakes in escaping, it is recommended to quote font family names that contain white space, digits, or punctuation characters other than hyphens.
+
+> **Warning:** Any font family name which could be misinterpreted as a generic family name or a CSS-wide keyword must be quoted. While the font-family names can be included as a {{cssxref("custom-ident")}} or a {{cssxref("string")}}, font family names that happen to be the same as a CSS-wide property value, like `initial`, or `inherit`, or CSS have the same name as one to the generic font family names, like `sans-serif` or `fantasy`, must be included as a quoted string. Otherwise, the font family name will be interpreted as being the equivalent CSS keyword or generic family name. When used as keywords, the generic font family names —`serif`, `sans-serif`, `monospace`, `cursive`, and `fantasy` — and the global CSS keywords MUST NOT be quoted, as strings are not interpreted as CSS keywords.
 
 #### A font-family example
 

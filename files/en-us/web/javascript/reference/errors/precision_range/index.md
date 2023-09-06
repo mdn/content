@@ -12,7 +12,7 @@ outside of the range of 0 and 20 (or 21) was passed into `toFixed` or
 
 ## Message
 
-```
+```plain
 RangeError: toExponential() argument must be between 0 and 100 (V8-based & Safari)
 RangeError: toFixed() digits argument must be between 0 and 100 (V8-based & Safari)
 RangeError: toPrecision() argument must be between 1 and 100 (V8-based & Safari)

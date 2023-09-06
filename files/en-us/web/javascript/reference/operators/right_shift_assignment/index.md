@@ -47,4 +47,4 @@ c >>= 2n; // 1n
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
+- [Right shift (`>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)

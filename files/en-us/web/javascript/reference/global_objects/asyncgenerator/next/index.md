@@ -7,13 +7,13 @@ browser-compat: javascript.builtins.AsyncGenerator.next
 
 {{JSRef}}
 
-The **`next()`** method returns the next value in the sequence.
+The **`next()`** method of {{jsxref("AsyncGenerator")}} instances returns the next value in the sequence.
 
 ## Syntax
 
 ```js-nolint
-asyncGeneratorObject.next()
-asyncGeneratorObject.next(value)
+next()
+next(value)
 ```
 
 ### Parameters

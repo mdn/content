@@ -59,7 +59,7 @@ myHeaders.forEach((value, key) => {
 
 The result is:
 
-```
+```plain
 compression ==> gzip
 content-type ==> application/json
 cookie ==> This is a demo cookie

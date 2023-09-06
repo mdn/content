@@ -7,13 +7,13 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{CSSRef("Selectors")}}
 
-The CSS selector represents a particular pattern of element or elements in a tree structure. The term "selector" can refer to a [simple selector](#simple-selector), a [compound selector](#compound-selector), or a [complex selector](#complex-selector). When included in the `:has()` pseudo-class as a parameter, these selectors are referred to as [relative selectors](#relative-selector), representing elements relative to one or more anchor elements.
+The CSS selector represents a particular pattern of element or elements in a tree structure. The term "selector" can refer to a [simple selector](#simple_selector), a [compound selector](#compound_selector), or a [complex selector](#complex_selector). When included in the `:has()` pseudo-class as a parameter, these selectors are referred to as [relative selectors](#relative_selector), representing elements relative to one or more anchor elements.
 
-These selectors can be combined into a comma-separated [selector list](#selector-list). If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Selector_list##valid_and_invalid_selector_lists) list is invalid, the entire selector list is invalidated.
+These selectors can be combined into a comma-separated [selector list](#selector_list). If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Selector_list#valid_and_invalid_selector_lists) list is invalid, the entire selector list is invalidated.
 
 ### Simple selector
 
-A **simple selector** is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. Any selector that contains a single [basic selector](/en-US/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators#basic_selectors), [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), or [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selector is a simple selector.
+A **simple selector** is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. Any selector that contains a single [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), or [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selector is a simple selector.
 
 ```css
 #myId {
@@ -25,7 +25,7 @@ A **simple selector** is a selector with a single component, such as a single ty
 
 ### Compound selector
 
-A **compound selector** is a sequence of [simple selectors](#simple_selector) that are not separated by a [combinator](/en-US/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators#combinators). A compound selector represents a set of simultaneous conditions on a single element. A given element is said to match a compound selector when the element matches all the simple selectors in the compound selector.
+A **compound selector** is a sequence of [simple selectors](#simple_selector) that are not separated by a [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators). A compound selector represents a set of simultaneous conditions on a single element. A given element is said to match a compound selector when the element matches all the simple selectors in the compound selector.
 
 ```css
 a#selected {
@@ -88,7 +88,7 @@ If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Selector_list#
 }
 ```
 
-The {{cssxref("is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-classes can be used to construct [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list).
+The {{cssxref(":is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-classes can be used to construct [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list).
 
 ## Specifications
 
@@ -101,4 +101,4 @@ The {{cssxref("is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-clas
 - {{DOMXref("Document.querySelector()")}}
 - {{DOMXref("Document.querySelectorAll()")}}
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo) module
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module

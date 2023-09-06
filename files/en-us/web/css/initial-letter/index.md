@@ -11,6 +11,8 @@ browser-compat: css.properties.initial-letter
 
 The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters.
 
+## Syntax
+
 ```css
 /* Keyword values */
 initial-letter: normal;
@@ -28,8 +30,6 @@ initial-letter: revert;
 initial-letter: revert-layer;
 initial-letter: unset;
 ```
-
-## Syntax
 
 The keyword value `normal`, or a `<number>` optionally followed by an `<integer>`.
 

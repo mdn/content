@@ -156,8 +156,8 @@ function logCookies(e) {
 // "requestHeaders" so we get the headers
 browser.webRequest.onSendHeaders.addListener(
   logCookies,
-  {urls: [targetPage]},
-  ["requestHeaders"]
+  { urls: [targetPage] },
+  ["requestHeaders"],
 );
 ```
 

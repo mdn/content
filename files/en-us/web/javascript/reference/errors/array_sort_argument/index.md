@@ -10,7 +10,7 @@ The JavaScript exception "invalid Array.prototype.sort argument" occurs when the
 
 ## Message
 
-```
+```plain
 TypeError: The comparison function must be either a function or undefined (V8-based)
 TypeError: invalid Array.prototype.sort argument (Firefox)
 TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined (Safari)

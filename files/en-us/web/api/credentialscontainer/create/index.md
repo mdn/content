@@ -152,10 +152,12 @@ The `publicKey` object can contain the following properties:
 
   - : An object whose properties are criteria used to filter out the potential authenticators for the credential creation operation. This object can contain the properties:
 
-    - `authenticatorAttachment` {{optional_inline}}: A string indicating which authenticator attachment type should be permitted for the chosen authenticator. Possible values are: Allowed values are:
+    - `authenticatorAttachment` {{optional_inline}}: A string indicating which authenticator attachment type should be permitted for the chosen authenticator. Possible values are:
 
       - `"platform"`: The authenticator is part of the device WebAuthn is running on (termed a **platform authenticator**), therefore WebAuthn will communicate with it using a transport available to that platform, such as a platform-specific API. A public key credential bound to a platform authenticator is called a **platform credential**.
       - `"cross-platform"`: The authenticator is not a part of the device WebAuthn is running on (termed a **roaming authenticator** as it can roam between different devices), therefore WebAuthn will communicate with it using a cross-platform transport protocol such as Bluetooth or NFC. A public key credential bound to a roaming authenticator is called a **roaming credential**.
+
+        If omitted, any type of authenticator, either platform or cross-platform, can be selected for the credential creation operation.
 
     - `requireResidentKey` {{optional_inline}} : A boolean. If set to `true`, it indicates that a resident key is required (see `residentKey`) This property is deprecated, but still available in some implementations for backwards compatibility with WebAuthn Level 1. The value should be set to `true` if `residentKey` is set to `"required"`.
 
@@ -298,12 +300,12 @@ navigator.credentials.create({ publicKey }).then((publicKeyCredential) => {
   // Return public key algorithm identifier
   const pkAlgo = response.getPublicKeyAlgorithm();
 
-  // Return permissable transports array
+  // Return permissible transports array
   const transports = response.getTransports();
 });
 ```
 
-Some of this data will need to be stored on the server for future authentication operations against this credential — for example the public key, the algorithm used, and the permissable transports.
+Some of this data will need to be stored on the server for future authentication operations against this credential — for example the public key, the algorithm used, and the permissible transports.
 
 > **Note:** See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
 

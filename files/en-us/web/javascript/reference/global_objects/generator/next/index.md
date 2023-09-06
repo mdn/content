@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Generator.next
 
 {{JSRef}}
 
-The **`next()`** method returns an
+The **`next()`** method of {{jsxref("Generator")}} instances returns an
 object with two properties `done` and `value`. You can also
 provide a parameter to the `next` method to send a value to the
 generator.
@@ -15,12 +15,13 @@ generator.
 ## Syntax
 
 ```js-nolint
-generatorObject.next(value)
+next()
+next(value)
 ```
 
 ### Parameters
 
-- `value`
+- `value` {{optional_inline}}
 
   - : The value to send to the generator.
 

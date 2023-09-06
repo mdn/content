@@ -18,7 +18,7 @@ The **`MouseScrollEvent`** interface represents events that occur due to the use
 
 ## Method overview
 
-```
+```webidl
 void initMouseScrollEvent(
   in DOMString typeArg,
   in boolean canBubbleArg,

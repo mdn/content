@@ -40,9 +40,9 @@ The `related_applications` field is an array of objects specifying native applic
 ]
 ```
 
-## Related application values
+## Related application properties
 
-Application objects may contain the following values:
+Application objects may contain the following properties:
 
 | Member     | Description                                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------ |

@@ -12,7 +12,7 @@ The **`with()`** method of {{jsxref("Array")}} instances is the [copying](/en-US
 ## Syntax
 
 ```js-nolint
-arrayObject.with(index, value)
+arrayInstance.with(index, value)
 ```
 
 ### Parameters
@@ -96,6 +96,7 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.with` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}

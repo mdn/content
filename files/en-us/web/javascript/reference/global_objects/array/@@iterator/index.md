@@ -11,11 +11,17 @@ The **`[@@iterator]()`** method of {{jsxref("Array")}} instances implements the 
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Array.prototype.values")}} property.
 
+{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
+
 ## Syntax
 
 ```js-nolint
 array[Symbol.iterator]()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -25,7 +31,7 @@ The same return value as {{jsxref("Array.prototype.values()")}}: a new [iterable
 
 ### Iteration using for...of loop
 
-Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes arrays [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically calls this method to obtain the iterator to loop over.
+Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes arrays [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
 
 #### HTML
 

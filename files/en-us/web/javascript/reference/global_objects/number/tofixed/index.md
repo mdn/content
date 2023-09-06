@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Number.toFixed
 
 {{JSRef}}
 
-The **`toFixed()`** method formats a number using fixed-point notation.
+The **`toFixed()`** method of {{jsxref("Number")}} values formats this number using fixed-point notation.
 
 {{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
 
