@@ -75,7 +75,7 @@ Int16Array.of(undefined); // Int16Array [ 0 ]
 ## See also
 
 - [Polyfill of `TypedArray.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.from()")}}
 - {{jsxref("Array.of()")}}

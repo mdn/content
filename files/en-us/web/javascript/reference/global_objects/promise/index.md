@@ -453,7 +453,7 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 ## See also
 
 - [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
-- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - [Promises/A+ specification](https://promisesaplus.com/)
 - [JavaScript Promises: an introduction](https://web.dev/promises/) on web.dev (2013)
 - [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript) slide show by Domenic Denicola (2011)

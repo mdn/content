@@ -175,10 +175,10 @@ parseInt(1e21, 10); // 1
 ## See also
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-- [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
+- [`Number()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Object.prototype.valueOf()")}}
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`BigInt()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
