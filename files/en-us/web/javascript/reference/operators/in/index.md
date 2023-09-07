@@ -1,5 +1,5 @@
 ---
-title: in operator
+title: in
 slug: Web/JavaScript/Reference/Operators/in
 page-type: javascript-operator
 browser-compat: javascript.operators.in

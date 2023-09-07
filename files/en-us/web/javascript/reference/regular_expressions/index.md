@@ -162,5 +162,5 @@ The other {{glossary("ASCII")}} characters, namely space character, `"`, `'`, `_
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("RegExp")}}

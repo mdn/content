@@ -147,4 +147,4 @@ globalThis.isDirectEval = false;
 
 ## See also
 
-- [`for` loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for)
