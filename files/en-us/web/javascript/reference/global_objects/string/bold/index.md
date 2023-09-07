@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.String.bold
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`bold()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("b")}} element (`<b>str</b>`), which causes this string to be displayed as bold.
 

@@ -200,7 +200,7 @@ Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#pri
   - : Returns an array of all symbol properties found directly upon a given object.
 - {{jsxref("Object.getPrototypeOf()")}}
   - : Returns the prototype (internal `[[Prototype]]` property) of the specified object.
-- {{jsxref("Object.groupBy()")}} {{Experimental_Inline}}
+- {{jsxref("Object.groupBy()")}} {{experimental_inline}}
   - : Groups the elements of a given iterable according to the string values returned by a provided callback function. The returned object has separate properties for each group, containing arrays with the elements in the group.
 - {{jsxref("Object.hasOwn()")}}
   - : Returns `true` if the specified object has the indicated property as its _own_ property, or `false` if the property is inherited or does not exist.
@@ -227,20 +227,20 @@ Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#pri
 
 These properties are defined on `Object.prototype` and shared by all `Object` instances.
 
-- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}}
   - : Points to the object which was used as prototype when the object was instantiated.
 - {{jsxref("Object.prototype.constructor")}}
   - : The constructor function that created the instance object. For plain `Object` instances, the initial value is the {{jsxref("Object/Object", "Object")}} constructor. Instances of other constructors each inherit the `constructor` property from their respective `Constructor.prototype` object.
 
 ## Instance methods
 
-- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) {{Deprecated_Inline}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) {{deprecated_inline}}
   - : Associates a function with a property that, when accessed, executes that function and returns its return value.
-- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) {{Deprecated_Inline}}
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) {{deprecated_inline}}
   - : Associates a function with a property that, when set, executes that function which modifies the property.
-- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__) {{Deprecated_Inline}}
+- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__) {{deprecated_inline}}
   - : Returns the function bound as a getter to the specified property.
-- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) {{Deprecated_Inline}}
+- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) {{deprecated_inline}}
   - : Returns the function bound as a setter to the specified property.
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
