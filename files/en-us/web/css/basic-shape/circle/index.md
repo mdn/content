@@ -30,7 +30,7 @@ clip-path: circle(6rem at 12rem 8rem);
       - : Uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the closest side in any dimension.
 
 - `<position>`
-  - : Moves the center of the circle. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a values such as `left`.
+  - : Moves the center of the circle. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a values such as `left`. The `<position>` value defaults to center if omitted.
 
 ## Examples
 

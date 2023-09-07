@@ -24,7 +24,7 @@ they are read or written:
 - In HTML
   - : The attribute name begins with `data-`. It can contain only letters,
     numbers, dashes (`-`), periods (`.`), colons (`:`),
-    and underscores (`_`). Any ASCII capital letters (`A` to
+    and underscores (`_`). Any {{Glossary("ASCII")}} capital letters (`A` to
     `Z`) are converted to lowercase.
 - In JavaScript
   - : The property name of a custom data attribute is the same as the HTML attribute

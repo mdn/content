@@ -22,10 +22,9 @@ format(date)
 - `date`
   - : The date to format.
 
-## Description
+### Return value
 
-The `format` getter formats a date into a string according to the locale and
-formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
+A string representing the given `date` formatted according to the locale and formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
 
 ## Examples
 

@@ -56,7 +56,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### Worker
 
-- The functions {{domxref("URL/createObjectURL_static")}} and {{domxref("URL/revokeObjectURL_static")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+- The functions {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Changes for add-on and Mozilla developers
 

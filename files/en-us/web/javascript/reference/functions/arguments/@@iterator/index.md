@@ -17,6 +17,10 @@ The initial value of this property is the same function object as the initial va
 arguments[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The same return value as {{jsxref("Array.prototype.values()")}}: a new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the value of each index in the `arguments` object.
@@ -62,7 +66,7 @@ f("w", "y", "k", "o", "p");
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Array.prototype.values()")}}

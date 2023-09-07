@@ -21,14 +21,14 @@ The `AsyncFunction()` constructor is not intended to be used directly, and all c
 
 ```js-nolint
 new AsyncFunction(functionBody)
-new AsyncFunction(arg0, functionBody)
-new AsyncFunction(arg0, arg1, functionBody)
-new AsyncFunction(arg0, arg1, /* …, */ argN, functionBody)
+new AsyncFunction(arg1, functionBody)
+new AsyncFunction(arg1, arg2, functionBody)
+new AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 
 AsyncFunction(functionBody)
-AsyncFunction(arg0, functionBody)
-AsyncFunction(arg0, arg1, functionBody)
-AsyncFunction(arg0, arg1, /* …, */ argN, functionBody)
+AsyncFunction(arg1, functionBody)
+AsyncFunction(arg1, arg2, functionBody)
+AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
 > **Note:** `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.
@@ -73,6 +73,6 @@ fn(10, 20).then((v) => {
 
 ## See also
 
-- [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)

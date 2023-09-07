@@ -11,11 +11,17 @@ The **`[@@iterator]()`** method of {{jsxref("TypedArray")}} instances implements
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("TypedArray.prototype.values")}} property.
 
+{{EmbedInteractiveExample("pages/js/typedarray-prototype-@@iterator.html")}}
+
 ## Syntax
 
 ```js-nolint
 typedArray[Symbol.iterator]()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -59,7 +65,7 @@ console.log(arrIter.next().value); // 50
 ## See also
 
 - [Polyfill of `TypedArray.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

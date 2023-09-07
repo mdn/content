@@ -14,7 +14,7 @@ The **`delete()`** method of {{jsxref("WeakSet")}} instances removes the specifi
 ## Syntax
 
 ```js-nolint
-delete(value)
+weakSetInstance.delete(value)
 ```
 
 ### Parameters

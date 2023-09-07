@@ -19,6 +19,10 @@ The **`italics()`** method of {{jsxref("String")}} values creates a string that 
 italics()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with an `<i>` start tag, then the text `str`, and then an `</i>` end tag.

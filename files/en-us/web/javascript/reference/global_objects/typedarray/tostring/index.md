@@ -17,6 +17,10 @@ The **`toString()`** method of {{jsxref("TypedArray")}} instances returns a stri
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the elements of the typed array.
@@ -47,7 +51,7 @@ console.log(`${uint8}`); // 1,2,3
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.join()")}}
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}

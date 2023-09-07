@@ -213,7 +213,7 @@ const sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 ```
 
-Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. More formally, it's disallowed to have `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07`.
+Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-{{Glossary("ASCII")}} character code numbers in octal. In strict mode, this is a syntax error. More formally, it's disallowed to have `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07`.
 
 #### Setting properties on primitive values
 
@@ -426,5 +426,5 @@ These differences are very subtle differences. It's possible that a test suite d
 
 ## See also
 
-- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

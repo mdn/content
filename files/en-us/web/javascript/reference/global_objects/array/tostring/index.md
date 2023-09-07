@@ -18,6 +18,10 @@ specified array and its elements.
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the elements of the array.
@@ -97,7 +101,7 @@ console.log(Array.prototype.toString.call({ join: "not function" }));
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}
 - {{jsxref("Array.prototype.toLocaleString()")}}

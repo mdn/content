@@ -15,7 +15,8 @@ The **`toSpliced()`** method of {{jsxref("Array")}} instances is the [copying](/
 toSpliced(start)
 toSpliced(start, deleteCount)
 toSpliced(start, deleteCount, item1)
-toSpliced(start, deleteCount, item1, item2, itemN)
+toSpliced(start, deleteCount, item1, item2)
+toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 ### Parameters
