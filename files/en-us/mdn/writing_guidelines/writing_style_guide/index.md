@@ -396,7 +396,7 @@ Try to be consistent, though.
 This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
 
 - [Code examples](#code_examples)
-- [Cross-references](#cross-references)
+- [Cross-references (linking)](#cross-references)
 - [External links](#external_links)
 - [Shortened URLs (shortlinks)](#shortened_urls_shortlinks)
 - [Heading levels](#heading_levels)
@@ -421,7 +421,7 @@ A page on MDN Web Docs can contain more than one code example. The following lis
 
 To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
-### Cross-references
+### Cross-references (linking)
 
 When referencing another page or the section of a page on MDN by its title, follow sentence casing in the link text (match the page or section title). Use sentence casing in the link text even if it is different from the linked page title or section title (it might be that the case used in the page or section title is incorrect). Don't use quotation marks around the link text. To refer to a page on MDN by its title, use the following style:
 
@@ -444,7 +444,7 @@ You can link part of a sentence to an article or the section of an article. Be m
 
 On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
 
-In the See also sections in reference pages, glossary pages, and guides, we follow the same cross-referencing guidelines to add links to MDN pages. For more details on the specific ordering and linking rules within the See also section, refer to the [See also section](#see-also-section) guidelines below.
+We follow similar cross-referencing guidelines in the [See also](#see-also-section) sections at the end of reference pages, glossary pages, and guides.
 
 ### External links
 
@@ -575,6 +575,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Incorrect**: The [`revert-layer`](/en-US/docs/Web/CSS/revert-layer) keyword.
   - **Correct**: [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
   - **Incorrect**: The [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
+- As shown in the above examples, add code formatting using backticks (\`) to keywords and literals in the link text, even though the formatting is not used in page and section titles. For example, for the page title "Array() constructor", the link text will be [`Array()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
 
 #### Descriptive text
 
