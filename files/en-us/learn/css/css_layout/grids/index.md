@@ -586,7 +586,7 @@ You can play around with our layout, changing the footer to only sit underneath 
 
 ## Nesting grids and subgrid
 
-It's also possible to nest grids inside each other and create a [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid).
+It's also possible to nest grids inside each other and create a [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
 You can do this by setting `display: grid` on a grid item.
 
 Let's expand on the example by adding a container for articles and use a nested grid to control how multiple articles are laid out.
@@ -882,7 +882,7 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 ## See also
 
 - [CSS Grid guides](/en-US/docs/Web/CSS/CSS_grid_layout#guides)
-- [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
 - [CSS Grid Inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS-Tricks Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) — an article explaining everything about Grid in a visually appealing way
 - [Grid Garden](https://cssgridgarden.com/) — an educational game to learn and better understand the basics of Grid
