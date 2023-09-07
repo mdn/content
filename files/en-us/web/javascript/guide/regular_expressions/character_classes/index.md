@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 page-type: guide
 ---
 
-{{JSSidebar("JavaScript Guide")}}
+{{jsSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
