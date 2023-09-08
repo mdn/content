@@ -396,7 +396,7 @@ Try to be consistent, though.
 This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
 
 - [Code examples](#code_examples)
-- [Cross-references (linking)](#cross-references)
+- [Cross-references (linking)](#cross-references_linking)
 - [External links](#external_links)
 - [Shortened URLs (shortlinks)](#shortened_urls_shortlinks)
 - [Heading levels](#heading_levels)
@@ -556,7 +556,7 @@ However, depending on the type of list you are creating, you will want to adjust
 
 ### See also section
 
-Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This section contains [cross-references](#cross_references) to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
+Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This section contains [cross-references](#cross-references_linking) to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
 
 In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn) area on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
 
