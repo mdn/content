@@ -68,7 +68,7 @@ addEventListener("rtctransform", (event) => {
 ```
 
 The resulting object from a local microphone might look like the one shown below.
-Note that there are no contributing sources because there is just one source.
+Note that there are no contributing sources because there is just one source, and no `sequenceNumber` because this is an outgoing frame.
 
 ```js
 {
