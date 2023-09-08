@@ -126,7 +126,7 @@ const table = new WebAssembly.Table(
     initial: 4,
     maximum: 4,
   },
-  myObject
+  myObject,
 );
 
 console.log(myObject === table.get(2)); // true
