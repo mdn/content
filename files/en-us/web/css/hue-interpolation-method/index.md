@@ -129,6 +129,53 @@ p {
   color: white;
   margin: 6px;
 }
+
+/* Fallback styles */
+.hsl,
+.hsl-named {
+  background: linear-gradient(
+    to right,
+    hsl(39 100% 50%),
+    hsl(46 100% 50%),
+    hsl(53 100% 50%),
+    hsl(60 100% 50%)
+  );
+}
+.hsl-increasing {
+  background: linear-gradient(
+    to right,
+    hsl(190 100% 50%),
+    hsl(225 100% 50%),
+    hsl(260 100% 50%),
+    hsl(295 100% 50%),
+    hsl(330 100% 50%),
+    hsl(365 100% 50%),
+    hsl(400 100% 50%),
+    hsl(435 100% 50%),
+    hsl(470 100% 50%),
+    hsl(505 100% 50%),
+    hsl(540 100% 50%)
+  );
+}
+.hsl-decreasing,
+.hsl-longer,
+.hsl-named-longer {
+  background: linear-gradient(
+    to right,
+    hsl(399 100% 50%),
+    hsl(368 100% 50%),
+    hsl(337 100% 50%),
+    hsl(307 100% 50%),
+    hsl(276 100% 50%),
+    hsl(245 100% 50%),
+    hsl(214 100% 50%),
+    hsl(183 100% 50%),
+    hsl(152 100% 50%),
+    hsl(122 100% 50%),
+    hsl(91 100% 50%),
+    hsl(60 100% 50%)
+  );
+}
 ```
 
 ```css
