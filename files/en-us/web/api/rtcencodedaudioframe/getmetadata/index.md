@@ -10,7 +10,7 @@ browser-compat: api.RTCEncodedAudioFrame.getMetadata
 
 The **`getMetadata()`** method of the {{domxref("RTCEncodedAudioFrame")}} interface returns an object containing the metadata associated with the frame.
 
-This includes information about the frame, including: audio encoding used, the synchronization source and contributing sources, and the sequence number (for incoming frames).
+This includes information about the frame, including the audio encoding used, the synchronization source and contributing sources, and the sequence number (for incoming frames).
 
 ## Syntax
 
@@ -28,7 +28,7 @@ An object with the following properties:
 
 - `synchronizationSource`
   - : A positive integer value indicating synchronization source ("ssrc") of the stream of RTP packets that are described by this frame.
-    A source might be something like a microphone, or some kind of mixer app that combines multiple sources.
+    A source might be something like a microphone, or a mixer application that combines multiple sources.
     All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.
     Note that two frames with the same value refer to the same source.
 - `payloadType`

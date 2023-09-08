@@ -43,7 +43,7 @@ The transform is usually implemented by piping frames from the `readable` throug
 
 The interface also provides methods for a sender to generate get a video encoder to generate a new keyframe, or for a receiver to request a new key frame from the sender's encoder (video encoders commonly send a key frame containing the full information needed to construct an image, and subsequently send delta frames containing just the information that has changed since the previous frame).
 
-These methods are required in cases where a recipient would be unable to decode incoming frame until they receive a new key frame.
+These methods are required in cases where a recipient would be unable to decode incoming frames until they receive a new key frame.
 For example, a new recipient joining a conference call will not be able see video until they have received a new key frame, since delta frames can only be decoded if you have the last key frame and all subsequent delta frames.
 Similarly, if frames are encrypted for a recipient, they will only be able to decode frames once they have received their first encrypted key frame.
 
