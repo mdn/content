@@ -171,8 +171,8 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
     "imports": {
       "shapes": "./shapes/square.js",
       "shapes/square": "./modules/shapes/square.js",
-      "https://example.com/shapes/": "/shapes/square/",
       "https://example.com/shapes/square.js": "./shapes/square.js",
+      "https://example.com/shapes/": "/shapes/square/",
       "../shapes/square": "./shapes/square.js"
     }
   }
