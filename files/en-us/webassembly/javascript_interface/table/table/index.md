@@ -37,7 +37,7 @@ new WebAssembly.Table(tableDescriptor, value)
 - If `tableDescriptor` is not an object, a {{jsxref("TypeError")}} is thrown.
 - If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
 - If `element` is not one of the [reference types](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), then a {{jsxref("TypeError")}} is thrown.
-- If `value` is not a value of the type `element`, a {{jsxref("TypeError")}} is throw.
+- If `value` is not a value of the type `element`, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
