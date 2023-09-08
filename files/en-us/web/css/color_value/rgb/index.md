@@ -27,7 +27,7 @@ The function also accepts a legacy syntax in which all values are separated with
 Functional notation: `rgb(R G B[ / A])`
 
 - `R`, `G`, `B`
-  - : Each as a whole {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which represent the red, green, and blue channels, respectively.
+  - : Each as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which represent the red, green, and blue channels, respectively.
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
