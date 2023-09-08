@@ -47,11 +47,10 @@ This code adds a click handler that asks for various permissions, then logs the 
 ```js
 const permissionsToRequest = {
   permissions: ["bookmarks", "history"],
-  origins: ["https://developer.mozilla.org/"]
-}
+  origins: ["https://developer.mozilla.org/"],
+};
 
 async function requestPermissions() {
-
   function onResponse(response) {
     if (response) {
       console.log("Permission was granted");
@@ -67,7 +66,9 @@ async function requestPermissions() {
   console.log(`Current permissions:`, currentPermissions);
 }
 
-document.querySelector("#request").addEventListener("click", requestPermissions);
+document
+  .querySelector("#request")
+  .addEventListener("click", requestPermissions);
 ```
 
 {{WebExtExamples}}

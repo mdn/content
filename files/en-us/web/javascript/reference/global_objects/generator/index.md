@@ -53,7 +53,7 @@ _Also inherits instance methods from its parent {{jsxref("Iterator")}}_.
 - {{jsxref("Generator.prototype.next()")}}
   - : Returns a value yielded by the {{JSxRef("Operators/yield", "yield")}} expression.
 - {{jsxref("Generator.prototype.return()")}}
-  - : Acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
+  - : Acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) block.
 - {{jsxref("Generator.prototype.throw()")}}
   - : Acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
 
@@ -93,4 +93,4 @@ console.log(generator.next().value); // 2
 - {{JSxRef("Statements/function*", "function*")}}
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{JSxRef("GeneratorFunction")}}
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

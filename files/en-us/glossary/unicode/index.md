@@ -4,6 +4,8 @@ slug: Glossary/Unicode
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 Unicode is a standard {{Glossary("Character set","character set")}} that numbers and defines {{Glossary("Character","characters")}} from the world's different languages, writing systems, and symbols.
 
 By assigning each character a number, programmers can create {{Glossary("Character encoding","character encodings")}}, to let computers store, process, and transmit any combination of languages in the same file or program.

@@ -1,6 +1,7 @@
 ---
 title: Updating add-ons for Firefox 8
 slug: Mozilla/Firefox/Releases/8/Updating_add-ons
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

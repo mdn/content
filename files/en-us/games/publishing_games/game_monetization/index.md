@@ -1,6 +1,7 @@
 ---
 title: Game monetization
 slug: Games/Publishing_games/Game_monetization
+page-type: guide
 ---
 
 {{GamesSidebar}}

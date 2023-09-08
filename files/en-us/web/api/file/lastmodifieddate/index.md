@@ -25,7 +25,7 @@ const fileInput = document.getElementById("myfileinput");
 
 for (const file of fileInput.files) {
   console.log(
-    `${file.name} has a last modified date of ${file.lastModifiedDate}`
+    `${file.name} has a last modified date of ${file.lastModifiedDate}`,
   );
 }
 ```

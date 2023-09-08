@@ -1,6 +1,7 @@
 ---
 title: What is JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
@@ -409,7 +410,7 @@ Scripts loaded using the `defer` attribute (see below) will run in the order the
 ```
 
 In the second example, we can be sure that `jquery.js` will load before `script2.js` and `script3.js` and that `script2.js` will load before `script3.js`.
-They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one of more elements on the page).
+They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
 
 To summarize:
 

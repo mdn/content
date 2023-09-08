@@ -9,7 +9,7 @@ browser-compat: css.properties.masonry-auto-flow
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`masonry-auto-flow`** CSS property modifies how items are placed when using [masonry](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) in [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+The **`masonry-auto-flow`** CSS property modifies how items are placed when using [masonry](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 ## Syntax
 

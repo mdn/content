@@ -7,7 +7,11 @@ browser-compat: css.properties.orphans
 
 {{CSSRef}}
 
-The **`orphans`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
+The **`orphans`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/CSS_paged_media), region, or [column](/en-US/docs/Web/CSS/CSS_multicol_layout).
+
+In typography, an _orphan_ is the first line of a paragraph that appears alone at the bottom of a page. (The paragraph continues on a following page.)
+
+## Syntax
 
 ```css
 /* <integer> values */
@@ -21,10 +25,6 @@ orphans: revert;
 orphans: revert-layer;
 orphans: unset;
 ```
-
-In typography, an _orphan_ is the first line of a paragraph that appears alone at the bottom of a page. (The paragraph continues on a following page.)
-
-## Syntax
 
 ### Values
 
@@ -93,4 +93,4 @@ p:first-child {
 ## See also
 
 - {{cssxref("widows")}}
-- [Paged media](/en-US/docs/Web/CSS/Paged_Media)
+- [Paged media](/en-US/docs/Web/CSS/CSS_paged_media)

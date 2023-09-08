@@ -1,6 +1,7 @@
 ---
 title: Firefox 60 for developers
 slug: Mozilla/Firefox/Releases/60
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -22,7 +23,7 @@ This article provides information about the changes in Firefox 60 that will affe
 
 ### HTML
 
-Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
+Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
 
 ### CSS
 
@@ -50,7 +51,7 @@ _No changes._
 
 #### DOM
 
-- In the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API), the `MakePublicKeyCredentialOptions` dictionary object has been renamed {{domxref("PublicKeyCredentialCreationOptions")}}; this change has been made in Firefox ([Firefox bug 1436473](https://bugzil.la/1436473)).
+- In the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API), the `MakePublicKeyCredentialOptions` dictionary object has been renamed `PublicKeyCredentialCreationOptions`; this change has been made in Firefox ([Firefox bug 1436473](https://bugzil.la/1436473)).
 - The `dom.workers.enabled` pref has been removed, meaning workers can no longer be disabled since ([Firefox bug 1434934](https://bugzil.la/1434934)).
 - The {{domxref("Document.body","body")}} property is now implemented on the {{domxref("Document")}} interface, rather than the {{domxref("HTMLDocument")}} interface ([Firefox bug 1276438](https://bugzil.la/1276438)).
 - {{domxref("PerformanceResourceTiming")}} is now available in workers ([Firefox bug 1425458](https://bugzil.la/1425458)).
@@ -73,7 +74,7 @@ _No changes._
 
 - When recording or sharing media obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, muting the camera by setting the corresponding track's {{domxref("MediaStreamTrack.enabled")}} property to `false` now turns off the camera's "in use" indicator light, to help the user more easily see that the camera is not in use ([Firefox bug 1299515](https://bugzil.la/1299515)). See [User privacy](/en-US/docs/Web/API/MediaDevices/getUserMedia#user_privacy) for more details. See also [this blog post](https://blog.mozilla.org/webrtc/better-privacy-on-camera-mute-in-firefox-60/).
 - Removing a track from an {{domxref("RTCPeerConnection")}} using {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} no longer removes the track's {{domxref("RTCRtpSender")}} from the peer connection's list of senders as reported by {{domxref("RTCPeerConnection.getSenders", "getSenders()")}} ([Firefox bug 1290949](https://bugzil.la/1290949)).
-- The {{domxref("RTCRtpContributingSource")}} and {{domxref("RTCRtpSynchronizationSource")}} objects' timestamps were previously being reported based on values returned by {{jsxref("Date.getTime()")}}. In Firefox 60, these have been fixed to correctly use the [Performance Timing API](/en-US/docs/Web/API/Performance_API) instead ([Firefox bug 1433576](https://bugzil.la/1433576)).
+- The `RTCRtpContributingSource` and `RTCRtpSynchronizationSource` objects' timestamps were previously being reported based on values returned by {{jsxref("Date.getTime()")}}. In Firefox 60, these have been fixed to correctly use the [Performance Timing API](/en-US/docs/Web/API/Performance_API) instead ([Firefox bug 1433576](https://bugzil.la/1433576)).
 - As per spec, the {{domxref("ConvolverNode.ConvolverNode","ConvolverNode()")}} constructor now throws a `NotSupportedError` {{domxref("DOMException")}} if the referenced {{domxref("AudioBuffer")}} does not have 1, 2, or 4 channels ([Firefox bug 1443228](https://bugzil.la/1443228)).
 - The obsolete {{domxref("RTCPeerConnection")}} event handler {{domxref("RTCPeerConnection.removestream_event", "RTCPeerConnection.onremovestream")}} has been removed; by now you should be using {{domxref("MediaStream/removetrack_event", "removetrack")}} events instead ([Firefox bug 1442385](https://bugzil.la/1442385)).
 - The primary name for {{domxref("RTCDataChannel")}} is now in fact `RTCDataChannel`, instead of being an alias for `DataChannel`. The name `DataChannel` is no longer supported ([Firefox bug 1173851](https://bugzil.la/1173851)).

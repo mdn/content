@@ -30,7 +30,7 @@ This attribute may have one of the following values:
     Devices may or may not show a minus key.
 - `search`
   - : A virtual keyboard optimized for search input.
-    For instance, the [return/submit key](https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled "Search".
+    For instance, the [return/submit key](https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled "Search".
 - `tel`
   - : A telephone keypad input that includes the digits 0–9, the asterisk (<kbd>\*</kbd>), and the pound (<kbd>#</kbd>) key.
 - `text`

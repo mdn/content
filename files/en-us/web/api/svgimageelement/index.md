@@ -16,9 +16,9 @@ The **`SVGImageElement`** interface corresponds to the {{SVGElement("image")}} e
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
 - {{domxref("SVGImageElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("image")}} element.
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.decoding")}}
-  - : A string representing a hint given to the browser on how it should decode the image.
+  - : Represents a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `"sync"` to decode the image synchronously, `"async"` to decode it asynchronously, or `"auto"` to indicate no preference (which is the default).
 - {{domxref("SVGImageElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.preserveAspectRatio")}} {{ReadOnlyInline}}

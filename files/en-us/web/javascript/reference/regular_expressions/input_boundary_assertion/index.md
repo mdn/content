@@ -77,10 +77,10 @@ const variables = ["foo", "foo:bar", "  foo  "];
 
 function toAssignment(key) {
   if (isValidIdentifier(key)) {
-    return `globalThis.${key} = undefined;`
+    return `globalThis.${key} = undefined;`;
   }
   // JSON.stringify() escapes quotes and other special characters
-  return `globalThis[${JSON.stringify(key)}] = undefined;`
+  return `globalThis[${JSON.stringify(key)}] = undefined;`;
 }
 
 const statements = variables.map(toAssignment).join("\n");
@@ -101,8 +101,8 @@ console.log(statements);
 
 ## See also
 
-- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)

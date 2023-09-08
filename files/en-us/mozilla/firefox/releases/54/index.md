@@ -1,6 +1,7 @@
 ---
 title: Firefox 54 for developers
 slug: Mozilla/Firefox/Releases/54
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -16,12 +17,12 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 ### CSS
 
-- {{cssxref("clip-path")}} now supports [basic shapes](/en-US/docs/Web/CSS/CSS_Shapes) ([Firefox bug 1247229](https://bugzil.la/1247229)).
+- {{cssxref("clip-path")}} now supports [basic shapes](/en-US/docs/Web/CSS/CSS_shapes) ([Firefox bug 1247229](https://bugzil.la/1247229)).
 - Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}} as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ([Firefox bug 1340309](https://bugzil.la/1340309)).
 - {{htmlelement("input")}} elements of types `checkbox` and `radio` with {{cssxref("appearance", "-moz-appearance")}}`: none;` set on them are now non-replaced elements, for compatibility with other browsers ([Firefox bug 605985](https://bugzil.la/605985)).
 - Previously, an element styled with {{cssxref("display")}}: `inline-block` with a child element of type {{domxref("HTMLInputElement")}} styled with `display:block` had a wrong baseline ([Firefox bug 1330962](https://bugzil.la/1330962)). This is now fixed.
 - When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to `<option>` elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See [Firefox bug 910022](https://bugzil.la/910022) for more information. Note that this is still disabled in Linux due to lack of contrast (see [Firefox bug 1338283](https://bugzil.la/1338283) for progress on this).
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) now send the {{domxref("Element/animationcancel_event", "animationcancel")}} event as expected when an animation aborts prematurely ([Firefox bug 1302648](https://bugzil.la/1302648)).
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) now send the {{domxref("Element/animationcancel_event", "animationcancel")}} event as expected when an animation aborts prematurely ([Firefox bug 1302648](https://bugzil.la/1302648)).
 - Transparent colors (i.e. those with an alpha channel of 0) were being serialized to the [`transparent` color keyword](/en-US/docs/Web/CSS/color_value) in certain situations; this has been fixed so that Firefox follows the spec (as well as other browsers' implementations). See ([Firefox bug 1339394](https://bugzil.la/1339394) for further information.
 - The proprietary `:-moz-table-border-nonzero` pseudo-class is no longer available to web content; it is now restricted to Firefox's internal UA stylesheet ([Firefox bug 1341925](https://bugzil.la/1341925)).
 - \[css-grid] Intrinsic content with overflow:auto overlaps in grid ([Firefox bug 1348857](https://bugzil.la/1348857)).
@@ -44,7 +45,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 ### Web Workers and Service Workers
 
-- {{domxref("WorkerGlobalScope.close")}} is now available on {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope.close", "SharedWorkerGlobalScope")}} instead. This change was made to stop `close()` being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see [Firefox bug 1336043](https://bugzil.la/1336043)).
+- `WorkerGlobalScope.close` is now available on {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope.close", "SharedWorkerGlobalScope")}} instead. This change was made to stop `close()` being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see [Firefox bug 1336043](https://bugzil.la/1336043)).
 - The {{domxref("origin")}} property has been implemented (see [Firefox bug 1306170](https://bugzil.la/1306170)).
 - The {{domxref("Client.type")}} property has been implemented (see [Firefox bug 1339844](https://bugzil.la/1339844)).
 - {{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see [Firefox bug 1266747](https://bugzil.la/1266747)).
@@ -61,7 +62,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 #### Media Capture and Streams API
 
-- Usage of a {{domxref("MediaStream")}} object as the input parameter to {{domxref("URL.createObjectURL()")}} has been deprecated — the console will now show a warning (see [Firefox bug 1334564](https://bugzil.la/1334564)). You are advised to use {{domxref("HTMLMediaElement.srcObject")}} instead.
+- Usage of a {{domxref("MediaStream")}} object as the input parameter to {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} has been deprecated — the console will now show a warning (see [Firefox bug 1334564](https://bugzil.la/1334564)). You are advised to use {{domxref("HTMLMediaElement.srcObject")}} instead.
 
 #### Web Audio API
 

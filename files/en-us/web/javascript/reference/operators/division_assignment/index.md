@@ -49,4 +49,4 @@ foo /= 2n; // 0n
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Division (`/`)](/en-US/docs/Web/JavaScript/Reference/Operators/Division)

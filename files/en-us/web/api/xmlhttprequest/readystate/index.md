@@ -23,7 +23,7 @@ The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest c
 - OPENED
   - : open() method has been invoked. During this state, the request headers can be set using the [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader) method and the [send()](/en-US/docs/Web/API/XMLHttpRequest/send) method can be called which will initiate the fetch.
 - HEADERS_RECEIVED
-  - : send() has been called and the response headers have been received.
+  - : send() has been called, all redirects (if any) have been followed and the response headers have been received.
 - LOADING
   - : Response's body is being received. If [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) is "text" or empty string, [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) will have the partial text response as it loads.
 - DONE

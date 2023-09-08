@@ -4,6 +4,8 @@ slug: Glossary/Type
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Type** is a characteristic of a {{glossary("value")}} affecting what kind of data it can store, and the structure that the data will adhere to. For example, a {{Glossary("boolean")}} [Data Type](/en-US/docs/Web/JavaScript/Data_structures) can hold only a `true` or `false` value at any given time, whereas a {{Glossary("string")}} has the ability to hold a string or a sequence of characters, a {{Glossary("number")}} can hold numerical values of any kind, and so on.
 
 A value's data type also affects the operations that are valid on that value. For example, a value of type number can be multiplied by another number, but not by a string - even if that string contains _only_ a number, such as the string "2".

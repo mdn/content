@@ -79,7 +79,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE
+  BUFFER_SIZE,
 );
 
 // ...

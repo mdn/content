@@ -1,6 +1,7 @@
 ---
 title: Insecure passwords
 slug: Web/Security/Insecure_passwords
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

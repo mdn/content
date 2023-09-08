@@ -4,6 +4,8 @@ slug: Glossary/Favicon
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A favicon (favorite icon) is a tiny icon included along with a website, which is displayed in places like the browser's address bar, page tabs and bookmarks menu.
 
 Note, however, that most modern browsers replaced the favicon from the address bar by an image indicating whether or not the website is using {{Glossary("HTTPS")}}.

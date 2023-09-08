@@ -68,6 +68,8 @@ browser-compat: path.to.feature.NameOfTheElement
 >   The content of the sidebar depends on the tags in the page metadata.
 > - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
+> Samples of the **Experimental** and **Deprecated** banners are shown right after this note block.
+>
 > _Remember to remove this whole explanatory note before publishing_
 
 {{SeeCompatTable}}{{Deprecated_Header}}{{HTMLSidebar}}
@@ -192,11 +194,15 @@ Optionally, warn of any potential accessibility concerns that exist with using t
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
@@ -204,3 +210,4 @@ Include links to reference pages and guides related to the current element. For 
 
 - link1
 - link2
+- external_link (year)

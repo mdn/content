@@ -1,6 +1,7 @@
 ---
 title: Guide to Web APIs
 slug: Web/Guide/API
+page-type: landing-page
 ---
 
 <section id="Quick_links">

@@ -141,7 +141,7 @@ if (user.authenticated) {
 
 JavaScript also has built-in APIs that produce `null`-prototype objects, especially those that use objects as ad hoc key-value collections. For example:
 
-- The return value of {{jsxref("Array.prototype.group()")}}
+- The return value of {{jsxref("Object.groupBy()")}}
 - The `groups` and `indices.groups` properties of the result of {{jsxref("RegExp.prototype.exec()")}}
 - [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) (all `@@unscopables` objects should have `null`-prototype)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
@@ -151,7 +151,7 @@ The term "`null`-prototype object" often also includes any object without `Objec
 
 ### Object coercion
 
-Many built-in operations that expect objects first coerce their arguments to objects. [The operation](https://tc39.es/ecma262/#sec-toobject) can be summarized as follows:
+Many built-in operations that expect objects first coerce their arguments to objects. [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toobject) can be summarized as follows:
 
 - Objects are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
@@ -200,6 +200,8 @@ Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#pri
   - : Returns an array of all symbol properties found directly upon a given object.
 - {{jsxref("Object.getPrototypeOf()")}}
   - : Returns the prototype (internal `[[Prototype]]` property) of the specified object.
+- {{jsxref("Object.groupBy()")}} {{Experimental_Inline}}
+  - : Groups the elements of a given iterable according to the string values returned by a provided callback function. The returned object has separate properties for each group, containing arrays with the elements in the group.
 - {{jsxref("Object.hasOwn()")}}
   - : Returns `true` if the specified object has the indicated property as its _own_ property, or `false` if the property is inherited or does not exist.
 - {{jsxref("Object.is()")}}

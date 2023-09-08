@@ -51,8 +51,8 @@ Events have three functions:
   - : `integer`. The ID of the tab in which the navigation is about to occur.
 - `url`
   - : `string`. The URL to which the given frame will navigate.
-- `processId`
-  - : `integer`. The ID of the process in which this tab is being rendered.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `timeStamp`
@@ -72,12 +72,8 @@ Logs the target URLs and extra transition information for `onReferenceFragmentUp
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnReferenceFragmentUpdated(details) {
   console.log(`onReferenceFragmentUpdated: ${details.url}`);
@@ -85,7 +81,10 @@ function logOnReferenceFragmentUpdated(details) {
   console.log(`Transition qualifiers: ${details.transitionQualifiers}`);
 }
 
-browser.webNavigation.onReferenceFragmentUpdated.addListener(logOnReferenceFragmentUpdated, filter);
+browser.webNavigation.onReferenceFragmentUpdated.addListener(
+  logOnReferenceFragmentUpdated,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

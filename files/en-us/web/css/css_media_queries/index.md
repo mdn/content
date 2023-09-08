@@ -1,5 +1,5 @@
 ---
-title: Media queries
+title: CSS media queries
 slug: Web/CSS/CSS_media_queries
 page-type: css-module
 spec-urls:
@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-**Media queries** are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) that allow you to apply CSS styles depending on the presence or value of device characteristics.
+**CSS media queries** are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) that allow you to apply CSS styles depending on the presence or value of device characteristics.
 
 It's common to apply a media query based on the {{Glossary("viewport")}} size so that layout choices can be made for devices with different screen sizes.
 For example, you may have a smaller font size for devices with small screens, increase the padding between paragraphs when a page is viewed in portrait mode, or increase the size of buttons on touchscreens.

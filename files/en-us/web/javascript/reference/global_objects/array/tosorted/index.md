@@ -12,17 +12,8 @@ The **`toSorted()`** method of {{jsxref("Array")}} instances is the [copying](/e
 ## Syntax
 
 ```js-nolint
-// Functionless
 toSorted()
-
-// Arrow function
-toSorted((a, b) => { /* … */ })
-
-// Compare function
 toSorted(compareFn)
-
-// Inline compare function
-toSorted(function compareFn(a, b) { /* … */ })
 ```
 
 ### Parameters
@@ -85,6 +76,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
+  3: 3, // ignored by toSorted() since length is 3
 };
 console.log(Array.prototype.toSorted.call(arrayLike));
 // [4, 5, undefined]
@@ -101,6 +93,7 @@ console.log(Array.prototype.toSorted.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.toSorted` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.sort()")}}
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}

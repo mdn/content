@@ -1,6 +1,7 @@
 ---
 title: Debugging CSS
 slug: Learn/CSS/Building_blocks/Debugging_CSS
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}

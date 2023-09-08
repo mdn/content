@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: HTML accessibility"
 slug: Learn/Accessibility/Test_your_skills:_HTML_accessibility
+page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}
