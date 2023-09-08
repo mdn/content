@@ -13,7 +13,7 @@ CSS (Cascading Style Sheets) is used to style and lay out web pages — for exam
 > #### Looking to become a front-end web developer?
 >
 > We have put together a course that includes all the essential information you need to
-> work towards your goal.
+> Work towards your goal.
 >
 > [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
@@ -22,7 +22,7 @@ CSS (Cascading Style Sheets) is used to style and lay out web pages — for exam
 Before starting this module, you should have:
 
 1. Basic familiarity with using computers and using the Web passively (i.e. looking at it, consuming the content.)
-2. A basic work environment set up, as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+2. A basic work environment set-up, as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
 3. Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
 
 > **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
