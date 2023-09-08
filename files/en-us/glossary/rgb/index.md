@@ -16,7 +16,7 @@ Note that there are other RGB color spaces, like the _Adobe RGB_ color space, th
 
 There are many ways to describe the RGB components of a color. In {{Glossary("CSS")}} they can be represented as a single 24-bit integer in hexadecimal notation (for example, `#add8e6` is light blue), or in functional notation, [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) as three separate numbers between 0 and 255 (for example, `rgb(46 139.5 87)`). There are also the `srgb`, `srgb-linear`, `a98-rgb`, and `prophoto-rgb` color spaces for the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
 
-RGB is not the only color model that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web. These are limited to the 16,777,216 color spectrum defined by the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function.
+RGB is not the only color model that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
 
 ## See also
 
