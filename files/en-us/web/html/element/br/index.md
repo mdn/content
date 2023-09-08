@@ -37,11 +37,11 @@ You can set a {{cssxref("margin")}} on `<br>` elements themselves to increase th
 In the following example we use `<br>` elements to create line breaks between the different lines of a postal address:
 
 ```html
-Mozilla<br />
-331 E. Evelyn Avenue<br />
-Mountain View, CA<br />
-94041<br />
-USA<br />
+Mozilla<br>
+331 E. Evelyn Avenue<br>
+Mountain View, CA<br>
+94041<br>
+USA<br>
 ```
 
 #### Result
