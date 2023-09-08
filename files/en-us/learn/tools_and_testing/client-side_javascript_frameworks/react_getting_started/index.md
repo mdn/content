@@ -244,7 +244,7 @@ Releases of React prior to the React 17 release in 2020 also required an import 
 
 ### The App component
 
-After the imports, we have a function named `App`. Whereas most of the JavaScript community prefers {{Glossary("camel_case", "lower camel case")}} names like `helloWorld`, React components use pascal case (or upper camel case) variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the `App` function to `app`, your browser would show you an error.
+After the imports, we have a function named `App`. Whereas most of the JavaScript community prefers {{Glossary("camel_case", "lower camel case")}} names like `helloWorld`, React components use Pascal case (or upper camel case) variable names, like `HelloWorld`, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the `App` function to `app`, your browser would show you an error.
 
 Let's look at `App` more closely.
 
