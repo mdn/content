@@ -167,7 +167,9 @@ been added to the connection.
 
 This method may return either a new `RTCRtpSender` or, under very specific
 circumstances, an existing compatible sender which has not yet been used to transmit
-data. Compatible reusable `RTCRtpSender` instances meet these criteria:
+data.
+
+Compatible reusable `RTCRtpSender` instances meet these criteria:
 
 - There is no track already associated with the sender.
 - The {{domxref("RTCRtpTransceiver")}} associated with the sender has a
@@ -177,25 +179,18 @@ data. Compatible reusable `RTCRtpSender` instances meet these criteria:
   the `track` parameter specified when calling
   `RTCPeerConnection.addTrack()`. This ensures that a transceiver only
   handles audio or video and never both.
-- The `RTCRtpTransceiver`'s {{domxref("RTCRtpTransceiver.stopped",
-    "stopped")}} property is `false`.
-- The `RTCRtpSender` being considered has never been used to send data. If
-  the transceiver's {{domxref("RTCRtpTransceiver.currentDirection",
-    "currentDirection")}} has ever been `"sendrecv"` or
-  `"sendonly"`, the sender can't be reused.
+- The {{domxref("RTCRtpTransceiver.currentDirection")}} property is not `"stopped"`.
+- The `RTCRtpSender` being considered has never been used to send data.
+  If the transceiver's {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} has ever been `"sendrecv"` or `"sendonly"`, the sender can't be reused.
 
-If all of those criteria are met, the sender gets reused, which results in these
-changes occurring to the existing `RTCRtpSender` and its
-`RTCRtpTransceiver`:
+If all of those criteria are met, the sender gets reused, which results in these changes occurring to the existing `RTCRtpSender` and its `RTCRtpTransceiver`:
 
 - The `RTCRtpSender`'s {{domxref("RTCRtpSender.track", "track")}} is set to
   the specified track.
 - The sender's set of associated streams is set to the list of streams passed into
   this method, `stream...`.
-- The associated {{domxref("RTCRtpTransceiver")}} has its
-  `currentDirection` updated to include sending; if its current value is
-  `"recvonly"`, it becomes `"sendrecv"`, and if its current value
-  is `"inactive"`, it becomes `"sendonly"`.
+- The associated {{domxref("RTCRtpTransceiver")}} has its `currentDirection` updated to include sending;
+  if its current value is `"recvonly"`, it becomes `"sendrecv"`, and if its current value is `"inactive"`, it becomes `"sendonly"`.
 
 ### New senders
 
