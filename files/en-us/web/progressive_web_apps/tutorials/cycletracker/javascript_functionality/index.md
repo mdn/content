@@ -167,7 +167,7 @@ function getAllStoredPeriods() {
 }
 ```
 
-### Render data
+### Render data to screen
 
 The last step of our application is to render the list of past periods to the screen along with a heading.
 
