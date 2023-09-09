@@ -27,11 +27,12 @@ None.
 
 A new asynchronous iterator provides a {{jsxref('Promise')}} which fulfills with
 an object with the following properties:
-  - `done`
-    - : A boolean value, representing if the iteration has ended.
-  - `value`
-    - : A {{domxref("FileSystemHandle")}} object. The handle of the entry.
-        If the iteration has ended, It would be `undefined`.
+
+- `done`
+  - : A boolean value, representing if the iteration has ended.
+- `value`
+  - : A {{domxref("FileSystemHandle")}} object. The handle of the entry.
+    If the iteration has ended, It would be `undefined`.
 
 ## Examples
 
