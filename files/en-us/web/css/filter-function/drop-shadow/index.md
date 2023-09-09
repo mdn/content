@@ -21,6 +21,12 @@ A drop shadow is effectively a blurred, offset version of the input image's alph
 /* drop-shadow( <offset-x> <offset-y> ) */
 drop-shadow(5px 5px)
 
+/* drop-shadow( <offset-x> <offset-y> <standard-deviation> ) */
+drop-shadow(5px 5px 15px)
+
+/* drop-shadow( <offset-x> <offset-y> <color> ) */
+drop-shadow(5px 5px red)
+
 /* drop-shadow( <offset-x> <offset-y> <standard-deviation> <color> ) */
 drop-shadow(5px 5px 15px red)
 
