@@ -9,9 +9,9 @@ browser-compat: api.FileSystemDirectoryHandle.values
 {{securecontext_header}}{{APIRef("File System API")}}
 
 The **`values()`** method of the
-{{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
-containing the values for each index in the `FileSystemDirectoryHandle`
-object.
+{{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
+for the iteration of the value of the entries within the `FileSystemDirectoryHandle`
+on which this method is called. The order of iteration is uncertain.
 
 ## Syntax
 
@@ -25,9 +25,17 @@ None.
 
 ### Return value
 
-A new {{jsxref('Array')}}
+A new asynchronous iterator provides a {{jsxref('Promise')}} which fulfills with
+an object with the following properties:
+  - `done`
+    - : A boolean value, representing if the iteration has ended.
+  - `value`
+    - : A {{domxref("FileSystemHandle")}} object. The handle of the entry.
+        If the iteration has ended, It would be `undefined`.
 
 ## Examples
+
+Use the `for await...of` loop can simplify the iteration process.
 
 ```js
 const dirHandle = await window.showDirectoryPicker();

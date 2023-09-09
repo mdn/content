@@ -9,8 +9,9 @@ browser-compat: api.FileSystemDirectoryHandle.keys
 {{securecontext_header}}{{APIRef("File System API")}}
 
 The **`keys()`** method of the
-{{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
-containing the keys for each item in `FileSystemDirectoryHandle`.
+{{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
+for the iteration of the key of the entries within the `FileSystemDirectoryHandle`
+on which this method is called. The order of iteration is uncertain.
 
 ## Syntax
 
@@ -24,9 +25,16 @@ None.
 
 ### Return value
 
-A new {{jsxref('Array')}}
+A new asynchronous iterator provides a {{jsxref('Promise')}} which fulfills with
+an object with the following properties:
+  - `done`
+    - : A boolean value, representing if the iteration has ended.
+  - `value`
+    - : A string, representing the key of an entry. If the iteration has ended, it would be `undefined`.
 
 ## Examples
+
+Use the `for await...of` loop can simplify the iteration process.
 
 ```js
 const dirHandle = await window.showDirectoryPicker();
