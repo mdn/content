@@ -148,9 +148,10 @@ scroll-snap-type: unset;
 }
 .container {
   display: flex;
-  overflow: auto;
+  margin: 1em auto;
   outline: 1px dashed lightgray;
   flex: none;
+  overflow: auto;
 }
 .container.x {
   width: 100%;
@@ -219,7 +220,7 @@ scroll-snap-type: unset;
 
 #### Results
 
-{{EmbedLiveSample("snapping_in_different_axes", "100%", 1630)}}
+{{EmbedLiveSample("snapping_in_different_axes", "100%", 1800)}}
 
 ## Specifications
 
