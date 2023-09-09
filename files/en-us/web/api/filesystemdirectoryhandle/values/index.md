@@ -31,8 +31,7 @@ an object with the following properties:
 - `done`
   - : A boolean value, representing if the iteration has ended.
 - `value`
-  - : A {{domxref("FileSystemHandle")}} object. The handle of the entry.
-    If the iteration has ended, this property would be `undefined`.
+  - : A {{domxref("FileSystemHandle")}} object. The handle of the entry. If the iteration has ended, this property would be `undefined`.
 
 ## Examples
 

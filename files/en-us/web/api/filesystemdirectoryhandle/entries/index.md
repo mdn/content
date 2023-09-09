@@ -32,10 +32,7 @@ an object with the following properties:
 - `done`
   - : A boolean value, representing if the iteration has ended.
 - `value`
-  - : An array, representing a key-value pair of an entry.
-    The first element is a string representing the key of the entry.
-    The second element is the {{domxref("FileSystemHandle")}} of the entry.
-    If the iteration has ended, this property would be `undefined`.
+  - : An array, representing a key-value pair of an entry. The first element is a string representing the key of the entry. The second element is the {{domxref("FileSystemHandle")}} of the entry. If the iteration has ended, this property would be `undefined`.
 
 ## Examples
 
