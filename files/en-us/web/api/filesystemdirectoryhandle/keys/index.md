@@ -32,7 +32,7 @@ an object with the following properties:
   - : A boolean value, representing if the iteration has ended.
 - `value`
   - : A string, representing the key of an entry.
-      If the iteration has ended, this property would be `undefined`.
+    If the iteration has ended, this property would be `undefined`.
 
 ## Examples
 
