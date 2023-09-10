@@ -56,8 +56,8 @@ button.addEventListener("click", () => {
   const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.isDefaultNamespace(""); // true
   result[1].value = aHtmlElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
-  result[2].value = aSvgElt.isDefaultNamespace(""); // true
-  result[3].value = aSvgElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
+  result[2].value = aSvgElt.isDefaultNamespace(""); // false
+  result[3].value = aSvgElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // true
 });
 ```
 
