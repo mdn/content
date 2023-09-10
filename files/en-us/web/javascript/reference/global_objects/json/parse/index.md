@@ -128,9 +128,7 @@ const jsonText = JSON.stringify(
 console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
-const obj = JSON.parse(
-  jsonText
-);
+const obj = JSON.parse(jsonText);
 
 const map2 =new Map(obj)
 
