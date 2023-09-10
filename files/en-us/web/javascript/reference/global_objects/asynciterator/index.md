@@ -61,4 +61,4 @@ const asyncIterator = (async function* () {
 ## See also
 
 - {{JSxRef("Statements/async_function*", "async function*")}}
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

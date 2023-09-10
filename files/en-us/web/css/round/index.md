@@ -2,12 +2,10 @@
 title: round()
 slug: Web/CSS/round
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.round
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a rounded number based on a selected rounding strategy.
 

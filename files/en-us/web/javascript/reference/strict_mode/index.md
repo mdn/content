@@ -426,5 +426,5 @@ These differences are very subtle differences. It's possible that a test suite d
 
 ## See also
 
-- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

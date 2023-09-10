@@ -180,4 +180,4 @@ Promise.all(
 
 ## See also
 
-- [`import` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import)

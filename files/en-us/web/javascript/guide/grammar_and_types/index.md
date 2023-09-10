@@ -700,10 +700,10 @@ console.log(str); // this string is broken across multiple lines.
 
 This chapter focuses on basic syntax for declarations and types. To learn more about JavaScript's language constructs, see also the following chapters in this guide:
 
-- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) guide
 - [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) guide
 
 In the next chapter, we will have a look at control flow constructs and error handling.
 

@@ -50,4 +50,4 @@ start: {
 
 ## See also
 
-- [Label](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)
