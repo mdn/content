@@ -25,7 +25,7 @@ Useful resources for writing any documentation include:
 
 1. The [How-to guides](/en-US/docs/MDN/Writing_guidelines/Howto) for MDN Web Docs: You're already here, but it's good to browse through all the articles and familiarize yourself with our writing style, the different types of pages and what sections are included in them, and the different ways we include different parts of the page (like specifications and browser compatibility).
 2. The latest specification: Different standards bodies create specifications for technologies that are documented on MDN Web Docs. For example, [TC39](https://tc39.es/) for JavaScript, the [WHATWG](https://whatwg.org/) for HTML, and the [W3C](https://www.w3.org/) for CSS, XML, and some Web APIs. Specifications are linked to from reference pages on MDN Web Docs (check the "Specifications" section). Alternatively, you can usually do a web search. Always work from the latest, most up-to-date specification.
-3. The latest modern web browsers: These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), [Chrome Canary](https://www.google.com/intl/en/chrome/canary/), or [Safari Technology Preview](https://webkit.org/downloads/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a feature that is "upcoming".
+3. The latest modern web browsers: These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), [Chrome Canary](https://www.google.com/intl/en/chrome/canary/), or [WebKit Build](https://webkit.org/downloads/#nightly) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a feature that is "upcoming".
 4. Demos/blog posts/other info: Find as much info as you can. If you are updating a technology because it has changed, ensure that the resources you are using to learn are not out of date. This is why the first two points above are important.
 
 It can also be wise to try and find someone to help answer questions. This can be the specification authors or the engineers who implement browser features.
@@ -35,11 +35,11 @@ It can also be wise to try and find someone to help answer questions. This can b
 This can feel a little alien to start, but the more you do it the more you get used to it. Here are some good links to help you get started:
 
 - [How to read W3C specs](https://alistapart.com/article/readspec/) by J. David Eisenberg on A List Apart
-- [Understanding the CSS Specifications](https://www.w3.org/Style/CSS/read) from the w3c
-- [How to read web specs Part I – Or: WebVR, how do you work?](https://surma.dev/things/reading-specs/) talks through reading the WebVR spec specifically, but is a great introduction to reading Web API specs.
-- [How to read web specs Part IIa – Or: ECMAScript Symbols](https://surma.dev/things/reading-specs-2/) the second part to the link above contains information on understanding the ECMAScript specification which outlines the JavaScript language
+- [Understanding the CSS specifications](https://www.w3.org/Style/CSS/read) from the w3c
+- [How to read web specs part I – or: WebVR, how do you work?](https://surma.dev/things/reading-specs/) talks through reading the WebVR spec specifically, but is a great introduction to reading Web API specs.
+- [How to read web specs part IIa – or: ECMAScript Symbols](https://surma.dev/things/reading-specs-2/) the second part to the link above contains information on understanding the ECMAScript specification which outlines the JavaScript language
 
-In addition, we have a guide on [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file), which can really help when reading Web API specs.
+In addition, we have the [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file) guide, which can really help when reading Web API specs.
 
 ## Exploring the feature
 
