@@ -36,21 +36,23 @@ The `fontcolor()` method itself simply joins the string parts together without a
 
 ### Using fontcolor()
 
-The following example uses the `fontcolor()` method to change the color of a string by producing a string with the HTML `<font>` element.
+The code below creates an HTML string and then replaces the document's body with it:
 
 ```js
-const worldString = "Hello, world";
+const contentString = "Hello, world";
 
-console.log(`${worldString.fontcolor("red")} is red in this line`);
-// '<font color="red">Hello, world</font> is red in this line'
-
-console.log(
-  `${worldString.fontcolor("FF00")} is red in hexadecimal in this line`,
-);
-// '<font color="FF00">Hello, world</font> is red in hexadecimal in this line'
+document.body.innerHTML = contentString.fontcolor("red");
 ```
 
-With the {{domxref("HTMLElement/style", "element.style")}} object you can get the element's `style` attribute and manipulate it more generically, for example:
+This will create the following HTML:
+
+```html
+<font color="red">Hello, world</font>
+```
+
+> **Warning:** This markup is invalid, because `font` is no longer a valid element.
+
+Instead of using `fontcolor()` and creating HTML text directly, you should use CSS to manipulate fonts. For example, you can manipulate {{cssxref("color")}} through the {{domxref("HTMLElement/style", "element.style")}} attribute:
 
 ```js
 document.getElementById("yourElemId").style.color = "red";
@@ -67,4 +69,5 @@ document.getElementById("yourElemId").style.color = "red";
 ## See also
 
 - [Polyfill of `String.prototype.fontcolor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.fontsize()")}}
+- [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
+- {{HTMLElement("font")}}
