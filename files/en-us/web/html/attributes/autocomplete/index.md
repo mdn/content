@@ -213,7 +213,9 @@ Some autocomplete values may be used more than once in form controls that may po
   <p>
     <label>
       City:
-      <input name="lc-add2" autocomplete="section-lemon shipping address-level2" />
+      <input
+        name="lc-add2"
+        autocomplete="section-lemon shipping address-level2" />
     </label>
   </p>
   <p>
