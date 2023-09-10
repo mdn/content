@@ -59,11 +59,9 @@ Similar to the `replacer` parameter of {{jsxref("JSON.stringify()")}}, for array
 Also, you should take care while doing your implementation of the `reviver` function and handle the last iteration that happened to the root value because if you return another value, it will override the returned root value.
 
 ```js
-const transformedObj1 =JSON.parse(
-  '[1,5,{"s":1}]',
-  (key, value) =>
-    {return typeof value === "object" ? undefined : value}
-);
+const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) => {
+  return typeof value === "object" ? undefined : value;
+});
 
 console.log(transformedObj1) // undefined
 ```
@@ -130,7 +128,7 @@ console.log(jsonText);
 
 const obj = JSON.parse(jsonText);
 
-const map2 =new Map(obj)
+const map2 = new Map(obj);
 
 console.log(map2);
 // Map { 1 => "one", 2 => "two", 3 => "three" }
