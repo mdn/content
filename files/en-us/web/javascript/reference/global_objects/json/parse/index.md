@@ -56,7 +56,7 @@ The `reviver` is called with the object containing the property being processed 
 
 Similar to the `replacer` parameter of {{jsxref("JSON.stringify()")}}, for arrays and objects, `reviver` will be last called on the root value with an empty string as the `key` and the root object as the `value`. For other valid JSON values, `reviver` works similarly and is called once with an empty string as the `key` and the value itself as the `value`.
 
-Also, you should take care while doing your implementation of the `reviver` function and handle the last iteration that happened to the root value because if you return another value, it will override the returned root value. However, it's a good place to transform the whole object after running the `reviver` function on its elements.
+Also, you should take care while doing your implementation of the `reviver` function and handle the last iteration that happened to the root value because if you return another value, it will override the returned root value.
 
 ```js
 const transformedObj1 =JSON.parse(
@@ -128,10 +128,11 @@ const jsonText = JSON.stringify(
 console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
-const map2 = JSON.parse(
-  jsonText,
-  (key, value) => (key === "" ? new Map(value) : value),
+const obj = JSON.parse(
+  jsonText
 );
+
+const map2 =new Map(obj)
 
 console.log(map2);
 // Map { 1 => "one", 2 => "two", 3 => "three" }
