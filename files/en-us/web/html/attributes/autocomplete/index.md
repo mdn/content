@@ -163,7 +163,7 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 
 If the `autocomplete` attribute is specified, its value must contain one or more space-separated autofill detail tokens. When using tokens to prevent forms from autocompleting, the tokens should be placed in the following order:
 
-1. Start with `section-`
+1. The first token is the hyphenated section name, with an author-defined name appended to `section-`
 2. Use the [defined autocomplete values](#values) like "shipping" or "billing" for addresses and "home", "mobile", "work", "fax", or "pager" for contact numbers
 3. A required token with an autocomplete field. See [W3's standard](https://www.w3.org/WAI/standards-guidelines/act/rules/73f2c2/2022-01-28/#correct-autocomplete-field) on this topic to learn more.
 
