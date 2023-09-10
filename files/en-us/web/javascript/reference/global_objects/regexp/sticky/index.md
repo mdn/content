@@ -43,7 +43,7 @@ For the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ex
 - [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
   - For `y` regexes: replaces once at the current `lastIndex` and updates `lastIndex`.
   - For `g` and `gy` regexes: replaces all occurrences matched by `exec()`.
-- [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
+- [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
   - For `y` regexes: `replaceAll()` throws.
   - For `g` and `gy` regexes: replaces all occurrences matched by `exec()`.
 
