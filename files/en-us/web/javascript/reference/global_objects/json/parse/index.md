@@ -62,7 +62,7 @@ Also, you should take care while doing your implementation of the `reviver` func
 const transformedObj1 =JSON.parse(
   '[1,5,{"s":1}]',
   (key, value) =>
-    (typeof value === "object") ? undefined : value
+    {return typeof value === "object" ? undefined : value}
 );
 
 console.log(transformedObj1) // undefined
