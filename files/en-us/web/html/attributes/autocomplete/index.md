@@ -167,7 +167,7 @@ If the `autocomplete` attribute is specified, its value must contain one or more
 2. Use the [defined autocomplete values](#values) like "shipping" or "billing" for addresses and "home", "mobile", "work", "fax", or "pager" for contact numbers
 3. A required token with an autocomplete field. See [W3's standard](https://www.w3.org/WAI/standards-guidelines/act/rules/73f2c2/2022-01-28/#correct-autocomplete-field) on this topic to learn more.
 
-> **NOTE:** Numbers 1-3 are optional tokens.
+> > **Note:** Numbers 1-3 are optional tokens.
 
 ### Example
 
@@ -178,7 +178,7 @@ If the `autocomplete` attribute is specified, its value must contain one or more
     <label>
       Address 1:
       <textarea
-        name="rvc"
+        name="rvc-add"
         autocomplete="section-red velvet shipping street-address"></textarea>
     </label>
   </p>
@@ -186,7 +186,7 @@ If the `autocomplete` attribute is specified, its value must contain one or more
     <label>
       City:
       <input
-        name="rvc2"
+        name="rvc-add2"
         autocomplete="section-red velvet shipping address-level2" />
     </label>
   </p>
@@ -194,7 +194,7 @@ If the `autocomplete` attribute is specified, its value must contain one or more
     <label>
       Postal Code:
       <input
-        name="rvpc"
+        name="rv-pc"
         inputmode="numeric"
         autocomplete="section-red velvet shipping postal-code" />
     </label>
@@ -206,20 +206,20 @@ If the `autocomplete` attribute is specified, its value must contain one or more
     <label>
       Address:
       <textarea
-        name="la"
+        name="lc-add"
         autocomplete="section-lemon shipping street-address"></textarea>
     </label>
   </p>
   <p>
     <label>
       City:
-      <input name="lc" autocomplete="section-lemon shipping address-level2" />
+      <input name="lc-add2" autocomplete="section-lemon shipping address-level2" />
     </label>
   </p>
   <p>
     <label>
       Postal Code:
-      <input name="lpc" autocomplete="section-lemon shipping postal-code" />
+      <input name="lc-pc" autocomplete="section-lemon shipping postal-code" />
     </label>
   </p>
 </fieldset>
