@@ -65,10 +65,8 @@ Check out the definition of each discussion category below so that you can start
         Discussions related to the
         <a href="https://github.com/mdn/content">content</a> on MDN Web Docs.
         <em>Note:</em> This is not the place to ask for help with code examples.
-        For code-related help, please
-        <a href="https://discourse.mozilla.org/c/mdn/learn/250"
-          >join our community on Discourse</a
-        >.
+        For code-related help, get in touch in one of our
+        <a href="/en-US/docs/MDN/Community/Communication_channels">Communication channels</a>.
       </td>
     </tr>
     <tr>
@@ -99,10 +97,8 @@ Check out the definition of each discussion category below so that you can start
       <td>
         Discussions related to all code examples on MDN Web Docs. This includes
         interactive examples, live samples and static code examples. For help
-        with general coding challenges on MDN Web Docs, please
-        <a href="https://discourse.mozilla.org/c/mdn/learn/250"
-          >join our community on Discourse</a
-        >.
+        with general coding challenges on MDN Web Docs, see our
+        <a href="/en-US/docs/MDN/Community/Communication_channels">Communication channels</a>.
       </td>
     </tr>
     <tr>

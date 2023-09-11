@@ -6,14 +6,12 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month, and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250) where people go to ask for general help, or request that their assessments be marked. We'd love some help with answering posts, and growing our learning community.
+Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month, and has an [active forum](https://discourse.mozilla.org/c/mdn/learn/250) where people go to ask for assistance.
+We'd love some help with answering posts, and growing our learning community.
 
 ## What we need help with
 
-In the [MDN learning forum](https://discourse.mozilla.org/c/mdn/learn/250), there are two main types of post that we'd like you to help out with answering:
-
-1. General questions about web development.
-2. Specific questions asking for help or assessment with the skill tests and assessments that appear on the Learn web development section on MDN.
+We receive a high volume of questions asking for help with the skill tests that appear on the Learn web development section on MDN.
 
 ## How you can benefit
 
@@ -41,11 +39,11 @@ After you are set up:
 3. If the post you are replying to is requesting an assessment for one of the "test your skill"/"assessment" tasks:
 
    1. Identify which article/task is being assessed, and find the associated marking guide for it. It is totally OK to ask the person who submitted the post if they can give you the link to the assessment/skill test.
-   2. Identify the person's code — they should give it to you in the form of a codepen/jsfiddle/jsbin link, or similar. If they don't provide it in a form that is easy to assess, it is perfectly OK to ask them to put it in codepen, jsfiddle, or similar.
+   2. Identify the person's code — they should give it to you in the form of an online editor such as JSFiddle or CodePen. If they don't provide it in a form that is easy to assess, it is perfectly OK to ask them to put it in CodePen, JSFiddle, or similar.
 
       - A common problem is when people post their code directly into a discourse message — discourse renders HTML elements and turns quotes into smartquotes, which breaks code. It is much better to get it sent over as a URL to a shareable code editor app.
 
-   3. Read through the code and assess it
+   3. Read through the code and check:
 
       1. Does it work, and does it give you the result that it should give?
       2. If not, why doesn't it work?

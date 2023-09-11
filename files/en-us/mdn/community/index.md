@@ -19,7 +19,7 @@ By participating in and contributing to our projects and discussions, you acknow
 - [Contribute to MDN Web Docs interactive examples](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)
 - [Help translate MDN Web Docs](/en-US/docs/MDN/Community/Contributing/Translated_content)
 - [Help fix known platform issues](https://github.com/mdn/yari/issues)
-- [Help us keep browser compatibility data up to date.](https://github.com/mdn/browser-compat-data)
+- [Help us keep browser compatibility data up to date](https://github.com/mdn/browser-compat-data)
 
 ## Guides in this section
 
@@ -77,6 +77,6 @@ We are a small team working hard to keep up with the documentation demands of a 
 
 - [Learn web development](/en-US/docs/Learn)
 - [MDN Web Docs learn forum](https://discourse.mozilla.org/c/mdn/learn/250)
-- [Stackoverflow](https://stackoverflow.com/questions/)
+- [Stack Overflow](https://stackoverflow.com/questions/)
 
 Any issues, discussions, or pull requests opened on repositories requesting support will be directed here, then closed and locked.
