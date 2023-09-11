@@ -11,7 +11,7 @@ We'd love some help with answering posts, and growing our learning community.
 
 ## What we need help with
 
-We receive a high volume of questions asking for help with the skill tests that appear on the Learn web development section on MDN.
+We receive a high volume of questions asking for help based on topics that appear on the Learn web development section on MDN.
 
 ## How you can benefit
 

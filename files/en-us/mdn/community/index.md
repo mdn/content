@@ -44,7 +44,9 @@ This is the list of guides and pages in this section.
 
 - [Learn forum](/en-US/docs/MDN/Community/Learn_forum)
 
-  - : Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250), where people go to ask for general help or request that their assessments be marked. We'd love some help with answering posts and growing our learning community. In this article, you'll learn what we need help with and the skills you'll need to provide help.
+  - : Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month and have [active forums](https://discourse.mozilla.org/c/mdn/learn/250), where people go to ask for help learning to code.
+    We'd love some additional support with answering questions and growing our learning community.
+    In this article, you'll learn what we need help with and the skills you'll need to help our learners.
 
 - [Issues](/en-US/docs/MDN/Community/Issues)
 
@@ -69,14 +71,14 @@ By participating in and contributing to our projects and discussions, you acknow
 
 You can communicate with the MDN Web Docs team and community using the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-> If you are learning web development and are stuck on a coding problem, we have [active forums](/en-US/docs/MDN/Community/Communication_channels#forums) where you can ask questions and get help.
+### General support
 
-### General support questions
-
-We are a small team working hard to keep up with the documentation demands of a continuously changing web ecosystem. Unfortunately, we just can't help with general support questions. For general help while learning to code, please refer to the following resources:
+We are a small team working hard to keep up with the documentation demands of a continuously changing web ecosystem.
+Unfortunately, we can't help with general support questions.
+If you're learning to code, you can refer to the following resources:
 
 - [Learn web development](/en-US/docs/Learn)
 - [MDN Web Docs learn forum](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Stack Overflow](https://stackoverflow.com/questions/)
 
-Any issues, discussions, or pull requests opened on repositories requesting support will be directed here, then closed and locked.
+Any issues, discussions, or pull requests opened on repositories asking for general support will be directed here and may be closed and locked.
