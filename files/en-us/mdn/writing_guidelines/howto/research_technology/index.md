@@ -60,7 +60,7 @@ It's possible that the sidebar of the pages you write will also need to be defin
 
 Some of the code examples for MDN Web Docs are held in separate repositories. Most notably, these are the interactive examples that appear in the "Try it" section in the reference pages and the larger demo code needed for guides. If you do need to add to or amend one of these repositories, it's a good idea to make a note of it in your list.
 
-[This article](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) describes the different types of code examples we use on MDN Web Docs.
+The [Code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) article describes the different types of code examples we use on MDN Web Docs.
 
 ### Example
 
