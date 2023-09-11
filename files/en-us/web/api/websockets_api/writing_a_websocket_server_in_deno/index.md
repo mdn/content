@@ -5,8 +5,7 @@ slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Deno
 
 ## Introduction
 
-This example shows you how to create a WebSocket API server using Deno, with a
-complimentary web page.
+This example shows you how to create a WebSocket API server using Deno, with a complimentary web page.
 
 Deno version at the time of writing: `1.36.4`.
 
@@ -16,10 +15,9 @@ The code will consist in two files, one for the server, and one for the client.
 
 ### Server
 
-Create a `main.ts`` file. This file will contain the code for a simple HTTP
-server which will also serve the client HTML.
+Create a `main.js` file. This file will contain the code for a simple HTTP server which will also serve the client HTML.
 
-```ts
+```js
 Deno.serve({
   port: 80,
   handler: async (request) => {
@@ -51,8 +49,7 @@ Deno.serve({
 
 ### Client
 
-Create an `index.html` file. This file will contain a script that will ping the
-server every five seconds after a connection has been made.
+Create an `index.html` file. This file will contain a script that will ping the server every five seconds after a connection has been made.
 
 ```html
 <!doctype html>
@@ -102,11 +99,10 @@ server every five seconds after a connection has been made.
 With the two files, run the app using Deno.
 
 ```sh
-deno run --allow-net=0.0.0.0:80 --allow-read=./index.html main.ts
+deno run --allow-net=0.0.0.0:80 --allow-read=./index.html main.js
 ```
 
-Deno requires us to give explicit permissions for what we can access on the host
-machine.
+Deno requires us to give explicit permissions for what we can access on the host machine.
 
 - `--allow-net=0.0.0.0:80` allows the app to attach to localhost on port 80
 - `--allow-read=./index.html` allows access to the html file for the client
